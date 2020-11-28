@@ -13,7 +13,7 @@ Activate the data you have in Real-time Customer Data Platform by mapping segmen
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected a destination](/help/rtcdp/destinations/connect-destination.md). If you haven't done so already, go to the [destinations catalog](/help/rtcdp/destinations/destinations-catalog.md), browse the supported destinations, and set up one or more destinations.
+To activate data to destinations, you must have successfully [connected a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/destinations-catalog.md), browse the supported destinations, and set up one or more destinations.
 
 ## Activate data {#activate-data}
 
@@ -24,11 +24,12 @@ The steps in the activation workflow vary slightly between destination types. Th
 Applies to: All destinations
 
 In the Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
-![browse to destination](assets/oracle-eloqua-connect.png)
+
+![browse to destination](../assets/ui/activate-destinations/connect.png)
 
 Select the name of the destination to navigate to the activation workflow.
 
-![activate-flow](assets/activate-flow.png)
+![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
 Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 
@@ -38,44 +39,45 @@ Once you have selected a destination, select **[!UICONTROL Activate]**.
 
 Applies to: All destinations
 
-![Select segments step](./assets/select-segments-icon.png)
+![Select segments step](../assets/ui/activate-destinations/select-segments-icon.png)
 
 In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select one or more segments to activate to the destination. Select **[!UICONTROL Next]** to proceed to the next step.
-![segments-to-destination](assets/email-select-segments.png)
+
+![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
 ### [!UICONTROL Identity mapping] step {#identity-mapping}
 
 Applies to: social destinations and Google Customer Match advertising destination
 
-![Identity mapping step](./assets/identity-mapping-icon.png)
+![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
 
 For social destinations, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema.
 
 If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
-![Email address as identity](assets/email-as-identity.gif)
+![Email address as identity](../assets/ui/activate-destinations/email-as-identity.gif)
 
 If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
-![Loyalty ID as identity](assets/rewardsid-as-identity.gif)
+![Loyalty ID as identity](../assets/ui/activate-destinations/ewardsid-as-identity.gif)
 
 Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
 
 Select `Email` as target identity if the email addresses you are using are not hashed. Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
    
-![identity mapping after filling in fields](assets/identity-mapping.png)
+![identity mapping after filling in fields](../assets/common/identity-mapping.png)
 
 ### **[!UICONTROL Configure]** step {#configure}
 
 Applies to: Email marketing destinations and cloud storage destinations
 
-![Configure step](./assets/configure-icon.png)
+![Configure step](../assets/ui/activate-destinations/configure-icon.png)
 
 In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
 
-![](./assets/activate-destinations/configure-destination-schedule.png)
+![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
 A popover appears, showing options to create the segment schedule.  
 
@@ -83,13 +85,13 @@ A popover appears, showing options to create the segment schedule.
 - **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
 - **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
 
-![](./assets/activate-destinations/export-full-file.png)
+![](../assets/ui/activate-destinations/export-full-file.png)
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
 Select the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
 
-![configure file name](./assets/activate-destinations/configure-name.png)
+![configure file name](../assets/ui/activate-destinations/configure-name.png)
 
 In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
@@ -103,7 +105,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
 
-![edit file name options](./assets/activate-workflow-configure-step-2.png)
+![edit file name options](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
 Once you have finishing configuring all your segments, select **[!UICONTROL Next]** to continue.
 
@@ -111,7 +113,7 @@ Once you have finishing configuring all your segments, select **[!UICONTROL Next
 
 Applies to: advertising destinations, social destinations
 
-![segment schedule step](./assets/segment-schedule-icon.png)
+![segment schedule step](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
 On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
 
@@ -119,13 +121,13 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-![choose data origin](./assets/choose-data-origin.png) 
+![choose data origin](../assets/ui/activate-destinations/choose-data-origin.png) 
 
 ### **[!UICONTROL Scheduling]** step {#scheduling}
 
 Applies to: email marketing destinations and cloud storage destinations
 
-![segment schedule step](./assets/scheduling-icon.png)
+![segment schedule step](../assets/ui/activate-destinations/scheduling-icon.png)
 
 On the **[!UICONTROL Scheduling]** page, you can see the start date for sending data to the destination as well as the frequency of sending data to the destination. These values cannot be edited.
 
@@ -133,7 +135,7 @@ On the **[!UICONTROL Scheduling]** page, you can see the start date for sending 
 
 Applies to: email marketing destinations and cloud storage destinations
 
-![select attributes step](./assets/select-attributes-icon.png)
+![select attributes step](../assets/ui/activate-destinations/select-attributes-icon.png)
 
 On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new field]** and choose the attributes that you want to send to the destination.
 
@@ -145,7 +147,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 - If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
 - If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
-![recommended attributes](./assets/activate-destinations/mark-mandatory.png) 
+![recommended attributes](../assets/ui/activate-destinations/mark-mandatory.png) 
 
 Additionally, you can mark different attributes as mandatory. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additionally form of filtering. Marking an attribute as mandatory is **not** required.
 
@@ -163,7 +165,7 @@ It is recommended that one of the attributes is a [unique identifier](/help/rtcd
 
 Applies to: all destinations 
 
-![review step](./assets/review-icon.png)
+![review step](../assets/ui/activate-destinations/review-icon.png)
 
 On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
@@ -171,11 +173,11 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 >
 >In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
-![data policy violation](assets/data-policy-violation.png)
+![data policy violation](../assets/ui/activate-destinations/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
-![confirm-selection](assets/confirm-selection.png)
+![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
 ## Edit activation {#edit-activation}
 

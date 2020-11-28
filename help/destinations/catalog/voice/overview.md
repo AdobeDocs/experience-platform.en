@@ -12,7 +12,7 @@ Voice platforms gather and collate data from various sources including voice mes
 
 Currently, Real-time Customer Data Platform supports the Voice of the Customer destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Confirmit Digital Feedback extension](confirmit-digital-feedback-extension.md)
-* [Invoca Tags extension](/help/rtcdp/destinations/invoca-extension.md)
-* [Medallia extension](medallia-extension.md)
-* [Talk URL Inbox extension](talkurl-extension.md)
+- [Confirmit Digital Feedback extension](./confirmit-digital-feedback.md)
+- [Invoca Tags extension](./invoca.md)
+- [Medallia extension](./medallia.md)
+- [Talk URL Inbox extension](./talkurl.md)

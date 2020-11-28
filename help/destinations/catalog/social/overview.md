@@ -12,5 +12,5 @@ With social network destinations, you can activate profiles for your campaigns f
 
 Real-time Customer Data Platform currently supports the following social network destinations:
 
-* [Adobe Livefyre extension](/help/rtcdp/destinations/adobe-livefyre-extension.md)
-* [[!DNL Facebook]](/help/rtcdp/destinations/facebook-destination.md)
+- [Adobe Livefyre extension](./adobe-livefyre.md)
+- [[!DNL Facebook]](./facebook.md)

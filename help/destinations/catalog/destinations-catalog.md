@@ -16,13 +16,13 @@ Browse the catalog to determine which destination platforms are best for your ad
 
 You can activate your data to different destination categories in the Real-time Customer Data Platform. The links below provide more information on each destination category:
 
-* [Adobe solutions](/help/rtcdp/destinations/adobe-destinations.md)
-* [Advertising destinations](/help/rtcdp/destinations/advertising-destinations.md)
-* [Analytics destinations](/help/rtcdp/destinations/analytics-destinations.md)
-* [Cloud storage destinations](/help/rtcdp/destinations/cloud-storage-destinations.md)
-* [Data Management Platform](/help/rtcdp/destinations/dmp-destinations.md)
-* [Email marketing](/help/rtcdp/destinations/email-marketing-destinations.md)
-* [Personalization](/help/rtcdp/destinations/personalization-destinations.md)
-* [Social destinations](/help/rtcdp/destinations/social-network-destinations.md)
-* [Surveys](/help/rtcdp/destinations/survey-destinations.md)
-* [Voice of the customer](/help/rtcdp/destinations/voice-of-customer-destinations.md)
+- [Adobe solutions](./adobe/overview.md)
+- [Advertising destinations](./advertising/overview.md)
+- [Analytics destinations](./analytics/overview.md)
+- [Cloud storage destinations](./cloud-storage/overview.md)
+- [Data Management Platform](./data-management/overview.md)
+- [Email marketing](./email-marketing/overview.md)
+- [Personalization](./personalization/overview.md)
+- [Social destinations](./social/overview.md)
+- [Surveys](./survey/overview.md)
+- [Voice of the customer](./voice/overview.md)

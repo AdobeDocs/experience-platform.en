@@ -42,19 +42,18 @@ You can create *rules* that determine when to forward event data to extensions. 
 
 Platform Launch extensions enable you to satisfy various customer use cases. Some example use cases for using Platform Launch extensions are:
 
-* You can send website or native app data to Facebook via the Facebook pixel extension. Facebook Pixel indicates which parts of your site or app a visitor navigated to, forwards that information to Facebook, and you can retarget your visitor via Facebook.
-* You can forward event data from your websites and apps into Google Analytics to analyze and make decisions based on that data.
-* You could turn on a client-side chatbox app at the right time based on how your users are interacting with your pages, according to rules you set up in Platform Launch.
-
+- You can send website or native app data to Facebook via the Facebook pixel extension. Facebook Pixel indicates which parts of your site or app a visitor navigated to, forwards that information to Facebook, and you can retarget your visitor via Facebook.
+- You can forward event data from your websites and apps into Google Analytics to analyze and make decisions based on that data.
+- You could turn on a client-side chatbox app at the right time based on how your users are interacting with your pages, according to rules you set up in Platform Launch.
 
 ## Extension categories {#extension-categories}
 
 Platform Launch extensions can fall under the following categories in Real-time CDP:
 
-* [Advertising](../advertising/overview.md)
-* [Analytics](../analytics/overview.md)
-* [Data Management Platform](../data-management/overview.md)
-* [Email marketing destinations](../email-marketing/overview.md)
-* [Personalization](../personalization/overview.md)
-* [Surveys](../survey/overview.md)
-* [Voice of the customer](../voice-of-customer/overview.md)
+- [Advertising](../advertising/overview.md)
+- [Analytics](../analytics/overview.md)
+- [Data Management Platform](../data-management/overview.md)
+- [Email marketing destinations](../email-marketing/overview.md)
+- [Personalization](../personalization/overview.md)
+- [Surveys](../survey/overview.md)
+- [Voice of the customer](../voice/overview.md)

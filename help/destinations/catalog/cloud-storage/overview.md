@@ -20,10 +20,10 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 
 ## Available Cloud storage destinations
 
-* [Amazon S3 destination](./amazon-s3.md)
-* [SFTP destination](./sftp.md)
+- [Amazon S3 destination](./amazon-s3.md)
+- [SFTP destination](./sftp.md)
 
 ## Available Cloud storage streaming destinations
 
-* [Amazon Kinesis destination](./amazon-kinesis.md)
-* [Azure Event Hubs destination](.azure-event-hubs.md)
+- [Amazon Kinesis destination](./amazon-kinesis.md)
+- [Azure Event Hubs destination](.azure-event-hubs.md)

@@ -12,7 +12,7 @@ Surveys platforms detect survey events, capture customer feedback in real-time t
 
 Currently, Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-* [Foresee extension](/help/rtcdp/destinations/foresee-extension.md)
-* [InMoment extension](/help/rtcdp/destinations/inmoment-extension.md)
-* [Qualtrics Website Feedback extension](qualtrics-extension.md)
-* [Web Intercept Surveys - QuestionPro extension](/help/rtcdp/destinations/web-intercept-surveys-extension.md)
+- [Foresee extension](./foresee.md)
+- [InMoment extension](./inmoment.md)
+- [Qualtrics Website Feedback extension](./qualtrics.md)
+- [Web Intercept Surveys - QuestionPro extension](./web-intercept-surveys.md)
