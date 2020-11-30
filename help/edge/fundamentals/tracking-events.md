@@ -129,6 +129,7 @@ Alternatively, the `eventType` can be passed into the event command using the `t
 
 ```javascript
 var myXDMData = { ... };
+
 alloy("sendEvent", {
   "xdm": myXDMData,
   "type": "commerce.purchases"
