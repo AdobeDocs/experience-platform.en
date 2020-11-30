@@ -8,7 +8,7 @@ keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloa
 
 # Tracking events
 
-To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
+To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories:
 
