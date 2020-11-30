@@ -52,7 +52,7 @@ The following standard namespaces are provided for use by all organizations with
 | Display name | Description |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud - ID Syncing Partner |
-| Adobe Analytics | Adobe Analytics (Legacy ID) |
+| Adobe Analytics (Legacy ID) | Namespace representing Adobe Analytics. |
 | Apple IDFA (ID for Advertisers) | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | Apple Push Notification service | Identities collected via Apple for Push notification Service. |
 | CORE | Legacy name: "Adobe AudienceManager" |
