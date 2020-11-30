@@ -57,12 +57,12 @@ The following standard namespaces are provided for use by all organizations with
 | Apple Push Notification service | Identities collected via Apple for Push notification Service. |
 | CORE | Legacy name: "Adobe AudienceManager" |
 | ECID | Alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
-| Email | Namespace representing email.
+| Email | Namespace representing email. |
 | Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
 | Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
 | Google Ad ID (GAID) | This namespace is associated to a Google Ad ID. |
 | Google Click ID | This namespace is associated to a Google Click ID. |
-| Phone | Namespace representing phone.
+| Phone | Namespace representing phone. |
 | Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus (`+`) sign is required. |
 | Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes and under the E.164 format.  |
 | Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
