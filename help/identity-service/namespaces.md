@@ -49,7 +49,7 @@ The following identity types are available within [!DNL Platform]:
 
 The following standard namespaces are provided for use by all organizations within [!DNL Experience Platform]:
 
-| Display name | Notes |
+| Display name | Description |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud - ID Syncing Partner |
 | Adobe Analytics | Adobe Analytics (Legacy ID) |
@@ -58,7 +58,7 @@ The following standard namespaces are provided for use by all organizations with
 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
 | Email |
-| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
+| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
 | Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
 | Google Ad ID |
 | Google Click ID |
