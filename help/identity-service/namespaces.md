@@ -53,19 +53,19 @@ The following standard namespaces are provided for use by all organizations with
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud - ID Syncing Partner |
 | Adobe Analytics | Adobe Analytics (Legacy ID) |
-| Apple IDFA (ID for Advertisers | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
+| Apple IDFA (ID for Advertisers) | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | Apple Push Notification service | Identities collected via Apple for Push notification Service. |
 | CORE | legacy name: "Adobe AudienceManager" |
 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
 | Email |
-| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. You won't be able to change this setting later. |
+| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
 | Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
 | Google Ad ID |
 | Google Click ID |
 | Phone |
-| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus `(+)` sign is required. |
+| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus (`+`) sign is required. |
 | Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes and under the E.164 format.  |
-| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. Note that some areas may have a different phone number formatting requirements.  |
+| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
 | TNTID | Adobe Target (TNTID) |
 | Windows AID |
 
@@ -98,3 +98,7 @@ Similar to standard namespaces, you can click on a custom namespace from the **[
 ## Namespaces in identity data
 
 Supplying the namespace for an identity depends on the method you use for providing identity data. For details on providing data identity data, please see the section on [supplying identity data](./home.md#supplying-identity-data-to-identity-service) in the [!DNL Identity Service] overview.
+
+## Next steps
+
+Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [Identity graph viewer](./ui/identity-graph-viewer.md).
