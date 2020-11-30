@@ -8,7 +8,7 @@ keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloa
 
 # Tracking events
 
-To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
+To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories:
 
@@ -76,7 +76,7 @@ Currently, sending data that does not match an XDM schema is unsupported. Suppor
 
 ### Setting `eventType`
 
-In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. 
+In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. [Read more in the XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
 
 | **Event Type:**               | **Definition:** |
@@ -105,7 +105,7 @@ In an XDM experience event, there is an optional `eventType` field. This holds t
 | delivery.feedback | Feedback events for a delivery. Example feedback events for an email delivery |
 
 
-These event types will be shown in a dropdown if using the Launch extension or you can always pass them in without Launch. They can be passed in as part of the `xdm` option.
+These event types will be shown in a dropdown if using the Adobe Experience Platform Launch extension or you can always pass them in without Experience Platform Launch. They can be passed in as part of the `xdm` option.
 
 
 ```javascript
@@ -153,7 +153,7 @@ alloy("sendEvent", {
 
 ### Adding identity information
 
-Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](./identity.md)
+Custom identity information can also be added to the event. See [Retrieving Experience Cloud ID](../identity/overview.md).
 
 ## Using the sendBeacon API
 
@@ -227,7 +227,7 @@ alloy("configure", {
 `xdm` fields are set in this order:
 
 1. Values passed in as options to the event command `alloy("sendEvent", { xdm: ... });`
-2. Automatically collected values.  (See [Automatic Information](../reference/automatic-information.md).)
+2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
 If the `onBeforeEventSend` callback throws an exception, the event is still sent; however, none of the changes that were made inside the callback are applied to the final event.

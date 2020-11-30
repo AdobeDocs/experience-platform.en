@@ -72,7 +72,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 | Feature    | Description  |
 | -----------| ---------- |
-| Manage data usage policies in the UI  | Data usage policies can now be managed within the _Policies_ workspace in the [!DNL Experience Platform] UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
+| Manage data usage policies in the UI  | Data usage policies can now be managed within the **Policies** workspace in the [!DNL Experience Platform] UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
 
 **Known issues**
 
@@ -83,7 +83,7 @@ For more information, please see the [Data Governance overview](../../data-gover
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 

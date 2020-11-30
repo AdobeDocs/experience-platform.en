@@ -98,7 +98,7 @@ Within the Experience Platform user interface, you can view and interact with Re
 
 To learn more about customizing profile data, visit the [Profile customization documentation](../profile/ui/profile-customization.md)
 
-## Next Steps
+## Next steps
 
 Once you have configured [!DNL Real-time Customer Profile] for your organization, you can begin adding data to individual customer profiles and creating audience segments based on specific customer attributes. To get started, see the following tutorials:
 

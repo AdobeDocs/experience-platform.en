@@ -1,5 +1,6 @@
 ---
 product: adobe experience platform
+solution: Experience Platform, Real-time Customer Data Platform
 audience: user
 user-guide-title: Real-time Customer Data Platform Guide
 user-guide-description: Bring together known and anonymous data from multiple enterprise sources to create customer profiles, create audience segments from those profiles, and activate those segments to third-party destinations.
@@ -24,9 +25,11 @@ user-guide-description: Bring together known and anonymous data from multiple en
     * [Destination details page](destinations/destination-details-page.md)
   * Destinations catalog {#destinations-cat}
     * [Destinations catalog overview](destinations/destinations-catalog.md)
+    * [ (Alpha) HTTP destination](/help/rtcdp/destinations/http-destination.md)
     * Adobe destinations{#adobe-destinations}
       * [Adobe destinations overview](destinations/adobe-destinations.md)
       * [Adobe Campaign](destinations/adobe-campaign-destination.md)
+      * [Experience Platform segment sharing (opens Audience Manager documentation)](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising-destinations}
       * [Advertising destinations overview](destinations/advertising-destinations.md)
       * [Adobe Advertising Cloud extension](/help/rtcdp/destinations/adobe-advertising-cloud-extension.md)
@@ -45,7 +48,9 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Google Display & Video 360](/help/rtcdp/destinations/google-dv360-destination.md)
       * [Google gtag extension](/help/rtcdp/destinations/gtag-advertising-extension.md)
       * [LinkedIn Insight Tag extension](/help/rtcdp/destinations/linkedin-extension.md)
+      * [Microsoft Bing](/help/rtcdp/destinations/bing-destination.md)
       * [Pinterest Conversion Tracking extension](destinations/pinterest-extension.md)
+      * [The Trade Desk destination](/help/rtcdp/destinations/tradedesk-destination.md)
       * [Twitter Universal Website Tag extension](destinations/twitter-uwt-extension.md)
     * Analytics destinations {#analytics-destinations}
       * [Analytics destinations overview](destinations/analytics-destinations.md)
@@ -90,6 +95,11 @@ user-guide-description: Bring together known and anonymous data from multiple en
       * [Salesforce Marketing Cloud](destinations/salesforce-marketing-cloud-destination.md)
     * Experience Platform Launch extensions{#launch-extensions}
       * [Experience Platform Launch extensions overview](/help/rtcdp/destinations/experience-platform-launch-extensions.md)  
+    * Mobile engagement destinations {#mobile-engagement-destinations}
+      * [Mobile engagement destinations overview](destinations/mobile-destinations.md)
+      * [Airship Attributes](destinations/airship-attributes-destination.md)
+      * [Airship Tags](destinations/airship-tags-destination.md)
+      * [Braze](destinations/braze-destination.md)
     * Personalization destinations {#personalization-destinations}
       * [Personalization destinations overview](/help/rtcdp/destinations/personalization-destinations.md)
       * [Adobe Target extension](/help/rtcdp/destinations/adobe-target-extension.md)

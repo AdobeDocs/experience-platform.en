@@ -28,11 +28,11 @@ The identity relationships that [!DNL Identity Service] defines and maintains ar
 
 ### Identities
 
-An identity is data that is unique to an entity, typically an individual person. An identity such as a login ID, ECID, or loyalty ID is referred to as a **known identity**.
+An identity is data that is unique to an entity, typically an individual person. An identity such as a login ID, ECID, or loyalty ID is referred to as a known identity.
 
 PII such as email address and phone number, serves to directly identify a customer. As a result, PII is used to match a customer's multiple identities across systems.
 
-**Unknown or anonymous identities** single out a device without identifying the actual person using it. This category includes information such as a visitor's IP address and cookie ID. While behavioral data can be gathered from a device using unknown identities, associating these identities across devices or mediums is limited until your customer supplies PII during their journey.
+Unknown or anonymous identities single out a device without identifying the actual person using it. This category includes information such as a visitor's IP address and cookie ID. While behavioral data can be gathered from a device using unknown identities, associating these identities across devices or mediums is limited until your customer supplies PII during their journey.
 
 As shown in the image below, known and anonymous identities are both important components of [identity graphs](#identity-graphs), which are discussed later in this document.
 
@@ -74,11 +74,13 @@ An identity namespace is an identifier such as device ID or email ID used to pro
 
 An identity graph is a map of relationships between different identity namespaces, providing you with a visual representation of how your customer interacts with your brand across different channels. 
 
-All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity. 
+All customer identity graphs are collectively managed and updated by [!DNL Identity Service] in near real-time, in response to customer activity.
 
 [!DNL Identity Service] manages an identity graph visible by only your organization and built based on your data, referred to as the private graph. [!DNL Identity Service] augments your private graph when an ingested data record contains more than one identity, adding a relationship between the identities found.
 
 As an example of the potential types of factors to consider when supplying and labeling identity data, using phone numbers such as "work phone" may result in more relationships than you intend in the identity graph. You may find many employees refer to the same number for work, and that "home" and "mobile" better serve to keep relationships as precise as possible.
+
+For more information, see the tutorial on [accessing the identity graph viewer](./ui/identity-graph-viewer.md)
 
 ## Supplying identity data to [!DNL Identity Service]
 

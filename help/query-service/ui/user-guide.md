@@ -92,7 +92,7 @@ See the [Query Service UI overview][query-service-ui] for more information.
 
 ## Executing queries using Query Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or **[!UICONTROL Browse]** tab, and click **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and click **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
 
 ### Console
 
