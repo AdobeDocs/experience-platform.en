@@ -55,19 +55,19 @@ The following standard namespaces are provided for use by all organizations with
 | Adobe Analytics | Adobe Analytics (Legacy ID) |
 | Apple IDFA (ID for Advertisers) | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | Apple Push Notification service | Identities collected via Apple for Push notification Service. |
-| CORE | legacy name: "Adobe AudienceManager" |
-| ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| Email |
+| CORE | Legacy name: "Adobe AudienceManager" |
+| ECID | Alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
+| Email | Namespace representing email.
 | Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
 | Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
-| Google Ad ID |
-| Google Click ID |
-| Phone |
+| Google Ad ID (GAID) | This namespace is associated to a Google Ad ID. |
+| Google Click ID | This namespace is associated to a Google Click ID. |
+| Phone | Namespace representing phone.
 | Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus (`+`) sign is required. |
 | Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes and under the E.164 format.  |
 | Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
 | TNTID | Adobe Target (TNTID) |
-| Windows AID |
+| Windows AID | This namespace is associated with Windows Ad ID. |
 
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
 
