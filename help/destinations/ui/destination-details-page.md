@@ -35,10 +35,10 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](../../ui/activate-destinations.md) for more information. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
-| [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](./destinations-catalog.md) for more information. |
+| [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/destinations-catalog.md) for more information. |
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |
-| [!UICONTROL Category] | Indicates the destination type. See the [destinations catalog](./destinations-catalog.md) for more information. |
+| [!UICONTROL Category] | Indicates the destination type. See the [destinations catalog](../catalog/destinations-catalog.md) for more information. |
 | [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include "[!UICONTROL Cookie]" and "[!UICONTROL Profile-based]". |
 | [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include "[!UICONTROL Streaming]" and "[!UICONTROL Batch]".  |
 | [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
