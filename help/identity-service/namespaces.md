@@ -45,8 +45,6 @@ The following identity types are available within [!DNL Platform]:
 
 Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Platform UI.
 
-Platform also provides namespaces for integration purposes. These namespaces are hidden by default.
-
 The following standard namespaces are provided for use by all organizations within  Platform:
 
 | Display name | Description |
@@ -72,6 +70,10 @@ The following standard namespaces are provided for use by all organizations with
 To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Browse]** tab to display a list of standard identity namespaces accessible to your organization. You can sort the namespaces alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the namespaces chronologically by their most recent update date.
 
 Select a namespace to see more specific information on the right rail.
+
+>[!NOTE]
+>
+>Platform also provides namespaces for integration purposes. These namespaces are hidden by default. To view integration namespaces, select **[!UICONTROL View integration identities]**.
 
 ![](./images/browse-namespaces.png)
 
