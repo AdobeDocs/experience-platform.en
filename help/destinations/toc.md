@@ -12,8 +12,8 @@ user-guide-description: Insert description of destinations here.
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Destination details page](./ui/destination-details-page.md)
-    * [Connect to a destination](./connect-destination.md)
-    * [Activate profiles and segments to a destination](./activate-destinations.md)
+    * [Connect to a destination](./ui/connect-destination.md)
+    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/destinations-catalog.md)
     * [ (Alpha) HTTP destination](./catalog/http-destination.md)
@@ -25,7 +25,6 @@ user-guide-description: Insert description of destinations here.
         * [Adobe Advertising Cloud extension](./catalog/advertising/adobe-advertising-cloud.md)
         * [Awin Advertising Conversion Tag extension](./catalog/advertising/awin-conversiontag.md)
         * [Awin Advertising Mastertag extension](./catalog/advertising/awin-mastertag.md)
-        * [Beemray extension](./catalog/advertising/beemray.md)
         * [Bing Ads Universal Event Tracking extension](./catalog/advertising/bing-ads.md)
         * [Branch extension](./catalog/advertising/branch.md)
         * [DoubleClick Floodlight extension](./catalog/advertising/doubleclick-floodlight.md)
