@@ -26,4 +26,4 @@ For information on how to connect to cloud storage destinations, see [Workflow t
 ## Available Cloud storage streaming destinations
 
 - [Amazon Kinesis destination](./amazon-kinesis.md)
-- [Azure Event Hubs destination](.azure-event-hubs.md)
+- [Azure Event Hubs destination](./azure-event-hubs.md)

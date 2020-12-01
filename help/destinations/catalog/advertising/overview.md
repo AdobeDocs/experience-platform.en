@@ -32,7 +32,6 @@ To understand the difference between connections and extensions, see [Extensions
 - [Adobe Advertising Cloud extension](./adobe-advertising-cloud.md)
 - [Awin Advertising Conversion Tag extension](./awin-conversiontag.md)
 - [Awin Advertising Mastertag extension](./awin-mastertag.md)
-- [Beemray extension](./beemray.md)
 - [Bing Ads Universal Event Tracking extension](./bing-ads.md)
 - [Branch extension](./branch.md)
 - [DoubleClick Floodlight extension](./doubleclick-floodlight.md)

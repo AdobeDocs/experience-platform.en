@@ -16,7 +16,7 @@ Adobe Analytics is an analytics extension in Real-time Customer Data Platform. F
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
-![Adobe Analytics extension](../..//assets/catalog/analytics/adobe-analytics/catalog.png)
+![Adobe Analytics extension](../../assets/catalog/analytics/adobe-analytics/catalog.png)
 
 ## Prerequisites {#prerequisites}
 

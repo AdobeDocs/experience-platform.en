@@ -19,7 +19,7 @@ One of the core functionalities of Real-time CDP is ingesting your first-party d
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./destinations-catalog.md) of all the destinations available in Real-time CDP.
-* Use **[!UICONTROL Destinations]** to [activate](../../ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use **[!UICONTROL Destinations]** to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -55,9 +55,9 @@ For more information about selecting marketing use cases in the create destinati
 
 * [Advertising destinations - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
 * [Advertising destinations - Google Ads](./catalog/advertising/google-ads-destination.md)
-* [Advertising destinations - Google Display & Video 360 ](./catalog/advertising/google-dv360-destination.md)
+* [Advertising destinations - Google Display & Video 360 ](./catalog/advertising/google-dv360.md)
 * [Cloud storage destinations](./catalog/cloud-storage/workflow.md)
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
-* [Social network destinations](./catalog/social-network/workflow.md)
+* [Social network destinations](./catalog/social/workflow.md)
 
 For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](./ui/activate-destinations.md#review).

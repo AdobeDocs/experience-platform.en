@@ -131,7 +131,7 @@ In the **[!UICONTROL Mapping]** step, select which attributes and identities fro
 For identifiers that should be mapped to a channel, i.e., a device, map to the appropriate channel based on the source. The following images show how to map a Google Advertising ID to an [!DNL Airship] Android channel. 
 
 ![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-source-identity.png) 
-![Connect to Airship Tags](/../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png) 
+![Connect to Airship Tags](../../assets/catalog/mobile-engagement/airship-tags/select-target-identity.png) 
 ![Channel Mapping](../../assets/catalog/mobile-engagement/airship-tags/mapping-option.png)
 
 On the **[!UICONTROL Segment schedule]** page, scheduling is currently disabled. Click **[!UICONTROL Next]** to continue to the review step.

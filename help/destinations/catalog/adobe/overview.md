@@ -26,7 +26,7 @@ To understand the difference between connections and extensions, see [Extensions
 - [Adobe Media Analytics for Audio and Video extension](../analytics/adobe-video-analytics.md)
 - [Adobe Target extension](../personalization/adobe-target.md)
 - [Adobe Target v2 extension](../personalization/adobe-target-v2.md)
-- [Audience Manager DIL extension](../data-management/aam-dil.md)
+- [Audience Manager DIL extension](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID Service extension](../personalization/adobe-ecid.md)
 - [Marketo extension](../email/marketo.md)
 - [Marketo Munchkin extension](../email/marketo-munchkin.md)

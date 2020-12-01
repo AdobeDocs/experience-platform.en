@@ -65,7 +65,7 @@ In the [Segment schedule](../../ui/activate-destinations.md#segment-schedule) st
 
 When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 
-![Segment Mapping ID](assets/segment-mapping-id.png)
+![Segment Mapping ID](../../assets/common/segment-mapping-id.png)
 
 ## Exported data {#exported-data}
 

@@ -59,7 +59,7 @@ If you are using email address as primary identity in your schema, you can skip 
 
 If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
-![Loyalty ID as identity](../assets/ui/activate-destinations/ewardsid-as-identity.gif)
+![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
 Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
 
@@ -159,7 +159,7 @@ It is recommended that one of the attributes is a [unique identifier](/help/rtcd
 >- The fields are used in the segment definition.
 >- The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 
@@ -171,9 +171,9 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
-![data policy violation](../assets/ui/activate-destinations/data-policy-violation.png)
+![data policy violation](../assets/common/data-policy-violation.png)
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
@@ -193,7 +193,7 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
-Note that you can edit the file format. For more information, go to the [Configure](../../ui/activate-destinations.md#configure) step for cloud storage destinations and email marketing destinations. 
+Note that you can edit the file format. For more information, go to the [Configure](#configure) step for cloud storage destinations and email marketing destinations. 
 
 With the default file format, the files you would receive on three consecutive days could look like this:
 
@@ -203,7 +203,7 @@ Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_202004090
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200410061130.csv
 ```
 
-The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](assets/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
+The presence of these files in your storage location is confirmation of successful activation. To understand how the exported files are structured, you can [download a sample .csv file](../assets/common/sample_export_file_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv). This sample file includes the profile attributes `person.firstname`, `person.lastname`, `person.gender`, `person.birthyear`, and `personalEmail.address`.
 
 ### Advertising destinations
 

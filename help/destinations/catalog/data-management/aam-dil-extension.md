@@ -14,7 +14,7 @@ This is the Adobe Audience Manager Data Integration Library extension (client-si
 
 [!DNL Audience Manager] DIL is a Data Management Platform (DMP) extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [Audience Manager extension page](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/adobe-audience-manager-extension.html) in Experience Platform Launch documentation.
 
-This destination is an [!DNL Experience Platform Launch] extension. For more information about how Launch extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/experience-platform-launch-extensions.md).
+This destination is an [!DNL Experience Platform Launch] extension. For more information about how Launch extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Audience Manager DIL extension](../../assets/catalog/data-management-platform/aam-dil-extension/configure.png)
 
