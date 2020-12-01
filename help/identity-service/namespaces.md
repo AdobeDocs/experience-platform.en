@@ -22,7 +22,7 @@ Working with identity namespaces requires an understanding of the various Adobe 
 
 A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when [!DNL Real-time Customer Profile] merges profile data, both the identity value and the namespace must match.
 
-For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and bring the data together in the identity graph for the individual.
+For example, two profile fragments may contain different primary IDs but they share the same value for the "Email" namespace, therefore [!DNL Platform] is able to see that these fragments are actually the same individual and and brings the data together in the identity graph for the individual.
 
 ![](images/identity-service-stitching.png)
 
@@ -37,63 +37,65 @@ The following identity types are available within [!DNL Platform]:
 | Cookie ID | Cookie IDs identify web browsers. These identities are critical for expansion and constitute the majority of the identity graph. However, by nature they decay fast and lose their value over time. |
 | Cross-Device ID | Cross-device IDs identify an individual and usually tie other IDs together. Examples include a login ID, CRM ID, and loyalty ID. This is an indication to [!DNL Identity Service] to handle the value sensitively. |
 | Device ID | Device IDs identify hardware devices, such as IDFA (iPhone and iPad), GAID (Android), and RIDA (Roku), and can be shared by multiple people in households.|
-| Email| Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
+| Email address | Email addresses are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include personally identifiable information (PII). This is an indication to [!DNL Identity Service] to handle the value sensitively.|
 | Non-people identifier | Non-people IDs are used for storing identifiers that require namespaces but are not connected to a person cluster. For example, a product SKU, data related to products, organizations, or stores. |
-| Phone number | Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
+| Phone number | Phone numbers are often associated with a single person and therefore can be used to identify that person across different channels. Identities of this type include PII. This is indication to [!DNL Identity Service] to handle the value sensitively. |
 
 ### Standard namespaces
 
-[!DNL Experience Platform] provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
+Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the Identity Service] API or through the Platform UI.
 
-[!DNL Experience Platform] also provides namespaces for integration purposes. These namespaces are hidden by default.
+Platform also provides namespaces for integration purposes. These namespaces are hidden by default.
 
-The following standard namespaces are provided for use by all organizations within [!DNL Experience Platform]:
+The following standard namespaces are provided for use by all organizations within  Platform:
 
 | Display name | Description |
 | ------------ | ----------- |
 | AdCloud | Adobe AdCloud - ID Syncing Partner |
-| Adobe Analytics (Legacy ID) | Namespace representing Adobe Analytics. |
-| Apple IDFA (ID for Advertisers) | Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
-| Apple Push Notification service | Identities collected via Apple for Push notification Service. |
+| Adobe Analytics (Legacy ID) | A namespace that represents Adobe Analytics. |
+| Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
+| Apple Push Notification service | A namespace that represents identities collected using Apple Push Notification service. See the following document on [Apple Push Notification service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1) for more information. |
 | CORE | Legacy name: "Adobe AudienceManager" |
 | ECID | Alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
-| Email | Namespace representing email. |
-| Emails (SHA256, lowercased) | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
-| Firebase Cloud Messaging | Identities collected via Google for Push notification Service. |
-| Google Ad ID (GAID) | This namespace is associated to a Google Ad ID. |
-| Google Click ID | This namespace is associated to a Google Click ID. |
-| Phone | Namespace representing phone. |
-| Phone (E.164) | Namespace for raw phone numbers in E.164 format. The plus (`+`) sign is required. |
-| Phone (SHA256_E.164) | Phone numbers need to be hashed using SHA256 without any dashes and under the E.164 format.  |
-| Phone (SHA256) | Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
+| Email | A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
+| Firebase Cloud Messaging | A namespace that represents identities collected using Google Firebase Cloud Messaging push notifications. See the following document on [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) for more information. |
+| Google Ad ID (GAID) | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
+| Google Click ID | A namespace that represents a Google Click ID. See the following document on [Click tracking in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) for more information. |
+| Phone | A namespace that represents a phone number. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
+| Phone (E.164) | A namespace for raw phone numbers that need to be hashed E.164 in format. The plus (`+`) sign is required. |
+| Phone (SHA256_E.164) | A namespace for phone numbers that need to be hashed using SHA256 without any dashes and under the E.164 format.  |
+| Phone (SHA256) | A namespace for phone numbers that need to be hashed using SHA256. Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
 | TNTID | Adobe Target (TNTID) |
-| Windows AID | This namespace is associated with Windows Ad ID. |
+| Windows AID | A namespace that represents a Windows Advertising ID. |
 
-To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left-rail and then select the **[!UICONTROL Browse]** tab. A list of standard identity namespaces accessible to your organization appears on the screen. You can sort the list alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the list chronologically by their most recent update date.
+To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Browse]** tab to display a list of standard identity namespaces accessible to your organization. You can sort the namespaces alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the namespaces chronologically by their most recent update date.
 
-Select a namespace to see more specific information on the right-rail.
+Select a namespace to see more specific information on the right rail.
 
 ![](./images/browse-namespaces.png)
 
-## Managing namespaces for your organization
+## Managing custom namespaces
 
-Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [!DNL Identity Service] API or through the UI.
+Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
-To create a custom namespace using the UI, select the **[!UICONTROL Create identity namespace]** button on the top-right of the **[!UICONTROL Identity Namespace]** page
+To create a custom namespace using the UI, navigate to the **[!UICONTROL Identities]** workspace, select **[!UICONTROL Browse]**, and then select **[!UICONTROL Create identity namespace]**.
 
 ![](./images/create.png)
 
-The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and a unique **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to provide further information on the namespace. When finished, select **[!UICONTROL Create]**.
+The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to further information about the namespace. When finished, select **[!UICONTROL Create]**.
 
-Namespaces that you define are private to your organization and require a unique **[!UICONTROL Identity Symbol]** in order to be created successfully.
+>[!IMPORTANT]
+>
+>Namespaces that you define are private to your organization and require a unique identity symbol in order to be created successfully.
 
 ![](./images/create-namespace.png)
 
-Similar to standard namespaces, you can click on a custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a custom namespace you can also edit its display name and description from the details area.
+Similar to standard namespaces, you can select a custom namespace from the **[!UICONTROL Browse]** tab to view its details. However, with a custom namespace you can also edit its display name and description from the details area.
 
 >[!NOTE]
 >
->Once a namespace has been created, it cannot be deleted and its "Identity Symbol" and "Type" cannot be changed.
+>Once a namespace has been created, it cannot be deleted and its identity symbol and type cannot be changed.
 
 ## Namespaces in identity data
 
@@ -101,4 +103,4 @@ Supplying the namespace for an identity depends on the method you use for provid
 
 ## Next steps
 
-Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [Identity graph viewer](./ui/identity-graph-viewer.md).
+Now that you understand the key concepts of identity namespaces, you can begin to learn how to work with your identity graph using the [identity graph viewer](./ui/identity-graph-viewer.md).
