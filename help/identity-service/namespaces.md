@@ -43,7 +43,7 @@ The following identity types are available within [!DNL Platform]:
 
 ### Standard namespaces
 
-Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the Identity Service] API or through the Platform UI.
+Experience Platform provides several identity namespaces that are available to all organizations. These are known as standard namespaces and are visible using the [!DNL Identity Service] API or through the Platform UI.
 
 Platform also provides namespaces for integration purposes. These namespaces are hidden by default.
 
@@ -58,14 +58,14 @@ The following standard namespaces are provided for use by all organizations with
 | CORE | Legacy name: "Adobe AudienceManager" |
 | ECID | Alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
 | Email | A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
-| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. |
-| Firebase Cloud Messaging | A namespace that represents identities collected using Google Firebase Cloud Messaging push notifications. See the following document on [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) for more information. |
+| Emails (SHA256, lowercased) | A namespace for pre-hashed email address. Values provided in this namespace are converted to lowercase before hashing with SHA256. Leading and trailing spaces need to be trimmed before an email address is normalized. This setting cannot be changed retroactively. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
+| Firebase Cloud Messaging | A namespace that represents identities collected using Google Firebase Cloud Messaging for push notifications. See the following document on [Google Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging) for more information. |
 | Google Ad ID (GAID) | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
 | Google Click ID | A namespace that represents a Google Click ID. See the following document on [Click tracking in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) for more information. |
 | Phone | A namespace that represents a phone number. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
 | Phone (E.164) | A namespace for raw phone numbers that need to be hashed E.164 in format. The plus (`+`) sign is required. |
-| Phone (SHA256_E.164) | A namespace for phone numbers that need to be hashed using SHA256 without any dashes and under the E.164 format.  |
-| Phone (SHA256) | A namespace for phone numbers that need to be hashed using SHA256. Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. |
+| Phone (SHA256_E.164) | A namespace for phone numbers that need to be hashed using SHA256 without any dashes and under the E.164 format. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
+| Phone (SHA256) | A namespace for phone numbers that need to be hashed using SHA256. Before hashing, you must remove symbols, letters, and any leading zeroes. You must also add the country code as a prefix. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
 | TNTID | Adobe Target (TNTID) |
 | Windows AID | A namespace that represents a Windows Advertising ID. |
 
