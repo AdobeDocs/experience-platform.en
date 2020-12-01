@@ -57,7 +57,7 @@ In addition to basic fields, you can also nest additional data types within your
 
 This demonstrates how flexible data types can be in terms of describing your data: data types can employ fields which are also data types, which themselves can contain further data types, and so on. This allows you to abstract and reuse common data patterns throughout your XDM schemas, making it easier to represent complex data structures.
 
-Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the Schema Library.
+Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
 ## Add the data type to a mixin
 
