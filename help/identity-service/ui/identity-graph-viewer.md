@@ -91,6 +91,7 @@ The graph viewer returns an error if the following prerequisites are not met:
 - The identity value does not exist in the selected namespace.
 - The graph has fewer than two identities.
 - The graph exceeds the maximum of 400 identities.
+- You are in a non-production sandbox environment.
 
 ![large-cluster](../images/identity-graph-viewer/error-screen.png)
 
