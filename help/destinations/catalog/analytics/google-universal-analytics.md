@@ -14,7 +14,7 @@ seo-description: The Google Universal Analytics extension is an analytics destin
 
 [!DNL Google Universal Analytics] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Google Universal Analytics extension](../../assets/catalog/analytics/google-universal-analytics/catalog.png)
 

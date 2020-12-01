@@ -18,7 +18,7 @@ DTVR: This accounts for linear TV viewing occurring on desktop and mobile device
 
 [!DNL Nielsen VideoJS Player Handler] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101361.nielsen-digital-sdk-extension.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Nielsen VideoJS Player Handler Extension](../../assets/catalog/analytics/nielsen-videojs/catalog.png)
 

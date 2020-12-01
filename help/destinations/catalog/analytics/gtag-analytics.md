@@ -14,7 +14,7 @@ Send data to [!DNL Google Analytics], [!DNL Google Ads], and the [!DNL Google Ma
 
 [!DNL Google Global Site Tag] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Google Global Site Tag extension](../../assets/catalog/analytics/gtag-analytics/catalog.png)
 

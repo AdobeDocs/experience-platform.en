@@ -14,7 +14,7 @@ seo-description: The Twitter Universal Website Tag extension is an advertising d
 
 [!DNL Twitter Universal Website Tag] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Twitter Universal Website Tag Extension](../../assets/catalog/advertising/twitter-uwt/catalog.png)
 

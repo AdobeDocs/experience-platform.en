@@ -14,7 +14,7 @@ seo-description: The QuestionPro Intercept Surveys extension is a survey destina
 
 [!DNL QuestionPro Intercept Surveys] is a survey extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![QuestionPro Intercept Surveys Extension](assets/web-intercept-surveys-extension.png)
 

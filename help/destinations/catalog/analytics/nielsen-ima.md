@@ -12,7 +12,7 @@ seo-description: The Nielsen IMA Handler extension is an analytics destination i
 
 [!DNL Nielsen IMA Handler] is an analytics extension in Real-time Customer Data Platform.
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Nielsen IMA Handler Extension](../../assets/catalog/analytics/nielsen-ima/catalog.png)
 

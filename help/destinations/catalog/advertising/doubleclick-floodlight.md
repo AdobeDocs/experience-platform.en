@@ -14,7 +14,7 @@ This extension allows for quick and easy deployment of [!DNL DoubleClick Floodli
 
 [!DNL DoubleClick Floodlight] (Beta) is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Doubleclick Floodlight extension](../../assets/catalog/advertising/doubleclick-floodlight/catalog.png)
 

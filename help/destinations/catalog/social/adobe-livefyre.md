@@ -14,7 +14,7 @@ Adobe Livefyre enables you to discover, organize, and publish a constant flow of
 
 Adobe Livefyre is a social extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Adobe Livefyre extension](../../assets/catalog/social/adobe-livefyre/catalog.png)
 

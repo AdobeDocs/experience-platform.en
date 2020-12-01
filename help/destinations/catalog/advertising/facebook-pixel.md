@@ -14,7 +14,7 @@ The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the ef
 
 [!DNL Facebook Pixel] is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Facebook Pixel extension](../../assets/catalog/advertising/facebook-pixel/catalog.png)
 

@@ -14,7 +14,7 @@ seo-description: The Parse.ly Analytics extension is an analytics destination in
 
 Parse.ly is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Parse.ly Analytics](https://www.parse.ly/).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Parse.ly Analytics Extension](../../assets/catalog/analytics/parsely/catalog.png)
 

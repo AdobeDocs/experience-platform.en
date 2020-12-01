@@ -14,7 +14,7 @@ seo-description: The KickFire extension is a personalization destination in Real
 
 [!DNL KickFire] is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Kickfire extension](../../assets/catalog/personalization/kickfire/catalog.png)
 

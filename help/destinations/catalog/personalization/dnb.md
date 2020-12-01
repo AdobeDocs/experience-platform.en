@@ -14,7 +14,7 @@ Analyze your unknown visitors and convert them into leads.
 
 [!DNL D&B Visitor Intelligence] is a personalization extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [D&B website](https://www.dnb.com/).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![D&B Visitor Intelligence extension](../../assets/catalog/personalization/dnb/catalog.png)
 

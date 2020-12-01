@@ -14,7 +14,7 @@ Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
 [!DNL DialogTech] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![DialogTech extension](../../assets/catalog/analytics/dialogtech/catalog.png)
 
