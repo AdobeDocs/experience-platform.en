@@ -43,7 +43,7 @@ Select a destination card in the catalog to open the right rail.  Here, you can 
 
 ![Destination catalog options](../assets/ui/workspace/destination-right-rail.png)
 
-For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/destinations-catalog.md) and [Destination Types and Categories](../destination-types.md).
+For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
 
 ## [!UICONTROL Accounts] {#accounts}
 

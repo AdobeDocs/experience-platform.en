@@ -591,4 +591,4 @@ The returned response should include in the `transformations` parameter the segm
 By following this tutorial, you have successfully connected Real-time CDP to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
-*   [Destinations Catalog overview](../catalog/destinations-catalog.md)
+*   [Destinations Catalog overview](../catalog/overview.md)

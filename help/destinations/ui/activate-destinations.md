@@ -13,7 +13,7 @@ Activate the data you have in Real-time Customer Data Platform by mapping segmen
 
 ## Prerequisites {#prerequisites}
 
-To activate data to destinations, you must have successfully [connected a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/destinations-catalog.md), browse the supported destinations, and set up one or more destinations.
+To activate data to destinations, you must have successfully [connected a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and set up one or more destinations.
 
 ## Activate data {#activate-data}
 

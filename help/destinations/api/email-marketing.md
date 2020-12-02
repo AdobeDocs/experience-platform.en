@@ -647,4 +647,4 @@ The returned response should include in the `transformations` parameter the segm
 By following this tutorial, you have successfully connected Real-time CDP to one of your preferred email marketing destinations and set up a dataflow to the respective destination. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
-*   [Destinations Catalog overview](../catalog/destinations-catalog.md)
+*   [Destinations Catalog overview](../catalog/overview.md)
