@@ -60,7 +60,7 @@ To learn more, see the [Real-time Customer Data Platform metrics overview](../..
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/overview.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
 
 **Available destinations**
 

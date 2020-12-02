@@ -42,7 +42,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | ------- | ----------- |
 | UX improvements | Users can access inline table actions for easier access to primary actions such as such as adding data, editing scheduling, and adding segments. See the [destinations workspace](../../destinations/ui/destinations-workspace.md) document for more information. |
 
-To learn more, visit the [destinations overview](../../destinations/overview.md)
+To learn more, visit the [destinations overview](../../destinations/home.md)
 
 ## [!DNL Observability Insights] {#observability}
 

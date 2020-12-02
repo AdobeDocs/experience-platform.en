@@ -119,7 +119,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | File scheduling | For both email-based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
 
-For more information, please see the [Destinations overview](../../destinations/overview.md).
+For more information, please see the [Destinations overview](../../destinations/home.md).
 
 ## Intelligent Services {#intelligent-services}
 
