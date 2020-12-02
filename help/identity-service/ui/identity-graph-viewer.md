@@ -86,12 +86,13 @@ Identity graphs with larger clusters of identities are also accessible through t
 
 ## Appendix
 
-The graph viewer returns an error if the following prerequisites are not met:
+The graph viewer returns an error if the following prerequisites and limitations are not met:
 
 - The identity value does not exist in the selected namespace.
-- The graph has fewer than two identities.
-- The graph exceeds the maximum of 400 identities.
-- You are in a non-production sandbox environment.
+- The graph viewer requires a minimum of two linked identities.
+- The graph viewer exceeds the maximum of 400 identities.
+- The graph viewer is currently not accessible in non-production sandboxes.
+- The graph viewer currently only supports batch ingested data and does not display data ingested using streaming sources.
 
 ![large-cluster](../images/identity-graph-viewer/error-screen.png)
 
