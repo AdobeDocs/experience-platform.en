@@ -10,7 +10,7 @@ seo-description: Create a real-time outbound connection to your Azure Event Hubs
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Event Hubs] destination in Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL Azure Event Hubs] destination in Adobe Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -20,7 +20,7 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](/help/rtcdp/destinations/streaming-destinations-api-tutorial.md).
-* To connect to [!DNL Azure Event Hubs] using the Real-time CDP user interface, see the sections below.
+* To connect to [!DNL Azure Event Hubs] using the Adobe Real-time CDP user interface, see the sections below.
 
 ![AWS Kinesis in the UI](/help/rtcdp/destinations/assets/azure-event-hubs-destination.png)
 
@@ -57,7 +57,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](/help/rtcdp/destinations/activate-destinations.md) for information about the segment activation workflow.
 
 
 ## Exported data {#exported-data}

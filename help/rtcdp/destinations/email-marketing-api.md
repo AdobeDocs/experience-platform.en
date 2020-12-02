@@ -24,7 +24,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Real-time CDP.
+The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Adobe Real-time CDP.
 
 ### Gather required credentials
 

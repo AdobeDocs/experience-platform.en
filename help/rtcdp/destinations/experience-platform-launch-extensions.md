@@ -11,12 +11,12 @@ seo-description: Launch is the next-generation of tag management capabilities fr
 Adobe Experience Platform Launch is the next-generation of tag management capabilities from Adobe. Platform Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature.
 
 For an introduction to Experience Platform Launch capabilities, see the resources below:
-*  Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/overview.html)
-*  Adobe Experience Platform Launch [quick start videos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
+*  Adobe Experience Platform Launch [documentation](https://docs.adobe.com/content/help/en/launch/using/overview.html)
+*  Adobe Experience Platform Launch [quick start videos](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/videos.html). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
-## How to find the Platform Launch extensions in the Real-time CDP interface {#how-to-find-extensions-in-interface}
+## How to find the Platform Launch extensions in the Adobe Real-time CDP interface {#how-to-find-extensions-in-interface}
 
-To find the Platform Launch extensions in the Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the Platform Launch extensions in the Adobe Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](/help/rtcdp/destinations/assets/extensions-filter.png)
 
@@ -36,7 +36,7 @@ Adobe Experience Platform Launch is free for existing Experience Cloud customers
 >
 >While you cannot activate segments to Platform Launch extensions, you can set up rules to only forward event data in certain situations. Read more below.
 
-You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Experience Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Experience Platform Launch documentation](https://docs.adobe.com/help/en/launch/using/reference/manage-resources/rules.html).
 
 ## Example use cases for Platform Launch extensions {#extensions-use-cases}
 
@@ -49,7 +49,7 @@ Platform Launch extensions enable you to satisfy various customer use cases. Som
 
 ## Extension categories {#extension-categories}
 
-Platform Launch extensions can fall under the following categories in Real-time CDP:
+Platform Launch extensions can fall under the following categories in Adobe Real-time CDP:
 
 * [Advertising](/help/rtcdp/destinations/advertising-destinations.md)
 * [Analytics](/help/rtcdp/destinations/analytics-destinations.md)

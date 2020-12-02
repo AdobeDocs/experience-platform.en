@@ -19,7 +19,7 @@ One of the core functionalities of Real-time CDP is ingesting your first-party d
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](/help/rtcdp/destinations/destinations-catalog.md) of all the destinations available in Real-time CDP.
-* Use **[!UICONTROL Destinations]** to [activate](../../ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use **[!UICONTROL Destinations]** to [activate](/help/rtcdp/destinations/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -49,7 +49,7 @@ Data governance is enforced for Real-time CDP destinations through:
 * *Marketing use cases* that you can select in the create destinations workflow;
 * *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases.
   
-See the [!DNL Data Governance] in Real-time CDP documentation for more information about [marketing use cases](../../../rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](../../../rtcdp/privacy/data-governance-overview.md#enforcement).
+See the [!DNL Data Governance] in Real-time CDP documentation for more information about [marketing use cases](/help/rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](/help/rtcdp/privacy/data-governance-overview.md#enforcement).
 
 For more information about selecting marketing use cases in the create destination workflow, see the following pages for the different destination types in Real-time CDP:
 
