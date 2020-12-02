@@ -586,6 +586,31 @@ The returned response should include in the `transformations` parameter the segm
 }
 ```
 
+## Using Postman collections to connect to streaming destinations  {#collections}
+
+To connect to the streaming destinations described in this tutorial in a more streamlined way, you can use [[!DNL Postman]](https://www.postman.com/). 
+
+[!DNL Postman] is a tool that you can use to make API calls and manage libraries of predefined calls and environments.
+
+For this specific tutorial, we included the following [!DNL Postman] collections, attached to this article:
+
+* [!DNL AWS Kinesis] [!DNL Postman] collection
+* [!DNL Azure Event Hubs] [!DNL Postman] collection
+
+Click [here](assets/DestinationPostmanCollection.zip) to download the collections archive.
+
+Each collection includes the necessary requests and environment variables, for [!DNL AWS Kinesis], and [!DNL Azure Event Hub], respectively.
+
+### How to use the Postman collections
+
+To successfully connect to the destinations using the attached [!DNL Postman] collections, follow these steps:
+
+* Download and install [!DNL Postman];
+* [Download](assets/DestinationPostmanCollection.zip) and unzip the attached collections;
+* Import the collections from their corresponding folders into Postman;
+* Fill in the environment variables according to the instructions in this article;
+* Run the [!DNL API] requests from Postman, based on the instructions in this article.
+
 ## Next steps
 
 By following this tutorial, you have successfully connected Real-time CDP to one of your preferred streaming destinations and set up a data flow to the respective destination. Outgoing data can now be used in the destination for customer analytics or any other data operations you may wish to perform. See the following pages for more details:
