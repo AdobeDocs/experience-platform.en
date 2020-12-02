@@ -230,7 +230,7 @@ When you've added the “Gift Giving Cart Abandoners” segment, you can see rou
 
 Click **[!UICONTROL Send to destinations]**.
 
-In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)
