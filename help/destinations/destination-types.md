@@ -22,11 +22,11 @@ In Real-time Customer Data Platform, we distinguish between two destination type
 
 #### Profile export destinations
 
-Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key. The [Amazon S3 cloud storage destination](../catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
+Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key. The [Amazon S3 cloud storage destination](./catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
 
 #### Segment export destinations
 
-Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [[!DNL Google Display & Video 360]](../catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](../catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
+Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
 
 #### Profile export and Segment export destinations - video overview
 

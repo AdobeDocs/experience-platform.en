@@ -18,7 +18,7 @@ One of the core functionalities of Real-time CDP is ingesting your first-party d
 
 ## Destinations steps {#steps}
 
-* Choose from a [self-service catalog](./destinations-catalog.md) of all the destinations available in Real-time CDP.
+* Choose from a [self-service catalog](./catalog/destinations-catalog.md) of all the destinations available in Real-time CDP.
 * Use **[!UICONTROL Destinations]** to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
