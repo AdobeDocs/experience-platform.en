@@ -2,14 +2,16 @@
 keywords: Experience Platform;home;popular topics;update accounts;
 description: 
 solution: Experience Platform
-title: Update account information in the UI
+title: Update account details in the UI
 topic: overview
 type: Tutorial
 ---
 
-# Update account information in the UI
+# Update account details in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for updating the information and credentials of an existing account from the **[!UICONTROL Sources]** workspace.
+In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to edit, add, and delete details of an account, including values for its name, description, and authentication credentials.
+
+This tutorial provides steps for updating the details and credentials of an existing account from the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
@@ -47,6 +49,8 @@ The **[!UICONTROL Edit account details]** dialog box allows you to update an acc
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
 After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful update.
+
+![update-confirmed](../../images/tutorials/update/update-confirmed.png)
 
 ## Next steps
 
