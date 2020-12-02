@@ -60,7 +60,7 @@ To learn more, see the [Real-time Customer Data Platform metrics overview](../..
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/overview.md) article.
 
 **Available destinations**
 
@@ -69,12 +69,12 @@ With the November release, Adobe's Real-time Customer Data Platform supports the
 * Advertising: [!DNL Google]
 * Email marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-See the [destination catalog](../../rtcdp/destinations/destinations-catalog.md) for information about each of the destinations.
+See the [destination catalog](../../destinations/catalog/destinations-catalog.md) for information about each of the destinations.
 
 **Known limitations**
 
-* The control to allow for custom activation schedules in the [activation flow](../../rtcdp/destinations/activate-destinations.md#activate-data) (Schedule step) is not available with the initial release. 
-* There is currently no way to edit or delete a destination configuration. To work around this limitation, you can enable or disable the destination in the top right corner of the [destination details page](../../rtcdp/destinations/destination-details-page.md). 
+* The control to allow for custom activation schedules in the [activation flow](../../destinations/ui/activate-destinations.md#activate-data) (Schedule step) is not available with the initial release. 
+* There is currently no way to edit or delete a destination configuration. To work around this limitation, you can enable or disable the destination in the top right corner of the [destination details page](../../destinations/ui/destination-details-page.md). 
 * No validation is currently in place for account details, path, or credentials when connecting to your destination or storage account. Make sure you are entering the right credentials and double-check for spelling errors or typos. 
 * No credential renewals are in place with the initial release. Once an account is expired or needs refreshing, you must create a new destination connection and remap your previously mapped segments.
 

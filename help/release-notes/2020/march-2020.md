@@ -73,7 +73,7 @@ New destinations are available where you can activate your Adobe Experience Plat
 |Cloud storage destinations | Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
 |Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
 
-To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
+To learn more, visit the [destinations overview](../../destinations/overview.md)
 
 ## [!DNL Identity Service] {#identity}
 

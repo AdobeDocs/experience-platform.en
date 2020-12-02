@@ -107,4 +107,4 @@ In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrat
 
 * None
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../../destinations/overview.md) for more information.
