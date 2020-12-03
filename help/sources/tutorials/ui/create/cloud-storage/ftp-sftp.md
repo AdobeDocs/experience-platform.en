@@ -38,9 +38,9 @@ In order to connect to SFTP, you must provide values for the following connectio
 | `privateKeyContent` | The Base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
-## Connect to your SFTP server
-
 Once you have gathered your required credentials, you can follow the steps below to create a new SFTP account to connect to Platform.
+
+## Connect to your SFTP server
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an inbound account with.
 
@@ -60,7 +60,7 @@ The SFTP connector provides you different authentication types for access. Under
 
 ![connect-password](../../../../images/tutorials/create/sftp/password.png)
 
-Alternatively, you can select **[SSH public key]** and connect your SFTP account using a combination of **[!UICONTROL Private key content]** and **[!UICONTROL Passphrase]**.
+Alternatively, you can select **[SSH public key]** and connect your SFTP account using a combination of [!UICONTROL Private key content] and [!UICONTROL Passphrase].
 
 >[!IMPORTANT]
 >
