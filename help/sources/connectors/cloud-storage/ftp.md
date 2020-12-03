@@ -41,7 +41,7 @@ The documentation below provides information on how to connect an FTP server to 
 
 ### Using the APIs
 
-- [Create an FTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Create an FTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 

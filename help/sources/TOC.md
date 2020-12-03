@@ -76,6 +76,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
       - [Azure Event Hubs connector](tutorials/api/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
+      - [FTP connector](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
