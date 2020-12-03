@@ -17,16 +17,37 @@ This tutorial covers the steps for exploring existing schemas, classes, mixins, 
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all existing XDM resources in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Mixins]**, and **[!UICONTROL Data types]** specifically.
 
-![](../images/explore/tabs.png)
+![](../images/tutorials/explore/tabs.png)
 
-On the [!UICONTROL Browse] tab, you can use the search bar or filter icon (![](../images/explore/icon.png)) to narrow down listed results.
+On the [!UICONTROL Browse] tab, you can use the search bar or filter icon (![](../images/tutorials/explore/icon.png)) to narrow down listed results.
 
-For example, if you wanted to look up the standard data type
+For example, to filter the list to only show standard data types provided by Adobe, select the filter icon to open the filter rail. Under **[!UICONTROL Type]**, select **[!UICONTROL Datatype]**, and under **[!UICONTROL Owner]**, select **[!UICONTROL Adobe]**. 
 
-![](../images/explore/filter.png)
+![](../images/tutorials/explore/filter.png)
 
-![](../images/explore/search.png)
+You can use the search bar to narrow results even further. Any resources whose titles match the search query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, all resources that contain standard fields matching the search query are listed.
+
+![](../images/tutorials/explore/search.png)
+
+When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
 ## Explore the resource in the canvas
+
+Once you select a resource, its structure opens in the canvas.
+
+![](../images/tutorials/explore/canvas.png)
+
+Any object-type fields at the root level will be collapsed by default. To show the sub-properties of any field, select its icon in the canvas.
+
+![](../images/tutorials/explore/field-expand.png)
+
+### Data types
+
+Note that for each field shown in the canvas, its corresponding data type is shown next to its name, indicating at a glance the type of data that field expects for data ingestion.
+
+Any data type that is appended with square brackets (`[]`) represents an array of that data type. For example, a data type of **[!UICONTROL String]\[]** indicates that the field expects an array of string values. A data type of **[!UICONTROL Payment Item]\[]**
+
+![](../images/tutorials/explore/field-properties.png)
+
 
 ## Next steps
