@@ -1,72 +1,28 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;data flows
-description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the Sources workspace.
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the Sources workspace.
 solution: Experience Platform
-title: Monitor accounts and dataflows
+title: Monitor dataflows
 topic: overview
 type: Tutorial
 ---
 
-# Monitor accounts and dataflows in the UI
+# Monitor dataflows in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing accounts and dataflows from the [!UICONTROL Sources] workspace.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    -   [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-
-## Monitor accounts
-
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create accounts and dataflows with. Each source shows the number of existing accounts and dataflows associated to them.
-
-Select **[!UICONTROL Accounts]** from the top header to view existing accounts.
-
-![catalog](../../images/tutorials/monitor/catalog-accounts.png)
-
-The **[!UICONTROL Accounts]** pages appears. On this page is a list of viewable accounts, including information about their source, username, number of dataflows, and date of creation.
-
-Select the funnel icon on the top left to launch the sort window.
-
-![accounts](../../images/tutorials/monitor/accounts-list.png)
-
-The sorting panel allows you to access accounts from a specific source. Select the source you wish to work with and select the account from the list on the right.
-
->[!TIP]
->
-> Use the ![spectrum-control](../../images/tutorials/monitor/spectrum-control.png) button in the **[!UICONTROL Name]** column to create a new source dataflow for the selected account.
-
-![accounts-select](../../images/tutorials/monitor/accounts-sort.png)
-
-Additionally, you can edit existing account information and update your account credentials. Select the pencil icon for the account information you want to edit.
-
-![](../../images/tutorials/monitor/click-edit.png)
-
-The **[!UICONTROL Edit account details]** modal appears. From this page, you can update your existing account details and authentication credentials.
-
->[!NOTE]
->
-> Editing account details is available on all batch source connectors.
-
-![](../../images/tutorials/monitor/edit-account.png)
-
-From the **[!UICONTROL Accounts]** page, you can view a list of existing dataflows or target datasets associated with the account you accessed. Select the ellipses (`...`) button to bring up more available options for your selected dataflow. These options are further described below:
-
-| Control | Description |
-| ------- | ----------- |
-| [!UICONTROL Edit schedule] | Allows you to edit the ingestion schedule of the dataflow. |
-| [!UICONTROL Disable dataflow] | Allows you to disable data ingestion for the selected dataflow. |
-| [!UICONTROL Delete] | Allows you to delete the selected dataflow. |
-
-![dataflows](../../images/tutorials/monitor/dataflows.png)
+- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+  - [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  - [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Monitor dataflows
 
-Dataflows can be accessed directly from the **[!UICONTROL Catalog]** page without viewing **[!UICONTROL Accounts]**. Select **[!UICONTROL Dataflows]** from the top header to view a list of dataflows.
+Log in to Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** ffrom the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view existing dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
