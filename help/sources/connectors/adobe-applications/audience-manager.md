@@ -67,4 +67,4 @@ Adobe Audience Manager creates one connection in Catalog: Audience Manager Conne
 | Audience Manager Data | Latency | Notes |
 | --- | --- | --- |
 | Real-time data | < 35 minutes. | Time from being captured at Audience Manager Edge node to appearing on Platform Data Lake. |
-| Profile data | < 2 days  | Time from being captured via DCS/PCS Edge data and on-boarded data, being processed to a user profile, to then appearing in Profile. This data does not land on Platform Data Lake directly today. Profile toggle can be enabled on Audience Manager Profile datasets to ingest this data directly into Profile. |
+| Profile data | < 2 days  | Time from being captured via DCS/PCS Edge data and on-boarded data, being processed to a user profile, to then appearing in Profile. This data does not land on Platform Data Lake directly today. Profile toggle can be enabled for Audience Manager Profile datasets to ingest this data directly into Profile. |
