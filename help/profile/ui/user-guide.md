@@ -20,9 +20,9 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](http://platform.adobe.com), select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
+In the [[!DNL Experience Platform] UI](http://platform.adobe.com), select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides a dashboard outlining key metrics related to your Profile data. 
 
-![](../images/user-guide/profiles-overview.png)
+To learn more, visit the [Profile dashboard documentation](profile-dashboard.md).
 
 ## Browse
 
