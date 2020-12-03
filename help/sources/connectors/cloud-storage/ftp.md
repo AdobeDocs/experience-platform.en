@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
 solution: Experience Platform
-title: SFTP connector
+title: FTP connector
 topic: overview
-description: The documentation below provides information on how to connect an SFTP server to Platform using APIs or the user interface.
+description: The documentation below provides information on how to connect an FTP server to Platform using APIs or the user interface.
 ---
 
-# (Beta) SFTP connector
+# (Beta) FTP connector
 
 >[!NOTE]
 >
->The SFTP connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The FTP connectors are in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
@@ -31,21 +31,17 @@ The following is a list of constraints you must account for when naming your clo
 - Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
 - The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
-## Connect SFTP to [!DNL Platform]
+## Connect FTP to [!DNL Platform]
 
->[!IMPORTANT]
->
->Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
-
-The documentation below provides information on how to connect an an SFTP server to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect an FTP server to [!DNL Platform] using APIs or the user interface:
 
 ### Using the APIs
 
-- [Create an SFTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Create an FTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an SFTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
+- [Create an FTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
