@@ -87,7 +87,7 @@ For more information about sources, see the [sources overview](../../sources/hom
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New features**
 
@@ -107,4 +107,4 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 
 * None
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../../destinations/home.md) for more information.
