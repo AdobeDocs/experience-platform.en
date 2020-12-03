@@ -47,5 +47,5 @@ The documentation below provides information on how to connect an FTP server to 
 
 ### Using the UI
 
-- [Create an FTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
+- [Create an FTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
