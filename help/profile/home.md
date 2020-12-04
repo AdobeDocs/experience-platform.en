@@ -17,7 +17,9 @@ The relationship between Real-time Customer Profile and other services within Ex
 
 ### Profile data store
 
-Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. In other words, the [!DNL Profile] store is separate from [!DNL Catalog] data ([!DNL Data Lake]) and [!DNL Identity Service] data (identity graph).
+Although [!DNL Real-time Customer Profile] processes ingested data and uses Adobe Experience Platform [!DNL Identity Service] to merge related data through identity mapping, it maintains its own data in the [!DNL Profile] store. The [!DNL Profile] store is separate from the [!DNL Catalog] data in the [!DNL Data Lake] and the [!DNL Identity Service] data in the identity graph.
+
+The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platform Data Lake uses Microsoft Azure Data Lake storage.
 
 ### Profile guardrails
 
