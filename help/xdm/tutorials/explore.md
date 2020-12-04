@@ -13,41 +13,78 @@ In Adobe Experience Platform, all Experience Data Model (XDM) resources are stor
 
 This tutorial covers the steps for exploring existing schemas, classes, mixins, and data types in the Experience Platform UI.
 
-## Look up an XDM resource to explore
+## Look up an XDM resource {#lookup}
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all existing XDM resources in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Mixins]**, and **[!UICONTROL Data types]** specifically.
 
 ![](../images/tutorials/explore/tabs.png)
 
-On the [!UICONTROL Browse] tab, you can use the search bar or filter icon (![](../images/tutorials/explore/icon.png)) to narrow down listed results.
+On the [!UICONTROL Browse] tab, you can use the filter icon (![](../images/tutorials/explore/icon.png)) to reveal controls in the left rail to narrow down listed results.
 
-For example, to filter the list to only show standard data types provided by Adobe, select the filter icon to open the filter rail. Under **[!UICONTROL Type]**, select **[!UICONTROL Datatype]**, and under **[!UICONTROL Owner]**, select **[!UICONTROL Adobe]**. 
+For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
+
+The **[!UICONTROL Included in Profile]** toggle allows you to filter results to show only resources that are used in schemas that have been enabled for use in [Real-time Customer Profile](../../profile/home.md).
 
 ![](../images/tutorials/explore/filter.png)
 
-You can use the search bar to narrow results even further. Any resources whose titles match the search query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, all resources that contain standard fields matching the search query are listed.
+You can also use the search bar to narrow results even further. Any resources whose titles match the search query appear at the top of the list. Further down in the list is a **[!UICONTROL Standard Fields]** section, which lists any resources containing standard XDM fields that match the search query.
 
 ![](../images/tutorials/explore/search.png)
 
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
-## Explore the resource in the canvas
+## Explore an XDM resource in the canvas {#explore}
 
 Once you select a resource, its structure opens in the canvas.
 
 ![](../images/tutorials/explore/canvas.png)
 
-Any object-type fields at the root level will be collapsed by default. To show the sub-properties of any field, select its icon in the canvas.
+All object-type fields containing sub-properties are collapsed by default when they first appear in the canvas. To show the sub-properties of any field, select the icon next to its name.
 
 ![](../images/tutorials/explore/field-expand.png)
 
-### Data types
+### System-generated fields {#system-fields}
 
-Note that for each field shown in the canvas, its corresponding data type is shown next to its name, indicating at a glance the type of data that field expects for data ingestion.
+Some schema fields are prepended with an underscore, such as `_repo` and `_id`. These represent placeholders for fields that the system will automatically generate and assign as data is ingested.
 
-Any data type that is appended with square brackets (`[]`) represents an array of that data type. For example, a data type of **[!UICONTROL String]\[]** indicates that the field expects an array of string values. A data type of **[!UICONTROL Payment Item]\[]**
+As such, most of these fields should be excluded from the structure of your data when ingesting into Platform, with the main exception being the `_{TENANT_ID}` field, which all XDM fields created under your organization must be namespaced under.
+
+### Data types {#data-types}
+
+For each field shown in the canvas, its corresponding data type is shown next to its name, indicating at a glance the type of data that field expects for ingestion.
+
+Any data type that is appended with square brackets (`[]`) represents an array of that particular data type. For example, a data type of **[!UICONTROL String]\[]** indicates that the field expects an array of string values. A data type of **[!UICONTROL Payment Item]\[]** indicates an array of objects that conform to the [!UICONTROL Payment Item] data type.
+
+If an array field is based on an object type, you can select its icon in the canvas to show the expected attributes for each array item.
+
+![](../images/tutorials/explore/array-type.png)
+
+### [!UICONTROL Field properties] {#field-properties}
+
+When you select the name of any field in the canvas, the right rail updates to show details about that field under **[!UICONTROL Field properties]**. This can include a description of the field's intended use case, default values, patterns, formats, whether or not the field is required, and more.
 
 ![](../images/tutorials/explore/field-properties.png)
 
+If the field your are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
+
+![](../images/tutorials/explore/enum-field.png)
+
+### Identity fields {#identity}
+
+When inspecting schemas that contain identity fields, these fields are highlighted in the canvas with a fingerprint icon (![](../images/tutorials/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
+
+![](../images/tutorials/explore/identity-field.png)
+
+### Relationship fields {#relationship}
+
+Relationship fields are also uniquely highlighted in the canvas, showing the name of the destination schema that the field references. If you select the relationship field's name, you can view the identity namespace of the destination schema's primary identity.
+
+![](../images/tutorials/explore/relationship-field.png)
+
+>[!NOTE]
+>
+>See the tutorial on [creating a relationship in the UI](./create-schema-ui.md) for more information on the use of relationships in XDM schemas.
 
 ## Next steps
+
+This document covered how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [schema creation tutorial](./create-schema-ui.md).
