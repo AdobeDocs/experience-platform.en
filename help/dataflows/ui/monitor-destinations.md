@@ -39,8 +39,8 @@ See the following table for more information on statuses:
 
 The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
 
-* **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
-* **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
+- **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
+- **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
