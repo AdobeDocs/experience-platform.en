@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
 title: Generate datasets from query results
 topic: queries
+type: Tutorial
+description: Query Service allows the creation of datasets from the UI. After a dataset is created, it can be accessed like any other dataset in the Data Lake and used for a variety of use cases. 
 ---
 
 # Generate datasets from query results

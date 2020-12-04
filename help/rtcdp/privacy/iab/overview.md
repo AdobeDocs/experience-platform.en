@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
@@ -35,10 +35,10 @@ This guide also requires a working understanding of the following Adobe Experien
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): A client-side JavaScript library that allows you to integrate various [!DNL Platform] services into your customer-facing website.
-    * [SDK consent commands](../../../edge/fundamentals/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+    * [SDK consent commands](../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
-In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/destinations-overview.md) and their use in [!DNL Real-time CDP].
+In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/overview.md) and their use in [!DNL Real-time CDP].
 
 ## Customer consent flow summary {#summary}
 
@@ -82,7 +82,7 @@ This dialog must allow the customer to opt in or out of the following:
 
 ### Consent strings {#consent-strings}
 
-Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a **consent string**.
+Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a consent string.
 
 In the TCF specification, consent strings are used to encode relevant details about a customer's consent settings, in terms of specific marketing purposes as defined by policies and vendors. [!DNL Real-time CDP] utilizes these strings to store the consent settings for each customer, and therefore a new consent string must be generated each time those settings change.
 
@@ -114,7 +114,7 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 In order for the SDK to send data to [!DNL Experience Platform], you must first create a new edge configuration for [!DNL Platform] in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
 
-After providing a unique name for the configuration, select the toggle button next to *[!UICONTROL Adobe Experience Platform]*. Next, use the following values to complete the rest of the form:
+After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
 | Edge configuration field | Value |
 | --- | --- |

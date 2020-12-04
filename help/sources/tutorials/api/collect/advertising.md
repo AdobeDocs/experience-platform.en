@@ -1,15 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Collect advertising data through source connectors and APIs
 topic: overview
+type: Tutorial
+description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform through source connectors and the Flow Service API.
 ---
 
 # Collect advertising data through source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial covers the steps for retrieving data from a third-party advertising application and bringing them in to [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
@@ -34,33 +36,25 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+*   `Authorization: Bearer {ACCESS_TOKEN}`
+*   `x-api-key: {API_KEY}`
+*   `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+*   `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
-
-## Create an ad-hoc XDM class and schema
-
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
-
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
-
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. The unique identifier (`$id`) of the ad-hoc schema is required to proceed to the next step of this tutorial.
+*   `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a base connection, a source data file, and a reference to the schema that describes the source data.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following the enum values for file-based connectors:
 
 | Data.format | Enum value |
 | ----------- | ---------- |
@@ -68,7 +62,7 @@ Use the following the enum values for **file-based connectors**:
 | JSON files | `json` |
 | Parquet files | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors use the enum value: `tabular`.
 
 **API format**
 
@@ -92,10 +86,6 @@ curl -X POST \
         "description": "Advertising source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/9056f97e74edfa68ccd811380ed6c108028dcb344168746d",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
         },
         "params": {
             "path": "v201809.AD_PERFORMANCE_REPORT"
@@ -110,7 +100,6 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `baseConnectionId` | The unique connection ID of the third-party advertising application you are accessing. |
-| `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party advertising application. |
 

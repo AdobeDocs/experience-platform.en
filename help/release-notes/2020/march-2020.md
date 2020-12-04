@@ -21,7 +21,7 @@ Updates to existing features in Adobe Experience Platform:
 
 ## [!DNL Data Governance] {#governance}
 
-[!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure, including Data Usage Labeling and Enforcement (DULE), to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
+[!DNL Experience Platform] allows companies to bring data from multiple enterprise systems together to better allow marketers to identify, understand, and engage customers. [!DNL Experience Platform] includes an end-to-end data governance infrastructure to ensure the proper use of data within [!DNL Platform] and when being shared between systems.
 
 Adobe Experience Platform [!DNL Data Governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data usage. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data access policies, and access control on data for marketing actions.
 
@@ -62,7 +62,7 @@ To learn more about ingesting data into Platform, visit the [Data Ingestion docu
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
@@ -70,10 +70,10 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Destination | Description|
 |--- | ---|
-|Cloud storage destinations | Adobe Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
-|Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Adobe Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
+|Cloud storage destinations | Real-time CDP can now deliver your segments as data files to your [!DNL Amazon S3] or SFTP cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files.|
+|Advertising destinations | The [!DNL Google] destination card is now split into three destination cards, for the three different [!DNL Google] platforms currently supported in Real-time CDP: [!DNL Google Ads], [!DNL Google Ad Manager], [!DNL Google] Display & Video 360.|
 
-To learn more, visit the [destinations overview](../../rtcdp/destinations/destinations-overview.md)
+To learn more, visit the [destinations overview](../../destinations/home.md)
 
 ## [!DNL Identity Service] {#identity}
 

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;IAB;IAB 2.0;
+keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
+description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
 ---
 
 # Create datasets for capturing IAB TCF 2.0 consent data
@@ -64,7 +65,7 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 ## Create customer consent schemas {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the *[!UICONTROL Schemas] workspace*. From here, follow the steps in the sections below to create each required schema.
+In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. From here, follow the steps in the sections below to create each required schema.
 
 >[!NOTE]
 >
@@ -72,11 +73,11 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Create a record-based consent schema {#profile-schema}
 
-From the **[!UICONTROL Browse]** tab in the *[!UICONTROL Schemas] workspace*, create a new schema based on the **[!DNL XDM Individual Profile] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the *[!UICONTROL Mixins]* section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the [!DNL XDM Individual Profile] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The *[!UICONTROL Add mixin]* dialog appears. From here, select **[!UICONTROL Profile privacy]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Profile privacy]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -105,7 +106,7 @@ In order for [!DNL Real-time CDP] to associate the consent data it receives to s
 >
 >Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-To enable the schema for [!DNL Profile], click the schema's name in the left-hand rail to open the *[!UICONTROL Schema properties]* dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button.
+To enable the schema for [!DNL Profile], click the schema's name in the left-hand rail to open the **[!UICONTROL Schema properties]** dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button.
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -119,11 +120,11 @@ Finally, click **[!UICONTROL Save]** to confirm your changes.
 
 ### Create a time-series-based consent schema {#event-schema}
 
-From the **[!UICONTROL Browse]** tab in the *[!UICONTROL Schemas] workspace*, create a new schema based on the **[!DNL XDM ExperienceEvent] class**. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the *[!UICONTROL Mixins]* section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas]** workspace, create a new schema based on the [!DNL XDM ExperienceEvent] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-event.png)
 
-The *[!UICONTROL Add mixin]* dialog appears. From here, select **[!UICONTROL Experience event privacy mixin]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Experience event privacy mixin]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -154,11 +155,11 @@ On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-The _[!UICONTROL Create dataset from schema]_ workflow appears, starting at the _[!UICONTROL Select schema]_ step. In the provided list, locate one of the consent schemas that you created earlier. You can optionally use the search to narrow down results and locate your schema easier. Click the radio button next to the schema to select it, then click **[!UICONTROL Next]** to continue.
+The **[!UICONTROL Create dataset from schema]** workflow appears, starting at the **[!UICONTROL Select schema]** step. In the provided list, locate one of the consent schemas that you created earlier. You can optionally use the search to narrow down results and locate your schema easier. Click the radio button next to the schema to select it, then click **[!UICONTROL Next]** to continue.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-The _[!UICONTROL Configure dataset]_ step appears. Provide a unique, easily identifiable name and description for the dataset before clicking **[!UICONTROL Finish]**.
+The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily identifiable name and description for the dataset before clicking **[!UICONTROL Finish]**.
 
 ![](../assets/iab/dataset-configure.png)
 

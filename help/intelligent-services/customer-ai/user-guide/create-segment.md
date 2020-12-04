@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;insights; customer ai;popular topics
+keywords: Experience Platform;insights;customer ai;popular topics
 solution: Experience Platform
 title: Create customer segments with predicted scores
 topic: Create a segment
+description: When a prediction run completes, predicted propensity scores are automatically consumed by Profiles. Enriching Profiles with Customer AI scores allows for the creation of customer segments to find audiences based on their propensity scores. This section provides steps for creating segments using the Segment Builder.
 ---
 
 # Create customer segments with predicted scores
@@ -17,7 +18,7 @@ In the Platform UI, click **[!UICONTROL Segments]** in the left navigation, and 
 
 ![](../images/user-guide/segments.png)
 
-The *Segment Builder* appears. From the left *Fields* column and under the *Attributes* tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. The folder named **[!UICONTROL Customer AI]** contains the results of prediction runs and are named after the instance the scores belong to. Click an instance folder to access its results of the desired instance.
+The **Segment Builder** appears. From the left **[!UICONTROL Fields]** column and under the **[!UICONTROL Attributes]** tab, click the folder named **[!UICONTROL XDM Individual Profile]** and then click the folder with the namespace of your organization. The folder named **[!UICONTROL Customer AI]** contains the results of prediction runs and are named after the instance the scores belong to. Click an instance folder to access its results of the desired instance.
 
 ![](../images/user-guide/results.png)
 
@@ -33,4 +34,4 @@ Above the left-hand *Fields* column, click the **gear** icon and select a *Merge
 
 ## Next steps
 
-By following this tutorial, you have successfully found audiences based on their propensity scores using the Segment Builder. You can now target your audiences by activating them to destinations. See the [destinations overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/destinations/destinations-overview.html) for more information.
+By following this tutorial, you have successfully found audiences based on their propensity scores using the Segment Builder. You can now target your audiences by activating them to destinations. See the [destinations overview](../../../destinations/home.md) for more information.

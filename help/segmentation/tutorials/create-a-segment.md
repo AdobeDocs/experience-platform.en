@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics;segment;Segment;create segment
+keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
 title: Create a segment
 topic: tutorial
+type: Tutorial
 description: This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the Adobe Experience Platform Segmentation Service API.
 ---
 
@@ -48,7 +49,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Develop a segment definition
 
-The first step in segmentation is to define a segment, represented in a construct called a **segment definition**. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a **PQL predicate**. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
+The first step in segmentation is to define a segment, represented in a construct called a segment definition. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
 
 You can create a new segment definition by making a POST request to the `/segment/definitions` endpoint in the [!DNL Segmentation] API. The following example outlines how to format a definition request, including what information is required in order for a segment to be defined successfully.
 

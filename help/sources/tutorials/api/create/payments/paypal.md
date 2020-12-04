@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
 solution: Experience Platform
 title: Create a PayPal connector using the Flow Service API
 topic: overview
+type: Tutorial
+description: This tutorial uses the Flow Service API to walk you through the steps to connect PayPal to Experience Platform.
 ---
 
 # Create a [!DNL PayPal] connector using the [!DNL Flow Service] API

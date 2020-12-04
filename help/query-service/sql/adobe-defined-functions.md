@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;sql;
 solution: Experience Platform
 title: Adobe-defined functions
 topic: functions
+description: This document provides information for Adobe-defined functions available in Query Service.
 ---
 
 # Adobe-defined functions

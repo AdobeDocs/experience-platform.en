@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Service user guide
 topic: ui guide
+description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 ---
 
-# [!UICONTROL Segmentation Service] user guide
+# Segmentation Service user guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
 
@@ -34,7 +35,19 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 ![](../images/ui/overview/segment-browse-all.png)
 
-This view lists information about the segment definition including the evaluation method, created date, and last modified date.
+This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
+
+The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Entered], [!UICONTROL Realized], and [!UICONTROL Exiting]. 
+
+![](../images/ui/overview/segment-browse-breakdown.png)
+
+| Status | Description |
+| ------ | ----------- |
+| Entered | A new profile within the segment. |
+| Realized | An existing profile which has remained within the segment. |
+| Exiting | An existing profile which is leaving the segment. |
+
+The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.
 
 The evaluation method can either be streaming or batch. Streaming segments are constantly evaluated as data enters the system. Batch segments are evaluated according to a set schedule. 
 
@@ -82,7 +95,7 @@ The **[!UICONTROL Activated destinations]** section shows the destinations that 
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../rtcdp/destinations/activate-destinations.md).
+> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../destinations/ui/activate-destinations.md).
 
 ### Profile samples
 
@@ -148,13 +161,13 @@ More information about streaming segmentation can be found in the [streaming seg
 >
 >In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
 
-## DULE policy violations
+## Policy violations
 
 >[!NOTE]
 >
->DULE policy violations only apply if you are creating a segment that has been assigned to a destination.
+>Policy violations only apply if you are creating a segment that has been assigned to a destination.
 
-Once you are done creating your segment, the segment will be analyzed by [!DNL Data Governance] to ensure there are no policy violations within the segment. For details on DULE and policy violations, please refer to the [data usage label overview](../../data-governance/labels/overview.md).
+Once you are done creating your segment, the segment will be analyzed by Adobe Experience Platform Data Governance to ensure there are no policy violations within the segment. See the [[!DNL Data Governance] overview](../../data-governance/home.md) for more information.
 
 ![](../images/ui/overview/segment-dule-policy-violations.png)
 

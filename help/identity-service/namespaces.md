@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;namespace;Namespace;Namespaces
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service
 topic: overview
-description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID. 
+description: Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name@email.com" as an email address or "443522" as a numeric CRM ID. 
 ---
 
 # Identity namespace overview
@@ -46,7 +46,7 @@ The following identity types are available within [!DNL Platform]:
 
 Adobe Experience Platform provides several identity namespaces that are available to all organizations. These are known as Standard namespaces and are visible using the [!DNL Identity Service] API or through the [!DNL Platform] UI.
 
-To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the *[!UICONTROL Browse]* tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
+To view Standard namespaces in the UI, click **[!UICONTROL Identities]** in the left-rail and then click on the **[!UICONTROL Browse]** tab. All identity namespaces accessible to your organization will be shown, however those with "[!UICONTROL Standard]" as the "[!UICONTROL Owner]" are the Standard namespaces provided by Adobe.
 
 You can then click on one of the namespaces listed to view details.
 
@@ -64,7 +64,7 @@ Namespaces that you define are private to your organization and require a unique
 
 ![](./images/create-identity-namespace.png)
 
-Similar to Standard namespaces, you can click on a Custom namespace from the *[!UICONTROL Browse]* tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
+Similar to Standard namespaces, you can click on a Custom namespace from the **[!UICONTROL Browse]** tab to view its details, however with a Custom namespace you can also edit its Display Name and Description from the details area.
 
 >[!NOTE]
 >

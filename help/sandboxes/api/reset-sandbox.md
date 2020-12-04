@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;reset sandbox
 solution: Experience Platform
 title: Reset a sandbox
 topic: developer guide
+description: Development sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's name in the request path.
 ---
 
 # Reset a sandbox

@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
 title: Create an Apache HDFS source connector in the UI
 topic: overview
+type: Tutorial
+description: This tutorial provides steps for authenticating an Apache Hadoop Distributed File System (hereinafter referred to as "HDFS") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Apache] HDFS source connector in the UI
@@ -17,7 +19,7 @@ Source connectors in [!DNL Adobe Experience Platform] provide the ability to ing
 
 This tutorial requires a working understanding of the following components of [!DNL Platform]:
 
--   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+-   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.

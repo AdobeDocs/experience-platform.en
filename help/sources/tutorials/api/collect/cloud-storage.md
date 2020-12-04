@@ -1,29 +1,28 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Collect cloud storage data through source connectors and APIs
 topic: overview
+type: Tutorial
+description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
 ---
 
 # Collect cloud storage data through source connectors and APIs
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have access to a third-party cloud storage through a valid connection and information about the file you wish to bring into [!DNL Platform], including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party cloud storage using the Flow Service API](../explore/cloud-storage.md) before attempting this tutorial.
+This tutorial requires you to have access to a third-party cloud storage through a valid connection and information about the file you wish to bring into [!DNL Platform], including the file's path and structure. If you do not have this information, see the tutorial on [exploring a third party cloud storage using the [!DNL Flow Service] API](../explore/cloud-storage.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
--   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
--   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
--   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
--   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
+- [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
+- [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 The following sections provide additional information that you will need to know in order to successfully connect to a cloud storage using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
@@ -34,41 +33,37 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
--   Authorization: Bearer `{ACCESS_TOKEN}`
--   x-api-key: `{API_KEY}`
--   x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
--   x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
--   Content-Type: `application/json`
-
-## Create an ad-hoc XDM class and schema
-
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
-
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
-
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. The unique identifier (`$id`) of the ad-hoc schema is required to proceed to the next step of this tutorial.
+- `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following the enum values for file-based connectors:
 
-| Data.format | Enum value |
+| Data format | Enum value |
 | ----------- | ---------- |
-| Delimited files | `delimited` |
-| JSON files | `json` |
-| Parquet files | `parquet` |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors, set the value to `tabular`.
+
+>[!NOTE]
+>
+>You can ingest CSV and TSV files with a cloud storage source connector by specifying a column delimiter as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
 
 **API format**
 
@@ -87,22 +82,19 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test source connection for a Cloud Storage connector",
-        "baseConnectionId": "ac33bd66-1565-4915-b3bd-6615657915c4",
-        "description": "Test source connection for a Cloud Storage connector",
+        "name": "Cloud storage source connector",
+        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/22a4ab59462a64de551d42dd10ec1f19d8d7246e3f90072a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "columnDelimiter": "\t"
         },
         "params": {
-            "path": "/backfil/data8.csv",
+            "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-        "connectionSpec": {
-            "id": "be5ec48c-5b78-49d5-b8fa-7c89ec4569b8",
+            "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
     }'
@@ -110,8 +102,9 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
-| `data.schema.id` | The ID of the ad-hoc XDM schema. |
+| `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
+| `data.format` | An enum value that defines the data format attribute. |
+| `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
@@ -121,18 +114,16 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "8bae595c-8548-4716-ae59-5c85480716e9",
-    "etag": "\"4a00038b-0000-0200-0000-5ebc47fd0000\""
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
 }
 ```
 
 ## Create a target XDM schema {#target-schema}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained.
+In order for the source data to be used in [!DNL Platform], a target schema must be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
-
-If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
 
 **API format**
 
@@ -183,13 +174,13 @@ A successful response returns details of the newly created schema including its 
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
-    "meta:altId": "_{TENANT_ID}.schemas.e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
+    "meta:altId": "_{TENANT_ID}.schemas.995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for a Cloud Storage connector",
+    "title": "Target schema cloud storage",
     "type": "object",
-    "description": "Target schema for Cloud Storage",
+    "description": "Target schema for cloud storage",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -198,11 +189,6 @@ A successful response returns details of the newly created schema including its 
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
-            "type": "object",
-            "meta:xdmType": "object"
-        },
-        {
-            "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
             "type": "object",
             "meta:xdmType": "object"
         },
@@ -229,18 +215,18 @@ A successful response returns details of the newly created schema including its 
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1589398474190,
-        "repo:lastModifiedDate": 1589398474190,
+        "repo:createdDate": 1597783248870,
+        "repo:lastModifiedDate": 1597783248870,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
         "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "f07723475e933dc30ed411d97986a36f13aa20c820463dd8cf7b74e63f4e7801",
-        "meta:globalLibVersion": "1.10.1.1"
+        "eTag": "596661ec6c7a9c6ae530676e98290a4a58ca29540ed92489cf4478b2bf013a65",
+        "meta:globalLibVersion": "1.13.3"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
-    "meta:tenantNamespace": "_{TENANT_ID}"
+    "meta:tenantNamespace": "{TENANT_ID}"
 }
 ```
 
@@ -265,9 +251,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a Cloud Storage connector",
+        "name": "Target dataset for cloud storage",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -283,15 +269,15 @@ A successful response returns an array containing the ID of the newly created da
 
 ```json
 [
-    "@/dataSets/5ebc4be8590b1b191a8dc4ca"
+    "@/dataSets/5f3c3cedb2805c194ff0b69a"
 ]
 ```
 
 ## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -314,12 +300,12 @@ curl -X POST \
         "description": "Target Connection for a Cloud Storage connector",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ebc4be8590b1b191a8dc4ca"
+            "dataSetId": "5f3c3cedb2805c194ff0b69a"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -332,7 +318,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The fixed connection spec ID to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -340,8 +326,8 @@ A successful response returns the new target connection's unique identifier (`id
 
 ```json
 {
-    "id": "1f5af99c-f1ef-4076-9af9-9cf1ef507678",
-    "etag": "\"530013e2-0000-0200-0000-5ebc4c110000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
@@ -367,13 +353,21 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/e28dd48fab732263816f8b80ae4fdf49ca7ad229ca62e5d6",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
+                "destinationXdmPath": "_id",
+                "sourceAttribute": "Id",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
                 "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "first_name",
+                "sourceAttribute": "FirstName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -381,23 +375,7 @@ curl -X POST \
             },
             {
                 "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "last_name",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "personalEmail.address",
-                "sourceAttribute": "email",
+                "sourceAttribute": "LastName",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -417,12 +395,12 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "febec6a6785e45ea9ed594422cc483d7",
+    "id": "bf5286a9c1ad4266baca76ba3adc9366",
     "version": 0,
-    "createdDate": 1589398562232,
-    "modifiedDate": 1589398562232,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdDate": 1597784069368,
+    "modifiedDate": 1597784069368,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
@@ -579,10 +557,10 @@ A successful response returns the details of the dataflow spec that is responsib
 
 The last step towards collecting cloud storage data is to create a dataflow. By now, you have the following required values prepared:
 
--   [Source connection ID](#source)
--   [Target connection ID](#target)
--   [Mapping ID](#mapping)
--   [Dataflow specification ID](#specs)
+- [Source connection ID](#source)
+- [Target connection ID](#target)
+- [Mapping ID](#mapping)
+- [Dataflow specification ID](#specs)
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
@@ -604,29 +582,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud Storage flow to AEP",
-        "description": "Cloud Storage flow to AEP",
+        "name": "Cloud Storage flow to Platform",
+        "description": "Cloud Storage flow to Platform",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "8bae595c-8548-4716-ae59-5c85480716e9"
+            "26b53912-1005-49f0-b539-12100559f0e2"
         ],
         "targetConnectionIds": [
-            "1f5af99c-f1ef-4076-9af9-9cf1ef507678"
+            "f7eb08fa-5f04-4e45-ab08-fa5f046e45ee"
         ],
         "transformations": [
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "febec6a6785e45ea9ed594422cc483d7",
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1589398646",
+            "startTime": "1597784298",
             "frequency":"minute",
             "interval":"30"
         }
@@ -649,21 +627,21 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "dbc5c132-bc2a-4625-85c1-32bc2a262558",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
 ## Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API](../monitor.md)
 
 ## Next steps
 
 By following this tutorial, you have created a source connector to collect data from your cloud storage on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
--   [Real-time Customer Profile overview](../../../../profile/home.md)
--   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+- [Real-time Customer Profile overview](../../../../profile/home.md)
+- [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix {#appendix}
 

@@ -1,16 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Registry API
-topic: tutorials
+description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
+topic: tutorial
+type: Tutorial
 ---
 
 # Define a relationship between two schemas using the [!DNL Schema Registry] API
 
-
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated **relationship field** must be added to a source schema, which references the identity of a destination schema.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
 This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
 
@@ -103,13 +104,13 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the **primary identity** field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
 >[!IMPORTANT]
 >
 >Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
 
-In this tutorial, the destination schema "[!DNL Hotels]" contains an `email` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
+In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
 
 >[!NOTE]
 >
@@ -331,7 +332,7 @@ A successful response returns the details of the updated schema, which now inclu
 
 ## Create a reference identity descriptor {#reference-identity}
 
-Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `email` field in "[!DNL Hotels]", `email` must be given a reference identity descriptor.
+Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `hotelId` must be given a reference identity descriptor.
 
 Create a reference descriptor for the destination schema by making a POST request to the `/tenant/descriptors` endpoint.
 
@@ -343,7 +344,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a reference descriptor for the `email` field in the destination schema "[!DNL Hotels]".
+The following request creates a reference descriptor for the `hotelId` field in the destination schema "[!DNL Hotels]".
 
 ```shell
 curl -X POST \
@@ -357,8 +358,8 @@ curl -X POST \
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email"
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
@@ -379,8 +380,8 @@ A successful response returns the details of the newly created reference descrip
     "@type": "xdm:descriptorReferenceIdentity",
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/email",
-    "xdm:identityNamespace": "Email",
+    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -415,7 +416,7 @@ curl -X POST \
     "xdm:sourceProperty": "/_{TENANT_ID}/favoriteHotel",
     "xdm:destinationSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:destinationVersion": 1,
-    "xdm:destinationProperty": "/_{TENANT_ID}/email"
+    "xdm:destinationProperty": "/_{TENANT_ID}/hotelId"
   }'
 ```
 

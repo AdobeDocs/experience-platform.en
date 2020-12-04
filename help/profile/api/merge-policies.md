@@ -1,13 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
 title: Merge policies - Real-time Customer Profile API
 topic: guide
 ---
 
 # Merge policies endpoint
 
-Adobe Experience Platform enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide shows steps for working with merge policies using the API. To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. 
+
+For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
+
+Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides steps for working with merge policies using the API. 
+
+To work with merge policies using the UI, please refer to the [merge policies user guide](../ui/merge-policies.md).
 
 ## Getting started
 
@@ -15,7 +20,13 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 ## Components of merge policies {#components-of-merge-policies}
 
-Merge policies are private to your IMS Organization, allowing you to create different policies in order to merge schemas in the specific way that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides a default merge policy, or you can create a merge policy for a specific schema and mark it as the default for your organization. Each organization can potentially have multiple merge policies per schema, however each schema can have only one default merge policy. Any merge policy set as default will be used in cases where the schema name is provided and a merge policy is required but not provided. When you set a merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
+Merge policies are private to your IMS Organization, allowing you to create different policies to merge schemas in the specific ways that you need. Any API accessing [!DNL Profile] data requires a merge policy, though a default will be used if one is not explicitly provided. [!DNL Platform] provides organizations with a default merge policy, or you can create a merge policy for a specific Experience Data Model (XDM) schema class and mark it as the default for your organization. 
+
+While each organization can potentially have multiple merge policies per schema class, each class can have only one default merge policy. Any merge policy set as default will be used in cases where the name of the schema class is provided and a merge policy is required but not provided. 
+
+>[!NOTE]
+>
+>When you set a new merge policy as the default, any existing merge policy that was previously set as the default will automatically be updated to no longer be used as the default.
 
 ### Complete merge policy object
 
@@ -29,7 +40,7 @@ The complete merge policy object represents a set of preferences controlling asp
         "name": "{NAME}",
         "imsOrgId": "{IMS_ORG}",
         "schema": {
-            "name": "{SCHEMA_NAME}"
+            "name": "{SCHEMA_CLASS_NAME}"
         },
         "version": 1,
         "identityGraph": {
@@ -50,7 +61,7 @@ The complete merge policy object represents a set of preferences controlling asp
 |`imsOrgId`|Organization ID to which this merge policy belongs|
 |`identityGraph`|[Identity graph](#identity-graph) object indicating the identity graph from which related identities will be obtained. Profile fragments found for all related identities will be merged.|
 |`attributeMerge`|[Attribute merge](#attribute-merge) object indicating the manner by which the merge policy will prioritize profile attributes in the case of data conflicts.|
-|`schema`|The [schema](#schema) object on which the merge policy can be used.|
+|`schema.name`|Part of the [`schema`](#schema) object, the `name` field contains the XDM schema class to which the merge policy relates. For more information on schemas and classes, please read the [XDM documentation](../../xdm/home.md).|
 |`default`|Boolean value indicating if this merge policy is the default for the specified schema.|
 |`version`|[!DNL Platform] maintained version of merge policy. This read-only value is incremented whenever a merge policy is updated.|
 |`updateEpoch`|Date of the last update to the merge policy.|
@@ -116,11 +127,11 @@ A profile fragment is the profile information for just one identity out of the l
 
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
-* **`timestampOrdered`**: (default) Give priority to the profile which was updated last in case of conflict. Using this merge type, the `data` attribute is not required. `timestampOrdered` also supports custom timestamps which will take precedence when merging profile fragments within or across datasets. To learn more, see the Appendix section on [using custom timestamps](#custom-timestamps).
+* **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required. `timestampOrdered` also supports custom timestamps which will take precedence when merging profile fragments within or across datasets. To learn more, see the Appendix section on [using custom timestamps](#custom-timestamps).
 * **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
     * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
-**Example attributeMerge object using `dataSetPrecedence` type**
+#### Example `attributeMerge` object using `dataSetPrecedence` type
 
 ```json
     "attributeMerge": {
@@ -134,7 +145,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
     }
 ```
 
-**Example attributeMerge object using `timestampOrdered` type**
+#### Example `attributeMerge` object using `timestampOrdered` type
 
 ```json
     "attributeMerge": {
@@ -144,7 +155,7 @@ Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
 ### Schema {#schema}
 
-The schema object specifies the Experience Data Model (XDM) schema for which this merge policy is created.
+The schema object specifies the Experience Data Model (XDM) schema class for which this merge policy is created.
 
 **`schema` object**
 
@@ -720,7 +731,7 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your IMS Organization, you can use them to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
 
 ## Appendix
 
@@ -728,23 +739,23 @@ This section provides supplemental information related to working with merge pol
 
 ### Using custom timestamps {#custom-timestamps}
 
-As Profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When `timestampOrdered` is selected as the `attributeMerge` type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
+As records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When `timestampOrdered` is selected as the `attributeMerge` type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
 
 Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
 
-In order to use a custom timestamp, the [External Source System Audit Details Mixin](#mixin-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the [[!DNL External Source System Audit Details Mixin]](#mixin-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >
 >You must ensure that the `xdm:lastUpdatedDate` timestamp is populated when sending a PATCH on the same record.
 
-For step-by-step instructions on working with schemas using the schema registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
+For step-by-step instructions on working with schemas using the Schema Registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
 To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
 
-#### External Source System Audit Details Mixin details {#mixin-details}
+#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-The following example shows correctly populated fields in the External Source System Audit Details Mixin. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/schemas/common/external-source-system-audit-details.schema.json) on GitHub.
+The following example shows correctly populated fields in the [!DNL External Source System Audit Details Mixin]. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
 
 ```json
 {

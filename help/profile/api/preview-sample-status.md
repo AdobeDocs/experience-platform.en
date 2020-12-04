@@ -1,6 +1,5 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-solution: Adobe Experience Platform
 title: Profile preview - Real-time Customer Profile API
 description: Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into Platform, it is stored within the Profile data store. As the number of records in the Profile store increases or decreases, a sample job is run that includes information regarding how many profile fragments and merged profiles are in the data store. Using the Profile API you can preview the latest successful sample, as well as list profile distribution by dataset and by identity namespace.
 topic: guide
@@ -17,6 +16,12 @@ These metrics are also available within the [!UICONTROL Profiles] section of the
 ## Getting started
 
 The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+
+## Profile fragments vs merged profiles
+
+This guide references both "profile fragments" and "merged profiles". It is important to understand the difference between these terms before proceeding. 
+
+Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together (based on the merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
 
 ## View last sample status {#view-last-sample-status}
 
@@ -52,6 +57,10 @@ The response includes the details for the last successful sample job that was ru
 ```json
 {
   "numRowsToRead": "41003",
+  "sampleJobRunning": {
+    "status": true,
+    "submissionTimestamp": "2020-08-01 17:57:57.0"
+  },
   "cosmosDocCount": "\"300803\"",
   "totalFragmentCount": 47429,
   "lastSuccessfulBatchTimestamp": "\"null\"",
@@ -68,6 +77,7 @@ The response includes the details for the last successful sample job that was ru
 |Property|Description|
 |---|---|
 |`numRowsToRead`|The total number of merged profiles in the sample.|
+|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
 |`cosmosDocCount`|Total document count in Cosmos.|
 |`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
@@ -199,7 +209,7 @@ The following request does not specify a `date` parameter and will therefore ret
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \

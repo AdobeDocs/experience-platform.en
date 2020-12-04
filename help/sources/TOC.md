@@ -2,7 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
-user-guide-description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+breadcrumb-title: Source Connectors Guide
+user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
 ---
 
 # Source connectors {#sources}
@@ -54,6 +55,8 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+  - eCommerce {#ecommerce}
+    - [Shopify connector](connectors/ecommerce/shopify.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
   - Payments {#payments}
@@ -98,6 +101,8 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
+    - eCommerce {#ecommerce}
+      - [Shopify connector](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/api/create/marketing-automation/hubspot.md)
     - Payments {#payments}
@@ -110,6 +115,7 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
     - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore eCommerce data](tutorials/api/explore/ecommerce.md)
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
@@ -119,12 +125,17 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect eCommerce data](tutorials/api/collect/ecommerce.md)
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
+    - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
-  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
+  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows](tutorials/api/monitor.md)
+  - [Update connections](tutorials/api/update.md)
+  - [Delete connections](tutorials/api/delete.md)
+  - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -168,6 +179,8 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
       - [Oracle connector](tutorials/ui/create/databases/oracle.md)
       - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
+    - eCommerce {#ecommerce}
+      - [Shopify connector](tutorials/ui/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
     - Payments {#payments}
@@ -175,17 +188,21 @@ user-guide-description: Adobe Experience Platform allows data to be ingested fro
     - Protocols {#protocols}
       - [Generic OData connector](tutorials/ui/create/protocols/odata.md)
   - Configure a dataflow {#dataflow}
-      - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
-      - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
-      - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage.md)
-      - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
-      - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
-      - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
-      - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
-      - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
-      - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
+    - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
+    - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
+    - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+    - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
+    - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+    - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
+    - [Configure a dataflow for an eCommerce connector](tutorials/ui/dataflow/ecommerce.md)
+    - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
+    - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
+    - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Update accounts](tutorials/ui/update.md)
+  - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
+- [IP address allow list](ip-address-allow-list.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

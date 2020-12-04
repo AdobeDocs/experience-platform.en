@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
 solution: Experience Platform
 title: FTP and SFTP connector
 topic: overview
+description: The documentation below provides information on how to connect an FTP or an STFP server to Platform using APIs or the user interface.
 ---
 
 # (Beta) FTP and SFTP connector
@@ -17,45 +18,34 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 ## IP address allow list
 
-The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
+A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-### East US region
+## Naming constraints for files and directories
 
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
+The following is a list of constraints you must account for when naming your cloud storage file or directory.
 
-### West Europe region
+- Directory and file component names cannot exceed 255 characters.
+- Directory and file names cannot end with a forward slash (`/`). If provided, it will be automatically removed.
+- The following reserved URL characters must be properly escaped: `! * ' ( ) ; : @ & = + $ , / ? % # [ ]`
+- The following characters are not allowed: `" \ / : | < > * ?`.
+- Illegal URL path characters not allowed. Code points like `\uE000`, while valid in NTFS filenames, are not valid Unicode characters. In addition, some ASCII or Unicode characters, like control characters (0x00 to 0x1F, \u0081, etc.), are also not allowed. For rules governing Unicode strings in HTTP/1.1 see [RFC 2616, Section 2.2: Basic Rules](https://www.ietf.org/rfc/rfc2616.txt) and [RFC 3987](https://www.ietf.org/rfc/rfc3987.txt).
+- The following file names are not allowed: LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, LPT9, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, PRN, AUX, NUL, CON, CLOCK$, dot character (.), and two dot characters (..).
 
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
+## Connect FTP and SFTP to [!DNL Platform]
 
-### Australia East
+>[!IMPORTANT]
+>
+>Users are required to disable Keyboard Interactive Authentication in the SFTP server configuration prior to connecting. Disabling the setting will allow passwords to be entered manually, as opposed to inputting through a service or a program. See the [Component Pro document](https://doc.componentpro.com/ComponentPro-Sftp/authenticating-with-a-keyboard-interactive-authentication) for more information on Keyboard Interactive Authentication.
 
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
+The documentation below provides information on how to connect an FTP or an SFTP server to [!DNL Platform] using APIs or the user interface:
 
-The documentation below provides information on how to connect an FTP or an STFP server to [!DNL Platform] using APIs or the user interface:
-
-## Connect FTP and SFTP to [!DNL Platform] using APIs
+### Using the APIs
 
 - [Create an FTP or SFTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Connect FTP or SFTP to [!DNL Platform] using the UI
+### Using the UI
 
 - [Create an FTP or SFTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

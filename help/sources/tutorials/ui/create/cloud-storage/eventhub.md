@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
 solution: Experience Platform
 title: Create an Azure Event Hubs source connector in the UI
 topic: overview
+type: Tutorial
+description: This tutorial provides steps for authenticating an Azure Event Hubs (hereinafter referred to as "Event Hubs") source connector using the Platform user interface.
 ---
 
 # Create an [!DNL Azure Event Hubs] source connector in the UI
@@ -17,12 +19,12 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+-   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Event Hubs] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/streaming/cloud-storage.md).
+If you already have a valid [!DNL Event Hubs] connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/streaming/cloud-storage-streaming.md).
 
 ### Gather required credentials
 
@@ -64,4 +66,4 @@ To connect an existing account, select the [!DNL Event Hubs] account you want to
 
 ## Next steps
 
-By following this tutorial, you have connected your [!DNL Event Hubs] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage.md).
+By following this tutorial, you have connected your [!DNL Event Hubs] account to [!DNL Platform]. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/streaming/cloud-storage-streaming.md).

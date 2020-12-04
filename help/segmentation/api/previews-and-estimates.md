@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Previews and estimates endpoints
 topic: developer guide
+description: As you develop your segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
 ---
 
 # Previews and estimates endpoints
@@ -147,14 +148,14 @@ A successful response returns HTTP status 200 with detailed information about th
         },
         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-        },
-        "state": "RESULT_READY",
-        "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
         }
     }],
+    "state": "RESULT_READY",
+    "links": {
+        "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
+        "next": "",
+        "prev": ""
+    },
     "page": {
         "offset": 0,
         "size": 3

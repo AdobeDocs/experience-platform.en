@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
 title: Connect with Looker
 topic: connect
+description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
 ---
 
 # Connect with [!DNL Looker]
@@ -35,6 +36,6 @@ After inputting your connection details, click on **[!UICONTROL Test These Setti
 
 ![](../images/clients/looker/click-test-connection.png)
 
-## Next Steps
+## Next steps
 
 Now that you've connected with [!DNL Query Service], you can use [!DNL Looker] to write queries. For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).

@@ -23,7 +23,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## Understanding identity namespaces {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses **[!UICONTROL identity namespaces]** to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses identity namespaces to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
 [!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
@@ -31,7 +31,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Adding identity data to datasets
 
-When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **[!UICONTROL identity descriptor]** in their associated XDM schema.
+When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an identity descriptor in their associated XDM schema.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ There are two methods of adding an identity descriptor to a dataset schema:
 
 ### Using the UI {#identity-ui}
 
-In the [!DNL Experience Platform ]user interface, the _[!UICONTROL Schemas]_ workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the [!DNL Schema Editor] tutorial.
+In the [!DNL Experience Platform ]user interface, the **[!UICONTROL Schemas]** workspace allows you to edit your existing XDM schemas. To add an identity descriptor to a schema, select the schema from the list and follow the steps for [setting a schema field as an identity field](../xdm/tutorials/create-schema-ui.md#identity-field) in the [!DNL Schema Editor] tutorial.
 
 Once you have set the appropriate fields within the schema as identity fields, you can proceed to the next section on [submitting privacy requests](#submit).
 
@@ -130,11 +130,15 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 
 The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
 
+>[!IMPORTANT]
+>
+>The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the Data Lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
+
 ### Using the UI
 
-When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under _[!UICONTROL Products]_ in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
+When creating job requests in the UI, be sure to select **[!UICONTROL AEP Data Lake]** and/or **[!UICONTROL Profile]** under **[!UICONTROL Products]** in order to process jobs for data stored in the [!DNL Data Lake] or [!DNL Real-time Customer Profile], respectively.
 
-<img src='images/privacy/product-value.png' width=450><br>
+<img src="images/privacy/product-value.png" width=450><br>
 
 ### Using the API
 

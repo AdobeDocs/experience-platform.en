@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: Honoring opt-outs
 topic: overview

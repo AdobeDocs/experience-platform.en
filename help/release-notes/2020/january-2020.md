@@ -50,7 +50,7 @@ New legal and organizational regulations are giving users the right to access or
 |New API endpoints | Base path for the [!DNL Privacy Service] API has been updated from `/data/privacy/gdpr` to `/data/core/privacy/jobs`.|
 |New required `regulation` property | When creating new jobs in the [!DNL Privacy Service] API, a `regulation` property must be supplied in the request payload to indicate which regulation to track the job under. Accepted values are `gdpr` and `ccpa`.|
 |Support for [!DNL Adobe Primetime Authentication] | [!DNL Privacy Service] now accepts access/delete requests from Adobe [!DNL Primetime Authentication], using `primetimeAuthentication` as its product value.|
-|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.|
+|Privacy Service UI enhancements | Separate job tracking pages for GDPR and CCPA regulations. New **Regulation Type **dropdown to switch between tracking data for GDPR and CCPA.|
 
 **Known issues**
 
@@ -77,7 +77,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 |Category | Permission | Description|
 |--- | --- | ---|
 |Data Ingestion | Manage Sources | Access to read, create, edit, and disable sources.|
-|Data Ingestion | View Sources | Read-only access to available sources in the *[!UICONTROL Catalog]* tab and authenticated sources in the *[!UICONTROL Browse]* tab.|
+|Data Ingestion | View Sources | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab.|
 
 **Known issues**
 
@@ -87,7 +87,7 @@ For more information about sources, see the [sources overview](../../sources/hom
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time CDP](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New features**
 
@@ -100,11 +100,11 @@ In [Adobe Real-time CDP](../../rtcdp/overview.md), destinations are pre-built in
 |Category | Permission | Description|
 |--- | --- | ---|
 |Destinations | Manage Destinations | Access to read, create, edit, and disable destinations.|
-|Destinations | View Destinations | Read-only access to available destinations in the [!UICONTROL _Catalog_] tab and authenticated destinations in the _Browse_ tab.|
+|Destinations | View Destinations | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **Browse** tab.|
 |Destinations | Activate Destinations | Ability to activate data to destinations. This permission requires either "Manage Destinations" or "View Destinations" to be added to the product profile.|
 
 **Known issues**
 
 * None
 
-See the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) for more information.
+See the [Destinations overview](../../destinations/home.md) for more information.

@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;datasets;tables;schemas;
 solution: Experience Platform
 title: Datasets vs tables and schemas
 topic: queries
+type: Tutorial
+description: This document contains information on viewing your datasets within the dataset schema structure and using PostgreSQL commands.
 ---
 
 # Datasets vs tables and schemas

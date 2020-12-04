@@ -2,7 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
-user-guide-description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe applications.  
+breadcrumb-title: Data Science Workspace Guide
+user-guide-description: Use machine learning to develop, train, and score models and recipes with Adobe Sensei and JupyterLab Notebooks.
 ---
 
 # Data Science Workspace {#data-science-workspace}
@@ -12,9 +13,10 @@ user-guide-description: Adobe Experience Platform Data Science Workspace uses ma
 * [Data Science Workspace walkthrough](walkthrough.md)
 * JupyterLab notebooks {#jupyterlab}
   * [JupyterLab user guide](jupyterlab/overview.md)
-  * [Analyze your data using notebooks](jupyterlab/analyze-your-data.md)
-  * [Query service in Jupyter notebook](jupyterlab/query-service.md)
-  * [Create a recipe using Jupyter notebooks](jupyterlab/create-a-recipe.md)
+  * [Data access](jupyterlab/access-notebook-data.md)
+  * [Analyze your data](jupyterlab/analyze-your-data.md)
+  * [Query service](jupyterlab/query-service.md)
+  * [Create a recipe](jupyterlab/create-a-recipe.md)
   * [Collaborate in JupyterLab using Git](jupyterlab/using-git-for-collaboration.md)
 * Sensei Machine Learning API {#api}
   * [Getting started](api/getting-started.md)
@@ -38,6 +40,8 @@ user-guide-description: Adobe Experience Platform Data Science Workspace uses ma
   * [Model Authoring SDK](authoring/sdk.md)
   * [Create a Feature Pipeline](authoring/feature-pipeline.md)
   * [Platform SDK guide (Python)](authoring/platform-sdk.md)
+  * [Python data access](authoring/python.md)
+  * [Spark data access](authoring/spark.md)
 * Model and recipe tutorials {#models-recipes}
   * [Create and publish a machine learning model walkthrough](models-recipes/create-publish-model.md)
   * [Create the Retail Sales schema and dataset](models-recipes/create-retails-sales-dataset.md)
@@ -54,7 +58,6 @@ user-guide-description: Adobe Experience Platform Data Science Workspace uses ma
   * [Publish a model as a service (UI)](models-recipes/publish-model-service-ui.md)
   * [Publish a model as a service (API)](models-recipes/publish-model-service-api.md)
   * [Schedule automated training and scoring on a service (UI)](models-recipes/schedule-models-ui.md)
-* [Recipe and notebook migration guides](recipe-notebook-migration.md) 
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

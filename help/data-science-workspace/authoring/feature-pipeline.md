@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-solution: Adobe Experience Platform Data Science Workspace
 title: Create a feature pipeline
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
 ---
 
@@ -64,7 +64,7 @@ The configuration JSON file consists of key-value pairs and is intended for you 
 
 The following example demonstrates key-value pairs found within a configuration file:
 
-**configuration JSON example**
+**Configuration JSON example**
 
 ```json
 [
@@ -392,7 +392,7 @@ Now that you have authored your feature pipeline, you need to create a Docker im
 
 Optionally, you can also use the following Postman collection to assist in completing the feature pipeline API workflow:
 
-https://www.getpostman.com/collections/c5fc0d1d5805a5ddd41a
+https://www.postman.com/collections/c5fc0d1d5805a5ddd41a
 
 ### Create a feature pipeline engine {#create-engine-api}
 

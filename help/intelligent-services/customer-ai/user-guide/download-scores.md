@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
 solution: Experience Platform
 title: Downloading scores in Customer AI
 topic: Downloading scores
+description: Customer AI allows you to download scores in the parquet file format.
 ---
 
 # Downloading scores in Customer AI
@@ -287,6 +288,6 @@ The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) se
 - **Monitor export progress:** Check the current progress of the export process.
 - **Read audience data:** Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
-## Next Steps
+## Next steps
 
 This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Intelligent Services](../../home.md) and guides that are offered.

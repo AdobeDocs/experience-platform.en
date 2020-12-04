@@ -16,7 +16,7 @@ The following guide outlines the steps needed to build a Real-time Machine Learn
 
 ## Create a Real-time Machine Learning notebook
 
-In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within *Data Science*. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
+In the Adobe Experience Platform UI, select **[!UICONTROL Notebooks]** from within **Data Science**. Next, select **[!UICONTROL JupyterLab]** and allow some time for the environment to load.
 
 ![open JupyterLab](../images/rtml/open-jupyterlab.png)
 
@@ -79,13 +79,13 @@ Start by loading your training data.
 >
 >In the **Real-time ML** template, the [car insurance CSV dataset](https://github.com/adobe/experience-platform-dsw-reference/tree/master/datasets/insurance) is grabbed from [!DNL Github].
 
-![Load traning data](../images/rtml/load_training.png)
+![Load training data](../images/rtml/load_training.png)
 
 If you wish to use a dataset from within Adobe Experience Platform, uncomment the cell below. Next, you need to replace `DATASET_ID` with the appropriate value.
 
 ![rtml dataset](../images/rtml/rtml-dataset.png)
 
-To access a dataset in your [!DNL JupyterLab] notebook, select the **Data** tab in the left-navigation of [!DNL JupyterLab]. The *[!UICONTROL Datasets]* and *[!UICONTROL Schemas]* directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
+To access a dataset in your [!DNL JupyterLab] notebook, select the **Data** tab in the left-navigation of [!DNL JupyterLab]. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Explore Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of the notebook. This cell has your `dataset_id`.
 
 ![dataset access](../images/rtml/access-dataset.png)
 
@@ -106,11 +106,11 @@ config_properties = {
 
 ### Prepare your model
 
-Using the *[!UICONTROL Real-time ML]* template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
+Using the **[!UICONTROL Real-time ML]** template, you need to analyze, pre-process, train, and evaluate your ML model. This is done by applying data transformations and building a training pipeline.
 
-**Data tranformations**
+**Data transformations**
 
-The *[!UICONTROL Real-time ML]* templates *Data Transformations* cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
+The **[!UICONTROL Real-time ML]** templates **Data Transformations** cell needs to be modified to work with your own dataset. Typically this involves renaming columns, data rollup, and data preparation/feature engineering. 
 
 >[!NOTE]
 >
@@ -348,7 +348,7 @@ Once complete, an `edge` object is returned containing each of the nodes and the
 
 >[!NOTE]
 >
->Real-time Machine Learning is temporarily deployed to and managed by the Adobe Expereince Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
+>Real-time Machine Learning is temporarily deployed to and managed by the Adobe Experience Platform Hub. For additional details, visit the overview section on [Real-time Machine Learning architecture](./home.md#architecture).
 
 Now that you have created a DSL graph, you can deploy your graph to the [!DNL Edge].
 
@@ -403,7 +403,7 @@ You are returned the updated DSL.
 
 ## Scoring {#scoring}
 
-After publishing to [!DNL Edge], scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The *[!UICONTROL Real-time ML]* template uses EdgeUtils to demonstrate this process.
+After publishing to [!DNL Edge], scoring is done by a POST request from a client. Typically, this can be done from a client application that needs ML scores. You can also do it from Postman. The **[!UICONTROL Real-time ML]** template uses EdgeUtils to demonstrate this process.
 
 >[!NOTE]
 >

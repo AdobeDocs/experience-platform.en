@@ -2,7 +2,8 @@
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;score a service
 solution: Experience Platform
 title: Publish a model as a service (UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: Adobe Experience Platform Data Science Workspace allows you to publish your trained and evaluated Model as a Service, enabling users within your IMS Organization to score data without the need for creating their own Models.
 ---
 
@@ -33,7 +34,7 @@ If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to
 
 ## Score using a Service {#access-a-service}
 
-1. In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the *[!UICONTROL Service Gallery]*. Find the Service that you wish to use and click **[!UICONTROL Score]**.
+1. In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the Service that you wish to use and click **[!UICONTROL Score]**.
 ![](../images/models-recipes/publish-model/click_to_score.png)
 2. Select an appropriate input dataset for the scoring run, then click **[!UICONTROL Next]**.
 ![](../images/models-recipes/publish-model/6_scoring_input.png)
@@ -41,9 +42,9 @@ If you prefer to publish a Model by using Sensei Machine Learning APIs, refer to
 ![](../images/models-recipes/publish-model/7_scoring_output.png)
 4. When a Service is created, it inherits default scoring configurations. You can review these configurations and adjust them as needed by double-clicking on the values. Once you are satisfied with the configurations, click **[!UICONTROL Finish]** to begin the scoring run.
 ![](../images/models-recipes/publish-model/8_scoring_configure.png)
-5.  On the Service's *Overview* page, details of the new scoring job and its progress is shown. Once the job completes, the **[!UICONTROL Most Recent]** scoring job will be updated.
+5.  On the Service's **Overview** page, details of the new scoring job and its progress is shown. Once the job completes, the **[!UICONTROL Most Recent]** header within the **[!UICONTROL Scoring]** container will be updated.
 ![](../images/models-recipes/publish-model/score_pending.png)
 
 ## Next steps {#next-steps}
 
-By following this tutorial, you have successfully published a Model as an accessible Service, and scored data using the new Service through the *[!UICONTROL Service Gallery]*. Continue to the next tutorial to learn how you can [schedule automated training and scoring runs on a Service](./schedule-models-ui.md).
+By following this tutorial, you have successfully published a Model as an accessible Service, and scored data using the new Service through the [!UICONTROL Service Gallery]. Continue to the next tutorial to learn how you can [schedule automated training and scoring runs on a Service](./schedule-models-ui.md).

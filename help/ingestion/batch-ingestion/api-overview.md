@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestion developer guide
+title: Batch Ingestion developer guide
 topic: developer guide
+description: This document provides a comprehensive overview of using batch ingestion APIs.
 ---
 
 # Batch ingestion developer guide
@@ -20,7 +21,7 @@ The following sections provide additional information that you will need to know
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-- [[!DNL Experience Data Model] (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 - [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Reading sample API calls

@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
 title: Create a Couchbase connector using the Flow Service API
 topic: overview
+type: Tutorial
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Couchbase to Experience Platform.
 ---
 
 # Create a [!DNL Couchbase] connector using the [!DNL Flow Service] API

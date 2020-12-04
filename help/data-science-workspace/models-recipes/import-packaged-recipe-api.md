@@ -2,7 +2,8 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Import a packaged recipe (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
 description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface. 
 
 ---

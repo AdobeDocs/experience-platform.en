@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
 title: Create an Oracle connector using the Flow Service API
 topic: overview
+type: Tutorial
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Oracle to Experience Platform.
 ---
 
 # Create an [!DNL Oracle] connector using the [!DNL Flow Service] API

@@ -85,6 +85,12 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 
+### eCommerce
+
+[!DNL Experience Platform] provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+
 ### Marketing Automation
 
 [!DNL Experience Platform] provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
@@ -105,14 +111,14 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 ## Access control for sources in data ingestion
 
-Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the *[!UICONTROL Permissions]* tab in a particular product profile. From the **[!UICONTROL Edit Permissions]** panel, you can access the permissions pertaining to sources through the *[!UICONTROL data ingestion]* menu entry. The **[!UICONTROL View Sources]** permission grants read-only access to available sources in the *[!UICONTROL Catalog]* tab and authenticated sources in the *[!UICONTROL Browse]* tab, while the **[!UICONTROL Manage Sources]** permission grants full access to read, create, edit, and disable sources.
+Permissions for sources in data ingestion can be managed within the Adobe Admin Console. You can access permissions through the **[!UICONTROL Permissions]** tab in a particular product profile. From the **[!UICONTROL Edit Permissions]** panel, you can access the permissions pertaining to sources through the **[!UICONTROL data ingestion]** menu entry. The **[!UICONTROL View Sources]** permission grants read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab, while the **[!UICONTROL Manage Sources]** permission grants full access to read, create, edit, and disable sources.
 
 The following table outlines how the UI behaves based on different combinations of these permissions:
 
 | Permission level | Description |
 | ---- | ----|
-| **[!UICONTROL View Sources]** On | Grant read-only access to sources in each source-type in the *Catalog* tab, as well as the *Browse*, *Accounts*, and *DataFlow* tabs. |
-| **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to *[!UICONTROL Connect Source]* option in *[!UICONTROL Catalog]* and to *[!UICONTROL Select Data]* option in *[!UICONTROL Browse]*. **[!UICONTROL Manage Sources]** also allows you to enable or disable *[!UICONTROL DataFlows]* and edit their schedules. |
+| **[!UICONTROL View Sources]** On | Grant read-only access to sources in each source-type in the Catalog tab, as well as the Browse, Accounts, and Dataflow tabs. |
+| **[!UICONTROL Manage Sources]** On | In addition to the functions included in **[!UICONTROL View Sources]**, grants access to **[!UICONTROL Connect Source]** option in **[!UICONTROL Catalog]** and to **[!UICONTROL Select Data]** option in **[!UICONTROL Browse]**. **[!UICONTROL Manage Sources]** also allows you to enable or disable **[!UICONTROL DataFlows]** and edit their schedules. |
 | **[!UICONTROL View Sources]** Off and **[!UICONTROL Manage Sources]** Off | Revoke all access to sources. |
 
 For more information about the available permissions granted through the Admin Console, including those four sources, see the [access control overview](../access-control/home.md).
