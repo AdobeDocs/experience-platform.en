@@ -31,7 +31,7 @@ In the **Authentication** step, if you had previously set up a connection to you
 
 Once your credentials are confirmed and Adobe Experience Cloud is connected to your social network, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
 
-![Credentials confirmed](/help/rtcdp/destinations/assets/facebook-post-connection-view.png)
+![Credentials confirmed](../../assets/catalog/social/workflow/post-connect.png)
 
 In the **[!UICONTROL Setup]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill in the [!UICONTROL Account ID] of your social network ad account. 
 
