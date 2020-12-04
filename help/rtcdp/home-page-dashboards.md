@@ -61,7 +61,7 @@ For more information about segments, see [Segmentation Service overview](segment
 
 **[!UICONTROL Destinations]** shows the total number of destinations created for the organization. This number is updated when new destinations are created.
 
-For more information about destinations, see [Destinations overview](destinations/destinations-overview.md).
+For more information about destinations, see [Destinations overview](destinations/overview.md).
 
 <!-- ### Successful profile records
 
@@ -127,4 +127,4 @@ The **[!UICONTROL Recent destinations]** metric card shows the five most recent 
 
 Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
 
-For more information about destinations, see [Destinations overview](destinations/destinations-overview.md).
+For more information about destinations, see [Destinations overview](destinations/overview.md).

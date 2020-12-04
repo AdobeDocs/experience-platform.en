@@ -34,7 +34,7 @@ You can set data usage restrictions on a destination by defining marketing use c
 
 Defining marketing use cases on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing use cases to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
-Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destinations documentation](../destinations/destinations-overview.md#data-governance) for steps on how to configure your particular destination.
+Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destinations documentation](../destinations/overview.md) for steps on how to configure your particular destination.
 
 ## Manage data usage policies {#policies}
 

@@ -64,7 +64,7 @@ Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
 
 >[!IMPORTANT]
 >
->If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
+>If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string. Additionally, if you are using version 12.0 or greater, you will need to add `PGGSSENCMODE=disable` to your connection string.
 
 Paste the command string into a terminal or command window and press Enter.
 
