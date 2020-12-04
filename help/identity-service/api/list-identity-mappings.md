@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity;Identity
 solution: Experience Platform
 title: List identity mappings
 topic: API guide
+description: A mapping is a collection of all identities in a cluster, for a specified namespace.
 ---
 
 # List identity mappings
@@ -58,7 +59,9 @@ curl -X GET \
 
 Use the `POST` method as a batch equivalent of the `GET` method described above to retrieve mappings for multiple identities.
 
->[!NOTE] Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
+>[!NOTE]
+>
+>Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
 
 **API format**
 

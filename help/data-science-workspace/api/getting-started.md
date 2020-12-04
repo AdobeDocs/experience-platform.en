@@ -1,29 +1,30 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Sensei Machine Learning API developer guide
 topic: Developer guide
+description: This developer guide provides steps to help you start using the Sensei Machine Learning API, and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 ---
 
-# Sensei Machine Learning API developer guide
+# [!DNL Sensei Machine Learning] API developer guide
 
-The Sensei Machine Learning API provides a mechanism for data scientiests to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
+The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
 This developer guide provides steps to help you start using the [Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml), and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to Adobe Experience Platform APIs:
+You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`
 * x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * x-sandbox-name: `{SANDBOX_NAME}`
 
-For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 

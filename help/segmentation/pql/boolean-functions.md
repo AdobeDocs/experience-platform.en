@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;boolean functions;boolean;
 solution: Experience Platform
 title: Boolean functions
 topic: developer guide
+description: Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).
 ---
 
 # Boolean functions
 
-Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).  More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## And
 

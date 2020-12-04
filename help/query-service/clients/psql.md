@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect
+description: PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
 ---
 
 # Connect with PSQL
 
-PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
+PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. You can install it by following these instructions. 
 
 ## Install Postgres on a Mac
 
@@ -31,15 +32,15 @@ After issuing these commands, you should see the following:
 /usr/local/bin/psql
 ```
 
-## Install Postgres on a PC
+## Install [!DNL Postgres] on a PC
 
-Download and install Postgres from this [location](https://www.postgresql.org/download/windows/).
+Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
 
 Edit your path variable:
 
 ![Image](../images/clients/psql/path.png)
     
-Add the two lines shown that include "Postgres."
+Add the two lines shown that include "[!DNL Postgres]."
     
 Save your updates, then open a command prompt and type:
 
@@ -53,18 +54,20 @@ You should see something like this:
 psql (PostgreSQL) 9.5.14
 ```
 
-## Connect PSQL and Query Service
+## Connect PSQL and [!DNL Query Service]
 
-Return to the Platform UI on the "Connect BI Tools" page. 
+Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page. 
 
-Click **copy** for "PSQL Command."
+Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
     
 ![Image](../images/clients/psql/connect-bi.png)
-    
->[!IMPORTANT]: If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string.
+
+>[!IMPORTANT]
+>
+>If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string. Additionally, if you are using version 12.0 or greater, you will need to add `PGGSSENCMODE=disable` to your connection string.
 
 Paste the command string into a terminal or command window and press Enter.
-    
+
 You should see a result like this:
 
 ```shell

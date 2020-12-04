@@ -1,15 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;adobe defined functions;query;using adobe defined functions;
 solution: Experience Platform
 title: Adobe-defined functions
 topic: queries
+type: Tutorial
+description: This document covers Adobe-defined functions (ADFs) to support three key Analytics activities sessionization, attribution, and pathing.
 ---
 
 # Using Adobe-defined functions
 
 One of Adobe's big differentiators is that they understand experience data and what customers need to be able to do with that data. You can use this understanding to build helper functions that make your job easier.
 
-This document covers Adobe-defined functions (ADFs) to support three key Analytics activities:
+This document covers Adobe-defined functions (ADFs) to support three key [!DNL Analytics] activities:
 - [Sessionization](#sessionization)
 - [Attribution](#attribution)
 - [Pathing](#pathing)
@@ -42,7 +44,7 @@ FROM  (
         ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
         AS session
         FROM your_analytics_table
-        WHERE _ACP_YEAR = 2018
+        WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
       )
 LIMIT 100;
 ```
@@ -69,7 +71,7 @@ FROM
       AS session,
           web.webPageDetails.pageviews.value as PageViews
       FROM your_analytics_table
-      WHERE _ACP_YEAR = 2018
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
 GROUP BY Day 
 ORDER BY Day DESC 
@@ -84,11 +86,13 @@ Attribution is how you allocate metrics or conversions like revenue, order, or s
 
 In Adobe Analytics, attribution settings are configured using variables like eVars and are generated as data is ingested.
 
-The Attribution ADFs found in Query Service allow those allocations to be defined and generated at query time.
+The Attribution ADFs found in [!DNL Query Service] allow those allocations to be defined and generated at query time.
 
 This example focuses on last-touch attribution, but Adobe also offers first-touch attribution. 
 
->[!NOTE] Other options with timeouts and event-based expiration will be available in future versions of Query Service.
+>[!NOTE]
+>
+>Other options with timeouts and event-based expiration will be available in future versions of [!DNL Query Service].
 
 **Syntax:**
 
@@ -111,7 +115,7 @@ SELECT
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 LIMIT 50;
 ```
 
@@ -132,7 +136,7 @@ FROM
       AS LastMemberLevel,
   commerce.purchases.value as Orders
 FROM your_analytics_table 
-WHERE _ACP_YEAR=2018 AND _ACP_MONTH=4
+WHERE TIMESTAMP >= to_timestamp('2018-04-01') AND TIMESTAMP <= to_timestamp('2018-04-30')
 )
 GROUP BY LastMemberLevel 
 ORDER BY MemberLevelOrders DESC
@@ -147,7 +151,7 @@ Pathing helps to understand how customers navigate your site. The `NEXT()` and `
 
 **Syntax:**
 
-```
+```sql
 NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
 ```
@@ -169,7 +173,7 @@ SELECT
               ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING).value
           AS next_pagename
 FROM your_analytics_table
-WHERE _ACP_YEAR=2018 
+WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31') 
 LIMIT 10;
 ```
 
@@ -222,7 +226,7 @@ LIMIT 10;
                 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) 
         AS session
       FROM your_analytics_table
-      WHERE _ACP_YEAR=2018)
+      WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
     )
   WHERE SessionPageDepth=1
   GROUP BY PageName, PageName_2, PageName_3, PageName_4, PageName_5
@@ -231,4 +235,10 @@ LIMIT 10;
 ```
 
 ![Image](../images/queries/adobe-functions/create-breakdown-report.png)
+
+## Additional resources
+
+The following video shows how to run queries in the Adobe Experience Platform interface and in a PSQL client. Additionally, the video also uses examples involving individual properties in an XDM object, using Adobe-defined functions, and using CREATE TABLE AS SELECT (CTAS).
+
+>[!VIDEO](https://video.tv.adobe.com/v/29796?quality=12&learn=on)
 

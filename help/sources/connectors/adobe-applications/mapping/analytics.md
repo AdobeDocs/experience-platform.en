@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Analytics mapping fields
 topic: overview
+description: Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
 ---
 
 # Analytics mapping fields
@@ -17,7 +18,9 @@ Select fields are directly mapped from Adobe Analytics to Experience Data Model 
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*).
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ---------- |
@@ -130,7 +133,9 @@ Select fields coming from ADC need to be transformed, requiring logic beyond a d
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*).
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ----------- |
@@ -188,7 +193,9 @@ To learn more about performing this transformations using Query Service, please 
 
 The following table includes columns that show the name of the Analytics field (*Analytics field*), the corresponding XDM field (*XDM field*) and its type (*XDM type*), as well as a description of the field (*Description*). 
 
->[!NOTE] Please scroll left/right to view the full contents of the table.
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
 
 | Analytics field | XDM field | XDM type | Description |
 | --------------- | --------- | -------- | ---------- |

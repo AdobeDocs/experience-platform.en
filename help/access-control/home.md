@@ -1,55 +1,58 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;access control;adobe admin console
 solution: Experience Platform
-title: Access control overview
 topic: overview
+title: Access control overview
+description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
 ---
 
 # Access control overview
 
-Access control for Experience Platform is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+Access control for [!DNL Experience Platform] is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.
 
 ## Access control hierarchy and workflow
 
-In order to configure access control for Experience Platform, you must have administrator privileges for an organization that has an Experience Platform product integration. The minimum role that grant or withdraw permissions is a **product profile administrator**. Other administrator roles that can manage permissions are **product administrators** (can manage all profiles within a product) and **system administrators** (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
+In order to configure access control for [!DNL Experience Platform], you must have administrator privileges for an organization that has an [!DNL Experience Platform] product integration. The minimum role that grant or withdraw permissions is a product profile administrator. Other administrator roles that can manage permissions are product administrators (can manage all profiles within a product) and system administrators (no restrictions). See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.
 
->[!NOTE] From this point on, any mentions of "administrator" in this document refer to a product profile administrator or higher (as outlined above).
+>[!NOTE]
+>
+>From this point on, any mentions of "administrator" in this document refer to a product profile administrator or higher (as outlined above).
 
 A high-level workflow for gaining and assigning access permissions can be summarized as follows:
 
-- After subscribing to Adobe Experience Platform, an email is sent to the administrator specified in the registration form.
+- After licensing Adobe Experience Platform, or an Application/App Service that uses Experience Platform, an email is sent to the administrator specified during licensing.
 - The administrator logs in to [Adobe Admin Console](#adobe-admin-console) and selects **Adobe Experience Platform** from the list of products on the overview page.
 - The administrator can view the default [product profiles](#product-profiles) or create new customer product profiles as needed.
 - The administrator can edit the permissions and users for any existing product profiles.
-- When creating or editing a product profile, the administrator adds users to the profile using the **users** tab, and grants permissions to these users (such as "Read Datasets" or "Manage Schemas") by accessing the **permissions** tab. Similarly, the administrator can assign access to sandboxes using the same permissions tab.
-- When users log in to the Experience Platform user interface, their access to Platform capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the "View Datasets" permission, the *Datasets* tab in the side menu will not be visible to that user.
+- When creating or editing a product profile, the administrator adds users to the profile using the **[!UICONTROL users]** tab, and grants permissions to these users (such as "[!UICONTROL Read Datasets]" or "[!UICONTROL Manage Schemas]") by accessing the **[!UICONTROL permissions]** tab. Similarly, the administrator can assign access to sandboxes using the same permissions tab.
+- When users log in to the [!DNL Experience Platform] user interface, their access to [!DNL Platform] capabilities is driven by the permissions that have been granted to them from Step 2. For example, if a user does not have the "[!UICONTROL View Datasets]" permission, the **[!UICONTROL Datasets]** tab in the side menu will not be visible to that user.
 
-For more detailed steps on how to manage access control in Experience Platform, see the [access control user guide](./ui/overview.md).
+For more detailed steps on how to manage access control in [!DNL Experience Platform], see the [access control user guide](./ui/overview.md).
 
-All calls to Experience Platform APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. Within the UI, elements will be hidden or altered depending on permissions granted to the current user.
+All calls to [!DNL Experience Platform] APIs are validated for permissions, and will return errors if the appropriate permission(s) are not found in the current user context. Within the UI, elements will be hidden or altered depending on permissions granted to the current user.
 
 ## Adobe Admin Console
 
-Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, you can grant groups of users access permissions for various Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
+Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, you can grant groups of users access permissions for various [!DNL Platform] capabilities, such as "[!UICONTROL Manage Datasets]", "[!UICONTROL View Datasets]", or "[!UICONTROL Manage Profiles]".
 
 ### Product profiles
 
-In the Admin Console, permissions are assigned to users through the use of **product profiles**. Product profiles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through product profiles. Users can be assigned to one or multiple product profiles belonging to your organization.
+In the [!DNL Admin Console], permissions are assigned to users through the use of product profiles. Product profiles allow you to grant permissions to one or multiple users, and also contain their access to the scope of the sandboxes that are assigned to them through product profiles. Users can be assigned to one or multiple product profiles belonging to your organization.
 
 ### Default product profiles
 
-Experience Platform comes with two pre-configured default product profiles. The following table outlines what is provided in each default profile, including the sandbox they grant access to as well as the permissions they grant within the scope of that sandbox.
+[!DNL Experience Platform] comes with two pre-configured default product profiles. The following table outlines what is provided in each default profile, including the sandbox they grant access to as well as the permissions they grant within the scope of that sandbox.
 
 | Product profile | Sandbox access | Permissions |
 | --- | --- | --- |
-| Default Production - All Access | Production | All permissions applicable to Experience Platform, except for Sandbox Administration permissions. |
-| Default Sandbox Administration | N/A | Provides access only to Sandbox Administration permissions. |
+| Default production all access | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Sandbox Administrators | N/A | Provides access only to Sandbox Administration permissions. |
 
 ## Sandboxes and permissions
 
-Experience Platform provides access to one Production sandbox, and allows you to create Non-Production **sandboxes**. Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's **permissions** give the profile's users access to Platform features within the sandbox environments to which they've been granted access to.
+Non-Production sandboxes are a form of data virtualization that allow you to isolate data from other sandboxes and are typically used for development experiments, testing, or trials. A product profile's permissions give the profile's users access to [!DNL Platform] features within the sandbox environments to which they've been granted access to. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
-For more information about sandboxes in Experience Platform, please refer to the [sandboxes overview](../sandboxes/home.md).
+For more information about sandboxes in [!DNL Experience Platform], please refer to the [sandboxes overview](../sandboxes/home.md).
 
 ### Access to sandboxes
 
@@ -61,38 +64,49 @@ The "Sandbox Management" permission allows users to manage, view, or reset sandb
 
 ### Permissions
 
-The **permissions** tab within a product profile displays the sandboxes and permissions that are active for that profile:
+The permissions tab within a product profile displays the sandboxes and permissions that are active for that profile:
 
-![](./images/permissions-overview.png)
+![permissions-overview](./images/permissions-overview.png)
 
-Permissions that are granted through the Admin Console are sorted by category, with some permissions granting access to several low-level functionalities.
+Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
 
-The following table outlines the available permissions for Experience Platform in the Admin Console, with descriptions of the specific Platform capabilities they grant access to. For detailed steps on how to add permissions to a product profile, see the [access control user guide](./ui/overview.md).
+The following table outlines the available permissions for [!DNL Experience Platform] in the [!DNL Admin Console], with descriptions of the specific [!DNL Platform] capabilities they grant access to. For detailed steps on how to add permissions to a product profile, see the [access control user guide](./ui/overview.md).
 
 | Category | Permission | Description |
 | --- | --- | --- |
-| Data Modeling | Manage Schemas | Access to read, create, edit, and delete schemas and related resources. |
-| Data Modeling | View Schemas | Read-only access to schemas and related resources. |
-| Data Management | Manage Datasets | Access to read, create, edit, and delete datasets. Read-only access for schemas. |
-| Data Management | View Datasets | Read-only access for datasets and schemas. |
-| Data Management | Data Monitoring | Read-only access to monitoring datasets and streams. |
-| Profile Management | Manage Profiles | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
-| Profile Management | View Profiles | Read-only access to available profiles. |
-| Profile Management | Export Audience for Segment | Ability to export an evaluated audience segment to a dataset. |
-| Identities | Manage Identity Namespaces | Access to read, create, edit, and delete identity namespaces. |
-| Identities | View Identity Namespaces | Read-only access for identity namespaces. |
-| Sandbox Administration | Manage Sandboxes | Access to read, create, edit, and delete sandboxes. |
-| Sandbox Administration | View Sandboxes | Read-only access for sandboxes belonging to your organization. |
-| Sandbox Administration | Reset a Sandbox | Ability to reset a sandbox. |
-| Destinations | Manage Destinations | Access to read, create, edit, and disable destinations.* |
-| Destinations | View Destinations | Read-only access to available destinations in the *Catalog* tab and authenticated destinations in the *Browse* tab.* |
-| Destinations | Activate Destinations | Ability to activate data to active destinations that have been created. This permission requires either “View Destinations” or “Manage Destinations” to be granted to the user who will activate destinations.* |
-| Data Ingestion | Manage Sources | Access to read, create, edit, and disable sources. |
-| Data Ingestion | View Sources | Read-only access to available sources in the *Catalog* tab and authenticated sources in the *Browse* tab. |
-| Data Science Workspace | Manage Data Science Workspace | Access to read, create, edit, and delete in Data Science Workspace. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
+| [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Identity Metadata] | Access to read, create, edit, and delete identity metadata for schemas. |
+| [!DNL Data Management] | [!UICONTROL Manage Datasets] | Access to read, create, edit, and delete datasets. Read-only access for schemas. |
+| [!DNL Data Management] | [!UICONTROL View Datasets] | Read-only access for datasets and schemas. |
+| [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. |
+| [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
+| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
+| [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition.. |
+| [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
+| [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
+| [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
+| [!DNL Sandbox Administration] | [!UICONTROL View Sandboxes] | Read-only access for sandboxes belonging to your organization. |
+| [!DNL Sandbox Administration] | [!UICONTROL Reset a Sandbox] | Ability to reset a sandbox. |
+| [!DNL Destinations] | [!UICONTROL Manage Destinations] | Access to read, create, edit, and disable destinations.* |
+| [!DNL Destinations] | [!UICONTROL View Destinations] | Read-only access to available destinations in the **[!UICONTROL Catalog]** tab and authenticated destinations in the **[!UICONTROL Browse]** tab.* |
+| [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations.* |
+| [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
+| [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
+| [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
 
-_(*) This permission requires provisions to Real-time Customer Data Platform. For more information regarding Real-time CDP, please begin by reading the [Real-time CDP overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
+_(*) This permission requires provisions to [!DNL Real-time Customer Data Platform]. For more information regarding Real-time CDP, please begin by reading the [Real-time CDP overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
 
 ## Next steps
 
-By reading this guide, you have been introduced to the main principles of access control in Experience Platform. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the Admin Console to create product profiles and assign permissions for Platform.
+By reading this guide, you have been introduced to the main principles of access control in [!DNL Experience Platform]. You can now continue to the [access control user guide](./ui/overview.md) for detailed steps on how use the [!DNL Admin Console] to create product profiles and assign permissions for [!DNL Platform].

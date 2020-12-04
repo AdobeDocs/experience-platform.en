@@ -3,9 +3,10 @@ keywords: Experience Platform;developer guide;SDK;Data Access SDK;Data Science W
 solution: Experience Platform
 title: Platform SDK guide
 topic: SDK authoring
+description: This tutorial provides you with information on converting data_access_sdk_python to the new Python platform_sdk in both Python and R.
 ---
 
-# Platform SDK guide
+# [!DNL Platform] SDK guide
 
 This tutorial provides you with information on converting `data_access_sdk_python` to the new Python `platform_sdk` in both Python and R. This tutorial provides information on the following operations:
 
@@ -15,7 +16,7 @@ This tutorial provides you with information on converting `data_access_sdk_pytho
 
 ## Build authentication {#build-authentication}
 
-Authentication is required to make calls to Adobe Experience Platform, and is comprised of API Key, IMS Org ID, a user token, and a service token.
+Authentication is required to make calls to [!DNL Adobe Experience Platform], and is comprised of API Key, IMS Org ID, a user token, and a service token.
 
 ### Python
 
@@ -62,7 +63,7 @@ client_context <- psdk$client_context$ClientContext(api_key={API_KEY},
 
 ## Basic reading of data {#basic-reading-of-data}
 
-With the new Platform SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
+With the new [!DNL Platform] SDK, the maximum read size is 32 GB, with a maximum read time of 10 minutes. 
 
 If your read time is taking too long, you can try using one of the following filtering options:
 
@@ -71,7 +72,9 @@ If your read time is taking too long, you can try using one of the following fil
 - [Filtering data by column](#filter-by-selected-columns)
 - [Getting sorted results](#get-sorted-results)
 
->[!NOTE] The IMS Org is set within the `client_context`. 
+>[!NOTE]
+>
+>The IMS Org is set within the `client_context`. 
 
 ### Python
 
@@ -137,7 +140,7 @@ df2 <- dataset_reader$where(
 df2
 ```
 
-The new Platform SDK supports the following operations:
+The new [!DNL Platform] SDK supports the following operations:
 
 | Operation | Function |
 | --------- | -------- |
@@ -185,7 +188,9 @@ df <- dataset_reader$sort(c(('column-a', 'asc'), ('column-b', 'desc')))$read()
 
 ## Basic writing of data {#basic-writing-of-data}
 
->[!NOTE] The IMS Org is set within the `client_context`. 
+>[!NOTE]
+>
+>The IMS Org is set within the `client_context`. 
 
 To write data in Python and R, use one of the following examples below:
 
@@ -210,4 +215,4 @@ write_tracker <- dataset_writer$write({PANDA_DATAFRAME}, file_format='json')
 
 ## Next steps
 
-Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using JupyterLab notebooks.
+Once you have configured the `platform_sdk` data loader, the data undergoes preparation and is then split to the `train` and `val` datasets. To learn about data preparation and feature engineering please visit the section on [data preparation and feature engineering](../jupyterlab/create-a-recipe.md#data-preparation-and-feature-engineering) in the tutorial for creating a recipe using [!DNL JupyterLab] notebooks.

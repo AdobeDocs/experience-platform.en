@@ -1,25 +1,36 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
-title: Google Ads connector
+title: Google AdWords connector
 topic: overview
+description: The documentation below provides information on how to connect Google AdWords to Platform using APIs or the user interface.
 ---
 
-# Google Ads connector
+# [!DNL Google AdWords] connector
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+>[!NOTE]
+>
+>The [!DNL Google AdWords] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Experience Platform provides support for ingesting data from a third-party advertising system. Support for advertising providers include Google Ads.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-The documentation below provides information on how to connect Google Ads to Platform using APIs or the user interface:
+[!DNL Experience Platform] provides support for ingesting data from a third-party advertising system. Support for advertising providers include [!DNL Google AdWords].
 
-## Connect Google Ads to Platform using APIs
+## IP address allow list
 
-- [Create a Google Ads connector using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
+A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
+
+## Connect [!DNL Google AdWords] to [!DNL Platform]
+
+The documentation below provides information on how to connect [!DNL Google AdWords] to [!DNL Platform] using APIs or the user interface:
+
+### Using APIs
+
+- [Create a Google AdWords connector using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Explore a advertising system using the Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Collect advertising data using the Flow Service API](../../tutorials/api/collect/advertising.md)
 
-## Connect Google Ads to Platform using the UI
+### Using the UI
 
-- [Create a Google Ads source connector in the UI](../../tutorials/ui/create/advertising/ads.md)
+- [Create a Google AdWords source connector in the UI](../../tutorials/ui/create/advertising/ads.md)
 - [Configure a dataflow for a advertising connector in the UI](../../tutorials/ui/dataflow/advertising.md)

@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;Score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;Score a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Score a model (API)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
+description: This tutorial will show you how to leverage the Sensei Machine Learning APIs to create an Experiment and an Experiment Run.
 ---
 
 # Score a model (API)
@@ -225,7 +227,9 @@ curl -X DELETE \
 `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.  
 `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.  
 
->[!NOTE] The API call will disable creation of new Experiment runs. However, it will not stop execution of already running Experiment Runs.
+>[!NOTE]
+>
+>The API call will disable creation of new Experiment runs. However, it will not stop execution of already running Experiment Runs.
 
 The following is the Response notifying that the Experiment is successfully deleted.
 

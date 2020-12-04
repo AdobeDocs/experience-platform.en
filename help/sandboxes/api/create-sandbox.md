@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: Create a sandbox
 topic: developer guide
+description: You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
 ---
 
 # Create a sandbox
@@ -54,4 +55,6 @@ A successful response returns the details of the newly created sandbox, showing 
 }
 ```
 
->[!NOTE] Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".
+>[!NOTE]
+>
+>Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".

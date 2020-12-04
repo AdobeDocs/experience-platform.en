@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
 solution: Experience Platform
 title: SDK developer guide
 topic: Overview
+description: The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark (Scala).
 ---
 
 # SDK developer guide
 
-The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark.
+The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
 This document provides information regarding the various classes found within the Model Authoring SDK.
 
@@ -29,14 +30,14 @@ The following table describes the abstract methods of a PySpark Data Loader clas
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Load and return Platform data as a Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">spark</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>spark</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -45,7 +46,7 @@ The following table describes the abstract methods of a PySpark Data Loader clas
 
 **Spark**
 
-The following table describes the abstract methods of a Spark Data Loader class:
+The following table describes the abstract methods of a [!DNL Spark] Data Loader class:
 
 <table>
     <thead>
@@ -57,22 +58,22 @@ The following table describes the abstract methods of a Spark Data Loader class:
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>Load and return Platform data as a DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### Load data from a Platform dataset {#load-data-from-a-platform-dataset}
+### Load data from a [!DNL Platform] dataset {#load-data-from-a-platform-dataset}
 
-The following example retrieves Platform data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
+The following example retrieves [!DNL Platform] data by ID and returns a DataFrame, where the dataset ID (`datasetId`) is a defined property in the configuration file.
 
 **PySpark**
 
@@ -86,102 +87,101 @@ class MyDataLoader(DataLoader):
     Implementation of DataLoader which loads a DataFrame and prepares data
     """
 
-    def load(self, configProperties, spark):
-        """
-        Load and return dataset
+    def load_dataset(config_properties, spark, task_id):
 
-        :param configProperties:    Configuration properties
-        :param spark:               Spark session
-        :return:                    DataFrame
-        """
-
-        # preliminary checks
-        if configProperties is None :
-            raise ValueError("configProperties parameter is null")
-        if spark is None:
-            raise ValueError("spark parameter is null")
+        PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
+        PLATFORM_SDK_PQS_INTERACTIVE = "interactive"
 
         # prepare variables
-        dataset_id = str(
-            configProperties.get("datasetId"))
-        service_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+        service_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+        user_token = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+        org_id = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+        api_key = str(spark.sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+
+        dataset_id = str(config_properties.get(task_id))
 
         # validate variables
-        for arg in ['dataset_id', 'service_token', 'user_token', 'org_id', 'api_key']:
+        for arg in ['service_token', 'user_token', 'org_id', 'dataset_id', 'api_key']:
             if eval(arg) == 'None':
                 raise ValueError("%s is empty" % arg)
 
         # load dataset through Spark session
-        pd = spark.read.format("com.adobe.platform.dataset") \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('orgId', org_id) \
-            .option('serviceApiKey', api_key) \
-            .load(dataset_id)
+
+        query_options = get_query_options(spark.sparkContext)
+
+        pd = spark.read.format(PLATFORM_SDK_PQS_PACKAGE) \
+            .option(query_options.userToken(), user_token) \
+            .option(query_options.serviceToken(), service_token) \
+            .option(query_options.imsOrg(), org_id) \
+            .option(query_options.apiKey(), api_key) \
+            .option(query_options.mode(), PLATFORM_SDK_PQS_INTERACTIVE) \
+            .option(query_options.datasetId(), dataset_id) \
+            .load()
+        pd.show()
 
         # return as DataFrame
         return pd
 ```
 
-**Spark**
+**Spark (Scala)**
 
 ```scala
 // Spark
 
+package com.adobe.platform.ml
+
+import java.time.LocalDateTime
+
 import com.adobe.platform.ml.config.ConfigProperties
-import com.adobe.platform.ml.sdk.DataLoader
+import com.adobe.platform.query.QSOption
+import org.apache.spark.ml.feature.StringIndexer
+import org.apache.spark.sql.expressions.Window
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types.{StructType, TimestampType}
 import org.apache.spark.sql.{DataFrame, SparkSession}
+import org.apache.spark.sql.Column
 
 /**
  * Implementation of DataLoader which loads a DataFrame and prepares data
  */
 class MyDataLoader extends DataLoader {
 
+    final val PLATFORM_SDK_PQS_PACKAGE: String = "com.adobe.platform.query"
+    final val PLATFORM_SDK_PQS_INTERACTIVE: String = "interactive"
+    final val PLATFORM_SDK_PQS_BATCH: String = "batch"
+
     /**
-     * @param configProperties  - Configuration properties
-     * @param sparkSession      - Spark session
-     * @return                  - DataFrame
-     */
-    override def load(configProperties: ConfigProperties, sparkSession: SparkSession): DataFrame = {
+    *
+    * @param configProperties - Configuration Properties map
+    * @param sparkSession     - SparkSession
+    * @return                 - DataFrame which is loaded for training
+    */
 
-        // preliminary checks
-        require(configProperties != null)
-        require(sparkSession != null)
 
-        // prepare variables
-        val dataSetId: String = configProperties
-            .get("datasetId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+  def load_dataset(configProperties: ConfigProperties, sparkSession: SparkSession, taskId: String): DataFrame = {
 
-        // validate variables
-        List(dataSetId, serviceToken, userToken, orgId, apiKey).foreach(
-            value => required(value != "")
-        )
+    require(configProperties != null)
+    require(sparkSession != null)
 
-        // load dataset through Spark session
-        var df = sparkSession.read.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .load(dataSetId)
-        
-        // return as DataFrame
-        df
+    // Read the configs
+    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+    val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+    val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+    val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+
+    val dataSetId: String = configProperties.get(taskId).getOrElse("")
+
+    // Load the dataset
+    var df = sparkSession.read.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.mode, PLATFORM_SDK_PQS_INTERACTIVE)
+      .option(QSOption.datasetId, dataSetId)
+      .load()
+    df.show()
+    df
     }
 }
 ```
@@ -192,7 +192,7 @@ The DataSaver class encapsulates anything related to storing output data includi
 
 **PySpark**
 
-The following table describes the abstract methods of a PySpark Data Saver class:
+The following table describes the abstract methods of a [!DNL PySpark] Data Saver class:
 
 <table>
     <thead>
@@ -204,23 +204,23 @@ The following table describes the abstract methods of a PySpark Data Saver class
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataframe</code>: Data to be stored in the form of a DataFrame</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataframe</code>: Data to be stored in the form of a DataFrame</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
-The following table describes the abstract methods of a Spark Data Saver class:
+The following table describes the abstract methods of a [!DNL Spark] Data Saver class:
 
 <table>
     <thead>
@@ -232,27 +232,27 @@ The following table describes the abstract methods of a Spark Data Saver class:
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataFrame</code>: Data to be stored in the form of a DataFrame</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataFrame</code>: Data to be stored in the form of a DataFrame</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-### Save data to a Platform dataset {#save-data-to-a-platform-dataset}
+### Save data to a [!DNL Platform] dataset {#save-data-to-a-platform-dataset}
 
-In order to store data onto a Platform dataset, the properties must be either provided or defined in the configuration file:
+In order to store data onto a [!DNL Platform] dataset, the properties must be either provided or defined in the configuration file:
 
-- A valid Platform dataset ID to which data will be stored
+- A valid [!DNL Platform] dataset ID to which data will be stored
 - The tenant ID belonging to your organization
 
-The following examples store data (`prediction`) onto a Platform dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
+The following examples store data (`prediction`) onto a [!DNL Platform] dataset, where the dataset ID (`datasetId`) and tenant ID (`tenantId`) are defined properties within the configuration file.
 
 
 **PySpark**
@@ -262,6 +262,8 @@ The following examples store data (`prediction`) onto a Platform dataset, where 
 
 from sdk.data_saver import DataSaver
 from pyspark.sql.types import StringType, TimestampType
+from pyspark.sql.functions import col, lit, struct
+from .helper import *
 
 
 class MyDataSaver(DataSaver):
@@ -269,66 +271,66 @@ class MyDataSaver(DataSaver):
     Implementation of DataSaver which stores a DataFrame to a Platform dataset
     """
 
-    def save(self, configProperties, prediction):
-        """
-        Store DataFrame to a Platform dataset
-
-        :param configProperties:    Configuration properties
-        :param prediction:          DataFrame to be stored to a Platform dataset
-        """
+    def save(self, config_properties, prediction):
 
         # Spark context
         sparkContext = prediction._sc
 
         # preliminary checks
-        if configProperties is None:
-            raise ValueError("configProperties parameter is null")
+        if config_properties is None:
+            raise ValueError("config_properties parameter is null")
         if prediction is None:
             raise ValueError("prediction parameter is null")
         if sparkContext is None:
             raise ValueError("sparkContext parameter is null")
+        
+        PLATFORM_SDK_PQS_PACKAGE = "com.adobe.platform.query"
 
         # prepare variables
+        scored_dataset_id = str(config_properties.get("scoringResultsDataSetId"))
+        tenant_id = str(config_properties.get("tenant_id"))
         timestamp = "2019-01-01 00:00:00"
-        output_dataset_id = str(
-            configProperties.get("datasetId"))
-        tenant_id = str(
-            configProperties.get("tenantId"))
-        service_token = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
-        user_token = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
-        org_id = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
-        api_key = str(
-            sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
+
+        service_token = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_ML_TOKEN"))
+        user_token = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_TOKEN"))
+        org_id = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_ORG_ID"))
+        api_key = str(sparkContext.getConf().get("ML_FRAMEWORK_IMS_CLIENT_ID"))
 
         # validate variables
-        for arg in ['output_dataset_id', 'tenant_id', 'service_token', 'user_token', 'org_id', 'api_key']:
+       for arg in ['service_token', 'user_token', 'org_id', 'scored_dataset_id', 'api_key', 'tenant_id']:
             if eval(arg) == 'None':
                 raise ValueError("%s is empty" % arg)
+        
+        scored_df = prediction.withColumn("date", col("date").cast(StringType()))
+        scored_df = scored_df.withColumn(tenant_id, struct(col("date"), col("store"), col("prediction")))
+        scored_df = scored_df.withColumn("timestamp", lit(timestamp).cast(TimestampType()))
+        scored_df = scored_df.withColumn("_id", lit("empty"))
+        scored_df = scored_df.withColumn("eventType", lit("empty")
 
         # store data into dataset
-        prediction.write.format("com.adobe.platform.dataset") \
-            .option('orgId', org_id) \
-            .option('serviceToken', service_token) \
-            .option('userToken', user_token) \
-            .option('serviceApiKey', api_key) \
-            .save(output_dataset_id)
+
+        query_options = get_query_options(sparkContext)
+
+        scored_df.select(tenant_id, "_id", "eventType", "timestamp").write.format(PLATFORM_SDK_PQS_PACKAGE) \
+            .option(query_options.userToken(), user_token) \
+            .option(query_options.serviceToken(), service_token) \
+            .option(query_options.imsOrg(), org_id) \
+            .option(query_options.apiKey(), api_key) \
+            .option(query_options.datasetId(), scored_dataset_id) \
+            .save()
 ```
 
-
-
-
-**Spark**
+**Spark (Scala)**
 
 ```scala
 // Spark
 
-import com.adobe.platform.dataset.DataSetOptions
+package com.adobe.platform.ml
+
 import com.adobe.platform.ml.config.ConfigProperties
 import com.adobe.platform.ml.impl.Constants
 import com.adobe.platform.ml.sdk.DataSaver
+import com.adobe.platform.query.QSOption
 import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.TimestampType
@@ -336,58 +338,57 @@ import org.apache.spark.sql.types.TimestampType
 /**
  * Implementation of DataSaver which stores a DataFrame to a Platform dataset
  */
+
 class ScoringDataSaver extends DataSaver {
 
-    /**
-     * @param configProperties  - Configuration properties
-     * @param dataFrame         - DataFrame to be stored to a Platform dataset
-     */
-    override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
+  final val PLATFORM_SDK_PQS_PACKAGE: String = "com.adobe.platform.query"
+  final val PLATFORM_SDK_PQS_BATCH: String = "batch"
 
-        // Spark session
-        val sparkSession = dataFrame.sparkSession
-        import sparkSession.implicits._
+  /**
+    * Method that saves the scoring data into a dataframe
+    * @param configProperties  - Configuration Properties map
+    * @param dataFrame         - Dataframe with the scoring results
+    */
+    
+  override def save(configProperties: ConfigProperties, dataFrame: DataFrame): Unit =  {
 
-        // preliminary checks
-        require(configProperties != null)
-        require(dataFrame != null)
+    require(configProperties != null)
+    require(dataFrame != null)
 
-        // prepare variables
-        val predictionColumn = configProperties.get(Constants.PREDICTION_COL)
-            .getOrElse(Constants.DEFAULT_PREDICTION)
-        val timestamp:String = "2019-01-01 00:00:00"
-        val output_dataset_id: String = configProperties
-            .get("datasetId").getOrElse("")
-        val tenant_id:String = configProperties
-            .get("tenantId").getOrElse("")
-        val serviceToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
-        val userToken: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_TOKEN", "").toString
-        val orgId: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
-        val apiKey: String = sparkSession.sparkContext.getConf
-            .get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+    val predictionColumn = configProperties.get(Constants.PREDICTION_COL).getOrElse(Constants.DEFAULT_PREDICTION)
+    val sparkSession = dataFrame.sparkSession
 
-        // validate variables
-        List(output_dataset_id, tenant_id, serviceToken, userToken, orgId, apiKey).foreach(
-            value => require(value != "")
-        )
+    val serviceToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ML_TOKEN", "").toString
+    val userToken: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_TOKEN", "").toString
+    val orgId: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_ORG_ID", "").toString
+    val apiKey: String = sparkSession.sparkContext.getConf.get("ML_FRAMEWORK_IMS_CLIENT_ID", "").toString
+    val tenantId:String = configProperties.get("tenantId").getOrElse("")
+    val timestamp:String = "2019-01-01 00:00:00"
 
-        // store data into dataset
-        dataFrame.write.format("com.adobe.platform.dataset")
-            .option(DataSetOptions.orgId, orgId)
-            .option(DataSetOptions.serviceToken, serviceToken)
-            .option(DataSetOptions.userToken, userToken)
-            .option(DataSetOptions.serviceApiKey, apiKey)
-            .save(output_dataset_id)
+    val scoringResultsDataSetId: String = configProperties.get("scoringResultsDataSetId").getOrElse("")
+    import sparkSession.implicits._
+
+    var df = dataFrame.withColumn("date", $"date".cast("String"))
+
+    var scored_df  = df.withColumn(tenantId, struct(df("date"), df("store"), df(predictionColumn)))
+    scored_df = scored_df.withColumn("timestamp", lit(timestamp).cast(TimestampType))
+    scored_df = scored_df.withColumn("_id", lit("empty"))
+    scored_df = scored_df.withColumn("eventType", lit("empty"))
+
+    scored_df.select(tenantId, "_id", "eventType", "timestamp").write.format(PLATFORM_SDK_PQS_PACKAGE)
+      .option(QSOption.userToken, userToken)
+      .option(QSOption.serviceToken, serviceToken)
+      .option(QSOption.imsOrg, orgId)
+      .option(QSOption.apiKey, apiKey)
+      .option(QSOption.datasetId, scoringResultsDataSetId)
+      .save()
     }
 }
 ```
 
 ## DatasetTransformer {#datasettransformer}
 
-The DatasetTransformer class modifies and transforms the structure of a dataset. The Sensei Machine Learning Runtime does not require this component to be defined, and is implemented based on your requirements. 
+The DatasetTransformer class modifies and transforms the structure of a dataset. The [!DNL Sensei Machine Learning Runtime] does not require this component to be defined, and is implemented based on your requirements. 
 
 In regards to a feature pipeline, dataset transformers can be used cooporatively with a feature pipeline factory to prepare data for feature engineering.
 
@@ -405,23 +406,23 @@ The following table describes the class methods of a PySpark dataset transformer
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>Takes a dataset as input and output a new derived dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataset</code>: The input dataset for transformation</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataset</code>: The input dataset for transformation</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
-The following table describes the abstract methods of a Spark dataset transformer class:
+The following table describes the abstract methods of a [!DNL Spark] dataset transformer class:
 
 <table>
     <thead>
@@ -433,13 +434,13 @@ The following table describes the abstract methods of a Spark dataset transforme
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>Takes a dataset as input and output a new derived dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataset</code>: The input dataset for transformation</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataset</code>: The input dataset for transformation</li>
                 </ul>
             </td>
         </tr>
@@ -464,35 +465,35 @@ The following table describes the class methods of a PySpark FeaturePipelineFact
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>Create and return a Spark Pipeline that contains a series of Spark Transformers</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
-The following table describes the class methods of a Spark FeaturePipelineFactory:
+The following table describes the class methods of a [!DNL Spark] FeaturePipelineFactory:
 
 <table>
     <thead>
@@ -504,24 +505,24 @@ The following table describes the class methods of a Spark FeaturePipelineFactor
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>Create and return a Pipeline that contains a series of Transformers</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -530,7 +531,7 @@ The following table describes the class methods of a Spark FeaturePipelineFactor
 
 ## PipelineFactory {#pipelinefactory}
 
-The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a Spark Pipeline.
+The PipelineFactory class encapsulates methods and definitions for model training and scoring, where training logic and algorithms are defined in the form of a [!DNL Spark] Pipeline.
 
 **PySpark**
 
@@ -546,62 +547,62 @@ The following table describes the class methods of a PySpark PipelineFactory:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>Create and Return a Spark Pipeline which contains the logic and algorithm for model training and scoring</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>Return a custom Pipeline which contains the logic and algorithm to train a model. This method is not required if a Spark Pipeline is used</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Feature dataset for training input</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Feature dataset for training input</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>Score using the trained model and return the results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Input dataset for scoring</li>
-                    <li><code class=" language-undefined">model</code>: A trained model used for scoring</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Input dataset for scoring</li>
+                    <li><code>model</code>: A trained model used for scoring</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
-The following table describes the class methods of a Spark PipelineFactory:
+The following table describes the class methods of a [!DNL Spark] PipelineFactory:
 
 <table>
     <thead>
@@ -613,24 +614,24 @@ The following table describes the class methods of a Spark PipelineFactory:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>Create and Return a Pipeline which contains the logic and algorithm for model training and scoring</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -655,37 +656,37 @@ The following table describes the class methods of a PySpark MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>Splits the input dataset into training and testing subsets</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Input dataset to be split</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Input dataset to be split</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>Evaluates a trained model and return the evaluation results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">dataframe</code>: A DataFrame consisting of training and testing data</li>
-                    <li><code class=" language-undefined">model</code>: A trained model</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>dataframe</code>: A DataFrame consisting of training and testing data</li>
+                    <li><code>model</code>: A trained model</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
     </tbody>
 </table>
 
-**Spark**
+**Spark (Scala)**
 
-The following table describes the class methods of a Spark MLEvaluator:
+The following table describes the class methods of a [!DNL Spark] MLEvaluator:
 
 <table>
     <thead>
@@ -697,26 +698,26 @@ The following table describes the class methods of a Spark MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>Splits the input dataset into training and testing subsets</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">data</code>: Input dataset to be split</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>data</code>: Input dataset to be split</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Evaluates a trained model and return the evaluation results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">model</code>: A trained model</li>
-                    <li><code class=" language-undefined">data</code>: A DataFrame consisting of training and testing data</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>model</code>: A trained model</li>
+                    <li><code>data</code>: A DataFrame consisting of training and testing data</li>
                 </ul>
             </td>
         </tr>

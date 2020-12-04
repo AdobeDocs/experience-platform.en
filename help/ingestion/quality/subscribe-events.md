@@ -1,73 +1,90 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
 solution: Experience Platform
 title: Subscribe to data ingestion events
 topic: overview
+description: To assist in monitoring the ingestion process, Adobe Experience Platform makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
 ---
 
 # Data ingestion notifications
 
-The process of ingesting data into Adobe Experience Platform is comprised of multiple steps. Once you identify data files that need to be ingested into Platform, the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. The ingestion process can be initiated using the [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) or using the Experience Platform user interface.
+The process of ingesting data into Adobe Experience Platform is comprised of multiple steps. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. The ingestion process can be initiated using the [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) or using the [!DNL Experience Platform] user interface.
 
-Data loaded into Platform must go through multiple steps in order to reach its destination, the Data Lake or the Real-time Customer Profile data store. Each step involves processing the data, validating the data, and then storing the data before passing it on to the next step. Depending on the amount of data being ingested, this can become a time consuming process and there is always a chance of the process failing due to validation, semantics, or processing errors. In the event of a failure, the data issues need to fixed and then the entire ingestion process must be restarted using the corrected data files. 
+Data loaded into [!DNL Platform] must go through multiple steps in order to reach its destination, the [!DNL Data Lake] or the [!DNL Real-time Customer Profile] data store. Each step involves processing the data, validating the data, and then storing the data before passing it on to the next step. Depending on the amount of data being ingested, this can become a time consuming process and there is always a chance of the process failing due to validation, semantics, or processing errors. In the event of a failure, the data issues need to fixed and then the entire ingestion process must be restarted using the corrected data files. 
 
-To assist in monitoring the ingestion process, Experience Platform makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures. 
+To assist in monitoring the ingestion process, [!DNL Experience Platform] makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures. 
 
-## Available status notification events
+## Register a webhook for data ingestion notifications
 
-Below is a list of available data ingestion status notifications that you can subscribe to. 
+In order to receive data ingestion notifications, you must use [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) to register a webhook to your Experience Platform integration.
 
->[!NOTE] There is only one event topic provided for all data ingestion notifications. In order to distinguish between different statuses, the event code can be used.
+Follow the tutorial on [subscribing to [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
 
-| Platform Service | Status | Event description | Event code |
-| ---------------- | ------ | ----------------- | ---------- |
-| Data Landing | success | Ingestion - Batch succeeded | ing_load_success |
-| Data Landing | failure | Ingestion - Batch failed | ing_load_failure |
-| Real-time Customer Profile | success | Profile service - Data load batch Succeeded | ps_load_success |
-| Real-time Customer Profile | failure | Profile service - Data load batch failed | ps_load_failure |
-| Identity Graph | success | Identity graph - Data load batch succeeded | ig_load_success |
-| Identity Graph | failure | Identity graph - Data load batch failed | ig_load_failure |
+>[!IMPORTANT]
+>
+>During the subscription process, ensure that you select **[!UICONTROL Platform notifications]** as the event provider, and select the **[!UICONTROL Data ingestion notification]** event subscription when prompted.
 
-## Notification payload schema
+## Receive data ingestion notifications
 
-The data ingestion notification event schema is an Experience Data Model (XDM) schema containing fields and values that provide details regarding the status of the data being ingested. Please visit the public XDM GitHub repo in order to view the latest [notification payload schema](https://github.com/adobe/xdm/blob/master/schemas/common/notifications/ingestion.schema.json).
+Once you have successfully registered your webhook and new data has been ingested, you can start receiving event notifications. These events can be viewed using the webhook itself, or by selecting the **[!UICONTROL Debug Tracing]** tab in your project's event registration overview in Adobe Developer Console.
 
-## Subscribe to Data Ingestion Status Notifications
+The following JSON is an example of a notification payload that would be sent to your webhook in the case of a failed batch ingestion event:
 
-Through [Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events.html), you can subscribe to multiple notification types using webhooks. To learn more about webhooks, and how to subscribe to Adobe I/O Events using webhooks, please see the [introduction to Adobe I/O Events Webhooks](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/intro/webhook_docs_intro.md) guide.
-
-### Create a new integration using Adobe I/O Console
-
-Sign in to [Adobe I/O Console](https://console.adobe.io/home) and click the *Integrations* tab or click **Create integration** under Quick Start. When the *Integration* screen appears, click **New Integration** to being creating a new integration.
-
-![Create new integration](../images/quality/subscribe-events/create_integration_start.png)
-
-The *Create new integration* screen appears. Select **Receive near-real time events**, then click **Continue**.
-
-![Receive near-realtime events](../images/quality/subscribe-events/create_integration_receive_events.png)
-
-The next screen provides options to create integrations with different events, products, and services available to your organization based on your subscriptions, entitlements, and permissions. For this integration, select **Platform notifications** under Experience Platform, then click **Continue**. 
- 
-![Select event provider](../images/quality/subscribe-events/create_integration_select_provider.png)
-
-The *Integration Details* form appears, requiring you to provide a name and description for the integration, as well as public key certificate.
-
-If you do not have a public certificate, you can generate one in the terminal by using the following command:
-
-```shell
-openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 -keyout private.key -out certificate_pub
+```json
+{
+  "event_id": "93a5b11a-b0e6-4b29-ad82-81b1499cb4f2",
+  "event": {
+    "xdm:ingestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:customerIngestionId": "01EGK8H8HF9JGFKNDCABHGA24G",
+    "xdm:imsOrg": "{IMS_ORG}",
+    "xdm:completed": 1598374341560,
+    "xdm:datasetId": "5e55b556c2ae4418a8446037",
+    "xdm:eventCode": "ing_load_failure",
+    "xdm:sandboxName": "prod",
+    "sentTime": "1598374341595",
+    "processStartTime": 1598374342614,
+    "transformedTime": 1598374342621,
+    "header": {
+      "_adobeio": {
+        "imsOrgId": "{IMS_ORG}",
+        "providerMetadata": "aep_observability_catalog_events",
+        "eventCode": "platform_event"
+      }
+    }
+  }
+}
 ```
 
-Once you have generated a certificate, drag and drop the file into the **Public keys certificates** box or click **Select a File** to browse your file directory and select the certificate directly.
-  
-After adding your certificate, the *Event Registration* option appears. Click **Add Event Registration**.
-  
-![integration details](../images/quality/subscribe-events/create_integration_details.png)
-    
-The *Event registration details* dialog expands to show additional controls. Here you can select your desired event types and register your webhook. Enter a name for the event registration, the webhook URL *(Optional)*, as well as a brief description. Finally, select the event types you wish to subscribe to (Data ingestion notification), then click **Save**.
-  
-![Select events](../images/quality/subscribe-events/create_integration_select_event.png)
+| Property | Description |
+| --- | --- |
+| `event_id` | A unique, system-generated ID for the notification. |
+| `event` | An object which contains the details of the event that triggered the notification. |
+| `event.xdm:datasetId` | The ID of the dataset to which the ingestion event applies. |
+| `event.xdm:eventCode` | A status code indicating the type of event that was triggered for the dataset. See the [appendix](#event-codes) for specific values and their definitions. |
+
+To view the full schema for event notifications, refer to the [public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/notifications/ingestion.schema.json).
 
 ## Next steps
 
-Once you have created your I/O integration you can view any received notifications for that integration. Refer to the [Tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) guide for detailed instructions on how to trace your events.
+Once you have registered [!DNL Platform] notifications to your project, you can view received events from the [!UICONTROL Project overview]. Refer to the guide on [tracing Adobe I/O Events](https://www.adobe.io/apis/experienceplatform/events/docs.html#!adobedocs/adobeio-events/master/support/tracing.md) for detailed instructions on how to trace your events.
+
+## Appendix
+
+The following section contains additional information about interpreting data ingestion notification payloads.
+
+### Available status notification events {#event-codes}
+
+The following table lists the available data ingestion status notifications that you can subscribe to. 
+
+| Event code | Platform Service | Status | Event description |
+| --- | ---------------- | ------ | ----------------- |
+| `ing_load_success` | [!DNL Data Ingestion] | success | A batch was successful ingested into a dataset within the [!DNL Data Lake]. |
+| `ing_load_failure` | [!DNL Data Ingestion] | failure | A batch failed to be ingested into a dataset within the [!DNL Data Lake]. |
+| `ps_load_success` | [!DNL Real-time Customer Profile] | success | A batch was successful ingested into the [!DNL Profile] data store. |
+| `ps_load_failure` | [!DNL Real-time Customer Profile] | failure | A batch failed to be ingested into the [!DNL Profile] data store. |
+| `ig_load_success` | [!DNL Identity Service] | success | Data was successfully loaded into the identity graph. |
+| `ig_load_failure` | [!DNL Identity Service] | failure | Data failed to be loaded into the identity graph. |
+
+>[!NOTE]
+>
+>There is only one event topic provided for all data ingestion notifications. In order to distinguish between different statuses, the event code can be used.

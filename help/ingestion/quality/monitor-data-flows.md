@@ -1,23 +1,24 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;monitoring;monitor;data flows;monitor ingestion;data ingestion;Data ingestion;view records;view batches;
 solution: Experience Platform
 title: Monitoring data ingestion
 topic: overview
+description: This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 ---
 
 # Monitoring data ingestion
 
-Data ingestion allows you to ingest your data to Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to Platform using streaming endpoints in real-time.
+Data ingestion allows you to ingest your data to Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real-time.
 
 This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 
 ## Monitor streaming end-to-end data ingestion
 
-In the [Experience Platform UI](https://platform.adobe.com), click **Monitoring** on the left navigation menu, then click **Streaming end-to-end**.
+In the [Experience Platform UI](https://platform.adobe.com), click **[!UICONTROL Monitoring]** on the left navigation menu, then click **[!UICONTROL Streaming end-to-end]**.
 
 ![](../images/quality/monitor-data-flows/click-streaming-end-to-end.png)
 
-The *Streaming end-to-end* monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by Platform, a graph that displays the rate of streamed events which were successfully processed by [Real-time Customer Profile](../../profile/home.md), as well as a detailed list of incoming data.
+The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspace provides a graph that displays the rate of streamed events being received by [!DNL Platform], a graph that displays the rate of streamed events which were successfully processed by [[!DNL Real-time Customer Profile]](../../profile/home.md), as well as a detailed list of incoming data.
 
 ![](../images/quality/monitor-data-flows/list-streams.png)
 
@@ -25,9 +26,11 @@ By default, the top graph shows the rate of ingestion over the past seven days. 
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
 
-The bottom graph shows the rate of successfully processed streamed events by Profile over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
+The bottom graph shows the rate of successfully processed streamed events by [!DNL Profile] over the past seven days. This date range can be adjusted to show various periods of time by clicking the highlighted button.
 
-> [!NOTE] In order for data to show up on this graph, the data must be **explicitly** enabled for Profile. To learn how to enable streaming data for Profile, read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
+>[!NOTE]
+>
+>In order for data to show up on this graph, the data must be **explicitly** enabled for [!DNL Profile]. To learn how to enable streaming data for [!DNL Profile], read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
 ![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
 
@@ -51,11 +54,11 @@ In addition, failed records provide details on the errors that ocurred while pro
 
 ## Monitor batch end-to-end data ingestion
 
-In the [Experience Platform UI](https://platform.adobe.com), click  **Monitoring**  on the left navigation menu. 
+In the [[!DNL Experience Platform UI]](https://platform.adobe.com), click  **[!UICONTROL Monitoring]**  on the left navigation menu. 
 
 ![](../images/quality/monitor-data-flows/click-monitoring.png)
 
-The **Batch end-to-end** monitoring page appears, displaying a list of the previously ingested batches. You can click any of the batches for more detailed information about that record.
+The **[!UICONTROL Batch end-to-end]** monitoring page appears, displaying a list of the previously ingested batches. You can click any of the batches for more detailed information about that record.
 
 ![](../images/quality/monitor-data-flows/list-batches.png)
 

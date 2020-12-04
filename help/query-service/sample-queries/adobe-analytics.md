@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe analytics;
 solution: Experience Platform
 title: Sample queries
 topic: queries
+description: Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets.
 ---
 
 # Sample queries for Adobe Analytics data
 
-Data from selected Adobe Analytics report suites is transformed into XDM ExperienceEvents and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform Query Service makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM ExperienceEvents.
+Data from selected Adobe Analytics report suites is transformed into XDM [!DNL ExperienceEvents] and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM [!DNL ExperienceEvents].
 
 ## Getting started
 
@@ -22,9 +23,7 @@ SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Da
        Substring(from_utc_timestamp(timestamp, 'America/New_York'), 12, 2) AS Hour, 
        Count(DISTINCT enduserids._experience.aaid.id) AS Visitor_Count 
 FROM   {target_table}
-WHERE _acp_year = {target_year} 
-      AND _acp_month = {target_month}  
-      AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY Day, Hour
 ORDER BY Hour;
 ```
@@ -35,9 +34,7 @@ ORDER BY Hour;
 SELECT web.webpagedetails.name AS Page_Name, 
        Sum(web.webpagedetails.pageviews.value) AS Page_Views 
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY web.webpagedetails.name 
 ORDER BY page_views DESC 
 LIMIT  10;
@@ -49,9 +46,7 @@ LIMIT  10;
 SELECT enduserids._experience.aaid.id AS aaid, 
        Count(timestamp) AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY enduserids._experience.aaid.id
 ORDER BY Count DESC
 LIMIT  10;
@@ -63,9 +58,7 @@ LIMIT  10;
 SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
        Count(timestamp) AS Count
 FROM   {target_table}
-WHERE  _acp_year = {target_year}
-       AND _acp_month = {target_month}
-       AND _acp_day = {target_day}
+WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY state_city
 ORDER BY Count DESC
 LIMIT  10;
@@ -79,9 +72,7 @@ SELECT Product_SKU,
 FROM  (SELECT Explode(productlistitems.sku) AS Product_SKU, 
               commerce.productviews.value   AS Product_Views 
        FROM   {target_table}
-       WHERE  _acp_year = {target_year}
-              AND _acp_month = {target_month}
-              AND _acp_day = {target_day}
+            WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
               AND commerce.productviews.value IS NOT NULL) 
 GROUP BY Product_SKU 
 ORDER BY Total_Product_Views DESC
@@ -97,9 +88,8 @@ FROM   (SELECT commerce.`order`.purchaseid AS Purchase_ID,
                Explode(productlistitems)   AS Product_Items 
         FROM   {target_table} 
         WHERE  commerce.`order`.purchaseid IS NOT NULL 
-               AND _acp_year = {target_year} 
-               AND _acp_month = {target_month}  
-               AND _acp_day = {target_day}) 
+                AND TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
+
 GROUP BY Purchase_ID 
 ORDER BY total_order_revenue DESC 
 LIMIT  10;
@@ -113,9 +103,7 @@ SELECT Substring(from_utc_timestamp(timestamp, 'America/New_York'), 1, 10) AS Da
        Sum(_experience.analytics.event1to100.{target_event}.value) AS Event_Count
 FROM   {target_table}
 WHERE  _experience.analytics.event1to100.{target_event}.value IS NOT NULL 
-        AND _acp_year = {target_year} 
-        AND _acp_month = {target_month}  
-        AND _acp_day = {target_day}
+        AND TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
 GROUP BY Day, Hour
 ORDER BY Hour;
 ```
@@ -124,11 +112,11 @@ ORDER BY Hour;
 
 In Adobe Analytics, custom product-level data can be collected through specially configured variables called "Merchandising Variables." These are based on either an eVar or Custom Event. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit. These variables are referred to as Product Syntax Merchandising Variables. This allows for collection of information like a per product "discount amount" or information about the product's "location on page" in the customer's search results.
 
-Here are the XDM fields to access the merchandising variables in your Analytics dataset:
+Here are the XDM fields to access the merchandising variables in your [!DNL Analytics] dataset:
 
 ### eVars
 
-```
+```console
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -136,7 +124,7 @@ Where `[#]` is an array index and `evar#` is the specific eVar variable.
 
 ### Custom events
 
-```
+```console
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
@@ -151,14 +139,14 @@ SELECT
   productListItems[0]._experience.analytics.customDimensions.evars.eVar1,
   productListItems[0]._experience.analytics.event1to100.event1.value
 FROM adobe_analytics_midvalues
-WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
+WHERE timestamp = to_timestamp('2019-07-23')
   AND productListItems[0].SKU IS NOT NULL
   AND productListItems[0]._experience.analytics.customDimensions.evars.eVar1 IS NOT NULL
   AND productListItems[0]._experience.analytics.event1to100.event1.value IS NOT NULL
 LIMIT 10
 ```
 
-This next query 'explodes' the `productListItems` and returns each merchandising eVar and event per product. The `_id` field is included to show the relationship to the original hit. The `_id` value is a unique primary key in the ExperienceEvent dataset.
+This next query 'explodes' the `productListItems` and returns each merchandising eVar and event per product. The `_id` field is included to show the relationship to the original hit. The `_id` value is a unique primary key in the [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -170,7 +158,7 @@ FROM (
     _id,
     explode(productListItems) as productItem
   FROM adobe_analytics_midvalues
-  WHERE _ACP_YEAR=2019 AND _ACP_MONTH=7 AND _ACP_DAY=23
+  WHERE TIMESTAMP = to_timestamp('2019-07-23')
   AND productListItems[0].SKU IS NOT NULL
   AND productListItems[0]._experience.analytics.customDimensions.evars.eVar1 IS NOT NULL
   AND productListItems[0]._experience.analytics.event1to100.event1.value IS NOT NULL
@@ -182,7 +170,7 @@ LIMIT 20
 
 The "No such struct field" error is encountered when you attempt to retrieve a field that doesn't existing in your current dataset. Evaluate the reason returned in the error message to identify an available field then update your query and rerun.
 
-```
+```console
 ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered. Reason: [No such struct field evar1 in eVar10, eVar13, eVar62, eVar88, eVar2;]
 ```
 
@@ -209,11 +197,11 @@ In reporting, the orders, revenue, product views, and cart adds will be reportab
 |internal search:summer shirt|19.99|1|1|1|
 |internal search:winter hat|12.99|1|1|1|
 
-Here are the XDM fields to produce the Conversion Syntax in your Analytics dataset:
+Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics] dataset:
 
 ### eVars
 
-```
+```console
 _experience.analytics.customDimensions.evars.evar#
 ```
 
@@ -221,7 +209,7 @@ Where `evar#` is the specific eVar variable.
 
 ### Product
 
-```
+```console
 productListItems[#].sku
 ```
 

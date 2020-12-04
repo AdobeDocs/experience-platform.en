@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
 solution: Experience Platform
 title: Query Service developer guide
 topic: query templates
+description: The following documentation walks through the various API calls you can make using query templates for the Query Service API.
 ---
 
 # Query templates
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the Query Service API. The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of query templates
 
@@ -98,7 +99,9 @@ A successful response returns HTTP status 200 with a list of query templates for
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Create a query template
 
@@ -159,7 +162,9 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Retrieve a specified query template
 
@@ -215,7 +220,9 @@ A successful response returns HTTP status 200 with details of your specified que
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Update a specified query template
 
@@ -233,7 +240,9 @@ PUT /query-templates/{TEMPLATE_ID}
 
 **Request**
 
->[!NOTE] The PUT request requires both the sql and name field to be filled, and will **overwrite** the current content of that query template.
+>[!NOTE]
+>
+>The PUT request requires both the sql and name field to be filled, and will **overwrite** the current content of that query template.
 
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/query/query-templates/0094d000-9062-4e6a-8fdb-05606805f08f
@@ -283,7 +292,9 @@ A successful response returns HTTP status 202 (Accepted) with the updated inform
 }
 ```
 
->[!NOTE] You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
+>[!NOTE]
+>
+>You can use the value of `_links.delete` to [delete your query template](#delete-a-specified-query-template).
 
 ### Delete a specified query template
 

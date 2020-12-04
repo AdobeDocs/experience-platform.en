@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
 title: Query Service developer guide
 topic: runs for scheduled queries
+description: The following sections walks through the various API calls you can make for running scheduled queries with the Query Service API.
 ---
 
 # Runs for scheduled queries
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the Query Service API. The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of all runs for a specified scheduled query
 
@@ -140,7 +141,9 @@ A successful response returns HTTP status 200 with a list of runs for the specif
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [stop a run for a specified scheduled query](#immediately-stop-a-run-for-a-specific-scheduled-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [stop a run for a specified scheduled query](#immediately-stop-a-run-for-a-specific-scheduled-query).
 
 ### Immediately trigger a run for a specific scheduled query
 

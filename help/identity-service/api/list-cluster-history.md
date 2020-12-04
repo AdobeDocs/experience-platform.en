@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identities;cluster history
 solution: Experience Platform
 title: Get cluster history of an identity
 topic: API guide
+description: Identities can move clusters over the course of various device graph runs. Identity Service provides visibility into the cluster associations of a given identity over time.
 ---
 
 # Get the cluster history of an identity
 
-Identities can move clusters over the course of various device graph runs. Identity Service provides visibility into the cluster associations of a given identity over time.
+Identities can move clusters over the course of various device graph runs. [!DNL Identity Service] provides visibility into the cluster associations of a given identity over time.
 
 Use optional `graph-type` parameter to indicate the output type to get the cluster from. Options are:
 
@@ -61,7 +62,9 @@ curl -X GET \
 
 Use the `POST` method as a batch equivalent of the `GET` method described above to return the cluster histories of multiple identities.
 
->[!NOTE] Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
+>[!NOTE]
+>
+>Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
 
 **API format**
 
@@ -203,7 +206,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
+>[!NOTE]
+>
+>The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
 
 ## Next steps
 

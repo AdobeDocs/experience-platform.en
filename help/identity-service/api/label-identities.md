@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;label identities
 solution: Experience Platform
 title: Label a field as identity
 topic: api guide
+description: Fields that contain personally identifiable information (PII) can be labeled as identity fields. A value provided in an identity field is interpreted as an identity by Identity Service. The namespace of the identity is specified as a part of labeling the field.
 ---
 
 # Label a field as identity
 
-Fields that contain personally identifiable information (PII) can be labeled as identity fields. A value provided in an identity field is interpreted as an identity by Identity Service. The namespace of the identity is specified as a part of labeling the field.
+Fields that contain personally identifiable information (PII) can be labeled as identity fields. A value provided in an identity field is interpreted as an identity by [!DNL Identity Service]. The namespace of the identity is specified as a part of labeling the field.
 
 The following criteria must be met for a field to be labeled as identity:
 

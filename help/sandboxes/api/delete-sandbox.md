@@ -1,15 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;delete sandbox
 solution: Experience Platform
 title: Delete a sandbox
 topic: developer guide
+description: You can delete a sandbox by making a DELETE request that includes the sandbox's name in the request path.
 ---
 
 # Delete a sandbox
 
 You can delete a sandbox by making a DELETE request that includes the sandbox's `name` in the request path.
 
->[!NOTE] Making this API call updates the sandbox's `status` property to "deleted" and deactivates it. GET requests can still retrieve sandbox's details after it has been deleted.
+>[!NOTE]
+>
+>Making this API call updates the sandbox's `status` property to "deleted" and deactivates it. GET requests can still retrieve sandbox's details after it has been deleted.
 
 **API format**
 

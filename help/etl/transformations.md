@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Sample ETL transformations
 topic: overview
+description: This article demonstrates the following example transformations that an extract, transform, load (ETL) developer can encounter.
 ---
 
 # Sample ETL Transformations 
@@ -13,7 +14,7 @@ This article demonstrates the following example transformations that an extract,
 
 ### Sample files
 
-Sample CSV and JSON files are available from the public ETL Reference GitHub repo maintained by Adobe:
+Sample CSV and JSON files are available from the public ETL Reference [!DNL GitHub] repo maintained by Adobe:
 
 - [CRM_profiles.csv](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.csv)
 - [CRM_profiles.json](https://github.com/adobe/experience-platform-etl-reference/blob/master/example_files/CRM_profiles.json)
@@ -170,7 +171,7 @@ The hierarchy of a dataframe (such as a Parquet file) must match that of the XDM
 
 ### Example dataframe
 
-The structure of the following example dataframe has been mapped to a schema that implements the XDM Individual Profile class, and contains the most common fields associated with schemas of that type.
+The structure of the following example dataframe has been mapped to a schema that implements the [!DNL XDM Individual Profile] class, and contains the most common fields associated with schemas of that type.
 
 ```python
 [

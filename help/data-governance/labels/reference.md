@@ -1,19 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
-title: Supported data usage labels
+title: Core data usage labels
 topic: labels
+description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 ---
 
-# Supported data usage labels
+# Core data usage labels
 
-Adobe Experience Platform includes infrastructure for data governance with Data Usage Labeling and Enforcement (DULE) at its core.  DULE features enable the application of data usage labels to datasets and fields in order to categorize data according to the type of usage policies that apply to that data.
+Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 
-The following list outlines all data usage labels currently supported by Experience Platform.
+This document outlines the core data usage labels currently provided by [!DNL Experience Platform]. More information regarding [!DNL Data Governance] can be found in the [Data Governance overview](../home.md).
 
-More information regarding Data Governance and DULE can be found in the [Data Governance overview](../home.md).
-
-## Contract Labels
+## Contract labels
 
 Contract "C" labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
 
@@ -28,8 +27,9 @@ Contract "C" labels are used to categorize data that has contractual obligations
 |**C7**|Data cannot be used for on-site targeting of content. [More info...](#c7)|
 |**C8**|Data cannot be used for measurement of your organization’s websites or apps. [More info...](#c8)|
 |**C9**|Data cannot be used in Data Science workflows. [More info...](#c9)|
+|**C10**|Data cannot be used for stitched identity activation. [More info...](#c10)|
 
-## Identity Labels
+## Identity labels
 
 Identity "I" labels are used to categorize data that can identify or contact a specific person.
 
@@ -38,7 +38,7 @@ Identity "I" labels are used to categorize data that can identify or contact a s
 |**I1**|Directly identifiable data that can identify or contact a specific person, rather than a device.|
 |**I2**|Indirectly identifiable data that can be used in combination with any other data to identify or contact a specific person.|
 
-## Sensitive Labels
+## Sensitive labels
 
 Sensitive “S” labels are used to categorize data that you, and your organization, consider sensitive.  
 
@@ -49,28 +49,31 @@ One type of data you may consider to be sensitive may be different types of geog
 |**S1**|Data specifying latitude and longitude that can be used to determine the precise location of a device.|
 |**S2**|Data that can be used to determine a broadly defined geofence area.|
 
+## Appendix
 
-## More Information
+The sections below provide additional information about available data usage labels.
 
-The following section provides detailed information related to the implementation of specific labels.
+### Contract label details
 
-### C1 {#c1}
+The following sections provide detailed information related to the implementation of specific contract "C" labels.
+
+#### C1 {#c1}
 
 Some data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
-### C2 {#c2}
+#### C2 {#c2}
 
 Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected. For example, social network contracts often restrict the transfer of data you receive from them. The C2 label is more restrictive than [C1](#c1), which only requires aggregation and anonymous data. 
 
-### C3 {#c3}
+#### C3 {#c3}
 
 Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information. For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data. 
 
-### C4 {#c4}
+#### C4 {#c4}
 
 C4 is the most restrictive label – it encompasses labels [C5](#c5), [C6](#c6), and [C7](#c7).
 
-### C5 {#c5}
+#### C5 {#c5}
 
 Interest-based targeting, or personalization, occurs if the following three conditions are met: The data collected on-site is (1) used to make inferences about a users’ interests, (2) is used in another context, such as on another site or app (off-site) AND (3) is used to select which content or ads are served based on those inferences.
 
@@ -86,9 +89,9 @@ IAB: Personalization. The collection and processing of information about your us
 
 DAA: On-line behavioral adverting. Collecting data from a particular computer or device regarding web viewing behaviors over time and across non-affiliate websites for the purpose of using such data to predict user preferences or interests to deliver advertising to that computer or device based on preferences or interests inferred from such web viewing behaviors. 
 
-### C6 {#c6}
+#### C6 {#c6}
 
-Ads are messages or notifications, including text and images, appearing on a website or app that are primarily intended to promote the sale of goods or services. It is up to you to determine the purpose of such messages or notifications. Ads are separate from on-site content, covered by label [C7](#c7). Data with a C6 label cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users’ interests to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as clicking an ad or making a purchase. Typically, making inferences about a users’ preferences based on that users’ on-site activities and then using those preferences in on-site ad targeting would not qualify as interest-based targeting (also called personalization), since it would not meet all three of the requirements necessary for interest-based targeting. _[See label C5 for these requirements.](#c5)_
+Ads are messages or notifications, including text and images, appearing on a website or app that are primarily intended to promote the sale of goods or services. It is up to you to determine the purpose of such messages or notifications. Ads are separate from on-site content, covered by label [C7](#c7). Data with a C6 label cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements. This includes using previously collected on-site data about the users’ interests to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as clicking an ad or making a purchase. Typically, making inferences about a users’ preferences based on that users’ on-site activities and then using those preferences in on-site ad targeting would not qualify as interest-based targeting (also called personalization), since it would not meet all three of the requirements necessary for interest-based targeting. *[See label C5 for these requirements.](#c5)*
 
 Ultimately, the interpretation of the label and how usage of data with that label is enforced is up to you. For reference, the IAB and DAA frameworks are provided below:
 
@@ -96,9 +99,9 @@ IAB: 3. Ad selection, delivery, reporting: The collection of information, and co
 
 DAA: Online Behavioral Adverting does not include the activities of First Parties, Ad Delivery or Ad Reporting, or contextual advertising (i.e. advertising based on the content of the Web page being visited, a consumer’s current visit to a Web page, or a search query).
 
-### C7 {#c7}
+#### C7 {#c7}
 
-On-site content is text and images that are designed to inform, educate, or entertain, and are not created to promote the sale of goods or services. It is up to you to determine the purpose of the content, including whether the content would qualify as native advertising. The C7 label is not intended to cover on-site ads, which are covered by label [C6](#c6). Data with a C7 label cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps, or to measure the delivery and effectiveness of such content. This includes previously collected information about users’ interests in select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example, clicking on content. Typically, making inferences about a users’ preferences based on that users’ on-site activities and then using those preferences in on-site content targeting would not qualify as interest-based targeting (also called personalization), since it would not meet all three of the requirements necessary for interest-based targeting. _[See label C5 for these requirements.](#c5)_
+On-site content is text and images that are designed to inform, educate, or entertain, and are not created to promote the sale of goods or services. It is up to you to determine the purpose of the content, including whether the content would qualify as native advertising. The C7 label is not intended to cover on-site ads, which are covered by label [C6](#c6). Data with a C7 label cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps, or to measure the delivery and effectiveness of such content. This includes previously collected information about users’ interests in select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example, clicking on content. Typically, making inferences about a users’ preferences based on that users’ on-site activities and then using those preferences in on-site content targeting would not qualify as interest-based targeting (also called personalization), since it would not meet all three of the requirements necessary for interest-based targeting. *[See label C5 for these requirements.](#c5)*
 
 Ultimately, the interpretation of the label and how usage of data with that label is enforced is up to you. For reference, the IAB and DAA frameworks are provided below:
 
@@ -106,10 +109,14 @@ IAB: 4. Content selection, delivery, reporting: The collection of information, a
 
 DAA: Online Behavioral Adverting does not include the activities of First Parties, Ad Delivery or Ad Reporting, or contextual advertising (i.e. advertising based on the content of the Web page being visiting, a consumer’s current visit to a Web page, or a search query).
 
-### C8 {#c8}
+#### C8 {#c8}
 
 Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting (cross-site targeting), which is the collection of information about your use of this service to subsequently personalize content and/or advertising for you in other contexts, i.e. on other services, such as websites or apps, over time.
 
-### C9 {#c9}
+#### C9 {#c9}
 
 Some contracts include explicit prohibitions on data use for data science. Sometimes these are phrased in terms that prohibit the use of data for Artificial Intelligence (AI), machine learning (ML), or modeling.
+
+#### C10 {#c10}
+
+Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.

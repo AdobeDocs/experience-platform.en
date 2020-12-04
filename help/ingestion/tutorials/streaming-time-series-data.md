@@ -1,21 +1,23 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
 solution: Experience Platform
 title: Streaming time series data
 topic: tutorial
+type: Tutorial
+description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
 # Stream time series data to Adobe Experience Platform
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
+This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
 ## Getting started
 
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes experience data.
-- [Real-time Customer Profile](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
-- [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the Schema Registry API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
 
@@ -23,21 +25,23 @@ The following sections provide additional information that you will need to know
 
 ### Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -45,7 +49,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 ## Compose a schema based off of the XDM ExperienceEvent class
 
-To create a dataset, you will first need to create a new schema that implements the XDM ExperienceEvent class. For more information about how to create schemas, please read the [Schema Registry API developer guide](../../xdm/api/getting-started.md).
+To create a dataset, you will first need to create a new schema that implements the [!DNL XDM ExperienceEvent] class. For more information about how to create schemas, please read the [Schema Registry API developer guide](../../xdm/api/getting-started.md).
 
 **API format**
 
@@ -90,7 +94,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | The name you want to use for your schema. This name must be unique. |
 | `description` | A meaningful description for the schema you are creating. |
-| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Response**
 
@@ -178,7 +182,7 @@ Next, add an [identity descriptor](../../xdm/api/descriptors.md) to the schema c
 
 1. The work email address will become a mandatory field. This means messages sent without this field will fail validation and will not be ingested.
 
-2. Real-time Customer Profile will use the work email address as an identifier to help stitch together more information about that individual.
+2. [!DNL Real-time Customer Profile] will use the work email address as an identifier to help stitch together more information about that individual.
 
 ### Request
 
@@ -204,11 +208,14 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/des
 | -------- | ----------- |
 | `{SCHEMA_REF_ID}` | The `$id` that you previously received when you composed the schema. It should look something like this: `"https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}"` |
 
->[!NOTE] ​ ​**Identity Namespace Codes**
+>[!NOTE]
+>
+>​**Identity Namespace Codes**
 >
 > Please ensure that the codes are valid - the example above uses "email" which is a standard identity namespace. Other commonly used standard identity namespaces can be found within the [Identity Service FAQ](../../identity-service/troubleshooting-guide.md#what-are-the-standard-identity-namespaces-provided-by-experience-platform).
 >
 > If you would like to create a custom namespace, follow the steps outlined in the [identity namespace overview](../../identity-service/home.md).
+
 **Response**
 
 A successful response returns HTTP status 201 with information on the newly created primary identity namespace for the schema.
@@ -233,7 +240,9 @@ A successful response returns HTTP status 201 with information on the newly crea
 
 Once you have created your schema, you will need to create a dataset to ingest record data.
 
->[!NOTE] This dataset will be enabled for **Real-time Customer Profile** and **Identity** by setting the appropriate tags.
+>[!NOTE]
+>
+>This dataset will be enabled for **[!DNL Real-time Customer Profile]** and **[!DNL Identity]** by setting the appropriate tags.
 
 **API format**
 
@@ -281,7 +290,7 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 
 ## Ingest time series data to the streaming connection
 
-With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest time series data within Platform.
+With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Platform].
 
 **API format**
 
@@ -296,8 +305,13 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Request**
 
->[!NOTE] You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
+Ingesting time series data to a streaming connection can be done either with or without the source name.
 
+The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
+
+>[!NOTE]
+>
+>You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -309,9 +323,6 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
         },
         "imsOrgId": "{IMS_ORG}",
-        "source": {
-            "name": "GettingStarted"
-        },
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -365,9 +376,25 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+If you want to include a source name, the following example shows how you would include it.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Response**
 
-An successful response returns HTTP status 200 with details of the newly streamed Profile.
+An successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
 
 ```json
 {
@@ -389,9 +416,11 @@ An successful response returns HTTP status 200 with details of the newly streame
 
 ## Retrieve the newly ingested time series data
 
-To validate the previously ingested records, you can use the [Profile Access API](../../profile/api/entities.md) to retrieve the time series data. This can be done using a GET request to the `/access/entities` endpoint and using optional query parameters. Multiple parameters can be used, separated by ampersands (&)."
+To validate the previously ingested records, you can use the [[!DNL Profile Access API]](../../profile/api/entities.md) to retrieve the time series data. This can be done using a GET request to the `/access/entities` endpoint and using optional query parameters. Multiple parameters can be used, separated by ampersands (&)."
 
->[!NOTE] If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, Profile Access will fetch **all** related identities.
+>[!NOTE]
+>
+>If the merge policy ID is not defined and the `schema.name` or `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] will fetch **all** related identities.
 
 **API format**
 
@@ -490,6 +519,6 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into Platform using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through Platform UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-flows.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-flows.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md). 

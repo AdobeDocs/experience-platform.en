@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
 solution: Experience Platform
 title: Query Service developer guide
 topic: connection parameters
+description: You can retrieve your connection parameters for using the interactive service by making a GET request to the /connection_parameters endpoint.
 ---
 
 # Connection parameters
 
 ## Sample API calls
 
-Now that you understand what headers to use, you are ready to begin making calls to the Query Service API. The following sections walk through the various API calls you can make using the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Request connection parameters for the interactive service
 

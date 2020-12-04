@@ -5,11 +5,11 @@ title: Privacy Service FAQ
 topic: troubleshooting
 ---
 
-# Privacy Service FAQ
+# [!DNL Privacy Service] troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Privacy Service.
+Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
 
-Privacy Service provides a RESTful API and user interface to help companies manage customer data privacy requests. With Privacy Service, you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.
+This document provides answers to frequently asked questions about [!DNL Privacy Service], as well as information on commonly encountered errors in the API.
 
 ## When making privacy requests in the API, what is the difference between a user and a user ID? {#user-ids}
 
@@ -57,34 +57,49 @@ The array contains two objects, representing individual users identified by thei
 For more information on providing user identity information, see the guide on [identity data for privacy requests](identity-data.md).
 
 
-## Can I use Privacy Service to clean up data that was accidentally sent to Platform?
+## Can I use [!DNL Privacy Service] to clean up data that was accidentally sent to [!DNL Platform]?
 
-Adobe does not support using Privacy Service for clearing out data that was accidentally submitted to a product. Privacy Service is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. These requests are time-sensitive and are completed related to applicable privacy law. Submission of requests which are not data-subject/consumer access or delete requests impacts all Privacy Service customers and the ability for Privacy Service to support the appropriate legal timelines.
+Adobe does not support using [!DNL Privacy Service] for clearing out data that was accidentally submitted to a product. [!DNL Privacy Service] is designed to assist you in meeting your obligations for data subject (or consumer) access or delete requests. These requests are time-sensitive and are completed related to applicable privacy law. Submission of requests which are not data-subject/consumer access or delete requests impacts all [!DNL Privacy Service] customers and the ability for [!DNL Privacy Service] to support the appropriate legal timelines.
 
 Please contact your account manager (CDM) to coordinate and provide a level of effort to remove any PII or data issues.
 
 ## How do I get information about the status of my privacy request or job?
 
-You can retrieve details about a particular job by using the Privacy Service API or user interface.
+You can retrieve details about a particular job by using the [!DNL Privacy Service] API or user interface.
 
 ### Using the API
 
-To retrieve the status of a particular job using the Privacy Service API, make a request to the root (`GET /`) endpoint, using the job's ID in the request path. For more details, see the section on [checking the status of a job](api/privacy-jobs.md#check-the-status-of-a-job) in the Privacy Service developer guide.
+To retrieve the status of a particular job using the [!DNL Privacy Service] API, make a request to the root (`GET /`) endpoint, using the job's ID in the request path. For more details, see the section on [checking the status of a job](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] developer guide.
 
 ### Using the UI
 
-All active job requests are listed in the **Job Requests** widget on the Privacy Service UI dashboard. The status for each job request is displayed under the **Status** column. For more information on viewing job requests in the UI, please see the [Privacy Service user guide](ui/user-guide.md).
+All active job requests are listed in the **[!UICONTROL Job Requests]** widget on the [!DNL Privacy Service] UI dashboard. The status for each job request is displayed under the **[!UICONTROL Status]** column. For more information on viewing job requests in the UI, please see the [Privacy Service user guide](ui/user-guide.md).
 
 ## How do I download the results of my completed privacy jobs?
 
-The Privacy Service API and user interface both provide methods for downloading the results of completed jobs in ZIP format.
+The [!DNL Privacy Service] API and user interface both provide methods for downloading the results of completed jobs in ZIP format.
 
 ### Using the API
 
-Make a request to the root (`GET /`) endpoint in the Privacy Service API, using the ID of the job whose results you want to download in the request path. If the job's status is complete, the API will include a `downloadURL` attribute in the response body. This attribute contains a URL that you can paste into the address bar of your browser to download the ZIP file.
+Make a request to the root (`GET /`) endpoint in the [!DNL Privacy Service] API, using the ID of the job whose results you want to download in the request path. If the job's status is complete, the API will include a `downloadURL` attribute in the response body. This attribute contains a URL that you can paste into the address bar of your browser to download the ZIP file.
 
-For more details, see the section on [looking up a job by its ID](api/privacy-jobs.md#check-the-status-of-a-job) in the Privacy Service developer guide.
+For more details, see the section on [looking up a job by its ID](api/privacy-jobs.md#check-the-status-of-a-job) in the [!DNL Privacy Service] developer guide.
 
 ### Using the UI
 
-On the Privacy Service UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the _Job Details_ page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the Job Details page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
+
+## Common error messages
+
+The following table outlines some common errors in [!DNL Privacy Service], with descriptions to help resolve their respective issues.
+
+| Error message | Description |
+| --- | --- |
+| User IDs were not found. | Some of the user IDs provided in the request could not be found and were skipped. Ensure that you are using the correct namespace(s) and ID values in the request payload. See the document on [providing identity data](./identity-data.md) for a more detailed explanation. |
+| Invalid Namespace | A provided identity namespace for a user ID was invalid. See the section on [standard identity namespaces](./api/appendix.md#standard-namespaces) in the [!DNL Privacy Service] developer guide appendix for a list of accepted namespaces. If you are using a custom namespace, ensure you are setting the ID's `type` property to "custom". |
+| Partially Completed | The job completed successfully, but some data was not applicable for the given request and was skipped. |
+| The data is not in the required format. | One or more of the data values for the specified application was incorrectly formatted. Check the job details for more info. |
+| The IMS Org has not been provisioned. | This message occurs when your IMS Org has not been provisioned for [!DNL Privacy Service]. Contact your administrator for more information. |
+| Access and permissions are required. | Access and permissions are required in order to use [!DNL Privacy Service]. Contact your administrator to gain access. |
+| There was a problem uploading and archiving the access data. | When this error occurs, re-upload the access data and try again. |
+| The workload was exceeded for the current document rate limit. | When this error occurs, reduce the submission rate and try again. |

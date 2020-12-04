@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestion overview
+title: Batch Ingestion overview
 topic: overview
+description: The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 ---
 
-# Batch Ingestion overview
+# [!DNL Batch Ingestion] overview
 
-The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
+The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
 The [Data Ingestion API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) provides additional information on these API calls.
 
@@ -17,17 +18,17 @@ The following diagram outlines the batch ingestion process:
 
 ## Using the API
 
-The Data Ingestion API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into Experience Platform in three basic steps:
+The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of data that consists of one or more files to be ingested as a single unit) into [!DNL Experience Platform] in three basic steps:
 
 1. Create a new batch. 
 2. Upload files to a specified dataset that matches the XDM schema of the data. 
 3. Signal the end of the batch. 
 
 
-### Data Ingestion prerequisites
+### [!DNL Data Ingestion] prerequisites
 
 - Data to upload must be either in Parquet or JSON formats.
-- A dataset created in the [Catalog services](../../catalog/home.md).
+- A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
 - Contents of the parquet file must match a subset of the schema of the dataset being uploaded into.
 - Have your unique Access Token after authentication.
 
@@ -40,21 +41,23 @@ To upload a file larger than 512MB, the file will need to be divided into smalle
 
 ### Reading sample API calls
 
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in Experience Platform are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
->[!NOTE] For more information on sandboxes in Platform, see the [sandbox overview documentation](../../sandboxes/home.md). 
+>[!NOTE]
+>
+>For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional header:
 
@@ -117,9 +120,11 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
 
 After successfully creating a new batch for uploading, files can then be uploaded to a specific dataset.
 
-You can upload files using the **Small File Upload API**. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the **Large File Upload API**. This API uploads the file in chunks, and stitches data together using the **Large File Upload Complete API** call.
+You can upload files using the Small File Upload API. However, if your files are too large and the gateway limit is exceeded (such as extended timeouts, requests for body size exceeded, and other constrictions), you can switch over to the Large File Upload API. This API uploads the file in chunks, and stitches data together using the Large File Upload Complete API call.
 
->[!NOTE] The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
+>[!NOTE]
+>
+>The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
 
 ### Small file upload
 
@@ -226,7 +231,7 @@ curl -X PATCH "https://platform.adobe.io/data/foundation/import/batches/{BATCH_I
 
 ## Signal batch completion
 
-After all files have been uploaded to the batch, the batch can be signaled for completion. By doing this, the Catalog **DataSetFile** entries are created for the completed files and associated with the batch generated above. The Catalog batch is then marked as successful, which triggers downstream flows to ingest the available data.
+After all files have been uploaded to the batch, the batch can be signaled for completion. By doing this, the [!DNL Catalog] DataSetFile entries are created for the completed files and associated with the batch generated above. The [!DNL Catalog] batch is then marked as successful, which triggers downstream flows to ingest the available data.
 
 **Request**
 
@@ -377,10 +382,10 @@ The `"status"` field is what shows the current status of the batch requested. Th
 | Status | Description |
 | ------ | ----------- |
 | Abandoned | The batch has not completed in the expected timeframe. |
-| Aborted | An abort operation has **explicitly** been called (via Batch Ingest API) for the specified batch. Once the batch is in a **Loaded** state, it cannot be aborted. |
-| Active |  The batch has been successfully promoted and is available for downstream consumption. This status can be used interchangeably with **Success**. |
+| Aborted | An abort operation has **explicitly** been called (via Batch Ingest API) for the specified batch. Once the batch is in a "Loaded" state, it cannot be aborted. |
+| Active |  The batch has been successfully promoted and is available for downstream consumption. This status can be used interchangeably with "Success". |
 | Deleted | Data for the batch has been completely removed. |
-| Failed | A terminal state that results from either bad configuration and/or bad data. Data for a failed batch will **not** show up. This status can be used interchangeably with **Failure**. |
+| Failed | A terminal state that results from either bad configuration and/or bad data. Data for a failed batch will **not** show up. This status can be used interchangeably with "Failure". |
 | Inactive | The batch was successfully promoted, but has been reverted or has expired. The batch is no longer available for downstream consumption. |
 | Loaded | Data for the batch is complete and the batch is ready for promotion. |
 | Loading | Data for this batch is being uploaded and the batch is currently **not** ready to be promoted. |

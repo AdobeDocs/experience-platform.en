@@ -1,38 +1,50 @@
 ---
 product: experience-platform
+solution: Experience Platform, Data Collection
 audience: user
-user-guide-title:  Adobe Experience Platform Edge Network Help
+user-guide-title: Adobe Experience Platform Web SDK Help
+breadcrumb-title: Web SDK Guide
+user-guide-description: Interact with Experience Cloud services through the Edge Network.
 ---
 
-# Adobe Experience Platform Edge Network {#edge}
+# Adobe Experience Platform Web SDK {#edge}
 
-* [Edge Network overview](home.md)
-* Getting started {#get-started}
-  * [Quick start with Launch](getting-started/quick-start-with-launch.md)
-  * [Deploying all products](getting-started/deploying-all-products.md)
+* [Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
-  * [Installing the SDK](fundamentals/installing-the-sdk.md)
-  * [Executing commands](fundamentals/executing-commands.md)
+  * [Prerequisite](fundamentals/prerequisite.md)
   * [Configuring the Edge](fundamentals/edge-configuration.md)
+  * [Installing the SDK](fundamentals/installing-the-sdk.md)
   * [Configuring the SDK](fundamentals/configuring-the-sdk.md)
+  * [Executing commands](fundamentals/executing-commands.md)
   * [Tracking events](fundamentals/tracking-events.md)
-  * [Merging event data](fundamentals/merging-event-data.md)
   * [Debugging](fundamentals/debugging.md)
+  * [Merging event data](fundamentals/merging-event-data.md)
   * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
-  * [Rendering personalized content](fundamentals/rendering-personalization-content.md)
-  * [Managing Flicker](fundamentals/managing-flicker.md)
-  * [Supporting consent](fundamentals/supporting-consent.md)
-  * [Supporting in-app browsers](fundamentals/supporting-in-app-browsers.md)
-  * [Retrieving Experience Cloud ID](fundamentals/retrieving-experience-cloud-id.md)
-* What to Implement {#implement}
-  * [Products](what-to-implement/commerce.md)
-* Solution Specific Considerations {#solutions}
-  * Analytics {#analytics}
-    * [Analytics Overview](solution-specific/analytics/analytics-overview.md)
-    * [Automatically Mapped Variables](solution-specific/analytics/automatically-mapped-vars.md)
-  * Target {#target}
-    * [Target Overview](solution-specific/target/target-overview.md)
-* Reference {#ref}
-  * [Automatically Collected Information](reference/automatic-information.md)
-  * [Retrieving Library Information](reference/retrieving-library-information.md)
-* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
+* Identity {#identity}
+  * [Overview](identity/overview.md)
+* Data Collection {#data-collection}
+  * [Automatically collected information](data-collection/automatic-information.md)
+  * [Track links](data-collection/track-links.md)
+  * [Collect commerce and products data](data-collection/collect-commerce-data.md)
+  * Adobe Analytics {#adobe-analytics}
+    * [Analytics overview](data-collection/adobe-analytics/analytics-overview.md)
+    * [Manually mapping variables in Adobe Analytics](data-collection/adobe-analytics/manually-mapping-variables.md)
+    * [Automatically mapped variables](data-collection/adobe-analytics/automatically-mapped-vars.md)
+    * [Sending data to Adobe Analytics](data-collection/adobe-analytics/sending-data-to-analytics.md)
+* Personalization {#personalization}
+  * [Rendering personalized content](personalization/rendering-personalization-content.md)
+  * [Manage flicker](personalization/manage-flicker.md)
+  * Adobe Target {#adobe-target}
+    * [Target overview](personalization/adobe-target/target-overview.md)
+    * [Single Page Application implementation](personalization/adobe-target/spa-implementation.md)
+  * Offer Decisioning {#offer-decisioning}
+    * [Offer Decisioning overview](personalization/offer-decisioning/offer-decisioning-overview.md)
+* Consent {#consent}
+  * [Supporting consent](consent/supporting-consent.md)
+  * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
+    * [Overview](consent/iab-tcf/overview.md)
+    * [Integrate with Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
+    * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* [Release notes](release-notes.md)
+* [Frequently Asked Questions](web-sdk-faq.md)
+* [Blog Posts](blog-posts.md)

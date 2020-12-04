@@ -1,19 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
 title: Adobe Experience Platform Identity Service troubleshooting guide
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 ---
 
 # Identity Service troubleshooting guide
 
-This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding Platform APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. **Identity Service** gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real-time. For more information, see the [Identity Service overview](./home.md).
+Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real-time. For more information, see the [Identity Service overview](./home.md).
 
 ## FAQ
 
-The following is a list of answers to frequently asked questions about Identity Service.
+The following is a list of answers to frequently asked questions about [!DNL Identity Service].
 
 ## What is identity data?
 
@@ -25,15 +26,15 @@ Labeling certain data fields as identities in your record and time series data a
 
 ## What are known and anonymous identities?
 
-A **known identity** refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRM IDs.
+A known identity refers to an identity value that can be used on its own or with other information to identify, contact, or locate an individual person. Examples of known identities may include email addresses, phone numbers, and CRM IDs.
 
-An **anonymous identity** refers to an identity value that cannot be used on its own or with other information to identify, contact, or locate an individual person (such as a cookie ID).
+An anonymous identity refers to an identity value that cannot be used on its own or with other information to identify, contact, or locate an individual person (such as a cookie ID).
 
 ## What is a Private Identity Graph?
 
 A Private Identity Graph is a private map of relationships between stitched and linked identities, visible only to your organization. 
 
-When more than one identity is included in any data ingested from a streaming endpoint or sent to a dataset enabled for Identity Service, those identities are linked in the Private Identity Graph. Identity Service leverages this graph to glean identities for a given consumer or entity, allowing for identity stitching and profile merging.
+When more than one identity is included in any data ingested from a streaming endpoint or sent to a dataset enabled for [!DNL Identity Service], those identities are linked in the Private Identity Graph. [!DNL Identity Service] leverages this graph to glean identities for a given consumer or entity, allowing for identity stitching and profile merging.
 
 ## How do I create multiple identity fields within an XDM schema?
 
@@ -65,7 +66,7 @@ Identity fields must be associated with an existing identity namespace when they
 
 For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
-## What are the standard identity namespaces provided by Experience Platform?
+## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
 The following standard namespaces are provided for use by all organizations within Experience Platform:
 
@@ -92,7 +93,7 @@ Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/ho
 
 ## What are composite identities and XIDs?
 
-Identities are referenced in API calls either by their composite identity or XID. A **composite identity** is a representation of an identity that contains an ID value and a namespace. An **XID** is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
+Identities are referenced in API calls either by their composite identity or XID. A composite identity is a representation of an identity that contains an ID value and a namespace. An XID is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
 
 ## How does Identity Service handle personally identifiable information (PII)?
 
@@ -113,7 +114,9 @@ If you are sending hashed PII values to Identity Service, you must use the same 
 
 The following table describes when the recommended approach for including identity data in your XDM would be identity map and when an identity field is the better method.
 
->[!NOTE] An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
+>[!NOTE]
+>
+>An advantage `identityMap` has is the ability to include multiple identity values for a single namespace.
 
 Write|XDM identity field|`identityMap`
 ---|---|---
@@ -126,11 +129,11 @@ Internal solutions|Preferred|Common
 
 ## Troubleshooting
 
-The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the Identity Service API.
+The following section provides troubleshooting suggestions for specific error codes and unexpected behavior you may encounter while working with the [!DNL Identity Service] API.
 
-## Identity Service error messages
+## [!DNL Identity Service] error messages
 
-The following is a list of error messages you may encounter when using the Identity Service API.
+The following is a list of error messages you may encounter when using the [!DNL Identity Service] API.
 
 ### Missing required query parameter
 
@@ -162,7 +165,7 @@ Check that you are properly including the indicated parameter in the request pat
 }
 ```
 
-Identity Service purges data older than 180 days. This error message displays when you attempt to access data older than this.
+[!DNL Identity Service] purges data older than 180 days. This error message displays when you attempt to access data older than this.
 
 ### There is a limit of 1000 XIDs in a single call
 
@@ -199,7 +202,7 @@ This error message displays when you attempt to retrieve identity information fo
 }
 ```
 
-This error message displays when a `graph-type` query parameter is given an invalid value in the request path. See the section on [identity graphs](./home.md) in the Identity Service overview to learn which graph-types are supported.
+This error message displays when a `graph-type` query parameter is given an invalid value in the request path. See the section on [identity graphs](./home.md) in the [!DNL Identity Service] overview to learn which graph-types are supported.
 
 ### Service token does not have valid scope
 
@@ -211,7 +214,7 @@ This error message displays when a `graph-type` query parameter is given an inva
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for Identity Service. Contact your system administrator to resolve this issue.
+This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Gateway service token is not valid
 
@@ -223,7 +226,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -235,7 +238,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using Platform APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -247,7 +250,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-This error message displays when your access token has not been generated from an Experience Platform integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an Experience Platform integration.
+This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
 
 ### Internal error when getting native XID from identity and namespace code
 
@@ -259,9 +262,9 @@ This error message displays when your access token has not been generated from a
 }
 ```
 
-When Identity Service persists an identity, the identity's ID and associated namespace ID are assigned a unique identifier called an XID. This message displays when an error occurs during the process of finding the XID for a given ID value and namespace.
+When [!DNL Identity Service] persists an identity, the identity's ID and associated namespace ID are assigned a unique identifier called an XID. This message displays when an error occurs during the process of finding the XID for a given ID value and namespace.
 
-### The IMS Org is not provisioned for Identity Service usage
+### The IMS Org is not provisioned for [!DNL Identity Service] usage
 
 ```json
 {
@@ -271,7 +274,7 @@ When Identity Service persists an identity, the identity's ID and associated nam
 }
 ```
 
-This error message displays when your IMS Organization has not been provisioned with the proper permissions for Identity Service. Contact your system administrator to resolve this issue.
+This error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Server Error
 
@@ -283,13 +286,13 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-This error displays when an unexpected exception occurs in the execution of a Platform service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
+This error displays when an unexpected exception occurs in the execution of a [!DNL Platform] service call. Best practice is to program your automated calls to retry their requests a few times at a timed interval when receiving this error. If the problem persists, contact your system administrator.
 
 ## Batch Ingestion error codes
 
-Identity Service ingests identity data from record and time series data that is uploaded to Platform using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
+[!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to Identity Service you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
 
 ### Unknown XDM schema
 
@@ -301,7 +304,7 @@ The following is a list of error messages related to Identity Service you may en
 }
 ```
 
-Identity Service only consumes identities for record or time series data that conforms to the Profile or ExperienceEvent classes, respectively. Attempting to ingest data for Identity Service that does not adhere to either class will trigger this error.
+[!DNL Identity Service] only consumes identities for record or time series data that conforms to the [!DNL Profile] or [!DNL ExperienceEvent] classes, respectively. Attempting to ingest data for [!DNL Identity Service] that does not adhere to either class will trigger this error.
 
 ### There were 0 valid identities in the first 100 rows of the processed batch
 
@@ -325,7 +328,7 @@ This error displays when the first 100 rows of a batch presented no identities. 
 }
 ```
 
-Identity Service only links identities when single records present two or more identity values. This error message occurs once for each ingested batch, and displays the number of records where only one identity could be found and resulted in no change to the identity graph.
+[!DNL Identity Service] only links identities when single records present two or more identity values. This error message occurs once for each ingested batch, and displays the number of records where only one identity could be found and resulted in no change to the identity graph.
 
 ### Namespace Code is not registered for this IMS Org
 
@@ -349,7 +352,7 @@ This error displays when an ingested record presents an identity whose associate
 }
 ```
 
-When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for Identity Service. Contact your system administrator to resolve this issue.
+When ingesting batch data, this error message displays when your IMS Organization has not been provisioned with the proper permissions for [!DNL Identity Service]. Contact your system administrator to resolve this issue.
 
 ### Internal Error
 

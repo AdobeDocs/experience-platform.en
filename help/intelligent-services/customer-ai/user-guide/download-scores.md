@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;download scores;customer ai;popular topics
+keywords: Experience Platform;download scores;customer ai;popular topics;Export;export
 solution: Experience Platform
 title: Downloading scores in Customer AI
 topic: Downloading scores
+description: Customer AI allows you to download scores in the parquet file format.
 ---
 
 # Downloading scores in Customer AI
@@ -236,7 +237,9 @@ Copy the `href` value for any file object in the `data` array, then proceed to t
 
 To download your file data, make a GET request to the `"href"` value you copied in the previous step [retrieving your files](#retrieving-your-files).
 
->[!NOTE] If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
+>[!NOTE]
+>
+>If you are making this request directly in command line, you might be prompted to add an output after your request headers. The following request example uses `--output {FILENAME.FILETYPE}`.
 
 **API format**
 
@@ -260,7 +263,9 @@ curl -X GET 'https://platform.adobe.io:443/data/foundation/export/files/035e2520
   -O 'filename.parquet'
 ```
 
->[!TIP] Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
+>[!TIP]
+>
+>Make sure you are in the correct directory or folder you want your file saved to before you make the GET request.
 
 **Response**
 
@@ -272,7 +277,9 @@ The response downloads the file you requested in in your current directory. In t
 
 An alternative way to download your score data is by exporting your audience to a dataset. After a segmentation job has successfully completed (the value of the `status` attribute is "SUCCEEDED"), you can export your audience to a dataset where it can be accessed and acted upon. To learn more about segmentation, visit the [segmentation overview](../../../segmentation/home.md).
 
->[!IMPORTANT] In order to utilize this method of exporting, Real-time Customer Profile needs to be enabled for the dataset.
+>[!IMPORTANT]
+>
+>In order to utilize this method of exporting, Real-time Customer Profile needs to be enabled for the dataset.
 
 The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) section in the segment evaluation guide covers the required steps to export an audience dataset. The guide outlines and provides examples of the following:
 
@@ -281,6 +288,6 @@ The [export a segment](../../../segmentation/tutorials/evaluate-a-segment.md) se
 - **Monitor export progress:** Check the current progress of the export process.
 - **Read audience data:** Retrieve the resulting XDM Individual Profiles representing the members of your audience.
 
-## Next Steps
+## Next steps
 
 This document outlined the steps required for downloading Customer AI scores. You can now continue to browse the other [Intelligent Services](../../home.md) and guides that are offered.

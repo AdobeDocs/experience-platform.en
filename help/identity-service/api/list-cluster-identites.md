@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;list identities;list cluster
 solution: Experience Platform
 title: List cluster identities
 topic: API guide
+description: Identities that are related in an identity graph, regardless of namespace, are considered to be part of the same "cluster" in that identity graph. The options below provide the means to access all cluster members.
 ---
 
 # List all identities in a cluster
@@ -63,7 +64,9 @@ curl -X GET \
 
 Use `POST` as a batch equivalent of the `GET` method described above to return the identities in the clusters of multiple identities.
 
->[!NOTE] Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
+>[!NOTE]
+>
+>Request should indicate no more than a maximum of 1000 identities. Requests exceeding 1000 identities will result in 400 status code.
 
 **API format**
 
@@ -227,7 +230,9 @@ curl -X POST \
 }
 ```
 
->[!NOTE] The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
+>[!NOTE]
+>
+>The response will always have one entry for each XID provided in the request regardless of whether a request's XIDs belong to the same cluster or if one or more have any cluster associated at all.
 
 ## Next steps
 

@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
 title: Query Service developer guide
 topic: queries
+description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
 ---
 
 # Queries
 
 ## Sample API Calls
 
-The following sections walk through calls you can make using the `/queries` endpoint in the Query Service API. Each call includes the general API format, a sample request showing required headers, and a sample response.
+The following sections walk through calls you can make using the `/queries` endpoint in the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
 ### Retrieve a list of queries
 
@@ -189,7 +190,9 @@ A successful response returns HTTP status 202 (Accepted) with details of your ne
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Retrieve a query by ID
 
@@ -258,7 +261,9 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
->[!NOTE] You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
+>[!NOTE]
+>
+>You can use the value of `_links.cancel` to [cancel your created query](#cancel-a-query).
 
 ### Cancel a query
 
@@ -289,10 +294,10 @@ curl -X PATCH https://platform.adobe.io/data/foundation/query/queries/4d64cd49-c
  -d '{
    "op": "cancel"  
  }'
- ```
+```
 
- | Property | Description |
- | -------- | ----------- |
+| Property | Description |
+| -------- | ----------- |
 | `op` | In order to cancel the query, you must set the op parameter with the value `cancel `. |
 
 **Response**

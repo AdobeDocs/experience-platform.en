@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics
+keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Train and evaluate a model (UI)
-topic: Tutorial
+topic: tutorial
+type: Tutorial
+description: In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe.
 ---
 
 # Train and evaluate a model (UI)
@@ -13,7 +15,7 @@ This tutorial walks through the steps to create, train, and evaluate a Model.
 
 ## Getting started
 
-In order to complete this tutorial, you must have access to Experience Platform. If you do not have access to an IMS Organization in Experience Platform, please speak to your system administrator before proceeding.
+In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
 This tutorial requires an existing Recipe. If you do not have a Recipe, follow the [Import a packaged Recipe in the UI](./import-packaged-recipe-ui.md) tutorial before continuing.
 
@@ -29,16 +31,19 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 ![](../images/models-recipes/train-evaluate-ui/select_dataset.png)
 
 4. Provide a name for the Model and review the default Model configurations. Default configurations were applied during Recipe creation, review and modify the configuration values by double-clicking the values. To provide a new set of configurations, click **[!UICONTROL Upload New Config]** and drag a JSON file containing Model configurations into the browser window. Click **[!UICONTROL Finish]** to create the Model.
-    >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
-    ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
+   >[!NOTE]
+   >
+   >Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
+
+   ![](../images/models-recipes/train-evaluate-ui/name_and_configure.png)
 
 ## Create a training Run
 
 1. In Adobe Experience Platform, click the **[!UICONTROL Models]** link located in the left navigation column to list all existing Models. Find and click on the name of the Model to be trained.
 ![](../images/models-recipes/train-evaluate-ui/models_browse.png)
 
-2. All existing training runs with their current training statuses are listed. For Models created using the Data Science Workspace user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
+2. All existing training runs with their current training statuses are listed. For Models created using the [!DNL Data Science Workspace] user interface, a training run is automatically generated and executed using the default configurations and input training dataset.
 ![](../images/models-recipes/train-evaluate-ui/model_overview.png)
 
 3. Create a new training run by clicking **[!UICONTROL Train]** near the top-right of the Model overview page.
@@ -48,9 +53,12 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 5. Default configurations provided during the Model's creation are shown, change and modify these accordingly by double-clicking the values. Click **[!UICONTROL Finish]** to create and execute the training run.
-    >[!NOTE]Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
 
-    ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
+   >[!NOTE]
+   >
+   >Configurations are unique and specific to their intended Recipe, this means that configurations for the Retail Sales Recipe will not work for the Product Recommendations Recipe. See the [reference](#reference) section for a list of Retail Sales Recipe configurations.
+
+   ![](../images/models-recipes/train-evaluate-ui/training_configuration.png)
 
 ## Evaluate the Model
 
@@ -73,7 +81,7 @@ This tutorial requires an existing Recipe. If you do not have a Recipe, follow t
 
 ## Next steps
 
-This tutorial walked you through creating, training, and evaluating a Model in Data Science Workspace. Once you have arrived at an optimized Model, you can use the trained Model to generate insights by following the [Score a Model in the UI](./score-model-ui.md) tutorial.
+This tutorial walked you through creating, training, and evaluating a Model in [!DNL Data Science Workspace]. Once you have arrived at an optimized Model, you can use the trained Model to generate insights by following the [Score a Model in the UI](./score-model-ui.md) tutorial.
 
 ## Reference {#reference}
 

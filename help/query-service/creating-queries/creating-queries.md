@@ -1,15 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
 title: Creating queries
 topic: queries
+type: Tutorial
+description: This document links to the core documentation used in creating and understanding queries in Adobe Experience Platform.
 ---
 
 # Creating queries
 
-Adobe Experience Platform Query Service provides the power to run SQL queries against datasets in the Data Lake within Experience Platform. As you use SQL to interact with datasets in the Data Lake, it is important to understand that Query Service automatically manages certain aspects, such as creating SQL-safe table names for each dataset in the data lake. There are also considerations around working with hierarchical data in the Data Lake, including discovering the schema upon which a dataset is based and ensuring that you are selecting the correct field within the hierarchical model.
+Adobe Experience Platform [!DNL Query Service] provides the power to run SQL queries against datasets in the [!DNL Data Lake] within [!DNL Experience Platform]. As you use SQL to interact with datasets in the Data Lake, it is important to understand that [!DNL Query Service] automatically manages certain aspects, such as creating SQL-safe table names for each dataset in the [!DNL Data Lake]. There are also considerations around working with hierarchical data in the [!DNL Data Lake], including discovering the schema upon which a dataset is based and ensuring that you are selecting the correct field within the hierarchical model.
 
-The following documentation will help you to better understand core concepts within Query Service:
+The following documentation will help you to better understand core concepts within [!DNL Query Service]:
 
 - [Datasets vs tables and schema](./datasets-and-tables.md)
 - [General guidance for writing queries](./writing-queries.md)

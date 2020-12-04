@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
 title: List available namespaces
 topic: API guide
+description: List all available namespaces.
 ---
 
 # List available namespaces
@@ -26,9 +27,11 @@ curl -X GET \
 
 **Response**
 
-The response includes an array of objects, with each object representing an available namespace. Namespaces with a "custom" value of "false" are standard namespaces, while those with a "custom" value of "true" are namespaces that your organization has created.
+The response includes an array of objects, with each object representing an available namespace. Namespaces with a "[!UICONTROL custom]" value of "[!UICONTROL false]" are standard namespaces, while those with a "[!UICONTROL custom]" value of "[!UICONTROL true]" are namespaces that your organization has created.
 
->[!NOTE] This response has been truncated for space.
+>[!NOTE]
+>
+>This response has been truncated for space.
 
 ```json
 [

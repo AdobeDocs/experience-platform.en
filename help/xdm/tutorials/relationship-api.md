@@ -1,35 +1,42 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;relationship;Relationship;relationship descriptor;Relationship descriptor;reference identity;Reference identity;
 solution: Experience Platform
 title: Define a relationship between two schemas using the Schema Registry API
-topic: tutorials
+description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
+topic: tutorial
+type: Tutorial
 ---
 
-# Define a relationship between two schemas using the Schema Registry API
+# Define a relationship between two schemas using the [!DNL Schema Registry] API
 
+The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
-The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your Experience Data Model (XDM) schemas allows you to gain complex insights into your customer data.
+While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
 
-This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
+This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the [[!DNL Schema Registry API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). 
 
 ## Getting started
 
-This tutorial requires a working understanding of Experience Data Model (XDM) and XDM System. Before beginning this tutorial, please review the following documentation:
+This tutorial requires a working understanding of [!DNL Experience Data Model] (XDM) and [!DNL XDM System]. Before beginning this tutorial, please review the following documentation:
 
-* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in Experience Platform.
+* [XDM System in Experience Platform](../home.md): An overview of XDM and its implementation in [!DNL Experience Platform].
     * [Basics of schema composition](../schema/composition.md): An introduction of the building blocks of XDM schemas.
-* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Schema Registry] API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the [!DNL Accept] header and its possible values).
 
 ## Define a source and destination schema {#define-schemas}
 
-It is expected that you have already created the two schemas that will be defined in the relationship. This tutorial creates a relationship between members of an organization's current loyalty program (defined in a "Loyalty Members" schema) and their favorite hotels (defined in a "Hotels" schema).
+It is expected that you have already created the two schemas that will be defined in the relationship. This tutorial creates a relationship between members of an organization's current loyalty program (defined in a "[!DNL Loyalty Members]" schema) and their favorite hotels (defined in a "[!DNL Hotels]" schema).
 
-Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "Loyalty Members" will be the source schema, while "Hotels" will act as the destination schema.
+Schema relationships are represented by a **source schema** having a field that refers to another field within a **destination schema**. In the steps that follow, "[!DNL Loyalty Members]" will be the source schema, while "[!DNL Hotels]" will act as the destination schema.
 
-In order to define a relationship between two schemas, you must first acquire the `$id` values for both schemas. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the Schema Registry API.
+>[!IMPORTANT]
+>
+>In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. See the section on [enabling a schema for use in Profile](./create-schema-api.md#profile) in the schema creation tutorial if you require guidance on how to configure your schemas accordingly.
+
+In order to define a relationship between two schemas, you must first acquire the `$id` values for both schemas. If you know the display names (`title`) of the schemas, you can find their `$id` values by making a GET request to the `/tenant/schemas` endpoint in the [!DNL Schema Registry] API.
 
 **API format**
 
@@ -49,7 +56,9 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
->[!NOTE] The Accept header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
+>[!NOTE]
+>
+>The [!DNL Accept] header `application/vnd.adobe.xed-id+json` returns only the titles, IDs, and versions of the resulting schemas.
 
 **Response**
 
@@ -93,15 +102,19 @@ A successful response returns a list of schemas defined by your organization, in
 
 Record the `$id` values of the two schemas you want to define a relationship between. These values will be used in later steps.
 
-## Define reference fields for both schemas
+## Define a reference field for the source schema
 
-Within the Schema Registry, relationship descriptors work similarly to foreign keys in SQL tables: a field in the source schema acts as a reference to a field of a destination schema. When defining a relationship, each schema must have a dedicated field to be used as a reference to the other schema.
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
->[!IMPORTANT] If the schemas are to be enabled for use in [Real-time Customer Profile](../../profile/home.md), the reference field for the destination schema must be its **primary identity**. This is explained in more detail later in this tutorial.
+>[!IMPORTANT]
+>
+>Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
 
-If either schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "string".
+In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
 
-For the purposes of this tutorial, the destination schema "Hotels" already contains a field for this purpose: `hotelId`. However, the source schema "Loyalty Members" does not have such a field, and must be given a new mixin that adds a new field, `favoriteHotel`, under its `TENANT_ID` namespace.
+>[!NOTE]
+>
+>If your source schema already has a dedicated field that you plan to use as a reference field, you can skip ahead to the step on [creating a reference descriptor](#reference-identity).
 
 ### Create a new mixin
 
@@ -115,7 +128,7 @@ POST /tenant/mixins
 
 **Request**
 
-The following request creates a new mixin that adds a `favoriteHotel` field under the `TENANT_ID` namespace of any schema it is added to.
+The following request creates a new mixin that adds a `favoriteHotel` field under the `_{TENANT_ID}` namespace of any schema it is added to.
 
 ```shell
 curl -X POST\
@@ -229,7 +242,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Request**
 
-The following request adds the "Favorite Hotel" mixin to the "Loyalty Members" schema.
+The following request adds the "[!DNL Favorite Hotel]" mixin to the "[!DNL Loyalty Members]" schema.
 
 ```shell
 curl -X PATCH \
@@ -253,7 +266,7 @@ curl -X PATCH \
 | Property | Description |
 | --- | --- |
 | `op` | The PATCH operation to be performed. This request uses the `add` operation. |
-| `path` | The path to the schema field where the new resource will be added. When adding  mixins to schemas, the value must be `/allOf/-`. |
+| `path` | The path to the schema field where the new resource will be added. When adding  mixins to schemas, the value must be "/allOf/-". |
 | `value.$ref` | The `$id` of the mixin to be added. |
 
 **Response**
@@ -317,73 +330,9 @@ A successful response returns the details of the updated schema, which now inclu
 }
 ```
 
-## Define primary identity fields for both schemas
+## Create a reference identity descriptor {#reference-identity}
 
->[!NOTE] This step is only required for schemas that will be enabled for use in [Real-time Customer Profile](../../profile/home.md). If you do not want either schema to participate in a union, or if your schemas already have primary identities defined, you can skip to the next step of [creating a reference identity descriptor](#create-descriptor) for the destination schema.
-
-In order for schemas to be enabled for use in Real-time Customer Profile, they must have a primary identity defined. In addition, a relationship's destination schema must use its primary identity as its reference field.
-
-For the purposes of this tutorial, the source schema already has a primary identity defined, but the destination schema does not. You can mark a schema field as a primary identity field by creating an identity descriptor. This is done by making a POST request to the `/tenant/descriptors` endpoint.
-
-**API format**
-
-```http
-POST /tenant/descriptors
-```
-
-**Request**
-
-The following request creates a new identity descriptor that defines the `hotelId` field of the destination schema "Hotels" as a primary identity field.
-
-```shell
-curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/descriptors \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -H 'Content-Type: application/json' \
-  -d '{
-    "@type": "xdm:descriptorIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
-    "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:namespace": "ECID",
-    "xdm:property": "xdm:code",
-    "xdm:isPrimary": true
-  }'
-```
-
-| Parameter | Description |
-| --- | --- |
-| `@type` | The type of descriptor to be created. The `@type` value for identity descriptors is `xdm:descriptorIdentity`. |
-| `xdm:sourceSchema` | The `$id` value of the destination schema, obtained in the [previous step](#define-schemas). |
-| `xdm:sourceVersion` | The version number of the schema. |
-| `sourceProperty` | The path to the specific field that will serve as the schema's primary identity. This path should begin with a "/" and not end with one, while also excluding any "properties" namespaces. For example, the request above uses `/_{TENANT_ID}/hotelId` instead of `/properties/_{TENANT_ID}/properties/hotelId`. |
-| `xdm:namespace` | The identity namespace for the identity field. `hotelId` is an ECID value in this example, therefore the "ECID" namespace is used. See the [identity namespace overview](../../identity-service/home.md) for a list of available namespaces. |
-| `xdm:isPrimary` | A boolean property determining whether the identity field will be the primary identity for the schema. Since this request defines a primary identity, the value is set to true. |
-
-**Response**
-
-A successful response returns the details of the newly created identity descriptor.
-
-```json
-{
-    "@type": "xdm:descriptorIdentity",
-    "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
-    "xdm:sourceVersion": 1,
-    "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:namespace": "ECID",
-    "xdm:property": "xdm:code",
-    "xdm:isPrimary": true,
-    "meta:containerId": "tenant",
-    "@id": "e3cfa302d06dc27080e6b54663511a02dd61316f"
-}
-```
-
-## Create a reference identity descriptor
-
-Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "Loyalty Members" will refer to the `hotelId` field in "Hotels", `hotelId` must be given a reference identity descriptor.
+Schema fields must have a reference identity descriptor applied to them if they are being used as a reference from other schemas in a relationship. Since the `favoriteHotel` field in "[!DNL Loyalty Members]" will refer to the `hotelId` field in "[!DNL Hotels]", `hotelId` must be given a reference identity descriptor.
 
 Create a reference descriptor for the destination schema by making a POST request to the `/tenant/descriptors` endpoint.
 
@@ -395,7 +344,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a reference descriptor for the `hotelId` field in the destination schema "Hotels".
+The following request creates a reference descriptor for the `hotelId` field in the destination schema "[!DNL Hotels]".
 
 ```shell
 curl -X POST \
@@ -410,16 +359,17 @@ curl -X POST \
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
     "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:identityNamespace": "ECID"
+    "xdm:identityNamespace": "Hotel ID"
   }'
 ```
 
 | Parameter | Description |
 | --- | --- |
+| `@type` | The type of descriptor being defined. For reference descriptors the value must be "xdm:descriptorReferenceIdentity". |
 | `xdm:sourceSchema` | The `$id` URL of the destination schema. |
 | `xdm:sourceVersion` | The version number of the destination schema. |
 | `sourceProperty` | The path to the destination schema's primary identity field. |
-| `xdm:identityNamespace` | The identity namespace of the reference field. `hotelId` is an ECID value in this example, therefore the "ECID" namespace is used. See the [identity namespace overview](../../identity-service/home.md) for a list of available namespaces. |
+| `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace used when defining the field as the schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
 
 **Response**
 
@@ -431,7 +381,7 @@ A successful response returns the details of the newly created reference descrip
     "xdm:sourceSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/d4ad4b8463a67f6755f2aabbeb9e02c7",
     "xdm:sourceVersion": 1,
     "xdm:sourceProperty": "/_{TENANT_ID}/hotelId",
-    "xdm:identityNamespace": "ECID",
+    "xdm:identityNamespace": "Hotel ID",
     "meta:containerId": "tenant",
     "@id": "53180e9f86eed731f6bf8bf42af4f59d81949ba6"
 }
@@ -439,7 +389,7 @@ A successful response returns the details of the newly created reference descrip
 
 ## Create a relationship descriptor {#create-descriptor}
 
-Relationship descriptors establish a one-to-one relationship between a source schema and a destination schema. You can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
+Relationship descriptors establish a one-to-one relationship between a source schema and a destination schema. Once you have defined a reference descriptor for the destination schema, you can create a new relationship descriptor by making a POST request to the `/tenant/descriptors` endpoint.
 
 **API format**
 
@@ -449,7 +399,7 @@ POST /tenant/descriptors
 
 **Request**
 
-The following request creates a new relationship descriptor, with "Loyalty Members" as the source schema and "Legacy Loyalty Members" as the destination schema.
+The following request creates a new relationship descriptor, with "[!DNL Loyalty Members]" as the source schema and "[!DNL Legacy Loyalty Members]" as the destination schema.
 
 ```shell
 curl -X POST \
@@ -472,13 +422,13 @@ curl -X POST \
 
 | Parameter | Description |
 | --- | --- |
-| `@type` | The type of descriptor to be created. The `@type` value for relationship descriptors is `xdm:descriptorOneToOne`. |
+| `@type` | The type of descriptor to be created. The `@type` value for relationship descriptors is "xdm:descriptorOneToOne". |
 | `xdm:sourceSchema` | The `$id` URL of the source schema. |
 | `xdm:sourceVersion` | The version number of the source schema. |
-| `sourceProperty`:  |he path to the reference field in the source schema. |
+| `xdm:sourceProperty` | The path to the reference field in the source schema. |
 | `xdm:destinationSchema` | The `$id` URL of the destination schema. |
 | `xdm:destinationVersion` | The version number of the destination schema. |
-| `destinationProperty`:  |he path to the reference field in the destination schema. |
+| `xdm:destinationProperty` | The path to the reference field in the destination schema. |
 
 ### Response
 
@@ -500,4 +450,4 @@ A successful response returns the details of the newly created relationship desc
 
 ## Next steps
 
-By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the Schema Registry API, see the [Schema Registry developer guide](../api/getting-started.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).
+By following this tutorial, you have successfully created a one-to-one relationship between two schemas. For more information on working with descriptors using the [!DNL Schema Registry] API, see the [Schema Registry developer guide](../api/descriptors.md). For steps on how to define schema relationships in the UI, see the tutorial on [defining schema relationships using the Schema Editor](relationship-ui.md).

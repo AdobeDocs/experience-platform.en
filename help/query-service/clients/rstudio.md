@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
 title: Connect with RStudio
 topic: connect
+description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 ---
 
-# Connect with RStudio
+# Connect with [!DNL RStudio]
 
-This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
+This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 
-After installing RStudio, on the *Console* screen that appears, you will first need to prepare your R script to use PostgreSQL.
+After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -18,7 +19,7 @@ require("RPostgreSQL")
 require("rstudioapi")
 ```
 
-Once you have prepared your R script to use PostgreSQL, you can now connect RStudio to Query Service by loading the PostgreSQL driver.
+Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
 
 ```r
 drv <- dbDriver("PostgreSQL")
@@ -36,11 +37,13 @@ con <- dbConnect(drv,
 | `{HOST_NUMBER` and `{PORT_NUMBER}` | The host endpoint and its port for Query Service. | 
 | `{USERNAME}` and `{PASSWORD}` | The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`. |
 
->[!NOTE] For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to Platform, click **Queries**, then click **Credentials**.
+>[!NOTE]
+>
+>For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
 
 ## Next steps
 
-Now that you have connected to Query Service, you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
+Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
 The following query uses a dataset containing [ExperienceEvents](../creating-queries/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
 

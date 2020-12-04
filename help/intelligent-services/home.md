@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;intelligent services;popular topics
+keywords: Experience Platform;home;intelligent services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform
 title: Intelligent Services overview
 topic: Intelligent Services overview
+description: Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
 ---
 
 # Intelligent Services overview
 
-Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in Adobe Experience Cloud, Adobe Experience Platform, and 3rd party applications.
+Intelligent Services empower marketing analysts and practitioners to leverage the power of artificial intelligence and machine learning in customer experience use cases. This allows for marketing analysts to set up predictions specific to a company's needs using business-level configurations without the need for data science expertise. Additionally, marketing practitioners can activate predictions in [!DNL Adobe Experience Cloud], [!DNL Adobe Experience Platform], and 3rd party applications.
 
 The following video is designed to support your understanding of Intelligent Services. Using example business use cases, this video explains a high level workflow and outlines the capabilities of both Attribution AI and Customer AI.
 
@@ -15,7 +16,7 @@ The following video is designed to support your understanding of Intelligent Ser
 
 ## Benefits of Intelligent Services
 
-Intelligent Services, built on Adobe Experience Platform, gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Listed below are some of the benefits that Intelligent Services provides.
+Intelligent Services, built on [!DNL Adobe Experience Platform], gives marketers responsible for customer experience access to AI-as-a-service, making it easy for anyone to predict customer behavior, measure the impact of a campaign, or ensure better return on every investment. Listed below are some of the benefits that Intelligent Services provides.
 
 ### Cost efficient speed to market
 
@@ -33,7 +34,7 @@ Empower marketers to get started with AI/ML right away and start improving marke
 
 ### Ingest
 
-Customer data is ingested and transformed with the Experience Data Model (XDM) on Adobe Experience Platform. To learn more about XDM, visit the [XDM overview](../xdm/home.md).
+Customer data is ingested and transformed with the Experience Data Model (XDM) on [!DNL Adobe Experience Platform]. To learn more about XDM, visit the [XDM overview](../xdm/home.md).
 
 ### Configure
 
@@ -45,7 +46,7 @@ After the models have finished training and scoring, the scores are written back
 
 ### Take action 
 
-Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the Adobe Experience Cloud, and building custom dashboards.
+Lastly, you can decide what actions to take with the predictions, such as consuming insights, activating applications across the [!DNL Adobe Experience Cloud], and building custom dashboards.
 
 ## Next steps
 

@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
 title: Data deduplication
 topic: queries
+type: Tutorial
+description: This document outlines sub-select and full sample query examples for deduplicating three common use cases ExperienceEvents, purchases, and metrics.
 ---
 
-# Data deduplication in Query Service
+# Data deduplication in [!DNL Query Service]
 
-Adobe Experience Platform Query Service supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate. The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the Experience Data Model (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
+Adobe Experience Platform [!DNL Query Service] supports data deduplication when it may be required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is a duplicate. The common pattern for deduplication involves using the `ROW_NUMBER()` function across a window for an ID, or pair of IDs, over ordered time (using the [!DNL Experience Data Model] (XDM) `timestamp` field) to return a new field that represents the number of times a duplicate has been detected. When this value is `1`, that refers to the original instance and in most cases that is the instance that you would wish to use, ignoring every other instance. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
 
 ## Use cases
 
@@ -22,7 +24,9 @@ This document outlines sub-select and full sample query examples for deduplicati
 
 In the case of duplicate ExperienceEvents, you will likely wish to ignore the entire row.
 
->[!CAUTION] Many DataSets in Experience Platform, including those produced by the Adobe Analytics Data Connector, already have ExperienceEvent-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query. It is important to understand the source of your DataSets and know if deduplication at the ExperienceEvent-level has already been applied. For any DataSets that are streamed (for example, those from Adobe Target), you will need to apply ExperienceEvent-level deduplication because those data sources have 'at-least-once' semantics.
+>[!CAUTION]
+>
+>Many DataSets in [!DNL Experience Platform], including those produced by the Adobe Analytics Data Connector, already have ExperienceEvent-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query. It is important to understand the source of your DataSets and know if deduplication at the ExperienceEvent-level has already been applied. For any DataSets that are streamed (for example, those from Adobe Target), you will need to apply ExperienceEvent-level deduplication because those data sources have 'at-least-once' semantics.
 
 **Scope:** Global
 
