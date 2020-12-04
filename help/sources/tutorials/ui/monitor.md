@@ -22,7 +22,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Monitor dataflows
 
-Log in to Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** ffrom the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view existing dataflows.
+Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view existing dataflows.
 
 ![catalog-dataflows](../../images/tutorials/monitor/catalog-dataflows.png)
 
