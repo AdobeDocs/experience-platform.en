@@ -38,7 +38,7 @@ This guide also requires a working understanding of the following Adobe Experien
     * [SDK consent commands](../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
-In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/destinations-overview.md) and their use in [!DNL Real-time CDP].
+In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/verview.md) and their use in [!DNL Real-time CDP].
 
 ## Customer consent flow summary {#summary}
 
