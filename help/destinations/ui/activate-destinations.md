@@ -61,7 +61,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 ![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
 
-Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](/help/rtcdp/destinations/facebook-destination.md#email-hashing-requirements).
+Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
 
 Select `Email` as target identity if the email addresses you are using are not hashed. Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
    
@@ -151,7 +151,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 Additionally, you can mark different attributes as mandatory. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additionally form of filtering. Marking an attribute as mandatory is **not** required.
 
-It is recommended that one of the attributes is a [unique identifier](/help/rtcdp/destinations/email-marketing-destinations.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](/help/rtcdp/destinations/email-marketing-destinations.md#identity) documentation. 
+It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
    
 >[!NOTE] 
 > 
