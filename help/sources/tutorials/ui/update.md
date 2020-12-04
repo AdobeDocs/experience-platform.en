@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Update accounts
 
-Log in to Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** ffrom the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Accounts]** from the top header to view existing accounts.
+Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Accounts]** from the top header to view existing accounts.
 
 ![catalog](../../images/tutorials/update/catalog.png)
 
