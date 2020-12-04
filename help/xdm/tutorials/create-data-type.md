@@ -108,6 +108,6 @@ Select your data type from the list, then select **[!UICONTROL Apply]**. The sch
 
 ## Next steps
 
-This tutorial covered how to create a data type and add it to a mixin using the [!DNL Schema Editor]. To learn more about working with data types in the UI, including how to convert a multi-field object into a data type, see the [schema creation tutorial](./create-schema-ui.md#datatype).
+This tutorial covered how to create and edit data types, and how to add them to mixins using the [!DNL Schema Editor]. To learn more about working with data types in the UI, including how to convert a multi-field object into a data type, see the [schema creation tutorial](./create-schema-ui.md#datatype).
 
 To learn how to create a data type using the Schema Registry API, see the [data types endpoint guide](../api/data-types.md#create).
