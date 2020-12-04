@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
 solution: Experience Platform
-title: Create a data type using the Schema Registry UI
+title: Create and edit data types using the Schema Registry UI
 topic: tutorial
 type: Tutorial
 description: This tutorial uses the Experience Platform UI to walk you through the steps to compose a custom data type.
 ---
 
-# Create a data type using the Experience Platform UI
+# Create and edit data types using the Experience Platform UI
 
 In Experience Data Model (XDM), data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. 
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
-This tutorial covers the steps for creating a new data type in the Platform user interface.
+This tutorial covers the steps for creating and editing custom data types in the Platform user interface.
 
 ## Prerequisites
 
@@ -21,9 +21,20 @@ This tutorial requires a working understanding of XDM System. Refer to the [XDM 
 
 While not required for this tutorial, it is recommended that you also follow the tutorial on [composing a schema in the UI](./-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
-## Create a new data type
+## Open the [!DNL Schema Editor] for a data type
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed, including those defined by Adobe as well as those created by your organization. From here, select **[!UICONTROL Create data type]**.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed, including those defined by Adobe as well as those created by your organization.
+
+![](../images/tutorials/create-datatype/data-types-tab.png)
+
+From here, you have two options:
+
+* [Create a new data type](#create)
+* [Select an existing data type to edit](#edit)
+
+### Create a new data type {#create}
+
+From the **[!UICONTROL Data types]** tab, select **[!UICONTROL Create data type]**.
 
 ![](../images/tutorials/create-datatype/create.png)
 
@@ -33,7 +44,17 @@ This tutorial creates a data type that describes a restaurant property, so the d
 
 ![](../images/tutorials/create-datatype/data-type-properties.png)
 
-## Add fields to the data type
+Skip ahead to the [next section](#add-fields) to start adding fields to the data type.
+
+### Edit an existing data type
+
+Only custom data types defined by your organization can be edited. To narrow down the displayed list, select the filter icon (![Filter Icon](../images/tutorials/create-datatype/filter.png)) to reveal controls for filtering based on [!UICONTROL Owner]. Select **[!UICONTROL Customer]** to show only custom data types owned by your organization.
+
+Select the data type you want to edit from the list to open the right rail, showing the details of the data type. Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
+
+![](../images/tutorials/create-datatype/edit.png)
+
+## Add fields to the data type {#add-fields}
 
 To start adding fields to the data type, select the **plus (+)** icon next to the root-level field in the canvas. A new field appears below, and the right rail updates to display controls for the new field.
 
