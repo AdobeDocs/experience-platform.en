@@ -10,4 +10,4 @@ seo-description: This document provides an overview of Destinations in Real-Time
 
 Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Real-time Customer Data Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-For a more detailed overview of destinations, including a list of available destinations and links to tutorials, please read the [Destinations documentation](../../destinations/home.md).
+For a more detailed overview of destinations, including a list of available destinations and links to tutorials, please read the [destinations documentation](../../destinations/home.md).
