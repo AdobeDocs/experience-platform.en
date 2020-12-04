@@ -49,4 +49,4 @@ The following validations are done for streaming ingestion:
 | Dataset | Ensures that the dataset is specified, enabled, and has not been removed. |
 | Header | Ensures that the header is specified and is valid. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).

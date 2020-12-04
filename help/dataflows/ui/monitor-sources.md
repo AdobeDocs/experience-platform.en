@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;sources
 description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the Sources workspace.
 solution: Experience Platform
 title: Monitor dataflows
@@ -7,7 +7,7 @@ topic: overview
 type: Tutorial
 ---
 
-# Monitor dataflows for Sources in the UI
+# Monitor dataflows for sources in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the [!UICONTROL Sources] workspace.
 
@@ -15,10 +15,8 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [[!DNL Experience Data Model (XDM)] System](../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-  - [Basics of schema composition](../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  - [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-- [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [Sources](../../sources/home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+- [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitor dataflows
 
@@ -92,7 +90,7 @@ After previewing the errors, you can select **[!UICONTROL Download]** from withi
 
 ![Preview-error-diagnostics](../assets/ui/monitor-sources/download.png)
 
-For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../../ingestion/quality/monitor-data-flows.md).
+For more information on monitoring dataflows and ingestion, refer to the tutorial on [monitoring streaming dataflows](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Next steps
 
