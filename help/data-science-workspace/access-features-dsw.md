@@ -11,88 +11,27 @@ The following document outlines Data Science workspace permissions, provisioning
 
 ## Intelligence Pack addon for Data Science Workspace
 
-The Intelligence pack addon for Data Science Workspace allows you to utilize additional advanced features and increase performance in areas such as Workspace capabilities and Query Service.
+The Intelligence pack addon for Data Science Workspace allows you to utilize additional advanced features and increase performance in areas such as workspace capabilities and Query Service.
 
-Upon purchasing Intelligence Pack, you receive access to both the *Models* and *Services* tabs in the left-navigation bar under *DATA SCIENCE*. Without Intelligence Pack, the *DATA SCIENCE* menu only displays the *Notebooks* tab.
+Upon purchasing Intelligence Pack, you receive access to both the **Models** and **Services** tabs in the left-navigation bar under **DATA SCIENCE**. Without Intelligence Pack, the **DATA SCIENCE** menu only displays the **Notebooks** tab.
 
 ![DSW tabs](./images/access/platform-tabs.png)
 
-- *Models* provides tools used to create, publish, and store advanced machine learning recipes and models. 
-- *Services* contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you created with Data Science Workspace.
+- **Models** provides tools used to create, publish, and store advanced machine learning recipes and models. 
+- **Services** contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom external services you created with Data Science Workspace.
 
 The following table outlines some of the key differences for Data Science Workspace with and without the Intelligence Pack:
 
 >[!NOTE]
+>
 >You can license more than one Intelligence Pack and the increased capacity outlined below is added to your overall entitlement. For example, a customer licensing 2 Intelligence Packs is entitled to a total of 20 Query Service users and 20 Data Science Workspace users.
 
-<table>
-    <th></th>
-    <th>Data Science Workspace</th>
-    <th>Intelligence Pack addon</th>
-    <tr>
-        <td>
-            <strong>Packaging</strong>
-        </td>
-        <td>
-            Included with Platform and Real-time Customer Data Profile.
-        </td>
-        <td>
-            Upgrade option
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Configuration options</strong>
-        </td>
-        <td>
-            <ul>
-                <li>Easily access, explore and prep your behavioral and transactional data.</li>
-                <li>Access to the JupyterLab Notebook interface with support for Python and R.</li>
-                <li>Explore and derive insights with minimal effort.</li>
-                <li>Easily write data sets back into Experience Platform.</li>
-                <li>Use insights to analyze and predict business outcomes.</li>
-            </ul>
-        </td>
-        <td>
-            <ul>
-                <li>Leverage larger datasets to train machine learning models.</li>
-                <li> Develop complex models with technologies such as Spark and TensorFlow.</li>
-                <li> Seamlessly Package models and deploy them in Intelligence Services.</li>
-                <li> Automate insights by configuring training and scoring schedules.</li>
-            </ul>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Modeling support</strong>
-        </td>
-        <td>
-            <li>Supports an average modeling data size of 2GB.</li>
-            <li>Supports 5 concurrent Notebooks.</li>
-            <li>Supports 1 interactive batch query.</li>
-            <li>CPU capacity across all Notebooks is 32 CPU Cores and 256 gigabytes of RAM.</li>
-        </td>
-        <td>
-            <li>Supports an average modeling data size of 30GB.</li>
-            <li>Supports 10 concurrent Notebooks.</li>
-            <li>Supports 10 concurrent interactive batch queries.</li>
-            <li>CPU capacity across all Notebooks is 128 CPU Cores and 512 gigabytes of RAM.</li>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <strong>Number of users</strong>
-        </td>
-        <td>
-            <li>Support for 5 Data Science Workspace users.</li>
-            <li>Support for 1 Query Service user.</li>
-        </td>
-        <td>
-            <li>Support for 10 Data Science Workspace users.</li>
-            <li>Support for 10 Query Service users.</li>
-        </td>
-    </tr>
-</table>
+| | Data Science Workspace | Intelligence Pack addon |
+| --- | --- | --- |
+| **Packaging** | Included with Platform and Real-time Customer Data Profile. | Upgrade option |
+| **Configuration options** | <ul><li>Easily access, explore and prep your behavioral and transactional data.</li><li>Access to the JupyterLab Notebook interface with support for Python and R.</li><li>Explore and derive insights with minimal effort.</li><li>Easily write data sets back into Experience Platform.</li><li>Use insights to analyze and predict business outcomes.</li></ul> | <ul><li>Leverage larger datasets to train machine learning models.</li><li> Develop complex models with technologies such as Spark and TensorFlow.</li><li> Seamlessly Package models and deploy them in Intelligence Services.</li><li> Automate insights by configuring training and scoring schedules.</li></ul> |
+| **Modeling support** | <li>Supports an average modeling data size of 2GB.</li><li>Supports 5 concurrent Notebooks.</li><li>Supports 1 interactive batch query.</li><li>CPU capacity across all Notebooks is 32 CPU Cores and 256 gigabytes of RAM.</li> | <li>Supports an average modeling data size of 30GB.</li><li>Supports 10 concurrent Notebooks.</li><li>Supports 10 concurrent interactive batch queries.</li><li>CPU capacity across all Notebooks is 128 CPU Cores and 512 gigabytes of RAM.</li> |
+| **Number of users** | <li>Support for 5 Data Science Workspace users.</li><li>Support for 1 Query Service user.</li> | <li>Support for 10 Data Science Workspace users.</li><li>Support for 10 Query Service users.</li> |
 
 ## Access control
 
