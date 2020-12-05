@@ -50,7 +50,7 @@ The **[!UICONTROL Select segment]** dialog opens, allowing you to choose the seg
 
 After selecting a segment, the merge policy text box will populate automatically with the merge policy related to that segment. 
 
-To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](/segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profiles/home.md).
+To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 *screen shot - showing merge policy populated*
 
