@@ -44,8 +44,8 @@ The dashboard is composed of widgets, which are read-only metrics providing impo
 
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your Profile data. Select the name of a widget below to learn more:
 
-* [!UICONTROL Audience size](#audience-size)
-* [!UICONTROL Profiles by namespace](#profiles-by-namespace)
+* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
 
 ### [!UICONTROL Audience size] {#audience-size}
 

@@ -64,7 +64,7 @@ The **[!UICONTROL Addressable audiences]** widget measures the total number of a
 
 ## Additional dashboards
 
-The Platform UI provides additional dashboards for viewing snapshots of your data within Experience Platform. These dashboards include Real-time Customer Profile and [segments. For more information on these additional dashboards, select from the following links:
+The Platform UI provides additional dashboards for viewing snapshots of your data within Experience Platform. These dashboards include Real-time Customer Profile and segments. For more information on these additional dashboards, select from the following links:
 
 * [Profile dashboard](../profile/ui/profile-dashboard.md)
 * [Segment dashboard](../segmentation/ui/segment-dashboard.md)

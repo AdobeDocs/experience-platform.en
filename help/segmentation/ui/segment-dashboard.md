@@ -64,8 +64,8 @@ The segment dashboard is composed of widgets, which are read-only metrics provid
 
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your segment. Select the name of a widget below to learn more:
 
-* [!UICONTROL Segment size](#segment-size)
-* [!UICONTROL Profiles by namespace](#profiles-by-namespace)
+* [[!UICONTROL Segment size]](#segment-size)
+* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
 
 ### [!UICONTROL Segment size] {#segment-size}
 
