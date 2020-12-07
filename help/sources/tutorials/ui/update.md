@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;update accounts
-description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to edit, add, and delete details of an account, including values for its name, description, and authentication credentials.
+description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to add, edit, and delete details of existing batch and streaming connections, including values for its name, description, and credentials.
 solution: Experience Platform
 title: Update account details in the UI
 topic: overview
@@ -9,7 +9,7 @@ type: Tutorial
 
 # Update account details in the UI
 
-In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to edit, add, and delete details of an account, including values for its name, description, and authentication credentials.
+In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to add, edit, and delete details of existing batch and streaming connections, including values for its name, description, and credentials.
 
 This tutorial provides steps for updating the details and credentials of an existing account from the [!UICONTROL Sources] workspace.
 
