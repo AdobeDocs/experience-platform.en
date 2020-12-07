@@ -1,6 +1,6 @@
 ---
-keywords: Experience Platform;home;popular topics;update accounts;
-description: 
+keywords: Experience Platform;home;popular topics;update accounts
+description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to edit, add, and delete details of an account, including values for its name, description, and authentication credentials.
 solution: Experience Platform
 title: Update account details in the UI
 topic: overview
