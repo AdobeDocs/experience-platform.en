@@ -9,7 +9,9 @@ description: This tutorial covers the steps for deleting a dataflow using the Fl
 
 # Delete a dataflow using the Flow Service API
 
-This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using [!DNL Flow Service].
 
 ## Getting started
 
