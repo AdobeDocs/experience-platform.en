@@ -14,6 +14,6 @@ Choose your namespaces from the [Identity Service Namespaces](../../identity/../
 
 ![View of the Namespaces UI](../../assets/edge_namespaceUI_identity-symbol.png)
 
-As an Audience Manager customer, all your existing Data Sources that use ID Type: Cross-Device automatically have a corresponding Identity Namespace. To find the corresponding Identity Namespace for your Audience Manager Data Source, log in to the Adobe Experience Platform and navigate to the Identities section.
+As an Audience Manager customer, all your existing Data Sources that use ID Type: Cross-Device automatically have a corresponding Identity Namespace. To find the corresponding Identity Namespace for your Audience Manager Data Source, log into Adobe Experience Platform and navigate to the Identities section.
 
 Any new [!DNL Audience Manager] Data Source that uses ID Type: Cross-Device will generate a corresponding Identity Namespace. Data Source ID Types Cookie and Device Advertising ID are not currently supported. Additionally, any Identity Namespace created in Adobe Experience Platform will generate a corresponding [!DNL Audience Manager] Data Source but note that the syncIdentity method only supports Namespace Identity Symbols.

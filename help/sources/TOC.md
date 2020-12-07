@@ -129,11 +129,13 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
+    - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
-  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
-  - [Update connection information using the Flow Service API](tutorials/api/update.md)
-  - [Delete connections using the Flow Service API](tutorials/api/delete.md)
+  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows](tutorials/api/monitor.md)
+  - [Update connections](tutorials/api/update.md)
+  - [Delete connections](tutorials/api/delete.md)
+  - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -197,7 +199,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
     - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Update accounts](tutorials/ui/update.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)

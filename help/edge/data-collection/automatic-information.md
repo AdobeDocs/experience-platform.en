@@ -1,14 +1,14 @@
 ---
 title: Information automatically collected
 seo-title: Information automatically collected by Adobe Experience Platform Web SDK
-description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
-seo-description: Description of each piece of information that The Adobe Experience Cloud SDK collects automatically
+description: Description of each piece of information that Adobe Experience Cloud SDK collects automatically
+seo-description: Description of each piece of information that Adobe Experience Cloud SDK collects automatically
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
 ---
 
 # Information automatically collected
 
-The Adobe Experience Cloud SDK collects a number of pieces of information automatically without any special configuration. However, this information can be disabled if needed using the `context` option in the `configure` command. [See Configuring the SDK](../fundamentals/configuring-the-sdk.md). Below is a list of those pieces of information. The name in parentheses indicates the string to use when configuring the context.
+Adobe Experience Platform Web SDK collects a number of pieces of information automatically without any special configuration. However, this information can be disabled if needed using the `context` option in the `configure` command. [See Configuring the SDK](../fundamentals/configuring-the-sdk.md). Below is a list of those pieces of information. The name in parentheses indicates the string to use when configuring the context.
 
 ## Device (`device`)
 
@@ -50,7 +50,7 @@ Browser
 | ------------------------------- | ------------ |
 | `events[].xdm.environment.type` | `browser`    |
 
-The type of environment the experience was surfaced through. The Adobe Experience Platform SDK for JavaScript always sets `browser`.
+The type of environment through which the experience surfaced. Adobe Experience Platform Web SDK always sets this to `browser`.
 
 ### Viewport height
 
