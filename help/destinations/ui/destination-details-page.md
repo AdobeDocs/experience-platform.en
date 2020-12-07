@@ -22,6 +22,10 @@ The details page for the destination appears, showing its available controls. If
 
 ![](../assets/ui/details-page/details.png)
 
+Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon.
+
+![](../assets/ui/details-page/delete-flow.png)
+
 ## Right rail
 
 The right rail displays the basic information about the destination.
@@ -33,6 +37,7 @@ The following table covers the controls and details provided by the right rail:
 | Right-rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
+| [!UICONTROL Delete] | Allows you to delete this dataflow run.
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -72,7 +77,7 @@ To view the details of a particular dataflow run, select the run's start time fr
 
 The [!UICONTROL Segments] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
-![](../assets/ui/details-page/segments.png)
+![](../assets/ui/details-page/details.png)
 
 >[!NOTE]
 >
