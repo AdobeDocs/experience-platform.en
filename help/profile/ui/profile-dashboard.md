@@ -32,13 +32,13 @@ The metrics displayed in the Profile dashboard are based on the default merge po
 
 To navigate to the Profile dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
-*Insert Overview screen shot*
+![](../images/profile-dashboard/dashboard-overview.png)
 
 ### Widgets and metrics
 
 The dashboard is composed of widgets, which are read-only metrics providing important information regarding your Profile data. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
 
-*Insert screen shot highlighting the timestamp*
+![](../images/profile-dashboard/dashboard-timestamp.png)
 
 ## Available widgets
 
@@ -53,7 +53,7 @@ The **[!UICONTROL Audience size]** widget displays the total number of merged pr
 
 For more information on fragments and merged profiles, please begin by reading the [profile fragments vs merged profiles](../home.md#profile-fragments-vs-merged-profiles) section of the [Profile overview](../home.md).
 
-*Insert widget screen shot*
+![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
@@ -61,7 +61,7 @@ The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of name
 
 To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-*Insert widget screen shot*
+![](../images/profile-dashboard/profiles-by-namespace.png)
 
 ## Additional dashboards
 

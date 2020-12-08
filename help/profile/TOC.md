@@ -19,7 +19,7 @@ user-guide-description: Merge customer data to create a unified view of customer
   * [Merge policies](api/merge-policies.md)
   * [Preview sample status ([!DNL Profile] preview)](api/preview-sample-status.md)
   * [[!DNL Profile] system jobs (Delete requests)](api/profile-system-jobs.md)
-* [!DNL Profile] UI {#ui}
+* UI guides {#ui}
   * [[!DNL Profile] UI guide](ui/user-guide.md)
   * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
   * [[!DNL Profile] detail customization](ui/profile-customization.md)
