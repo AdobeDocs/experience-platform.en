@@ -55,9 +55,22 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Real-time CDP] integration.
 - Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
 
-### Email hashing requirements {#email-hashing-requirements}
+### ID matching requirements {#id-matching-requirements}
 
-[!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+[!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
+
+Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
+
+#### Phone number hashing requirements {#phone-number-hashing-requirements}
+
+Experience Platform will automatically hash phone numbers on activation, the only requirements being that you ingest phone numbers data into the `Phone_E.164` namespace.
+
+Phone numbers ingested into any other namespace cannot be activated in [!DNL Facebook].
+
+
+#### Email hashing requirements {#email-hashing-requirements}
+
+You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 

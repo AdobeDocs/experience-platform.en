@@ -50,8 +50,19 @@ Before setting up a [!DNL Google Customer Match] destination in Real-time CDP, m
 
 Before creating the [!DNL Google Customer Match] destination in Real-time CDP, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
 
+### ID matching requirements {#id-matching-requirements}
 
-### Email hashing requirements {#hashing-requirements}
+[!DNL Google] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
+
+Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
+
+#### Phone number hashing requirements {#phone-number-hashing-requirements}
+
+Experience Platform will automatically hash phone numbers on activation, the only requirements being that you ingest phone numbers data into the `Phone_E.164` namespace.
+
+Phone numbers ingested into any other namespace cannot be activated in [!DNL Google Customer Match].
+
+#### Email hashing requirements {#hashing-requirements}
 
 <!--
 
@@ -61,7 +72,7 @@ Before creating the [!DNL Google Customer Match] destination in Real-time CDP, y
 
 -->
 
-Google requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] must be keyed off *hashed* email addresses. You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 

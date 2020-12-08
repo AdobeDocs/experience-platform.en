@@ -57,15 +57,34 @@ If you are using email address as primary identity in your schema, you can skip 
 
 ![Email address as identity](../assets/ui/activate-destinations/email-as-identity.gif)
 
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
+<!-- If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
 
-![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
+![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif) -->
 
 Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
 
 Select `Email` as target identity if the email addresses you are using are not hashed. Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
    
 ![identity mapping after filling in fields](../assets/common/identity-mapping.png)
+
+Select `PHONE_SHA256` as target identity if you hashed phone numbers on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
+
+Select `PHONE_E.164` as target identity if your data consists of non-hashed phone numbers. Experience Platform will hash the phone numbers to comply with [!DNL Facebook] requirements.
+
+Select `IDFA` as target identity if your data consists of Apple device IDs. `IDFA` IDs will be mapped to:
+
+* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
+
+Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
+
+* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
+
+If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
+
+* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
 
 ### **[!UICONTROL Configure]** step {#configure}
 
