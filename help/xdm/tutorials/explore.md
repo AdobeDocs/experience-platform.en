@@ -19,7 +19,7 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The 
 
 ![](../images/tutorials/explore/tabs.png)
 
-On the [!UICONTROL Browse] tab, you can use the filter icon (![](../images/tutorials/explore/icon.png)) to reveal controls in the left rail to narrow down listed results.
+On the [!UICONTROL Browse] tab, you can use the filter icon (![Filter Icon Image](../images/tutorials/explore/icon.png)) to reveal controls in the left rail to narrow down listed results.
 
 For example, to filter the list to only show standard data types provided by Adobe, select **[!UICONTROL Datatype]** and **[!UICONTROL Adobe]** under the **[!UICONTROL Type]** and **[!UICONTROL Owner]** sections, respectively.
 
@@ -71,7 +71,7 @@ If the field your are inspecting is an enum field, the right rail will also disp
 
 ### Identity fields {#identity}
 
-When inspecting schemas that contain identity fields, these fields are highlighted in the canvas with a fingerprint icon (![](../images/tutorials/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
+When inspecting schemas that contain identity fields, these fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/tutorials/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
 
 ![](../images/tutorials/explore/identity-field.png)
 
