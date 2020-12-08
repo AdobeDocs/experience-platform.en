@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Destinations Guide
-user-guide-description: Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
 # Destinations {#destinations}
