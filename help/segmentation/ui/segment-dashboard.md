@@ -30,21 +30,23 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 To navigate to the segment dashboard within the Platform UI, select **[!UICONTROL Segments]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
-*Insert Overview screen shot*
+![](../images/ui/segment-dashboard/dashboard-overview.png)
 
 ### Select a segment
 
 To select a segment to view in the dashboard, choose the dialog selector for the **[!UICONTROL Select segment]** text box. 
 
+![](../images/ui/segment-dashboard/select-segment.png)
+
 >[!NOTE]
 >
 >If a segment is already selected, use the `X` to remove the segment first and then the dialog selector will appear.
-
-*Screen shot - highlight dialog selector button*
+>
+>![](../images/ui/segment-dashboard/remove-segment.png)
 
 The **[!UICONTROL Select segment]** dialog opens, allowing you to choose the segment you wish to view. After choosing the segment you want, use **[!UICONTROL Select]** to return to the dashboard.
 
-*Screen shot - select segment dialog, highlight select button*
+![](../images/ui/segment-dashboard/select-segment-dialog.png)
 
 ### Merge policy
 
@@ -52,13 +54,13 @@ After selecting a segment, the merge policy text box will populate automatically
 
 To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
-*screen shot - showing merge policy populated*
+![](../images/ui/segment-dashboard/merge-policy.png)
 
 ### Widgets and metrics
 
 The segment dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
 
-*Insert screen shot highlighting the timestamp*
+![](../images/ui/segment-dashboard/widget-timestamp.png)
 
 ## Available widgets
 
@@ -73,7 +75,7 @@ The **[!UICONTROL Segment size]** widget displays the total number of merged pro
 
 For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../home.md).
 
-*Insert widget screen shot*
+![](../images/ui/segment-dashboard/segment-size.png)
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
@@ -81,7 +83,7 @@ The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of name
 
 To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-*Insert widget screen shot*
+![](../images/ui/segment-dashboard/profiles-by-namespace.png)
 
 ## Additional dashboards
 
