@@ -27,6 +27,10 @@ Note the following details that are specific to the [!DNL Braze] destination:
 * You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
+>[!NOTE]
+>
+>Keep in mind that sending additional custom attributes to [!DNL Braze] may cause increases in your [!DNL Braze] data point consumption. Please consult with your [!DNL Braze] account manager before sending additional custom attributes.
+
 ## Use cases {#use-cases}
 
 As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
