@@ -15,7 +15,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
-    * [Privacy Consent mixin](schema/privacy-consent.md)
+    * [Consents & Preferences data type](schema/privacy-consent.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -33,6 +33,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Data types {#data-types}
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
+    * [Consents & Preferences](./data-types/consents.md)
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
