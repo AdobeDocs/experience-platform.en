@@ -73,11 +73,11 @@ To view the details of a particular dataflow run, select the run's start time fr
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Segments]
+## [!UICONTROL Activation data]
 
-The [!UICONTROL Segments] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
+The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
-![](../assets/ui/details-page/details.png)
+![](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
