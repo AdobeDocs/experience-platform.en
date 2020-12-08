@@ -31,7 +31,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
-    - [SFTP connector](connectors/cloud-storage/ftp-sftp.md)
+    - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
@@ -157,7 +157,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP connector](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-      - [SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+      - [SFTP connector](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)

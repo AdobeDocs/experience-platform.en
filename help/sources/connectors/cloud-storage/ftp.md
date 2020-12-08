@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
+keywords: Experience Platform;home;popular topics;FTP;ftp;
 solution: Experience Platform
 title: FTP connector
 topic: overview
@@ -10,7 +10,7 @@ description: The documentation below provides information on how to connect an F
 
 >[!NOTE]
 >
->The FTP connectors are in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+>The FTP connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 

@@ -17,7 +17,7 @@ description: This tutorial uses the Flow Service API to walk you through the ste
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an SFTP (Secure File Transfer Protocol) server.
 
-If you would prefer to use the user interface in [!DNL Experience Platform], the [UI tutorial](../../../ui/create/cloud-storage/ftp-sftp.md) provides step-by-step instructions for performing similar actions.
+If you would prefer to use the user interface in [!DNL Experience Platform], the [UI tutorial](../../../ui/create/cloud-storage/sftp.md) provides step-by-step instructions for performing similar actions.
 
 ## Getting started
 

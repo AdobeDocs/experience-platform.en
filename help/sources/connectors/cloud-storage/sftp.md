@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;FTP;SFTP;ftp;sftp
+keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
 title: SFTP connector
 topic: overview
@@ -47,5 +47,5 @@ The documentation below provides information on how to connect an an SFTP server
 
 ### Using the UI
 
-- [Create an SFTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp-sftp.md)
+- [Create an SFTP source connector in the UI](../../tutorials/ui/create/cloud-storage/sftp.md)
 - [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
