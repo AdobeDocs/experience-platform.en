@@ -29,7 +29,7 @@ Experience Platform provides a series of guardrails to help you avoid creating [
 
 [!DNL Real-time Customer Profile] merges data from various enterprise systems and then provides access to that data in the form of customer profiles with related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels. The following sections highlight some of the core concepts that you must understand in order to effectively build and maintain profiles within Platform.
 
-### Profile fragments vs merged profiles
+### Profile fragments vs merged profiles {#profile-fragments-vs-merged-profiles}
 
 Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
 
