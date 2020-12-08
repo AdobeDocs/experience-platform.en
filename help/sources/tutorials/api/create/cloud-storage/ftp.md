@@ -1,10 +1,10 @@
 ---
-keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
+keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
 solution: Experience Platform
 title: Create an FTP connector using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an SFTP (File Transfer Protocol) server.
+description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an FTP (File Transfer Protocol) server.
 ---
 
 # Create an FTP connector using the [!DNL Flow Service] API
@@ -13,9 +13,7 @@ description: This tutorial uses the Flow Service API to walk you through the ste
 >
 >The FTP connector is in beta. The features and documentation are subject to change. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an SFTP (Secure File Transfer Protocol) server.
-
-If you would prefer to use the user interface in [!DNL Experience Platform], the [UI tutorial](../../../ui/create/cloud-storage/sftp.md) provides step-by-step instructions for performing similar actions.
+This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an FTP (File Transfer Protocol) server.
 
 ## Getting started
 
