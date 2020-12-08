@@ -19,7 +19,7 @@ This tutorial covers the steps for creating and editing custom data types in the
 
 This tutorial requires a working understanding of XDM System. Refer to the [XDM overview](../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../schema/composition.md) for how data types contribute to XDM schemas.
 
-While not required for this tutorial, it is recommended that you also follow the tutorial on [composing a schema in the UI](./-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
+While not required for this tutorial, it is recommended that you also follow the tutorial on [composing a schema in the UI](./create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
 ## Open the [!DNL Schema Editor] for a data type
 
