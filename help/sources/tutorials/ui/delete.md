@@ -53,6 +53,6 @@ After a few moments, a green confirmation box appears on the bottom of the scree
 
 ## Next steps
 
-By following this tutorial, you have successfully used the **[!UICONTROL Sources]** workspace to delete existing dataflows.
+By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to delete existing dataflows.
 
 For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting dataflows using the Flow Service API](../../tutorials/api/delete-dataflows.md)
