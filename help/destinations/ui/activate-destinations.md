@@ -100,9 +100,9 @@ To add a schedule for the segment, select **[!UICONTROL Create schedule]**.
 
 A popover appears, showing options to create the segment schedule.  
 
-- **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-- **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
-- **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
+* **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+* **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
+* **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -114,9 +114,9 @@ Select the pencil icon to open a modal window and edit the file names. Note that
 
 In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
-- **[!UICONTROL Segment name]**: You can append the segment name to the file name.
-- **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
-- **[!UICONTROL Custom text]**: Add custom text to the file names.
+* **[!UICONTROL Segment name]**: You can append the segment name to the file name.
+* **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
+* **[!UICONTROL Custom text]**: Add custom text to the file names.
 
 Select **[!UICONTROL Apply changes]** to confirm your selection. 
 
@@ -163,8 +163,8 @@ On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new fie
 > Real-time CDP prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-- If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-- If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
 ![recommended attributes](../assets/ui/activate-destinations/mark-mandatory.png) 
 
