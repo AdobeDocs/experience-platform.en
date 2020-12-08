@@ -219,6 +219,10 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 
 In a future schema, you could now assign a field as a "[!DNL Loyalty]" type and it would automatically include fields for ID, loyalty level, member since, and points.
 
+>[!NOTE]
+>
+>You can also create and edit custom data types independently from editing schemas. See the tutorial on [creating and editing data types](./create-data-type.md) for more information.
+
 ## Search and filter schema fields
 
 Your schema now contains several mixins in addition to the fields provided by its base class. When working with larger schemas, you can select the checkboxes next to mixin names in the left rail to filter the displayed fields to only those provided by the mixins you are interested in.
