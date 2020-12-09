@@ -26,7 +26,7 @@ For more information on the schema composition model, including design principle
 
 ### [!DNL Schema Registry] and [!DNL Schema Library]
 
-The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. The Schema Registry UI and API can also be used to create and manage new schemas and resources that are unique to your organization.
+The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry-standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. The Schema Registry UI and API can also be used to create and manage new schemas and resources that are unique to your organization.
 
 For a comprehensive guide to the major operations available in the [!DNL Schema Registry], see the [Schema Registry developer guide](api/getting-started.md).
 
@@ -39,7 +39,7 @@ Data intended for use in [!DNL Experience Platform] is grouped into two behavior
 
 All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema's class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior.
 
-Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time series data, respectively. These classes are outlined in more detail below.
+Although you are able to define your own classes within the [!DNL Schema Registry], it is recommended that you use the preferred classes **[!DNL XDM Individual Profile]** and **[!DNL XDM ExperienceEvent]** for record and time-series data, respectively. These classes are outlined in more detail below.
 
 ### [!DNL XDM Individual Profile] {#xdm-individual-profile}
 
@@ -61,7 +61,7 @@ While not all events are easily categorized across all data sources, it is extre
 
 ## XDM schemas and [!DNL Experience Platform] services
 
-[!DNL Experience Platform] is schema agnostic, meaning that any schema that conforms to the XDM standard is available for use by [!DNL Platform] services. The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
+[!DNL Experience Platform] is schema-agnostic, meaning that any schema that conforms to the XDM standard is available for use by [!DNL Platform] services. The ways in which different [!DNL Platform] services use schemas are outlined in more detail below.
 
 ### [!DNL Catalog Service], [!DNL Data Ingestion] & [!DNL Data Lake]
 
