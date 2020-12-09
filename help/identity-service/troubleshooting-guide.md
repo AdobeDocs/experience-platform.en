@@ -66,6 +66,10 @@ Identity fields must be associated with an existing identity namespace when they
 
 For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
+## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
+
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
+
 ## Where can I find the list of identity namespaces available for my organization?
 
 Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
