@@ -22,7 +22,7 @@ The details page for the destination appears, showing its available controls. If
 
 ![](../assets/ui/details-page/details.png)
 
-Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon.
+Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon. Any segments that are activated to a destinations will be unmapped before the dataflow is deleted.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
