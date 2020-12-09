@@ -9,7 +9,7 @@ type: Tutorial
 
 # Monitor dataflows for destinations in the UI
 
-In the Adobe Experience Platform user interface, you can monitor the dataflows for your destinations. Details for these dataflow runs include.
+Destinations allow you to activate your data from Adobe Experience Platform to countless external partners. This tutorial provides instructions on how you can monitor dataflows for your destinations using the Experience Platform user interface.
 
 ## Getting started
 
