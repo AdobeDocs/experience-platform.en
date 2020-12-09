@@ -30,7 +30,7 @@ The **[!UICONTROL Dataflows]** page appears. On this page is a list of viewable 
 
 Select the filter icon (![filter-icon](../../images/tutorials/delete/filter.png)) on the top left to launch the sort panel.
 
-![dataflows](../../images/tutorials/delete/dataflows-list.png)
+![dataflows](../../images/tutorials/delete/dataflows.png)
 
 The sort panel provides a list of all sources. You can select more than one source from the list to access a filtered selection of dataflows associated with the particular sources you selected.
 
