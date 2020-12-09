@@ -9,15 +9,15 @@ description: This tutorial covers the steps for monitoring flow run data for com
 
 # Monitor dataflows using the Flow Service API
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others. Additionally, Experience Platform allows for data to be activated to external partners. 
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources and destinations are connectable.
 
 This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have the ID value of a valid dataflow. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../sources/home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have the ID value of a valid dataflow. If you do not have a valid dataflow ID, select your connector of choice from the [sources overview](../../sources/home.md) or [destinations overview](../../destinations/catalog/overview.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -82,159 +82,102 @@ A successful response returns details regarding your flow run, including informa
 {
     "items": [
         {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
+            "id": "65b7cfcc-6b2e-47c8-8194-13005b792752",
+            "createdAt": 1607520228894,
+            "updatedAt": 1607520276948,
             "createdBy": "{CREATED_BY}",
             "updatedBy": "{UPDATED_BY}",
             "createdClient": "{CREATED_CLIENT}",
             "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
+            "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "c9cef9cb-c934-4467-8ef9-cbc934546741",
-            "etag": "\"b8003af1-0000-0200-0000-5f2b09f10000\"",
+            "imsOrgId": "{IMS_ORG_ID}",
+            "flowId": "f00c8762-df2f-432b-a7d7-38999fef5e8e",
+            "etag": "\"560266dc-0000-0200-0000-5fd0d0140000\"",
             "metrics": {
                 "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
+                    "startedAtUTC": 1607520205922,
+                    "completedAtUTC": 1607520262413
                 },
                 "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
+                    "inputBytes": 87885,
+                    "outputBytes": 56730
                 },
                 "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
+                    "inputRecordCount": 26758,
+                    "outputRecordCount": 26758,
+                    "failedRecordCount": 0
                 },
                 "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
+                    "inputFileCount": 11,
+                    "outputFileCount": 11,
                     "activityRefs": [
-                        "promotionActivity"
+                        "37b34f84-1ada-11eb-adc1-0242ac120002"
                     ]
                 },
                 "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
+                    "status": "success"
                 }
             },
             "activities": [
                 {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
+                    "id": "4f008a00-3a04-11eb-adc1-0242ac120002",
+                    "name": "Copy Activity",
+                    "updatedAtUTC": 0,
                     "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
+                        "startedAtUTC": 1607520205922,
+                        "completedAtUTC": 1607520236968
                     },
                     "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
+                        "inputBytes": 87885,
+                        "outputBytes": 87885
                     },
                     "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
+                        "inputRecordCount": 26758,
+                        "outputRecordCount": 26758
                     },
                     "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
+                        "inputFileCount": 11,
+                        "outputFileCount": 11
+                    },
+                    "statusSummary": {
+                        "status": "success"
+                    }
+                },
+                {
+                    "id": "37b34f84-1ada-11eb-adc1-0242ac120002",
+                    "name": "Promotion Activity",
+                    "updatedAtUTC": 0,
+                    "durationSummary": {
+                        "startedAtUTC": 1607520244985,
+                        "completedAtUTC": 1607520262413
+                    },
+                    "sizeSummary": {
+                        "inputBytes": 26758,
+                        "outputBytes": 56730
+                    },
+                    "recordSummary": {
+                        "inputRecordCount": 26758,
+                        "outputRecordCount": 26758,
+                        "failedRecordCount": 0
+                    },
+                    "fileSummary": {
+                        "inputFileCount": 11,
+                        "outputFileCount": 2,
                         "extensions": {
                             "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
+                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01ES3TRN69E9W2DZ770XCGYAH1/meta?path=input_files",
+                                "pathPrefix": "bucket1/csv_test/"
                             }
                         }
                     },
                     "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
+                        "status": "success"
+                    }
                 }
             ]
         }
-    ],
-    "_links": {}
+    ]
 }
 ```
 
