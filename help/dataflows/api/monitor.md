@@ -241,13 +241,13 @@ A successful response returns details regarding your flow run, including informa
 | Property | Description |
 | -------- | ----------- |
 | `items` | Contains a single payload of metadata associated with your specific flow run. |
-| `metrics` | Defines characteristics of the data in the flow run. |
-| `activities` | Defines how the data is transformed. |
-| `durationSummary` | Defines the start and end time of the flow run. |
-| `sizeSummary` | Defines the volume of the data in bytes. |
-| `recordSummary` | Defines the record count of the data. |
-| `fileSummary` | Defines the file count of the data. |
-| `statusSummary` | Defines whether the flow run is a success or a failure. |
+| `metrics` | The characteristics of the data in the flow run. |
+| `activities` | Shows how the data is transformed. |
+| `durationSummary` | The start and end time of the flow run. |
+| `sizeSummary` | The volume of the data in bytes. |
+| `recordSummary` | The record count of the data. |
+| `fileSummary` | The file count of the data. |
+| `statusSummary` | Shows whether the flow run is a success or a failure. |
 
 ## Next steps
 

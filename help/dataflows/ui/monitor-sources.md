@@ -43,7 +43,7 @@ The sorting panel appears. Select the source you wish to access from the scroll 
 
 ![sort-dataflows](../assets/ui/monitor-sources/dataflows-sort.png)
 
-The **[!UICONTROL Dataflow activity]** page contains details on the number of records ingested  and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to adjust the time frame of your ingestion records.
+The **[!UICONTROL Dataflow activity]** page contains details on the number of records ingested and records failed, as well as information regarding dataflow status and processing time. Select the calendar icon above the dataflow to adjust the time frame of your ingestion records.
 
 ![datflow-activity](../assets/ui/monitor-sources/dataflow-activity.png)
 
