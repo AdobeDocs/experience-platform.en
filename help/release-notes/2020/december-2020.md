@@ -12,8 +12,20 @@ author: ens60013 & ens72471
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Sources]](#sources)
 - [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Sources]](#sources)
+
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+
+### Key features
+
+|Feature | Description|
+|--- | ---|
+| Adobe Experience Platform Intelligence package addon | The Adobe Experience Platform Intelligence package addon is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark-based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
+
+To learn more about the Adobe Experience Platform Intelligence package addon, please see the documentation on [Data Science Workspace access and features](../../data-science-workspace/access-features-dsw.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -30,14 +42,4 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
 
-## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
-
-### Key features
-
-|Feature | Description|
-|--- | ---|
-| Adobe Experience Platform Intelligence package addon | The Adobe Experience Platform Intelligence package addon is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark-based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
-
-To learn more about the Adobe Experience Platform Intelligence package addon, please see the documentation on [Data Science Workspace access and features](../../data-science-workspace/access-features-dsw.md).
