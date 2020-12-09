@@ -23,7 +23,7 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 
 |Feature | Description|
 |--- | ---|
-| Adobe Experience Platform Intelligence package addon | The Adobe Experience Platform Intelligence package addon is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
+| Adobe Experience Platform Intelligence package addon | The Adobe Experience Platform Intelligence package addon is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark-based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
 
 To learn more about the Adobe Experience Platform Intelligence package addon, please see the documentation on [Data Science Workspace access and features](../../data-science-workspace/access-features-dsw.md).
 
