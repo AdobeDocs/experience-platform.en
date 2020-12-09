@@ -34,6 +34,10 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 To choose a sandbox to view in the dashboard, select either [!UICONTROL Production] or [!UICONTROL Development]. The selected sandbox is indicated by the radio button next to the sandbox name. 
 
+>[!NOTE]
+>
+>Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] will report on all production or development sandboxes, respectively.
+
 ![](images/license-usage-dashboard/select-sandbox.png)
 
 ### Select a date range
