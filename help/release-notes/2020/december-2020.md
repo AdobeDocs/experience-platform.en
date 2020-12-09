@@ -1,28 +1,44 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes December 08, 2020
+description: Experience Platform release notes December 9, 2020
 doc-type: release notes
-last-update: December 08, 2020
-author: crhoades, ens72471
+last-update: December 9, 2020
+author: ens60013
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: December 8th, 2020**
+**Release date: December 9, 2020**
 
-New features in Adobe Experience Platform:
+Updates to existing features in Adobe Experience Platform:
 
-- [Data Science Workspace](#dsw)
+- [[!DNL Sources]](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+
+[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+**Key features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Update account and connection details for streaming sources | You can now update the names, descriptions, and credentials of existing streaming connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
+| Delete dataflows | Streaming dataflows that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting dataflows using the API](../../sources/tutorials/api/delete-dataflows.md) and [deleting dataflows using the UI](../../sources/tutorials/ui/delete.md). |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
 
 ## [!DNL Data Science Workspace] {#dsw}
 
-Data Science Workspace uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions. With Adobe Experience Platforms most recent update, the Data Science Workspace Intelligence Pack addon is now available. With these changes, the **Models** and **Services** tabs are made available to organizations with Intelligence Pack provisioned.
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
 
 ### Key features
 
 |Feature | Description|
 |--- | ---|
-| Data Science Workspace | Included with Platform, Data Science Workspace provides access to notebooks. Easily access, explore, and prep your behavioral and transactional data. Examples include: <li> Access to the JupyterLab Notebook interface with support for Python and R.</li><li> Ability to explore and derive insights with minimal effort.</li> <li> Ability to easily write data sets back into Experience Platform.</li> <li> The power to use insights to analyze and predict business outcomes.</li>|
-| Data Science Workspace (Intelligence Pack) | Intelligence Pack is a Data Science Workspace upgrade that unlocks the **models** and **services** tabs. Intelligence Pack allows you to: <li> Leverage larger datasets to train machine learning models.</li><li> Develop complex models with technologies such as Spark and TensorFlow.</li><li> Seamlessly Package models and deploy them in Intelligence Services.</li><li> Automate insights by configuring training and scoring schedules.</li>|
+| Data Science Workspace & Real-time Customer Data Platform | Included with Platform, Data Science Workspace provides access to notebooks. Easily access, explore, and prep your behavioral and transactional data. Examples include: <li>  Integrated Jupyter Notebooks for exploratory data analysis and model authoring (R, Python, Scala, PySpark)</li><li> Ability to explore and derive insights with minimal effort.</li> <li> Ability to easily write data sets back into Experience Platform.</li> |
+| Adobe Experience Platform Intelligence package | The Adobe Experience Platform Intelligence package is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
 
-For more information, please see the documentation for [Data Science Workspace access and provisioning](../../data-science-workspace/access-features-dsw.md).
+To learn more about the Adobe Experience Platform Intelligence package, please see the documentation on [Data Science Workspace access and features](../../data-science-workspace/access-features-dsw.md).
