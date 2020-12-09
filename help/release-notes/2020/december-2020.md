@@ -24,7 +24,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| Update account and connection details for streaming connections | You can now update the names, descriptions, and credentials of existing streaming connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the Flow Service API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
+| Update account and connection details for streaming sources | You can now update the names, descriptions, and credentials of existing streaming connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the Flow Service API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
 | Delete dataflows | Streaming dataflows that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting dataflows using the Flow Service API](../../sources/tutorials/api/delete-dataflows.md) and [deleting dataflows using the UI](../../sources/tutorials/ui/delete.md). |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
