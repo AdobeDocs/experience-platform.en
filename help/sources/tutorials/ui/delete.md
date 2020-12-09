@@ -40,7 +40,7 @@ Select the source you wish to work with to see a list of its existing dataflows.
 
 A dropdown menu appears, providing you with options to edit your dataflow's schedule, disable the dataflow, or delete it entirely.
 
-Select **[!UICONTROL delete]** to delete the dataflow.
+Select **[!UICONTROL Delete]** to delete the dataflow.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
