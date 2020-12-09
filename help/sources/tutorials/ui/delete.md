@@ -32,27 +32,28 @@ Select the filter icon (![filter-icon](../../images/tutorials/delete/filter.png)
 
 ![dataflows](../../images/tutorials/delete/dataflows-list.png)
 
-The sort panel provides a list of all sources. You can select more than one source from the list to access a filtered selection of dataflows associated with different accounts.
+The sort panel provides a list of all sources. You can select more than one source from the list to access a filtered selection of dataflows associated with the particular sources you selected.
 
 Select the source you wish to work with to see a list of its existing dataflows. Once you have identified the dataflow you want to delete, select the ellipses (`...`) beside the dataflow name.
 
 ![dataflows-filter](../../images/tutorials/delete/dataflows-filter.png)
 
-A dropdown menu appears, providing you with options to edit your dataflow's schedule, disable your dataflow, and **[!UICONTROL delete]**.
-Select **[!UICONTROL delete]** from the menu to delete your dataflow.
+A dropdown menu appears, providing you with options to edit your dataflow's schedule, disable the dataflow, or delete it entirely.
+
+Select **[!UICONTROL delete]** to delete the dataflow.
 
 ![delete](../../images/tutorials/delete/delete.png)
 
-A final confirmation dialog box appears, select **[!UICONTROL Delete]** to complete the process.
+A final confirmation dialog box appears. Select **[!UICONTROL Delete]** to complete the process.
 
 ![confirm](../../images/tutorials/delete/confirm.png)
 
-After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful deletion.
+After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful deletion.
 
 ![confirmed](../../images/tutorials/delete/confirmed.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to delete existing dataflows.
+By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to delete an existing dataflow.
 
-For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [deleting dataflows using the Flow Service API](../../tutorials/api/delete-dataflows.md)
+See the tutorial on [deleting dataflows using the Flow Service API](../../tutorials/api/delete-dataflows.md) for steps on how to perform these operations programmatically using API calls.

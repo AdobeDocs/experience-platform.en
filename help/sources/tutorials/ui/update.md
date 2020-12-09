@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;update accounts
-description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to add, edit, and delete details of existing batch and streaming connections, including values for its name, description, and credentials.
+description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 solution: Experience Platform
 title: Update account details in the UI
 topic: overview
@@ -9,7 +9,7 @@ type: Tutorial
 
 # Update account details in the UI
 
-In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to add, edit, and delete details of existing batch and streaming connections, including values for its name, description, and credentials.
+In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
 This tutorial provides steps for updating the details and credentials of an existing account from the [!UICONTROL Sources] workspace.
 
@@ -17,8 +17,8 @@ This tutorial provides steps for updating the details and credentials of an exis
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-- [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sources](../../home.md): DNL Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+- [Sandboxes](../../../sandboxes/home.md): DNL Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Update accounts
 
