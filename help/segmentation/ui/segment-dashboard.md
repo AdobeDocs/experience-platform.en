@@ -89,7 +89,7 @@ To learn more about identity namespaces, please visit the [Adobe Experience Plat
 
 The Platform UI provides additional dashboards for viewing snapshots of your data within Experience Platform. These dashboards include Real-time Customer Profile and [!UICONTROL License usage]. For more information on these additional dashboards, select from the following links:
 
-* [Profile dashboard](../../profile/ui/profile-dashboard.md)
+* [[!DNL Profile] dashboard](../../profile/ui/profile-dashboard.md)
 * [[!UICONTROL License usage] dashboard](../../landing/license-usage-dashboard.md)
 
 ## Next steps
