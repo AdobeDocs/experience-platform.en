@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Update connection information using the Flow Service API
 topic: overview
 type: Tutorial
-description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including values for its name, description, and credentials.
+description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 ---
 
 # Update connection information using the Flow Service API
 
-In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of existing batch and streaming connections, including values for its name, description, and credentials.
+In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
 This tutorial covers the steps for updating the details and credentials of an existing connection using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

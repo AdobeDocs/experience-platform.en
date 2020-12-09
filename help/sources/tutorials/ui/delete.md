@@ -9,9 +9,9 @@ type: Tutorial
 
 # Delete dataflows in the UI
 
-The [!UICONTROL Sources] workspace provides you with the ability to delete existing batch and streaming dataflows that contain errors or have become obsolete.
+The [!UICONTROL Sources] workspace allows you to delete existing batch and streaming dataflows that contain errors or have become obsolete.
 
-This tutorial provides steps for deleting dataflows from the [!UICONTROL Sources] workspace.
+This tutorial provides steps for deleting dataflows using the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
@@ -22,13 +22,13 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Delete dataflows
 
-Log in to the [Experience Platform UI](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. Select **[!UICONTROL Dataflows]** from the top header to view existing dataflows.
+In the [Experience Platform UI](https://platform.adobe.com), select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace, and then select **[!UICONTROL Dataflows]** from the top header.
 
 ![catalog](../../images/tutorials/delete/catalog.png)
 
 The **[!UICONTROL Dataflows]** page appears. On this page is a list of viewable dataflows, including information about their target dataset, source, account name, and date of creation.
 
-Select the filter icon ![filter](../../images/tutorials/delete/filter.png) on the top left to launch the sort panel.
+Select the filter icon (![filter-icon](../../images/tutorials/delete/filter.png)) on the top left to launch the sort panel.
 
 ![dataflows](../../images/tutorials/delete/dataflows-list.png)
 
