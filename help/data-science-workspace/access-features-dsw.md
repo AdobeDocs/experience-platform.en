@@ -10,8 +10,8 @@ description: The following document outlines Data Science Workspace permissions 
 
 The following document outlines Data Science Workspace permissions and access to features. 
 
-- **Notebooks:** Provides an interactive development environment (JupyterLab) to explore, analyze, and model your data on Experience Platform.
-- **Models:** Provides tools used to create, publish, and store advanced machine learning recipes and models. 
+- **Notebooks:** Provides an interactive development environment ([JupyterLab](./jupyterlab/overview.md)) to explore, analyze, and model your data on Experience Platform.
+- **Models:** Provides tools used to create, publish, and store advanced machine learning recipes and models. For more information, visit the [create and publish a machine learning model](./models-recipes/create-publish-model.md) tutorial.
 - **Services:** Contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom services you created with Data Science Workspace.
 
 ![DSW tabs](./images/access/platform-tabs.png)
