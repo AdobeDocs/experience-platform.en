@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
-breadcrumb-title: Data Model (XDM) Guide
+breadcrumb-title: Experience Data Model (XDM) Guide
 user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
 ---
 
@@ -15,7 +15,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
-    * [Privacy Consent mixin](schema/privacy-consent.md)
+    * [Consents & Preferences data type](schema/privacy-consent.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -33,6 +33,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Data types {#data-types}
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
+    * [Consents & Preferences](./data-types/consents.md)
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
@@ -63,6 +64,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Tutorials {#tutorials}
   * [Create a schema (API)](tutorials/create-schema-api.md)
   * [Create a schema (UI)](tutorials/create-schema-ui.md)
+  * [Create and edit data types (UI)](./tutorials/create-data-type.md)
   * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
   * [Define a relationship between two schemas (UI)](tutorials/relationship-ui.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)

@@ -35,20 +35,17 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
-| Query type | Details |
-| ---------- | ------- |
-| Incoming hit that refers to a profile within a relative window | A segment definition that includes [!DNL Adobe Audience Manager (AAM)] segments or traits. |
-| Multiple events that refer to a profile | A segment definition that includes Adobe Audience Manager (AAM) segments or traits. |
-| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
+- The segment definition includes Adobe Audience Manager (AAM) segments or traits.
+- The segment definition includes multiple entities (multi-entity queries).
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
 | Single event query | There are no limits to the lookback window. |
-| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
