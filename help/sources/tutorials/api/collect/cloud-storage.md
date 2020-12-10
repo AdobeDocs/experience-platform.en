@@ -566,6 +566,10 @@ A dataflow is responsible for scheduling and collecting data from a source. You 
 
 To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
 
+>[!IMPORTANT]
+>
+>It is strongly recommended to schedule your dataflow for one-time ingestion when using the [FTP connector](../../../connectors/cloud-storage/ftp.md).
+
 **API format**
 
 ```http
