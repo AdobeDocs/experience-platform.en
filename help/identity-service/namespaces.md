@@ -47,8 +47,8 @@ Experience Platform provides several identity namespaces that are available to a
 
 The following standard namespaces are provided for use by all organizations within  Platform:
 
-| Display name | Description |
-| ------------ | ----------- |
+| Display name | Description | Example |
+| ------------ | ----------- | ------- |
 | AdCloud | A namespace that represents Adobe AdCloud. |
 | Adobe Analytics (Legacy ID) | A namespace that represents Adobe Analytics. See the following document on [Adobe Analytics namespaces](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-namespaces.html?lang=en#namespaces) for more information. |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
@@ -61,7 +61,7 @@ The following standard namespaces are provided for use by all organizations with
 | Google Ad ID (GAID) | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
 | Google Click ID | A namespace that represents a Google Click ID. See the following document on [Click tracking in Google Ads](https://developers.google.com/adwords/api/docs/guides/click-tracking) for more information. |
 | Phone | A namespace that represents a phone number. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
-| Phone (E.164) | A namespace that represents raw phone numbers that need to be hashed in E.164 format. The E.164 format includes a plus sign (`+`), an international country calling code, a local area code, and a phone number. For example: `(+)(country code)(area code)(phone number)`. |
+| Phone (E.164) | A namespace that represents raw phone numbers that need to be hashed in E.164 format. The E.164 format includes a plus sign (`+`), an international country calling code, a local area code, and a phone number. | `(+)(country code)(area code)(phone number)`. |
 | Phone (SHA256) | A namespace that represents phone numbers that need to be hashed using SHA256. You must remove symbols, letters, and any leading zeroes. You must also add the country calling code as a prefix. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
 | Phone (SHA256_E.164) | A namespace that represents raw phone numbers that need to be hashed using both SHA256 and E.164 format. See the following document on [SHA256 hashing support](https://experienceleague.adobe.com/docs/id-service/using/reference/hashing-support.html?lang=en#hashing-support) for more information. |
 | TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
