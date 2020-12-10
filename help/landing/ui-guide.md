@@ -142,7 +142,7 @@ The **[!UICONTROL Datasets]** section lets you create and manage datasets. More 
 
 The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your PostgreSQL credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
 
-The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-flows.md).
+The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
 
 ### [!UICONTROL Decisioning]
 

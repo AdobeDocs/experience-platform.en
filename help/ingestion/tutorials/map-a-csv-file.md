@@ -106,9 +106,9 @@ The mapping screen reappears with your newly created source field. Apply the app
 
 ![](../images/tutorials/map-a-csv-file/new-calculated-field.png)
 
-## Monitor your dataflow
+## Monitor data ingestion
 
-Once your CSV file is mapped and created, you can monitor the data that is being ingested through it. For more information on monitoring dataflows, see the tutorial on [monitoring streaming dataflows](../../ingestion/quality/monitor-data-flows.md).
+Once your CSV file is mapped and created, you can monitor the data that is being ingested through it. For more information on monitoring data ingestion, see the tutorial on [monitoring data ingestion](../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Next steps
 
