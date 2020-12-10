@@ -32,7 +32,9 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 ### Existing [!DNL Google Ads] account
 
-[!DNL Google] has paused any new [!DNL Google Ads] integrations with third-party vendors. You must have an existing integration with [!DNL Google Ads] in order to be able to perform the allow list steps in the next section and to create a [!DNL Google Ads] destination in Real-time CDP.
+>[!IMPORTANT]
+>
+> [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. In order to perform the allow list steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, please read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
 
 ### Allow list
 
