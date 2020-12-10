@@ -9,13 +9,13 @@ seo-description: Email Service Providers (ESPs) allow you to manage your email m
 
 # Email marketing destinations {#email-marketing-destinations}
 
-Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
 
-To send segments to email marketing destinations for your campaigns, Real-time CDP must first connect to the destination.
+To send segments to email marketing destinations for your campaigns, Platform must first connect to the destination.
 
 Connecting to email marketing destinations is a three-step process. Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Real-time CDP. The process to import data varies for each partner. See the individual destinations articles for more information. 
+In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Platform exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Platform. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
 ## Configure destination {#connect-destination}
 

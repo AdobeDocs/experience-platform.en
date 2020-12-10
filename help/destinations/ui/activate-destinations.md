@@ -3,13 +3,13 @@ keywords: activate destination;activate destinations;activate data
 title: Activate profiles and segments to a destination
 type: Tutorial
 seo-title: Activate profiles and segments to a destination
-description: Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
-seo-description: Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+seo-description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 ---
 
 # Activate profiles and segments to a destination
 
-Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +23,7 @@ The steps in the activation workflow vary slightly between destination types. Th
 
 Applies to: All destinations
 
-In the Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+In the Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
 
 ![browse to destination](../assets/ui/activate-destinations/connect.png)
 
@@ -63,7 +63,7 @@ If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary id
 
 Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
 
-Select `Email` as target identity if the email addresses you are using are not hashed. Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
+Select `Email` as target identity if the email addresses you are using are not hashed. Platform will hash the email addresses to comply with [!DNL Facebook] requirements.
    
 ![identity mapping after filling in fields](../assets/common/identity-mapping.png)
 
@@ -141,7 +141,7 @@ On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new fie
 
 >[!NOTE] 
 >
-> Real-time CDP prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 - If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
@@ -171,7 +171,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
@@ -181,7 +181,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Edit activation {#edit-activation}
 
-Follow the steps below to edit existing activation flows in Real-time CDP: 
+Follow the steps below to edit existing activation flows in Platform: 
 
 1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
@@ -190,7 +190,7 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 
 ### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
-For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Platform creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Note that you can edit the file format. For more information, go to the [Configure](#configure) step for cloud storage destinations and email marketing destinations. 
@@ -215,7 +215,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->The integration between Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
 
 ## Disable activation {#disable-activation}
 

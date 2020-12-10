@@ -14,9 +14,9 @@ For an introduction to Experience Platform Launch capabilities, see the resource
 -  Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/overview.html)
 -  Adobe Experience Platform Launch [quick start videos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
-## How to find the Platform Launch extensions in the Real-time CDP interface {#how-to-find-extensions-in-interface}
+## How to find the Platform Launch extensions in the Platform interface {#how-to-find-extensions-in-interface}
 
-To find the Platform Launch extensions in the Real-time CDP interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
+To find the Platform Launch extensions in the Platform interface, browse to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]** and select **[!UICONTROL Extensions]** in the **[!UICONTROL Types]** filter. 
 
 ![Extensions filter in the interface](../../assets/catalog/launch-extensions/filter.png)
 
@@ -24,7 +24,7 @@ To find the Platform Launch extensions in the Real-time CDP interface, browse to
 
 Platform Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](../personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](../voice/confirmit-digital-feedback.md).
 
-**Profile/Segment Export** destinations in Real-time Customer Data Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
+**Profile/Segment Export** destinations in Adobe Experience Platform capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Examples of those are the [Amazon S3 cloud storage destination](../cloud-storage/amazon-s3.md) or the [Google Display & Video 360 advertising destination](../advertising/google-dv360.md).
 
 ![Experience Platform Launch extensions compared to other destinations](../../assets/common/launch-and-other-destinations.png)
 
@@ -48,7 +48,7 @@ Platform Launch extensions enable you to satisfy various customer use cases. Som
 
 ## Extension categories {#extension-categories}
 
-Platform Launch extensions can fall under the following categories in Real-time CDP:
+Platform Launch extensions can fall under the following categories in Platform:
 
 - [Advertising](../advertising/overview.md)
 - [Analytics](../analytics/overview.md)

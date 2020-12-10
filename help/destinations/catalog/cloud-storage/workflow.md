@@ -11,7 +11,7 @@ seo-description: Instructions to connect to your cloud storage locations
 
 ## Overview
 
-This page explains how you can connect to cloud storage locations in Real-time Customer Data Platform.
+This page explains how you can connect to cloud storage locations in Adobe Experience Platform.
 
 In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
 
@@ -27,7 +27,7 @@ See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-ki
 
 >[!NOTE]
 >
->Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
+>Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
 
 ![Connect to cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
@@ -43,11 +43,11 @@ For SFTP destinations, insert the **[!UICONTROL Folder path]** where the files w
 
 ![Connect to SFTP cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/sftp-setup.png)
 
-For [!DNL Amazon Kinesis] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+For [!DNL Amazon Kinesis] destinations, provide the name of your existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
 ![Connect to Kinesis cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/kinesis-setup.png)
 
-For [!DNL Azure Event Hubs] destinations, provide the name of your existing data stream in your [!DNL Amazon Event Hubs] account. Real-time CDP will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+For [!DNL Azure Event Hubs] destinations, provide the name of your existing data stream in your [!DNL Amazon Event Hubs] account. Platform will export data to this stream. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
 ![Connect to Event Hubs cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)   
 

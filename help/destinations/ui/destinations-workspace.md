@@ -1,14 +1,14 @@
 ---
-keywords: RTCDP;rtcdp
+keywords: platform;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;
 title: Destinations workspace
 seo-title: Destinations workspace
 description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View, which are described in the sections below.
-seo-description: In Real-time Customer Data Platform, select Destinations from the left navigation bar to access the destinations workspace.
+seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 ---
 
 # Destinations workspace {#destinations-workspace}
 
-In Real-time Customer Data Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
+In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
 The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], which are described in the sections below.
 
@@ -16,13 +16,13 @@ The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL C
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Real-time CDP, that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Platform, that you can send data to. 
 
-The Real-time CDP user interface provides a number of search and filter options on the destinations catalog page:
+The Platform user interface provides a number of search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
-* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When **[!UICONTROL All destinations]** is selected, all available Real-time CDP destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
+* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When **[!UICONTROL All destinations]** is selected, all available Platform destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
 * Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. To understand the difference between the two categories, see [Destination Types and Categories](../destination-types.md).
 
 ![destinations filtering and search demo](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -103,7 +103,7 @@ Select the destination name to see information about the segments activated to t
  
 ## [!UICONTROL System View] {#system-view}
 
-The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Real-time Customer Data Platform.
+The **[!UICONTROL System View]** tab displays a graphic representation of the activation flows that you have set up in the Adobe Experience Platform.
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 

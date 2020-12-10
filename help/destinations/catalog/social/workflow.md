@@ -11,7 +11,7 @@ seo-description: Instructions to connect to your social network ad accounts
 
 ## Workflow to create social network destinations
 
-This tutorial uses [!DNL Facebook] as an example, but the workflow in Real-time Customer Data Platform will be the same for all social network destinations, once more are added to the product.
+This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Experience Platform will be the same for all social network destinations, once more are added to the product.
 
 In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
 
@@ -25,7 +25,7 @@ In the **Authentication** step, if you had previously set up a connection to you
 
 >[!NOTE]
 >
->Real-time CDP supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social network account ID. This ensures that you don't complete the workflow with incorrect credentials.
+>Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social network account ID. This ensures that you don't complete the workflow with incorrect credentials.
 
 ![Connect to social network destination - authentication step](../../assets/catalog/social/workflow/pre-connect.png)
 
