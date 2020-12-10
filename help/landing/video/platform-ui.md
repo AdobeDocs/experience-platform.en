@@ -16,7 +16,7 @@ This video provides a quick tour of the Adobe Experience Platform user interface
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video.
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, please visit the [Adobe Experience Platform UI guide](../ui-guide.md).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/32792?quality=12&learn=on)

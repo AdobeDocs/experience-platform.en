@@ -71,7 +71,7 @@ Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow so
 
 ## Monitor and delete your dataflow
 
-Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring and deleting dataflows, see the tutorial on [monitoring dataflows](../../../../../ingestion/quality/monitor-data-flows.md).
+Once your cloud storage dataflow has been created, you can monitor the data that is being ingested through it. For more information on monitoring and deleting dataflows, see the tutorial on [monitoring dataflows](../../../../../ingestion/quality/monitor-data-ingestion.md).
 
 ## Next steps
 
