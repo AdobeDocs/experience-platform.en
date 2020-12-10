@@ -27,7 +27,7 @@ Dataflows are a representation of data jobs that move data across Platform. Thes
 
 | Feature | Description |
 | ------- | ----------- |
-| Transparency for dataflows | You can monitor dataflows for sources and destinations. For more information, please read the [tutorial on monitoring sources](../../dataflows/ui/monitor-sources.md) or the [tutorial on monitoring destinations](../../dataflows/ui/monitor-destinations.md).
+| Transparency for dataflows | You can monitor dataflows for sources and destinations. For more information, please read the [tutorial on monitoring sources](../../dataflows/ui/monitor-sources.md) or the [tutorial on monitoring destinations](../../dataflows/ui/monitor-destinations.md). |
 
 To learn more about dataflows, please read the [dataflows overview](../../dataflows/home.md).
 
