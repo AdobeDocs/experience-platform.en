@@ -1,9 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Getting started with Real-time Customer Data Platform
-seo-title: Getting started with Real-time Customer Data Platform
-description: Sample scenario for Real-time Customer Data Platform
-seo-description: Sample scenario for Real-time Customer Data Platform
+description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
 ---
 
 # Getting started with Real-time Customer Data Platform

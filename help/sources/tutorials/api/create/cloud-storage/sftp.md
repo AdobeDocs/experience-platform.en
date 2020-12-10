@@ -13,18 +13,14 @@ description: This tutorial uses the Flow Service API to walk you through the ste
 >
 >The SFTP connector is in beta. The features and documentation are subject to change. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an SFTP (Secure File Transfer Protocol) server.
-
-If you would prefer to use the user interface in [!DNL Experience Platform], the [UI tutorial](../../../ui/create/cloud-storage/ftp-sftp.md) provides step-by-step instructions for performing similar actions.
+This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect Experience Platform to an SFTP (Secure File Transfer Protocol) server.
 
 ## Getting started
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to an SFTP server using the [!DNL Flow Service] API.
 

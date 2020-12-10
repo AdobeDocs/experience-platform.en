@@ -136,13 +136,25 @@ The **[!UICONTROL Services]** section lets you manage your published models for 
 
 ### [!UICONTROL Data management]
 
-The **[!UICONTROL Schemas]** section lets you create and manage schemas. To learn more about how to use the Schemas section, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). More information about Experience Data Model (XDM) can be found in the [XDM overview](../xdm/home.md).
+The **[!UICONTROL Schemas]** section lets you create and manage Experience Data Model (XDM) schemas. To learn more about schemas, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
 
-The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about the Datasets section can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
+The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about datasets can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
 
-The **[!UICONTROL Queries]** section lets you create and manage queries, logs SQL queries made by Query Service, and view your PostgreSQL credentials. More information about the Queries section can be found in the [Query Service user guide](../query-service/ui/overview.md).
+The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your PostgreSQL credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
 
-The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about the Monitoring section can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
+The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
+
+### [!UICONTROL Decisioning]
+
+Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to leverage Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+
+### [!UICONTROL Administration]
+
+The Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. This can be accessed by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](license-usage-dashboard.md).
+
+>[!IMPORTANT]
+>
+>The license usage dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
 ## Next steps
 
