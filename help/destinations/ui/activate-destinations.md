@@ -51,7 +51,7 @@ Applies to: social destinations and Google Customer Match advertising destinatio
 
 ![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
 
-For social destinations, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema.
+For social destinations, you can select source attributes or identity namespaces to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema.
 
 If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
 
