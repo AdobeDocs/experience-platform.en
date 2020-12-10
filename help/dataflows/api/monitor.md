@@ -190,6 +190,7 @@ A successful response returns details regarding your flow run, including informa
 | `sizeSummary` | The volume of the data in bytes. |
 | `recordSummary` | The record count of the data. |
 | `fileSummary` | The file count of the data. |
+| `fileSummary.extensions` | Contains information that is specific to the activity. For example, manifest is only part of the "Promotion Activity", which is why it is an extension to it. |
 | `statusSummary` | Shows whether the flow run is a success or a failure. |
 
 ## Next steps
