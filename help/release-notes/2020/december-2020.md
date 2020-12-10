@@ -10,9 +10,12 @@ author: ens60013 & ens72471
 
 **Release date: December 9, 2020**
 
-Updates to existing features in Adobe Experience Platform:
+New features to Adobe Experience Platform:
 
 - [[!DNL Dataflows]](#dataflows)
+
+Updates to existing features in Adobe Experience Platform:
+
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Sources]](#sources)
 
