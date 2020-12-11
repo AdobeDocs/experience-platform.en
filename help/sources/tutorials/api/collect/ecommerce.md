@@ -54,7 +54,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for file-based connectors:
+Use the following enum values for file-based connectors:
 
 | Data format | Enum value |
 | ----------- | ---------- |
@@ -234,7 +234,6 @@ A successful response returns details of the newly created schema including its 
 }
 ```
 
-
 ## Create a target dataset
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
@@ -307,7 +306,7 @@ curl -X POST \
     "data": {
         "format": "parquet_xdm",
         "schema": {
-            "id": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
             "version": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     },
@@ -360,7 +359,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/adobe_mcdp_connectors_stg/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
@@ -394,8 +393,8 @@ A successful response returns details of the newly created mapping including its
     "version": 0,
     "createdDate": 1604960750613,
     "modifiedDate": 1604960750613,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
@@ -547,12 +546,12 @@ A successful response returns the details of the dataflow specification that is 
 
 The last step towards collecting data is to create a dataflow. At this point, you should have the following required values prepared:
 
-*   [Source connection ID](#source)
-*   [Target connection ID](#target)
-*   [Mapping ID](#mapping)
-*   [Dataflow specification ID](#specs)
+* [Source connection ID](#source)
+* [Target connection ID](#target)
+* [Mapping ID](#mapping)
+* [Dataflow specification ID](#specs)
 
-A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
+A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the request payload.
 
 To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
 
