@@ -18,39 +18,6 @@ This document covers Adobe-defined functions (ADFs) to support three key [!DNL A
 
 ## Sessionization
 
-The `SESS_TIMEOUT()` reproduces the visit groupings found with Adobe Analytics. It performs a similar time-based grouping, but with customizable parameters.
-
-**Syntax:**
-
-`SESS_TIMEOUT(timestamp, timeout_in_seconds) OVER ([partition] [order] [frame])`
-
-**Returns:**
-
-Structure with fields `(timestamp_diff, num, is_new, depth)`
-
-### Explore the row-level `SESS_TIMEOUT()` and output
-
-```sql
-SELECT analyticsVisitor,
-      session.is_new,
-      session.timestamp_diff,
-      session.num,
-      session.depth
-FROM  (
-        SELECT endUserIDs._experience.aaid.id as analyticsVisitor,
-        SESS_TIMEOUT(timestamp, 60 * 30)
-        OVER (PARTITION BY endUserIDs._experience.aaid.id
-        ORDER BY timestamp
-        ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
-        AS session
-        FROM your_analytics_table
-        WHERE TIMESTAMP >= to_timestamp('2018-12-01') AND TIMESTAMP <= to_timestamp('2018-12-31')
-      )
-LIMIT 100;
-```
-
-![Image](../images/queries/adobe-functions/sess-timeout.png)
-
 ### Create a new trended report with visitors, sessions, and page views
 
 ```sql
