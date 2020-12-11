@@ -8,7 +8,7 @@ description: This document provides information for Adobe-defined functions avai
 
 # Adobe-defined functions
 
-Adobe-defined functions (ADFs) are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. 
+Adobe-defined functions, herein referred to as ADFs, are prebuilt functions in [!DNL Query Service] that help perform common business related tasks on [!DNL ExperienceEvent] data. These include functions for Sessionization and Attribution like those found in Adobe Analytics. 
 
 See the [Adobe Analytics documentation](https://experienceleague.adobe.com/docs/analytics/landing/home.html?lang=en) for more information about Adobe Analytics and the concepts behind the ADFs defined on this page. This document provides information for Adobe-defined functions available in [!DNL Query Service].
 
