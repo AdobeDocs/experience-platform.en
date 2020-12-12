@@ -148,8 +148,8 @@ The results are written in the format below. For the sample query given, the res
 (`name`, `value`, `timestamp`, `fraction`)
 ```
 
-| Parameter |  Description  | 
-| --------- | ------------- |
+| Parameter | Description | 
+| --------- | ----------- |
 | `name` | The `channelName` entered as a label in the ADF. |
 | `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event] |
 | `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred |
@@ -187,7 +187,7 @@ ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [
 ```
 
 | Parameter | Description | 
-| --- | --- |
+| --------- | ----------- |
 | `timestamp` | Timestamp field found in the dataset |
 | `channelName` | A friendly name to use as a label in the returned object |
 | `channelValue` | The column or field that is the target channel for the query |
@@ -215,8 +215,8 @@ The results are written in the format below. For the sample query given, the res
 (`name`, `value`, `timestamp`, `fraction`)
 ```
 
-| Parameters |  Description  | 
-| ---------- | ------------- |
+| Parameters | Description | 
+| ---------- | ----------- |
 | `name` | The `channelName` entered as a label in the ADF. |
 | `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event] |
 | `timestamp` | The timestamp of the [!DNL Experience Event] where the `channelValue` was used |
@@ -253,7 +253,7 @@ ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expConditio
 ```
 
 | Parameter | Description | 
-| --- | --- |
+| --------- | ----------- |
 | `timestamp` | Timestamp field found in the dataset |
 | `channelName` | A friendly name to use as a label in the returned object |
 | `channelValue` | The column or field that is the target channel for the query |
@@ -283,8 +283,8 @@ The results are written in the format below. For the sample query given, the res
 (`name`, `value`, `timestamp`, `fraction`)
 ```
 
-| Parameters |  Description  | 
-| ---------- | ------------- |
+| Parameters | Description | 
+| ---------- | ----------- |
 | `name` | The `channelName` entered as a label in the ADF |
 | `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event] prior to the `expCondition` |
 | `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred |
@@ -348,8 +348,8 @@ The results are written in the format below. For the sample query given, the res
 (`name`, `value`, `timestamp`, `fraction`)
 ```
 
-| Parameters |  Description  | 
-| ---------- | ------------- |
+| Parameters | Description | 
+| ---------- | ----------- |
 | `name` | The `channelName` entered as a label in the ADF |
 | `value` | The value from `channelValue` that is the first touch within the specified `expTimeout` interval |
 | `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occured |
@@ -545,8 +545,8 @@ The results are written in the format below. For the sample query given, the res
 `value`
 ```
 
-| Returned object parameters |  Description  | 
-| ---------------------- | ------------- |
+| Parameters | Description | 
+| ---------- | ----------- |
 | `value` | The value based on the `key` used in the ADF |
 
 **Results**
@@ -644,7 +644,7 @@ TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefintion, [timeUnit]) OVER ([partit
 ```
 
 | Parameter | Description | 
-| --- | --- |
+| --------- | ----------- |
 | `timestamp` | Timestamp field found in the dataset populated on all events. |
 | `eventDefintion` | Expression to qualify the previous event. |
 | `timeUnit` | Unit of output: days, hours, minutes, and seconds. Default is seconds.  |
