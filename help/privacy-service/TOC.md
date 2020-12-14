@@ -2,7 +2,8 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service Help
-user-guide-description: Developed in response to a fundamental shift in how businesses are required to manage the personal data of their customers, Adobe Experience Platform Privacy Service provides a RESTful API and user interface to help you manage customer data requests. With Privacy Service, you can submit requests to access and delete personal customer data from Adobe Experience Cloud applications, facilitating automated compliance with legal and organizational privacy regulations.
+breadcrumb-title: Privacy Service Guide
+user-guide-description: Manage customer data requests to comply with legal privacy regulations like GDPR and CCPA.
 ---
 
 # Adobe Experience Platform Privacy Service {#privacy}
@@ -20,14 +21,10 @@ user-guide-description: Developed in response to a fundamental shift in how busi
   * [Privacy Service UI overview](ui/overview.md)
   * [Privacy Service user guide](ui/user-guide.md)
 * [Subscribe to Privacy Events](privacy-events.md)
-* GDPR guides {#gdpr}
-  * [GDPR FAQ](gdpr/faq.md)
-  * [GDPR terminology](gdpr/terminology.md)
-* CCPA guides {#ccpa}
-  * [CCPA FAQ](ccpa/faq.md)
-* PDPA (Thailand) guides {#pdpa-tha}
-  * [PDPA (Thailand) FAQ](./pdpa-tha/faq.md)
-  * [PDPA (Thailand) terminology](./pdpa-tha/terminology.md)
+* Privacy regulation guides {#regulations}
+  * [Overview](regulations/overview.md)
+  * [FAQ](regulations/faq.md)
+  * [Terminology](regulations/terminology.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
 * [Release notes](release-notes.md)

@@ -10,7 +10,7 @@ description: Once data usage labels have been applied to Adobe Experience Platfo
 
 Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
-There are two methods of policy enforcement provided by [!DNL Data Governance] features on [!DNL Platform]: **API-based enforcement** and **automatic enforcement**.
+There are two methods of policy enforcement provided by [!DNL Data Governance] features on [!DNL Platform]: API-based enforcement and automatic enforcement.
 
 ## API-based enforcement
 
@@ -20,6 +20,6 @@ See the tutorial on [policy enforcement](api-enforcement.md) for steps on how to
 
 ## Automatic enforcement
 
-Certain applications that are built on top of [!DNL Experience Platform] (such as [!DNL Real-time Customer Data Platform]) provide automatic enforcement for data usage policies. Each application maintains its own method of surfacing policy violations and providing steps for resolving issues. 
+Certain applications that are built on top of [!DNL Experience Platform] (such as [!DNL Real-time Customer Data Platform]) provide automatic enforcement for data usage policies. Each application maintains its own method of surfacing policy violations and providing steps for resolving issues.
 
-Please consult the documentation for the [!DNL Platform]-based application you are using for more information on automatic data usage policy enforcement. For information on automatic policy enforcement in Real-time CDP, please refer to the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+Automatic policy enforcement in Real-time CDP leverages data lineage, data classification, and policy management capabilities to evaluate and surface policy violations. Please refer to the [Real-time CDP Data Governance overview](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance) for more information.

@@ -4,6 +4,7 @@ description: This tutorial provides steps for creating an Adobe Analytics Classi
 solution: Experience Platform
 title: Create an Adobe Analytics Classifications Data connector in the UI
 topic: overview
+type: Tutorial
 ---
 
 # Create an Adobe Analytics Classifications Data connector in the UI
@@ -14,9 +15,11 @@ This tutorial provides steps for creating an Adobe Analytics Classifications Dat
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 *   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+The Analytics Classifications Data Connector requires your data to have been migrated to the new [!DNL Classifications] infrastructure of Adobe Analytics prior to use. To confirm the migration status of your data, please contact your Adobe Customer Success Manager.
 
 ## Select your classifications
 
@@ -28,7 +31,7 @@ Under the **[!UICONTROL Adobe applications]** category, select the **[!UICONTROL
 
 ![](../../../../images/tutorials/create/classifications/catalog.png)
 
-The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Classifications]** from the top header to see a list of [!DNL Classifications] datasets, including information about their **[!UICONTROL Dimension ID]**, **[!UICONTROL Report Suite name]**, and **[!UICONTROL Report Suite ID]**.
+The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Classifications]** from the top header to see a list of [!DNL Classifications] datasets, including information about their dimension ID, report suite name, and report suite ID.
 
 Each page shows up to ten different [!DNL Classifications] datasets you can choose from. Select **[!UICONTROL Next]** at the bottom of the page to browse for more options. The panel on the right shows the total number of [!DNL Classifications] datasets you selected, as well as their names. This panel also allows you to remove any [!DNL Classifications] datasets you may have selected by mistake or clear all selections with one action.
 

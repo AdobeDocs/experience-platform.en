@@ -108,10 +108,12 @@ SELECT statement 2
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
 ```sql
-CREATE TABLE table_name [ WITH (schema='target_schema_title') ] AS (select_query)
+CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query.
+where,
+ `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
+ `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'true'
 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
@@ -476,3 +478,50 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>
+
+### ALTER
+
+This command helps in adding or dropping primary or foreign key constraints to the table.
+
+```sql
+Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
+
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
+
+Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
+```
+
+>[!NOTE]
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
+>
+
+### SHOW PRIMARY KEYS
+
+This command lists all the primary key constraints for the given database.
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### SHOW FOREIGN KEYS
+
+This command lists all the foreign key constraints for the given database.
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+
+```

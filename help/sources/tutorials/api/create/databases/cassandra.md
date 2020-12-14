@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Apache Cassandra;apache cassan
 solution: Experience Platform
 title: Create an Apache Cassandra connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Apache Cassandra (hereinafter referred to as "Cassandra") to Experience Platform.
 ---
 

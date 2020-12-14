@@ -2,12 +2,16 @@
 product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Release Notes
+breadcrumb-title: Platform Release Notes
 user-guide-description: Monthly release notes for Adobe Experience Platform.
 ---
 
 # Adobe Experience Platform release notes {#release-notes}
 
-* [September 2020](latest/latest.md)
+* [December 2020](latest/latest.md)
+* [November 2020](2020/november-2020.md)
+* [October 2020](2020/october-2020.md)
+* [September 2020](2020/september-2020.md)
 * [August 2020](2020/august-2020.md)
 * [July 2020](2020/july-2020.md)
 * [June 2020](2020/june-2020.md)

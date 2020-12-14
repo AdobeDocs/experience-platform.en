@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;S
 solution: Experience Platform
 title: Data ingestion quality
 topic: overview
+description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
 ---
 
 # Data quality in Adobe Experience Platform
@@ -48,4 +49,4 @@ The following validations are done for streaming ingestion:
 | Dataset | Ensures that the dataset is specified, enabled, and has not been removed. |
 | Header | Ensures that the header is specified and is valid. |
 
-More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-flows.md).
+More information about how [!DNL Platform] monitors and validates data can be found in the [monitoring data flows documentation](./monitor-data-ingestion.md).

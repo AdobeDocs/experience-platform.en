@@ -10,7 +10,7 @@ keywords: debugging web sdk;debugging;configure;configure command;debug command;
 
 When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
 
-Debugging is disabled by default, but can be toggled on in three different ways: 
+Debugging is disabled by default, but can be toggled on in three different ways:
 
 * `configure` command
 * `setDebug` command
@@ -58,6 +58,20 @@ Similar to the `debug` command, if you prefer not to change code on your webpage
 
 When debugging is set through the `debug` command or query string parameter, it overrides any `debug` option set in the `configure` command. In these two cases, debugging also remains toggled on for the duration of the session. In other words, if you enable debugging using the debug command or query string parameter, it stays enabled until one of the following:
 
-* The end of your session 
-* You run the `debug` command 
+* The end of your session
+* You run the `debug` command
 * You set the query string parameter again
+
+## Retrieving library information
+
+It's often helpful to access some of the details behind the library you have loaded onto your website. To do this, execute the `getLibraryInfo` command as follows:
+
+```js
+alloy("getLibraryInfo").then(function(libraryInfo) {
+  console.log(libraryInfo.version);
+});
+```
+
+Currently, the provided `libraryInfo` object contains the following properties:
+
+* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the AEP Web SDK Adobe Launch Extension, the version is the library version and the extension version joined with a "+". For example, if the version of the library was 1.0.0, and the version of the launch extension was 1.2.0, the value would be `1.0.0+1.2.0`.

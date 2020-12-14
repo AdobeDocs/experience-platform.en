@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis
 solution: Experience Platform
 title: Create an Amazon Kinesis connector using the Flow Service API
 topic: overview
+type: Tutorial
 description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Amazon Kinesis account.
 ---
 
@@ -33,7 +34,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 | ---------- | ----------- |
 | `accessKeyId` | The access key ID for your [!DNL Kinesis] account. |
 | `secretKey` | The secret access key for your [!DNL Kinesis] account. |
-| `region` | | The region for your [!DNL Kinesis] account. |
+| `region` | The region for your [!DNL Kinesis] account. |
 | `connectionSpec.id` | The [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 For more information about these values, refer to [this Kinesis document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
@@ -46,17 +47,17 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Create a connection
 
@@ -115,4 +116,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created an [!DNL Amazon Kinesis] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md).
+By following this tutorial, you have created an [!DNL Amazon Kinesis] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [collect streaming data using the Flow Service API](../../collect/streaming.md).
