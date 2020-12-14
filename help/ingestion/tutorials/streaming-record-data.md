@@ -446,7 +446,7 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-flows.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md). 
 

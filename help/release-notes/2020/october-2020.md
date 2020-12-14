@@ -64,7 +64,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature | Description |
 | ------- | ----------- |
-| SSH authentication support for SFTP | You can connect your SFTP account to [!DNL Platform] using RSA/DSA Open SSH keys. See the [SFTP overview](../../sources/connectors/cloud-storage/ftp-sftp.md) for more information. |
+| SSH authentication support for SFTP | You can connect your SFTP account to [!DNL Platform] using RSA/DSA Open SSH keys. See the [SFTP overview](../../sources/connectors/cloud-storage/sftp.md) for more information. |
 | UX improvements  | You can enable your dataset for [!DNL Profile] during the data ingestion process. See the [cloud storage dataflow workflow](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) tutorial for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

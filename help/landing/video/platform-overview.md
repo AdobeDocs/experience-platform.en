@@ -12,6 +12,6 @@ thumbnail: 32797.jpg
 
 # Adobe Experience Platform overview
 
-This video provides a quick overview of what Experience Platform is and the business challenges it solves.
+This video provides a quick overview of what Experience Platform is and the business challenges it solves. To learn more, visit the [Experience Platform overview documentation](../home.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32797?quality=12&learn=on)

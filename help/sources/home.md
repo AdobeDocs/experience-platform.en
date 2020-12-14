@@ -47,8 +47,9 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] connector](connectors/cloud-storage/ftp-sftp.md)
-- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md) 
+- [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
+- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
 

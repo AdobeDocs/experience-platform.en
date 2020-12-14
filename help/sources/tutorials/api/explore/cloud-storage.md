@@ -27,6 +27,7 @@ In order to explore a third party cloud storage using [!DNL Platform] APIs, you 
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
 * [Azure File Storage](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
