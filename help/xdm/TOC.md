@@ -62,6 +62,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Ad-hoc schemas](api/ad-hoc.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
+  * [Explore resources in the UI](./tutorials/explore.md)
   * [Create a schema (API)](tutorials/create-schema-api.md)
   * [Create a schema (UI)](tutorials/create-schema-ui.md)
   * [Create and edit data types (UI)](./tutorials/create-data-type.md)
