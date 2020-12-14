@@ -65,7 +65,7 @@ When you select the name of any field in the canvas, the right rail updates to s
 
 ![](../images/tutorials/explore/field-properties.png)
 
-If the field your are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
+If the field you are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
 
 ![](../images/tutorials/explore/enum-field.png)
 
