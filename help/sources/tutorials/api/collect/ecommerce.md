@@ -280,7 +280,7 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake.. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using the [!DNL Flow Service] API, you can create a target connection by specifying these identifiers along with the dataset that will contain the inbound source data.
 
@@ -300,24 +300,24 @@ curl -X POST \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-    -d '{{
-    "name": "Test Shopify Dataset Target Connection",
-    "description": "Test Shopify Dataset Target Connection",
-    "data": {
-        "format": "parquet_xdm",
-        "schema": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
-            "version": "application/vnd.adobe.xed-full-notext+json; version=1"
+    -d '{
+        "name": "Test Shopify Dataset Target Connection",
+        "description": "Test Shopify Dataset Target Connection",
+        "data": {
+            "format": "parquet_xdm",
+            "schema": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
+                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
+            }
+        },
+        "params": {
+            "dataSetId": "5fa9c083de62e418dd170b42"
+        },
+        "connectionSpec": {
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+            "version": "1.0"
         }
-    },
-    "params": {
-        "dataSetId": "5fa9c083de62e418dd170b42"
-    },
-    "connectionSpec": {
-        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
-        "version": "1.0"
-    }
-}'
+    }'
 ```
 
 | Property | Description |
