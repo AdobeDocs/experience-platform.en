@@ -10,15 +10,15 @@ description: Adobe Experience Platform
 
 This guide serves as an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
 
-To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md).
+To learn more about Adobe Experience Platform, please read the [Experience Platform overview](home.md).
 
 ## Home screen
 
-After logging into Adobe Experience Platform, you will arrive on the [!UICONTROL Home] page, which is comprised of the metrics dashboard, recent data, and recommended learning sections.
+After logging into Adobe Experience Platform, you are on the [!UICONTROL Home] page, which is comprised of the [metrics dashboard](#metrics), [recent data](#recent-data), and [recommended learning](#recommended-learning) sections.
 
 ![](images/user-guide/homepage.png)
 
-### Metrics dashboard
+### Metrics
 
 The metrics dashboard provides cards that gives you information about datasets, profiles, segments, and destinations within your organization.
 
@@ -56,13 +56,13 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 The top navigation bar in the Platform UI displays the IMS Organization you are currently signed into, and provides several important controls.
 
-On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this will bring you back to the Platform UI home screen.
+On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this at any time will bring you back to the Platform UI home screen.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS Organization switcher
 
-The first item on the right side of the navigation bar is the **IMS Organization switcher**. 
+The first item on the right side of the top navigation bar is the **IMS Organization switcher**. 
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -72,7 +72,7 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ### Switch applications
 
-The next item on the right side is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Experience Platform, Assets, Exchange, and Launch.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and Launch.
 
 ### Help
 
@@ -82,7 +82,7 @@ To the right of the application switcher is the **help and support menu**, which
 
 ### Notifications and announcements
 
-After the help and support menu is the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
+In the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows information about service maintenance.
 
 ### User profile
 
