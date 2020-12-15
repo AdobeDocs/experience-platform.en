@@ -9,9 +9,7 @@ description: This tutorial covers the steps for retrieving data from a third-par
 
 # Collect eCommerce data through source connectors and APIs
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -20,8 +18,8 @@ This tutorial requires you to have access to an **[!UICONTROL eCommerce]** syste
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
 * [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    * [Schema Registry API](../../../../xdm/api/getting-started.md): Learn how to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+  * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Registry API](../../../../xdm/api/getting-started.md): Learn how to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 * [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
 * [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
 * [[!DNL Sandboxes]](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -81,9 +79,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Shopify Source Connection demo",
+        "name": "Shopify source connection",
         "baseConnectionId": "582f4f8d-71e9-4a5c-a164-9d2056318d6c",
-        "description": "Shopify Source Connection",
+        "description": "Shopify source connection",
         "data": {
             "format": "tabular"
         },
@@ -150,8 +148,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Test Shopify schema",
-        "description": "",
+        "title": "Shopify target XDM schema",
+        "description": "Shopify target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -180,9 +178,9 @@ A successful response returns details of the newly created schema including its 
     "meta:altId": "_{TENANT_ID}.schemas.854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Test shopify demo",
+    "title": "Shopify target XDM schema",
     "type": "object",
-    "description": "",
+    "description": "Shopify target XDM schema",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -205,7 +203,7 @@ A successful response returns details of the newly created schema including its 
         "https://ns.adobe.com/xdm/context/profile-personal-details",
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "imsOrg": "7DC732555AECDB4C0A494036@AdobeOrg",
+    "imsOrg": "{IMS_ORG}",
     "meta:extensible": false,
     "meta:abstract": false,
     "meta:extends": [
@@ -255,7 +253,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test Shopify Target Dataset",
+        "name": "Shopify target dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/854ddc36ad2c7bd001f66a4392575ed4004f81883328772f",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -300,8 +298,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Test Shopify Dataset Target Connection",
-        "description": "Test Shopify Dataset Target Connection",
+        "name": "Shopify target connection",
+        "description": "Shopify target connection",
         "data": {
             "format": "parquet_xdm",
             "schema": {
@@ -419,7 +417,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your **[!UICONTROL eCommerce]** source into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
