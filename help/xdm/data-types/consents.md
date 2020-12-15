@@ -325,4 +325,4 @@ The following table outlines the accepted values for `xdm:preferred`:
 
 ### Full [!DNL Consents & Preferences] schema {#full-schema}
 
-To view the full schema for the [!DNL Consents & Preferences] data type, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consentpreferences.schema.json).
+To view the full schema for the [!DNL Consents & Preferences] data type, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
