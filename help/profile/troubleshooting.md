@@ -2,6 +2,8 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Real-time Customer Profile troubleshooting guide
 topic: guide
+type: Documentation
+description: This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors when working with Profile data using Adobe Experience Platform.
 ---
 
 # Real-time Customer Profile troubleshooting guide
