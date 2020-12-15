@@ -17,6 +17,6 @@ This video provides a quick tour of Real-time Customer Profile features and func
 
 >[!NOTE]
 >
->The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, including the latest screen shots and functionality, please visit the [Real-time Customer Profile user guide](ui/user-guide.md). 
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, including the latest screen shots and functionality, please visit the [Real-time Customer Profile user guide](user-guide.md). 
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12)
