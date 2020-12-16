@@ -426,7 +426,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow spec that is responsible for bringing data from your cloud storage into Platform. The response includes a unique flow spec ID. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
