@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Attribution AI input and output
 topic: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
