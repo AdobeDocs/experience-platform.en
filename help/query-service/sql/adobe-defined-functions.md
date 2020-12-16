@@ -28,9 +28,9 @@ OVER ([partition] [order] [frame])
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `partition` | A subgroup of rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
-| `order` | A column or available field used to order the subset or rows. | `ORDER BY timestamp` |
-| `frame` | A subgroup of the rows in a partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| `[partition]` | A subgroup of rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `[order]` | A column or available field used to order the subset or rows. | `ORDER BY timestamp` |
+| `[frame]` | A subgroup of the rows in a partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionization
 
@@ -43,13 +43,13 @@ For more information about sessionization in Adobe Analytics, see the documentat
 **Query syntax**
 
 ```sql
-SESS_TIMEOUT(timestamp, expirationInSeconds) OVER ([partition] [order] [frame])
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `expirationInSeconds` | The number of seconds needed between events to qualify the end of the current session and the start of a new session. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{EXPIRATION_IN_SECONDS}` | The number of seconds needed between events to qualify the end of the current session and the start of a new session. |
 
 **Example query**
 
@@ -85,20 +85,18 @@ LIMIT 10
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `session` column.
+For the sample query given, the results are given in the `session` column. The `session` column is made up of the following components:
 
 ```sql
-(`timestamp_diff`, `num`, `is_new`, `depth)
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
 | Parameters |  Description  | 
 | ---------- | ------------- |
-| `timestamp_diff` | The difference in time, in seconds, between the current record and the prior record. |
-| `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
-| `is_new` | A boolean used to identify whether a record is the first of a session. |
-| `depth` | The depth of the current record within the session. |
+| `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
+| `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
+| `{IS_NEW}` | A boolean used to identify whether a record is the first of a session. |
+| `{DEPTH}` | The depth of the current record within the session. |
 
 ### SESS_START_IF
 
@@ -107,13 +105,13 @@ This query returns the state of the session for the current row, based on the cu
 **Query syntax**
 
 ```sql
-SESS_START_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `testFlag` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{TEST_EXPRESSION}` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
 
 **Example query**
 
@@ -121,7 +119,8 @@ SESS_START_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
 SELECT
     endUserIds._experience.mcid.id AS id,
     timestamp,
-    SESS_START_IF(timestamp, application.launches > 0)
+    IF(application.launches.value > 0, true, false) AS isLaunch,
+    SESS_START_IF(timestamp, application.launches.value > 0)
         OVER (PARTITION BY endUserIds._experience.mcid.id
             ORDER BY timestamp
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
@@ -134,35 +133,33 @@ SELECT
 **Results**
 
 ```console
-                id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | (40,1,false,4)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | (55,1,false,5)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | (1361821,2,true,1)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | (54,2,false,2)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | (49,2,false,3)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | (33,2,false,4)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | (31,2,false,5)
+                id                |       timestamp       | isLaunch |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | true     | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | false    | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | true     | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `session` column.
+For the sample query given, the results are given in the `session` column. The `session` column is made up of the following components:
 
 ```sql
-(`timestamp_diff`, `num`, `is_new`, `depth)
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
 | Parameters |  Description  | 
 | ---------- | ------------- |
-| `timestamp_diff` | The difference in time, in seconds, between the current record and the prior record. |
-| `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
-| `is_new` | A boolean used to identify whether a record is the first of a session. |
-| `depth` | The depth of the current record within the session. |
+| `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
+| `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function. |
+| `{IS_NEW}` | A boolean used to identify whether a record is the first of a session. |
+| `{DEPTH}` | The depth of the current record within the session. |
 
 ### SESS_END_IF
 
@@ -171,13 +168,15 @@ This query returns the state of the session for the current row, based on the cu
 **Query syntax**
 
 ```sql
-SESS_END_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `testFlag` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{TEST_EXPRESSION}` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+
+An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
 **Example query**
 
@@ -185,7 +184,8 @@ SESS_END_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
 SELECT
     endUserIds._experience.mcid.id AS id,
     timestamp,
-    SESS_END_IF(timestamp, application.launches > 0)
+    IF(application.applicationCloses.value > 0 OR application.crashes.value > 0, true, false) AS isExit,
+    SESS_END_IF(timestamp, application.applicationCloses.value > 0 OR application.crashes.value > 0)
         OVER (PARTITION BY endUserIds._experience.mcid.id
             ORDER BY timestamp
             ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
@@ -198,35 +198,33 @@ SELECT
 **Results**
 
 ```console
-                id                |       timestamp       |      session       
-----------------------------------+-----------------------+--------------------
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | (40,1,false,4)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | (55,1,false,5)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | (1361821,2,true,1)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | (54,2,false,2)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | (49,2,false,3)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | (33,2,false,4)
- 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | (31,2,false,5)
+                id                |       timestamp       | isExit   |      session       
+----------------------------------+-----------------------+----------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | false    | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | false    | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | true     | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | false    | (40,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | false    | (55,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | false    | (1361821,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | false    | (54,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | false    | (49,2,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | false    | (33,2,false,6)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | false    | (31,2,false,7)
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `session` column.
+For the sample query given, the results are given in the `session` column. The `session` column is made up of the following components.
 
 ```sql
-(`timestamp_diff`, `num`, `is_new`, `depth)
+({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
 ```
 
 | Parameters |  Description  | 
 | ---------- | ------------- |
-| `timestamp_diff` | The difference in time, in seconds, between the current record and the prior record. |
-| `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
-| `is_new` | A boolean used to identify whether a record is the first of a session. |
-| `depth` | The depth of the current record within the session. |
+| `{TIMESTAMP_DIFF}` | The difference in time, in seconds, between the current record and the prior record. |
+| `{NUM}` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
+| `{IS_NEW}` | A boolean used to identify whether a record is the first of a session. |
+| `{DEPTH}` | The depth of the current record within the session. |
 
 ## Attribution
 
@@ -243,14 +241,14 @@ This query is useful if you want to see what interaction led to a series of cust
 **Query syntax**
 
 ```sql
-ATTRIBUTION_FIRST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label for the returned object. |
-| `channelValue` | The column or field that is the target channel for the query. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
 
 An explanation of the parameters within `OVER()` can be found in the [window functions section](#window-functions). 
 
@@ -286,20 +284,18 @@ LIMIT 10
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
+For the sample query given, the results are given in the `first_touch` column. The `first_touch` column is made up of the following components.
 
 ```sql
-(`name`, `value`, `timestamp`, `fraction`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event] |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the first touch in the [!DNL Experience Event] |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
+| `{FRACTION}` | The attribution of the first touch, expressed as a decimal fraction. |
 
 ### Last-touch attribution
 
@@ -310,14 +306,14 @@ This query is useful if you want to see the final interaction in a series of cus
 **Query syntax**
 
 ```sql
-ATTRIBUTION_LAST_TOUCH(timestamp, channelName, channelValue) OVER ([partition] [order] [frame])
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label of the returned object. |
-| `channelValue` | The column or field that is the target channel for the query. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label of the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
 
 An explanation of the parameters within `OVER()` can be found in the [window functions section](#window-functions). 
 
@@ -352,42 +348,40 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+For the sample query given, the results are given in the `last_touch` column. The `last_touch` column is made up of the following components:
 
 ```sql
-(`name`, `value`, `timestamp`, `fraction`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event] |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the `channelValue` was used. |
-| `fraction` | The attribution of the last touch, expressed as a decimal fraction. |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch in the [!DNL Experience Event] |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the `channelValue` was used. |
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. |
 
 ### First-touch attribution with expiration condition
 
 This query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
-This query is useful if you want to see what interaction led to a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your chosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the initial tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
+This query is useful if you want to see what interaction led to a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your choosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the initial tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
 
 **Query syntax**
 
 ```sql
 ATTRIBUTION_FIRST_TOUCH_EXP_IF(
-    timestamp, channelName, channelValue, expCondition, expBefore) 
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
     OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label for the returned object. |
-| `channelValue` | The column or field that is the target channel for the query. |
-| `expCondition` | The condition that determines the expiry point of the channel. |
-| `expBefore` | A boolean that indicates if the channel expires before or after the specified condition, `expCondition`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
+| `{EXP_CONDITION}` | The condition that determines the expiry point of the channel. |
+| `{EXP_BEFORE}` | A boolean that indicates if the channel expires before or after the specified condition, `{EXP_CONDITION}`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -422,20 +416,18 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
+For the sample query given, the results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
-(`name`, `value`, `timestamp`, `fraction`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event], prior to the `expCondition`. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `CHANNEL_VALUE}` that is the first touch in the [!DNL Experience Event], prior to the `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
+| `{FRACTION}` | The attribution of the first touch, expressed as a decimal fraction. |
 
 ### First-touch attribution with expiration timeout
 
@@ -446,15 +438,17 @@ This query is useful if you want to see what interaction, within a selected time
 **Specification**
 
 ```sql
-ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])
+ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label for the returned object. |
-| `channelValue` | The column or field that is the target channel for the query. |
-| `expTimeout` | The window of time prior to the channel event, in seconds, that the query searches for a first touch event. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
+| `{EXP_TIMEOUT}` | The window of time prior to the channel event, in seconds, that the query searches for a first touch event. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -489,20 +483,18 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
+For the sample query given, the results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
-(`name`, `value`, `timestamp`, `fraction`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch within the specified `expTimeout` interval. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occured |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `CHANNEL_VALUE}` that is the first touch within the specified `{EXP_TIMEOUT}` interval. |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
+| `{FRACTION}` | The attribution of the first touch, expressed as a decimal fraction. |
 
 ### Last-touch attribution with expiration condition
 
@@ -513,16 +505,18 @@ This query is useful if you want to see the last interaction in a series of cust
 **Query syntax**
 
 ```sql
-ATTRIBUTION_LAST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])
+ATTRIBUTION_LAST_TOUCH_EXP_IF(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
+    OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label for the returned object |
-| `channelValue` | The column or field that is the target channel for the query |
-| `expCondition` | The condition that determines the expiry point of the channel |
-| `expBefore` | A boolean that indicates if the channel expires before or after the specified condition, `expCondition`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object. |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query. |
+| `{EXP_CONDITION}` | The condition that determines the expiry point of the channel. |
+| `{EXP_BEFORE}` | A boolean that indicates if the channel expires before or after the specified condition, `{EXP_CONDITION}`, is met. This is primarily enabled for a session's expiry conditions, to ensure that the first touch is not selected from a previous session. By default, this value is set to `false`. |
 
 **Example query**
 
@@ -555,20 +549,18 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+For the sample query given, the results are given in the `last_touch` column. The `last_touch` column is made up of the following components:
 
 ```sql
-(`name`, `value`, `timestamp`, `percentage`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF |
-| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event], prior to the `expCondition`. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred. |
-| `percentage` | The attribution of the last touch, expressed as a decimal fraction.  |
+| `{NAME}` | The `{CHANNEL_NAME}`, which was entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch in the [!DNL Experience Event], prior to the `{EXP_CONDITION}`. |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred. |
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction.  |
 
 ### Last-touch attribution with expiration timeout
 
@@ -579,15 +571,17 @@ This query is useful if you want to see the last interaction within a selected t
 **Query syntax**
 
 ```sql
-ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(timestamp, channelName, channelValue, expTimeout) OVER ([partition] [order] [frame])
+ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
+    {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
+    OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | The timestamp field found in the dataset. |
-| `channelName` | The label for the returned object |
-| `channelValue` | The column or field that is the target channel for the query |
-| `expTimeout` | The window of time after the channel event, in seconds, that the query searches for a last touch event. |
+| `{TIMESTAMP}` | The timestamp field found in the dataset. |
+| `{CHANNEL_NAME}` | The label for the returned object |
+| `{CHANNEL_VALUE}` | The column or field that is the target channel for the query |
+| `{EXP_TIMEOUT}` | The window of time after the channel event, in seconds, that the query searches for a last touch event. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -622,20 +616,18 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+For the sample query given, the results are given in the `last_touch` column. The `last_touch` column is made up of the following components:
 
 ```sql
-(`name`, `value`, `timestamp`, `percentage`)
+({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
 ```
 
 | Parameters | Description | 
 | ---------- | ----------- |
-| `name` | The `channelName`, entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the last touch within the specified `expTimeout` interval |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
-| `percentage` | The attribution of the last touch, expressed as a decimal fraction. |
+| `{NAME}` | The `{CHANNEL_NAME}`, entered as a label in the ADF. |
+| `{VALUE}` | The value from `{CHANNEL_VALUE}` that is the last touch within the specified `{EXP_TIMEOUT}` interval |
+| `{TIMESTAMP}` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
+| `{FRACTION}` | The attribution of the last touch, expressed as a decimal fraction. |
 
 ## Pathing
 
@@ -650,14 +642,14 @@ Determines the previous value of a particular field a defined number of steps aw
 **Query syntax**
 
 ```sql
-PREVIOUS(key, shift, ignoreNulls) OVER ([partition] [order] [frame])
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `key` | The column or field from the event. |
-| `shift` | (Optional) The number of events away from the current event. By default, the value is 1. |
-| `ingnoreNulls` | (Optional) A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
+| `{KEY}` | The column or field from the event. |
+| `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
+| `{IGNORE_NULLS}` | (Optional) A boolean that indicates if null `{KEY}` values should be ignored. By default, the value is `false`. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -692,17 +684,7 @@ ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, time
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
-
-```sql
-`value`
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `value` | The value, based on the `key` used in the ADF. |
+For the sample query given, the results are given in the `previous_page` column. The value within the `previous_page` column is based on the `{KEY}` used in the ADF.
 
 ### Next page
 
@@ -711,14 +693,14 @@ Determines the next value of a particular field a defined number of steps away w
 **Query syntax**
 
 ```sql
-NEXT(key, shift, ignoreNulls) OVER ([partition] [order] [frame])
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `key` | The column or field from the event. |
-| `shift` | (Optional) The number of events away from the current event. By default, the value is 1. |
-| `ingnoreNulls` | (Optional) A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
+| `{KEY}` | The column or field from the event. |
+| `{SHIFT}` | (Optional) The number of events away from the current event. By default, the value is 1. |
+| `{IGNORE_NULLS}` | (Optional) A boolean that indicates if null `{KEY}` values should be ignored. By default, the value is `false`. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -754,17 +736,7 @@ LIMIT 10
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
-
-```sql
-`value`
-```
-
-| Parameter | Description | 
-| --------- | ----------- |
-| `value` | The value based on the `key` used in the ADF. |
+For the sample query given, the results are given in the `previous_page` column. The value within the `previous_page` column is based on the `{KEY}` used in the ADF.
 
 ## Time-between
 
@@ -777,14 +749,16 @@ This query returns a number representing the unit of time since the previous mat
 **Query syntax**
 
 ```sql
-TIME_BETWEEN_PREVIOUS_MATCH(timestamp, eventDefinition, [timeUnit]) OVER ([partition] [order] [frame])
+TIME_BETWEEN_PREVIOUS_MATCH(
+    {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
+    OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | A timestamp field found in the dataset populated on all events. |
-| `eventDefinition` | The expression to qualify the previous event. |
-| `timeUnit` | The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
+| `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
+| `{EVENT_DEFINITION}` | The expression to qualify the previous event. |
+| `{TIME_UNIT}` | The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -830,17 +804,7 @@ LIMIT 10
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format previously listed. For the sample query given, the results are given in the `average_minutes_since_registration` column.
-
-```sql
-`time`
-```
-
-| Parameters | Description |
-| ---------- | ----------- |
-| `time` | The difference in time between the current and previous events. The unit of time was defined previously in the `timeUnit`. |
+For the sample query given, the results are given in the `average_minutes_since_registration` column. The value within the `average_minutes_since_registration` column is the difference in time between the current and previous events. The unit of time was defined previously in the `{TIME_UNIT}`.
 
 ### Time-between next match
 
@@ -849,14 +813,14 @@ This query returns a negative number representing the unit of time behind the ne
 **Query syntax**
 
 ```sql
-TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefinition, timeUnit) OVER ([partition] [order] [frame])
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
-| `timestamp` | A timestamp field found in the dataset populated on all events. |
-| `eventDefinition` | The expression to qualify the next event. |
-| `timeUnit` | (Optional) The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
+| `{TIMESTAMP}` | A timestamp field found in the dataset populated on all events. |
+| `{EVENT_DEFINITION}` | The expression to qualify the next event. |
+| `{TIME_UNIT}` | (Optional) The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -902,17 +866,7 @@ LIMIT 10
 (10 rows)
 ```
 
-**Results syntax**
-
-The results are written in the format previously listed. For the sample query given, the results are given in the `average_minutes_until_order_confirmation` column.
-
-```sql
-`time`
-```
-
-| Parameters | Description |
-| ---------- | ----------- |
-| `time` | The difference in time between the current and next events. The unit of time was defined previously in the `timeUnit`. |
+For the sample query given, the results are given in the `average_minutes_until_order_confirmation` column. The value within the `average_minutes_until_order_confirmation` column is the difference in time between the current and next events. The unit of time was defined previously in the `{TIME_UNIT}`.
 
 ## Next steps
 
