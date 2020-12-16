@@ -51,6 +51,8 @@ SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ([partition] [order] [fr
 | `{TIMESTAMP}` | The timestamp field found in the dataset. |
 | `{EXPIRATION_IN_SECONDS}` | The number of seconds needed between events to qualify the end of the current session and the start of a new session. |
 
+An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
+
 **Example query**
 
 ```sql
@@ -112,6 +114,8 @@ SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ([partition] [order] [frame])
 | --------- | ----------- |
 | `{TIMESTAMP}` | The timestamp field found in the dataset. |
 | `{TEST_EXPRESSION}` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+
+An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
 **Example query**
 
