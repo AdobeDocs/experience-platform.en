@@ -432,7 +432,7 @@ curl -X GET \
 
 **Response**
 
-A dataflow is responsible for collecting data from sources, and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications that are responsible for collecting payments data.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
