@@ -54,7 +54,7 @@ To create a source connection, you must also define an enum value for the data f
 
 Use the following enum values for file-based connectors:
 
-| Data.format | Enum value |
+| Data format | Enum value |
 | ----------- | ---------- |
 | Delimited | `delimited` |
 | JSON | `json` |
