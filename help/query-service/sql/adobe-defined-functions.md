@@ -8,7 +8,7 @@ description: This document provides information for Adobe-defined functions avai
 
 # Adobe-defined functions
 
-Adobe-defined functions, herein referred to as ADFs, are prebuilt functions in Adobe Experience Platform Query Service that help perform common business related tasks on [!DNL Experience Event] data. These include functions for [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) and [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) like those found in Adobe Analytics. 
+Adobe-defined functions, herein referred to as ADFs, are prebuilt functions in Adobe Experience Platform Query Service that help perform common business-related tasks on [!DNL Experience Event] data. These include functions for [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) and [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) like those found in Adobe Analytics. 
 
 This document provides information for Adobe-defined functions available in [!DNL Query Service].
 
@@ -23,12 +23,12 @@ The majority of the [!DNL Spark] SQL helpers are window functions that update ea
 **Query syntax**
 
 ```sql
-OVER (`[partition]` `[order]` `[frame]`)
+OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `partition` | A subgroup of the rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `partition` | A subgroup of rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
 | `order` | A column or available field used to order the subset or rows. | `ORDER BY timestamp` |
 | `frame` | A subgroup of the rows in a partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
@@ -67,6 +67,24 @@ ORDER BY id, timestamp ASC
 LIMIT 10
 ```
 
+**Results**
+
+```console
+                id                |       timestamp       |      session       
+----------------------------------+-----------------------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | (40,1,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | (55,1,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | (1361821,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | (54,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | (49,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | (33,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | (31,2,false,5)
+(10 rows)
+```
+
 **Results syntax**
 
 The results are written in the format below. For the sample query given, the results are given in the `session` column.
@@ -81,6 +99,37 @@ The results are written in the format below. For the sample query given, the res
 | `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
 | `is_new` | A boolean used to identify whether a record is the first of a session. |
 | `depth` | The depth of the current record within the session. |
+
+### SESS_START_IF
+
+This query returns the state of the session for the current row, based on the current timestamp and the expression given and starts a new session with the current row.
+
+**Query syntax**
+
+```sql
+SESS_START_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `timestamp` | The timestamp field found in the dataset. |
+| `testFlag` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+
+**Example query**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    SESS_START_IF(timestamp, application.launches > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
 
 **Results**
 
@@ -100,17 +149,96 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
+**Results syntax**
+
+The results are written in the format below. For the sample query given, the results are given in the `session` column.
+
+```sql
+(`timestamp_diff`, `num`, `is_new`, `depth)
+```
+
+| Parameters |  Description  | 
+| ---------- | ------------- |
+| `timestamp_diff` | The difference in time, in seconds, between the current record and the prior record. |
+| `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
+| `is_new` | A boolean used to identify whether a record is the first of a session. |
+| `depth` | The depth of the current record within the session. |
+
+### SESS_END_IF
+
+This query returns the state of the session for the current row, based on the current timestamp and the expression given, ends the current session, and starts a new session on the next row.
+
+**Query syntax**
+
+```sql
+SESS_END_IF(timestamp, testFlag) OVER ([partition] [order] [frame])
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `timestamp` | The timestamp field found in the dataset. |
+| `testFlag` | An expression that you want to check the fields of the data against. For example, `application.launches > 0`. |
+
+**Example query**
+
+```sql
+SELECT
+    endUserIds._experience.mcid.id AS id,
+    timestamp,
+    SESS_END_IF(timestamp, application.launches > 0)
+        OVER (PARTITION BY endUserIds._experience.mcid.id
+            ORDER BY timestamp
+            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
+        AS session
+    FROM experience_events
+    ORDER BY id, timestamp ASC
+    LIMIT 10
+```
+
+**Results**
+
+```console
+                id                |       timestamp       |      session       
+----------------------------------+-----------------------+--------------------
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:55:53.0 | (0,1,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:56:51.0 | (58,1,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:57:47.0 | (56,1,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:58:27.0 | (40,1,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-01-18 06:59:22.0 | (55,1,false,5)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:16:23.0 | (1361821,2,true,1)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:17:17.0 | (54,2,false,2)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:06.0 | (49,2,false,3)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:18:39.0 | (33,2,false,4)
+ 100080F22A45CB40-3A2B7A8E11096B6 | 2018-02-03 01:19:10.0 | (31,2,false,5)
+(10 rows)
+```
+
+**Results syntax**
+
+The results are written in the format below. For the sample query given, the results are given in the `session` column.
+
+```sql
+(`timestamp_diff`, `num`, `is_new`, `depth)
+```
+
+| Parameters |  Description  | 
+| ---------- | ------------- |
+| `timestamp_diff` | The difference in time, in seconds, between the current record and the prior record. |
+| `num` | A unique session number, starting at 1, for the key defined in the `PARTITION BY` of the window function.   |
+| `is_new` | A boolean used to identify whether a record is the first of a session. |
+| `depth` | The depth of the current record within the session. |
+
 ## Attribution
 
-Associating customer actions to success is an important part of understanding the factors that influence customer experience. The following ADFs support first touch attribution and last touch attribution with different expiration settings.
+Associating customer actions to success is an important part of understanding the factors that influence customer experiences. The following ADFs support first-touch attribution and last-touch attribution with different expiration settings.
 
-For more information about attribution in Adobe Analytics, see the [Attribution IQ overview](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) in the [!DNL Analytics] Analyze Guide.
+For more information about attribution in Adobe Analytics, see the [Attribution IQ overview](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/panels/attribution.html) in the [!DNL Analytics] Attribution panel guide.
 
-### First touch attribution
+### First-touch attribution
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
+This query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
-This query is useful if you want to see what interaction led to a series of customer actions. In the example shown below, the initial tracking code (`em:946426`) in the [!DNL Experience Event] data is attributed 100% (`1.0`) responsibility for the customer actions as it was the first interaction.
+This query is useful if you want to see what interaction led to a series of customer actions. In the example shown below, the initial tracking code (`em:946426`) in the [!DNL Experience Event] data is attributed 100% (`1.0`) responsibility for the customer actions, as it was the first interaction.
 
 **Query syntax**
 
@@ -140,22 +268,6 @@ ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 LIMIT 10
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `fraction`)
-```
-
-| Parameter | Description | 
-| --------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event] |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
-
-
 **Results**
 
 ```console
@@ -174,11 +286,26 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
-### Last touch attribution
+**Results syntax**
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel.
+The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
 
-This query is useful if you want to see the final interaction in a series of customer actions. In the example shown below, the tracking code in the returned object is the last interaction in each [!DNL Experience Event] record. Each code is attributed 100% (`1.0`) responsibility for the customer actions as it was the last interaction.
+```sql
+(`name`, `value`, `timestamp`, `fraction`)
+```
+
+| Parameter | Description | 
+| --------- | ----------- |
+| `name` | The `channelName`, which was entered as a label in the ADF. |
+| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event] |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
+| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+
+### Last-touch attribution
+
+This query returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel.
+
+This query is useful if you want to see the final interaction in a series of customer actions. In the example shown below, the tracking code in the returned object is the last interaction in each [!DNL Experience Event] record. Each code is attributed 100% (`1.0`) responsibility for the customer actions, as it was the last interaction.
 
 **Query syntax**
 
@@ -207,21 +334,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `fraction`)
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event] |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the `channelValue` was used. |
-| `fraction` | The attribution of the last touch, expressed as a decimal fraction. |
-
 **Results**
 
 ```console
@@ -240,16 +352,33 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
-### First touch attribution with expiration condition
+**Results syntax**
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
+The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+
+```sql
+(`name`, `value`, `timestamp`, `fraction`)
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `name` | The `channelName`, which was entered as a label in the ADF. |
+| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event] |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the `channelValue` was used. |
+| `fraction` | The attribution of the last touch, expressed as a decimal fraction. |
+
+### First-touch attribution with expiration condition
+
+This query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel.
 
 This query is useful if you want to see what interaction led to a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your chosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the initial tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
 
 **Query syntax**
 
 ```sql
-ATTRIBUTION_FIRST_TOUCH_EXP_IF(timestamp, channelName, channelValue, expCondition, expBefore) OVER ([partition] [order] [frame])
+ATTRIBUTION_FIRST_TOUCH_EXP_IF(
+    timestamp, channelName, channelValue, expCondition, expBefore) 
+    OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
@@ -275,21 +404,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `fraction`)
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event], prior to the `expCondition`. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
-
 **Results**
 
 ```console
@@ -308,9 +422,24 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
-### First touch attribution with expiration timeout
+**Results syntax**
 
-Returns the first touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel. 
+The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
+
+```sql
+(`name`, `value`, `timestamp`, `fraction`)
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `name` | The `channelName`, which was entered as a label in the ADF. |
+| `value` | The value from `channelValue` that is the first touch in the [!DNL Experience Event], prior to the `expCondition`. |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occurred. |
+| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+
+### First-touch attribution with expiration timeout
+
+Ths query returns the first-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the first touch value, timestamp, and attribution for each row returned for the selected channel. 
 
 This query is useful if you want to see what interaction, within a selected time interval, led to a customer action. In the example shown below, the first touch returned for each customer action is the earliest interaction within the previous seven days (`expTimeout = 86400 * 7`).
 
@@ -342,21 +471,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `fraction`)
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the first touch within the specified `expTimeout` interval. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occured |
-| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
-
 **Results**
 
 ```console
@@ -375,9 +489,24 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
-### Last touch attribution with expiration condition
+**Results syntax**
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+The results are written in the format below. For the sample query given, the results are given in the `first_touch` column.
+
+```sql
+(`name`, `value`, `timestamp`, `fraction`)
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `name` | The `channelName`, which was entered as a label in the ADF. |
+| `value` | The value from `channelValue` that is the first touch within the specified `expTimeout` interval. |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the first touch occured |
+| `fraction` | The attribution of the first touch, expressed as a decimal fraction. |
+
+### Last-touch attribution with expiration condition
+
+This query returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset, expiring after or before a condition. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
 
 This query is useful if you want to see the last interaction in a series of customer actions within a portion of the [!DNL Experience Event] dataset determined by a condition of your choosing. In the example shown below, a purchase is recorded (`commerce.purchases.value IS NOT NULL`) on each of the four days shown in the results (July 15, 21, 23, and 29) and the last tracking code on each day is attributed 100% (`1.0`) responsibility for the customer actions.
 
@@ -408,21 +537,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `percentage`)
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `name` | The `channelName`, which was entered as a label in the ADF |
-| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event], prior to the `expCondition`. |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred. |
-| `percentage` | The attribution of the last touch, expressed as a decimal fraction.  |
-
 **Example results**
 
 ```console
@@ -441,9 +555,24 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
-### Last touch attribution with expiration timeout
+**Results syntax**
 
-Returns the last touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
+The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+
+```sql
+(`name`, `value`, `timestamp`, `percentage`)
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `name` | The `channelName`, which was entered as a label in the ADF |
+| `value` | The value from `channelValue` that is the last touch in the [!DNL Experience Event], prior to the `expCondition`. |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred. |
+| `percentage` | The attribution of the last touch, expressed as a decimal fraction.  |
+
+### Last-touch attribution with expiration timeout
+
+This query returns the last-touch attribution value and details for a single channel in the target [!DNL Experience Event] dataset for a specified time period. The query returns a `struct` object with the last touch value, timestamp, and attribution for each row returned for the selected channel. 
 
 This query is useful if you want to see the last interaction within a selected time interval. In the example shown below, the last touch returned for each customer action is the final interaction within the following seven days (`expTimeout = 86400 * 7`).
 
@@ -475,21 +604,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
-
-```sql
-(`name`, `value`, `timestamp`, `percentage`)
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `name` | The `channelName`, entered as a label in the ADF. |
-| `value` | The value from `channelValue` that is the last touch within the specified `expTimeout` interval |
-| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
-| `percentage` | The attribution of the last touch, expressed as a decimal fraction. |
-
 **Results**
 
 ```console
@@ -508,6 +622,21 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
+**Results syntax**
+
+The results are written in the format below. For the sample query given, the results are given in the `last_touch` column.
+
+```sql
+(`name`, `value`, `timestamp`, `percentage`)
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `name` | The `channelName`, entered as a label in the ADF. |
+| `value` | The value from `channelValue` that is the last touch within the specified `expTimeout` interval |
+| `timestamp` | The timestamp of the [!DNL Experience Event] where the last touch occurred |
+| `percentage` | The attribution of the last touch, expressed as a decimal fraction. |
+
 ## Pathing
 
 Pathing can be used to understand the customer's depth of engagement, confirm the intended steps of an experience are working as designed, and identify potential pain points impacting the customer. 
@@ -521,14 +650,14 @@ Determines the previous value of a particular field a defined number of steps aw
 **Query syntax**
 
 ```sql
-PREVIOUS(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
+PREVIOUS(key, shift, ignoreNulls) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
 | `key` | The column or field from the event. |
 | `shift` | (Optional) The number of events away from the current event. By default, the value is 1. |
-| `ingnoreNulls` | A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
+| `ingnoreNulls` | (Optional) A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -544,18 +673,6 @@ SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timest
 FROM experience_events
 ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
 ```
-
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
-
-```sql
-`value`
-```
-
-| Parameters | Description | 
-| ---------- | ----------- |
-| `value` | The value, based on the `key` used in the ADF. |
 
 **Results**
 
@@ -575,6 +692,18 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
+**Results syntax**
+
+The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
+
+```sql
+`value`
+```
+
+| Parameters | Description | 
+| ---------- | ----------- |
+| `value` | The value, based on the `key` used in the ADF. |
+
 ### Next page
 
 Determines the next value of a particular field a defined number of steps away within the window. Notice in the example that the `WINDOW` function is configured with a frame of `ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING` setting the ADF to look at the current row and all subsequent rows.
@@ -582,14 +711,14 @@ Determines the next value of a particular field a defined number of steps away w
 **Query syntax**
 
 ```sql
-NEXT(key, [shift, [ignoreNulls]]) OVER ([partition] [order] [frame])
+NEXT(key, shift, ignoreNulls) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
 | `key` | The column or field from the event. |
 | `shift` | (Optional) The number of events away from the current event. By default, the value is 1. |
-| `ingnoreNulls` | A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
+| `ingnoreNulls` | (Optional) A boolean that indicates if null `key` values should be ignored. By default, the value is `false`. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -606,18 +735,6 @@ FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
 ```
-
-**Results syntax**
-
-The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
-
-```sql
-`value`
-```
-
-| Parameter | Description | 
-| --------- | ----------- |
-| `value` | The value based on the `key` used in the ADF. |
 
 **Results**
 
@@ -637,13 +754,25 @@ The results are written in the format below. For the sample query given, the res
 (10 rows)
 ```
 
+**Results syntax**
+
+The results are written in the format below. For the sample query given, the results are given in the `previous_page` column.
+
+```sql
+`value`
+```
+
+| Parameter | Description | 
+| --------- | ----------- |
+| `value` | The value based on the `key` used in the ADF. |
+
 ## Time-between
 
-Time-between allows you to explore latent customer behavior within a period before or after an event occurs.
+Time-between allows you to explore latent customer behavior within a certain time period before or after an event occurs.
 
 ### Time-between previous match
 
-Returns a number representing the unit of time since the previous matching event was seen. If no matching event was found, it returns null.
+This query returns a number representing the unit of time since the previous matching event was seen. If no matching event was found, it returns null.
 
 **Query syntax**
 
@@ -701,21 +830,33 @@ LIMIT 10
 (10 rows)
 ```
 
+**Results syntax**
+
+The results are written in the format previously listed. For the sample query given, the results are given in the `average_minutes_since_registration` column.
+
+```sql
+`time`
+```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `time` | The difference in time between the current and previous events. The unit of time was defined previously in the `timeUnit`. |
+
 ### Time-between next match
 
- Returns a negative number representing the unit of time behind the next matching event. If a matching event is not found, null is returned.
+This query returns a negative number representing the unit of time behind the next matching event. If a matching event is not found, null is returned.
 
 **Query syntax**
 
 ```sql
-TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefinition, [timeUnit]) OVER ([partition] [order] [frame])
+TIME_BETWEEN_NEXT_MATCH(timestamp, eventDefinition, timeUnit) OVER ([partition] [order] [frame])
 ```
 
 | Parameter | Description | 
 | --------- | ----------- |
 | `timestamp` | A timestamp field found in the dataset populated on all events. |
 | `eventDefinition` | The expression to qualify the next event. |
-| `timeUnit` | The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
+| `timeUnit` | (Optional) The unit of output. Possible value include days, hours, minutes, and seconds. By default, the value is seconds. |
 
 An explanation of the parameters within the `OVER()` function can be found in the [window functions section](#window-functions). 
 
@@ -760,6 +901,18 @@ LIMIT 10
  Product Details|Buffalo           |                      -1274.9571428571428
 (10 rows)
 ```
+
+**Results syntax**
+
+The results are written in the format previously listed. For the sample query given, the results are given in the `average_minutes_until_order_confirmation` column.
+
+```sql
+`time`
+```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `time` | The difference in time between the current and next events. The unit of time was defined previously in the `timeUnit`. |
 
 ## Next steps
 
