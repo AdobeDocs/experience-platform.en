@@ -20,4 +20,4 @@ See the tutorial on [API-based enforcement](./api-enforcement.md) for steps on h
 
 ## Automatic enforcement
 
-Automatic policy enforcement in Real-time CDP leverages data lineage, data classification, and policy management capabilities to evaluate and surface policy violations. See the overview on [automatic policy enforcement](./auto-enforcement.md) for more information.
+Experience Platform leverages data lineage, data classification, and policy management capabilities to automatically evaluate and surface policy violations. See the overview on [automatic policy enforcement](./auto-enforcement.md) for more information.
