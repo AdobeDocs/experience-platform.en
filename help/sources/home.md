@@ -14,19 +14,6 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 With Experience Platform, you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
-| Category | API | UI |
-| -------- | --- | --- |
-| Advertising | <ul><li>[Explore an advertising source]()</li><li>[Create a dataflow]()</li><li>[Update connection]()</li><li>[Delete dataflows]()</li></ul> | <ul><li>[Create a dataflow]()</li><li>[Update accounts]()</li><li>[Delete accounts]()</li><li>[Delete dataflows]()</li></ul> |
-| Cloud Storage | <ul><li>[Explore a cloud storage]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| CRM | <ul><li>[Explore a CRM]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Customer Success | <ul><li>[Explore a customer success system]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Database | <ul><li>[Explore a database]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| eCommerce | <ul><li>[Explore an eCommerce system]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Marketing Automation | <ul><li>[Explore a marketing automation system]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Payments | <ul><li>[Explore a payments system]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Protocols | <ul><li>[Explore a protocols system]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-| Streaming | <ul><li>[Explore a cloud storage]()</li><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
-
 ## Types of sources
 
 Sources in Experience Platform are grouped into the following categories:
