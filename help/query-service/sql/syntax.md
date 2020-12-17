@@ -3,14 +3,14 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sq
 solution: Experience Platform
 title: SQL syntax
 topic: syntax
-description: This document shows SQL syntax supported by Query Service.
+description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
 ---
 
 # SQL syntax
 
-[!DNL Query Service] provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by [!DNL Query Service].
+Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by [!DNL Query Service].
 
-## Define a SELECT query
+## SELECT queries {#select-queries}
 
 The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 
@@ -66,24 +66,23 @@ The key word ILIKE can be used instead of LIKE to make matches on the WHERE clau
 ```
 
 The logic of LIKE and ILIKE clauses are as follows:
-- ```WHERE condition LIKE pattern```, ```~~``` is equivalent to pattern
-- ```WHERE condition NOT LIKE pattern```, ```!~~``` is equivalent to pattern
-- ```WHERE condition ILIKE pattern```, ```~~*``` equivalent to pattern
-- ```WHERE condition NOT ILIKE pattern```, ```!~~*``` equivalent to pattern
+- `WHERE condition LIKE pattern`, `~~` is equivalent to pattern
+- `WHERE condition NOT LIKE pattern`, `!~~` is equivalent to pattern
+- `WHERE condition ILIKE pattern`, `~~*` equivalent to pattern
+- `WHERE condition NOT ILIKE pattern`, `!~~*` equivalent to pattern
 
-
-#### Example
+**Example**
 
 ```sql
 SELECT * FROM Customers
 WHERE CustomerName ILIKE 'a%';
 ```
 
-Returns customers with names beginning in "A" or "a".
+This query returns customers with names beginning in "A" or "a".
 
-## JOINS
+### JOIN
 
-A `SELECT` query using joins has the following syntax:
+A `SELECT` query that uses joins has the following syntax:
 
 ```sql
 SELECT statement
@@ -92,8 +91,7 @@ FROM statement
 ON join condition
 ```
 
-
-## UNION, INTERSECT, and EXCEPT
+### UNION, INTERSECT, and EXCEPT
 
 The `UNION`, `INTERSECT`, and `EXCEPT` clauses are supported to combine or exclude like rows from two or more tables:
 
@@ -111,24 +109,20 @@ The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported b
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
-where,
- `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
- `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'true'
+ - `schema`: The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query.
+ - `rowvalidation`: (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`.
+- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
 
-and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
-
-
-### Example
+**Example**
 
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
 ```
 
-Please note that for a given CTAS query:
-
-1. The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. 
-2. The `SELECT` statement can be provided with or without parentheses ().
+>[!NOTE]
+>
+>The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Additionally, the `SELECT` statement can be provided with or without parentheses ().
 
 ## INSERT INTO
 
@@ -140,7 +134,7 @@ INSERT INTO table_name select_query
 
 where `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
-### Example
+**Example**
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
@@ -159,7 +153,7 @@ Drop a table and delete the directory associated with the table from the file sy
 DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
 ```
 
-### Parameters
+**Parameters**
 
 -  `IF EXISTS`: If the table does not exist, nothing happens
 - `TEMP`: Temporary table 
@@ -175,7 +169,7 @@ CREATE [ OR REPLACE ] VIEW view_name AS select_query
 Where `view_name` is the name of view to be created
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
-Example:
+**Example**
 
 ```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
@@ -221,7 +215,7 @@ This command is parsed and the completed command is sent back to the client. Thi
 BEGIN [ TRANSACTION ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `TRANSACTION`: Optional key words. Listens it, no action is taken on this.
 
@@ -233,7 +227,7 @@ BEGIN [ TRANSACTION ]
 CLOSE { name }
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: the name of an open cursor to close.
 
@@ -245,7 +239,7 @@ No action is taken in [!DNL Query Service] as a response to the commit transacti
 COMMIT [ WORK | TRANSACTION ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `WORK`
 - `TRANSACTION`: Optional key words. They have no effect.
@@ -258,7 +252,7 @@ Use `DEALLOCATE` to deallocate a previously prepared SQL statement. If you do no
 DEALLOCATE [ PREPARE ] { name | ALL }
 ```
 
-#### Parameters
+**Parameters**
 
 - `Prepare`: This keyword is ignored.
 - `name`: The name of the prepared statement to deallocate.
@@ -272,7 +266,7 @@ DEALLOCATE [ PREPARE ] { name | ALL }
 DECLARE name CURSOR [ WITH  HOLD ] FOR query
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: The name of the cursor to be created.
 - `WITH HOLD`: Specifies that the cursor can continue to be used after the transaction that created it successfully commits.
@@ -288,7 +282,7 @@ If the `PREPARE` statement that created the statement specified some parameters,
 EXECUTE name [ ( parameter [, ...] ) ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: The name of the prepared statement to execute.
 - `parameter`: The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created. 
@@ -311,7 +305,7 @@ where option can be one of:
     FORMAT { TEXT | JSON }
 ```
 
-#### Parameters
+**Parameters**
 
 - `ANALYZE`: Carry out the command and show actual run times and other statistics. This parameter defaults to `FALSE`.
 - `FORMAT`: Specify the output format, which can be TEXT, XML, JSON, or YAML. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
@@ -321,12 +315,15 @@ where option can be one of:
 >
 >Keep in mind that the statement is actually executed when the `ANALYZE` option is used. Although `EXPLAIN` discards any output that a `SELECT` returns, other side effects of the statement happen as usual. 
 
-#### Example
+**Example**
 
 To show the plan for a simple query on a table with a single `integer` column and 10000 rows:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
+```
+
+```console
 
                        QUERY PLAN
 ---------------------------------------------------------
@@ -344,7 +341,7 @@ A cursor has an associated position, which is used by `FETCH`. The cursor positi
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
-#### Parameters
+**Parameters**
 
 - `num_of_rows`: A possibly-signed integer constant, determining the location or number of rows to fetch. 
 - `cursor_name`: An open cursor's name.
@@ -363,11 +360,10 @@ Prepared statements potentially have the largest performance advantage when a si
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`: An arbitrary name given to this particular prepared statement. It must be unique within a single session and is subsequently used to execute or deallocate a previously prepared statement.
 - `data-type`: The data type of a parameter to the prepared statement. If the data type of a particular parameter is unspecified or is specified as unknown, it is inferred from the context in which the parameter is first referenced. To refer to the parameters in the prepared statement itself, use $1, $2, and so on.
-
 
 ### ROLLBACK
 
@@ -377,7 +373,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 ROLLBACK [ WORK ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `WORK`
 
@@ -403,13 +399,13 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
     [ FOR { UPDATE | SHARE } [ OF table_name [, ...] ] [ NOWAIT ] [...] ]
 ```
 
-#### Parameters
+**Parameters**
 
 - `TEMPORARAY` or `TEMP`: If specified, the table is created as a temporary table.
 - `UNLOGGED:` if specified, the table is created as an unlogged table.
 - `new_table` The name (optionally schema-qualified) of the table to be created. 
 
-#### Example
+**Example**
 
 Create a new table `films_recent` consisting of only recent entries from the table `films`:
 
@@ -425,7 +421,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 SHOW name
 ```
 
-#### Parameters
+**Parameters**
 
 - `name`:
     - `SERVER_VERSION`: Shows the server's version number.
@@ -435,12 +431,15 @@ SHOW name
     `IS_SUPERUSER`: True if the current role has superuser privileges.
 - `ALL`: Show the values of all configuration parameters with descriptions.
 
-#### Example
+**Example**
 
 Show the current setting of the parameter `DateStyle`
 
 ```sql
 SHOW DateStyle;
+```
+
+```console
  DateStyle
 -----------
  ISO, MDY
@@ -498,7 +497,6 @@ Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
 
 >[!NOTE]
 >The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
->
 
 ### SHOW PRIMARY KEYS
 
@@ -506,12 +504,14 @@ This command lists all the primary key constraints for the given database.
 
 ```sql
 SHOW PRIMARY KEYS
+```
+
+```console
     tableName | columnName    | datatype | namespace
 ------------------+----------------------+----------+-----------
  table_name_1 | column_name1  | text     | "ECID"
  table_name_2 | column_name2  | text     | "AAID"
 ```
-
 
 ### SHOW FOREIGN KEYS
 
@@ -519,9 +519,11 @@ This command lists all the foreign key constraints for the given database.
 
 ```sql
 SHOW FOREIGN KEYS
+```
+
+```console
     tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
-
 ```
