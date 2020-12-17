@@ -217,7 +217,7 @@ SELECT
 (10 rows)
 ```
 
-For the sample query given, the results are given in the `session` column. The `session` column is made up of the following components.
+For the sample query given, the results are given in the `session` column. The `session` column is made up of the following components:
 
 ```sql
 ({TIMESTAMP_DIFF}, {NUM}, {IS_NEW}, {DEPTH})
@@ -288,7 +288,7 @@ LIMIT 10
 (10 rows)
 ```
 
-For the sample query given, the results are given in the `first_touch` column. The `first_touch` column is made up of the following components.
+For the sample query given, the results are given in the `first_touch` column. The `first_touch` column is made up of the following components:
 
 ```sql
 ({NAME}, {VALUE}, {TIMESTAMP}, {FRACTION})
