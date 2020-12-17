@@ -16,16 +16,16 @@ With Experience Platform, you can centralize data you collect from disparate sou
 
 | Category | API | UI |
 | -------- | --- | --- |
-| Advertising | <ul><li>[Explore an advertising source]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Cloud Storage | <ul><li>[Explore a cloud storage]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| CRM | <ul><li>[Explore a CRM]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Customer Success | <ul><li>[Explore a customer success system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Database | <ul><li>[Explore a database]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| eCommerce | <ul><li>[Explore an eCommerce system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Marketing Automation | <ul><li>[Explore a marketing automation system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Payments | <ul><li>[Explore a payments system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Protocols | <ul><li>[Explore a protocols system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
-| Streaming | <ul><li>[Explore a cloud storage]()</li></ul> <ul><li>[Create a dataflow]()</li></ul>
+| Advertising | <ul><li>[Explore an advertising source]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Cloud Storage | <ul><li>[Explore a cloud storage]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| CRM | <ul><li>[Explore a CRM]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Customer Success | <ul><li>[Explore a customer success system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Database | <ul><li>[Explore a database]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| eCommerce | <ul><li>[Explore an eCommerce system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Marketing Automation | <ul><li>[Explore a marketing automation system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Payments | <ul><li>[Explore a payments system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Protocols | <ul><li>[Explore a protocols system]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
+| Streaming | <ul><li>[Explore a cloud storage]()</li></ul> <ul><li>[Create a dataflow]()</li></ul> | <ul><li>[Create a dataflow]()</li></ul> |
 
 ## Types of sources
 
