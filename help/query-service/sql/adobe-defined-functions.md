@@ -23,14 +23,14 @@ The majority of the [!DNL Spark] SQL helpers are window functions that update ea
 **Query syntax**
 
 ```sql
-OVER ([partition] [order] [frame])
+OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | Example |
 | --------- | ----------- | ------- |
-| `[partition]` | A subgroup of rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
-| `[order]` | A column or available field used to order the subset or rows. | `ORDER BY timestamp` |
-| `[frame]` | A subgroup of the rows in a partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
+| `{PARTITION}` | A subgroup of rows based on a column or available field. | `PARTITION BY endUserIds._experience.mcid.id` |
+| `{ORDER}` | A column or available field used to order the subset or rows. | `ORDER BY timestamp` |
+| `{FRAME}` | A subgroup of the rows in a partition. | `ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW` |
 
 ## Sessionization
 
@@ -43,7 +43,7 @@ For more information about sessionization in Adobe Analytics, see the documentat
 **Query syntax**
 
 ```sql
-SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ([partition] [order] [frame])
+SESS_TIMEOUT({TIMESTAMP}, {EXPIRATION_IN_SECONDS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -107,7 +107,7 @@ This query returns the state of the session for the current row, based on the cu
 **Query syntax**
 
 ```sql
-SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ([partition] [order] [frame])
+SESS_START_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description |
@@ -172,7 +172,7 @@ This query returns the state of the session for the current row, based on the cu
 **Query syntax**
 
 ```sql
-SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ([partition] [order] [frame])
+SESS_END_IF({TIMESTAMP}, {TEST_EXPRESSION}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description |
@@ -245,7 +245,7 @@ This query is useful if you want to see what interaction led to a series of cust
 **Query syntax**
 
 ```sql
-ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ([partition] [order] [frame])
+ATTRIBUTION_FIRST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -310,7 +310,7 @@ This query is useful if you want to see the final interaction in a series of cus
 **Query syntax**
 
 ```sql
-ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ([partition] [order] [frame])
+ATTRIBUTION_LAST_TOUCH({TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -376,7 +376,7 @@ This query is useful if you want to see what interaction led to a series of cust
 ```sql
 ATTRIBUTION_FIRST_TOUCH_EXP_IF(
     {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
-    OVER ([partition] [order] [frame])
+    OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -444,7 +444,7 @@ This query is useful if you want to see what interaction, within a selected time
 ```sql
 ATTRIBUTION_FIRST_TOUCH_EXP_TIMEOUT(
     {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
-    OVER ([partition] [order] [frame])
+    OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -511,7 +511,7 @@ This query is useful if you want to see the last interaction in a series of cust
 ```sql
 ATTRIBUTION_LAST_TOUCH_EXP_IF(
     {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_CONDITION}, {EXP_BEFORE}) 
-    OVER ([partition] [order] [frame])
+    OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -577,7 +577,7 @@ This query is useful if you want to see the last interaction within a selected t
 ```sql
 ATTRIBUTION_LAST_TOUCH_EXP_TIMEOUT(
     {TIMESTAMP}, {CHANNEL_NAME}, {CHANNEL_VALUE}, {EXP_TIMEOUT}) 
-    OVER ([partition] [order] [frame])
+    OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -646,7 +646,7 @@ Determines the previous value of a particular field a defined number of steps aw
 **Query syntax**
 
 ```sql
-PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ([partition] [order] [frame])
+PREVIOUS({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -697,7 +697,7 @@ Determines the next value of a particular field a defined number of steps away w
 **Query syntax**
 
 ```sql
-NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ([partition] [order] [frame])
+NEXT({KEY}, {SHIFT}, {IGNORE_NULLS}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -755,7 +755,7 @@ This query returns a number representing the unit of time since the previous mat
 ```sql
 TIME_BETWEEN_PREVIOUS_MATCH(
     {TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT})
-    OVER ([partition] [order] [frame])
+    OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
@@ -817,7 +817,7 @@ This query returns a negative number representing the unit of time behind the ne
 **Query syntax**
 
 ```sql
-TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ([partition] [order] [frame])
+TIME_BETWEEN_NEXT_MATCH({TIMESTAMP}, {EVENT_DEFINITION}, {TIME_UNIT}) OVER ({PARTITION} {ORDER} {FRAME})
 ```
 
 | Parameter | Description | 
