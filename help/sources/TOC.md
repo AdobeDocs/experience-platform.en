@@ -80,7 +80,6 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
-      - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
       - [Microsoft Dynamics connector](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce connector](tutorials/api/create/crm/salesforce.md)
     - Customer success {#customer-success}
