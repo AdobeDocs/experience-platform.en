@@ -72,6 +72,8 @@ POST /connections
 
 **Request**
 
+In order to create an SFTP connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for SFTP is `b7bf2577-4520-42c9-bae9-cad01560f7bc`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

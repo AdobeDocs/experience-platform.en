@@ -67,6 +67,8 @@ POST /connections
 
 **Request**
 
+In order to create a [!DNL Salesforce] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Salesforce] is `cfc0fee1-7dc0-40ef-b73e-d8b134c436f5`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

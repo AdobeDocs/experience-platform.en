@@ -71,6 +71,8 @@ POST /connections
 
 **Request**
 
+In order to create a [!DNL BigQuery] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL BigQuery]  is `3c9b37f8-13a6-43d8-bad3-b863b941fedd`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

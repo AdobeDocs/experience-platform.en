@@ -65,6 +65,8 @@ POST /connections
 
 **Request**
 
+In order to create a [!DNL Google Cloud Storage] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Google Cloud Storage] is `32e8f412-cdf7-464c-9885-78184cb113fd`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

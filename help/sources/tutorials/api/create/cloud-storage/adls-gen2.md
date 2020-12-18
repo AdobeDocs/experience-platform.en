@@ -67,6 +67,8 @@ POST /connections
 
 **Request**
 
+In order to create an ADLS-Gen2 connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for ADLS-Gen2 is `0ed90a81-07f4-4586-8190-b40eccef1c5a`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

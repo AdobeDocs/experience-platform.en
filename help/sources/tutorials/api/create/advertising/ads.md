@@ -73,7 +73,7 @@ POST /connections
 
 **Request**
 
-The following request creates a new AdWords connection, configured by the properties provided in the payload:
+In order to create a [!DNL Google AdWords] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Google AdWords]  is `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
 
 ```shell
 curl -X POST \

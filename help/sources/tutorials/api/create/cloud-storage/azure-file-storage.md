@@ -61,7 +61,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure File Storage account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Azure File Storage] account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -71,7 +71,7 @@ POST /connections
 
 **Request**
 
-The following request creates a new [!DNL Azure File Storage] connection, configured by the properties provided in the payload:
+In order to create an [!DNL Azure File Storage] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Azure File Storage] is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
 
 ```shell
 curl -X POST \

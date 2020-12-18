@@ -66,6 +66,8 @@ POST /connections
 
 **Request**
 
+In order to create a [!DNL Dynamics] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Dynamics] is `38ad80fe-8b06-4938-94f4-d4ee80266b07`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
