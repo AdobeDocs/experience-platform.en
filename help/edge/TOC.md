@@ -19,6 +19,7 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Tracking events](fundamentals/tracking-events.md)
   * [Debugging](fundamentals/debugging.md)
   * [Merging event data](fundamentals/merging-event-data.md)
+  * [Configuring a CSP](fundamentals/configuring-a-csp.md)
   * [Interacting with multiple properties](fundamentals/interacting-with-multiple-properties.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
