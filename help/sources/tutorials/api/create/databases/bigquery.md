@@ -28,7 +28,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-A BigQuery source connector requires an OAuth 2.0 authentication process. In order for [!DNL Flow Service] to connect with BigQuery, you must provide the following connection properties:
+In order for [!DNL Flow Service] to connect BigQuery to Platform, you must provide the following OAuth 2.0 authentication values:
 
 | Credential | Description |
 | ---------- | ----------- |

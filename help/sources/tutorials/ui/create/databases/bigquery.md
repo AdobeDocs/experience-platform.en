@@ -28,8 +28,7 @@ If you already have a valid BigQuery connection, you may skip the remainder of t
 
 ### Gather required credentials
 
-A BigQuery source connector requires an OAuth 2.0 authentication process.
-In order to access your BigQuery account on [!DNL Platform], you must provide the following values:
+In order to access your BigQuery account on [!DNL Platform], you must provide the following OAuth 2.0 authentication values:
 
 | Credential | Description |
 | ---------- | ----------- |
