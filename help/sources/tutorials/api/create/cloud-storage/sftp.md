@@ -62,7 +62,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection as it can be used to create multiple dataflows to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required as it can be used to create multiple dataflows to bring in different data.
 
 ### Create an SFTP connection using basic authentication
 
