@@ -15,7 +15,7 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model] (XDM) data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for [!DNL Data Governance] purposes.
 - [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement, using the following components:

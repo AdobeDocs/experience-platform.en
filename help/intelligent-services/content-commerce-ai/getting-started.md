@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
-title: Getting started in Content and Commerce AI]
+solution: Experience Platform, Intelligent Services
+title: Getting started in Content and Commerce AI
 topic: Getting started 
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 ---
 
-# Getting started with [!DNL Content and Commerce AI]
+# Getting started with Content and Commerce AI
 
 >[!NOTE]
 >

@@ -1,10 +1,5 @@
 # Contributing content
 
-| Production | Stage |
-|---|---|
-| [![Build Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Build Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
-|[Output Prod](https://docs.adobe.com/content/help/en/experience-platform/landing/home.html)|[Output Stg](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html)|
-
 We welcome content contributions from our community and Adobe employees outside the documentation teams. 
 
 ## Adobe Open Source Code of Conduct

@@ -21,8 +21,8 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Azure File Storage] using the [!DNL Flow Service] API.
 
@@ -47,21 +47,21 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
+* `Content-Type: application/json`
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per Azure File Storage account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Azure File Storage] account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -71,8 +71,7 @@ POST /connections
 
 **Request**
 
-The following request creates a new [!DNL Azure File Storage] connection, configured by the properties provided in the payload:
-
+In order to create an [!DNL Azure File Storage] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Azure File Storage] is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
 
 ```shell
 curl -X POST \

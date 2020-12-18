@@ -18,7 +18,7 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will require batch evaluation to be triggered.
+>Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segmented job.
 
 ## Getting started
 
@@ -67,27 +67,23 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | Query type | Details |
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
-| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event **within the last seven days**. |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes, **within the last seven days**. |
+| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
-The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
-| Query type | Details |
-| ---------- | ------- | 
-| Incoming hit within a relative time window | If the segment definition refers to an incoming event **not** within the **last seven-day period**. For example, within the **last two weeks**. |
-| Incoming hit that refers to a profile within a relative window | The following options will **not** support streaming segmentation:<ul><li>An incoming event **not** within the **last seven-day period**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> | 
-| Multiple events that refer to a profile | The following options will **not** support streaming segmentation:<ul><li>An event that does **not** occur within **the last 24 hours**.</li><li>A segment definition that includes Adobe Audience Manager (AAM) segments or traits.</li></ul> |
-| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
+- The segment definition includes Adobe Audience Manager (AAM) segments or traits.
+- The segment definition includes multiple entities (multi-entity queries).
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
-| Single event query | The look-back window is limited to **seven days**. |
-| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+| Single event query | There are no limits to the lookback window. |
+| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 ## Retrieve all segments enabled for streaming segmentation
 

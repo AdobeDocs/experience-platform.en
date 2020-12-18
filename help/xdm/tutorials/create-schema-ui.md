@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experien
 solution: Experience Platform
 title: Create a schema using the Schema Editor
 topic: tutorial
-type: Tutorials
+type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 ---
 
@@ -25,15 +25,13 @@ This tutorial requires a working understanding of the various aspects of Adobe E
     * [Basics of schema composition](../schema/composition.md): An overview of XDM schemas and their building blocks, including classes, mixins, data types, and fields.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-## Browse existing schemas in the [!UICONTROL Schemas] workspace {#browse}
+## Open the [!UICONTROL Schemas] workspace {#browse}
 
 The [!UICONTROL Schemas] workspace in the [!DNL Platform] UI provides a visualization of the [!DNL Schema Library], allowing you to view manage the schemas available for your organization. The workspace also includes the [!DNL Schema Editor], the canvas on which you can compose a schema throughout this tutorial.
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) which you can view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
-Select the filter icon next to the search bar to use filtering capabilities for all resources in the registry, including classes, mixins, and data types. You can also filter based on whether resources are owned by Adobe or your organization, and if they have been enabled for use in [!DNL Real-time Customer Profile]. 
-
-![](../images/tutorials/create-schema/schemas_filter.png)
+See the guide on [exploring existing XDM resources in the UI](./explore.md) for more information.
 
 ## Create and name a schema {#create}
 
@@ -83,11 +81,11 @@ When previewing a mixin, a detailed description of the mixin's schema is provide
 
 ![](../images/tutorials/create-schema/preview-mixin.png)
 
-For this tutorial, select the **[!UICONTROL Profile person details]** mixin, then select **[!UICONTROL Add mixin]**.
+For this tutorial, select the **[!UICONTROL Demographic Details]** mixin, then select **[!UICONTROL Add mixin]**.
 
 ![](../images/tutorials/create-schema/add_mixin_person_details.png)
 
-The schema canvas reappears. The **[!UICONTROL Mixins]** section now lists "[!UICONTROL Profile person details]" and the **[!UICONTROL Structure]** section includes the fields contributed by the mixin. You can select the mixin's name under the **[!UICONTROL Mixins]** section to highlight the specific fields it provides within the canvas.
+The schema canvas reappears. The **[!UICONTROL Mixins]** section now lists "[!UICONTROL Demographic Details]" and the **[!UICONTROL Structure]** section includes the fields contributed by the mixin. You can select the mixin's name under the **[!UICONTROL Mixins]** section to highlight the specific fields it provides within the canvas.
 
 ![](../images/tutorials/create-schema/person_details_structure.png)
 
@@ -97,19 +95,19 @@ This mixin contributes several fields under the top-level name `person` with the
 >
 >Remember that fields may use scalar types (such as string, integer, array, or date), as well as any data type (a group of fields representing a common concept) defined within the [!DNL Schema Registry]. 
 
-Notice that the `name` field has a data type of "[!UICONTROL Full name]", meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, courtesy title, and suffix.
+Notice that the `name` field has a data type of "[!UICONTROL Person name]", meaning it too describes a common concept and contains name-related sub-fields such as first name, last name, courtesy title, and suffix.
 
 Select the different fields within the canvas to reveal any additional fields they contribute to the schema structure.
 
 ## Add another mixin {#mixin-2}
 
-You can now repeat the same steps to add another mixin. When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the "[!UICONTROL Profile person details]" mixin has been greyed out and the checkbox next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
+You can now repeat the same steps to add another mixin. When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the "[!UICONTROL Demographic Details]" mixin has been greyed out and the checkbox next to it cannot be selected. This prevents you from accidentally duplicating mixins that you have already included in the current schema.
 
-For this tutorial, select the "[!DNL Profile personal details]" mixin from the dialog, then select **[!UICONTROL Add mixin]** to add it to the schema.
+For this tutorial, select the "[!DNL Personal Contact Details]" mixin from the dialog, then select **[!UICONTROL Add mixin]** to add it to the schema.
 
 ![](../images/tutorials/create-schema/add_mixin_personal_details.png)
 
-Once added, the canvas reappears. "[!UICONTROL Profile personal details]" is now listed under **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
+Once added, the canvas reappears. "[!UICONTROL Personal Contact Details]" is now listed under **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
 
 Similar to the `name` field, the fields you just added represent multi-field concepts. For example, `homeAddress` has a data type of "[!UICONTROL Postal address]" and `mobilePhone` has a data type of "[!UICONTROL Phone number]". You can select each of these fields to expand them and see the additional fields included in the data type.
 
@@ -119,25 +117,25 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
 
-This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a **[!UICONTROL Display Name]** and **[!UICONTROL Description]** for your mixin. 
+This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a display name and description for your mixin. 
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
 As with class names, the mixin name should be short and simple, describing what the mixin will contribute to the schema. These too are unique, so you will not be able to reuse the name and must therefore ensure it is specific enough. 
 
-For this tutorial, name the new mixin "[!UICONTROL Loyalty Details]".
+For this tutorial, name the new mixin "Loyalty Details".
 
 Select **[!UICONTROL Add mixin]** to return to the [!DNL Schema Editor]. "[!UICONTROL Loyalty Details]" should now appear under **[!UICONTROL Mixins]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
 
 ## Add fields to the mixin {#mixin-fields}
 
-Now that you have created the "[!UICONTROL Loyalty Details]" mixin, it is time to define the fields that the mixin will contribute to the schema.
+Now that you have created the "Loyalty Details" mixin, it is time to define the fields that the mixin will contribute to the schema.
 
-To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you do this, the mixin's properties appear on the right-hand side of the editor and an **[!UICONTROL Add field]** button appears next to the name of the schema under **[!UICONTROL Structure]**.
+To begin, select the mixin name in the **[!UICONTROL Mixins]** section. Once you do this, the mixin's properties appear on the right-hand side of the editor and a **plus (+)** icon appears next to the name of the schema under **[!UICONTROL Structure]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
-Select **[!UICONTROL Add field]** next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
+Select the **plus (+)** icon next to "[!DNL Loyalty Members]" to create a new node in the structure. This node (called `_tenantId` in this example) represents your IMS Organization's tenant ID, preceded by an underscore. The presence of the tenant ID indicates that the fields you are adding are contained in your organization's namespace. 
 
 In other words, the fields you are adding are unique to your organization and are going to be saved in the [!DNL Schema Registry] in a specific area accessible only to your organization. Fields you define must always be added to your tenant namespace to prevent collisions with names from other standard classes, mixins, data types, and fields.
 
@@ -149,7 +147,7 @@ Using the controls on the right-hand side of the editor, start by creating a `lo
 
 ![](../images/tutorials/create-schema/loyalty_object.png)
 
-The changes are applied and the newly created `loyalty` object appears. Select **[!UICONTROL Add field]** next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field properties]** section is visible on the right-hand side of the canvas.
+The changes are applied and the newly created `loyalty` object appears. Select the **plus (+)** icon next to the object to add additional loyalty-related fields. A "[!UICONTROL New Field]" appears and the **[!UICONTROL Field properties]** section is visible on the right-hand side of the canvas.
 
 ![](../images/tutorials/create-schema/new_field_in_loyalty_object.png)
 
@@ -160,7 +158,7 @@ Each field requires the following information:
 * **[!UICONTROL Type]:** The data type of the field. This includes basic scalar types and any data types defined in the [!DNL Schema Registry]. Examples: [!UICONTROL String], [!UICONTROL Integer], [!UICONTROL Boolean], [!UICONTROL Person], [!UICONTROL Address], [!UICONTROL Phone number], etc.
 * **[!UICONTROL Description]:** An optional description of the field should be included, written in sentence case, with a maximum of 200 characters.
 
-The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including **[!UICONTROL Default value]**, **[!UICONTROL Format]**, and **[!UICONTROL Maximum length]**.
+The first field for the `Loyalty` object will be a string called `loyaltyId`. When setting the new field's type to "[!UICONTROL String]", the **[!UICONTROL Field properties]** section becomes populated with several options for applying constraints, including default value, format, and maximum length.
 
 ![](../images/tutorials/create-schema/string_constraints.png)
 
@@ -175,7 +173,7 @@ Now that you have added the `loyaltyId` field, you can add additional fields to 
 * Points (integer)
 * Member-since (date)
 
-Each field is added by selecting **[!UICONTROL Add field]** on the `loyalty` object and filling in the required information.
+To add each field to the schema, select the **plus (+)** icon next to the `loyalty` object and fill in the required information.
 
 When complete, the Loyalty object will contain fields for loyalty ID, points, and member-since.
 
@@ -193,7 +191,7 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
 | [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
 
-For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select **[!UICONTROL Add field]** beside the `loyalty` object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
+For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select the **plus (+)** icon beside the `loyalty` object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
 
@@ -219,7 +217,11 @@ Now, when you look under **[!UICONTROL Structure]**, you can see that the `loyal
 
 ![](../images/tutorials/create-schema/loyalty_data_type.png)
 
-In a future schema, you could now assign a field the **[!UICONTROL Type]** of "[!DNL Loyalty]" and it would automatically include fields for ID, loyalty level, member since, and points.
+In a future schema, you could now assign a field as a "[!DNL Loyalty]" type and it would automatically include fields for ID, loyalty level, member since, and points.
+
+>[!NOTE]
+>
+>You can also create and edit custom data types independently from editing schemas. See the tutorial on [creating and editing data types](./create-data-type.md) for more information.
 
 ## Search and filter schema fields
 
@@ -263,7 +265,7 @@ Next, you must provide an **[!UICONTROL Identity namespace]** from the list of p
 >
 >For a list of standard namespaces and their definitions, see the [[!DNL Identity Service] documentation](../../identity-service/troubleshooting-guide.md#standard-namespaces).
 
-After applying the change, the icon for `loyaltyId` shows a fingerprint symbol, indicating that it is now an identity field. In addition, the [!DNL Loyalty Details] mixin in the left rail lists the identity field beneath it, allowing you to easily determine which mixin in a schema supplies that schema's identity field(s).
+After applying the change, the icon for `loyaltyId` shows a fingerprint symbol, indicating that it is now an identity field.
 
 ![](../images/tutorials/create-schema/identity-applied.png)
 
@@ -329,7 +331,7 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../images/tutorials/create-schema/browse-classes.png)
 
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a **[!UICONTROL Display name]** (a short, descriptive, unique, and user-friendly name for the class), a **[!UICONTROL Description]**, and a **[!UICONTROL Behavior]** ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
 
 ![](../images/tutorials/create-schema/create_new_class.png)
 

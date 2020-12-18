@@ -8,7 +8,7 @@ description: Adobe Experience Platform Data Governance provides a user interface
 
 # Data usage policies user guide
 
-Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the _Policies_ workspace in the [!DNL Experience Platform] user interface.
+Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
 
 >[!IMPORTANT]
 >
@@ -49,7 +49,7 @@ The **[!UICONTROL Select marketing actions]** step appears. Choose the appropria
 
 >[!NOTE]
 >
->When selecting multiple marketing actions, the policy interprets them as an "OR" rule. In other words, the policy applies if _any_ of the selected marketing actions are performed.
+>When selecting multiple marketing actions, the policy interprets them as an "OR" rule. In other words, the policy applies if **any** of the selected marketing actions are performed.
 
 ![](../images/policies/add-marketing-actions.png)
 

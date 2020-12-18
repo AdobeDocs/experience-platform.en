@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai;color extraction;Color extraction
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Color extraction
 topic: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.

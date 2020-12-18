@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
+keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Service user guide
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
 ---
 
-# [!UICONTROL Segmentation Service] user guide
+# Segmentation Service UI guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
 
@@ -95,7 +95,7 @@ The **[!UICONTROL Activated destinations]** section shows the destinations that 
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../rtcdp/destinations/destinations-overview.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../rtcdp/destinations/activate-destinations.md).
+> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../destinations/ui/activate-destinations.md).
 
 ### Profile samples
 

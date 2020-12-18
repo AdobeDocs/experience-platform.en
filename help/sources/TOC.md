@@ -29,8 +29,9 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure Blob connector](connectors/cloud-storage/blob.md)
     - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
-    - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
+    - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
@@ -55,6 +56,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+  - eCommerce {#ecommerce}
+    - [Shopify connector](connectors/ecommerce/shopify.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
   - Payments {#payments}
@@ -73,10 +76,10 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
       - [Azure Event Hubs connector](tutorials/api/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
+      - [FTP connector](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
-      - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
       - [Microsoft Dynamics connector](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce connector](tutorials/api/create/crm/salesforce.md)
     - Customer success {#customer-success}
@@ -99,6 +102,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Phoenix connector](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/api/create/databases/postgres.md)
       - [SQL Server connector](tutorials/api/create/databases/sql-server.md)
+    - eCommerce {#ecommerce}
+      - [Shopify connector](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/api/create/marketing-automation/hubspot.md)
     - Payments {#payments}
@@ -111,6 +116,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
     - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore eCommerce data](tutorials/api/explore/ecommerce.md)
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
     - [Explore protocol data](tutorials/api/explore/protocols.md)
@@ -120,13 +126,17 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
     - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect eCommerce data](tutorials/api/collect/ecommerce.md)
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
+    - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
-  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
-  - [Update connection information using the Flow Service API](tutorials/api/update.md)
+  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows](tutorials/api/monitor.md)
+  - [Update connections](tutorials/api/update.md)
+  - [Delete connections](tutorials/api/delete.md)
+  - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -144,8 +154,9 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure Blob connector](tutorials/ui/create/cloud-storage/blob.md)
       - [Azure Event Hubs connector](tutorials/ui/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-      - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+      - [FTP connector](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [SFTP connector](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
@@ -170,6 +181,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Oracle connector](tutorials/ui/create/databases/oracle.md)
       - [Phoenix connector](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL connector](tutorials/ui/create/databases/postgres.md)
+    - eCommerce {#ecommerce}
+      - [Shopify connector](tutorials/ui/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot connector](tutorials/ui/create/marketing-automation/hubspot.md)
     - Payments {#payments}
@@ -180,14 +193,18 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Configure a dataflow for an advertising connector](tutorials/ui/dataflow/advertising.md)
     - [Configure a dataflow for a batch cloud storage connector](tutorials/ui/dataflow/batch/cloud-storage.md)
     - [Configure a dataflow for a streaming cloud storage connector](tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
-    - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
     - [Configure a dataflow for a CRM connector](tutorials/ui/dataflow/crm.md)
     - [Configure a dataflow for a customer success connector](tutorials/ui/dataflow/customer-success.md)
+    - [Configure a dataflow for a database connector](tutorials/ui/dataflow/databases.md)
+    - [Configure a dataflow for an eCommerce connector](tutorials/ui/dataflow/ecommerce.md)
     - [Configure a dataflow for a marketing automation connector](tutorials/ui/dataflow/marketing-automation.md)
     - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
     - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Update accounts](tutorials/ui/update.md)
+  - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
+- [IP address allow list](ip-address-allow-list.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
