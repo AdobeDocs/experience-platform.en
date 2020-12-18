@@ -52,7 +52,7 @@ In order to make calls to Platform APIs, you must first complete the [authentica
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in Experience Platform, including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -75,6 +75,8 @@ POST /connections
 ```
 
 **Request**
+
+In order to create an SFTP connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for SFTP is `b7bf2577-4520-42c9-bae9-cad01560f7bc`.
 
 ```shell
 curl -X POST \
