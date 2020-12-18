@@ -25,7 +25,7 @@ Updates to existing features:
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Built on Adobe Experience Platform, the Adobe Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
+Built on Adobe Experience Platform, the Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. Real-time CDP combines multiple enterprise data sources to create unified profiles in real time that can be used to provide one-to-one personalized customer experiences across all channels and devices.
 
 [!DNL Real-time Customer Data Platform] includes tools for data governance, identity management, advanced segmentation, and data science so that you can build profiles and define audiences, as well as derive rich insights while being able to enforce strict data governance policies.
 
@@ -38,19 +38,19 @@ With Real-time CDP, you can:
 * Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
 * Deliver personalized experiences in realtime across all channels and destinations.
 
-For more information, see the [Adobe Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
+For more information, see the [Real-time Customer Data Platform documentation](../../rtcdp/overview.md).
 
 **Key features**
 
 |Feature|Description|
 |---|---|
 |Destinations|Pre-built integrations with destination platforms supported by Adobe’s [!DNL Real-time Customer Data Platform] that activate data to those partners in a seamless way. See [Destinations](#destinations) below for more information.|
-|Home page metrics dashboard|The Adobe Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
+|Home page metrics dashboard|The Real-time Customer Data Platform (Real-time CDP) home page includes a metrics dashboard that shows information about profiles and segments. The home page also contains links to learning materials. See the section on [Real-time Customer Data Platform metrics](#real-time-customer-data-platform-metrics) below.|
 |Sources|You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM. See the [Sources](#sources) section below to learn more.|
 
 **[!DNL Real-time Customer Data Platform] metrics**
 
-The Adobe Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
+The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 
 The home page is only one of the places where metric cards appear. Real-time CDP provides metric cards throughout your experience. These metrics inform you about the data, profile, and segment audiences in the system. 
 
@@ -60,7 +60,7 @@ To learn more, see the [Real-time Customer Data Platform metrics overview](../..
 
 ## [!DNL Destinations] {#destinations}
 
-[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../rtcdp/destinations/destinations-overview.md) article.
+[!DNL Destinations] are pre-built integrations with destination platforms supported by Adobe’s Real-time Customer Data Platform that activate data to those partners in a seamless way. For more information, read the [Destinations overview](../../destinations/home.md) article.
 
 **Available destinations**
 
@@ -69,12 +69,12 @@ With the November release, Adobe's Real-time Customer Data Platform supports the
 * Advertising: [!DNL Google]
 * Email marketing: Adobe Campaign, [!DNL Salesforce Marketing Cloud], [!DNL Responsys], [!DNL Oracle Eloqua]
 
-See the [destination catalog](../../rtcdp/destinations/destinations-catalog.md) for information about each of the destinations.
+See the [destination catalog](../../destinations/catalog/overview.md) for information about each of the destinations.
 
 **Known limitations**
 
-* The control to allow for custom activation schedules in the [activation flow](../../rtcdp/destinations/activate-destinations.md#activate-data) (Schedule step) is not available with the initial release. 
-* There is currently no way to edit or delete a destination configuration. To work around this limitation, you can enable or disable the destination in the top right corner of the [destination details page](../../rtcdp/destinations/destination-details-page.md). 
+* The control to allow for custom activation schedules in the [activation flow](../../destinations/ui/activate-destinations.md#activate-data) (Schedule step) is not available with the initial release. 
+* There is currently no way to edit or delete a destination configuration. To work around this limitation, you can enable or disable the destination in the top right corner of the [destination details page](../../destinations/ui/destination-details-page.md). 
 * No validation is currently in place for account details, path, or credentials when connecting to your destination or storage account. Make sure you are entering the right credentials and double-check for spelling errors or typos. 
 * No credential renewals are in place with the initial release. Once an account is expired or needs refreshing, you must create a new destination connection and remap your previously mapped segments.
 

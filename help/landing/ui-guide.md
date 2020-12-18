@@ -10,15 +10,15 @@ description: Adobe Experience Platform
 
 This guide serves as an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
 
-To learn more about Adobe Experience Platform, please read the [Experience Platform overview](./home.md).
+To learn more about Adobe Experience Platform, please read the [Experience Platform overview](home.md).
 
 ## Home screen
 
-After logging into Adobe Experience Platform, you will arrive on the [!UICONTROL Home] page, which is comprised of the metrics dashboard, recent data, and recommended learning sections.
+After logging into Adobe Experience Platform, you are on the [!UICONTROL Home] page, which is comprised of the [metrics dashboard](#metrics), [recent data](#recent-data), and [recommended learning](#recommended-learning) sections.
 
 ![](images/user-guide/homepage.png)
 
-### Metrics dashboard
+### Metrics
 
 The metrics dashboard provides cards that gives you information about datasets, profiles, segments, and destinations within your organization.
 
@@ -30,7 +30,7 @@ The **[!UICONTROL Profiles]** section shows the total number of people with prof
 
 The **[!UICONTROL Segments]** section shows the total number of segments created within your IMS Organization. This number is updated when a new segment is created. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Destinations]** section shows the total number of destinations created for the IMS Organization. This number is updated when a new destination is created. More information about destinations can be found in the [destinations overview](../destinations/home.md).
 
 ### Recent data
 
@@ -44,7 +44,7 @@ The **[!UICONTROL Recent sources]** section lists the five most recently created
 
 The **[!UICONTROL Recent segments]** section lists the five most recently created segment definitions within your IMS Organization. This list is updated every time a new segment definition is created. You can select a segment definition from the list to view more information about the specified segment definition or select **[!UICONTROL View all]** to see a list of all created segment definitions. More information about segments can be found in the [Segmentation Service overview](../segmentation/home.md).
 
-The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Recent destinations]** section lists the five most recently created destinations within your IMS Organization. This list is updated every time a new destination is created. You can select a destination from the list to view more information about the specified destination or select **[!UICONTROL View all]** to see a list of all created destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
 
 ### Recommended learning
 
@@ -56,13 +56,13 @@ The **[!UICONTROL Recommended learning]** section provides links to useful docum
 
 The top navigation bar in the Platform UI displays the IMS Organization you are currently signed into, and provides several important controls.
 
-On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this will bring you back to the Platform UI home screen.
+On the left side of the navigation bar is the Adobe Experience Platform logo. Selecting this at any time will bring you back to the Platform UI home screen.
 
 ![](./images/user-guide/homepage-top-nav-bar.png)
 
 ### IMS Organization switcher
 
-The first item on the right side of the navigation bar is the **IMS Organization switcher**. 
+The first item on the right side of the top navigation bar is the **IMS Organization switcher**. 
 
 ![](./images/user-guide/homepage-ims-org.png)
 
@@ -72,7 +72,7 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ### Switch applications
 
-The next item on the right side is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Experience Platform, Assets, Exchange, and Launch.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and Launch.
 
 ### Help
 
@@ -82,7 +82,7 @@ To the right of the application switcher is the **help and support menu**, which
 
 ### Notifications and announcements
 
-After the help and support menu is the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows notifications about service maintenance.
+In the **notifications section**, which is represented by the ![bell/Notifications and Announcements](images/user-guide/notification-icon.png) icon. The **[!UICONTROL Notifications]** tab shows important information about the product and other relevant updates, while the **[!UICONTROL Announcements]** tab shows information about service maintenance.
 
 ### User profile
 
@@ -110,7 +110,7 @@ The **[!UICONTROL Workflows]** section shows a list of multi-step workflows for 
 
 The **[!UICONTROL Sources]** section lets you create, update, and delete source connections, allowing you to ingest data from external sources into Platform. More information about sources can be found in the [sources overview](../sources/home.md).
 
-The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. More information about destinations can be found in the [destinations overview](../rtcdp/destinations/destinations-overview.md).
+The **[!UICONTROL Destinations]** section lets you create, update, and delete destinations, allowing you to export data from Platform to many external destinations. More information about destinations can be found in the [destinations overview](../destinations/home.md).
 
 ### [!UICONTROL Customer]
 
@@ -136,13 +136,25 @@ The **[!UICONTROL Services]** section lets you manage your published models for 
 
 ### [!UICONTROL Data management]
 
-The **[!UICONTROL Schemas]** section lets you create and manage schemas. To learn more about how to use the Schemas section, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). More information about Experience Data Model (XDM) can be found in the [XDM overview](../xdm/home.md).
+The **[!UICONTROL Schemas]** section lets you create and manage Experience Data Model (XDM) schemas. To learn more about schemas, please read the tutorial on [creating a schema](../xdm/tutorials/create-schema-ui.md). More information about XDM can be found in the [XDM System overview](../xdm/home.md).
 
-The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about the Datasets section can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
+The **[!UICONTROL Datasets]** section lets you create and manage datasets. More information about datasets can be found in the [datasets user guide](../catalog/datasets/user-guide.md).
 
-The **[!UICONTROL Queries]** section lets you create and manage queries, logs SQL queries made by Query Service, and view your PostgreSQL credentials. More information about the Queries section can be found in the [Query Service user guide](../query-service/ui/overview.md).
+The **[!UICONTROL Queries]** section lets you create and manage queries, log SQL queries made by Adobe Experience Platform Query Service, and view your PostgreSQL credentials. More information about queries can be found in the [Query Service user guide](../query-service/ui/overview.md).
 
-The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about the Monitoring section can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-flows.md).
+The **[!UICONTROL Monitoring]** section lets you monitor batch and streaming ingestion. More information about monitoring can be found in the [monitoring data ingestion user guide](../ingestion/quality/monitor-data-ingestion.md).
+
+### [!UICONTROL Decisioning]
+
+Offer Decisioning is an Application Service integrated with Adobe Experience Platform. It allows you to leverage Experience Platform to deliver the best offer and experience to your customers across all touch points at the right time. To learn more about Offer Decisioning, including working with [!UICONTROL Offers] and [!UICONTROL Activities] visit the [Offer Decisioning documentation](https://experienceleague.adobe.com/docs/offer-decisioning.html).
+
+### [!UICONTROL Administration]
+
+The Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. This can be accessed by selecting **[!UICONTROL License usage]** in the navigation. To learn more about the license usage dashboard, visit the [license usage dashboard guide](license-usage-dashboard.md).
+
+>[!IMPORTANT]
+>
+>The license usage dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
 ## Next steps
 

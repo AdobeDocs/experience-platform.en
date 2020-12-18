@@ -8,7 +8,7 @@ keywords: Executing commands;commandName;Promises;getLibraryInfo;response object
 
 # Executing commands
 
-After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file \(`alloy.js`\) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
+After the base code has been implemented on your webpage, you can begin executing commands with the SDK. You do not need to wait for the external file (alloy.js) to be loaded from the server before executing commands. If the SDK has not finished loading, commands are queued and processed by the SDK as soon as possible.
 
 Commands are executed using the following syntax.
 
@@ -35,7 +35,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 If knowing when the command succeeds is not important to you, you may remove the `then` call.
@@ -45,7 +45,7 @@ alloy("commandName", options)
   .catch(function(error) {
     // The command failed.
     // "error" is an error object with additional information
-  })
+  });
 ```
 
 Likewise, if knowing when the command fails is not important to you, you may remove the `catch` call.
@@ -55,7 +55,7 @@ alloy("commandName", options)
   .then(function(result) {
     // The command succeeded.
     // "value" will be whatever the command returned
-  })
+  });
 ```
 
 ### Response objects
@@ -63,9 +63,10 @@ alloy("commandName", options)
 All promises returned from commands are resolved with a `result` object. The result object will contain data depending on the command and the user's consent. For example, library info is passed as a property of the results object in the following command.
 
 ```js
-alloy("getLibraryInfo").then(function(result) {
-  console.log(results.libraryInfo.version);
-});
+alloy("getLibraryInfo")
+  .then(function(result) {
+    console.log(results.libraryInfo.version);
+  });
 ```
 
 ### Consent

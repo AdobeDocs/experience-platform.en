@@ -31,7 +31,7 @@ For more information on [!DNL JupyterLab], please see the [[!DNL JupyterLab] use
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
@@ -39,18 +39,18 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Destination | Description|
 |--- | ---|
-|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](/help/rtcdp/destinations/google-customer-match-destination.md) in the destinations catalog for more information about the destination and how to set it up in Adobe Real-time CDP.|
+|[!DNL Google Customer Match] | Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], Gmail, and YouTube. <br><br> Visit the [!DNL Google Customer Match] [page](../../destinations/catalog/advertising/google-customer-match.md) in the destinations catalog for more information about the destination and how to set it up in Real-time CDP.|
 
 **New features**
 
 |Feature | Description|
 |------- | -----------|
-|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](/help/rtcdp/destinations/activate-destinations.md#configure) in the activation workflow.|
-|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](/help/rtcdp/destinations/activate-destinations.md#select-attributes) in the activation workflow.|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-destinations.md#configure) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-destinations.md#select-attributes) in the activation workflow.|
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 
-Built on Experience Platform, Adobe Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] combines multiple enterprise data sources to create customer profiles in real time. Segments built from these profiles can then be sent to downstream destinations in order to provide one-to-one personalized customer experiences across all channels and devices.
+Built on Experience Platform, Real-time Customer Data Platform ([!DNL Real-time CDP]) helps companies bring together known and unknown data to activate customer profiles with intelligent decisioning throughout the customer journey. [!DNL Real-time CDP] combines multiple enterprise data sources to create customer profiles in real time. Segments built from these profiles can then be sent to downstream destinations in order to provide one-to-one personalized customer experiences across all channels and devices.
 
 **New features**
 

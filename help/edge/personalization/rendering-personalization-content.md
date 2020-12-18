@@ -8,7 +8,7 @@ keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisi
 
 # Overview of personalization options
 
-The Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../personalization/manage-flicker.md).
+Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../personalization/manage-flicker.md).
 
 ## Automatically rendering content
 
@@ -44,12 +44,12 @@ alloy("sendEvent",{
     if (result.decisions){
       // Do something with the decisions.
     }
-  })
+  });
 ```
 
 This will return a list of decisions as a JSON object for each decisions.
 
-```javascript
+```json
 {
   "decisions": [
     {
