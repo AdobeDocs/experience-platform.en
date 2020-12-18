@@ -99,7 +99,7 @@ Adobe Experience Platform Web SDK has been developed for the following people:
 
 ## How do I get access to start using Adobe Experience Platform Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your Certified software manager (CSM) to start the request process.
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your Customer Success Manager (CSM) to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 
