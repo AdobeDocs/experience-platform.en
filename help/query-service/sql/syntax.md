@@ -101,7 +101,7 @@ SELECT statement 1
 SELECT statement 2
 ```
 
-## CREATE TABLE AS SELECT
+### CREATE TABLE AS SELECT
 
 The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
 
@@ -124,15 +124,15 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 >
 >The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Additionally, the `SELECT` statement can be provided with or without parentheses ().
 
-## INSERT INTO
+### INSERT INTO
 
-The following syntax defines an `INSERT INTO` query supported by [!DNL Query Service]:
+An `INSERT INTO` query is defined as follows:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
-where `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
+- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
 
 **Example**
 
@@ -140,34 +140,33 @@ where `select_query` is a `SELECT` statement, the syntax of which is defined abo
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 ```
 
-Please note that for a given INSERT INTO query:
-
-1. The `SELECT` statement MUST NOT be enclosed in parentheses ().
-2. The schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement.
+>[!NOTE] 
+> The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement.
 
 ### DROP TABLE
 
-Drop a table and delete the directory associated with the table from the file system if this is not an EXTERNAL table. If the table to drop does not exist, an exception occurs.
+This query drops an existing table and deletes the directory associated with the table from the file system if it is not an EXTERNAL table. If the table does not exist, an exception occurs.
 
 ```sql
-DROP [TEMP] TABLE [IF EXISTS] [db_name.]table_name
+DROP TABLE [IF EXISTS] [db_name.]table_name
 ```
 
 **Parameters**
 
--  `IF EXISTS`: If the table does not exist, nothing happens
-- `TEMP`: Temporary table 
+-  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query supported by [!DNL Query Service]:
+The following syntax defines a `CREATE VIEW` query.
 
 ```sql
 CREATE [ OR REPLACE ] VIEW view_name AS select_query
 ```
 
-Where `view_name` is the name of view to be created
-and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
+**Parameters**
+
+- `view_name`: The name of view to be created.
+- `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
 
 **Example**
 
@@ -178,15 +177,17 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ### DROP VIEW
 
-The following syntax defines a `DROP VIEW` query supported by [!DNL Query Service]:
+The following syntax defines a `DROP VIEW` query.
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
 ```
 
-Where `view_name` is the name of view to be deleted
+**Parameter**
 
-Example:
+- `view_name`: The name of view to be deleted.
+
+**Example**
 
 ```sql
 DROP VIEW v1
@@ -195,9 +196,11 @@ DROP VIEW IF EXISTS v1
 
 ## [!DNL Spark] SQL commands 
 
+The following Spark SQL command is supported. 
+
 ### SET
 
-Set a property, return the value of an existing property, or list all existing properties. If a value is provided for an existing property key, the old value is overridden.
+The `SET` command sets a property and either returns the value of an existing property or lists all the existing properties. If a value is provided for an existing property key, the old value is overridden.
 
 ```sql
 SET property_key [ To | =] property_value
@@ -207,21 +210,21 @@ To return the value for any setting, use `SHOW [setting name]`.
 
 ## PostgreSQL commands
 
+The following PostgreSQL commands are supported.
+
 ### BEGIN
 
-This command is parsed and the completed command is sent back to the client. This is the same as the `START TRANSACTION` command.
+The `BEGIN` command, or alternatively the `BEGIN WORK` or `BEGIN TRANSACTION` command, initiates a transaction block. Any statements that are inputted after the begin command will be executed in a single transaction until an explicit COMMIT or ROLLBACK command is given. This command is the same as `START TRANSACTION`.
 
 ```sql
-BEGIN [ TRANSACTION ]
+BEGIN
+BEGIN WORK
+BEGIN TRANSACTION
 ```
-
-**Parameters**
-
-- `TRANSACTION`: Optional key words. Listens it, no action is taken on this.
 
 ### CLOSE
 
-`CLOSE` frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
+The `CLOSE` command frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
 
 ```sql
 CLOSE { name }
@@ -229,41 +232,35 @@ CLOSE { name }
 
 **Parameters**
 
-- `name`: the name of an open cursor to close.
+- `name`: The name of an open cursor to close.
 
 ### COMMIT
 
-No action is taken in [!DNL Query Service] as a response to the commit transaction statement.
+The `COMMIT` command, or alternatively the `COMMIT WORK` or `COMMIT TRANSACTION` command, commits the current transaction. 
 
 ```sql
-COMMIT [ WORK | TRANSACTION ]
+COMMIT
+COMMIT WORK
+COMMIT TRANSACTION
 ```
-
-**Parameters**
-
-- `WORK`
-- `TRANSACTION`: Optional key words. They have no effect.
 
 ### DEALLOCATE
 
-Use `DEALLOCATE` to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends.
+The `DEALLOCATE` command allows you to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends. More information about prepared statements can be found in the [PREPARE command](#prepare) section.
 
 ```sql
-DEALLOCATE [ PREPARE ] { name | ALL }
+DEALLOCATE name
+DEALLOCATE ALL
 ```
 
-**Parameters**
-
-- `Prepare`: This keyword is ignored.
-- `name`: The name of the prepared statement to deallocate.
-- `ALL`: Deallocate all prepared statements.
+If `DEALLOCATE name` is used, `name` represents the name of the prepared statement that needs to be deallocated. If `DEALLOCATE ALL` is used, all the prepared statements will be deallocated.
 
 ### DECLARE
 
-`DECLARE` allows a user to create cursors, which can be used to retrieve a small number of rows at a time out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
+The `DECLARE` command allows a user to create cursors, which can be used to retrieve a small number of rows out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
 
 ```sql
-DECLARE name CURSOR [ WITH  HOLD ] FOR query
+DECLARE name CURSOR WITH HOLD FOR query
 ```
 
 **Parameters**
@@ -274,9 +271,9 @@ DECLARE name CURSOR [ WITH  HOLD ] FOR query
 
 ### EXECUTE
 
-`EXECUTE` is used to execute a previously prepared statement. Because prepared statements only exist for the duration of a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session.
+The `EXECUTE` command is used to execute a previously prepared statement. Since prepared statements only exist for the duration of a session, the prepared statement must have been created by a `PREPARE` statement executed earlier in the current session. More information about using prepared statements can be found in the [`PREPARE` command](#prepare) section.
 
-If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement, or else an error is raised. Note that prepared statements (unlike functions) are not overloaded based on the type or number of their parameters. The name of a prepared statement must be unique within a database session.
+If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement. If these parameters are not passed in, an error will be raised. 
 
 ```sql
 EXECUTE name [ ( parameter [, ...] ) ]
@@ -289,20 +286,20 @@ EXECUTE name [ ( parameter [, ...] ) ]
 
 ### EXPLAIN
 
-This command displays the execution plan that the PostgreSQL planner generates for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned — by plain sequential scan, index scan, and so on — and if multiple tables are referenced, what join algorithms are used to bring together the required rows from each input table.
-
-The most critical part of the display is the estimated statement execution cost, which is the planner's guess at how long it will take to run the statement (measured in cost units that are arbitrary, but conventionally mean disk page fetches). Actually, two numbers are shown: the start-up cost before the first row can be returned, and the total cost to return all the rows. For most queries, the total cost is what matters, but in contexts such as a subquery in EXISTS, the planner chooses the smallest start-up cost instead of the smallest total cost (because the executor stops after getting one row, anyway). Also, if you limit the number of rows to return with a `LIMIT` clause, the planner makes an appropriate interpolation between the endpoint costs to estimate which plan is really the cheapest.
+The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
 The `ANALYZE` option causes the statement to be executed, not only planned. Then, actual run time statistics are added to the display, including the total elapsed time expended within each plan node (in milliseconds) and the total number of rows it returned. This is useful for seeing whether the planner's estimates are close to reality.
 
 ```sql
 EXPLAIN [ ( option [, ...] ) ] statement
 EXPLAIN [ ANALYZE ] statement
+```
 
-where option can be one of:
-    ANALYZE [ boolean ]
-    TYPE VALIDATE
-    FORMAT { TEXT | JSON }
+Where option can be one of:
+```sql
+ANALYZE [ boolean ]
+TYPE VALIDATE
+FORMAT { TEXT | JSON }
 ```
 
 **Parameters**
@@ -346,7 +343,7 @@ FETCH num_of_rows [ IN | FROM ] cursor_name
 - `num_of_rows`: A possibly-signed integer constant, determining the location or number of rows to fetch. 
 - `cursor_name`: An open cursor's name.
 
-### PREPARE
+### PREPARE {#prepare}
 
 `PREPARE` creates a prepared statement. A prepared statement is a server-side object that can be used to optimize performance. When the `PREPARE` statement is executed, the specified statement is parsed, analyzed, and rewritten. When an `EXECUTE` command is subsequently issued, the prepared statement is planned and executed. This division of labor avoids repetitive parse analysis work, while allowing the execution plan to depend on the specific parameter values supplied.
 
