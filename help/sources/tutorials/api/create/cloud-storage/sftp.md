@@ -24,7 +24,7 @@ This guide requires a working understanding of the following components of Adobe
 
 >[!IMPORTANT]
 >
->It is recommended to avoid newlines and carriage returns when ingesting JSON objects with an SFTP source connections. To work around the limitation, use a single JSON object per line and use multi-line files.
+>It is recommended to avoid newlines or carriage returns when ingesting JSON objects with an SFTP source connection. To work around the limitation, use a single JSON object per line and use multi-lines for ensuing files.
 
 The following sections provide additional information that you will need to know in order to successfully connect to an SFTP server using the [!DNL Flow Service] API.
 

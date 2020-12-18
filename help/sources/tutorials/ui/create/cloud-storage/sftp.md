@@ -26,7 +26,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->It is recommended to avoid newlines and carriage returns when ingesting JSON objects with an SFTP source connections. To work around the limitation, use a single JSON object per line and use multi-line files.
+>It is recommended to avoid newlines or carriage returns when ingesting JSON objects with an SFTP source connection. To work around the limitation, use a single JSON object per line and use multi-lines for ensuing files.
 
 If you already have a valid SFTP connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
