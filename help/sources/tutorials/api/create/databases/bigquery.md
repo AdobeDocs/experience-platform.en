@@ -28,7 +28,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with BigQuery, you must provide the following connection properties:
+In order for [!DNL Flow Service] to connect BigQuery to Platform, you must provide the following OAuth 2.0 authentication values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -82,20 +82,22 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "BigQuery base connection",
-        "description": "Base connection for Google BigQuery",
+        "name": "Google BigQuery connection",
+        "description": "Google BigQuery connection",
         "auth": {
             "specName": "Basic Authentication",
+            "type": "OAuth2.0",
             "params": {
-                "project": "{PROJECT}",
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
+                    "project": "{PROJECT}",
+                    "clientId": "{CLIENT_ID},
+                    "clientSecret": "{CLIENT_SECRET}",
+                    "refreshToken": "{REFRESH_TOKEN}"
+                }
         },
         "connectionSpec": {
             "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
+        }
     }'
 ```
 
