@@ -59,7 +59,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 ### WHERE ILIKE clause
 
-The key word ILIKE can be used instead of LIKE to make matches on the WHERE clause of the SELECT query case-insensitive.
+The key word `ILIKE` can be used instead of `LIKE` to make matches on the WHERE clause of the SELECT query case-insensitive.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
@@ -124,14 +124,17 @@ CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(
 >
 >The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. Additionally, the `SELECT` statement can be provided with or without parentheses ().
 
-### INSERT INTO
+## INSERT INTO
 
-An `INSERT INTO` query is defined as follows:
+The `INSERT INTO` command is defined as follows:
 
 ```sql
 INSERT INTO table_name select_query
 ```
 
+**Parameters**
+
+- `table_name`: The name of the table that you want to insert the query into.
 - `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
 
 **Example**
@@ -143,9 +146,9 @@ INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
 >[!NOTE] 
 > The `SELECT` statement **must not** be enclosed in parentheses (). Additionally, the schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement.
 
-### DROP TABLE
+## DROP TABLE
 
-This query drops an existing table and deletes the directory associated with the table from the file system if it is not an EXTERNAL table. If the table does not exist, an exception occurs.
+The `DROP TABLE` command drops an existing table and deletes the directory associated with the table from the file system if it is not an external table. If the table does not exist, an exception occurs.
 
 ```sql
 DROP TABLE [IF EXISTS] [db_name.]table_name
@@ -160,7 +163,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 The following syntax defines a `CREATE VIEW` query.
 
 ```sql
-CREATE [ OR REPLACE ] VIEW view_name AS select_query
+CREATE VIEW view_name AS select_query
 ```
 
 **Parameters**
@@ -175,7 +178,7 @@ CREATE VIEW V1 AS SELECT color, type FROM Inventory
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
-### DROP VIEW
+## DROP VIEW
 
 The following syntax defines a `DROP VIEW` query.
 
@@ -185,6 +188,7 @@ DROP VIEW [IF EXISTS] view_name
 
 **Parameter**
 
+-  `IF EXISTS`: If this is specified, no exception is thrown if the view does **not** exist.
 - `view_name`: The name of view to be deleted.
 
 **Example**
@@ -203,10 +207,15 @@ The following Spark SQL command is supported.
 The `SET` command sets a property and either returns the value of an existing property or lists all the existing properties. If a value is provided for an existing property key, the old value is overridden.
 
 ```sql
-SET property_key [ To | =] property_value
+SET property_key = property_value
 ```
 
-To return the value for any setting, use `SHOW [setting name]`.
+**Properties**
+
+- `property_key`: The name of the property that you want to list or alter.
+- `property_value`: The value that you want the property to be set as.
+
+To return the value for any setting, use `SET [property key]` without a `property_value`.
 
 ## PostgreSQL commands
 
@@ -227,12 +236,11 @@ BEGIN TRANSACTION
 The `CLOSE` command frees the resources associated with an open cursor. After the cursor is closed, no subsequent operations are allowed on it. A cursor should be closed when it is no longer needed.
 
 ```sql
-CLOSE { name }
+CLOSE name
+CLOSE ALL
 ```
 
-**Parameters**
-
-- `name`: The name of an open cursor to close.
+If `CLOSE name` is used, `name` represents the name of an open cursor that needs to be closed. If `CLOSE ALL` is used, all open cursors will be closed.
 
 ### COMMIT
 
@@ -257,16 +265,18 @@ If `DEALLOCATE name` is used, `name` represents the name of the prepared stateme
 
 ### DECLARE
 
-The `DECLARE` command allows a user to create cursors, which can be used to retrieve a small number of rows out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
+The `DECLARE` command allows a user to create a cursor, which can be used to retrieve a small number of rows out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
 
 ```sql
 DECLARE name CURSOR WITH HOLD FOR query
+DECLARE name CURSOR WITHOUT HOLD FOR query
 ```
 
 **Parameters**
 
 - `name`: The name of the cursor to be created.
 - `WITH HOLD`: Specifies that the cursor can continue to be used after the transaction that created it successfully commits.
+- `WITHOUT HOLD`: Specifies that the cursor can only be used within the transaction that created it.
 - `query`: A `SELECT` or `VALUES` command which provides the rows to be returned by the cursor. 
 
 ### EXECUTE
@@ -276,36 +286,33 @@ The `EXECUTE` command is used to execute a previously prepared statement. Since 
 If the `PREPARE` statement that created the statement specified some parameters, a compatible set of parameters must be passed to the `EXECUTE` statement. If these parameters are not passed in, an error will be raised. 
 
 ```sql
-EXECUTE name [ ( parameter [, ...] ) ]
+EXECUTE name [ ( parameter ) ]
 ```
 
 **Parameters**
 
 - `name`: The name of the prepared statement to execute.
-- `parameter`: The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created. 
+- `parameter`: The actual value of a parameter to the prepared statement. This must be an expression yielding a value that is compatible with the data type of this parameter, as determined when the prepared statement was created.  If there are multiple parameters for the prepared statement, they are separated by commas.
 
 ### EXPLAIN
 
 The `EXPLAIN` command displays the execution plan for the supplied statement. The execution plan shows how the tables referenced by the statement will be scanned.  If multiple tables are referenced, it will show what join algorithms are used to bring together the required rows from each input table.
 
-The `ANALYZE` option causes the statement to be executed, not only planned. Then, actual run time statistics are added to the display, including the total elapsed time expended within each plan node (in milliseconds) and the total number of rows it returned. This is useful for seeing whether the planner's estimates are close to reality.
-
 ```sql
-EXPLAIN [ ( option [, ...] ) ] statement
-EXPLAIN [ ANALYZE ] statement
+EXPLAIN option statement
 ```
 
-Where option can be one of:
+Where `option` can be one of:
+
 ```sql
-ANALYZE [ boolean ]
-TYPE VALIDATE
+ANALYZE
 FORMAT { TEXT | JSON }
 ```
 
 **Parameters**
 
-- `ANALYZE`: Carry out the command and show actual run times and other statistics. This parameter defaults to `FALSE`.
-- `FORMAT`: Specify the output format, which can be TEXT, XML, JSON, or YAML. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
+- `ANALYZE`: If the `option` contains `ANALYZE`, the run times and other statistics are shown. 
+- `FORMAT`: If the `option` contains `FORMAT`, it specifies the output format, which can be TEXT or JSON. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
 - `statement`: Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see.
 
 >[!IMPORTANT]
@@ -330,18 +337,18 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-`FETCH` retrieves rows using a previously-created cursor.
-
-A cursor has an associated position, which is used by `FETCH`. The cursor position can be before the first row of the query result, on any particular row of the result, or after the last row of the result. When created, a cursor is positioned before the first row. After fetching some rows, the cursor is positioned on the row most recently retrieved. If `FETCH` runs off the end of the available rows then the cursor is left positioned after the last row. If there is no such row, an empty result is returned, and the cursors is left positioned before the first row or after the last row as appropriate. 
+The `FETCH` command retrieves rows using a previously-created cursor.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
 ```
 
+Do we not have FIRST/NEXT?
+
 **Parameters**
 
-- `num_of_rows`: A possibly-signed integer constant, determining the location or number of rows to fetch. 
-- `cursor_name`: An open cursor's name.
+- `num_of_rows`: The number of rows to fetch. 
+- `cursor_name`: The name of the cursor you're retrieving information from.
 
 ### PREPARE {#prepare}
 
