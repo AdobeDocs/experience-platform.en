@@ -1,16 +1,14 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Getting started with Adobe Real-time Customer Data Platform
-seo-title: Getting started with Adobe Real-time Customer Data Platform
-description: Sample scenario for Adobe Real-time Customer Data Platform
-seo-description: Sample scenario for Adobe Real-time Customer Data Platform
+title: Getting started with Real-time Customer Data Platform
+description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
 ---
 
-# Getting started with Adobe Real-time Customer Data Platform
+# Getting started with Real-time Customer Data Platform
 
-This getting started guide leads you through a sample implementation of Adobe Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
+This getting started guide leads you through a sample implementation of Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
-This example shows the power of Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
+This example shows the power of Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
 
 * Ingest data from multiple sources
 * Merge them into a single [!DNL real-time customer profile]
@@ -114,7 +112,7 @@ This personalized content helps Sarah find relevant items quickly. This increase
 
 Sarah gets distracted and leaves the site, ending her session. Luma can use her data in Adobe Experience Platform to help bring her back to the site.
 
-Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
+Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
 
 * Simplify data integration and activation 
 * Govern known and unknown data usage 
@@ -230,7 +228,7 @@ When you've added the “Gift Giving Cart Abandoners” segment, you can see rou
 
 Click **[!UICONTROL Send to destinations]**.
 
-In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)

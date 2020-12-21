@@ -113,7 +113,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 where,
  `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
- `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'false'
+ `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'true'
 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
@@ -485,13 +485,15 @@ where 'format_name' is be one of:
 This command helps in adding or dropping primary or foreign key constraints to the table.
 
 ```sql
-Alter TABLE table_name ADD ( column_name Primary key Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
 
-Alter TABLE table_name ADD ( column_name Foreign key references referenced_table_name Namespace 'namespace')
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name DROP ( column_name Primary key)
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
 
-Alter TABLE table_name DROP ( column_name Foreign key)
+Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
 ```
 
 >[!NOTE]

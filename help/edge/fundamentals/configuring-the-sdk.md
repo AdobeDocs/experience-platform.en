@@ -1,6 +1,6 @@
 ---
 title: Configuring the SDK
-seo-title: Configuring the Adobe Experience Platform Web SDK
+seo-title: Configuring Adobe Experience Platform Web SDK
 description: Learn how to configure the Experience Platform Web SDK
 seo-description: Learn how to configure the Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
@@ -79,13 +79,7 @@ Your assigned [!DNL Experience Cloud] organization ID.  When configuring multipl
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | `true`            |
 
-Indicates whether data associated with link clicks should be automatically collected. For clicks that qualify as link clicks, the following [Web Interaction](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) data is collected:
-
-| **Property** |    **Description**                  |
-| ------------ | ----------------------------------- |
-| Link Name    | Name determined by the link context |
-| Link URL     | Normalized URL                      |
-| Link Type    | Set to download, exit, or other     |
+Indicates whether data associated with link clicks should be automatically collected. See [Automatic Link Tracking](../data-collection/track-links.md#automaticLinkTracking) for more information.
 
 ### `onBeforeEventSend`
 
@@ -147,7 +141,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | true              |
 
-If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using the AEP Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

@@ -45,8 +45,8 @@ In the [!DNL Admin Console], permissions are assigned to users through the use o
 
 | Product profile | Sandbox access | Permissions |
 | --- | --- | --- |
-| Default Production - All Access | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
-| Default Sandbox Administration | N/A | Provides access only to Sandbox Administration permissions. |
+| Default production all access | Production | All permissions applicable to [!DNL Experience Platform], except for Sandbox Administration permissions. |
+| Sandbox Administrators | N/A | Provides access only to Sandbox Administration permissions. |
 
 ## Sandboxes and permissions
 
@@ -66,7 +66,7 @@ The "Sandbox Management" permission allows users to manage, view, or reset sandb
 
 The permissions tab within a product profile displays the sandboxes and permissions that are active for that profile:
 
-![](./images/permissions-overview.png)
+![permissions-overview](./images/permissions-overview.png)
 
 Permissions that are granted through the [!DNL Admin Console] are sorted by category, with some permissions granting access to several low-level functionalities.
 
@@ -76,12 +76,19 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | --- | --- | --- |
 | [!DNL Data Modeling] | [!UICONTROL Manage Schemas] | Access to read, create, edit, and delete schemas and related resources. |
 | [!DNL Data Modeling] | [!UICONTROL View Schemas] | Read-only access to schemas and related resources. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Relationships] | Access to read, create, edit, and delete schema relationships. |
+| [!DNL Data Modeling] | [!UICONTROL Manage Identity Metadata] | Access to read, create, edit, and delete identity metadata for schemas. |
 | [!DNL Data Management] | [!UICONTROL Manage Datasets] | Access to read, create, edit, and delete datasets. Read-only access for schemas. |
 | [!DNL Data Management] | [!UICONTROL View Datasets] | Read-only access for datasets and schemas. |
 | [!DNL Data Management] | [!UICONTROL Data Monitoring] | Read-only access to monitoring datasets and streams. |
 | [!DNL Profile Management] | [!UICONTROL Manage Profiles] | Access to read, create, edit, and delete datasets that are used for customer profiles. Read-only access to available profiles. |
 | [!DNL Profile Management] | [!UICONTROL View Profiles] | Read-only access to available profiles. |
+| [!DNL Profile Management] | [!UICONTROL Manage Segments] | Access to read, create, edit, and delete segments. |
+| [!DNL Profile Management] | [!UICONTROL View Segments] | Read-only access to available segments. |
+| [!DNL Profile Management] | [!UICONTROL Manage Merge Policies] | Access to read, create, edit, and delete merge policies. |
+| [!DNL Profile Management] | [!UICONTROL View Merge Policies] | Read-only access to available merge policies. |
 | [!DNL Profile Management] | [!UICONTROL Export Audience for Segment] | Ability to export an evaluated audience segment to a dataset. |
+| [!DNL Profile Management] | [!UICONTROL Evaluate a Segment to an Audience] | Ability to generate profiles for an audience by evaluating a segment definition.. |
 | [!DNL Identities] | [!UICONTROL Manage Identity Namespaces] | Access to read, create, edit, and delete identity namespaces. |
 | [!DNL Identities] | [!UICONTROL View Identity Namespaces] | Read-only access for identity namespaces. |
 | [!DNL Sandbox Administration] | [!UICONTROL Manage Sandboxes] | Access to read, create, edit, and delete sandboxes. |
@@ -93,6 +100,10 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
+| [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
+| [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
+| [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
+| [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
 
 _(*) This permission requires provisions to [!DNL Real-time Customer Data Platform]. For more information regarding Real-time CDP, please begin by reading the [Real-time CDP overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
 

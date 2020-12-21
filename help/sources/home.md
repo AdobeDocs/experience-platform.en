@@ -8,19 +8,19 @@ description: Adobe Experience Platform allows data to be ingested from external 
 
 # Source connectors overview
 
-Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
 
-[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
-With [!DNL Experience Platform], you can centralize data you collect from disparate sources and use the insights gained from it to do more.
+With Experience Platform, you can centralize data you collect from disparate sources and use the insights gained from it to do more.
 
 ## Types of sources
 
-Sources in [!DNL Experience Platform] are grouped into the following categories:
+Sources in Experience Platform are grouped into the following categories:
 
 ### Adobe applications
 
-[!DNL Experience Platform] allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. See the following related documents for more information:
+Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. See the following related documents for more information:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
@@ -32,13 +32,13 @@ Sources in [!DNL Experience Platform] are grouped into the following categories:
 
 ### Advertising
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a third-party advertising system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Google AdWords]](connectors/advertising/ads.md) connector
 
 ### Cloud Storage
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
 - [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
@@ -47,26 +47,27 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 - [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
-- [[!DNL FTP and SFTP] connector](connectors/cloud-storage/ftp-sftp.md)
-- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md) 
+- [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
+- [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
 
-CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. [!DNL Experience Platform] provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
+CRM systems provide data that can help build customer relationships, which in turn, create loyalty and drive customer retention. Experience Platform provides support for ingesting CRM data from [!DNL Microsoft Dynamics 365] and [!DNL Salesforce]. See the following related documents for more information:
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
 
 ### Customer Success
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
+Experience Platform provides support for ingesting data from a third-party customer success application. See the following related documents for more information:
 
 - [[!DNL Salesforce Service Cloud] connector](connectors/customer-success/salesforce-service-cloud.md)
 - [[!DNL ServiceNow] connector](connectors/customer-success/servicenow.md)
 
 ### Database
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a third-party database. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Amazon Redshift] connector](connectors/databases/redshift.md)
 - [[!DNL Apache Hive on Azure HDInsights] connector](connectors/databases/hive.md)
@@ -85,21 +86,27 @@ CRM systems provide data that can help build customer relationships, which in tu
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
 
+### eCommerce
+
+Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
+
+- [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+
 ### Marketing Automation
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
 
 ### Payments
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
 ### Protocols
 
-[!DNL Experience Platform] provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
+Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Generic OData] connector](connectors/protocols/odata.md)
 

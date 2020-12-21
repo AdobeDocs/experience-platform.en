@@ -1,5 +1,6 @@
 ---
 product: experience-platform
+solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
 breadcrumb-title: Web SDK Guide
@@ -35,6 +36,9 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Manage flicker](personalization/manage-flicker.md)
   * Adobe Target {#adobe-target}
     * [Target overview](personalization/adobe-target/target-overview.md)
+    * [Single Page Application implementation](personalization/adobe-target/spa-implementation.md)
+  * Offer Decisioning {#offer-decisioning}
+    * [Offer Decisioning overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
@@ -43,3 +47,4 @@ user-guide-description: Interact with Experience Cloud services through the Edge
     * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
+* [Blog Posts](blog-posts.md)

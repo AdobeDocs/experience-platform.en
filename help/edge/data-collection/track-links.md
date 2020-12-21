@@ -39,9 +39,9 @@ The link type can be one of three values:
 
 ## Automatic link tracking {#automaticLinkTracking}
 
-By default, the Web SDK captures, [labels](#labelingLinks), and [records](https://github.com/adobe/xdm/blob/master/docs/reference/context/webinteraction.schema.md) clicks on [qualifying](#qualifyingLinks) link tags. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document.
+By default, the Web SDK captures, labels, and records clicks on qualifying link tags. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document.
 
-Disabling automatic link tracking can be done by [configuring](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) the Web SDK.
+Automatic link tracking can be disabled by [configuring](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) the Web SDK.
 
 ```javascript
 clickCollectionEnabled: false

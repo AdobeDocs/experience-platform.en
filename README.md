@@ -1,14 +1,5 @@
 # Contributing content
 
-| EXL-PR | EXL | Preview | Activate | Published | Help |
-|--- |--- |--- |--- |--- |--- |
-| [![Build Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_pr-exl/lastBuild/) | [![Build Status](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/badge/icon)](https://docs.ci.corp.adobe.com/view/exl-pr/job/experience-platform.en_exl/lastBuild/lastBuild) | [Preview URL](https://experienceleague.corp.adobe.com/docs/experience-platform/using/home.html?lang=en) | [activate-exl](https://docs.ci.corp.adobe.com/job/experience-platform/build/)| [Live URL](https://experienceleague.adobe.com/docs/experience-platform/using/home.html?lang=en) | [Authoring Guide](https://experienceleague.adobe.com/docs/authoring-guide-exl/using/home.html?lang=en) |
-
-| Production | Stage |
-|---|---|
-| [![Build Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_production/lastBuild) | [![Build Status](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/badge/icon)](https://docs.ci.corp.adobe.com/job/experience-platform.en_stage/lastBuild) |
-|[Output Prod](https://docs.adobe.com/content/help/en/experience-platform/landing/home.html)|[Output Stg](https://docs-stg.corp.adobe.com/content/help/en/experience-platform/landing/home.html)|
-
 We welcome content contributions from our community and Adobe employees outside the documentation teams. 
 
 ## Adobe Open Source Code of Conduct

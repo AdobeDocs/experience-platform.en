@@ -16,7 +16,7 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 * [Apply usage labels to your data](#labels)
 * [Manage data usage policies](#policies)
-* [Enforce data usage compliance](#enforce-data-usage-compliance)
+* [Enforce data usage compliance](#enforce)
 
 ## Apply usage labels to your data {#labels}
 
@@ -34,8 +34,7 @@ You can set data usage restrictions on a destination by defining marketing use c
 
 Defining marketing use cases on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing use cases to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
-Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destination documentation](../destinations/destinations-overview.md) for steps on how to configure your particular destination.
-
+Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destinations documentation](../destinations/overview.md) for steps on how to configure your particular destination.
 
 ## Manage data usage policies {#policies}
 
@@ -43,49 +42,11 @@ In order for data usage labels to effectively support data compliance, data usag
 
 Adobe Experience Platform provides several core policies for common customer experience use cases. These policies can be viewed in the UI by navigating to the **[!UICONTROL Policies]** workspace and selecting the **[!UICONTROL Browse]** tab. See the [policies user guide](../../data-governance/policies/user-guide.md) in the [!DNL Experience Platform] documentation for more detailed steps on working with policies in the UI, including how to make your own custom policies.
 
-## Enforce data usage compliance {#enforce-data-usage-compliance}
+## Enforce data usage compliance {#enforce}
 
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations in Real-time CDP, [!DNL Data Governance] automatically enforces usage policies should any violations occur.
 
-The following diagram illustrates how policy enforcement is integrated into the data flow of segment activation:
-
-![](assets/enforcement-flow.png)
-
-When a segment is first activated, [!DNL Policy Service] checks for policy violations based on the following factors:
-
-* The data usage labels applied to fields and datasets within the segment to be activated.
-* The marketing purpose of the destination. 
-
->[!NOTE]
->
->If there are data usage labels that have only been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation only occurs under the following conditions:
->* The fields are used in the segment definition.
->* The fields are configured as projected attributes for the target destination.
-
-### Policy violation messages {#enforcement}
-
-If a policy violation occurs from attempting to activate a segment (or [making edits to an already activated segment](#policy-enforcement-for-activated-segments)) the action is prevented and a popover appears indicating that one or more policies have been violated. Select a policy violation in the popover's left column to display details for that violation.
-
-![](assets/violation-popover.png)
-
-The popover's **[!UICONTROL Details]** tab indicates the action that triggered the violation the reason why the violation occurred, and provides suggestions for how to potentially resolve the issue.
-
-Click **[!UICONTROL Data Lineage]** to track the destinations, segments, merge policies, or datasets whose data label(s) triggered the violation.
-
-![](assets/data-lineage.png)
-
-Once a violation has triggered, the **[!UICONTROL Save]** button is disabled for the activation until the appropriate components are updated to comply with data usage policies.
-
-### Policy enforcement for activated segments {#policy-enforcement-for-activated-segments}
-
-Policy enforcement still applies to segments after they have been activated, restricting any changes to a segment or its destination that would result in a policy violation. Due to the numerous components involved in activating segments to destinations, any of the following actions can potentially trigger a violation:
-
-* Updating data usage labels
-* Changing datasets for a segment
-* Changing segment predicates
-* Changing destination configurations
-
-If any of the above actions triggers a violation, that action is prevented from being saved and a policy violation message is displayed, ensuring that your activated segments continue to comply with data usage policies when being modified.
+See the document on [automatic policy enforcement](../../data-governance/enforcement/auto-enforcement.md) for more information.
 
 ## Next steps
 

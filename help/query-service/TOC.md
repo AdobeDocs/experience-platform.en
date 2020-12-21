@@ -21,7 +21,6 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
 - Creating queries {#creating-queries}
-  - [Adobe defined functions](creating-queries/using-adobe-defined-functions.md)
   - [Creating queries overview](creating-queries/creating-queries.md)
   - [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
   - [General guidance for query execution](creating-queries/writing-queries.md)

@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
-solution: Experience Platform
+solution: Intelligent Services, Experience Platform
 title: Discovering insights in Attribution AI
 topic: Attribution AI insights
 description: This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
@@ -18,11 +18,11 @@ In order to utilize insights for Attribution AI, you need to have a service inst
 
 ## Service instance insights overview
 
-In the [!DNL Adobe Experience Platform] UI, click **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, click **[!UICONTROL Open]**.
+In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe Intelligent Services. In the container for Attribution AI, select **[!UICONTROL Open]**.
 
 ![Accessing your instance](./images/insights/open_Attribution_ai.png)
 
-The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Click on a service instance name to begin.
+The Attribution AI service page appears. This page lists service instances of Attribution AI and displays information about them, including the name of the instance, conversion events, how often the instance is run, and the status of the last update. Select a service instance name to begin.
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ Next, the insights page for that service instance appears, where you are provide
 
 ### Service instance details
 
-To view additional details for a service instance, click **[!UICONTROL Show more]** in the top-right.
+To view additional details for a service instance, select **[!UICONTROL Show more]** in the top-right.
 
 ![show more](./images/insights/show-more.png)
 
@@ -46,31 +46,28 @@ A detailed list appears. For more information on any of the properties listed, p
 
 ### Edit an instance
 
-To edit an instance, click **[!UICONTROL Edit]** in the top-right navigation.
+To edit an instance, select **[!UICONTROL Edit]** in the top-right navigation.
 ![click the edit button](./images/insights/edit-button.png)
 
-The edit dialog box appears, allowing you to edit the description and scoring frequency of the instance. To confirm your changes and close the dialog, click **[!UICONTROL Edit]** in the bottom-right corner.
+The edit dialog box appears, allowing you to edit the name, description, and scoring frequency of the instance. If the instance status is disabled, scoring frequency cannot be edited. To confirm your changes and close the dialog, select **[!UICONTROL Save]** in the bottom-right corner.
 
 ![edit popover](./images/insights/edit-popover.png)
 
 ### More actions {#more-actions}
 
-The **[!UICONTROL More actions]** button is located in the top-right navigation next to *Edit*. Clicking **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
+The **[!UICONTROL More actions]** button is located in the top-right navigation next to **[!UICONTROL Edit]**. Selecting **[!UICONTROL More actions]** opens a dropdown that allows you to select one of the following operations:
 
-- **Delete**: Deletes the instance.
-- **Download summary data**: Downloads a CSV file containing the summary data.
-- **Access scores**: Clicking **Access scores** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
-- **View run history**: A popover containing a list of all the scoring runs associated with the service instance appears.
+- **[!UICONTROL Clone]**: Clones the instance.
+- **[!UICONTROL Delete]**: Deletes the instance.
+- **[!UICONTROL Download summary data]**: Downloads a CSV file containing the summary data.
+- **[!UICONTROL Access scores]**: Selecting **[!UICONTROL Access scores]** redirects you to the [access scores for Attribution AI tutorial](./download-scores.md).
+- **[!UICONTROL View run history]**: A popover containing a list of all the scoring runs associated with the service instance appears.
 
 ![more actions](./images/insights/more-actions.png)
 
 ## Filtering your data
 
 Attribution AI insights allow you to filter your data and automatically update the UI visuals based on your selected filters.
-
->[!NOTE]
->
->By default, every filter is set to "All" except the "[!UICONTROL Attribution Model]" filter which is set to "Incremental and Influenced attributed conversions".
 
 ### Conversion event
 
@@ -82,23 +79,9 @@ From within the instance, the **[!UICONTROL Conversion events]** dropdown allows
 
 ### Attribution model
 
-Clicking **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
+Selecting **[!UICONTROL Attribution Model]** opens a dropdown with all of the different attribution models available. You can select multiple models to compare results. For more information on the different attribution models and how they work, visit the [Attribution AI](./overview.md) overview which contains a table with information on each model.
 
 ![attribution model](./images/insights/attribution-model.png)
-
-### Product
-
-The **[!UICONTROL Product]** filter allows you to select from any products that were initially ingested in the creation of your instance. Click the dropdown and use the search feature to quickly select all of the products you wish to compare.
-
-![products filter](./images/insights/product-filter.png)
-
-### Geography
-
-The **[!UICONTROL Geography]** filter populates country codes based on region-based models. Depending on your data this filter may or may not be present.
-
->[!NOTE]
->
->Country codes are two characters long. A complete list can be found here [ISO 3166-1 alpha-2](https://datahub.io/core/country-list).
 
 ### Region
 
@@ -108,15 +91,22 @@ The **[!UICONTROL Geography]** filter populates country codes based on region-ba
 
 This filter allows you select any regions you set up in the instance creation process.
 
-### Channel
+### Add filters
 
-Clicking the **[!UICONTROL Channel]** filter reveals a dropdown containing all of your available marketing channels. You can select multiple channels to compare them. 
+You can add additional filters by selecting the **filter** icon to open the **[!UICONTROL Add filters]** popover. The **[!UICONTROL Add filters]** popover allows you to filter by Channel, Geography, Media type, and Product. Only the applicable filters for a service instance are populated by the popover. For example, if you did not provide geographical data or a media type, those filter attributes are not going to be available for your instance.
 
-![Channel](./images/insights/channel.png)
+![extra filters](./images/insights/additional-filters.png)
+
+![filter popover](./images/insights/filter-popover.png)
+
+- **[!UICONTROL Channel]:** Selecting the channel attribute allows you to filter any of your available marketing channels. You can select multiple channels to compare them.
+- **[!UICONTROL Geography]:** Selecting the geography attribute allows you to filter country codes based on region-based models. Depending on your data, this filter may or may not be present. Country codes are two characters long. See the complete country code list [here](https://datahub.io/core/country-list).
+- **[!UICONTROL Media type]:** Selecting the media type attribute allows you to filter any of your defined media types.
+- **[!UICONTROL Product]:** Selecting the product attribute allows you to filter from any products that were initially ingested in the creation of your instance.
 
 ### Date Range
 
-Click the calendar icon to open the date range popover. The beginning and end conversion event dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated. 
+Select the calendar icon to open the date range popover. The beginning and end conversion event dates determine the amount of data populated in the UI. You can choose to narrow or broaden the date range in order to focus or expand the amount of data populated.
 
 ![date range](./images/insights/display-date-range.png)
 
@@ -130,29 +120,67 @@ The **[!UICONTROL Overview]** card shows your total conversions by attribution m
 
 The **[!UICONTROL Weekly trends]** card breaks down your total conversion by the date range you set during the filtering process. 
 
-![trends](./images/insights/weekly-trends.png)
-
-Clicking the ellipses in the top-right of the *Weekly trends* card displays a drop down allowing you to select daily, weekly, or monthly trends.
+Selecting the ellipses in the top-right of the **Weekly trends** card displays a drop down allowing you to select daily, weekly, or monthly trends.
 
 Hovering over the data line of a specific attribution model creates a popover that shows the total number of conversions for that date.
 
-![hover trends](./images/insights/weekly-trend-hover.png)
+![trends](./images/insights/weekly-trends.png)
 
 ## Breakdown by channel
 
 The **[!UICONTROL Breakdown by channel]** card is used to determine the total number of conversions in relation to each channel. This card can be used to help make decisions on the effectiveness of each channel and the return on investment.
 
+Selecting the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a dropdown allowing you to populate data based on touchpoints.
+
 ![breakdown channel](./images/insights/channel-breakdown.png)
-
-Clicking the ellipses in the top-right of the **[!UICONTROL Breakdown by channel]** card opens a drop down allowing you to populate data based on touchpoints.
-
-![touchpoints](./images/insights/breakdown-by-touchpoints.png)
 
 ## Top campaigns
 
-The **[!UICONTROL Top campaigns]** card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insight into where to further invest.
+The **[!UICONTROL Top campaigns]** card displays an overview of your campaigns and how the campaign is performing in each channel. This card can help inform your team of the effectiveness of a specific campaign for a given channel and provide insights such as what campaigns you should further invest into.
 
 ![top campaigns](./images/insights/top-campaigns.png)
+
+## Breakdown by touchpoint position
+
+Selecting the **[!UICONTROL Path Analysis]** tab loads the **[!UICONTROL Breakdown by touchpoint position]** and **[!UICONTROL Top conversion paths]** graphs.
+
+The **[!UICONTROL Breakdown by touchpoint position]** graph is a breakdown of attributed conversions by position of the touchpoint compared across all the conversion paths. This graph helps you understand what touchpoints are more effective in different stages of the conversion path. The stages are starter, player, and closer.
+
+- **Starter:** Indicates the touchpoint was the first touch in a conversion path.
+- **Player:** Indicates the touchpoint was not the first or the last touch leading to a conversion.
+- **Closer:** Indicates the touchpoint was the last touch before a conversion.
+
+>![NOTE]
+>
+> The sum of percentage contribution for an attribution model across all touchpoints and positions should be equal to 100.
+
+![user-path breakdown touchpoint](./images/insights/user-paths.png)
+
+## Top conversion paths
+
+The **[!UICONTROL Top conversion paths]** graph shows the influenced and algorithmic scores on the top conversion paths in the selected regions. This graph allows you to visualize what touchpoints contribute to conversions and what the attribution score is for each touchpoint. You can use this information to view the most frequent paths in a certain region and see if any patterns emerge between the different sets of touchpoints.
+
+![Most common user paths](./images/insights/Touchpoint-paths.png)
+
+## Touchpoint effectiveness
+
+Selecting the **[!UICONTROL Touchpoint Effectiveness]** tab loads the **[!UICONTROL Touchpoint effectiveness]** card. This card uses Attribution AI's distribution of data to display information for each touchpoint. The data for this table is only generated for specific periods of time as indicated by the **[!UICONTROL As of]** date in the top-right of the card.
+
+![touchpoint effectiveness select](./images/insights/Touchpoint-effectiveness.png)
+
+You can use the **[!UICONTROL Touchpoint effectiveness]** card information to understand how a touchpoint contributes to a conversion. You can also see how effective each touchpoint is with the following performance metrics:
+
+**Paths touched**: This metric displays a percentage of paths achieving/not achieving conversion for the touchpoint. You will see higher attributed conversions if the ratio of paths (percentage) achieving conversion to paths not achieving conversion is high.
+
+![Paths touched metric](./images/insights/Touchpoint-metrics.png)
+
+**Efficiency measure**: This metric displays stars on a scale of one to five. The scale indicates the relative importance of a touchpoint towards making a conversion.
+
+>[!NOTE]
+>
+>Higher touchpoint volume does not guarantee higher efficiency measure.
+
+**Total volume**: The aggregate number of times a touchpoint was touched by a user. This is inclusive of touchpoints that appear on a path achieving conversion as well as paths not resulting in a conversion.
 
 ## Next steps
 
