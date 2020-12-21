@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
-solution: Experience Platform
+solution: Intelligent Services, Experience Platform
 title: Discovering insights in Attribution AI
 topic: Attribution AI insights
 description: This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.

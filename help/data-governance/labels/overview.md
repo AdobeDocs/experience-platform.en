@@ -24,11 +24,11 @@ In addition to the labels provided by Adobe, you can also define your own custom
 
 ## Label inheritance for audience segments
 
-All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows applications built on top of Experience Platform (such as [!DNL Real-time Customer Data Platform]) to provide automatic data usage policy enforcement when activating segments to destinations.
+All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows Experience Platform to provide automatic data usage policy enforcement when activating segments to destinations.
 
-In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Depending on how your [!DNL Platform]-based application consumes segments, you can potentially specify which fields are used, thereby preventing the segment from inheriting labels from excluded fields.
+In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Therefore, you can more easily identify which attributes should be excluded from your segments and prevent them from inheriting labels from excluded fields.
 
-For more information on how automatic enforcement works in Real-time CDP, see the overview on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+For more information on how automatic enforcement works in Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
 
 ### Inheritance from Adobe Audience Manager Data Export Controls
 

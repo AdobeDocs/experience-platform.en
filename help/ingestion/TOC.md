@@ -29,7 +29,7 @@ user-guide-description: Bring your data into Platform through batch or streaming
   - [Streaming multiple messages](tutorials/streaming-multiple-messages.md)
 - Data ingestion quality and monitoring{#quality}
   - [Overview](quality/overview.md)
-  - [Monitor data flows](quality/monitor-data-flows.md)
+  - [Monitor data ingestion](quality/monitor-data-ingestion.md)
   - [Retrieve error diagnostics](quality/error-diagnostics.md)
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)

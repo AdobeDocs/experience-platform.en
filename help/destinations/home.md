@@ -49,7 +49,7 @@ Data governance is enforced for Platform destinations through:
 * *Marketing use cases* that you can select in the create destinations workflow;
 * *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases.
   
-See the [!DNL Data Governance] in Platform documentation for more information about [marketing use cases](../rtcdp/privacy/data-governance-overview.md#destinations) and [resolving data policy violations](../rtcdp/privacy/data-governance-overview.md#enforcement).
+See the [!DNL Data Governance] in Platform documentation for more information about [marketing use cases](../data-governance/policies/overview.md) and [resolving data policy violations](../data-governance/enforcement/auto-enforcement.md).
 
 For more information about selecting marketing use cases in the create destination workflow, see the following pages for the different destination types in Platform:
 

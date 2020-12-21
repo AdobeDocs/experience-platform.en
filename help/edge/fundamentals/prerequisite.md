@@ -10,7 +10,7 @@ keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extensi
 
 To use this SDK, you must first:
 
-- Provision your organization for this feature. (If you would like to get on the waiting list, please reach out to your Certified software manager (CSM)).
+- Provision your organization for this feature. (If you would like to get on the waiting list, please reach out to your Customer Success Manager (CSM)).
 - Have a 1st-party domain (CNAME) enabled. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development works without a CNAME, but you need one before you go to production.
 
 >[!IMPORTANT]
