@@ -352,9 +352,9 @@ Do we not have FIRST/NEXT?
 
 ### PREPARE {#prepare}
 
-The `PREPARE` command lets you create a prepared statement. A prepared statement is a server-side object that can be used to optimize performance. When the `PREPARE` statement is executed, the specified statement is parsed, analyzed, and rewritten. 
+The `PREPARE` command lets you create a prepared statement. A prepared statement is a server-side object that can be used to templatize similar SQL statements.
 
-Prepared statements can take parameters, values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. Optionally, you can specify a list of parameter data types. 
+Prepared statements can take parameters,  values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. Optionally, you can specify a list of parameter data types. 
 
 When a parameter's data type is not specified or is declared as unknown, the type is inferred from the context in which the parameter is first referenced, if possible. When executing the statement, specify the actual values for these parameters in the `EXECUTE` statement.
 
