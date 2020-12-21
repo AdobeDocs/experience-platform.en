@@ -8,7 +8,7 @@ description: This document covers how data usage policies are automatically enfo
 
 # Automatic policy enforcement
 
-Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, in Adobe Experience Platform automatically enforces usage policies should any violations occur.
+Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.
 
 ## Prerequisites
 
