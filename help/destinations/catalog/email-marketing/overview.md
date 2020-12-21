@@ -35,7 +35,7 @@ In the **[!UICONTROL Setup]** step, enter a name and a description for your new 
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
 
-Also in this step, you can select any marketing use case that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions).
+Also in this step, you can select any marketing use case that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Email setup step](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 

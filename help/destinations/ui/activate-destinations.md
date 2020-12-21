@@ -159,7 +159,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >- The fields are used in the segment definition.
 >- The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see the [data usage policies guide](../../data-governance/policies/overview.md).
 
 ### **[!UICONTROL Review]** step {#review}
 
