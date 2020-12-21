@@ -371,4 +371,4 @@ A successful response returns the URL for the marketing action, the usage labels
 
 By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of data usage labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+For information on how Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).
