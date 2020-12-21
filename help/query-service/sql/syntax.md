@@ -352,9 +352,11 @@ Do we not have FIRST/NEXT?
 
 ### PREPARE {#prepare}
 
-`PREPARE` creates a prepared statement. A prepared statement is a server-side object that can be used to optimize performance. When the `PREPARE` statement is executed, the specified statement is parsed, analyzed, and rewritten. When an `EXECUTE` command is subsequently issued, the prepared statement is planned and executed. This division of labor avoids repetitive parse analysis work, while allowing the execution plan to depend on the specific parameter values supplied.
+The `PREPARE` command lets you create a prepared statement. A prepared statement is a server-side object that can be used to optimize performance. When the `PREPARE` statement is executed, the specified statement is parsed, analyzed, and rewritten. 
 
-Prepared statements can take parameters, values that are substituted into the statement when it is executed. When creating the prepared statement, refer to parameters by position, using $1, $2, and so on. A corresponding list of parameter data types can optionally be specified. When a parameter's data type is not specified or is declared as unknown, the type is inferred from the context in which the parameter is first referenced, if possible. When executing the statement, specify the actual values for these parameters in the `EXECUTE` statement.
+Prepared statements can take parameters, values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. Optionally, you can specify a list of parameter data types. 
+
+When a parameter's data type is not specified or is declared as unknown, the type is inferred from the context in which the parameter is first referenced, if possible. When executing the statement, specify the actual values for these parameters in the `EXECUTE` statement.
 
 Prepared statements only last for the duration of the current database session. When the session ends, the prepared statement is forgotten, so it must be re-created before being used again. This also means that a single prepared statement cannot be used by multiple simultaneous database clients. However, each client can create their own prepared statement to use. Prepared statements can be manually cleaned up using the `DEALLOCATE` command.
 
@@ -366,7 +368,7 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 **Parameters**
 
-- `name`: An arbitrary name given to this particular prepared statement. It must be unique within a single session and is subsequently used to execute or deallocate a previously prepared statement.
+- `name`: The name given to the prepared statement. The name must be unique within a single session and this name is used to execute or deallocate a previously prepared statement.
 - `data-type`: The data type of a parameter to the prepared statement. If the data type of a particular parameter is unspecified or is specified as unknown, it is inferred from the context in which the parameter is first referenced. To refer to the parameters in the prepared statement itself, use $1, $2, and so on.
 
 ### ROLLBACK
