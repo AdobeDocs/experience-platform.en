@@ -2,23 +2,23 @@
 keywords: destinations;destination;destination types
 title: Destinations Types and Categories
 seo-title: Destinations Types and Categories
-description: In Real-time Customer Data Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations. 
-seo-description: In Real-time Customer Data Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations.
+description: In Adobe Experience Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations. 
+seo-description: In Adobe Experience Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations.
 ---
 
 # Destination Types and Categories
 
-Read this page to understand the different types and categories of Real-time Customer Data Platform destinations.
+Read this page to understand the different types and categories of Adobe Experience Platform destinations.
 
 ## Destination types
 
-In Real-time Customer Data Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations. 
+In Adobe Experience Platform, we distinguish between two destination types - connections and extensions. There are two types of connection destinations, Profile Export destinations and Segment Export destinations. 
 
 ![Types of destinations](./assets/destination-types/types-of-destinations.png)
 
 ### Connections {#connections}
 
-**[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Real-time Customer Data Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 #### Profile export destinations
 
@@ -36,7 +36,7 @@ The video below runs you through the particularities of the two types of destina
 
 ### Extensions {#extensions}
 
-Real-time CDP leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Real-time CDP interface. 
+Platform leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Platform interface. 
 
 >[!TIP]
 >
