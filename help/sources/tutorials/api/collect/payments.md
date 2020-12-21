@@ -7,70 +7,60 @@ type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
 ---
 
-# Collect payment data through source connectors and APIs
+# Collect payments data through source connectors and APIs
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial covers the steps for retrieving data from a third-party payment system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+This tutorial covers the steps for retrieving data from a third-party payments application and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ## Getting started
 
-This tutorial requires you to have access to a payment system through a valid connection, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a payments application using the Flow Service API](../explore/payments.md) before attempting this tutorial.
+This tutorial requires you to have access to a payment application through a valid connection, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a payments application using the Flow Service API](../explore/payments.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
-*   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
+* [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a payments application using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
-
-## Create an ad-hoc XDM class and schema
-
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
-
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
-
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Obtain and store the unique identifier (`$id`) of the ad-hoc schema and then proceed to the next step of this tutorial.
+* `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
 Use the following the enum values for file-based connectors:
 
-| Data.format | Enum value |
+| Data format | Enum value |
 | ----------- | ---------- |
-| Delimited files | `delimited` |
-| JSON files | `json` |
-| Parquet files | `parquet` |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-For all table-based connectors use the enum value: `tabular`.
+For all table-based connectors, set the value to `tabular`.
 
 **API format**
 
@@ -89,14 +79,11 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Paypal source connection",
-        "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
-        "description": "Paypal",
+        "name": "PayPal source connection",
+        "connectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
+        "description": "PayPal source connection",
         "data": {
             "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/396f583b57577b2f2fca79c2cb88e9254992f5fa70ce5f1a",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
             }
         },
         "params": {
@@ -111,10 +98,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId` | The unique connection ID of the third-party payments application you are accessing. |
-| `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
+| `connectionId` | The unique connection ID of the third-party payments application you are accessing. |
 | `params.path`| The path of the source file. |
-| `connectionSpec.id`| The connection specification ID of your payments application. |
+| `connectionSpec.id`| The connection spec ID of your payments application. |
 
 **Response**
 
@@ -129,9 +115,9 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Create a target XDM schema {#target-schema}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
+In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](https://docs.adobe.com/content/help/en/experience-platform/xdm/tutorials/create-schema-ui.html) provides step-by-step instructions for performing similar actions in the Schema Editor.
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **API format**
 
@@ -153,8 +139,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Target schema for payments",
-        "description": "Target schema for payments",
+        "title": "PayPal target XDM schema",
+        "description": "PayPal target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -186,9 +172,9 @@ A successful response returns details of the newly created schema including its 
     "meta:altId": "_{TENANT_ID}.schemas.14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for payments",
+    "title": "PayPal target XDM schema",
     "type": "object",
-    "description": "Target schema for Paypal",
+    "description": "PayPal target XDM",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -263,7 +249,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for payments",
+        "name": "PayPal target dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
@@ -287,9 +273,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using the [!DNL Flow Service] API, you can create a target connection by specifying these identifiers along with the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -312,7 +298,8 @@ curl -X POST \
         "description": "Target Connection for payments",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722"
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
+                "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
@@ -329,7 +316,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The fixed connection spec ID to data lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -418,14 +405,14 @@ A successful response returns details of the newly created mapping including its
     "version": 0,
     "createdDate": 1586043319604,
     "modifiedDate": 1586043319604,
-    "createdBy": "28AF22BA5DE6B0B40A494036@AdobeID",
-    "modifiedBy": "28AF22BA5DE6B0B40A494036@AdobeID"
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}"
 }
 ```
 
 ## Look up dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
+A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
 
 **API format**
 
@@ -443,10 +430,9 @@ curl -X GET \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your payments application into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
@@ -456,6 +442,59 @@ A successful response returns the details of the dataflow specification that is 
             "name": "CRMToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "3416976c-a9ca-4bba-901a-1f08f66978ff",
+                "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+                "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+                "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+                "3000eb99-cd47-43f3-827c-43caf170f015",
+                "26d738e0-8963-47ea-aadf-c60de735468a",
+                "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+                "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+                "cb66ab34-8619-49cb-96d1-39b37ede86ea",
+                "eb13cb25-47ab-407f-ba89-c0125281c563",
+                "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+                "37b6bf40-d318-4655-90be-5cd6f65d334b",
+                "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+                "221c7626-58f6-4eec-8ee2-042b0226f03b",
+                "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
+                "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
+                "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
+                "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
+                "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+                "102706fb-a5cd-42ee-afe0-bc42f017ff43",
+                "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+                "0479cc14-7651-4354-b233-7480606c2ac3",
+                "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+                "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
+                "1fe283f6-9bec-11ea-bb37-0242ac130002"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
+            "optionSpec": {
+                "name": "OptionSpec",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "errorDiagnosticsEnabled": {
+                            "title": "Error diagnostics.",
+                            "description": "Flag to enable detailed and sample error diagnostics summary.",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "partialIngestionPercent": {
+                            "title": "Partial ingestion threshold.",
+                            "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            },
             "transformationSpecs": [
                 {
                     "name": "Copy",
@@ -514,21 +553,18 @@ A successful response returns the details of the dataflow specification that is 
                             "description": "epoch time",
                             "type": "integer"
                         },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
                         "frequency": {
                             "type": "string",
                             "enum": [
+                                "once",
                                 "minute",
                                 "hour",
                                 "day",
                                 "week"
                             ]
+                        },
+                        "interval": {
+                            "type": "integer"
                         },
                         "backfill": {
                             "type": "boolean",
@@ -537,31 +573,88 @@ A successful response returns the details of the dataflow specification that is 
                     },
                     "required": [
                         "startTime",
-                        "frequency",
-                        "interval"
+                        "frequency"
                     ],
                     "if": {
                         "properties": {
                             "frequency": {
-                                "const": "minute"
+                                "const": "once"
                             }
                         }
                     },
                     "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
+                        "allOf": [
+                            {
+                                "not": {
+                                    "required": [
+                                        "interval"
+                                    ]
+                                }
+                            },
+                            {
+                                "not": {
+                                    "required": [
+                                        "backfill"
+                                    ]
+                                }
                             }
-                        }
+                        ]
                     },
                     "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
+                        "required": [
+                            "interval"
+                        ],
+                        "if": {
+                            "properties": {
+                                "frequency": {
+                                    "const": "minute"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 15
+                                }
+                            }
+                        },
+                        "else": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 1
+                                }
                             }
                         }
                     }
                 }
+            },
+            "attributes": {
+                "notification": {
+                    "category": "sources",
+                    "flowRun": {
+                        "enabled": true
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -572,10 +665,10 @@ A successful response returns the details of the dataflow specification that is 
 
 The last step towards collecting data is to create a dataflow. At this point, you should have the following required values prepared:
 
-*   [Source connection ID](#source)
-*   [Target connection ID](#target)
-*   [Mapping ID](#mapping)
-*   [Dataflow specification ID](#specs)
+* [Source connection ID](#source)
+* [Target connection ID](#target)
+* [Mapping ID](#mapping)
+* [Dataflow specification ID](#specs)
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
@@ -663,10 +756,9 @@ A successful response returns the ID `id` of the newly created dataflow.
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
 
-
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a payments application on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a payments application on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-*   [Real-time Customer Profile overview](../../../../profile/home.md)
-*   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Data Science Workspace overview](../../../../data-science-workspace/home.md)

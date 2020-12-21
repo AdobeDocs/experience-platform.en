@@ -27,7 +27,7 @@ The **[!UICONTROL Included in Profile]** toggle allows you to filter results to 
 
 ![](../images/tutorials/explore/filter.png)
 
-You can also use the search bar to narrow results even further. Any resources whose titles match the search query appear at the top of the list. Further down in the list is a **[!UICONTROL Standard Fields]** section, which lists any resources containing standard XDM fields that match the search query.
+You can also use the search bar to narrow down results to resources whose names match the search query.
 
 ![](../images/tutorials/explore/search.png)
 
@@ -65,7 +65,7 @@ When you select the name of any field in the canvas, the right rail updates to s
 
 ![](../images/tutorials/explore/field-properties.png)
 
-If the field your are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
+If the field you are inspecting is an enum field, the right rail will also display the acceptable values the field expects to receive.
 
 ![](../images/tutorials/explore/enum-field.png)
 
