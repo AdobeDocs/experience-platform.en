@@ -83,7 +83,7 @@ Relationship fields are also uniquely highlighted in the canvas, showing the nam
 
 >[!NOTE]
 >
->See the tutorial on [creating a relationship in the UI](./create-schema-ui.md) for more information on the use of relationships in XDM schemas.
+>See the tutorial on [creating a relationship in the UI](../tutorials/create-schema-ui.md) for more information on the use of relationships in XDM schemas.
 
 ## Next steps
 
