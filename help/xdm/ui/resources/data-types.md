@@ -84,7 +84,7 @@ Once you have finished adding fields to the data type, select **[!UICONTROL Save
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more mixins, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a mixin.
 
-> [!NOTE]
+>[!NOTE]
 >
 > This section focuses on adding a data type to a mixin, since this is the most common pattern for custom data types. However, you can also apply the same steps to add your data type to a class instead.
 
@@ -102,7 +102,7 @@ Select your data type from the list, then select **[!UICONTROL Apply]**. The sch
 
 ![](../../images/ui/resources/data-types/data-type-added.png)
 
-> [!NOTE]
+>[!NOTE]
 >
 > Mixins are only compatible with one class. If you wish to use your data type in additional schemas based on different classes, you must follow the above steps to add the data type to additional mixins intended to extend those classes.
 
