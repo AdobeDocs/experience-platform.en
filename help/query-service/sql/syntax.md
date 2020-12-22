@@ -472,21 +472,24 @@ COPY query
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints to the table.
 
 ```sql
-ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name Namespace 'namespace'
+ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
-ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
-
-ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
+
+I removed the namespace one because it seems that isn't valid? If it is valid, can you please give me a resource showing me how it works? 
 
 **Parameters**
 
 - `table_name`: The name of the table which you are editing.
+- `constraint_name`: The name of the constraint that you want to add or delete.
 - `column_name`: The name of the column that you are adding a constraint to.
+- `referenced_table_name`: The name of the table that is referenced by the foreign key.
+- `primary_column_name`: The name of the column that is referenced by the foreign key.
 
 >[!NOTE]
 >
@@ -494,7 +497,7 @@ ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
 
 ### SHOW PRIMARY KEYS
 
-This command lists all the primary key constraints for the given database.
+The `SHOW PRIMARY KEYS` command lists all the primary key constraints for the given database.
 
 ```sql
 SHOW PRIMARY KEYS
@@ -509,7 +512,7 @@ SHOW PRIMARY KEYS
 
 ### SHOW FOREIGN KEYS
 
-This command lists all the foreign key constraints for the given database.
+The `SHOW FOREIGN KEYS` command lists all the foreign key constraints for the given database.
 
 ```sql
 SHOW FOREIGN KEYS
