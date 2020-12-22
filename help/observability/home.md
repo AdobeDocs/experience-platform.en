@@ -22,6 +22,12 @@ For more information on working with the API, see the [[!DNL Observability Insig
 
 See the overview on [event notifications](./notifications/overview.md) for more information.
 
+## Alerts
+
+[!DNL Observability Insights] can deliver alerts based on specific Observability metrics when a certain set of conditions in your Platform operations is reached. Unlike event notifications, these messages repeat over a pre-defined time interval until the conditions that triggered the alert have been resolved.
+
+See the overview on [alerts](./alerts/overview.md) for more information.
+
 ## Next steps
 
 This document covered the various capabilities of [!DNL Observability Insights]. Refer to the documentation linked to throughout this overview to learn more about each feature.

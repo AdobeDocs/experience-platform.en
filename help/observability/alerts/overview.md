@@ -8,7 +8,7 @@ description: Observability Insights allows you to subscribe to event alerts rega
 
 # Alerts overview
 
-Adobe Experience Platform Observability Insights allows you to configure and manage alerts based on selected Observability metrics. When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Observability Insights can deliver alert messages to all users in your organization who have opted in to receiving them. These messages repeat over a pre-defined time interval until the alert has been resolved.
+Adobe Experience Platform Observability Insights allows you to receive and manage alerts based on specific Observability metrics. When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Observability Insights can deliver alert messages to all users in your organization who have opted in to receiving them. These messages repeat over a pre-defined time interval until the alert has been resolved.
 
 This document provides an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 
