@@ -60,7 +60,7 @@ TABLE [ ONLY ] table_name [ * ]
 
 ### SNAPSHOT clause
 
-This clause can be used to read data incrementally based on snapshot ids. It attaches itself to the table relation it is used next to.
+This clause can be used to read data on a table incrementally based on snapshot ids. A snapshot id is a checkpoint marker identified by a number, of type Long, on a datalake table every time data is written to it. The SNAPSHOT clause attaches itself to the table relation it is used next to.
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
 ``` 
