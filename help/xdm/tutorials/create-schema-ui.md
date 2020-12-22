@@ -31,7 +31,7 @@ The [!UICONTROL Schemas] workspace in the [!DNL Platform] UI provides a visualiz
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) which you can view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
-See the guide on [exploring existing XDM resources in the UI](./explore.md) for more information.
+See the guide on [exploring existing XDM resources in the UI](../ui/explore.md) for more information.
 
 ## Create and name a schema {#create}
 
@@ -227,7 +227,7 @@ In a future schema, you could now assign a field as a "[!DNL Loyalty]" type and 
 
 >[!NOTE]
 >
->You can also create and edit custom data types independently from editing schemas. See the tutorial on [creating and editing data types](./create-data-type.md) for more information.
+>You can also create and edit custom data types independently from editing schemas. See the guide on [creating and editing data types](../ui/resources/data-types.md) for more information.
 
 ## Search and filter schema fields
 
