@@ -153,6 +153,11 @@ Please note that for a given CTAS query:
 
 1. The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. 
 2. The `SELECT` statement can be provided with or without parentheses ().
+3. THE `SELECT` statement can be provided with a SNAPSHOT clause to read incremental deltas into target table.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERT INTO
 
@@ -174,6 +179,11 @@ Please note that for a given INSERT INTO query:
 
 1. The `SELECT` statement MUST NOT be enclosed in parentheses ().
 2. The schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement.
+3. The `SELECT` statement can be provided with a SNAPSHOT clause to read incremental deltas into target table.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
