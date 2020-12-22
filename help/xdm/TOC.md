@@ -56,7 +56,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Schemas](./ui/resources/schemas.md)
     * [Classes](./ui/resources/classes.md)
     * [Mixins](./ui/resources/mixins.md)
-    * [Data type](./ui/resources/data-type.md)
+    * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
     * [Required fields](./ui/fields/required.md)
     * [Array fields](./ui/fields/array.md)
@@ -78,7 +78,6 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Tutorials {#tutorials}
   * [Create a schema (API)](tutorials/create-schema-api.md)
   * [Create a schema (UI)](tutorials/create-schema-ui.md)
-  * [Create and edit data types (UI)](./tutorials/create-data-type.md)
   * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
   * [Define a relationship between two schemas (UI)](tutorials/relationship-ui.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
