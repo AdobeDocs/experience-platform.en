@@ -17,7 +17,7 @@ This tutorial covers the steps for creating and editing custom data types in the
 
 ## Prerequisites
 
-This tutorial requires a working understanding of XDM System. Refer to the [XDM overview](../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
+This tutorial requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
 
 While not required for this tutorial, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
@@ -110,4 +110,4 @@ Select your data type from the list, then select **[!UICONTROL Apply]**. The sch
 
 This tutorial covered how to create and edit data types, and how to add them to mixins using the [!DNL Schema Editor]. To learn more about working with data types in the UI, including how to convert a multi-field object into a data type, see the [schema creation tutorial](../../tutorials/create-schema-ui.md#datatype).
 
-To learn how to create a data type using the Schema Registry API, see the [data types endpoint guide](../api/data-types.md#create).
+To learn how to create a data type using the Schema Registry API, see the [data types endpoint guide](../../api/data-types.md#create).

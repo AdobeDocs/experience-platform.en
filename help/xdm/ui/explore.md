@@ -87,4 +87,4 @@ Relationship fields are also uniquely highlighted in the canvas, showing the nam
 
 ## Next steps
 
-This document covered how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [schema creation tutorial](./create-schema-ui.md).
+This document covered how to explore existing XDM resources in the Experience Platform UI. For more information on the different features of the [!UICONTROL Schemas] workspace and [!DNL Schema Editor], see the [schema creation tutorial](../tutorials/create-schema-ui.md).

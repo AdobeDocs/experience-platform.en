@@ -49,7 +49,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [POI details](./data-types/poi-details.md)
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
-* Schemas UI {#ui}
+* [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
   * [Explore XDM resources](./ui/explore.md)
   * Create and edit resources {#resources}
@@ -58,6 +58,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Mixins](./ui/resources/mixins.md)
     * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
+    * [Basic fields](./ui/fields/basic.md)
     * [Required fields](./ui/fields/required.md)
     * [Array fields](./ui/fields/array.md)
     * [Enum fields](./ui/fields/enum.md)
