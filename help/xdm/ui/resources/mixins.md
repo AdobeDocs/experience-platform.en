@@ -7,3 +7,5 @@ topic: user guide
 ---
 
 # Create and edit mixins in the UI
+
+## Create a new mixin {#create}

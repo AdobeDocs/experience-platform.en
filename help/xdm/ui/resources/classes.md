@@ -7,3 +7,7 @@ topic: user guide
 ---
 
 # Create and edit classes in the UI
+
+## Create a new class {#create}
+
+## Change the class of a schema {#schema}
