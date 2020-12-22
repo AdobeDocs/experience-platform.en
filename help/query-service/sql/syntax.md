@@ -210,7 +210,7 @@ The `SET` command sets a property and either returns the value of an existing pr
 SET property_key = property_value
 ```
 
-**Properties**
+**Parameters**
 
 - `property_key`: The name of the property that you want to list or alter.
 - `property_value`: The value that you want the property to be set as.
@@ -354,13 +354,9 @@ Do we not have FIRST/NEXT?
 
 The `PREPARE` command lets you create a prepared statement. A prepared statement is a server-side object that can be used to templatize similar SQL statements.
 
-Prepared statements can take parameters,  values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. Optionally, you can specify a list of parameter data types. 
+Prepared statements can take parameters, which are values that are substituted into the statement when it is executed. Parameters are referred by position, using $1, $2, etc, when using prepared statements. 
 
-When a parameter's data type is not specified or is declared as unknown, the type is inferred from the context in which the parameter is first referenced, if possible. When executing the statement, specify the actual values for these parameters in the `EXECUTE` statement.
-
-Prepared statements only last for the duration of the current database session. When the session ends, the prepared statement is forgotten, so it must be re-created before being used again. This also means that a single prepared statement cannot be used by multiple simultaneous database clients. However, each client can create their own prepared statement to use. Prepared statements can be manually cleaned up using the `DEALLOCATE` command.
-
-Prepared statements potentially have the largest performance advantage when a single session is being used to execute a large number of similar statements. The performance difference is particularly significant if the statements are complex to plan or rewrite, for example if the query involves a join of many tables or requires the application of several rules. If the statement is relatively simple to plan and rewrite but relatively expensive to execute, the performance advantage of prepared statements is less noticeable.
+Optionally, you can specify a list of parameter data types. If a parameter's data type isn't listed, the type can be inferred from the context.
 
 ```sql
 PREPARE name [ ( data_type [, ...] ) ] AS SELECT
@@ -368,24 +364,21 @@ PREPARE name [ ( data_type [, ...] ) ] AS SELECT
 
 **Parameters**
 
-- `name`: The name given to the prepared statement. The name must be unique within a single session and this name is used to execute or deallocate a previously prepared statement.
-- `data-type`: The data type of a parameter to the prepared statement. If the data type of a particular parameter is unspecified or is specified as unknown, it is inferred from the context in which the parameter is first referenced. To refer to the parameters in the prepared statement itself, use $1, $2, and so on.
+- `name`: The name for the prepared statement.
+- `data_type`: The data types of the prepared statement's parameters. If a parameter's data type isn't listed, the type can be inferred from the context. If you need to add multiple data types, you can add them in a comma separated list.
 
 ### ROLLBACK
 
-`ROLLBACK` rolls back the current transaction and causes all the updates made by the transaction to be discarded.
+The `ROLLBACK` command undoes the current transaction and discards all the updates made by the transaction.
 
 ```sql
-ROLLBACK [ WORK ]
+ROLLBACK
+ROLLBACK WORK
 ```
-
-**Parameters**
-
-- `WORK`
 
 ### SELECT INTO
 
-`SELECT INTO` creates a new table and fills it with data computed by a query. The data is not returned to the client, as it is with a normal `SELECT`. The new table's columns have the names and data types associated with the output columns of the `SELECT`.
+The `SELECT INTO` command creates a new table and fills it with data computed by a query. The data is not returned to the client, as it is with a normal `SELECT` command. The new table's columns have the names and data types associated with the output columns of the `SELECT` command.
 
 ```sql
 [ WITH [ RECURSIVE ] with_query [, ...] ]
@@ -407,13 +400,15 @@ SELECT [ ALL | DISTINCT [ ON ( expression [, ...] ) ] ]
 
 **Parameters**
 
-- `TEMPORARAY` or `TEMP`: If specified, the table is created as a temporary table.
-- `UNLOGGED:` if specified, the table is created as an unlogged table.
-- `new_table` The name (optionally schema-qualified) of the table to be created. 
+More information about the standard SELECT query parameters can be found in the [SELECT query section](#select-queries). This section will only list parameters that are exclusive to the `SELECT INTO` command.
+
+- `TEMPORARY` or `TEMP`: An optional parameter. If specified, the table that is created will be a temporary table.
+- `UNLOGGED`: An optional parameter. If specified, the table that is created as will be an unlogged table. More information about unlogged tables can be found in the [PostgreSQL documentation](https://www.postgresql.org/docs/current/sql-createtable.html).
+- `new_table`: The name of the table to be created. 
 
 **Example**
 
-Create a new table `films_recent` consisting of only recent entries from the table `films`:
+The following query creates a new table `films_recent` consisting of only recent entries from the table `films`:
 
 ```sql
 SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
@@ -421,25 +416,26 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-`SHOW` displays the current setting of run-time parameters. These variables can be set using the `SET` statement, by editing the postgresql.conf configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the postgres server.
+The `SHOW` command displays the current setting of run-time parameters. These variables can be set using the `SET` statement, by editing the postgresql.conf configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the postgres server.
 
 ```sql
 SHOW name
+SHOW ALL
 ```
 
 **Parameters**
 
-- `name`:
-    - `SERVER_VERSION`: Shows the server's version number.
-    - `SERVER_ENCODING`: Shows the server-side character set encoding. At present, this parameter can be shown but not set, because the encoding is determined at database creation time.
-    - `LC_COLLATE`: Shows the database's locale setting for collation (text ordering). At present, this parameter can be shown but not set, because the setting is determined at database creation time.
-    - `LC_CTYPE`: Shows the database's locale setting for character classification. At present, this parameter can be shown but not set, because the setting is determined at database creation time.
-    `IS_SUPERUSER`: True if the current role has superuser privileges.
+- `name`: The name of the run-time parameter you want information about. Possible values for the run-time parameter include the following values:
+    - `SERVER_VERSION`: This parameter shows the server's version number.
+    - `SERVER_ENCODING`: This parameter shows the server-side character set encoding.
+    - `LC_COLLATE`: This parameter shows the database's locale setting for collation (text ordering). 
+    - `LC_CTYPE`: This parameter shows the database's locale setting for character classification.
+    `IS_SUPERUSER`: This parameter shows if the current role has superuser privileges.
 - `ALL`: Show the values of all configuration parameters with descriptions.
 
 **Example**
 
-Show the current setting of the parameter `DateStyle`
+The following query shows the current setting of the parameter `DateStyle`.
 
 ```sql
 SHOW DateStyle;
@@ -452,56 +448,48 @@ SHOW DateStyle;
 (1 row)
 ```
 
-### START TRANSACTION
-
-This command is parsed and sends the completed command back to client. This is the same as the `BEGIN` command.
-
-```sql
-START TRANSACTION [ transaction_mode [, ...] ]
-
-where transaction_mode is one of:
-
-    ISOLATION LEVEL { SERIALIZABLE | REPEATABLE READ | READ COMMITTED | READ UNCOMMITTED }
-    READ WRITE | READ ONLY
-```
-
 ### COPY
 
-This command dumps the output of any SELECT query to a specified location. The user must have access to this location for this command to succeed.
+The `COPY` command dumps the output of any `SELECT` query to a specified location. The user must have access to this location for this command to succeed.
 
 ```sql
-COPY  query
+COPY query
     TO '%scratch_space%/folder_location'
     [  WITH FORMAT 'format_name']
-
-where 'format_name' is be one of:
-    'parquet', 'csv', 'json'
-
-'parquet' is the default format.
 ```
+
+**Parameters**
+
+- `query`: The query that you want to copy.
+- `format_name`: The format that you want to copy the query in. The `format_name` can be one of `parquet`, `csv`, or `json`. By default, the value is `parquet`.
 
 >[!NOTE]
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
->
 
-### ALTER
+### ALTER TABLE
 
-This command helps in adding or dropping primary or foreign key constraints to the table.
+The `ALTER TABLE` command lets you add or drop primary or foreign key constraints to the table.
 
 ```sql
-Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name ADD CONSTRAINT PRIMARY KEY ( column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
-Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
+ALTER TABLE table_name ADD CONSTRAINT FOREIGN KEY ( column_name ) REFERENCES referenced_table_name Namespace 'namespace'
 
-Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT PRIMARY KEY ( column_name )
 
-Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
+ALTER TABLE table_name DROP CONSTRAINT FOREIGN KEY ( column_name )
 ```
 
+**Parameters**
+
+- `table_name`: The name of the table which you are editing.
+- `column_name`: The name of the column that you are adding a constraint to.
+
 >[!NOTE]
+>
 >The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
 
 ### SHOW PRIMARY KEYS
