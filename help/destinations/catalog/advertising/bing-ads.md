@@ -2,8 +2,8 @@
 keywords: bing;bing ads event tracking;event tracking bing;UET;UET extension
 title: Bing Ads Universal Event Tracking (UET) extension
 seo-title: Bing Ads Universal Event Tracking (UET) extension
-description: The Bing Ads Universal Event Tracking (UET) extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Bing Ads Universal Event Tracking (UET) extension is an advertising destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Bing Ads Universal Event Tracking (UET) extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+seo-description: The Bing Ads Universal Event Tracking (UET) extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Bing Ads Universal Event Tracking] (UET) extension {#bing-ads-extension}
@@ -12,15 +12,15 @@ seo-description: The Bing Ads Universal Event Tracking (UET) extension is an adv
 
 [!DNL Bing Ads Universal Event Tracking] (UET) for [!DNL Experience Platform Launch] is a useful way to track what happens after someone has clicked on your search ad. By using a single UET tag to record what customers do on your website, you can leverage that data, allowing you to track conversions or target audiences using remarketing lists.
 
-[!DNL Bing Ads Universal Event Tracking] (UET) is an advertising extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
+[!DNL Bing Ads Universal Event Tracking] (UET) is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100154.html).
 
-This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Real-time CDP, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Platform, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Bing Ads extension](../../assets/catalog/advertising/bing-ads/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
 
 To use this extension, you need access to [!DNL Adobe Experience Platform Launch]. [!DNL Platform Launch] is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to [!DNL Platform Launch] and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
@@ -28,7 +28,7 @@ To use this extension, you need access to [!DNL Adobe Experience Platform Launch
 
 To install the [!DNL Bing Ads Universal Event Tracking] (UET) extension:
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
@@ -55,6 +55,6 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
+>If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
