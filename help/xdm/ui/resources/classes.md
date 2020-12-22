@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;class;classes;
 solution: Experience Platform
 title: Create and edit classes in the UI
 description: Create and edit classes in the UI
@@ -8,6 +8,64 @@ topic: user guide
 
 # Create and edit classes in the UI
 
+This document provides an overview of how to create, edit, and manage custom Experience Data Model (XDM) class for your organization in the Adobe Experience Platform UI.
+
 ## Create a new class {#create}
 
+Platform provides the flexibility to define a schema based on a class that is unique to your organization. 
+
+In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select **[!UICONTROL Browse]** from the dropdown.
+
+![](../../images/ui/resources/classes/browse-classes.png)
+
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define.
+
+When finished, select **[!UICONTROL Assign class]**.
+
+![](../../images/ui/resources/classes/class-details.png)
+
+The [!DNL Schema Editor] appears, showing a new schema in the canvas that is based on the custom class you just created. Since no fields have been added to the class yet, the schema only contains an `_id` field, which represents the system-generated unique identifier that is automatically applied to all resources in the [!DNL Schema Registry].
+
+![](../../images/ui/resources/classes/schema.png)
+
+>[!IMPORTANT]
+>
+>When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new mixins](./mixins.md#create) for use with that class. The next time you compose a schema that implements the new class, the mixins that you defined will be listed and available for use.
+
+You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
+
+## Edit an existing class {#edit}
+
+To edit an existing class, select the **[!UICONTROL Browse]** tab, and then select the name of a schema that employs the class you want to edit.
+
+>[!TIP]
+>
+>You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
+
+![](../../images/ui/resources/classes/select-for-edit.png)
+
+The [!DNL Schema Editor] appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
+
+![](../../images/ui/resources/classes/edit.png)
+
+>[!NOTE]
+>
+>Keep in mind that once a class has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+
+## Add fields to a class {#add-fields}
+
+One you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
+
+![](../../images/ui/resources/classes/add-field.png)
+
+>[!IMPORTANT]
+>
+>Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./mixins.md#create) instead.
+
 ## Change the class of a schema {#schema}
+
+You can change the class of the schema at any point during the initial creation process before it has been saved. See the guide on [creating and editing schemas](./schemas.md#change-class) for more information.
+
+## Next steps
+
+This document covered the basics of creating and editing classes in the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
