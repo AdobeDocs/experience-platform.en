@@ -19,6 +19,7 @@ The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -56,6 +57,29 @@ and `with_query` is:
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### SNAPSHOT clause
+
+This clause can be used to read data incrementally based on snapshot ids. It attaches itself to the table relation it is used next to.
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+``` 
+
+#### Example 
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+
+```
+Please note that a SNAPSHOT clause works with a table or table alias but not on top of a sub-query or view. A SNAPHOST clause will work anywhere a SELECT query on a table can be applied.
 
 ### WHERE ILIKE clause
 
