@@ -8,7 +8,17 @@ topic: user guide
 
 # Create and edit classes in the UI
 
-This document provides an overview of how to create, edit, and manage custom Experience Data Model (XDM) class for your organization in the Adobe Experience Platform UI.
+In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
+
+Adobe provides two standard (“core”) XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+
+This document provides an overview of how to create, edit, and manage custom classes for your organization in the Adobe Experience Platform UI.
+
+## Prerequisites
+
+This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how classes contribute to XDM schemas.
+
+While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
 ## Create a new class {#create}
 
@@ -69,3 +79,5 @@ You can change the class of the schema at any point during the initial creation 
 ## Next steps
 
 This document covered the basics of creating and editing classes in the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+
+To learn how to manage classes using the [!DNL Schema Registry] API, see the [classes endpoint guide](../../api/classes.md).

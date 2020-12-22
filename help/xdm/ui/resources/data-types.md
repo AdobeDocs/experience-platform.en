@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
 solution: Experience Platform
-title: Create and edit data types using the Schema Registry UI
+title: Create and edit data types using the UI
 topic: tutorial
 type: Tutorial
 description: This tutorial uses the Experience Platform UI to walk you through the steps to compose a custom data type.
 ---
 
-# Create and edit data types using the Experience Platform UI
+# Create and edit data types using the UI
 
 In Experience Data Model (XDM), data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level.
 
@@ -17,9 +17,9 @@ This tutorial covers the steps for creating and editing custom data types in the
 
 ## Prerequisites
 
-This tutorial requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
+This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how data types contribute to XDM schemas.
 
-While not required for this tutorial, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
+While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
 ## Open the [!DNL Schema Editor] for a data type
 
@@ -105,6 +105,18 @@ Select your data type from the list, then select **[!UICONTROL Apply]**. The sch
 >[!NOTE]
 >
 > Mixins are only compatible with one class. If you wish to use your data type in additional schemas based on different classes, you must follow the above steps to add the data type to additional mixins intended to extend those classes.
+
+## Convert a multi-field object into a data type
+
+When you create an object-type field with multiple sub-fields in the [!DNL Schema Editor], you can convert that field into a data type so you can use that same field structure in a different class or mixin.
+
+To convert an object-type field to a data type, select the the field in the canvas. Before you convert the field, ensure that the **[!UICONTROL Display name]** is descriptive of the data that the object will contain, as this will become the name of the data type. When you are ready to convert the field, select **[!UICONTROL Convert to new data type]** in the right rail.
+
+![](../../images/ui/resources/data-types/convert-object.png)
+
+The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be re-used in other classes and mixins by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
+
+![](../../images/ui/resources/data-types/converted.png)
 
 ## Next steps
 
