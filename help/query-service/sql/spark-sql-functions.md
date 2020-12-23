@@ -174,114 +174,15 @@ For more detailed information about the functions, including its syntax, usage, 
 - Separate elements of array into multiple rows, including null (`explode_outer`)
 - 1-based position of array (`find_in_set`)
 - Flatten array of arrays (`flatten`)
-- Explode array of structs into a table, excluding null (`inline`)
-- Explode array of structs into a table, including null (`inline_outer`)
-
-
-#### posexplode
-
-`posexplode(expr)`: Separates the elements of array `expr` into multiple rows with positions, or the elements of map `expr` into multiple rows and columns with positions.
-
-Example:
-
-```sql
-> SELECT posexplode(array(10,20));
- 0  10
- 1  20
-```
-
-#### posexplode_outer
-
-`posexplode_outer(expr)`: Separates the elements of array `expr` into multiple rows with positions, or the elements of map `expr` into multiple rows and columns with positions.
-
-Example:
-
-```sql
-> SELECT posexplode_outer(array(10,20));
- 0  10
- 1  20
-```
-
-#### reverse
-
-`reverse(array)`: Returns a reversed string or an array with reverse order of elements.
-
-Examples:
-
-```sql
-> SELECT reverse('Spark SQL');
- LQS krapS
-> SELECT reverse(array(2, 1, 4, 3));
- [3,4,1,2]
-```
-
-Since: 1.5.0
-
->[!NOTE]
->
->rse logic for arrays is available since 2.4.0.
-
-#### shuffle
-
-`shuffle(array)`: Returns a random permutation of the given array.
-
-Examples:
-
-```sql
-> SELECT shuffle(array(1, 20, 3, 5));
- [3,1,5,20]
-> SELECT shuffle(array(1, 20, null, 3));
- [20,null,3,1]
-```
-
-Since: 2.4.0
-
->[!NOTE]
->
->function is non-deterministic.
-
-#### slice
-
-`slice(x, start, length)`: Subsets array x starting from index start (or starting from the end if start is negative) with the specified length.
-
-Examples:
-
-```sql
-> SELECT slice(array(1, 2, 3, 4), 2, 2);
- [2,3]
-> SELECT slice(array(1, 2, 3, 4), -2, 2);
- [3,4]
-```
-
-Since: 2.4.0
-
-#### sort_array
-
-`sort_array(array[, ascendingOrder])`: Sorts the input array in ascending or descending order according to the natural ordering of the array elements. Null elements are placed at the beginning of the returned array in ascending order or at the end of the returned array in descending order.
-
-Examples:
-
-```sql
-> SELECT sort_array(array('b', 'd', null, 'c', 'a'), true);
- [null,"a","b","c","d"]
-```
-
-#### zip_with
-
-`zip_with(left, right, func)`: Merges the two given arrays, element-wise, into a single array using function. If one array is shorter, nulls are appended at the end to match the length of the longer array, before applying function.
-
-Examples:
-
-```sql
-> SELECT zip_with(array(1, 2, 3), array('a', 'b', 'c'), (x, y) -> (y, x));
- [{"y":"a","x":1},{"y":"b","x":2},{"y":"c","x":3}]
-> SELECT zip_with(array(1, 2), array(3, 4), (x, y) -> x + y);
- [4,6]
-> SELECT zip_with(array('a', 'b', 'c'), array('d', 'e', 'f'), (x, y) -> concat(x, y));
- ["ad","be","cf"]
-```
-
-Since: 2.4.0
+- Separate array of structs into a table, excluding null (`inline`)
+- Separate array of structs into a table, including null (`inline_outer`)
+- Separate elements of array into multiple rows with positions, excluding null (`posexplod`)
+- Separate elements of array into multiple rows with positions, including null (`posexplod`)
+- Reverse elements of the array (`reverse`)
+- Return a random permutation of the array (`shuffle`)
+- Subset (`slice`)
+- Sort given an order (`sort_array`)
+- Zip, given a function (`zip_with`)
 
 ### Datatype casting functions {#datatype-casting}
 
