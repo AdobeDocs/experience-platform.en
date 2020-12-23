@@ -120,6 +120,6 @@ The canvas updates the data type of the field from "[!UICONTROL Object]" to the 
 
 ## Next steps
 
-This tutorial covered how to create and edit data types, and how to add them to mixins using the [!DNL Schema Editor]. To learn more about working with data types in the UI, including how to convert a multi-field object into a data type, see the [schema creation tutorial](../../tutorials/create-schema-ui.md#datatype).
+This document covered how to create and edit data types using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
-To learn how to create a data type using the Schema Registry API, see the [data types endpoint guide](../../api/data-types.md#create).
+To learn how to manage data types using the [!DNL Schema Registry] API, see the [data types endpoint guide](../../api/data-types.md).

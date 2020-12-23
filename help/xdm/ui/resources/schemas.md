@@ -10,7 +10,7 @@ topic: user guide
 
 This document provides an overview of how to create, edit, and manage custom Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >XDM schemas are extremely customizable, and therefore the steps involved in creating a schema can vary depending on what kind of data you want the schema to capture. As a result, this document only covers the basic interactions you can make with schemas in the UI, and excludes related steps such as customizing classes, mixins, data types, and fields.
 >
@@ -26,7 +26,7 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-The [!DNL Schema Editor] appears, and the schema's base structure (provided by its class) is shown in the canvas. From here, you can start to [add mixins](#add-mixin) to the schema.
+Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can start to [add mixins](#add-mixin) to the schema.
 
 ## Edit an existing schema {#edit}
 
@@ -38,7 +38,7 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 ![](../../images/ui/resources/schemas/edit-schema.png)
 
-The [!DNL Schema Editor] appears, with the schema's structure shown in the canvas.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixin) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
 
 >[!NOTE]
 >

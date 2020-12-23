@@ -58,7 +58,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Mixins](./ui/resources/mixins.md)
     * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
-    * [Basic fields](./ui/fields/basic.md)
+    * [Overview](./ui/fields/overview.md)
     * [Required fields](./ui/fields/required.md)
     * [Array fields](./ui/fields/array.md)
     * [Enum fields](./ui/fields/enum.md)

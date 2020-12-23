@@ -31,14 +31,7 @@ The [!UICONTROL Schemas] workspace provides powerful tools for creating and cust
 
 ## Defining XDM fields
 
-Classes, mixins, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the following documentation to learn how to create these different field types:
-
-* [Basic fields](./fields/basic.md)
-* [Required fields](./fields/required.md)
-* [Array fields](./fields/array.md)
-* [Enum fields](./fields/enum.md)
-* [Identity fields](./fields/identity.md)
-* [Relationship fields](./fields/relationship.md)
+Classes, mixins, and data types all contribute fields to a schema. You can choose from a list of standard field types when adding fields to these resources, and can also define specialized fields for certain use cases. Refer to the the guide on [defining XDM fields in the UI](./fields/overview.md) for more information.
 
 ## Next steps
 
