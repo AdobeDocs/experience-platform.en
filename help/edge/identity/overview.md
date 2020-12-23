@@ -30,6 +30,10 @@ When migrating from using Visitor API, you can also migrate existing AMCV cookie
 
 When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
 
+## Server Side Forwarding
+
+If you currently have server side forwarding enabled and are using `appmeasurement.js`. and `visitor.js` you can keep the server side forwarding feature enabled and this won't cause any issues. In the backend, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won’t call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.
+
 ## Retrieving the Visitor ID
 
 If you want to use this unique ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID.
