@@ -60,7 +60,7 @@ For more details on creating identity descriptors in the API, see the document o
 
 #### Defining identities in the UI
 
-With your schema open in the Schema Editor, click on the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, click on the **[!UICONTROL Identity]** checkbox. 
+With your schema open in the Schema Editor, select the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, select the **[!UICONTROL Identity]** checkbox. 
 
 For more details on managing identities in the UI, see the section on [defining identity fields](./tutorials/create-schema-ui.md#identity-field) section in the Schema Editor tutorial.
 
@@ -80,7 +80,7 @@ For more information on using the API to enable a schema for use in [!DNL Real-t
 
 #### Enabling an existing schema for [!DNL Profile] using the UI
 
-In [!DNL Experience Platform], click on **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, click on **[!UICONTROL Profile]** to toggle it on.
+In [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, select **[!UICONTROL Profile]** to toggle it on.
 
 
 For more information, see the section on [use in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.

@@ -125,7 +125,7 @@ After providing a unique name for the configuration, select the toggle button ne
 
 ![](../assets/iab/edge-config.png)
 
-When finished, click **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
+When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 ### Making consent-change commands
 
