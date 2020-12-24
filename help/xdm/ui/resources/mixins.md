@@ -10,9 +10,9 @@ topic: user guide
 
 In Experience Data Model (XDM), mixins are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 
 
-Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all mixins are available for use with all classes.
+A mixin defines which class(es) it is compatible with, based on the behavior of the data that the mixin represents (record or time series). This means that not all mixins are available for use with all classes.
 
-Adobe Experience Platform provides many standard mixins that cover a wide range of marketing use cases. However, you can also create and edit your own custom mixins to define additional concepts related to your business within your XDM schemas. This document provides an overview of how to create, edit, and manage custom mixins for your organization in the Platform UI.
+Adobe Experience Platform provides many standard mixins that cover a wide range of marketing use cases. However, you can also create and edit your own custom mixins to define additional concepts related to your business within your XDM schemas. This guide provides an overview of how to create, edit, and manage custom mixins for your organization in the Platform UI.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Create a new mixin {#create}
 
-To create a new mixin, you must first select a schema that the mixin will be added to. You can choose to [create a new schema](./schemas.md#create), or [select an existing schema to edit](./schemas.md#edit).
+To create a new mixin, you must first select a schema that the mixin will be added to. You can choose to [create a new schema](./schemas.md#create) or [select an existing schema to edit](./schemas.md#edit).
 
 Once you have the schema open in the [!DNL Schema Editor], select **[!UICONTROL Add]** next to the [!UICONTROL Mixins] section in the left rail.
 
@@ -52,27 +52,7 @@ To add fields to a mixin in the [!DNL Schema Editor], start by selecting the mix
 
 ![](../../images/ui/resources/mixins/add-field-button.png)
 
-A **[!UICONTROL New field]** appears in in the canvas, located within a root-level object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All fields that are added to a schema through custom mixins are automatically placed within this namespace, in order to prevent conflicts with other fields from Adobe-provided classes and mixins.
-
-![](../../images/ui/resources/mixins/new-field.png)
-
-In the right rail, you can configure the details of the new fields. The following information is required for each field:
-
-| Field property | Description |
-| --- | --- |
-| **[!UICONTROL Field name]** | The name for the field, written in camelCase. |
-| **[!UICONTROL Display name]** | A human-friendly name for the field. |
-| **[!UICONTROL Type]** | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](./data-types.md) that have been previously defined in the [!DNL Schema Registry]. |
-
-See the guide on [defining fields in the UI](../fields/overview.md) for more information.
-
-Once you have finished configuring the field, select **[!UICONTROL Apply]**.
-
-![](../../images/ui/resources/mixins/field-details.png)
-
-The canvas updates to show the field's name and type, and the right rail now lists the field's path in addition to its other properties.
-
-![](../../images/ui/resources/mixins/field-added.png)
+A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the mixin.
 
 Continue to add as many fields as required to the mixin. When finished, select **[!UICONTROL Save]** to save both the schema and the mixin.
 
@@ -82,6 +62,6 @@ If the same mixin is already employed in other schemas, the newly added fields w
 
 ## Next steps
 
-This document covered how to create and edit mixins using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
+This guide covered how to create and edit mixins using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
 To learn how to manage mixins using the [!DNL Schema Registry] API, see the [mixins endpoint guide](../../api/mixins.md).

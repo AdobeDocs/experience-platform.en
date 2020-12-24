@@ -10,25 +10,23 @@ topic: user guide
 
 In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
 
-Adobe provides two standard (“core”) XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
+Adobe provides several standard (“core”) XDM classes, including [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition to these core classes, you can also create your own custom classes to describe more specific use cases for your organization.
 
-This document provides an overview of how to create, edit, and manage custom classes for your organization in the Adobe Experience Platform UI.
+This document provides an overview of how to create, edit, and manage custom classes in the Adobe Experience Platform UI.
 
 ## Prerequisites
 
-This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) for how classes contribute to XDM schemas.
+This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.
 
 While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
 ## Create a new class {#create}
 
-Platform provides the flexibility to define a schema based on a class that is unique to your organization. 
-
 In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select **[!UICONTROL Browse]** from the dropdown.
 
 ![](../../images/ui/resources/classes/browse-classes.png)
 
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define.
+A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior for the data that the schema will define ("[!UICONTROL Record]" or "[!UICONTROL Time-series]").
 
 When finished, select **[!UICONTROL Assign class]**.
 
@@ -48,11 +46,11 @@ You can now start [adding fields to the class](#add-fields), which will be share
 
 To edit an existing class, select the **[!UICONTROL Browse]** tab, and then select the name of a schema that employs the class you want to edit.
 
+![](../../images/ui/resources/classes/select-for-edit.png)
+
 >[!TIP]
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
-
-![](../../images/ui/resources/classes/select-for-edit.png)
 
 The [!DNL Schema Editor] appears, with the schema's structure shown in the canvas. You can now start [adding fields to the class](#add-fields).
 
@@ -71,6 +69,8 @@ One you have a schema that employs a custom class open in the [!UICONTROL Schema
 >[!IMPORTANT]
 >
 >Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./mixins.md#create) instead.
+
+
 
 ## Change the class of a schema {#schema}
 

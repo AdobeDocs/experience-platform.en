@@ -8,7 +8,7 @@ topic: user guide
 
 # Create and edit schemas in the UI
 
-This document provides an overview of how to create, edit, and manage custom Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
+This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
 >[!IMPORTANT]
 >
