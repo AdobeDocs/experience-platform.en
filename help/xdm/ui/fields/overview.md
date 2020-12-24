@@ -18,7 +18,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Select a resource to add fields to {#select-resource}
 
-To define new XDM fields in the UI, you must first open a schema within the [!DNL Schema Editor]. Depending on what schemas are currently available to you in the [!DNL Schema Library], you can choose to [create a new schema](./schemas.md#create) or [select an existing schema to edit](./schemas.md#edit).
+To define new XDM fields in the UI, you must first open a schema within the [!DNL Schema Editor]. Depending on what schemas are currently available to you in the [!DNL Schema Library], you can choose to [create a new schema](../resources/schemas.md#create) or [select an existing schema to edit](../resources/schemas.md#edit).
 
 Once you have the [!DNL Schema Editor] open, use the left rail to select the class or mixin that you want to define fields for. If the resource is a custom resource defined by your organization, controls to add or edit fields appear in the canvas. These controls appear next to the name of the schema, as well as any object-type fields that have been defined under the selected class or mixin.
 
