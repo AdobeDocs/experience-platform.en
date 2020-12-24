@@ -28,7 +28,7 @@ In the right rail, you can configure the details of the new fields. The followin
 | --- | --- |
 | **[!UICONTROL Field name]** | The name for the field, written in camelCase. |
 | **[!UICONTROL Display name]** | A human-friendly name for the field. |
-| **[!UICONTROL Type]** | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](./data-types.md) that have been previously defined in the [!DNL Schema Registry]. |
+| **[!UICONTROL Type]** | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry]. |
 
 Once you have finished configuring the field, select **[!UICONTROL Apply]**.
 
