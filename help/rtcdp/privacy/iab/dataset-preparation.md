@@ -65,7 +65,7 @@ While each privacy mixin varies in structure and the types of fields they contai
 
 ## Create customer consent schemas {#create-schemas}
 
-In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. From here, follow the steps in the sections below to create each required schema.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. From here, follow the steps in the sections below to create each required schema.
 
 >[!NOTE]
 >
@@ -73,11 +73,11 @@ In the Platform UI, click **[!UICONTROL Schemas]** in the left navigation to ope
 
 ### Create a record-based consent schema {#profile-schema}
 
-From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the [!DNL XDM Individual Profile] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas] workspace**, create a new schema based on the [!DNL XDM Individual Profile] class. Once you have the schema open within the Schema Editor, select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Profile privacy]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Profile privacy]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, select **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-profile-privacy.png)
 
@@ -94,7 +94,7 @@ From here, repeat the above steps to add the following additional mixins to the 
 
 ![](../assets/iab/profile-all-mixins.png)
 
-If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], click **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
+If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], select **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
 #### Enable the schema for use in [!DNL Real-time Customer Profile]
 
@@ -106,7 +106,7 @@ In order for [!DNL Real-time CDP] to associate the consent data it receives to s
 >
 >Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-To enable the schema for [!DNL Profile], click the schema's name in the left-hand rail to open the **[!UICONTROL Schema properties]** dialog in the right-hand rail. From here, click the **[!UICONTROL Profile]** toggle button.
+To enable the schema for [!DNL Profile], select the schema's name in the left-hand rail to open the **[!UICONTROL Schema properties]** dialog in the right-hand rail. From here, select the **[!UICONTROL Profile]** toggle button.
 
 ![](../assets/iab/profile-enable-profile.png)
 
@@ -114,17 +114,17 @@ A popover appears, indicating a missing primary identity. Select the checkbox fo
 
 <img src="../assets/iab/missing-primary-identity.png" width=600 /><br>
 
-Finally, click **[!UICONTROL Save]** to confirm your changes.
+Finally, select **[!UICONTROL Save]** to confirm your changes.
 
 ![](../assets/iab/profile-save.png)
 
 ### Create a time-series-based consent schema {#event-schema}
 
-From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas]** workspace, create a new schema based on the [!DNL XDM ExperienceEvent] class. Once you have the schema open within the Schema Editor, click **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+From the **[!UICONTROL Browse]** tab in the **[!UICONTROL Schemas]** workspace, create a new schema based on the [!DNL XDM ExperienceEvent] class. Once you have the schema open within the Schema Editor, select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
 
 ![](../assets/iab/add-mixin-event.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Experience event privacy mixin]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, click **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Experience event privacy mixin]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once you have chosen a mixin, select **[!UICONTROL Add mixin]**.
 
 ![](../assets/iab/add-event-privacy.png)
 
@@ -139,7 +139,7 @@ From here, repeat the above steps to add the following additional mixins to the 
 * [!UICONTROL ExperienceEvent web details]
 * [!UICONTROL ExperienceEvent implementation details]
 
-Once the mixins have been added, finish by clicking **[!UICONTROL Save]**.
+Once the mixins have been added, finish by selecting **[!UICONTROL Save]**.
 
 ![](../assets/iab/event-all-mixins.png)
 
@@ -147,7 +147,7 @@ Once the mixins have been added, finish by clicking **[!UICONTROL Save]**.
 
 For each of the required schemas described above, you must create a dataset that will ultimately ingest your customers' consent data. The dataset based on the [!DNL XDM Individual Profile] schema must be enabled for [!DNL Real-time Customer Profile], while the dataset based on the [!DNL XDM ExperienceEvent] schema should not be [!DNL Profile]-enabled.
 
-To begin, select **[!UICONTROL Datasets]** in the left navigation, then click **[!UICONTROL Create dataset]** in the top-right corner.
+To begin, select **[!UICONTROL Datasets]** in the left navigation, then select **[!UICONTROL Create dataset]** in the top-right corner.
 
 ![](../assets/iab/dataset-create.png)
 
@@ -155,15 +155,15 @@ On the next page, select **[!UICONTROL Create dataset from schema]**.
 
 ![](../assets/iab/dataset-create-from-schema.png)
 
-The **[!UICONTROL Create dataset from schema]** workflow appears, starting at the **[!UICONTROL Select schema]** step. In the provided list, locate one of the consent schemas that you created earlier. You can optionally use the search to narrow down results and locate your schema easier. Click the radio button next to the schema to select it, then click **[!UICONTROL Next]** to continue.
+The **[!UICONTROL Create dataset from schema]** workflow appears, starting at the **[!UICONTROL Select schema]** step. In the provided list, locate one of the consent schemas that you created earlier. You can optionally use the search to narrow down results and locate your schema easier. Select the radio button next to the schema to select it, then select **[!UICONTROL Next]** to continue.
 
 ![](../assets/iab/dataset-select-schema.png)
 
-The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily identifiable name and description for the dataset before clicking **[!UICONTROL Finish]**.
+The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily identifiable name and description for the dataset before selecting **[!UICONTROL Finish]**.
 
 ![](../assets/iab/dataset-configure.png)
 
-The details page for the newly created dataset appears. If the dataset is based on your [!DNL XDM ExperienceEvent] schema, then the process is complete. If the dataset is based on your [!DNL XDM Individual Profile] schema, the final step in the process is to enable the dataset for use in [!DNL Real-time Customer Profile]. In the right-hand rail, click the **[!UICONTROL Profile]** toggle button to enable the dataset.
+The details page for the newly created dataset appears. If the dataset is based on your [!DNL XDM ExperienceEvent] schema, then the process is complete. If the dataset is based on your [!DNL XDM Individual Profile] schema, the final step in the process is to enable the dataset for use in [!DNL Real-time Customer Profile]. In the right-hand rail, select the **[!UICONTROL Profile]** toggle button to enable the dataset.
 
 ![](../assets/iab/dataset-enable-profile.png)
 
