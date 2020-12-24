@@ -70,7 +70,13 @@ One you have a schema that employs a custom class open in the [!UICONTROL Schema
 >
 >Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./mixins.md#create) instead.
 
+A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class.
 
+Continue to add as many fields as required to the class. When finished, select **[!UICONTROL Save]** to save both the schema and the class.
+
+![](../../images/ui/resources/classes/save.png)
+
+If you have previously created schemas that employ this class, the newly added fields will automatically appear in those schemas.
 
 ## Change the class of a schema {#schema}
 
