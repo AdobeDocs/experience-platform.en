@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform product documentation
+title: Adobe Experience Platform glossary
 topic: getting started
+description: A glossary of important terminology in Experience Platform.
 ---
 
-# Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
+# Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
 ## A
 

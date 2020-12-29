@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service FAQ
+title: Privacy Service troubleshooting guide
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 ---
 
 # [!DNL Privacy Service] troubleshooting guide
