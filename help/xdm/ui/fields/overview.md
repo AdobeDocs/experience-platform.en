@@ -67,6 +67,7 @@ You can continue to follow the steps above to add more fields to the schema. Onc
 >[!NOTE]
 >
 >Any changes you make to the mixins or class of one schema will be reflected in all other schemas that employ those mixins or class.
+
 ## Type-specific field properties {#type-specific-properties}
 
 When defining a new field, additional configuration options may appear in the right rail depending on the **[!UICONTROL Type]** you choose for the field. The following table outlines these additional field properties along with their compatible types:
