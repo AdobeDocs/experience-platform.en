@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Privacy Service user guide
 topic: UI guide
+description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 ---
 
 # [!DNL Privacy Service] user guide

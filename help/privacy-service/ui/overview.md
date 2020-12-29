@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service UI overview
 topic: UI guide
+description: Get started using the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 ---
 
 # [!DNL Privacy Service] UI overview
