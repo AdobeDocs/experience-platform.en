@@ -12,7 +12,7 @@ The [!DNL Schema Editor] in the Adobe Experience Platform user interface allows 
 
 ## Prerequisites
 
-This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes contribute to XDM schemas.
+This guide requires a working understanding of XDM System. Refer to the [XDM overview](../../home.md) for an introduction to the role of XDM within the Experience Platform ecosystem, and the [basics of schema composition](../../schema/composition.md) to learn how classes and mixins contribute fields to XDM schemas.
 
 While not required for this guide, it is recommended that you also follow the tutorial on [composing a schema in the UI](../../tutorials/create-schema-ui.md) to familiarize yourself with the various capabilities of the [!DNL Schema Editor].
 
@@ -34,7 +34,7 @@ To add a new field to the resource, select the **plus (+)** icon next to the obj
 
 ## Define a field for a resource {#define}
 
-After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in in the canvas, located within a root-level object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All fields that are added to a schema through custom classes and mixins are automatically placed within this namespace, in order to prevent conflicts with other fields from Adobe-provided classes and mixins.
+After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in in the canvas, located within a root-level object that is namespaced to your unique tenant ID (shown as `_tenantId` in the example below). All fields that are added to a schema through custom classes and mixins are automatically placed within this namespace to prevent conflicts with other fields from Adobe-provided classes and mixins.
 
 ![](../../images/ui/fields/overview/new-field.png)
 
@@ -42,7 +42,7 @@ In the right rail, you can configure the details of the new fields. The followin
 
 | Field property | Description |
 | --- | --- |
-| [!UICONTROL Field name] | The name for the field, written in camelCase. |
+| [!UICONTROL Field name] | A unique, descriptive name for the field. Note that the field's name cannot be changed once the schema has been saved.<br><br>The name should ideally be written in camelCase. It may contain alphanumeric, dash, or underscore characters, but it **may not** start with an underscore.<ul><li>**Correct**: `fieldName`</li><li>**Acceptable:** `field_name2`, `Field-Name`, `field-name_3`</li><li>**Incorrect**: `_fieldName`</li></ul> |
 | [!UICONTROL Display name] | A human-friendly name for the field. |
 | [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
 
@@ -50,7 +50,7 @@ You can also provide an optional human-readable **[!UICONTROL Description]** to 
 
 >[!NOTE]
 >
->Depending on the **[!UICONTROL Type]** you selected for the field, additional configuration options may appear. See the section on [type-specific field properties](#type-specific-properties).
+>Depending on the **[!UICONTROL Type]** you selected for the field, additional configuration controls may appear in the right rail. See the section on [type-specific field properties](#type-specific-properties) for more information on these controls.
 >
 >The right rail also provides checkboxes for designating special field types. See the section on [special field types](#special) for more information.
 
@@ -62,21 +62,26 @@ The canvas updates to show the field's name and type, and the right rail now lis
 
 ![](../../images/ui/fields/overview/field-added.png)
 
+You can continue to follow the steps above to add more fields to the schema. Once the schema is saved, its base class and mixins are also saved if any changes have been made to them.
+
+>[!NOTE]
+>
+>Any changes you make to the mixins or class of one schema will be reflected in all other schemas that employ those mixins or class.
 ## Type-specific field properties {#type-specific-properties}
 
 When defining a new field, additional configuration options may appear in the right rail depending on the **[!UICONTROL Type]** you choose for the field. The following table outlines these additional field properties along with their compatible types:
 
 | Field property | Compatible types | Description |
 | --- | --- | --- |
-| [!UICONTROL Default value] | String, Double, Long, Integer, Short, Byte, Boolean | A default value that will be assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type. |
-| [!UICONTROL Pattern] | String | A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that the value for this field must conform to in order to be accepted during ingestion. |
-| [!UICONTROL Format] | String | Select from a list of pre-defined formats for strings that the value must conform to. Available formats include: <ul><li>[!UICONTROL date-time]</li><li>[!UICONTROL email]</li><li>[!UICONTROL hostname]</li><li>[!UICONTROL ipv4]</li><li>[!UICONTROL ipv6]</li><li>[!UICONTROL uri]</li><li>[!UICONTROL uri-reference]</li><li>[!UICONTROL url-template]</li><li>[!UICONTROL json-pointer]</li></ul> |
-| [!UICONTROL Minimum length] | String | The minimum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
-| [!UICONTROL Maximum length] | String | The minimum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
-| [!UICONTROL Minimum value] | Double | The minimum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
-| [!UICONTROL Maximum value] | Double | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
-| [!UICONTROL Exclusive minimum value] | Double | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. |
-| [!UICONTROL Exclusive maximum value] | Double | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. |
+| [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type. |
+| [!UICONTROL Pattern] | [!UICONTROL String] | A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that the value for this field must conform to in order to be accepted during ingestion. |
+| [!UICONTROL Format] | [!UICONTROL String] | Select from a list of pre-defined formats for strings that the value must conform to. Available formats include: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
+| [!UICONTROL Minimum length] | [!UICONTROL String] | The minimum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
+| [!UICONTROL Maximum length] | [!UICONTROL String] | The maximum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
+| [!UICONTROL Minimum value] | [!UICONTROL Double] | The minimum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
+| [!UICONTROL Maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
+| [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. |
+| [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. |
 
 ## Special field types {#special}
 
@@ -87,8 +92,8 @@ To learn more about these special types, refer to the following documentation:
 * [[!UICONTROL Required]](./required.md)
 * [[!UICONTROL Array]](./array.md)
 * [[!UICONTROL Enum]](./enum.md)
-* [[!UICONTROL Identity]](./identity.md) (Available for string fields only)
-* [[!UICONTROL Relationship]](./relationship.md) (Available for string fields only)
+* [[!UICONTROL Identity]](./identity.md) (Available only for string fields)
+* [[!UICONTROL Relationship]](./relationship.md) (Available only for string fields)
 
 While technically not a special field type, it is also recommended that you visit the guide on [defining object-type fields](./object.md) to learn more about defining nested sub-fields if your schema structures.
 
