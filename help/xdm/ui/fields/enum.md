@@ -30,4 +30,4 @@ The canvas updates to reflect the changes. When you explore this schema in the f
 
 ## Next steps
 
-This guide covered how to define a required field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).
+This guide covered how to define an enum field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).

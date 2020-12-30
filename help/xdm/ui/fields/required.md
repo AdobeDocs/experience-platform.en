@@ -14,7 +14,7 @@ When [defining a new field](./overview.md#define) in the Adobe Experience Platfo
 
 ![](../../images/ui/fields/special/required.png)
 
-Once the field is applied, its path appears under **[!UICONTROL Required fields]** in the left rail.
+Once the field is applied, its path appears under **[!UICONTROL Required fields]** in the left rail. If the field is nested, then any parent fields will also appear as required.
 
 ![](../../images/ui/fields/special/required-applied.png)
 
