@@ -18,11 +18,11 @@ To access to the workspace in the Platform UI, select **[!UICONTROL Schemas]** i
 
 If you are using the workspace for the first time, start with the guide on [exploring existing resources in the UI](./explore.md) to familiarize yourself with the different tabs and the schema canvas.
 
-Alternatively, you can also visit the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the Schema Editor's capabilities in the process.
+It is also recommended that you follow the [schema creation tutorial](../tutorials/create-schema-ui.md) to create an example schema and get a full tour of the [!DNL Schema Editor]'s capabilities in the process.
 
 ## Creating and managing XDM resources
 
-The [!UICONTROL Schemas] workspace provides powerful tools for creating and customizing your organization's XDM resources. Refer to the following documentation to learn how to create and edit each resource type:
+The [!UICONTROL Schemas] workspace provides powerful tools for creating and customizing your organization's XDM resources. Refer to the following documentation to learn how to create and edit each resource type in the UI:
 
 * [Schemas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
