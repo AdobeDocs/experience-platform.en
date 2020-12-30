@@ -26,7 +26,11 @@ In the [!UICONTROL Schemas] workspace, select **[!UICONTROL Create schema]** in 
 
 ![](../../images/ui/resources/schemas/create-schema.png)
 
-Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can start to [add mixins](#add-mixin) to the schema.
+Once you select a class, the [!DNL Schema Editor] appears and the schema's base structure (provided by the class) is shown in the canvas. From here, you can use the right rail to add a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the schema.
+
+![](../../images/ui/resources/schemas/schema-details.png)
+
+You can now start building the structure of the schema by [adding mixins](#add-mixins).
 
 ## Edit an existing schema {#edit}
 
@@ -38,13 +42,13 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 
 ![](../../images/ui/resources/schemas/edit-schema.png)
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixin) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
 
 >[!NOTE]
 >
 >Keep in mind that once a schema has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
-## Add mixins to a schema {#add-mixin}
+## Add mixins to a schema {#add-mixins}
 
 >[!NOTE]
 >
@@ -69,6 +73,34 @@ Once you have finished choosing mixin, select **[!UICONTROL Add mixin]** to add 
 The [!DNL Schema Editor] reappears with the mixin-provided fields represented in the canvas.
 
 ![](../../images/ui/resources/schemas/mixins-added.png)
+
+## Enable a schema for Real-time Customer Profile {#profile}
+
+[Real-time Customer Profile](../../../profile/home.md) merges data from disparate sources to construct a complete view of each individual customer. If you want the data captured by a schema to participate in this process, you must enable the schema for use in [!DNL Profile].
+
+>[!IMPORTANT]
+>
+>In order to enable a schema for [!DNL Profile], it must have a primary identity field defined. See the guide on [defining identity fields](../fields/identity.md) for more information.
+
+To enable the schema, start by selecting the schema's name in the left rail, then select the **[!UICONTROL Profile]** toggle in the right rail.
+
+![](../../images/ui/resources/schemas/profile-toggle.png)
+
+A popover appears, warning you that once a schema has been enabled and saved, it cannot be disabled. Select **[!UICONTROL Enable]** to continue.
+
+![](../../images/ui/resources/schemas/profile-confirm.png)
+
+The canvas reappears with the [!UICONTROL Profile] toggle enabled.
+
+>[!IMPORTANT]
+>
+>Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-time Customer Profile. Select the **[!UICONTROL Profile]** you can select the toggle again to disable it. Once you save the schema, it can no longer be disabled.
+
+To finish the process, select **[!UICONTROL Save]** to save the schema.
+
+![](../../images/ui/resources/schemas/profile-enabled.png)
+
+The schema is now enabled for use in Real-time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
 
 ## Change a schema's class {#change-class}
 
