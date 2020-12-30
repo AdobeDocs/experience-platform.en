@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Create and edit data types using the UI
 topic: tutorial
 type: Tutorial
-description: This tutorial uses the Experience Platform UI to walk you through the steps to compose a custom data type.
+description: Learn how to create and edit data types in the Experience Platform user interface.
 ---
 
 # Create and edit data types using the UI

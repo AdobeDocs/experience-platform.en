@@ -1,8 +1,8 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;field;
 solution: Experience Platform
 title: Define XDM fields in the UI
-description: Define XDM fields in the UI
+description: Learn how to define XDM fields in the Experience Platform user interface.
 topic: user guide
 ---
 
