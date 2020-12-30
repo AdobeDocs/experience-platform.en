@@ -56,7 +56,7 @@ The following table outlines the accepted values for `xdm:eventType`, along with
 |`advertising.starts` | A digital video ad has started playing. |
 |`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
 |`web.webpagedetails.pageViews` | A webpage has received one or more views. |
-|`web.webinteraction.linkClicks` | A link has received one or more clicks. |
+|`web.webinteraction.linkClicks` | A link has been selected one or more times. |
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify the each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |

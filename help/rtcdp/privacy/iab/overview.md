@@ -3,6 +3,7 @@ keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
+description: Learn how to configure your data operations and schemas to convey user consent choices when exporting segments in Real-time Customer Data Platform.
 ---
 
 # IAB TCF 2.0 support in [!DNL Real-time Customer Data Platform]
@@ -125,7 +126,7 @@ After providing a unique name for the configuration, select the toggle button ne
 
 ![](../assets/iab/edge-config.png)
 
-When finished, click **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
+When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 ### Making consent-change commands
 

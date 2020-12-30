@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Privacy JavaScript Library overview
 topic: overview
+description: The Adobe Privacy JavaScript Library allows you to retrieve data subject identities for use in Privacy Service.
 ---
 
 # Adobe Privacy JavaScript Library overview

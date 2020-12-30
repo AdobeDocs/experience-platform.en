@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform product documentation
+title: Getting started with Adobe Experience Platform
 topic: getting started
+description: This video provides a quick introduction to Experience Platform and outlines the business challenges it solves.
 ---
 
 # Getting started with Adobe Experience Platform

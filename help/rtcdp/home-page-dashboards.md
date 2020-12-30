@@ -67,7 +67,7 @@ For more information about destinations, see [Destinations overview](destination
 
 In the leaderboard **[!UICONTROL Successful profile records]** shows the total number of records that have been successfully processed into the profile.
 
-There is also a metric card that shows the percentage of successful records. Click **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
+There is also a metric card that shows the percentage of successful records. Select **[!UICONTROL View datasets]** to see more details about the profile records. Hover over the colored area of the graph to see additional details:
 
 ![image](assets/home-profilerecords-details.PNG)
 
@@ -83,7 +83,7 @@ The **[!UICONTROL Total profile records]** metric card shows the total number of
 
 ![image](assets/home-profile-details.PNG)
 
-Click **[!UICONTROL View profiles]** to see more details about the profile records.
+Select **[!UICONTROL View profiles]** to see more details about the profile records.
 
 For more information about profiles, see [A unified view of your customer in Real-time CDP](profile/profile-overview.md).
 
@@ -93,7 +93,7 @@ For more information about viewing a specific profile, see [Profile viewer](prof
 
 In the leaderboard, **[!UICONTROL Failed profile records]** counts the number of records that failed to process into the profile.
 
-The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Click **[!UICONTROL View datasets]** to see more details about the profile records.
+The **[!UICONTROL Failed profile records]** metric card shows this count, and includes a graphical representation that helps you see how failures have trended during the time shown below the graphic. This chart is updated hourly. Select **[!UICONTROL View datasets]** to see more details about the profile records.
 
 The number of failed profile records is updated hourly. -->
 
@@ -101,7 +101,7 @@ The number of failed profile records is updated hourly. -->
 
 The **[!UICONTROL Recent datasets]** card shows the five most recent datasets created within the organization. This list is updated when a new dataset is created.
 
-Click a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can click on a specific source for details.
+Select a dataset to view the details for that item, or **[!UICONTROL View all]** to see the list of datasets. From there, you can select a specific source for details.
 
 For more information about datasets, see the [datasets overview](../catalog/datasets/overview.md).
 
@@ -109,7 +109,7 @@ For more information about datasets, see the [datasets overview](../catalog/data
 
 The **[!UICONTROL Recent sources]** metric card shows the five most recent sources created within the organization. This list is updated when a new source is created.
 
-Click a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. From there, you can click on a specific source for details.
+Select a source to view the details for that item, or **[!UICONTROL View all]** to see the list of sources. From there, you can select a specific source for details.
 
 For more information about sources, see [Sources overview](sources/sources-overview.md).
 
@@ -117,7 +117,7 @@ For more information about sources, see [Sources overview](sources/sources-overv
 
 The **[!UICONTROL Recent segments]** metric card shows the five most recent segments created within the organization. This list is updated when a new segment is created.
 
-Click a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
+Select a segment to view the details for that item, or **[!UICONTROL View all]** to see information about more segments.
 
 For more information about segments, see [Segmentation Service overview](segmentation/segmentation-overview.md).
 
@@ -125,6 +125,6 @@ For more information about segments, see [Segmentation Service overview](segment
 
 The **[!UICONTROL Recent destinations]** metric card shows the five most recent destinations created within the organization. This list is updated when a new destination is created.
 
-Click a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
+Select a destination to view the details for that item, or **[!UICONTROL View all]** to see information about more destinations.
 
 For more information about destinations, see [Destinations overview](destinations/overview.md).

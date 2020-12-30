@@ -8,7 +8,7 @@ description: Adobe Experience Platform is the most powerful, flexible, and open 
 
 # Platform documentation language support
 
-Adobe Experience Platform documentation is available in several languages. To change language, click the language dropdown and select the desired language.
+Adobe Experience Platform documentation is available in several languages. To change language, select the language dropdown and choose the desired language from the list.
 
 ![image](../images/overview/lang.jpg)
 
