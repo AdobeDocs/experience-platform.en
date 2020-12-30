@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;enum;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;enum;field;
 solution: Experience Platform
 title: Define an enum field in the UI
 description: Learn how to define an enum field in the Experience Platform user interface.

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;mixin;mixins;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;mixin;mixins;
 solution: Experience Platform
 title: Create and edit mixins in the UI
 description: Learn how to create and edit mixins in the Experience Platform user interface.

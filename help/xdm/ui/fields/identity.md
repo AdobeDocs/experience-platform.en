@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;data model;ui;workspace;identity;field;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;identity;field;
 solution: Experience Platform
 title: Define an identity field in the UI
 description: Learn how to define an identity field in the Experience Platform user interface.
