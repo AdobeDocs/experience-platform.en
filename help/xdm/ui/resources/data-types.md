@@ -44,7 +44,7 @@ This tutorial creates a data type that describes a restaurant property, so the d
 
 ![](../../images/ui/resources/data-types/data-type-properties.png)
 
-Skip ahead to the [next section](#add-fields) to start adding fields to the data type.
+From here, you can skip ahead to the [next section](#add-fields) to start adding fields to the new data type.
 
 ### Edit an existing data type
 
@@ -60,15 +60,13 @@ To start adding fields to the data type, select the **plus (+)** icon next to th
 
 ![](../../images/ui/resources/data-types/new-field.png)
 
-Use the right-rail controls to provide a **[!UICONTROL Field name]**, **[!UICONTROL Display name]**, and **[!UICONTROL Type]** for the field. Note that a field's type may be a basic scalar type (such as a string, integer, or boolean), or can represent another multi-field data type defined by Adobe or your organization.
+Use the controls in the right rail to configure the details of the new field. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the data type.
 
-The Restaurant data type requires a string field to represent the restaurant's name. As such, the [!UICONTROL Field name] is set as "name" and the [!UICONTROL Type] is set as [!UICONTROL String]. Select **[!UICONTROL Apply]** to apply the changes to the field.
+The Restaurant data type requires a string field to represent the restaurant's name. As such, the [!UICONTROL Field name] is set as "name" and the [!UICONTROL Type] is set as "[!UICONTROL String]". Select **[!UICONTROL Apply]** to apply the changes to the field.
 
 ![](../../images/ui/resources/data-types/name-field.png)
 
-Continue following the same process for adding additional fields, starting by selecting the **plus (+)** icon next to the root-level field and providing the configuration details in the right rail.
-
-The Restaurant data type now has additional fields for brand, seating capacity, and floor space.
+Continue adding more fields to the data type as needed. The example Restaurant data type now has additional fields for brand, seating capacity, and floor space.
 
 ![](../../images/ui/resources/data-types/more-fields.png)
 
@@ -80,31 +78,11 @@ This demonstrates how flexible data types can be in terms of describing your dat
 
 Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
-## Add the data type to a mixin
+## Add the data type to a class or mixin
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more mixins, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a mixin.
 
->[!NOTE]
->
-> This section focuses on adding a data type to a mixin, since this is the most common pattern for custom data types. However, you can also apply the same steps to add your data type to a class instead.
-
-You can add the data type to an existing mixin, or create a new mixin entirely. In either case, you must open the [!DNL Schema Editor] for a schema that you plan to add the new data type to, either by selecting an existing schema from the **[!UICONTROL Browse]** tab, or by creating a new schema entirely.
-
-Once you have the schema open in the [!DNL Schema Editor], select the mixin you want to add the data type to in the left rail. If the schema does not have an appropriate mixin, follow the steps to [create a new mixin](../../tutorials/create-schema-ui.md#define-mixin) to add to the schema instead, and make sure that the mixin is selected in the left rail.
-
-![](../../images/ui/resources/data-types/mixin-selected.png)
-
-Select the **plus (+)** icon next to the schema's name to add a new field to the selected mixin. When selecting the **[!UICONTROL Type]** property for the field, the name of the data type you created earlier is now available in the dropdown list. You can start typing the name of the data type to help locate it easier.
-
-![](../../images/ui/resources/data-types/add-data-type.png)
-
-Select your data type from the list, then select **[!UICONTROL Apply]**. The schema field updates in the canvas to show the structured sub-fields provided by the data type. If you save the schema by selecting **[!UICONTROL Save]**, the mixin is saved as well, allowing you to reuse the mixin in additional schemas belonging to the same class.
-
-![](../../images/ui/resources/data-types/data-type-added.png)
-
->[!NOTE]
->
-> Mixins are only compatible with one class. If you wish to use your data type in additional schemas based on different classes, you must follow the above steps to add the data type to additional mixins intended to extend those classes.
+Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a mixin](./mixins.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
 
 ## Convert a multi-field object into a data type {#convert}
 
@@ -114,7 +92,7 @@ To convert an object-type field to a data type, select the field in the canvas. 
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be re-used in other classes and mixins by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
+The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be reused in other classes and mixins by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

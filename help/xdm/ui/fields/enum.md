@@ -20,7 +20,7 @@ To add additional constraints to the enum, select **[!UICONTROL Add row]**.
 
 ![](../../images/ui/fields/special/enum-add-row.png)
 
-Continue to add the desired constraints and optional labels to the enum. When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
+Continue to add the desired constraints and optional labels to the enum. When finished, select **[!UICONTROL Apply]** to apply the changes to the schema.
 
 ![](../../images/ui/fields/special/enum-configured.png)
 
@@ -30,4 +30,4 @@ The canvas updates to reflect the changes. When you explore this schema in the f
 
 ## Next steps
 
-This guide covered how to define an enum field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).
+This guide covered how to define an enum field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

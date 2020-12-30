@@ -20,4 +20,4 @@ Once the field is applied, its path appears under **[!UICONTROL Required fields]
 
 ## Next steps
 
-This guide covered how to define a required field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).
+This guide covered how to define a required field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

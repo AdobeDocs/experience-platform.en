@@ -44,6 +44,12 @@ You can now start [adding fields to the class](#add-fields), which will be share
 
 ## Edit an existing class {#edit}
 
+>[!NOTE]
+>
+>Only custom classes defined by your organization can be edited.
+>
+>In addition, once a class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+
 To edit an existing class, select the **[!UICONTROL Browse]** tab, and then select the name of a schema that employs the class you want to edit.
 
 ![](../../images/ui/resources/classes/select-for-edit.png)
@@ -56,13 +62,9 @@ The [!DNL Schema Editor] appears, with the schema's structure shown in the canva
 
 ![](../../images/ui/resources/classes/edit.png)
 
->[!NOTE]
->
->Keep in mind that once a class has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
-
 ## Add fields to a class {#add-fields}
 
-One you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
+Once you have a schema that employs a custom class open in the [!UICONTROL Schema Editor], you can start adding fields to the class. To add a new field, select the **plus (+)** icon next to the schema's name.
 
 ![](../../images/ui/resources/classes/add-field.png)
 

@@ -34,19 +34,19 @@ You can now start building the structure of the schema by [adding mixins](#add-m
 
 ## Edit an existing schema {#edit}
 
+>[!NOTE]
+>
+>Once a schema has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+
 To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then select the name of the schema you want to edit.
+
+![](../../images/ui/resources/schemas/edit-schema.png)
 
 >[!TIP]
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-![](../../images/ui/resources/schemas/edit-schema.png)
-
 Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
-
->[!NOTE]
->
->Keep in mind that once a schema has been saved and used in data ingestion, only additive changes can be made to it. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
 ## Add mixins to a schema {#add-mixins}
 
@@ -120,7 +120,7 @@ Select a class from the list to display its description on the right-hand side o
 
 ![](../../images/ui/resources/schemas/assign-class.png)
 
-A new dialog opens asking you to confirm that you wish to assign a new class. Select **[!UICONTROL Assign]** to confirm.
+A new dialog opens, asking you to confirm that you wish to assign a new class. Select **[!UICONTROL Assign]** to confirm.
 
 ![](../../images/ui/resources/schemas/assign-confirm.png)
 

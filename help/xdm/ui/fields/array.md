@@ -16,7 +16,7 @@ After you have [defined a new field in the UI](./overview.md#define), you can se
 
 ![](../../images/ui/fields/special/array.png)
 
-Once the checkbox is selected, additional optional controls appear in the right rail that allow you to constrain the array further. If you do not wish to enforce a particular constraint, leave the field blank.
+Once the checkbox is selected, additional controls appear in the right rail that allow you to optionally constrain the array further. If you do not wish to enforce a particular constraint, leave the field blank.
 
 The additional configuration controls for arrays are as follows:
 
@@ -36,4 +36,4 @@ The canvas updates to reflect the changes made to the field. Note that the data 
 
 ## Next steps
 
-This guide covered how to define an array field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).
+This guide covered how to define an array field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

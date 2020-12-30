@@ -8,9 +8,9 @@ topic: user guide
 
 # Define an object field in the UI
 
-Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, mixins, and data types. In order to organize and nest related fields in custom XDM resources, you can define an object-type fields which can contain additional sub-fields.
+Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, mixins, and data types. In order to organize and nest related fields in custom XDM resources, you can define object-type fields which can contain additional sub-fields.
 
-When [defining a new field](./overview.md#define) in the Adobe Experience Platform user interface, use the **[!UICONTROL Type]** dropdown and choose "[!UICONTROL Object]" from the list.
+When [defining a new field](./overview.md#define) in the Adobe Experience Platform user interface, use the **[!UICONTROL Type]** dropdown and select "[!UICONTROL Object]" from the list.
 
 ![](../../images/ui/fields/special/object.png)
 
@@ -30,4 +30,4 @@ Once you have finished constructing the object, you may find that you want to re
 
 ## Next steps
 
-This guide covered how to define an object field in the the UI. To learn how to define other field types, see the [field definition overview](./overview.md#special).
+This guide covered how to define an object field in the the UI. See the overview on [defining fields in the UI](./overview.md#special) to learn how to define other XDM field types in the [!DNL Schema Editor].

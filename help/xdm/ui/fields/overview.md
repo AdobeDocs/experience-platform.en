@@ -28,7 +28,7 @@ Once you have the [!DNL Schema Editor] open, use the left rail to select the cla
 >
 >If the class or mixin you select is a core resource provided by Adobe, it cannot be edited and therefore the controls shown above will not appear. If the schema you want to add fields to is based on a core XDM class and does not contain any custom mixins, you can [create a new mixin](../resources/mixins.md#create) to add to the schema instead.
 
-To add a new field to the resource, select the **plus (+)** icon next to the object-type field that you want to define the field under.
+To add a new field to the resource, select the **plus (+)** icon next to the schema's name in the canvas, or next to the object-type field that you want to define the field under.
 
 ![](../../images/ui/fields/overview/plus-icon.png)
 
@@ -38,7 +38,7 @@ After selecting the **plus (+)** icon, a **[!UICONTROL New field]** appears in i
 
 ![](../../images/ui/fields/overview/new-field.png)
 
-In the right rail, you can configure the details of the new fields. The following information is required for each field:
+In the right rail under **[!UICONTROL Field properties]**, you can configure the details of the new fields. The following information is required for each field:
 
 | Field property | Description |
 | --- | --- |
@@ -66,7 +66,7 @@ You can continue to follow the steps above to add more fields to the schema. Onc
 
 >[!NOTE]
 >
->Any changes you make to the mixins or class of one schema will be reflected in all other schemas that employ those mixins or class.
+>Any changes you make to the mixins or class of one schema will be reflected in all other schemas that employ them.
 
 ## Type-specific field properties {#type-specific-properties}
 
@@ -77,8 +77,8 @@ When defining a new field, additional configuration options may appear in the ri
 | [!UICONTROL Default value] | [!UICONTROL String], [!UICONTROL Double], [!UICONTROL Long], [!UICONTROL Integer], [!UICONTROL Short], [!UICONTROL Byte], [!UICONTROL Boolean] | A default value that will be assigned to this field if no other value is provided during ingestion. This value must conform to the field's selected type. |
 | [!UICONTROL Pattern] | [!UICONTROL String] | A [regular expression](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions) that the value for this field must conform to in order to be accepted during ingestion. |
 | [!UICONTROL Format] | [!UICONTROL String] | Select from a list of pre-defined formats for strings that the value must conform to. Available formats include: <ul><li>[[!UICONTROL date-time]](https://tools.ietf.org/html/rfc3339)</li><li>[[!UICONTROL email]](https://tools.ietf.org/html/rfc2822)</li><li>[[!UICONTROL hostname]](https://tools.ietf.org/html/rfc1123#page-13)</li><li>[[!UICONTROL ipv4]](https://tools.ietf.org/html/rfc791)</li><li>[[!UICONTROL ipv6]](https://tools.ietf.org/html/rfc2460)</li><li>[[!UICONTROL uri]](https://tools.ietf.org/html/rfc3986)</li><li>[[!UICONTROL uri-reference]](https://tools.ietf.org/html/rfc3986#section-4.1)</li><li>[[!UICONTROL url-template]](https://tools.ietf.org/html/rfc6570)</li><li>[[!UICONTROL json-pointer]](https://tools.ietf.org/html/rfc6901)</li></ul> |
-| [!UICONTROL Minimum length] | [!UICONTROL String] | The minimum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
-| [!UICONTROL Maximum length] | [!UICONTROL String] | The maximum number of characters the string must contain for the value to be accepted during ingestion. You can select the arrow icons to increment the number, or type in an integer manually. |
+| [!UICONTROL Minimum length] | [!UICONTROL String] | The minimum number of characters the string must contain for the value to be accepted during ingestion. |
+| [!UICONTROL Maximum length] | [!UICONTROL String] | The maximum number of characters the string must contain for the value to be accepted during ingestion. |
 | [!UICONTROL Minimum value] | [!UICONTROL Double] | The minimum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
 | [!UICONTROL Maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. |
 | [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. |

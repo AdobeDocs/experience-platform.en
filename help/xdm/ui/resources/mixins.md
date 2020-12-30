@@ -48,7 +48,7 @@ Once you have the schema open in the editor, you can start [adding fields to the
 
 ## Add fields to a mixin {#add-fields}
 
-To add fields to a mixin in the [!DNL Schema Editor], start by selecting the mixin's name in the left rail, then select the **plus (+)** icon next to the schema's name.
+To add fields to a mixin in the [!DNL Schema Editor], start by selecting the mixin's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
 
 ![](../../images/ui/resources/mixins/add-field-button.png)
 
