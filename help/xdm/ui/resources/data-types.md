@@ -106,7 +106,7 @@ Select your data type from the list, then select **[!UICONTROL Apply]**. The sch
 >
 > Mixins are only compatible with one class. If you wish to use your data type in additional schemas based on different classes, you must follow the above steps to add the data type to additional mixins intended to extend those classes.
 
-## Convert a multi-field object into a data type
+## Convert a multi-field object into a data type {#convert}
 
 When you create an object-type field with multiple sub-fields in the [!DNL Schema Editor], you can convert that field into a data type so you can use that same field structure in a different class or mixin.
 
