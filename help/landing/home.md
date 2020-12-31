@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer
 solution: Experience Platform
 title: Adobe Experience Platform overview
 topic: getting started
-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
 # Adobe Experience Platform overview
@@ -33,7 +33,9 @@ Adobe has built multiple application services on top of Experience Platform. You
 
 ## [!DNL Experience Platform] tutorials
 
-You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html) to get started.
+You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. 
+
+Visit the [Experience Platform tutorials](https://www.adobe.com/go/platform-tutorials-home-en) landing page to get started.
 
 ## Reference documents and resources
 
