@@ -9,7 +9,7 @@ description: This tutorial provides steps for creating a source connector in the
 
 # Create a customer attributes source connector in the UI
 
-This tutorial provides steps for creating a source connector in the UI for collecting customer attributes profile data into Adobe Experience Platform. For more information about customer attributes, see the [overview document](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/attributes.html).
+This tutorial provides steps for creating a source connector in the UI for collecting customer attributes profile data into Adobe Experience Platform. For more information about customer attributes, see the [overview document](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Create a source connection
 
