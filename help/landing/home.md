@@ -26,8 +26,8 @@ To begin learning more about a specific [!DNL Platform] service, return to the [
 
 Adobe has built multiple application services on top of Experience Platform. You can find documentation for these services in their own guides, linked below:
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 

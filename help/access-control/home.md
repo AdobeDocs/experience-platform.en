@@ -105,7 +105,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
 
-_(*) This permission requires provisions to [!DNL Real-time Customer Data Platform]. For more information regarding Real-time CDP, please begin by reading the [Real-time CDP overview](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html)._
+_(*) This permission requires provisioning for [!DNL Real-time Customer Data Platform]. For more information regarding Real-time CDP, please begin by reading the [Real-time CDP overview](../rtcdp/overview.md)._
 
 ## Next steps
 
