@@ -10,7 +10,7 @@ seo-description: With social network destinations, you can activate profiles for
 
 With social network destinations, you can activate profiles for your campaigns for audience targeting, personalization and suppression based on hashed emails.
 
-Real-time Customer Data Platform currently supports the following social network destinations:
+Adobe Experience Platform currently supports the following social network destinations:
 
 - [Adobe Livefyre extension](./adobe-livefyre.md)
 - [[!DNL Facebook]](./facebook.md)

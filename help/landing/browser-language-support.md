@@ -42,7 +42,7 @@ Your default UI language is determined by the region specified in your user prof
 To change your language:
 
 1. Select the current language in the footer of the [!DNL Experience Platform] user interface.
-2. In your profile settings, click **[!UICONTROL Change Region]**.
+2. In your profile settings, select **[!UICONTROL Change Region]**.
 3. Select your region. 
 
 >[!NOTE]

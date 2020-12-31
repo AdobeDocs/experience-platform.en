@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service and Experience Cloud applications
 topic: overview
+description: This document provides a reference for how to configure different Experience Cloud applications for privacy-related operations.
 ---
 
 # [!DNL Privacy Service] and [!DNL Experience Cloud] applications

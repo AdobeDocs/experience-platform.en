@@ -24,19 +24,19 @@ The next section provides steps for creating a new dataset to apply labels to. I
 >
 >In this example, a dataset is created using a pre-configured [!DNL Experience Data Model] (XDM) schema. For more information on XDM schemas, see the [XDM System overview](../../xdm/home.md) and [basics of schema composition](../../xdm/schema/composition.md).
 
-To create a new dataset, click **[!UICONTROL Create Dataset]** in the top-right corner of the **[!UICONTROL Datasets]** workspace.
+To create a new dataset, select **[!UICONTROL Create Dataset]** in the top-right corner of the **[!UICONTROL Datasets]** workspace.
 
 ![](../images/labels/create_dataset.png)
 
-The **[!UICONTROL Create Dataset]** screen appears. From here, click **[!UICONTROL Create Dataset from Schema]**. 
+The **[!UICONTROL Create Dataset]** screen appears. From here, select **[!UICONTROL Create Dataset from Schema]**. 
 
 ![Create Dataset from Schema](../images/labels/dataset_create.png)
 
-The **[!UICONTROL Select Schema]** screen appears, which lists all available schemas that you can use for creating a dataset. Click the radio button next to a schema to select it. The **[!UICONTROL Schemas]** section on the right-hand side displays additional details about the selected schema. Once you have selected a schema, click **[!UICONTROL Next]**.
+The **[!UICONTROL Select Schema]** screen appears, which lists all available schemas that you can use for creating a dataset. Select the radio button next to a schema to select it. The **[!UICONTROL Schemas]** section on the right-hand side displays additional details about the selected schema. Once you have selected a schema, select **[!UICONTROL Next]**.
 
 ![Select Dataset Schema](../images/labels/dataset_schema.png)
 
-The **[!UICONTROL Configure Dataset]** screen appears. Provide a name (required) and description (optional, but recommended) for your new dataset, then click **[!UICONTROL Finish]**.
+The **[!UICONTROL Configure Dataset]** screen appears. Provide a name (required) and description (optional, but recommended) for your new dataset, then select **[!UICONTROL Finish]**.
 
 ![Configure Dataset with Name and Description](../images/labels/dataset_configure.png)
 
@@ -46,15 +46,15 @@ The **[!UICONTROL Dataset Activity]** page appears, displaying information about
 
 ### Add data usage labels to the dataset {#add-labels}
 
-After creating a new dataset or selecting an existing dataset from the list in the **[!UICONTROL Datasets]** workspace, click **[!UICONTROL Data Governance]** to open the **[!UICONTROL Data Governance]** workspace. The workspace allows you to manage data usage labels at the dataset level and field level.
+After creating a new dataset or selecting an existing dataset from the list in the **[!UICONTROL Datasets]** workspace, select **[!UICONTROL Data Governance]** to open the **[!UICONTROL Data Governance]** workspace. The workspace allows you to manage data usage labels at the dataset level and field level.
 
 ![Dataset Data Governance Tab](../images/labels/dataset_data_governance.png)
 
-To edit data usage labels at the dataset level, start by clicking the pencil icon next to the dataset name.
+To edit data usage labels at the dataset level, start by selecting the pencil icon next to the dataset name.
 
 ![Edit dataset-level labels](../images/labels/dataset_labels_edit_button.png)
 
-The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, click **[!UICONTROL Save Changes]**.
+The **[!UICONTROL Edit Governance Labels]** dialog opens. Within the dialog, check the boxes next to the labels you wish to apply to the dataset. Remember that these labels will be inherited by all fields within the dataset. The **[!UICONTROL Applied Labels]** header updates as you check each box, showing the labels you have chosen. Once you have selected the desired labels, select **[!UICONTROL Save Changes]**.
 
 <img alt="Apply Governance Labels at the Dataset Level" src="../images/labels/apply-labels-dataset.png" width=700><br>
 
@@ -72,7 +72,7 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 
-To apply data usage labels to an individual field, select the checkbox next to the field name, then click **[!UICONTROL Edit Governance Labels]**.  
+To apply data usage labels to an individual field, select the checkbox next to the field name, then select **[!UICONTROL Edit Governance Labels]**.  
 
 ![Edit Field Labels](../images/labels/fields_single_field.png)
 
@@ -80,7 +80,7 @@ The **[!UICONTROL Edit Governance Labels]** dialog appears. The dialog displays 
 
 <img alt="Edit governance labels for an individual field" src="../images/labels/field-label-inheritance.png" width=700><br>
 
-Select field-level labels by clicking the checkbox next to each label you wish to use. As you select labels, the **[!UICONTROL Applied Labels]** header updates to show labels applied to the fields shown in the **[!UICONTROL Selected Fields]** header. Once you have finished selecting field-level labels, click **[!UICONTROL Save Changes]**.
+Select field-level labels by selecting the checkbox next to each label you wish to use. As you select labels, the **[!UICONTROL Applied Labels]** header updates to show labels applied to the fields shown in the **[!UICONTROL Selected Fields]** header. Once you have finished selecting field-level labels, select **[!UICONTROL Save Changes]**.
 
 <img alt="Apply field-level labels" src="../images/labels/apply-labels-field.png" width=700><br>
 
@@ -96,7 +96,7 @@ It is important to remember that inheritance moves from the top-level down only 
 
 ## Managing custom labels
 
-You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Click **[!UICONTROL Policies]** in the left-navigation, then click **[!UICONTROL Labels]** to view a list of existing labels. From here, click **[!UICONTROL Create label]**.
+You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Select **[!UICONTROL Policies]** in the left-navigation, then select **[!UICONTROL Labels]** to view a list of existing labels. From here, select **[!UICONTROL Create label]**.
 
 ![](../images/labels/create-label-btn.png)
 
@@ -106,7 +106,7 @@ The **[!UICONTROL Create label]** dialog appears. From here, provide the followi
 * **[!UICONTROL Name]**: A friendly display name for the label.
 * **[!UICONTROL Description]**: (Optional) A description for the label to provide further context.
 
-When finished, click **[!UICONTROL Create]**.
+When finished, select **[!UICONTROL Create]**.
 
 ![](../images/labels/create-label.png)
 

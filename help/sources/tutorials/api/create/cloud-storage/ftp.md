@@ -70,6 +70,8 @@ POST /connections
 
 **Request**
 
+In order to create an FTP connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for FTP is `fb2e94c9-c031-467d-8103-6bd6e0a432f2`.
+
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \

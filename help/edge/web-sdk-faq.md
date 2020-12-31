@@ -99,7 +99,7 @@ Adobe Experience Platform Web SDK has been developed for the following people:
 
 ## How do I get access to start using Adobe Experience Platform Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third party solutions is coming in the near future. If you would like to get access to the Web SDK contact your Certified software manager (CSM) to start the request process.
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. The SDK is free, is hosted by Adobe for free, and can be downloaded so you can host it on your own servers, if desired, for free. Platform Web SDK requires access to Platform Edge Network configurations and the Adobe Experience Platform XDM schema builder, in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Customer Success Manager (CSM) to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 
@@ -117,7 +117,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Alloy so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions in [this document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) for more details.
 
 ## How is the Web SDK different than Adobe Experience Platform Launch?
 
