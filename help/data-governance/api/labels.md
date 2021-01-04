@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Labels endpoint
 topic: developer guide
+description: Learn how to manage data usage labels in Experience Platform using the Policy Service API.
 ---
 
 # Labels endpoint
