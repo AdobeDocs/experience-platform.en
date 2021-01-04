@@ -46,7 +46,7 @@ For more information on field types, see the document on [XDM field type constra
 
 ### How do I define identities for my schema?
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, and other unique ID fields.
+In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, and other unique ID fields.
 
 Fields can be marked as identities using either the API or user interface.
 
