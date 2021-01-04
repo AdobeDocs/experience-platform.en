@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Consent
+title: Consent endpoint
 topic: developer guide
+description: Learn how to manage customer consent requests for Experience Cloud applications using the Privacy Service API.
 ---
 
-# Consent
+# Consent endpoint
 
 Certain regulations required explicit customer consent before their personal data can be collected. The `/consent` endpoint in the [!DNL Privacy Service] API allows you to process customer consent requests and integrate them into your privacy workflow.
 

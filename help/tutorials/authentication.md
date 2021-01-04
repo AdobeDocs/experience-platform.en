@@ -33,7 +33,7 @@ The following sections walk through the steps to create an Adobe ID and become a
 If you do not have an Adobe ID, you can create one using the following steps:
 
 1. Go to [Adobe Developer Console](https://console.adobe.io)
-2. Click **[!UICONTROL create a new account]**
+2. Select **[!UICONTROL create a new account]**
 3. Complete the sign up process
 
 ## Become a developer and user for [!DNL Experience Platform] for an organization
@@ -82,11 +82,11 @@ The steps are covered in detail below.
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
-Once you have created a new project, click **[!UICONTROL Add API]** on the **Project Overview** screen.
+Once you have created a new project, select **[!UICONTROL Add API]** on the **Project Overview** screen.
 
 ![](images/authentication/add-api-button.png)
 
-The **Add an API** screen appears. Click the product icon for Adobe Experience Platform, then select **[!UICONTROL Experience Platform API]** before clicking **[!UICONTROL Next]**.
+The **Add an API** screen appears. Select the product icon for Adobe Experience Platform, then choose **[!UICONTROL Experience Platform API]** before selecting **[!UICONTROL Next]**.
 
 ![](images/authentication/add-platform-api.png)
 

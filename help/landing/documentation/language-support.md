@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
-title: Platform documentation language support
+title: Experience Platform documentation language support
 topic: getting started
-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
-# Platform documentation language support
+# Experience Platform documentation language support
 
-Adobe Experience Platform documentation is available in several languages. To change language, click the language dropdown and select the desired language.
+Adobe Experience Platform documentation is available in multiple languages. 
 
-![image](../images/overview/lang.jpg)
+To change the language in which documentation is presented, select the language icon in the top navigation.
 
-## [!DNL Experience Platform] documentation
+![](../images/overview/documentation-language.png)
 
-To learn more about the types of documentation that are available, please visit the [Platform documentation types overview](overview.md). 
+When the language dropdown opens, choose the language in which you would like to view the documentation.
 
-To learn more about a specific [!DNL Platform] feature or service, select a guide from the [Experience Platform documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html).
+![](../images/overview/documentation-language-select.png)
