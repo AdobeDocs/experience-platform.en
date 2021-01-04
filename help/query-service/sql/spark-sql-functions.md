@@ -32,301 +32,292 @@ For more detailed information about the functions, including their syntax, usage
 
 | Function | Operator |
 | -------- | -------- |
-
-- Modulo (`%`)
-- Multiply (`*`)
-- Addition (`+`)
-- Subtract (`-`)
-- Divide (`/`)
-- Absolute value (`abs`)
-- Inverse cosine (`acos`)
-- Estimated cardinality (`approx_count_distinct`)
-- Approximate percentile (`approx_percentile`)
-- Inverse sine (`asin`)
-- Inverse tangent (`atan`)
-- Two argument inverse tangent (`atan2`)
-- Cardinality (`cardinality`)
-- Average (`avg`)
-- Cube root (`cbrt`)
-- Ceiling (`ceil` or `ceiling`)
-- Convert from one base to another (`conv`)
-- Pearson coefficient (`corr`)
-- Cosine (`cos`)
-- Hyperbolic cosine (`cosh`)
-- Cotangent (`cot`)
-- Rank of rows (`dense_rank`)
-- Euler's number (`e`)
-- Natural exponential function (`expr`)
-- Natural exponential function minus 1 (`expm1`)
-- Factorial (`factorial`)
-- Floor (`floor`)
-- Greatest (`greatest`)
-- Hypotenuse (`hypot`)
-- Kurtosis (`kurtosis`)
-- Least (`least`)
-- Levenshtein distance (`levenshtein`)
-- Natural logarithm (`ln`)
-- Logarithm (`log`)
-- Base 10 logarithm (`log10`)
-- Logarithm + 1 (`log1p`)
-- Base 2 logarithm (`log2`)
-- Maximum value (`max`)
-- Mean value (`mean`)
-- Minimum value (`min`)
-- Monotonically increasing IDs (`monotonically_increasing_id`)
-- Negation (`negative`)
-- Percentage ranking (`percent_rank`)
-- Percentile (`percentile`)
-- Approximate percentile (`percentile_approx`)
-- Pi (`pi`)
-- Positive modulo (`pmod`)
-- Positive (`positive`)
-- To the power of (`pow`, `power`)
-- Convert to radians (`radians`)
-- Random number between 0 and 1 (`rand`)
-- Random value (`randn`)
-- Closest double value (`rint`)
-- Closest rounded value (`round`)
-- Returns the number's sign (`sign`, `signum`)
-- Sine (`sin`)
-- Hyperbolic sine (`sinh`)
-- Square root (`sqrt`)
-- Standard deviation (`stddev`)
-- Population standard deviation (`sttdev_pop`)
-- Sample standard deviation (`stddev_samp`)
-- Sum (`sum`)
-- Tangent (`tan`)
-- Hyperbolic tangent (`tanh`)
-- Population variance (`var_pop`)
-- Sample variance (`var_samp`, `variance`)
+| `%` | Modulo |
+| `*` | Multiply 
+| `+` | Addition |
+| `-` | Subtract | 
+| `/` | Divide |
+| `abs` | Absolute value |
+| `acos` | Inverse cosine |
+| `approx_count_distinct` | Estimated cardinality |
+| `approx_percentile` | Approximate percentile |
+| `asin` | Inverse sine |
+| `atan` | Inverse tangent |
+| `atan2` | Two argument inverse tangent |
+| `cardinality` | Cardinality |
+| `avg` | Average |
+| `cbrt` | Cube root |
+| `ceil` or `ceiling` | Ceiling | 
+| `conv` | Convert from one base to another |
+| `corr` | Pearson coefficient |
+| `cos` | Cosine |
+| `cosh` | Hyperbolic cosine |
+| `cot` | Cotangent |
+| `dense_rank` | Rank of rows |
+| `e` | Euler's number |
+| `expr` | Natural exponential function |
+| `expm1` | Natural exponential function minus 1 |
+| `factorial` | Factorial |
+| `floor` | Floor |
+| `greatest` | Greatest |
+| `hypot` | Hypotenuse |
+| `kurtosis` | Kurtosis |
+| `least` | Least |
+| `levenshtein` | Levenshtein distance |
+| `ln` | Natural logarithm |
+| `log` | Logarithm |
+| `log10` | Base 10 logarithm | 
+| `log1p` | Logarithm + 1 |
+| `log2` | Base 2 logarithm |
+| `max` | Maximum value |
+| `mean` | Mean value |
+| `min` | Minimum value |
+| `monotonically_increasing_id` | Monotonically increasing IDs |
+| `negative` | Negation |
+| `percent_rank` | Percentage ranking |
+| `percentile` | Percentile |
+| `percentile_approx` | Approximate percentile |
+| `pi` | Pi | 
+| `pmod` | Positive modulo |
+| `positive` | Positive |
+| `pow`, `power` | To the power of |
+| `radians` | Convert to radians |
+| `rand` | Random number between 0 and 1 |
+| `randn` | Random value |
+| `rint` | Closest double value |
+| `round` | Closest rounded value |
+| `sign`, `signum` | Returns the number's sign |
+| `sin` | Sine | 
+| `sinh` | Hyperbolic sine |
+| `sqrt` | Square root |
+| `stddev` | Standard deviation |
+| `sttdev_pop` | Population standard deviation |
+| `stddev_samp` | Sample standard deviation |
+| `sum` | Sum |
+| `tan` | Tangent |
+| `tanh` | Hyperbolic tangent |
+| `var_pop` | Population variance |
+| `var_samp`, `variance` | Sample variance |
 
 ### Logical operators {#logical-operators}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Logical not (`!`)
-- Less than (`<`)
-- Less than or equal to (`<=`)
-- Equal to (`=`)
-- Greater than (`>`)
-- Greater than or equal to (`>=`)
-- Bitwise exclusive or (`^`)
-- Logical and (`and`)
-- Shares common element (`arrays_overlap`)
-- Assert if true (`assert_true`)
-- If (`if`)
-- If null (`ifnull`)
-- In (`in`)
-- If not a number (`isnan`)
-- If not null (`isnotnull`)
-- If null (`isnull`)
-- If not a number, return expression (`nanvl`)
-- Logical not (`not`)
-- Logical or (`or`)
-- When (`when`)
-- If xpath boolean (`xpath_boolean`)
+| `!` | Logical not |
+| `<` | Less than |
+| `<=` | Less than or equal to |
+| `=` | Equal to |
+| `>` | Greater than |
+| `>=` | Greater than or equal to |
+| `^` | Bitwise exclusive or |
+| `and` | Logical and |
+| `arrays_overlap` | Shares common element |
+| `assert_true` | Assert if true |
+| `if` | If |
+| `ifnull` | If null |
+| `in` | In | 
+| `isnan` | If not a number | 
+| `isnotnull` | If not null |
+| `isnull` | If null |
+| `nanvl` | If not a number, return expression |
+| `not` | Logical not |
+| `or` | Logical or |
+| `when` | When |
+| `xpath_boolean` | If xpath boolean |
 
 ### Date/time functions {#datetime-functions}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Add months to date (`add_months`)
-- Add days to date (`date_add`)
-- Modify date format (`date_format`)
-- Subtract days from date (`date_sub`)
-- Truncate date (`date_trunc`)
-- Difference between dates in days (`datediff`)
-- Day of the month (`day`, `dayofmonth`)
-- Day of week (1-7) (`dayofweek`)
-- Day of year (`dayofyear`)
-- Returns date in Unix time (`from_unixtime`)
-- Returns date in UTC time (`from_utc_timestamp`)
-- Hour (`hour`)
-- Last day of the month (`last_day`)
-- Minute (`minute`)
-- Month (`month`)
-- Number of months between (`months_between`)
-- Next day (`next_day`)
-- Quarter (`quarter`)
-- Second (`second`)
-- Convert to date (`to_date`)
-- Convert to timestamp (`to_timestamp`)
-- Convert to Unix timestamp (`to_unix_timestamp`)
-- Convert to UTC timestamp (`to_utc_timestamp`)
-- Truncate date (`trunc`)
-- Unix timestamp (`unix_timestamp`)
-- Day of the week (0-6) (`weekday`)
-- Week of the year (`week_of_year`)
-- Year (`year`)
+| `add_months` | Add months to date |
+| `date_add` | Add days to date |
+| `date_format` | Modify date format |
+| `date_sub` | Subtract days from date |
+| `date_trunc` | Truncate date |
+| `datediff` | Difference between dates in days |
+| `day`, `dayofmonth` | Day of the month |
+| `dayofweek` | Day of week (1-7) |
+| `dayofyear` | Day of year |
+| `from_unixtime` | Returns date in Unix time |
+| `from_utc_timestamp` | Returns date in UTC time |
+| `hour` | Hour |
+| `last_day` | Last day of the month |
+| `minute` | Minute | 
+| `month` | Month |
+| `months_between` | Number of months between |
+| `next_day` | Next day |
+| `quarter` | Quarter |
+| `second` | Second |
+| `to_date` | Convert to date |
+| `to_timestamp` | Convert to timestamp |
+| `to_unix_timestamp` | Convert to Unix timestamp |
+| `to_utc_timestamp` | Convert to UTC timestamp |
+| `trunc` | Truncate date |
+| `unix_timestamp` | Unix timestamp |
+| `weekday` | Day of the week (0-6) |
+| `week_of_year` | Week of the year |
+| `year` | Year |
 
 ### Arrays {#arrays}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Array (`array`)
-- Contains (`array_contains`)
-- Distinct (`array_distinct`)
-- Except (`array_except`)
-- Intersection (`array_intersect`)
-- Join (`array_join`)
-- Maximum (`array_max`)
-- Minimum (`array_min`)
-- Position (`array_position`)
-- Remove (`array_remove`)
-- Repeat (`array_repeat`)
-- Sort (`array_sort`)
-- Union (`array_union`)
-- Zip (`array_zip`)
-- Return the element at position (`element_at`)
-- Separate elements of array into multiple rows, excluding null (`explode`)
-- Separate elements of array into multiple rows, including null (`explode_outer`)
-- 1-based position of array (`find_in_set`)
-- Flatten array of arrays (`flatten`)
-- Separate array of structs into a table, excluding null (`inline`)
-- Separate array of structs into a table, including null (`inline_outer`)
-- Separate elements of array into multiple rows with positions, excluding null (`posexplod`)
-- Separate elements of array into multiple rows with positions, including null (`posexplod`)
-- Reverse elements of the array (`reverse`)
-- Return a random permutation of the array (`shuffle`)
-- Subset (`slice`)
-- Sort given an order (`sort_array`)
-- Zip, given a function (`zip_with`)
+| `array` | Array | 
+| `array_contains` | Contains |
+| `array_distinct` | Distinct | 
+| `array_except` | Except |
+| `array_intersect` | Intersection |
+| `array_join` | Join |
+| `array_max` | Maximum |
+| `array_min` | Minimum |
+| `array_position` | Position |
+| `array_remove` | Remove |
+| `array_repeat` | Repeat |
+| `array_sort` | Sort |
+| `array_union` | Union |
+| `array_zip` | Zip |
+| `element_at` | Return the element at position |
+| `explode` | Separate elements of array into multiple rows, excluding null |
+| `explode_outer` | Separate elements of array into multiple rows, including null |
+| `find_in_set` | 1-based position of array |
+| `flatten` | Flatten array of arrays |
+| `inline` | Separate array of structs into a table, excluding null |
+| `inline_outer` | Separate array of structs into a table, including null |
+| `posexplod` | Separate elements of array into multiple rows with positions, excluding null |
+| `posexplod` | Separate elements of array into multiple rows with positions, including null |
+| `reverse` | Reverse elements of the array |
+| `shuffle` | Return a random permutation of the array |
+| `slice` | Subset |
+| `sort_array` | Sort given an order |
+| `zip_with` | Zip, given a function |
 
 ### Datatype casting functions {#datatype-casting}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Change the data type to bigint (`bigint`)
-- Change the data type to binary (`binary`)
-- Change the data type to boolean (`boolean`)
-- Change the data type to the specified type (`type`)
-- Change the data type to date (`date`)
-- Change the data type to decimal (`decimal`)
-- Change the data type to double (`double`)
-- Change the data type to float (`float`)
-- Change the data type to int (`int`)
-- Change the data type to smallint (`smallint`)
-- Create a map from a string (`str_to_map`)
-- Change the data type to string (`string`)
-- Create a struct (`struct`)
-- Change the data type to tinyint (`tinyint`)
+| `bigint` | Change the data type to bigint |
+| `binary` | Change the data type to binary |
+| `boolean` | Change the data type to boolean |
+| `type` | Change the data type to the specified type |
+| `date` | Change the data type to date |
+| `decimal` | Change the data type to decimal |
+| `double` | Change the data type to double |
+| `float` | Change the data type to float |
+| `int` | Change the data type to int |
+| `smallint` | Change the data type to smallint |
+| `str_to_map` | Create a map from a string |
+| `string` | Change the data type to string |
+| `struct` | Create a struct |
+| `tinyint` | Change the data type to tinyint |
 
 ### Conversion and formatting functions {#conversion}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Return the numeric (ASCII) value (`ascii`)
-- Change the argument to a base64 string (`base64`)
-- Change the argument to a binary value (`bin`)
-- Return the bit length (`bit_length`)
-- Return the ASCII character (`char`, `chr`)
-- Return the string length (`char_length`, `character_length`)
-- Returns the cyclic redundancy check value (`crc32`)
-- Convert radians to degrees (`degrees`)
-- Change the number's format (`format_number`)
-- Get data from JSON (`from_json`, `get_json_object`)
-- Return the hash value (`hash`)
-- Convert the argument to a hexadecimal value (`hex`)
-- Changes the string to be title cased (`initcap`)
-- Changes the string to be all lowercase (`lcase`, `lower`)
-- Pads the left side of a string (`lpad`)
-- Create a map (`map`)
-- Create a map from an array (`map_from_arrays`)
-- Create a map from an array of structs (`map_from_entries`)
-- Return the md5 value (`md5`)
-- Pads the right side of a string (`rpad`)
-- Removes trailing spaces (`rtrim`)
-- Return the SHA1 value (`sha`, `sha1`)
-- Return the SHA2 value (`sha2`)
-- Return the soundex code (`soundex`)
-- Separate values into rows (`stack`)
-- Return the substring (`substr`, `substring`)
-- Returns a JSON string (`to_json`)
-- Replace values within string (`translate`)
-- Remove leading and trailing characters (`trim`)
-- Change the string to be all uppercase (`ucase`, `upper`)
-- Convert the base64 string to binary (`unbase64`)
-- Convert the hexadecimal to binary (`unhex`)
-- Return a UUID (`uuid`)
+| `ascii` | Return the numeric (ASCII) value |
+| `base64` | Change the argument to a base64 string |
+| `bin` | Change the argument to a binary value |
+| `bit_length` | Return the bit length |
+| `char`, `chr` | Return the ASCII character |
+| `char_length`, `character_length` | Return the string length |
+| `crc32` | Returns the cyclic redundancy check value |
+| `degrees` | Convert radians to degrees |
+| `format_number` | Change the number's format |
+| `from_json`, `get_json_object` | Get data from JSON |
+| `hash` | Return the hash value |
+| `hex` | Convert the argument to a hexadecimal value |
+| `initcap` | Changes the string to be title cased |
+| `lcase`, `lower` | Changes the string to be all lowercase |
+| `lpad` | Pads the left side of a string |
+| `map` | Create a map |
+| `map_from_arrays` | Create a map from an array |
+| `map_from_entries` | Create a map from an array of structs |
+| `md5` | Return the md5 value |
+| `rpad` | Pads the right side of a string |
+| `rtrim` | Removes trailing spaces |
+| `sha`, `sha1` | Return the SHA1 value |
+| `sha2` | Return the SHA2 value |
+| `soundex` | Return the soundex code |
+| `stack` | Separate values into rows |
+| `substr`, `substring` | Return the substring |
+| `to_json` | Returns a JSON string |
+| `translate` | Replace values within string |
+| `trim` | Remove leading and trailing characters |
+| `ucase`, `upper` | Change the string to be all uppercase |
+| `unbase64` | Convert the base64 string to binary |
+| `unhex` | Convert the hexadecimal to binary |
+| `uuid` | Return a UUID |
 
 ### Data evaluation {#data-evaluation}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Return the first non-null argument (`coalesce`)
-- Return a list of non-unique elements (`collect_list`)
-- Return a set of unique elements (`collect_set`)
-- Concatenation (`concat`)
-- Concatenation with separator (`concat_ws`)
-- Returns the total count for rows (`count`)
-- Decode using a character set (`decode`)
-- Return the `n`th input (`elt`)
-- Encode using a character set (`encode`)
-- Returns the first value (`first`, `first_value`)
-- Indicates if a column is grouped (`grouping`)
-- Returns the level of grouping (`grouping_id`)
-- Returns a 1-based index of character occurrence (`instr`)
-- Returns a tuple from a JSON input (`json_tuple`)
-- Returns the value before the offset (`lag`, `lead`)
-- Returns the last value (`last`, `last_value`)
-- Returns the first `n` characters (`left`)
-- Returns the length of the string (`length`)
-- Returns the position of the first occurrence of a substring (`locate`, `position`)
-- Concatenate a map (`map_concat`)
-- Return a map's keys (`map_keys`)
-- Return a map's values (`map_values`)
-- Divide rows into partitions (`ntile`)
-- Returns null if true (`nullif`)
-- Returns value if null (`nvl`)
-- Returns value if not null (`nvl2`)
-- Extracts part of a URL (`parse_url`)
-- Computes rank of a value (`rank`)
-- Extracts something that matches the regex (`regexp_extract)`
-- Replaces something that matches the regex (`regex_replace`)
-- Returns a string that repeats (`repeat`)
-- Replace all instances of a string (`replace`)
-- Create a multi-dimensional rollup (`rollup`)
-- Assigns a unique row number (`row_number`)
-- Returns the schema of the JSON (`schema_of_json`)
-- Splits string into an array of words (`sentences`)
-- Generates an array of elements (`sequence`)
-- Signed bitwise shift left (`shiftleft`)
-- Signed bitwise shift right (`shiftright`)
-- Unsigned bitwise shift right (`shiftrightunsigned`)
-- Return the size of the array (`size`)
-- Return a string with `n` spaces (`space`)
-- Split string (`split`)
-- Return index of substring (`substring_index`)
-- Window (`window`)
-- Parse XML nodes (`xpath`)
-- Parse XML nodes for double (`xpath_double`, `xpath_number`)
-- Parse XML nodes for float (`xpath_float`)
-- Parse XML nodes for integer (`xpath_int`)
-- Parse XML nodes for long (`xpath_long`)
-- Parse XML nodes for short integer (`xpath_short`)
-- Parse XML nodes for string (`xpath_string`)
+| `coalesce` | Return the first non-null argument | 
+| `collect_list` | Return a list of non-unique elements |
+| `collect_set` | Return a set of unique elements |
+| `concat` | Concatenation |
+| `concat_ws` | Concatenation with separator |
+| `count` | Returns the total count for rows |
+| `decode` | Decode using a character set |
+| `elt` | Return the `n`th input |
+| `encode` | Encode using a character set |
+| `first`, `first_value` | Returns the first value |
+| `grouping` | Indicates if a column is grouped |
+| `grouping_id` | Returns the level of grouping |
+| `instr` | Returns a 1-based index of character occurrence |
+| `json_tuple` | Returns a tuple from a JSON input |
+| `lag`, `lead` | Returns the value before the offset |
+| `last`, `last_value` | Returns the last value |
+| `left` | Returns the first `n` characters |
+| `length` | Returns the length of the string |
+| `locate`, `position` | Returns the position of the first occurrence of a substring |
+| `map_concat` | Concatenate a map |
+| `map_keys` | Return a map's keys |
+| `map_values` | Return a map's values |
+| `ntile` | Divide rows into partitions |
+| `nullif` | Returns null if true |
+| `nvl` | Returns value if null |
+| `nvl2` | Returns value if not null |
+| `parse_url` | Extracts part of a URL |
+| `rank` | Computes rank of a value |
+| `regexp_extract` | Extracts something that matches the regex |
+| `regex_replace` | Replaces something that matches the regex |
+| `repeat` | Returns a string that repeats |
+| `replace` | Replace all instances of a string |
+| `rollup` | Create a multi-dimensional rollup |
+| `row_number` | Assigns a unique row number |
+| `schema_of_json` | Returns the schema of the JSON |
+| `sentences` | Splits string into an array of words |
+| `sequence` | Generates an array of elements |
+| `shiftleft` | Signed bitwise shift left |
+| `shiftright` | Signed bitwise shift right |
+| `shiftrightunsigned` | Unsigned bitwise shift right |
+| `size` | Return the size of the array |
+| `space` | Return a string with `n` spaces |
+| `split` | Split string |
+| `substring_index` | Return index of substring |
+| `window` | Window |
+| `xpath` | Parse XML nodes |
+| `xpath_double`, `xpath_number` | Parse XML nodes for double |
+| `xpath_float` | Parse XML nodes for float |
+| `xpath_int` | Parse XML nodes for integer |
+| `xpath_long` | Parse XML nodes for long |
+| `xpath_short` | Parse XML nodes for short integer |
+| `xpath_string` | Parse XML nodes for string |
 
 ### Current information {#current-information}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Returns current database (`current_database`)
-- Returns current date (`current_date`)
-- Returns current timestamp (`current_timestamp`, `now`)
+| `current_database` | Returns current database |
+| `current_date` | Returns current date |
+| `current_timestamp`, `now` | Returns current timestamp |
 
 ### Higher order functions {#higher-order}
 
 | Function | Operator |
 | -------- | -------- |
-
-- Transform elements in an array (`transform`)
-- Check if element exists (`exists`)
-- Filter the input array (`filter`)
-- Apply a binary operator to all elements (`aggregate`)
+| `transform` | Transform elements in an array |
+| `exists` | Check if element exists |
+| `filter` | Filter the input array |
+| `aggregate` | Apply a binary operator to all elements |
