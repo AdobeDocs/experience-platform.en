@@ -28,6 +28,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Authenticate to Experience Platform APIs](http://www.adobe.com/go/platform-api-authentication-en)
 * Platform documentation {#documentation}
   * [Documentation overview](documentation/overview.md)
+  * [Documentation language support](documentation/language-support.md)
 * Platform in the Adobe ecosystem {#ecosystem}
   * [Application Services](application-services.md)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)

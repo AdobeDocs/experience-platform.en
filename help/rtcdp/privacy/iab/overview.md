@@ -56,7 +56,7 @@ The following sections describe how consent data is collected and enforced after
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into [!DNL Experience Platform] through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
 
-Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Downstream consent enforcement
 
@@ -237,7 +237,7 @@ TCF 2.0 also requires that the source of data must check the destination's vendo
 
 >[!NOTE]
 >
->Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
+>Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
 
 ## Test your implementation {#test-implementation}
 
