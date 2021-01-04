@@ -3,14 +3,14 @@ keywords: Experience Platform;home;popular topics;query service;Query service;sp
 solution: Experience Platform
 title: Spark SQL functions
 topic: spark sql functions
-description: This documentation contains information on Spark SQL helpers which provide built-in Spark SQL functions to extend SQL functionality.
+description: This documentation contains information on Spark SQL functions that extend SQL functionality.
 ---
 
 # [!DNL Spark] SQL functions
 
-The [!DNL Spark] SQL helpers provide built-in [!DNL Spark] SQL functions to extend SQL functionality. This document lists the Spark SQL functions that are supported by Adobe Experience Platform Query Service.
+Adobe Experience Platform Query Service provides several built-in Spark SQL functions to extend SQL functionality. This document lists the Spark SQL functions that are supported by Query Service.
 
-For more detailed information about the functions, including its syntax, usage, and examples, please read the [Spark SQL function documentation](https://spark.apache.org/docs/latest/api/sql/index.html).
+For more detailed information about the functions, including their syntax, usage, and examples, please read the [Spark SQL function documentation](https://spark.apache.org/docs/latest/api/sql/index.html).
 
 >[!NOTE]
 >
@@ -29,6 +29,9 @@ For more detailed information about the functions, including its syntax, usage, 
 - [Higher order functions](#higher-order)
 
 ## Math and statistical operators and functions {#math}
+
+| Function | Operator |
+| -------- | -------- |
 
 - Modulo (`%`)
 - Multiply (`*`)
@@ -99,6 +102,9 @@ For more detailed information about the functions, including its syntax, usage, 
 
 ### Logical operators {#logical-operators}
 
+| Function | Operator |
+| -------- | -------- |
+
 - Logical not (`!`)
 - Less than (`<`)
 - Less than or equal to (`<=`)
@@ -122,6 +128,9 @@ For more detailed information about the functions, including its syntax, usage, 
 - If xpath boolean (`xpath_boolean`)
 
 ### Date/time functions {#datetime-functions}
+
+| Function | Operator |
+| -------- | -------- |
 
 - Add months to date (`add_months`)
 - Add days to date (`date_add`)
@@ -154,6 +163,9 @@ For more detailed information about the functions, including its syntax, usage, 
 
 ### Arrays {#arrays}
 
+| Function | Operator |
+| -------- | -------- |
+
 - Array (`array`)
 - Contains (`array_contains`)
 - Distinct (`array_distinct`)
@@ -185,6 +197,9 @@ For more detailed information about the functions, including its syntax, usage, 
 
 ### Datatype casting functions {#datatype-casting}
 
+| Function | Operator |
+| -------- | -------- |
+
 - Change the data type to bigint (`bigint`)
 - Change the data type to binary (`binary`)
 - Change the data type to boolean (`boolean`)
@@ -201,6 +216,9 @@ For more detailed information about the functions, including its syntax, usage, 
 - Change the data type to tinyint (`tinyint`)
 
 ### Conversion and formatting functions {#conversion}
+
+| Function | Operator |
+| -------- | -------- |
 
 - Return the numeric (ASCII) value (`ascii`)
 - Change the argument to a base64 string (`base64`)
@@ -237,6 +255,9 @@ For more detailed information about the functions, including its syntax, usage, 
 - Return a UUID (`uuid`)
 
 ### Data evaluation {#data-evaluation}
+
+| Function | Operator |
+| -------- | -------- |
 
 - Return the first non-null argument (`coalesce`)
 - Return a list of non-unique elements (`collect_list`)
@@ -293,11 +314,17 @@ For more detailed information about the functions, including its syntax, usage, 
 
 ### Current information {#current-information}
 
+| Function | Operator |
+| -------- | -------- |
+
 - Returns current database (`current_database`)
 - Returns current date (`current_date`)
 - Returns current timestamp (`current_timestamp`, `now`)
 
 ### Higher order functions {#higher-order}
+
+| Function | Operator |
+| -------- | -------- |
 
 - Transform elements in an array (`transform`)
 - Check if element exists (`exists`)
