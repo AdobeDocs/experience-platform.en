@@ -91,7 +91,7 @@ Consent strings may only be created by a CMP that is registered with the IAB TCF
 
 ## Create datasets with IAB consent fields {#datasets}
 
-Customer consent data must be sent to a datasets whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to datasets whose schemas contain IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
