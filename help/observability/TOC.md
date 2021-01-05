@@ -19,5 +19,6 @@ user-guide-description: Monitor Platform activities through the use of statistic
 * Alerts {#alerts}
   * [Overview](./alerts/overview.md)
   * [UI guide](./alerts/ui-guide.md)
+  * [Standard alerts](./alerts/rules.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
