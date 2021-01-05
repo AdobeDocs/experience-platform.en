@@ -101,7 +101,7 @@ For more detailed information about the functions, including their syntax, usage
 
 | Operator/Function | Description |
 | ----------------- | ----------- |
-| [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) | Logical not |
+| [`!`](https://spark.apache.org/docs/latest/api/sql/index.html#_1) or [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not)| Logical not |
 | [`<`](https://spark.apache.org/docs/latest/api/sql/index.html#_7) | Less than |
 | [`<=`](https://spark.apache.org/docs/latest/api/sql/index.html#_8) | Less than or equal to |
 | [`=`](https://spark.apache.org/docs/latest/api/sql/index.html#_10) | Equal to |
@@ -109,21 +109,20 @@ For more detailed information about the functions, including their syntax, usage
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Bitwise exclusive or |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Bitwise or |
+| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) x| Bitwise or |
 | [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Bitwise not |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | Returns the common elements |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Asserts if the expression is true |
-| [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | If |
-| [`ifnull`](https://spark.apache.org/docs/latest/api/sql/index.html#ifnull) | If null |
-| [`in`](https://spark.apache.org/docs/latest/api/sql/index.html#in) | In | 
-| [`isnan`](https://spark.apache.org/docs/latest/api/sql/index.html#isnan) | If not a number | 
-| [`isnotnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnotnull) | If not null |
-| [`isnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnull) | If null |
-| [`nanvl`](https://spark.apache.org/docs/latest/api/sql/index.html#nanvl) | If not a number, return expression |
-| [`not`](https://spark.apache.org/docs/latest/api/sql/index.html#not) | Logical not |
+| [`if`](https://spark.apache.org/docs/latest/api/sql/index.html#if) | If the expression evaluates to true, return the second expression. Otherwise, return the third expression. |
+| [`ifnull`](https://spark.apache.org/docs/latest/api/sql/index.html#ifnull) | If the expression is null, it returns the second expression. Otherwise, it returns the first expression. |
+| [`in`](https://spark.apache.org/docs/latest/api/sql/index.html#in) | Returns true if the first expression is in any of the subsequent expressions. | 
+| [`isnan`](https://spark.apache.org/docs/latest/api/sql/index.html#isnan) | Returns true if the value is not a number | 
+| [`isnotnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnotnull) | Returns true if the value is not null |
+| [`isnull`](https://spark.apache.org/docs/latest/api/sql/index.html#isnull) | Returns true if the value is null |
+| [`nanvl`](https://spark.apache.org/docs/latest/api/sql/index.html#nanvl) | Returns the first expression if not a number, returns the second expression otherwise |
 | [`or`](https://spark.apache.org/docs/latest/api/sql/index.html#or) | Logical or |
-| [`when`](https://spark.apache.org/docs/latest/api/sql/index.html#when) | When |
-| [`xpath_boolean`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_boolean) | If xpath boolean |
+| [`when`](https://spark.apache.org/docs/latest/api/sql/index.html#when) | When can be used to create branch conditions for comparison |
+| [`xpath_boolean`](https://spark.apache.org/docs/latest/api/sql/index.html#xpath_boolean) | Returns true if the XPath expression evaluates to true or if a matching node is found |
 
 ### Date/time functions {#datetime-functions}
 
