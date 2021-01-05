@@ -159,8 +159,8 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `auth.params.serviceUri` | The service URI associated with your [!DNL Dynamics] instance. |
-| `auth.params.servicePrincipalId` |
-| `auth.params.servicePrincipalKey` |
+| `auth.params.servicePrincipalId` | The client ID of your [!DNL Dynamics] account. This ID is required when using service principal and key-based authentication. |
+| `auth.params.servicePrincipalKey` | The service principal secret key. This credential is required when using service principal and key-based authentication. |
 
 **Response**
 

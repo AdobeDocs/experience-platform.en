@@ -68,8 +68,8 @@ Alternatively, you can select **[!UICONTROL Service-principal and key authentica
 
 | Credential | Description |
 | ---------- | ----------- |
-| [!UICONTROL Service principal ID] |  |
-| [!UICONTROL Service principal key] | |
+| [!UICONTROL Service principal ID] | The client ID of your [!DNL Dynamics] account. This ID is required when using service principal and key-based authentication. |
+| [!UICONTROL Service principal key] | The service principal secret key. This credential is required when using service principal and key-based authentication. |
 
 ### Existing account
 
