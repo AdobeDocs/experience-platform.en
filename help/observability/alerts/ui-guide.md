@@ -32,7 +32,7 @@ The **[!UICONTROL Alert rules]** tab lists the available rules that may trigger 
 
 ![](../images/alerts/rules.png)
 
-Select a rule from the list to view its description and is configuration parameters in the right rail, including threshold and severity.
+Select a rule from the list to view its description and its configuration parameters in the right rail, including threshold and severity.
 
 ![](../images/alerts/rule-details.png)
 
