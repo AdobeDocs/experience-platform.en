@@ -24,11 +24,21 @@ The **[!UICONTROL Alert history]** tab shows the history of received alerts for 
 
 Select a listed alert and more details appear in the right rail, including a short summary of the alert rule that was triggered.
 
+![](../images/alerts/history-details.png)
+
 ## [!UICONTROL Alert rules]
 
-The **[!UICONTROL Alert rules]** tab lists the available rules that may trigger an alert. Select a rule from the list to view its description and is configuration parameters in the right rail, including threshold and severity.
+The **[!UICONTROL Alert rules]** tab lists the available rules that may trigger an alert.
+
+![](../images/alerts/rules.png)
+
+Select a rule from the list to view its description and is configuration parameters in the right rail, including threshold and severity.
+
+![](../images/alerts/rule-details.png)
 
 The right rail also contains a toggle for enabling or disabling the rule, depending on its current status. Once you select the toggle, the rule's status will update to [!UICONTROL enabling] or [!UICONTROL disabling], and may take a few minutes before updating again to [!UICONTROL enabled] or [!UICONTROL disabled].
+
+![](../images/alerts/enable.png)
 
 ## Next steps
 
