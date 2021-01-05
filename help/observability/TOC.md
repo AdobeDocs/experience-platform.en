@@ -11,7 +11,6 @@ user-guide-description: Monitor Platform activities through the use of statistic
 * Observability Insights API developer guide {#api}
   * [Overview](./api/overview.md)
   * [Getting started](./api/getting-started.md)
-  * [Alerts](./api/alerts.md)
   * [Metrics](./api/metrics.md)
 * Notifications {#notifications}
   * [Overview](./notifications/overview.md)
