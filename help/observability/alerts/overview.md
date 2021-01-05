@@ -23,7 +23,7 @@ This document provides an overview of alerts in Adobe Experience Platform, inclu
 | Examples include:<ul><li>Ingestion duration is exceeding the service-level agreement (SLA).</li><li>Daily ingestion did not happen over the past 24 hours.</li><li>The stream processor's rate of error is above the configured threshold.</li><li>The total number of profiles is exceeding entitlement.</li></ul> | Examples include:<ul><li>Data ingestion has successfully completed.</li><li>A query execution has finished.</li><li>Data has been deleted.</li></ul> |
 
 
-In other words, alerts are a specialized type of notification that should only be used to indicate an undesirable state. For more information on general notifications, refer to the [notifications overview](../notifications/overview).
+In other words, alerts are a specialized type of notification that should only be used to indicate an undesirable state. For more information on general notifications, refer to the [notifications overview](../notifications/overview.md).
 
 ## Anatomy of an alert
 
