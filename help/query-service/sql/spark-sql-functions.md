@@ -109,7 +109,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
 | [`^`](https://spark.apache.org/docs/latest/api/sql/index.html#_14) | Bitwise exclusive or |
 | [`>=`](https://spark.apache.org/docs/latest/api/sql/index.html#_13) | Greater than or equal to |
-| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) x| Bitwise or |
+| [`|`](https://spark.apache.org/docs/latest/api/sql/index.html#_15) | Bitwise or |
 | [`~`](https://spark.apache.org/docs/latest/api/sql/index.html#_16) | Bitwise not |
 | [`arrays_overlap`](https://spark.apache.org/docs/latest/api/sql/index.html#arrays_overlap) | Returns the common elements |
 | [`assert_true`](https://spark.apache.org/docs/latest/api/sql/index.html#assert_true) | Asserts if the expression is true |
