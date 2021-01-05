@@ -9,7 +9,7 @@ description: Learn to create different types of destinations and activate data.
 
 # Create a destination and activate data using APIs
 
-Learn to create different types of destinations and activate data. This functionality is available for users of [Adobe's Real-time Customer Data Platform](https://docs.adobe.com/content/help/en/experience-platform/rtcdp/overview.html).
+Learn to create different types of destinations and activate data. This functionality is available for users of [Adobe's Real-time Customer Data Platform](../rtcdp/overview.md).
 
 ## Email marketing destinations {#email-destinations}
 

@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Experience Platform API fundamentals
 topic: getting started
+description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
 ---
 
 # Adobe Experience Platform API fundamentals
