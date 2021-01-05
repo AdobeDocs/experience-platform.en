@@ -97,7 +97,7 @@ For more detailed information about the functions, including their syntax, usage
 | [`var_pop`](https://spark.apache.org/docs/latest/api/sql/index.html#var_pop) | Returns the calculated population variance |
 | [`var_samp`](https://spark.apache.org/docs/latest/api/sql/index.html#var_samp), [`variance`](https://spark.apache.org/docs/latest/api/sql/index.html#variance) | Returns the calculated sample variance |
 
-### Logical operators {#logical-operators}
+### Logical operators and functions {#logical-operators}
 
 | Operator/Function | Description |
 | ----------------- | ----------- |
