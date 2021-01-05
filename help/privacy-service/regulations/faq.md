@@ -60,13 +60,14 @@ For many regulations like the GDPR, explicit consent is required for processing 
 
 ### Can data subjects under a certain age give consent? 
 
-All privacy regulations stipulate that if a data subject is below a certain age, they cannot legally provide consent for the collection of their personal data. Some regulations allow for consent to be given by the holder of parental responsibility for that data subject in these cases, but not all. The following table lists the minimum age for data subjects to provide their own consent for each regulation, with notes for further information:
+Many privacy regulations stipulate that if a data subject is below a certain age, they cannot legally provide consent for the collection of their personal data. Some regulations allow for consent to be given by the holder of parental responsibility for that data subject in these cases, but not all. The following table lists the minimum age for data subjects to provide their own consent for each regulation, with notes for further information:
 
 | Regulation | Age of consent | Notes |
 | --- | --- | --- |
 | CCPA (California) | 16 | <ul><li>Parental consent can only be provided for data subjects of age 13 or older.</li><li>The collection of personal data from subjects below the age of 13 is strictly prohibited.</li></ul> |
 | GDPR (European Union) | 16 | <ul><li>Some member states of the EU may provide a law for a lower age for this purpose, but no lower than 13.</li><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
 | LGPD (Brazil) | 13 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li><li>Consent may be given by a 13 to 18 year old natural person, as long as the processing of their personal data is undergone in their best interest.</li></ul> |
+| New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> |
 | PDPA (Thailand) | 10 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
 
 ### How many days does a business have to respond to a consumer request to access or delete personal information?
@@ -78,6 +79,7 @@ Assuming that the business has collected personal information and that it can au
 | CCPA (California) | 45 days | |
 | GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |
 | LGPD (Brazil) | 15 days | |
+| New Zealand [!DNL Privacy Act] | 20 working days | |
 | PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
 
 ### Does my business need to appoint a data protection officer?
