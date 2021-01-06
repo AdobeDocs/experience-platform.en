@@ -6,7 +6,7 @@ topic: ui guide
 description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 ---
 
-# [!DNL Segment Builder] user guide 
+# [!DNL Segment Builder] UI guide 
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 

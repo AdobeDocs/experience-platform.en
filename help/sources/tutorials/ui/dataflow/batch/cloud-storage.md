@@ -136,11 +136,11 @@ Provide values for the schedule and select **[!UICONTROL Next]**.
 
 ### Set up a one-time ingestion dataflow
 
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited.
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited. **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible when setting up a one-time ingestion dataflow.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>It is strongly recommended to schedule your dataflow for one-time ingestion when using the [FTP connector](../../../../connectors/cloud-storage/ftp.md).
 
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 

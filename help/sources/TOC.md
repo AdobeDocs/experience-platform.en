@@ -29,8 +29,9 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure Blob connector](connectors/cloud-storage/blob.md)
     - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
-    - [FTP and SFTP connector](connectors/cloud-storage/ftp-sftp.md)
+    - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
@@ -75,10 +76,10 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure Data Lake Storage Gen2 connector](tutorials/api/create/cloud-storage/adls-gen2.md)
       - [Azure Event Hubs connector](tutorials/api/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/api/create/cloud-storage/azure-file-storage.md)
+      - [FTP connector](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/api/create/cloud-storage/google.md)
       - [SFTP connector](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
-      - [HubSpot connector](tutorials/api/create/crm/hubspot.md)
       - [Microsoft Dynamics connector](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce connector](tutorials/api/create/crm/salesforce.md)
     - Customer success {#customer-success}
@@ -131,10 +132,11 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
   - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
-  - [Create a dataset base connection using the Flow Service API](tutorials/api/create-dataset-base-connection.md)
-  - [Monitor dataflows using the Flow Service API](tutorials/api/monitor.md)
-  - [Update connection information using the Flow Service API](tutorials/api/update.md)
-  - [Delete connections using the Flow Service API](tutorials/api/delete.md)
+  - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
+  - [Monitor dataflows](tutorials/api/monitor.md)
+  - [Update connections](tutorials/api/update.md)
+  - [Delete connections](tutorials/api/delete.md)
+  - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connector {#create}
     - Adobe applications {#adobe-applications}
@@ -152,8 +154,9 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure Blob connector](tutorials/ui/create/cloud-storage/blob.md)
       - [Azure Event Hubs connector](tutorials/ui/create/cloud-storage/eventhub.md)
       - [Azure File Storage connector](tutorials/ui/create/cloud-storage/azure-file-storage.md)
-      - [FTP and SFTP connector](tutorials/ui/create/cloud-storage/ftp-sftp.md)
+      - [FTP connector](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage connector](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [SFTP connector](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob connector](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
       - [Microsoft Dynamics connector](tutorials/ui/create/crm/dynamics.md)
@@ -198,7 +201,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Configure a dataflow for a payment connector](tutorials/ui/dataflow/payments.md)
     - [Configure a dataflow for a protocol connector](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor accounts and dataflows](tutorials/ui/monitor.md)
+  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Update accounts](tutorials/ui/update.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
