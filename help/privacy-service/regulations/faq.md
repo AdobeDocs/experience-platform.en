@@ -102,12 +102,6 @@ Once you have taken the necessary steps to authenticate consumers that fall with
 >
 >Further guidance from the California regulator is still forthcoming as to which types of data are eligible for consumer privacy requests.
 
-### Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
-
-Adobe Experience Cloud applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
-
-Adobe has received various certifications of its privacy and security practices, such as an ISO 27001 certification and a TrustArc GDPR validation.
-
 ## CCPA questions
 
 The following questions relate specifically to the CCPA.
@@ -124,6 +118,12 @@ As a Service Provider, Adobe collects and processes personal information on beha
 Given this relationship and Adobe's contract language, disclosures to Adobe likely would not be considered a "sale" for which businesses would need to provide notice and request consent.  
 
 However, Adobe services may be used to enable certain data sharing and transfers to third parties. These third-party transfers could be considered a "sale" and legally require disclosure and consent. Customers should work with their legal counsel to evaluate specific use cases to assess applicable requirements.
+
+### Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
+
+Adobe Experience Cloud applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
+
+Adobe has received various certifications of its privacy and security practices, such as an ISO 27001 certification and a TrustArc GDPR validation.
 
 ## GDPR questions
 
