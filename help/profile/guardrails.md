@@ -97,6 +97,8 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 ## Segmentation guardrails
 
+The guardrails outlined in this section refer to the number and nature of segments an organization can create within Experience Platform, as well as mapping and activating segments to destinations.
+
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
 | Maximum number of segments per sandbox | 100K | Soft | **The maximum number of segments an organization can create is 100K per sandbox.** An organization can have more than 100K segments in total, as long as there are less than 100,000 segments in each individual sandbox.|
