@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Experience Platform guidelines
+title: Experience Platform guardrails for Profile data
+solution: Experience Platform
+product: experience platform
 topic: guide
+type: Documentation
+description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. These guardrails also outline best practices and constraints when using dimension entities, specifically in batch segmentation.
 ---
 
 # [!DNL Platform] guardrails for [!DNL Real-time Customer Profile]
 
 [!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile] and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it extremely important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines these guardrails as well as best practices and constraints when using dimension entities, specifically in batch segmentation. 
 
 >[!NOTE]
 >
@@ -90,3 +94,14 @@ The following guardrails refer to data size and are recommended to ensure data c
 | --- | --- | --- | --- |
 | Maximum total size for all dimensional entities | 5GB | Soft | **The maximum recommended total size for all dimensional entities is 5GB.** Ingesting large dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Soft | **A maximum of 5 datasets associated with each dimensional entity schema is recommended.** For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
+
+## Segmentation guardrails
+
+| Guardrail | Limit | Limit Type | Description|
+| --- | --- | --- | --- |
+| Maximum number of segments per sandbox | 100K | Soft | **The maximum number of segments an organization can create is 100K per sandbox.** An organization can have more than 100K segments in total, as long as there are less than 100,000 segments in each individual sandbox.|
+| Maximum number of streaming segments in Platform | 500 | Soft | **The maximum number of streaming segments an organization can create within Platform is 500.** Attempting to create additional streaming segments will result in degraded system performance.|
+| Maximum number of batch segments in Platform | 10K | Soft | **The maximum number of batch segments an organization can create within Platform is 10K.** Attempting to create additional batch segments will result in degraded system performance.|
+| Number of segments mapped to destinations | No limit | N/A | **There is currently no limit to the number of segments that can be mapped to a destination.** As long as an organization adheres to the limits regarding the total number of segments, there is no limit to the number of those segments that can be mapped to a destination.|
+| Maximum number of destinations and sources with Activation licensing | No limit | N/A | **There is currently no limit to the number of destinations and sources that you can connect if your organization is licensed for Activation.** To learn more about licensing and provisioning for Activation, please speak with your account representative. |
+| Maximum number of destinations and sources for Real-time Customer Data Platform (Real-time CDP) | 5 Destinations & 5 Sources | Hard | **For Real-time CDP users, the maximum number of connected destinations and sources is 5 of each. This does not include Adobe applications.** For example, an organization could connect Adobe Audience Manager and Adobe Target as destinations along with 5 additional destinations. |
