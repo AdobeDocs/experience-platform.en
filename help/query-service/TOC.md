@@ -20,14 +20,15 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
-- Creating queries {#creating-queries}
-  - [Creating queries overview](creating-queries/creating-queries.md)
-  - [Datasets vs tables and schemas](creating-queries/datasets-and-tables.md)
-  - [General guidance for query execution](creating-queries/writing-queries.md)
-  - [ExperienceEvent queries](creating-queries/experience-event-queries.md)
-  - [Joining datasets](creating-queries/joining-datasets.md)
-  - [Data deduplication](creating-queries/deduplication.md)
-- [Generating datasets from query results](creating-queries/create-datasets.md)
+- Queries best practices {#best-practices}
+  - [Datasets vs tables and schemas](best-practices/datasets-and-tables.md)
+  - [General guidance for query execution](best-practices/writing-queries.md)
+  - [ExperienceEvent queries](best-practices/experience-event-queries.md)
+  - [Joining datasets](best-practices/joining-datasets.md)
+  - [Data deduplication](best-practices/deduplication.md)
+  - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
+  - [Sample Adobe Target queries](best-practices/adobe-target.md)
+  - [Generating datasets from query results](best-practices/create-datasets.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
@@ -35,10 +36,6 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
   - [Spark SQL functions](sql/spark-sql-functions.md)
   - [Metadata commands](sql/metadata.md)
   - [Prepared statements](sql/prepared-statements.md)
-- Sample queries {#samples}
-  - [Sample queries overview](sample-queries/overview.md)
-  - [Adobe Analytics](sample-queries/adobe-analytics.md)
-  - [Adobe Target](sample-queries/adobe-target.md)
 - Connect clients to Query Service {#clients}
   - [Client connections overview](clients/overview.md)
   - [Aqua Data Studio](clients/aqua-data-studio.md)

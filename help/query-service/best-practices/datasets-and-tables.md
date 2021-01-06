@@ -10,6 +10,7 @@ description: This document contains information on viewing your datasets within 
 # Datasets vs tables and schemas
 
 Review the list of datasets available in the [Adobe Experience Platform UI](https://platform.adobe.com/datasets), being sure to observe the dataset names. 
+
 >[!NOTE]
 >
 >Some dataset names have spaces and might otherwise not be SQL safe. 
