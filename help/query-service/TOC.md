@@ -20,15 +20,15 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
-- Queries best practices {#best-practices}
+  - [Generating datasets from query results](best-practices/create-datasets.md)
+- Best practices {#best-practices}
   - [Datasets vs tables and schemas](best-practices/datasets-and-tables.md)
   - [General guidance for query execution](best-practices/writing-queries.md)
-  - [ExperienceEvent queries](best-practices/experience-event-queries.md)
   - [Joining datasets](best-practices/joining-datasets.md)
   - [Data deduplication](best-practices/deduplication.md)
+  - [Sample ExperienceEvent queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
   - [Sample Adobe Target queries](best-practices/adobe-target.md)
-  - [Generating datasets from query results](best-practices/create-datasets.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)

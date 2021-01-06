@@ -9,7 +9,9 @@ description: The following document provides examples of queries involving Exper
 
 # [!DNL ExperienceEvent] queries
 
-In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL ExperienceEvents]. An [!DNL ExperienceEvent] is an [!DNL Experience Data Model] (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. More information about XDM and [!DNL Experience Events] can be found in the [!DNL XDM System] overview. By combining [!DNL Query Service] with [!DNL ExperienceEvents], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL ExperienceEvents].
+In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL ExperienceEvents]. An [!DNL ExperienceEvent] is an [!DNL Experience Data Model] (XDM) class that represents an immutable non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. 
+
+More information about XDM and [!DNL Experience Events] can be found in the [!DNL XDM System] overview. By combining [!DNL Query Service] with [!DNL ExperienceEvents], you can effectively track behavioral trends amongst your users. The following document provides examples of queries involving [!DNL ExperienceEvents].
 
 ## Creating a trended report of events by day over a specific date range
 
