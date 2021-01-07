@@ -54,7 +54,7 @@ This dialog should allow the customer to opt in or out of specific marketing use
 
 ## Create datasets with Adobe-standard consent fields {#datasets}
 
-Customer consent data must be sent to a datasets whose schema contains Adobe-standard consent fields. Refer to the tutorial on [creating datasets for capturing customer consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to a datasets whose schema contains Adobe-standard consent fields. Refer to the tutorial on [creating datasets for capturing customer consent](./dataset-prep.md) for how to create the two required datasets before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
