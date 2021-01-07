@@ -102,9 +102,9 @@ LIMIT 1
 (1 row)
 ```
 
-## When to use single quotes, double quotes, and back quotes
+## Quotes
 
-This section explains when to use single quotes, double quotes, and back quotes in queries. 
+Single quotes, double quotes, and back quotes in queries have different usages within Query Service queries.
 
 ### Single quotes
 
@@ -291,6 +291,10 @@ LIMIT 50;
 | OSX 10.6 | 13357.0 |
 | Windows Phone 7.5 | 11054.0 |
 | Android 4.3 | 9221.0 |
+
+## Deduplication
+
+Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](./deduplication.md).
 
 ## Next steps
 
