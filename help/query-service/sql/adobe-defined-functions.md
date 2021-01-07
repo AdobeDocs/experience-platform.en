@@ -874,7 +874,7 @@ For the sample query given, the results are given in the `average_minutes_until_
 
 ## Next steps
 
-Using the functions described here, you can write queries to access your own [!DNL Experience Event] datasets using [!DNL Query Service]. For more information about authoring queries in [!DNL Query Service], see the documentation on [creating queries](../creating-queries/creating-queries.md).
+Using the functions described here, you can write queries to access your own [!DNL Experience Event] datasets using [!DNL Query Service]. For more information about authoring queries in [!DNL Query Service], see the documentation on [creating queries](../best-practices/writing-queries.md).
 
 ## Additional resources
 

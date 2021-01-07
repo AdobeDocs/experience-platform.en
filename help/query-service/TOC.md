@@ -20,7 +20,7 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
 - Query Service UI {#ui}
   - [UI overview](ui/overview.md)
   - [Query Editor user guide](ui/user-guide.md)
-  - [Generating datasets from query results](best-practices/create-datasets.md)
+  - [Generating datasets from query results](ui/create-datasets.md)
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Data deduplication](best-practices/deduplication.md)
