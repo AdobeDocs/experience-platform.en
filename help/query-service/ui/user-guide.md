@@ -122,5 +122,5 @@ Now that you know what features are available in [!DNL Query Editor] and how to 
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
-[query-service-running-queries]: ./writing-queries.md
-[query-service-create-datasets]: ../best-practices/create-datasets.md
+[query-service-running-queries]: ../best-practices/writing-queries.md
+[query-service-create-datasets]: ./create-datasets.md
