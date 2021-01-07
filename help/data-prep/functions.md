@@ -54,6 +54,8 @@ rtrim | Removes the whitespace from the end of the string. | <ul><li>STRING: **R
 trim | Removes the whitespace from the beginning and the end of the string. | <ul><li>STRING: **Required** The string you want to remove the whitespace from.</li></ul> | trim(STRING) | trim(" hello ") | "hello"
 equals | Compares two strings to confirm if they are equal. This function is case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.equals(STRING2) | "string1".equals("STRING1) | false
 equalsIgnoreCase | Compares two strings to confirm if they are equal. This function is **not** case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.equalsIgnoreCase(STRING2) | "string1".equalsIgnoreCase("STRING1) | true
+extract_regex | Extracts groups from the input string, based on a regular expression. | <ul><li>STRING: **Required** The string that you are extracting the groups from.</li><li>REGEX: **Required** The regular expression that you want the group to match.</li></ul> | extract_regex(STRING, REGEX) | extract_regex("E259,E259B_009,1_1", "([^,]+),[^,]*,([^,]+)") | ["E259,E259B_009,1_1", "E259", "1_1"]
+matches_regex | Checks to see if the string matches against the inputted regular expression. | <ul><li>STRING: **Required** The string that you are checking matches the regular expression.</li><li>REGEX: **Required** The regular expression that you are comparing against.</li></ul> | matches_regex(STRING, REGEX) | matches_regex("E259,E259B_009,1_1", "([^,]+),[^,]*,([^,]+)") | true
 
 ### Hashing functions
 
