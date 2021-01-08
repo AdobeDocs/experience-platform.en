@@ -18,6 +18,8 @@ The SQL examples throughout this document require you to edit the SQL and fill i
 
 ## Commonly used SQL examples
 
+The following examples show commonly used SQL queries to analyze your Adobe Analytics data.
+
 ### Hourly visitor count for a given day
 
 ```sql
@@ -112,7 +114,9 @@ ORDER BY Hour;
 
 ## Merchandising variables (product syntax)
 
-In Adobe Analytics, custom product-level data can be collected through specially configured variables called "Merchandising Variables." These are based on either an eVar or Custom Event. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit. These variables are referred to as Product Syntax Merchandising Variables. This allows for collection of information like a per product "discount amount" or information about the product's "location on page" in the customer's search results.
+In Adobe Analytics, custom product-level data can be collected through specially configured variables called "Merchandising Variables". These are based on either an eVar or custom events. The difference between these variables and their standard use is that they represent a separate value for each product found on the hit rather than only a single value for the hit. 
+
+These variables are referred to as "Product Syntax Merchandising Variables". This allows for collection of information, such as a per product "discount amount" or information about the product's "location on page" in the customer's search results.
 
 Here are the XDM fields to access the merchandising variables in your [!DNL Analytics] dataset:
 
@@ -122,7 +126,8 @@ Here are the XDM fields to access the merchandising variables in your [!DNL Anal
 productListItems[#]._experience.analytics.customDimensions.evars.evar#
 ```
 
-Where `[#]` is an array index and `evar#` is the specific eVar variable.
+- `[#]`: The index of the array you are accessing.
+- `evar#`: The specific eVar variable that you are accessing.
 
 ### Custom events
 
@@ -130,7 +135,8 @@ Where `[#]` is an array index and `evar#` is the specific eVar variable.
 productListItems[#]._experience.analytics.event1to100.event#.value
 ```
 
-Where `[#]` is an array index and `event#` is the specific custom event variable.
+- `[#]`: The index of the array you are accessing.
+- `event#`: The specific custom event variable that you are accessing.
 
 ### Sample queries
 
@@ -148,7 +154,7 @@ WHERE timestamp = to_timestamp('2019-07-23')
 LIMIT 10
 ```
 
-This next query 'explodes' the `productListItems` and returns each merchandising eVar and event per product. The `_id` field is included to show the relationship to the original hit. The `_id` value is a unique primary key in the [!DNL ExperienceEvent] dataset.
+This next query explodes the `productListItems` and returns each merchandising eVar and event per product. The `_id` field is included to show the relationship to the original hit. The `_id` value is a unique primary key in the [!DNL ExperienceEvent] dataset.
 
 ```sql
 SELECT
@@ -178,7 +184,7 @@ ERROR: ErrorCode: 08P01 sessionId: XXXX queryId: XXXX Unknown error encountered.
 
 ## Merchandising variables (conversion syntax)
 
-Another type of a Merchandising Variable found in Adobe Analytics is Conversion Syntax. With Product Syntax the value is collected at the same time as the product but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the Product Finding Method reporting use case.
+Another type of merchandising variable found in Adobe Analytics is conversion syntax. With product syntax, the value is collected at the same time as the product, but this requires the data to be present on the same page. There are scenarios where the data occurs on a page prior to the conversion or event of interest related to the product. For example, consider the Product Finding Method reporting use case.
 
 1. A user performs and internal search for "winter hat" which sets the Conversion Syntax enabled Merchandising eVar6 to "internal search:winter hat"
 2. The user clicks on "waffle beanie" and lands on the product detail page.  
