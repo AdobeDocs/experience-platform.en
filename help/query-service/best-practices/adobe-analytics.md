@@ -8,7 +8,9 @@ description: Data from selected Adobe Analytics report suites is transformed int
 
 # Sample queries for Adobe Analytics data
 
-Data from selected Adobe Analytics report suites is transformed into XDM [!DNL ExperienceEvents] and ingested into Adobe Experience Platform as datasets for you. This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM [!DNL ExperienceEvents].
+Data from selected Adobe Analytics report suites is transformed into XDM [!DNL ExperienceEvents] and ingested into Adobe Experience Platform as datasets. 
+
+This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, and the included sample queries should work with your Adobe Analytics datasets. See the [Analytics field mapping documentation](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to XDM [!DNL ExperienceEvents].
 
 ## Getting started
 
@@ -205,7 +207,7 @@ Here are the XDM fields to produce the Conversion Syntax in your [!DNL Analytics
 _experience.analytics.customDimensions.evars.evar#
 ```
 
-Where `evar#` is the specific eVar variable.
+- `evar#`: The specific eVar variable that you are accessing.
 
 ### Product
 
@@ -213,7 +215,7 @@ Where `evar#` is the specific eVar variable.
 productListItems[#].sku
 ```
 
-Where `[#]` is an array index.
+- `[#]`: The index of the array you are accessing.
 
 ### Sample queries
 

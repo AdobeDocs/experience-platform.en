@@ -299,3 +299,5 @@ Query Service supports data deduplication, or the removal of duplicate rows from
 ## Next steps
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
+
+For samples of queries that can be used within Query Service, please read the [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or the [ExperienceEvent sample queries](./experience-event-queries.md) guides.

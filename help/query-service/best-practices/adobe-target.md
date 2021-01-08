@@ -16,7 +16,8 @@ Data from Adobe Target is transformed into Experience Event XDM schema and inges
 
 ## Standard dataset name for Target data source on [!DNL Platform]: 
 
-Adobe Target Experience Events (friendly name) <br>
+Adobe Target Experience Events (friendly name)
+
 `adobe_target_experience_events` (name to use in query)
 
 ## High-level partial XDM field mapping
@@ -25,13 +26,13 @@ The use of `[ ]` denotes an array
 
 | Name | XDM Field | Notes |
 | ---- | --------- | ----- |
-|mboxName | `_experience.target.mboxname`||
-|Activity ID | `_experience.target.activities.activityID`||
-|Experience ID|`_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`||
-|Segment ID|`_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`||
-|Event Scope|`_experience.target.activities[].activityEvents[].eventScope`|Tracks new Visitor and Visit|
-|Step ID| `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`|Custom step ID for Campaign|
-|Price Total|`commerce.order.priceTotal`||
+| mboxName | `_experience.target.mboxname` | |
+| Activity ID | `_experience.target.activities.activityID` | |
+| Experience ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` | |
+| Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | |
+| Event Scope | `_experience.target.activities[].activityEvents[].eventScope` | Tracks new Visitor and Visit|
+| Step ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Custom step ID for Campaign |
+| Price Total | `commerce.order.priceTotal` | |
 
 ## Hourly activity counts for a given day
 
