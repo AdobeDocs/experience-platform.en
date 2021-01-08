@@ -28,25 +28,21 @@ description: A glossary of important terminology in Experience Platform.
 
 **Adobe Experience Platform Launch**: [!DNL Platform Launch] is a tag and SDK management ecosystem, integrated with [!DNL Experience Platform] and [!DNL Experience Cloud] applications. [!DNL Platform Launch] provides tools to deploy, unify, and manage analytics, marketing, and advertising integrations that are necessary to power relevant customer experiences on all client devices.
 
-**Adobe Experience Platform Query Service**: Enables the use of standard SQL to query data in Experience Platform, joining any datasets within the Data Lake and capturing query results as a new dataset for use in reporting, Data Science Workspace, or Real-time Customer Profile.
+**Adobe Experience Platform Query Service**: Enables data analysts to query events and profiles for use in analytics and machine learning. With Query Service, data scientists and analysts can pull all of their datasets stored in Experience Platform (including behavioral data as well as point-of-sale (POS), customer relationship management (CRM), and more) and query those datasets to answer specific questions about the data.
 
 **Adobe Experience Platform Segmentation Service**: Enables building segments and generate audiences from your Real-time Customer Profile data. These audiences can then be exported to their own datasets within the Data Lake.
 
-**Adobe Intelligent Services**: Adobe Sensei is the intelligence framework that powers [!DNL Experience Platform]. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
+**Adobe Intelligent Services**: Intelligent Services such as Attribution AI and Customer AI are machine-learning, artificial-intelligence-based models that are purpose-built and require Experience Platform to run and operate.
 
-**Adobe I/O**: Adobe I/O is part of [!DNL Experience Platform] and provides access to everything developers need to integrate, extend, and customize Adobe Experience Platform including APIs, events, developer console, and helpful tooling.
+**Adobe I/O**: Adobe I/O is part of [!DNL Experience Platform] and provides access to everything developers need to integrate, extend, and customize Platform including APIs, events, developer console, and helpful tooling.
 
 **Adobe Sensei**: Adobe Sensei is the intelligence framework that powers [!DNL Experience Platform]. It also provides a set of AI services that empowers brands to enhance their ability to deliver real-time, personalized customer experiences.
 
 **Amazon S3 bucket**: [!DNL Amazon S3] buckets are the foundational containers for data stored in the [!DNL Amazon] ecosystem. Buckets contain objects, each object is stored and retrieved using a unique developer-assigned key.
 
-**Amazon S3 connector**: [!DNL Amazon] S3 connector allows customers of [!DNL Experience Platform] to securely connect and access their [!DNL Amazon] S3 data.
+**Amazon S3 connector**: The [!DNL Amazon] S3 connector allows customers of [!DNL Experience Platform] to securely connect and access their [!DNL Amazon] S3 data.
 
-**Analytics marketing action**: A marketing action that uses data for analytics purposes, such as measuring, analyzing, and reporting on customers' usage of your organization's sites or apps.
-
-**Append save strategy**: The `Append` save strategy is an option used when specifying third-party data to ingest via a connection and appending any new data or rows at the end of the dataset. The previously ingested rows remain untouched and only rows created since the last scheduled run are ingested to [!DNL Experience Platform]. Any rows that were changed in the source system remain unchanged on [!DNL Experience Platform].
-
-**Application lifecycle management**: Application lifecycle management enables the ability to create separate virtual environments to develop and evolve digital experience applications.
+**Append save strategy**: The Append save strategy is an option used when specifying third-party data to ingest via a connection and appending any new data or rows at the end of the dataset. The previously ingested rows remain untouched and only rows created since the last scheduled run are ingested to [!DNL Experience Platform]. Any rows that were changed in the source system remain unchanged on [!DNL Experience Platform].
 
 **Array**: Arrays are used for ordered elements with the same data type.
 
