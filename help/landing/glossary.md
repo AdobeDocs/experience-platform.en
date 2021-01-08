@@ -52,9 +52,9 @@ description: A glossary of important terminology in Experience Platform.
 
 **Attribute merge**: Attribute merge defines how a merge policy prioritizes profile attribute value in the case of data conflicts. 
 
-**Attribution AI**: [!DNL Attribution AI] is an Adobe Sensei Service that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
+**Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
-**Audience**: An audience or audience size is the resulting set of profiles that meet the criteria of a segment definition.
+**Audience**: An audience (or audience size) is the resulting set of profiles that meet the criteria of a segment definition.
 
 **Audience snapshot**: An audience snapshot captures all profiles who qualify for the segment criteria at the time of segmentation.
 
@@ -62,43 +62,43 @@ description: A glossary of important terminology in Experience Platform.
 
 ## B
 
-**Backfill**: In [!DNL Real-time Customer Data Platform], in scheduled source connections, backfill enables ingestion of historical data.
+**Backfill**: For scheduled sources, the backfill option enables ingestion of historical data.
 
-**Backfill period**: The `Backfill period` is an option to set the length of time for ingesting third-party historical data via a connection. Selecting a backfill period of forever will ingest the entire history of the source data to [!DNL Experience Platform].
+**Backfill period**: The backfill period is an option to set the length of time for ingesting third-party historical data via a source connection. Selecting a backfill period of "forever" will ingest the entire history of the source data to [!DNL Experience Platform].
 
-**Batch**: A batch is a set of data collected over a period of time and processed together as a single unit.
+**Batch**: A batch is a set of data collected over a period of time and processed together as a single unit. Datasets are composed of multiple batches.
 
 **Batch ID**: A batch ID is an Adobe-generated identifier for a batch of data.
 
-**Batch ingestion**: Batch ingestion allows users to ingest petabytes of data and make it available within enterprise systems. With the latest technologies, users can now ingest any schema XDM and non-XDM into [!DNL Experience Platform].
+**Batch ingestion**: Batch ingestion allows users to manually ingest petabytes of data and make it available within enterprise systems.
 
-**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
+**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all Profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
 
 **Build**: In [!DNL Adobe Experience Platform Launch], a build is a deployed library. The build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of that library.
 
-**Business intelligence tools**: Business intelligence, also known as "BI" tools are primarily integrated with the [!DNL Experience Platform Query Service]. BI tools are types of application software that collect and process large amounts of unstructured data from internal and external systems.
+**Business intelligence tools**: Business intelligence (BI) tools are primarily integrated with [!DNL Experience Platform Query Service]. BI tools are types of application software that collect and process large amounts of unstructured data from internal and external systems.
 
 [Back to top](#adobe-experience-platform-glossary)
 
 ## C
 
-**Capping**: In [!DNL Offer Decisioning], capping is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience, also known as "Global Cap," and how many times an offer can be proposed to the same end user, also known as "Profile Cap".
+**Capping**: In [!DNL Offer Decisioning], capping (also known as frequency capping) is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience (also known as "Global Cap"), and how many times an offer can be proposed to the same end user (also known as "Profile Cap").
 
-**Catalog**: In [!DNL Real-time Customer Data Platform], in sources and destinations, a catalog is a gallery with available connections to Adobe applications and 3rd Party technologies.
+**Catalog**: In the context of sources and destinations, a catalog is gallery with available connections to Adobe applications and third-party technologies.
 
-**Class**: A class defines the smallest set of fields used to build a schema and is the base behavior that describes the business object.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-**Client**: A client is an external tool or application which connects to [!DNL Query Service] via Postgres protocol or HTTP API.
+**Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
+
+**Client**: A client is an external tool or application which connects to [!DNL Query Service] via PostgreSQL protocol or HTTP API.
 
 **Collection**: In [!DNL Offer Decisioning], collections are subsets of offers based on predefined conditions defined by a marketer, such as category of the offer.
 
 **Combine with PII marketing action**: A marketing action that combines any personally identifiable information (PII) with anonymous data. Contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of such data with directly identifiable data.
 
-**Command-line interface**: A command-line interface is a command line tool used to connect to [!DNL Query Service] for raw query execution.
+**Command-line interface**: A command-line interface is a text-based tool that can be used to connect to [!DNL Query Service] for raw query execution.
 
 **Composition**: A composition is a grouping of components that form together to make up the schema.
-
-**Connection**: A connection is a virtual pipeline that enables data to flow in and out of [!DNL Experience Platform]. Connections are now replaced by Sources.
 
 **Connector**: Adobe Experience Platform Source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using [!DNL Experience Platform Services]. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
@@ -106,95 +106,93 @@ description: A glossary of important terminology in Experience Platform.
 
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a Query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-**Contract data "C" labels**: Contract `C` labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
+**Contract "C" labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
 
-**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+**C1 contract label**: A "C1" contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
-**C2 contract label**: A `C2` contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
+**C2 contract label**: A "C2" contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
 
-**C3 contract label**: A `C3` contract data usage label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
+**C3 contract label**: A "C3" contract data usage label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
 
-**C4 contract label**: A `C4` contract data usage label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
+**C4 contract label**: A "C4" contract data usage label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
 
-**C5 contract label**: A `C5` contract data usage label specifies data cannot be used for interest-based, cross-site targeting of content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
+**C5 contract label**: A "C5" contract data usage label specifies data cannot be used for cross-site targeting of interest-based content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label**: A `C6` contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
+**C6 contract label**: A "C6" contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
 
-**C7 contract label**: A `C7` contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
+**C7 contract label**: A "C7" contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
 
-**C8 contract label**: A `C8` contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
+**C8 contract label**: A "C8" contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
-**C9 contract label**: A `C9` contract data usage label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
+**C9 contract label**: A "C9" contract data usage label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
 
-**C10 contract label**: A `C10` contract data usage label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+**C10 contract label**: A "C10" contract data usage label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
 
-**Created Date column**: Selecting a `Created Date` column is an option when specifying third-party data via a connection. When the append save strategy is selected and the dataset contains a multiple dates related schema, the user must choose from the available date/time schema to specify a `Created Date` key column. `Created Date` option is not available when the overwrite save strategy is selected.
+**Created Date column**: Selecting a Created Date column is an option when specifying third-party data via a source connection. When the append save strategy is selected and the dataset schema contains a multiple date fields, you must choose from the available schema to specify a Created Date key column. The Created Date option is not available when the overwrite save strategy is selected.
 
-**Create Table as Select**: Create Table as Select is a SQL command which, when executed as a part of a complete and valid SQL query, will instruct the [!DNL Query Service] to persist the results of the query in a dataset on the Data Lake. Options include: Create New, Overwrite all Previous, and Append to Previous.
+**Create Table as Select**: Create Table as Select (CTAS) is a SQL command which, when executed as a part of a complete and valid SQL query, will instruct [!DNL Query Service] to persist the results of the query in a dataset. Available options include Create New, Overwrite all Previous, and Append to Previous.
 
 **Cross-site data**: Cross-site data is the combination of data from several sites, including a combination of on-site data and off-site data or a combination of data from several off-site sources.
 
-**Cross-site targeting marketing action**: Uses data for cross-site ad targeting. The combination of data from several sites, including a combination of on-site data and off-site data or a combination of data from several off-site sources, is referred to as cross-site data. Cross-site data is typically collected and processed to make inferences about users' interests.
+**Cross-site targeting marketing action**: A marketing action that uses data for cross-site ad targeting. The combination of data from several sites, including a combination of on-site data and off-site data or a combination of data from several off-site sources, is referred to as cross-site data. Cross-site data is typically collected and processed to make inferences about customers' interests.
 
-**Custom identity namespace**: Custom identity namespaces are customer created identifiers used to represent identities for a specific organization or business case.
+**Custom identity namespace**: Custom identity namespaces are can be created by your organization to represent identities for a specific organization or business case.
 
-**Custom labels**: Custom data governance labels enable users to create and apply specific labels to data fields that meet specific business needs.
+**Custom labels**: Custom data usage labels allow you to create and apply specific labels to data fields that meet specific business needs.
 
-**Customer AI**: Customer AI is an Adobe Sensei Service that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
+**Customer AI**: Customer AI is an Intelligent Service powered by Adobe Sensei that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
 
 [Back to top](#adobe-experience-platform-glossary)
 
 ## D
 
-**Data dictionary**: In [!DNL Adobe Experience Platform Launch], a data dictionary is a set of data elements defined within a property.
+**Data dictionary**: In [!DNL Adobe Experience Platform Launch], a data dictionary (also known as a data map) is a set of data elements defined within a property.
 
 **Data element**: In [!DNL Adobe Experience Platform Launch], a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
 **Data layer**: In [!DNL Adobe Experience Platform Launch], a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
-**Data mapping**: Data mapping is the process of mapping source data fields to destination related target fields.
-
-**Data governance**: Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organization policies with respect to data usage.
+**Data governance**: Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organizational policies with respect to data usage.
 
 **Data integration partners**: Data integration partners simplify and automate the loading and transformation of massive volumes of data from over 200 sources to [!DNL Experience Platform] without writing code.
 
 **Dataset labels**: Data usage labels can be added to datasets. All fields within that dataset will inherit the dataset's labels.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] within [!DNL Experience Platform] enables customers to create machine learning models utilizing data across [!DNL Experience Platform] and Adobe applications to generate intelligent insights and predictions to weave delightful end-user digital experiences.
+**Data Science Workspace**: [!DNL Data Science Workspace] within [!DNL Experience Platform] enables customers to create machine-learning models utilizing data across [!DNL Platform] and Adobe applications to generate intelligent insights and predictions, weaving delightful end-user digital experiences as a result.
 
 **Data source**: A data source is a user designated origin of data. Examples of a data source are a mobile app, profile and/or experience events, website profile events or a CRM.
 
-**Data steward**: A data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organization policies.
+**Data steward**: A data steward is the person responsible for the management, oversight, and enforcement of an organization's data assets. A data steward also ensures data governance policies are safeguarded and maintained to be compliant with government regulations and organizational policies.
 
 **Data stream**: A data stream is a set or collection of messages which share the same schema and are sent by the same source.
 
-**Data type**: Data type is a reusable object with properties in a hierarchical representation.
+**Data type**: A data type is a reusable XDM resource that defines an object-type field with properties in a hierarchical representation.
 
-**Data usage labels**: Data usage labels provide users the ability to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
+**Data usage labels**: Data usage labels allow you to categorize data that reflects privacy-related considerations and contractual conditions to be compliant with regulations and corporate policies. Data usage labels added to a dataset are inherited down or applied to all fields within that dataset. Data usage labels can also be applied directly to fields.
 
-**Dataflow**: In [!DNL Real-time Customer Data Platform], a dataflow is a virtual pipeline of data that flows into [!DNL Platform] from a source and out to destinations. 
+**Dataflow**: A dataflow is a virtual pipeline of data that flows into [!DNL Platform] from a source and out to destinations. 
 
 **Dataflow run**: A dataflow run is a dataflow that lands in Experience Platform based on a user specified schedule.
 
-**Dataset**: A dataset is a storage and management construct for a collection of data, typically a table, that contains schema (columns) and fields (rows).
+**Dataset**: A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows).
 
 **Dataset ID**: An Adobe-generated identifier for an ingested dataset.
 
-**Dataset output**: Dataset output provides a mechanism for determining what the Create Table as Select option will be used for a particular [!DNL Query Service] run.
+**Dataset output**: Dataset output provides a mechanism for determining what the "Create Table as Select" option will be used for a particular [!DNL Query Service] run.
 
-**Delta column**: In [!DNL Real-time Customer Data Platform], delta column enables source data field selection for a timestamp for incremental ingestion
+**Delta column**: A delta column allows you to select a source data field to represent a timestamp for incremental ingestion.
 
-**Delta save strategy**: The `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
+**Delta save strategy**: The delta save strategy is an option for ingesting third-party data via a source connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
-**Destination**: In [!DNL Real-time Customer Data Platform] a destination is a general term for any endpoint, such as an Adobe application, advertising platform, cloud storage service, or marketing service, where an audience is activated and delivered.
+**Destination**: In a destination is a general term for any endpoint, such as an Adobe application, advertising platform, cloud storage service, or marketing service, where an audience is activated and delivered.
 
-**Destination category**: A destination category is a grouping of [!DNL Real-time Customer Data Platform] destinations that have similar characteristics.
+**Destination category**: A destination category is a grouping of destinations that have similar characteristics.
 
-**Destination catalog**: A destination catalog is a list of available destinations in the [!DNL Real-time Customer Data Platform].
+**Destination catalog**: A destination catalog is a list of available destinations in Experience Platform.
 
-**Direct call rules**: In [!DNL Adobe Experience Platform Launch], you can set up a direct call rule that executes when it is called directly from the page. If your page load or your action on your site is very simple, or if it is unique and can execute a specific set of instructions every time (set [!DNL eVar4] to X and trigger [!DNL event2] every time), then you can use a direct call rule. See [!DNL Launch] documentation regarding creating direct call rules.
+**Direct call rules**: In [!DNL Adobe Experience Platform Launch], a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
 
-**Display name**: The display name is a user-friendly name of a field that is shown in the UI.
+**Display name**: In Experience Data Model (XDM), a display name is a user-friendly name for a field that is shown in the UI.
 
 [Back to top](#adobe-experience-platform-glossary)
 
