@@ -60,7 +60,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Dynamics] account as it can be used to create multiple dataflows to bring in different data.
 
-### Create a Dynamics connection using basic authentication
+### Create a [!DNL Dynamics] connection using basic authentication
 
 To create a [!DNL Dynamics] connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
 
@@ -118,9 +118,9 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Create a Dynamics connection using service principal key-based authentication
+### Create a [!DNL Dynamics] connection using service principal key-based authentication
 
-To create a [!DNL Dynamics ]connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
+To create a [!DNL Dynamics] connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
 **API format**
 
