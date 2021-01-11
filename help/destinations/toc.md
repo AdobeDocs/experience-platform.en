@@ -22,7 +22,7 @@ user-guide-description: Activate your known and unknown data for cross-channel m
     * [ (Alpha) HTTP destination](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
-        * [Experience Platform segment sharing](https://docs.adobe.com/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
+        * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
         * [Adobe Advertising Cloud destination](./catalog/advertising/adobe-advertising-cloud.md)

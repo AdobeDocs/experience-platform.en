@@ -117,7 +117,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Alloy so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions in [this document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) for more details.
 
 ## How is the Web SDK different than Adobe Experience Platform Launch?
 
