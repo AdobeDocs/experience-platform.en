@@ -134,10 +134,19 @@ To enable Offer Decisioning, you need to perform the following steps:
         {
           "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
           "items": [
             {
               "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "etag": "1",
               "data": {
                 "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
@@ -164,6 +173,8 @@ To enable Offer Decisioning, you need to perform the following steps:
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `activity.id` | The unique ID of the offer activity. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
+| `placement.id` | The unique ID of the offer placement. | `"id": "xcore:offer-placement:1175009612b0100c"` |
 | `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
 | `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
@@ -220,17 +231,26 @@ To enable Offer Decisioning, you need to perform the following steps:
         {
           "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
           "items": [
             {
               "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "etag": "1",
               "data": {
                 "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
                 "language": [
                   "en-US"
                 ],
-                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
+                "content": "<p>20% Off on shipping</p>",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
