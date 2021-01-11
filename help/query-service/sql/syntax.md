@@ -61,6 +61,7 @@ TABLE [ ONLY ] table_name [ * ]
 ### SNAPSHOT clause
 
 This clause can be used to read data on a table incrementally based on snapshot ids. A snapshot id is a checkpoint marker identified by a number, of type Long, on a datalake table every time data is written to it. The SNAPSHOT clause attaches itself to the table relation it is used next to.
+
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
 ``` 
@@ -77,8 +78,8 @@ SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
 SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
 
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
-
 ```
+
 Please note that a SNAPSHOT clause works with a table or table alias but not on top of a sub-query or view. A SNAPHOST clause will work anywhere a SELECT query on a table can be applied.
 
 ### WHERE ILIKE clause
