@@ -22,7 +22,7 @@ To get started, select **[!UICONTROL Alerts]** in the left navigation.
 
 The **[!UICONTROL Alert history]** tab shows the history of received alerts for your organization, including their current status, severity, triggered date, and resolved date (if applicable).
 
-Select a listed alert and more details appear in the right rail, including a short summary of the alert rule that was triggered.
+Select a listed alert and more details appear in the right rail, including a short summary of the alert that was triggered.
 
 ![](../images/alerts/history-details.png)
 
