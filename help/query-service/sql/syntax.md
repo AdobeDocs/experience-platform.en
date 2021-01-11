@@ -142,7 +142,9 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 ```sql
 CREATE TABLE Chairs AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+
 CREATE TABLE Chairs WITH (schema='target schema title') AS (SELECT color, count(*) AS no_of_chairs FROM Inventory i WHERE i.type=="chair" GROUP BY i.color)
+
 CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
 ```
 
@@ -167,6 +169,7 @@ INSERT INTO table_name select_query
 
 ```sql
 INSERT INTO Customers SELECT SupplierName, City, Country FROM OnlineCustomers;
+
 INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
 ```
 
@@ -202,6 +205,7 @@ CREATE VIEW view_name AS select_query
 
 ```sql
 CREATE VIEW V1 AS SELECT color, type FROM Inventory
+
 CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 ```
 
