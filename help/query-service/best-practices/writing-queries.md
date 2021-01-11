@@ -274,7 +274,7 @@ LIMIT 50;
 **Results**
 
 | OperatingSystem | PageViews |
-| ---------------- | --------- |
+| --------------- | --------- |
 | Windows 7 | 2781979.0 |
 | Windows XP | 1669824.0 |
 | Windows 8 | 420024.0 |
