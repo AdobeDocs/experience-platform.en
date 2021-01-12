@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform product documentation
+title: Adobe Experience Platform glossary
 topic: getting started
+description: A glossary of important terminology in Experience Platform.
 ---
 
-# Adobe Experience Platform Glossary {#adobe-experience-platform-glossary}
+# Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
 ## A
 
@@ -125,9 +126,9 @@ topic: getting started
 
 **C5 contract label:** A `C5` contract data usage label specifies data cannot be used for interest-based, cross-site targeting of content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label:** A `C6` contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as clicking an ad or making a purchase.
+**C6 contract label:** A `C6` contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
 
-**C7 contract label:** A `C7` contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example clicking on content.
+**C7 contract label:** A `C7` contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
 
 **C8 contract label:** A `C8` contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
@@ -189,7 +190,7 @@ topic: getting started
 
 **Dataset output:** Dataset output provides a mechanism for determining what the Create Table as Select option will be used for a particular [!DNL Query Service] run.
 
-**Delta column:** In [!DNL Real-time Customer Data Platform], delta column enables source data field selection for a timestamp for incremental ingestion
+**Delta column:** In [!DNL Real-time Customer Data Platform], delta column enables source data field selection for a timestamp for incremental ingestion.
 
 **Delta save strategy:** The `Delta save strategy` is an option for ingesting third-party data via a connection. The option allows the user to specify that new or changed rows of source data are ingested to [!DNL Experience Platform]. New rows are added to the end of the dataset and changed rows are updated in the dataset on [!DNL Experience Platform].
 
@@ -222,6 +223,8 @@ topic: getting started
 **Error diagnostics:** Error diagnostics enables the generation of detailed error messages for ingested batches. The Error threshold enables the configuration of the percentage of acceptable errors before the entire batch will fail.
 
 **Event** In [!DNL Adobe Experience Platform Launch], an event is a specific type of rule component, a trigger that occurs on a client device to begin the execution of a rule.
+
+**Event entities** Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the XDM ExperienceEvent class.
 
 **Events:** Events are the behavior data associated with a profile.
 
@@ -275,11 +278,13 @@ topic: getting started
 
 **Identity:** Identity is an identifier such as a cookie ID, device ID, or email ID that uniquely represents an end customer.
 
+**Identity fields:** Identity fields are XDM fields marked as identities and are used to stitch together information about individual customers coming from multiple data sources. A single primary identity must be defined in order for the schema to be enabled for use in Real-time Customer Profile.
+
 **Identity "I" labels:** `Identity I` data usage labels are used to categorize data that can identify or contact a specific person.
 
 **Identity graph:** Identity graph is a map of relationships between stitched and linked identities, that updates near real-time with customer activity.
 
-**Identity namespace:** An identity namespace is an identifier such as cookie ID, device ID, or email ID to indicate the context from which data originates and is used to recognize and link identities across [!DNL Experience Cloud].
+**Identity namespace:** An identity namespace defines the context of an identifier such as an email address or CRM ID.
 
 **Identity Service:** [!DNL Experience Platform Identity Service] UI enables the creation and management of identity types to enable linking of identities across devices and channels for a complete user-view from [!DNL Real-time Customer Profile].
 
@@ -287,7 +292,7 @@ topic: getting started
 
 **Identity symbol:** An identity symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
 
-**Identity value:** Identity value is data associated with an assigned identity in the schema. When matching record data across profile fragments both the identity value and the namespace must match. 
+**Identity value:** An identity value is an identifier that represents a unique individual, organization, or asset. When matching record data across profile fragments the namespace and identity value must match.
 
 **I1 data usage label:** The `I1` data usage label is used to classify directly identifiable data that can identify or contact a specific person rather than a device.
 
@@ -318,6 +323,8 @@ topic: getting started
 ## L
 
 **Library:** In [!DNL Adobe Experience Platform Launch], a library is a set of business logic that contains instructions for how the [!DNL Platform Launch] library should behave on the client device.
+
+**Lookup entities** Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom classes.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -371,6 +378,8 @@ topic: getting started
 
 ## P
 
+**Partial batch ingestion:** Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. 
+
 **Partial ingestion:** Partial ingestion enables ingestion of valid records of batch data within a specified error threshold. Error diagnostics for failed records can be downloaded or access in Monitoring or Sources dataflow run overview.
 
 **Parquet files:** A Parquet file is a columnar storage file format with complex nested data structures. Parquet files are required for adding data to populate a schema dataset.
@@ -398,6 +407,8 @@ topic: getting started
 **Profile:** {#profile} Not to be confused with [Real-time Customer Profile](#rtcp), a profile is the output of [!DNL Identity Service] and [!DNL Real-time Customer Profile] data, taking ingested profile data with identity fields and constructing a representation of a person.
 
 **Profile data:** Profile data is data ingested under the XDM Individual Profile class. This data typically describes customer attributes, as opposed to event data.
+
+**Profile entities:** Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the XDM Individual Profile class.
 
 **Profile export:** [!DNL Profile] export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email and is used to integrate with marketing and email automation platforms.
 
@@ -429,6 +440,8 @@ topic: getting started
 
 **Record:** A record is data that persists as rows in a dataset.
 
+**Record data:** Provides information about the attributes of a subject. A subject could be an organization or an individual.
+
 **Recurrence:** A recurrence defines whether a [!DNL Query Service] query is scheduled to run only once or on a recurring basis.
 
 **Representation:** In [!DNL Offer Decisioning], a representation is information used by a channel, such as location or language to display an offer.
@@ -459,9 +472,13 @@ topic: getting started
 
 **Scoring:** Scoring is the process of generating insights from data using a trained model.
 
-**Schema:** A schema is comprised of a class and optional mixin and is used to create datasets and data streams. A schema includes behavioral attributes, timestamp, identity, attribute definitions, and relationships.
+**Schema:** A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional mixin(s) and is used to create datasets and datastreams. A schema includes behavioral attributes, timestamp, identity, attribute definitions, and relationships.
 
 **Schema descriptor:** A schema descriptor is an additional schema related metadata that describes behavior that can be used by [!DNL Experience Platform] to understand intended schema behavior such as the relationship between two schemas.
+
+**Schema Library:** The Schema Library contains industry-standard resources made available by Adobe, Experience Platform partners, and vendors.
+
+**Schema Registry:** The Schema Registry provides a user interface and RESTful API used to view and manage all schema-related resources in the [!DNL Experience Platform Schema Library]. 
 
 **Secret access key:** A secret access key is an [!DNL Amazon] S3 key that is used in conjunction with the access key ID to sign AWS requests.
 
@@ -527,6 +544,8 @@ topic: getting started
 
 **Target features:** Target feature is specified in feature mapping is the feature that is predicted by a model.
 
+**Time series data:** Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
+
 **Trained model:** A trained model represents the executable output of a model training process, in which a set of training data was applied to the model instance. A trained model will maintain a reference to any Intelligent Web Service that is created from it. The trained model is suitable for scoring and creating an intelligent web service. Modifications to a trained model can be tracked as a new version.
 
 **Token:** A token is a type of two-factor authentication security that can be used to authorize the use of computer services with [!DNL Query Service].
@@ -555,11 +574,11 @@ topic: getting started
 
 **XDM DecisionEvent:** A DecisionEvent is used to capture observations about the outcome and context of a decision activity, including information about how the decision was made, when it occurred, what options were proposed (and chosen) and what contextual state existed that either influenced the decision or could be observed during the decision process. DecisionEvents also capture the proposition ID, a globally unique identifier that can be used to correlate the decision to other events. DecisionEvents are not only relatable to Experience Events that impacted a decision but also to ExperienceEvents that are a direct response to a proposition. It is the expectation that applications reference the proposition ID in every ExperienceEvent that was influenced by the propositions. The proposition-response history in an individual profile is maintained using proposition IDs.
 
-**XDM ExperienceEvent:** An ExperienceEvent is a fact record of what occurred, including the point in time and identity of the individual involved. ExperienceEvents can be either explicit (directly observable human actions) or implicit (raised without a direct human action) and are recorded without aggregation or interpretation. They are critical for time-domain analytics as they allow for observation and analysis of changes that occur in a given window of time and the comparison between multiple windows of time to track trends.
+**XDM ExperienceEvent:** XDM ExperienceEvent is a time-series-based class used to capture the state of the system when an event (or set of events) occurred, including the point in time and identity of the subject involved. Experience Events are fact records of what occurred and are immutable and represent what happened without aggregation or interpretation. 
 
-**XDM Individual Profile:** An XDM [!DNL Individual Profile] forms a singular representation of the attributes and interests of both identified and partially-identified individuals. Less-identified profiles may contain only anonymous behavioral signals, such as browser cookies, while highly-identified profiles may contain detailed personal information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identification information, contact details, and communication preferences for an individual.
+**XDM Individual Profile:** XDM [!DNL Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses.
 
-**XDM System:** XDM System is the infrastructure, data semantics, and workflow in [!DNL Experience Platform] that is powered by standard schemas.
+**XDM System:** XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with [!DNL Experience Platform] services. 
 
 [Back to top](#adobe-experience-platform-glossary)
 

@@ -21,7 +21,8 @@ user-guide-description: Build segments and generate audiences from your Real-tim
     - [Segment search](api/segment-search.md)
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
-    - [Overview](ui/overview.md)
+    - [Segmentation UI guide](ui/overview.md)
+    - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)

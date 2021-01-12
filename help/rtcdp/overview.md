@@ -50,5 +50,5 @@ The following documentation is recommended to help you get started with Real-tim
 * [How to ingest data](sources/sources-overview.md)
 * [How to access profiles](profile/profile-overview.md)
 * [How to build segments](segmentation/segmentation-overview.md)
-* [How to activate segments to destinations](destinations/activate-destinations.md)
+* [How to activate segments to destinations](destinations/overview.md)
 * [How to define and enforce data governance policies](privacy/data-governance-overview.md)
