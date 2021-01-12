@@ -10,14 +10,27 @@ Each row in the data represents a conversion, in which information for related t
 
 ## Access Query Service
 
-1.  First you want to retrieve the name of your Attribution score table from Adobe Experience Platform and copy `Table Name`
-2.  Click on the _DATA MANAGEMENT_ tab followed by the _Queries_ tab from the left panel.
-3.  Click `+ Create Query` on the upper right corner for new queries or go to the `Log` tab for previously executed queries.
-4.  Create/edit queries for analyzing attribution scores.
+In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, select **[!UICONTROL Open]**.
 
-## Query Templates for Attribution Score Analysis
+![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
 
-### Validation
+The Attribution AI service page appears. Next, select the service instance (avoiding the hyperlink) you wish to query from. The right rail appears with additional info about your service instance. From the right rail select your data source hyperlink. You are redirected to the dataset activity page.
+
+From within the dataset activity page, copy the table name located in the right rail.
+
+![Copy table name]()
+
+Once you have copide your table name, select **[!UICONTROL Queries]** in the left navigation. Then select **Create query**.
+
+![Select queries]()
+
+You are redirected to the queries tab where you can query from your dataset.
+
+## Query templates for attribution score analysis
+
+The queries below can be used as a template for different score analysis senarios.
+
+### Validation examples
 
 **Total Number of Conversions by Conversion Event (within in a conversion window)**
 
@@ -58,7 +71,7 @@ Each row in the data represents a conversion, in which information for related t
         conversionName
 ```
 
-### Trend Analysis
+### Trend Analysis examples
 
 **Number of Conversions Per Day**
 
@@ -81,7 +94,7 @@ Each row in the data represents a conversion, in which information for related t
     LIMIT 20
 ```
 
-### Distribution Analysis
+### Distribution Analysis examples
 
 **Amount of Touchpoints on Conversion Paths by Defined Type (within in a conversion window)**
 
@@ -107,7 +120,7 @@ Each row in the data represents a conversion, in which information for related t
         conversionName, tp_count DESC
 ```
 
-### Insight Generation
+### Insight Generation examples
 
 **Incremental Units breakdown by Touchpoint and Conversion Date (within in a conversion window)**
 
@@ -191,7 +204,7 @@ Each row in the data represents a conversion, in which information for related t
         conversionName, touchpointName
 ```
 
-**Advanced - Path Length Analysis**
+**Advanced - path length analysis**
 
 Get path length distribution for each conversion event type:
 
