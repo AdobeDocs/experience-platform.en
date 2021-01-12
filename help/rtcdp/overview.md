@@ -52,9 +52,9 @@ To learn more about Adobe Experience Platform, begin by reading the [Experience 
 
 The following documentation is recommended to help you get started with Real-time Customer Data Platform:
 
-- [How to get started with Real-time CDP](get-started.md)
-- [How to ingest data](sources/sources-overview.md)
-- [How to access profiles](profile/profile-overview.md)
-- [How to build segments](segmentation/segmentation-overview.md)
-- [How to activate segments to destinations](destinations/activate-destinations.md)
-- [How to define and enforce data governance policies](privacy/data-governance-overview.md)
+* [How to get started with Real-time CDP](get-started.md)
+* [How to ingest data](sources/sources-overview.md)
+* [How to access profiles](profile/profile-overview.md)
+* [How to build segments](segmentation/segmentation-overview.md)
+* [How to activate segments to destinations](destinations/overview.md)
+* [How to define and enforce data governance policies](privacy/data-governance-overview.md)

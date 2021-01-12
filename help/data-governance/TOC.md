@@ -20,7 +20,8 @@ user-guide-description: Enforce data usage restrictions through the use of label
   * [Create a data usage policy using the Policy Service API](policies/create.md)
 * Policy enforcement {#enforcement}
   * [Policy enforcement overview](enforcement/overview.md)
-  * [Enforce data usage policies using the Policy Service API](enforcement/api-enforcement.md)
+  * [Automatic enforcement](enforcement/auto-enforcement.md)
+  * [API-based enforcement](enforcement/api-enforcement.md)
 * Policy Service API developer guide {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
