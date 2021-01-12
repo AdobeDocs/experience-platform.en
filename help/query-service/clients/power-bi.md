@@ -6,35 +6,41 @@ topic: connect
 description: This document walks through the steps for connecting Power BI with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL Power BI] (PC)
+# [!DNL Power BI]
 
-PC users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
+This document walks through the steps for connecting Power BI with Adobe Experience Platform Query Service.
+
+>[!NOTE]
+>
+>Power BI is only available on Windows computers.
+
+# Installing [!DNL Power BI]
+
+Windows users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
 
 ## Set up [!DNL Power BI]
 
-After you have [!DNL Power BI] installed, you need to set up the necessary components to support the PostgreSQL connector. Follow these steps:
+After installing Power BI, you will need to install `npgsql`, a .NET driver package for PostgreSQL. More information about npgsql can be found in the [npgsql documentation](https://www.npgsql.org/doc/index.html).
 
-- Find and install `npgsql`, a .NET driver package for PostgreSQL that is the official way for PowerBI to connect.
+>[!IMPORTANT]
+>
+>You must download v4.0.10 or lower, as newer versions result in errors.
 
-- Select v4.0.10 (newer versions currently result in an error).
+Under "Npgsql GAC Installation" on the custom setup screen, select **[!UICONTROL Will be installed on local hard drive]**. 
 
-- Under "Npgsql GAC Installation" on the Custom Setup screen, select **[!UICONTROL Will be installed on local hard drive]**. Not installing the GAC will cause Power BI to fail later.
-
-- Restart Windows.
-
-- Find the [!DNL PowerBI] Desktop evaluation version.
+To ensure that npgsql has properly installed, please restart your computer before proceeding to the next steps.
 
 ## Connect [!DNL Power BI] to [!DNL Query Service]
 
-After performing those preparatory steps, you can connect [!DNL Power BI] to [!DNL Query Service]:
+To connect [!DNL Power BI] to [!DNL Query Service], open [!DNL Power BI] and select **[!UICONTROL Get Data]** in the top menu ribbon.
 
-- Open [!DNL Power BI].
+Screenshot???
 
-- Click **[!UICONTROL Get Data]** in the top menu ribbon.
+Select **[!UICONTROL PostgreSQL database]**, followed by **[!UICONTROL Connect]**.
 
-- Choose **[!UICONTROL PostgreSQL database]**, then click **[!UICONTROL Connect]**.
+ANOTHER SCREENSHOT
 
-- Enter values for the Server and Database. **[!UICONTROL Server]** is the Host found under the connection details. For production, add port `:80` to the end of the Host string. **[!UICONTROL Database]** can be either "all" or a dataset table name. (Try one of the CTAS-derived datasets.)
+Enter values for the Server and Database. **[!UICONTROL Server]** is the Host found under the connection details. For production, add port `:80` to the end of the Host string. **[!UICONTROL Database]** can be either "all" or a dataset table name. (Try one of the CTAS-derived datasets.)
 
 - Click **[!UICONTROL Advanced options]**, and then uncheck **[!UICONTROL include relationship columns]**. Do not check **[!UICONTROL Navigate using full hierarchy]**.
 

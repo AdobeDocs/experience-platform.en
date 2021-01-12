@@ -6,15 +6,17 @@ topic: connect
 description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL Looker]
+# [!DNL Looker]
 
-To connect [!DNL Looker] with [!DNL Query Service] on Adobe Experience Platform, please follow the steps below:
+This document walks through the steps for connecting [!DNL Looker] with Adobe Experience Platform [!DNL Query Service].
 
-After logging into [!DNL Looker], click on **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.
+## Connect [!DNL Looker] with Platform
+
+After logging into [!DNL Looker], select **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.
 
 ![](../images/clients/looker/click-admin-connections.png)
 
-On this page, click on **New Connection**.
+On this page, select **New Connection**.
 
 ![](../images/clients/looker/click-new-connection.png)
    
@@ -30,9 +32,9 @@ From here, you can fill out the details for the Connection Settings.
 
 >[!NOTE]
 >
->For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+>For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-After inputting your connection details, click on **[!UICONTROL Test These Settings]** to ensure your credentials work properly. If they do, a message telling you can connect will appear below. If your connection is indeed successful, click on **[!UICONTROL Add Connection]** to create your connection.
+After inputting your connection details, select **[!UICONTROL Test These Settings]** to ensure your credentials work properly. If they do, a message telling you can connect will appear below. If your connection is indeed successful, select **[!UICONTROL Add Connection]** to create your connection.
 
 ![](../images/clients/looker/click-test-connection.png)
 
