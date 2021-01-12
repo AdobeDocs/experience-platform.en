@@ -37,7 +37,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Overview](./governance-privacy-security/overview.md)
   * Consent collection {#consent}
     * [Overview](./governance-privacy-security/consent/overview.md)
-    * [Create datasets for capturing consent and preference data](./governance-privacy-security/consent/dataset-prep.md)
+    * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/dataset-prep.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [ADLS Gen2 Migration](adls2-gen2-migration.md)

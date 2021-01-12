@@ -52,9 +52,9 @@ Since each CMP system is unique, you must determine the best way to allow your c
 
 This dialog should allow the customer to opt in or out of specific marketing use cases for their data. These consents and preferences should conform to the Adobe consent standard, as represented by the [Consents & Preferences XDM data type](../../../xdm/data-types/consents.md). 
 
-## Create datasets with Adobe-standard consent fields {#datasets}
+## Create a dataset with Adobe-standard consent fields {#dataset}
 
-Customer consent data must be sent to a datasets whose schema contains Adobe-standard consent fields. Refer to the tutorial on [creating datasets for capturing customer consent](./dataset-prep.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields. Refer to the tutorial on [creating a dataset for capturing customer consent](./dataset-prep.md) for how to create the required dataset before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
@@ -78,8 +78,8 @@ After providing a unique name for the configuration, select the toggle button ne
 | --- | --- |
 | [!UICONTROL Sandbox] | The name of the [!DNL Platform] [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for [!DNL Experience Platform]. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
-| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Event Dataset] | ??? |
+| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#dataset). |
 
 ![](../../images/governance-privacy-security/consent/overview/edge-config.png)
 
