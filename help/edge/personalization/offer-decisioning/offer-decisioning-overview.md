@@ -224,93 +224,88 @@ To enable Offer Decisioning, you need to perform the following steps:
 
 ```json
 {
-  "header": {
-    "origin": "ods-local-local",
-    "createdAt": 1596222580482
-  },
-  "body": {
-    "handle": [
-      {
-        "namespace": "personalization",
-        "type": "decisions",
-        "payloads": [
-          {
-            "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
-            "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MTEyMyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDExMjMifQ==",
-            "activity": {
-              "id": "xcore:offer-activity:11cfb1fa93381123",
-              "etag": "1"
-            },
-            "placement": {
-              "id": "xcore:offer-placement:1175009612b01123",
-              "etag": "3"
-            },
-            "items": [
-              {
-                "id": "xcore:personalized-offer:11e36d4a22954123",
-                "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
-                "etag": "2",
-                "data": {
-                  "id": "xcore:personalized-offer:11e36d4a22954123",
-                  "format": "text/text",
-                  "language": [
-                    "en"
-                  ],
-                  "content": "20% Off on shipping",
-                  "characteristics": {
-                    "foo2": "bar2"
-                  }
-                }
-              }
-            ]
+  "requestId": "94c4f2f1-9218-43ce-afd3-eb0d853c5174",
+  "handle": [
+    {
+      "payload": [
+        {
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MTEyMyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDExMjMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381123",
+            "etag": "1"
           },
-          {
-            "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
-            "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
-            "activity": {
-              "id": "xcore:offer-activity:11cfb1fa93381aca",
-              "etag": "2"
-            },
-            "placement": {
-              "id": "xcore:offer-placement:1175009612b0100c",
-              "etag": "1"
-            },
-            "items": [
-              {
-                "id": "xcore:personalized-offer:11e36d4a2295415d",
-                "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
-                "etag": "1",
-                "data": {
-                  "id": "xcore:personalized-offer:11e36d4a2295415d",
-                  "format": "image/png",
-                  "language": [
-                    "en"
-                  ],
-                  "deliveryURL": "https://image.jpeg",
-                  "characteristics": {
-                    "foo": "bar",
-                    "foo1": "bar1"
-                  }
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b01123",
+            "etag": "3"
+          },
+          "items": [
+            {
+              "id": "xcore:personalized-offer:11e36d4a22954123",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
+              "etag": "2",
+              "data": {
+                "id": "xcore:personalized-offer:11e36d4a22954123",
+                "format": "text/text",
+                "language": [
+                  "en"
+                ],
+                "content": "20% Off on shipping",
+                "characteristics": {
+                  "foo2": "bar2"
                 }
               }
-            ]
-          }
-        ]
-      }
-    ]
-  }
+            }
+          ]
+        },
+        {
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
+          "items": [
+            {
+              "id": "xcore:personalized-offer:11e36d4a2295415d",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
+              "etag": "1",
+              "data": {
+                "id": "xcore:personalized-offer:11e36d4a2295415d",
+                "format": "image/png",
+                "language": [
+                  "en"
+                ],
+                "deliveryURL": "https://image.jpeg",
+                "characteristics": {
+                  "foo": "bar",
+                  "foo1": "bar1"
+                }
+              }
+            }
+          ]
+        }
+      ],
+      "type": "personalization:decisions",
+      "eventIndex": 0
+    }
+  ]
 }
 ```
 
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `activity.id` | The unique ID of the offer activity. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
-| `placement.id` | The unique ID of the offer placement. | `"id": "xcore:offer-placement:1175009612b0100c"` |
-| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
-| `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
-| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
-| `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
+| `activity.id` | The unique ID of the offer activity. | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
+| `placement.id` | The unique ID of the offer placement. | `"xcore:offer-placement:1175009612b01123"` |
+| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:11e36d4a22954123"`|
+| `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"`|
+| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:11e36d4a22954123"`|
+| `format`| The format of the content associated with the proposed offer. | `"format": "text/text"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
 | `content` | Content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
 | `deliveryUrl`| Image content associated with the proposed offer in the format of a URL. | `"deliveryURL": "https://image.jpeg"`|
