@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: Experience Platform guardrails for Profile data
+title: Experience Platform guardrails for Real-time Customer Profile
 solution: Experience Platform
 product: experience platform
 topic: guide
@@ -101,9 +101,6 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum number of segments per sandbox | 100K | Soft | **The maximum number of segments an organization can create is 100K per sandbox.** An organization can have more than 100K segments in total, as long as there are less than 100,000 segments in each individual sandbox.|
-| Maximum number of streaming segments in Platform | 500 | Soft | **The maximum number of streaming segments an organization can create within Platform is 500.** Attempting to create additional streaming segments will result in degraded system performance.|
-| Maximum number of batch segments in Platform | 10K | Soft | **The maximum number of batch segments an organization can create within Platform is 10K.** Attempting to create additional batch segments will result in degraded system performance.|
-| Number of segments mapped to destinations | No limit | N/A | **There is currently no limit to the number of segments that can be mapped to a destination.** As long as an organization adheres to the limits regarding the total number of segments, there is no limit to the number of those segments that can be mapped to a destination.|
-| Maximum number of destinations and sources with Activation licensing | No limit | N/A | **There is currently no limit to the number of destinations and sources that you can connect if your organization is licensed for Activation.** To learn more about licensing and provisioning for Activation, please speak with your account representative. |
-| Maximum number of destinations and sources for Real-time Customer Data Platform (Real-time CDP) | 5 Destinations & 5 Sources | Hard | **For Real-time CDP users, the maximum number of connected destinations and sources is 5 of each. This does not include Adobe applications.** For example, an organization could connect Adobe Audience Manager and Adobe Target as destinations along with 5 additional destinations. |
+| Maximum number of segments per sandbox | 100K | Soft | **The maximum number of segments an organization can create is 100K per sandbox.** An organization can have more than 100K segments in total, as long as there are less than 100,000 segments in each individual sandbox. Attempting to create additional segments will results in degraded system performance.|
+| Maximum number of streaming segments per sandbox | 500 | Soft | **The maximum number of streaming segments an organization can create is 500 per sandbox.** An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments will result in degraded system performance.|
+| Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|
