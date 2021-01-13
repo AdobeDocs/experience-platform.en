@@ -65,8 +65,8 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL and [!DNL Query Service]
 
-After installing PosstgreSQL on your computer, you are ready to connect PSQL with Query Service. Return to the [!DNL Platform] UI, select **[!UICONROL Queries]**, followed by **[!UICONTROL Credentials]**.
-    
+After installing PostgreSQL on your computer, you are ready to connect PSQL with Query Service. Return to the [!DNL Platform] UI, select **[!UICONROL Queries]**, followed by **[!UICONTROL Credentials]**.
+
 ![Image](../images/clients/psql/connect-bi.png)
 
 Select the icon to copy the section labelled **[!UICONTROL PSQL Command]**.
