@@ -8,7 +8,7 @@ description: The tables below contain the mappings between the Marketo Campaign 
 
 # Campaigns and campaign memberships mapping fields
 
-The tables below contain the mappings between the Marketo Program and program membership datasets and their corresponding XDM fields.
+The tables below contain the mappings between the [!DNL Marketo] Campaigns and campaign memberships datasets and their corresponding XDM fields.
 
 ## Campaigns
 

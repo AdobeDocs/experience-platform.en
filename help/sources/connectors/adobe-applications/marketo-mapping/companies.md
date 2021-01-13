@@ -10,11 +10,9 @@ description: The tables below contain the mappings between the Marketo Companies
 
 The tables below contain the mappings between the [!DNL Marketo] [!UICONTROL Companies] datasets and their corresponding XDM fields.
 
-If the customer plans to ingest B2B data from not only Marketo but also another CRM system, then choose the blue color attribute on the source side for the first row.
-
-If the customer plans to ingest B2B data from Marketo exclusively, then choose the green color attribute on the source side for the first row.
-
-There is no difference from the second row and beyond.
+>[!IMPORTANT]
+>
+>If you are ingesting B2B data from [!DNL Marketo] and another CRM system, then select `External-Account-key` from the first row of source datasets. If you are ingesting B2B data exclusively from [!DNL Marketo], then `Account-key` from the first row.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

@@ -12,11 +12,9 @@ The tables below contain the mappings between the [!DNL Marketo] Opportunities a
 
 ## Opportunities
 
-If the customer plans to ingest B2B data from not only Marketo but also another CRM system, then choose the blue color attribute on the source side for the first row.
-
-If the customer plans to ingest B2B data from Marketo exclusively, then choose the green color attribute on the source side for the first row.
-
-There is no difference from the second row and beyond.
+>[!IMPORTANT]
+>
+>If you are ingesting B2B data from [!DNL Marketo] and another CRM system, then select `External-Opportunity-key` from the first row of source datasets. If you are ingesting B2B data exclusively from [!DNL Marketo], then `Opportunity-key` from the first row.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
