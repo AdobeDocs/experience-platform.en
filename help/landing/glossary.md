@@ -476,7 +476,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Segment definition**: A segment definition is the rule set used to describe the key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
 
-**Segment evaluation method**: There are two segment evaluation methods: scheduled and on-demand. A scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
+**Segment evaluation method**: There are two segment evaluation methods: scheduled and on-demand. Scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
 
 **Segment export**: Segment export is one of the two types of destinations in Experience Platform. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
 
