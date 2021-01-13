@@ -558,7 +558,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **XDM Individual Profile**: XDM [!DNL Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses.
 
-**XDM System**: XDM System is the methodology that operationalizes Experience Data Model schemas for use in nearly all downstream Platform Services.
+**XDM System**: XDM System represents the framework that operationalizes Experience Data Model schemas for use in downstream Experience Platform services.
 
 [Back to top](#adobe-experience-platform-glossary)
 
