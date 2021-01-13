@@ -27,9 +27,6 @@ This guide requires a working understanding of the various Experience Platform s
     * [SDK consent commands](../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide Real-time Customer Profile data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
-<!-- (Out of scope?)
-In addition to the Platform services listed above, you should also be familiar with [destinations](../../destinations/overview.md) and their use in [!DNL Real-time CDP]. -->
-
 ## Consent collection flow summary {#summary}
 
 The following process describes how consent data is collected after the system has been properly configured:
@@ -40,9 +37,6 @@ The following process describes how consent data is collected after the system h
 1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields.
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
-
-<!-- (Out of scope?)
-Any segments shared with Platform by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html). -->
 
 ## Determine how to generate customer consent data within your CMP {#consent-data}
 
@@ -62,13 +56,24 @@ Once you have created a [!DNL Profile]-enabled dataset for collecting consent da
 
 For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences data type, as outlined in the guide on [dataset preparation](./dataset-prep.md).
 
-## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
+## Bring consent data into Platform
 
-Once you have configured your CMP to collect customer consent settings from your website, you must integrate the Experience Platform Web SDK to collect those settings and send them to Platform. The Platform SDK provides two commands that can be used to send consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
+Once you have your datasets and merge policies to represent the required consent fields in your customer profiles, the next step is to bring the consent data itself into Platform.
+
+Primarily, you should be using the Adobe Experience Platform Web SDK to send consent-change signals to Platform whenever they occur on your website. If you already have consent data stored elsewhere, however, you can also opt to ingest your collect consent data directly by mapping it to your consent dataset's XDM schema and bringing it in through batch ingestion.
+
+Refer to the following sections for details on each of these methods:
+
+* [Integrate the SDK to collect customer consent data](#sdk)
+* [Ingest XDM-compliant consent data directly](#batch)
+
+### Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
+
+Once you have configured your CMP to collect customer consent settings from your website, you can integrate the Experience Platform Web SDK to collect those settings and send them to Platform. The SDK provides two commands that can be used to send consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. 
 
-### Set up an edge configuration
+#### Set up an edge configuration
 
 In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain Adobe-standard consent fields. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
 
@@ -85,7 +90,7 @@ After creating a new configuration or selecting an existing one to edit, select 
 
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
-### Making consent-change commands
+#### Making consent-change commands
 
 Once you have created the edge configuration described in the previous section, you can start using SDK commands to send consent data to Platform. These commands should be used as part of a CMP hook that listens for consent-change events.
 
@@ -155,20 +160,41 @@ CMP.OnConsentChanged(function () {
 });
 ```
 
-### Handling SDK responses
+#### Handling SDK responses
 
 All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
 
+
+### Ingest XDM-compliant consent data directly {#batch}
+
+You can ingest XDM-compliant consent data from a data file by using batch ingestion. This can be useful if you have a backlog of previously collected consent data that has yet to be integrated into your customer profiles.
+
+If your consent data is stored in a flat storage format such as a CSV file, follow the tutorial on [mapping a CSV file to XDM](../../../ingestion/tutorials/map-a-csv-file.md) to learn how to convert your data fields to XDM and ingest them into Platform. When selecting the [!UICONTROL Destination] for the mapping, ensure that you use the **[!UICONTROL Use existing dataset]** option and select the [!DNL Profile]-enabled consent schema you created earlier.
+
 ## Test your implementation {#test-implementation}
 
-After 
+After you have ingested customer consent data into your [!DNL Profile]-enabled dataset, you can check your updated profiles to see whether they contain consent attributes.
 
-## Handle customer opt-out signals using Customer Journey Management
+>[!IMPORTANT]
+>
+>In order to view the attributes of any individual profile in the UI, you must know at least one identity value (and its corresponding namespace) associated with that profile.
+>
+>If you do not have access to this information, you can opt to ingest your own test consent data and associate it with an identity value/namespace that is known to you instead.
 
-If you are using [Customer Journey Management](https://experienceleague.corp.adobe.com/docs/customer-journey-management/using/get-started.html), after confirming that your profiles and segments contain consent data, you can start handling customer opt-outs for specific marketing preferences. Consent preference changes make from customers selecting "unsubscribe" links in email messages are signalled to Platform, and the appropriate profile attributes are updated accordingly.
+See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse) in the [!DNL Profile] UI guide for specific steps on how to look up the details of a profile.
+
+Note that the new consent attributes will not appear on a profile's dashboard by default, and therefore you must navigate to the **[!UICONTROL Attributes]** tab on the details page of a profile in order to confirm that they have been ingested as expected. See the guide on the [profile dashboard](../../../profile/ui/profile-dashboard.md) to learn how to customize the dashboard to suit your needs.
+
+## Handling consent in Customer Journey Management
+
+If you are using [Customer Journey Management](https://experienceleague.corp.adobe.com/docs/customer-journey-management/using/get-started.html), after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../xdm/data-types/consents.md#marketing) when pulling segments from Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
+
+Customer Journey Management can also send consent-change signals back to Platform. When a customer selects an "unsubscribe" link in an email message, that consent change is signalled to Platform and the appropriate profile attributes are updated accordingly.
 
 See the overview on [consent management](https://experienceleague.corp.adobe.com/docs/customer-journey-management/using/define-audience/consent.html#consent-management) in the Customer Journey Management documentation for more information.
 
 ## Next steps
 
-This guide covered how to configure your Platform data operations to collect customer consent data that conforms to the Adobe standard. For more information on Experience Platform's privacy-related capabilities, see the overview on [governance, privacy, and security]().
+This guide covered how to configure your Platform operations to collect customer consent data that conforms to the Adobe standard, and have those attributes represented in customer profiles. You can now integrate customer consent preferences as a determining factor in segment qualification and other downstream use cases.
+
+For more information on Experience Platform's privacy-related capabilities, see the overview on [governance, privacy, and security in Platform](../overview.md).
