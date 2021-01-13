@@ -660,14 +660,14 @@ An explanation of the parameters within the `OVER()` function can be found in th
 **Example query**
 
 ```sql
-SELECT endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp, web.webPageDetails.name
+SELECT endUserIds._experience.mcid.id, timestamp, web.webPageDetails.name
     PREVIOUS(web.webPageDetails.name, 3)
-      OVER(PARTITION BY endUserIds._experience.mcid.id, _experience.analytics.session.num
+      OVER(PARTITION BY endUserIds._experience.mcid.id
            ORDER BY timestamp
            ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW)
       AS previous_page
 FROM experience_events
-ORDER BY endUserIds._experience.mcid.id, _experience.analytics.session.num, timestamp ASC
+ORDER BY endUserIds._experience.mcid.id, timestamp ASC
 ```
 
 **Results**
@@ -716,7 +716,7 @@ SELECT endUserIds._experience.aaid.id, timestamp, web.webPageDetails.name,
       OVER(PARTITION BY endUserIds._experience.aaid.id
            ORDER BY timestamp
            ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
-      AS previous_page
+      AS next_page
 FROM experience_events
 ORDER BY endUserIds._experience.aaid.id, timestamp ASC
 LIMIT 10
