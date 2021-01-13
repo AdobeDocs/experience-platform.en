@@ -273,16 +273,6 @@ CLOSE ALL
 
 If `CLOSE name` is used, `name` represents the name of an open cursor that needs to be closed. If `CLOSE ALL` is used, all open cursors will be closed.
 
-### COMMIT
-
-The `COMMIT` command, or alternatively the `COMMIT WORK` or `COMMIT TRANSACTION` command, commits the current transaction. 
-
-```sql
-COMMIT
-COMMIT WORK
-COMMIT TRANSACTION
-```
-
 ### DEALLOCATE
 
 The `DEALLOCATE` command allows you to deallocate a previously prepared SQL statement. If you do not explicitly deallocate a prepared statement, it is deallocated when the session ends. More information about prepared statements can be found in the [PREPARE command](#prepare) section.
@@ -299,15 +289,12 @@ If `DEALLOCATE name` is used, `name` represents the name of the prepared stateme
 The `DECLARE` command allows a user to create a cursor, which can be used to retrieve a small number of rows out of a larger query. After the cursor is created, rows are fetched from it using `FETCH`.
 
 ```sql
-DECLARE name CURSOR WITH HOLD FOR query
-DECLARE name CURSOR WITHOUT HOLD FOR query
+DECLARE name CURSOR FOR query
 ```
 
 **Parameters**
 
 - `name`: The name of the cursor to be created.
-- `WITH HOLD`: Specifies that the cursor can continue to be used after the transaction that created it successfully commits.
-- `WITHOUT HOLD`: Specifies that the cursor can only be used within the transaction that created it.
 - `query`: A `SELECT` or `VALUES` command which provides the rows to be returned by the cursor. 
 
 ### EXECUTE
