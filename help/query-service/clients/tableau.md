@@ -6,7 +6,11 @@ topic: connect
 description: This document walks through the steps for connecting Tableau with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL Tableau]
+# [!DNL Tableau]
+
+This document walks through the steps for connecting Tableau with Adobe Experience Platform [!DNL Query Service].
+
+## Installing Tableau
 
 Install [!DNL Tableau], if it is not already installed.
 

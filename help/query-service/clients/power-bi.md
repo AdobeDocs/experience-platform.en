@@ -40,28 +40,38 @@ Select **[!UICONTROL PostgreSQL database]**, followed by **[!UICONTROL Connect]*
 
 ANOTHER SCREENSHOT
 
-Enter values for the Server and Database. **[!UICONTROL Server]** is the Host found under the connection details. For production, add port `:80` to the end of the Host string. **[!UICONTROL Database]** can be either "all" or a dataset table name. (Try one of the CTAS-derived datasets.)
+You can now enter values for the server and database. **[!UICONTROL Server]** is the host found under the connection details. For production, add port `:80` to the end of the host string. **[!UICONTROL Database]** can be either "all" or a dataset table name. 
 
-- Click **[!UICONTROL Advanced options]**, and then uncheck **[!UICONTROL include relationship columns]**. Do not check **[!UICONTROL Navigate using full hierarchy]**.
+SCREENSHOT
 
-- *(Optional but recommended when "all" is declared for the database)* Enter a SQL statement. 
+Select **[!UICONTROL Advanced options]**, and then uncheck **[!UICONTROL include relationship columns]**. Do not check **[!UICONTROL Navigate using full hierarchy]**.
+
+If you used "all" as your database name, it is highly recommended that you enter an SQL statement.
 
 >[!NOTE]
 >
->If a SQL statement is not provided, then [!DNL Power BI] will preview all of the tables in database. For hierarchical data, a custom SQL statement should be used. If the table schema is flat, it will work with or without a custom SQL statement. Compound types are yet not supported by [!DNL Power BI] - to get primitive types from compound types, you will need to write SQL statements to derive them.
+>If a SQL statement is not provided, then [!DNL Power BI] will preview all of the tables in database. For hierarchical data, a custom SQL statement should be used. If the table schema is flat, it will work with or without a custom SQL statement. Compound types are yet not supported by [!DNL Power BI] - to get primitive types from compound types, you will need to write SQL statements to derive them, such as the following SQL query:
+>
+>```sql
+>SELECT web.webPageDetails.name AS Page_Name, 
+>SUM(web.webPageDetails.pageviews.value) AS Page_Views 
+>FROM _TABLE_ 
+>WHERE TIMESTAMP >= to_timestamp('2018-11-20')
+>GROUP BY web.webPageDetails.name 
+>ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
+>LIMIT 10
+>``` 
 
-```sql
-SELECT web.webPageDetails.name AS Page_Name, 
-SUM(web.webPageDetails.pageviews.value) AS Page_Views 
-FROM _TABLE_ 
-WHERE TIMESTAMP >= to_timestamp('2018-11-20')
-GROUP BY web.webPageDetails.name 
-ORDER BY SUM(web.webPageDetails.pageviews.value) DESC 
-LIMIT 10
-``` 
+After (optionally) putting in a SQL query, select either "[!UICONTROL DirectQuery]" or "[!UICONTROL Import]" mode. In [!UICONTROL DirectQuery] mode, all the queries will be sent to [!DNL Query Service] for execution. In [!UICONTROL Import] mode, data will be imported in [!DNL Power BI]. 
 
-- Select either "[!UICONTROL DirectQuery]" or "[!UICONTROL Import]" mode. In [!UICONTROL DirectQuery] mode, all the queries will be sent to [!DNL Query Service] for execution. In [!UICONTROL Import] mode, data will be imported in [!DNL Power BI]. 
+After choosing a mode, select **[!UICONTROL OK]**. Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. 
 
-- Click **[!UICONTROL OK]**. Now, [!DNL Power BI] connects to the [!DNL Query Service] and produces a preview if there are no errors. There is a known issue with the Preview rendering numeric columns. Proceed to the next step.
+>[!NOTE]
+>
+>There is an issue with the preview rendering numeric columns. You can proceed to the next step without any issues.
 
-- Click **[!UICONTROL Load]** to bring the dataset into [!DNL Power BI].
+Select **[!UICONTROL Load]** to bring the dataset into [!DNL Power BI].
+
+## Next steps
+
+Now that you've connected with [!DNL Query Service], you can use [!DNL Power BI] to write queries. For more information on how to write and run queries, please read the [running queries guide](../best-practices/writing-queries.md).

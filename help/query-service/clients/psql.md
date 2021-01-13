@@ -3,16 +3,20 @@ keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query serv
 solution: Experience Platform
 title: Connect with PSQL
 topic: connect
-description: PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
+description: PSQL is a command-line interface that comes when you install PostgreSQL on your machine. You can install it by following these instructions. 
 ---
 
-# Connect with PSQL
+# PSQL
 
-PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. You can install it by following these instructions. 
+PSQL is a command-line interface that comes when you install [!DNL PostgreSQL] on your machine. This document walks through the steps for connecting PSQL with Adobe Experience Platform [!DNL Query Service].
 
-## Install Postgres on a Mac
+## Installing PostgreSQL 
 
-Open a terminal window and issue these three commands:
+PostgreSQL can be installed on both MacOS and Windows devices. 
+
+### MacOS installation
+
+To install PostgreSQL on a MacOS, open a terminal window and issue these following three commands:
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -32,23 +36,28 @@ After issuing these commands, you should see the following:
 /usr/local/bin/psql
 ```
 
-## Install [!DNL Postgres] on a PC
+## Windows installation
 
-Download and install [!DNL Postgres] from this [location](https://www.postgresql.org/download/windows/).
+To install PostgreSQL on Windows, download and install [!DNL PostgreSQL] from the [PostgreSQL website](https://www.postgresql.org/download/windows/).
 
-Edit your path variable:
+After installing it, update your path variable to include the following:
 
-![Image](../images/clients/psql/path.png)
-    
-Add the two lines shown that include "[!DNL Postgres]."
-    
-Save your updates, then open a command prompt and type:
+```console
+C:\Program Files\PostgreSQL\9.5\bin
+C:\Program Files\PostgreSQL\9.5\lib
+```
+
+>[!NOTE]
+>
+>The version in your path variable should be updated with the version of PostgreSQL you downloaded.
+ 
+After saving your updates, you can verify your installation was successful by opening a command prompt and checking the version. To check the version, use the following command:
 
 ```shell
 psql -V
 ```
 
-You should see something like this:
+You should see something like this returned, with the version that you are using displayed:
 
 ```shell
 psql (PostgreSQL) 9.5.14
@@ -56,17 +65,16 @@ psql (PostgreSQL) 9.5.14
 
 ## Connect PSQL and [!DNL Query Service]
 
-Return to the [!DNL Platform] UI on the **[!UICONTROL Connect BI Tools]** page. 
-
-Click **[!UICONTROL copy]** for **[!UICONTROL PSQL Command]**.
+After installing PosstgreSQL on your computer, you are ready to connect PSQL with Query Service. Return to the [!DNL Platform] UI, select **[!UICONROL Queries]**, followed by **[!UICONTROL Credentials]**.
     
 ![Image](../images/clients/psql/connect-bi.png)
+
+Select the icon to copy the section labelled **[!UICONTROL PSQL Command]**.
+Paste the command string into a terminal or command window and press Enter.
 
 >[!IMPORTANT]
 >
 >If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string. Additionally, if you are using version 12.0 or greater, you will need to add `PGGSSENCMODE=disable` to your connection string.
-
-Paste the command string into a terminal or command window and press Enter.
 
 You should see a result like this:
 
@@ -78,3 +86,7 @@ all=>
 ```
 
 If you don't see at least version 10.5, then you need to download that version or newer.
+
+## Next steps
+
+Now that you've connected with [!DNL Query Service], you can use PSQL to write queries. For more information on how to write and run queries, please read the [running queries guide](../best-practices/writing-queries.md).

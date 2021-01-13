@@ -6,11 +6,13 @@ topic: connect
 description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL RStudio]
+# [!DNL RStudio]
 
 This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 
-After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
+## Connecting RStudio with [!DNL Query Service]
+
+After installing [!DNL RStudio], on the **Console** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -39,9 +41,9 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+>For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-## Next steps
+## Writing queries
 
 Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
@@ -79,5 +81,7 @@ df_pageviews
 6 100-199 4415
 7 600-699 3097040
 ```
+
+## Next steps
 
 For more information on how to write and run queries, please read the [running queries guide](../best-practices/writing-queries.md).
