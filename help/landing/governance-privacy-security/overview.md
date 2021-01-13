@@ -8,11 +8,11 @@ description: Experience Platform provides several services and tools that allow 
 
 # Governance, privacy, and security in Adobe Experience Platform
 
-Adobe Experience Platform allows you to ingest, analyze, optimize and action your data to greatly enhance customer experiences. This data is vast, complex and incredibly valuable. Depending on the nature of your data operations, the legal jurisdictions your business operates under, and your organizational policies regarding data usage, you must carefully control and monitor the collection and use of customer experience data.
+Adobe Experience Platform allows you to ingest, analyze, optimize and action your data to greatly enhance customer experiences. This data is vast, complex and incredibly valuable. Depending on the nature of your data operations, the legal jurisdictions your business operates under, and your organizational policies regarding data usage, you must carefully control and monitor the collection and use of customer experience data in order to protect your business interests.
 
-Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process. The sections below provide an introduction to each of these services, along with links to documentation for further information.
+Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development processes. The sections below provide an introduction to each of these services, along with links to documentation for further information.
 
-These services can be categorized into three domains:
+The services can be categorized into three domains:
 
 * [Data governance](#governance)
 * [Privacy](#privacy)
@@ -20,11 +20,11 @@ These services can be categorized into three domains:
 
 ## Data governance {#governance}
 
-Data governance is an essential concept that is intertwined with every capability in Experience Platform. As a concept, data governance represents your ability to control and comprehend your data throughout the journey through Platform. This involves maintaining data quality, data lineage, data cataloging, and more.
+Data governance is an essential concept that is intertwined with every capability in Experience Platform. Data governance represents your ability to control and comprehend your data throughout its journey through Platform. This involves maintaining data quality, data lineage, data cataloging, and more.
 
 ### Adobe Experience Platform Data Governance {#data-governance}
 
-As a Platform service, Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for specific marketing actions.
+As a Platform service, Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including data usage labeling, data usage policies, policy enforcement, and data lineage.
 
 See the [Data Governance overview](../../data-governance/home.md) for more information.
 
@@ -32,7 +32,7 @@ See the [Data Governance overview](../../data-governance/home.md) for more infor
 
 Catalog Service is the system of record for data location and lineage within Platform. While all data that is ingested into Experience Platform is stored in the Data Lake as files and directories, Catalog holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
-Catalog organizes ingested data into dataset, with each dataset containing metadata that can be used to label and categorize the data they contain.
+Catalog organizes ingested data into datasets, with each dataset containing metadata that can be used to label and categorize the data it contains.
 
 See the [Catalog Service overview](../../catalog/home.md) for more information on the service. To learn how to manage datasets in Experience Platform, see the [datasets overview](../../catalog/datasets/overview.md).
 
@@ -68,7 +68,7 @@ See the [access control overview](../../access-control/home.md) for more informa
 
 Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
 
-In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+In order to address the need for development flexibility, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help you evolve your digital experience applications based on your own development lifecycle.
 
 See the [sandboxes overview](../../sandboxes/home.md) for more information.
 

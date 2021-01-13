@@ -8,7 +8,7 @@ description: Configure a dataset to capture consent and preference data
 
 # Configure a dataset to capture consent and preference data
 
-In order for Adobe Experience Platform to process customer consent data that conforms to the Adobe consent standard, that data must be sent a dataset whose schema contains Adobe-standard consent fields. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
+In order for Adobe Experience Platform to process customer consent data that conforms to the Adobe consent standard, that data must be sent to a dataset whose schema contains Adobe-standard consent fields. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
 
 This document provides steps for configuring a dataset to collect Adobe-standard consent data. For an overview of the full workflow for collecting consent data in Platform, refer to the [consent collection overview](./overview.md).
 
@@ -22,9 +22,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 >[!IMPORTANT]
 >
->This tutorial assumes that you know the [!DNL Profile] schema in Platform that you want to use to capture customer attribute information. Regardless of the method you use to collect consent data, this schema must be [enabled for Real-time Customer Profile](../../../xdm/ui/resources/schemas.md#profile). In addition, the schema's primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted..
->
->If you plan on using the Adobe Experience Platform Web SDK to send consent data, this tutorial also assumes that you have created an [edge configuration](../../../edge/fundamentals/edge-configuration.md) to allow the SDK to send data to Platform from your web application. Specifically, you should know the [!UICONTROL Profile Dataset] that was selected for the configuration, as the schema for this dataset is the one that must be edited in order to collect customer consent data using the SDK. 
+>This tutorial assumes that you know the [!DNL Profile] schema in Platform that you want to use to capture customer attribute information. Regardless of the method you use to collect consent data, this schema must be [enabled for Real-time Customer Profile](../../../xdm/ui/resources/schemas.md#profile). In addition, the schema's primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
 
 ## Consents & Preferences mixin structure {#structure}
 
