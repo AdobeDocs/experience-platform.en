@@ -73,7 +73,7 @@ Select a namespace to see more specific information on the right rail.
 
 >[!NOTE]
 >
->Platform also provides namespaces for integration purposes. These namespaces are hidden by default. To view integration namespaces, select **[!UICONTROL View integration identities]**.
+>Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
 
 ![](./images/browse-namespaces.png)
 
