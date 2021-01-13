@@ -21,8 +21,8 @@ This tutorial uses the [[!DNL Flow Service]](https://www.adobe.io/apis/experienc
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Sources]](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [[!DNL Sandboxes]](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Shopify] using the [!DNL Flow Service] API.
 
@@ -70,7 +70,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL Shopify] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL OData] is `4f63aa36-bd48-4e33-bb83-49fbcd11c708`.
+In order to create a [!DNL Shopify] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Shopify] is `4f63aa36-bd48-4e33-bb83-49fbcd11c708`.
 
 ```shell
 curl -X POST \
@@ -105,7 +105,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
 
 ```json
 {

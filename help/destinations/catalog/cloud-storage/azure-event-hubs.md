@@ -10,7 +10,7 @@ seo-description: Create a real-time outbound connection to your Azure Event Hubs
 
 >[!IMPORTANT]
 >
->The [!DNL Azure Event Hubs] destination in Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL Azure Event Hubs] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -20,7 +20,7 @@ You can create a real-time outbound connection to your [!DNL Azure Event Hubs] s
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
 * To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
-* To connect to [!DNL Azure Event Hubs] using the Real-time CDP user interface, see the sections below.
+* To connect to [!DNL Azure Event Hubs] using the Platform user interface, see the sections below.
 
 ![AWS Kinesis in the UI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
 

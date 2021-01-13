@@ -12,7 +12,7 @@ description: Adobe Experience Platform documentation is provided in multiple for
 >
 >Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
 
-Adobe Experience Platform documentation is currently available for a number of Platform services. To access Platform documentation, return to the [documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html) and select the guide you would like to view.
+Adobe Experience Platform documentation is available for a number of Platform features and services. To access Experience Platform documentation, return to the [documentation landing page](https://experienceleague.adobe.com/docs/experience-platform.html) and select the guide you would like to view.
 
 ## Types of Experience Platform documentation
 
@@ -29,10 +29,4 @@ Experience Platform documentation is provided in multiple formats, including ove
 * **Tutorial:** A tutorial is a step-by-step guide through the UI, API, or a mix of both, that leads to a specific outcome. Unlike a developer guide, an API tutorial may only focus on one or two endpoints and is not an exhaustive API resource. Similarly, UI tutorials may focus only on specific steps, not the complete user interface available for that service. Tutorials are often part of a larger workflow and feature "next steps" that describe which tutorials you may want to try next.
 
 * **UI guide:** A UI guide outlines actions available in the [!DNL Platform] user interface for a specific service. These documents contain screenshots and steps focused on interacting with Platform through the UI. Similar to a developer guide, the UI guide outlines all available actions and options including "gotchas" to avoid. This is the most detailed resource for working with the UI.
-
-## Documentation language support
-
-Experience Platform documentation is available in several languages. To change language, select the language dropdown and choose the desired language.
-
-![image](../images/overview/lang.jpg)
 
