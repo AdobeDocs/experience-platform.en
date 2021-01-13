@@ -108,25 +108,25 @@ description: A glossary of important terminology in Experience Platform.
 
 **Contract "C" labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
 
-**C1 contract label**: A "C1" contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
+**C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
-**C2 contract label**: A "C2" contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
+**C2 contract label**: A `C2` contract data usage label specifies data that cannot be exported to a third-party. Some data providers have terms in their contracts that prohibit the export of data from where it was originally collected.  For example, social networks contracts often restrict the transfer of data you receive from them. C2 is more restrictive than C1, which only requires aggregation and anonymous data.
 
-**C3 contract label**: A "C3" contract data usage label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
+**C3 contract label**: A `C3` contract data usage label specifies data that cannot be combined or otherwise used with directly identifiable information. Some data providers have terms in their contracts that prohibit the combination or use of that data with directly identifiable information.  For example, contracts for data sourced from ad networks, ad servers, and third-party data providers often include specific contractual prohibitions on the use of directly identifiable data.
 
-**C4 contract label**: A "C4" contract data usage label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
+**C4 contract label**: A `C4` contract data usage label specifies data cannot be used for targeting any ads or content, either on-site or cross-site. C4 is the most restrictive label as it encompasses C5, C6, and C7 labels.
 
-**C5 contract label**: A "C5" contract data usage label specifies data cannot be used for cross-site targeting of interest-based content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
+**C5 contract label**: A `C5` contract data usage label specifies data cannot be used for cross-site targeting of interest-based content or ads. Interest-based targeting, or personalization, occurs if the following three conditions are met:  The data collected on-site is used to make inferences about a user's interest, is used in another context, such as on another site or app and is used to select which content or ads are served based on those inferences.
 
-**C6 contract label**: A "C6" contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
+**C6 contract label**: A `C6` contract data usage label specifies data cannot be used for on-site ad targeting. Data cannot be used for on-site ad targeting, including the selection and delivery of advertisements on your organization’s websites or apps or to measure the delivery and effectiveness of such advertisements.  This includes using previously collected on-site data about the users’ interest to select ads, process data about what advertisements were shown, when and where they were shown, and whether the users took any action related to the advertisement, such as selecting an ad or making a purchase.
 
-**C7 contract label**: A "C7" contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
+**C7 contract label**: A `C7` contract data usage label specifies data cannot be used for on-site targeting of content.  Data cannot be used for on-site content targeting, including the selection and delivery of content on your organization’s websites or apps or to measure the delivery and effectiveness of such content.  This includes previously collected information about users’ interest to select content, processing data about what content was shown, how often or how long it was shown, when and where it was shown, and whether the uses took any actions related to the content, including for example selecting content.
 
-**C8 contract label**: A "C8" contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
+**C8 contract label**: A `C8` contract data usage label specifies data cannot be used for measurement of your organization’s websites or apps. Data cannot be used to measure, understand, and report on users’ usage of your organization’s sites or apps. This does not include interest-based targeting, which is the collection of information about your use of this service to subsequently personalize content and/or advertising in other contexts.
 
-**C9 contract label**: A "C9" contract data usage label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
+**C9 contract label**: A `C9` contract data usage label specifies data cannot be used in Data Science workflows. Some contracts include explicit prohibitions on data used for data science.  Sometimes these are phrased in terms that prohibit the use of data for artificial intelligence (AI), machine-learning (ML), or modeling.
 
-**C10 contract label**: A "C10" contract data usage label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+**C10 contract label**: A `C10` contract data usage label specifies data data cannot be used for stitched identity activation. Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
 
 **Created Date column**: Selecting a Created Date column is an option when specifying third-party data via a source connection. When the append save strategy is selected and the dataset schema contains a multiple date fields, you must choose from the available schema to specify a Created Date key column. The Created Date option is not available when the overwrite save strategy is selected.
 
@@ -184,6 +184,8 @@ description: A glossary of important terminology in Experience Platform.
 
 **Delta save strategy**: The delta save strategy is an option for ingesting third-party data via a source connection. The option allows the user to specify that new or changed rows of source data are ingested to Experience Platform. New rows are added to the end of the dataset and changed rows are updated in the dataset on Experience Platform.
 
+**Descriptor**: In Experience Data Model (XDM), a descriptor is an additional set of schema-related metadata that describes a specific behavior for a field. Descriptors can be used by Experience Platform to understand intended schema behavior such as the relationship between two schemas.
+
 **Destination**: In a destination is a general term for any endpoint, such as an Adobe application, advertising platform, cloud storage service, or marketing service, where an audience is activated and delivered.
 
 **Destination category**: A destination category is a grouping of destinations that have similar characteristics.
@@ -218,7 +220,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Events**: Events are the behavior data associated with a profile.
 
-**Experience Data Model (XDM)**: [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**Experience Data Model (XDM)**:{#xdm} [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
 
 **Experiment**: An experiment is a process of creating a trained model by training the instance with a sample portion of the live production data.
 
@@ -282,9 +284,9 @@ description: A glossary of important terminology in Experience Platform.
 
 **Identity value**: An identity value, combined with an identity namespace, is an identifier that represents a unique individual, organization, or asset. When matching record data across profile fragments the namespace and identity value must match.
 
-**I1 data usage label**: The "I1" data usage label is used to classify data that can directly identify or contact a specific person rather than a device.
+**I1 data usage label**: The `I1` data usage label is used to classify data that can directly identify or contact a specific person rather than a device.
 
-**I2 data usage label**: The "I2" data usage label is used to classify data that can be used in combination with any other data to indirectly identify or contact a specific person.
+**I2 data usage label**: The `I2` data usage label is used to classify data that can be used in combination with any other data to indirectly identify or contact a specific person.
 
 **Ingestion**: Ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streamed, batched, or added via connector.
 
@@ -394,7 +396,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Production sandbox**: A production sandbox is a sandbox intended for use in your production environment. Unlike non-production sandboxes, production sandboxes cannot be reset or deleted.
 
-**Profile**: Not to be confused with [Real-time Customer Profile](#rtcp), a profile is the output of [!DNL Identity Service] and [!DNL Real-time Customer Profile] data, taking ingested profile data with identity fields and constructing a representation of a person.
+**Profile**:{#profile} Not to be confused with [Real-time Customer Profile](#rtcp), a profile is the output of [!DNL Identity Service] and [!DNL Real-time Customer Profile] data, taking ingested profile data with identity fields and constructing a representation of a person.
 
 **Profile data**: Profile data is data ingested under the [!DNL XDM Individual Profile] class. This data typically describes customer attributes, as opposed to event data.
 
@@ -448,9 +450,9 @@ description: A glossary of important terminology in Experience Platform.
 
 ## S
 
-**Sample data**: Sample data is a preview of a data file, typically the first 100 rows, to provide a data scientist or engineer an idea of what schema or data is in the data file.
+**Sample data**: Sample data is a preview of a data file, typically the first 100 rows, which provides a data scientist or engineer an idea of what schema or data is in the data file.
 
-**Sandbox**: A sandbox is a form of isolating virtual data within a users org on Experience Platform.
+**Sandbox**: A sandbox is a virtual construct that partitions a single Platform instance into a separate virtual environment, in order to help develop and evolve digital experience applications.
 
 **Sandbox reset**: A sandbox reset deletes all data including data, profiles, and segments within a sandbox. Sandbox resets can affect data that is connected to internal or external destinations.
 
@@ -460,39 +462,35 @@ description: A glossary of important terminology in Experience Platform.
 
 **Scoring**: Scoring is the process of generating insights from data using a trained model.
 
-**Schema**: A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional mixin(s) and is used to create datasets and datastreams. A schema includes behavioral attributes, timestamp, identity, attribute definitions, and relationships.
+**Schema**: A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional mixin(s) and is used to create datasets and datastreams. A schema may include behavioral attributes, timestamps, identities, attribute definitions, relationships, and more.
 
-**Schema descriptor**: A schema descriptor is an additional schema related metadata that describes behavior that can be used by Experience Platform to understand intended schema behavior such as the relationship between two schemas.
+**Schema Library**: The Schema Library contains industry-standard XDM resources made available by Adobe, as well as custom resources defined by your organization.
 
-**Schema Library**: The Schema Library contains industry-standard resources made available by Adobe, Experience Platform partners, and vendors.
-
-**Schema Registry**: The Schema Registry provides a user interface and RESTful API used to view and manage all schema-related resources in the [!DNL Experience Platform Schema Library]. 
+**Schema Registry**: The Schema Registry provides a user interface and RESTful API used to view and manage all schema-related resources in the Schema Library. 
 
 **Secret access key**: A secret access key is an [!DNL Amazon] S3 key that is used in conjunction with the access key ID to sign AWS requests.
 
 **Segment**: A segment is a set of rules that include attributes and event data that qualify a number of profiles to become an audience.
 
-**Segment Builder**: [!DNL Segment Builder] is the visual development environment used to build segment definitions and serves as a common component of all applications using [!DNL Segmentation Service] on Experience Platform.
+**Segment Builder**: The [!DNL Segment Builder] is a visual development environment used to build segment definitions. It serves as a common component of all applications using Experience Platform Segmentation Service.
 
-**Segment definition**: A segment definition is the rule set used to describe key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
+**Segment definition**: A segment definition is the rule set used to describe the key characteristics or behavior of a target audience. Once conceptualized, the rules outlined in a segment definition are used to determine qualifying audience members for a segment.
 
-**Segment evaluation method**: A segment scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
+**Segment evaluation method**: There are two segment evaluation methods: scheduled and on-demand. A scheduled evaluation enables a recurring schedule for running an export job at a specific time, whereas on-demand evaluation involves creating a segment job to build the audience immediately. 
 
-**Segment export**: Segment export is one of the two types of destinations in [!DNL Real-time Customer Data Platform]. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
+**Segment export**: Segment export is one of the two types of destinations in Experience Platform. With segment export, you can send the profiles that qualify and have been mapped to the destination. Uses segment and user IDs and pseudonymous data and typically integrates with social networks and other digital media target platforms.
 
 **Segment ID**: A segment ID is an auto-generated identifier associated with a segment.
 
-**Segment membership**: Segment membership displays which segment a profile is currently part of.
+**Segment membership**: Segment membership displays which segment(s) a profile is currently part of.
 
-**Segment rules**: Segment rules are where and how the user defines what the profiles qualify for the segment.
+**Segment rules**: Segment rules define the conditions that determine whether a profile qualifies for a segment.
 
-**Segment type**: There are two types of segments: One is a segment that updates dynamically with Experience Platform data changes, and the other is an audience snapshot that captures all profiles meeting segment rules, and these don't change.
+**Segmentation**: Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to specific marketing strategies.
 
-**Segmentation**: Segmentation is the process of dividing a large group of customers, prospects, or consumers into smaller groups that share similar attributes and will respond similarly to marketing strategies.
+**Sensei ML Framework**: Sensei ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
-**Sensei ML Framework**: Sensei ML Framework is a unified machine learning framework across Adobe that leverages data on Experience Platform to empower data scientists in the development of machine learning driven intelligence services in a faster, scalable, and reusable manner.
-
-**Sensitive labels**: Sensitive “S” labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
+**Sensitive labels**: Sensitive "S" labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 
 **Services**: A powerful framework to operationalize AI and ML services by leveraging Adobe Intelligent Services. Services deliver real-time, personalized customer experiences or operationalize custom intelligent services.
 
@@ -502,27 +500,23 @@ description: A glossary of important terminology in Experience Platform.
 
 **S2 data usage label**: An `S2` data usage label is used to classify data that can be used to determine a broadly defined geo-fence area.
 
-**Source**: Source is a general term for any input connector in the [!DNL Real-time Customer Data Platform].
+**Source**: A source is a general term for any input connector in Platform.
 
 **Source attribute**: A source attribute is a field in source dataset.  Source attributes are mapped to target schema fields.
 
-**Source catalog**: A source catalog is a list of available sources in the [!DNL Real-time Customer Data Platform].
+**Source catalog**: The source catalog is the list of available source connectors in Experience Platform.
 
-**Source category**: A source category is a grouping of [!DNL Real-time Customer Data Platform] sources that have similar characteristics.
+**Source category**: A source category is a grouping of sources that have similar characteristics.
 
 **Source connector**: Adobe Experience Platform Source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using [!DNL Experience Platform Services]. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
 **Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to a customer's IMS Organization to stream data into Experience Platform.
 
-**Standard identity namespace**: Standard identity namespaces are Adobe pre-defined identifiers, including Adobe and industry standard solutions employed to identify users.
+**Standard identity namespace**: Standard identity namespaces are a set pre-defined identity namespaces provided by Adobe, which represent industry-standard solutions commonly employed to identify customers.
 
-**Standard schema**: Standard schemas consist of classes and mixins and are intended for reuse.
-
-**Streaming ingestion**: Streaming ingestion provides users a method to send data from client and server-side devices to Experience Platform in real-time.
+**Streaming ingestion**: Streaming ingestion allows you to send data from client- and server-side devices to Experience Platform in real time.
 
 **Streaming segmentation**: Streaming segmentation is an ongoing data selection process that updates segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant.
-
-**Symbol**: A symbol is an abbreviation of an identity namespace that can be used as a reference in APIs.
 
 **System View**: System View is a visual representation of source datasets that flow through [!DNL Real-time Customer Profile] to destinations. 
 
@@ -530,15 +524,13 @@ description: A glossary of important terminology in Experience Platform.
 
 ## T
 
-**Target features**: Target feature is specified in feature mapping is the feature that is predicted by a model.
+**Target features**: In feature mapping, a target feature is the feature that is predicted by a model.
 
-**Time series data**: Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
+**Time-series data**: Time-series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
 
-**Trained model**: A trained model represents the executable output of a model training process, in which a set of training data was applied to the model instance. A trained model will maintain a reference to any Intelligent Web Service that is created from it. The trained model is suitable for scoring and creating an intelligent web service. Modifications to a trained model can be tracked as a new version.
+**Trained model**: A trained model represents the executable output of a model-training process, in which a set of training data was applied to the model instance. A trained model will maintain a reference to any Intelligent Web Service that is created from it. A trained model is suitable for scoring and creating an intelligent web service.
 
 **Token**: A token is a type of two-factor authentication security that can be used to authorize the use of computer services with [!DNL Query Service].
-
-**Type**: Type is the class of machine learning problem a recipe is designed for and is used after training to help tailor evaluating the training run.
 
 [Back to top](#adobe-experience-platform-glossary)
 
@@ -558,15 +550,15 @@ description: A glossary of important terminology in Experience Platform.
 
 ## X
 
-**XDM (Experience Data Model)**: XDM (Experience Data Model) is the concept of using standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM is a formal specification used to represent all customer experience data in a single language or standard data model and standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**XDM**: See [Experience Data Model (XDM)](#xdm).
 
-**XDM DecisionEvent**: A DecisionEvent is used to capture observations about the outcome and context of a decision activity, including information about how the decision was made, when it occurred, what options were proposed (and chosen) and what contextual state existed that either influenced the decision or could be observed during the decision process. DecisionEvents also capture the proposition ID, a globally unique identifier that can be used to correlate the decision to other events. DecisionEvents are not only relatable to Experience Events that impacted a decision but also to ExperienceEvents that are a direct response to a proposition. It is the expectation that applications reference the proposition ID in every ExperienceEvent that was influenced by the propositions. The proposition-response history in an individual profile is maintained using proposition IDs.
+**XDM Decision Event**: XDM Decision Event is a time-series-based class used to capture observations about the outcome and context of a decision activity. This includes information about how the decision was made, when it occurred, what options were proposed (and chosen), and what contextual state existed that either influenced the decision or could be observed during the decision process.
 
 **XDM ExperienceEvent**: XDM ExperienceEvent is a time-series-based class used to capture the state of the system when an event (or set of events) occurred, including the point in time and identity of the subject involved. Experience Events are fact records of what occurred and are immutable and represent what happened without aggregation or interpretation. 
 
 **XDM Individual Profile**: XDM [!DNL Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses.
 
-**XDM System**: XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to use to communicate with Experience Platform services. 
+**XDM System**: XDM System is the methodology that operationalizes Experience Data Model schemas for use in nearly all downstream Platform Services.
 
 [Back to top](#adobe-experience-platform-glossary)
 
