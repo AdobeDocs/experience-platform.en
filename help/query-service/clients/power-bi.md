@@ -14,7 +14,7 @@ This document walks through the steps for connecting Power BI with Adobe Experie
 >
 >Power BI is only available on Windows computers.
 
-# Installing [!DNL Power BI]
+## Installing [!DNL Power BI]
 
 Windows users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
 
