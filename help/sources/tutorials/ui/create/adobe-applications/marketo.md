@@ -105,7 +105,19 @@ Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset
 
 ![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
 
+### Map your [!DNL Marketo] dataset source fields to target XDM fields
+
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
+
+See the following documents for mapping rules for specific [!DNL Marketo] datasets:
+
+* [Activities](../../../../connectors/adobe-applications/marketo-mapping/activities.md)
+* [Campaigns and Campaign Memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
+* [Companies](../../../../connectors/adobe-applications/marketo-mapping/companies.md)
+* [Marketing Lists and Marketing List Memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
+* [Named Accounts](../../../../connectors/adobe-applications/marketo-mapping/named-accounts.md)
+* [Opportunities and Opportunity Person Relations](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
+* [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
 
 >[!TIP]
 >
