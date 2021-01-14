@@ -16,7 +16,7 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 To maintain the security of your applications and users, all requests to Adobe I/O APIs must be authenticated and authorized using standards such as OAuth and JSON Web Tokens (JWT). The JWT is then used along with client-specific information to generate your personal access token.
 
 This tutorial covers the steps of authentication through the creation of an access token outlined in the following flowchart:
-![](images/authentication/authentication-flowchart.png)
+![](images/api-authentication/authentication-flowchart.png)
 
 ## Prerequisites
 
@@ -44,11 +44,11 @@ Before creating integrations on Adobe I/O, your account must have developer perm
 
 Contact an [!DNL Admin Console] administrator in your Organization to add you as a developer for one of your Organization's products using the [[!DNL Admin Console]](https://adminconsole.adobe.com/).
 
- ![](images/authentication/assign-developer.png)
+ ![](images/api-authentication/assign-developer.png)
 
 The administrator must assign you as a developer to at least one product profile to proceed.
 
- ![](images/authentication/add-developer.png)
+ ![](images/api-authentication/add-developer.png)
 
 Once you are assigned as a developer, you will have access privileges to create integrations on [Adobe I/O](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to the Adobe API.
 
@@ -56,11 +56,11 @@ Once you are assigned as a developer, you will have access privileges to create 
 
 Your [!DNL Admin Console] administrator must also add you to the product as a user. 
 
-![](images/authentication/assign-users.png)
+![](images/api-authentication/assign-users.png)
 
 Similar to the process for adding a developer, the administrator must assign you to at least one product profile in order to proceed.
 
-![](images/authentication/assign-user-details.png)
+![](images/api-authentication/assign-user-details.png)
 
 ## Generate access credentials in Adobe Developer Console
 
@@ -84,11 +84,11 @@ Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and si
 
 Once you have created a new project, select **[!UICONTROL Add API]** on the **Project Overview** screen.
 
-![](images/authentication/add-api-button.png)
+![](images/api-authentication/add-api-button.png)
 
 The **Add an API** screen appears. Select the product icon for Adobe Experience Platform, then choose **[!UICONTROL Experience Platform API]** before selecting **[!UICONTROL Next]**.
 
-![](images/authentication/add-platform-api.png)
+![](images/api-authentication/add-platform-api.png)
 
 Once you have selected [!DNL Experience Platform] as the API to be added to the project, follow the steps outlined in the tutorial on [adding an API to a project using a service account (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (starting from the "Configure API" step) to finish the process. 
 
@@ -97,7 +97,7 @@ Once the API has been added to the project, the **Project overview** page displa
 * `{API_KEY}` (Client ID)
 * `{IMS_ORG}` (Organization ID)
 
-![](./images/authentication/api-key-ims-org.png)
+![](./images/api-authentication/api-key-ims-org.png)
 
 ### Authentication for each session
 
