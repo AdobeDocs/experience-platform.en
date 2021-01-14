@@ -24,7 +24,7 @@ Data governance is an essential concept that is intertwined with every capabilit
 
 ### Adobe Experience Platform Data Governance {#data-governance}
 
-As a Platform service, Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including data usage labeling, data usage policies, policy enforcement, and data lineage.
+As a Platform service, Adobe Experience Platform Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within Experience Platform at various levels, including data usage labeling, data usage policies, policy enforcement, and data lineage.
 
 See the [Data Governance overview](../../data-governance/home.md) for more information.
 
