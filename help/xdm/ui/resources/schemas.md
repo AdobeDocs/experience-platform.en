@@ -94,7 +94,7 @@ The canvas reappears with the [!UICONTROL Profile] toggle enabled.
 
 >[!IMPORTANT]
 >
->Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-time Customer Profile. Select the **[!UICONTROL Profile]** you can select the toggle again to disable it. Once you save the schema, it can no longer be disabled.
+>Since the schema is not saved yet, this is the point of no return if you change your mind about letting the schema participate in Real-time Customer Profile: once you save an enabled schema, it can no longer be disabled. Select the **[!UICONTROL Profile]** toggle again to disable the schema.
 
 To finish the process, select **[!UICONTROL Save]** to save the schema.
 
