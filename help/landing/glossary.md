@@ -84,9 +84,9 @@ description: A glossary of important terminology in Experience Platform.
 
 **Capping**: In [!DNL Offer Decisioning], capping (also known as frequency capping) is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience (called a "Global Cap"), and how many times an offer can be proposed to the same end user (called a "Profile Cap").
 
-**Catalog**: In the context of sources and destinations, a catalog is gallery with available connections to Adobe applications and third-party technologies.
+**Catalog**: In the context of sources and destinations, a catalog is gallery with available connections to Adobe applications and third-party technologies. Not to be confused with [!DNL Catalog Service].
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] (sometimes called [!DNL Catalog]) is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
 
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
