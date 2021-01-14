@@ -187,13 +187,13 @@ See the section on [browsing profiles by identity](../../../profile/ui/user-guid
 
 Note that the new consent attributes will not appear on a profile's dashboard by default, and therefore you must navigate to the **[!UICONTROL Attributes]** tab on the details page of a profile in order to confirm that they have been ingested as expected. See the guide on the [profile dashboard](../../../profile/ui/profile-dashboard.md) to learn how to customize the dashboard to suit your needs.
 
+<!-- (To be included once CJM is GA)
 ## Handling consent in Customer Journey Management
 
-If you are using [Customer Journey Management](https://experienceleague.corp.adobe.com/docs/customer-journey-management/using/get-started.html), after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../xdm/data-types/consents.md#marketing) when pulling segments from Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
+If you are using Customer Journey Management, after confirming that your profiles and segments contain consent data, you can start honoring customer [marketing preferences](../../../xdm/data-types/consents.md#marketing) when pulling segments from Platform. Specifically, profiles who have opted out of the email marketing preference should not be included in segments that are targeted for email campaigns.
 
 Customer Journey Management can also send consent-change signals back to Platform. When a customer selects an "unsubscribe" link in an email message, the updated consent preference is sent to Platform and the appropriate profile attributes are updated accordingly.
-
-See the overview on [consent management](https://experienceleague.corp.adobe.com/docs/customer-journey-management/using/define-audience/consent.html#consent-management) in the Customer Journey Management documentation for more information.
+-->
 
 ## Next steps
 
