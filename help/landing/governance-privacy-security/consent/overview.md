@@ -50,13 +50,13 @@ This dialog should allow the customer to opt in or out of specific marketing and
 
 Customer consent data must be sent to a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields. These fields should be included in the same schema and dataset that you use to capture attribute information about individual customers.
 
-Refer to the tutorial on [configuring a dataset for capturing consent data](./dataset-prep.md) for detailed steps on how to add these required fields to a [!DNL Profile]-enabled dataset before continuing with this guide.
+Refer to the tutorial on [configuring a dataset for capturing consent data](./dataset.md) for detailed steps on how to add these required fields to a [!DNL Profile]-enabled dataset before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include consent fields in each customer profile. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences mixin, as outlined in the guide on [dataset preparation](./dataset-prep.md).
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences mixin, as outlined in the guide on [dataset preparation](./dataset.md).
 
 ## Bring consent data into Platform
 
