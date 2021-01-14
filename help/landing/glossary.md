@@ -72,7 +72,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Batch ingestion**: Batch ingestion allows you to ingest data into Experience Platform as batch files. Batches are units of data that consist of one or more files to be ingested as a single unit.
 
-**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all Profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
+**Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
 
 **Build**: In [!DNL Platform Launch], a build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of a library, allowing you to deploy that library on your website or mobile app.
 
