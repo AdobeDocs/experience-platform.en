@@ -53,6 +53,10 @@ The **[!UICONTROL Audience size]** widget displays the total number of merged pr
 
 For more information on fragments and merged profiles, please begin by reading the [profile fragments vs merged profiles](../home.md#profile-fragments-vs-merged-profiles) section of the [Profile overview](../home.md).
 
+>[!NOTE]
+>
+>The merge policy used to calculate this metric is not the same as the system-generated merge policy used to calculate [!UICONTROL Addressable audiences] in the [!UICONTROL License usage] dashboard, therefore the audience count in the [!DNL Profile] and [!UICONTROL License usage] dashboards are unlikely to be exactly the same.
+
 ![](../images/profile-dashboard/audience-size.png)
 
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
