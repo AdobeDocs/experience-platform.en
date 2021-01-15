@@ -12,11 +12,11 @@ PSQL is a command-line interface that comes when you install [!DNL PostgreSQL] o
 
 ## Installing PostgreSQL 
 
-PostgreSQL can be installed on both MacOS and Windows devices. 
+PostgreSQL can be installed on both macOS and Windows devices. 
 
-### MacOS installation
+### macOS installation
 
-To install PostgreSQL on a MacOS, open a terminal window and issue these following three commands:
+To install PostgreSQL on a macOS, open a terminal window and issue these following three commands:
 
 ```shell
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
