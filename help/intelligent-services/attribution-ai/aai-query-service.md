@@ -8,27 +8,43 @@ Each row in the data represents a conversion, in which information for related t
 | Touchpoint channel                | `touchpointsDetail.touchPoint.mediaChannel`                                                                        |
 | Touchpoint AAI algorithmic scores | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
+## Finding your data paths
+
+In the Adobe Experience Platform UI, select **[!UICONTROL Datasets]** in the left navigation. The **[!UICONTROL Datasets]** page appears. Next, select the **[!UICONTROL Browse]** tab and find the output dataset for your Attribution AI scores.
+
+![Accessing your instance](./images/aai-query/datasets_browse.png)
+
+Select your output dataset. The dataset activity page appears. Within the dataset activity page, select **[!UICONTROL Preview dataset]** in the top-right corner to preview your data and make sure it was ingested as expected.
+
+![dataset activity page](./images/aai-query/select_preview.png)
+
+![preview dataset](./images/aai-query/preview_dataset.jpg)
+
+After previewing your data, select the schema in the right rail. A popover appears with the schema name and description. Select the schema name hyperlink to redirect to the scoring schema.
+
+![select the schema](./images/aai-query/select_schema.png)
+
+Using the scoring schema, you can select or search for a value. Once selected, the **[!UICONTROL Field properties]** side-rail opens allowing you to copy the path for use in creating queries.
+
+![copy the path](./images/aai-query/copy_path.png)
+
 ## Access Query Service
 
-In the [!DNL Adobe Experience Platform] UI, select **[!UICONTROL Services]** in the left navigation. The **[!UICONTROL Services]** browser appears and displays available Adobe intelligent services. In the container for Attribution AI, select **[!UICONTROL Open]**.
+To access query service from within the Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the  **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
 
-![Accessing your instance](./images/user-guide/open_Attribution_ai.png)
+![query service browse](./images/aai-query/query_tab.png)
 
-The Attribution AI service page appears. Next, select the service instance (avoiding the hyperlink) you wish to query from. The right rail appears with additional info about your service instance. From the right rail select your data source hyperlink. You are redirected to the dataset activity page.
+Next, select **[!UICONTROL Create query]** in the top-right corner. The query editor loads. Using the query editor you can begin to create queries using your scoring data.
 
-From within the dataset activity page, copy the table name located in the right rail.
-
-![Copy table name]()
-
-Once you have copide your table name, select **[!UICONTROL Queries]** in the left navigation. Then select **Create query**.
-
-![Select queries]()
-
-You are redirected to the queries tab where you can query from your dataset.
+![query editor](./images/aai-query/query_example.png)
 
 ## Query templates for attribution score analysis
 
-The queries below can be used as a template for different score analysis senarios.
+The queries below can be used as a template for different score analysis senarios. You need to replace the `_tenantId` and `your_score_output_dataset` with the proper values found in your scoring output schema.
+
+>[!NOTE]
+>
+> Depending on how your data was ingested, the values used below such as `timestamp` might be in a different format.
 
 ### Validation examples
 
@@ -40,9 +56,9 @@ The queries below can be used as a template for different score analysis senario
            SUM(scores.algorithmicSourced) as total_attributed_conversions
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName
+                _tenantId.your_score_output_dataset.conversionName
                     as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -59,12 +75,12 @@ The queries below can be used as a template for different score analysis senario
 
 ```sql
     SELECT
-        _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
+        _tenantId.your_score_output_dataset.conversionName as conversionName,
         COUNT(1) as convOnly_cnt
     FROM
         attribution_ai_scores_luma_with_2_conversion_segments_10492
     WHERE
-        _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail.touchpointName[0] IS NULL AND
+        _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NULL AND
         timestamp >= "2020-07-16" AND
         timestamp <  "2020-10-14"
     GROUP BY
@@ -81,8 +97,8 @@ The queries below can be used as a template for different score analysis senario
            SUM(scores.firstTouch) as convertion_cnt
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                _tenantId.your_score_output_dataset.conversionName as conversionName,
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -104,8 +120,8 @@ The queries below can be used as a template for different score analysis senario
            COUNT(1) as tp_count
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                _tenantId.your_score_output_dataset.conversionName as conversionName,
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -131,8 +147,8 @@ The queries below can be used as a template for different score analysis senario
            SUM(scores.algorithmicSourced) as incremental_units
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                _tenantId.your_score_output_dataset.conversionName as conversionName,
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -156,8 +172,8 @@ The queries below can be used as a template for different score analysis senario
            SUM(scores.algorithmicSourced) as incremental_units
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                _tenantId.your_score_output_dataset.conversionName as conversionName,
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -188,8 +204,8 @@ The queries below can be used as a template for different score analysis senario
            SUM(scores.firstTouch) as total_firstTouch_units
     FROM
         (SELECT
-                _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-                inline(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail),
+                _tenantId.your_score_output_dataset.conversionName as conversionName,
+                inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
@@ -211,16 +227,16 @@ Get path length distribution for each conversion event type:
 ```sql
     WITH agg_path AS (
           SELECT
-            _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-            sum(size(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail)) as path_length
+            _tenantId.your_score_output_dataset.conversionName as conversionName,
+            sum(size(_tenantId.your_score_output_dataset.touchpointsDetail)) as path_length
           FROM
             attribution_ai_scores_luma_with_2_conversion_segments_10492
           WHERE
-            _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail.touchpointName[0] IS NOT NULL AND
+            _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
             timestamp >= "2020-07-16" AND
             timestamp <  "2020-10-14"
           GROUP BY
-            _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName,
+            _tenantId.your_score_output_dataset.conversionName,
             eventMergeId
     )
     SELECT
@@ -243,16 +259,16 @@ for each conversion event type:
 ```sql
     WITH agg_path AS (
       SELECT
-        _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName as conversionName,
-        size(array_distinct(flatten(collect_list(_adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail.touchpointName)))) as num_dist_tp
+        _tenantId.your_score_output_dataset.conversionName as conversionName,
+        size(array_distinct(flatten(collect_list(_tenantId.your_score_output_dataset.touchpointsDetail.touchpointName)))) as num_dist_tp
       FROM
         attribution_ai_scores_luma_with_2_conversion_segments_10492
       WHERE
-        _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.touchpointsDetail.touchpointName[0] IS NOT NULL AND
+        _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
         timestamp >= "2020-07-16" AND
         timestamp <  "2020-10-14"
       GROUP BY
-        _adsdsnpmmsv2.attribution_AI_Scores___Luma_with_2_Conversion_Segments__10492.conversionName,
+        _tenantId.your_score_output_dataset.conversionName,
         eventMergeId
     )
     SELECT
