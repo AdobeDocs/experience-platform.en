@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mappin
 solution: Experience Platform
 title: Activities mapping field
 topic: overview
-description: The tables below contain the mappings between the fields in the Marketo Activities dataset and their corresponding XDM fields.
+description: The table below contains the mappings between the fields in the Marketo activities dataset and their corresponding XDM fields.
 ---
 
 # Activities mapping field
 
-The table below contain the mappings between the fields in the [!DNL Marketo] Activities dataset and their corresponding XDM fields.
+The table below contains the mappings between the fields in the [!DNL Marketo] activities dataset and their corresponding XDM fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

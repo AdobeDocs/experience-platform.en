@@ -1,32 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Program mapping;Program memberships mapping;program;program memberships
+keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Campaign memberships mapping;campaign memberships mapping
 solution: Experience Platform
-title: Campaign and campaign membership mapping fields
+title: Campaign memberships mapping fields
 topic: overview
-description: The tables below contain the mappings between the Marketo Campaign and campaign membership dataset and their corresponding XDM fields.
+description: The table below contains the mappings between the Marketo Campaign memberships dataset and their corresponding XDM fields.
 ---
 
-# Campaigns and campaign memberships mapping fields
+# Campaign memberships mapping fields
 
-The tables below contain the mappings between the [!DNL Marketo] Campaigns and campaign memberships datasets and their corresponding XDM fields.
-
-## Campaigns
-
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| Campaign-key | campaignID |
-| name | campaignName |
-| description | campaignDescription |
-| type | campaignType |
-| status | campaignStatus |
-| channel | channelName |
-| Campaign-systemID | campaignComponents.sourceCampaignID.systemID |
-| Campaign-ID | campaignComponents.sourceCampaignID.ID |
-| Campaign-key | campaignComponents.sourceCampaignID.key |
-| createdAt | extSourceSystemAudit.createdDate |
-| updatedAt | extSourceSystemAudit.lastUpdatedDate |
-
-## Campaign memberships
+The table below contains the mappings between the [!DNL Marketo] Campaign memberships datasets and their corresponding XDM fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

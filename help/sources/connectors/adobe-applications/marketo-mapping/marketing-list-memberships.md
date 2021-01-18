@@ -1,29 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Activities mapping;activities mapping;activities
+keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;
 solution: Experience Platform
-title: Marketing lists and marketing list membership mapping fields
+title: Marketing list membership mapping fields
 topic: overview
-description: The tables below contain the mappings between the fields in the Marketo Activities dataset and their corresponding XDM fields.
+description: The table below contains the mappings between the fields in the Marketo marketing list memberships dataset and their corresponding XDM fields.
 ---
 
-# Marketing lists and marketing list membership mapping fields
+# Marketing list memberships mapping fields
 
-The tables below contain the mappings between the fields in the Marketo Activities dataset and their corresponding XDM fields.
-
-## Marketing Lists
-
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| MarketingList-key | marketingListID |
-| name | marketingListName |
-| description | marketingListDescription |
-| MarketingList-systemID | marketingListComponents.sourceMarketingListID.systemID |
-| MarketingList-ID | marketingListComponents.sourceMarketingListID.ID |
-| MarketingList-key | marketingListComponents.sourceMarketingListID.key |
-| createdAt | extSourceSystemAudit.createdDate |
-| updatedAt | extSourceSystemAudit.lastUpdatedDate |
-
-## Marketing list membershio
+The table below contains the mappings between the fields in the [!DNL Marketo] marketing list memberships dataset and their corresponding XDM fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

@@ -3,16 +3,16 @@ keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mappin
 solution: Experience Platform
 title: Named accounts mapping fields
 topic: overview
-description: The table below contain the mappings between the Marketo named accounts dataset and their corresponding XDM fields.
+description: The table below contains the mappings between the Marketo named accounts dataset and their corresponding XDM fields.
 ---
 
 # Named accounts mapping fields
 
-The table below contain the mappings between the [!DNL Marketo] named accounts dataset and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] named accounts dataset and their corresponding XDM fields.
 
 >[!IMPORTANT]
 >
->If you are ingesting B2B data from [!DNL Marketo] and another CRM system, then select `External-Account-key` from the first row of source datasets. If you are ingesting B2B data exclusively from [!DNL Marketo], then `Account-key` from the first row.
+>If you are ingesting B2B data from [!DNL Marketo] and another CRM system, then select `External-Account-key` from the first row of source datasets. If you are ingesting B2B data exclusively from [!DNL Marketo], then select `Account-key` from the first row.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

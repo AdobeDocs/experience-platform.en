@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mappin
 solution: Experience Platform
 title: Persons mapping fields
 topic: overview
-description: The tables below contain the mappings between the Marketo Persons datasets and their corresponding XDM fields.
+description: The table below contains the mappings between the Marketo Persons datasets and their corresponding XDM fields.
 ---
 
 # Persons mapping fields
 
-The table below contains the mappings between the [!DNL Marketo] [!UICONTROL Persons] datasets and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] persons datasets and their corresponding XDM fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
