@@ -26,6 +26,14 @@ When migrating from using Visitor API, you can also migrate existing AMCV cookie
 * When Adobe Experience Platform Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for Visitor API on the page and calls it to get the ECID.
 * When the entire site is using Adobe Experience Platform Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
 
+## Updating traits for migration
+
+When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
+
+## Server Side Forwarding
+
+If you currently have server side forwarding enabled and are using `appmeasurement.js`. and `visitor.js` you can keep the server side forwarding feature enabled and this won't cause any issues. In the backend, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won’t call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.
+
 ## Retrieving the Visitor ID
 
 If you want to use this unique ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID.
