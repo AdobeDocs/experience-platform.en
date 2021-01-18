@@ -7,7 +7,7 @@ description: Real-time Customer Profile is a generic lookup entity store that me
 
 # [!DNL Real-time Customer Profile] overview
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. [!DNL Profile] allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
 
 ## [!DNL Profile] in Experience Platform
 
@@ -35,7 +35,7 @@ Experience Platform provides a series of guardrails to help you avoid creating [
 >
 >The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-The Experience Platform UI provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard guide](ui/profile-dashboard.md).  
+The Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
 
 ### Profile fragments vs merged profiles {#profile-fragments-vs-merged-profiles}
 
@@ -116,4 +116,4 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ## Next steps and additional resources
 
-To learn more about working with [!DNL Real-time Customer Profile], please read the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md).
+To learn more about working with [!DNL Real-time Customer Profile] data using the Experience Platform UI or the Profile API, please begin by reading the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md), respectively.

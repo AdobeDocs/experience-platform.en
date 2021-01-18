@@ -10,7 +10,7 @@ description: This document provides answers to frequently asked questions about 
 
 This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. This enables marketers to drive coordinated, consistent, and relevant experiences for customers across multiple channels.
 
 ## FAQ
 
