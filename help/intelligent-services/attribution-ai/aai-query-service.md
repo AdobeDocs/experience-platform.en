@@ -64,9 +64,9 @@ The queries below can be used as a template for different score analysis senario
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
         )
     WHERE
-        conversion_timestamp >= "2020-07-16"
+        conversion_timestamp >= '2020-07-16'
       AND
-        conversion_timestamp <  "2020-10-14"
+        conversion_timestamp <  '2020-10-14'
     GROUP BY
         conversionName
 ```
@@ -81,8 +81,8 @@ The queries below can be used as a template for different score analysis senario
         attribution_ai_scores_luma_with_2_conversion_segments_10492
     WHERE
         _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NULL AND
-        timestamp >= "2020-07-16" AND
-        timestamp <  "2020-10-14"
+        timestamp >= '2020-07-16' AND
+        timestamp <  '2020-10-14'
     GROUP BY
         conversionName
 ```
@@ -127,8 +127,8 @@ The queries below can be used as a template for different score analysis senario
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
         )
     WHERE
-        conversion_timestamp >= "2020-07-16" AND
-        conversion_timestamp < "2020-10-14" AND
+        conversion_timestamp >= '2020-07-16' AND
+        conversion_timestamp < '2020-10-14' AND
         touchpointName IS NOT NULL
     GROUP BY
         conversionName, touchpointName
@@ -154,8 +154,8 @@ The queries below can be used as a template for different score analysis senario
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
         )
     WHERE
-        conversion_timestamp >= "2020-07-16" AND
-        conversion_timestamp < "2020-10-14"  AND
+        conversion_timestamp >= '2020-07-16' AND
+        conversion_timestamp < '2020-10-14'  AND
         touchpointName IS NOT NULL
     GROUP BY
         conversionName, touchpointName, DATE(conversion_timestamp)
@@ -179,8 +179,8 @@ The queries below can be used as a template for different score analysis senario
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
         )
     WHERE
-        conversion_timestamp >= "2020-07-16" AND
-        conversion_timestamp < "2020-10-14"  AND
+        conversion_timestamp >= '2020-07-16' AND
+        conversion_timestamp < '2020-10-14'  AND
         touchpointName IS NOT NULL
     GROUP BY
         conversionName, touchpointName, DATE(touchpoint.timestamp)
@@ -211,8 +211,8 @@ The queries below can be used as a template for different score analysis senario
                 attribution_ai_scores_luma_with_2_conversion_segments_10492
         )
     WHERE
-        conversion_timestamp >= "2020-07-16" AND
-        conversion_timestamp < "2020-10-14"  AND
+        conversion_timestamp >= '2020-07-16' AND
+        conversion_timestamp < '2020-10-14'  AND
         touchpointName = 'display'
     GROUP BY
         conversionName, touchpointName
@@ -233,8 +233,8 @@ Get path length distribution for each conversion event type:
             attribution_ai_scores_luma_with_2_conversion_segments_10492
           WHERE
             _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
-            timestamp >= "2020-07-16" AND
-            timestamp <  "2020-10-14"
+            timestamp >= '2020-07-16' AND
+            timestamp <  '2020-10-14'
           GROUP BY
             _tenantId.your_score_output_dataset.conversionName,
             eventMergeId
@@ -265,8 +265,8 @@ for each conversion event type:
         attribution_ai_scores_luma_with_2_conversion_segments_10492
       WHERE
         _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
-        timestamp >= "2020-07-16" AND
-        timestamp <  "2020-10-14"
+        timestamp >= '2020-07-16' AND
+        timestamp <  '2020-10-14'
       GROUP BY
         _tenantId.your_score_output_dataset.conversionName,
         eventMergeId
