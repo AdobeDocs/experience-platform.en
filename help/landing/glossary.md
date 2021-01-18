@@ -18,7 +18,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Activate**: Activate is the action taken by a user to map a segment or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
 
-**Activity**: In [!DNL Offer Decisioning], an activity is a set of offers the marketer wants the decision engine to select the best offer from.
+**Activity**: In [!DNL Offer Decisioning], an activity contains the logic that informs the selection of an offer.
 
 **Administrator**: One or more individuals in your organization who can configure and customize permissions for Experience Platform in Adobe Admin Console. 
 
@@ -99,8 +99,6 @@ description: A glossary of important terminology in Experience Platform.
 **Command-line interface**: A command-line interface is a text-based tool that can be used to connect to [!DNL Query Service] for raw query execution.
 
 **Composition**: A composition is a grouping of components that form together to make up the schema.
-
-**Connector**: Adobe Experience Platform source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling, and enhancement of data using [!DNL Experience Platform Services]. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
 **Condition**: In [!DNL Platform Launch], a condition is a rule component that evaluates a logical statement that must return `true` or `false`. All conditions must evaluate to `true` and all exception conditions must evaluate to `false` before any actions on the rule are executed.
 
@@ -204,7 +202,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Eligible offer**: An eligible offer can be consistently offered to a profile, as it meets the constraints defined upstream.
 
-**Eligible rules**: In [!DNL Offer Decisioning], eligibility rules are applied to a profile related to calendar, schedule, and capping constraints.
+**Eligibility rules**: In [!DNL Offer Decisioning], eligibility rules are applied to a profile related to calendar, schedule, and capping constraints.
 
 **Email targeting marketing action**: A marketing action that uses data in email targeting campaigns.
 
@@ -266,7 +264,7 @@ description: A glossary of important terminology in Experience Platform.
 
 ## I
 
-**Identity**: An identity is an identifier that uniquely represents and individual customer, such as a cookie ID, device ID, or email ID.
+**Identity**: An identity is an identifier that uniquely represents an individual customer, such as a cookie ID, device ID, or email ID.
 
 **Identity fields**: Identity fields are XDM fields that are used to stitch together information about individual customers coming from multiple data sources. A single primary identity must be defined in order for the schema to be enabled for use in Real-time Customer Profile.
 
@@ -498,7 +496,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **S2 data usage label**: An `S2` data usage label is used to classify data that can be used to determine a broadly defined geofence area.
 
-**Source**: A source is a general term for any input connector in Platform.
+**Source**: A source is a general term for any input connector in Platform. See also: [Source connector](#source-connector)
 
 **Source attribute**: A source attribute is a field in source dataset. Source attributes are mapped to target schema fields.
 
@@ -506,7 +504,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Source category**: A source category is a grouping of sources that have similar characteristics.
 
-**Source connector**: Source connectors help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
+**Source connector**:{#source-connector} Source connectors (also known as sources) help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
 **Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to a customer's IMS Organization to stream data into Experience Platform.
 
