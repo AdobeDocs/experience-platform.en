@@ -112,11 +112,14 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 See the following documents for mapping rules for specific [!DNL Marketo] datasets:
 
 * [Activities](../../../../connectors/adobe-applications/marketo-mapping/activities.md)
-* [Campaigns and Campaign Memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
+* [Campaigns](../../../../connectors/adobe-applications/marketo-mapping/campaigns.md)
+* [Campaign memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
 * [Companies](../../../../connectors/adobe-applications/marketo-mapping/companies.md)
-* [Marketing Lists and Marketing List Memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
+* [Marketing lists](../../../../connectors/adobe-applications/marketo-mapping/marketing-lists.md)
+* [Marketing list memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
 * [Named Accounts](../../../../connectors/adobe-applications/marketo-mapping/named-accounts.md)
-* [Opportunities and Opportunity Person Relations](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
+* [Opportunities](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
+* [Opportunity person relations](../../../../connectors/adobe-applications/marketo-mapping/opportunity-person-relations.md)
 * [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
 
 >[!TIP]
