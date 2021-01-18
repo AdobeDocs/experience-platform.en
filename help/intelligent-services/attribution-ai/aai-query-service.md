@@ -18,7 +18,7 @@ Select your output dataset. The dataset activity page appears. Within the datase
 
 ![dataset activity page](./images/aai-query/select_preview.png)
 
-![preview dataset](./images/aai-query/preview_dataset.jpg)
+![preview dataset](./images/aai-query/preview_dataset.JPG)
 
 After previewing your data, select the schema in the right rail. A popover appears with the schema name and description. Select the schema name hyperlink to redirect to the scoring schema.
 
