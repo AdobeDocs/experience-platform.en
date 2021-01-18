@@ -12,4 +12,39 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting [!DNL Marketo Engage] data into Adobe Experience Platform.
 
-The documentation below provides information on how to connect [!DNL Marketo Engage] to Platform through the user interface:
+## Authenticate your [!DNL Marketo] connector
+
+In order to connect [!DNL Marketo] to Platform, you must first acquire a `munchkinId`, a `clientId`, and a `clientSecret`. 
+
+## Experience Data Model (XDM)
+
+XDM is a publicly documented specification that provides common structures and definitions for an application to use to communicate with services on Experience Platform.
+
+Adhering to XDM standards allows data to be uniformly incorporated, making it easier to deliver data and gather information.
+
+To learn more about XDM, please see the [XDM System overview](../../../xdm/home.md).
+
+## Field mapping from [!DNL Marketo] to XDM
+
+When a source connection is established for bringing [!DNL Marketo] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Marketo] using the Platform UI, see the [Marketo connector tutorial](../../tutorials/ui/create/adobe-applications/marketo.md).
+
+See the following documents for detailed information on the field mapping that occurs between [!DNL Marketo] datasets and Platform:
+
+* [Activities](./marketo-mapping/activities.md)
+* [Campaigns](./marketo-mapping/campaigns.md)
+* [Campaign memberships](./marketo-mapping/campaign-memberships.md)
+* [Companies](./marketo-mapping/companies.md)
+* [Marketing lists](./marketo-mapping/marketing-lists.md)
+* [Marketing list memberships](./marketo-mapping/marketing-list-memberships.md)
+* [Named Accounts](./marketo-mapping/named-accounts.md)
+* [Opportunities](./marketo-mapping/opportunities.md)
+* [Opportunity person relations](./marketo-mapping/opportunity-person-relations.md)
+* [Persons](./marketo-mapping/persons.md)
+
+## Expected latency of [!DNL Marketo] data on Platform
+
+| Marketo Data | Expected Latency |
+| ------------ | ---------------- |
+| New streaming data to Data Lake | < 1 minute |
+| New batch data to Data Lake | < 5 minutes |
+| New data to B2B CDP | < 15 minutes |
