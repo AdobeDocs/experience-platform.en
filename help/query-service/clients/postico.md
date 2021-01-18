@@ -14,15 +14,19 @@ This document walks through the steps for connecting [!DNL Postico] with Adobe E
 
 macOS users can install [!DNL Postico] from [https://eggerapps.at/postico/](https://eggerapps.at/postico/).
 
+More information about using Postico in general can be found in the [official Postico documentation](https://eggerapps.at/postico/docs).
+
 ## Connect Postico to Query Service
 
-To connect Postico to Query Service, open Postico and select New Favorite.
+To connect Postico to Query Service, open [!DNL Postico] and select **[!UICONTROL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)
 
-You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+You can now enter values to connect with Adobe Experience Platform. 
 
-After inserting your credentials, select Connect to connect with Query Service.
+For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+
+After inserting your credentials, select **[!UICONTROL Connect]** to connect with Query Service.
 
 ![](../images/clients/postico/authentication-details.png)
 
@@ -32,7 +36,7 @@ After connecting to Platform, you'll be able to see a list of all the relations 
 
 ## Create SQL statements
 
-To create a new SQL query, select the "SQL Query" icon, and double click on the option. 
+To create a new SQL query, select and open "SQL Query".
 
 ![](../images/clients/postico/create-query.png)
 
