@@ -16,10 +16,10 @@ Real-time Customer Data Platform connects to a large ecosystem of partners, not 
 
 With Real-time Customer Data Platform, you can:
 
-- Achieve a single view of your customer by combining data from across the enterprise.
-- Responsibly manage profiles with trusted governance and privacy controls for known and anonymous identifiers.
-- Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
-- Deliver personalized experiences in realtime across all channels and destinations.
+* Achieve a single view of your customer by combining data from across the enterprise.
+* Responsibly manage profiles with trusted governance and privacy controls for known and anonymous identifiers.
+* Generate actionable insights and scale audiences with AI and machine learning powered by Adobe Sensei and built for marketers.
+* Deliver personalized experiences in realtime across all channels and destinations.
 
 ## Customer AI
 
