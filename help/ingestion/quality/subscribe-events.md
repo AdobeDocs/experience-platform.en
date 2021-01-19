@@ -18,7 +18,7 @@ To assist in monitoring the ingestion process, [!DNL Experience Platform] makes 
 
 In order to receive data ingestion notifications, you must use [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) to register a webhook to your Experience Platform integration.
 
-Follow the tutorial on [subscribing to [!DNL Adobe I/O Event] notifications](../../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
+Follow the tutorial on [subscribing to [!DNL Adobe I/O Event] notifications](../../observability/alerts/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
 >
