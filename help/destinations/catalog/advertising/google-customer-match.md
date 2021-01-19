@@ -58,9 +58,14 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 #### Phone number hashing requirements {#phone-number-hashing-requirements}
 
-Experience Platform will automatically hash phone numbers on activation, the only requirements being that you ingest phone numbers data into the `Phone_E.164` namespace.
+There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
-Phone numbers ingested into any other namespace cannot be activated in [!DNL Google Customer Match].
+* **Method 1**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform], which will be automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
+* **Method 2**: you can pre-hash your phone numbers before ingestion into [!DNL Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `PHONE_SHA256_E.164` namespace.
+
+>[!NOTE]
+>
+>Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Google Customer Match].
 
 #### Email hashing requirements {#hashing-requirements}
 

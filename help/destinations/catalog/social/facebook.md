@@ -63,9 +63,14 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 #### Phone number hashing requirements {#phone-number-hashing-requirements}
 
-Experience Platform will automatically hash phone numbers on activation, the only requirements being that you ingest phone numbers data into the `Phone_E.164` namespace.
+There are two methods to activate phone numbers in [!DNL Facebook]:
 
-Phone numbers ingested into any other namespace cannot be activated in [!DNL Facebook].
+* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform], which will be automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
+* **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `Phone_SHA256` namespace.
+
+>[!NOTE]
+>
+>Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Facebook].
 
 
 #### Email hashing requirements {#email-hashing-requirements}
@@ -83,10 +88,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
   - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Do not salt the string.
 
-
->[!IMPORTANT]
->
->If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Facebook]. In the [activation workflow](../../ui/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+If you choose to activate unhashed email addresses, [!DNL Platform] will hash them upon activation [!DNL Facebook]. In the [activation workflow](../../ui/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
 
 ![Hashing on activation](../../assets/common/identity-mapping.png)
 

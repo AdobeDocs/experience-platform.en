@@ -61,17 +61,65 @@ If you are using email address as primary identity in your schema, you can skip 
 
 ![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif) -->
 
-Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
+#### Example: activating audience data in [!DNL Facebook] {#example-facebook}
 
-Select `Email` as target identity if the email addresses you are using are not hashed. Real-time CDP will hash the email addresses to comply with [!DNL Facebook] requirements.
-   
-![identity mapping after filling in fields](../assets/common/identity-mapping.png)
+This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 
-Select `PHONE_SHA256` as target identity if you hashed phone numbers on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
+Selecting source fields:
 
-Select `PHONE_E.164` as target identity if your data consists of non-hashed phone numbers. Experience Platform will hash the phone numbers to comply with [!DNL Facebook] requirements.
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
+* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Selec the `Custom` namespace as source identity if your data consists of other type of identifiers.
 
-Select `IDFA` as target identity if your data consists of Apple device IDs. `IDFA` IDs will be mapped to:
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Selec the `Extern_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../assets/ui/activate-destinations/identity-mapping.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-transformation.png)
+
+
+#### Example: activating audience data in [!DNL Google Customer Match] {#example-facebook}
+
+This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
+
+Selecting source fields:
+
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Google Customer Match] [email hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Selec the `Custom` namespace as source identity if your data consists of other type of identifiers.
+
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Selec the `User_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../assets/ui/activate-destinations/identity-mapping-gcm.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
+
+<!-- 
+`IDFA` IDs will be mapped to:
 
 * [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
 * [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
@@ -84,7 +132,7 @@ Select `GAID` as target identity if your data consists of Android device IDs. `G
 If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
 
 * [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
-* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
+* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
 
 ### **[!UICONTROL Configure]** step {#configure}
 
