@@ -28,7 +28,7 @@ In order to access your [!DNL Marketo] account on [!DNL Platform], you must prov
 
 | Credential | Description |
 | ---------- | ----------- |
-| `munchkinId` |
+| `munchkinId` |  The Munchkin ID is the unique identifier for a specific Marketo instance. |
 | `clientId` |
 | `clientSecret` |
 

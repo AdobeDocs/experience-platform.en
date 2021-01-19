@@ -14,7 +14,33 @@ Experience Platform provides support for ingesting [!DNL Marketo Engage] data in
 
 ## Authenticate your [!DNL Marketo] connector
 
-In order to connect [!DNL Marketo] to Platform, you must first acquire a `munchkinId`, a `clientId`, and a `clientSecret`. 
+In order to connect [!DNL Marketo] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
+
+### Get your Munchkin ID
+
+To retrieve your Munchkin ID, log in to [!DNL Marketo] and select **[!UICONTROL Admin]** from the top navigation bar.
+
+![marketo-main]()
+
+From the admin page, you can access several features of your [!DNL Marketo] instance. Select **[!UICONTROL Munchkin]** from the [!UICONTROL Integration] panel to retrieve your Munchkin ID.
+
+![admin-munchkin]()
+
+The [!UICONTROL Munchkin] page appears, with your unique Munchkin ID listed at the top of the panel. 
+
+![munchkin-Id]()
+
+### Get your client ID and client secret
+
+You can retrieve your client ID and client secret from the [!DNL Marketo] admin page. Under the integration panel, select [!UICONTROL LaunchPoint].
+
+![admin-launchpoint]()
+
+The [!UICONTROL Installed services] page appears. Locate the service you need to access from the list and then select **[!UICONTROL View Details]**.
+
+![client-keys]()
+
+Combined with your Munchkin ID, you can use the newly retrieved client ID and client secret to connect your [!DNL Marketo] instance to Platform.
 
 ## Experience Data Model (XDM)
 
