@@ -2,10 +2,10 @@
 
 Each row in the data represents a conversion, in which information for related touchpoints are stored as an array of structs under the `touchpointsDetail` column.
 
-| Touchpoint information            | Column                                                                                                             |
-| --------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Touchpoint name                   | `touchpointsDetail.touchpointName`                                                                                 |
-| Touchpoint channel                | `touchpointsDetail.touchPoint.mediaChannel`                                                                        |
+| Touchpoint information | Column |
+| ---------------------- | ------ |
+| Touchpoint name | `touchpointsDetail. touchpointName` |
+| Touchpoint channel | `touchpointsDetail.touchPoint.mediaChannel` |
 | Touchpoint AAI algorithmic scores | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Finding your data paths
