@@ -1,4 +1,12 @@
-# QueryService quick start guide for analyzing attribution scores
+---
+keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
+solution: Intelligent Services, Experience Platform
+title: AAI Query Service quick start guide
+topic: Attribution AI queries
+description: This document provides a guide and templates for using Query Service to analyze your attribution scores.
+---
+
+# Adobe Experience Platform Query Service quick start guide for analyzing attribution scores
 
 Each row in the data represents a conversion, in which information for related touchpoints are stored as an array of structs under the `touchpointsDetail` column.
 
@@ -14,9 +22,11 @@ In the Adobe Experience Platform UI, select **[!UICONTROL Datasets]** in the lef
 
 ![Accessing your instance](./images/aai-query/datasets_browse.png)
 
-Select your output dataset. The dataset activity page appears. Within the dataset activity page, select **[!UICONTROL Preview dataset]** in the top-right corner to preview your data and make sure it was ingested as expected.
+Select your output dataset. The dataset activity page appears.
 
 ![dataset activity page](./images/aai-query/select_preview.png)
+
+ Within the dataset activity page, select **[!UICONTROL Preview dataset]** in the top-right corner to preview your data and make sure it was ingested as expected.
 
 ![preview dataset](./images/aai-query/preview_dataset.JPG)
 
@@ -30,13 +40,15 @@ Using the scoring schema, you can select or search for a value. Once selected, t
 
 ## Access Query Service
 
-To access query service from within the Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the  **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
+To access Query Service from within the Platform UI, start by selecting **[!UICONTROL Queries]** in the left navigation, then select the **[!UICONTROL Browse]** tab. A list of your previously saved queries is loaded.
 
 ![query service browse](./images/aai-query/query_tab.png)
 
-Next, select **[!UICONTROL Create query]** in the top-right corner. The query editor loads. Using the query editor you can begin to create queries using your scoring data.
+Next, select **[!UICONTROL Create query]** in the top-right corner. The Query Editor loads. Using the Query Editor you can begin to create queries using your scoring data.
 
 ![query editor](./images/aai-query/query_example.png)
+
+For more information on the Query Editor, visit the [Query Editor user guide](../../query-service/ui/user-guide.md).
 
 ## Query templates for attribution score analysis
 
@@ -48,7 +60,7 @@ The queries below can be used as a template for different score analysis senario
 
 ### Validation examples
 
-**Total Number of Conversions by Conversion Event (within in a conversion window)**
+**Total number of conversions by conversion event (within in a conversion window)**
 
 ```sql
     SELECT conversionName,
@@ -71,7 +83,7 @@ The queries below can be used as a template for different score analysis senario
         conversionName
 ```
 
-**Total Number of Conversion-Only Events (within in a conversion window)**
+**Total number of conversion-only events (within in a conversion window)**
 
 ```sql
     SELECT
@@ -87,9 +99,9 @@ The queries below can be used as a template for different score analysis senario
         conversionName
 ```
 
-### Trend Analysis examples
+### Trend analysis examples
 
-**Number of Conversions Per Day**
+**Number of conversions per day**
 
 ```sql
     SELECT conversionName,
@@ -110,9 +122,9 @@ The queries below can be used as a template for different score analysis senario
     LIMIT 20
 ```
 
-### Distribution Analysis examples
+### Distribution analysis examples
 
-**Amount of Touchpoints on Conversion Paths by Defined Type (within in a conversion window)**
+**Amount of touchpoints on conversion paths by defined type (within in a conversion window)**
 
 ```sql
     SELECT conversionName,
@@ -136,9 +148,9 @@ The queries below can be used as a template for different score analysis senario
         conversionName, tp_count DESC
 ```
 
-### Insight Generation examples
+### Insight generation examples
 
-**Incremental Units breakdown by Touchpoint and Conversion Date (within in a conversion window)**
+**Incremental units breakdown by touchpoint and conversion date (within in a conversion window)**
 
 ```sql
     SELECT conversionName,
@@ -163,7 +175,7 @@ The queries below can be used as a template for different score analysis senario
         conversionName, touchpointName, DATE(conversion_timestamp)
 ```
 
-**Incremental Units breakdown by Touchpoint and Touchpoint Date (within in a conversion window)**
+**Incremental units breakdown by touchpoint and touchpoint date (within in a conversion window)**
 
 ```sql
     SELECT conversionName,
@@ -189,7 +201,7 @@ The queries below can be used as a template for different score analysis senario
     LIMIT 20
 ```
 
-**Aggregated Scores for a certain type of Touchpoint for all scoring models (within in a conversion window)**
+**Aggregated scores for a certain type of touchpoint for all scoring models (within in a conversion window)**
 
 ```sql
     SELECT
@@ -222,7 +234,7 @@ The queries below can be used as a template for different score analysis senario
 
 **Advanced - path length analysis**
 
-Get path length distribution for each conversion event type:
+Get a path length distribution for each conversion event type:
 
 ```sql
     WITH agg_path AS (
@@ -251,10 +263,9 @@ Get path length distribution for each conversion event type:
         conversionName, path_length
 ```
 
-**Advanced - Distinct Number of Touchpoints on Conversion Paths Analysis**
+**Advanced - distinct number of touchpoints on conversion paths analysis**
 
-Get distribution for number of distinct touchpoints on a conversion path
-for each conversion event type:
+Get the distribution for the number of distinct touchpoints on a conversion path for each conversion event type:
 
 ```sql
     WITH agg_path AS (
