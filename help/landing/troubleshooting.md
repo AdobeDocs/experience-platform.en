@@ -84,15 +84,15 @@ For more information on specific endpoints in Platform APIs, including required 
 
 ## What is my IMS organization? {#what-is-my-ims-organization}
 
-An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. The IMS Org ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
+An IMS organization is an an Adobe representation of a customer. Any licensed Adobe solutions are integrated with this customer organization. When an IMS organization is entitled to [!DNL Experience Platform], it can assign access to developers. The IMS Org ID (`x-gw-ims-org-id`) represents the organization that an API call should be executed for, and is therefore required as a header in all API requests. This ID can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui): in the **Integrations** tab, navigate to the **Overview** section for any particular integration to find the ID under **Client Credentials**. For a step-by-step walkthrough of how to authenticate into [!DNL Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## Where can I find my API key? {#where-can-i-find-my-api-key}
 
-An API key is required as a header in all API requests. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
+An API key is required as a header in all API requests. It can be found through the [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). Within the console, on the **Integrations** tab, navigate to the **Overview** section for a specific integration and you will find the key under **Client Credentials**. For a step-by-step walkthrough of how to authenticate to [!DNL Platform], see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## How do I get an access token? {#how-do-i-get-an-access-token}
 
-Access tokens are required in the Authorization header of all API calls. They can be generated using a `curl` command, provided you have access to an integration for an IMS organization. Access tokens are only valid for 24 hours, after which a new token must be generated to continue using the API. For details on generating access tokens, see the [authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en).
+Access tokens are required in the Authorization header of all API calls. They can be generated using a `curl` command, provided you have access to an integration for an IMS organization. Access tokens are only valid for 24 hours, after which a new token must be generated to continue using the API. For details on generating access tokens, see the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ## How do I use query parameters? {#how-do-i-user-query-parameters}
 
@@ -146,7 +146,7 @@ Status Code | Description | Possible Causes
 
 ## Request header errors {#request-header-errors}
 
-All API calls in [!DNL Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](http://www.adobe.com/go/platform-api-authentication-en). If any of these headers are missing or invalid when making an API call, the following errors may occur.
+All API calls in [!DNL Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). If any of these headers are missing or invalid when making an API call, the following errors may occur.
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
@@ -168,7 +168,7 @@ This error message displays when an `Authorization` header is missing from an AP
 }
 ```
 
-This error message displays when the provided access token in the `Authorization` header is not valid. Ensure that the token has been entered correctly, or [generate a new token](http://www.adobe.com/go/platform-api-authentication-en) in the Adobe I/O Console.
+This error message displays when the provided access token in the `Authorization` header is not valid. Ensure that the token has been entered correctly, or [generate a new token](https://www.adobe.com/go/platform-api-authentication-en) in the Adobe I/O Console.
 
 ### API key is required
 

@@ -15,7 +15,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 Before starting this tutorial, you must have the following prerequisites:
 -   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
--   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](../../tutorials/authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
+-   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`
     -   x-gw-ims-org-id: `{IMS_ORG}`
