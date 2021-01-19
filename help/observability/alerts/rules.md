@@ -6,7 +6,11 @@ topic: overview
 description: This document covers the predefined alert rules provided by Experience Platform. 
 ---
 
-# Standard alert rules
+# Standard alert rules (Alpha)
+
+>[!IMPORTANT]
+>
+>Alerts in Adobe Experience Platform are not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 Adobe Experience Platform provides several predefined alert rules that you can enable for your organization. The table below covers the details of these Adobe-provided alert rules. For more general information on alerts in Experience Platform, see the [alerts overview](./overview.md).
 

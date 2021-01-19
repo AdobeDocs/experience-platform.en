@@ -6,9 +6,13 @@ topic: overview
 description: Learn how to manage alerts in the Experience Platform user interface.
 ---
 
-# Alerts UI guide
+# Alerts UI guide (Alpha)
 
-Adobe Experience Platform Observability Insights allows you to view a history of received alerts, as well as view, enable, and disable available alert rules.
+>[!IMPORTANT]
+>
+>Alerts in Adobe Experience Platform are not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
+
+The Adobe Experience Platform user interface allows you to view a history of received alerts based on metrics revealed by Adobe Experience Platform Observability Insights. The UI also allows you to view, enable, and disable available alert rules.
 
 >[!NOTE]
 >
@@ -42,4 +46,4 @@ The right rail also contains a toggle for enabling or disabling the rule, depend
 
 ## Next steps
 
-This document provided an overview of how to view and manage Observability alerts in the Platform UI. For more information on Observability, see the [overview documentation](../home.md).
+This document provided an overview of how to view and manage alerts in the Platform UI. See the overview on [Observability Insights](../home.md) for more information on the service's capabilities

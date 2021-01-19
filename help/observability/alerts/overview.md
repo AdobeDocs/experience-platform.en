@@ -6,7 +6,11 @@ topic: overview
 description: Learn about alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 ---
 
-# Alerts overview
+# Alerts overview (Alpha)
+
+>[!IMPORTANT]
+>
+>Alerts in Adobe Experience Platform are not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
@@ -18,9 +22,9 @@ This document provides an overview of alerts in Adobe Experience Platform, inclu
 
 ## One-time alerts vs. repeating alerts
 
-Platform alerts can be sent as one-time notifications, or they can repeat over a pre-defined interval until they are resolved. The use cases of each of these options are intended to differ in the following ways:
+Platform alerts can be sent one time, or they can repeat over a pre-defined interval until they are resolved. The use cases of each of these options are intended to differ in the following ways:
 
-| One-time notification | Repeating alert |
+| One-time alert | Repeating alert |
 | --- | --- |
 | Does not necessarily indicate a problem. |  Indicates a potentially undesirable state. |
 | Does not repeat. | Can repeat if the anomalous condition persists. |
