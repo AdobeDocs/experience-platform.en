@@ -26,7 +26,7 @@ This document also requires a working understanding of webhooks and how to conne
 
 In order to receive flow run notifications, you must use Adobe Developer Console to register a webhook to your [!DNL Experience Platform] integration.
 
-Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
+Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
 >

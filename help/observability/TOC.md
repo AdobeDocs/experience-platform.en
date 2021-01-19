@@ -8,15 +8,13 @@ user-guide-description: Monitor Platform activities through the use of statistic
 # Observability Insights {#observability}
 
 * [Observability Insights overview](./home.md)
-* Observability Insights API developer guide {#api}
+* Observability Insights API {#api}
   * [Overview](./api/overview.md)
   * [Getting started](./api/getting-started.md)
   * [Metrics](./api/metrics.md)
-* Notifications {#notifications}
-  * [Overview](./notifications/overview.md)
-  * [Subscribe to I/O Event notifications](./notifications/subscribe.md)
 * Alerts {#alerts}
   * [Overview](./alerts/overview.md)
+  * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
   * [UI guide](./alerts/ui-guide.md)
   * [Standard alerts](./alerts/rules.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)

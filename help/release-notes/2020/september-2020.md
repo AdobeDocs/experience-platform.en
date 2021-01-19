@@ -52,7 +52,7 @@ To learn more, visit the [destinations overview](../../destinations/home.md)
 
 | Feature | Description |
 | --- | --- |
-| Adobe I/O Event notifications | [!DNL Observability Insights] leverages Adobe I/O Events to create event notifications for several Experience Platform services. Notification payloads are sent to a configured webhook which you can then use to automate further downstream processes. See the [notifications overview](../../observability/notifications/overview.md) for more information. |
+| Adobe I/O Event notifications | [!DNL Observability Insights] leverages Adobe I/O Events to create event notifications for several Experience Platform services. Notification payloads are sent to a configured webhook which you can then use to automate further downstream processes. |
 
 See the [[!DNL Observability Insights] overview](../../observability/home.md) for more information on the service.
 

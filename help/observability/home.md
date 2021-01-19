@@ -16,15 +16,11 @@ The [!DNL Observability Insights] API is a RESTful API that allows you to expose
 
 For more information on working with the API, see the [[!DNL Observability Insights] API developer guide](./api/overview.md).
 
-## Event notifications
-
-[!DNL Observability Insights] allows you to subscribe to event notifications regarding Adobe Experience Platform activities. By subscribing to events, you can set up your own downstream protocols for when a job has completed, if a certain milestone within a workflow has been reached, or if any failures occurred during the process.
-
-See the overview on [event notifications](./notifications/overview.md) for more information.
-
 ## Alerts
 
-[!DNL Observability Insights] can deliver alerts based on specific Observability metrics when a certain set of conditions in your Platform operations is reached. Unlike event notifications, these messages repeat over a pre-defined time interval until the conditions that triggered the alert have been resolved.
+Experience Platform allows you to subscribe to alerts based on specific Observability metrics when a certain set of conditions in your Platform operations is reached. An alert can take the form of one-time notification, or it can repeat over a pre-defined time interval until the conditions that triggered the alert have been resolved.
+
+By subscribing to alerts, you can set up your own downstream protocols for when a job has completed, if a certain milestone within a workflow has been reached, or if any failures occurred during the process.
 
 See the overview on [alerts](./alerts/overview.md) for more information.
 

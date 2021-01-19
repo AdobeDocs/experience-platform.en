@@ -3,26 +3,28 @@ keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
 title: Alerts overview
 topic: overview
-description: Observability Insights allows you to subscribe to event alerts regarding Adobe Experience Platform activities.
+description: Learn about alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 ---
 
 # Alerts overview
 
-Adobe Experience Platform Observability Insights allows you to receive and manage alerts based on specific Observability metrics. When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Observability Insights can deliver alert messages to all users in your organization who have opted in to receiving them. These messages repeat over a pre-defined time interval until the alert has been resolved.
+Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
+
+When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Observability Insights can deliver alert messages to all users in your organization who have opted in to receiving them. These messages repeat over a pre-defined time interval until the alert has been resolved.
+
+Platform alerts currently leverage Adobe I/O Events, which can be sent to a configured webhook to facilitate efficient automation of activity monitoring. However, notification capabilities will eventually encompass email and UI notifications as well.
 
 This document provides an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 
-## Alerts vs. notifications
+## One-time alerts vs. repeating alerts
 
-[!DNL Observability Insights] provides both alerts and notifications that are delivered to users based on observed metric data. While functionally similar to notifications, the use case of alerts differs in the following ways:
+Platform alerts can be sent as one-time notifications, or they can repeat over a pre-defined interval until they are resolved. The use cases of each of these options are intended to differ in the following ways:
 
-| Alert | Notification |
+| One-time notification | Repeating alert |
 | --- | --- |
-| Indicates a potentially undesirable state. | Does not necessarily indicate a problem. | 
-| Can repeat if the anomalous condition persists. | Does not repeat. |
-| Examples include:<ul><li>Ingestion duration is exceeding the service-level agreement (SLA).</li><li>Daily ingestion did not happen over the past 24 hours.</li><li>The stream processor's rate of error is above the configured threshold.</li><li>The total number of profiles is exceeding entitlement.</li></ul> | Examples include:<ul><li>Data ingestion has successfully completed.</li><li>A query execution has finished.</li><li>Data has been deleted.</li></ul> |
-
-In other words, alerts are a specialized type of notification that should only be used to indicate an undesirable state. For more information on general notifications, refer to the [notifications overview](../notifications/overview.md).
+| Does not necessarily indicate a problem. |  Indicates a potentially undesirable state. |
+| Does not repeat. | Can repeat if the anomalous condition persists. |
+| Examples include:<ul><li>Data ingestion has successfully completed.</li><li>A query execution has finished.</li><li>Data has been deleted.</li></ul> | Examples include:<ul><li>Ingestion duration is exceeding the service-level agreement (SLA).</li><li>Daily ingestion did not happen over the past 24 hours.</li><li>The stream processor's rate of error is above the configured threshold.</li><li>The total number of profiles is exceeding entitlement.</li></ul> |
 
 ## Anatomy of an alert
 
@@ -38,10 +40,10 @@ An alert can be broken down into the following components:
 
 ## Receiving and managing alerts
 
-Alerts are currently only able to be sent via webhook, while other delivery channels are planned for future releases. In order to receive alerts, you must create your own webhook and register it with [!DNL Observability] notifications in Adobe Developer Console. See the guide on [subscribing to notifications](../notifications/subscribe.md) for specific steps.
+Alerts are currently only able to be sent via webhook, while other delivery channels are planned for future releases. In order to receive alerts, you must create your own webhook and register it for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
 
-Alerts themselves are managed in the Experience Platform user interface. The [!UICONTROL Alerts] tab provides controls for viewing the history of triggered alerts, enabling or disabling alert rules, and manually resolving alerts. See the [UI guide](./ui-guide.md) for more information on managing alerts in the UI.
+Alert rules are managed in the Experience Platform user interface. The [!UICONTROL Alerts] tab provides controls for viewing the history of triggered alerts, enabling or disabling alert rules, and manually resolving alerts. See the [UI guide](./ui-guide.md) for more information on managing alerts in the UI.
 
 ## Next steps
 
-By reading this document, you have been introduced to [!DNL Observability] alerts and their role in the Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to manage alerts and rules in the Platform UI.
+By reading this document, you have been introduced to Platform alerts and their role in the Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to manage alerts and rules in the Platform UI.
