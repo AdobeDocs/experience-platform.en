@@ -98,11 +98,10 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
 
->[!IMPORTANT]
->
->If you choose not to hash email addresses, Real-time CDP will do that for you when you activate segments to [!DNL Google Customer Match]. In the [activation workflow](#activate-segments) (see step 5), select the `Email` option as shown below for *plain text email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
-![Hashing on activation](../../assets/catalog/advertising/google-customer-match/identity-mapping.png)
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Connect to destination {#connect-destination}
 

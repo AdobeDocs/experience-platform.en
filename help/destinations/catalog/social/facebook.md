@@ -88,9 +88,10 @@ If you select to hash the email addresses yourself, make sure to comply with the
   - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Do not salt the string.
 
-If you choose to activate unhashed email addresses, [!DNL Platform] will hash them upon activation [!DNL Facebook]. In the [activation workflow](../../ui/activate-destinations.md#activate-data) (see step 5), select the `Email` option as shown below for *raw email addresses* and `Email_LC_SHA256` for *hashed email addresses*.
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
-![Hashing on activation](../../assets/common/identity-mapping.png)
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 ## Connect to destination {#connect-destination}
 
