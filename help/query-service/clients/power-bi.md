@@ -16,7 +16,9 @@ This document walks through the steps for connecting Power BI with Adobe Experie
 
 ## Installing [!DNL Power BI]
 
-Windows users can install [!DNL Power BI] from [https://powerbi.microsoft.com/en-us/desktop/](https://powerbi.microsoft.com/en-us/desktop/).
+Windows users can install [!DNL Power BI] from the [official Power BI website](https://powerbi.microsoft.com/en-us/desktop/). 
+
+More documentation about using Power BI can be found in the [Power BI documentation](https://docs.microsoft.com/en-us/power-bi/).
 
 ## Set up [!DNL Power BI]
 

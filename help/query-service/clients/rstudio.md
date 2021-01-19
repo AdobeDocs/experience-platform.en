@@ -10,6 +10,12 @@ description: This document walks through the steps for connecting R Studio with 
 
 This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 
+## Installing RStudio
+
+To install RStudio, download it from the [official RStudio website](https://rstudio.com/products/rstudio/).
+
+More information about RStudio, including installation instructions, can be found in the [official RStudio documentation](https://docs.rstudio.com/).
+
 ## Connecting RStudio with [!DNL Query Service]
 
 After installing [!DNL RStudio], on the **Console** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].

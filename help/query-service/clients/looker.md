@@ -10,6 +10,10 @@ description: This document walks through the steps for connecting Looker with Ad
 
 This document walks through the steps for connecting [!DNL Looker] with Adobe Experience Platform [!DNL Query Service].
 
+>[!NOTE]
+>
+> This guide assumes you already have access to Looker. More information about Looker can be found in the [official Looker documentation](https://docs.looker.com/).
+
 ## Connect [!DNL Looker] with Platform
 
 After logging into [!DNL Looker], select **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.

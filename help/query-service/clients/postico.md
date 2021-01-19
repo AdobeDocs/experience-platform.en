@@ -12,9 +12,9 @@ This document walks through the steps for connecting [!DNL Postico] with Adobe E
 
 ## Installing Postico
 
-macOS users can install [!DNL Postico] from [https://eggerapps.at/postico/](https://eggerapps.at/postico/).
+macOS users can install [!DNL Postico] from the [official Postico website](https://eggerapps.at/postico/).
 
-More information about using Postico in general can be found in the [official Postico documentation](https://eggerapps.at/postico/docs).
+More information about using Postico can be found in the [official Postico documentation](https://eggerapps.at/postico/docs).
 
 ## Connect Postico to Query Service
 
