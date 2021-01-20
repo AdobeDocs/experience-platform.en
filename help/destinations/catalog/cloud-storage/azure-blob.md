@@ -21,6 +21,12 @@ This tutorial requires a working understanding of the following components of Ad
 
 If you already have a valid Blob destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-destinations.md).
 
+### Supported file formats
+
+[!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
+
+-   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
+
 ## Connect your Blob account {#connect-destination}
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Destinations]** from the left navigation bar to access the **[!UICONTROL Destinations]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
