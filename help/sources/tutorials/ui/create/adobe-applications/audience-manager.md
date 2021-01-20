@@ -15,7 +15,7 @@ This tutorial walks you through the steps to create a source connector for Adobe
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
-Under the [!UICONTROL Adobe applications] category, select **Adobe Audience Manager** and then select **[!UICONTROL Configure]**.
+Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Adobe Audience Manager]** and then select **[!UICONTROL Configure]**.
 
 ![catalog](../../../../images/tutorials/create/aam/catalog.png)
 
