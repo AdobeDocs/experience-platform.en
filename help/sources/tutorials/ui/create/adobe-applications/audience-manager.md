@@ -42,8 +42,8 @@ Once you are finished, select **[!UICONTROL Next]**
 
 The [!UICONTROL Review] step appears, allowing you to review your selected traits and segments before they are connected to Platform. Details are grouped within the following categories:
 
-* [!UICONTROL Connection]: Shows the source platform and the status of the connection.
-* [!UICONTROL Selected data]: Shows the number of selected segments and enabled traits.
+* **[!UICONTROL Connection]**: Shows the source platform and the status of the connection.
+* **[!UICONTROL Selected data]**: Shows the number of selected segments and enabled traits.
 
 ![review](../../../../images/tutorials/create/aam/review.png)
 
