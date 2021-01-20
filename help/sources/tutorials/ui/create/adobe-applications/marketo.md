@@ -15,12 +15,12 @@ This tutorial provides steps for creating a [!DNL Marketo Engage] source connect
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
 
@@ -32,7 +32,7 @@ In order to access your [!DNL Marketo] account on [!DNL Platform], you must prov
 | `clientId` | The unique client ID of your [!DNL Marketo] instance. |
 | `clientSecret` | The unique client secret of your [!DNL Marketo] instance. |
 
-For more information on acquiring your `munchkinId`, see the following document on [finding your [!DNL Marketo] instance](https://nation.marketo.com/t5/Knowledgebase/How-to-Find-Your-Munchkin-ID-for-a-Marketo-Instance/ta-p/248432). For more information on your `clientId` and `clientSecret`, refer to this [[!DNL Marketo] authentication document](https://developers.marketo.com/rest-api/authentication/).
+For more information on acquiring these values, refer to this [[!DNL Marketo] document](../../../../connectors/adobe-applications/marketo.md).
 
 Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Marketo] account to [!DNL Platform].
 
@@ -103,7 +103,7 @@ During this step, you can enable your dataset for [!DNL Real-time Customer Profi
 
 Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
 
-![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset.png)
+![create-new-dataset](../../../../images/tutorials/create/marketo/new-dataset-schema.png)
 
 ### Map your [!DNL Marketo] dataset source fields to target XDM fields
 
@@ -142,7 +142,7 @@ During this process, you can also enable **[!UICONTROL Partial ingestion]** and 
 
 Provide values for the dataflow and select **[!UICONTROL Next]**.
 
-![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-detail.png)
+![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-detail-max.png)
 
 ## Review your dataflow
 
