@@ -31,6 +31,7 @@ In the Connect destination workflow, select the **[!UICONTROL Connection type]**
 - For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
 - For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
 - For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+- For **[!UICONTROL Azure Blob]** connections, you must provide a connection string.
 
 Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string. 
 
