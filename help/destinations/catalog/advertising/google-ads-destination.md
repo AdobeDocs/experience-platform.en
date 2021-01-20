@@ -16,7 +16,8 @@ seo-description: Google Ads, formerly known as Google AdWords, is an online adve
 
 Note the following details that are specific to [!DNL Google Ads] destinations:
 
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
+* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
+  * Google will use [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) to target users in California, and the Google Cookie ID for all other users.
 * Activated audiences are created programmatically in the [!DNL Google] platform.
 * Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
