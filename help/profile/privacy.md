@@ -3,6 +3,8 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy request processing in Real-time Customer Profile
 topic: overview
+type: Documentation
+description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-time Customer Profile.
 ---
 
 # Privacy request processing in [!DNL Real-time Customer Profile]
