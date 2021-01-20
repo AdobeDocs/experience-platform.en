@@ -39,15 +39,19 @@ An alert can be broken down into the following components:
 | **Metric** | An Observability [metric](../api/metrics.md#available-metrics) whose value triggers the alert, such as the number of failed batch ingestion events (`timeseries.ingestion.dataset.batchfailed.count`). |
 | **Condition** | A condition related to the metric which triggers the alert if it resolves to true, such as a count metric exceeding a certain number. This condition may be associated with a pre-defined time window. |
 | **Window** | (Optional) The condition for an alert may be constrained to a pre-defined time window. For example, an alert may trigger depending on the number of failed batches in the past five minutes. |
-| **Action** | When an alert is triggered, an action is performed. Specifically, messages are delivered to applicable recipients through a pre-configured webhook. |
+| **Action** | When an alert is triggered, an action is performed. Specifically, messages are sent to applicable recipients through a delivery channel, such as a pre-configured webhook or the Experience Platform UI. |
 | **Frequency** | (Optional) An alert can be configured to repeat its action at a defined interval if its condition remains true or is otherwise unresolved. |
 
 ## Receiving and managing alerts
 
-Alerts are currently only able to be sent via webhook, while other delivery channels are planned for future releases. In order to receive alerts, you must create your own webhook and register it for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
+Alerts are currently only able to be sent via webhook and the Experience Platform user interface, while other delivery channels are planned for future releases. In order to receive alerts via webhook, you must register your webhook for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
 
-Alert rules are managed in the Experience Platform user interface. The [!UICONTROL Alerts] tab provides controls for viewing the history of triggered alerts, enabling or disabling alert rules, and manually resolving alerts. See the [UI guide](./ui-guide.md) for more information on managing alerts in the UI.
+In the Platform UI, you can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
+
+![Bell Icon](../images/alerts/overview/ui.png)
+
+In addition, the [!UICONTROL Alerts] tab in the UI provides controls for viewing the history of triggered alerts, enabling or disabling alert rules, and manually resolving alerts. See the [UI guide](./ui-guide.md) for more information on managing alerts.
 
 ## Next steps
 
-By reading this document, you have been introduced to Platform alerts and their role in the Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to manage alerts and rules in the Platform UI.
+By reading this document, you have been introduced to Platform alerts and their role in the Platform ecosystem. Refer to the process documentation linked to throughout this overview to learn how to receive and manage alerts.

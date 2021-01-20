@@ -20,7 +20,7 @@ The Adobe Experience Platform user interface allows you to view a history of rec
 
 To get started, select **[!UICONTROL Alerts]** in the left navigation.
 
-![](../images/alerts/workspace.png)
+![](../images/alerts/ui-guide/workspace.png)
 
 ## [!UICONTROL Alert history]
 
@@ -28,21 +28,21 @@ The **[!UICONTROL Alert history]** tab shows the history of received alerts for 
 
 Select a listed alert and more details appear in the right rail, including a short summary of the alert that was triggered.
 
-![](../images/alerts/history-details.png)
+![](../images/alerts/ui-guide/history-details.png)
 
 ## [!UICONTROL Alert rules]
 
 The **[!UICONTROL Alert rules]** tab lists the available rules that may trigger an alert.
 
-![](../images/alerts/rules.png)
+![](../images/alerts/ui-guide/rules.png)
 
 Select a rule from the list to view its description and its configuration parameters in the right rail, including threshold and severity.
 
-![](../images/alerts/rule-details.png)
+![](../images/alerts/ui-guide/rule-details.png)
 
 The right rail also contains a toggle for enabling or disabling the rule, depending on its current status. Once you select the toggle, the rule's status will update to [!UICONTROL enabling] or [!UICONTROL disabling], and may take a few minutes before updating again to [!UICONTROL enabled] or [!UICONTROL disabled].
 
-![](../images/alerts/enable.png)
+![](../images/alerts/ui-guide/enable.png)
 
 ## Next steps
 
