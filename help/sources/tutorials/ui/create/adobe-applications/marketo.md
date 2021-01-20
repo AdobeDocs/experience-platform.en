@@ -15,7 +15,7 @@ This tutorial provides steps for creating a [!DNL Marketo Engage] source connect
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ### Gather required credentials
 
-In order to access your [!DNL Marketo] account on [!DNL Platform], you must provide the following values:
+In order to access your [!DNL Marketo] account on Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -34,7 +34,7 @@ In order to access your [!DNL Marketo] account on [!DNL Platform], you must prov
 
 For more information on acquiring these values, refer to this [[!DNL Marketo] document](../../../../connectors/adobe-applications/marketo.md).
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Marketo] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Marketo] account to Platform.
 
 ## Connect your [!DNL Marketo] account
 
@@ -79,7 +79,7 @@ Select the dataset you wish to use and then select **[!UICONTROL Next]**.
 
 ## Map data fields to an XDM schema
 
-The [!UICONTROL Mapping] step appears, providing an interactive interface to map the [!DNL Marketo] dataset to a [!DNL Platform] dataset.
+The [!UICONTROL Mapping] step appears, providing an interactive interface to map the [!DNL Marketo] dataset to a Platform dataset.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
 
@@ -124,7 +124,7 @@ See the following documents for mapping rules for specific [!DNL Marketo] datase
 
 >[!TIP]
 >
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+>Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 ![mapping](../../../../images/tutorials/create/marketo/mapping.png)
 
@@ -140,7 +140,9 @@ The [!UICONTROL Dataflow detail] step appears, allowing you to name and give a b
 
 During this process, you can also enable **[!UICONTROL Partial ingestion]** and **[!UICONTROL Error diagnostics]**. Enabling **[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. Once **[!UICONTROL Partial ingestion]** is enabled, drag the **[!UICONTROL Error threshold %]** dial to adjust the error threshold of the batch. Alternatively, you can manually adjust the threshold by selecting the input box. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
 
-Provide values for the dataflow and select **[!UICONTROL Next]**.
+The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. It is recommended to set the initial batch ingestion at the highest error threshold to prevent the dataflow from failing.
+
+Once you have provided your dataflow details and set your error threshold to max, select **[!UICONTROL Next]**.
 
 ![dataflow-details](../../../../images/tutorials/create/marketo/dataflow-detail-max.png)
 
