@@ -20,25 +20,29 @@ In order to connect [!DNL Marketo] to Platform, you must first retrieve values f
 
 To retrieve your Munchkin ID, log in to [!DNL Marketo] and select **[!UICONTROL Admin]** from the top navigation bar.
 
-![marketo-main]()
+![home](./images/marketo/home.png)
 
 From the admin page, you can access several features of your [!DNL Marketo] instance. Select **[!UICONTROL Munchkin]** from the [!UICONTROL Integration] panel to retrieve your Munchkin ID.
 
-![admin-munchkin]()
+![admin-munchkin](./images/marketo/admin-munchkin.png)
 
 The [!UICONTROL Munchkin] page appears, with your unique Munchkin ID listed at the top of the panel. 
 
-![munchkin-Id]()
+![munchkin-Id](./images/marketo/munchkin-id.png)
 
 ### Get your client ID and client secret
 
 You can retrieve your client ID and client secret from the [!DNL Marketo] admin page. Under the integration panel, select [!UICONTROL LaunchPoint].
 
-![admin-launchpoint]()
+![admin-launchpoint](./images/marketo/admin-launchpoint.png)
 
-The [!UICONTROL Installed services] page appears. Locate the service you need to access from the list and then select **[!UICONTROL View Details]**.
+The [!UICONTROL Installed services] page contains a list of installed services available to you.
 
-![client-keys]()
+![services](./images/marketo/services.png)
+
+Locate the service you need to access from the list and then select **[!UICONTROL View Details]**.
+
+![client-keys](./images/marketo/client-keys.png)
 
 Combined with your Munchkin ID, you can use the newly retrieved client ID and client secret to connect your [!DNL Marketo] instance to Platform.
 
@@ -74,3 +78,11 @@ See the following documents for detailed information on the field mapping that o
 | New streaming data to Data Lake | < 1 minute |
 | New batch data to Data Lake | < 5 minutes |
 | New data to B2B CDP | < 15 minutes |
+
+## Connect [!DNL Marketo] to Platform
+
+The documentation below provides information on how to connect [!DNL Marketo] to Platform through the UI.
+
+### Using APIs
+
+* [Create a Marketo source connector in the UI](../../tutorials/ui/create/adobe-applications/marketo.md)
