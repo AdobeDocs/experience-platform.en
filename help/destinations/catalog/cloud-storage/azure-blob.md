@@ -31,7 +31,7 @@ If you already have a valid Blob destination, you may skip the remainder of this
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Destinations]** from the left navigation bar to access the **[!UICONTROL Destinations]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific destination you wish to work with using the search option.
 
 Under the **[!UICONTROL Cloud Storage]** category, select **[!UICONTROL Azure Blob Storage]**, followed by **[!UICONTROL Activate]**.
 
@@ -49,7 +49,7 @@ Optionally, you can attach your RSA-formatted public key to add encryption to yo
 
 ### Existing account
 
-To connect an existing account, select the Blob account you want to connect with, then select **Next** to proceed.
+To connect an existing account, select the [!DNL Blob] account you want to connect with, then select **Next** to proceed.
 
 ![Existing account](../../assets/catalog/cloud-storage/blob/existing.png)
 
