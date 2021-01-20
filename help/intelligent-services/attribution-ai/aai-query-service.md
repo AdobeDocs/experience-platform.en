@@ -73,7 +73,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     WHERE
         conversion_timestamp >= '2020-07-16'
@@ -90,7 +90,7 @@ The queries below can be used as a template for different score analysis senario
         _tenantId.your_score_output_dataset.conversionName as conversionName,
         COUNT(1) as convOnly_cnt
     FROM
-        attribution_ai_scores_luma_with_2_conversion_segments_10492
+        your_score_output_dataset
     WHERE
         _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NULL AND
         timestamp >= '2020-07-16' AND
@@ -113,7 +113,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     GROUP BY
         conversionName, DATE(conversion_timestamp)
@@ -136,7 +136,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     WHERE
         conversion_timestamp >= '2020-07-16' AND
@@ -163,7 +163,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     WHERE
         conversion_timestamp >= '2020-07-16' AND
@@ -188,7 +188,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     WHERE
         conversion_timestamp >= '2020-07-16' AND
@@ -220,7 +220,7 @@ The queries below can be used as a template for different score analysis senario
                 inline(_tenantId.your_score_output_dataset.touchpointsDetail),
                 timestamp as conversion_timestamp
          FROM
-                attribution_ai_scores_luma_with_2_conversion_segments_10492
+                your_score_output_dataset
         )
     WHERE
         conversion_timestamp >= '2020-07-16' AND
@@ -242,7 +242,7 @@ Get a path length distribution for each conversion event type:
             _tenantId.your_score_output_dataset.conversionName as conversionName,
             sum(size(_tenantId.your_score_output_dataset.touchpointsDetail)) as path_length
           FROM
-            attribution_ai_scores_luma_with_2_conversion_segments_10492
+            your_score_output_dataset
           WHERE
             _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
             timestamp >= '2020-07-16' AND
@@ -273,7 +273,7 @@ Get the distribution for the number of distinct touchpoints on a conversion path
         _tenantId.your_score_output_dataset.conversionName as conversionName,
         size(array_distinct(flatten(collect_list(_tenantId.your_score_output_dataset.touchpointsDetail.touchpointName)))) as num_dist_tp
       FROM
-        attribution_ai_scores_luma_with_2_conversion_segments_10492
+        your_score_output_dataset
       WHERE
         _tenantId.your_score_output_dataset.touchpointsDetail.touchpointName[0] IS NOT NULL AND
         timestamp >= '2020-07-16' AND
