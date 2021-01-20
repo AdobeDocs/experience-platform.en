@@ -154,3 +154,18 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 Once you have reviewed your dataflow, click **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
 ![review](../../../../images/tutorials/create/marketo/review.png)
+
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflow, see the tutorial on [monitoring dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Delete your dataflow
+
+You can delete dataflows that are no longer necessary or were incorrectly created using the **[!UICONTROL Delete]** function available in the [!UICONTROL Dataflows] workspace. For more information on how to delete dataflows, see the tutorial on [deleting dataflows in the UI](../../delete.md).
+
+## Next steps
+
+By following this tutorial, you have successfully created a dataflow to bring in [!DNL Marketo] data and gained insight on monitoring datasets. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+
+* [[!DNL Realtime Customer Profile] overview](../../../../profile/home.md)
+* [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
