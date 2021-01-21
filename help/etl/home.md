@@ -14,7 +14,7 @@ The ETL integration guide outlines general steps for creating high-performance, 
 - [[!DNL Catalog]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
 - [[!DNL Data Access]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml)
 - [[!DNL Data Ingestion]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
-- [Authentication and Authorization APIs](../tutorials/authentication.md)
+- [Authentication and Authorization for Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en)
 - [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
 
 This guide also includes sample API calls to use when designing an ETL connector, with links to documentation that outlines each [!DNL Experience Platform] service, and use of its API, in more detail. 
@@ -50,7 +50,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -88,7 +88,7 @@ Using the source of data for mapping, a list of all available datasets can be fe
 
 You can issue a single API request to view all available datasets (e.g. `GET /dataSets`), with best practice being to include query parameters that limit the size of the response. 
 
-In cases where _full_ dataset information is being requested the response payload can reach past 3GB in size, which can slow overall performance. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
+In cases where full dataset information is being requested the response payload can reach past 3GB in size, which can slow overall performance. Therefore, using query parameters to filter only the information needed will make [!DNL Catalog] queries more efficient.
 
 #### List filtering
 
@@ -158,7 +158,7 @@ The response includes three (`limit=3`) datasets showing the "name", "descriptio
 
 ### View dataset schema
 
-The "schemaRef" property of a dataset contains a URI referencing the XDM schema upon which the dataset is based. The XDM schema ("schemaRef") represents all _potential_ fields that could be used by the dataset, not necessarily the fields that _are_ being used (see "observableSchema" below). 
+The "schemaRef" property of a dataset contains a URI referencing the XDM schema upon which the dataset is based. The XDM schema ("schemaRef") represents all potential fields that could be used by the dataset, not necessarily the fields that are being used (see "observableSchema" below). 
 
 The XDM schema is the schema you use when you need to present the user with a list of all available fields that could be written to.
 
@@ -594,7 +594,7 @@ Details for creating a batch, including sample requests and responses can be fou
 
 ### Write to dataset
 
-After successfully creating a new batch, files can then be uploaded to a specific dataset. Multiple files can be posted in a batch until it is promoted. Files can be uploaded using the _Small File Upload API_; however, if your files are too large and the gateway limit is exceeded, you can use the _Large File Upload API_. Details for using both Large and Small File Upload can be found in the [Batch Ingestion overview](../ingestion/batch-ingestion/overview.md).
+After successfully creating a new batch, files can then be uploaded to a specific dataset. Multiple files can be posted in a batch until it is promoted. Files can be uploaded using the Small File Upload API; however, if your files are too large and the gateway limit is exceeded, you can use the Large File Upload API. Details for using both Large and Small File Upload can be found in the [Batch Ingestion overview](../ingestion/batch-ingestion/overview.md).
 
 **Request**
 

@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
-title: Adobe Experience Platform Privacy Service
+title: Adobe Experience Platform Privacy Service overview
 topic: overview
+description: Privacy Service allows you to facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
 ---
 
 # Adobe Experience Platform [!DNL Privacy Service] overview
@@ -34,16 +35,9 @@ The sections below provide general guidance on these important prerequisite step
 
 Depending on the nature of your business and the jurisdictions it operates under, your data operations may be subject to legal privacy regulations. These regulations often give your customers the right to request access to the data you collect from them, and the right to request the deletion of that stored data. These customer requests for their personal data are referred to as "privacy requests" throughout the documentation.
 
-The following table outlines the legal privacy regulations that [!DNL Privacy Service] manages requests for, including links to documentation for more information:
+For details on the different legal privacy regulations that [!DNL Privacy Service] manages requests for, including key terms and answers to frequently asked questions, refer to the [privacy regulations documentation](./regulations/overview.md).
 
-| Regulation | Description |
-| --- | --- |
-| CCPA (California) | The [!DNL California Consumer Privacy Act] (CCPA) enhances privacy rights and consumer protection for residents of California, United States. The CCPA provides new data privacy rights to California residents, including the right to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.<br/><br/>Links for further documentation: <ul><li>[Legal overview](https://oag.ca.gov/privacy/ccpa)</li><li>[CCPA FAQ](ccpa/faq.md)</li></ul> |
-| GDPR (European Union) | The [!DNL General Data Protection Regulation] (GDPR) introduced several new data privacy rights for members of the European Union, including the **Right to Access** and the **Right to be Forgotten**. This means that any EU citizen whose personal data has been collected by your business can request to access or delete their data at any time. <br/><br/>Links for further documentation: <ul><li>[Legal overview](https://gdpr-info.eu/)</li><li>[GDPR FAQ](gdpr/faq.md)</li><li>[GDPR terminology](gdpr/terminology.md)</li></ul>|
-| LGPD (Brazil) | The [!DNL Lei Geral de Proteção de Dados] (LGPD) aims to regulate the treatment of personal data of all individuals or natural persons in Brazil. The LGPD gives Brazil citizens the rights to access and delete their personal data, to know whether their personal data is sold or disclosed (and to whom), and the right to opt out of having their data sold to third parties.<br/><br/>Links for further documentation: <ul><li>[Legal overview](https://gdpr.eu/gdpr-vs-lgpd/)</li></ul>|
-| PDPA (Thailand) | The [!DNL Personal Data Protection Act] of Thailand (PDPA) was introduced to safeguard Thai data owners from the illegal collection, use, or disclosure of their personal data. Inspired by the European Union's GDPR, the regulation grants Thai citizens the right to request access to, or the deletion of, their stored personal data.<br/><br/>Links for further documentation: <ul><li>[Legal overview](https://www.dataprotectionreport.com/2020/02/thailand-personal-data-protection-law/)</li><li>[PDPA FAQ](pdpa-tha/faq.md)</li><li>[PDPA terminology](pdpa-tha/terminology.md)</li></ul> |
-
-If your data operations fall under the purview of any of the above regulations, review their documentation for important information such as the specific privacy rights they afford your customers, and compliance windows for honoring privacy requests. This information should be taken into account when determining how to integrate [!DNL Privacy Service] into your CRM system, and how customers should interact with your website in order to make privacy requests.
+If your data operations fall under the purview of any of the supported regulations, review their documentation for important information such as the specific privacy rights they afford your customers, and compliance windows for honoring privacy requests. This information should be taken into account when determining how to integrate [!DNL Privacy Service] into your CRM system, and how customers should interact with your website in order to make privacy requests.
 
 In addition to legal regulations, any organizational or industry standards applicable to your organization should also be considered when making these decisions.
 
@@ -68,6 +62,8 @@ Once you have determined your business' privacy needs, and decided which identit
 >The sections below provide links to documentation that cover how to make generic privacy requests in the API or UI. However, depending on the [!DNL Experience Cloud] applications you are using, the fields you must send in the request payload may be different from the examples shown in these guides. 
 >
 >As you follow along with the API or UI guides, please refer to the document on [Privacy Service and Experience Cloud applications](./experience-cloud-apps.md) for further documentation on how to format privacy requests for your particular [!DNL Experience Cloud] application(s).
+>
+>It is also important to note that privacy requests are processed asynchronously across Experience Cloud applications. Once a request is received by Privacy Service, each application can take anywhere from minutes to weeks to complete the request. The amount of time it takes to complete each request is specific to the application you are working with, and the amount of data that needs to be processed.
 
 #### Using the API
 

@@ -9,6 +9,7 @@ user-guide-description: Use machine learning to develop, train, and score models
 # Data Science Workspace {#data-science-workspace}
 
 * [Data Science Workspace overview](home.md)
+* [Data Science Workspace access and features](access-features-dsw.md)
 * [Data Science Workspace walkthrough](walkthrough.md)
 * JupyterLab notebooks {#jupyterlab}
   * [JupyterLab user guide](jupyterlab/overview.md)
@@ -39,6 +40,8 @@ user-guide-description: Use machine learning to develop, train, and score models
   * [Model Authoring SDK](authoring/sdk.md)
   * [Create a Feature Pipeline](authoring/feature-pipeline.md)
   * [Platform SDK guide (Python)](authoring/platform-sdk.md)
+  * [Python data access](authoring/python.md)
+  * [Spark data access](authoring/spark.md)
 * Model and recipe tutorials {#models-recipes}
   * [Create and publish a machine learning model walkthrough](models-recipes/create-publish-model.md)
   * [Create the Retail Sales schema and dataset](models-recipes/create-retails-sales-dataset.md)

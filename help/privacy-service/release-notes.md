@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service release notes
 topic: release notes
+description: The latest release notes for Adobe Experience Platform Privacy Service.
 ---
 
 # [!DNL Privacy Service] release notes
@@ -46,7 +47,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] UI enhancements:
     * Separate job tracking pages for GDPR and CCPA regulations.
-    * New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.
+    * New *Regulation Type* dropdown to switch between tracking data for GDPR and CCPA.
 
 ## July 25, 2019
 
