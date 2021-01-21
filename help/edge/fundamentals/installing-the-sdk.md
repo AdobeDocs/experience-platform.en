@@ -10,19 +10,17 @@ keywords: web sdk installation;installing web sdk;internet explorer;promise;
 
 There are three supported ways to use Adobe Experience Platform Web SDK:
 
-1. The preferred way to use Adobe Experience Platform Web SDK is via [Adobe Experience Platform Launch](http://launch.adobe.com/). Search for `AEP Web SDK` in the extensions catalog, and install then configure the extension.
-1. Adobe Experience Platform Web SDK is also available on a CDN for you to use. You can reference this file or download it and host it on your own infrastructure.
-1. Use the NPM library which exports ES6 and ES5 modules.
+1. The preferred way to use Adobe Experience Platform Web SDK is via [Adobe Experience Platform Launch](https://launch.adobe.com/).
+1. Adobe Experience Platform Web SDK is also available on a content delivery network (CDN) for you to use.
+1. Use the NPM library which exports EcmaScript 5 and EcmaScript 2015 (ES6) modules.
 
+## Option 1: Installing the Adobe Experience Platform Launch extension
 
-
-## Option 1: Installing the Launch Extension
-
-For documentation on the AEP Web SDK Launch Extension see the [launch documentation](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+For documentation on the Adobe Experience Platform Web SDK Launch extension, see the [launch documentation](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
 
 ## Option 2: Installing the Prebuilt Standalone Version
 
-The prebuilt version is available on CDN. You can reference this file directly on your page, or download and host it on your own infrastructure. It is available in a minified and non-minified version. The non-minified version is helpful for debugging purposes.
+The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
 URL structure: https://cdn1.adoberesources.net/alloy/[VERSION]/alloy.min.js OR alloy.js for the non-minified version.
 
@@ -105,40 +103,40 @@ To load the file synchronously instead of asynchronously, remove the `async` att
 <script src="https://cdn1.adoberesources.net/alloy/2.3.0/alloy.min.js"></script>
 ```
 
-## Option 3: Using the NPM version
+## Option 3: Using the NPM package
 
-Adobe Experience Platform Web SDK is also available as an NPM library. NPM is the package manager for Node JavaScript. Installing the NPM version allows you to control the build process for the JavaScript. The NPM version exposes CommonJS (CJS) modules or EcmaScript version 6 (ES6) modules meant to be run in the browser.
+Adobe Experience Platform Web SDK is also available as an NPM package. [NPM](https://www.npmjs.com) is the package manager for JavaScript. Installing the NPM package allows you have control of the build process for the Adobe Experience Platform Web SDK JavaScript. The NPM package exposes EcmaScript version 5 modules or EcmaScript version 2015 (ES6) modules meant to be run in the browser.
 
 ```bash
 npm install @adobe/alloy
 ```
 
-AEP Web SDK is designed to use a piece of javascript code that is included statically on the page as shown [above](#adding-the-code). This code defines a function that is used to execute SDK commands. Once the base code is run, you can call SDK commands. Commands are queued until the code for the library is loaded. This allows the library to be loaded asynchronously. When using the NPM version you can still include the base code statically on the page in a script tag, but the NPM library also exposes the base code as a function. The `baseCode` function accepts one parameter, an array of strings which are the name(s) of the AEP Web SDK instances to create as global variables. The `core` function processes the commands called, and replaces the instances with versions that do not queue the commands, but execute them immediately.
+The NPM package of the Adobe Experience Platform Web SDK exposes a `createInstance` function. This function is used to create an instance. The instanceName option passed to the function controls the prefix used in logging. Below are examples of using the package.
 
-### Using the library as an ES6 module
+### Using the package as an ECMAScript 2015 (ES6) module
 
 ```javascript
-import { baseCode, core } from "@adobe/alloy";
-baseCode(["alloy"]);   // creates the baseCode window.alloy function
-window.alloy("config", { ... });
-window.alloy("sendEvent", { ... });
-
-core(); // process the alloy calls
+import { createInstance } from "@adobe/alloy";
+const alloy = createInstance({ instanceName: "alloy" });
+alloy("config", { ... });
+alloy("sendEvent", { ... });
 ```
 
-### Using the library as a CJS module
+### Using the package as a ECMAScript 5 module
 
 ```javascript
 var alloyLibrary = require("@adobe/alloy");
-alloyLibrary.baseCode(["alloy"]);   // creates the baseCode window.alloy function
-window.alloy("config", { ... });
-window.alloy("sendEvent", { ... });
-
-alloyLibrary.core(); // process the alloy calls
+var alloy = alloyLibrary.createInstance({ instanceName: "alloy" });
+alloy("config", { ... });
+alloy("sendEvent", { ... });
 ```
 
 ### Supporting Internet Explorer {#support-internet-explore}
 
-This SDK makes use of promises, which is a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
+The Adobe Experience Platform SDK makes use of promises, which is a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
 One library you could use to polyfill promise is promise-polyfill. See the [promise-polyfill documentation](https://www.npmjs.com/package/promise-polyfill) for more information on how to install with NPM.
+
+>[!NOTE]
+>
+>If you choose to load a different Promise implementation, be sure it supports `Promise.prototype.finally`.
