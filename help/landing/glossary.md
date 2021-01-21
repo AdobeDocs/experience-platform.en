@@ -158,7 +158,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Dataset labels**: Data usage labels can be added to datasets. All fields within that dataset will inherit the dataset's labels.
 
-**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Platform and Adobe applications to generate intelligent insights and predictions, allowing you to greatly enhance end-user digital experiences.
+**Data Science Workspace**: [!DNL Data Science Workspace] within Experience Platform enables customers to create machine-learning models utilizing data across Platform and Adobe applications to create intelligent segments, generate insights, and provide predictions, allowing you to greatly enhance end-user digital experiences.
 
 **Data source**: A data source is a user designated origin of data. Examples of a data source are a mobile app, profile and/or experience events, website profile events, or a CRM.
 
@@ -294,7 +294,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Input feature**: An input feature is specified in feature mapping and is used by a machine-learning model to make predictions.
 
-**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform to run and operate.
+**[!DNL Intelligent Services]**: [!DNL Intelligent Services] such as [!DNL Attribution AI] and [!DNL Customer AI] are machine-learning, artificial-intelligence-based models that require Experience Platform (or applications built on top of Platform such as Real-time Customer Data Platform) to run and operate.
 
 **Interest-based targeting or personalization**: Interest-based targeting, also known as personalization, occurs if the following three conditions are met: 
 
@@ -308,7 +308,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Platform UI.
 
-**[!DNL Jupyter Notebook]**: An open-source web application that enables users to create and share documents that contain live code, equations, visualizations, and narrative text.
+**[!DNL Jupyter Notebook]**: Integrated with JupyterLab, Jupyter Notebooks enable you to perform data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and more on your Experience Platform data in a variety of languages such as Python, Scala, and PySpark.
 
 ## K
 
@@ -326,7 +326,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Machine learning (ML)**: Machine learning is the field of study that enables computers to learn without being explicitly programmed.
 
-**Machine-learning model**: A machine-learning model is an instance of a machine-learning recipe that is trained using historical data and configurations to solve for a business use case. In Adobe [!DNL Data Science Workspace], machine-learning models are called recipes.
+**Machine-learning model**: A machine-learning model is an instance of a machine-learning recipe that is trained using historical data and configurations to solve for a business use case. In Adobe Experience Platform Data Science Workspace, machine-learning models are called recipes.
 
 **Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination. 
 
