@@ -3,14 +3,18 @@ keywords: Experience Platform;home;popular topics;Marketo Engage;marketo engage;
 solution: Experience Platform
 title: Marketo Engage connector
 topic: overview
-description: This document provides an overview of Marketo Engage.
+description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 ---
 
 # Marketo Engage connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-Experience Platform provides support for ingesting [!DNL Marketo Engage] data into Adobe Experience Platform.
+[!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
+
+With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Marketo] to Platform and keep this data up-to-date using Platform-connected applications.
+
+This document provides an overview of the [!DNL Marketo] source connector, including information about its authentication, mapping, and data latency.
 
 ## Authenticate your [!DNL Marketo] connector
 
@@ -56,7 +60,7 @@ To learn more about XDM, please see the [XDM System overview](../../../xdm/home.
 
 ## Field mapping from [!DNL Marketo] to XDM
 
-When a source connection is established for bringing [!DNL Marketo] data into Experience Platform using the Platform user interface, data fields are automatically mapped and ingested into [!DNL Real-time Customer Profile] within minutes. For instructions on creating a source connection with [!DNL Marketo] using the Platform UI, see the [Marketo connector tutorial](../../tutorials/ui/create/adobe-applications/marketo.md).
+When a source connection is established between [!DNL Marketo] and Platform, the [!DNL Marketo] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into [!DNL Real-time Customer Profile].
 
 See the following documents for detailed information on the field mapping that occurs between [!DNL Marketo] datasets and Platform:
 
@@ -83,6 +87,6 @@ See the following documents for detailed information on the field mapping that o
 
 The documentation below provides information on how to connect [!DNL Marketo] to Platform through the UI.
 
-### Using APIs
+### Using the UI
 
 * [Create a Marketo source connector in the UI](../../tutorials/ui/create/adobe-applications/marketo.md)
