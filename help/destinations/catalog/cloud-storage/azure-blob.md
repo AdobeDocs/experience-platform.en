@@ -25,11 +25,11 @@ If you already have a valid Blob destination, you may skip the remainder of this
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
--   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
+-   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, please read the cloud storage section in the tutorial on [activating destinations](../../ui/activate-destinations.md#esp-and-cloud-storage)
 
 ## Connect your Blob account {#connect-destination}
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Destinations]** from the left navigation bar to access the **[!UICONTROL Destinations]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
+Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Destinations]** from the left navigation bar to access the **[!UICONTROL Destinations]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of destinations for which you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific destination you wish to work with using the search option.
 
@@ -41,7 +41,7 @@ The **[!UICONTROL Connect to Azure Blob Storage]** page appears. On this page, y
 
 ### New account {#new-account}
 
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection string. The connection string required to access data in your Blob storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection string. The connection string required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
 
 Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Note that this public key **must** be written as a Base64 encoded string. 
 
