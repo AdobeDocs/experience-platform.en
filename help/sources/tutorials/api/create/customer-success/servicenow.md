@@ -21,8 +21,8 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to a [!DNL ServiceNow] server using the [!DNL Flow Service] API.
 
@@ -44,96 +44,23 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
+* `Content-Type: application/json`
 
-## Look up connection specifications
+## Create a connection
 
-In order to create a [!DNL ServiceNow] connection, a set of [!DNL ServiceNow] connection specifications must exist within [!DNL Flow Service]. The first step in connecting [!DNL Platform] to [!DNL ServiceNow] is to retrieve these specifications.
-
-**API format**
-
-Each available source has its own unique set of connection specifications for describing connector properties such as authentication requirements. Sending a GET request to the `/connectionSpecs` endpoint will return connection specifications for all available sources. You can also include the query `property=name=="service-now"` to obtain information specifically for [!DNL ServiceNow].
-
-```http
-GET /connectionSpecs
-GET /connectionSpecs?property=name=="service-now"
-```
-
-**Request**
-
-The following request retrieves the connection specifications for [!DNL ServiceNow].
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs?property=name=="service-now"' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the connection specifications for [!DNL ServiceNow], including its unique identifier (`id`). This ID is required in the next step to create a base connection.
-
-```json
-{
-    "items": [
-        {
-            "id": "eb13cb25-47ab-407f-ba89-c0125281c563",
-            "name": "service-now",
-            "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-            "version": "1.0",
-            "authSpec": [
-                {
-                    "name": "Basic Authentication",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines auth params required for connecting to ServiceNow server",
-                        "properties": {
-                            "endpoint": {
-                                "type": "string",
-                                "description": "The endpoint of the ServiceNow server (http://<instance>.service-now.com)."
-                            },
-                            "username": {
-                                "type": "string",
-                                "description": "The user name used to connect to the ServiceNow server for authentication."
-                            },
-                            "password": {
-                                "type": "string",
-                                "description": "password to connect to the ServiceNow server for authentication.",
-                                "format": "password"
-                            }
-                        },
-                        "required": [
-                            "endpoint",
-                            "username",
-                            "password"
-                        ]
-                    }
-                }
-            ],
-        }
-    ]
-}
-```
-
-## Create a base connection
-
-A base connection specifies a source and contains your credentials for that source. Only one base connection is required per [!DNL ServiceNow] account as it can be used to create multiple source connectors to bring in different data.
+A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL ServiceNow] account as it can be used to create multiple source connectors to bring in different data.
 
 **API format**
 
@@ -142,6 +69,8 @@ POST /connections
 ```
 
 **Request**
+
+In order to create a [!DNL ServiceNow] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL ServiceNow] is `eb13cb25-47ab-407f-ba89-c0125281c563`.
 
 ```shell
 curl -X POST \
@@ -152,8 +81,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Base connection for service-now",
-        "description": "Base connection for service-now,
+        "name": "Connection for service-now",
+        "description": "Connection for service-now,
         "auth": {
             "specName": "Basic Authentication",
             "params": {
@@ -178,7 +107,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required to explore your CRM in the next step.
+A successful response returns the newly created connection, including its unique identifier (`id`). This ID is required to explore your CRM system in the next step.
 
 ```json
 {
@@ -189,4 +118,4 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created a [!DNL ServiceNow] base connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this base connection ID in the next tutorial as you learn how to [explore customer success systems using the Flow Service API](../../explore/customer-success.md).
+By following this tutorial, you have created a [!DNL ServiceNow] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore customer success systems using the Flow Service API](../../explore/customer-success.md).

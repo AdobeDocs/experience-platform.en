@@ -27,6 +27,7 @@ In order to explore a third party cloud storage using [!DNL Platform] APIs, you 
 * [Azure Blob](../create/cloud-storage/blob.md)
 * [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
 * [Azure File Storage](../create/cloud-storage/azure-file-storage.md)
+* [FTP](../create/cloud-storage/ftp.md)
 * [Google Cloud Store](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
 * [SFTP](../create/cloud-storage/sftp.md)
@@ -37,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

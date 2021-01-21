@@ -1,22 +1,22 @@
 ---
 keywords: streaming;
-title: The HTTP destination is a Real-time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+title: The HTTP destination is an Adobe Experience Platform destination that helps you send profile data to third-party HTTP endpoints.
+seo-title: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
+description: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
+seo-description: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
 ---
 
 # (Alpha) [!DNL HTTP] Destination 
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Real-time CDP is currently in alpha. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
-The [!DNL HTTP] destination is an [!DNL Real-time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
+The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
-To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [[!DNL Real-time Customer Data Platform]](#connect-destination).
+To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Use Cases {#use-cases}
 
@@ -62,7 +62,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 
 ![HTTP authentication](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
+**[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
 
 Click **[!UICONTROL Create destination]**.
 

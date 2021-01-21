@@ -11,7 +11,7 @@ seo-description: Create a real-time outbound connection to your Amazon Kinesis s
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Kinesis] destination in Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
+>The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -21,7 +21,7 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
 * To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
-* To connect to [!DNL Amazon Kinesis] using the Real-time CDP user interface, see the sections below.
+* To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
@@ -44,7 +44,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### In the Authentication step {#authentication-step}
 
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
@@ -53,7 +53,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream.
+* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
 
 ![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -61,7 +61,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 >[!IMPORTANT]
 >
->Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 

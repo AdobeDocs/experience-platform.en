@@ -2,7 +2,7 @@
 product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
-breadcrumb-title: Data Model (XDM) Guide
+breadcrumb-title: Experience Data Model (XDM) Guide
 user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
 ---
 
@@ -15,7 +15,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Schema use cases {#use-cases}
-    * [Privacy Consent mixin](schema/privacy-consent.md)
+    * [Consents & Preferences data type](schema/privacy-consent.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -33,6 +33,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Data types {#data-types}
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
+    * [Consents & Preferences](./data-types/consents.md)
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
@@ -48,15 +49,35 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [POI details](./data-types/poi-details.md)
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
+* [!UICONTROL Schemas] UI {#ui}
+  * [Overview](./ui/overview.md)
+  * [Explore XDM resources](./ui/explore.md)
+  * Create and edit resources {#resources}
+    * [Schemas](./ui/resources/schemas.md)
+    * [Classes](./ui/resources/classes.md)
+    * [Mixins](./ui/resources/mixins.md)
+    * [Data types](./ui/resources/data-types.md)
+  * Define fields {#fields}
+    * [Overview](./ui/fields/overview.md)
+    * [Required fields](./ui/fields/required.md)
+    * [Object fields](./ui/fields/object.md)
+    * [Array fields](./ui/fields/array.md)
+    * [Enum fields](./ui/fields/enum.md)
+    * [Identity fields](./ui/fields/identity.md)
+    * [Relationship fields](./ui/fields/relationship.md)
 * Schema Registry API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [Schemas](api/schemas.md)
+  * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
   * [Mixins](api/mixins.md)
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
+  * [Export/Import](api/export-import.md)
+  * [Sample data](api/sample-data.md)
+  * [Audit log](api/audit-log.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}

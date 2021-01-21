@@ -14,7 +14,7 @@ Browse the catalog to determine which destination platforms are best for your ad
 
 ## Destination categories
 
-You can activate your data to different destination categories in the Real-time Customer Data Platform. The links below provide more information on each destination category:
+You can activate your data to different destination categories in Adobe Experience Platform. The links below provide more information on each destination category:
 
 - [Adobe solutions](./adobe/overview.md)
 - [Advertising destinations](./advertising/overview.md)
