@@ -131,10 +131,6 @@ See the following documents for mapping rules for specific [!DNL Marketo] datase
 * [Opportunity person relations](../../../../connectors/adobe-applications/marketo-mapping/opportunity-person-relations.md)
 * [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
 
->[!TIP]
->
->Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
-
 ![mapping](../../../../images/tutorials/create/marketo/mapping.png)
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
