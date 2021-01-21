@@ -9,7 +9,7 @@ description: This tutorial provides steps for creating a Marketo Engage source c
 
 # Create a [!DNL Marketo Engage] source connector in the UI
 
-This tutorial provides steps for creating a [!DNL Marketo Engage] source connector in the UI to bring consumer data into Adobe Experience Platform.
+This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring consumer data into Adobe Experience Platform.
 
 ## Getting started
 
@@ -64,16 +64,25 @@ To create a dataflow with an existing account, select **[!UICONTROL Existing acc
 
 After creating your [!DNL Marketo] account, the [!UICONTROL Add data] step appears, providing an interactive interface for you to explore [!DNL Marketo] datasets.
 
-* The left half of the interface is a directory browser, displaying the list of [!DNL Marketo] datasets available to use.
-* The right half of the interface lets you preview up to 100 rows of data from a compatible file.
+The left half of the interface is a directory browser, displaying the 10 [!DNL Marketo] datasets. A fully-functioning [!DNL Marketo] source connection requires the ingestion of the following nine datasets:
 
-You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the dataset you intend to use.
+* [Activities](../../../../connectors/adobe-applications/marketo-mapping/activities.md)
+* [Campaigns](../../../../connectors/adobe-applications/marketo-mapping/campaigns.md)
+* [Campaign memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
+* [Companies](../../../../connectors/adobe-applications/marketo-mapping/companies.md)
+* [Marketing lists](../../../../connectors/adobe-applications/marketo-mapping/marketing-lists.md)
+* [Marketing list memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
+* [Opportunities](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
+* [Opportunity person relations](../../../../connectors/adobe-applications/marketo-mapping/opportunity-person-relations.md)
+* [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
+
+If you are also using [!DNL Marketo's] account-based marketing (ABM) feature, then you must also create a 10th dataflow to ingest the [Named Accounts](../../../../connectors/adobe-applications/marketo-mapping/named-accounts.md) dataset.
 
 >[!NOTE]
 >
->The search dataset option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
+>For the purposes of brevity, the following tutorial uses [!UICONTROL Named Acccounts] as an example, but the steps outlined below apply to any of the 10 [!DNL Marketo] datasets.
 
-Select the dataset you wish to use and then select **[!UICONTROL Next]**.
+Select the dataset you wish to first ingest and then select **[!UICONTROL Next]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
