@@ -69,39 +69,25 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
 #### Email hashing requirements {#hashing-requirements}
 
-<!--
-
->[!IMPORTANT]
->
-> When using mobile device IDs as identifiers, an AppId must be provided in the activation flow. For more information, see step 6 in the [Activate segments](#activate-segments) section of this page.
-
--->
-
 You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
 * [[!DNL Customer Match] with email address, address, or user ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id)
 * [[!DNL Customer Match] considerations](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_considerations)
-
-<!--
-
-Links to be added when activation based on phone number and device IDs becomes available.
-
 * [Customer Match with phone number](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_phone_number)
 * [Customer Match with mobile device IDs](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_mobile_device_ids)
 
--->
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](../../../ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](../../../ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
 
-Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+<!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
-![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
+![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
 ## Connect to destination {#connect-destination}
 
@@ -142,6 +128,22 @@ Your destination is now created. You can select **[!UICONTROL Save & Exit]** if 
 
 ## Activate segments to [!DNL Google Customer Match] {#activate-segments}
 
+For instructions on how to activate segments to [!DNL Google Customer Match], see [Activate Data to Destinations](../../ui/activate-destinations.md). 
+
+
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] segments to [!DNL Google Customer Match].
+
+![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
+
+For details on how to find the [!DNL App ID], see the [official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+
+
+
+
+
+
+
+<!-- 
 To activate segments to [!DNL Google Customer Match], follow the steps below: 
 
 In **[!UICONTROL Destinations > Browse]**, select the [!DNL Google Customer Match] destination where you want to activate your segments.
@@ -180,7 +182,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
 
-![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png)
+![confirm-selection](../../assets/catalog/advertising/google-customer-match/review.png) -->
 
 ## Verify that segment activation was successful {#verify-activation}
 

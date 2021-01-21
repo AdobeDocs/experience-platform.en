@@ -14,21 +14,21 @@ Activate profiles for your [!DNL Facebook] campaigns for audience targeting, per
 
 You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
 
-![Facebook destination in the Real-time CDP UI](../../assets/catalog/social/facebook/catalog.png)
+![Facebook destination in the Adobe Experience Platform UI](../../assets/catalog/social/facebook/catalog.png)
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Real-time Customer Data Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL Facebook] destination, here are two sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
 ### Use Case #1
 
-An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Real-time CDP, build segments from their own offline data, and send these segments to the [!DNL Facebook] social platform, optimizing their advertising spending.
+An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL Facebook] social platform, optimizing their advertising spending.
 
 ### Use Case #2
 
 An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses. 
 
-To target them across social media, they can onboard the customer data from their CRM into Real-time CDP, using the email addresses as identifiers.
+To target them across social media, they can onboard the customer data from their CRM into Adobe Experience Platform, using the email addresses as identifiers.
 
 Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
 
@@ -52,7 +52,7 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 - The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
     >[!IMPORTANT]
     >
-    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Real-time CDP] integration.
+    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
 - Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
 
 ### ID matching requirements {#id-matching-requirements}
@@ -99,7 +99,11 @@ To connect to the [!DNL Facebook] destination, see [Social network destinations 
 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](../../ui/activate-destinations.md). 
+For instructions on how to activate segments to [!DNL Facebook], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+
+In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending segments to [!DNL Facebook Custom Audiences].
+
+![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
 ## Exported data {#exported-data}
 
@@ -107,4 +111,4 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->The integration between Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.

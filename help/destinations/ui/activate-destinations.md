@@ -3,13 +3,13 @@ keywords: activate destination;activate destinations;activate data
 title: Activate profiles and segments to a destination
 type: Tutorial
 seo-title: Activate profiles and segments to a destination
-description: Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
-seo-description: Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+seo-description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 ---
 
 # Activate profiles and segments to a destination
 
-Activate the data you have in Real-time Customer Data Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -23,7 +23,7 @@ The steps in the activation workflow vary slightly between destination types. Th
 
 Applies to: All destinations
 
-In the Real-time CDP user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+In the Adobe Experience Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
 
 ![browse to destination](../assets/ui/activate-destinations/connect.png)
 
@@ -51,15 +51,7 @@ Applies to: social destinations and Google Customer Match advertising destinatio
 
 ![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
 
-For social destinations, you can select source attributes or identity namespaces to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema.
-
-If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
-
-![Email address as identity](../assets/ui/activate-destinations/email-as-identity.gif)
-
-<!-- If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
-
-![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif) -->
+For social destinations, you must select source attributes or identity namespaces to map as target identities in the destination.
 
 #### Example: activating audience data in [!DNL Facebook] {#example-facebook}
 
@@ -73,14 +65,14 @@ Selecting source fields:
 * Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
 * Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
 * Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
-* Selec the `Custom` namespace as source identity if your data consists of other type of identifiers.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
 
 Selecting target fields:
 
 * Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
-* Selec the `Extern_ID` namespace as target identity when your source namespace is a custom one.
+* Select the `Extern_ID` namespace as target identity when your source namespace is a custom one.
 
 ![Identity mapping](../assets/ui/activate-destinations/identity-mapping.png)
 
@@ -89,6 +81,7 @@ Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon ac
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
+&nbsp;
 
 #### Example: activating audience data in [!DNL Google Customer Match] {#example-facebook}
 
@@ -102,14 +95,14 @@ Selecting source fields:
 * Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/../advertising/google-customer-match.md).
 * Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
 * Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
-* Selec the `Custom` namespace as source identity if your data consists of other type of identifiers.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
 
 Selecting target fields:
 
 * Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
-* Selec the `User_ID` namespace as target identity when your source namespace is a custom one.
+* Select the `User_ID` namespace as target identity when your source namespace is a custom one.
 
 ![Identity mapping](../assets/ui/activate-destinations/identity-mapping-gcm.png)
 
@@ -188,7 +181,13 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-![choose data origin](../assets/ui/activate-destinations/choose-data-origin.png) 
+![Facebook Origin of Audience](../assets/catalog/social/facebook/facebook-origin-audience.png)
+
+>[!IMPORTANT]
+>
+>For Google Customer Match, you must provide the [!UICONTROL App ID] in this step, when activating [!DNL IDFA] or [!DNL GAID] segments.
+
+![enter app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 ### **[!UICONTROL Scheduling]** step {#scheduling}
 
@@ -208,7 +207,7 @@ On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new fie
 
 >[!NOTE] 
 >
-> Real-time CDP prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
 * If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
@@ -226,7 +225,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >- The fields are used in the segment definition.
 >- The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 
@@ -238,7 +237,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Real-time CDP checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
@@ -248,7 +247,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Edit activation {#edit-activation}
 
-Follow the steps below to edit existing activation flows in Real-time CDP: 
+Follow the steps below to edit existing activation flows in Adobe Experience Platform: 
 
 1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
@@ -257,7 +256,7 @@ Follow the steps below to edit existing activation flows in Real-time CDP:
 
 ### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
-For email marketing destinations and cloud storage destinations, Real-time CDP creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Note that you can edit the file format. For more information, go to the [Configure](#configure) step for cloud storage destinations and email marketing destinations. 
@@ -282,7 +281,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->The integration between Real-time CDP and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
 
 ## Disable activation {#disable-activation}
 
