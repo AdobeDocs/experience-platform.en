@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Campaign memberships mapping;campaign memberships mapping
 solution: Experience Platform
-title: Campaign memberships mapping fields
+title: Mapping Marketo campaign memberships fields to XDM
 topic: overview
 description: The table below contains the mappings between the Marketo Campaign memberships dataset and their corresponding XDM fields.
 ---
 
-# Campaign memberships mapping fields
+# Mapping Marketo campaign memberships fields to XDM
 
-The table below contains the mappings between the [!DNL Marketo] Campaign memberships datasets and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] Campaign memberships datasets and their corresponding Experience Data Model (XDM) fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
@@ -40,3 +40,5 @@ The table below contains the mappings between the [!DNL Marketo] Campaign member
 | Success | campaignMemberComponents.hasReachedSuccess |
 | Status | campaignMemberComponents.memberStatus |
 | Status Reason | campaignMemberComponents.memberStatusReason |
+
+## Next steps
