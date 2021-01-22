@@ -49,3 +49,7 @@ The table below contains the mappings between the [!DNL Marketo] named accounts 
 | `AccountParent-systemID` | `accountComponents.sourceAccountParentID.systemID` |
 | `AccountParent-ID` | `accountComponents.sourceAccountParentID.ID` |
 | `AccountParent-key` | `accountComponents.sourceAccountParentID.key` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] named accounts dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] named accounts mapping set.

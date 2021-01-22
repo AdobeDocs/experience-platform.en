@@ -31,3 +31,7 @@ The table below contains the mappings between the fields in the [!DNL Marketo] a
 | `visitWebPage.referrerURL` | `web.webReferrer.URL`|
 | `visitWebPage.webPageURL` | `web.webPageDetails._marketo.URL` |
 | `Person-key` | `personID` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] activities dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] activities mapping set.

@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Campaigns;campaigns;Campaigns mapping;campaigns mapping
+keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;marketo campaigns
 solution: Experience Platform
 title: Mapping Marketo campaigns fields to XDM
 topic: overview
@@ -23,3 +23,7 @@ The table below contains the mappings between the [!DNL Marketo] campaigns datas
 | `Campaign-key` | `campaignComponents.sourceCampaignID.key` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] campaigns dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] campaigns mapping set.

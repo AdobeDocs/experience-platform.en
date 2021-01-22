@@ -36,3 +36,7 @@ The table below contains the mappings between the [!DNL Marketo] opportunity per
 | `Person-ID` | `opportunityPersonComponents.sourcePersonID.ID` |
 | `Person-key` | `opportunityPersonComponents.sourcePersonID.key` |
 | `role` | `opportunityPersonComponents.personRole` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] opportunity person relations dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] opportunity person relations mapping set.

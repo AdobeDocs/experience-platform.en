@@ -49,3 +49,7 @@ The tables below contains the mappings between the [!DNL Marketo] opportunities 
 | `Opportunity-systemID` | `opportunityComponents.sourceOpportunityID.systemID` |
 | `Opportunity-ID` | `opportunityComponents.sourceOpportunityID.ID` |
 | `Opportunity-key` | `opportunityComponents.sourceOpportunityID.key` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] opportunities dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] opportunities mapping set.

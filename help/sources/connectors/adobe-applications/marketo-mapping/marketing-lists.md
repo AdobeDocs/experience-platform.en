@@ -20,3 +20,7 @@ The table below contains the mappings between the fields in the [!DNL Marketo] m
 | `MarketingList-key` | `marketingListComponents.sourceMarketingListID.key` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] marketing lists dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] marketing lists mapping set.

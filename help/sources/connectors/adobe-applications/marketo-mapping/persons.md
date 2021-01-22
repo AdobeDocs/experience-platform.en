@@ -86,3 +86,7 @@ The table below contains the mappings between the [!DNL Marketo] persons dataset
 | `Person-key` | `personComponents.sourcePersonID.key` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] persons dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] persons mapping set.

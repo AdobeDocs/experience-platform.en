@@ -50,3 +50,7 @@ The table below contains the mappings between the [!DNL Marketo] compaigns datas
 | `External-Account-systemID` | `accountComponents.sourceExternalID.systemID` |
 | `External-Account-ID` | `accountComponents.sourceExternalID.ID` |
 | `External-Account-key` | `accountComponents.sourceExternalID.key` |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] companies dataset and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] companies mapping set.
