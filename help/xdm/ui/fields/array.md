@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;array;field;
 solution: Experience Platform
-title: Define array fields in the UI
+title: Define Array Fields in the UI
 description: Learn how to define an array field in the Experience Platform user interface.
 topic: user guide
 ---

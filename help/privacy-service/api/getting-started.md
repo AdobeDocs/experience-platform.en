@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service API developer guide
+title: Privacy Service API Developer Guide
 description: Use the RESTful API to manage the personal data of your data subjects across Adobe Experience Cloud applications
 topic: developer guide
 ---

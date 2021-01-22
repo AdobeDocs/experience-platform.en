@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
-title: Core data usage labels
+title: Core Data Usage Labels
 topic: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 ---

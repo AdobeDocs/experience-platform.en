@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
-title: Manage data usage labels in the UI
+title: Manage Data Usage Labels in the UI
 topic: labels
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 ---

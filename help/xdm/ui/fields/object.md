@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;object;field;
 solution: Experience Platform
-title: Define object fields in the UI
+title: Define Object Fields in the UI
 description: Learn how to define an object-type field in the Experience Platform user interface.
 topic: user guide
 ---

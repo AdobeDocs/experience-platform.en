@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
-title: Adobe Experience Platform Privacy Service overview
+title: Adobe Experience Platform Privacy Service Overview
 topic: overview
 description: Privacy Service allows you to facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
 ---

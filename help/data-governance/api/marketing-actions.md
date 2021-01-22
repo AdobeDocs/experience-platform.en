@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;marketing actions api;API-based enforcement;data governance
 solution: Experience Platform
-title: Marketing actions endpoint
+title: Marketing Actions API Endpoint
 topic: developer guide
 description: A marketing action, in the context of the Adobe Experience Platform Data Governance, is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 ---
 
-# Marketing actions endpoint
+# Marketing actions API endpoint
 
 A marketing action, in the context of the Adobe Experience Platform [!DNL Data Governance], is an action that an [!DNL Experience Platform] data consumer takes, for which there is a need to check for violations of data usage policies.
 

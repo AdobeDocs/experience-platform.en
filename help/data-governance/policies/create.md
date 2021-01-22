@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
-title: Create a data usage policy in the API
+title: Create a Data Usage Policy in the API
 topic: policies
 type: Tutorial
 description: The Policy Service API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels. This document provides a step-by-step tutorial for creating a policy using the Policy Service API.

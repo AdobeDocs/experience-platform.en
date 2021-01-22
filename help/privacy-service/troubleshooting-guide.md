@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service troubleshooting guide
+title: Privacy Service Troubleshooting Guide
 topic: troubleshooting
 description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 ---
