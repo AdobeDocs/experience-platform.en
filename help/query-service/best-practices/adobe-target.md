@@ -14,11 +14,13 @@ In Experience Platform, the friendly name for the dataset is "Adobe Target Exper
 
 ## High-level partial XDM field mapping
 
-The following table shows what Target 
+The following table shows the Target fields that map to their corresponding XDM fields.
 
-The use of `[ ]` denotes an array 
+>[!NOTE]
+>
+> The use of `[ ]` within the XDM field denotes an array.
 
-| Name | XDM Field | Notes |
+| Name | XDM field | Notes |
 | ---- | --------- | ----- |
 | mboxName | `_experience.target.mboxname` | |
 | Activity ID | `_experience.target.activities.activityID` | |

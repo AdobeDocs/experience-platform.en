@@ -104,7 +104,7 @@ LIMIT 1
 
 ## Quotes
 
-Single quotes, double quotes, and back quotes in queries have different usages within Query Service queries.
+Single quotes, double quotes, and back quotes have different usages within Query Service queries.
 
 ### Single quotes
 
@@ -188,7 +188,7 @@ After connecting to Query Service, you can see all your available tables on Plat
 
 ### Standard table view
 
-The `\d` command shows the standard PostgreSQL view for listing tables. An example of this command's usage can be seen below:
+The `\d` command shows the standard PostgreSQL view for listing tables. An example of this command's output can be seen below:
 
 ```sql
              List of relations
@@ -201,7 +201,7 @@ The `\d` command shows the standard PostgreSQL view for listing tables. An examp
 
 ### Detailed table view
 
-The `SHOW TABLES` command is a custom command that provides more detailed information about the tables. It also includes the name and ID of the dataset. An example of this command's usage can be seen below:
+The `SHOW TABLES` command is a custom command that provides more detailed information about the tables. An example of this command's output can be seen below:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -238,7 +238,7 @@ The following example shows the schema information for the `luma_midvalues` tabl
  search            | search                      |           |          | 
 ```
 
-Additionally, you can get further information about the schema's column by appending the name of the column to the table name. This would be written in the format `\d {TABLE_NAME}_{COLUMN}`.
+Additionally, you can get further information about a particular column by appending the name of the column to the table name. This would be written in the format `\d {TABLE_NAME}_{COLUMN}`.
 
 The following example shows additional information for the `web` column, and would be invoked by using the following command: `\d luma_midvalues_web`:
 
@@ -256,7 +256,7 @@ You can join multiple datasets together to include data from other datasets in y
 
 The following example would join the following two datasets ( `your_analytics_table`, `custom_operating_system_lookup`) and creates a `SELECT` statement for the top 50 operating systems by number of page views.
 
-**Example**
+**Query**
 
 ```sql
 SELECT 
@@ -300,4 +300,4 @@ Query Service supports data deduplication, or the removal of duplicate rows from
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
 
-For samples of queries that can be used within Query Service, please read the [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or the [ExperienceEvent sample queries](./experience-event-queries.md) guides.
+For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
