@@ -14,7 +14,7 @@ This developer guide provides steps to help you start using the [Sensei Machine 
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
+You are required to have completed the [authentication](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

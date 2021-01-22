@@ -10,7 +10,7 @@ type: Tutorial
 # Adobe Experience Platform tutorials {#tutorials}
 
 * [Tutorials overview](home.md)
-* [Authenticate to Experience Platform APIs](authentication.md)
+* [Authenticate to Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en)
 * [Access Platform data](data-access.md)
 * [Data governance and privacy](data-governance-privacy.md)
 * [Data Science Workspace](data-science-workspace.md)

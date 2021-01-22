@@ -5,7 +5,7 @@ solution: Experience Platform
 product: experience platform
 topic: guide
 type: Documentation
-description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. These guardrails also outline best practices and constraints when using Profile data for segmentation.
+description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines best practices and constraints to keep in mind when modeling Profile data. 
 ---
 
 # [!DNL Platform] guardrails for [!DNL Real-time Customer Profile]
@@ -101,6 +101,6 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum number of segments per sandbox | 100K | Soft | **The maximum number of segments an organization can create is 100K per sandbox.** An organization can have more than 100K segments in total, as long as there are less than 100,000 segments in each individual sandbox. Attempting to create additional segments will results in degraded system performance.|
+| Maximum number of segments per sandbox | 10K | Soft | **The maximum number of segments an organization can create is 10K per sandbox.** An organization can have more than 10K segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments will results in degraded system performance.|
 | Maximum number of streaming segments per sandbox | 500 | Soft | **The maximum number of streaming segments an organization can create is 500 per sandbox.** An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments will result in degraded system performance.|
-| Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|
+| Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 batch segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|

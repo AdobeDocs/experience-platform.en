@@ -16,7 +16,7 @@ This tutorial will show you how to create, train, and evaluate a Model using API
 
 Follow the [Import a packaged Recipe using the API](./import-packaged-recipe-api.md) for creating an Engine, which is required to train and evaluate a Model using the API.
 
-Follow this [Tutorial](../../tutorials/authentication.md) for authorization to start making API calls.
+Follow the [Experience Platform API authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to start making API calls.
 
 From the tutorial you should now have the following values:
 
