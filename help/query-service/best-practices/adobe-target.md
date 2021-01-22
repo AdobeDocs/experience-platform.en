@@ -10,26 +10,23 @@ description: Data from Adobe Target is transformed into Experience Event XDM sch
 
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets for you. There are many use cases for Adobe Experience Platform Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
 
-In Experience Platform, the friendly name for the dataset is "Adobe Target Experience Events". The name that you should use within a Query Service query is `adobe_target_experience_events`.
+In Experience Platform, the name of auto-created dataset is "Adobe Target Experience Events". When using this dataset with queries, you should use the name `adobe_target_experience_events`.
 
 ## High-level partial XDM field mapping
 
-The following table shows the Target fields that map to their corresponding XDM fields.
+The following list shows the Target fields that map to their corresponding XDM fields.
 
 >[!NOTE]
 >
 > The use of `[ ]` within the XDM field denotes an array.
 
-| Name | XDM field | Notes |
-| ---- | --------- | ----- |
-| mboxName | `_experience.target.mboxname` | |
-| Activity ID | `_experience.target.activities.activityID` | |
-| Experience ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` | |
-| Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | |
-| Event Scope | `_experience.target.activities[].activityEvents[].eventScope` | Tracks new Visitor and Visit|
-| Step ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Custom step ID for Campaign |
-| Price Total | `commerce.order.priceTotal` | |
-
+- mboxName: `_experience.target.mboxname`
+- Activity ID: `_experience.target.activities.activityID`
+- Experience ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
+- Segment ID: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
+- Event Scope: `_experience.target.activities[].activityEvents[].eventScope` - This field tracks new visitors and visits.
+- Step ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` - This field is a custom step ID for Adobe Campaign.
+- Price Total: `commerce.order.priceTotal`
 
 ## Sample queries
 
