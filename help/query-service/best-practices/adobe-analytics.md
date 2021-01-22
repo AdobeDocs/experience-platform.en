@@ -8,9 +8,9 @@ description: Data from selected Adobe Analytics report suites is transformed int
 
 # Sample queries for Adobe Analytics data
 
-Data from selected Adobe Analytics report suites is transformed into data conforming to the XDM [!DNL ExperienceEvents] class and ingested into Adobe Experience Platform as datasets. 
+Data from selected Adobe Analytics report suites is transformed into data conforming to the [!DNL XDM ExperienceEvent] class and ingested into Adobe Experience Platform as datasets. 
 
-This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, including sample queries should work with your Adobe Analytics datasets. See the documentation on [Analytics field mapping](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to [!DNL ExperienceEvents].
+This document outlines a number of use cases where Adobe Experience Platform [!DNL Query Service] makes use of this data, including sample queries should work with your Adobe Analytics datasets. See the documentation on [Analytics field mapping](../../sources/connectors/adobe-applications/mapping/analytics.md) for more information on mapping to [!DNL Experience Events].
 
 ## Getting started
 

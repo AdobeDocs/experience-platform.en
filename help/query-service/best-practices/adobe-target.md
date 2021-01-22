@@ -24,8 +24,10 @@ The following list shows the Target fields that map to their corresponding XDM f
 - Activity ID: `_experience.target.activities.activityID`
 - Experience ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
 - Segment ID: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
-- Event Scope: `_experience.target.activities[].activityEvents[].eventScope` - This field tracks new visitors and visits.
-- Step ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` - This field is a custom step ID for Adobe Campaign.
+- Event Scope: `_experience.target.activities[].activityEvents[].eventScope` 
+    - This field tracks new visitors and visits.
+- Step ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` 
+    - This field is a custom step ID for Adobe Campaign.
 - Price Total: `commerce.order.priceTotal`
 
 ## Sample queries

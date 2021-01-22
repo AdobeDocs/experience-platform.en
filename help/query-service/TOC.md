@@ -24,7 +24,7 @@ user-guide-description: Use standard SQL to query data in Platform Data Lake.
 - Best practices {#best-practices}
   - [General guidance for query execution](best-practices/writing-queries.md)
   - [Data deduplication](best-practices/deduplication.md)
-  - [Sample ExperienceEvent queries](best-practices/experience-event-queries.md)
+  - [Sample Experience Event queries](best-practices/experience-event-queries.md)
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
   - [Sample Adobe Target queries](best-practices/adobe-target.md)
 - SQL reference {#sql}

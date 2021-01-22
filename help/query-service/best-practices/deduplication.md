@@ -15,8 +15,6 @@ Deduplication commonly involves using the `ROW_NUMBER()` function across a windo
 
 When the value of the `ROW_NUMBER()` is `1`, it refers to the original instance. Generally, that is the instance that you would wish to use. This will most often be done inside of a sub-select where the deduplication is done in a higher-level `SELECT` like performing an aggregate count.
 
-## Use cases
-
 Deduplication use cases can either be global or constrained to a single user or end-user ID within the `identityMap`.
 
 This document outlines how to perform deduplication for three common use cases: Experience Events, purchases, and metrics.
@@ -29,9 +27,9 @@ In the case of duplicate Experience Events, you will likely wish to ignore the e
 
 >[!CAUTION]
 >
->Many datasets in [!DNL Experience Platform], including those produced by the Adobe Analytics Data Connector, already have Experience Event-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query.
+>Many datasets in [!DNL Experience Platform], including those produced by the Adobe Analytics Data Connector, already have Experience-Event-level deduplication applied. Therefore, reapplying this level of deduplication is unnecessary and will slow down your query.
 >
->It is important to understand the source of your datasets and know if deduplication at the Experience Event-level has already been applied. For any datasets that are streamed (for example, those from Adobe Target), you **will** need to apply Experience Event-level deduplication, since those data sources have "at-least-once" semantics.
+>It is important to understand the source of your datasets and know if deduplication at the Experience-Event-level has already been applied. For any datasets that are streamed (for example, those from Adobe Target), you **will** need to apply Experience-Event-level deduplication, since those data sources have "at-least-once" semantics.
 
 **Scope:** Global
 

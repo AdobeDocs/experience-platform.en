@@ -201,7 +201,7 @@ The `\d` command shows the standard PostgreSQL view for listing tables. An examp
 
 ### Detailed table view
 
-The `SHOW TABLES` command is a custom command that provides more detailed information about the tables. An example of this command's output can be seen below:
+`SHOW TABLES` command is a custom command that provides more detailed information about the tables. An example of this command's output can be seen below:
 
 ```sql
        name      |        dataSetId         |     dataSet    | description | resolved 
@@ -213,7 +213,7 @@ The `SHOW TABLES` command is a custom command that provides more detailed inform
 
 ### Schema information 
 
-To view more detailed information about the schemas within the table, you can use the `\d {TABLE_NAME}` command, where `{TABLE_NAME}` is the name of the table you want schema information about.
+To view more detailed information about the schemas within the table, you can use the `\d {TABLE_NAME}` command, where `{TABLE_NAME}` is the name of the table whose schema information you want to view.
 
 The following example shows the schema information for the `luma_midvalues` table, which would be seen by using `\d luma_midvalues`:
 
@@ -254,7 +254,7 @@ The following example shows additional information for the `web` column, and wou
 
 You can join multiple datasets together to include data from other datasets in your query.
 
-The following example would join the following two datasets ( `your_analytics_table`, `custom_operating_system_lookup`) and creates a `SELECT` statement for the top 50 operating systems by number of page views.
+The following example would join the following two datasets (`your_analytics_table` and `custom_operating_system_lookup`) and creates a `SELECT` statement for the top 50 operating systems by number of page views.
 
 **Query**
 
