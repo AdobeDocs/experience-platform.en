@@ -12,14 +12,14 @@ The table below contains the mappings between the [!DNL Marketo] campaigns datas
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
-| Campaign-key | campaignID |
-| name | campaignName |
-| description | campaignDescription |
-| type | campaignType |
-| status | campaignStatus |
-| channel | channelName |
-| Campaign-systemID | campaignComponents.sourceCampaignID.systemID |
-| Campaign-ID | campaignComponents.sourceCampaignID.ID |
-| Campaign-key | campaignComponents.sourceCampaignID.key |
-| createdAt | extSourceSystemAudit.createdDate |
-| updatedAt | extSourceSystemAudit.lastUpdatedDate |
+| `Campaign-key` | `campaignID` |
+| `name` | `campaignName` |
+| `description` | `campaignDescription` |
+| `type` | `campaignType` |
+| `status` | `campaignStatus` |
+| `channel` | `channelName` |
+| `Campaign-systemID` | `campaignComponents.sourceCampaignID.systemID` |
+| `Campaign-ID` | `campaignComponents.sourceCampaignID.ID` |
+| `Campaign-key` | `campaignComponents.sourceCampaignID.key` |
+| `createdAt` | `extSourceSystemAudit.createdDate` |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |

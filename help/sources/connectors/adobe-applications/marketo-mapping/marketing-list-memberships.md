@@ -12,17 +12,17 @@ The table below contains the mappings between the fields in the [!DNL Marketo] m
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
-| MarketingListMember-key | marketingListMemberID |
-| MarketingList-key | marketingListID |
-| Person-key | personID |
-| MarketingListMember-systemID | marketingListMemberComponents.sourceMarketingListMemberID.systemID |
-| MarketingListMember-ID | marketingListMemberComponents.sourceMarketingListMemberID.ID |
-| MarketingListMember-key | marketingListMemberComponents.sourceMarketingListMemberID.key |
-| MarketingList-systemID | marketingListMemberComponents.sourceMarketingListID.systemID |
-| MarketingList-ID | marketingListMemberComponents.sourceMarketingListID.ID |
-| MarketingList-key | marketingListMemberComponents.sourceMarketingListID.key |
-| Person-systemID | marketingListMemberComponents.sourcePersonID.systemID |
-| Person-ID | marketingListMemberComponents.sourcePersonID.ID |
-| Person-key | marketingListMemberComponents.sourcePersonID.key |
-| createdAt | extSourceSystemAudit.createdDate |
-| updatedAt | extSourceSystemAudit.lastUpdatedDate |
+| `MarketingListMember-key` | `marketingListMemberID` |
+| `MarketingList-key` | `marketingListID` |
+| `Person-key`| `personID` |
+| `MarketingListMember-systemID` | `marketingListMemberComponents.sourceMarketingListMemberID.systemID` |
+| `MarketingListMember-ID` | `marketingListMemberComponents.sourceMarketingListMemberID.ID` |
+| `MarketingListMember-key` | `marketingListMemberComponents.sourceMarketingListMemberID.key` |
+| `MarketingList-systemID` | `marketingListMemberComponents.sourceMarketingListID.systemID` |
+| `MarketingList-ID` | `marketingListMemberComponents.sourceMarketingListID.ID` |
+| `MarketingList-key` | `marketingListMemberComponents.sourceMarketingListID.key` |
+| `Person-systemID` | `marketingListMemberComponents.sourcePersonID.systemID` |
+| `Person-ID` | `marketingListMemberComponents.sourcePersonID.ID` |
+| `Person-key` | `marketingListMemberComponents.sourcePersonID.key` |
+| `createdAt` | `extSourceSystemAudit.createdDate` |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
