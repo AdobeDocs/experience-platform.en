@@ -35,7 +35,7 @@ The tables below contains the mappings between the [!DNL Marketo] opportunities 
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId`* | `campaignID` |
+| `mktoCdpSourceCampaignId` | `campaignID` |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
