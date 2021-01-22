@@ -188,7 +188,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments will now show up in your Google account as customer lists. Please note that depending on your segment size, some audiences will not populate unless there are over 100 active users to serve.
 
-Keep in mind that when mapping a segment to multiple types of IDs, [!DNL Google Customer Match] creates a separate segment for each ID mapping. If, for instance, you map a segment to both [!DNL IDFA] and [!DNL GAID] IDs, your Google Ads account will show two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
+When mapping a segment to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate segment for each ID mapping. Your [!DNL Google Ads] account will show two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
 
 ## Additional resources {#additional-resources}
 
