@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;data type registry;Schema Registry;data type;Data type;data types;Data types;create
 solution: Experience Platform
-title: Create a data type
+title: Data types endpoint
 description: The /datatypes endpoint in the Schema Registry API allows you to programmatically manage XDM data types within your experience application.
 ---
 

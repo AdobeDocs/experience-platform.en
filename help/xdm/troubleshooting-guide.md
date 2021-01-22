@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
 solution: Experience Platform
-title: Experience Data Model (XDM) System troubleshooting guide
-description: This document provides answers to frequently asked questions about Experience Data Model (XDM) System, as well as a troubleshooting guide for common errors.
+title: XDM System troubleshooting guide
+description: This document provides answers to frequently asked questions about Experience Data Model (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors.
 topic: troubleshooting
 ---
 
-# [!DNL Experience Data Model] (XDM) System troubleshooting guide
+# XDM System troubleshooting guide
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 **[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 

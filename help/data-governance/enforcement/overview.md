@@ -8,7 +8,7 @@ description: Once data usage labels have been applied to Adobe Experience Platfo
 
 # Policy enforcement overview
 
-Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Once data usage labels have been applied to datasets, and data usage policies have been defined for marketing actions against those labels, Adobe Experience Platform Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
 There are two methods of policy enforcement provided by [!DNL Data Governance] features on [!DNL Platform]: API-based enforcement and automatic enforcement.
 

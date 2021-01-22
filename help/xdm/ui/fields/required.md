@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;required;field;
 solution: Experience Platform
-title: Define a required field in the UI
+title: Define required fields in the UI
 description: Learn how to define a required XDM field in the Experience Platform user interface.
 topic: user guide
 ---
 
-# Define a required field in the UI
+# Define required fields in the UI
 
 In Experience Data Model (XDM), a required field indicates that it must be supplied a valid value in order for a particular record or time-series event to be accepted during data ingestion. Common use cases for required fields include user identity information and timestamps.
 

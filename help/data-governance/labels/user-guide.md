@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label;policy service;data usage labels user guide
 solution: Experience Platform
-title: Data usage labels user guide
+title: Manage data usage labels in the UI
 topic: labels
-description: This user guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
+description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
 ---
 
-# Data usage labels user guide
+# Manage data usage labels in the UI
 
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.
 
-## Managing data usage labels at the dataset level
+## Manage labels at the dataset level
 
 In order to manage data usage labels at the dataset level, you must select an existing dataset or create a new one. After logging into Adobe Experience Platform, select **[!UICONTROL Datasets]** on the left-navigation to open the **[!UICONTROL Datasets]** workspace. This page lists all created datasets belonging to your organization, along with useful details related to each dataset. 
 
@@ -68,7 +68,7 @@ The **[!UICONTROL Show Inherited Labels]** toggle is on by default, which allows
 
 ![Hide inherited labels](../images/labels/hide_inherited_labels.png)
 
-## Managing data usage labels at the dataset field level
+## Manage labels at the field level
 
 Continuing the workflow for [adding and editing data usage labels at the dataset level](#add-labels), you can also manage field-level labels within the **[!UICONTROL Data Governance]** workspace for that dataset. 
 
@@ -94,7 +94,7 @@ You can repeat these steps to continue adding and editing field-level labels for
 
 It is important to remember that inheritance moves from the top-level down only (dataset → fields), meaning that labels applied at the field level are not propagated to other fields or datasets.
 
-## Managing custom labels
+## Manage custom labels
 
 You can create your own custom usage labels within the **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI. Select **[!UICONTROL Policies]** in the left-navigation, then select **[!UICONTROL Labels]** to view a list of existing labels. From here, select **[!UICONTROL Create label]**.
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
-title: Create a mixin
+title: Mixins endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
 topic: developer guide
 ---

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;
 solution: Experience Platform
-title: Schemas workspace overview
+title: Schemas UI overview
 description: This overview covers the major capabilities of the Schemas workspace in Experience Platform.
 topic: user guide
 ---
 
-# [!UICONTROL Schemas] workspace overview
+# [!UICONTROL Schemas] UI overview
 
 The [!UICONTROL Schemas] workspace in the Adobe Experience Platform user interface allows you to manage Experience Data Model (XDM) resources, including schemas, classes, mixins, and data types. You can view and explore core resources provided by Adobe, and create custom resources and schemas for your organization.
 
