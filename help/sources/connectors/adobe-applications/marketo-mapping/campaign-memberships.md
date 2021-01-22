@@ -8,7 +8,7 @@ description: The table below contains the mappings between the Marketo Campaign 
 
 # Mapping Marketo campaign memberships fields to XDM
 
-The table below contains the mappings between the [!DNL Marketo] Campaign memberships datasets and their corresponding Experience Data Model (XDM) fields.
+The table below contains the mappings between the [!DNL Marketo] Campaign memberships dataset and their corresponding Experience Data Model (XDM) fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

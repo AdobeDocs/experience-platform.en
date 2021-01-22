@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping
 solution: Experience Platform
-title: Opportunity person relations mapping fields
+title: Mapping Marketo opportunity person relations fields to XDM
 topic: overview
-description: The table below contains the mappings between the Marketo Opportunity person relations datasets and their corresponding XDM fields.
+description: The table below contains the mappings between the Marketo Opportunity person relations dataset and their corresponding XDM fields.
 ---
 
-# Opportunity person relations mapping fields
+# Mapping Marketo opportunity person relations fields to XDM
 
-The table below contains the mappings between the [!DNL Marketo] opportunity person relations datasets and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] opportunity person relations dataset and their corresponding Experience Data Model (XDM) fields.
 
 >[!IMPORTANT]
 >

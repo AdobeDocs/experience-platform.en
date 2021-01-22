@@ -1,16 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping
 solution: Experience Platform
-title: Opportunities mapping fields
+title: Mapping Marketo opportunities fields to XDM
 topic: overview
-description: The table below contains the mappings between the Marketo Opportunities datasets and their corresponding XDM fields.
+description: The table below contains the mappings between the Marketo Opportunities dataset and their corresponding XDM fields.
 ---
 
-# Opportunities mapping fields
+# Mapping Marketo opportunities fields to XDM
 
-The tables below contains the mappings between the [!DNL Marketo] opportunities datasets and their corresponding XDM fields.
-
-## Opportunities
+The tables below contains the mappings between the [!DNL Marketo] opportunities dataset and their corresponding Experience Data Model (XDM) fields.
 
 >[!IMPORTANT]
 >

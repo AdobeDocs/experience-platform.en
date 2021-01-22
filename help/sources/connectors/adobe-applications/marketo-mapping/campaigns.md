@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Campaigns;campaigns;Campaigns mapping;campaigns mapping
 solution: Experience Platform
-title: Campaigns mapping fields
+title: Mapping Marketo campaigns fields to XDM
 topic: overview
 description: The table below contains the mappings between the Marketo campaigns dataset and its corresponding XDM fields.
 ---
 
-# Campaigns mapping fields
+# Mapping Marketo campaigns fields to XDM
 
-The table below contains the mappings between the [!DNL Marketo] campaigns datasets and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] campaigns dataset and their corresponding Experience Data Model (XDM) fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

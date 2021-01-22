@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Marking lists mapping;marketing lists mapping;
 solution: Experience Platform
-title: Marketing lists mapping fields
+title: Mapping Marketo marketing lists fields to XDM
 topic: overview
 description: The table below contains the mappings between the fields in the Marketo marketing lists dataset and their corresponding XDM fields.
 ---
 
-# Marketing lists mapping fields
+# Mapping Marketo marketing lists fields to XDM
 
-The table below contains the mappings between the fields in the [!DNL Marketo] marketing lists dataset and their corresponding XDM fields.
+The table below contains the mappings between the fields in the [!DNL Marketo] marketing lists dataset and their corresponding Experience Data Model (XDM) fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

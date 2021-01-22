@@ -8,7 +8,7 @@ description: The table below contains the mappings between the fields in the Mar
 
 # Mapping Marketo activities fields to XDM
 
-The table below contains the mappings between the fields in the [!DNL Marketo] activities dataset and their corresponding XDM fields.
+The table below contains the mappings between the fields in the [!DNL Marketo] activities dataset and their corresponding Experience Data Model (XDM) fields.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |

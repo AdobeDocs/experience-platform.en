@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo mapping;marketo mapping;Named accounts mapping;named accounts mapping;named accounts
 solution: Experience Platform
-title: Named accounts mapping fields
+title: Mapping Marketo named accounts fields to XDM
 topic: overview
 description: The table below contains the mappings between the Marketo named accounts dataset and their corresponding XDM fields.
 ---
 
-# Named accounts mapping fields
+# Mapping Marketo named accounts fields to XDM
 
-The table below contains the mappings between the [!DNL Marketo] named accounts dataset and their corresponding XDM fields.
+The table below contains the mappings between the [!DNL Marketo] named accounts dataset and their corresponding Experience Data Model (XDM) fields.
 
 >[!IMPORTANT]
 >
