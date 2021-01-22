@@ -8,25 +8,25 @@ description: This document contains the link for installing the backup client Po
 
 # [!DNL Postico]
 
-This document walks through the steps for connecting [!DNL Postico] with Adobe Experience Platform [!DNL Query Service].
+This document covers the steps for connecting [!DNL Postico] with Adobe Experience Platform [!DNL Query Service].
 
-## Installing Postico
+>[!NOTE]
+>
+> This guide assumes you already have access to [!DNL Postico] and are familiar with how to navigate its interface. More information about [!DNL Looker] can be found in the [official [!DNL Postico] documentation](https://eggerapps.at/postico/docs).
+> 
+> Additionally, [!DNL Postico] is **only** available on macOS devices.
 
-macOS users can install [!DNL Postico] from the [official Postico website](https://eggerapps.at/postico/).
+## Connect [!DNL Postico] to Query Service
 
-More information about using Postico can be found in the [official Postico documentation](https://eggerapps.at/postico/docs).
-
-## Connect Postico to Query Service
-
-To connect Postico to Query Service, open [!DNL Postico] and select **[!UICONTROL New Favorite]**.
+To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)
 
 You can now enter values to connect with Adobe Experience Platform. 
 
-For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-After inserting your credentials, select **[!UICONTROL Connect]** to connect with Query Service.
+After inserting your credentials, select **[!DNL Connect]** to connect with Query Service.
 
 ![](../images/clients/postico/authentication-details.png)
 
@@ -40,11 +40,11 @@ To create a new SQL query, select and open "SQL Query".
 
 ![](../images/clients/postico/create-query.png)
 
-A box appears. Type in the query you want to execute. Once you finished writing your query, select Execute Statement to run the query.
+A box appears, and from here you can type in the query you want to execute. When finished, select **[!DNL Execute Statement]** to run the query.
 
 ![](../images/clients/postico/run-statement.png)
 
-The results of your run query are shown.
+A table appears, showing the results of your completed query run.
 
 ![](../images/clients/postico/query-results.png)
 

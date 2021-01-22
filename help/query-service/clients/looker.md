@@ -8,37 +8,37 @@ description: This document walks through the steps for connecting Looker with Ad
 
 # [!DNL Looker]
 
-This document walks through the steps for connecting [!DNL Looker] with Adobe Experience Platform [!DNL Query Service].
+This document covers the steps for connecting [!DNL Looker] with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
-> This guide assumes you already have access to Looker. More information about Looker can be found in the [official Looker documentation](https://docs.looker.com/).
+> This guide assumes you already have access to [!DNL Looker] and are familiar with how to navigate its interface. More information about [!DNL Looker] can be found in the [official [!DNL Looker] documentation](https://docs.looker.com/).
 
 ## Connect [!DNL Looker] with Platform
 
-After logging into [!DNL Looker], select **[!UICONTROL Admin]**, followed by **[!UICONTROL Connections]**.
+After logging into [!DNL Looker], select **[!DNL Admin]**, followed by **[!DNL Connections]**.
 
 ![](../images/clients/looker/click-admin-connections.png)
 
-On this page, select **New Connection**.
+On this page, select **[!DNL New Connection]**.
 
 ![](../images/clients/looker/click-new-connection.png)
    
-From here, you can fill out the details for the Connection Settings.
+From here, you can fill out the details for the connection settings.
 
 ![](../images/clients/looker/new-connection.png)
 
-- **Name:** The name of your connection.
-- **Dialect:** The dialect used for the SQL database. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
-- **Host and Port:** The host endpoint and its port for [!DNL Query Service]. 
-- **Database:** The database that will be used. 
-- **Username and Password:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`. 
+- **[!DNL Name]:** The name of your connection.
+- **[!DNL Dialect]:** The dialect used for the SQL database. [!DNL Query Service] uses **[!DNL PostgreSQL]**.
+- **[!DNL Host and Port]:** The host endpoint and its port for [!DNL Query Service]. 
+- **[!DNL Database]:** The database that will be used. 
+- **[!DNL Username and Password]:** The login credentials that will be used. The username will be in the form of `ORG_ID@AdobeOrg`. 
 
 >[!NOTE]
 >
->For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+>For more information on finding your host and port, database name, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-After inputting your connection details, select **[!UICONTROL Test These Settings]** to ensure your credentials work properly. If they do, a message telling you can connect will appear below. If your connection is indeed successful, select **[!UICONTROL Add Connection]** to create your connection.
+After inputting your connection details, select **[!DNL Test These Settings]** to ensure your credentials work properly. If they do, a message indicating that you can connect will appear below. If your connection is indeed successful, select **[!DNL Add Connection]** to create your connection.
 
 ![](../images/clients/looker/click-test-connection.png)
 
