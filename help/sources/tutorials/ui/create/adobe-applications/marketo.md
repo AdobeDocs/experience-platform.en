@@ -32,7 +32,7 @@ In order to access your [!DNL Marketo] account on Platform, you must provide the
 | `clientId` | The unique client ID of your [!DNL Marketo] instance. |
 | `clientSecret` | The unique client secret of your [!DNL Marketo] instance. |
 
-For more information on acquiring these values, refer to the [[!DNL Marketo] source connector authentication guide](../../../../connectors/adobe-applications/marketo.md).
+For more information on acquiring these values, refer to the [[!DNL Marketo] source connector authentication guide](../../../../connectors/adobe-applications/marketo-auth.md).
 
 Once you have gathered your required credentials, you can follow the steps in the next section.
 
