@@ -20,35 +20,7 @@ This document provides an overview of the [!DNL Marketo] source connector, inclu
 
 In order to connect [!DNL Marketo] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
 
-### Get your Munchkin ID
-
-To retrieve your Munchkin ID, log in to [!DNL Marketo] and select **[!DNL Admin]** from the top navigation bar.
-
-![home](./images/marketo/home.png)
-
-From the admin page, you can access several features of your [!DNL Marketo] instance. Select **[!DNL Munchkin]** from the [!DNL Integration] panel to retrieve your Munchkin ID.
-
-![admin-munchkin](./images/marketo/admin-munchkin.png)
-
-The [!DNL Munchkin] page appears, with your unique Munchkin ID listed at the top of the panel. 
-
-![munchkin-Id](./images/marketo/munchkin-id.png)
-
-### Get your client ID and client secret
-
-You can retrieve your client ID and client secret from the [!DNL Marketo] admin page. Under the integration panel, select [!DNL LaunchPoint].
-
-![admin-launchpoint](./images/marketo/admin-launchpoint.png)
-
-The [!DNL Installed services] page contains a list of installed services available to you. Locate the service you need to access from the list and then select **[!DNL View Details]**.
-
-![services](./images/marketo/services.png)
-
-A popover panel appears, containing your client ID and client secret.
-
-![client-keys](./images/marketo/client-keys.png)
-
-Combined with your Munchkin ID, you can use the newly retrieved client ID and client secret to connect your [!DNL Marketo] instance to Platform.
+See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
 ## Experience Data Model (XDM)
 
