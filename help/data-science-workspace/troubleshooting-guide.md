@@ -109,3 +109,11 @@ For more information on [!DNL Spark] cluster resource configuration, including t
 ## Why am I receiving an error when trying execute certain tasks for larger datasets?
 
 If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.
+
+## [!DNL Docker Hub] limit restrictions in Data Science Workspace
+
+As of November 20, 2020, rate limits for anonymous and free authenticated use of Docker Hub went into effect. Anonymous and Free [!DNL Docker Hub] users are limited to 100 container image pull requests every six hours. If you are affected by these changes you will receive this error message: `ERROR: toomanyrequests: Too Many Requests.` or `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
+
+Currently, this limit will only affect your organization if you are attempting to build 100 recipes within the six hour timeframe. Additionally, if you are using Notebooks within Data Science Workspace or Batch AI for training/scoring heavily, it is possible to exhaust your 100 pulls although unlikely as the cluster these run on remain active for two hours before idling out. If you receive any of the above errors, you will need to wait until your [!DNL Docker] limit is reset.
+
+For more information about [!DNL Docker Hub] rate limits, visit the [DockerHub documentation](https://www.docker.com/increase-rate-limits). A solution for this is being worked on and expected in a subsequent release.
