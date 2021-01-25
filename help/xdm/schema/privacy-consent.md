@@ -48,9 +48,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
       "xdm:val": "y",
     },
     "xdm:personalize": {
-      "xdm:any": {
-        "xdm:val": "y",
-      },
       "xdm:content": {
         "xdm:val": "y"
       }
@@ -104,9 +101,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     "xdm:val": "y",
   },
   "xdm:personalize": {
-    "xdm:any": {
-      "xdm:val": "y",
-    },
     "xdm:content": {
       "xdm:val": "y"
     }
