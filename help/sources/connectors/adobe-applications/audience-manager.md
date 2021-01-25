@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;Audience Manager connector;Aud
 solution: Experience Platform
 title: Audience Manager connector
 topic: overview
-description: The Adobe Audience Manager data connector streams first party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests three categories of data to Platform.
+description: The Adobe Audience Manager data connector streams first party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests two categories of data to Platform.
 ---
 
 # Audience Manager connector
 
-The Adobe Audience Manager data connector streams first-party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests three categories of data to Platform:
+The Adobe Audience Manager data connector streams first-party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests two categories of data to Platform:
 
 - **Real-time data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule based traits and will surface in Platform in the shortest latency time.
 - **Profile data:** Audience Manager uses real-time and on-boarded data to derive customer profiles. These profiles are used to populate identity graphs and traits on segment realizations.
