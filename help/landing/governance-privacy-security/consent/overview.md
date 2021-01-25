@@ -32,8 +32,8 @@ This guide requires a working understanding of the various Experience Platform s
 The following process describes how consent data is collected after the system has been properly configured:
 
 1. A customer provides their consent preferences for data collection through a dialog on your website.
-1. Your CMP detects the consent preference change, and maps those changes to a standard XDM schema.
-1. Using the Experience Platform Web SDK, the structured consent data is sent to Adobe Experience Platform.
+1. On each page load (or when consent preferences change), your CMP maps the current preferences to a standard XDM schema before passing it to the Platform Web SDK.
+1. The Platform Web SDK checks whether the consent values are different from those it last received. If the values are different (or there is no previous value), the structured consent data is sent to Adobe Experience Platform.
 1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields.
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
@@ -118,7 +118,7 @@ alloy("setConsent", {
           "xdm:val": "y"
         }
         "xdm:personalize": {
-          "xdm:any": {
+          "xdm:content": {
             "xdm:val": "y"
           }
         },

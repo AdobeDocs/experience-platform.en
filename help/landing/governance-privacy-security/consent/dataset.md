@@ -43,9 +43,6 @@ The mixin provides a single object-type field, `xdm:consents`, whose sub-propert
       "xdm:val": "y",
     },
     "xdm:personalize": {
-      "xdm:any": {
-        "xdm:val": "y",
-      },
       "xdm:content": {
         "xdm:val": "y"
       }
