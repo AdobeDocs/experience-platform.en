@@ -144,7 +144,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Data element**: In [!DNL Platform Launch], a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
-**Data ingestion**:{#ingestion} Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streaming, batches, or added via source connectors.
+**Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streaming, batches, or added via source connectors.
 
 **Data layer**: In [!DNL Platform Launch], a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
@@ -214,11 +214,11 @@ description: A glossary of important terminology in Experience Platform.
 
 **Events**: Events are the behavior data associated with a profile.
 
-**Experience Data Model (XDM)**:{#xdm} [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
+**Experience Data Model (XDM)** [!DNL Experience Data Model] (XDM) is an open-source framework that uses standard schemas to unify data for use with Experience Platform and Adobe Experience Cloud applications. XDM standardizes how data is structured and speeds up and simplifies the process of gaining insights from massive amounts of data.
 
 **Experiment**: An experiment is the process of creating a trained model by training the instance with a sample portion of live production data. This is different from a trained model that is tested against a holdout test dataset. This is also different from the concept of an experiment in some machine-learning frameworks where it actually means a sample modeling project.
 
-**Experience Event**:{#experience-event} An Experience Event represents a snapshot of the system when an interaction or event related to a customer experience takes place. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
+**Experience Event**: An Experience Event represents a snapshot of the system when an interaction or event related to a customer experience takes place. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
 
 **Extension**: In [!DNL Platform Launch], an extension is a package of functionality added to a [!DNL Platform Launch] property. An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
 
@@ -274,7 +274,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **IMS Organization**: An IMS Organization (sometimes referred to as an IMS Org) is the name used to identify a company or a specific group within a company across Adobe products. Administrators can configure and manage access and permissions of features to users of an Organization. 
 
-**Ingestion**: See [data ingestion](#ingestion).
+**Ingestion**: See data ingestion.
 
 **Ingestion schedule**: An ingestion schedule provides time-based options when ingesting from a source to Experience Platform.
 
@@ -366,15 +366,15 @@ description: A glossary of important terminology in Experience Platform.
 
 **Production sandbox**: A production sandbox is a sandbox intended for use in your production environment. Unlike non-production sandboxes, production sandboxes cannot be reset or deleted.
 
-**Profile**:{#profile} Not to be confused with [Real-time Customer Profile](#rtcp) as a service, a profile is a complete representation of an individual customer, constructed from merged record and time-series data from multiple sources.
+**Profile**: Not to be confused with Real-time Customer Profile as a service, a profile is a complete representation of an individual customer, constructed from merged record and time-series data from multiple sources.
 
-**Profile access**:{#profile-access} The `/entities` endpoint in the Real-time Customer Profile API allows you to access record data and time-series events in the Profile data store. See also: [Profile entities](#profile-entities)
+**Profile access**: The `/entities` endpoint in the Real-time Customer Profile API allows you to access record data and time-series events in the Profile data store. See also: Profile entities
 
 **Profile data**: Profile data refers to any data that is located within the Profile data store.
 
 **Profile data store**: The Profile data store (sometimes called the Profile store) is a data storage system separate from the data lake, used by Real-time Customer Profile to create and store profiles. 
 
-**Profile entities**:{#profile-entities} Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class. See also: [Profile access](#profile-access)
+**Profile entities**: Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class. See also: Profile access
 
 **Profile export**: [!DNL Profile] export is one of the two types of destinations in Experience Platform. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email in order to integrate with marketing and email-automation platforms.
 
@@ -394,7 +394,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile**:{#rtcp} Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual [profiles](#profile) offering actionable, timestamped accounts of every customer interaction.
+**Real-time Customer Profile**: Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual profiles offering actionable, timestamped accounts of every customer interaction.
 
 **Recipe**: A recipe is Adobe's term for a model specification and is a top-level container representing specific machine-learning processes, AI algorithms, processing logic, and configuration parameters required to build and execute a trained model and hence help solve specific business problems.
 
@@ -468,7 +468,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **S2 data usage label**: An `S2` data usage label is used to classify data that can be used to determine a broadly defined geofence area.
 
-**Source**: A source is a general term for any input connector in Platform. See also: [Source connector](#source-connector)
+**Source**: A source is a general term for any input connector in Platform. See also: Source connector
 
 **Source attribute**: A source attribute is a field in source dataset. Source attributes are mapped to target schema fields.
 
@@ -476,7 +476,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Source category**: A source category is a grouping of sources that have similar characteristics.
 
-**Source connector**:{#source-connector} Source connectors (also known as sources) help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
+**Source connector**: Source connectors (also known as sources) help users easily ingest data from multiple sources, allowing the structuring, labeling and enhancement of data using Experience Platform services. Data can be ingested from a variety of sources such as cloud-based storage, third party software, and CRM systems.
 
 **Streaming connection**: A streaming connection is a unique endpoint provided by Adobe and tied to a customer's IMS Organization to stream data into Experience Platform.
 
@@ -508,11 +508,11 @@ description: A glossary of important terminology in Experience Platform.
 
 ## X
 
-**XDM**: See [Experience Data Model (XDM)](#xdm).
+**XDM**: See Experience Data Model (XDM).
 
 **XDM Decision Event**: XDM Decision Event is a time-series-based class used to capture observations about the outcome and context of a decision activity. This includes information about how the decision was made, when it occurred, what options were proposed (and chosen), and what contextual state existed that either influenced the decision or could be observed during the decision process.
 
-**XDM ExperienceEvent**: XDM ExperienceEvent is a time-series-based class used to capture the state of the system when an event (or set of events) occurred, including the point in time and identity of the subject involved. See also: [Experience Event](#expereince-event)
+**XDM ExperienceEvent**: XDM ExperienceEvent is a time-series-based class used to capture the state of the system when an event (or set of events) occurred, including the point in time and identity of the subject involved. See also: Experience Event
 
 **XDM Individual Profile**: XDM [!DNL Individual Profile] is a record-based class that forms a singular representation of the attributes of both identified and partially-identified subjects. Profiles that are highly identified may be used for personal communications or targeted engagements, and can contain detailed personal information such as name, gender, date of birth, location, and contact information including phone numbers and email addresses.
 
