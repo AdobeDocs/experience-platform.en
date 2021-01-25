@@ -32,8 +32,8 @@ This guide requires a working understanding of the various Experience Platform s
 The following process describes how consent data is collected after the system has been properly configured:
 
 1. A customer provides their consent preferences for data collection through a dialog on your website.
-1. On each page load (or when consent preferences change), your CMP maps the current preferences to a standard XDM schema before passing it to the Platform Web SDK.
-1. The Platform Web SDK checks whether the consent values are different from those it last received. If the values are different (or there is no previous value), the structured consent data is sent to Adobe Experience Platform.
+1. On each page load (or when your CMP detects a change in consent preferences), a custom script on your site maps the current preferences to a standard XDM schema before passing it to the Platform Web SDK `setConsent` command.
+1. When `setConsent` is called, the Platform Web SDK checks whether the consent values are different from those it last received. If the values are different (or there is no previous value), the structured consent data is sent to Adobe Experience Platform.
 1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields.
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
@@ -73,7 +73,7 @@ Refer to the sections below for details on each of these methods:
 
 Once you have configured your CMP to listen for consent-change events on your website, you can integrate the Experience Platform Web SDK to collect the updated consent settings and send them to Platform whenever a consent-change event occurs. The SDK provides two commands that can be used to send consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
 
-**The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. 
+**The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. The sections below provide general guidance on how to integrate your CMP with the Platform Web SDK.
 
 #### Set up an edge configuration
 
@@ -85,7 +85,7 @@ After creating a new configuration or selecting an existing one to edit, select 
 | --- | --- |
 | [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data via events is not currently supported. |
+| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with Adobe-standard consent fields that you created earlier. |
 
 ![](../../images/governance-privacy-security/consent/overview/edge-config.png)
@@ -94,15 +94,23 @@ When finished, select **[!UICONTROL Save]** at the bottom of the screen and cont
 
 #### Making consent-change commands
 
-Once you have created the edge configuration described in the previous section, you can start using SDK commands to send consent data to Platform. These commands should be used as part of a CMP hook that listens for consent-change events.
+Once you have created the edge configuration described in the previous section, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
+
+There are two scenarios where `setConsent` should be called on your site:
+
+1. When consent is loaded on the page (in other words, on every page load)
+1. As part of a CMP hook or event listener that detects changes in consent settings
 
 >[!NOTE]
 >
->For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
+>For an introduction to the common syntax for Platform SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
 
-When your CMP hook detects a consent-change event, you can use the `setConsent` command to update that customer's consent data.
+The `setConsent` command expects two arguments:
 
-The `setConsent` command expects two arguments: (1) a string that indicates the command type (in this case, `"setConsent"`), and (2) a payload that contains a `consent` array, which must contain at least one object that provides the required consent fields, as shown below:
+1. A string that indicates the command type (in this case, `"setConsent"`)
+1. A payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
+
+The required consent fields for the Adobe standard are shown in the following example `setConsent` call:
 
 ```js
 alloy("setConsent", {
@@ -110,21 +118,19 @@ alloy("setConsent", {
     standard: "Adobe",
     version: "2.0",
     value: {
-      "xdm:consents": {
-        "xdm:collect": {
-          "xdm:val": "y"
-        },
-        "xdm:share": {
-          "xdm:val": "y"
+      "collect": {
+        "val": "y"
+      },
+      "share": {
+        "val": "y"
+      }
+      "personalize": {
+        "content": {
+          "val": "y"
         }
-        "xdm:personalize": {
-          "xdm:content": {
-            "xdm:val": "y"
-          }
-        },
-        "xdm:metadata": {
-          "xdm:time": "2020-10-12T15:52:25+00:00"
-        }
+      },
+      "metadata": {
+        "time": "2020-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -141,23 +147,37 @@ alloy("setConsent", {
 >
 >If you are using additional consent standards in conjunction with `Adobe` (such as `IAB TCF`), you can add additional objects to the `consent` array for each standard. Each object must contain appropriate values for `standard`, `version`, and `value` for the consent standard they represent.
 
-The `setConsent` command should be used as part of a CMP hook that detects changes in consent settings. The following JavaScript provides an example of how the `setConsent` command can be used for an example CMP hook (`OnConsentChanged`):
+The following JavaScript provides an example of how the `setConsent` command can be used for an example CMP hook (`OnConsentChanged`):
 
 ```js
 CMP.OnConsentChanged(function () {
-  // Retrieve the consent data generated by the CMP, and pass it to Alloy. 
-  fetchConsentData(function (data, success) {
-    if (success) {
-      var consentXDM = data.consentXDM;
+  getConsentData(function (categories, collectedAt) {
+    // Map the retrieved consent data to XDM
+    var consentXDM = {
+      collect: {
+        val: categories.collect !== -1 ? "y" : "n"
+      },
+      personalize: {
+        content: {
+          val: categories.personalizeContent !== -1 ? "y" : "n"
+        }
+      },
+      share: {
+        val: categories.share !== -1 ? "y" : "n"
+      },
+      metadata: {
+        time: collectedAt
+      }
+    };
 
-      alloy("setConsent", {
-        consent: [{
-          standard: "Adobe",
-          version: "2.0",
-          value: consentXDM
-        }]
-      });
-    }
+    // Pass the mapped XDM to Alloy
+    alloy("setConsent", {
+      consent: [{
+        standard: "Adobe",
+        version: "2.0",
+        value: consentXDM
+      }]
+    });
   });
 });
 ```
@@ -171,7 +191,7 @@ All [!DNL Platform SDK] commands return promises that indicate whether the call 
 
 You can ingest XDM-compliant consent data from a CSV file by using batch ingestion. This can be useful if you have a backlog of previously collected consent data that has yet to be integrated into your customer profiles.
 
-Follow the tutorial on [mapping a CSV file to XDM](../../../ingestion/tutorials/map-a-csv-file.md) to learn how to convert your data fields to XDM and ingest them into Platform. When selecting the [!UICONTROL Destination] for the mapping, ensure that you use the **[!UICONTROL Use existing dataset]** option and select the [!DNL Profile]-enabled consent schema you created earlier.
+Follow the tutorial on [mapping a CSV file to XDM](../../../ingestion/tutorials/map-a-csv-file.md) to learn how to convert your data fields to XDM and ingest them into Platform. When selecting the [!UICONTROL Destination] for the mapping, ensure that you select the **[!UICONTROL Use existing dataset]** option and choose the [!DNL Profile]-enabled consent dataset you created earlier.
 
 ## Test your implementation {#test-implementation}
 
