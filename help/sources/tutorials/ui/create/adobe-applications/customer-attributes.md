@@ -9,7 +9,7 @@ description: This tutorial provides steps for creating a source connector in the
 
 # Create a customer attributes source connector in the UI
 
-This tutorial provides steps for creating a source connector in the UI for collecting customer attributes profile data into Adobe Experience Platform. For more information about customer attributes, see the [overview document](https://docs.adobe.com/content/help/en/core-services/interface/customer-attributes/attributes.html).
+This tutorial provides steps for creating a source connector in the UI for collecting customer attributes profile data into Adobe Experience Platform. For more information about customer attributes, see the [overview document](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Create a source connection
 
@@ -21,7 +21,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com) and then selec
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-The *Source activity* screen lists all previously established connections for customer attributes profile data, you can create a new connection by clicking **Select data**. 
+The **Source activity** screen lists all previously established connections for customer attributes profile data, you can create a new connection by clicking **Select data**. 
 
 >[!NOTE]
 >
@@ -37,10 +37,10 @@ From the list of available customer attributes profile datasets, select the one 
 
 ![](../../../../images/tutorials/create/customer-attributes/select_data.png)
 
-The *Review* step appears, allowing you to review your new inbound connection before it is created. Details of the connection are grouped by categories, including:
+The **Review** step appears, allowing you to review your new inbound connection before it is created. Details of the connection are grouped by categories, including:
 
-*   *Source details*: Shows the type of the source connection and the selected source data.
-*   *Target details*: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Customer attributes profile data is automatically mapped and ingested into Real-time Customer Profiles.
+*   **Source details**: Shows the type of the source connection and the selected source data.
+*   **Target details**: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Customer attributes profile data is automatically mapped and ingested into Real-time Customer Profiles.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 

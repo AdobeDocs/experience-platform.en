@@ -73,4 +73,4 @@ The following table shows which pattern letters are defined for format strings. 
 
 **Example**
 
-The expression `date(orderDate, 'yyyy-MM-dd')` will convert the orderDate, if its value was "December 31st, 2020", into a date time with the value "2020-12-31".
+The expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".

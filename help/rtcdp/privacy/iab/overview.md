@@ -3,6 +3,7 @@ keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 support in Real-time Customer Data Platform
 topic: privacy events
+description: Learn how to configure your data operations and schemas to convey user consent choices when exporting segments in Real-time Customer Data Platform.
 ---
 
 # IAB TCF 2.0 support in [!DNL Real-time Customer Data Platform]
@@ -35,10 +36,10 @@ This guide also requires a working understanding of the following Adobe Experien
 * [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
 * [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 * [Adobe Experience Platform Web SDK](../../../edge/home.md): A client-side JavaScript library that allows you to integrate various [!DNL Platform] services into your customer-facing website.
-    * [SDK consent commands](../../../edge/fundamentals/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+    * [SDK consent commands](../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
 * [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
-In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/destinations-overview.md) and their use in [!DNL Real-time CDP].
+In addition to the [!DNL Platform] services listed above, you should also be familiar with [destinations](../../destinations/overview.md) and their use in [!DNL Real-time CDP].
 
 ## Customer consent flow summary {#summary}
 
@@ -55,7 +56,7 @@ The following sections describe how consent data is collected and enforced after
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into [!DNL Experience Platform] through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
 
-Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
+Any segments shared with [!DNL Platform] by Adobe Audience Manager (through the [!DNL Audience Manager] source connector or otherwise) may also contain consent data, provided that the appropriate fields have been applied to those segments through [!DNL Experience Cloud Identity Service]. For more information on collecting consent data in [!DNL Audience Manager], see the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html).
 
 ### Downstream consent enforcement
 
@@ -82,7 +83,7 @@ This dialog must allow the customer to opt in or out of the following:
 
 ### Consent strings {#consent-strings}
 
-Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a **consent string**.
+Regardless of the method you use to collect the data, the goal is to generate a string value based on the consent options chosen by the customer, called a consent string.
 
 In the TCF specification, consent strings are used to encode relevant details about a customer's consent settings, in terms of specific marketing purposes as defined by policies and vendors. [!DNL Real-time CDP] utilizes these strings to store the consent settings for each customer, and therefore a new consent string must be generated each time those settings change.
 
@@ -90,7 +91,7 @@ Consent strings may only be created by a CMP that is registered with the IAB TCF
 
 ## Create datasets with IAB consent fields {#datasets}
 
-Customer consent data must be sent to a datasets whose schema contains IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to datasets whose schemas contain IAB consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
@@ -125,7 +126,7 @@ After providing a unique name for the configuration, select the toggle button ne
 
 ![](../assets/iab/edge-config.png)
 
-When finished, click **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
+When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 ### Making consent-change commands
 
@@ -236,7 +237,7 @@ TCF 2.0 also requires that the source of data must check the destination's vendo
 
 >[!NOTE]
 >
->Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://docs.adobe.com/help/en/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
+>Any segments that are shared with Adobe Audience Manager will contain the same TCF 2.0 consent values as their [!DNL Platform] counterparts. Since [!DNL Audience Manager] shares the same vendor ID as [!DNL Real-time CDP] (565), the same purposes and vendor permission are required. See the document on the [Adobe Audience Manager plug-in for IAB TCF](https://experienceleague.adobe.com/docs/audience-manager/user-guide/overview/data-privacy/consent-management/aam-iab-plugin.html) for more information.
 
 ## Test your implementation {#test-implementation}
 

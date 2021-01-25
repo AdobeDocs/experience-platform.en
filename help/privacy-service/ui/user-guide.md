@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
 title: Privacy Service user guide
 topic: UI guide
+description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 ---
 
 # [!DNL Privacy Service] user guide
@@ -11,20 +12,21 @@ This document provides steps for creating and managing privacy requests using th
 
 ## Browse the [!DNL Privacy Service] UI dashboard
 
-The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: **[!UICONTROL Status Report]** and **[!UICONTROL Job Requests]**. The dashboard also displays the current selected regulation for the displayed jobs.
+The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow you to view the status of your privacy jobs: "[!UICONTROL Status Report]" and "[!UICONTROL Job Requests]". The dashboard also displays the current selected regulation for the displayed jobs.
 
 ![UI dashboard](../images/user-guide/dashboard.png)
 
 ### Regulation Type
 
-[!DNL Privacy Service] supports job requests for four regulation types: 
+[!DNL Privacy Service] supports job requests for several privacy regulations: 
 
-* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
 * The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
 * Thailand's [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
+* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* The New Zealand [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
 
-Jobs for each regulation type are tracked separately. To switch between regulation types, click the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
+Jobs for each regulation type are tracked separately. To switch between regulation types, select the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 
 ![Regulation Type dropdown](../images/user-guide/regulation.png)
 
@@ -36,7 +38,7 @@ Upon changing the regulation type, the dashboard updates to show all operations,
 
 The graph on the left-hand side of the Status Report widget tracks submitted jobs against any jobs that may have reported back with errors. The graph on the right-hand side tracks jobs nearing the end of the 30-day compliance window.
 
-Click one of the two toggle buttons above the graph to show or hide their respective metrics.
+Select one of the two toggle buttons above the graph to show or hide their respective metrics.
 
 ![](../images/user-guide/hide-errors.png)
 
@@ -44,13 +46,13 @@ You can view the exact number of jobs associated with any data point on the grap
 
 ![Mouse-over data points](../images/user-guide/mouse-over.png)
 
-To view further details about a given data point, click the data point in question to display the associated jobs in the Job Requests widget. Take note of the filter that is applied just above the job list.
+To view further details about a given data point, select the data point in question to display the associated jobs in the Job Requests widget. Take note of the filter that is applied just above the job list.
 
 ![Applied filter from widget](../images/user-guide/apply-filter.png)
 
 >[!NOTE]
 >
->When a filter has been applied to the Job Requests widget, you can remove the filter by clicking the **X** on the filter pill. Job Requests then return to the default tracking list.
+>When a filter has been applied to the Job Requests widget, you can remove the filter by selecting the **X** on the filter pill. Job Requests then return to the default tracking list.
 
 ### Job Requests
 
@@ -64,15 +66,15 @@ You can filter the list by typing keywords into the search bar below the Job Req
 
 ![Job Request search options](../images/user-guide/job-search.png)
 
-To view the details of a particular job request, click the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
+To view the details of a particular job request, select the request's job ID from the list to open the **[!UICONTROL Job Details]** page.
 
 ![GDPR UI Job Details](../images/user-guide/job-details.png)
 
 This dialog contains status information about each [!DNL Experience Cloud] solution and its current state in relation to the overall job. As every privacy job is asynchronous, the page displays the latest communication date and time (GMT) from each solution, as some require more time than others to process the request.
 
-If a solution has provided any additional data, it is viewable in this dialog. You can view this data by clicking on individual product rows.
+If a solution has provided any additional data, it is viewable in this dialog. You can view this data by selecting individual product rows.
 
-To download the complete job data as a CSV file, click **[!UICONTROL Export to CSV]** at the top-right of the dialog.
+To download the complete job data as a CSV file, select **[!UICONTROL Export to CSV]** at the top-right of the dialog.
 
 ## Create a new privacy job request
 
@@ -91,15 +93,15 @@ Steps for using each of these methods are provided in the following sections.
 
 Using the Request Builder, you can manually create a new privacy job request in the user interface. The Request Builder is best used for simpler and smaller sets of requests, because the Request Builder limits requests to have only ID type per user. For more complicated requests, it may better to [upload a JSON file](#json) instead.
 
-To start using the Request builder, click **[!UICONTROL Create Request]** below the Status Report widget on the right-hand side of the screen.
+To start using the Request builder, select **[!UICONTROL Create Request]** below the Status Report widget on the right-hand side of the screen.
 
-![Click Create Request](../images/user-guide/create-request.png)
+![Select Create Request](../images/user-guide/create-request.png)
 
 The **[!UICONTROL Create Request]** dialog opens, displaying the available options for submitting a privacy job request for the currently selected regulation type.
 
 <img src="../images/user-guide/request-builder.png" width=500 /><br/>
 
-Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available **[!UICONTROL Products]** from the list.
+Select the **[!UICONTROL Job Type]** of the request ("Delete" or "Access") and one or more available products from the list.
 
 <img src="../images/user-guide/type-and-products.png" width=500 /><br/>
 
@@ -107,15 +109,15 @@ Under **[!UICONTROL Namespace type]**, select the appropriate namespace type for
 
 <img src="../images/user-guide/namespace-type.png" width=500 /><br/>
 
-When using the _standard_ namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
+When using the standard namespace type, select a namespace from the drop-down menu (email, ECID, or AAID), then type the ID values in the textbox to the right, pressing **\<enter>** for each ID to add it to the list.
 
 <img src="../images/user-guide/standard-namespace.png" width=500 /><br/>
 
-When using the _custom_ namespace type, you must manually type in the namespace before providing the ID values below.
+When using the custom namespace type, you must manually type in the namespace before providing the ID values below.
 
 <img src="../images/user-guide/custom-namespace.png" width=500 /><br/>
 
-When finished, click **[!UICONTROL Create]**.
+When finished, select **[!UICONTROL Create]**.
 
 <img src="../images/user-guide/request-builder-create.png" width=500 /><br/>
 
@@ -125,7 +127,7 @@ The dialog disappears, and the new job (or jobs) are listed in the Job Requests 
 
 When creating more complicated requests, such as those that use multiple ID types for each data subject being processed, you can create a request by uploading a JSON file.
 
-Click the arrow next to **[!UICONTROL Create Request]**, below the Status Report widget on the right-hand side of the screen. From the list of options that appears, select **[!UICONTROL Upload JSON]**.
+Select the arrow next to **[!UICONTROL Create Request]**, below the Status Report widget on the right-hand side of the screen. From the list of options that appears, select **[!UICONTROL Upload JSON]**.
 
 ![Request creation options](../images/user-guide/create-options.png)
 
@@ -133,7 +135,7 @@ The **[!UICONTROL Upload JSON]** dialog appears, providing a window for you to d
 
 <img src="../images/user-guide/upload-json.png" width=500 /><br/>
 
-If you do not have a JSON file to upload, click **[!UICONTROL Download Adobe-GDPR-Request.json]** to download a template that you can populate according to the values you have collected from your data subjects.
+If you do not have a JSON file to upload, select **[!UICONTROL Download Adobe-GDPR-Request.json]** to download a template that you can populate according to the values you have collected from your data subjects.
 
 
 <img src="../images/user-guide/privacy-template.png" width=500 /><br/>
@@ -141,7 +143,7 @@ If you do not have a JSON file to upload, click **[!UICONTROL Download Adobe-GDP
 
 Locate the JSON file on your computer, and drag it into the dialog window. If the upload is successful, the file name appears in the dialog. You can continue to add more JSON files as necessary by dragging and dropping them into the dialog.
 
-When finished, click **[!UICONTROL Create]**. The dialog disappears, and the new job (or jobs) are listed in the _Job Requests_ widget along with their current processing status.
+When finished, select **[!UICONTROL Create]**. The dialog disappears, and the new job (or jobs) are listed in the Job Requests widget along with their current processing status.
 
 ### Next steps
 

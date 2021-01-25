@@ -1,6 +1,6 @@
 ---
 keywords: text classification;Text classification
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Text classification API endpoint
 topic: Developer guide
 description: The text classification service, when given a text fragment, can classify it into one or more labels. The classification can be single-label, multi-label, or hierarchical.
@@ -56,7 +56,7 @@ curl -w'\n' -i -X POST https://sensei.adobe.io/services/v1/predict \
 | Property | Description | Mandatory |
 | --- | --- | --- |
 | `analyzer_id` | The [!DNL Sensei] service ID that your request is deployed under. This ID determines which of the [!DNL Sensei Content Frameworks] are used. For custom services, please contact the Content and Commerce AI team to set up a custom ID. | Yes |
-| `application-id` | The ID of application created. | Yes |
+| `application-id` | The ID of the application created. | Yes |
 | `data` | An array that contains a JSON object with each object in the array representing a document. Any parameters passed as part of this array overrides the global parameters specified outside the `data` array. Any of the remaining properties outlined below in this table can be overridden from within `data`. | Yes |
 | `language` | Language of input text. The default value is `en`. | No |
 | `content-type` | Used to indicate whether the input is part of the request body or a signed url for an S3 bucket. The default for this property is `inline`. | No |

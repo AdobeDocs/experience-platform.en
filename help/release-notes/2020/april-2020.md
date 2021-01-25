@@ -72,7 +72,7 @@ The [!DNL Data Governance] framework simplifies and streamlines the process of c
 
 | Feature    | Description  |
 | -----------| ---------- |
-| Manage data usage policies in the UI  | Data usage policies can now be managed within the _Policies_ workspace in the [!DNL Experience Platform] UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
+| Manage data usage policies in the UI  | Data usage policies can now be managed within the **Policies** workspace in the [!DNL Experience Platform] UI. See the [policy user guide](../../data-governance/policies/user-guide.md) for more information.|
 
 **Known issues**
 
@@ -83,18 +83,18 @@ For more information, please see the [Data Governance overview](../../data-gover
 
 ## Destinations {#destinations}
 
-In [Adobe Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
+In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are pre-built integrations with destination platforms that activate data to those partners in a seamless way.
 
 **New destinations**
 
-Adobe Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
+Real-time CDP now supports data activation to over fifty [!DNL Experience Cloud Launch] extensions, enabling analytics, personalization, and other use cases. See below for details:
 
 |Documentation | Description|
 |--- | ---|
-|[Destination types and categories](/help/rtcdp/destinations/destination-types.md) | This article explains the difference between connections and extensions in the Adobe Real-time CDP interface and recommends when to use each of these destinations.|
-|[Experience Platform Launch extensions](/help/rtcdp/destinations/experience-platform-launch-extensions.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Adobe Real-time CDP.|
+|[Destination types and categories](../../destinations/destination-types.md) | This article explains the difference between connections and extensions in the Real-time CDP interface and recommends when to use each of these destinations.|
+|[Experience Platform Launch extensions](../../destinations/catalog/launch-extensions/overview.md) | This page explains what [!DNL Launch] extensions are, lists use cases for using them, and links to documentation for each [!DNL Launch] extension in Real-time CDP.|
 
-For more information, please see the [Destinations overview](/help/rtcdp/destinations/destinations-overview.md).
+For more information, please see the [Destinations overview](../../destinations/home.md).
 
 ## [!DNL Privacy Service] {#privacy}
 

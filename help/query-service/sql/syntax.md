@@ -19,6 +19,7 @@ The following syntax defines a `SELECT` query supported by [!DNL Query Service]:
 SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ * | expression [ [ AS ] output_name ] [, ...] ]
     [ FROM from_item [, ...] ]
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
     [ WHERE condition ]
     [ GROUP BY grouping_element [, ...] ]
     [ HAVING condition [, ...] ]
@@ -56,6 +57,30 @@ and `with_query` is:
  
 TABLE [ ONLY ] table_name [ * ]
 ```
+
+### SNAPSHOT clause
+
+This clause can be used to read data on a table incrementally based on snapshot ids. A snapshot id is a checkpoint marker identified by a number, of type Long, on a datalake table every time data is written to it. The SNAPSHOT clause attaches itself to the table relation it is used next to.
+
+```sql
+    [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
+``` 
+
+#### Example 
+
+```sql
+SELECT * FROM Customers SNAPSHOT SINCE 123;
+
+SELECT * FROM Customers SNAPSHOT AS OF 345;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
+
+SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
+
+SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
+```
+
+Please note that a SNAPSHOT clause works with a table or table alias but not on top of a sub-query or view. A SNAPHOST clause will work anywhere a SELECT query on a table can be applied.
 
 ### WHERE ILIKE clause
 
@@ -113,7 +138,7 @@ CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='fal
 
 where,
  `target_schema_title` is the title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by CTAS query
- `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'false'
+ `rowvalidation` specifies if the user wants row level validation of every new batches ingested for the new dataset created. Default value is 'true'
 
 and `select_query` is a `SELECT` statement, the syntax of which is defined above in this document.
 
@@ -129,6 +154,11 @@ Please note that for a given CTAS query:
 
 1. The `SELECT` statement must have an alias for the aggregate functions such as `COUNT`, `SUM`, `MIN`, and so on. 
 2. The `SELECT` statement can be provided with or without parentheses ().
+3. THE `SELECT` statement can be provided with a SNAPSHOT clause to read incremental deltas into target table.
+
+```sql
+CREATE TABLE Chairs AS (SELECT color FROM Inventory SNAPSHOT SINCE 123)
+```
 
 ## INSERT INTO
 
@@ -150,6 +180,11 @@ Please note that for a given INSERT INTO query:
 
 1. The `SELECT` statement MUST NOT be enclosed in parentheses ().
 2. The schema of the result of the `SELECT` statement must conform to that of the table defined in the `INSERT INTO` statement.
+3. The `SELECT` statement can be provided with a SNAPSHOT clause to read incremental deltas into target table.
+
+```sql
+INSERT INTO Customers AS (SELECT * from OnlineCustomers SNAPSHOT AS OF 345)
+```
 
 ### DROP TABLE
 
@@ -478,3 +513,50 @@ where 'format_name' is be one of:
 >[!NOTE]
 >
 >The complete output path will be `adl://<ADLS_URI>/users/<USER_ID>/acp_foundation_queryService/folder_location/<QUERY_ID>`
+>
+
+### ALTER
+
+This command helps in adding or dropping primary or foreign key constraints to the table.
+
+```sql
+Alter TABLE table_name ADD CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name ( primary_column_name )
+
+Alter TABLE table_name ADD CONSTRAINT Foreign key ( column_name ) references referenced_table_name Namespace 'namespace'
+
+Alter TABLE table_name DROP CONSTRAINT Primary key ( column_name )
+
+Alter TABLE table_name DROP CONSTRAINT  Foreign key ( column_name )
+```
+
+>[!NOTE]
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
+>
+
+### SHOW PRIMARY KEYS
+
+This command lists all the primary key constraints for the given database.
+
+```sql
+SHOW PRIMARY KEYS
+    tableName | columnName    | datatype | namespace
+------------------+----------------------+----------+-----------
+ table_name_1 | column_name1  | text     | "ECID"
+ table_name_2 | column_name2  | text     | "AAID"
+```
+
+
+### SHOW FOREIGN KEYS
+
+This command lists all the foreign key constraints for the given database.
+
+```sql
+SHOW FOREIGN KEYS
+    tableName   |     columnName      | datatype | referencedTableName | referencedColumnName | namespace 
+------------------+---------------------+----------+---------------------+----------------------+-----------
+ table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
+ table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+
+```

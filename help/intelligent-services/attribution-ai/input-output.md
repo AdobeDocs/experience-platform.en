@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
-solution: Experience Platform
+solution: Experience Platform, Intelligent Services
 title: Attribution AI input and output
 topic: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
@@ -131,7 +131,7 @@ You can view the path to your raw scores in the UI. Start by selecting **[!UICON
 
 ![Pick your schema](./images/input-output/schemas_browse.png)
 
-Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the **[!UICONTROL Path]** field that maps to your raw scores.
+Next, select a field within the **[!UICONTROL Structure]** window of the UI, the **[!UICONTROL Field properties]** tab opens. Within **[!UICONTROL Field properties]** is the path field that maps to your raw scores.
 
 ![Pick a Schema](./images/input-output/field_properties.png)
 

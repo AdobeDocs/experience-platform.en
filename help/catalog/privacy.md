@@ -23,7 +23,7 @@ It is recommended that you have a working understanding of the following [!DNL E
 
 ## Understanding identity namespaces {#namespaces}
 
-Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses **[!UICONTROL identity namespaces]** to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+Adobe Experience Platform [!DNL Identity Service] bridges customer identity data across systems and devices. [!DNL Identity Service] uses identity namespaces to provide context to identity values by relating them to their system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
 [!DNL Identity Service] maintains a store of globally defined (standard) and user-defined (custom) identity namespaces. Standard namespaces are available for all organizations (for example, "Email" and "ECID"), while your organization can also create custom namespaces to suit its particular needs.
 
@@ -31,7 +31,7 @@ For more information about identity namespaces in [!DNL Experience Platform], se
 
 ## Adding identity data to datasets
 
-When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an **[!UICONTROL identity descriptor]** in their associated XDM schema.
+When creating privacy requests for the [!DNL Data Lake], valid identity values (and their associated namespaces) must be provided for each individual customer in order to locate their data and process it accordingly. Therefore, all datasets that are subject to privacy requests must contain an identity descriptor in their associated XDM schema.
 
 >[!NOTE]
 >
@@ -129,6 +129,10 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 >This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
+
+>[!IMPORTANT]
+>
+>The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the Data Lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the UI
 

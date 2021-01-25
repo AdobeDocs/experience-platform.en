@@ -24,7 +24,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -192,7 +192,7 @@ This section contains information about what the various status codes mean for r
 | ----------- | ------------- |
 | 200 | Success. For synchronous validation, it means that it has passed the validation checks. For asynchronous validation, it means that it only has successfully received the message. Users can find out the eventual message status by observing the dataset. |
 | 400 | Error. There is something wrong with your request. An error message with further details is received from the Streaming Validation Services. |
-| 401 | Error. Your request is unauthorized - you'll need to request with a bearer token. For further information about how to request access, check out this [tutorial](../../tutorials/authentication.md) or this [blog post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
+| 401 | Error. Your request is unauthorized - you'll need to request with a bearer token. For further information about how to request access, check out this [tutorial](https://www.adobe.com/go/platform-api-authentication-en) or this [blog post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f). |
 | 500 | Error. There is an internal system error. |
 | 501 | Error. This means that synchronous validation is **not** supported for this location. |
 | 503 | Error. The service is currently unavailable. Clients should retry at least three times using an exponential back-off strategy. |
