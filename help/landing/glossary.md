@@ -50,15 +50,15 @@ description: A glossary of important terminology in Experience Platform.
 
 **Attributes**: Attributes are specified characteristics that represent a profile.
 
-**Attribute merge**: Attribute merge defines how a merge policy prioritizes profile attribute value in the case of data conflicts. 
+**Attribute merge**: When defining a merge policy using the Real-time Customer Profile API, the `attributeMerge` object indicates the manner by which the merge policy will prioritize profile attributes in the case of data conflicts. It is equivalent to selecting a [!UICONTROL Merge method] when defining a merge policy in the Platform UI.
 
 **Attribution AI**: [!DNL Attribution AI] is an Intelligent Service powered by Adobe Sensei that delivers algorithmic multi-channel attribution capabilities across the entire customer lifecycle.
 
-**Audience**: An audience (or audience size) is the resulting set of profiles that meet the criteria of a segment definition.
+**Audience**: An audience is the resulting set of profiles that meet the criteria of a segment definition.
+
+**Audience size**: An audience size is the total number of profiles that meet the criteria of a segment definition and qualify for audience membership.
 
 **Audience snapshot**: An audience snapshot captures all profiles who qualify for the segment criteria at the time of segmentation.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## B
 
@@ -78,15 +78,13 @@ description: A glossary of important terminology in Experience Platform.
 
 **Business intelligence tools**: Business intelligence (BI) tools are primarily integrated with [!DNL Experience Platform Query Service]. BI tools are types of application software that collect and process large amounts of unstructured data from internal and external systems.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## C
 
 **Capping**: In [!DNL Offer Decisioning], capping (also known as frequency capping) is used in decisioning rules to define how many times an offer is presented. There are two types of caps: how many times an offer can be proposed across the combined target audience (called a "Global Cap"), and how many times an offer can be proposed to the same end user (called a "Profile Cap").
 
-**Catalog**: In the context of sources and destinations, a catalog is gallery with available connections to Adobe applications and third-party technologies. Not to be confused with [!DNL Catalog Service].
+**Catalog**: In the context of sources and destinations, a catalog is a gallery with available connections to Adobe applications and third-party technologies. Not to be confused with [!DNL Catalog Service].
 
-**[!DNL Catalog Service]**: [!DNL Catalog Service] (sometimes called [!DNL Catalog]) is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup and monitoring purposes.
+**[!DNL Catalog Service]**: [!DNL Catalog Service] (sometimes called [!DNL Catalog]) is the system of record for data location and lineage within Adobe Experience Platform. While all data that is ingested into Experience Platform is stored in the data lake as files and directories, [!DNL Catalog] holds the metadata and description of those files and directories for lookup, monitoring, and data-governance purposes.
 
 **Class**: In Experience Data Model (XDM), a class defines the smallest set of fields used to build a schema and defines the base behavior of the business object that the schema represents.
 
@@ -104,7 +102,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
-**Contract "C" labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
+**Contract ("C") labels**: Contract ("C") data usage labels are used to categorize data that has contractual obligations or is related to a customer's data governance policies.
 
 **C1 contract label**: A `C1` contract data usage label specifies data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. For example, data that originated from social networks.
 
@@ -139,8 +137,6 @@ description: A glossary of important terminology in Experience Platform.
 **Custom labels**: Custom data usage labels allow you to create and apply specific labels to data fields that meet specific business needs.
 
 **Customer AI**: Customer AI is an Intelligent Service powered by Adobe Sensei that enriches customer profiles with AI-based propensities and empowers customer segmentation and targeting efforts.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## D
 
@@ -196,8 +192,6 @@ description: A glossary of important terminology in Experience Platform.
 
 **Display name**: In Experience Data Model (XDM), a display name is a user-friendly name for a field that is shown in the UI.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## E
 
 **Eligible offer**: An eligible offer can be consistently offered to a profile, as it meets the constraints defined upstream.
@@ -230,15 +224,13 @@ description: A glossary of important terminology in Experience Platform.
 
 **Extension package**: In [!DNL Platform Launch], an extension package is a ZIP file created and uploaded by an extension developer that provides everything necessary for [!DNL Platform Launch] users to install the extension inside their property. An extension package contains a manifest specifying information about the extension, the HTML/JavaScript needed for end-users to configure the behavior of the [!DNL Platform Launch] extension, and the executable JavaScript delivered to the client environment (if required).
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## F
 
 **Fallback offers**: A fallback offer is the default offer displayed when an end-user is not eligible for any of the offers in the collection used.
 
 **Feature mapping**: Feature mapping refers to the process of mapping features from data into input and target features that are required by a machine-learning model.
 
-**Field**: A field is the lowest level element of a dataset, as defined by the dataset's XDM schema. Each field has a name for referencing purposes, and a type to indicate the type of data that it contains. Field types can include (but are not limited to) integer, number, string, boolean, and object.
+**Field**: A field is the lowest level element of a dataset, as defined by the dataset's XDM schema. Each field has a name for referencing purposes and a type to indicate the type of data that it contains. Field types can include (but are not limited to) integer, number, string, boolean, and object.
 
 **Field labels**: Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.
 
@@ -246,21 +238,15 @@ description: A glossary of important terminology in Experience Platform.
 
 **Frequency**: In [!DNL Query Service], frequency determines how often a recurring scheduled query will run.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## G
 
 **Geofence**: A geofence is a virtual geographic boundary, defined by GPS or RFID technology, that enables software to trigger a response when a mobile device enters or leaves a particular area.
 
 **GDPR (General Data Protection Regulation)**: The General Data Protection Regulation (GDPR) is a legal framework that sets guidelines for the collection and processing of personal information of individuals within the European Union (EU). The GDPR sets out the principles for data management and the rights of the individual and covers all companies that deal with the data of EU citizens.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## H
 
 **Host**: In [!DNL Platform Launch], a host specifies the location, domain, and user credentials necessary for [!DNL Platform Launch] to deliver a build.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## I
 
@@ -268,7 +254,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Identity fields**: Identity fields are XDM fields that are used to stitch together information about individual customers coming from multiple data sources. A single primary identity must be defined in order for the schema to be enabled for use in Real-time Customer Profile.
 
-**Identity "I" labels**: Identity "I" data usage labels are used to categorize data that can identify or contact a specific person.
+**Identity ("I") labels**: Identity ("I") data usage labels are used to categorize data that can identify or contact a specific person.
 
 **Identity graph**: An identity graph is a map of relationships between stitched and linked identities that exist for an individual customer. Each identity graph updates in near-real-time with customer activity. The common structure of identity relationships in your data is represented by the [!UICONTROL Private Graph], which serves as the structural blueprint for each individual identity graph.
 
@@ -302,8 +288,6 @@ description: A glossary of important terminology in Experience Platform.
 1. Data is used in another context such as on another site or app (off-site).
 1. Data is used to select which content or ads are served based on those inferences.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## J
 
 **[!DNL JupyterLab]**: An open-source, web-based interface for Project [!DNL Jupyter] that is integrated into the Platform UI.
@@ -312,15 +296,11 @@ description: A glossary of important terminology in Experience Platform.
 
 ## K
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## L
 
 **Library**: In [!DNL Platform Launch], a library is a set of business logic that contains instructions for how the [!DNL Platform Launch] library should behave on the client device.
 
 **Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## M
 
@@ -332,23 +312,19 @@ description: A glossary of important terminology in Experience Platform.
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
 
-**Merge method**: A merge method is a merge policy option that specifies how data fragments should be prioritized when being merged together. The merge methods include "timestamp ordered" and "dataset precedence".
+**Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
-**Merge policy**: A merge policy is a set are rules used by Real-time Customer Profile to determine how data will be prioritized and combined into a unified view under certain conditions.
+**Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
 **Mixin**: In Experience Data Model (XDM), a mixin allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
 
 **Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## N
 
 **Non-production sandbox**: Non-production sandboxes are sandboxes that are typically used for development experiments, testing, or trials. Unlike production sandboxes, non-production sandboxes can be reset and deleted.
 
 **[!DNL Notebooks]**: [!DNL Notebooks] are authored using [!DNL Jupyter Notebook] and can be run to perform data analysis.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## O
 
@@ -363,8 +339,6 @@ description: A glossary of important terminology in Experience Platform.
 **On-site targeting marketing action**: A marketing action that uses data for on-site ads, including the selection and delivery of advertisements on your organization's websites or apps, or to measure the delivery and effectiveness of such advertisements.
 
 **Overwrite save strategy**: The "Overwrite" save strategy is an option for ingesting third-party data via a connection, where you can specify if ingested data will be overwritten on a specified schedule.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## P
 
@@ -392,11 +366,15 @@ description: A glossary of important terminology in Experience Platform.
 
 **Production sandbox**: A production sandbox is a sandbox intended for use in your production environment. Unlike non-production sandboxes, production sandboxes cannot be reset or deleted.
 
-**Profile**:{#profile} Not to be confused with [Real-time Customer Profile](#rtcp), a profile is the output of [!DNL Identity Service] and [!DNL Real-time Customer Profile] data, taking ingested profile data with identity fields and constructing a representation of a person.
+**Profile**:{#profile} Not to be confused with [Real-time Customer Profile](#rtcp) as a service, a profile is a complete representation of an individual customer, constructed from merged record and time-series data from multiple sources.
 
-**Profile data**: Profile data is data ingested under the [!DNL XDM Individual Profile] class. This data typically describes customer attributes, as opposed to event data.
+**Profile access**:{#profile-access} The `/entities` endpoint in the Real-time Customer Profile API allows you to access record data and time-series events in the Profile data store. See also: [Profile entities](#profile-entities)
 
-**Profile entities**: Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class.
+**Profile data**: Profile data refers to any data that is located within the Profile data store.
+
+**Profile data store**: The Profile data store (sometimes called the Profile store) is a data storage system separate from the data lake, used by Real-time Customer Profile to create and store profiles. 
+
+**Profile entities**:{#profile-entities} Profile entities represent attributes relating to an individual person, typically a customer. Entities that fall under this category should be represented by schemas based on the [!DNL XDM Individual Profile] class. See also: [Profile access](#profile-access)
 
 **Profile export**: [!DNL Profile] export is one of the two types of destinations in Experience Platform. [!DNL Profile] export generates a file containing profiles and attributes, and uses raw PII data with email in order to integrate with marketing and email-automation platforms.
 
@@ -406,21 +384,17 @@ description: A glossary of important terminology in Experience Platform.
 
 **Property**: In [!DNL Platform Launch], a property is a container for everything needed to deploy a set of tags.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## Q
 
 **Query**: Queries are requests for data from database tables.
 
 **Query Editor**: Query Editor is a tool for writing, validating, and submitting SQL statements in [!DNL Query Service].
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## R
 
 **Real-time Customer Data Platform**: [!DNL Real-time Customer Data Platform] brings together known and unknown customer data to create trusted customer profiles with simplified integration, intelligent segmentation, and real-time activation across the digital customer journey.
 
-**Real-time Customer Profile**:{#rtcp} Not to be confused with a generic [profile](#profile), [!DNL Real-time Customer Profile] (often referred to as "Profile") is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+**Real-time Customer Profile**:{#rtcp} Real-time Customer Profile (sometimes called Profile) provides a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. Profile allows you to consolidate your customer data into individual [profiles](#profile) offering actionable, timestamped accounts of every customer interaction.
 
 **Recipe**: A recipe is Adobe's term for a model specification and is a top-level container representing specific machine-learning processes, AI algorithms, processing logic, and configuration parameters required to build and execute a trained model and hence help solve specific business problems.
 
@@ -441,8 +415,6 @@ description: A glossary of important terminology in Experience Platform.
 **Rule component**: In [!DNL Platform Launch], rule components are the events, conditions, and actions that make up a rule.
 
 **Runtime**: Runtime specifies a runtime environment for a machine-learning recipe. [!DNL Python], R, [!DNL Spark], PySpark, and Tensorflow runtimes allow you to input a URL to a Docker image for a recipe source.
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## S
 
@@ -486,7 +458,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Sensei ML Framework**: Sensei ML Framework is a unified machine-learning (ML) framework that leverages Experience Platform data to empower data scientists to development of ML-driven intelligence services in a faster, scalable, and reusable manner.
 
-**Sensitive labels**: Sensitive "S" labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
+**Sensitive ("S") labels**: Sensitive ("S") labels are used to categorize data deemed sensitive, such as different types of behavioral or geographic data that you want marked as sensitive.
 
 **Services**: A powerful framework to operationalize AI and ML services by leveraging Adobe Intelligent Services. Services deliver real-time, personalized customer experiences or operationalize custom intelligent services.
 
@@ -516,8 +488,6 @@ description: A glossary of important terminology in Experience Platform.
 
 **System View**: System View is a visual representation of source datasets that flow through [!DNL Real-time Customer Profile] to destinations. 
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## T
 
 **Target features**: In feature mapping, a target feature is the feature that is predicted by a model.
@@ -528,21 +498,13 @@ description: A glossary of important terminology in Experience Platform.
 
 **Token**: A token is a type of two-factor authentication security that can be used to authorize the use of computer services with [!DNL Query Service].
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## U
 
-**Union schema**: A union schema is a consolidation of schemas that have been enabled for [!DNL Real-time Customer Profile].
-
-[Back to top](#adobe-experience-platform-glossary)
+**Union schema**: A union schema is a consolidation of schemas that share the same class and have been enabled for [!DNL Real-time Customer Profile]. Multiple union schemas can exist for an organization, but there can only be one union schema per class.
 
 ## V
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## W
-
-[Back to top](#adobe-experience-platform-glossary)
 
 ## X
 
@@ -556,12 +518,6 @@ description: A glossary of important terminology in Experience Platform.
 
 **XDM System**: XDM System represents the framework that operationalizes XDM schemas for use in downstream Experience Platform services.
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## Y
 
-[Back to top](#adobe-experience-platform-glossary)
-
 ## Z
-
-[Back to top](#adobe-experience-platform-glossary)
