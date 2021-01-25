@@ -25,5 +25,10 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Feature | Description |
 | ------- | ----------- |
 | Adobe Audience Manager source connector enhancements | You are now able to filter and select individual first-party segments from Adobe Audience Manager to ingest into Platform, as well as filter out first-party traits See the tutorial on [creating an Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
+| UI support for custom separators in cloud storage sources |
+| Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source  | You can now connect your [!DNL Microsoft Dynamics] account using service principal key-based authentication. See the []
+| Support for Shared Access Signature URI-based authentication for Azure Blob source | You can now connect your Azure Blob account using Shared Access Signature URI-based authentication. |
+Support for large size record ingestion for Google BigQuery | You can now ingest files larger than 10GB in one flow run using the [Google BigQuery](../../sources/connectors/databases/bigquery.md) source connector. |
+| Support for complex data types in file ingestion for cloud storages | Cloud storage connectors can now support complex data types such as arrays in JSON files during file ingestion. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
