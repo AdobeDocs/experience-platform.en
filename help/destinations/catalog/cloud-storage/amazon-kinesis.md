@@ -8,7 +8,6 @@ seo-description: Create a real-time outbound connection to your Amazon Kinesis s
 
 # (Beta) [!DNL Amazon Kinesis] destination
 
-
 >[!IMPORTANT]
 >
 >The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
@@ -24,7 +23,6 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 * To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
-
 
 ## Use Cases {#use-cases}
 
