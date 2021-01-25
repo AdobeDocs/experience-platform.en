@@ -66,7 +66,9 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 ### Merge policy
 
-The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. To learn more about merge policies and their role within Platform, see the [merge policies UI guide](merge-policies.md).
+The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. 
+
+To learn more about merge policies and their role within Platform, see the [merge policies UI guide](merge-policies.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -106,13 +108,15 @@ From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Pol
 
 For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
 
+To learn more about working with merge policies using the Real-time Customer Profile API, please refer to the [merge policies endpoint guide](../api/merge-policies.md).
+
 ![](../images/user-guide/profiles-merge-policies.png)
 
 ## Union schema {#union-schema}
 
-From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view the union schemas for your ingested data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 
+From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Union Schema]** tab to view available union schemas for your ingested data. A union schema is an amalgamation of all [!DNL Experience Data Model] (XDM) fields under the same class, whose schemas have been enabled for use in [!DNL Real-time Customer Profile]. 
 
-For more information on union schemas, see the [union schema UI guide](union-schema.md).
+For more information on union schemas, please visit the [union schema UI guide](union-schema.md).
 
 ![](../images/user-guide/profiles-union-schema.png)
 
