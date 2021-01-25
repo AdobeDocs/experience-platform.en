@@ -147,12 +147,12 @@ alloy("setConsent", {
 >
 >If you are using additional consent standards in conjunction with `Adobe` (such as `IAB TCF`), you can add additional objects to the `consent` array for each standard. Each object must contain appropriate values for `standard`, `version`, and `value` for the consent standard they represent.
 
-The following JavaScript provides an example of how the `setConsent` command can be used for an example CMP hook (`OnConsentChanged`):
+The following JavaScript provides an example of how you may define a function that handles consent preference changes, to be used as a callback in an event listener:
 
 ```js
-CMP.OnConsentChanged(function () {
+var handleConsentChange = function () {
+  // Retrieve the consent data, map it to XDM, and pass it to the Platform Web SDK
   getConsentData(function (categories, collectedAt) {
-    // Map the retrieved consent data to XDM
     var consentXDM = {
       collect: {
         val: categories.collect !== -1 ? "y" : "n"
@@ -170,7 +170,6 @@ CMP.OnConsentChanged(function () {
       }
     };
 
-    // Pass the mapped XDM to Alloy
     alloy("setConsent", {
       consent: [{
         standard: "Adobe",
@@ -185,7 +184,6 @@ CMP.OnConsentChanged(function () {
 #### Handling SDK responses
 
 All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
-
 
 ### Ingest XDM-compliant consent data directly {#batch}
 
