@@ -14,8 +14,6 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
-  * Schema use cases {#use-cases}
-    * [Consents & Preferences data type](schema/privacy-consent.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
