@@ -34,17 +34,19 @@ All requests with a payload in the request body (such as POST, PUT, and PATCH ca
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
 
-### How to setup Postman for Experience Platform
+### How to setup a Postman environment for Experience Platform
 
-The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, anytime a value expires such as your access token, you can update the current value in the environment and this new value will be used across all your collections.
+The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, anytime a value expires such as your `ACCESS_TOKEN`, you can update the current value in the environment and this new value will be used across all your collections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-Once you have your environment set up, select the **Manage Environments** selector in the top-right corner.
+### Importing a Postman collection
+
+In order to utilize a postman collection you need to have an environment set up. Once you have completed your environment set up, select the **Manage Environments** selector in the top-right corner.
 
 ![manage environment selector](./images/api-guide/environment-selector.png)
 
-The manage environment popover appears and displays all your current environments. Next, select the import button.
+The manage environment popover appears and displays all your current environments. To import a collection, select the import button.
 
 ![import button](./images/api-guide/import-collection.png)
 
@@ -52,7 +54,7 @@ You are asked to choose a file to import. Select the JSON Postman collection fil
 
 ![populated collection](./images/api-guide/imported-collection.png)
 
-Each collection has different key value pairs that may be required. Please review the services [API developer guide](#api-guides) to learn more about any of the required values, examples, and tips.
+Each collection has different key value pairs that may be required to perform a successful CRUD operation. Please review the services [API developer guide](#api-guides) to learn about required values, tips, and see examples.
 
 To learn more about Postman and its available features, visit the [Postman documentation](https://learning.postman.com/docs/getting-started/navigating-postman/).
 
