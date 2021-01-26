@@ -16,9 +16,9 @@ The true power of [!DNL Query Service] is revealed when queries are used to gene
 1. Write your query using a connected client and validate the output.
 2. Log in to the [!DNL Platform] UI and go to Queries.
 3. Find your query in the list and hover over the row.
-4. Click **[!UICONTROL Create Dataset]**. ![Image](../images/queries/create-datasets/click-create-dataset.png)
+4. Click **[!UICONTROL Create Dataset]**. ![Image](../images/ui/output-dataset.png)
 5. Enter a dataset name, prepended with your LDAP ID (does not have to be unique or SQL-safe; the system generates a "table name" based on the name given here).
-6. Enter a dataset description and click **[!UICONTROL Run Query]**.![Image](../images/queries/create-datasets/run-query.png)
+6. Enter a dataset description and click **[!UICONTROL Run Query]**.![Image](../images/ui/run-query.png)
 7. Watch the query complete, and then go to the dataset list page to see the dataset you just created. 
 
 After a dataset is created, it can be accessed like any other dataset in the [!DNL Data Lake] and used for a variety of use cases. 
