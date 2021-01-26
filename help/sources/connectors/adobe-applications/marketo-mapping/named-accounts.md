@@ -10,13 +10,15 @@ description: The table below contains the mappings between the Marketo named acc
 
 The table below contains the mappings between the [!DNL Marketo] named accounts dataset and their corresponding Experience Data Model (XDM) fields.
 
+The named accounts dataset is only necessary with [!DNL Marketo's] account-based marketing (ABM) feature. If you are not using ABM, then you do not need to set up mappings for named accounts.
+
 >[!IMPORTANT]
 >
 >If you are ingesting B2B data from [!DNL Marketo] and another CRM system, then select `External-Account-key` from the first row of source datasets. If you are ingesting B2B data exclusively from [!DNL Marketo], then select `Account-key` from the first row.
 
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
-| <ul><li>`External-Account-ke`y</li><li>`Account-key`</li></ul> | `accountID` |
+| <ul><li>`External-Account-key`</li><li>`Account-key`</li></ul> | `accountID` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |

@@ -86,7 +86,7 @@ To ingest data into an existing dataset, select **[!UICONTROL Use existing datas
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
-The **[!UICONTROL Select dataset]** dialog appears. Find the dataset you you wish to use, select it, then select **[!UICONTROL Confirm]**.
+The **[!UICONTROL Select dataset]** dialog appears. Find the dataset with the appropriate schema you wish to use, select it, then select **[!UICONTROL Confirm]**.
 
 ![select-existing-dataset](../../../../images/tutorials/create/marketo/select-dataset.png)
 
