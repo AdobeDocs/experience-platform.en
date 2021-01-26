@@ -34,7 +34,31 @@ All requests with a payload in the request body (such as POST, PUT, and PATCH ca
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
 
- The following Postman collections are available:
+### How to setup Postman for Experience Platform
+
+The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, anytime a value expires such as your access token, you can update the current value in the environment and this new value will be used across all your collections.
+
+>[!VIDEO](https://video.tv.adobe.com/v/28832)
+
+Once you have your environment set up, select the **Manage Environments** selector in the top-right corner.
+
+![manage environment selector]()
+
+The manage environment popover appears and displays all your current environments. Next, select the import button.
+
+![import button]()
+
+You are asked to choose a file to import. Select the JSON Postman collection file you wish to import. Once selected, the collection will populate in the left rail under the collections tab.
+
+![populated collection]()
+
+Each collection has different key value pairs that may be required. Please review the services [API developer guide](#api-guides) to learn more about any of the required values, examples, and tips.
+
+To learn more about Postman and its available features, visit the [Postman documentation](https://learning.postman.com/docs/getting-started/navigating-postman/).
+
+### Postman collections
+
+There are a few ways to download a postman collection. 
 
 - [Access Control Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Access%20Control%20API.postman_collection.json)
 - [Catalog Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json)
@@ -54,7 +78,8 @@ Postman is a collaboration platform for API development that allows you to set u
 - [Segmentation Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Segmentation%20Service%20API.postman_collection.json)
 - [Sensei Machine Learning API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sensei%20Machine%20Learning%20API.postman_collection.json)
 
-## Developer guides
+## Platform developer guides {#api-guides}
+
 
 ## Swagger documents
 
