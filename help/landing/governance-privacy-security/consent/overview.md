@@ -118,19 +118,19 @@ alloy("setConsent", {
     standard: "Adobe",
     version: "2.0",
     value: {
-      "collect": {
-        "val": "y"
+      collect: {
+        val: "y"
       },
-      "share": {
-        "val": "y"
-      }
-      "personalize": {
-        "content": {
-          "val": "y"
+      share: {
+        val: "y"
+      },
+      personalize: {
+        content: {
+          val: "y"
         }
       },
-      "metadata": {
-        "time": "2020-10-12T15:52:25+00:00"
+      metadata: {
+        time: "2020-10-12T15:52:25+00:00"
       }
     }
   }]
@@ -141,42 +141,46 @@ alloy("setConsent", {
 | --- | --- |
 | `standard` | The consent standard being used. This value must be set to `Adobe` in order to process Adobe-standard consent fields. |
 | `version` | The version number of the consent standard indicated under `standard`. This value must be set to `2.0` for Adobe-standard consent processing. |
-| `value` | A JSON object that conforms to the [Consents & Preferences data type](../../../xdm/data-types/consents.md), representing the customer's updated consent information. |
+| `value` | An object that conforms to the [Consents & Preferences data type](../../../xdm/data-types/consents.md), representing the customer's updated consent information. |
 
 >[!NOTE]
 >
 >If you are using additional consent standards in conjunction with `Adobe` (such as `IAB TCF`), you can add additional objects to the `consent` array for each standard. Each object must contain appropriate values for `standard`, `version`, and `value` for the consent standard they represent.
 
-The following JavaScript provides an example of how you may define a function that handles consent preference changes, to be used as a callback in an event listener:
+The following JavaScript provides an example of how you may define a function that handles consent preference changes on your site, to be used as a callback in an event listener or a CMP hook:
 
 ```js
 var handleConsentChange = function () {
-  // Retrieve the consent data, map it to XDM, and pass it to the Platform Web SDK
-  getConsentData(function (categories, collectedAt) {
-    var consentXDM = {
-      collect: {
-        val: categories.collect !== -1 ? "y" : "n"
-      },
-      personalize: {
-        content: {
-          val: categories.personalizeContent !== -1 ? "y" : "n"
-        }
-      },
-      share: {
-        val: categories.share !== -1 ? "y" : "n"
-      },
-      metadata: {
-        time: collectedAt
-      }
-    };
+  // Retrieve the consent data and generate a timestamp
+  var categories = getConsentData();
+  var d = new Date();
+  var collectedAt = d.toISOString();
 
-    alloy("setConsent", {
-      consent: [{
-        standard: "Adobe",
-        version: "2.0",
-        value: consentXDM
-      }]
-    });
+  //  Map the consent values and timestamp to XDM
+  var consentXDM = {
+    collect: {
+      val: categories.collect !== -1 ? "y" : "n"
+    },
+    personalize: {
+      content: {
+        val: categories.personalizeContent !== -1 ? "y" : "n"
+      }
+    },
+    share: {
+      val: categories.share !== -1 ? "y" : "n"
+    },
+    metadata: {
+      time: collectedAt
+    }
+  };
+
+  // Pass the XDM object to the Platform Web SDK
+  alloy("setConsent", {
+    consent: [{
+      standard: "Adobe",
+      version: "2.0",
+      value: consentXDM
+    }]
   });
 });
 ```
