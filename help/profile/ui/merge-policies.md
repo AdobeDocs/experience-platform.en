@@ -125,7 +125,7 @@ When creating or editing a merge policy, you can view the union schema for the c
 
 This opens the [!UICONTROL View Union Schema] dialog, showing all contributing schemas, identities, and relationships associated with the union schema. You can use the dialog to explore the union schema in the same way that you would by accessing the [!UICONTROL Union Schema] tab in the [!UICONTROL Profiles] section of the Platform UI.
 
-For detailed information on union schemas, including how to interact with them in the [!UICONTROL Union Schema] tab or the [!UICONTROL View Union Schema] dialog shown in the merge policies workflow, please visit the [Union schema UI guide](union-schema.md).
+For detailed information on union schemas, including how to interact with them in the [!UICONTROL Union Schema] tab or the [!UICONTROL View Union Schema] dialog shown in the merge policies workflow, please visit the [union schema UI guide](union-schema.md).
 
 ![](../images/merge-policies/view-union-schema-dialog.png)
 
@@ -148,7 +148,7 @@ Selecting **[!UICONTROL Dataset precedence]** as the merge method requires you t
 
 You can select up to 50 datasets from the dataset list to include in the merge policy. As datasets are selected, they are added to the **[!UICONTROL Select datasets]** section, allowing you to drag and drop the datasets and order them according to your desired precedence. As the datasets are adjusted in the list, the ordinal (1, 2, 3, etc) next to the dataset will update, displaying priority (1 being given the highest priority, then 2, and onward).
 
-Selecting a dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [Union schema UI guide](union-schema.md)  
+Selecting a dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [union schema UI guide](union-schema.md)  
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -170,7 +170,7 @@ If you selected **[!UICONTROL Dataset precedence]** as the merge method for Prof
 
 ExperienceEvent datasets cannot be manually ordered, instead the attributes in the ExperienceEvent datasets are appended to the Profile datasets if they are part of the same profile fragment.
 
-Similar to selecting Profile datasets, selecting an ExperienceEvent dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [Union schema UI guide](union-schema.md)  
+Similar to selecting Profile datasets, selecting an ExperienceEvent dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [union schema UI guide](union-schema.md)  
 
 ![](../images/merge-policies/dataset-precedence-experienceevent.png)
 
