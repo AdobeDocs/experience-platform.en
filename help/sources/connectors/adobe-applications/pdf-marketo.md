@@ -10,15 +10,15 @@ description: This document provides an overview of the Marketo Engage source con
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[[!DNL Marketo Engage]](https://www.marketo.com/software/) (hereinafter referred to as "[!DNL Marketo]") is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
+[Marketo Engage](https://www.marketo.com/software/) (hereinafter referred to as "Marketo") is a complete solution for lead management and B2B marketers looking to transform customer experiences by engaging across every stage of complex buying journeys.
 
-With the [!DNL Marketo] source connector, you can bring B2B data from [!DNL Marketo] to Platform and keep this data up to date using Platform-connected applications.
+With the Marketo source connector, you can bring B2B data from Marketo to Platform and keep this data up to date using Platform-connected applications.
 
-This document provides an overview of the [!DNL Marketo] source connector, including information about how to authenticate the connector, how to map [!DNL Marketo] fields to Experience Data Model (XDM), and the connector's data latency.
+This document provides an overview of the Marketo source connector, including information about how to authenticate the connector, how to map Marketo fields to Experience Data Model (XDM), and the connector's data latency.
 
-## Authenticate your [!DNL Marketo] connector
+## Authenticate your Marketo connector
 
-In order to connect [!DNL Marketo] to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
+In order to connect Marketo to Platform, you must first retrieve values for your `munchkinId`, `clientId`, and `clientSecret`.
 
 See the steps outlined in the [Authenticate your Marketo source connector](./marketo-auth.md) document to retrieve your credentials.
 
@@ -28,13 +28,13 @@ XDM is a publicly documented specification that provides common structures and d
 
 Adhering to XDM standards allows data to be uniformly incorporated into the Platform ecosystem, making it easier to deliver data and gather information.
 
-To learn more about XDM and its role in Platform, please see the [XDM System overview](../../../xdm/home.md).
+To learn more about XDM and its role in Platform, please see the [XDM System overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en).
 
-## Field mapping from [!DNL Marketo] to XDM
+## Field mapping from Marketo to XDM
 
-To establish a source connection between [!DNL Marketo] and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
+To establish a source connection between Marketo and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
 
-See the following documents for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
+See the following documents for detailed information on the field mapping rules between Marketo datasets and Platform:
 
 * [Activities](./marketo-mapping/activities.md)
 * [Campaigns](./marketo-mapping/campaigns.md)
@@ -47,9 +47,9 @@ See the following documents for detailed information on the field mapping rules 
 * [Opportunity person relations](./marketo-mapping/opportunity-person-relations.md)
 * [Persons](./marketo-mapping/persons.md)
 
-## Expected latency of [!DNL Marketo] data on Platform
+## Expected latency of Marketo data on Platform
 
-The following table outlines the expected latency for bringing [!DNL Marketo] data into Platform, based on the nature of ingestion and the desired destination:
+The following table outlines the expected latency for bringing Marketo data into Platform, based on the nature of ingestion and the desired destination:
 
 | Marketo Data | Expected Latency |
 | ------------ | ---------------- |
@@ -57,6 +57,6 @@ The following table outlines the expected latency for bringing [!DNL Marketo] da
 | New batch data to Data Lake | < 5 minutes |
 | New data to B2B CDP | < 15 minutes |
 
-## Connect [!DNL Marketo] to Platform
+## Connect Marketo to Platform
 
-To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../tutorials/ui/create/adobe-applications/marketo.md).
+To learn how to connect your Marketo data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../tutorials/ui/create/adobe-applications/marketo.md).
