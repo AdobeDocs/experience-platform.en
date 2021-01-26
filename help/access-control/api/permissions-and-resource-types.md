@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;access control permissions;access control resource types;access control api
 solution: Experience Platform
-title: List names of permissions and resource types
+title: Reference API Endpoint
 topic: developer guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. You can list the names of all permissions and resource types by making a GET request to the /acl/reference endpoint. These names can then be used in API calls to view effective policies for the current user.
 ---
 
-# List names of permissions and resource types
+# Reference API endpoint
 
 You can list the names of all permissions and resource types by making a GET request to the `/acl/reference` endpoint. These names can then be used in API calls to [view effective policies](./effective-policies.md) for the current user.
 

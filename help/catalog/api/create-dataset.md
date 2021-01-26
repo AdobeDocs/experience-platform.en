@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
-title: Create a dataset
+title: Create a Dataset
 topic: developer guide
-description: This document covers how to create a dataset object in Catalog.
+description: This document covers how to create a dataset object in the Catalog Service API.
 ---
 
 # Create a dataset

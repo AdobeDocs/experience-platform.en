@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
 solution: Experience Platform
-title: Create a dataset using APIs
+title: Create a Dataset using APIs
 topic: datasets
 description: This document provides general steps for creating a dataset using Adobe Experience Platform APIs and populating the dataset using a file.
 ---
