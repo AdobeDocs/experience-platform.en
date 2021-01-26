@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api 
 solution: Experience Platform
 title: Adobe Experience Platform API guide
 topic: ui guide
-description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and provides examples.
+description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and provides sample API calls.
 ---
 
 # Getting started with Adobe Experience Platform APIs
 
-Using an API endpoint, you can perform basic CRUD operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. Adobe Experience Platform API services are closely linked to one another and depending on which service you wish to use, you may need additional unique values. The following guide is intended to outline the basics and fundamentals for using Platform APIs. After reading this guide, please review the getting started guide of the service you wish to use before proceeding.
+Using an API endpoint, you can perform basic CRUD operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. Adobe Experience Platform API services are closely linked to one another and it is suggested that you have a basic understandings of the service before starting to use the API. The following guide is intended to outline the basics and fundamentals for using Platform APIs. After reading this guide, you will be prepared to work with any of the Platform developer guides.
 
 ## Authentication and headers
 
@@ -24,7 +24,7 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
 
 ### Specifying the content type
 
@@ -82,14 +82,13 @@ There are a few ways to download a postman collection.
 
 ## Platform developer guides {#api-guides}
 
-
 ## Swagger documents
 
 ## Error messages
 
 ## Reading sample API calls
 
-The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+The [!DNL Real-time Customer Profile] API documentation provides example API calls to demonstrate how to properly format requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](./troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
 
 ## Additional information
 
