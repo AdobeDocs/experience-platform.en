@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
 solution: Experience Platform
-title: Getting started with Real-time Machine Learning
+title: Getting Started with Real-time Machine Learning
 topic: Getting started
 description: The following document outlines the steps that are required to create a Real-time Machine Learning model in Adobe Experience Platform.
 ---

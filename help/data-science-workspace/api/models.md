@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;models;sensei machine learning api
 solution: Experience Platform
-title: Models
+title: Models API endpoint
 topic: Developer guide
 description: A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 ---
 
-# Models
+# Models API endpoint
 
 A model is an instance of a machine learning recipe that is trained using historical data and configurations to solve for a business use case.
 

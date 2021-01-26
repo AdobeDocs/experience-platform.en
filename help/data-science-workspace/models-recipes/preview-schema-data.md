@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;preview schema data;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Preview schemas and datasets
+title: Preview the retail sales schema and dataset
 topic: tutorial
 type: Tutorial
 description: The following document outlines previewing schemas and datasets on Adobe Experience Platform.
 ---
 
-# Preview schemas and datasets
+# Preview the retail sales schema and dataset
 
 Upon successful completion of the bootstrap script from the [Create the retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial. Output schemas and datasets can be viewed on [!DNL Experience Platform]. To view the schemas and datasets follow the steps below:
 

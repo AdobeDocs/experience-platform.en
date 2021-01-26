@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
-title: Enrich Real-time Customer Profile with machine learning insights
+title: Enrich Real-time Customer Profile with Machine-Learning Insights
 topic: tutorial
 type: Tutorial
 description: This document provides a step-by-step tutorial to enrich Real-time Customer Profile with machine learning insights, steps are broken into the following sections, create an output schema/dataset, configure an output schema/dataset, and create segments using the Segment Builder.
 ---
 
-# Enrich [!DNL Real-time Customer Profile] with machine learning insights
+# Enrich [!DNL Real-time Customer Profile] with machine-learning insights
 
 [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] provides the tools and resources to create, evaluate, and utilize machine learning models to generate data predictions and insights. When machine learning insights are ingested into a [!DNL Profile]-enabled dataset, that same data is also ingested as [!DNL Profile] records which can then be segmented into subsets of related elements by using [!DNL Experience Platform Segmentation Service].
 

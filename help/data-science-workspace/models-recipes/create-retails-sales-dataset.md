@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
-title: Create the retail sales schema and dataset
+title: Create the Retail Sales Schema and Dataset
 topic: tutorial
 type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
