@@ -17,7 +17,7 @@ This document provides a step-by-step tutorial for creating a policy using the [
 
 This tutorial requires a working understanding of the following key concepts involved in creating and evaluating policies:
 
-* [[Adobe Experience Platform Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
+* [Adobe Experience Platform Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
     * [Data usage labels](../labels/overview.md): Data usage labels are applied to XDM data fields, specifying restrictions for how that data can be accessed.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
