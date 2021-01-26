@@ -42,15 +42,15 @@ The following video guide outlines creating and setting up your Postman environm
 
 Once you have your environment set up, select the **Manage Environments** selector in the top-right corner.
 
-![manage environment selector]()
+![manage environment selector](./images/api-guide/environment-selector.png)
 
 The manage environment popover appears and displays all your current environments. Next, select the import button.
 
-![import button]()
+![import button](./images/api-guide/import-collection.png)
 
 You are asked to choose a file to import. Select the JSON Postman collection file you wish to import. Once selected, the collection will populate in the left rail under the collections tab.
 
-![populated collection]()
+![populated collection](./images/api-guide/imported-collection.png)
 
 Each collection has different key value pairs that may be required. Please review the services [API developer guide](#api-guides) to learn more about any of the required values, examples, and tips.
 
