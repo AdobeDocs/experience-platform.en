@@ -23,6 +23,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
 * Experience Platform APIs {#platform-apis}
+  * [Introduction to Experience Platform APIs](api-guide.md)
   * [API fundamentals](api-fundamentals.md)
   * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
   * [Authenticate and Access Platform APIs tutorial](api-authentication.md)
