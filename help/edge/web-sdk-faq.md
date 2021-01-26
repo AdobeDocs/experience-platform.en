@@ -151,13 +151,13 @@ More information about a CNAME is available in the [Adobe documentation](https:/
 
 Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your implmentation. Below is a list of the 4 cookies that you might see with the Web SDK and the way that they are used. 
 
-**kndct_orgid_identity** - the identity cookie is used to store the ECID as well as some other information related tot he users identity
+**kndct_orgid_identity** - the identity cookie is used to store the ECID as well as some other information related to the ECID
 
 **kndctr_orgid_consent** - this cookies stores the consent preference for the user on the website 
 
-**kndctr_orgid_personalization** - this cookies includes session information that Target will use to personalize webpages 
+**kndctr_orgid_personalization** - this cookies includes session information that Adone Target will use to personalize webpages 
 
-**kndctr_orgid_consentcheck** - aother session based cookie that will fetch consent preferences from the server
+**kndctr_orgid_consentcheck** - another session based cookie that will signal the server to lookup the consent preferences server side
 
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 
