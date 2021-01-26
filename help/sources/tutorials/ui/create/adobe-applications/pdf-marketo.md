@@ -11,6 +11,18 @@ description: This tutorial provides steps for creating a Marketo Engage source c
 
 This tutorial provides steps for creating a Marketo Engage (hereinafter referred to as "Marketo") source connector in the UI to bring consumer data into Adobe Experience Platform.
 
+The following steps are covered:
+
+* [Connect your Marketo account](#connect-your-marketo-account)
+* [Create a new account](#new-account)
+* [Use an existing account](existing-account)
+* [Select a dataset](#select-a-dataset)
+* [Use an existing dataset](#use-an-existing-dataset)
+* [Use a new dataset](#use-a-new-dataset)
+* [Map your Marketo dataset source fields to target XDM fields](#map-your-marketo-dataset-source-fields-to-target-xdm-fields)
+* [Provide dataflow details](#provide-dataflow-details)
+* [Review your dataflow](#review-your-dataflow)
+
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
