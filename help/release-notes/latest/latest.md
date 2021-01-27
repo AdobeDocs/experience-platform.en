@@ -13,7 +13,7 @@ author: ens60013
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations](#destinations)]
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
