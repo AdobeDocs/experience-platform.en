@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Identity Graph Viewer Overview
 topic: tutorial
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
-# (Beta) Identity graph viewer
+# (Beta) Identity graph viewer overview
 
 >[!NOTE]
 >

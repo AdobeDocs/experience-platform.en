@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
-title: Getting started
+title: Identity Service API Developer Guide
 topic: API guide
 description: Adobe Experience Platform Identity Service manages the cross-device, cross-channel, and near real-time identification of your customers in what is known as an identity graph within Adobe Experience Platform. 
 ---
