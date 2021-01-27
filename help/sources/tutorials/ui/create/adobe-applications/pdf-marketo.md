@@ -43,7 +43,7 @@ In order to access your Marketo account on Platform, you must provide the follow
 | `clientId` | The unique client ID of your Marketo instance. |
 | `clientSecret` | The unique client secret of your Marketo instance. |
 
-For more information on acquiring these values, refer to the [Marketo source connector authentication guide](../../../../connectors/adobe-applications/marketo-auth.md).
+For more information on acquiring these values, refer to the Marketo authentication guide.
 
 Once you have gathered your required credentials, you can follow the steps in the next section.
 
@@ -117,18 +117,18 @@ Once you have selected a schema, scroll down to view the mapping dialog to start
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
-See the following documents for mapping rules for specific Marketo datasets:
+For more information on mapping rules for Marketo datasets, open the **Mappings** folder and select the dataset you want to use.
 
-* [Activities](../../../../connectors/adobe-applications/marketo-mapping/activities.md)
-* [Campaigns](../../../../connectors/adobe-applications/marketo-mapping/campaigns.md)
-* [Campaign memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
-* [Companies](../../../../connectors/adobe-applications/marketo-mapping/companies.md)
-* [Marketing lists](../../../../connectors/adobe-applications/marketo-mapping/marketing-lists.md)
-* [Marketing list memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
-* [Named Accounts](../../../../connectors/adobe-applications/marketo-mapping/named-accounts.md)
-* [Opportunities](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
-* [Opportunity person relations](../../../../connectors/adobe-applications/marketo-mapping/opportunity-person-relations.md)
-* [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
+* Activities
+* Campaigns
+* Campaign memberships
+* Companies
+* Marketing lists
+* Marketing list memberships
+* Named Accounts
+* Opportunities
+* Opportunity person relations
+* Persons
 
 Select **Preview data** to see mapping results based on your selected dataset.
 
@@ -181,5 +181,5 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 By following this tutorial, you have successfully created a dataflow to bring in Marketo data. Incoming data can now be used by downstream Platform services such as Real-time Customer Profile and Data Science Workspace. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-in-experience-platform)
-* [[!DNL Data Science Workspace] overview](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/home.html?lang=en)
+* [Real-time Customer Profile overview](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-in-experience-platform)
+* [Data Science Workspace overview](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/home.html?lang=en)

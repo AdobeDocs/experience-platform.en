@@ -34,4 +34,4 @@ The table below contains the mappings between the fields in the Marketo activiti
 
 ## Next steps
 
-By reading this document, you have gained insight on the mapping relationship between your Marketo activities dataset and their corresponding XDM fields. See the tutorial on [creating a Marketo source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your Marketo activities mapping set.
+By reading this document, you have gained insight on the mapping relationship between your Marketo activities dataset and their corresponding XDM fields. See the Marketo tutorial to complete your Marketo activities mapping set.

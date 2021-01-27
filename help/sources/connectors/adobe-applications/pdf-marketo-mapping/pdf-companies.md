@@ -53,4 +53,4 @@ The table below contains the mappings between the Marketo companies dataset and 
 
 ## Next steps
 
-By reading this document, you have gained insight on the mapping relationship between your Marketo companies dataset and their corresponding XDM fields. See the tutorial on [creating a Marketo source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your Marketo companies mapping set.
+By reading this document, you have gained insight on the mapping relationship between your Marketo companies dataset and their corresponding XDM fields. See the Marketo tutorial to complete your Marketo companies mapping set.

@@ -26,4 +26,4 @@ The table below contains the mappings between the Marketo campaigns dataset and 
 
 ## Next steps
 
-By reading this document, you have gained insight on the mapping relationship between your Marketo campaigns dataset and their corresponding XDM fields. See the tutorial on [creating a Marketo source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your Marketo campaigns mapping set.
+By reading this document, you have gained insight on the mapping relationship between your Marketo campaigns dataset and their corresponding XDM fields. See the Marketo tutorial to complete your Marketo campaigns mapping set.
