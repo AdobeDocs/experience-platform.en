@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
 solution: Experience Platform
-title: Streaming time series data
+title: Stream Time-Series Data to Adobe Experience Platform
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
-# Stream time series data to Adobe Experience Platform
+# Stream time-series data to Adobe Experience Platform
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 

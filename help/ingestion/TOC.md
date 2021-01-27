@@ -27,13 +27,13 @@ user-guide-description: Bring your data into Platform through batch or streaming
   - [Streaming record data](tutorials/streaming-record-data.md)
   - [Streaming time series data](tutorials/streaming-time-series-data.md)
   - [Streaming multiple messages](tutorials/streaming-multiple-messages.md)
-- Data ingestion quality and monitoring{#quality}
+- Data quality and monitoring{#quality}
   - [Overview](quality/overview.md)
   - [Monitor data ingestion](quality/monitor-data-ingestion.md)
   - [Retrieve error diagnostics](quality/error-diagnostics.md)
   - [Retrieve failed batches](quality/retrieve-failed-batches.md)
   - [Streaming ingestion validation](quality/streaming-validation.md)
-  - [Subscribe to data ingestion events](quality/subscribe-events.md)
+  - [Data ingestion notifications](quality/subscribe-events.md)
 - [Source connectors](source-connectors.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
