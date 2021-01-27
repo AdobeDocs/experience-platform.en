@@ -103,9 +103,9 @@ The **Select dataset]** dialog appears. Find the dataset with the appropriate sc
 
 ### Use a new dataset
 
-To ingest data into a new dataset, select **Create new dataset]** and enter a name and description for the dataset in the fields provided.
+To ingest data into a new dataset, select **Create new dataset** and enter a name and description for the dataset in the fields provided.
 
-You can search for a schema by entering its name in the **Select schema]** search bar. You can also select the dropdown icon to see a list of existing schemas. Alternatively, you can select **Advanced search]** to access page of existing schemas including their respective details.
+You can search for a schema by entering its name in the **Select schema** search bar. You can also select the dropdown icon to see a list of existing schemas. Alternatively, you can select **Advanced search** to access page of existing schemas including their respective details.
 
 Toggle the **Profile dataset** button to enable your target dataset for Profile, allowing you to create a holistic view of an entity's attributes and behaviors. Data from all Profile-enabled datasets will be included in Profile and changes are applied when you save your dataflow.
 
