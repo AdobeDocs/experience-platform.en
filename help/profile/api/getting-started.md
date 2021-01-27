@@ -2,11 +2,13 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Getting started with Real-time Customer Profile API
 topic: guide
+type: Documentation
+description: The Profile API getting started guide outlines the key concepts and basic functionality that you need to know in order to use Real-time Customer Profile API endpoints to perform basic CRUD operations against Profile data.
 ---
 
 # Getting started with the [!DNL Real-time Customer Profile] API {#getting-started}
 
-Using the [!DNL Real-time Customer Profile] API, you can perform basic CRUD operations against Profile resources, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
+Using Real-time Customer Profile API endpoints, you can perform basic CRUD operations against Profile data, such as configuring computed attributes, accessing entities, exporting Profile data, and deleting unneeded datasets or batches.
 
 Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Profile] data. Before beginning to work with the [!DNL Real-time Customer Profile] API, please review the documentation for the following services:
 
@@ -24,7 +26,7 @@ The [!DNL Real-time Customer Profile] API documentation provides example API cal
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

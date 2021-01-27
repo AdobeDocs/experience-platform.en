@@ -8,30 +8,35 @@ description: Data from Adobe Target is transformed into Experience Event XDM sch
 
 # Sample queries for Adobe Target data
 
-Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets for you. There are many use cases for Adobe Experience Platform Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
 
-On Adobe Experience Platform, the friendly name for the dataset is "Adobe Target Experience Events". The name that you should use within a Query Service query is `adobe_target_experience_events`.
+In Experience Platform, the name of auto-created dataset is "Adobe Target Experience Events". When using this dataset with queries, you should use the name `adobe_target_experience_events`.
 
 ## High-level partial XDM field mapping
 
-The use of `[ ]` denotes an array 
-
-| Name | XDM Field | Notes |
-| ---- | --------- | ----- |
-| mboxName | `_experience.target.mboxname` | |
-| Activity ID | `_experience.target.activities.activityID` | |
-| Experience ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID` | |
-| Segment ID | `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id` | |
-| Event Scope | `_experience.target.activities[].activityEvents[].eventScope` | Tracks new Visitor and Visit|
-| Step ID | `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` | Custom step ID for Campaign |
-| Price Total | `commerce.order.priceTotal` | |
-
+The following list shows the Target fields that map to their corresponding XDM fields.
 
 >[!NOTE]
 >
->In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
+> The use of `[ ]` within the XDM field denotes an array.
 
-## Hourly activity counts for a given day
+- mboxName: `_experience.target.mboxname`
+- Activity ID: `_experience.target.activities.activityID`
+- Experience ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
+- Segment ID: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
+- Event Scope: `_experience.target.activities[].activityEvents[].eventScope` 
+    - This field tracks new visitors and visits.
+- Step ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` 
+    - This field is a custom step ID for Adobe Campaign.
+- Price Total: `commerce.order.priceTotal`
+
+## Sample queries
+
+The following queries show examples of commonly used queries with Adobe Target.
+
+In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
+
+### Hourly activity counts for a given day
 
 ```sql
 SELECT
@@ -52,7 +57,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## Hourly details for a specific activity for a given day
+### Hourly details for a specific activity for a given day
 
 ```sql
 SELECT
@@ -69,7 +74,7 @@ ORDER BY Hour DESC
 LIMIT 24
 ```
 
-## Experience IDs for a specific activity for a given day
+### Experience IDs for a specific activity for a given day
 
 ```sql
 SELECT
@@ -100,7 +105,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## Return a list of Event Scopes (visitor, visit, impression) by instances per Activity ID for a given day
+### Return a list of Event Scopes (visitor, visit, impression) by instances per Activity ID for a given day
 
 ```sql
 SELECT
@@ -130,7 +135,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## Return count of visitors, visits, impressions per activity for a given day
+### Return count of visitors, visits, impressions per activity for a given day
 
 ```sql
 SELECT
@@ -154,7 +159,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## Return visitors, visits, impressions for Experience ID, Segment ID, and EventScope for a given day
+### Return visitors, visits, impressions for Experience ID, Segment ID, and EventScope for a given day
 
 ```sql
 SELECT
@@ -199,7 +204,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-## Return mbox names and count of records for a given day
+### Return mbox names and count of records for a given day
 
 ```sql
 SELECT
