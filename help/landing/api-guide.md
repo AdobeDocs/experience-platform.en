@@ -20,11 +20,11 @@ In order to successfully make calls to Platform endpoints, you are required to h
 
 ### Sandbox header
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. Requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - `x-sandbox-name: {SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../sandboxes/home.md). 
+For more information on sandboxes in Platform, see the [sandbox overview documentation](../sandboxes/home.md). 
 
 ### Specifying the content type
 
