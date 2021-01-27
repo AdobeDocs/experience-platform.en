@@ -8,7 +8,7 @@ description: This document walks through the steps for connecting Aqua Data Stud
 
 # [!DNL Aqua Data Studio]
 
-This document walks through the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
+This document covers the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
