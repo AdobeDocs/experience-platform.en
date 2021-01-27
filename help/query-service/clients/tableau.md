@@ -18,7 +18,7 @@ This document covers the steps for connecting Tableau with Adobe Experience Plat
 
 To connect Tableau to Query Service, open Tableau, and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 
-![](../images/clients/postico/open-connection.png)
+![](../images/clients/tableau/open-connection.png)
 
 You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
@@ -26,11 +26,11 @@ Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying
 
 After filling in all your credentials, select **[!DNL Sign In]** to continue.
     
-![](../images/clients/postico/sign-in.png)
+![](../images/clients/tableau/sign-in.png)
 
 You have now connected with Adobe Experience Platform, with a list of your tables displayed on the side.
 
-![](../images/clients/postico/connected.png)
+![](../images/clients/tableau/connected.png)
 
 ## Next steps
 
