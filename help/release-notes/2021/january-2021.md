@@ -12,7 +12,20 @@ author: ens60013
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
+
+For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -20,7 +33,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**Key features**
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
