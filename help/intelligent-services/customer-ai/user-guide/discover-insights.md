@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Discovering insights with Customer AI
+title: Discovering Insights with Customer AI
 topic: Discovering insights
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
 ---

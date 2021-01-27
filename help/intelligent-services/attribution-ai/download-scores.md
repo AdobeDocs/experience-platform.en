@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
 solution: Experience Platform, Intelligent Services
-title: Accessing scores in Attribution AI
-topic: Accessing scores
+title: Downloading Scores in Attribution AI
+topic: Downloading scores
 description: This document serves as a guide for downloading scores for Attribution AI.
 ---
 
