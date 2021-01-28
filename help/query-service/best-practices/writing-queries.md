@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
-title: Writing queries
+title: General Guidance for Query Execution in Query Service
 topic: queries
 type: Tutorial
 description: This document details important details to know when writing queries in Adobe Experience Platform Query Service.
