@@ -86,7 +86,7 @@ In this section different scenarios for Customer AI instances are described as w
 The following good-to-have event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
 
 - productListViews
-- productListRemovals	
+- productListRemovals
 - productListOpens
 - productViews
 - webInteraction
