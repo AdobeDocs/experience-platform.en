@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: Experience Platform guardrails for Real-time Customer Profile
+title: Experience Platform Guardrails for Real-time Customer Profile Data
 solution: Experience Platform
 product: experience platform
 topic: guide
