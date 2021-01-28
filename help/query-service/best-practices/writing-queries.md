@@ -102,9 +102,9 @@ LIMIT 1
 (1 row)
 ```
 
-## When to use single quotes, double quotes, and back quotes
+## Quotes
 
-This section explains when to use single quotes, double quotes, and back quotes in queries. 
+Single quotes, double quotes, and back quotes have different usages within Query Service queries.
 
 ### Single quotes
 
@@ -182,6 +182,122 @@ Back quotes are **not** needed if you are using bracket-notation.
  LIMIT 10
 ```
 
+## Viewing table information
+
+After connecting to Query Service, you can see all your available tables on Platform by using either the `\d` or `SHOW TABLES` commands.
+
+### Standard table view
+
+The `\d` command shows the standard PostgreSQL view for listing tables. An example of this command's output can be seen below:
+
+```sql
+             List of relations
+ Schema |       Name      | Type  |  Owner   
+--------+-----------------+-------+----------
+ public | luma_midvalues  | table | postgres
+ public | luma_postvalues | table | postgres
+(2 rows)
+```
+
+### Detailed table view
+
+`SHOW TABLES` command is a custom command that provides more detailed information about the tables. An example of this command's output can be seen below:
+
+```sql
+       name      |        dataSetId         |     dataSet    | description | resolved 
+-----------------+--------------------------+----------------+-------------+----------
+ luma_midvalues  | 5bac030c29bb8d12fa992e58 | Luma midValues |             | false
+ luma_postvalues | 5c86b896b3c162151785b43c | Luma midValues |             | false
+(2 rows)
+```
+
+### Schema information 
+
+To view more detailed information about the schemas within the table, you can use the `\d {TABLE_NAME}` command, where `{TABLE_NAME}` is the name of the table whose schema information you want to view.
+
+The following example shows the schema information for the `luma_midvalues` table, which would be seen by using `\d luma_midvalues`:
+
+```sql
+                         Table "public.luma_midvalues"
+      Column       |             Type            | Collation | Nullable | Default 
+-------------------+-----------------------------+-----------+----------+---------
+ timestamp         | timestamp                   |           |          | 
+ _id               | text                        |           |          | 
+ productlistitems  | anyarray                    |           |          | 
+ commerce          | luma_midvalues_commerce     |           |          | 
+ receivedtimestamp | timestamp                   |           |          | 
+ enduserids        | luma_midvalues_enduserids   |           |          | 
+ datasource        | datasource                  |           |          | 
+ web               | luma_midvalues_web          |           |          | 
+ placecontext      | luma_midvalues_placecontext |           |          | 
+ identitymap       | anymap                      |           |          | 
+ marketing         | marketing                   |           |          | 
+ environment       | luma_midvalues_environment  |           |          | 
+ _experience       | luma_midvalues__experience  |           |          | 
+ device            | device                      |           |          | 
+ search            | search                      |           |          | 
+```
+
+Additionally, you can get further information about a particular column by appending the name of the column to the table name. This would be written in the format `\d {TABLE_NAME}_{COLUMN}`.
+
+The following example shows additional information for the `web` column, and would be invoked by using the following command: `\d luma_midvalues_web`:
+
+```sql
+                 Composite type "public.luma_midvalues_web"
+     Column     |               Type                | Collation | Nullable | Default 
+----------------+-----------------------------------+-----------+----------+---------
+ webpagedetails | luma_midvalues_web_webpagedetails |           |          | 
+ webreferrer    | web_webreferrer                   |           |          | 
+```
+
+## Joining datasets
+
+You can join multiple datasets together to include data from other datasets in your query.
+
+The following example would join the following two datasets (`your_analytics_table` and `custom_operating_system_lookup`) and creates a `SELECT` statement for the top 50 operating systems by number of page views.
+
+**Query**
+
+```sql
+SELECT 
+  b.operatingsystem AS OperatingSystem,
+  SUM(a.web.webPageDetails.pageviews.value) AS PageViews
+FROM your_analytics_table a 
+     JOIN custom_operating_system_lookup b 
+      ON a._experience.analytics.environment.operatingsystemID = b.operatingsystemid 
+WHERE TIMESTAMP >= ('2018-01-01') AND TIMESTAMP <= ('2018-12-31')
+GROUP BY OperatingSystem 
+ORDER BY PageViews DESC
+LIMIT 50;
+```
+
+**Results**
+
+| OperatingSystem | PageViews |
+| --------------- | --------- |
+| Windows 7 | 2781979.0 |
+| Windows XP | 1669824.0 |
+| Windows 8 | 420024.0 |
+| Adobe AIR | 315032.0 |
+| Windows Vista | 173566.0 |
+| Mobile iOS 6.1.3 | 119069.0 |
+| Linux | 56516.0 |
+| OSX 10.6.8 | 53652.0 |
+| Android 4.0.4 | 46167.0 |
+| Android 4.0.3 | 31852.0 |
+| Windows Server 2003 and XP x64 Edition | 28883.0 |
+| Android 4.1.1 | 24336.0 |
+| Android 2.3.6 | 15735.0 |
+| OSX 10.6 | 13357.0 |
+| Windows Phone 7.5 | 11054.0 |
+| Android 4.3 | 9221.0 |
+
+## Deduplication
+
+Query Service supports data deduplication, or the removal of duplicate rows from data. For more information on deduplication, please read the [Query Service deduplication guide](./deduplication.md).
+
 ## Next steps
 
 By reading this document, you have been introduced to some important considerations when writing queries using [!DNL Query Service]. For more information on how to use the SQL syntax to write your own queries, please read the [SQL syntax documentation](../sql/syntax.md).
+
+For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).

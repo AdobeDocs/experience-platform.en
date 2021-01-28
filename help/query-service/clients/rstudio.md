@@ -45,7 +45,7 @@ con <- dbConnect(drv,
 
 Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
-The following query uses a dataset containing [ExperienceEvents](../creating-queries/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
+The following query uses a dataset containing [ExperienceEvents](../best-practices/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -80,4 +80,4 @@ df_pageviews
 7 600-699 3097040
 ```
 
-For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).
+For more information on how to write and run queries, please read the [running queries guide](../best-practices/writing-queries.md).

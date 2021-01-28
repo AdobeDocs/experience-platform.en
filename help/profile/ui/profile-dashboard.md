@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
-title: Profile Dashboard
+title: Profile Dashboard UI Guide
 description: This guide outlines the Real-time Customer Profile data dashboard available in the Adobe Experience Platform UI. 
 topic: guide
 type: Documentation

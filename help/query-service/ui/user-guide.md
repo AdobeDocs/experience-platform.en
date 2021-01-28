@@ -118,10 +118,9 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries][query-service-running-queries]. For sample SQL queries for working with Adobe Analytics and Adobe Target data, see the [sample queries reference][query-service-sample-queries].
+Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries][query-service-running-queries]. 
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
-[query-service-running-queries]: ../creating-queries/creating-queries.md
-[query-service-sample-queries]: ../sample-queries/overview.md
-[query-service-create-datasets]: ../creating-queries/create-datasets.md
+[query-service-running-queries]: ../best-practices/writing-queries.md
+[query-service-create-datasets]: ./create-datasets.md

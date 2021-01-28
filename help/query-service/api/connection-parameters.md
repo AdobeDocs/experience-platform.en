@@ -12,9 +12,9 @@ description: You can retrieve your connection parameters for using the interacti
 
 Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-### Request connection parameters for the interactive service
+### Request connection parameters
 
-You can retrieve your connection parameters for using the [interactive service](../creating-queries/writing-queries.md) by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
+You can retrieve your connection parameters by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
 
 **API format**
 
