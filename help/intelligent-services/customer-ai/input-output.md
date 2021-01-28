@@ -83,7 +83,7 @@ In this section different scenarios for Customer AI instances are described as w
 
 **Additional good to have standard event types:**
 
-The following good-to-have event types might be required based on the complexity of the goal you wish to define and eligible population while configuring your Customer AI instance.
+The following good-to-have event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
 
 - productListViews
 - productListRemovals	
@@ -91,10 +91,6 @@ The following good-to-have event types might be required based on the complexity
 - productViews
 - webInteraction
 - search
-
-| Event Type | Scenario 1, 3, 4 | Scenario 2 | Scenario 5 |
-| --- | --- | --- | --- |
-| order | Recommended | Recommended (A subscription signal to indicate a subscription was purchased and its type). | Not needed |
 
 ## Customer AI output data
 
