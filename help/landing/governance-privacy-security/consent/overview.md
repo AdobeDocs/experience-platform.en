@@ -46,9 +46,9 @@ Since each CMP system is unique, you must determine the best way to allow your c
 
 This dialog should allow the customer to opt in or out of specific marketing and personalization use cases for their data. These consents and preferences should conform to the data model that you define for the [!DNL Profile]-enabled dataset in the next step.
 
-## Add Adobe-standard consent fields to a [!DNL Profile]-enabled dataset {#dataset}
+## Add standardized consent fields to a [!DNL Profile]-enabled dataset {#dataset}
 
-Customer consent data must be sent to a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields. These fields should be included in the same schema and dataset that you use to capture attribute information about individual customers.
+Customer consent data must be sent to a [!DNL Profile]-enabled dataset whose schema contains consent fields. These fields should be included in the same schema and dataset that you use to capture attribute information about individual customers.
 
 Refer to the tutorial on [configuring a dataset for capturing consent data](./dataset.md) for detailed steps on how to add these required fields to a [!DNL Profile]-enabled dataset before continuing with this guide.
 
@@ -77,7 +77,7 @@ Once you have configured your CMP to listen for consent-change events on your we
 
 #### Set up an edge configuration
 
-In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain Adobe-standard consent fields. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
+In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
 
 After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
@@ -141,7 +141,7 @@ alloy("setConsent", {
 | --- | --- |
 | `standard` | The consent standard being used. For the Adobe standard, this value must be set to `Adobe`. |
 | `version` | The version number of the consent standard indicated under `standard`. This value must be set to `2.0` for Adobe-standard consent processing. |
-| `value` | An object that conforms to the [Consents & Preferences data type](../../../xdm/data-types/consents.md), representing the customer's updated consent information. |
+| `value` | The customer's updated consent information, provided as an XDM object that conforms to the structure of the Profile-enabled dataset's consent fields. |
 
 >[!NOTE]
 >
