@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
-title: Real-time Customer Profile API developer guide
+title: Real-time Customer Profile API Developer Guide
 topic: guide
 description: The Real-time Customer Profile API includes multiple endpoints for exploring and working with Profile data, including viewing profiles, creating and updating merge policies, exporting or sampling Profile data, and deleting Profile data that you no longer require or that was added in error.
 ---
