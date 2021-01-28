@@ -14,7 +14,7 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 
-## Connecting RStudio with [!DNL Query Service]
+## Connecting [!DNL RStudio] with [!DNL Query Service]
 
 After installing [!DNL RStudio], on the **[!DNL Console]** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 

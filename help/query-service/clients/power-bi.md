@@ -44,7 +44,7 @@ You can now enter values for the server and database. For more information on fi
 
 Additionally, you can select your **[!DNL Data Connectivity mode]**. Select **[!DNL Import]** to display a list of all available tables, or select **[!DNL DirectQuery]** to directly create a query. 
 
-To learn more about **[!DNL Import]** mode, please read the section on[previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). Select **[!DNL OK]** after confirming your database details.
+To learn more about **[!DNL Import]** mode, please read the section on [previewing and importing a table](#preview). To learn more about **[!DNL DirectQuery]** mode, please read the section on [creating SQL statements](#create). Select **[!DNL OK]** after confirming your database details.
 
 ![](../images/clients/power-bi/connectivity-mode.png)
 

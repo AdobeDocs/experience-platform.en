@@ -12,7 +12,7 @@ This document covers the steps for connecting [!DNL Aqua Data Studio] with Adobe
 
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL Aqua Data Studio] and are familiar with how to navigate its interface. More information about Aqua Data Studio can be found in the [official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
+> This guide assumes you already have access to [!DNL Aqua Data Studio] and are familiar with how to navigate its interface. More information about [!DNL Aqua Data Studio] can be found in the [official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
 
 ## Connect [!DNL Aqua Data Studio] with Platform
 

@@ -12,7 +12,7 @@ This document covers the steps for connecting [!DNL Postico] with Adobe Experien
 
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL Postico] and are familiar with how to navigate its interface. More information about [!DNL Looker] can be found in the [official [!DNL Postico] documentation](https://eggerapps.at/postico/docs).
+> This guide assumes you already have access to [!DNL Postico] and are familiar with how to navigate its interface. More information about [!DNL Postico] can be found in the [official [!DNL Postico] documentation](https://eggerapps.at/postico/docs).
 > 
 > Additionally, [!DNL Postico] is **only** available on macOS devices.
 
