@@ -112,7 +112,7 @@ In this example, the following three event types order, checkouts, and purchases
 - webVisit
 - search
 
-Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types for your CEE schema.
+Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types.
 
 **Additional recommended standard event types:**
 
@@ -185,7 +185,7 @@ The following recommended event types might be required based on the complexity 
 - productListOpens
 - webInteraction
 
-Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types for your CEE schema.
+Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types.
 
 
 ## Customer AI output data
