@@ -28,17 +28,19 @@ A prominent technology company has just released a new phone. In an effort to pr
 
 To promote the release, they upload email addresses from their CRM database into Real-time CDP, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube]. 
 
-## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
+## Destination specifics {#destination-specs}
+
+### Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
 The destinations in Real-time CDP may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
 
-## Export Type and Identities {#export-type}
+### Export Type and Identities {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
 
 **Identities** - you can use raw or hashed emails as customer IDs in Google
 
-## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
+### [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
 Before setting up a [!DNL Google Customer Match] destination in Real-time CDP, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
 
@@ -49,6 +51,8 @@ Before setting up a [!DNL Google Customer Match] destination in Real-time CDP, m
 >It is mandatory to be added to Google's allow list before setting up your first [!DNL Google Customer Match] destination in Real-time CDP. Please ensure the allow list process described below has been completed by Google before creating a destination.
 
 Before creating the [!DNL Google Customer Match] destination in Real-time CDP, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
+
+Additionally, there is a second Google allow list that you must add your account to if you are planning to upload data using Google's [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Contact your Google account manager to make sure you are added to the allow lists.
 
 ### ID matching requirements {#id-matching-requirements}
 
@@ -83,6 +87,9 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with Google's requirements, outlined in the links above.
 
+#### Using custom namespaces {#custom-namespaces}
+
+Before you can use the `User_ID` namespace to send data to Google, make sure you synchronize your own identifiers using [!DNL gTag]. See the [official documentation](https://support.google.com/google-ads/answer/9199250) for detailed information.
 
 <!-- Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 
