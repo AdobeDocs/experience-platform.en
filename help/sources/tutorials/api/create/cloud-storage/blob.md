@@ -77,8 +77,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Connection",
-        "description": "Cnnection for an Azure Blob account",
+        "name": "Azure Blob connection using connectionString",
+        "description": "Azure Blob connection using connectionString",
         "auth": {
             "specName": "ConnectionString",
             "params": {
@@ -131,12 +131,12 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Blob Connection",
-        "description": "Cnnection for an Azure Blob account",
+        "name": "Azure Blob source connection using SAS URI",
+        "description": "Azure Blob source connection using SAS URI",
         "auth": {
             "specName": "SasURIAuthentication",
             "params": {
-                "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>"
+                "sasUri": "https://{ACCOUNT_NAME}.blob.core.windows.net/?sv={STORAGE_VERSION}&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>"
             }
         },
         "connectionSpec": {
