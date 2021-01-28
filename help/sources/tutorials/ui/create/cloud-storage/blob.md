@@ -36,10 +36,8 @@ In order to access your [!DNL Blob] storage on Platform, you must provide a vali
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your [!DNL Blob] storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. |
-
-For more information on getting started, visit [this [!DNL Azure Blob] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
+| `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
+| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The Blob SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication). |
 
 ## Connect your Blob account
 
@@ -65,11 +63,17 @@ To use an existing account, select the [!DNL Blob] account you want to create a 
 
 If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an option description for your new [!DNL Blob] account.
 
+**Authenticate using a connection string**
+
 The [!DNL Blob] connector provides you with different authentication types for access. Under [!UICONTROL Account authentication] select **[!UICONTROL ConnectionString]** to use connection string-based credentials.
 
 ![connection string](../../../../images/tutorials/create/blob/connectionstring.png)
 
-Alternatively, you can select **[!UICONTROL SasURIAuthentication]** and connect your [!DNL Blob] account using a shared access signature URI.
+**Authenticate using a shared access signature URI**
+
+A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
+
+Select **[!UICONTROL SasURIAuthentication]** and then provide your [!DNL Blob] SAS URI. Select **[!UICONTROL Connect to source]** to proceed.
 
 ![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 

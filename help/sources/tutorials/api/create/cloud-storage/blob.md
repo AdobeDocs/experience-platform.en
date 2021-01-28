@@ -27,7 +27,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL Blob] storage, you m
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
-| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
+| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The Blob SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
 | `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Blob] is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 ### Reading sample API calls
@@ -148,8 +148,8 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-|   `auth.params.connectionString` | The SAS URI required to access data in your Blob storage. The Blob SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
-|   `connectionSpec.id` | The Blob storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+|   `auth.params.connectionString` | The SAS URI required to access data in your [!DNL Blob] storage. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>`. |
+|   `connectionSpec.id` | The [!DNL Blob] storage connection specification ID is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
 
 **Response**
 
@@ -164,4 +164,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created a Blob connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest parquet data using the Flow Service API](../../cloud-storage-parquet.md).
+By following this tutorial, you have created a [!DNL Blob] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest parquet data using the Flow Service API](../../cloud-storage-parquet.md).
