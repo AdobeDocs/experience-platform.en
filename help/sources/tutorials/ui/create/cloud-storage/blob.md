@@ -77,6 +77,6 @@ Select **[!UICONTROL SasURIAuthentication]** and then provide your [!DNL Blob] S
 
 ![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 
-## Next steps and additional resources
+## Next steps
 
 By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
