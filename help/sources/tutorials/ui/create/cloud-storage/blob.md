@@ -9,7 +9,7 @@ description: This tutorial provides steps for creating an Azure Blob (hereinafte
 
 # Create an [!DNL Azure Blob] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the Platform user interface.
 
 ## Getting started
 
@@ -32,7 +32,7 @@ If you already have a valid [!DNL Blob] connection, you may skip the remainder o
 
 ### Gather required credentials
 
-In order to access your [!DNL Blob] storage on [!DNL Platform], you must provide a valid value for the following credential:
+In order to access your [!DNL Blob] storage on Platform, you must provide a valid value for the following credential:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -42,13 +42,13 @@ For more information on getting started, visit [this [!DNL Azure Blob] document]
 
 ## Connect your Blob account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to Platform.
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
+In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
-Under the **[!UICONTROL Databases]** category, select **[!UICONTROL Azure Blob Storage]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new [!DNL Blob]connector.
+Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Azure Blob Storage]**, and then select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/blob/catalog.png)
 
@@ -68,4 +68,4 @@ To connect an existing account, select the [!DNL Blob] account you want to conne
 
 ## Next steps and additional resources
 
-By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into [!DNL Platform]](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
