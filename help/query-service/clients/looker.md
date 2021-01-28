@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;Looker;looker;connect to query service;
 solution: Experience Platform
-title: Connect with Looker
+title: Connect Looker to Query Service
 topic: connect
 description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL Looker]
+# Connect [!DNL Looker] to Query Service
 
 To connect [!DNL Looker] with [!DNL Query Service] on Adobe Experience Platform, please follow the steps below:
 

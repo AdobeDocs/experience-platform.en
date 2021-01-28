@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;PSQL;psqlconnect to query service;Query service;query service;
 solution: Experience Platform
-title: Connect with PSQL
+title: Connect PSQL to Query Service
 topic: connect
 description: PSQL is a command-line interface that comes when you install Postgres on your machine. You can install it by following these instructions. 
 ---
 
-# Connect with PSQL
+# Connect PSQL to Query Service
 
 PSQL is a command-line interface that comes when you install [!DNL Postgres] on your machine. You can install it by following these instructions. 
 

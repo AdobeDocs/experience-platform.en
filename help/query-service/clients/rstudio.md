@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
-title: Connect with RStudio
+title: Connect RStudio to Query Service
 topic: connect
 description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL RStudio]
+# Connect [!DNL RStudio] to Query Service
 
 This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
 

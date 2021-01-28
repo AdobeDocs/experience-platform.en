@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;create queries;
 solution: Experience Platform
-title: Creating queries
+title: Creating Queries
 topic: queries
 type: Tutorial
 description: This document links to the core documentation used in creating and understanding queries in Adobe Experience Platform.
