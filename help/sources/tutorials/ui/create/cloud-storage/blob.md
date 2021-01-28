@@ -37,6 +37,7 @@ In order to access your [!DNL Blob] storage on Platform, you must provide a vali
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string required to access data in your Blob storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. |
 
 For more information on getting started, visit [this [!DNL Azure Blob] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
 
@@ -54,17 +55,23 @@ Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Azure Blob S
 
 The **[!UICONTROL Connect to Azure Blob Storage]** page appears. On this page, you can either use new credentials or existing credentials.
 
-### New account
-
-If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide a name, an optional description, and your [!DNL Blob] credentials. When finished, select **[!UICONTROL Connect]** and then allow some time for the new connection to establish.
-
-![connect](../../../../images/tutorials/create/blob/new.png)
-
 ### Existing account
 
-To connect an existing account, select the [!DNL Blob] account you want to connect with, then select **[!UICONTROL Next]** to proceed.
+To use an existing account, select the [!DNL Blob] account you want to create a new dataflow with, then select **[!UICONTROL Next]** to proceed.
 
 ![existing](../../../../images/tutorials/create/blob/existing.png)
+
+### New account
+
+If you are creating a new account, select **[!UICONTROL New account]**, and then provide a name and an option description for your new [!DNL Blob] account.
+
+The [!DNL Blob] connector provides you with different authentication types for access. Under [!UICONTROL Account authentication] select **[!UICONTROL ConnectionString]** to use connection string-based credentials.
+
+![connection string](../../../../images/tutorials/create/blob/connectionstring.png)
+
+Alternatively, you can select **[!UICONTROL SasURIAuthentication]** and connect your [!DNL Blob] account using a shared access signature URI.
+
+![sas-uri](../../../../images/tutorials/create/blob/sas-uri.png)
 
 ## Next steps and additional resources
 
