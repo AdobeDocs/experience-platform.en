@@ -68,9 +68,9 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section different scenarios for Customer AI instances are described as well as which Event types are required for the scenarios specifically using the [standard event mixin table](#standard-events) above.
+In this section different scenarios for Customer AI instances are described as well as which event types are required for the scenarios using the [standard event mixin table](#standard-events) above.
 
-### Purchase conversion on an e-commerce retail website:
+### Scenario 1: Purchase conversion on an e-commerce retail website
 
 **Prediction goal:** Predict the conversion propensity for the eligible profiles to purchase a certain article of clothing on a website.
 
@@ -94,7 +94,7 @@ The following good-to-have event types might be required based on the complexity
 
 | Event Type | Scenario 1, 3, 4 | Scenario 2 | Scenario 5 |
 | --- | --- | --- | --- |
-| order | Recommended | Recommended (Some subscription signal to indicate a subscription was purchased and its type). | Not needed |
+| order | Recommended | Recommended (A subscription signal to indicate a subscription was purchased and its type). | Not needed |
 
 ## Customer AI output data
 
