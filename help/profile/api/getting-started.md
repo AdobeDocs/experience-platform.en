@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Getting started with Real-time Customer Profile API
+title: Getting Started with Real-time Customer Profile API
 topic: guide
 type: Documentation
 description: The Profile API getting started guide outlines the key concepts and basic functionality that you need to know in order to use Real-time Customer Profile API endpoints to perform basic CRUD operations against Profile data.
