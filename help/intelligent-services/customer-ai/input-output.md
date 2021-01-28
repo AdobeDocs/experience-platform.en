@@ -12,13 +12,15 @@ The following document outlines the different input and outputs utilized in Cust
 
 ## Customer AI input data
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of XDM Mixins. It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have and of the standard events data available it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web Details` mixins.
+Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of XDM Mixins. It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web Details` mixins.
 
 >[!NOTE]
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
 ### Standard event mixins {#standard-events}
+
+XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
 | Mixin | Event type | XDM columns |
 | --- | --- | --- |
@@ -68,22 +70,26 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section different scenarios for Customer AI instances are described as well as which event types are required for the scenarios using the [standard event mixin table](#standard-events) above.
+In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard event mixin table](#standard-events) above for more information on the mixin and column the listed event types belong to.
+
+>[!NOTE]
+>
+> Required event types are used to clearly and unambiguously identify web user activity. The number of required event types will change based on the prediction goal and structure of your schema. If you are unsure a particular event type is needed, it is recommended to include that event type.
 
 ### Scenario 1: Purchase conversion on an e-commerce retail website
 
 **Prediction goal:** Predict the conversion propensity for the eligible profiles to purchase a certain article of clothing on a website.
 
-**Recommended standard event types:**
+**Required standard event types:**
 
 - order
 - checkouts
 - purchases
 - webVisit
 
-**Additional good to have standard event types:**
+**Additional recommended standard event types:**
 
-The following good-to-have event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
+The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
 
 - productListViews
 - productListRemovals
@@ -94,11 +100,11 @@ The following good-to-have event types might be required based on the complexity
 
 ## Customer AI output data
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume it via Real-time Customer Profile. If you don't have Real-time Customer Profile you can download the Customer AI output dataset available on the data lake. 
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume it from the Real-time Customer Profile. If you don't have Real-time Customer Profile you can download the Customer AI output dataset available on the data lake. 
 
 >[!NOTE]
 >
->Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
+> Output values are consumed by Real-time Customer Profile which can be used to create and define segments.
 
  The table below describes the various attributes found in the output of Customer AI:
 
