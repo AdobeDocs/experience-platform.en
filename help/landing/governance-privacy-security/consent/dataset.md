@@ -8,9 +8,19 @@ description: Configure a dataset to capture consent and preference data
 
 # Configure a dataset to capture consent and preference data
 
-In order for Adobe Experience Platform to process customer consent data that conforms to the Adobe consent standard, that data must be sent to a dataset whose schema contains Adobe-standard consent fields. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
+In order for Adobe Experience Platform to process customer consent data, that data must be sent to a dataset whose schema contains consent-related fields. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
 
-This document provides steps for configuring a dataset to collect Adobe-standard consent data. For an overview of the full workflow for collecting consent data in Platform, refer to the [consent collection overview](./overview.md).
+This document provides steps for configuring a dataset to collect consent data in Experience Platform. For an overview of the full workflow for collecting consent data in Platform, refer to the [consent collection overview](./overview.md).
+
+>[!IMPORTANT]
+>
+>The examples in this guide use a standardized set of fields to represent customer consent values, as defined by the [Consents & Preferences XDM data type](../../../xdm/data-types/consents.md). The structure of these fields is intended to provide an efficient data model to cover many common consent-collection use cases.
+>
+>However, you can also define your own mixins to represent consent according to your own data models. Please consult with your legal team to get approval for a consent data model that fits your business needs, based on the following options:
+>
+>* The standardized consent mixin
+>* A custom consent mixin created by your organization
+>* A combination of the standardized consent mixin and additional fields provided by a custom consent mixin
 
 ## Prerequisites
 
@@ -26,9 +36,9 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## Consents & Preferences mixin structure {#structure}
 
-The [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin (hereinafter referred to as the "Consents & Preferences mixin") provides Adobe-standard consent fields to a schema. Currently, this mixin is only compatible with schemas based on the [!DNL XDM Individual Profile] class.
+The [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin (hereinafter referred to as the "Consents & Preferences mixin") provides standardized consent fields to a schema. Currently, this mixin is only compatible with schemas based on the [!DNL XDM Individual Profile] class.
 
-The mixin provides a single object-type field, `xdm:consents`, whose sub-properties capture Adobe-standard consent fields. The following JSON is an example of the kind of data `xdm:consents` expects upon data ingestion:
+The mixin provides a single object-type field, `xdm:consents`, whose sub-properties capture a set of standardized consent fields. The following JSON is an example of the kind of data `xdm:consents` expects upon data ingestion:
 
 ```json
 {
@@ -140,6 +150,6 @@ The dataset is now saved and enabled for use in [!DNL Profile]. If you are plann
 
 ## Next steps
 
-By following this tutorial, you have added Adobe-standard consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Platform Web SDK or direct XDM ingestion.
+By following this tutorial, you have added consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Platform Web SDK or direct XDM ingestion.
 
 You can now return to the [consent collection overview](./overview.md#merge-policies) to continue the process of configuring Experience Platform to collect consent data.

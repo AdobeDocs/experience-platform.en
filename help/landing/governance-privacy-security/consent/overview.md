@@ -14,7 +14,7 @@ This document provides an overview of how to configure your Platform data operat
 
 >[!NOTE]
 >
->This document focuses on collecting consent data using the Adobe consent standard. If you are collecting consent data in compliance with the IAB Transparency and Consent Framework (TCF) 2.0, see the guide on [TCF 2.0 support in Real-time Customer Data Platform](../../../rtcdp/privacy/iab/overview.md).
+>This document focuses on collecting consent data using the Adobe standard. If you are collecting consent data in compliance with the IAB Transparency and Consent Framework (TCF) 2.0, see the guide on [TCF 2.0 support in Real-time Customer Data Platform](../../../rtcdp/privacy/iab/overview.md).
 
 ## Prerequisites
 
@@ -34,7 +34,7 @@ The following process describes how consent data is collected after the system h
 1. A customer provides their consent preferences for data collection through a dialog on your website.
 1. On each page load (or when your CMP detects a change in consent preferences), a custom script on your site maps the current preferences to a standard XDM schema before passing it to the Platform Web SDK `setConsent` command.
 1. When `setConsent` is called, the Platform Web SDK checks whether the consent values are different from those it last received. If the values are different (or there is no previous value), the structured consent data is sent to Adobe Experience Platform.
-1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains Adobe-standard consent fields.
+1. The collected consent data is ingested into a [!DNL Profile]-enabled dataset whose schema contains customer consent fields.
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
 
@@ -44,7 +44,7 @@ Since each CMP system is unique, you must determine the best way to allow your c
 
 ![](../../images/governance-privacy-security/consent/overview/consent-dialog.png)
 
-This dialog should allow the customer to opt in or out of specific marketing and personalization use cases for their data. These consents and preferences should conform to the Adobe consent standard, as represented by the [Consents & Preferences XDM data type](../../../xdm/data-types/consents.md). 
+This dialog should allow the customer to opt in or out of specific marketing and personalization use cases for their data. These consents and preferences should conform to the data model that you define for the [!DNL Profile]-enabled dataset in the next step.
 
 ## Add Adobe-standard consent fields to a [!DNL Profile]-enabled dataset {#dataset}
 
@@ -62,7 +62,7 @@ For more information on how to work with merge policies, refer to the [merge pol
 
 Once you have your datasets and merge policies to represent the required consent fields in your customer profiles, the next step is to bring the consent data itself into Platform.
 
-Primarily, you should be using the Adobe Experience Platform Web SDK to send consent-change signals to Platform whenever they occur on your website. If you already have consent data stored elsewhere, however, you can also opt to ingest your collect consent data directly by mapping it to your consent dataset's XDM schema and sending it to Platform through batch ingestion.
+Primarily, you should be using the Adobe Experience Platform Web SDK to send consent-change signals to Platform whenever they occur on your website. If you already have consent data stored elsewhere, however, you can also opt to ingest your collected consent data directly by mapping it to your consent dataset's XDM schema and sending it to Platform through batch ingestion.
 
 Refer to the sections below for details on each of these methods:
 
@@ -86,7 +86,7 @@ After creating a new configuration or selecting an existing one to edit, select 
 | [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
-| [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with Adobe-standard consent fields that you created earlier. |
+| [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
 
 ![](../../images/governance-privacy-security/consent/overview/edge-config.png)
 
@@ -139,7 +139,7 @@ alloy("setConsent", {
 
 | Payload property | Description |
 | --- | --- |
-| `standard` | The consent standard being used. This value must be set to `Adobe` in order to process Adobe-standard consent fields. |
+| `standard` | The consent standard being used. For the Adobe standard, this value must be set to `Adobe`. |
 | `version` | The version number of the consent standard indicated under `standard`. This value must be set to `2.0` for Adobe-standard consent processing. |
 | `value` | An object that conforms to the [Consents & Preferences data type](../../../xdm/data-types/consents.md), representing the customer's updated consent information. |
 
@@ -219,6 +219,6 @@ Customer Journey Management can also send consent-change signals back to Platfor
 
 ## Next steps
 
-This guide covered how to configure your Platform operations to collect customer consent data that conforms to the Adobe standard, and have those attributes represented in customer profiles. You can now integrate customer consent preferences as a determining factor in segment qualification and other downstream use cases.
+This guide covered how to configure your Platform operations to collect customer consent data using the Adobe standard, and have those attributes represented in customer profiles. You can now integrate customer consent preferences as a determining factor in segment qualification and other downstream use cases.
 
 For more information on Experience Platform's privacy-related capabilities, see the overview on [governance, privacy, and security in Platform](../overview.md).
