@@ -9,7 +9,7 @@ description: This tutorial provides steps for creating an Azure Blob (hereinafte
 
 # Create an [!DNL Azure Blob] source connector in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the Platform user interface.
+This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the Platform user interface.
 
 ## Getting started
 
@@ -36,7 +36,7 @@ In order to access your [!DNL Blob] storage on Platform, you must provide a vali
 
 | Credential | Description |
 | ---------- | ----------- |
-| `connectionString` | The connection string required to access data in your Blob storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
+| `connectionString` | The connection string required to access data in your [!DNL Blob] storage. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
 | `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. |
 
 For more information on getting started, visit [this [!DNL Azure Blob] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string).
