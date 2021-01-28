@@ -55,7 +55,7 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Type** | **Required** | **Default Value**  |
 | -------- | ------------ | ------------------ |
@@ -135,7 +135,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 
 ## Identity options
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
