@@ -15,10 +15,10 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 Additionally, this tutorial requires that you have an established cloud storage account. A list of tutorials for creating different cloud storage accounts in the UI can be found in the [source connectors overview](../../../../home.md).
 
@@ -45,11 +45,11 @@ Select the appropriate data format for the file you want to ingest and allow for
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
 
-You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). Alternatively, you can define a custom delimiter by entering a custom value in the input bar.
+You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). Alternatively, you can select **[!UICONTROL Custom]** and enter a custom delimiter of your choice in the pop up input bar.
 
-Once you have selected your data format and set a custom delimiter, select **[!UICONTROL Next]**.
+Once you have selected your data format and set your delimiter, select **[!UICONTROL Next]**.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/custom-delimiter.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
 ### Ingest Parquet or JSON files
 
