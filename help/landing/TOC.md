@@ -23,18 +23,18 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
 * Experience Platform APIs {#platform-apis}
+  * [Authenticate and Access Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
   * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
-  * [Authenticate and Access Platform APIs tutorial](api-authentication.md)
 * Platform documentation {#documentation}
-  * [Documentation overview](documentation/overview.md)
-  * [Documentation language support](documentation/language-support.md)
+  * [Overview](documentation/overview.md)
+  * [Language support](documentation/language-support.md)
 * Platform in the Adobe ecosystem {#ecosystem}
   * [Application Services](application-services.md)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
-  * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
+  * [Integrations with Experience Cloud applications (Video)](video/experience-cloud-integrations.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
-* [ADLS Gen2 Migration](adls2-gen2-migration.md)
+* [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
 * [Release notes](https://www.adobe.com/go/platform-release-notes-en)

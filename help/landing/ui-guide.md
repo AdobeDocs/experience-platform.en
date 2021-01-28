@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
 solution: Experience Platform
-title: Adobe Experience Platform UI guide
+title: Experience Platform UI Overview
 topic: ui guide
 description: Adobe Experience Platform 
 ---
