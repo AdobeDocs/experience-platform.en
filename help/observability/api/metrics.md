@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Available metrics
+title: Metrics endpoint
 topic: developer guide
+description: Learn how to retrieve observability metrics in Experience Platform using the Observability Insights API.
 ---
 
 # Metrics endpoint

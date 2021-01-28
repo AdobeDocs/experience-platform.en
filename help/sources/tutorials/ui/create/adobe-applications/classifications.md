@@ -80,4 +80,4 @@ By following this tutorial, you have created an Analytics Classifications Data c
 
 * [Analytics Data connector overview](../../../../connectors/adobe-applications/analytics.md)
 * [Create an Analytics Data connector in the UI](./analytics.md)
-* [About classifications](https://docs.adobe.com/content/help/en/analytics/components/classifications/c-classifications.html#)
+* [About classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)

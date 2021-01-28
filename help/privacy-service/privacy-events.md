@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Subscribe to Privacy Service Events
 topic: privacy events
+description: Learn how to subscribe to Privacy Service events using a preconfigured webhook.
 ---
 
 # Subscribe to [!DNL Privacy Service Events]

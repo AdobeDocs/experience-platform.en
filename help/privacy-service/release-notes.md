@@ -3,6 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service release notes
 topic: release notes
+description: The latest release notes for Adobe Experience Platform Privacy Service.
 ---
 
 # [!DNL Privacy Service] release notes

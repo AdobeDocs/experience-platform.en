@@ -46,7 +46,7 @@ First, install the Adobe Experience Platform [!DNL Web SDK] extension.
     * **Configuration ID:** Specify the Configuration ID you got from your Adobe representative.
     * **Edge Domain:** Specify the edge domain you got from your Adobe representative.
 
-1. Click **[!UICONTROL Save]** and continue to the next step.
+1. Select **[!UICONTROL Save]** and continue to the next step.
 
 ## Create a rule to tell [!DNL Launch] what data to send
 
@@ -64,7 +64,7 @@ Next, create a rule to let [!DNL Launch] know what data you want to send to Adob
 
     The data object you send needs to be valid XDM that will pass validation against the schema that is used by the dataset connected to your Configuration ID.
     
-1. Click **[!UICONTROL Keep Changes]**.
+1. Select **[!UICONTROL Keep Changes]**.
 
 For more information, see [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html) in the [!DNL Launch] documentation.
 
