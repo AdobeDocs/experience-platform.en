@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Platform
 solution: Experience Platform
 title: Connect to streaming destinations and activate data
+description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
