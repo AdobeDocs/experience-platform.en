@@ -3,6 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+description: This document lists the table of contents for Adobe Experience Platform destinations
 ---
 
 # Destinations {#destinations}
@@ -70,6 +71,7 @@ user-guide-description: Activate your known and unknown data for cross-channel m
         * [Workflow to create cloud storage destinations](./catalog/cloud-storage/workflow.md)
         * [Amazon Kinesis destination](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 destination](./catalog/cloud-storage/amazon-s3.md)
+        * [Azure Blobs destination](./catalog/cloud-storage/azure-blob.md)
         * [Azure Event Hubs destination](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP destination](./catalog/cloud-storage/sftp.md)
     * Data Management Platform destinations {#data-management}
