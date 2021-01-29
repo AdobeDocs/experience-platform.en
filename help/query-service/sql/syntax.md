@@ -492,12 +492,12 @@ ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name 
 
 ALTER TABLE table_name ADD CONSTRAINT constraint_name FOREIGN KEY ( column_name ) REFERENCES referenced_table_name ( primary_column_name )
 
+ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY column_name NAMESPACE namespace
+
 ALTER TABLE table_name DROP CONSTRAINT constraint_name PRIMARY KEY ( column_name )
 
 ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name )
 ```
-
-I removed the namespace one because it seems that isn't valid? If it is valid, can you please give me a resource showing me how it works? 
 
 **Parameters**
 
