@@ -36,6 +36,5 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Customer AI](segmentation/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
-  * [Implement website tags with Adobe Launch](sources/launch.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

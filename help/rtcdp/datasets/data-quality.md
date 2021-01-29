@@ -1,12 +1,12 @@
 ---
 keywords: data quality;rtcdp data quality
-title: Data quality on Real-time Customer Data Platform
+title: Data Quality in Real-time Customer Data Platform
 seo-title: Data quality on Real-time Customer Data Platform
 description: A document on data quality on Real-time Customer Data Platform
 seo-description: A document describing how data quality works through batch and data ingestion on Real-time Customer Data Platform
 ---
 
-# Data quality on [!DNL Real-time Customer Data Platform]
+# Data quality in [!DNL Real-time Customer Data Platform]
 
 [!DNL Real-time Customer Data Platform] (Real-time CDP) allows you to bring data from multiple sources and bridge them together to give a consistent and coordinated experience for your customers. As a result, ensuring your data is complete, accurate, and concise is of utmost importance. 
 
