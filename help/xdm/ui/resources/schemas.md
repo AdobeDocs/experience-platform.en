@@ -62,7 +62,7 @@ A dialog appears, showing a list selectable mixins that you can select for the s
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-You can use the search bar to help locate your desired mixin. Mixins whose name matches the query (or otherwise have fields that match the query) will be included in the results.
+You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
