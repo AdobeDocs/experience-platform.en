@@ -3,7 +3,7 @@ keywords: Experience Platform;getting started;customer ai;popular topics;custome
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI input and output
 topic: Getting started
-description: The following document outlines the different input and outputs utilized in Customer AI.
+description: The following document outlines the required events, inputs, and outputs utilized in Customer AI.
 ---
 
 # Customer AI input and output
@@ -12,7 +12,7 @@ The following document outlines the different input and outputs utilized in Cust
 
 ## Customer AI input data
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of XDM Mixins. It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web Details` mixins.
+Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of XDM mixins. It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web Details` mixins.
 
 >[!NOTE]
 >
