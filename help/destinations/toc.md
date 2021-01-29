@@ -71,7 +71,7 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Workflow to create cloud storage destinations](./catalog/cloud-storage/workflow.md)
         * [Amazon Kinesis destination](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 destination](./catalog/cloud-storage/amazon-s3.md)
-        * [Azure Blobs destination](./catalog/cloud-storage/azure-blob.md)
+        * [Azure Blob destination](./catalog/cloud-storage/azure-blob.md)
         * [Azure Event Hubs destination](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP destination](./catalog/cloud-storage/sftp.md)
     * Data Management Platform destinations {#data-management}
