@@ -58,7 +58,7 @@ Once you have opened a schema within the [!DNL Schema Editor], you can add field
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-A dialog appears, showing a list selectable mixins that you can select for the schema. Since mixins are only compatible with one class, only those mixins that are associated with the schema's selected class will be listed. By default, listed mixins are sorted based on their usage popularity within your organization.
+A dialog appears, showing a list of mixins that you can select for the schema. Since mixins are only compatible with one class, only those mixins that are associated with the schema's selected class will be listed. By default, listed mixins are sorted based on their usage popularity within your organization.
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
