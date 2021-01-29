@@ -33,6 +33,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
+  * [Customer AI](segmentation/customer-ai.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
   * [Implement website tags with Adobe Launch](sources/launch.md)
