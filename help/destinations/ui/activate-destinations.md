@@ -83,7 +83,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 &nbsp;
 
-#### Example: activating audience data in [!DNL Google Customer Match] {#example-facebook}
+#### Example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
 
 This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
 
@@ -222,8 +222,8 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >[!NOTE] 
 > 
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
->- The fields are used in the segment definition.
->- The fields are configured as projected attributes for the target destination.
+>* The fields are used in the segment definition.
+>* The fields are configured as projected attributes for the target destination.
 >
 > For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
