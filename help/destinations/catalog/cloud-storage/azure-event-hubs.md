@@ -59,7 +59,6 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
 
-
 ## Exported data {#exported-data}
 
 Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] in JSON format. For example, the event below contains the email address profile attribute of an audience that has qualified for a certain segment and exited another segment. The identities for this prospect are ECID and email.
