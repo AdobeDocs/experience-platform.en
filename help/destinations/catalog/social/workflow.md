@@ -41,7 +41,6 @@ Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
 >[!IMPORTANT]
 >
-> * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
 > * For [!DNL Facebook] destinations. **[!UICONTROL Account ID]** is your [!DNL Facebook Ad Account ID]. You can find this ID in the [!DNL Facebook Ads Manager]. Prefix the ID with `act_` as shown below: 
 
 ![Connect to social network destination - setup step](../../assets/catalog/social/workflow/setup.png)

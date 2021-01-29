@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Create email marketing destinations
+description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
