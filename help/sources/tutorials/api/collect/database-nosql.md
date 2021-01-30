@@ -79,17 +79,88 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Database Source Connector",
-        "connectionId": "d5cbb5bc-44cc-41a2-8bb5-bc44ccf1a2fb",
-        "description": "A test source connector for a database",
+        "name": "Database source connection",
+        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+        "description": "Database source connection",
         "data": {
-            "format": "tabular",
+            "format": "tabular"
         },
         "params": {
-            "path": "ADMIN.E2E"
+            "tableName": "test1.Mytable",
+            "columns": [
+                {
+                    "name": "TestID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Datefield",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                {
+                    "name": "complaint_type",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "complaint_description",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "status",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "status_change_date",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                {
+                    "name": "city",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Datefield2",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
-            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
         }
     }'
@@ -97,7 +168,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId`| The connection ID of your database source. |
+| `baseConnectionId`| The connection ID of your database source. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
@@ -107,14 +178,14 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "2f7356d9-a866-47ea-b356-d9a86687ea7a",
-    "etag": "\"c8006055-0000-0200-0000-5ecd79520000\""
+    "id": "8b1aa81b-4807-4536-8148-fae4441072fb",
+    "etag": "\"880402b6-0000-0200-0000-6014a1c00000\""
 }
 ```
 
 ## Create a target XDM schema {#target-schema}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in Platform, a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
+In order for the source data to be used in Platform, a target XDM schema must be created to structure the source data according to your needs. The target XDM schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
 
 A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
