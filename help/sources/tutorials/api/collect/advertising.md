@@ -78,15 +78,47 @@ curl -X POST \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-        -d '{
+    -d '{
         "name": "Google AdWords source connection",
-        "connectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
+        "baseConnectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
         "description": "Google AdWords source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "v201809.AD_PERFORMANCE_REPORT"
+            "tableName": "v201809.AD_PERFORMANCE_REPORT",
+            "columns": [
+                {
+                    "name": "AbsoluteTopImpressionPercentage",
+                    "type": "double",
+                    "xdm": {
+                        "type": "number"
+                    }
+                },
+                {
+                    "name": "AccountCurrencyCode",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "AccountDescriptiveName",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Impressions",
+                    "type": "long",
+                    "xdm": {
+                        "type": "integer",
+                        "minimum": -9007199254740992,
+                        "maximum": 9007199254740991
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
@@ -97,7 +129,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId` | The unique connection ID of the advertising application you are accessing. |
+| `baseConnectionId` | The unique connection ID of the advertising application you are accessing. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your advertising application. |
 
