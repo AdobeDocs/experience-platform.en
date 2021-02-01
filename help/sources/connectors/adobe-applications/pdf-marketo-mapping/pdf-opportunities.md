@@ -10,13 +10,9 @@ description: The table below contains the mappings between the Marketo Opportuni
 
 The tables below contains the mappings between the Marketo opportunities dataset and their corresponding Experience Data Model (XDM) fields.
 
->[!IMPORTANT]
->
->If you are ingesting B2B data from Marketo and another CRM system, then select `External-Opportunity-key` from the first row of source datasets. If you are ingesting B2B data exclusively from Marketo, then select `Opportunity-key` from the first row.
-
 | Source dataset | XDM target field |
 | -------------- | ---------------- |
-| <ul><li>`External-Opportunity-key`</li><li>`Opportunity-key`</li></ul> | `opportunityID` |
+| `Opportunity-key` | `opportunityID` |
 | `Account-key` | `accountID` |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -39,16 +35,6 @@ The tables below contains the mappings between the Marketo opportunities dataset
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
-| `Account-systemID` | `opportunityComponents.sourceAccountID.systemID` |
-| `Account-ID` | `opportunityComponents.sourceAccountID.ID` |
-| `Account-key` | `opportunityComponents.sourceAccountID.key` |
-| `mktoCdpSourceCampaignId` | `opportunityComponents.sourceCampaignID.ID` |
-| `External-Opportunity-systemID` | `opportunityComponents.sourceExternalID.systemID` |
-| `External-Opportunity-ID` | `opportunityComponents.sourceExternalID.ID` |
-| `External-Opportunity-key` | `opportunityComponents.sourceExternalID.key` |
-| `Opportunity-systemID` | `opportunityComponents.sourceOpportunityID.systemID` |
-| `Opportunity-ID` | `opportunityComponents.sourceOpportunityID.ID` |
-| `Opportunity-key` | `opportunityComponents.sourceOpportunityID.key` |
 
 ## Next steps
 

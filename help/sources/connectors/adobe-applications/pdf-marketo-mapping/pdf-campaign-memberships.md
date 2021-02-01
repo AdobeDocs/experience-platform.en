@@ -25,21 +25,6 @@ The table below contains the mappings between the Marketo Campaign memberships d
 | `Track Name` | `nurtureTrackName` |
 | `Webinar Url` | `webinarConfirmationUrl` |
 | `Registration Code` | `webinarRegistrationID` |
-| `CampaignMember-systemID` | `campaignMemberComponents.sourceCampaignMemberID.systemID` |
-| `CampaignMember-ID` | `campaignMemberComponents.sourceCampaignMemberID.ID` |
-| `CampaignMember-key` | `campaignMemberComponents.sourceCampaignMemberID.key` |
-| `Campaign-systemID` | `campaignMemberComponents.sourceCampaignID.systemID` |
-| `Campaign-ID` | `campaignMemberComponents.sourceCampaignID.ID` |
-| `Campaign-key` | `campaignMemberComponents.sourceCampaignID.key` |
-| `Person-systemID` | `campaignMemberComponents.sourcePersonID.systemID` |
-| `Person-ID` | `campaignMemberComponents.sourcePersonID.ID` |
-| `Person-key` | `campaignMemberComponents.sourcePersonID.key` |
-| `AcquiredByCampaign-systemID` | `campaignMemberComponents.sourceAcquiredByCampaignID.systemID` |
-| `AcquiredByCampaign-ID` | `campaignMemberComponents.sourceAcquiredByCampaignID.ID` |
-| `AcquiredByCampaign-key` | `campaignMemberComponents.sourceAcquiredByCampaignID.key` |
-| `Success` | `campaignMemberComponents.hasReachedSuccess` |
-| `Status` | `campaignMemberComponents.memberStatus` |
-| `Status Reason` | `campaignMemberComponents.memberStatusReason` |
 
 ## Next steps
 

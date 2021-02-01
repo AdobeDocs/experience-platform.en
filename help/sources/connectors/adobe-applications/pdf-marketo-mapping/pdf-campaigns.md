@@ -18,9 +18,6 @@ The table below contains the mappings between the Marketo campaigns dataset and 
 | `type` | `campaignType` |
 | `status` | `campaignStatus` |
 | `channel` | `channelName` |
-| `Campaign-systemID` | `campaignComponents.sourceCampaignID.systemID` |
-| `Campaign-ID` | `campaignComponents.sourceCampaignID.ID` |
-| `Campaign-key` | `campaignComponents.sourceCampaignID.key` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 

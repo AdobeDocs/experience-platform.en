@@ -15,9 +15,6 @@ The table below contains the mappings between the fields in the Marketo marketin
 | `MarketingList-key` | `marketingListID` |
 | `name` | `marketingListName` |
 | `description` | `marketingListDescription` |
-| `MarketingList-systemID` | `marketingListComponents.sourceMarketingListID.systemID` |
-| `MarketingList-ID` | `marketingListComponents.sourceMarketingListID.ID` |
-| `MarketingList-key` | `marketingListComponents.sourceMarketingListID.key` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
