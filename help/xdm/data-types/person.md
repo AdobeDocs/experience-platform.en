@@ -10,7 +10,7 @@ description: This document provides an overview of the Person XDM data type.
 
 [!UICONTROL Person] is a standard XDM data type that describes an individual person. This datatype can represent a person acting in various roles, such as a customer, contact, or owner.
 
-<img src='../images/data-types/person.png' width=500 /><br />
+<img src='../images/data-types/person.PNG' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
