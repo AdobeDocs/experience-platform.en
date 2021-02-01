@@ -444,7 +444,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 The response body includes the first 100 bytes of the file (as specified by the "Range" header in the request) along with HTTP Status 206 (Partial Contents). The response also includes the following headers:
 
 - Content-Length: 100 (the number of bytes returned)
-- Content-type: application/parquet (a parquet file was requested, therefore the response content type is parquet)
+- Content-type: application/parquet (a Parquet file was requested, therefore the response content type is `parquet`)
 - Content-Range: bytes 0-99/249058 (the range requested (0-99) out of the total number of bytes (249058))
 
 ## Configure API response pagination
