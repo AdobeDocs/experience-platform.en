@@ -1,60 +1,60 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes December 9, 2020
+description: Experience Platform release notes January 27, 2021
 doc-type: release notes
-last-update: December 9, 2020
-author: ens60013 & ens72471
+last-update: January 27, 2021
+author: ens60013
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: December 9, 2020**
-
-New features in Adobe Experience Platform:
-
-- [[!DNL Dataflows]](#dataflows)
+**Release date: January 27, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Data Prep]](#data-prep)
 - [[!DNL Sources]](#sources)
+- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Dataflows] {#dataflows}
+## [!DNL Data Prep] {#data-prep}
 
-Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity and Profile Service, and to destinations. 
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**Key feature**
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Transparency for dataflows | You can monitor dataflows for sources and destinations. For more information, please read the [tutorial on monitoring sources](../../dataflows/ui/monitor-sources.md) or the [tutorial on monitoring destinations](../../dataflows/ui/monitor-destinations.md). |
+| Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
 
-To learn more about dataflows, please read the [dataflows overview](../../dataflows/home.md).
-
-## [!DNL Data Science Workspace] {#dsw}
-
-Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
-
-**Key features**
-
-| Feature | Description|
-| --- | ---|
-| Adobe Experience Platform Intelligence package addon | The Adobe Experience Platform Intelligence package addon is a Data Science Workspace upgrade that unlocks additional key features such as: <li> UI driven model experimentation and evaluation.</li><li> Ability to deploy and operationalize models with scheduled training and inferencing jobs.</li><li> Support for deep learning in Tensorflow models (GPU Compute).</li><li> Spark-based distributed compute to train and score against large datasets (10MM + rows).</li><li>And more</li>|
-
-To learn more about the Adobe Experience Platform Intelligence package addon, please see the documentation on [Data Science Workspace access and features](../../data-science-workspace/access-features-dsw.md).
+For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
-[!DNL Experience Platform] provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**Key features**
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Update account and connection details for streaming sources | You can now update the names, descriptions, and credentials of existing streaming connections using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [updating connections using the API](../../sources/tutorials/api/update.md) and [editing account details using the UI](../../sources/tutorials/ui/monitor.md). |
-| Delete dataflows | Streaming dataflows that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting dataflows using the API](../../sources/tutorials/api/delete-dataflows.md) and [deleting dataflows using the UI](../../sources/tutorials/ui/delete.md). |
+| Adobe Audience Manager source connector enhancements | You can now filter and select individual first-party segments from Audience Manager to ingest into Platform, as well as filter out first-party traits. See the tutorial on [creating an Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
+| [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
+| Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
+| Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
+| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
 
+## [!DNL Experience Platform Launch Server Side] {#launch}
+
+Adobe Experience Platform Launch Server Side decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Platform Launch Server Side rules can transform and send data to new destinations without changing client-side implementations.
+
+Platform Launch Server Side, combined with the Adobe Experience Platform Web and Mobile SDKs, makes it possible to:
+
+- Make a single call from the page that contains a payload of data and then federate this data server-side to reduce client-side network traffic and deliver a faster experience for customers.
+- Decrease the amount of time it takes for web pages to load so your site conforms to industry best practices around performance.
+- Increase transparency and control over which types of data are sent where, across all client-side properties.
+- Create a server-side rule to send previously tracked data to a new destination.
+
+For information, refer to the [Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).

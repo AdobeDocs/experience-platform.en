@@ -58,13 +58,21 @@ Once you have opened a schema within the [!DNL Schema Editor], you can add field
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-In the dialog that appears, you can select the desired mixins from the list. You can select multiple mixins from the list, with each selected mixin appearing in the right rail.
+A dialog appears, showing a list of mixins that you can select for the schema. Since mixins are only compatible with one class, only those mixins that are associated with the schema's selected class will be listed. By default, listed mixins are sorted based on their usage popularity within your organization.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Select the checkbox next to the name of the mixin that you wish to add to the schema. You can select multiple mixins from the list, with each selected mixin appearing in the right rail.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->For any listed mixin, you can select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
+>For any listed mixin, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the mixin captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
 
 Once you have finished choosing mixin, select **[!UICONTROL Add mixin]** to add them to the schema.
 
