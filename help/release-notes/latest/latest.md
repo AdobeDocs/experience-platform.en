@@ -14,6 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Sources]](#sources)
+- [[!DNL Experience Platform Launch Server Side]](#launch)
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -41,5 +42,19 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
 | Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 | Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
+| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
+
+## [!DNL Experience Platform Launch Server Side] {#launch}
+
+Adobe Experience Platform Launch Server Side decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Platform Launch Server Side rules can transform and send data to new destinations without changing client-side implementations.
+
+Platform Launch Server Side, combined with the Adobe Experience Platform Web and Mobile SDKs, makes it possible to:
+
+- Make a single call from the page that contains a payload of data and then federate this data server-side to reduce client-side network traffic and deliver a faster experience for customers.
+- Decrease the amount of time it takes for web pages to load so your site conforms to industry best practices around performance.
+- Increase transparency and control over which types of data are sent where, across all client-side properties.
+- Create a server-side rule to send previously tracked data to a new destination.
+
+For information, refer to the [Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).
