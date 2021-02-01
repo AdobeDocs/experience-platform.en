@@ -6,7 +6,7 @@ topic: Developer guide
 description: The keyword extraction service, when given a text document, automatically extracts keywords or keyphrases that best describe the subject of the document. In order to extract keywords, a combination of named entity recognition (NER) and unsupervised keyword extraction algorithms are used.
 ---
 
-# Keyword extraction in the Content and Commerce AI API
+# Keyword extraction
 
 >[!NOTE]
 >

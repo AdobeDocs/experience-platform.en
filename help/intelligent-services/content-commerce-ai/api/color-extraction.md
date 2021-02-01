@@ -6,7 +6,7 @@ topic: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
 ---
 
-# Color extraction in the Content and Commerce AI API
+# Color extraction
 
 >[!NOTE]
 >

@@ -6,7 +6,7 @@ topic: Developer guide
 description: The visual similarity service, when given an image, automatically finds visually similar images from a catalog.
 ---
 
-# Visual similarity in the Content and Commerce AI API
+# Visual similarity 
 
 >[!NOTE]
 >
