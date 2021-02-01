@@ -12,19 +12,31 @@ Before you can create a Marketo Engage (hereinafter referred to as "Marketo") so
 
 The documentation below provides steps on how to acquire authentication credentials in order to create a Marketo source connector.
 
-## Set up a new user
+## Set up a new role
 
-The first step in acquiring your authentication credentials is to set up a new user through the [Marketo](https://app-sjint.marketo.com/#MM0A1) interface.
+The first step in acquiring your authentication credentials is to set up a new role through the [Marketo](https://app-sjint.marketo.com/#MM0A1) interface.
 
 Log in to Marketo and select **Admin** from the top navigation bar.
 
-![Admin](./images/marketo/home.png)
+![Admin for a new role](./images/marketo/home.png)
 
-You can access several features of your Marketo instance from the admin page. To set up a new user, select **Users & Roles** from the *Security* panel.
+You can access several features of your Marketo instance from the admin page. To set up a new role, select **Users & Roles** from the *Security* panel.
 
-![admin-new-user](./images/marketo/admin-new-user.png)
+![admin-new-role](./images/marketo/admin-new-user.png)
 
-The *Users* page provides a list of active users currently provisioned in Marketo. Select **Invite New User** to provision a new user.
+The **Users & Roles** page contains information about users, roles, and login histories. To create a new role, select **Roles** from the top header and then select **New Role**.
+
+![new-role](./images/marketo/new-role.png)
+
+The *Create New Role* dialog box appears. Provide a descriptive name and description and then select the permissions you would like to grant for this role. Permissions are restricted to specific workspaces and users are only able to perform actions in workspaces that they have permissions in.
+
+Once you have selected the permissions you would like to grant, select **Create**.
+
+![create-new-role](./images/marketo/create-new-role.png)
+
+## Set up a new user
+
+Similar to roles, you can set up a new user from the **Users and Roles** page. The *Users* page provides a list of active users currently provisioned in Marketo. Select **Invite New User** to provision a new user.
 
 ![invite-new-user](./images/marketo/invite-new-user.png)
 
