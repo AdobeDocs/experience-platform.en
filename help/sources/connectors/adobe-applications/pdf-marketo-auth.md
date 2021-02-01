@@ -36,7 +36,7 @@ Once you have selected the permissions you would like to grant, select **Create*
 
 ## Set up a new user
 
-Similar to roles, you can set up a new user from the **Users and Roles** page. The *Users* page provides a list of active users currently provisioned in Marketo. Select **Invite New User** to provision a new user.
+Similar to roles, you can set up a new user from the **Users & Roles** page. The *Users* page provides a list of active users currently provisioned in Marketo. Select **Invite New User** to provision a new user.
 
 ![invite-new-user](./images/marketo/invite-new-user.png)
 
