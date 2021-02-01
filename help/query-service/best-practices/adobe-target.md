@@ -8,32 +8,35 @@ description: Data from Adobe Target is transformed into Experience Event XDM sch
 
 # Sample queries for Adobe Target data
 
-Data from Adobe Target is transformed into Experience Event XDM schema and ingested into [!DNL Experience Platform] as datasets for you. There are many use cases for [!DNL Query Service] with this data, and the following sample queries should work with your Adobe Target datasets.
+Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets for you. There are many use cases for Adobe Experience Platform Query Service with this data, and the following sample queries should work with your Adobe Target datasets.
 
->[!NOTE]
->
->In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
-
-## Standard dataset name for Target data source on [!DNL Platform]: 
-
-Adobe Target Experience Events (friendly name) <br>
-`adobe_target_experience_events` (name to use in query)
+In Experience Platform, the name of auto-created dataset is "Adobe Target Experience Events". When using this dataset with queries, you should use the name `adobe_target_experience_events`.
 
 ## High-level partial XDM field mapping
 
-The use of `[ ]` denotes an array 
+The following list shows the Target fields that map to their corresponding XDM fields.
 
-| Name | XDM Field | Notes |
-| ---- | --------- | ----- |
-|mboxName | `_experience.target.mboxname`||
-|Activity ID | `_experience.target.activities.activityID`||
-|Experience ID|`_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`||
-|Segment ID|`_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`||
-|Event Scope|`_experience.target.activities[].activityEvents[].eventScope`|Tracks new Visitor and Visit|
-|Step ID| `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID`|Custom step ID for Campaign|
-|Price Total|`commerce.order.priceTotal`||
+>[!NOTE]
+>
+> The use of `[ ]` within the XDM field denotes an array.
 
-## Hourly activity counts for a given day
+- mboxName: `_experience.target.mboxname`
+- Activity ID: `_experience.target.activities.activityID`
+- Experience ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.experienceID`
+- Segment ID: `_experience.target.activities[].activityEvents[].segmentEvents[].segmentID._id`
+- Event Scope: `_experience.target.activities[].activityEvents[].eventScope` 
+    - This field tracks new visitors and visits.
+- Step ID: `_experience.target.activities[].activityEvents[]._experience.target.activity.activityevent.context.stepID` 
+    - This field is a custom step ID for Adobe Campaign.
+- Price Total: `commerce.order.priceTotal`
+
+## Sample queries
+
+The following queries show examples of commonly used queries with Adobe Target.
+
+In the following examples, you will need to edit the SQL to fill in the expected parameters for your queries based on the dataset, variables, or timeframe you are interested in evaluating. Provide parameters wherever you see `{ }` in the SQL.
+
+### Hourly activity counts for a given day
 
 ```sql
 SELECT
@@ -46,7 +49,7 @@ FROM
     date_format(from_utc_timestamp(timestamp, 'America/New_York'), 'yyyy-MM-dd HH') AS Hour,
     EXPLODE(_experience.target.activities.activityID) AS ActivityID
   FROM adobe_target_experience_events
-  WHERE TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+  WHERE TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, ActivityID
@@ -54,7 +57,7 @@ ORDER BY Hour DESC, Instances DESC
 LIMIT 24
 ```
 
-## Hourly details for a specific activity for a given day
+### Hourly details for a specific activity for a given day
 
 ```sql
 SELECT
@@ -64,14 +67,14 @@ SELECT
 FROM adobe_target_experience_events
 WHERE
   array_contains( _experience.target.activities.activityID, {Activity ID} ) AND 
-    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+    TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
   _experience.target.activities IS NOT NULL
 GROUP BY Hour, ActivityID
 ORDER BY Hour DESC
 LIMIT 24
 ```
 
-## Experience IDs for a specific activity for a given day
+### Experience IDs for a specific activity for a given day
 
 ```sql
 SELECT
@@ -92,7 +95,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+      TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
       _experience.target.activities IS NOT NULL
   )
   WHERE Activities.activityID = {activity_id}
@@ -102,7 +105,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 20
 ```
 
-## Return a list of Event Scopes (visitor, visit, impression) by instances per Activity ID for a given day
+### Return a list of Event Scopes (visitor, visit, impression) by instances per Activity ID for a given day
 
 ```sql
 SELECT
@@ -123,7 +126,7 @@ FROM
       EXPLODE(_experience.target.activities) AS Activities
     FROM adobe_target_experience_events
     WHERE 
-      TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+      TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
       _experience.target.activities IS NOT NULL
   )
 )
@@ -132,7 +135,7 @@ ORDER BY Day DESC, Instances DESC
 LIMIT 30
 ```
 
-## Return count of visitors, visits, impressions per activity for a given day
+### Return count of visitors, visits, impressions per activity for a given day
 
 ```sql
 SELECT
@@ -148,7 +151,7 @@ FROM
     EXPLODE(_experience.target.activities) AS Activities
   FROM adobe_target_experience_events
   WHERE
-    TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+    TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
     _experience.target.activities IS NOT NULL
 )
 GROUP BY Hour, Activities.activityid
@@ -156,7 +159,7 @@ ORDER BY Hour DESC, Visitors DESC
 LIMIT 30
 ```
 
-## Return visitors, visits, impressions for Experience ID, Segment ID, and EventScope for a given day
+### Return visitors, visits, impressions for Experience ID, Segment ID, and EventScope for a given day
 
 ```sql
 SELECT
@@ -188,7 +191,7 @@ FROM
         EXPLODE(_experience.target.activities) AS Activities
       FROM adobe_target_experience_events
       WHERE 
-        TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}') AND 
+        TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}') AND 
         _experience.target.activities IS NOT NULL
       LIMIT 1000000
     )
@@ -201,7 +204,7 @@ ORDER BY Day DESC, Activities.activityID, ExperienceID ASC, SegmentID._id ASC, V
 LIMIT 20
 ```
 
-## Return mbox names and count of records for a given day
+### Return mbox names and count of records for a given day
 
 ```sql
 SELECT
@@ -210,7 +213,7 @@ SELECT
 FROM
   adobe_target_experience_events
 WHERE
-  TIMESTAMP = to_timestamp('{target_year}-{target_month}-{target_day}')
+  TIMESTAMP = to_timestamp('{TARGET_YEAR}-{TARGET_MONTH}-{TARGET_DAY}')
   GROUP BY _experience.target.mboxname ORDER BY records DESC
 LIMIT 100
 ```

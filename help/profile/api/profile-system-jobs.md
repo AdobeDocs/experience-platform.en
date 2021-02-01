@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Profile system jobs - Real-time Customer Profile API
+title: Profile System Jobs API Endpoint
 topic: guide
 type: Documentation
 description: Adobe Experience Platform enables you to delete a dataset or batch from the Profile store in order to remove Real-time Customer Profile data that is no longer needed or was added in error. This requires using the Profile API to create a Profile system job, or delete request.
@@ -8,21 +8,21 @@ description: Adobe Experience Platform enables you to delete a dataset or batch 
 
 # Profile system jobs endpoint (Delete requests)
 
-Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
+Adobe Experience Platform enables you to ingest data from multiple sources and build robust profiles for individual customers. Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake], and if the datasets have been enabled for Profile, that data is stored in the [!DNL Real-time Customer Profile] data store as well. Occasionally it may be necessary to delete a dataset or batch from the Profile store in order to remove data that is no longer needed or was added in error. This requires using the [!DNL Real-time Customer Profile] API to create a [!DNL Profile] system job, or `delete request`, that can also be modified, monitored, or removed if required.
 
 >[!NOTE]
 >
->If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for instructions.
+>If you are trying to delete datasets or batches from the [!DNL Data Lake], please visit the [Catalog Service overview](../../catalog/home.md) for more information.
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## View delete requests
 
 A delete request is a long-running, asynchronous process, meaning that your organization may be running multiple delete requests at once. In order to view all delete requests that your organization is currently running, you can perform a GET request to the `/system/jobs` endpoint. 
 
-You may also use optional query parameters to filter the list of delete requests returned in the response. To use multiple parameters, separate each parameter using an ampersand (&).
+You may also use optional query parameters to filter the list of delete requests returned in the response. To use multiple parameters, separate each parameter using an ampersand (`&`).
 
 **API format**
 
@@ -33,10 +33,10 @@ GET /system/jobs?{QUERY_PARAMETERS}
 
 |Parameter|Description|
 |---|---|
-|`start`|Offset the page of results returned, as per the create time of the request. Example: *`start=4`*|
-|`limit`|Limit the number of results returned. Example: *`limit=10`*|
-|`page`|Return a specific page of results, as per the create time of the request. Example: ***`page=2`***|
-|`sort`|Sort results by a specific field in ascending (*`asc`*) or descending (**`desc`**) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
+|`start`|Offset the page of results returned, as per the create time of the request. Example: `start=4`|
+|`limit`|Limit the number of results returned. Example: `limit=10`|
+|`page`|Return a specific page of results, as per the create time of the request. Example: `page=2`|
+|`sort`|Sort results by a specific field in ascending (`asc`) or descending (`desc`) order. The sort parameter does not work when returning multiple pages of results. Example: `sort=batchId:asc`| 
 
 **Request**
 
@@ -98,11 +98,7 @@ Initiating a new delete request is done through a POST request to the `/systems/
 
 ### Delete a dataset
 
-In order to delete a dataset, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
-
->[!CAUTION]
->
-> When attempting to delete a [!DNL Profile]-enabled dataset using the [!DNL Experience Platform] UI, the dataset is disabled for ingestion but will not be deleted until a delete request is created using the API. For more information, see the [appendix](#appendix) to this document.
+In order to delete a dataset from the Profile store, the dataset ID must be included in the body of the POST request. This action will delete ALL data for a given dataset. [!DNL Experience Platform] allows you to delete datasets based on both record and time series schemas.
 
 **API format**
 
@@ -131,7 +127,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The **`status`** for the request at time of creation is *`"NEW"`* until it begins processing. The **`dataSetId`** in the response should match the ***`dataSetId`*** sent in the request.
+A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `status` for the request at time of creation is `"NEW"` until it begins processing. The `dataSetId` in the response should match the `dataSetId` sent in the request.
 
 ```json
 {
@@ -187,7 +183,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `"status"` for the request at time of creation is `"NEW"` until it begins processing. The `"batchId"` in the response should match the `"batchId"` sent in the request.
+A successful response returns the details of the newly created delete request, including a unique, system-generated, read-only ID for the request. This can be used to look up the request and check its status. The `"status"` for the request at time of creation is `"NEW"` until it begins processing. The `"batchId"` value in the response should match the `"batchId"` value sent in the request.
 
 ```json
 {
@@ -249,7 +245,7 @@ curl -X POST \
 
 **Response**
 
-The response provides the details of the delete request, including its updated status. The ID of the delete request in the response should match the ID sent in the request path.
+The response provides the details of the delete request, including its updated status. The ID of the delete request in the response (the `"id"` value) should match the ID sent in the request path.
 
 ```json
 {
@@ -304,19 +300,3 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 ## Next steps
 
 Now that you know the steps involved in deleting datasets and batches from the [!DNL Profile Store] within [!DNL Experience Platform], you can safely delete data that has been added erroneously or that your organization no longer needs. Please be mindful that a delete request cannot be undone, therefore you should only delete data that you are confident you do not need now and will not need in the future.
-
-## Appendix {#appendix}
-
-The following information is supplemental to the act of deleting a dataset from the [!DNL Profile Store].
-
-### Deleting a dataset using the [!DNL Experience Platform] UI
-
-When using the [!DNL Experience Platform] user interface to delete a dataset that has been enabled for [!DNL Profile], a dialog opens asking, "Are you sure you want to delete this dataset from the [!DNL Experience Data Lake]? Use the 'p[!DNL rofile systems jobs]' API to delete this dataset from the [!DNL Profile Service]."
-
-Clicking **[!UICONTROL Delete]** in the UI disables the dataset for ingestion, but DOES NOT automatically delete the dataset in the backend. In order to permanently delete the dataset, a delete request must be created manually using the steps in this guide for [creating a delete request](#create-a-delete-request).
-
-The following image shows the warning when attempting to delete a [!DNL Profile]-enabled dataset using the UI.
-
-![](../images/delete-profile-dataset.png)
-
-For more information regarding working with datasets, please begin by reading the [datasets overview](../../catalog/datasets/overview.md).

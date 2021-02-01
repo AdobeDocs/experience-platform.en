@@ -27,7 +27,7 @@ The **[!UICONTROL Included in Profile]** toggle allows you to filter results to 
 
 ![](../images/ui/explore/filter.png)
 
-You can also use the search bar to narrow down results to resources whose names match the search query.
+You can also use the search bar to narrow down results further. When you search for a term, the top items represent resources whose names match the search query. Below these items, under **[!UICONTROL Standard Fields]**, any resources containing fields that match the query will be listed. This allows you to search for XDM resources based on the type of data they contain, without having to know the name of the resource beforehand.
 
 ![](../images/ui/explore/search.png)
 
