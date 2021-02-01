@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
-title: Collect payment data through source connectors and APIs
+title: Collect Payment Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect payments data through source connectors and APIs
+# Collect payment data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party payments application and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 

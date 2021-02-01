@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data source connection
 solution: Experience Platform
-title: Ingest parquet data from a third-party cloud storage system using the Flow Service API
+title: Ingest Parquet Data from a Third-Party Cloud Storage System Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to ingest parquet data from a third-party cloud storage system.
+description: This tutorial uses the Flow Service API to walk you through the steps to ingest Apache Parquet data from a third-party cloud storage system.
 ---
 
-# Ingest parquet data from a third-party cloud storage system using the [!DNL Flow Service] API
+# Ingest Parquet data from a third-party cloud storage system using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 

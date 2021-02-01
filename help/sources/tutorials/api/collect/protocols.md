@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
-title: Collect protocols data through source connectors and APIs
+title: Collect Protocols Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect protocols data through source connectors and APIs
+# Collect protocols data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party protocol application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 

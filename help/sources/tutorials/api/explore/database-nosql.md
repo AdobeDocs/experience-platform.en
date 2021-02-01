@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;third party database;database flow service
 solution: Experience Platform
-title: Explore a database using the Flow Service API
+title: Explore a Database Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore the contents and file structure of a third-party database.
 ---

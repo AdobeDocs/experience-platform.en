@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;salesforce;Salesforce
 solution: Experience Platform
-title: Salesforce connector
+title: Salesforce Source Connector Overview
 topic: overview
-description: Experience Platform provides support for ingesting data from a third-party CRM system. Support for CRM providers include Salesforce.
+description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # [!DNL Salesforce] connector
@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL Salesforce]
 
 ## Connect [!DNL Salesforce] to [!DNL Platform] using APIs
 
-- [Create a Salesforce connector using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
+- [Create a Salesforce source connection using the Flow Service API](../../tutorials/api/create/crm/salesforce.md)
 - [Explore a CRM system using the Flow Service API](../../tutorials/api/explore/crm.md)
 - [Collect CRM data using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Salesforce] to [!DNL Platform] using the UI
 
-- [Create a Salesforce source connector in the UI](../../tutorials/ui/create/crm/salesforce.md)
-- [Configure a dataflow for a CRM connector in the UI](../../tutorials/ui/dataflow/crm.md)
+- [Create a Salesforce source connection in the UI](../../tutorials/ui/create/crm/salesforce.md)
+- [Configure a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)

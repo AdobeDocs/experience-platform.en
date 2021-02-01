@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
-title: Delete a connection using the Flow Service API
+title: Delete a Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for deleting a connection using the Flow Service API.
+description: Learn how to delete a connection using the Flow Service API.
 ---
 
 # Delete a connection using the Flow Service API

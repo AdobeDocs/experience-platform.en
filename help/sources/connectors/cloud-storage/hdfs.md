@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;HDFS;hdfs;Apache HDFS;apache hdfs
 solution: Experience Platform
-title: HDFS connector
+title: Apache HDFS Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Apache HDFS to Platform using APIs or the user interface.
+description: Learn how to connect Apache HDFS to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Apache] HDFS connector
@@ -35,11 +35,11 @@ The documentation below provides information on how to connect [!DNL Apache] HDF
 
 ### Using APIs
 
-- [Create an HDFS connector using the Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
+- [Create an HDFS source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/hdfs.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an Apache HDFS source connector in the UI](../../tutorials/ui/create/cloud-storage/hdfs.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create an Apache HDFS source connection in the UI](../../tutorials/ui/create/cloud-storage/hdfs.md)
+- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

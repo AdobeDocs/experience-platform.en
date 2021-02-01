@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ATS;ats
 solution: Experience Platform
-title: Azure Table Storage connector
+title: Azure Table Storage Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Azure Table Storage to Platform using APIs or the user interface.
+description: Learn how to connect Azure Table Storage to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Azure Table Storage] connector
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Azure Table
 
 ## Connect [!DNL Azure Table Storage] to [!DNL Platform] using APIs
 
-- [Create an Azure Table Storage connector using the Flow Service API](../../tutorials/api/create/databases/ats.md)
+- [Create an Azure Table Storage source connection using the Flow Service API](../../tutorials/api/create/databases/ats.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Azure Table Storage] to [!DNL Platform] using the UI
 
-- [Create an Azure Table Storage source connector in the UI](../../tutorials/ui/create/databases/ats.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create an Azure Table Storage source connection in the UI](../../tutorials/ui/create/databases/ats.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

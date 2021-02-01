@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
 solution: Experience Platform
-title: Create a Google AdWords connector using the Flow Service API
+title: Create a Google AdWords Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Google AdWords.
+description: Learn how to connect Adobe Experience Platform to Google AdWords using the Flow Service API.
 ---
 
-# Create a [!DNL Google AdWords] connector using the [!DNL Flow Service] API
+# Create a [!DNL Google AdWords] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

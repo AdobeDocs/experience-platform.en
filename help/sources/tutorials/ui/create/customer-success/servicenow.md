@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ServiceNow;servicenow
 solution: Experience Platform
-title: Create a ServiceNow source connector in the UI
+title: Create a ServiceNow  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a ServiceNow source connector using the Platform user interface.
+description: Learn how to create a ServiceNow source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL ServiceNow] source connector in the UI
+# Create a [!DNL ServiceNow] source connection in the UI
 
 >[!NOTE]
 >

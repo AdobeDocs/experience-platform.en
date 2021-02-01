@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;Dynamics;dynamics
 solution: Experience Platform
-title: Create a Microsoft Dynamics source connector in the UI
+title: Create a Microsoft Dynamics  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Microsoft Dynamics (hereinafter referred to as "Dynamics") source connector using the Platform user interface.
+description: Learn how to create a Microsoft Dynamics source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL Microsoft Dynamics] source connector in the UI
+# Create a [!DNL Microsoft Dynamics] source connection in the UI
 
-This tutorial provides steps for creating a [!DNL Microsoft Dynamics] (hereinafter referred to as "[!DNL Dynamics]") source connector using the Platform user interface.
+This tutorial provides steps for creating a [!DNL Microsoft Dynamics] (hereinafter referred to as "[!DNL Dynamics]") source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
