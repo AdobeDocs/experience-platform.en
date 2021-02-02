@@ -28,7 +28,7 @@ To send consent data to Adobe Experience Platform using the SDK, the following i
 - A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
 - An edge configuration set up with Platform and the Profile-enabled dataset mentioned above.
 
-Please refer to the guide on [TCF 2.0 compliance](../../../rtcdp/privacy/iab/dataset-preparation.md) for instructions on creating the required datasets and edge configuration.
+Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and edge configuration.
 
 ## Audience Manager integration
 
