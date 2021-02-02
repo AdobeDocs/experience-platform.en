@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Governance, privacy, and security in Adobe Experience Platform
+title: Governance, Privacy, and Security in Adobe Experience Platform
 topic: overview
-description: Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 ---
 
 # Governance, privacy, and security in Adobe Experience Platform
