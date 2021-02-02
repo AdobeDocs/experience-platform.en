@@ -79,7 +79,7 @@ The left half of the interface is a directory browser, displaying the 10 Marketo
 
 >[!NOTE]
 >
->For the purposes of brevity, the following tutorial uses Named Acccounts as an example, but the steps outlined below apply to any of the 10 Marketo datasets.
+>For the purposes of brevity, the following tutorial uses Named Accounts as an example, but the steps outlined below apply to any of the 10 Marketo datasets.
 
 Select the dataset you wish to ingest first, then select **Next**.
 
