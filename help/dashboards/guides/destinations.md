@@ -6,13 +6,13 @@ topic: guide
 type: Documentation
 ---
 
-# (Beta) [!UICONTROL Desinations] dashboard
+# (Beta) [!UICONTROL Destinations] dashboard
 
 >[!IMPORTANT]
 >
 >The dashboard functionality outlined in this document is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your destination data, as captured during a daily snapshot. This guide outlines how to access and work with the destinations dashboard in the UI and provides more information regarding the metrics displayed in the dashboard.  
+The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's active destinations, as captured during a daily snapshot. This guide outlines how to access and work with the destinations dashboard in the UI and provides more information regarding the metrics displayed in the dashboard.  
 
 For an overview of destinations, as well as a catalog of all available destinations within Experience Platform, please visit the [destinations overview](../../destinations/home.md).
 
