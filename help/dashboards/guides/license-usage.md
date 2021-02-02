@@ -14,7 +14,7 @@ type: Documentation
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's license usage, as captured during a daily snapshot. This guide outlines how to access and work with the license usage dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
-For a general overview of the Platform UI, please visit the [Experience Platform UI guide](ui-guide.md).
+For a general overview of the Platform UI, please visit the [Experience Platform UI guide](../../landing/ui-guide.md).
 
 ## License usage dashboard data
 
@@ -58,7 +58,7 @@ Experience Platform currently provides one widget that you can use to visualize 
 
 The **[!UICONTROL Addressable audiences]** widget displays the total number of merged profiles within the Profile data store, after applying a system-generated merge policy to combine profile fragments from all present datasets using a deterministic (private) graph algorithm. 
 
-For more information on fragments and merged profiles, please begin by reading the *Profile fragments vs merged profiles* section of the [Profile overview](../profile/home.md).
+For more information on fragments and merged profiles, please begin by reading the *Profile fragments vs merged profiles* section of the [Profile overview](../../profile/home.md).
 
 >[!NOTE]
 >
@@ -66,13 +66,6 @@ For more information on fragments and merged profiles, please begin by reading t
 
 ![](../images/license-usage/addressable-audiences.png)
 
-## Additional dashboards
-
-The Platform UI provides additional dashboards for viewing snapshots of your data within Experience Platform. These dashboards include Real-time Customer Profile and segments. For more information on these dashboards, select from the following links:
-
-* [[!DNL Profile] dashboard](../profile/ui/profile-dashboard.md)
-* [Segment dashboard](../segmentation/ui/segment-dashboard.md)
-
 ## Next steps
 
-By following this document you should now be able to locate the license usage dashboard and select a sandbox to view. You should also understand the metrics displayed in the available widgets. To learn more about the Experience Platform UI, please refer to the [Platform UI guide](ui-guide.md).
+By following this document you should now be able to locate the license usage dashboard and select a sandbox to view. You should also understand the metrics displayed in the available widgets. To learn more about the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).

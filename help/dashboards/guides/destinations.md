@@ -34,13 +34,13 @@ The metrics displayed in the [!UICONTROL Profiles] dashboard are based on the de
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
-![](../images/destinations/dashboard-overview.png)
+<!-- ![](../images/destinations/dashboard-overview.png) -->
 
 ### Widgets and metrics
 
 The dashboard is composed of widgets, which are read-only metrics providing important information regarding your destinations data. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
 
-![](../images/destinations/dashboard-timestamp.png)
+<!-- ![](../images/destinations/dashboard-timestamp.png) -->
 
 ## Available widgets
 
@@ -64,4 +64,4 @@ COMING SOON!
 
 ## Next steps
 
-By following this document you should now be able to locate the Profiles dashboard and understand the metrics displayed in the available widgets. To learn more about working with [!DNL Profile] data in the Experience Platform UI, please refer to the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).
+By following this document you should now be able to locate the destinations dashboard and understand the metrics displayed in the available widgets. To learn more about working with destinations in Experience Platform, please refer to the [destinations documentation](../../destinations/home.md).

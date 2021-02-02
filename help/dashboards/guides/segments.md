@@ -85,13 +85,6 @@ To learn more about identity namespaces, please visit the [Adobe Experience Plat
 
 ![](../images/segments/profiles-by-namespace.png)
 
-## Additional dashboards
-
-The Platform UI provides additional dashboards for viewing snapshots of your data within Experience Platform. These dashboards include Real-time Customer Profile and [!UICONTROL License usage]. For more information on these additional dashboards, select from the following links:
-
-* [[!DNL Profile] dashboard](../../profile/ui/profile-dashboard.md)
-* [[!UICONTROL License usage] dashboard](../../landing/license-usage-dashboard.md)
-
 ## Next steps
 
-By following this document you should now be able to locate the segment dashboard and select a segment to view. You should also understand the metrics displayed in the available widgets. To learn more about working with segments in the Experience Platform UI, please refer to the [Segmentation Service UI guide](overview.md).
+By following this document you should now be able to locate the segment dashboard and select a segment to view. You should also understand the metrics displayed in the available widgets. To learn more about working with segments in the Experience Platform UI, please refer to the [Segmentation Service UI guide](../../segmentation/ui/overview.md).
