@@ -22,9 +22,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Privacy and data governance {#privacy}
   * [Privacy overview](privacy/privacy-overview.md)
   * [Data Governance overview](privacy/data-governance-overview.md)
-  * IAB TCF 2.0 support {#iab}
-    * [IAB TCF 2.0 support in Real-time CDP](privacy/iab/overview.md)
-    * [Create datasets for capturing IAB TCF 2.0 consent data](privacy/iab/dataset-preparation.md)
 * Profiles {#profile}
   * [Profile overview](profile/profile-overview.md)
   * [Identities & identity namespaces](profile/identities-overview.md)
