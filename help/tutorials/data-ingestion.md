@@ -18,7 +18,7 @@ Source connectors allow you to ingest data from multiple sources, where it can t
 
 ## Ingest batch data
 
-Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry. To get started, visit the [ingestion data into Platform tutorial](../ingestion/tutorials/ingest-batch-data.md).
+Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry. To get started, visit the [ingestion data into Platform tutorial](../ingestion/tutorials/ingest-batch-data.md).
 
 ## Map a CSV file to an XDM Schema
 
