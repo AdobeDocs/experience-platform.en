@@ -16,7 +16,7 @@ When the ingestion of records into the Profile store increases or decreases the 
 
 These metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
 
->[!NOTE
+>[!NOTE]
 >
 >There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with segment preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
 
