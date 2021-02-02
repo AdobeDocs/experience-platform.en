@@ -12,7 +12,7 @@ description: This document provides an overview of the Measure Experience Data M
 
 It has a value, and a unique identifier.
 
-<img src='../images/data-types/application.PNG' width=500 /><br />
+<img src='../images/data-types/measure.PNG' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
