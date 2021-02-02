@@ -89,33 +89,35 @@ curl -X POST \
             "tableName": "v201809.AD_PERFORMANCE_REPORT",
             "columns": [
                 {
-                    "name": "AbsoluteTopImpressionPercentage",
-                    "type": "double",
-                    "xdm": {
-                        "type": "number"
-                    }
-                },
-                {
-                    "name": "AccountCurrencyCode",
+                    "name": "CallOnlyPhoneNumber",
                     "type": "string",
                     "xdm": {
                         "type": "string"
                     }
                 },
                 {
-                    "name": "AccountDescriptiveName",
-                    "type": "string",
-                    "xdm": {
-                        "type": "string"
-                    }
-                },
-                {
-                    "name": "Impressions",
+                    "name": "AdGroupId",
                     "type": "long",
                     "xdm": {
                         "type": "integer",
                         "minimum": -9007199254740992,
                         "maximum": 9007199254740991
+                    }
+                },
+                {
+                    "name": "AdGroupName",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Date",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
                     }
                 }
             ]

@@ -86,7 +86,30 @@ curl -X POST \
             "format": "tabular",
         },
         "params": {
-            "path": "Accounts"
+            "tableName": "Accounts",
+            "columns": [
+                {
+                    "name": "first_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "last_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "ccfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
