@@ -12,7 +12,7 @@ This document serves as a guide for downloading scores for Attribution AI.
 
 ## Getting started
 
-Attribution AI allows you to download scores in the parquet file format. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Attribution AI allows you to download scores in the Parquet file format. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
 Additionally, in order to access scores for Attribution AI, you need to have a service instance with a successful run status available. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 
@@ -254,7 +254,7 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-The scores downloaded will be in parquet format and will either need a [!DNL Spark]-shell or parquet reader to view the scores. For raw score viewing, you can use [parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Parquet tools can analyze the data with [!DNL Spark].
+The scores downloaded will be in Parquet format and will either need a [!DNL Spark]-shell or Parquet reader to view the scores. For raw score viewing, you can use [Apache Parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Parquet tools can analyze the data with [!DNL Spark].
 
 ## Next steps
 

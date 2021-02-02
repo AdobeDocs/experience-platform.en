@@ -11,7 +11,7 @@ description: This tutorial uses the Flow Service API to walk you through the ste
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to ingest parquet data from a third-party cloud storage system.
+This tutorial uses the [!DNL Flow Service] API to walk you through the steps to ingest Parquet data from a third-party cloud storage system.
 
 ## Getting started
 
@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Adobe
 - [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 - [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully ingest parquet data from a third-party cloud storage using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully ingest Parquet data from a third-party cloud storage using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
@@ -44,7 +44,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
   
 ## Create a connection
 
-In order to ingest parquet data using [!DNL Platform] APIs, you must possess a valid connection for the third-party cloud storage source you are accessing. If you do not already have a connection for the storage you wish to work with, you can create one through the following tutorials:
+In order to ingest Parquet data using [!DNL Platform] APIs, you must possess a valid connection for the third-party cloud storage source you are accessing. If you do not already have a connection for the storage you wish to work with, you can create one through the following tutorials:
 
 - [Amazon S3](./create/cloud-storage/s3.md)
 - [Azure Blob](./create/cloud-storage/blob.md)
@@ -364,7 +364,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a dataflow
 
-The last step towards ingesting parquet data from a third-party cloud storage is to create a dataflow. By now, you have the following required values prepared:
+The last step towards ingesting Parquet data from a third-party cloud storage is to create a dataflow. By now, you have the following required values prepared:
 
 - [Source connection ID](#source)
 - [Target connection ID](#target)
@@ -425,7 +425,7 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect Parquet data from your third-party cloud storage system on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../../profile/home.md)
 - [Data Science Workspace overview](../../../data-science-workspace/home.md)

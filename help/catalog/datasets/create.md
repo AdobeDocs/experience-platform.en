@@ -208,7 +208,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->This tutorial uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
+>This tutorial uses the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
 
 **Response**
 
@@ -288,7 +288,7 @@ A successful response returns HTTP Status 201 (Created) and a response object co
 
 ## Upload files to a batch
 
-After successfully creating a new batch for uploading, you can now upload files to the specific dataset. It is important to remember that when you defined the dataset, you specified the file format as parquet. Therefore, the files you upload must be in that format.
+After successfully creating a new batch for uploading, you can now upload files to the specific dataset. It is important to remember that when you defined the dataset, you specified the file format as Parquet. Therefore, the files you upload must be in that format.
 
 >[!NOTE]
 >

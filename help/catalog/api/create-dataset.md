@@ -53,7 +53,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
+>This example uses the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
 
 **Response**
 

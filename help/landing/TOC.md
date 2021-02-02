@@ -32,7 +32,13 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 * Platform in the Adobe ecosystem {#ecosystem}
   * [Application Services](application-services.md)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
-  * [Integrations with Experience Cloud applications (Video)](video/experience-cloud-integrations.md)
+  * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
+* Governance, privacy, and security {#governance-privacy-security}
+  * [Overview](./governance-privacy-security/overview.md)
+  * Consent management {#consent}
+    * IAB TCF 2.0 {#iab}
+      * [Overview](./governance-privacy-security/consent/iab/overview.md)
+      * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)

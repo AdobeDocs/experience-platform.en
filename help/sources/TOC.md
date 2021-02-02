@@ -131,7 +131,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Collect payment data](tutorials/api/collect/payments.md)
     - [Collect protocol data](tutorials/api/collect/protocols.md)
     - [Collect streaming data](tutorials/api/collect/streaming.md)
-  - [Ingest parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
+  - [Ingest Parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update connections](tutorials/api/update.md)
