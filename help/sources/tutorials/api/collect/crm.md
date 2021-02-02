@@ -80,7 +80,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Salesforce source connection",
-        "connectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Salesforce source connection",
         "data": {
             "format": "tabular",
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `connectionId` | The unique connection ID of the third-party CRM system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party CRM system you are accessing. |
 | `params.path` | The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party CRM system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
