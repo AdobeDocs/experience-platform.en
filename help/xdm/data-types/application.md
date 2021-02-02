@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;person;datatype;data-type;data type;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;application;datatype;data-type;data type;
 solution: Experience Platform
 title: Application Data Type
 topic: overview
