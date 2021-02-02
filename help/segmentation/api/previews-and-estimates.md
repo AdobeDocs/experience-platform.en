@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
-title: Previews and Estimates API Endpoints
+title: Previews and Estimates Endpoints
 topic: developer guide
 description: The previews and estimates endpoints in the Adobe Experience Platform Segmentation Service API allow you to view summary-level information to help ensure you are isolating the expected audience in your segments.
 ---
 
-# Previews and estimates API endpoints
+# Previews and estimates endpoints
 
 As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
 

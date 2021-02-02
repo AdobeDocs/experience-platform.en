@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;
 solution: Experience Platform
-title: Sensei Machine Learning API Developer Guide Appendix
+title: Sensei Machine Learning API Guide Appendix
 topic: Developer guide
 description: The following sections provide reference information for various features of the Sensei Machine Learning API.
 ---
 
-# [!DNL Sensei Machine Learning] API developer guide appendix
+# [!DNL Sensei Machine Learning] API guide appendix
 
 The following sections provide reference information for various features of the [!DNL Sensei Machine Learning] API.
 

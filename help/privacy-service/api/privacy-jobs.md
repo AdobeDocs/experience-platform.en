@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Jobs API Endpoint
+title: Privacy Jobs Endpoint
 topic: developer guide
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
 ---
 
-# Privacy jobs API endpoint
+# Privacy jobs endpoint
 
 This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
 

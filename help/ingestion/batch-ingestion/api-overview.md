@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
 solution: Experience Platform
-title: Batch Ingestion Developer Guide
+title: Batch Ingestion API Guide
 topic: developer guide
 description: This document provides a comprehensive overview of using batch ingestion APIs.
 ---
 
-# Batch ingestion developer guide
+# Batch ingestion API guide
 
 This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
 

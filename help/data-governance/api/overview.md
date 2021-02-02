@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Policy Service API Developer Guide
+title: Policy Service API Guide
 topic: developer guide
 description: Learn how to use the Policy Service API to manage data usage labels and policies in Experience Platform.
 ---
 
-# [!DNL Policy Service] API developer guide
+# [!DNL Policy Service] API guide
 
 Adobe Experience Platform [!DNL Data Governance] allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. It plays a key role within [!DNL Experience Platform] at various levels, including cataloging, data lineage, data usage labeling, data usage policies, and controlling usage of data for marketing actions.
 

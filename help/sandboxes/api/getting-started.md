@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
-title: Sandbox API Developer Guide
+title: Sandbox API Guide
 topic: developer guide
 description: This developer guide provides steps to help you use the Sandbox API to manage sandboxes in Experience Platform, and includes sample API calls for performing various operations.
 ---
 
-# Sandbox API developer guide
+# Sandbox API guide
 
 Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment.
 

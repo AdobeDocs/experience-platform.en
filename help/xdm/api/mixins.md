@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
 solution: Experience Platform
-title: Mixins API Endpoint
+title: Mixins Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
 topic: developer guide
 ---
 
-# Mixins API endpoint
+# Mixins endpoint
 
 Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/mixins` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage mixins within your experience application.
 

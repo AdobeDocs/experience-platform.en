@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;class registry;Schema Registry;class;Class;classes;Classes;create
 solution: Experience Platform
-title: Classes API Endpoint
+title: Classes Endpoint
 description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
 topic: developer guide
 ---
 
-# Classes API endpoint
+# Classes endpoint
 
 All Experience Data Model (XDM) schemas must be based on a class. A class determines the base structure of common properties that all schemas based on that class must contain, as well as which mixins are eligible for use in those schemas. In addition, a schema's class determines the behavioral aspects of the data that a schema will contain, of which there are two types:
 
