@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service API Guide
-description: Use the RESTful API to manage the personal data of your data subjects across Adobe Experience Cloud applications
+description: The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. Follow this guide to learn how to perform key operations using the API.
 topic: developer guide
 ---
 

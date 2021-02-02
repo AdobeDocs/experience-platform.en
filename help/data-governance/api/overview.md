@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Policy Service API Guide
 topic: developer guide
-description: Learn how to use the Policy Service API to manage data usage labels and policies in Experience Platform.
+description: The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
 # [!DNL Policy Service] API guide

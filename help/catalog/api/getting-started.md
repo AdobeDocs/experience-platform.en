@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalo
 solution: Experience Platform
 title: Catalog Service API Guide
 topic: developer guide
-description: This developer guide provides steps to help you start using the Catalog API. The guide then provides sample API calls for performing key operations using Catalog.
+description: The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
 # [!DNL Catalog Service] API guide
