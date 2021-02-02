@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: Person data type
 topic: overview
-description: This document provides an overview of the Person XDM data type.
+description: This document provides an overview of the Person Experience Data Model (XDM) data type.
 ---
 
 # [!UICONTROL Person] data type
 
-[!UICONTROL Person] is a standard XDM data type that describes an individual person. This datatype can represent a person acting in various roles, such as a customer, contact, or owner.
+[!UICONTROL Person] is a standard Experience Data Model (XDM) data type that describes an individual person. This datatype can represent a person acting in various roles, such as a customer, contact, or owner.
 
 <img src='../images/data-types/person.PNG' width=500 /><br />
 
