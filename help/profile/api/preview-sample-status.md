@@ -9,11 +9,10 @@ topic: guide
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. 
 
-When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. 
+When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
-For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
-
-For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+* For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 These metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
 
@@ -23,7 +22,7 @@ These metrics are also available within the [!UICONTROL Profiles] section of the
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Profile fragments vs merged profiles
 
@@ -288,4 +287,3 @@ The response includes a `data` array, with individual objects containing the det
 ## Next steps
 
 Now that you know how to preview sample data in the Profile store, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
-

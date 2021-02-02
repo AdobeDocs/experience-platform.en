@@ -10,9 +10,9 @@ description: As segment definition are developed, you can use the estimate and p
 
 As you develop a segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure that you are isolating the audience you expect. 
 
-**Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. 
+* **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. 
 
-**Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
+* **Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
 
 >[!NOTE]
 >
@@ -172,7 +172,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [[!DNL Profile Access API]](../../profile/api/entities.md). |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [profile access API endpoint](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
@@ -242,4 +242,4 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Next steps
 
-After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (preview sample status) endpoint guide](../../profile/api/preview-sample-status.md). 
+After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md). 
