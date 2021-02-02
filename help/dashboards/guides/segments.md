@@ -52,7 +52,7 @@ The **[!UICONTROL Select segment]** dialog opens, allowing you to choose the seg
 
 After selecting a segment, the merge policy text box will populate automatically with the merge policy related to that segment. 
 
-To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ![](../images/segments/merge-policy.png)
 
@@ -73,7 +73,7 @@ Experience Platform provides multiple widgets that you can use to visualize diff
 
 The **[!UICONTROL Segment size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
-For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../home.md).
+For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ![](../images/segments/segment-size.png)
 
