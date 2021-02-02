@@ -32,14 +32,14 @@ In order to follow along with this guide, you must be using a Consent Management
 
 This guide also requires a working understanding of the following Platform services:
 
-* [Experience Data Model (XDM)](../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-* [Adobe Experience Platform Identity Service](../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
-* [Real-time Customer Profile](../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
-* [Adobe Experience Platform Web SDK](../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
-    * [SDK consent commands](../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
-* [Adobe Experience Platform Segmentation Service](../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
+* [Experience Data Model (XDM)](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Adobe Experience Platform Identity Service](../../../../identity-service/home.md): Solves the fundamental challenge posed by the fragmentation of customer experience data by bridging identities across devices and systems.
+* [Real-time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to create detailed customer profiles from your datasets in real-time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
+* [Adobe Experience Platform Web SDK](../../../../edge/home.md): A client-side JavaScript library that allows you to integrate various Platform services into your customer-facing website.
+    * [SDK consent commands](../../../../edge/consent/supporting-consent.md): A use-case overview of the consent-related SDK commands shown in this guide.
+* [Adobe Experience Platform Segmentation Service](../../../../segmentation/home.md): Allows you to divide [!DNL Real-time Customer Profile] data into groups of individuals that share similar traits and will respond similarly to marketing strategies.
 
-In addition to the Platform services listed above, you should also be familiar with [destinations](../../destinations/overview.md) and their role in the Platform ecosystem.
+In addition to the Platform services listed above, you should also be familiar with [destinations](../../../../data-governance/home.md) and their role in the Platform ecosystem.
 
 ## Customer consent flow summary {#summary}
 
@@ -91,13 +91,13 @@ Consent strings may only be created by a CMP that is registered with the IAB TCF
 
 ## Create datasets with TCF consent fields {#datasets}
 
-Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset-preparation.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset.md) for how to create the two required datasets before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include TCF consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy mixin](./dataset-preparation.md#privacy-mixin), as outlined in the guide on dataset preparation.
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy mixin](./dataset-preparation.md#privacy-mixin), as outlined in the guide on dataset preparation.
 
 ## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
 
@@ -113,14 +113,14 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 ### Create a new edge configuration
 
-In order for the SDK to send data to Experience Platform, you must first create a new edge configuration for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../edge/fundamentals/edge-configuration.md).
+In order for the SDK to send data to Experience Platform, you must first create a new edge configuration for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/edge-configuration.md).
 
 After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
 | Edge configuration field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
-| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
+| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
+| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
 | [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
 | [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
 
@@ -134,7 +134,7 @@ Once you have created the edge configuration described in the previous section, 
 
 >[!NOTE]
 >
->For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../edge/fundamentals/executing-commands.md).
+>For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
 
 #### Using CMP consent-change hooks
 
@@ -216,7 +216,7 @@ alloy("sendEvent", {
 
 ### Handling SDK responses
 
-All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
 
 ## Export segments {#export}
 
