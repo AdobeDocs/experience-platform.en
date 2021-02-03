@@ -10,7 +10,7 @@ description: This document provides an overview of the web page details Experien
 
 [!UICONTROL Web page details] is a standard Experience Data Model (XDM) data type that describes details about a web page that has just been loaded and viewed, as recorded by an ExperienceEvent.
 
-The web page details data type is intended for full page details and initial page loads of single page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interactions.md) data type.
+The data type is intended for full page details and initial page loads of single-page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interactions.md) data type.
 
 <img src='../images/data-types/web-page-details.PNG' width=500 /><br />
 
@@ -23,7 +23,7 @@ The web page details data type is intended for full page details and initial pag
 | `name` | String | The normative name of the web page. This name is not necessarily the page title or directly associate with page content, but is used to organize a site's pages for classification purposes. |
 | `server` | String | The normative or usual server that hosts the web page. This may or may not be the host or server that actually served the page interaction. |
 | `siteSection` | String | The normative name of the site section where this web page resides. This can be used to classify or categorize the interaction. |
-| `viewName` | String | The name of the view, within a page. This property is commonly used with single page applications or pages that have tabs or controls that change a majority of the page layout. |
+| `viewName` | String | The name of the view, within a page. This property is commonly used with single-page applications or pages that have tabs or controls that change a majority of the page layout. |
 
 For more details on the data type, refer to the public XDM repository:
 

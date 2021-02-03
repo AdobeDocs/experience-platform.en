@@ -8,7 +8,7 @@ description: This document provides an overview of the Application Experience Da
 
 # [!UICONTROL Application] data type
 
-[!UICONTROL Application] is a standard Experience Data Model (XDM) data type that describes details related to the application generated interactions. Application refers to a software experience, such as a mobile or desktop application that can be installed, run, closed, or uninstalled by an end user. The properties for this data type are not intended to describe agents such as chatbots, browser-based plugins, or other experiences that do not apply to applications.
+[!UICONTROL Application] is a standard Experience Data Model (XDM) data type that describes details related to the application generated interactions. An application refers to a software experience, such as a mobile or desktop application that can be installed, run, closed, or uninstalled by an end user. The properties for this data type are not intended to describe agents such as chatbots, browser-based plugins, or other experiences that do not apply to applications.
 
 <img src='../images/data-types/application.PNG' width=500 /><br />
 
@@ -21,8 +21,8 @@ description: This document provides an overview of the Application Experience Da
 | `installs` | [[!UICONTROL Measure]](./measure.md) | Records the installation of an application on a device when a specific installation event is available. |
 | `launches` | [[!UICONTROL Measure]](./measure.md) | Describes a value associated with the launch of an application. This is triggered on every run, including crashes, installs, and resuming from background when the session timeout has been exceeded. |
 | `upgrades` | [[!UICONTROL Measure]](./measure.md) | Contains data on the upgrade of an application that has previously been installed. This is triggered on the first launch after an upgrade. |
-| `id` | String | Identifier of the application. |
-| `name` | String | Name of the application. |
+| `id` | String | A unique identifier for the application. |
+| `name` | String | The name of the application. |
 | `userPerspective` | String | The perspective or physical relationship between the user and the app or brand at the time an event happened. Understanding the perspective of the user in relation to the app helps with accurately generating sessions as the majority of the time you will not want to include `background` and `detached` events as part of an "active" session. The value of this property must be equal to one of the enum values listed below. <li> `foreground`: The user and app are directly interacting with one another. </li> <li> `background`: The app and user are indirectly interacting with one another. For example, the app could measure a value and refresh while the screen is locked or another app is being used in the foreground.  </li> <li> `detached`: Detached means the event was related to the app but didn't come directly from the app, such as the sending of an email or push notification from an external system. |
 | `version` | String | The version of the application. |
 
