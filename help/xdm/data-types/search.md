@@ -20,7 +20,7 @@ description: This document provides an overview of the Search Experience Data Mo
 | `position` | Integer | The position or rank of the listing in the search result page. |
 | `searchEngine` | String | The search engine used by the search. |
 | `searchEngineID` | String | The application specified identifier used to identify the search engine used by the search. |
-| `slot` | String | The named section of the page where the search result appeared. The value of this property must be equal to one of the known enum values you define such as `top`, `side`, or `bottom`.
+| `slot` | String | The named section of the page where the search result appeared. The value of this property must be equal to one of the known enum values you define such as `top`, `side`, or `bottom`. |
 
 For more details on the data type, refer to the public XDM repository:
 
