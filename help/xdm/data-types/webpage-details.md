@@ -10,7 +10,7 @@ description: This document provides an overview of the web page details Experien
 
 [!UICONTROL Web page details] is a standard Experience Data Model (XDM) data type that describes details about a web page that has just been loaded and viewed, as recorded by an ExperienceEvent.
 
-The web page details data type is intended for full page details and initial page loads of single page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interaction.md) data type.
+The web page details data type is intended for full page details and initial page loads of single page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interactions.md) data type.
 
 <img src='../images/data-types/web-page-details.PNG' width=500 /><br />
 
