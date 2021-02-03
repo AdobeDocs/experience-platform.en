@@ -29,6 +29,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Environment Details](./mixins/event/environment-details.md)
   * [Mixin name updates](./mixins/name-updates.md)
 * Data types {#data-types}
+    * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
     * [Consents & Preferences](./data-types/consents.md)
@@ -41,6 +42,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Geo interaction details](./data-types/geo-interaction-details.md)
     * [Geo Shape](./data-types/geo-shape.md)
     * [Identity](./data-types/identity.md)
+    * [Measure](./data-types/measure.md)
     * [Person](./data-types/person.md)
     * [Person name](./data-types/person-name.md)
     * [Phone number](./data-types/phone-number.md)
@@ -48,7 +50,10 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [POI details](./data-types/poi-details.md)
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
+    * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
+    * [Web interactions](./data-types/web-interactions.md)
+    * [Web page details](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
   * [Explore XDM resources](./ui/explore.md)
