@@ -46,7 +46,7 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
 
 ## Add mixins to a schema {#add-mixins}
 
@@ -109,6 +109,22 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 The schema is now enabled for use in Real-time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+
+## Edit display names for schema fields {#display-names}
+
+Once you have assigned a class and added mixins to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
+
+>[!NOTE]
+>
+>Keep in mind that the display names of fields that belong to standard classes or mixins can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the associated class or mixin.
+
+To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Select **[!UICONTROL Apply]** in the right rail, and the canvas updates to show the field's new display name. Select **[!UICONTROL Save]** to apply the changes to the schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Change a schema's class {#change-class}
 

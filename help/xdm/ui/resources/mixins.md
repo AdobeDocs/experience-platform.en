@@ -38,7 +38,7 @@ The [!DNL Schema Editor] reappears, with the new mixin listed in the left rail. 
 
 >[!NOTE]
 >
->Only custom mixins defined by your organization can be edited.
+>Only custom mixins defined by your organization can be fully edited and customized. For core mixins defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
 >In addition, once a mixin has been saved and used in a schema for data ingestion, only additive changes can be made to the mixin thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
