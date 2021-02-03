@@ -335,6 +335,10 @@ A successful response returns the new target connection's unique identifier (`id
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
 
+>[!TIP]
+>
+>You can map complex data types such as arrays in JSON files using a cloud storage source connector.
+
 **API format**
 
 ```http
