@@ -8,11 +8,9 @@ description: This document provides an overview of the Search Experience Data Mo
 
 # [!UICONTROL Search] data type
 
-[!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains a concrete quantifiable data point of a particular metric.
+[!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains onformation about web search activity.
 
-It has a value, and a unique identifier.
-
-<img src='../images/data-types/measure.PNG' width=500 /><br />
+<img src='../images/data-types/search.PNG' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -23,8 +21,6 @@ It has a value, and a unique identifier.
 | `searchEngine` | String | The search engine used by the search. |
 | `searchEngineID` | String | The application specified identifier used to identify the search engine used by the search. |
 | `slot` | String | The named section of the page where the search result appeared. The value of this property must be equal to one of the known enum values you define such as `top`, `side`, or `bottom`.
-
-
 
 For more details on the data type, refer to the public XDM repository:
 
