@@ -65,6 +65,8 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Enum fields](./ui/fields/enum.md)
     * [Identity fields](./ui/fields/identity.md)
     * [Relationship fields](./ui/fields/relationship.md)
+  * [Generate sample XDM data](./ui/sample.md)
+  * [Export XDM resources](./ui/export.md)
 * Schema Registry API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
