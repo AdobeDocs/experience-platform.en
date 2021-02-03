@@ -8,7 +8,7 @@ description: This document provides an overview of the Search Experience Data Mo
 
 # [!UICONTROL Search] data type
 
-[!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains onformation about web search activity.
+[!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains information about web search activity.
 
 <img src='../images/data-types/search.PNG' width=500 /><br />
 
