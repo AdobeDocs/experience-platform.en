@@ -52,7 +52,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Postal address](./data-types/postal-address.md)
     * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
-    * [Web interactions](./data-types/web-interactions.md)
+    * [Web interaction](./data-types/web-interactions.md)
     * [Web page details](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
