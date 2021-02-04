@@ -8,8 +8,6 @@ description: The Product Purchase Prediction recipe enables you to predict the l
 
 # Product purchase prediction recipe
 
-## Overview
-
 The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 
 ![](../images/pre-built-recipes/ppp_bigpicture.png)

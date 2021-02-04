@@ -10,8 +10,6 @@ description: The HTTP destination in Adobe Experience Platform allows you to sen
 >
 >The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
 
-## Overview {#overview}
-
 The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
 To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in [[!DNL Adobe Experience Platform]](#connect-destination).
