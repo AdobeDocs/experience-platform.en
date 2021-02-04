@@ -36,7 +36,7 @@ For more information, please see the [[!DNL Data Prep] overview](../../data-prep
 
 | Destination | Description |
 | ----------- | ----------- |
-| Azure Blob | Azure Blob is Microsoft's object storage solution for the cloud. |
+| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
 
 **New features**
 
