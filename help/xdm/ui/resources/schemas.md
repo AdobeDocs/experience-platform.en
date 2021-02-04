@@ -116,7 +116,7 @@ Once you have assigned a class and added mixins to a schema, you can edit the di
 
 >[!NOTE]
 >
->Keep in mind that the display names of fields that belong to standard classes or mixins can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the associated class or mixin.
+>Keep in mind that the display names of fields that belong to standard classes or mixins can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or mixin.
 
 To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
