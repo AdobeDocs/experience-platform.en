@@ -113,7 +113,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 
 Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](http://jsonpatch.com/).
 
-## JSON Schema
+## JSON Schema {#json-schema}
 
 JSON Schema is a format used to describe and validate the structure of JSON data. [Experience Data Model (XDM)](../xdm/home.md) leverages JSON Schema capabilities to enforce constraints on the structure and format of ingested customer experience data. For more information on JSON Schema, please refer to the [official documentation](https://json-schema.org/).
 

@@ -18,7 +18,152 @@ If you plan on defining your own field types, it is strongly recommended that yo
 
 ## Mapping XDM types to other formats
 
-The table below describes the mapping between each XDM type (`meta:xdmType`) and other serialization formats.
+The sections below describe how each XDM type (`meta:xdmType`) maps to other serialization formats.
+
+### JSON Schema
+
+<!-- | XDM Type | JSON Schema | 
+| --- | --- |
+| [!UICONTROL String] | |
+| [!UICONTROL Double] | |
+| [!UICONTROL Long] | |
+| [!UICONTROL Integer] | |
+| [!UICONTROL Short] | |
+| [!UICONTROL Byte] | |
+| [!UICONTROL Date] | |
+| [!UICONTROL DateTime] | |
+| [!UICONTROL Boolean] | | -->
+
+XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax.
+
+>[!NOTE]
+>
+>See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Experience Platform APIs.
+
+The following table outlines how each XDM type is represented in JSON Schema:
+
+<table>
+  <thead>
+    <tr>
+      <th>XDM Type</th>
+      <th>JSON Schema</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>[!UICONTROL String]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {"type": "string"}
+        </pre>
+      </td>
+      <td><code>"Platinum"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Double]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {"type": "number"}
+        </pre>
+      </td>
+      <td><code>12925.49</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Long]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "integer",
+            "maximum": 9007199254740991,
+            "minimum": -9007199254740991
+          }
+        </pre>
+      </td>
+      <td><code>1478108935</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Integer]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "integer",
+            "maximum": 2147483648,
+            "minimum": -2147483648
+          }
+        </pre>
+      </td>
+      <td><code>24906290</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Short]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "integer",
+            "maximum": 32768,
+            "minimum": -32768
+          }
+        </pre>
+      </td>
+      <td><code>15781</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Byte]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "integer",
+            "maximum": 128,
+            "minimum": -128
+          }
+        </pre>
+      </td>
+      <td><code>90</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Date]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "string",
+            "format": "date"
+          }
+        </pre>
+      </td>
+      <td><code>"2019-05-15T20:20:39+00:00"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL DateTime]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {
+            "type": "string",
+            "format": "date-time"
+          }
+        </pre>
+      </td>
+      <td><code>"2019-05-15"</code></td>
+    </tr>
+    <tr>
+      <td>[!UICONTROL Boolean]</td>
+      <td>
+        <pre class="JSON language-JSON hljs">
+          {"type": "string"}
+        </pre>
+      </td>
+      <td><code>true</code></td>
+    </tr>
+  </tbody>
+</table>
+
+### Parquet, Spark SQL, and Java
+
+### Scala, .NET, and CosmosDB
+
+### MongoDB, Aerospike, and Protobuf 2
+
+
 
 |XDM Type<br>(meta:xdmType)|JSON<br>(JSON Schema)|Parquet<br>(type/annotation)|[!DNL Spark] SQL|Java|Scala|.NET|CosmosDB|MongoDB|Aerospike|Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
