@@ -30,7 +30,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
-* [[!DNL Real-time Customer Profile]](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-in-experience-platform): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-in-experience-platform): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
@@ -49,7 +49,7 @@ Once you have gathered your required credentials, you can follow the steps in th
 
 ## Connect your Marketo account
 
-In the Platform UI, select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create an account with.
+In the [Platform UI](https://platform.adobe.com), select **Sources** from the left navigation bar to access the *Sources* workspace. The *Catalog* screen displays a variety of sources for which you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
@@ -174,6 +174,8 @@ Once you have reviewed your dataflow, select **Finish** and allow some time for 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the UI](https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=en#getting-started).
 
 ## Delete your dataflow
+
+Custom attributes in datasets cannot be retroactively hidden or removed. If you want to hide or remove a custom attribute from an existing dataset, then you must create a new dataset without this custom attribute, a new XDM schema, and configure a new dataflow for the new dataset that you create. You must also disable or delete the original dataflow that consists of the dataset with the custom attribute you want to hide or remove.
 
 You can delete dataflows that are no longer necessary or were incorrectly created using the **Delete** function available in the *Dataflows* workspace. For more information on how to delete dataflows, see the tutorial on [deleting dataflows in the UI](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/delete.html?lang=en#ui-tutorials).
 
