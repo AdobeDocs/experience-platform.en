@@ -12,7 +12,7 @@ seo-description: Google Customer Match lets you use your online and offline data
 
 >[!IMPORTANT]
 >
->Customer migration to the new destination configuration experience is currently in progress. You might experience difficulties accessing the destination configuration page at the moment.
+>Customer migration to the new destination versions is currently in progress. Until the migration is complete, you will only see the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_SHA_256] available identities for this destination.
 
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 

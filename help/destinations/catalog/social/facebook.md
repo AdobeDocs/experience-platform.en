@@ -12,7 +12,7 @@ seo-description: Activate profiles for your Facebook campaigns for audience targ
 
 >[!IMPORTANT]
 >
->Customer migration to the new destination configuration experience is currently in progress. You might experience difficulties accessing the destination configuration page at the moment.
+>Customer migration to the new destination versions is currently in progress. Until the migration is complete, you will only see the EMAIL and EMAIL_SHA_256 available identities for this destination.
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
