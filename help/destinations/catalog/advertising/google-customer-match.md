@@ -10,6 +10,10 @@ seo-description: Google Customer Match lets you use your online and offline data
 
 ## Overview {#overview}
 
+>[!IMPORTANT]
+>
+>Customer migration to the new destination configuration experience is currently in progress. You might experience difficulties accessing the destination configuration page at the moment.
+
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 
 ![Google Customer Match destination in the Real-time CDP UI](../../assets/catalog/advertising/google-customer-match/catalog.png)
