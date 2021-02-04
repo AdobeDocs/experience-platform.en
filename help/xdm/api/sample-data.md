@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;sampledata;sample data;rpc;
 solution: Experience Platform
-title: Sample Data Endpoint
+title: Sample Data API Endpoint
 description: The /sampledata endpoint in the Schema Registry API allows you to generate sample data mapped to the structure of any existing XDM schema.
 topic: developer guide
 ---

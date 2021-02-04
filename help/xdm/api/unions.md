@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
-title: Unions Endpoint
+title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
 topic: developer guide
 ---

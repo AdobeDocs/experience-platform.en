@@ -21,7 +21,7 @@ user-guide-description: Manage customer data requests to comply with legal priva
   * [Overview](ui/overview.md)
   * [Manage privacy jobs](ui/user-guide.md)
 * [Subscribe to Privacy Events](privacy-events.md)
-* Privacy regulation guides {#regulations}
+* Privacy regulations {#regulations}
   * [Overview](regulations/overview.md)
   * [FAQ](regulations/faq.md)
   * [Terminology](regulations/terminology.md)

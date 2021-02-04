@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;supported data usage labels;contract labels;identity labels;sensitive labels
 solution: Experience Platform
-title: Core Data Usage Labels
+title: Data Usage Labels Glossary
 topic: labels
 description: This document outlines all data usage labels currently supported by Adobe Experience Platform.
 ---
 
-# Core data usage labels
+# Data usage labels glossary
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Adobe Experience Platform Data Governance provides several core data usage labels out-of-the-box that you can use to start categorizing your data.
 

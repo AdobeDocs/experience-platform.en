@@ -11,5 +11,5 @@ user-guide-description: Discover and access ingested datasets within Platform.
 - [Data Access overview](home.md)
 - [Data Access API](api.md)
 - Tutorials {#tutorials}
-  - [Query dataset data](tutorials/dataset-data.md)
+  - [View dataset data](tutorials/dataset-data.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
-title: Query Dataset Data Using the Data Access API
+title: View Dataset Data Using the Data Access API
 topic: tutorial
 type: Tutorial
 description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 ---
 
-# Query dataset data using [!DNL Data Access] API
+# View dataset data using [!DNL Data Access] API
 
 This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. You will also be introduced to some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
 

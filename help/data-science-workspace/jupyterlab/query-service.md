@@ -7,7 +7,7 @@ type: Tutorial
 description: Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
 ---
 
-# Query Service in Jupyter notebook
+# Query Service in Jupyter Notebook
 
 [!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab] as a standard feature. 
 

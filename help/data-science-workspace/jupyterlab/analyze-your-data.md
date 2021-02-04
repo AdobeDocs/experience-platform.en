@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Analyze Your Data Using Notebooks
 topic: tutorial
 type: Tutorial
-description: This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data.
+description: This tutorial focuses on how to use Jupyter Notebooks, built within Data Science Workspace, to access, explore, and visualize your data.
 ---
 
 # Analyze your data using notebooks
 
-This tutorial focuses on how to use Jupyter notebooks, built within Data Science Workspace, to access, explore, and visualize your data. By the end of this tutorial, you should have a understanding of some of the features Jupyter notebooks offer to better understand your data.
+This tutorial focuses on how to use Jupyter Notebooks, built within Data Science Workspace, to access, explore, and visualize your data. By the end of this tutorial, you should have a understanding of some of the features Jupyter Notebooks offer to better understand your data.
 
 The following concepts are introduced:
 
@@ -189,8 +189,8 @@ Notice the diagonal of 1's down the center. This shows that when comparing a var
 
 ## Next steps
 
-This tutorial went over how to create a new Jupyter notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Specifically, we went over the following steps:
-- Create a new Jupyter notebook
+This tutorial went over how to create a new Jupyter Notebook in the Data Science Workspace and how to access data externally as well as from [!DNL Adobe Experience Platform]. Specifically, we went over the following steps:
+- Create a new Jupyter Notebook
 - Access datasets and schemas
 - Explore datasets 
 

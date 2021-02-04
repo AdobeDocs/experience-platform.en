@@ -11,7 +11,7 @@ user-guide-description: Enforce data usage restrictions through the use of label
 * [Data Governance overview](home.md)
 * Data usage labels {#labels}
   * [Overview](labels/overview.md)
-  * [Core labels](labels/reference.md)
+  * [Labels glossary](labels/reference.md)
   * [Manage labels in the UI](labels/user-guide.md)
   * [Manage labels for datasets using APIs](labels/dataset-api.md)
 * Data usage policies {#policies}

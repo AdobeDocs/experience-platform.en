@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: Scheduled Queries Endpoint
+title: Scheduled Queries API Endpoint
 topic: scheduled queries
 description: The following sections walks through the various API calls you can make for scheduled queries with the Query Service API.
 ---

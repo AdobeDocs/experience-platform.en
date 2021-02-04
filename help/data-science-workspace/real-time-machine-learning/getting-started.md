@@ -14,7 +14,7 @@ description: The following document outlines the steps that are required to crea
 
 In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and [!DNL Data Science Workspace]. Additionally, you need to have a complete dataset for use in training and scoring.
 
-The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
+The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter Notebooks](../jupyterlab/overview.md), data science, and machine learning.
 
 **Key Terms:**
 

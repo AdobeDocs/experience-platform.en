@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
 solution: Experience Platform
-title: Connection Parameters Endpoint
+title: Connection Parameters API Endpoint
 topic: connection parameters
 description: You can retrieve your connection parameters for using the interactive service by making a GET request to the /connection_parameters endpoint.
 ---

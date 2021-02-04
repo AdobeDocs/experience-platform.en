@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
-title: Effective Policies Endpoint
+title: Effective Policies API Endpoint
 topic: developer guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to view effective policies using the access control API for Adobe Experience Platform.
 ---
