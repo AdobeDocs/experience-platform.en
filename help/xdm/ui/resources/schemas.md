@@ -74,7 +74,7 @@ Select the checkbox next to the name of the mixin that you wish to add to the sc
 >
 >For any listed mixin, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the mixin captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
 
-Once you have finished choosing mixin, select **[!UICONTROL Add mixin]** to add them to the schema.
+Once you have chosen your mixins, select **[!UICONTROL Add mixin]** to add them to the schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 

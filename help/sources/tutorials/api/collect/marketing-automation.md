@@ -80,7 +80,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId` | The unique connection ID of the third-party marketing automation system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party marketing automation system you are accessing. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id`| The connection specification ID of your marketing automation system. |
 

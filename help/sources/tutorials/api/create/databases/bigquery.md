@@ -115,8 +115,8 @@ A successful response returns details of the newly created connection, including
 
 ```json
 {
-    "id": "26ced882-729b-470f-8ed8-82729b570f03",
-    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
 
