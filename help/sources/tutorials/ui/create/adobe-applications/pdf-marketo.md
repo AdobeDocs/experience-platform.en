@@ -22,6 +22,9 @@ The following steps are covered:
 * [Map your Marketo dataset source fields to target XDM fields](#map-your-marketo-dataset-source-fields-to-target-xdm-fields)
 * [Provide dataflow details](#provide-dataflow-details)
 * [Review your dataflow](#review-your-dataflow)
+* [Monitor your dataflow](#monitor-your-dataflow)
+* [Delete your attributes](#delete-your-attributes)
+* [Delete your dataflow](#delete-your-dataflow)
 
 ## Getting started
 
