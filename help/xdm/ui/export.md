@@ -196,6 +196,10 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
 ]
 ```
 
+The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom mixin and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and IMS Organizations.
+
+Note that each instance of your organization's tenant ID appears as `<XDM_TENANTID_PLACEHOLDER>` in the payload. These placeholders will be automatically replaced with the appropriate tenant ID value depending on where you export the schema in the next step.
+
 ## Import the resource using the API
 
 Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/import` endpoint in the Schema Registry API. See the section on [importing an XDM resource in the API](../api/export-import.md#import) for details on how to configure the call to send the schema to the correct IMS Org and sandbox.
