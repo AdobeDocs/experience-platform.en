@@ -93,7 +93,7 @@ The following section provides additional information for working with the ident
 Errors may happen when accessing the identity graph viewer. The following is a list of prerequisites and limitations to take note of when working with the identity graph viewer.
 
 - An identity value must exist in the selected namespace.
-- The identity graph viewer requires a minimum of two linked identities to generate.
+- The identity graph viewer requires a minimum of two linked identities to generate. It is possible that there is only one identity value and no linked identities, and in this case, the value would only exist in [!DNL Profile] viewer.
 - The identity graph viewer cannot exceed the maximum of 150 identities.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
