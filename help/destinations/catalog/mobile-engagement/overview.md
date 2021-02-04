@@ -1,12 +1,10 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Mobile engagement destinations
-seo-title: Mobile engagement destinations
-description: Adobe Experience Platform supports the mobile engagement destinations listed below
-seo-description: Adobe Experience Platform supports the mobile engagement destinations listed below
+title: Mobile Engagement Destinations Overview
+description: Learn about the different mobile engagement destinations supported by Adobe Experience Platform.
 ---
 
-# Mobile engagement destinations {#mobile-destinations}
+# Mobile engagement destinations overview {#mobile-destinations}
 
 [!DNL Adobe Experience Platform] currently supports the following mobile engagement destinations:
 

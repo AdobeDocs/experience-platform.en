@@ -1,12 +1,10 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes destination
-seo-title: Airship Attributes destination
+title: Airship Attributes Connection Destination
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >

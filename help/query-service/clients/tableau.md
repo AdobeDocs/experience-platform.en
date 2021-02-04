@@ -14,8 +14,6 @@ This document covers the steps for connecting Tableau with Adobe Experience Plat
 >
 > This guide assumes you already have access to [!DNL Tableau] and are familiar with how to navigate its interface. More information about [!DNL Tableau] can be found in the [official [!DNL Tableau] documentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-## Connect [!DNL Tableau] with Platform
-
 To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 
 ![](../images/clients/tableau/open-connection.png)

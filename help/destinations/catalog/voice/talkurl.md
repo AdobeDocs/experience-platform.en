@@ -1,14 +1,10 @@
 ---
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
-title: Talk URL Inbox extension
-seo-title: Talk URL Inbox
+title: Talk URL Inbox Extension Destination
 description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Talk URL Inbox] Extension {#talk-url-extension}
-
-## Overview {#overview}
 
 Receive voice messages from your web page visitors. Includes hosted UI and cloud-based machine learning to transcribe your voice messages into text insights instantly.
 

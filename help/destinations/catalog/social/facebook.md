@@ -1,9 +1,7 @@
 ---
 keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
-title: Facebook Destination
-seo-title: Facebook Destination
+title: Facebook Extension Destination
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
-seo-description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
 # [!DNL Facebook] Destination 

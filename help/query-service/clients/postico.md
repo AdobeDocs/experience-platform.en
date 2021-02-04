@@ -16,8 +16,6 @@ This document covers the steps for connecting [!DNL Postico] with Adobe Experien
 > 
 > Additionally, [!DNL Postico] is **only** available on macOS devices.
 
-## Connect [!DNL Postico] to Query Service
-
 To connect [!DNL Postico] to Query Service, open [!DNL Postico] and select **[!DNL New Favorite]**.
 
 ![](../images/clients/postico/open-postico.png)

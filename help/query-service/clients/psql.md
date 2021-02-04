@@ -14,8 +14,6 @@ PSQL is a command-line interface that comes installed when you install [!DNL Pos
 >
 > This guide assumes you already have access to [!DNL PSQL] and are familiar with how to use it. More information about [!DNL PSQL] can be found in the [official [!DNL PSQL] documentation](https://www.postgresql.org/docs/current/app-psql.html.
 
-## Connect PSQL and [!DNL Query Service]
-
 After installing PSQL on your computer, you are ready to connect PSQL with Query Service. Return to the [!DNL Platform] UI, then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 ![Image](../images/clients/psql/connect-bi.png)

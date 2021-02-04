@@ -16,8 +16,6 @@ This document covers the steps for connecting Power BI with Adobe Experience Pla
 >
 > Additionally, Power BI is **only** available on Windows devices.
 
-## Set up [!DNL Power BI]
-
 After installing Power BI, you will need to install `Npgsql`, a .NET driver package for PostgreSQL. More information about Npgsql can be found in the [Npgsql documentation](https://www.npgsql.org/doc/index.html).
 
 >[!IMPORTANT]

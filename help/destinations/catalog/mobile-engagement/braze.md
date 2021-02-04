@@ -1,12 +1,10 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze destination
-seo-title: Braze destination
+title: Braze Connection Destination
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
-seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 
-# (Beta) [!DNL Braze] destination
+# (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
 >

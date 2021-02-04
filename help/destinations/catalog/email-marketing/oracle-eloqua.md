@@ -1,14 +1,10 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle eloqua;oracle
-title: Oracle Eloqua destination
-seo-title: Oracle Eloqua destination
+title: Oracle Eloqua Connection Destination
 description: Oracle Eloqua is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
-seo-description: Oracle Eloqua is a software as a service (SaaS) platform for marketing automation offered by Oracle that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation.
 ---
 
-# [!DNL Oracle Eloqua]
-
-## Overview
+# [!DNL Oracle Eloqua] connection
 
 [[!DNL Oracle Eloqua]](https://www.oracle.com/marketingcloud/products/marketing-automation/) is a software as a service (SaaS) platform for marketing automation offered by [!DNL Oracle] that aims to help B2B marketers and organizations manage marketing campaigns and sales lead generation. 
 
