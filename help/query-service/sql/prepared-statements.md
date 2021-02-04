@@ -6,7 +6,7 @@ topic: prepared statements
 description: In SQL, prepared statements are used to template similar queries or updates. Adobe Experience Platform Query Service supports prepared statements by using a parameterized query.
 ---
 
-# Prepared statements in Query Service
+# Prepared statements
 
 In SQL, prepared statements are used to templatize similar queries or updates. Adobe Experience Platform [!DNL Query Service] supports prepared statements by using a parameterized query. This can be used to optimize performance, as you will no longer need to re-parse a query over and over again.
 

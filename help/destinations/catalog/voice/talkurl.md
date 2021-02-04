@@ -4,7 +4,7 @@ title: Talk URL Inbox Extension Destination
 description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Talk URL Inbox] Extension {#talk-url-extension}
+# [!DNL Talk URL Inbox] extension {#talk-url-extension}
 
 Receive voice messages from your web page visitors. Includes hosted UI and cloud-based machine learning to transcribe your voice messages into text insights instantly.
 

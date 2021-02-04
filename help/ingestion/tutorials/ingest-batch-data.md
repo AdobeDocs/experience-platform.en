@@ -7,7 +7,7 @@ type: Tutorial
 description: Adobe Experience Platform allows you to easily import data as batch files in the form of Parquet files or data that conforms to a known Experience Data Model (XDM) schema.
 ---
 
-# Ingest data into Experience Platform
+# Ingest data into Adobe Experience Platform
 
 Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
 

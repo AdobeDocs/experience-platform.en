@@ -1,10 +1,10 @@
 ---
 keywords: streaming;
-title: HTTP Destination
+title: HTTP Connection Destination
 description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 ---
 
-# (Alpha) [!DNL HTTP] Destination 
+# (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >

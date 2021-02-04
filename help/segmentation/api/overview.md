@@ -5,7 +5,7 @@ topic: guide
 description: The Segmentation Service API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
-# [!DNL Segmentation Service] API guide
+# Segmentation Service API guide
 
 [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 
