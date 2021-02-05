@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Google AdWords;google adwords
 solution: Experience Platform
-title: Google AdWords connector
+title: Google AdWords Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Google AdWords to Platform using APIs or the user interface.
+description: Learn how to connect Google AdWords to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # [!DNL Google AdWords] connector
@@ -26,11 +26,11 @@ The documentation below provides information on how to connect [!DNL Google AdWo
 
 ### Using APIs
 
-- [Create a Google AdWords connector using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
+- [Create a Google AdWords source connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
 - [Explore a advertising system using the Flow Service API](../../tutorials/api/explore/advertising.md)
 - [Collect advertising data using the Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### Using the UI
 
-- [Create a Google AdWords source connector in the UI](../../tutorials/ui/create/advertising/ads.md)
-- [Configure a dataflow for a advertising connector in the UI](../../tutorials/ui/dataflow/advertising.md)
+- [Create a Google AdWords source connection in the UI](../../tutorials/ui/create/advertising/ads.md)
+- [Configure a dataflow for a advertising connection in the UI](../../tutorials/ui/dataflow/advertising.md)

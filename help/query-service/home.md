@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: Adobe Experience Platform Query Service
+title: Query Service Overview
 topic: overview
 description: This document provides an overview of the role of Query Service within Experience Platform.
 ---

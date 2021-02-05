@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
-title: Configure a dataflow for a cloud storage batch connector in the UI
+title: Configure a Dataflow for a Cloud Storage Batch Connector in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 ---
 
-# Configure a dataflow for a cloud storage batch connector in the UI
+# Configure a dataflow for a cloud storage batch connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 
@@ -101,7 +101,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays.
+For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays You can also preview and map complex data types such as arrays in JSON files using a cloud storage source connector.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data flows;dataflows;data;monitoring;monitor dataflows;monitor data flows;monitor;monitoring dataflows;monitoring data flows;flow;flow service;
 solution: Experience Platform
-title: Adobe Experience Platform dataflow overview
+title: Dataflows Overview
 topic: overview
 description: This document introduces dataflows, expressing how they are used in Adobe Experience Platform.
 ---

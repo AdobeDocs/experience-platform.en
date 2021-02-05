@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure File Storage;Azure File Storage connector
 solution: Experience Platform
-title: Create an Azure File Storage source connector in the UI
+title: Create an Azure File Storage  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for authenticating an Azure File Storage source connector using the Platform user interface.
+description: Learn how to create an Azure File Storage source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Azure File Storage] source connector in the UI
+# Create an [!DNL Azure File Storage] source connection in the UI
 
 >[!NOTE]
 >

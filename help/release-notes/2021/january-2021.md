@@ -13,6 +13,7 @@ author: ens60013
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -26,6 +27,24 @@ Updates to existing features in Adobe Experience Platform:
 | Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
 
 For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## Destinations {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
+
+To learn more, visit the [destinations overview](../../destinations/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -41,5 +60,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
 | Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
 | Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
+| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

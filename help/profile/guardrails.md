@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
-title: Experience Platform Guardrails for Real-time Customer Profile Data
+title: Guardrails for Real-time Customer Profile Data
 solution: Experience Platform
 product: experience platform
 topic: guide
@@ -8,7 +8,7 @@ type: Documentation
 description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines best practices and constraints to keep in mind when modeling Profile data. 
 ---
 
-# [!DNL Platform] guardrails for [!DNL Real-time Customer Profile]
+# Guardrails for [!DNL Real-time Customer Profile] data
 
 [!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile] and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it extremely important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 

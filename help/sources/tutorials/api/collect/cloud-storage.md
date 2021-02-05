@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
-title: Collect cloud storage data through source connectors and APIs
+title: Collect Cloud Storage Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
 ---
 
-# Collect cloud storage data through source connectors and APIs
+# Collect cloud storage data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -83,7 +83,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -102,7 +102,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.format` | An enum value that defines the data format attribute. |
 | `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
@@ -334,6 +334,10 @@ A successful response returns the new target connection's unique identifier (`id
 ## Create a mapping {#mapping}
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
+
+>[!TIP]
+>
+>You can map complex data types such as arrays in JSON files using a cloud storage source connector.
 
 **API format**
 

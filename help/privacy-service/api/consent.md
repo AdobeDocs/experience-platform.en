@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Consent endpoint
+title: Consent API Endpoint
 topic: developer guide
 description: Learn how to manage customer consent requests for Experience Cloud applications using the Privacy Service API.
 ---

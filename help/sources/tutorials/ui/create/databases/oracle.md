@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle DB;oracle db
 solution: Experience Platform
-title: Create an Oracle DB source connector in the UI
+title: Create an Oracle DB  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating an Oracle DB source connector using the Platform user interface.
+description: Learn how to create an Oracle DB source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Oracle DB] source connector in the UI
+# Create an [!DNL Oracle DB] source connection in the UI
 
 >[!NOTE]
 >

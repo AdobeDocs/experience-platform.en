@@ -1,12 +1,12 @@
 ---
 keywords: advertising destinations;destinations;platform destinations
 title: Advertising Destinations
-seo-title: Advertising Destinations
+seo-title: Advertising Destinations Overview
 description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 ---
 
-# Advertising destinations {#advertising-destinations}
+# Advertising destinations overview {#advertising-destinations}
 
 Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 

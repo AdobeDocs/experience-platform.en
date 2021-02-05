@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Greenplum;greenplum
 solution: Experience Platform
-title: Create a GreenPlum source connector in the UI
+title: Create a GreenPlum  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating an GreenPlum source connector using the Platform user interface.
+description: Learn how to create a GreenPlum source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL GreenPlum] source connector in the UI
+# Create a [!DNL GreenPlum] source connection in the UI
 
 >[!NOTE]
 >
