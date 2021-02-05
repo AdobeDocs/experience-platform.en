@@ -52,7 +52,7 @@ See the [Privacy Service overview](../../privacy-service/home.md) for more infor
 
 Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform allows you to capture consent information in individual customer profiles and use those preferences as a determining factor in how each customer's data is used in downstream Platform workflows.
 
-To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](./consent/overview.md).
+To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](./consent/adobe/overview.md).
 
 For information on how process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
 
