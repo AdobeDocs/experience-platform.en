@@ -55,8 +55,7 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL String]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {"type": "string"}
-        </pre>
+{"type": "string"}</pre>
       </td>
       <td><code>"Platinum"</code></td>
     </tr>
@@ -64,8 +63,7 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Double]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {"type": "number"}
-        </pre>
+{"type": "number"}</pre>
       </td>
       <td><code>12925.49</code></td>
     </tr>
@@ -73,12 +71,11 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Long]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "integer",
-            "maximum": 9007199254740991,
-            "minimum": -9007199254740991
-          }
-        </pre>
+{
+  "type": "integer",
+  "maximum": 9007199254740991,
+  "minimum": -9007199254740991
+}</pre>
       </td>
       <td><code>1478108935</code></td>
     </tr>
@@ -86,12 +83,11 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Integer]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "integer",
-            "maximum": 2147483648,
-            "minimum": -2147483648
-          }
-        </pre>
+{
+  "type": "integer",
+  "maximum": 2147483648,
+  "minimum": -2147483648
+}</pre>
       </td>
       <td><code>24906290</code></td>
     </tr>
@@ -99,12 +95,11 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Short]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "integer",
-            "maximum": 32768,
-            "minimum": -32768
-          }
-        </pre>
+{
+  "type": "integer",
+  "maximum": 32768,
+  "minimum": -32768
+}</pre>
       </td>
       <td><code>15781</code></td>
     </tr>
@@ -112,12 +107,11 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Byte]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "integer",
-            "maximum": 128,
-            "minimum": -128
-          }
-        </pre>
+{
+  "type": "integer",
+  "maximum": 128,
+  "minimum": -128
+}</pre>
       </td>
       <td><code>90</code></td>
     </tr>
@@ -125,11 +119,10 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Date]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "string",
-            "format": "date"
-          }
-        </pre>
+{
+  "type": "string",
+  "format": "date"
+}</pre>
       </td>
       <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
@@ -137,11 +130,10 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL DateTime]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {
-            "type": "string",
-            "format": "date-time"
-          }
-        </pre>
+{
+  "type": "string",
+  "format": "date-time"
+}</pre>
       </td>
       <td><code>"2019-05-15"</code></td>
     </tr>
@@ -149,8 +141,7 @@ The following table outlines how each XDM type is represented in JSON Schema:
       <td>[!UICONTROL Boolean]</td>
       <td>
         <pre class="JSON language-JSON hljs">
-          {"type": "string"}
-        </pre>
+{"type": "string"}</pre>
       </td>
       <td><code>true</code></td>
     </tr>
