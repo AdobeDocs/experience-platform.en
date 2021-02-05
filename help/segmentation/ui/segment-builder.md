@@ -106,7 +106,7 @@ After placing the event within the Events container, select the ... icon, follow
 
 ![](../images/ui/segment-builder/add-aggregation.png)
 
-The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value.
+The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value. For the example below, this segment would qualify any profile that has a sum of purchased values that is greater than $100, even if each individual purchase is less than $100.
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
