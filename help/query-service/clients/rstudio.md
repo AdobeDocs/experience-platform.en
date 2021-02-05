@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
-title: Connect with RStudio
+title: Connect RStudio to Query Service
 topic: connect
 description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 ---
 
-# [!DNL RStudio]
+# Connect [!DNL RStudio] to Query Service
 
 This document walks through the steps for connecting [!DNL RStudio] with Adobe Experience Platform [!DNL Query Service].
 
@@ -14,7 +14,7 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
 
-## Connecting [!DNL RStudio] with [!DNL Query Service]
+## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 
 After installing [!DNL RStudio], on the **[!DNL Console]** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 

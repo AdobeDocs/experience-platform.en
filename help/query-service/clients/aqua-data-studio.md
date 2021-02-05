@@ -1,20 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;Aqua Data Studio;Aqua data studio;connect to query service;
 solution: Experience Platform
-title: Connect with Aqua Data Studio
+title: Connect Aqua Data Studio to Query Service
 topic: connect
 description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
 ---
 
-# [!DNL Aqua Data Studio]
+# Connect [!DNL Aqua Data Studio] to Query Service
 
 This document covers the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > This guide assumes you already have access to [!DNL Aqua Data Studio] and are familiar with how to navigate its interface. More information about [!DNL Aqua Data Studio] can be found in the [official [!DNL Aqua Data Studio] documentation](https://www.aquaclusters.com/app/home/project/public/aquadatastudio/wikibook/Documentation21.1/page/0/Aqua-Data-Studio-21-1).
-
-## Connect [!DNL Aqua Data Studio] with Platform
 
 After installing [!DNL Aqua Data Studio], you must first register the server. From the main menu, select **[!DNL Server]**, followed by **[!DNL Register Server]**.
 

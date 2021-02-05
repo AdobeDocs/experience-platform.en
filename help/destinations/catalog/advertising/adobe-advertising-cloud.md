@@ -1,14 +1,10 @@
 ---
 keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
-title: Adobe Advertising Cloud extension
-seo-title: Adobe Advertising Cloud extension
+title: Adobe Advertising Cloud Extension Destination
 description: The Adobe Advertising Cloud extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adobe Advertising Cloud extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Adobe Advertising Cloud Extension {#adobe-advertising-cloud-extension}
-
-## Overview {#overview}
+# Adobe Advertising Cloud extension {#adobe-advertising-cloud-extension}
 
 This is the [!DNL Advertising Cloud] extension for implementing [!DNL Advertising Cloud] conversion and segment tags for both the DSP and Search (DCO is not supported currently).
 

@@ -1,12 +1,10 @@
 ---
 keywords: airship tags;airship destination
-title: Airship Tags Destination
-seo-title: Airship Tags destination
+title: Airship Tags Connection Destination
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Tags] destination {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] connection {#airship-tags-destination}
 
 >[!IMPORTANT]
 >

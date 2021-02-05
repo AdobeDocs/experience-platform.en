@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;azure synapse analytics;Synapse;synapse
 solution: Experience Platform
-title: Azure Synapse Analytics connector
+title: Azure Synapse Analytics Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Azure Synapse Analytics to Platform using APIs or the user interface.
+description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Azure Synapse Analytics] connector
@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL Azure Synap
 
 ## Connect [!DNL Azure Synapse Analytics] to [!DNL Platform] using APIs
 
-- [Create a Azure Synapse Analytics connector using the Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
+- [Create a Azure Synapse Analytics source connection using the Flow Service API](../../tutorials/api/create/databases/synapse-analytics.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Azure Synapse Analytics] to [!DNL Platform] using the UI
 
-- [Create a Azure Synapse Analytics source connector in the UI](../../tutorials/ui/create/databases/synapse-analytics.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Azure Synapse Analytics source connection in the UI](../../tutorials/ui/create/databases/synapse-analytics.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

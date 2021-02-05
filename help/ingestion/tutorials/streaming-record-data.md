@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
-title: Streaming record data
+title: Stream Record Data Using Streaming Ingestion APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
-# Stream record data to Adobe Experience Platform
+# Stream record data using Streaming Ingestion APIs
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 

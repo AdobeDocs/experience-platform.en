@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
-title: Manage users for a product profile
+title: Manage Users for a Product Profile
 topic: user guide
 description: This document shows you how to manage users for a product profile in the UI for Adobe Experience Platform.
 ---

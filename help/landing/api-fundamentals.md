@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform API fundamentals
+title: Experience Platform API fundamentals
 topic: getting started
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
 ---
 
-# Adobe Experience Platform API fundamentals
+# Experience Platform API fundamentals
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 

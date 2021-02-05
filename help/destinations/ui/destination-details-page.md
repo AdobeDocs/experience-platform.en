@@ -1,12 +1,11 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
-title: Destinations Details Page
-seo-title: Destinations Details Page
+title: View the Details of a Destination in the UI
 description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 seo-description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 ---
 
-# Destination details page
+# View the details of a destination
 
 In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 

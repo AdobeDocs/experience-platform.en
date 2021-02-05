@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;data deduplication;deduplication;
 solution: Experience Platform
-title: Data deduplication
+title: Data Deduplication in Query Service
 topic: queries
 type: Tutorial
 description: This document outlines sub-select and full sample query examples for deduplicating three common use cases Experience Events, purchases, and metrics.

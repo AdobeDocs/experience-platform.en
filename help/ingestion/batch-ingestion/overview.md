@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Batch Ingestion overview
+title: Batch Ingestion Overview
 topic: overview
-description: The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
+description: The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 ---
 
-# [!DNL Batch Ingestion] overview
+# Batch ingestion overview
 
-The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
 The [Data Ingestion API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) provides additional information on these API calls.
 

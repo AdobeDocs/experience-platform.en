@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;PayPal connector;paypal;Paypal
 solution: Experience Platform
-title: Create a PayPal connector using the Flow Service API
+title: Create a PayPal Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect PayPal to Experience Platform.
+description: Learn how to connect PayPal to Adobe Experience Platform using the Flow Service API.
 ---
 
-# Create a [!DNL PayPal] connector using the [!DNL Flow Service] API
+# Create a [!DNL PayPal] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
