@@ -37,8 +37,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Overview](./governance-privacy-security/overview.md)
   * Consent management {#consent}
     * Adobe standard {#adobe}
-      * [Overview](./governance-privacy-security/consent/overview.md)
-      * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/dataset.md)
+      * [Overview](./governance-privacy-security/consent/adobe/overview.md)
+      * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/adobe/dataset.md)
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
