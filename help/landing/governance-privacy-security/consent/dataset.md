@@ -8,9 +8,9 @@ description: Configure a dataset to capture consent and preference data
 
 # Configure a dataset to capture consent and preference data
 
-In order for Adobe Experience Platform to process customer consent data, that data must be sent to a dataset whose schema contains consent-related fields. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
+In order for Adobe Experience Platform to process your customer consent/preference data, that data must be sent to a dataset whose schema contains fields related to consents and other permissions. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].
 
-This document provides steps for configuring a dataset to collect consent data in Experience Platform. For an overview of the full workflow for collecting consent data in Platform, refer to the [consent collection overview](./overview.md).
+This document provides steps for configuring a dataset to process consent data in Experience Platform. For an overview of the full workflow for processing consent/preference data in Platform, refer to the [consent processing overview](./overview.md).
 
 >[!IMPORTANT]
 >
@@ -112,7 +112,7 @@ The canvas reappears, showing that the `consents` field has been added to the sc
 
 ![](../../images/governance-privacy-security/consent/dataset-prep/save-schema.png)
 
-If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent collection guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to collect consent data.
+If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
 
 If you have not created a dataset for this schema, follow the steps in the next section.
 
@@ -146,10 +146,10 @@ Finally, select **[!UICONTROL Enable]** in the confirmation popover to enable th
 
 ![](../../images/governance-privacy-security/consent/dataset-prep/enable-dataset.png)
 
-The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to collect consent data, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [edge configuration](../../../edge/fundamentals/edge-configuration.md).
+The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [edge configuration](../../../edge/fundamentals/edge-configuration.md).
 
 ## Next steps
 
 By following this tutorial, you have added consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Platform Web SDK or direct XDM ingestion.
 
-You can now return to the [consent collection overview](./overview.md#merge-policies) to continue the process of configuring Experience Platform to collect consent data.
+You can now return to the [consent processing overview](./overview.md#merge-policies) to continue configuring Experience Platform to process consent data.

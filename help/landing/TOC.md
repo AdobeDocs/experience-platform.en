@@ -35,7 +35,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
 * Governance, privacy, and security {#governance-privacy-security}
   * [Overview](./governance-privacy-security/overview.md)
-  * Consent collection {#consent}
+  * Consent processing {#consent}
     * [Overview](./governance-privacy-security/consent/overview.md)
     * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/dataset.md)
 * [License usage dashboard](license-usage-dashboard.md)

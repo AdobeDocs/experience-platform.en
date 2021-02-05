@@ -48,11 +48,11 @@ Adobe Experience Platform Privacy Service provides a RESTful API and user interf
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information.
 
-### Consent collection {#consent}
+### Consent processing {#consent}
 
 Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform provides a standardized method for capturing granular customer consents and preferences and including them in customer profiles whenever a customer opts in or opts out.
 
-For more information on the consent collection process, see the [consent collection overview](./consent/overview.md).
+For more information on consent processing in Experience Platform, see the [consent processing overview](./consent/overview.md).
 
 ## Security {#security}
 
