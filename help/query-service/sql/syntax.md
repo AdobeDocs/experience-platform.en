@@ -8,7 +8,7 @@ description: This document shows SQL syntax supported by Adobe Experience Platfo
 
 # SQL syntax in Query Service
 
-Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document shows SQL syntax supported by [!DNL Query Service].
+Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document covers the SQL syntax supported by [!DNL Query Service].
 
 ## SELECT queries {#select-queries}
 
@@ -58,9 +58,11 @@ and `with_query` is:
 TABLE [ ONLY ] table_name [ * ]
 ```
 
+The following sub-sections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
+
 ### SNAPSHOT clause
 
-This clause can be used to read data on a table incrementally based on snapshot ids. A snapshot id is a checkpoint marker identified by a number, of type Long, on a datalake table every time data is written to it. The SNAPSHOT clause attaches itself to the table relation it is used next to.
+This clause can be used to incrementally read data on a table based on snapshot IDs. A snapshot ID is a checkpoint marker represented by a Long-type number that is applied to a data lake table every time data is written to it. The `SNAPSHOT` clause attaches itself to the table relation it is used next to.
 
 ```sql
     [ SNAPSHOT { SINCE start_snapshot_id | AS OF end_snapshot_id | BETWEEN start_snapshot_id AND end_snapshot_id } ]
@@ -75,26 +77,35 @@ SELECT * FROM Customers SNAPSHOT AS OF 345;
 
 SELECT * FROM Customers SNAPSHOT BETWEEN 123 AND 345;
 
+SELECT * FROM Customers SNAPSHOT BETWEEN HEAD AND 123;
+
+SELECT * FROM Customers SNAPSHOT BETWEEN 345 AND TAIL;
+
 SELECT * FROM (SELECT id FROM CUSTOMERS BETWEEN 123 AND 345) C 
 
 SELECT * FROM Customers SNAPSHOT SINCE 123 INNER JOIN Inventory AS OF 789 ON Customers.id = Inventory.id;
 ```
 
-Please note that a SNAPSHOT clause works with a table or table alias but not on top of a sub-query or view. A SNAPHOST clause will work anywhere a SELECT query on a table can be applied.
+Please note that a `SNAPSHOT` clause works with a table or table alias but not on top of a sub-query or view. A `SNAPSHOT` clause will work anywhere a `SELECT` query on a table can be applied.
+
+Additionally, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
 ### WHERE ILIKE clause
 
-The key word `ILIKE` can be used instead of `LIKE` to make matches on the WHERE clause of the SELECT query case-insensitive.
+By default, matches produced by a `WHERE` clause on a `SELECT` query are case-sensitive. If you want matches to be case-insensitive, you can use the keyword `ILIKE` instead of `LIKE`.
 
 ```sql
     [ WHERE condition { LIKE | ILIKE | NOT LIKE | NOT ILIKE } pattern ]
 ```
 
-The logic of LIKE and ILIKE clauses are as follows:
-- `WHERE condition LIKE pattern`, `~~` is equivalent to pattern
-- `WHERE condition NOT LIKE pattern`, `!~~` is equivalent to pattern
-- `WHERE condition ILIKE pattern`, `~~*` equivalent to pattern
-- `WHERE condition NOT ILIKE pattern`, `!~~*` equivalent to pattern
+The logic of the LIKE and ILIKE clauses are explained in the following table:
+
+| Clause | Operator |
+| ------ | -------- |
+| `WHERE condition LIKE pattern` | `~~` |
+| `WHERE condition NOT LIKE pattern` | `!~~` |
+| `WHERE condition ILIKE pattern` | `~~*` |
+| `WHERE condition NOT ILIKE pattern` | `!~~*` |
 
 **Example**
 
@@ -118,7 +129,7 @@ ON join condition
 
 ### UNION, INTERSECT, and EXCEPT
 
-The `UNION`, `INTERSECT`, and `EXCEPT` clauses are supported to combine or exclude like rows from two or more tables:
+The `UNION`, `INTERSECT`, and `EXCEPT` clauses are used to combine or exclude like rows from two or more tables:
 
 ```sql
 SELECT statement 1
@@ -128,7 +139,7 @@ SELECT statement 2
 
 ### CREATE TABLE AS SELECT
 
-The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query supported by [!DNL Query Service]:
+The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 
 ```sql
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
@@ -485,7 +496,11 @@ COPY query
 
 ### ALTER TABLE
 
-The `ALTER TABLE` command lets you add or drop primary or foreign key constraints to the table.
+The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
+
+#### ADD or DROP CONSTRAINT
+
+The following SQL queries show examples of adding or dropping constraints to a table. 
 
 ```sql
 ALTER TABLE table_name ADD CONSTRAINT constraint_name PRIMARY KEY ( column_name )
@@ -509,7 +524,23 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name FOREIGN KEY ( column_name
 
 >[!NOTE]
 >
->The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory.
+>The table schema should be unique and not shared among multiple tables. Additionally, the namespace is mandatory for primary key constraints.
+
+#### ADD COLUMN
+
+The following SQL queries show examples of adding columns to a table.
+
+```sql
+ALTER TABLE table_name ADD COLUMN column_name data_type
+
+ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
+```
+
+**Parameters**
+
+- `table_name`: The name of the table which you are editing.
+- `column_name`: The name of the column you want to add.
+- `data_type`: The data type of the column you want to add. Supported data types include the following: bigint, char, string, date, datetime, double, double precision, integer, smallint, tinyint, varchar.
 
 ### SHOW PRIMARY KEYS
 
