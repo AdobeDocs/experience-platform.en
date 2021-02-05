@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service API developer guide appendix
+title: Privacy Service API Guide Appendix
 topic: developer guide
 description: This document contains additional information for working with the Privacy Service API.
 ---
 
-# Appendix
+# Privacy Service API guide appendix
 
 The following sections contain additional information for working with the Adobe Experience Platform Privacy Service API.
 

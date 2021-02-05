@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
-title: Partial batch ingestion overview
+title: Partial Batch Ingestion Overview
 topic: overview
 description: This document provides a tutorial for managing partial batch ingestion.
 ---

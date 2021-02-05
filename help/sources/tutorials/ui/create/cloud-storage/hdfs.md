@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Apache HDFS;HDFS;hdfs
 solution: Experience Platform
-title: Create an Apache HDFS source connector in the UI
+title: Create an Apache HDFS  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for authenticating an Apache Hadoop Distributed File System (hereinafter referred to as "HDFS") source connector using the Platform user interface.
+description: Learn how to create an Apache Hadoop Distributed File System source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Apache] HDFS source connector in the UI
+# Create an [!DNL Apache] HDFS source connection in the UI
 
 >[!NOTE]
 >

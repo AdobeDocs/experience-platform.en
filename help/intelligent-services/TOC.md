@@ -16,9 +16,9 @@ user-guide-description: Utilize intelligent AI services to generate scores, disc
   - [Getting started with Attribution AI](attribution-ai/getting-started.md)
   - [Input and output](attribution-ai/input-output.md)
   - [User interface guide](attribution-ai/user-guide.md)
-  - [Discovering insights](attribution-ai/discover-insights.md)
-  - [Accessing scores](attribution-ai/download-scores.md)
-  - [AAI Query Service quick start guide](attribution-ai/aai-query-service.md)
+  - [Discover insights](attribution-ai/discover-insights.md)
+  - [Download scores](attribution-ai/download-scores.md)
+  - [Analyze scores using Query Service](attribution-ai/aai-query-service.md)
 - Content and Commerce AI (beta) {#content-commerce-ai}
   - [Overview](content-commerce-ai/overview.md)
   - [Getting started](content-commerce-ai/getting-started.md)
@@ -34,7 +34,7 @@ user-guide-description: Utilize intelligent AI services to generate scores, disc
   - [Input and output](customer-ai/input-output.md)
   - UI guides{#user-guide}
     - [Configure an instance](customer-ai/user-guide/configure.md)
-    - [Discovering insights](customer-ai/user-guide/discover-insights.md)
+    - [Discover insights](customer-ai/user-guide/discover-insights.md)
     - [Create segments using Customer AI scores](customer-ai/user-guide/create-segment.md)
-    - [Downloading scores](customer-ai/user-guide/download-scores.md)
+    - [Download scores](customer-ai/user-guide/download-scores.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

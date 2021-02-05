@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
-title: Create a SQL Server connector using the Flow Service API
+title: Create a SQL Server Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to a Microsoft SQL Server (hereinafter referred to as "SQL Server").
+description: Learn how to connect Adobe Experience Platform to a Microsoft SQL Server using the Flow Service API.
 ---
 
-# Create a [!DNL Microsoft] SQL Server connector using the [!DNL Flow Service] API
+# Create a [!DNL Microsoft] SQL Server source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

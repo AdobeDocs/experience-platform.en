@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query;query editor;Query Editor;Query editor;
 solution: Experience Platform
-title: Adobe Experience Platform Query Service UI guide
+title: Query Service UI Guide
 topic: guide
-description: The Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
+description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
 ---
 
 # [!DNL Query Service] guide

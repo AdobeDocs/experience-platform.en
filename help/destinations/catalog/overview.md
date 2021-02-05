@@ -6,9 +6,9 @@ description: The Destinations Catalog provides a list of available destinations 
 seo-description: The Destinations Catalog provides a list of available destinations that are ready to receive data. These destinations include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, and more.
 ---
 
-# [!DNL Destinations Catalog]
+# Destinations catalog
 
-The **[!DNL Destinations Catalog]** provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, Experience Platform extensions, and more. 
+The destinations catalog provides a list of available destination platforms that are ready to receive data. These destination platforms include Adobe solutions, advertising platforms, survey platforms, email marketing platforms, Experience Platform extensions, and more. 
 
 Browse the catalog to determine which destination platforms are best for your advertising and personalization use cases, then set up flows to activate your segments to destinations.
 

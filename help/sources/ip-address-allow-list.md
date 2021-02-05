@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip address allow list; allow list
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
-title: IP address allow list
+title: IP Address Allow List for Source Connections
 topic: overview
 ---
 
