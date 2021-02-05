@@ -22,30 +22,18 @@ The sections below describe how each XDM type (`meta:xdmType`) maps to other ser
 
 ### JSON Schema
 
-<!-- | XDM Type | JSON Schema | 
-| --- | --- |
-| [!UICONTROL String] | |
-| [!UICONTROL Double] | |
-| [!UICONTROL Long] | |
-| [!UICONTROL Integer] | |
-| [!UICONTROL Short] | |
-| [!UICONTROL Byte] | |
-| [!UICONTROL Date] | |
-| [!UICONTROL DateTime] | |
-| [!UICONTROL Boolean] | | -->
-
 XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar syntax.
 
 >[!NOTE]
 >
 >See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Experience Platform APIs.
 
-The following table outlines how each XDM type is represented in JSON Schema:
+The following table outlines how each XDM type is represented in JSON Schema, and provides an example value that conforms to the type:
 
 <table>
   <thead>
     <tr>
-      <th>XDM Type</th>
+      <th>XDM type</th>
       <th>JSON Schema</th>
       <th>Example</th>
     </tr>
@@ -124,7 +112,7 @@ The following table outlines how each XDM type is represented in JSON Schema:
   "format": "date"
 }</pre>
       </td>
-      <td><code>"2019-05-15T20:20:39+00:00"</code></td>
+      <td><code>"2019-05-15"</code></td>
     </tr>
     <tr>
       <td>[!UICONTROL DateTime]</td>
@@ -135,7 +123,7 @@ The following table outlines how each XDM type is represented in JSON Schema:
   "format": "date-time"
 }</pre>
       </td>
-      <td><code>"2019-05-15"</code></td>
+      <td><code>"2019-05-15T20:20:39+00:00"</code></td>
     </tr>
     <tr>
       <td>[!UICONTROL Boolean]</td>
@@ -150,11 +138,45 @@ The following table outlines how each XDM type is represented in JSON Schema:
 
 ### Parquet, Spark SQL, and Java
 
+| XDM type | Parquet | Spark SQL | Java | 
+| --- | --- | --- | --- |
+| [!UICONTROL String] | Type: `BYTE_ARRAY`<br>Annotation: `UTF8` | `StringType` | `java.lang.String` |
+| [!UICONTROL Double] | Type: `DOUBLE` | `LongType` | `java.lang.Double` |
+| [!UICONTROL Long] | Type: `INT64` | `LongType` | `java.lang.Long` |
+| [!UICONTROL Integer] | Type: `INT32`<br>Annotation: `INT_32` | `IntegerType` | `java.lang.Integer` |
+| [!UICONTROL Short] | Type: `INT32`<br>Annotation: `INT_16` | `ShortType` | `java.lang.Short` |
+| [!UICONTROL Byte] | Type: `INT32`<br>Annotation: `INT_8` | `ByteType` | `java.lang.Short` |
+| [!UICONTROL Date] | Type: `INT32`<br>Annotation: `DATE` | `DateType` | `java.util.Date` |
+| [!UICONTROL DateTime] | Type: `INT64`<br>Annotation: `TIMESTAMP_MILLIS` | `TimestampType` | `java.util.Date` |
+| [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
+
 ### Scala, .NET, and CosmosDB
+
+| XDM type | Scala | .NET | CosmosDB 
+| --- | --- | --- | --- |
+| [!UICONTROL String] | `String` | `System.String` | `String` |
+| [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
+| [!UICONTROL Long] | `Long` | `System.Int64` | `Number` |
+| [!UICONTROL Integer] | `Int` | `System.Int32` | `Number` |
+| [!UICONTROL Short] | `Short` | `System.Int16` | `Number` |
+| [!UICONTROL Byte] | `Byte` | `System.SByte` | `Number` |
+| [!UICONTROL Date] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL DateTime] | `java.util.Date` | `System.DateTime` | `String` |
+| [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 
 ### MongoDB, Aerospike, and Protobuf 2
 
-
+| XDM type | MongoDB | Aerospike | Protobuf 2 | 
+| --- | --- | --- | --- |
+| [!UICONTROL String] | `string` | `String` | `string` |
+| [!UICONTROL Double] | `double` | `Double` | `double` |
+| [!UICONTROL Long] | `long` | `Integer` | `int64` |
+| [!UICONTROL Integer] | `int` | `Integer` | `int32` |
+| [!UICONTROL Short] | `int` | `Integer` | `int32` |
+| [!UICONTROL Byte] | `int` | `Integer` | `int32` |
+| [!UICONTROL Date] | `date` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
+| [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
+| [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binary) | `bool` |
 
 |XDM Type<br>(meta:xdmType)|JSON<br>(JSON Schema)|Parquet<br>(type/annotation)|[!DNL Spark] SQL|Java|Scala|.NET|CosmosDB|MongoDB|Aerospike|Protobuf 2 |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -198,12 +220,11 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-            "type": "string",
-            "pattern": "^[A-Z]{2}$",
-            "maxLength": 2
-        }
-      </pre>
+"sampleField": {
+    "type": "string",
+    "pattern": "^[A-Z]{2}$",
+    "maxLength": 2
+}</pre>
     </td>
   </tr>
   <tr>
@@ -211,11 +232,10 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: string<br/>format: uri</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "string",
-          "format": "uri"
-        }
-      </pre>
+"sampleField": {
+  "type": "string",
+  "format": "uri"
+}</pre>
     </td>
   </tr>
   <tr>
@@ -227,21 +247,20 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
     <td>Specify customer-facing option labels using "meta:enum":
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "string",
-          "enum": [
-              "value1",
-              "value2",
-              "value3"
-          ],
-          "meta:enum": {
-              "value1": "Value 1",
-              "value2": "Value 2",
-              "value3": "Value 3"
-          },
-          "default": "value1"
-        }
-      </pre>
+"sampleField": {
+  "type": "string",
+  "enum": [
+      "value1",
+      "value2",
+      "value3"
+  ],
+  "meta:enum": {
+      "value1": "Value 1",
+      "value2": "Value 2",
+      "value3": "Value 3"
+  },
+  "default": "value1"
+}</pre>
     </td>
   </tr>
   <tr>
@@ -249,10 +268,9 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: number<br/>minimum: ±2.23×10^308<br/>maximum: ±1.80×10^308</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "number"
-        }
-      </pre>
+"sampleField": {
+  "type": "number"
+}</pre>
     </td>
   </tr>
   <tr>
@@ -260,12 +278,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: integer<br/>maximum:2^53+1<br>minimum:-2^53+1</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "integer",
-          "minimum": -9007199254740992,
-          "maximum": 9007199254740992
-        }
-      </pre>
+"sampleField": {
+  "type": "integer",
+  "minimum": -9007199254740992,
+  "maximum": 9007199254740992
+}</pre>
     </td>
   </tr>
   <tr>
@@ -273,12 +290,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: integer<br/>maximum:2^31<br>minimum:-2^31</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "integer",
-          "minimum": -2147483648,
-          "maximum": 2147483648
-        }
-      </pre>
+"sampleField": {
+  "type": "integer",
+  "minimum": -2147483648,
+  "maximum": 2147483648
+}</pre>
     </td>
   </tr>
   <tr>
@@ -286,12 +302,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: integer<br/>maximum:2^15<br>minimum:-2^15</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "integer",
-          "minimum": -32768,
-          "maximum": 32768
-        }
-      </pre>
+"sampleField": {
+  "type": "integer",
+  "minimum": -32768,
+  "maximum": 32768
+}</pre>
     </td>
   </tr>
   <tr>
@@ -299,12 +314,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: integer<br/>maximum:2^7<br>minimum:-2^7</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "integer",
-          "minimum": -128,
-          "maximum": 128
-          }
-      </pre>
+"sampleField": {
+  "type": "integer",
+  "minimum": -128,
+  "maximum": 128
+  }</pre>
     </td>
   </tr>
   <tr>
@@ -316,11 +330,10 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "boolean",
-          "default": false
-        }
-      </pre>
+"sampleField": {
+  "type": "boolean",
+  "default": false
+}</pre>
     </td>
   </tr>
   <tr>
@@ -328,12 +341,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: string<br/>format: date</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "string",
-          "format": "date",
-          "examples": ["2004-10-23"]
-        }
-      </pre>
+"sampleField": {
+  "type": "string",
+  "format": "date",
+  "examples": ["2004-10-23"]
+}</pre>
       Date as defined by <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, where "full-date" = date-fullyear "-" date-month "-" date-mday (YYYY-MM-DD)
     </td>
   </tr>
@@ -342,12 +354,11 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: string<br/>format: date-time</td>
     <td>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "string",
-          "format": "date-time",
-          "examples": ["2004-10-23T12:00:00-06:00"]
-        }
-      </pre>
+"sampleField": {
+  "type": "string",
+  "format": "date-time",
+  "examples": ["2004-10-23T12:00:00-06:00"]
+}</pre>
       Date-Time as defined by <a href="https://tools.ietf.org/html/rfc3339#section-5.6" target="_blank">RFC 3339, section 5.6</a>, where "date-time" = full-date "T" full-time:<br/>(YYYY-MM-DD'T'HH:MM:SS.SSSSX)
     </td>
   </tr>
@@ -356,22 +367,20 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: array</td>
     <td>items.type can be defined using any scalar type:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "array",
+  "items": {
+    "type": "string"
+  }
+}</pre>
       Array of objects defined by another schema:<br/>
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "array",
-          "items": {
-            "$ref": "id"
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "array",
+  "items": {
+    "$ref": "id"
+  }
+}</pre>
       Where "id" is the {id} of the reference schema.
     </td>
   </tr>
@@ -380,25 +389,23 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: object</td>
     <td>properties.{field}.type can be defined using any scalar type:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "properties": {
-            "field1": {
-              "type": "string"
-            },
-            "field2": {
-              "type": "number"
-            }
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "object",
+  "properties": {
+    "field1": {
+      "type": "string"
+    },
+    "field2": {
+      "type": "number"
+    }
+  }
+}</pre>
       Field of type "object" that is defined by a reference schema:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "$ref": "id"
-        }
-      </pre>
+"sampleField": {
+  "type": "object",
+  "$ref": "id"
+}</pre>
       Where "id" is the {id} of the reference schema.
     </td>
   </tr>
@@ -407,34 +414,31 @@ To begin, find the desired field type and use the sample code provided to build 
     <td>type: object<br/><br/><strong>Note:</strong><br/>Use of the 'map' data type is reserved for industry and vendor schema usage and is not available for use in tenant defined fields. It is used in standard schemas when data is represented as keys that map to some value, or where keys cannot reasonably be included in a static schema and must be treated as data values.</td>
     <td>A 'map' MUST NOT define any properties. It MUST define a single "[!UICONTROL additionalProperties]" schema to describe the type of values contained in the 'map'. A 'map' in XDM can contain only a single data type. Values may be any valid XDM schema definition, including an array or an object, or as a reference to another schema (via $ref).<br/><br/>Map field with values of type 'string':
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "additionalProperties":{
-            "type": "string"
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "object",
+  "additionalProperties":{
+    "type": "string"
+  }
+}</pre>
     Map field with values being an array of strings:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "additionalProperties":{
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "object",
+  "additionalProperties":{
+    "type": "array",
+    "items": {
+      "type": "string"
+    }
+  }
+}</pre>
     Map field that references another schema:
       <pre class="JSON language-JSON hljs">
-        "sampleField": {
-          "type": "object",
-          "additionalProperties":{
-            "$ref": "id"
-          }
-        }
-      </pre>
+"sampleField": {
+  "type": "object",
+  "additionalProperties":{
+    "$ref": "id"
+  }
+}</pre>
       Where "id" is the {id} of the reference schema.
     </td>
   </tr>
