@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;segment evaluation;Segmentation Service;segmentation;Segmentation;evaluate a segment;access segment results;evaluate and access segment;
 solution: Experience Platform
-title: Evaluate a segment
+title: Evaluate and Access Segment Results
 topic: tutorial
 type: Tutorial
-description: This document provides a tutorial for evaluating segments and accessing segment results using the Segmentation API.
+description: Follow this tutorial to learn how to evaluate segments and access segment results using the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Evaluate and access segment results

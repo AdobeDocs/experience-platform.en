@@ -12,7 +12,7 @@ description: Data Ingestion includes batch ingestion, streaming ingestion, and i
 
 Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe [!DNL Experience Platform Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform services]. [!DNL Data Ingestion] includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../sources/home.md).
 
-## Create a source connector in the UI and API
+## Create a source connection in the UI and API
 
 Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using [!DNL Platform services]. To begin creating a source connector, see the [sources overview](../sources/home.md).
 

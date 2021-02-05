@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
-title: Data Science Workspace overview
+title: Data Science Workspace Overview
 topic: overview
-description: This guide provides an overview of the key concepts related to Data Science Workspace.
+description: This guide provides an overview of the key concepts related to Data Science Workspace in Adobe Experience Platform.
 ---
 
 # Data Science Workspace overview

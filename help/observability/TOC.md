@@ -8,7 +8,7 @@ user-guide-description: Monitor Platform activities through the use of statistic
 # Observability Insights {#observability}
 
 * [Observability Insights overview](home.md)
-* Observability Insights API developer guide {#api}
+* Observability Insights API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [Metrics](api/metrics.md)

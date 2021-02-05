@@ -1,14 +1,10 @@
 ---
 keywords: clicktale;clicktale extension;clicktale destination
-title: Clicktale extension
-seo-title: Clicktale extension
+title: Clicktale Extension Destination
 description: The Clicktale extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Clicktale extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Clicktale] extension {#clicktale-extension}
-
-## Overview {#overview}
 
 [!DNL Clicktale's] integration with Experience Platform Launch allows for deployment of [!DNL Clicktale] code and the ability to map data elements within Launch, using [!DNL Clicktale's] Visual Editor.
 

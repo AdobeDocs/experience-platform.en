@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
-title: Collect advertising data through source connectors and APIs
+title: Collect Advertising Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform through source connectors and the Flow Service API.
+description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
 ---
 
-# Collect advertising data through source connectors and APIs
+# Collect advertising data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 

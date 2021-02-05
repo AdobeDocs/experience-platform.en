@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;API;api;delete;delete dataflows
 solution: Experience Platform
-title: Delete a dataflow using the Flow Service API
+title: Delete a Dataflow Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for deleting batch and streaming dataflows using the Flow Service API.
+description: Learn how to delete batch and streaming dataflows using the Flow Service API.
 ---
 
 # Delete a dataflow using the Flow Service API
