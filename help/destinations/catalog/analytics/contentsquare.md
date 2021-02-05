@@ -1,14 +1,10 @@
 ---
 keywords: contentsquare extension;contentsquare destination;contentsquare
-title: Contentsquare extension
-seo-title: Contentsquare extension
+title: Contentsquare Extension Destination
 description: The Contentsquare extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Contentsquare extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Contentsquare] extension {#contentsquare-extension}
-
-## Overview {#overview}
 
 Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. Attribute revenue to UX and content elements for each Analytics segment and Target test. Install the [!DNL Contentsquare] tag, setup custom variables and events. Start gathering data for your UX analysis in a few clicks.
 

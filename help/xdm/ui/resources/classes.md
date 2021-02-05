@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
 solution: Experience Platform
-title: Create and edit classes in the UI
+title: Create and Edit Classes in the UI
 description: Learn how to create and edit classes in the Experience Platform user interface.
 topic: user guide
 ---
@@ -46,9 +46,9 @@ You can now start [adding fields to the class](#add-fields), which will be share
 
 >[!NOTE]
 >
->Only custom classes defined by your organization can be edited.
+>Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
->In addition, once a class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+>Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
 To edit an existing class, select the **[!UICONTROL Browse]** tab, and then select the name of a schema that employs the class you want to edit.
 

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Identity Graph Viewer Overview
 topic: tutorial
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
-# (Beta) Identity graph viewer
+# (Beta) Identity graph viewer overview
 
 >[!NOTE]
 >
@@ -93,7 +93,7 @@ The following section provides additional information for working with the ident
 Errors may happen when accessing the identity graph viewer. The following is a list of prerequisites and limitations to take note of when working with the identity graph viewer.
 
 - An identity value must exist in the selected namespace.
-- The identity graph viewer requires a minimum of two linked identities to generate.
+- The identity graph viewer requires a minimum of two linked identities to generate. It is possible that there is only one identity value and no linked identities, and in this case, the value would only exist in [!DNL Profile] viewer.
 - The identity graph viewer cannot exceed the maximum of 150 identities.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)

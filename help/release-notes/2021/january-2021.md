@@ -32,6 +32,12 @@ For more information, please see the [[!DNL Data Prep] overview](../../data-prep
 
 [!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
+
 **New features**
 
 | Feature | Description |

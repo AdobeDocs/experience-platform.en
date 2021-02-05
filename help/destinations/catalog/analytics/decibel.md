@@ -1,14 +1,10 @@
 ---
 keywords: decibel extension;decibel;decibel destination
-title: Decibel extension
-seo-title: Decibel extension
+title: Decibel Extension Destination
 description: The Decibel extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Decibel extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Decibel] extension {#decibel-extension}
-
-## Overview {#overview}
 
 Quickly and seamlessly deploy [!DNL Decibel] on your web properties. Additional advanced configurations may also be deployed with rules using actions made available through the extension.
 

@@ -1,14 +1,10 @@
 ---
 keywords: branch;branch extension;branch destination
-title: Branch  extension
-seo-title: Branch  extension
+title: Branch Extension Destination
 description: The Branch extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Branch extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Branch] extension {#branch-extension}
-
-## Overview {#overview}
 
 Branch provides powerful links and solutions that help you acquire, engage, and measure across all devices, channels, and platforms.
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;MariaDB;mariadb
 solution: Experience Platform
-title: Create a MariaDB connector using the Flow Service API
+title: Create a MariaDB Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform] to MariaDB.
+description: Learn how to connect Adobe Experience Platform to MariaDB using the Flow Service API.
 ---
 
-# Create a [!DNL MariaDB] connector using the [!DNL Flow Service] API
+# Create a [!DNL MariaDB] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
-title: MySQL connector
+title: MySQL Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect MySQL to Platform using APIs or the user interface.
+description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) MySQL connector
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect MySQL to [!DNL Pl
 
 ## Connect MySQL to [!DNL Platform] using APIs
 
-- [Create a MySQL connector using the Flow Service API](../../tutorials/api/create/databases/mysql.md)
+- [Create a MySQL source connection using the Flow Service API](../../tutorials/api/create/databases/mysql.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect MySQL to [!DNL Platform] using the UI
 
-- [Create a MySQL source connector in the UI](../../tutorials/ui/create/databases/mysql.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a MySQL source connection in the UI](../../tutorials/ui/create/databases/mysql.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

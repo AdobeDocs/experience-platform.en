@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;API;api;
-title: Adobe Experience Platform Segmentation Service developer guide
+title: Segmentation Service API Guide
 topic: guide
-description: This overview document provides high-level introductions to each of the Segmentation Service API endpoints, and links to the associated endpoint guides for details.
+description: The Segmentation Service API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
-# Adobe Experience Platform [!DNL Segmentation Service] API developer guide
+# Segmentation Service API guide
 
 [!DNL Adobe Experience Platform Segmentation Service] allows you to build segments and generate audiences in [!DNL Adobe Experience Platform] from your [!DNL Real-time Customer Profile] data.
 

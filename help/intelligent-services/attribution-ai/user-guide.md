@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;user guide;attribution ai;popular topics;region
 solution: Experience Platform, Intelligent Services
-title: Attribution AI user guide
+title: Attribution AI UI Guide
 topic: User guide 
 description: This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 
 ---
 
-# Attribution AI user guide
+# Attribution AI UI guide
 
 Attribution AI, as part of Intelligent Services is a multi-channel, algorithmic attribution service that calculates the influence and incremental impact of customer interactions against specified outcomes. With Attribution AI, marketers can measure and optimize marketing and advertising spend by understanding the impact of every individual customer interaction across each phase of the customers’ journeys.
 
