@@ -152,7 +152,7 @@ The following table outlines how each XDM type is represented in JSON Schema, an
 
 ### Scala, .NET, and CosmosDB
 
-| XDM type | Scala | .NET | CosmosDB 
+| XDM type | Scala | .NET | CosmosDB |
 | --- | --- | --- | --- |
 | [!UICONTROL String] | `String` | `System.String` | `String` |
 | [!UICONTROL Double] | `Double` | `System.Double` | `Number` |
