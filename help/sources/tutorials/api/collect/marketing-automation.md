@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
-title: Collect marketing automation data through source connectors and APIs
+title: Collect Marketing Automation Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them into Adobe Experience Platform using source connectors and APIs.
 ---
 
-# Collect marketing automation data through source connectors and APIs
+# Collect marketing automation data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party marketing automation system and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -80,7 +80,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "HubSpot source connection",
-        "connectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
+        "baseConnectionId": "c6d4ee17-6752-4e83-94ee-1767522e83fa",
         "description": "HubSpot source connection",
         "data": {
             "format": "tabular",
@@ -97,7 +97,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId` | The unique connection ID of the third-party marketing automation system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party marketing automation system you are accessing. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id`| The connection specification ID of your marketing automation system. |
 

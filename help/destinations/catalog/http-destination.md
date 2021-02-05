@@ -1,18 +1,14 @@
 ---
 keywords: streaming;
-title: The HTTP destination is an Adobe Experience Platform destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is an Adobe Experience Platform  destination that helps you send profile data to third-party HTTP endpoints.
+title: HTTP Connection Destination
+description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 ---
 
-# (Alpha) [!DNL HTTP] Destination 
+# (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 

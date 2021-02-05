@@ -1,15 +1,11 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
-title: Social Network Destinations Workflow
+title: Create a Social Network Destination
 type: Tutorial
-seo-title: Social Network Destinations Workflow
-description: Instructions to connect to your social network ad accounts
-seo-description: Instructions to connect to your social network ad accounts
+description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
 ---
 
-# Social Network destinations authentication workflow {#social-network-destinations-workflow}
-
-## Workflow to create social network destinations
+# Create a social network destination {#social-network-destinations-workflow}
 
 This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Experience Platform will be the same for all social network destinations, once more are added to the product.
 
@@ -41,7 +37,6 @@ Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
 >[!IMPORTANT]
 >
-> * The *Single Identity Personalization* marketing use case is selected by default for social network destinations and cannot be removed. 
 > * For [!DNL Facebook] destinations. **[!UICONTROL Account ID]** is your [!DNL Facebook Ad Account ID]. You can find this ID in the [!DNL Facebook Ads Manager]. Prefix the ID with `act_` as shown below: 
 
 ![Connect to social network destination - setup step](../../assets/catalog/social/workflow/setup.png)

@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Governance, privacy, and security in Adobe Experience Platform
+title: Governance, Privacy, and Security Overview
 topic: overview
-description: Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 ---
 
 # Governance, privacy, and security in Adobe Experience Platform
@@ -50,9 +50,11 @@ See the [Privacy Service overview](../../privacy-service/home.md) for more infor
 
 ### Consent processing {#consent}
 
-Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform provides a standardized method for capturing granular customer consents and preferences and including them in customer profiles whenever a customer opts in or opts out.
+Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform allows you to capture consent information in individual customer profiles and use those preferences as a determining factor in how each customer's data is used in downstream Platform workflows.
 
-For more information on consent processing in Experience Platform, see the [consent processing overview](./consent/overview.md).
+To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](./consent/overview.md).
+
+For information on how process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
 
 ## Security {#security}
 

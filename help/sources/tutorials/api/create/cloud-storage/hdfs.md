@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Apache Hadoop Distributed File System;Apache hadoop;hdfs;HDFS
 solution: Experience Platform
-title: Create an Apache HDFS connector using the Flow Service API
+title: Create an Apache HDFS Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect an Apache Hadoop Distributed File System (hereinafter referred to as "HDFS") to Experience Platform.
+description: Learn how to connect an Apache Hadoop Distributed File System to Adobe Experience Platform using the Flow Service API.
 ---
 
-# Create an [!DNL Apache] HDFS connector using the [!DNL Flow Service] API
+# Create an [!DNL Apache] HDFS source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

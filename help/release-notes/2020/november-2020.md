@@ -96,7 +96,7 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 | ------- | ----------- |
 | [!DNL JupyterLab] Recipe Builder template | Notebook to recipe requirements usage and versions updated. [!DNL Python] ML Runtime base image has been updated to use [!DNL Python] 3.6.7 and a [!DNL Conda] environment exclusively. |
 
-For more information, please read the document on [creating a recipe using Jupyter notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+For more information, please read the document on [creating a recipe using Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Service {#destinations}
 

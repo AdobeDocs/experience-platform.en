@@ -8,7 +8,7 @@ user-guide-description: Dataflows are a representation of data jobs that move da
 # Dataflows {#dataflows}
 
 - [Dataflows overview](./home.md)
-- API tutorials {#api}
+- API guides {#api}
   - [Monitor dataflows](./api/monitor.md)
 - UI guides {#ui}
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)

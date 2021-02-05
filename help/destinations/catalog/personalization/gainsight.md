@@ -1,14 +1,10 @@
 ---
 keywords: foresee;foresee extension;foresee destination
-title: Gainsight extension
-seo-title: Gainsight extension
+title: Gainsight Extension Destination
 description: The Gainsight extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Gainsight extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Gainsight] extension {#gainsight-extension}
-
-## Overview {#overview}
 
 [!DNL Gainsight] empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
 
