@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: Demographic Details mixin
+title: Demographic Details Mixin
 topic: overview
 description: This document provides an overview of the Demographic Details mixin.
 ---

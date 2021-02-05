@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;product profile
 solution: Experience Platform
-title: Manage details and additional services for a product profile
+title: Manage Details and Additional Services for a Product Profile
 topic: user guide
 description: This document covers the necessary steps needed to manage details and additional services for a product profile in the Adobe Admin Console. You can configure a profile's details and access to additional services from within the Profile Settings menu.
 ---

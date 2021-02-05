@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics; flow service; update connections
 solution: Experience Platform
-title: Update connection information using the Flow Service API
+title: Update Connection Information Using the Flow Service API
 topic: overview
 type: Tutorial
 description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.

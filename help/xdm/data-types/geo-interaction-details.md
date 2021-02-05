@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
 solution: Experience Platform
-title: Geo interaction details data type
+title: Geo Interaction Details Data Type
 topic: overview
 description: This document provides an overview of the Geo Interaction Details XDM data type.
 ---

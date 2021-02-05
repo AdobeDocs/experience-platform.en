@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Data Lake Storage Gen2;azure data lake storage;Azure
 solution: Experience Platform
-title: Create an Azure Data Lake Storage Gen2 connector using the Flow Service API
+title: Create an Azure Data Lake Storage Gen2 Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Azure Data Lake Storage Gen2 (hereinafter referred to as "ADLS Gen2").
+description: Learn how to connect Adobe Experience Platform to Azure Data Lake Storage Gen2 using the Flow Service API.
 ---
 
-# Create an [!DNL Azure] Data Lake Storage Gen2 connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure] Data Lake Storage Gen2 source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -20,7 +20,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully create an ADLS Gen2 source connector using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully create an ADLS Gen2 source connection using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 

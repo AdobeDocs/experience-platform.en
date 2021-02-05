@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
-title: Configure a dataflow for a CRM connector in the UI
+title: Configure a Dataflow for a CRM Source Connection in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your CRM account.
 ---
 
-# Configure a dataflow for a CRM connector in the UI
+# Configure a dataflow for a CRM connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM account.
 

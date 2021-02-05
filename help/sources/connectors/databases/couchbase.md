@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
-title: Couchbase connector
+title: Couchbase Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Couchbase to Platform using APIs or the user interface.
+description: Learn how to connect Couchbase to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Couchbase] connector
@@ -22,11 +22,11 @@ The documentation below provides information on how to connect [!DNL Couchbase] 
 
 ## Connect [!DNL Couchbase] to [!DNL Platform] using APIs
 
-- [Create a Couchbase connector using the Flow Service API](../../tutorials/api/create/databases/couchbase.md)
+- [Create a Couchbase source connection using the Flow Service API](../../tutorials/api/create/databases/couchbase.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Couchbase] to [!DNL Platform] using the UI
 
-- [Create a Couchbase source connector in the UI](../../tutorials/ui/create/databases/couchbase.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Couchbase source connection in the UI](../../tutorials/ui/create/databases/couchbase.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

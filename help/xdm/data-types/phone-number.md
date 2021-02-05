@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
 solution: Experience Platform
-title: Phone number data type
+title: Phone Number Data Type
 topic: overview
 description: This document provides an overview of the Phone Number XDM data type.
 ---

@@ -1,12 +1,12 @@
 ---
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
-title: Privacy in Real-time Customer Data Profile
-seo-title: Privacy in Real-time Customer Data Profile
-description: Real-time Customer Data Profile allows you to streamline the process of keeping your data operations compliant with privacy regulations.
-seo-description: Real-time Customer Data Profile allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+title: Privacy in Real-time Customer Data Platform
+seo-title: Privacy in Real-time Customer Data Platform
+description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 ---
 
-# Privacy in [!DNL Real-time CDP]
+# Privacy in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) helps marketers bring data from multiple enterprise systems together, allowing them to better identify, understand, and engage their customers. Adobe holds consumer data privacy as a fundamental design principle and provides various controls to help marketers manage the data privacy of their customers.
 

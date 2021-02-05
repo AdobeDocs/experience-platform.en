@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: Create an Azure Blob connector using the Flow Service API
+title: Create an Azure Blob Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Blob (hereinafter referred to as "Blob") storage.
+description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 ---
 
-# Create an [!DNL Azure Blob] connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure Blob] source connection using the [!DNL Flow Service] API
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Azure Blob] (hereinafter referred to as "Blob") to Experience Platform.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Azure Blob] (hereinafter referred to as "Blob") to Adobe Experience Platform.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully create a [!DNL Blob] source connector using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully create a [!DNL Blob] source connection using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
