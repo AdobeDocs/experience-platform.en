@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Create a Salesforce Service Cloud source connector in the UI
+title: Create a Salesforce Service Cloud  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Salesforce Service Cloud (hereinafter referred to as "SSC") source connector using the Platform user interface.
+description: Learn how to create a Salesforce Service Cloud source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL Salesforce Service Cloud] source connector in the UI
+# Create a [!DNL Salesforce Service Cloud] source connection in the UI
 
 >[!NOTE]
 >

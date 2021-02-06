@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
-title: Create an Azure File Storage connector using the Flow Service API
+title: Create an Azure File Storage Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Azure File Storage to Experience Platform.
+description: Learn how to connect Azure File Storage to Adobe Experience Platform using the Flow Service API.
 ---
 
-# Create an [!DNL Azure File Storage] connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure File Storage] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

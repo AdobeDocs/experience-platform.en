@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;CRM;crm;crm flow service
 solution: Experience Platform
-title: Explore a CRM system using the Flow Service API
+title: Explore a CRM System Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore CRM systems.
 

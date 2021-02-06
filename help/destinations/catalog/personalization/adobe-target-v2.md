@@ -1,14 +1,10 @@
 ---
 keywords: target extension;target;target v2;target v2 extension
-title: Adobe Target v2 extension
-seo-title: Adobe Target v2 extension
+title: Adobe Target v2 Extension Destination
 description: The Adobe Target v2 extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adobe Target v2 extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Adobe Target v2 Extension {#adobe-target-v2-extension}
-
-## Overview {#overview}
+# Adobe Target v2 extension {#adobe-target-v2-extension}
 
 Adobe Target is the Adobe Experience Cloud solution that provides everything you need to tailor and personalize your customers' experience to maximize revenue on your web and mobile sites, apps, social media, and other digital channels.
 

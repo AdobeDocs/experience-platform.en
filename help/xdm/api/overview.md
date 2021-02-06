@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
-title: Schema Registry API developer guide
-description: The Schema Registry API allows you to programmatically manage all schemas and related XDM resources available to you within Experience Platform. 
+title: Schema Registry API Guide
+description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 topic: developer guide
 ---
 
-# [!DNL Schema Registry] API developer guide
+# [!DNL Schema Registry] API guide
 
 The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 

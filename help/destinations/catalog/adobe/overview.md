@@ -1,12 +1,10 @@
 ---
 keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
-title: Adobe Destinations
-seo-title: Adobe Destinations
+title: Adobe Destinations Overview
 description: Manage your customer experience by connecting your data in Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
-seo-description: Manage your customer experience by connecting your data in Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 ---
 
-# Adobe Destinations {#adobe-destinations}
+# Adobe destinations overview {#adobe-destinations}
 
 Manage your customer experience by connecting your data in Adobe Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more.
 

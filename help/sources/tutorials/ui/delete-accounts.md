@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics; delete accounts
 description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for deleting accounts from the Sources workspace.
 solution: Experience Platform
-title: Delete accounts
+title: Delete Source Connection Accounts in the UI
 topic: overview
 type: Tutorial
 ---
 
-# Delete accounts
+# Delete source connection accounts
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for deleting accounts from the **[!UICONTROL Sources]** workspace.
 

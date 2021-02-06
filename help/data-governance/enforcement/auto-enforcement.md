@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
-title: Automatic policy enforcement
+title: Automatic Policy Enforcement
 topic: guide
 description: This document covers how data usage policies are automatically enforced when activating segments to destinations in Experience Platform.
 ---

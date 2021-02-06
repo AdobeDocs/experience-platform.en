@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;generate datasets;generate dataset;create dataset;
 solution: Experience Platform
-title: Generate datasets from query results
+title: Generate Datasets from Results in Query Service
 topic: queries
 type: Tutorial
-description: Query Service allows the creation of datasets from the UI. After a dataset is created, it can be accessed like any other dataset in the Data Lake and used for a variety of use cases. 
+description: Adobe Experience Platform Query Service allows the creation of datasets from the UI. After a dataset is created, it can be accessed like any other dataset in the Data Lake and used for a variety of use cases. 
 ---
 
-# Generate datasets from query results
+# Generate datasets from results in Query Service
 
 The true power of [!DNL Query Service] is revealed when queries are used to generate datasets in the [!DNL Data Lake] to be used as input into more queries or in other services such as [!DNL Data Science Workspace], [!DNL Real-time Customer Profile], or [!DNL Analysis Workspace]. 
 
