@@ -11,7 +11,7 @@ In order to ingest data into Adobe Experience Platform, the format and structure
 
 For any schema that you define in the Experience Platform UI, you can generate a sample JSON object that conforms to the schema's structure. This object can serve as a template for any data that is ingested into datasets that employ the schema in question.
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Under the **[!UICONTROL Browse]** tab, locate the schema that you want to generate sample data for. Select it from the list, and the right rail updates to show details about the schema. From here, select **[!UICONTROL Download sample file].**
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Under the **[!UICONTROL Browse]** tab, locate the schema that you want to generate sample data for. Select it from the list, and the right rail updates to show details about the schema. From here, select **[!UICONTROL Download sample file]**.
 
 ![](../images/ui/sample/sample-data.png)
 
