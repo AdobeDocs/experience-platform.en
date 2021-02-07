@@ -17,7 +17,7 @@ The CSP needs to reflect how [!DNL Platform Web SDK] is deployed and configured.
 
 The following examples show how to configure a CSP.
 
-### Allow access to the edgedomain
+### Allow access to the edge domain
 
 ```
 default-src 'self';
