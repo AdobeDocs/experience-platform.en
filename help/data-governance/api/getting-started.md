@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;DULE;dule
 solution: Experience Platform
-title: Getting started with the Policy Service API
+title: Getting Started with the Policy Service API
 topic: developer guide
 description: The Policy Service API allows you to create and manage various resources related to Adobe Experience Platform Data Governance. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Policy Service API.
 ---

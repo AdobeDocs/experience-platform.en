@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;HP Vertica
 solution: Experience Platform
-title: Create an HP Vertica source connector in the UI
+title: Create an HP Vertica  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating an HP Vertica source connector using the Platform user interface.
+description: Learn how to create an HP Vertica source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an HP [!DNL Vertica] source connector in the UI
+# Create an HP [!DNL Vertica] source connection in the UI
 
 >[!NOTE]
 >

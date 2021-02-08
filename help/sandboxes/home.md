@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox;Sandbox;testing;Testing
 solution: Experience Platform
-title: Sandboxes overview
+title: Sandboxes Overview
 topic: overview
 description: Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications.
 ---

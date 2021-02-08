@@ -1,12 +1,10 @@
 ---
 keywords: cloud storage destination;cloud storage
-title: Cloud storage destinations
-seo-title: Cloud storage destinations
-description: Platform can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
-seo-description: Platform can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
+title: Cloud Storage Destinations Overview
+description: Adobe Experience Platform can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
 ---
 
-# Cloud storage destinations {#cloud-storage-destinations}
+# Cloud storage destinations overview {#cloud-storage-destinations}
 
 Adobe Experience Platform can deliver your segments as data files to your cloud storage locations. This enables you to send audiences and their profile attributes to your internal systems, via CSV or tab-delimited files for [!DNL Amazon S3] and SFTP. For [!DNL AWS Kinesis] and [!DNL Azure Event Hubs] destinations, data is streamed out of Experience Platform in JSON format.
 

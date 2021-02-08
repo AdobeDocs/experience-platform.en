@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
 solution: Experience Platform
-title: Create and edit classes in the UI
+title: Create and Edit Classes in the UI
 description: Learn how to create and edit classes in the Experience Platform user interface.
 topic: user guide
 ---

@@ -1,14 +1,10 @@
 ---
 keywords: advertising; the trade desk;
-title: The Trade Desk Destination
-seo-title: The Trade Desk Destination
+title: The Trade Desk Connection Destination
 description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
-seo-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
 ---
 
-# [!DNL The Trade Desk] destination 
-
-## Overview {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
 

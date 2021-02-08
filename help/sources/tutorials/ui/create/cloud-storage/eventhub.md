@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Event Hubs;Event Hubs;azure event hubs
 solution: Experience Platform
-title: Create an Azure Event Hubs source connector in the UI
+title: Create an Azure Event Hubs  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for authenticating an Azure Event Hubs (hereinafter referred to as "Event Hubs") source connector using the Platform user interface.
+description: Learn how to create an Azure Event Hubs source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Azure Event Hubs] source connector in the UI
+# Create an [!DNL Azure Event Hubs] source connection in the UI
 
 >[!NOTE]
 >
