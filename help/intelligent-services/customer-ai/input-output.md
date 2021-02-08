@@ -115,7 +115,7 @@ In this example, the following three event types order, checkouts, and purchases
 - webVisit
 - search
 
-Additionally, you may also want to use some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
+Additionally, for an accurate model it is suggested that you make use of some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
 
 **Additional recommended standard event types:**
 
@@ -162,7 +162,7 @@ Any of the remaining [event types](#standard-events) might be required based on 
 - webVisit
 - search
 
-Additionally, you may also want to use some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
+Additionally, for an accurate model it is suggested that you make use of some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
 
 **Additional recommended standard event types:**
 
