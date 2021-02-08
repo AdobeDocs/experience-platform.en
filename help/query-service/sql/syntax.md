@@ -30,33 +30,40 @@ SELECT [ ALL | DISTINCT [( expression [, ...] ) ] ]
     [ OFFSET start ]
 ```
 
-where `from_item` can be one of:
+where `from_item` can be one of the following options:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
-    with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
-    from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
+
+[ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
+
+with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+
+from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
-and `grouping_element` can be one of:
+and `grouping_element` can be one of the following options:
 
 ```sql
 ( )
-    expression
-    ( expression [, ...] )
-    ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
-    CUBE ( { expression | ( expression [, ...] ) } [, ...] )
-    GROUPING SETS ( grouping_element [, ...] )
+
+expression
+
+( expression [, ...] )
+
+ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
+
+CUBE ( { expression | ( expression [, ...] ) } [, ...] )
+
+GROUPING SETS ( grouping_element [, ...] )
 ```
 
 and `with_query` is:
 
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
- 
-TABLE [ ONLY ] table_name [ * ]
 ```
+
 
 The following sub-sections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
 
@@ -90,7 +97,7 @@ Please note that a `SNAPSHOT` clause works with a table or table alias but not o
 
 Additionally, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
-### WHERE ILIKE clause
+### WHERE clause
 
 By default, matches produced by a `WHERE` clause on a `SELECT` query are case-sensitive. If you want matches to be case-insensitive, you can use the keyword `ILIKE` instead of `LIKE`.
 
