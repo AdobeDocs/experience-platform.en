@@ -14,8 +14,8 @@ The tables below contains the mappings between the Marketo opportunities dataset
 >
 >The `mktoCdpSourceCampaignId` source dataset and its corresponding `campaignID` XDM target field are only available to customers with the Salesforce integration.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
 | `Opportunity-key` | `opportunityID` |
 | `Account-key` | `accountID` |
 | `description` | `opportunityDescription` |
@@ -35,7 +35,7 @@ The tables below contains the mappings between the Marketo opportunities dataset
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` |
+| `mktoCdpSourceCampaignId` | `campaignID` | This mapping is available only to customers with a Salesforce integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
