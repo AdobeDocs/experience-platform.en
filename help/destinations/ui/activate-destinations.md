@@ -1,6 +1,6 @@
 ---
 keywords: activate destination;activate destinations;activate data
-title: Activate profiles and segments to a destination
+title: Activate Profiles and Segments to a Destination
 type: Tutorial
 seo-title: Activate profiles and segments to a destination
 description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.

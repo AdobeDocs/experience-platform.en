@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Apache Spark;apache spark;Azure HDInsights;azure hdinsights
 solution: Experience Platform
-title: Apache Spark on Azure HDInsights connector
+title: Apache Spark on Azure HDInsights Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Apache Spark on Azure HDInsights to Platform using APIs or the user interface.
+description: Learn how to connect Apache Spark on Azure HDInsights to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Apache Spark] on [!DNL Azure HDInsights] connector
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Apache Spar
 
 ## Connect [!DNL Apache Spark] on [!DNL Azure HDInsights] to [!DNL Platform] using APIs
 
-- [Create a Apache Spark on Azure HDInsights connector using the Flow Service API](../../tutorials/api/create/databases/spark.md)
+- [Create a Apache Spark on Azure HDInsights source connection using the Flow Service API](../../tutorials/api/create/databases/spark.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Apache Spark] on [!DNL Azure HDInsights] to [!DNL Platform] using the UI
 
-- [Create a Apache Spark on Azure HDInsights source connector in the UI](../../tutorials/ui/create/databases/spark.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Apache Spark on Azure HDInsights source connection in the UI](../../tutorials/ui/create/databases/spark.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;circle;datatype;data-type;data type;
 solution: Experience Platform
-title: Geo Circle data type
+title: Geo Circle Data Type
 topic: overview
 description: This document provides an overview of the Geo Circle XDM data type.
 ---

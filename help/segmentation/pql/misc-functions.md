@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;miscellaneous functions;misc;
 solution: Experience Platform
-title: Miscellaneous functions
+title: PQL Miscellaneous Functions
 topic: developer guide
 description: The following function is a miscellaneous function for Profile Query Language (PQL).
 ---

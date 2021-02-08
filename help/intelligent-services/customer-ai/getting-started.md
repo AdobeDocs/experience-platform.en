@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Getting started in Customer AI
+title: Getting Started in Customer AI
 topic: Getting started
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
 ---

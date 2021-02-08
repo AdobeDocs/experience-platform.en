@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;insights;sensei machine learning api
 solution: Experience Platform
-title: Insights
+title: Insights API Endpoint
 topic: Developer guide
 description: Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
 ---
 
-# Insights
+# Insights endpoint
 
 Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
 

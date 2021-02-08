@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
-title: Create a ServiceNow connector using the Flow Service API
+title: Create a ServiceNow Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to a ServiceNow server.
+description: Learn how to connect Adobe Experience Platform to a ServiceNow server using the Flow Service API.
 ---
 
-# Create a [!DNL ServiceNow] connector using the [!DNL Flow Service] API
+# Create a [!DNL ServiceNow] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

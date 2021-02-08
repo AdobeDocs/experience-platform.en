@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
-title: SQL Server connector
+title: SQL Server Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Microsoft SQL Server to Platform using APIs or the user interface.
+description: Learn how to connect Microsoft SQL Server to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Microsoft] SQL Server connector
@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL Microsoft] 
 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using APIs
 
-- [Create a Microsoft SQL Server connector using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
+- [Create a Microsoft SQL Server source connection using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using the UI
 
-- [Create a Microsoft SQL Server source connector in the UI](../../tutorials/ui/create/databases/sql-server.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Microsoft SQL Server source connection in the UI](../../tutorials/ui/create/databases/sql-server.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
