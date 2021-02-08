@@ -34,18 +34,18 @@ To learn more about XDM and its role in Platform, please see the [XDM System ove
 
 To establish a source connection between Marketo and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
 
-See the following documents for detailed information on the field mapping rules between Marketo datasets and Platform:
+For more information on mapping rules for Marketo datasets, open the **Mappings** folder and select the dataset you want to use.
 
-* [Activities](./marketo-mapping/activities.md)
-* [Campaigns](./marketo-mapping/campaigns.md)
-* [Campaign memberships](./marketo-mapping/campaign-memberships.md)
-* [Companies](./marketo-mapping/companies.md)
-* [Marketing lists](./marketo-mapping/marketing-lists.md)
-* [Marketing list memberships](./marketo-mapping/marketing-list-memberships.md)
-* [Named Accounts](./marketo-mapping/named-accounts.md)
-* [Opportunities](./marketo-mapping/opportunities.md)
-* [Opportunity person relations](./marketo-mapping/opportunity-person-relations.md)
-* [Persons](./marketo-mapping/persons.md)
+* Activities
+* Campaigns
+* Campaign memberships
+* Companies
+* Marketing lists
+* Marketing list memberships
+* Named Accounts
+* Opportunities
+* Opportunity person relations
+* Persons
 
 ## Expected latency of Marketo data on Platform
 
