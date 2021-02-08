@@ -12,7 +12,7 @@ The following document outlines the different input and outputs utilized in Cust
 
 ## Customer AI input data
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of [XDM data types](../../xdm/schema/composition.md).
+Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on creating the Consumer Experience Event dataset, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of [XDM data types](../../xdm/schema/composition.md).
 
 Data types provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
 
@@ -24,7 +24,7 @@ It is not necessary to have data for each of the standard events listed below bu
 
 ### Standard events {#standard-events}
 
-XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change. It is suggested that you add the data types listed below in the form of XDM mixins. 
+XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
 To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Data types]** tab.
 
