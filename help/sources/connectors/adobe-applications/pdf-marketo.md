@@ -51,11 +51,10 @@ See the following documents for detailed information on the field mapping rules 
 
 The following table outlines the expected latency for bringing Marketo data into Platform, based on the nature of ingestion and the desired destination:
 
-| Marketo Data | Expected Latency |
-| ------------ | ---------------- |
-| New streaming data to Data Lake | < 1 minute |
-| New batch data to Data Lake | < 5 minutes |
-| New data to B2B CDP | < 15 minutes |
+| Destination | Expected Latency |
+| ----------- | ---------------- |
+| Real-time Customer Profile | < 1 minute |
+| Data Lake | < 60 minutes |
 
 ## Connect Marketo to Platform
 

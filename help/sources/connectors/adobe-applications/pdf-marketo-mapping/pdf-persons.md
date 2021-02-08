@@ -10,8 +10,8 @@ description: The table below contains the mappings between the Marketo Persons d
 
 The table below contains the mappings between the Marketo persons dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
 | `Person-key` | `personID` |
 | `DunsNumber` | `b2b.leadOrganization.DUNSNumber` |
 | `NaicsCode` | `b2b.leadOrganization.NAICSCode` |
@@ -19,7 +19,7 @@ The table below contains the mappings between the Marketo persons dataset and th
 | `sicCode` | `b2b.leadOrganization.SICCode` |
 | `SicDesc` | `b2b.leadOrganization.SICDescription` |
 | `industry` | `b2b.leadOrganization.industry` |
-| `Jigsaw` | `b2b.leadOrganization.jigsaw` |
+| `Jigsaw` | `b2b.leadOrganization.jigsaw` | This mapping is available only with a Salesforce integration. |
 | `numberOfEmployees` | `b2b.leadOrganization.numberOfEmployees` |
 | `website` | `b2b.leadOrganization.website` |
 | `emailSuspended` | `b2b.personOptInOut._channels.email` |
@@ -61,13 +61,13 @@ The table below contains the mappings between the Marketo persons dataset and th
 | `inferredPostalCode` | `personComponents.personSegmentTraits.inferredAddress.postalCode` |
 | `inferredStateRegion` | `personComponents.personSegmentTraits.inferredAddress.state` |
 | `annualRevenue` | `personComponents.personSegmentTraits.leadOrganization.annualRevenue.amount` |
-| `DunsNumber` | `personComponents.personSegmentTraits.leadOrganization.DUNSNumber` |
-| `NaicsCode` | `personComponents.personSegmentTraits.leadOrganization.NAICSCode` |
-| `NaicsDesc` | `personComponents.personSegmentTraits.leadOrganization.NAICSDescription` |
+| `DunsNumber` | `personComponents.personSegmentTraits.leadOrganization.DUNSNumber` | This mapping is available only with a Salesforce integration. |
+| `NaicsCode` | `personComponents.personSegmentTraits.leadOrganization.NAICSCode` | This mapping is available only with a Salesforce integration. |
+| `NaicsDesc` | `personComponents.personSegmentTraits.leadOrganization.NAICSDescription` | This mapping is available only with a Salesforce integration. |
 | `sicCode` | `personComponents.personSegmentTraits.leadOrganization.SICCode` |
-| `SicDesc` | `personComponents.personSegmentTraits.leadOrganization.SICDescription` |
+| `SicDesc` | `personComponents.personSegmentTraits.leadOrganization.SICDescription` | This mapping is available only with a Salesforce integration. |
 | `industry` | `personComponents.personSegmentTraits.leadOrganization.industry` |
-| `Jigsaw` | `personComponents.personSegmentTraits.leadOrganization.jigsaw` |
+| `Jigsaw` | `personComponents.personSegmentTraits.leadOrganization.jigsaw` | This mapping is available only with a Salesforce integration. |
 | `numberOfEmployees` | `personComponents.personSegmentTraits.leadOrganization.numberOfEmployees` |
 | `website` | `personComponents.personSegmentTraits.leadOrganization.website` |
 | `inferredCompany` | `personComponents.personSegmentTraits.inferredCompany` |
@@ -80,7 +80,7 @@ The table below contains the mappings between the Marketo persons dataset and th
 | `Account-systemID` | `personComponents.sourceAccountID.systemID` |
 | `Account-ID` | `personComponents.sourceAccountID.ID` |
 | `Account-key` | `personComponents.sourceAccountID.key` |
-| `sfdcContactId` | `personComponents.sourceExternalID.ID` |
+| `sfdcContactId` | `personComponents.sourceExternalID.ID` | This mapping is available only with a Salesforce integration. |
 | `Person-systemID` | `personComponents.sourcePersonID.systemID` |
 | `Person-ID` | `personComponents.sourcePersonID.ID` |
 | `Person-key` | `personComponents.sourcePersonID.key` |

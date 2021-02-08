@@ -9,6 +9,10 @@ description: This tutorial provides steps for creating a Marketo Engage source c
 
 # Create a Marketo Engage source connector in the UI
 
+>[!IMPORTANT]
+>
+>The Marketo Engage source connector is currently in alpha and you must ensure that you are using a non-production sandbox when using the connector during the alpha program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
+
 This tutorial provides steps for creating a Marketo Engage (hereinafter referred to as "Marketo") source connector in the UI to bring consumer data into Adobe Experience Platform.
 
 The following steps are covered:
