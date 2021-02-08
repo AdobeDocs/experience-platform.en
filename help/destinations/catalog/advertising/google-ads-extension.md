@@ -1,14 +1,10 @@
 ---
 keywords: Google ads;google ads;google ads extension;Google Ads extension
-title: Google Ads extension
-seo-title: Google Ads extension
+title: Google Ads Extension Destination
 description: The Google Ads extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Google Ads extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Google Ads] extension
-
-## Overview {#overview}
 
 This extension tracks conversions from users that click on your [!DNL Google Ads]. You will need to also install the gtag.js extension and add it to your library, as [!DNL Google Ads] depends on it.
 

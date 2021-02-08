@@ -1,14 +1,10 @@
 ---
 keywords: Yext Conversion Trackin;Yext;yext;yext conversion tracking
-title: Yext Conversion Tracking extension
-seo-title: Yext Conversion Tracking extension
+title: Yext Conversion Tracking Extension Destination
 description: The Yext Conversion Tracking extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Yext Conversion Tracking extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Yext Conversion Tracking] Extension {#yext-extension}
-
-## Overview {#overview}
+# [!DNL Yext Conversion Tracking] extension {#yext-extension}
 
 The [!DNL Yext Conversion Tracking] Extension allows you to measure conversions that can be attributed to your use of Yext products.
 

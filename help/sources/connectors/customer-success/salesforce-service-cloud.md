@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Salesforce Service Cloud connector
+title: Salesforce Service Cloud Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Salesforce Service Cloud to Platform using APIs or the user interface.
+description: Learn how to connect Salesforce Service Cloud to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Salesforce Service Cloud] connector
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Salesforce 
 
 ## Connect [!DNL Salesforce Service Cloud ]to [!DNL Platform] using APIs
 
-- [Create a Salesforce Service Cloud connector using the Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
+- [Create a Salesforce Service Cloud source connection using the Flow Service API](../../tutorials/api/create/customer-success/salesforce-service-cloud.md)
 - [Explore a customer success system using the Flow Service API](../../tutorials/api/explore/customer-success.md)
 - [Collect data from a customer success system using the Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## Connect [!DNL Salesforce Service Cloud] to [!DNL Platform] using the UI
 
-- [Create a Salesforce Service Cloud source connector in the UI](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
-- [Configure dataflow for a customer success connector in the UI](../../tutorials/ui/dataflow/customer-success.md)
+- [Create a Salesforce Service Cloud source connection in the UI](../../tutorials/ui/create/customer-success/salesforce-service-cloud.md)
+- [Configure dataflow for a customer success connection in the UI](../../tutorials/ui/dataflow/customer-success.md)

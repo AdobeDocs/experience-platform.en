@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Amazon Redshift;amazon redshift;Redshift;redshift
 solution: Experience Platform
-title: Create an Amazon Redshift source connector in the UI
+title: Create an Amazon Redshift  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Amazon Redshift (hereinafter referred to as "Redshift") source connector using the Platform user interface.
+description: Learn how to create a Amazon Redshift source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Amazon Redshift] source connector in the UI
+# Create an [!DNL Amazon Redshift] source connection in the UI
 
 >[!NOTE]
 >

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;identities;cluster history
 solution: Experience Platform
-title: Get cluster history of an identity
+title: Get Cluster History of an Identity
 topic: API guide
 description: Identities can move clusters over the course of various device graph runs. Identity Service provides visibility into the cluster associations of a given identity over time.
 ---

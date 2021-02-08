@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
-title: Score a model (UI)
+title: Score a Model in the Data Science Workspace UI
 topic: tutorial
 type: Tutorial
 description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 ---
 
-# Score a model (UI)
+# Score a model in the Data Science Workspace UI
 
 Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
-title: Create a Phoenix source connector in the UI
+title: Create a Phoenix  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Phoenix source connector using the Platform user interface.
+description: Learn how to create a Phoenix source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL Phoenix] source connector in the UI
+# Create a [!DNL Phoenix] source connection in the UI
 
 >[!NOTE]
 >

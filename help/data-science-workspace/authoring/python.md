@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;data access;python sdk;data access api;read python;write python
 solution: Experience Platform
-title: Accessing data using Python
+title: Accessing Data Using Python in Data Science Workspace
 topic: tutorial
 type: Tutorial
 description: The following document contains examples on how to access data in Python for use in Data Science Workspace.
 ---
 
-# Accessing data using Python 
+# Accessing data using Python in Data Science Workspace 
 
 The following document contains examples on how to access data using Python for use in Data Science Workspace. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.
 

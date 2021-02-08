@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;update accounts
 description: In some circumstances, it may be required to update the details of an existing sources account. The Sources workspace provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 solution: Experience Platform
-title: Update account details in the UI
+title: Update Source Connection Account Details in the UI
 topic: overview
 type: Tutorial
 ---

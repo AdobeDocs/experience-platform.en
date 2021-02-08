@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
 solution: Experience Platform
-title: Create a dataset for exporting an audience segment
+title: Create a Dataset for Exporting an Audience Segment
 topic: tutorial
 type: Tutorial
 description: This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the Experience Platform UI.
