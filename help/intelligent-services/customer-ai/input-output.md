@@ -12,35 +12,43 @@ The following document outlines the different input and outputs utilized in Cust
 
 ## Customer AI input data
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of XDM mixins. It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web Details` mixins.
+Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on Consumer Experience Event, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of [XDM data types](../../xdm/schema/composition.md).
 
->[!NOTE]
+Data types provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
+
+It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
+
+>[!TIP]
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-### Standard event mixins {#standard-events}
+### Standard events {#standard-events}
 
-XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
+XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change. It is suggested that you add the data types listed below in the form of XDM mixins. 
 
-| Mixin | Event type | XDM columns |
+To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Data types]** tab.
+
+| data type | Event type | XDM columns |
 | --- | --- | --- |
-| **Commerce Details** | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
+| [[!UICONTROL Commerce]](../../xdm/data-types/commerce.md) | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li>  |
 |  | checkouts | <li> commerce.checkouts.value </li> <li> productListItems.SKU </li> |
 |  | purchases | <li> commerce.purchases.value </li> <li> productListItems.SKU </li> |
 |  | productListRemovals | <li> commerce.productListRemovals.value </li> <li> productListItems.SKU </li> |
 |  | productListOpens | <li> commerce.productListOpens.value </li> <li> productListItems.SKU </li> |
 |  | productViews | <li> commerce.productViews.value </li> <li> productListItems.SKU </li> |
-| **Web Details** | webVisit | web.webPageDetails.name |
+| [[!UICONTROL Web page details]](../../xdm/data-types/webpage-details.md) | webVisit | web.webPageDetails.name |
 |  | webInteraction | web.webInteraction.linkClicks.value |
-| **Application Details** | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
+| [[!UICONTROL Application]](../../xdm/data-types/application.md) | applicationCloses | <li> application.applicationCloses.value </li> <li> application.name </li> |
 |  | applicationCrashes | <li> application.crashes.value </li> <li> application.name </li> |
 |  | applicationFeatureUsages | <li> application.featureUsages.value </li> <li> application.name </li> |
 |  | applicationFirstLaunches | <li> application.firstLaunches.value </li> <li> application.name </li> |
 |  | applicationInstalls | <li> application.installs.value </li> <li> application.name </li> |
 |  | applicationLaunches | <li> application.launches.value </li> <li> application.name </li> |
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
-| **Search Details** | search | search.keywords |
+| [[!UICONTROL Search]](../../xdm/data-types/search.md) | search | search.keywords |
+
+Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROLSubscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide as many of fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
 ### Historical data
 
@@ -70,7 +78,7 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard event mixin table](#standard-events) above for more information on the mixin and column the listed event types belong to.
+In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the data type and column the listed event types belong to.
 
 >[!NOTE]
 >
@@ -90,13 +98,8 @@ In this section, different scenarios for Customer AI instances are described as 
 
 **Additional recommended standard event types:**
 
-The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
 
-- productListViews
-- productListRemovals
-- productListOpens
-- productViews
-- webInteraction
 
 ### Scenario 2: Subscription conversion on a media streaming service website
 
@@ -112,17 +115,11 @@ In this example, the following three event types order, checkouts, and purchases
 - webVisit
 - search
 
-Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types.
+Additionally, you may also want to use some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
 
 **Additional recommended standard event types:**
 
-The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
-
-- productListViews
-- productListRemovals
-- productListOpens
-- productViews
-- webInteraction
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
 
 ### Scenario 3: Non-purchase conversion on an e-commerce retail website
 
@@ -138,13 +135,7 @@ The following recommended event types might be required based on the complexity 
 
 **Additional recommended standard event types:**
 
-The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
-
-- productListViews
-- productListRemovals
-- productListOpens
-- productViews
-- webInteraction
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
 
 ### Scenario 4: Up-sell conversion on an e-commerce retail website
 
@@ -160,13 +151,7 @@ The following recommended event types might be required based on the complexity 
 
 **Additional recommended standard event types:**
 
-The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
-
-- productListViews
-- productListRemovals
-- productListOpens
-- productViews
-- webInteraction
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
 
 ### Scenario 5: Un-subscribe (churn) on an online news outlet
 
@@ -177,16 +162,11 @@ The following recommended event types might be required based on the complexity 
 - webVisit
 - search
 
+Additionally, you may also want to use some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
+
 **Additional recommended standard event types:**
 
-The following recommended event types might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance.
-
-- productListRemovals
-- productListOpens
-- webInteraction
-
-Additionally, you may also want to use some of the available properties in the [subscription schema](https://github.com/adobe/xdm/blob/63a4a825b2acb0a8cb661d6e02ae952711fc4da6/docs/reference/datatypes/subscription.schema.md) to create a custom mixin with additional event types.
-
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
 
 ## Customer AI output data
 
