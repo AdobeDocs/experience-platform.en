@@ -145,6 +145,8 @@ The following syntax defines a `CREATE TABLE AS SELECT` (CTAS) query:
 CREATE TABLE table_name [ WITH (schema='target_schema_title', rowvalidation='false') ] AS (select_query)
 ```
 
+**Parameters**
+
  - `schema`: The title of XDM schema. Use this clause only if you wish to use an existing XDM schema for the new dataset created by the CTAS query.
  - `rowvalidation`: (Optional) Specifies if the user wants row level validation of every new batches ingested for the newly created dataset. The default value is `true`.
 - `select_query`: A `SELECT` statement. The syntax of the `SELECT` query can be found in the [SELECT queries section](#select-queries).
@@ -201,7 +203,7 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 ## CREATE VIEW
 
-The following syntax defines a `CREATE VIEW` query.
+The following syntax defines a `CREATE VIEW` query:
 
 ```sql
 CREATE VIEW view_name AS select_query
@@ -222,7 +224,7 @@ CREATE OR REPLACE VIEW V1 AS SELECT model, version FROM Inventory
 
 ## DROP VIEW
 
-The following syntax defines a `DROP VIEW` query.
+The following syntax defines a `DROP VIEW` query:
 
 ```sql
 DROP VIEW [IF EXISTS] view_name
@@ -242,7 +244,7 @@ DROP VIEW IF EXISTS v1
 
 ## [!DNL Spark] SQL commands 
 
-The following Spark SQL command is supported. 
+The sub-section below covers the Spark SQL commands supported by Query Service.
 
 ### SET
 
@@ -261,7 +263,7 @@ To return the value for any setting, use `SET [property key]` without a `propert
 
 ## PostgreSQL commands
 
-The following PostgreSQL commands are supported.
+The sub-sections below cover the PostgreSQL commands supported by Query Service.
 
 ### BEGIN
 
@@ -341,7 +343,7 @@ FORMAT { TEXT | JSON }
 **Parameters**
 
 - `ANALYZE`: If the `option` contains `ANALYZE`, the run times and other statistics are shown. 
-- `FORMAT`: If the `option` contains `FORMAT`, it specifies the output format, which can be TEXT or JSON. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
+- `FORMAT`: If the `option` contains `FORMAT`, it specifies the output format, which can be `TEXT` or `JSON`. Non-text output contains the same information as the text output format, but is easier for programs to parse. This parameter defaults to `TEXT`.
 - `statement`: Any `SELECT`, `INSERT`, `UPDATE`, `DELETE`, `VALUES`, `EXECUTE`, `DECLARE`, `CREATE TABLE AS`, or `CREATE MATERIALIZED VIEW AS` statement, whose execution plan you want to see.
 
 >[!IMPORTANT]
@@ -350,7 +352,7 @@ FORMAT { TEXT | JSON }
 
 **Example**
 
-To show the plan for a simple query on a table with a single `integer` column and 10000 rows:
+The following example shows the plan for a simple query on a table with a single `integer` column and 10000 rows:
 
 ```sql
 EXPLAIN SELECT * FROM foo;
@@ -366,7 +368,7 @@ EXPLAIN SELECT * FROM foo;
 
 ### FETCH
 
-The `FETCH` command retrieves rows using a previously-created cursor.
+The `FETCH` command retrieves rows using a previously created cursor.
 
 ```sql
 FETCH num_of_rows [ IN | FROM ] cursor_name
@@ -443,7 +445,7 @@ SELECT * INTO films_recent FROM films WHERE date_prod >= '2002-01-01';
 
 ### SHOW
 
-The `SHOW` command displays the current setting of run-time parameters. These variables can be set using the `SET` statement, by editing the postgresql.conf configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the postgres server.
+The `SHOW` command displays the current setting of runtime parameters. These variables can be set using the `SET` statement, by editing the `postgresql.conf` configuration file, through the `PGOPTIONS` environmental variable (when using libpq or a libpq-based application), or through command-line flags when starting the Postgres server.
 
 ```sql
 SHOW name
@@ -452,7 +454,7 @@ SHOW ALL
 
 **Parameters**
 
-- `name`: The name of the run-time parameter you want information about. Possible values for the run-time parameter include the following values:
+- `name`: The name of the runtime parameter you want information about. Possible values for the runtime parameter include the following values:
     - `SERVER_VERSION`: This parameter shows the server's version number.
     - `SERVER_ENCODING`: This parameter shows the server-side character set encoding.
     - `LC_COLLATE`: This parameter shows the database's locale setting for collation (text ordering). 
