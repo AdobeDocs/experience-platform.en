@@ -48,7 +48,7 @@ To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab o
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [[!UICONTROL Search]](../../xdm/data-types/search.md) | search | search.keywords |
 
-Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROLSubscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide as many of fields as possible such as, `startDate`, `endDate`, and any other relevant details.
+Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide as many of fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
 ### Historical data
 
@@ -98,7 +98,7 @@ In this section, different scenarios for Customer AI instances are described as 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
 
 ### Scenario 2: Subscription conversion on a media streaming service website
@@ -119,7 +119,7 @@ Additionally, you may also want to use some of the available properties in the [
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
 ### Scenario 3: Non-purchase conversion on an e-commerce retail website
 
@@ -135,7 +135,7 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
 ### Scenario 4: Up-sell conversion on an e-commerce retail website
 
@@ -151,7 +151,7 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
 ### Scenario 5: Un-subscribe (churn) on an online news outlet
 
@@ -166,7 +166,7 @@ Additionally, you may also want to use some of the available properties in the [
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schmea.
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
 ## Customer AI output data
 
