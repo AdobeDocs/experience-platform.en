@@ -102,7 +102,7 @@ To create an aggregation function, select an event from the left rail, and inser
 
 ![](../images/ui/segment-builder/select-event.png)
 
-After placing the event within the Events container, select the ... icon, followed by **[!UICONTROL Aggregate]**.
+After placing the event within the Events container, select the ellipses icon (...), followed by **[!UICONTROL Aggregate]**.
 
 ![](../images/ui/segment-builder/add-aggregation.png)
 
