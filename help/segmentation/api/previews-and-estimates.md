@@ -236,9 +236,9 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 | Property | Description |
 | -------- | ----------- |
-|`estimatedNamespaceDistribution`|An array of objects showing the number of profiles within the segment broken down by namespace. The total number of profiles by namespace (adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.|
-| `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
+|`estimatedNamespaceDistribution`|An array of objects showing the number of profiles within the segment broken down by identity namespace. The total number of profiles by namespace (adding together the values shown for each namespace) may be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.|
+| `state` | The current state of the preview job. The state will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
+| `_links.preview` | When the `state` is "RESULT_READY", this field provides a URL to view the estimate. |
 
 ## Next steps
 
