@@ -10,10 +10,6 @@ description: The table below contains the mappings between the Marketo Opportuni
 
 The tables below contains the mappings between the Marketo opportunities dataset and their corresponding Experience Data Model (XDM) fields.
 
->[!NOTE]
->
->The `mktoCdpSourceCampaignId` source dataset and its corresponding `campaignID` XDM target field are only available to customers with the Salesforce integration.
-
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `Opportunity-key` | `opportunityID` |
