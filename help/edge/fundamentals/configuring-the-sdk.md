@@ -60,6 +60,7 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | **Type** | **Required** | **Default Value**  |
 | -------- | ------------ | ------------------ |
 | String   | No           | `beta.adobedc.net` |
+| String   | No           | `omtrdc.net`       |
 
 The domain used to interact with Adobe services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
 
