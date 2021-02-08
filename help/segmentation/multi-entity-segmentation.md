@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segments;Segments;multi-entity;multi-entity segmentation;multi-entity segments;
 solution: Experience Platform
-title: Multi-entity segmentation
+title: Multi-entity Segmentation Overview
 topic: overview
 description: Multi-entity segmentation is the ability to extend Profile data with additional data based on products, stores, or other non-profile classes. Once connected, data from additional classes becomes available as if they were native to the Profile schema.
 ---
 
-# Multi-entity segmentation
+# Multi-entity segmentation overview
 
 Multi-entity segmentation is an advanced feature available as part of Adobe Experience Platform [!DNL Segmentation Service]. This feature enables you to extend [!DNL Real-time Customer Profile] data with additional "non-people" data (also known as "dimension entities") that your organization may define, such as data related to products or stores. Multi-entity segmentation provides flexibility when defining audience segments based on data relevant to your unique business needs and can be performed without having expertise in querying databases. With multi-entity segmentation, you can add key data to your segments without having to make costly changes to data streams or wait for a back-end data merge.
 

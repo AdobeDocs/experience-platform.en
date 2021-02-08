@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
-title: Privacy Service user guide
+title: Manage Privacy Jobs in the Privacy Service UI
 topic: UI guide
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 ---
 
-# [!DNL Privacy Service] user guide
+# Manage privacy jobs in the Privacy Service UI
 
 This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
 

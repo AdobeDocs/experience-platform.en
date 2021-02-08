@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
-title: Create an HP Vertica connector using the Flow Service API
+title: Create an HP Vertica Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect HP Vertica to Experience Platform.
+description: Learn how to connect HP Vertica to Adobe Experience Platform using the Flow Service API.
 
 ---
 
-# Create an HP [!DNL Vertica] connector using the [!DNL Flow Service] API
+# Create an HP [!DNL Vertica] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >

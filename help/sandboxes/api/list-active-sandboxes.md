@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
-title: List active sandboxes for the current user
+title: List Active Sandboxes for the Current User in the API
 topic: developer guide
 description: You can list the sandboxes that are active for the current user by making a GET request to the root endpoint.
 ---
 
-# List active sandboxes for the current user
+# List active sandboxes for the current user in the API
 
 >[!NOTE]
 >

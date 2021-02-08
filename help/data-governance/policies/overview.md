@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
-title: Data usage policies overview
+title: Data Usage Policies Overview
 topic: policies
 description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 ---

@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform Overview video
+title: Adobe Experience Platform Overview Video
 description: This video gives a quick overview of what Adobe Experience Platform is and the business challenges it solves.
 feature:
 topics:

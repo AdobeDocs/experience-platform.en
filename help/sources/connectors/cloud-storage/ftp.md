@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;FTP;ftp;
 solution: Experience Platform
-title: FTP connector
+title: FTP Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect an FTP server to Platform using APIs or the user interface.
+description: Learn how to connect an FTP server to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) FTP connector
@@ -14,7 +14,7 @@ description: The documentation below provides information on how to connect an F
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from an FTP or an SFTP server through batches.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from an FTP or an SFTP server through batches.
 
 >[!IMPORTANT]
 >
@@ -41,11 +41,11 @@ The documentation below provides information on how to connect an FTP server to 
 
 ### Using the APIs
 
-- [Create an FTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Create an FTP source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an FTP source connector in the UI](../../tutorials/ui/create/cloud-storage/ftp.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create an FTP source connection in the UI](../../tutorials/ui/create/cloud-storage/ftp.md)
+- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

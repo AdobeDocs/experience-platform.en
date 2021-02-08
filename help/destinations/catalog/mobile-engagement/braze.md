@@ -1,18 +1,14 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze destination
-seo-title: Braze destination
+title: Braze Connection Destination
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
-seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 
-# (Beta) [!DNL Braze] destination
+# (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
 >
 >The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;ETL;etl;etl integrations;ETL integrations
 solution: Experience Platform
-title: Creating ETL integrations
+title: Developing ETL Integrations for Adobe Experience Platform
 topic: overview
 description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Platform.
 ---
@@ -487,7 +487,7 @@ curl -X GET "https://platform.adobe.io/data/foundation/catalog/dataSets/59c93f3d
 
 Data will be written to [!DNL Experience Platform] using [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).  Writing of data is an asynchronous process. When data is written to Adobe Experience Platform, a batch is created and marked as a success only after data is fully written.
 
-Data in [!DNL Experience Platform] should be written in the form of parquet files.
+Data in [!DNL Experience Platform] should be written in the form of Parquet files.
 
 ## Execution phase
 
@@ -598,7 +598,7 @@ After successfully creating a new batch, files can then be uploaded to a specifi
 
 **Request**
 
-Data in [!DNL Experience Platform] should be written in the form of parquet files.
+Data in [!DNL Experience Platform] should be written in the form of Parquet files.
 
 ```shell
 curl -X PUT "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/dataSets/{DATASET_ID}/files/{FILE_NAME}.parquet" \

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
-title: Real-time Customer Profile API Developer Guide
+title: Real-time Customer Profile API Guide
 topic: guide
-description: The Real-time Customer Profile API includes multiple endpoints for exploring and working with Profile data, including viewing profiles, creating and updating merge policies, exporting or sampling Profile data, and deleting Profile data that you no longer require or that was added in error.
+description: The Real-time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. Follow this guide to learn how to perform key operations using the API.
 ---
 
-# [!DNL Real-time Customer Profile] API developer guide
+# [!DNL Real-time Customer Profile] API guide
 
 [!DNL Real-time Customer Profile] enables you to see a holistic view of each of your individual customers within Adobe Experience Platform. [!DNL Profile] allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction.
 
@@ -47,7 +47,7 @@ As data enabled for Profile is ingested into Experience Platform, it is stored w
 
 ## Profile system jobs {#profile-system-jobs}
 
-Data ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the [!DNL Profile] store in order to remove data that you no longer require or that was added in error. This requires using the API to create a [!DNL Profile System Job], known as a "[!DNL delete request]", that can also be, modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
+Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the [!DNL Profile] store in order to remove data that you no longer require or that was added in error. This requires using the API to create a [!DNL Profile System Job], also known as a "[!DNL delete request]", which can be modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
 
 ## Next steps {#next-steps}
 

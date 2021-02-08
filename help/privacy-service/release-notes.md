@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service release notes
+title: Privacy Service Release Notes
 topic: release notes
 description: The latest release notes for Adobe Experience Platform Privacy Service.
 ---
