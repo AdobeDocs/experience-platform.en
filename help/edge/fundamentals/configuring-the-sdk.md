@@ -88,7 +88,7 @@ Indicates whether data associated with link clicks should be automatically colle
 | -------- | ------------ | ----------------- |
 | Function | No           | () => undefined   |
 
-Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information.  For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
+Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
 ## Privacy options
 
