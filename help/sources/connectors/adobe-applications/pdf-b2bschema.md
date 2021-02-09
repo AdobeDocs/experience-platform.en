@@ -40,7 +40,7 @@ The following table contains custom namespaces you must create in order to estab
 
 ## Schemas
 
-The following table contains B2B schemas required to create a Marketo source connector.
+The following table contains B2B schemas required to create a Marketo source connector. For more information on schemas, see the [schema overview](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#understanding-schemas) or the tutorial on [creating and editing schemas]((https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en#ui)) in the UI.
 
 | Schema name | Base class | Mixins | Profile in schema | Primary identifier | Namespace (Marketo) | Notes |
 | --- | --- | --- | --- | --- | --- | --- |
