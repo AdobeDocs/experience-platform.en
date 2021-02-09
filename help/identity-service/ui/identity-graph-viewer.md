@@ -101,3 +101,9 @@ Errors may happen when accessing the identity graph viewer. The following is a l
 ## Next steps
 
 By reading this document, you have learned how to explore your customers' identity graphs in the Platform UI. For more information on identities in Platform, please refer to the [Identity Service overview](../home.md)
+
+## Additional resources
+
+The following video is intended to support your understanding of the identity graph viewer.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
