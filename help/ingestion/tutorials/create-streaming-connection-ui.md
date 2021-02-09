@@ -23,11 +23,12 @@ Please note that in order to complete this guide, you will need access to Adobe 
 
 After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. This page displays the available source types as individual cards, with each card containing a bubble that displays the number of data flows that have been created from streaming connections to datasets. 
 
-![](../images/streaming-ingestion/ui/click-sources.png)
-
 On the **[!UICONTROL Sources]** page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]**. 
 
-![](../images/streaming-ingestion/ui/click-connect-source.png)
+![](../images/streaming-ingestion/ui/catalog.png)
+
+![](../images/streaming-ingestion/ui/existing-account.png)
+
 
 The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the name and a description for your new streaming connection.
 
@@ -38,7 +39,7 @@ Under **[!UICONTROL Account Authentication]**, select the following configuratio
 
 Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Sources]** workspace.
 
-![](../images/streaming-ingestion/ui/http-sources-details.png)
+![](../images/streaming-ingestion/ui/new-account.png)
 
 From the **[!UICONTROL Browse]** tab, you can click on your newly created Streaming HTTP Connection and view the details of that connection.
 
@@ -54,21 +55,23 @@ You can either [create a new dataset](#create-a-new-dataset) or [use an existing
 
 To create a new dataset, provide the name, description, as well as the target schema for the dataset.
 
-![](../images/streaming-ingestion/ui/create-new-dataset.png)
+![](../images/streaming-ingestion/ui/new-dataset.png)
 
 Upon inserting all the details and clicking **[!UICONTROL Next]**, you can review the provided details before clicking **[!UICONTROL Finish]** to connect the dataset to your streaming HTTP connection.
 
-![](../images/streaming-ingestion/ui/review-create-new-dataset.png)
+![](../images/streaming-ingestion/ui/review.png)
 
 ### Use an existing dataset
 
 To use an existing dataset, select the **[!UICONTROL Output dataset name]**.
 
-![](../images/streaming-ingestion/ui/use-existing-dataset.png)
+![](../images/streaming-ingestion/ui/existing-dataset.png)
 
-After clicking **[!UICONTROL Next]**, you can review the details before clicking **[!UICONTROL Finish]** to connect the selected dataset to your streaming HTTP connection.
+dataflow step
 
-![](../images/streaming-ingestion/ui/review-existing-dataset.png)
+![](../images/streaming-ingestion/ui/dataflow-detail.png)
+
+review
 
 ## Next steps
 
