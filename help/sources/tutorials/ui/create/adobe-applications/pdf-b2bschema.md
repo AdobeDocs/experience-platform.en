@@ -1,13 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo source connector;Marketo connector;Marketo source;Marketo
 solution: Experience Platform
-title: Create a B2B schema
+title: B2B schemas and Marketo namespaces
 topic: overview
 type: Tutorial
 description: This tutorial provides steps for creating a B2B schema
 ---
 
-# Create a B2B schema
+# B2B schemas and Marketo namespaces
+
+## Schemas
 
 This tutorial provides steps for creating a B2B schema to be used for a Marketo Engage source connector.
 
@@ -22,3 +24,29 @@ This tutorial provides steps for creating a B2B schema to be used for a Marketo 
 | Marketo Campaign | XDM Business Campaign | XDM Business Campaign Details | Enabled | `campaignID` in the base class | Marketo Campaign |
 | Marketo Campaign Member | XDM Business Campaign Member | XDM Business Campaign Details | Enabled | `campaignMemberID` in the base class | Marketo Campaign Member |
 | Marketo Activity | XDM ExperienceEvent | <ul><li>Remove From List</li><li>Visit WebPage</li><li>Person Identifier</li><li>Marketo Web URL</li></ul> | Enabled | `personID` of Person Identifier mixin | Marketo Person |
+
+## Namespaces
+
+| Namespaces | Identity symbol | Entity type |
+| --- | --- | --- |
+| Marketo Opportunity | `mktoOppty` | Non-people |
+| Salesforce Opportunity | `sfdcOppty` | Non-people |
+| Microsoft Opportunity | `msftOppty` | Non-people |
+| Bizible Opportunity | `bizOppty` | Non-people |
+| Marketo Opportunity Person Relation | `mktoOpptyPersonRel` | Non-people |
+| Salesforce Account Person Relation | `sfdcAccntPersonRel` | Non-people |
+| Microsoft Account Person Relation | `msftAccntPersonRel` | Non-people |
+| Marketo Campaign | `mktoCampaign` | Non-people |
+| Bizible Campaign | `bizCampaign` | Non-people |
+| Marketo Campaign Member | `mktoCampaignMbr` | Non-people |
+| Bizible Campaign Member | `bizCampaignMbr` | Non-people |
+| Marketo Marketing List | `mktoList` | Non-people |
+| Marketo Marketing List Member | `mktoListMbr` | Non-people |
+| Marketo Person | `mktoPrsn` | Cross-Device |
+| Salesforce Person | `sfdcPrsn` | Cross-Device |
+| Microsoft Person | `msftPrsn` | Cross-Device |
+| Bizible Person | `bizPrsn` | Cross-Device |
+| Marketo Account | `mktoAcct` | Non-people |
+| Salesforce Account | `sfdcAcct` | Non-people |
+| Microsoft Account | `msftAcct` | Non-people |
+| Bizible Account | `bizAcct` | Non-people |
