@@ -29,7 +29,6 @@ The table below contains the mappings between the Marketo companies dataset and 
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `AccountParentKey` | `accountParentID` |
 
 ## Next steps
 
