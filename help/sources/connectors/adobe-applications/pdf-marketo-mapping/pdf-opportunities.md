@@ -31,7 +31,7 @@ The tables below contains the mappings between the Marketo opportunities dataset
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | This mapping is available only to customers with a Salesforce integration. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the Salesforce integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
