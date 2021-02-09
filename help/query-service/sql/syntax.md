@@ -34,11 +34,17 @@ where `from_item` can be one of the following options:
 
 ```sql
 table_name [ * ] [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+```
 
+```sql
 [ LATERAL ] ( select ) [ AS ] alias [ ( column_alias [, ...] ) ]
+```
 
+```sql
 with_query_name [ [ AS ] alias [ ( column_alias [, ...] ) ] ]
+```
 
+```sql
 from_item [ NATURAL ] join_type from_item [ ON join_condition | USING ( join_column [, ...] ) ]
 ```
 
@@ -46,15 +52,25 @@ and `grouping_element` can be one of the following options:
 
 ```sql
 ( )
+```
 
+```sql
 expression
+```
 
+```sql
 ( expression [, ...] )
+```
 
+```sql
 ROLLUP ( { expression | ( expression [, ...] ) } [, ...] )
+```
 
+```sql
 CUBE ( { expression | ( expression [, ...] ) } [, ...] )
+```
 
+```sql
 GROUPING SETS ( grouping_element [, ...] )
 ```
 
@@ -63,7 +79,6 @@ and `with_query` is:
 ```sql
  with_query_name [ ( column_name [, ...] ) ] AS ( select | values )
 ```
-
 
 The following sub-sections provide details on additional clauses that you can use in your queries, provided they follow the format outlined above.
 
