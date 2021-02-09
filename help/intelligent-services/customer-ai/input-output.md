@@ -3,20 +3,32 @@ keywords: Experience Platform;getting started;customer ai;popular topics;custome
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Input and Output in Customer AI
 topic: Getting started
-description: The following document outlines the required events, inputs, and outputs utilized in Customer AI.
+description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
 ---
 
 # Input and output in Customer AI
 
-The following document outlines the different input and outputs utilized in Customer AI.
+The following document outlines the different required events, inputs, and outputs utilized in Customer AI. 
+
+## Getting started
+
+Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. This document requires a basic understanding of the CEE schema. Please review the [Intelligent Services data preparation](../data-preparation.md) documentation before continuing.
+
+The following table outlines some common terminology used in this document:
+
+| Term | Definition |
+| --- | --- |
+| [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
+| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more mixins. |
+| XDM class | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
+| [Mixin](../../xdm/schema/composition.md) | A Component that define one or more fields in a schema. Mixins enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Mixins are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Data type](../../xdm/schema/composition.md) | A Component that can also provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. |
+| Churn | A measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service. |
+| [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
 ## Customer AI input data
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. For more details on creating the Consumer Experience Event dataset, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md). After building the basic CEE dataset, Customer AI also requires standard events in the form of [XDM data types](../../xdm/schema/composition.md).
 
-Data types provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
-
-It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
 >[!TIP]
 >
@@ -24,11 +36,13 @@ It is not necessary to have data for each of the standard events listed below bu
 
 ### Standard events {#standard-events}
 
-XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all your customers behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
+XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
+
+It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
 To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Data types]** tab.
 
-| data type | Event type | XDM columns |
+| Data type | Event type | XDM field path |
 | --- | --- | --- |
 | [[!UICONTROL Commerce]](../../xdm/data-types/commerce.md) | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li>  |
@@ -48,7 +62,7 @@ To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab o
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [[!UICONTROL Search]](../../xdm/data-types/search.md) | search | search.keywords |
 
-Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide as many of fields as possible such as, `startDate`, `endDate`, and any other relevant details.
+Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
 ### Historical data
 
@@ -78,7 +92,7 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the data type and column the listed event types belong to.
+In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the data type and its field path.
 
 >[!NOTE]
 >
@@ -100,20 +114,20 @@ In this section, different scenarios for Customer AI instances are described as 
 
 Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
-
 ### Scenario 2: Subscription conversion on a media streaming service website
 
 **Prediction goal:** Predict the subscription conversion propensity for the eligible profiles to commit to a certain level of subscription such as a standard or premium plan.
 
 **Required standard event types:**
 
-In this example, the following three event types order, checkouts, and purchases are used to indicate that a subscription was purchased and its type.
 
 - order
 - checkouts
 - purchases
 - webVisit
 - search
+
+In this example, `order`, `checkouts`, and `purchases` are used to indicate that a subscription was purchased and its type.
 
 Additionally, for an accurate model it is suggested that you make use of some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
 
