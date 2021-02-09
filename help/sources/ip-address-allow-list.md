@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip address allow list; allow list
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
-title: IP address allow list
+title: IP Address Allow List for Source Connections
 topic: overview
 ---
 
@@ -12,12 +12,12 @@ You can define network access controls through your network firewall. By specify
 
 ## East US region
 
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
+- `20.42.2.0/23`
+- `20.42.4.0/26`
+- `20.42.64.0/28`
+- `20.49.111.0/29`
+- `40.71.14.32/28`
+- `40.78.229.96/28`
 
 ## West Europe region
 

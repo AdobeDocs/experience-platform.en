@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;spark sql;Spark sql;spark;spark sql functions;functions;
 solution: Experience Platform
-title: Spark SQL functions
+title: Spark SQL Functions in Query Service
 topic: spark sql functions
 description: This documentation contains information on Spark SQL functions that extend SQL functionality.
 ---

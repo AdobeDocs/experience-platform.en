@@ -29,7 +29,7 @@ To learn more and get the required values for performing CRUD operations with th
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] is a web-based user interface for [!DNL Project Jupyter] and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
+[!DNL JupyterLab] is a web-based user interface for [!DNL Project Jupyter] and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter Notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **This guide will help you:**
 - Access and understand the [!DNL JupyterLab] interface.

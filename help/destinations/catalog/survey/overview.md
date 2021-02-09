@@ -1,12 +1,10 @@
 ---
 keywords: Survey destinations;survey;foresee;inmoment;web intercept surveys;qualtrics
-title: Survey Destinations
-seo-title: Survey Destinations
-description: Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Platform.
-seo-description: Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Platform.
+title: Survey Destinations Overview
+description: Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Adobe Experience Platform.
 ---
 
-# Survey destinations {#survey-destinations}
+# Survey destinations overview {#survey-destinations}
 
 Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Adobe Experience Platform.
 

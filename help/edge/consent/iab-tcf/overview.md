@@ -21,16 +21,14 @@ In order to implement the Web SDK with IAB TCF 2.0, you are required to have a w
 
 - [Experience Data Model (XDM) System overview](../../../xdm/home.md): Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model (XDM)], driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
-## Real-time Customer Data Platform integration
+## Experience Platform integration
 
-Built on Adobe Experience Platform, Real-time Customer Data Platform (Real-time CDP) helps you bring together known and anonymous data from multiple enterprise sources. This allows you to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time. To send consent data to Real-time CDP through the SDK, the following is required:
+To send consent data to Adobe Experience Platform using the SDK, the following is required:
 
-- A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile], with the Profile privacy mixin.
-- An edge configuration set up with Real-time CDP, and the profile dataset mentioned above.
+- A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
+- An edge configuration set up with Platform and the Profile-enabled dataset mentioned above.
 
-Please refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](../../../rtcdp/privacy/iab/dataset-preparation.md) for how to create the required dataset. 
-
-Refer to the [IAB TCF 2.0 compliance overview](../../../rtcdp/privacy/privacy-overview.md) for instructions on creating the edge configuration.
+Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and edge configuration.
 
 ## Audience Manager integration
 

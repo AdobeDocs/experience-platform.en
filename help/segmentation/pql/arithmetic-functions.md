@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;arithmetic functions;arithmetic;
 solution: Experience Platform
-title: Arithmetic functions
+title: PAL Arithmetic Functions
 topic: developer guide
 description: Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL).
 ---

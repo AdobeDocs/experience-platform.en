@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;interaction;point of interest;point-of-interest;datatype;data-type;data type;
 solution: Experience Platform
-title: Point of interest interaction data type
+title: Point of Interest Interaction Data Type
 topic: overview
 description: This document provides an overview of the Point Of Interest Interaction XDM data type.
 ---

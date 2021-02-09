@@ -1,12 +1,12 @@
 ---
 keywords: data governance rtcdp;rtcdp data governance;real time customer data profile data governance;privacy rtcdp;rtcdp privacy
-title: Privacy in Real-time Customer Data Profile
-seo-title: Privacy in Real-time Customer Data Profile
-description: Real-time Customer Data Profile allows you to streamline the process of keeping your data operations compliant with privacy regulations.
-seo-description: Real-time Customer Data Profile allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+title: Privacy in Real-time Customer Data Platform
+seo-title: Privacy in Real-time Customer Data Platform
+description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 ---
 
-# Privacy in [!DNL Real-time CDP]
+# Privacy in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) helps marketers bring data from multiple enterprise systems together, allowing them to better identify, understand, and engage their customers. Adobe holds consumer data privacy as a fundamental design principle and provides various controls to help marketers manage the data privacy of their customers.
 
@@ -24,9 +24,9 @@ See the document on [honoring opt-out requests](../../segmentation/honoring-opt-
 
 ## IAB TCF 2.0 support
 
-[!DNL Real-time CDP] is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, [!DNL Real-time CDP] allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audience segments, depending on their use case.
+[!DNL Real-time CDP] is built on Adobe Experience Platform, which is part of the registered [vendor list](https://iabeurope.eu/vendor-list-tcf-v2-0/) for the [!DNL Transparency & Consent Framework (TCF)], as outlined by the [!DNL Interactive Advertising Bureau (IAB)]. In compliance with TCF 2.0 requirements, Platform allows you to collect detailed customer consent data and integrate it into your stored customer profiles. This consent data can then be factored into whether certain profiles are included in exported audience segments, depending on their use case.
 
-See the overview on [IAB TCF 2.0 support in [!DNL Real-time CDP]](./iab/overview.md) for more information.
+See the overview on [IAB TCF 2.0 support in Experience Platform](../../landing/governance-privacy-security/consent/iab/overview.md) for more information.
 
 ## Next steps
 
