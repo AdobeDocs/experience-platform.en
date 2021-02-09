@@ -11,7 +11,7 @@ description: This tutorial provides steps for creating a Marketo Engage source c
 
 >[!IMPORTANT]
 >
->The Marketo Engage source connector is currently in alpha and you must ensure that you are using a non-production sandbox when using the connector during the alpha program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
+>The Marketo Engage source connector is currently in alpha. You must ensure that you are using a non-production sandbox when using the connector during the alpha program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
 
 This tutorial provides steps for creating a Marketo Engage (hereinafter referred to as "Marketo") source connector in the UI to bring consumer data into Adobe Experience Platform.
 
@@ -36,7 +36,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 * [Sources](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en): The standardized framework by which Experience Platform organizes customer experience data.
-  * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
+  * [Create and edit schemas in the UI](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/schemas.html?lang=en#ui): Learn how to create and edit schemas in the UI.
 * [Real-time Customer Profile](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=en#profile-in-experience-platform): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
