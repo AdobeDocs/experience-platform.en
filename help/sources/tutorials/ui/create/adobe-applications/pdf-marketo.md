@@ -123,9 +123,7 @@ Once you have selected a schema, scroll down to view the mapping dialog to start
 
 ### Map your Marketo dataset source fields to target XDM fields
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
-
-For more information on mapping rules for Marketo datasets, open the **Mappings** folder and select the dataset you want to use.
+Each Marketo dataset has its own specific mapping rules. For more information on mapping rules for Marketo datasets, open the **Mappings** folder and select the dataset you want to use.
 
 * Activities
 * Campaigns
