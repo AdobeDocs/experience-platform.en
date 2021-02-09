@@ -7,15 +7,16 @@ user-guide-description: Adobe Experience Platform is committed to providing acce
 
 # Adobe Experience Platform Accessibility {#accessibility}
 
-* [Platform Accessibility overview](home.md)
-* Accessibility features {#features}
-  * [Keyboard accessibility](features/keyboard.md)
-  * [Color palettes and contrast]
-  * [Required field validation]
-  * [Support for assistive technologies]
-* Custom Accessibility for Platform {#custom}
-  * [Navigation](custom/navigation.md)
+* [Accessibility overview](home.md)
+* [General accessibility features](general-features.md)
+* Custom Accessibility for Platform UI {#custom}
+  * [Left navigation](custom/left-navigation.md)
+  * [File drag and drop](custom/file-drag-drop.md)
+  * [Home and Overview]
+  * [Schemas]
+  * [Segments]
+  * [Query Service]
+  * [Sources and Destinations]
 * Exceptions and workarounds {#exceptions}
-* [Platform troubleshooting guide](troubleshooting.md)
-* [Platform API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Platform overview](https://www.adobe.com/go/platform-overview-en)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
