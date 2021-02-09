@@ -85,8 +85,18 @@ target_table_id = "5f7c40ef488de5194ba0157a"
 
 ### Explore the dataset for available dates
 
+Using the cell provided below, you are able to view the date range covered in the table. The purpose of exploring the number of days, first date, and last date data is to assist with selecting a date range for further in depth analysis.
 
+```python
+%%read_sql -c QS_CONNECTION
+SELECT distinct Year(timestamp) as Year, Month(timestamp) as Month, count(distinct DAY(timestamp)) as Count_days, min(DAY(timestamp)) as First_date, max(DAY(timestamp)) as Last_date, count(timestamp) as Count_hits
+from {target_table}
+group by Month(timestamp), Year(timestamp)
+order by Year, Month;
+```
 
+Running the cell produces the following output:
 
+![query date output]()
 
-
+### Configure dates for dataset discovery
