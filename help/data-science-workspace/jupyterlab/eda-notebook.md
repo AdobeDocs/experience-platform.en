@@ -145,3 +145,50 @@ ColumnNames_Types
 ```
 
 ![column name and data types list]()
+
+### Dataset trend exploration
+
+Once you have a strong understanding as to what your data contains, you are ready to use queries to explore some trends in the data. The examples provided below are not exhaustive but cover some of the more common looked at features.
+
+**Hourly activity count for a given day**
+
+This query analyzes the number of actions and clicks throughout the day. The output is represented in the form of a table containing metrics on the activity count for each hour of the day.
+
+```sql
+%%read_sql query_2_df -c QS_CONNECTION
+
+SELECT Substring(timestamp, 12, 2)                        AS Hour, 
+       Count(enduserids._experience.aaid.id) AS Count 
+FROM   {target_table}
+WHERE  Year(timestamp) = {target_year} 
+       AND Month(timestamp) = {target_month}  
+       AND Day(timestamp) in {target_day}
+GROUP  BY Hour
+ORDER  BY Hour;
+```
+
+![query 1 output]()
+
+After confirming the query works, the data can presented in a bar graph for visual clairity.
+
+```python
+trace = go.Bar(
+    x = query_2_df['Hour'],
+    y = query_2_df['Count'],
+    name = "Activity Count"
+)
+
+layout = go.Layout(
+    title = 'Activity Count by Hour of Day',
+    width = 1200,
+    height = 600,
+    xaxis = dict(title = 'Hour of Day'),
+    yaxis = dict(title = 'Count')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![bar graph output for query 1]()
+
