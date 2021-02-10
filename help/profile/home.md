@@ -71,9 +71,9 @@ To learn more about union schemas, including how to access union schemas in the 
 
 >[!IMPORTANT]
 >
->The computed attribute functionality is in alpha. The documentation and the functionality are subject to change.
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them using the [!DNL Real-time Customer Profile] API, please see the [computed attributes endpoint guide](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations.
+Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
 
 ## Profiles and segments
 
