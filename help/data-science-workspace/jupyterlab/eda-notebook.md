@@ -100,3 +100,48 @@ Running the cell produces the following output:
 ![query date output]()
 
 ### Configure dates for dataset discovery
+
+After determining the available dates for dataset discovery, the parameters below need to be updated. The dates configured in this cell are only used for data discovery in the form of queries. The dates will be updated to suitable ranges for exploratory data analysis later in this guide.
+
+```python
+target_year = "2020" ## The target year
+target_month = "02" ## The target month
+target_day = "(01,02,03)" ## The target days
+```
+
+### Dataset discovery
+
+Once you have configured all your parameters, started query service, and have a date range, you are ready to begin reading rows of data. It is suggested that you limit the number of rows.
+
+```python
+from platform_sdk.dataset_reader import DatasetReader
+from datetime import date
+dataset_reader = DatasetReader(PLATFORM_SDK_CLIENT_CONTEXT, dataset_id=target_table_id)
+# If you do not see any data or would like to expand the default date range, change the following query
+Table = dataset_reader.limit(5).read()
+```
+
+To view the number of columns available in the dataset use the following cell:
+
+```python
+print("\nNumber of columns:",len(Table.columns))
+```
+
+To view the rows of the dataset, use the following cell. In this example the number of rows are limited to five.
+
+```python
+Table.head(5)
+```
+
+![table row output]()
+
+Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. This breakdown when compared to the full table is much easier to digest and understand. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
+
+```python
+ColumnNames_Types = pd.DataFrame(Table.dtypes)
+ColumnNames_Types = ColumnNames_Types.reset_index()
+ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
+ColumnNames_Types
+```
+
+![column name and data types list]()
