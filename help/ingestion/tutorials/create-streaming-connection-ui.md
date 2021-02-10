@@ -15,10 +15,10 @@ This UI guide will help you create a streaming connection using Adobe Experience
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+-   [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+    -   [Basics of schema composition](../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    -   [Schema Editor tutorial](../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+-   [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Create a streaming connection
 
@@ -30,11 +30,11 @@ Under the **[!UICONTROL Streaming]** category, select **[!UICONTROL HTTP API]**.
 
 ![](../images/streaming-ingestion/ui/catalog.png)
 
-The **Connect HTTP API account** page appears. On this page, you can either use new credentials or existing credentials.
+The **[!UICONTROL Connect HTTP API account]** page appears. On this page, you can either use new credentials or existing credentials.
 
 ### New account
 
-If you are using new credentials, select **New account**. On the input form that appears, provide an account name and an optional description. You will also get the option of providing the following configuration properties:
+If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide an account name and an optional description. You will also get the option of providing the following configuration properties:
 
 - **[!UICONTROL Authentication]:** This property determines whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. If you're dealing with Personally Identifiable Information (PII), this property should be turned on. By default, this property is turned off.
 - **[!UICONTROL XDM Schema Compatibility]:** This property denotes if this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned on.
@@ -51,7 +51,7 @@ To connect using existing credentials, select the HTTP API connection you want t
 
 ## Select data
 
-After creating the HTTP API connection, the **Select data** step appears, providing an interface to choose what dataset to connect with. You have the option to either create a new dataset or connect to an existing dataset.
+After creating the HTTP API connection, the **[!UICONTROL Select data]** step appears, providing an interface to choose what dataset to connect with. You have the option to either create a new dataset or connect to an existing dataset.
 
 ### Create a new dataset
 
