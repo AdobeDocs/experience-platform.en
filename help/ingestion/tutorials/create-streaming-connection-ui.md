@@ -13,65 +13,74 @@ This UI guide will help you create a streaming connection using Adobe Experience
 
 ## Getting started
 
-In order to start streaming data to [!DNL Experience Platform], you must first create a streaming HTTP connection. When creating a streaming connection, you need to provide key details such as the source of streaming data, and whether or not you intend to send data from a trusted (authenticated) or an untrusted (unauthenticated) source.
+This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-After registering a streaming connection you will have a unique URL which can be used to stream data to [!DNL Platform].
-
-Please note that in order to complete this guide, you will need access to Adobe Experience Platform. If you do not have access to [!DNL Platform], please contact your system administrator before proceeding.
+-   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+    -   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+    -   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+-   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Create a streaming connection
 
-After logging in to the [!DNL Experience Platform] UI, click **[!UICONTROL Sources]** to open the **[!UICONTROL Catalog]** tab. This page displays the available source types as individual cards, with each card containing a bubble that displays the number of data flows that have been created from streaming connections to datasets. 
+After logging in to the [!DNL Experience Platform] UI, select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
-On the **[!UICONTROL Sources]** page, click **[!UICONTROL HTTP API]**, then **[!UICONTROL Connect source]**. 
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+
+Under the **[!UICONTROL Streaming]** category, select **[!UICONTROL HTTP API]**. If this is your first time using this connector, select **[!UICONTROL Configure]**. Otherwise, select **[!UICONTROL Add data]** to create a new HTTP streaming connector.
 
 ![](../images/streaming-ingestion/ui/catalog.png)
 
-![](../images/streaming-ingestion/ui/existing-account.png)
+The **Connect HTTP API account** page appears. On this page, you can either use new credentials or existing credentials.
 
+### New account
 
-The **[!UICONTROL Connect to HTTP]** screen appears. Under **[!UICONTROL Service details]**, provide both the name and a description for your new streaming connection.
+If you are using new credentials, select **New account**. On the input form that appears, provide an account name and an optional description. You will also get the option of providing the following configuration properties:
 
-Under **[!UICONTROL Account Authentication]**, select the following configuration properties for your streaming connection:
+- **[!UICONTROL Authentication]:** This property determines whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. If you're dealing with Personally Identifiable Information (PII), this property should be turned on. By default, this property is turned off.
+- **[!UICONTROL XDM Schema Compatibility]:** This property denotes if this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned on.
 
-- **[!UICONTROL Authentication]:** Whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. It is recommended that this is turned on if dealing with Personally Identifiable Information (PII).
-- **[!UICONTROL XDM Schema Compatibility]:** Whether or not this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned **on**.
-
-Once you have finished selecting your configuration properties, click **[!UICONTROL Connect]**. Your streaming HTTP connection is now created, and can now be viewed under the **[!UICONTROL Browse]** tab in the **[!UICONTROL Sources]** workspace.
+When finished, select **[!UICONTROL Connect to source]**, followed by **[!UICONTROL Next]** to proceed.
 
 ![](../images/streaming-ingestion/ui/new-account.png)
 
-From the **[!UICONTROL Browse]** tab, you can click on your newly created Streaming HTTP Connection and view the details of that connection.
+### Existing account
 
-![](../images/streaming-ingestion/ui/browse-sources.png)
+To connect using existing credentials, select the HTTP API connection you want to use, then select **[!UICONTROL Next]** to proceed.
 
-By clicking on the hyperlink of the connection name, you can select data to be displayed by configuring which dataset is connected, by clicking **[!UICONTROL Select data]**.
+![](../images/streaming-ingestion/ui/existing-account.png)
 
-![](../images/streaming-ingestion/ui/select-data.png)
+## Select data
 
-You can either [create a new dataset](#create-a-new-dataset) or [use an existing dataset](#use-an-existing-dataset). 
+After creating the HTTP API connection, the **Select data** step appears, providing an interface to choose what dataset to connect with. You have the option to either create a new dataset or connect to an existing dataset.
 
 ### Create a new dataset
 
-To create a new dataset, provide the name, description, as well as the target schema for the dataset.
+To create a new dataset, select **[!UICONTROL New dataset]**. On the form that appears, provide the name, an optional description, as well as the target schema for the dataset. If you select a Profile enabled schema, you can choose if the dataset should also be Profile enabled.
 
 ![](../images/streaming-ingestion/ui/new-dataset.png)
 
-Upon inserting all the details and clicking **[!UICONTROL Next]**, you can review the provided details before clicking **[!UICONTROL Finish]** to connect the dataset to your streaming HTTP connection.
-
-![](../images/streaming-ingestion/ui/review.png)
-
 ### Use an existing dataset
 
-To use an existing dataset, select the **[!UICONTROL Output dataset name]**.
+To use an existing dataset, select **[!UICONTROL Existing dataset]**. On the form that appears, select the dataset that you want to use. Once you select a dataset, you can choose if the dataset should be Profile enabled.
 
 ![](../images/streaming-ingestion/ui/existing-dataset.png)
 
-dataflow step
+## Dataflow detail
+
+The **[!UICONTROL Dataflow detail]** step appears. On this page, you can provide details for the created dataflow by giving a name and an optional description. 
+
+After providing details for the dataflow, select **[!UICONTROL Next]**.
 
 ![](../images/streaming-ingestion/ui/dataflow-detail.png)
 
-review
+## Review
+
+The **[!UICONTROL Review]** step appears, allowing you to review the details of your dataflow before it is created. Details are group within the following categories:
+
+- **[!UICONTROL Connection]**: Shows the account name, source platform, and the source name.
+- **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
+
+![](../images/streaming-ingestion/ui/review.png)
 
 ## Next steps
 
