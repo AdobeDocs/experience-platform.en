@@ -8,6 +8,6 @@ description: Learn about the different mobile engagement destinations supported 
 
 [!DNL Adobe Experience Platform] currently supports the following mobile engagement destinations:
 
-* [Airship Attributes](./airship-attributes.md)
-* [Airship Tags](./airship-tags.md)
-* [Braze](./braze.md)
+* [Airship Attributes connection](./airship-attributes.md)
+* [Airship Tags connection](./airship-tags.md)
+* [Braze connection](./braze.md)
