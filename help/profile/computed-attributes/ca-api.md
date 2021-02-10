@@ -6,109 +6,37 @@ type: Documentation
 description: Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Adobe Experience Platform. 
 ---
 
-# (Alpha) Computed attributes endpoint
+# (Alpha) Computed attributes API endpoint
 
 >[!IMPORTANT]
 >
 >The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. 
+Computed attributes enable you to create fields containing values that are automatically computed from other values, calculations, and expressions. 
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed.
-
-This guide will help you to better understand computed attributes within Adobe Experience Platform and includes sample API calls for performing basic CRUD operations using the `/config/computedAttributes` endpoint. 
+This guide includes sample API calls for performing basic CRUD operations using the `/config/computedAttributes` endpoint. 
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
 
-## Understanding computed attributes
+Before continuing, please review the [Profile API getting started guide](../api/getting-started.md) for links to recommended documentation, a guide to reading the sample API calls that appear in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-Adobe Experience Platform enables you to easily import and merge data from multiple sources in order to generate [!DNL Real-time Customer Profiles]. Each profile contains important information related to an individual, such as their contact information, preferences, and purchase history, providing a 360-degree view of the customer. 
+## Configure a computed attribute field
 
-Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
+In order to create a computed attribute, you first need to identify the field in a schema that will hold the computed attribute value. 
 
-Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute or event. Expressions can be defined in multiple different ways, allowing you to specify that a rule evaluate incoming events only, an incoming event and profile data, or an incoming event, profile data, and historical events.
+Please refer to the documentation on [configuring a computed attribute](configure-ui.md) for a complete end-to-end guide to creating a computed attribute field in a schema.
 
-### Use cases
-
-Use cases for computed attributes can range from simple calculations to very complex references. Here are a few example use cases for computed attributes:
-
-1. **[!UICONTROL Percentages]:** A simple computed attribute could include taking two numeric fields on a record and dividing them to create a percentage. For example, you could take the total number of emails sent to an individual and divide it by the number of emails the individual opens. Looking at the resulting computed attribute field would quickly show the percentage of total emails opened by the individual.
-1. **[!UICONTROL Application use]:** Another example includes the ability to aggregate the number of times a user opens your application. By tracking the total number of application opens, based on individual open events, you could deliver special offers or messages to users on their 100th open, encouraging deeper engagement with your brand.
-1. **[!UICONTROL Lifetime values]:** Gathering running totals, such as a lifetime purchase value for a customer, can be very difficult. This requires updating the historic total each time a new purchase event occurs. A computed attribute allows you to do this much more easily by maintaining the lifetime value in a single field that is updated automatically following each successful purchase event related to the customer.
-
-## Configure a computed attribute
-
-In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a mixin to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
-
->[!NOTE]
+>[!WARNING]
 >
->Computed attributes cannot be added to fields within Adobe-defined mixins. The field must be within the `tenant` namespace, meaning it must be a field that you define and add to a schema.
+>In order to proceed with the API guide you must have a computed attribute configured.
 
-In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). It is also recommended to review the [section on unions](../../xdm/schema/composition.md) in the schema composition basics documentation.
+## Create a computed attribute {#create-a-computed-attribute}
 
-The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. If you already have a field that is in the correct namespace within a Profile-enabled schema, you can proceed directly to the step for [creating a computed attribute](#create-a-computed-attribute).
+With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute. See the [configuring a computed attribute](configure-ui.md) documentation if you have not done this already.
 
-### View a schema
-
-The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a mixin, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
-
-In the user interface, click **[!UICONTROL Schemas]** in the left-rail and use the search bar on the **[!UICONTROL Browse]** tab to quickly find the schema you wish to update.
-
-![](../images/computed-attributes/Schemas-Browse.png)
-
-Once you have located the schema, click its name to open the [!DNL Schema Editor] where you can make edits to the schema.
-
-![](../images/computed-attributes/Schema-Editor.png)
-
-### Create a mixin
-
-To create a new mixin, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
-
-Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when complete.
-
-![](../images/computed-attributes/Add-mixin.png)
-
-### Add a computed attribute field to the schema
-
-Your new mixin should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
-
-Select **[!UICONTROL Add field]** next to the name of the schema in order to add a top-level field, or you can select to add the field anywhere within the schema you prefer.
-
-After clicking **[!UICONTROL Add field]** a new object opens, named for your tenant ID, showing that the field is in the correct namespace. Within that object, a **[!UICONTROL New field]** appears. This if the field where you will define the computed attribute.
-
-![](../images/computed-attributes/New-field.png)
-
-### Configure the field
-
-Using the **[!UICONTROL Field properties]** section on the right side of the editor, provide the necessary information for your new field, including its name, display name, and type. 
-
->[!NOTE]
->
->The type for the field must be the same type as the computed attribute value. For example, if the computed attribute value is a string, the field being defined in the schema must be a string.
-
-When done, click **[!UICONTROL Apply]** and the name of the field, as well as its type will appear in the **[!UICONTROL Structure]** section of the editor.
-
-![](../images/computed-attributes/Apply.png)
-
-### Enable schema for [!DNL Profile]
-
-Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Click on the schema name in the **[!UICONTROL Structure]** section of the editor so that the **[!UICONTROL Schema Properties]** tab appears. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile]. 
-
->[!NOTE]
->
->Enabling a schema for [!DNL Profile] cannot be undone, so if you click on the slider once it has been enabled, you do not have to risk disabling it.
-
-![](../images/computed-attributes/Profile.png)
-
-You can now click **[!UICONTROL Save]** to save the updated schema and continue with the rest of the tutorial using the API.
-
-### Create a computed attribute {#create-a-computed-attribute}
-
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute. 
-
-Begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
+To create a computed attribute, begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
 **API format**
 
@@ -149,7 +77,7 @@ curl -X POST \
 |`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
 |`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
 |`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview](../../segmentation/pql/overview.md).|
+|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
 |`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
@@ -212,14 +140,13 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 |`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
 |`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
 
-
 ## Access computed attributes
 
 When working with computed attributes using the API, there are two options for accessing computed attributes that have been defined by your organization. The first is to list all computed attributes, the second is to view a specific computed attribute by its unique `id`.
 
 Steps for both listing all computed attributes and viewing a specific computed attribute are outlined in the sections that follow.
 
-### List computed attributes {#list-computed-attributes}
+### List all computed attributes {#list-all-computed-attributes}
 
 Your IMS Organization may create multiple computed attributes, and performing a GET request to the `/config/computedAttributes` endpoint allows you list all existing computed attributes for your organization.
 

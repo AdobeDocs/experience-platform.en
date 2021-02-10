@@ -13,7 +13,6 @@ user-guide-description: Merge customer data to create a unified view of customer
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [(Alpha) Computed attributes](api/computed-attributes.md)
   * [Edge projections](api/edge-projections.md)
   * [Entities ([!DNL Profile] access)](api/entities.md)
   * [Export jobs ([!DNL Profile] export)](api/export-jobs.md)
@@ -28,6 +27,12 @@ user-guide-description: Merge customer data to create a unified view of customer
   * [Create merge policies (Video)](video/create-merge-policies.md)
   * [Union schema UI guide](ui/union-schema.md)
   * [Union schema overview (Video)](video/union-schemas-overview.md)
+* (Alpha) Computed attributes {#computed-attributes}
+  * [Overview](computed-attributes/overview.md)
+  * [Configure a computed attribute field](computed-attributes/configure-ui.md)
+  * [Computed attributes API](computed-attributed/ca-api.md)
+  * [Sample computed attribute expressions](computed-attributes/expressions.md)
+  * [Using computed attributes in Platform](computed-attributes/using-ca.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
   * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
