@@ -1,6 +1,6 @@
 ---
 keywords: Quantum Metric Extension;Quantum Metric;quantum metric;Quantum metric
-title: Quantum Metric Extension Destination
+title: Quantum Metric extension
 description: The Quantum Metric extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

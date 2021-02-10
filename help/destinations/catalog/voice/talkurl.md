@@ -1,6 +1,6 @@
 ---
 keywords: Talk URL Inbox;talk url inbox;Talk URL inbox;talk URL inbox;talk url;Talk URL;Talk url
-title: Talk URL Inbox Extension Destination
+title: Talk URL Inbox extension
 description: The Talk URL Inbox extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

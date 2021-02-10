@@ -1,6 +1,6 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze Connection Destination
+title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 

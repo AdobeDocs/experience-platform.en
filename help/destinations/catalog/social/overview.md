@@ -1,6 +1,6 @@
 ---
 keywords: social network;social network destinations;Livefyre;facebook;Facebook
-title: Social Network Destinations Overview
+title: Social network destinations overview
 description: With social network destinations, you can activate profiles for your campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
