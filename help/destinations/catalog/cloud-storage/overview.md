@@ -1,6 +1,6 @@
 ---
 keywords: cloud storage destination;cloud storage
-title: Cloud Storage Destinations Overview
+title: Cloud Storage destinations overview
 description: Adobe Experience Platform can deliver your segments as data files to your Amazon S3, AWS Kinesis, Azure Event Hubs, or SFTP cloud storage locations.
 ---
 

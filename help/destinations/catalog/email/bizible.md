@@ -1,6 +1,6 @@
 ---
 keywords: bizible;bizible extension;bizible destination
-title: Bizible Extension Destination
+title: Bizible extension
 description: The Bizible extension is an email destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

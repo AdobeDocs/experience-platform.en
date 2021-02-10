@@ -1,6 +1,6 @@
 ---
 keywords: Nielsen BSDK;nielsen bsdk;nielsen BSDK
-title: Nielsen BSDK Extension Destination
+title: Nielsen BSDK extension
 description: The Nielsen BSDK extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

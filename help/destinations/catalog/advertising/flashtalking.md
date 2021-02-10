@@ -1,6 +1,6 @@
 ---
 keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalking OneTag destinations;Flashtalking OneTag;flashtalking onetag
-title: Flashtalking OneTag Extension Destination
+title: Flashtalking OneTag extension
 description: The Flashtalking OneTag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

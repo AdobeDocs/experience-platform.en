@@ -1,6 +1,6 @@
 ---
 keywords: advertising; the trade desk;
-title: The Trade Desk Connection Destination
+title: The Trade Desk connection
 description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
 ---
 

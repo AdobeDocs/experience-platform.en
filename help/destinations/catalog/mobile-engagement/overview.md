@@ -1,6 +1,6 @@
 ---
 keywords: mobile messaging;mobile messaging destinations;Braze; Airship
-title: Mobile Engagement Destinations Overview
+title: Mobile engagement destinations overview
 description: Learn about the different mobile engagement destinations supported by Adobe Experience Platform.
 ---
 

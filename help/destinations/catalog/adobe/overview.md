@@ -1,6 +1,6 @@
 ---
 keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
-title: Adobe Destinations Overview
+title: Adobe destinations overview
 description: Manage your customer experience by connecting your data in Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 ---
 
