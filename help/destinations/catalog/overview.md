@@ -16,13 +16,13 @@ Browse the catalog to determine which destination platforms are best for your ad
 
 You can activate your data to different destination categories in Adobe Experience Platform. The links below provide more information on each destination category:
 
-- [Adobe solutions](./adobe/overview.md)
-- [Advertising destinations](./advertising/overview.md)
-- [Analytics destinations](./analytics/overview.md)
-- [Cloud storage destinations](./cloud-storage/overview.md)
-- [Data Management Platform](./data-management/overview.md)
-- [Email marketing](./email-marketing/overview.md)
-- [Personalization](./personalization/overview.md)
-- [Social destinations](./social/overview.md)
-- [Surveys](./survey/overview.md)
-- [Voice of the customer](./voice/overview.md)
+- [Adobe destinations overview](./adobe/overview.md)
+- [Advertising destinations overview](./advertising/overview.md)
+- [Analytics destinations overview](./analytics/overview.md)
+- [Cloud storage destinations overview](./cloud-storage/overview.md)
+- [Data Management Platform (DMP) destinations overview](./data-management/overview.md)
+- [Email marketing destinations overview](./email-marketing/overview.md)
+- [Personalization destinations overview](./personalization/overview.md)
+- [Social network destinations overview](./social/overview.md)
+- [Survey destinations overview](./survey/overview.md)
+- [Voice of the Customer destinations overview](./voice/overview.md)

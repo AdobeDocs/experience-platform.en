@@ -11,4 +11,4 @@ With social network destinations, you can activate profiles for your campaigns f
 Adobe Experience Platform currently supports the following social network destinations:
 
 - [Adobe Livefyre extension](./adobe-livefyre.md)
-- [[!DNL Facebook]](./facebook.md)
+- [[!DNL Facebook] extension](./facebook.md)
