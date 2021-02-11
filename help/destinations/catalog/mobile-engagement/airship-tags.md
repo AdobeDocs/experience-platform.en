@@ -1,6 +1,6 @@
 ---
 keywords: airship tags;airship destination
-title: Airship Tags Connection Destination
+title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 ---
 

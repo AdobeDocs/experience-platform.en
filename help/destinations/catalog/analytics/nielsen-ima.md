@@ -1,6 +1,6 @@
 ---
 keywords: Nielsen IMA Handler;nielsen ima handler;nielsen ima;Nielsen ima;Nielsen IMA
-title: Nielsen IMA Handler Extension Destination
+title: Nielsen IMA Handler extension
 description: The Nielsen IMA Handler extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
