@@ -160,7 +160,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
 | `auth.params.sourceId` | The ID of the streaming connection you want to create. |
 | `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
 | `auth.params.name` | The name of the streaming connection you want to create. |
-| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection 
+| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection |
 | `connectionSpec.id` | The connection specification `id` for streaming connections. |
 
 **Response**
