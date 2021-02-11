@@ -24,7 +24,7 @@ In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitorin
 
 The upper part of the dashboard contains a horizontal path of ingestion from the source level, to [!DNL Identities], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that particular stage of ingestion.
 
-INCLUDE A NEW SCREENSHOT OF THE DASHBOARD, FOCUSING ON THE HORIZONTAL PATH OF INGESTION FROM SOURCES TO IDENTITIES TO PROFILE
+![ingestion-flow](../assets/ui/monitor-sources/ingestion-flow.png)
 
 At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. The graphs are enabled by default and you can disable them to expand the list of sources below.
 
@@ -38,7 +38,7 @@ Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 | Records ingested | Displays a graph representing the rate of records ingested based on the time frame that you set. |
 | Records failed | Displays a graph representing the rate of records failed based on the time frame that you set. |
 
-The source ingestion list displays a list of all sources including information on their ingestion rates, failure and success rates, as well as last updated dates.
+The source ingestion list displays a list of all sources including information on their rate of ingestion, failure, and success.
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
