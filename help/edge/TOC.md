@@ -45,6 +45,10 @@ user-guide-description: Interact with Experience Cloud services through the Edge
     * [Overview](consent/iab-tcf/overview.md)
     * [Integrate with Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
     * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
+* Web SDK extension for Adobe Experience Platform Launch {#extension}
+  * [Web SDK extension](extension/web-sdk-extension.md)
+  * [Action types](extension/action-types.md)
+  * [Data element types](extension/data-element-types.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Blog Posts](blog-posts.md)
