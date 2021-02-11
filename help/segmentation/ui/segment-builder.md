@@ -94,6 +94,22 @@ Code view provides a button that allows you to copy the value of the segment to 
 
 ![](../images/ui/segment-builder/copy-code.png)
 
+### Aggregation functions
+
+An aggregation in [!DNL Segment Builder] is a calculation on a group of XDM attributes whose data type is a number (either a double or an integer). The four supported aggregation functions within Segment Builder are SUM, AVERAGE, MIN, and MAX.
+
+To create an aggregation function, select an event from the left rail, and insert it into the [!UICONTROL Events] container.
+
+![](../images/ui/segment-builder/select-event.png)
+
+After placing the event within the Events container, select the ellipses icon (...), followed by **[!UICONTROL Aggregate]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value. For the example below, this segment would qualify any profile that has a sum of purchased values that is greater than $100, even if each individual purchase is less than $100.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.

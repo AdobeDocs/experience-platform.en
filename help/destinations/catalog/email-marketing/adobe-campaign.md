@@ -1,6 +1,6 @@
 ---
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
-title: Adobe Campaign Connection Destination
+title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
 ---
 

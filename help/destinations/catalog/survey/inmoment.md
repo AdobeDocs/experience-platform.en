@@ -1,6 +1,6 @@
 ---
 keywords: InMoment;inmoment;Inmoment;launch integration
-title: InMoment Extension Destination
+title: InMoment extension
 description: The InMoment extension is a survey destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

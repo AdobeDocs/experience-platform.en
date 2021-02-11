@@ -10,13 +10,13 @@ keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID M
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
-## First party identity
+## First-party identity
 
-The [!DNL Identity Service] stores the identity in a cookie in a first party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
+The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
 
-## 3rd party identity
+## 3rd-party identity
 
-The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
+The [!DNL Identity Service] has the ability to sync an ID with a 3rd-party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (for example, someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it such as Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
 
 ## ID migration
 
