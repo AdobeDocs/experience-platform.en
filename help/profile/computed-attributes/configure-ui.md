@@ -22,7 +22,7 @@ In order to successfully define a computed attribute field, the schema must be e
 
 The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. If you already have a field that is in the correct namespace within a Profile-enabled schema, you can proceed directly to the step for [creating a computed attribute](#create-a-computed-attribute).
 
-### View a schema
+## View a schema
 
 The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a mixin, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
@@ -34,7 +34,7 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-### Create a mixin
+## Create a mixin
 
 To create a new mixin, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
 
@@ -42,7 +42,7 @@ Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when
 
 ![](../images/computed-attributes/Add-mixin.png)
 
-### Add a computed attribute field to the schema
+## Add a computed attribute field to the schema
 
 Your new mixin should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
 
@@ -52,7 +52,7 @@ After clicking **[!UICONTROL Add field]** a new object opens, named for your ten
 
 ![](../images/computed-attributes/New-field.png)
 
-### Configure the field
+## Configure the field
 
 Using the **[!UICONTROL Field properties]** section on the right side of the editor, provide the necessary information for your new field, including its name, display name, and type. 
 
@@ -64,7 +64,7 @@ When done, click **[!UICONTROL Apply]** and the name of the field, as well as it
 
 ![](../images/computed-attributes/Apply.png)
 
-### Enable schema for [!DNL Profile]
+## Enable schema for [!DNL Profile]
 
 Before continuing, ensure that the schema has been enabled for [!DNL Profile]. Click on the schema name in the **[!UICONTROL Structure]** section of the editor so that the **[!UICONTROL Schema Properties]** tab appears. If the **[!UICONTROL Profile]** slider is blue, the schema has been enabled for [!DNL Profile]. 
 
@@ -75,3 +75,7 @@ Before continuing, ensure that the schema has been enabled for [!DNL Profile]. C
 ![](../images/computed-attributes/Profile.png)
 
 You can now click **[!UICONTROL Save]** to save the updated schema and continue with the rest of the tutorial using the API.
+
+## Next steps
+
+Now that you have created a field into which your computed attribute value will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).

@@ -14,7 +14,7 @@ description: Computed attributes enable you to automatically compute the value o
 
 Computed attributes enable you to create fields containing values that are automatically computed from other values, calculations, and expressions. 
 
-This guide includes sample API calls for performing basic CRUD operations using the `/config/computedAttributes` endpoint. 
+This guide includes sample API calls for performing basic CRUD operations using the `/computedAttributes` endpoint. 
 
 ## Getting started
 
