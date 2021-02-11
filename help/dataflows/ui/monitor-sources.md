@@ -22,17 +22,23 @@ This tutorial requires a working understanding of the following components of Ad
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from the source level to Platform.
 
-At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. The ingestion graphs are activated by default. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+The upper part of the dashboard contains a horizontal path of ingestion from the source level, to [!DNL Identities], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that particular stage of ingestion.
+
+INCLUDE A NEW SCREENSHOT OF THE DASHBOARD, FOCUSING ON THE HORIZONTAL PATH OF INGESTION FROM SOURCES TO IDENTITIES TO PROFILE
+
+At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. The graphs are enabled by default and you can disable them to expand the list of sources below.
+
+Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
 | Source ingestion | Description |
 | ---------------- | ----------- |
-| Metrics | Not the indie pop band |
-| Records ingested | 
-| Records failed |
+| Metrics | Displays information on the total number of records ingested, records failed, and failed dataflows. |
+| Records ingested | Displays a graph representing the rate of records ingested based on the time frame that you set. |
+| Records failed | Displays a graph representing the rate of records failed based on the time frame that you set. |
 
-Disabling the graphs maximizes the sources ingestion list, which displays a wheel of all sources, including information on their ingestion rates, failure and success rates, as well as last updated dates.
+The source ingestion list displays a list of all sources including information on their ingestion rates, failure and success rates, as well as last updated dates.
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
