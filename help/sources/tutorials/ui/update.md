@@ -72,7 +72,7 @@ The **[!UICONTROL Edit schedule]** dialog box provides you with options to updat
 
 | Scheduling | Description |
 | ---------- | ----------- |
-| Frequency | The frequency at which the dataflow will collect data. Acceptable values for editing frequency schedule for an already existing dataflow include: `minute`, `hour`, `day`, or `week`.
+| Frequency | The frequency at which the dataflow will collect data. Acceptable values for editing frequency schedule for an already existing dataflow include: `minute`, `hour`, `day`, or `week`. |
 | Interval | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer and must be greater than or equal to `15`. |
 
 After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful update.
