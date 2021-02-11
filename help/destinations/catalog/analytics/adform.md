@@ -1,10 +1,10 @@
 ---
 keywords: adform extension;adform
-title: Adform Extension Destination
+title: Adform Website Tracking extension
 description: The Adform extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# Adform extension {#adform-extension}
+# Adform Website Tracking extension {#adform-extension}
 
 The Adform Website Tracking extension enables advertisers to implement Adform Tracking Points effortlessly across their sites using the [!DNL Experience Platform Launch] platform.
 

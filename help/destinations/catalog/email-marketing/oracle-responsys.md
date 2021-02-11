@@ -1,6 +1,6 @@
 ---
 keywords: email;Email;e-mail;email destinations;oracle responsys destination
-title: Oracle Responsys Connection Destination
+title: Oracle Responsys connection
 description: Responsys is an enterprise email marketing tool for cross-channel marketing campaigns offered by Oracle to personalize interactions across email, mobile, display, and social.
 ---
 

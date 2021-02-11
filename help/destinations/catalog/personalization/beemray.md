@@ -1,6 +1,6 @@
 ---
 keywords: beemray,beemray extension
-title: Beemray Extension Destination
+title: Beemray extension
 description: The Beemray extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

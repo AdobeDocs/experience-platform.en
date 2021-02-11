@@ -1,6 +1,6 @@
 ---
 keywords: launch extensions;launch extension;launch destinations; platform launch extensions;platform launch extension;platform launch destinations
-title: Adobe Experience Platform Launch Extension Destinations
+title: Adobe Experience Platform Launch extension
 description: Adobe Experience Platform Launch is the next generation of tag management capabilities from Adobe. Platform Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 ---
 

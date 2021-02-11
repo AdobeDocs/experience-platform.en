@@ -1,6 +1,6 @@
 ---
 keywords: cloud storage destination;cloud storage
-title: Create a Cloud Storage Destination
+title: Create a cloud storage destination
 type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations

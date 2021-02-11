@@ -1,6 +1,6 @@
 ---
 keywords: livefyre;livefyre extension
-title: Adobe Livefyre Extension Destination
+title: Adobe Livefyre extension
 description: The Adobe Livefyre extension is a social destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
