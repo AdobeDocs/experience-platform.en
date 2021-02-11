@@ -1,6 +1,6 @@
 ---
 keywords: target extension;target
-title: Adobe Target Extension Destination
+title: Adobe Target extension
 description: The Adobe Target extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

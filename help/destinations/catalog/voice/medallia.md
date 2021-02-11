@@ -1,6 +1,6 @@
 ---
 keywords: Medallia;medallia
-title: Medallia Extension Destination
+title: Medallia etension
 description: The Medallia extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

@@ -1,10 +1,10 @@
 ---
 keywords: Amazon S3;S3 destination;s3;amazon s3
-title: Amazon S3 Connection Destination
+title: Amazon S3 connection
 description: Create a live outbound connection to your Amazon Web Services (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 ---
 
-# [!DNL Amazon S3] connection
+# [!DNL Amazon S3] connection {#s3-connection}
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
