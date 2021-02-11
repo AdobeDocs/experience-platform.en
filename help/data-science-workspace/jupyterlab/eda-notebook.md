@@ -322,3 +322,114 @@ After exploring the trends and patterns of the data, you should have a good idea
 
 ## Exploratory data analysis
 
+Exploratory data analysis is used to refine your understanding of the data and build an intuition for compelling questions that can be used as the basis for your modeling. 
+
+After finishing the data discovery step, you will have explored at the event level data with some aggregations at the event, city, or user ID level to see trends for a day. Although this data is important, it does not give a full picture. You still do not understand what drives a purchase on your website. 
+
+To understand this, you need to aggregate data at a profile/visitor level, define a purchase goal, apply statistical concepts such as correlation, box plots, scatter plots, and more. These methods are used to compare patterns of activities for buyers vs non-buyers in the prediction window you define.
+
+The following features are created and explored in this section:
+
+- `COUNT_UNIQUE_PRODUCTS_PURCHASED`: The number of unique products purchased.
+- `COUNT_CHECK_OUTS`: The number of check outs.
+- `COUNT_PURCHASES`: The number of purchases.
+- `COUNT_INSTANCE_PRODUCTADDS`: The number of product add instances.
+- `NUMBER_VISITS` : The number of visits.
+- `COUNT_PAID_SEARCHES`: The number of paid searches.
+- `DAYS_SINCE_VISIT`: The number of days since the last visit.
+- `TOTAL_ORDER_REVENUE`: The total oder revenue.
+- `DAYS_SINCE_PURCHASE`: The number of days since the previous purchase.
+- `AVG_GAP_BETWEEN_ORDERS_DAYS`: The average gap between purchases in days.
+- `STATE_CITY`: Contains the State and City.
+
+Before you continue with your data aggregation, you need to define the parameters for the prediction variable used in exploratory data analysis. In other words, what do you want from your data science model? Common parameters include a goal, prediction period, and analysis period. The goal is our objective
+
+ If you are using the EDA notebook, you are required to replace the values below before continuing.
+
+```python
+goal = "commerce.`order`.purchaseID" #### prediction variable
+goal_column_type = "numerical" #### choose either "categorical" or "numerical"
+prediction_window_day_start = "2020-01-01" #### YYYY-MM-DD
+prediction_window_day_end = "2020-01-31" #### YYYY-MM-DD
+analysis_period_day_start = "2020-02-01" #### YYYY-MM-DD
+analysis_period_day_end = "2020-02-28" #### YYYY-MM-DD
+### If the goal is a categorical goal then select threshold for the defining category and creating bins (say 0 is no order placed and 1 is at least one order placed):
+threshold = 1
+```
+
+### Data aggregation for feature and goal creation
+
+To begin exploratory analysis the creation of a goal at the profile level is needed followed by the aggregation of your dataset. In this example, two queries are provided. The first query contains the creation of a goal. The second query needs to be updated to include any variables other than the ones in the first query. You may want to update the `limit` for your query. After performing the following queries, aggregated data is now available for exploration.
+
+```sql
+%%read_sql target_df -d -c QS_CONNECTION
+
+SELECT DISTINCT endUserIDs._experience.aaid.id                  AS ID,
+       Count({goal})                                            AS TARGET
+FROM   {target_table}
+WHERE DATE(TIMESTAMP) BETWEEN '{prediction_window_day_start}' AND '{prediction_window_day_end}'
+GROUP BY endUserIDs._experience.aaid.id;
+```
+
+```sql
+%%read_sql agg_data -d -c QS_CONNECTION
+
+SELECT z.*, z1.state_city as STATE_CITY
+from
+((SELECT y.*,a2.AVG_GAP_BETWEEN_ORDERS_DAYS as AVG_GAP_BETWEEN_ORDERS_DAYS
+from
+(select a1.*, f.DAYS_SINCE_PURCHASE as DAYS_SINCE_PURCHASE
+from
+(SELECT DISTINCT a.ID  AS ID,
+COUNT(DISTINCT Product_Items.SKU) as COUNT_UNIQUE_PRODUCTS_PURCHASED,
+COUNT(a.check_out) as COUNT_CHECK_OUTS,
+COUNT(a.purchases) as COUNT_PURCHASES, 
+COUNT(a.product_list_adds) as COUNT_INSTANCE_PRODUCTADDS,
+sum(CASE WHEN a.search_paid = 'TRUE' THEN 1 ELSE 0 END) as COUNT_PAID_SEARCHES,
+DATEDIFF('{analysis_period_day_end}', MAX(a.date_a)) as DAYS_SINCE_VISIT,
+ROUND(SUM(Product_Items.priceTotal * Product_Items.quantity), 2) AS TOTAL_ORDER_REVENUE
+from 
+(SELECT endUserIDs._experience.aaid.id as ID,
+commerce.`checkouts`.value as check_out,
+commerce.`order`.purchaseID as purchases, 
+commerce.`productListAdds`.value as product_list_adds,
+search.isPaid as search_paid,
+DATE(TIMESTAMP) as date_a,
+Explode(productlistitems) AS Product_Items
+from {target_table}
+Where DATE(TIMESTAMP) BETWEEN '{analysis_period_day_start}' AND '{analysis_period_day_end}') as a
+group by a.ID) as a1
+left join 
+(SELECT DISTINCT endUserIDs._experience.aaid.id as ID,
+DATEDIFF('{analysis_period_day_end}', max(DATE(TIMESTAMP))) as DAYS_SINCE_PURCHASE
+from {target_table}
+where DATE(TIMESTAMP) BETWEEN '{analysis_period_day_start}' AND '{analysis_period_day_end}'
+and commerce.`order`.purchaseid is not null
+GROUP BY endUserIDs._experience.aaid.id) as f
+on f.ID = a1.ID
+where a1.COUNT_PURCHASES>0) as y
+left join
+(select ab.ID, avg(DATEDIFF(ab.ORDER_DATES, ab.PriorDate)) as AVG_GAP_BETWEEN_ORDERS_DAYS
+from
+(SELECT distinct endUserIDs._experience.aaid.id as ID, TO_DATE(DATE(TIMESTAMP)) as ORDER_DATES, 
+TO_DATE(LAG(DATE(TIMESTAMP),1) OVER (PARTITION BY endUserIDs._experience.aaid.id ORDER BY DATE(TIMESTAMP))) as PriorDate
+FROM {target_table}
+where DATE(TIMESTAMP) BETWEEN '{analysis_period_day_start}' AND '{analysis_period_day_end}'
+AND commerce.`order`.purchaseid is not null) AS ab
+where ab.PriorDate is not null
+GROUP BY ab.ID) as a2
+on a2.ID = y.ID) z    
+left join
+(select t.ID, t.state_city from
+(
+SELECT DISTINCT endUserIDs._experience.aaid.id as ID,
+concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) as state_city, 
+ROW_NUMBER() OVER(PARTITION BY endUserIDs._experience.aaid.id ORDER BY DATE(TIMESTAMP) DESC) AS ROWNUMBER
+FROM   {target_table}
+WHERE  DATE(TIMESTAMP) BETWEEN '{analysis_period_day_start}' AND '{analysis_period_day_end}') as t
+where t.ROWNUMBER = 1) z1
+on z.ID = z1.ID)
+limit 500000;
+```
+
+### Merge the features in the aggregated dataset with a goal
