@@ -14,12 +14,12 @@ seo-description: Destinations are pre-built integrations with destination platfo
 
 ## Destinations and sources {#destinations-and-sources}
 
-One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use sources to ingest data into Platform and destinations to export data from Platform. 
+One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use [sources](../sources/home.md) to ingest data into Platform and destinations to export data from Platform. 
 
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use **[!UICONTROL Destinations]** to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
