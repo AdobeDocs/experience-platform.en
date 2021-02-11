@@ -107,3 +107,10 @@ By reading this document, you have learned how to explore your customers' identi
 The following video is intended to support your understanding of the identity graph viewer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
+
+## Changelog
+
+| Date | Action |
+| ---- | ------ |
+| 2021-01 | Added support for streaming ingested data and non-production sandbox, and minor bug fixes. |
+| 2021-02 | Identity graph viewer is made accessible through dataset preview, and minor bug fixes. |
