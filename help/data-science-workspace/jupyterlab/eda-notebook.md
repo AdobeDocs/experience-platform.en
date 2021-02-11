@@ -135,7 +135,7 @@ Table.head(5)
 
 ![table row output]()
 
-Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. This breakdown when compared to the full table is much easier to digest and understand. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
+Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. In this example, the output is used to check if the data type is correct or not. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
 
 ```python
 ColumnNames_Types = pd.DataFrame(Table.dtypes)
@@ -148,7 +148,7 @@ ColumnNames_Types
 
 ### Dataset trend exploration
 
-Once you have a strong understanding as to what your data contains, you are ready to use queries to explore some trends in the data. The examples provided below are not exhaustive but cover some of the more common looked at features.
+The following section contains four example queries used to explore trends and patterns in data. The examples provided below are not exhaustive but cover some of the more commonly looked at features.
 
 **Hourly activity count for a given day**
 
@@ -169,7 +169,7 @@ ORDER  BY Hour;
 
 ![query 1 output]()
 
-After confirming the query works, the data can presented in a bar graph for visual clairity.
+After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
 
 ```python
 trace = go.Bar(
@@ -191,4 +191,134 @@ iplot(fig)
 ```
 
 ![bar graph output for query 1]()
+
+**Top 10 viewed pages for a given day**
+
+This query analyzes which pages are the most viewed for a given day. The output is represented in the form of a table containing metrics on the page name and page view count.
+
+```sql
+%%read_sql query_4_df -c QS_CONNECTION
+
+SELECT web.webpagedetails.name                 AS Page_Name, 
+       Sum(web.webpagedetails.pageviews.value) AS Page_Views 
+FROM   {target_table}
+WHERE  Year(timestamp) = {target_year}
+       AND Month(timestamp) = {target_month}
+       AND Day(timestamp) in {target_day}
+GROUP  BY web.webpagedetails.name 
+ORDER  BY page_views DESC 
+LIMIT  10;
+```
+
+After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+
+```python
+trace = go.Bar(
+    x = query_4_df['Page_Name'],
+    y = query_4_df['Page_Views'],
+    name = "Page Views"
+)
+
+layout = go.Layout(
+    title = 'Top Ten Viewed Pages For a Given Day',
+    width = 1000,
+    height = 600,
+    xaxis = dict(title = 'Page_Name'),
+    yaxis = dict(title = 'Page_Views')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![top ten viewed pages]()
+
+**Top ten cities grouped by user activity**
+
+This query analyzes which cities the data is originating from.
+
+```sql
+%%read_sql query_6_df -c QS_CONNECTION
+
+SELECT concat(placeContext.geo.stateProvince, ' - ', placeContext.geo.city) AS state_city, 
+       Count(timestamp)                                                     AS Count
+FROM   {target_table}
+WHERE  Year(timestamp) = {target_year}
+       AND Month(timestamp) = {target_month}
+       AND Day(timestamp) in {target_day}
+GROUP  BY state_city
+ORDER  BY Count DESC
+LIMIT  10;
+```
+
+After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+
+```python
+trace = go.Bar(
+    x = query_6_df['state_city'],
+    y = query_6_df['Count'],
+    name = "Activity by City"
+)
+
+layout = go.Layout(
+    title = 'Top Ten Cities by User Activity',
+    width = 1200,
+    height = 600,
+    xaxis = dict(title = 'City'),
+    yaxis = dict(title = 'Count')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![top ten cities]()
+
+**Top ten viewed products**
+
+This query provides a list of the top ten viewed products. In the example below, the `Explode()` function is used to return each product in the `productlistitems` object to its own row. This allows you to do a nested query to aggregate product views for different SKU's.
+
+```sql
+%%read_sql query_7_df -c QS_CONNECTION
+
+SELECT Product_List_Items.sku AS Product_SKU,
+       Sum(Product_Views) AS Total_Product_Views
+FROM  (SELECT Explode(productlistitems) AS Product_List_Items, 
+              commerce.productviews.value   AS Product_Views 
+       FROM   {target_table}
+       WHERE  Year(timestamp) = {target_year}
+              AND Month(timestamp) = {target_month}
+              AND Day(timestamp) in {target_day}
+              AND commerce.productviews.value IS NOT NULL) 
+GROUP BY Product_SKU 
+ORDER BY Total_Product_Views DESC
+LIMIT  10;
+```
+
+After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+
+```python
+trace = go.Bar(
+    x = "SKU-" + query_7_df['Product_SKU'],
+    y = query_7_df['Total_Product_Views'],
+    name = "Product View"
+)
+
+layout = go.Layout(
+    title = 'Top Ten Viewed Products',
+    width = 1200,
+    height = 600,
+    xaxis = dict(title = 'SKU'),
+    yaxis = dict(title = 'Product View Count')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![top ten product views]()
+
+After exploring the trends and patterns of the data, you should have a good idea as to what features you want to build for a prediction of a goal. Skimming through tables can quickly highlight the form of each data attribute, obvious misrepresentations, and large outliers in the values and start to suggest candidate relationships to explore between attributes.
+
+## Exploratory data analysis
 
