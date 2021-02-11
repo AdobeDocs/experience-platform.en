@@ -29,7 +29,7 @@ user-guide-description: Merge customer data to create a unified view of customer
   * [Union schema overview (Video)](video/union-schemas-overview.md)
 * (Alpha) Computed attributes {#computed-attributes}
   * [Overview](computed-attributes/overview.md)
-  * [Computed attributes API](computed-attributed/ca-api.md)
+  * [Computed attributes API](computed-attributes/ca-api.md)
   * [Configure a computed attribute field](computed-attributes/configure-ui.md)
   * [Sample computed attribute expressions](computed-attributes/expressions.md)
   * [Using computed attributes in Platform](computed-attributes/using-ca.md)

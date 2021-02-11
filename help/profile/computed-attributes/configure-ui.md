@@ -10,7 +10,7 @@ description: Computed attributes enable you to automatically compute the value o
 
 >[!IMPORTANT]
 >
->The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+>Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
 In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a mixin to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
 
