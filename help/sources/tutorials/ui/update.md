@@ -62,7 +62,7 @@ The dataflows page appears. This page contains a list of existing dataflows asso
 
 ![reschedule](../../images/tutorials/update/reschedule.png)
 
-A dropdown menu appears, providing you with options to **[!UICONTROL edit schedule]**, **[!UICONTROL Enable dataflow]**, **[!UICONTROL View in monitoring]**, and **[!UICONTROL Delete]**. Select **[!UICONTROL Edit schedule]** from the menu.
+A dropdown menu appears, providing you with options to **[!UICONTROL Edit schedule]**, **[!UICONTROL Enable dataflow]**, **[!UICONTROL View in monitoring]**, and **[!UICONTROL Delete]**. Select **[!UICONTROL Edit schedule]** from the menu.
 
 ![edit-schedule](../../images/tutorials/update/edit-schedule.png)
 
