@@ -9,15 +9,13 @@ description: This tutorial will help you begin using streaming ingestion APIs, p
 
 # Creating a streaming connection using the API
 
-This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data [!DNL Ingestion Service] APIs.
+Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+
+This tutorial uses the [!DNL Flow Service] API to walk you through the steps to create a streaming connection using the Flow Service API.
 
 ## Getting started
 
-Streaming connection registration is required in order to start streaming data to Adobe Experience Platform. When registering a streaming connection, you need to provide some key details like the source of streaming data.
-
-After registering a streaming connection, you, as the data producer, will have a unique URL which can be used to stream data to Platform.
-
-This tutorial also requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
+This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
@@ -36,7 +34,7 @@ In order to make calls to [!DNL Platform] APIs, you must first complete the [aut
 - x-api-key: `{API_KEY}`
 - x-gw-ims-org-id: `{IMS_ORG}`
 
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 - x-sandbox-name: `{SANDBOX_NAME}`
 
@@ -64,9 +62,7 @@ POST /flowservice/connections
 
 **Request**
 
->[!NOTE]
->
->The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion.. 
+In order to create a streaming connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -76,7 +72,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample name",
+     "name": "Sample streaming connection",
      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
@@ -94,9 +90,16 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.sourceId` | The ID of the streaming connection you want to create. |
+| `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
+| `auth.params.name` | The name of the streaming connection you want to create. |
+| `connectionSpec.id` | The connection specification `id` for streaming connections. |
+
 **Response**
 
-A successful response returns HTTP status 201 with details of the newly created connection.
+A successful response returns HTTP status 201 with details of the newly created connection, including its unique identifier (`id`).
 
 ```json
 {
@@ -122,9 +125,7 @@ POST /flowservice/connections
 
 **Request**
 
->[!NOTE]
->
->The values for the listed `providerId` and the `connectionSpec` **must** be used as shown in the example, as they are what specifies to the API that you are creating a streaming connection for streaming ingestion. 
+In order to create a streaming connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb`.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
@@ -134,7 +135,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
-     "name": "Sample name",
+     "name": "Sample streaming connection",
      "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
@@ -153,9 +154,18 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  }
 ```
 
+
+| Property | Description |
+| -------- | ----------- |
+| `auth.params.sourceId` | The ID of the streaming connection you want to create. |
+| `auth.params.dataType` | The data type for the streaming connection. This value must be `xdm`. |
+| `auth.params.name` | The name of the streaming connection you want to create. |
+| `auth.params.authenticationRequired` | The parameter that specifies that the created streaming connection 
+| `connectionSpec.id` | The connection specification `id` for streaming connections. |
+
 **Response**
 
-A successful response returns HTTP status 201 with details of the newly created connection.
+A successful response returns HTTP status 201 with details of the newly created connection, including its unique identifier (`id`).
 
 ```json
 {
@@ -169,9 +179,9 @@ A successful response returns HTTP status 201 with details of the newly created 
 | `id` | The `id` of your newly created connection. This will herein be referred to as `{CONNECTION_ID}`. |
 | `etag` | An identifier assigned to the connection, specifying the revision of the connection. |
 
-## Get data collection URL
+## Get streaming endpoint URL
 
-With the connection created, you can now retrieve your data collection URL.
+With the connection created, you can now retrieve your streaming endpoint URL.
 
 **API format**
 
@@ -195,7 +205,7 @@ curl -X GET https://platform.adobe.io/data/foundation/flowservice/connections/{C
 
 **Response**
 
-A successful response returns HTTP status 200 with detailed information about the requested connection. The data collection URL is automatically created with the connection, and can be retrieved using the `inletUrl` value.
+A successful response returns HTTP status 200 with detailed information about the requested connection. The streaming endpoint URL is automatically created with the connection, and can be retrieved using the `inletUrl` value.
 
 ```json
 {

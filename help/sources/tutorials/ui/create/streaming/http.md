@@ -80,7 +80,15 @@ The **[!UICONTROL Review]** step appears, allowing you to review the details of 
 - **[!UICONTROL Connection]**: Shows the account name, source platform, and the source name.
 - **[!UICONTROL Assign dataset and map fields]**: Shows the target dataset and the schema that the dataset adheres to.
 
+After confirming the details are correct, select **[!UICONTROL Finish]**.
+
 ![](../../../../images/tutorials/create/http/review.png)
+
+## Get streaming endpoint URL
+
+With the connection created, the sources detail page appears. This page shows details of your newly created connection, including previously run dataflows, ID, and streaming endpoint URL. 
+
+![](../../../../images/tutorials/create/http/get-streaming-url.png)
 
 ## Next steps
 
