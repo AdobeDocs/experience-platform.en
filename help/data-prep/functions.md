@@ -134,6 +134,8 @@ coalesce | Returns the first non-null object in a given array. | <ul><li>INPUT: 
 first | Retrieves the first element of the given array. | <ul><li>INPUT: **Required** The array you want to find the first element of.</li></ul> | first(INPUT) |  first("1", "2", "3") | "1"
 last | Retrieves the last element of the given array. | <ul><li>INPUT: **Required** The array you want to find the last element of.</li></ul> | last(INPUT) |  last("1", "2", "3") | "3"
 to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]`
+add_to_array | Adds elements to the end of the array. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The elements that you want to append to the array.</li></ul> | add_to_array(ARRAY, VALUES) | add_to_array(['a', 'b'], 'c', 'd') | ['a', 'b', 'c', 'd']
+join_arrays | Combines the arrays with each other. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The array(s) you want to append to the parent array.</li></ul> | join_arrays(ARRAY, VALUES) | join_arrays(['a', 'b'], ['c'], ['d', 'e']) | ['a', 'b', 'c', 'd', 'e']
 
 ### Logical operators
 
