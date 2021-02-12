@@ -41,6 +41,8 @@ For information on building segment definitions using the API, see the tutorial 
 
 ## Evaluate segments
 
+Platform currently supports two methods of evaluating segments - streaming segmentation and batch segmentation.
+
 ### Streaming segmentation
 
 Streaming segmentation is an ongoing data selection process that updates your segments in response to user activity. Once a segment has been built and saved, the segment definition is applied against incoming data to [!DNL Real-time Customer Profile]. Segment additions and removals are processed regularly, ensuring your target audience remains relevant. 
