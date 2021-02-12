@@ -67,12 +67,6 @@ Additional information about the last segment evaluation can be found by selecti
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
 
-## Streaming segmentation video demo
-
-The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
-
 ## Next steps
 
 This user guide explains how streaming-enabled segment definitions work on Adobe Experience Platform and how to monitor streaming-enabled segments. 
