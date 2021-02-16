@@ -23,7 +23,7 @@ If you already have a valid Blob destination, you may skip the remainder of this
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
--   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, please read the cloud storage section in the tutorial on [activating destinations](/help/destinations/ui/activate-destinations.md#esp-and-cloud-storage).
+-   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, please read the cloud storage section in the tutorial on [activating destinations](../../ui/activate-destinations.md#esp-and-cloud-storage).
 
 ## Connect your Blob account {#connect-destination}
 
