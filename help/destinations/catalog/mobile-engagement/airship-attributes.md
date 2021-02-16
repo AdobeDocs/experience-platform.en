@@ -1,18 +1,14 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes destination
-seo-title: Airship Attributes destination
+title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 

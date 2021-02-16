@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
-title: Segment dashboard
+title: Segment Dashboard UI Guide
 description: This guide outlines the segment dashboard available in the Adobe Experience Platform UI. 
 topic: guide
 type: Documentation

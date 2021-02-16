@@ -1,15 +1,11 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
-title: Social Network Destinations Workflow
+title: Create a social network destination
 type: Tutorial
-seo-title: Social Network Destinations Workflow
-description: Instructions to connect to your social network ad accounts
-seo-description: Instructions to connect to your social network ad accounts
+description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
 ---
 
-# Social Network destinations authentication workflow {#social-network-destinations-workflow}
-
-## Workflow to create social network destinations
+# Create a social network destination {#social-network-destinations-workflow}
 
 This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Experience Platform will be the same for all social network destinations, once more are added to the product.
 

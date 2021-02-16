@@ -1,12 +1,10 @@
 ---
 keywords: Azure Blob;Blob destination;s3;azure blob destination
-title: Azure Blob destination
-seo-title: Azure Blob destination
+title: Azure Blob connection
 description: Create a live outbound connection to your Azure Blob storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform.
-seo-description: Create a live outbound connection to your Azure Blob storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform.
 ---
 
-# Create an [!DNL Azure Blob] destination in the UI
+# [!DNL Azure Blob] connection
 
 [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
 

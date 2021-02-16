@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy jobs endpoint
+title: Privacy Jobs API Endpoint
 topic: developer guide
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
 ---

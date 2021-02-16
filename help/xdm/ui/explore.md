@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
 solution: Experience Platform
-title: Explore XDM resources in the UI
+title: Explore XDM Resources in the UI
 description: Learn how to explore existing schemas, classes, mixins, and data types in the Experience Platform user interface.
 topic: tutorial
 type: Tutorial

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create email marketing destinations
+title: Connect to email marketing destinations and activate data using API calls
 description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
 
-# Create email marketing destinations and activate data using API calls in Adobe Experience Platform
+# Connect to email marketing destinations and activate data using API calls
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
 

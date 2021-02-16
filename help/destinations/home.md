@@ -1,8 +1,8 @@
 ---
 keywords: destinations;adobe experience platform;platform;destinations overview;activate data;activate;
-title: Destinations Overview
-seo-title: Destinations Overview
-description: Activate Platform data to destinations for cross-channel marketing campaigns, emails, targeted advertising, and more.
+title: Destinations overview
+seo-title: Destinations overview
+description: Learn how to activate Adobe Experience Platform data to destinations for cross-channel marketing campaigns, emails, targeted advertising, and more.
 seo-description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use Destinations in the Adobe Experience Platform to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 ---
 
@@ -12,14 +12,14 @@ seo-description: Destinations are pre-built integrations with destination platfo
 
 **[!DNL Destinations]** are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
-## Destinations and Sources {#destinations-and-sources}
+## Destinations and sources {#destinations-and-sources}
 
-One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use sources to ingest data into Platform and destinations to export data from Platform. 
+One of the core functionalities of Platform is ingesting your first-party data and activating it for your business needs. Use [sources](../sources/home.md) to ingest data into Platform and destinations to export data from Platform. 
 
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use **[!UICONTROL Destinations]** to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -36,7 +36,7 @@ The controls in the [Destinations workspace](./ui/destinations-workspace.md) all
 
 For detailed information, see the [destination types and categories overview](./destination-types.md).
 
-## Destinations and Access Controls {#access-controls}
+## Destinations and access controls {#access-controls}
 
 The destinations functionality in Platform works with Adobe Experience Platform access control permissions. Depending on your user's permission level, you can view, manage, and activate destinations. For information about the individual permissions, see [Access control in Adobe Experience Platform](../access-control/home.md) and scroll down to the bottom of the page.
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: Create an Amazon Kinesis source connector in the UI
+title: Create an Amazon Kinesis  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for authenticating an Amazon Kinesis (hereinafter referred to as "Kinesis") source connector using the Platform user interface.
+description: Learn how to create an Amazon Kinesis source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an [!DNL Amazon Kinesis] source connector in the UI
+# Create an [!DNL Amazon Kinesis] source connection in the UI
 
 >[!NOTE]
 >

@@ -1,18 +1,16 @@
 ---
-keywords: facebook extensions;facebook extension;facebook destinations;facebook;instagram;messenger;facebook messenger
-title: Facebook Destination
-seo-title: Facebook Destination
+keywords: facebook connection;facebook connection;facebook destinations;facebook;instagram;messenger;facebook messenger
+title: Facebook connection
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
-seo-description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
-# [!DNL Facebook] Destination 
-
-## Overview {#overview}
+# [!DNL Facebook] connection
 
 >[!IMPORTANT]
 >
->Customer migration to the new destination versions is currently in progress. Until the migration is complete, you will only see the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] available identities for this destination.
+>We are currently migrating customers to the new version of this destination, [!DNL Facebook Custom Audience].
+>
+> The instructions in this article apply to both versions, with the following note: while this migration is in progress, you will only see the current version of the [!DNL Facebook] destination in the user interface, where you can only use the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] identities for activation. 
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
@@ -92,9 +90,12 @@ If you select to hash the email addresses yourself, make sure to comply with the
   - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Do not salt the string.
 
-Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+>[!NOTE]
+>
+>Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+> Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Using custom namespaces {#custom-namespaces}

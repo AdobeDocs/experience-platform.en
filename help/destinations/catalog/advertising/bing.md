@@ -1,14 +1,10 @@
 ---
 keywords: advertising; bing; 
-title: Microsoft Bing Destination
-seo-title: The Microsoft Bing destination helps you send profile data to Microsoft Display Advertising.
-description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
-seo-description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+title: Microsoft Bing connection
+description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
 
-# [!DNL Microsoft Bing] destination 
-
-## Overview {#overview}
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 

@@ -1,20 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
 solution: Experience Platform
-title: Connect with Tableau
+title: Connect Tableau to Query Service
 topic: connect
 description: This document walks through the steps for connecting Tableau with Adobe Experience Platform Query Service.
 ---
 
-# [!DNL Tableau]
+# Connect [!DNL Tableau] to Query Service
 
 This document covers the steps for connecting Tableau with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
 > This guide assumes you already have access to [!DNL Tableau] and are familiar with how to navigate its interface. More information about [!DNL Tableau] can be found in the [official [!DNL Tableau] documentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
-
-## Connect [!DNL Tableau] with Platform
 
 To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 

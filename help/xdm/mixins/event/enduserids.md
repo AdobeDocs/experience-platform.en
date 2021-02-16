@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: End User ID Details mixin
+title: End User ID Details Mixin
 topic: overview
 description: This document provides an overview of the End User ID Details mixin.
 ---

@@ -1,18 +1,14 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) Azure Event Hubs destination
-seo-title: (Beta) Azure Event Hubs destination
+title: (Beta) Azure Event Hubs connection
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
-seo-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
-# (Beta) [!DNL Azure Event Hubs] destination
+# (Beta) [!DNL Azure Event Hubs] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL Azure Event Hubs] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 [!DNL Azure Event Hubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
 

@@ -1,18 +1,14 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: Amazon Kinesis destination
-seo-title: Amazon Kinesis destination
+title: Amazon Kinesis connection
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
-seo-description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
 ---
 
-# (Beta) [!DNL Amazon Kinesis] destination
+# (Beta) [!DNL Amazon Kinesis] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time. 
 

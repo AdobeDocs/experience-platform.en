@@ -1,12 +1,10 @@
 ---
 keywords: launch extensions;launch extension;launch destinations; platform launch extensions;platform launch extension;platform launch destinations
-title: Experience Platform Launch Extensions
-seo-title: Experience Platform Launch Extensions
-description: Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
-seo-description: Launch is the next-generation of tag management capabilities from Adobe. Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
+title: Adobe Experience Platform Launch extension
+description: Adobe Experience Platform Launch is the next generation of tag management capabilities from Adobe. Platform Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
 ---
 
-# Adobe Experience Platform Launch extensions {#overview.md}
+# Adobe Experience Platform Launch extensions
 
 Adobe Experience Platform Launch is the next-generation of tag management capabilities from Adobe. Platform Launch gives customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences. Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature.
 

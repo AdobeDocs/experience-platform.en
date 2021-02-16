@@ -6,7 +6,7 @@ description: Dashboards, Home Page, and First-Time User Experience of Adobe Expe
 seo-description: Dashboards, Home Page, and First-Time User Experience of Adobe Experience Platform
 ---
 
-# [!DNL Real-time Customer Data Platform] metrics overview
+# [!DNL Real-time Customer Data Platform] home page and dashboards
 
 The Real-time Customer Data Platform (Real-time CDP) home page, which includes a metrics dashboard, appears when you log in to Real-time CDP.
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
-title: Environment Details mixin
+title: Environment Details Mixin
 topic: overview
 description: This document provides an overview of the ExperienceEvent Environment Details mixin.
 ---

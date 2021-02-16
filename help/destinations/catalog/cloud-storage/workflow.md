@@ -1,15 +1,12 @@
 ---
 keywords: cloud storage destination;cloud storage
-title: Cloud storage destinations workflow
-seo-title: Cloud storage destinations workflow
+title: Create a cloud storage destination
 type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations
 ---
 
-# Workflow to create cloud storage destinations
-
-## Overview
+# Create a cloud storage destination
 
 This page explains how you can connect to cloud storage locations in Adobe Experience Platform.
 

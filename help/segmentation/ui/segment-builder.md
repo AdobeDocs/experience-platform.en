@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
-title: Segmentation Service Segment Builder user guide
+title: Segment Builder UI Guide
 topic: ui guide
-description: Segment Builder provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 ---
 
-# [!DNL Segment Builder] UI guide 
+# [!DNL Segment Builder] UI guide
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
 
@@ -93,6 +93,22 @@ Alternatively, you can view a code-based version of a rule created in the [!DNL 
 Code view provides a button that allows you to copy the value of the segment to use in API calls. To get the latest version of the segment, make sure you have saved your latest changes to the segment.
 
 ![](../images/ui/segment-builder/copy-code.png)
+
+### Aggregation functions
+
+An aggregation in [!DNL Segment Builder] is a calculation on a group of XDM attributes whose data type is a number (either a double or an integer). The four supported aggregation functions within Segment Builder are SUM, AVERAGE, MIN, and MAX.
+
+To create an aggregation function, select an event from the left rail, and insert it into the [!UICONTROL Events] container.
+
+![](../images/ui/segment-builder/select-event.png)
+
+After placing the event within the Events container, select the ellipses icon (...), followed by **[!UICONTROL Aggregate]**.
+
+![](../images/ui/segment-builder/add-aggregation.png)
+
+The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value. For the example below, this segment would qualify any profile that has a sum of purchased values that is greater than $100, even if each individual purchase is less than $100.
+
+![](../images/ui/segment-builder/filled-aggregation.png)
 
 ## Containers
 
