@@ -26,7 +26,7 @@ Here are some benefits to using Adobe Experience Platform Web SDK for your Singl
 
 ## XDM Views and Single Page Applications 
 
-The Adobe Target VEC for SPAs takes advantage of a new concept called Views: a logical group of visual elements that together make up an SPA experience. A single page application can, therefore, be considered as transitioning through Views, instead of URLs, based on user interactions. A View can typically represent a whole site or grouped visual elements within a site. 
+The Adobe Target VEC for SPAs takes advantage of a concept called Views: a logical group of visual elements that together make up an SPA experience. A single page application can, therefore, be considered as transitioning through Views, instead of URLs, based on user interactions. A View can typically represent a whole site or grouped visual elements within a site. 
 
 To further explain what Views are, the following example uses a hypothetical online e-commerce site implemented in React to explore example Views.  
 
