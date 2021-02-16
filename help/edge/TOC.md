@@ -49,6 +49,7 @@ user-guide-description: Interact with Experience Cloud services through the Edge
   * [Web SDK extension](extension/web-sdk-extension.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
+  * [Web SDK extension release notes](web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
 * [Blog Posts](blog-posts.md)
