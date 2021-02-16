@@ -122,3 +122,4 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Invoca Tags](./catalog/voice/invoca.md)
         * [Medallia](./catalog/voice/medallia.md)
         * [Talk URL Inbox](./catalog/voice/talkurl.md)
+* [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
