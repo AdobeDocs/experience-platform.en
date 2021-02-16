@@ -18,7 +18,7 @@ An online retailer wants to reach existing customers through social platforms an
 
 ## Destination specifics {#destination-specs}
 
- ### Data governance for [!DNL LinkedIn Matched Audience] destinations {#data-governance}
+### Data governance for [!DNL LinkedIn Matched Audience] destinations {#data-governance}
 
 >[!IMPORTANT]
 >
