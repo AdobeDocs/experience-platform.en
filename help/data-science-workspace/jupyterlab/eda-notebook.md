@@ -434,3 +434,71 @@ limit 500000;
 
 ### Merge the features in the aggregated dataset with a goal
 
+The following cell is used to merge the features in the aggregated dataset outlined in the previous example with your prediction goal.
+
+```python
+Data = pd.merge(agg_data,target_df, on='ID',how='left')
+Data['TARGET'].fillna(0, inplace=True)
+```
+
+The next three example cells are used to make sure the merge was successful.
+
+`Data.shape` returns the number of columns followed by the number of rows for example: (11913, 12).
+
+```python
+Data.shape
+```
+
+`Data.head(5)` returns a table with 5 rows of data. The returned table contains all 12 columns of aggregated data mapped to a profile ID.
+
+```python
+Data.head(5)
+```
+
+![example table]()
+
+This cell prints the number of unique profiles.
+
+```python
+print("Count of unique profiles :", (len(Data)))
+```
+
+### Detect missing values and outliers
+
+Once you have completed your data aggregation and merged it with your goal, you need to review the data sometimes referred to as a data health check. This process involves identifying missing values and outliers. When issues are identified, the next task is to come up with specific strategies for handling them.
+
+>[!NOTE]
+>
+>During this step, you sometimes spot corruption in the values that may signal a fault in the data logging process.
+
+```python
+Missing = pd.DataFrame(round(Data.isnull().sum()*100/len(Data),2))
+Missing.columns =['Percentage_missing_values'] 
+Missing['Features'] = Missing.index
+```
+
+The following cell is used to visualize the missing values.
+
+```python
+trace = go.Bar(
+    x = Missing['Features'],
+    y = Missing['Percentage_missing_values'],
+    name = "Percentage_missing_values")
+
+layout = go.Layout(
+    title = 'Missing values',
+    width = 1200,
+    height = 600,
+    xaxis = dict(title = 'Features'),
+    yaxis = dict(title = 'Percentage of missing values')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![Missing values]()
+
+After detecting missing values, it is critical to identify outliers. Parametric statistics like means, standard deviations, correlations, and every statistic based on these are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
+
+To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the first percentile, or 1.5 times the IQR above the third percentile. Values that fall under this are considered to be an outlier.
