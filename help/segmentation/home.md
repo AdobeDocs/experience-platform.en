@@ -41,7 +41,7 @@ For information on building segment definitions using the API, see the tutorial 
 
 ## Evaluate segments
 
-Platform currently supports two methods of evaluating segments - streaming segmentation and batch segmentation.
+Platform currently supports two methods of evaluating segments: streaming segmentation and batch segmentation.
 
 ### Streaming segmentation
 
