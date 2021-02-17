@@ -34,31 +34,17 @@ To navigate to the segment dashboard within the Platform UI, select **[!UICONTRO
 
 ### Select a segment
 
-To select a segment to view in the dashboard, choose the dialog selector for the **[!UICONTROL Select segment]** text box. 
-
-![](../images/segments/select-segment.png)
+The dashboard will automatically select a segment to display, but you can change the segment that is displayed using the drop down menu. To choose a different segment, select the drop down next to the segment name and then select the segment that you wish to view.
 
 >[!NOTE]
 >
->If a segment is already selected, use the `X` to remove the segment first and then the dialog selector will appear.
->
->![](../images/segments/remove-segment.png)
+>The dropdown menu shows all segments that your organization has created so far. This may mean that you will need to scroll in order to view the complete list of available segments.
 
-The **[!UICONTROL Select segment]** dialog opens, allowing you to choose the segment you wish to view. After choosing the segment you want, use **[!UICONTROL Select]** to return to the dashboard.
-
-![](../images/segments/select-segment-dialog.png)
-
-### Merge policy
-
-After selecting a segment, the merge policy text box will populate automatically with the merge policy related to that segment. 
-
-To learn more about building segments in Experience Platform, visit the [Segment Builder UI guide](../../segmentation/ui/segment-builder.md). For more information on merge policies, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
-
-![](../images/segments/merge-policy.png)
+![](../images/segments/change-segment.png)
 
 ### Widgets and metrics
 
-The segment dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
+The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
 
 ![](../images/segments/widget-timestamp.png)
 
@@ -67,6 +53,7 @@ The segment dashboard is composed of widgets, which are read-only metrics provid
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your segment. Select the name of a widget below to learn more:
 
 * [[!UICONTROL Segment size]](#segment-size)
+* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
 * [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
 
 ### [!UICONTROL Segment size] {#segment-size}
@@ -77,9 +64,17 @@ For more information on fragments and merged profiles, please begin by reading t
 
 ![](../images/segments/segment-size.png)
 
+### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+
+The **[!UICONTROL Profiles added over time]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days. This widget displays how the segment size may have shifted over a 30 day period as new profiles qualify for or exit from the segment. 
+
+To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
+
+![](../images/segments/profiles-added-over-time.png)
+
 ### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
 
-The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of namespaces across all of the merged profiles in your selected segment. The total number of profiles by [!UICONTROL ID namespace] (in other words, adding together the values shown for each namespace) will usually be higher than the total number of profiles in the segment because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces may be associated with that individual customer.
+The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of namespaces across all of the merged profiles in your selected segment. The total number of profiles by identity namespace ([!UICONTROL ID namespace] in the widget) may be higher than the total number of profiles in the segment because one profile could have multiple namespaces associated with it. In other words, adding together the values shown for each namespace may total more than the total profiles in the segment because if a customer interacts with your brand on more than one channel, multiple namespaces may be associated with that individual customer.
 
 To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 

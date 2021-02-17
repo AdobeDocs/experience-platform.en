@@ -13,4 +13,5 @@ user-guide-description: Visualize Experience Platform data on customizable dashb
   * [Profiles](guides/profiles.md)
   * [Segments](guides/segments.md)
   * [Destinations](guides/destinations.md)
+  * [License usage](guides/license-usage.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
