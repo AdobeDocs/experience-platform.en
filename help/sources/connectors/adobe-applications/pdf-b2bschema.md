@@ -115,4 +115,4 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Profile in schema**: Enabled
 * **Primary identity**: `personID` in base class
 * **Primary identity namespace**: `person_{MUNCHKIN_ID}_marketo`
-* **Notes**: Experience Event is different from entities. The identity of experience event is the person who did the activity
+* **Notes**: Experience Event is different from entities. The identity of experience event is the person who did the activity. 

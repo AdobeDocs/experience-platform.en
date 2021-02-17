@@ -16,7 +16,7 @@ This document provides an overview of custom namespaces required when creating a
 
 ## Marketo namespaces
 
-The Marketo namespace is used in the primary identity of the entity. The namespace display name is in the format of: `{ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the munchkin ID of `123-ABC-789`, and the issuer type is `marketo`, then the display name is `company_123-ABC-789_marketo`.
+The Marketo namespace is used in the primary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the munchkin ID of `123-ABC-789`, and the issuer type is `marketo`, then the display name is `company_123-ABC-789_marketo`.
 
 >[!IMPORTANT]
 >
@@ -36,7 +36,7 @@ The Marketo namespace is used in the primary identity of the entity. The namespa
 
 ## Salesforce namespaces
 
-The salesforce namespace is used in the secondary identity of the entity. The namespace display name is in the format of: `{ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the salesforce organization ID of `00DA0000000Hz79`, and the issuer type is salesforce, then the display name is `company_00DA0000000Hz79_salesforce`.
+The salesforce namespace is used in the secondary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the salesforce organization ID of `00DA0000000Hz79`, and the issuer type is salesforce, then the display name is `company_00DA0000000Hz79_salesforce`.
 
 | Display name | Display name example | Identity symbol | Identity symbol example | Entity type |
 | --- | --- | --- | --- | --- |
@@ -47,3 +47,32 @@ The salesforce namespace is used in the secondary identity of the entity. The na
 | `campaign_{SFDC_ORGANIZATION_ID}_salesforce` | `campaign_00DA0000000Hz79_salesforce` | `sf{SFDC_ORGANIZATION_ID_WITHOUT_HYPHEN}cp` | `sf00DA0000000Hz79cp` | Non-people identifier |
 | `campaign_member_{SFDC_ORGANIZATION_ID}_salesforce` | `campaign_member_00DA0000000Hz79_salesforce` | `sf{SFDC_ORGANIZATION_ID_WITHOUT_HYPHEN}cpm` | `sf00DA0000000Hz79cpm` | Non-people identifier |
 | `named_account_{SFDC_ORGANIZATION_ID}_salesforce` | `named_account_00DA0000000Hz79_salesforce` | `sf{SFDC_ORGANIZATION_ID_WITHOUT_HYPHEN}na` | `sf00DA0000000Hz79na` | Non-people identifier |
+
+## Appendix
+
+The following are additional information that provides further context on the use of Marketo namespaces.
+
+### Limits and constraints
+
+* The identity symbol must be composed of only alphanumeric characters and no special characters.
+* The identity symbol cannot exceed its cap of 20 characters. The Salesforce organization ID itself is the 15-character GUID.
+
+The identity symbol follows the format of: `{ISSUER_TYPE_ABBREVIATION}{ISSUER_INSTANCE_ID}{ENTITY_TYPE_ABBREVIATION}`.
+
+### Issuer type abbreviations
+
+* `mk` for Marketo
+* `sf` for Salesforce
+* `md` for Microsoft Dynamics
+
+### Entity type abbreviations
+
+* `p` for Persons
+* `c` for Companies
+* `na` for Named accounts
+* `o` for Opportunities
+* `opr` for Opportunity person relations
+* `cp` for Campaigns
+* `cpm` for Campaign members
+* `ml` for Marketing lists
+* `mlm` for Marketing list members
