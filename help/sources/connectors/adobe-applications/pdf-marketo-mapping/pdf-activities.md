@@ -14,23 +14,23 @@ The table below contains the mappings between the fields in the Marketo activiti
 >
 >Currently, the only activity types supported are `removeFromList` and `visitWebPage`. More activity types will be supported in future releases.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `activityKey` | `_id` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `id` | `_id` |
+| `personID` | `personID` | Primary Identity |
 | `eventType` | `eventType` |
-| `activityDate` | `timestamp`|
+| `timeStamp` | `timestamp`|
 | `removeFromList.listID` | `listOperations.listID` |
 | `visitWebPage.userAgent` | `environment.browserDetails.userAgent` |
-| `visitWebPage.clientIPAddress` | `environment.ipV4` |
-| `visitWebPage.searchQuery`| `search.keywords` |
+| `visitWebPage.ipV4` | `environment.ipV4` |
+| `visitWebPage.searchKeywords`| `search.keywords` |
 | `visitWebPage.searchEngine` | `search.searchEngine` |
-| `visitWebPage.personalizedURL` | `web.webPageDetails.isPersonalizedURL` |
+| `visitWebPage.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
 | `visitWebPage.webPageName` | `web.webPageDetails.name` |
 | `visitWebPage.queryParameters` | `web.webPageDetails.queryParameters` |
 | `visitWebPage.webPageID` | `web.webPageDetails.webPageID` |
 | `visitWebPage.referrerURL` | `web.webReferrer.URL`|
 | `visitWebPage.webPageURL` | `web.webPageDetails._marketo.URL` |
-| `Person-key` | `personID` |
 
 ## Next steps
 

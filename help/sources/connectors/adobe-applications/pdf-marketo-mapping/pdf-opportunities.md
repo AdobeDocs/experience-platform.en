@@ -12,8 +12,9 @@ The tables below contains the mappings between the Marketo opportunities dataset
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `Opportunity-key` | `opportunityID` |
-| `Account-key` | `accountID` |
+| `id` | `opportunityID` | Primary Identity |
+| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `mktoCdpAccountOrgId` | `accountID` | Relationship |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |

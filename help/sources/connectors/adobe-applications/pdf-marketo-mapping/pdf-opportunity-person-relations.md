@@ -10,11 +10,12 @@ description: The table below contains the mappings between the Marketo Opportuni
 
 The table below contains the mappings between the Marketo opportunity person relations dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `OpportunityPerson-key` | `opportunityPersonID` |
-| `Opportunity-key` | `opportunityID` |
-| `Person-key` | `personID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `id` | `opportunityPersonID` | Primary Identity |
+| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `mktoCdpOpptyId` | `opportunityID` | Relationship |
+| `leadId` | `personID` | Relationship |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |

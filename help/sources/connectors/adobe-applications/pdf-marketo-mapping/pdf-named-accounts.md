@@ -14,9 +14,10 @@ The table below contains the mappings between the Marketo named accounts dataset
 >
 >The named accounts dataset is only necessary with Marketo's account-based marketing (ABM) feature. If you are not using ABM, then you do not need to set up mappings for named accounts.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `Account-key` | `accountID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `id` | `accountID` | Primary Identity |
+| `crmGuid` | `extSourceSystemAudit.externalID` | Secondary Identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -28,8 +29,7 @@ The table below contains the mappings between the Marketo named accounts dataset
 | `logoUrl` | `accountOrganization.logoUrl` |
 | `numberOfEmployees` | `accountOrganization.numberOfEmployees` |
 | `name` | `accountName` |
-| `accountOwnerId` | `accountOwnerID` |
-| `AccountParent-key` | `accountParentID` |
+| `parentAccountId` | `accountParentID` |
 | `sourceType` | `accountSourceType` |
 
 ## Next steps

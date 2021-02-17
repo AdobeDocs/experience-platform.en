@@ -10,9 +10,10 @@ description: The table below contains the mappings between the Marketo campaigns
 
 The table below contains the mappings between the Marketo campaigns dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `Campaign-key` | `campaignID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `id` | `campaignID` | Primary Identity |
+| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary Identity |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |

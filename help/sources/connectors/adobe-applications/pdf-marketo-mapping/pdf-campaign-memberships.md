@@ -10,9 +10,9 @@ description: The table below contains the mappings between the Marketo Campaign 
 
 The table below contains the mappings between the Marketo Campaign memberships dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `CampaignMember-key` | `campaignMemberID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `Id` | `campaignMemberID` | Primary Identity |
 | `Campaign-key` | `campaignID` |
 | `Person-key` | `personID` |
 | `AcquiredByCampaign-key` | `acquiredByCampaignID` |

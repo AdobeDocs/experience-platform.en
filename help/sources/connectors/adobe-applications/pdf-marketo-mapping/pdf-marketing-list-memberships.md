@@ -10,11 +10,11 @@ description: The table below contains the mappings between the fields in the Mar
 
 The table below contains the mappings between the fields in the Marketo marketing list memberships dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `MarketingListMember-key` | `marketingListMemberID` |
-| `MarketingList-key` | `marketingListID` |
-| `Person-key`| `personID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `marketingListMemberID` | `marketingListMemberID` | Primary Identity |
+| `marketingListID` | `marketingListID` | Relationship |
+| `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 

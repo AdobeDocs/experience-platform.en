@@ -12,26 +12,20 @@ The table below contains the mappings between the Marketo persons dataset and th
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `Person-key` | `personID` |
-| `DunsNumber` | `b2b.leadOrganization.DUNSNumber` |
-| `NaicsCode` | `b2b.leadOrganization.NAICSCode` |
-| `NaicsDesc` | `b2b.leadOrganization.NAICSDescription` |
-| `sicCode` | `b2b.leadOrganization.SICCode` |
-| `SicDesc` | `b2b.leadOrganization.SICDescription` |
-| `industry` | `b2b.leadOrganization.industry` |
-| `Jigsaw` | `b2b.leadOrganization.jigsaw` | Recommended only if you use the Salesforce integration. |
-| `numberOfEmployees` | `b2b.leadOrganization.numberOfEmployees` |
-| `website` | `b2b.leadOrganization.website` |
+| `id` | `personID` |
 | `emailSuspended` | `b2b.personOptInOut._channels.email` |
 | `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
 | `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
-| `Account-key` | `b2b.accountID` |
+| `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
 | `leadSource` | `b2b.personSource` |
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
+| `leadPartitionId` | `b2b.personGroupID` |
+| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
+| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -48,42 +42,14 @@ The table below contains the mappings between the Marketo persons dataset and th
 | `state` | `workAddress.state` |
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
-| `inferredCompany` | `inferredCompany` |
-| `inferredMetropolitanArea` | `inferredMetropolitanArea` |
-| `inferredPhoneAreaCode` | `inferredPhoneAreaCode` |
-| `inferredCity` | `inferredAddress.city` |
-| `inferredCountry` | `inferredAddress.country` |
-| `inferredPostalCode` | `inferredAddress.postalCode` |
-| `inferredStateRegion` | `inferredAddress.state `|
 | `company` | `organizations` |
-| `inferredCity` | `personComponents.personSegmentTraits.inferredAddress.city` |
-| `inferredCountry` | `personComponents.personSegmentTraits.inferredAddress.country` |
-| `inferredPostalCode` | `personComponents.personSegmentTraits.inferredAddress.postalCode` |
-| `inferredStateRegion` | `personComponents.personSegmentTraits.inferredAddress.state` |
-| `annualRevenue` | `personComponents.personSegmentTraits.leadOrganization.annualRevenue.amount` |
-| `DunsNumber` | `personComponents.personSegmentTraits.leadOrganization.DUNSNumber` | Recommended only if you use the Salesforce integration. |
-| `NaicsCode` | `personComponents.personSegmentTraits.leadOrganization.NAICSCode` | Recommended only if you use the Salesforce integration. |
-| `NaicsDesc` | `personComponents.personSegmentTraits.leadOrganization.NAICSDescription` | Recommended only if you use the Salesforce integration. |
-| `sicCode` | `personComponents.personSegmentTraits.leadOrganization.SICCode` |
-| `SicDesc` | `personComponents.personSegmentTraits.leadOrganization.SICDescription` | Recommended only if you use the Salesforce integration. |
-| `industry` | `personComponents.personSegmentTraits.leadOrganization.industry` |
-| `Jigsaw` | `personComponents.personSegmentTraits.leadOrganization.jigsaw` | Recommended only if you use the Salesforce integration. |
-| `numberOfEmployees` | `personComponents.personSegmentTraits.leadOrganization.numberOfEmployees` |
-| `website` | `personComponents.personSegmentTraits.leadOrganization.website` |
-| `inferredCompany` | `personComponents.personSegmentTraits.inferredCompany` |
-| `inferredMetropolitanArea` | `personComponents.personSegmentTraits.inferredMetropolitanArea` |
-| `inferredPhoneAreaCode` | `personComponents.personSegmentTraits.inferredPhoneAreaCode` |
 | `leadScore` | `personComponents.personSegmentTraits.personScore` |
 | `leadSource` | `personComponents.personSegmentTraits.personSource` |
 | `leadStatus` | `personComponents.personSegmentTraits.personStatus` |
 | `personType` | `personComponents.personSegmentTraits.personType` |
-| `Account-systemID` | `personComponents.sourceAccountID.systemID` |
-| `Account-ID` | `personComponents.sourceAccountID.ID` |
-| `Account-key` | `personComponents.sourceAccountID.key` |
-| `sfdcContactId` | `personComponents.sourceExternalID.ID` | Recommended only if you use the Salesforce integration. |
-| `Person-systemID` | `personComponents.sourcePersonID.systemID` |
-| `Person-ID` | `personComponents.sourcePersonID.ID` |
-| `Person-key` | `personComponents.sourcePersonID.key` |
+| `contactCompany` | `personComponents.sourceAccountID` |
+| `sfdcContactId` | `personComponents.sourceExternalID` | Recommended only if you use the Salesforce integration. |
+| `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 

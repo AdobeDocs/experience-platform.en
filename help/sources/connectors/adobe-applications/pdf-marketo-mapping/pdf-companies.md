@@ -10,9 +10,10 @@ description: The table below contains the mappings between the Marketo companies
 
 The table below contains the mappings between the Marketo companies dataset and their corresponding Experience Data Model (XDM) fields.
 
-| Source dataset | XDM target field |
-| -------------- | ---------------- |
-| `Account-key` | `accountID` |
+| Source dataset | XDM target field | Notes |
+| -------------- | ---------------- | ----- |
+| `id` | `accountID` | Primary Identity |
+| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Secondary Identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
