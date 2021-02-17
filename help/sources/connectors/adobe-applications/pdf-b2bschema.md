@@ -19,30 +19,29 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Account
 * **Mixins**: XDM Business Account Details
 * **Profile in schema**: Enabled
-* **Primary identity**: `accountID` in the base class
+* **Primary identity**: `accountID` in the base class.
 * **Primary identity namespace**: `company_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class
-* **Secondary identity namespace**: `company_{SFDC_ORGANIZATION_ID}_salesforce` in the base class
+* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
+* **Secondary identity namespace**: `company_{SFDC_ORGANIZATION_ID}_salesforce` in the base class.
 
 ### Marketo Person
 
 * **Base class**: XDM Individual Profile
 * **Mixins**: <ul><li>XDM Business Person Details</li><li>XDM Business Person Components</li></ul>
 * **Profile in schema**: Enabled
-* **Primary identity**: `personID` in the base class
+* **Primary identity**: `personID` in the base class.
 * **Primary identity namespace**: `person_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` of XDM Business Person Details mixin
+* **Secondary identity**: `extSourceSystemAudit.externalID` of XDM Business Person Details mixin.
 * **Secondary identity namespace**: `person_{SFDC_Organization_ID}_salesforce`
-* **Relationship**:
 
 ### Marketo Opportunity
 
 * **Base class**: XDM Business Opportunity
 * **Mixins**: XDM Business Opportunity Details
 * **Profile in schema**: Enabled
-* **Primary identity**: `opportunityPersonID` in the base class
+* **Primary identity**: `opportunityPersonID` in the base class.
 * **Primary identity namespace**: `opportunity_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class
+* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
 * **Secondary identity namespace**: `opportunity_{SFDC_Organization_ID}_salesforce`
 * **Relationship**: <ul><li>`accountID` in the base class</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul>
 
@@ -51,9 +50,9 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Opportunity Person Relation
 * **Mixins**: None
 * **Profile in schema**: Enabled
-* **Primary identity**: `opportunityPersonID` in base class
+* **Primary identity**: `opportunityPersonID` in base class.
 * **Primary identity namespace**: `opportunity_person_relation_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class
+* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
 * **Secondary identity namespace**: `opportunity_person_relation_{SFDC_Organization_ID}_salesforce`
 
 ### Marketo Campaign
@@ -61,9 +60,9 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Campaign
 * **Mixins**: XDM Business Campaign Details
 * **Profile in schema**: Enabled
-* **Primary identity**: `campaignID` in base class
+* **Primary identity**: `campaignID` in base class.
 * **Primary identity namespace**: `campaign_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class
+* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
 * **Secondary identity namespace**: `campaign_{SFDC_Organization_ID}_salesforce`
 
 ### Marketo Campaign Member
@@ -71,7 +70,7 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Campaign Member
 * **Mixins**: XDM Business Campaign Member Details
 * **Profile in schema**: Enabled
-* **Primary identity**: `campaignMemberID` in base class
+* **Primary identity**: `campaignMemberID` in base class.
 * **Primary identity namespace**: `campaign_member_{MUNCHKIN_ID}_marketo`
 * **Secondary identity**:
 * **Secondary identity namespace**:
@@ -82,37 +81,35 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Marketing List
 * **Mixins**: None
 * **Profile in schema**: Enabled
-* **Primary identity**: marketingListID` in base class
+* **Primary identity**: marketingListID` in base class.
 * **Primary identity namespace**: `marketing_list_{MUNCHKIN_ID}_marketo`
-* **Notes**: Marketing list is not synced from Salesforce, so there is no secondary identity
+* **Notes**: Marketing list is not synced from Salesforce, so there is no secondary identity.
 
 ### Marketo Marketing List Member
 
 * **Base class**: XDM Business Marketing List Members
 * **Mixins**: None
 * **Profile in schema**: Enabled
-* **Primary identity**: `marketingListMemberID` in base class
+* **Primary identity**: `marketingListMemberID` in base class.
 * **Primary identity namespace**: `marketing_list_member_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**:
-* **Secondary identity namespace**:
 * **Relationship**: <ul><li>`personID` in the base class</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul><ul><br><li>`marketingListID` in the base class</li><li>Schema: Marketo Opportunity</li><li>Namespace: `marketing_list_{MUNCHKIN_ID}_marketo`</li></ul>
-* **Notes**: Marketing list is not synced from Salesforce, so there is no secondary identity
+* **Notes**: Marketing list is not synced from Salesforce, so there is no secondary identity.
 
 ### Marketo Named Account
 
 * **Base class**: XDM Business Account
 * **Mixins**: XDM Business Account  Details
 * **Profile in schema**: Details
-* **Primary identity**: `accountID` in base class
+* **Primary identity**: `accountID` in base class.
 * **Primary identity namespace**: `named_account_{MUNCHKIN_ID}_marketo`
-* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class
+* **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
 * **Secondary identity namespace**: `account_{SFDC_Organization_ID}_salesforce`
 
 ### Marketo Activity
 
-* **Base class**: XDM ExperienceEvent 
+* **Base class**: XDM ExperienceEvent
 * **Mixins**: <ul><li>Remove From List</li><li>Visit WebPage</li><li>Person Identifier</li><li>Marketo Web URL</li></ul>
 * **Profile in schema**: Enabled
-* **Primary identity**: `personID` in base class
+* **Primary identity**: `personID` in base class.
 * **Primary identity namespace**: `person_{MUNCHKIN_ID}_marketo`
-* **Notes**: Experience Event is different from entities. The identity of experience event is the person who did the activity. 
+* **Notes**: Experience Event is different from entities. The identity of experience event is the person who did the activity.
