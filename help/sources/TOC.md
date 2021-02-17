@@ -110,6 +110,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
+    - Streaming {#streaming}
+      - [HTTP API](tutorials/api/create/streaming/http.md)
   - Explore data {#explore}
     - [Explore advertising data](tutorials/api/explore/advertising.md)
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
@@ -189,6 +191,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
+    - Streaming {#streaming}
+      - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)
