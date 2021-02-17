@@ -166,8 +166,4 @@ Segment Builder provides a rich workflow allowing you to isolate marketable audi
 - Enable all segment definitions for scheduled segmentation.
 - Enable specified segment definitions for streaming segmentation.
   
-To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the videos below. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md)
-
->[!WARNING]
->
-> The [!DNL Platform] UI shown in the following videos is out-of-date. Please refer to the documentation above for the latest UI screenshots and functionality.
+To learn more about [!DNL Segmentation Service], please continue reading the documentation and supplement your learning by watching the related videos. To learn more about the other parts of the [!DNL Segmentation Service] UI, please read the [[!DNL Segmentation Service] user guide](./overview.md)
