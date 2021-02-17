@@ -8,7 +8,7 @@ description: A reference for field type constraints in Experience Data Model (XD
 
 # XDM field type constraints
 
-The field type of an Experience Data Model (XDM) schema field constrains what kind of data the field can contain. This document provides an overview of each core field type, including the other serialization formats they can be mapped to and how to define your own field types in the API in order to enforce different constraints.
+In Experience Data Model (XDM) schemas, a field's type constrains what kind of data the field can contain. This document provides an overview of each core field type, including the other serialization formats they can be mapped to and how to define your own field types in the API in order to enforce different constraints.
 
 ## Getting started
 
@@ -22,7 +22,7 @@ XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar s
 
 >[!NOTE]
 >
->See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Experience Platform APIs.
+>See the [API fundamentals guide](../../landing/api-fundamentals.md#json-schema) for more information on JSON Schema and other underlying technologies in Platform APIs.
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 
