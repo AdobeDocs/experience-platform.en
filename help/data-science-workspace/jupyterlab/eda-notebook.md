@@ -501,4 +501,157 @@ iplot(fig)
 
 After detecting missing values, it is critical to identify outliers. Parametric statistics like means, standard deviations, correlations, and every statistic based on these are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
 
-To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the first percentile, or 1.5 times the IQR above the third percentile. Values that fall under this are considered to be an outlier.
+To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the 25th percentile, or 1.5 times the IQR above the 75th percentile. Values that fall under either of these are defined as an outlier in the following cell.
+
+```python
+TARGET = Data.TARGET
+
+Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+Data_numerical.drop(['TARGET'],axis = 1,inplace = True)
+Data_numerical1 = Data_numerical
+
+for i in range(0,len(Data_numerical1.columns)):
+    Q1 = Data_numerical1.iloc[:,i].quantile(0.25)
+    Q3 = Data_numerical1.iloc[:,i].quantile(0.75)
+    IQR = Q3 - Q1
+    Data_numerical1.iloc[:,i] = np.where(Data_numerical1.iloc[:,i]<(Q1 - 1.5 * IQR),np.nan, np.where(Data_numerical1.iloc[:,i]>(Q3 + 1.5 * IQR),
+                                                                                                    np.nan,Data_numerical1.iloc[:,i]))
+    
+Outlier = pd.DataFrame(round(Data_numerical1.isnull().sum()*100/len(Data),2))
+Outlier.columns =['Percentage_outliers'] 
+Outlier['Features'] = Outlier.index   
+```
+
+As always, it is important to visualize the results.
+
+```python
+trace = go.Bar(
+    x = Outlier['Features'],
+    y = Outlier['Percentage_outliers'],
+    name = "Percentage_outlier")
+
+layout = go.Layout(
+    title = 'Outliers',
+    width = 1200,
+    height = 600,
+    xaxis = dict(title = 'Features'),
+    yaxis = dict(title = 'Percentage of outliers')
+)
+
+fig = go.Figure(data = [trace], layout = layout)
+iplot(fig)
+```
+
+![outliers graph]()
+
+### Univariate analysis
+
+Once your data has been corrected for missing values and outliers you are able to start your analysis. There are three types of analysis, univariate, bivariate, and multivariate analysis. Univariate analysis takes data, summarizes, and finds patterns in the data using single variable relationships. If you were to look at more than one variable at a time, it becomes bivariate analysis or in the case of three or more multivariate analysis.
+
+The following example produces a table to visualize the distribution of the features.
+
+```python
+Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+distribution = pd.DataFrame([Data_numerical.count(),Data_numerical.mean(),Data_numerical.quantile(0), Data_numerical.quantile(0.01),
+                             Data_numerical.quantile(0.05),Data_numerical.quantile(0.25), Data_numerical.quantile(0.5),
+                        Data_numerical.quantile(0.75),  Data_numerical.quantile(0.95),Data_numerical.quantile(0.99), Data_numerical.max()])
+distribution = distribution.T
+distribution.columns = ['Count', 'Mean', 'Min', '1st_perc','5th_perc','25th_perc', '50th_perc','75th_perc','95th_perc','99th_perc','Max']
+distribution
+```
+
+![distribution of the features]()
+
+Once you have a distribution of the features, you can create visualized data charts using an array. The following cells are used to visualize the above table with numerical data.
+
+```python
+A = sns.palplot(sns.color_palette("Blues"))
+```
+
+```python
+for column in Data_numerical.columns[0:]:
+    plt.figure(figsize=(5, 4))
+    plt.ticklabel_format(style='plain', axis='y')
+    sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
+```
+
+![numerical data graphs]()
+
+### Categorical data
+
+Grouping categorical data is used to understand the values contained in each of the columns of aggregated data and their distributions. This example uses the top 10 categories to assist with plotting the distributions. It is important to note that there can be thousands of unique values contained in a column. You do not want to render a cluttered plot making it illegible. With your business goal in mind, grouping data yields more meaningful results.
+
+```python
+Data_categorical = Data.select_dtypes(include='object')
+Data_categorical.drop(['ID'], axis = 1, inplace = True, errors = 'ignore')
+```
+
+```python
+for column in Data_categorical.columns[0:]:
+    if (len(Data_categorical[column].value_counts())>10):
+        plt.figure(figsize=(12, 8))
+        sns.countplot(x=column, data = Data_categorical, order = Data_categorical[column].value_counts().iloc[:10].index, palette="Set2");
+    else:
+        plt.figure(figsize=(12, 8))
+        sns.countplot(x=column, data = Data_categorical, palette="Set2");
+```
+
+![catagorical columns]()
+
+### Remove columns with only a single distinct value
+
+Columns that have only one value do not add any information to the analysis, these columns can be removed.
+
+```python
+for col in Data.columns:
+    if len(Data[col].unique()) == 1:
+        if col == 'TARGET':
+            print(Fore.RED + '\033[1m' + 'WARNING : TARGET HAS A SINGLE UNIQUE VALUE, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+        elif col == 'ID':
+            print(Fore.RED + '\033[1m' + 'WARNING : THERE IS ONLY ONE PROFILE IN THE DATA, ANY BIVARIATE ANALYSIS (NEXT STEP IN THIS NOTEBOOK) OR PREDICTION WILL BE MEANINGLESS' + Fore.RESET + '\x1b[21m')
+        else:
+            print('Dropped column :',col)
+            Data.drop(col,inplace=True,axis=1)
+```
+
+Once you have removed single value columns, check the remaining columns for any errors using the `Data.columns` command in a new cell.
+
+### Correct for missing values
+
+The following section contains some sample approaches on correcting for missing values. Event though in the above data only one column had a missing value, the example cells below correct values for all data types. These include:
+
+- Numerical data types: input 0 or max where applicable
+- Categorical data types: input modal value
+
+```python
+#### Select only numerical data
+Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+
+#### For columns that contain days we impute max days of history for null values, for rest all we impute 0
+
+# Imputing days with max days of history
+Days_cols = [col for col in Data_numerical.columns if 'DAYS_' in col]
+d1 = datetime.strptime(analysis_period_day_start, "%Y-%m-%d")
+d2 = datetime.strptime(analysis_period_day_end, "%Y-%m-%d")
+A = abs((d2 - d1).days)
+
+for column in Days_cols:
+    Data[column].fillna(A, inplace=True)
+
+# Imputing 0
+Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+Missing_numerical = Data_numerical.columns[Data_numerical.isnull().any()].tolist()
+
+for column in Missing_numerical:
+    Data[column].fillna(0, inplace=True)
+```
+
+```python
+#### Correct for missing values in categorical columns (Replace with mode)
+Data_categorical = Data.select_dtypes(include='object')
+Missing_cat = Data_categorical.columns[Data_categorical.isnull().any()].tolist() 
+for column in Missing_cat:
+    Data[column].fillna(Data[column].mode()[0], inplace=True)
+```
+
+Once complete the clean data is ready for bivariate analysis.
