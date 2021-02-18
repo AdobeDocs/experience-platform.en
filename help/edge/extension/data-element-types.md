@@ -1,9 +1,9 @@
 ---
-title: Platform Web SDK Extension Data Element Types
-description: Adobe Experience Platform Web SDK Extension Data Element Types in Adobe Experience Platform Launch
+title: Data Element Types in the Adobe Experience Platform Web SDK Extension
+description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
 ---
 
-# Data Element Types
+# Data element types
 
 After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK extension](web-sdk-extension.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure your data element types.
 
