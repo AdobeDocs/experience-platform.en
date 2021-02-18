@@ -1,12 +1,10 @@
 ---
-title: Supporting consent
-seo-title: Supporting Adobe Experience Platform Web SDK consent preference
-description: Learn how to support consent preferences with Experience Platform Web SDK
-seo-description: Learn how to support consent preferences with Experience Platform Web SDK
+title: Supporting Customer Consent Preferences Using the Adobe Experience Platform Web SDK
+description: Learn how to support consent preferences with the Adobe Experience Platform Web SDK.
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
 ---
 
-# Supporting consent
+# Supporting customer consent preferences
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
 

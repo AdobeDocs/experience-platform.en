@@ -1,9 +1,9 @@
 ---
-title: Platform Web SDK Extension Action Types
-description: Adobe Experience Platform Web SDK Extension Action Types in Adobe Experience Platform Launch
+title: Action Types in the Adobe Experience Platform Web SDK Extension
+description: Learn about the different action types provided by the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
 ---
 
-# Action Types
+# Action types
 
 After you configure the [Adobe Experience Platform Web SDK extension](web-sdk-extension.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure your action types.
 
