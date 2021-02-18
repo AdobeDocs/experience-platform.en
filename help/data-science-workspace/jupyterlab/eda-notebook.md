@@ -134,6 +134,7 @@ To view the rows of the dataset, use the following cell. In this example the num
 ```python
 Table.head(5)
 ```
+
 ![table row output](../images/jupyterlab/eda/data-table-overview.PNG)
 
 Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. In this example, the output is used to check if the data type is correct or not. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
