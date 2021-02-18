@@ -1,8 +1,6 @@
 ---
-title: Sending Data to Adobe Analytics
-seo-title: Sending Data to Adobe Analytics with Adobe Experience Platform Web SDK
-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
-seo-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
+title: Sending Data to Adobe Analytics Using the Adobe Experience Platform Web SDK
+description: Learn how to send data to Adobe Analytics with the Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 ---
 
