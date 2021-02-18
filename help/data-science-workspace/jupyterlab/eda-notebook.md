@@ -169,7 +169,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![query 1 output](../images/jupyterlab/eda/hour-count-raw.png)
+![query 1 output](../images/jupyterlab/eda/hour-count-raw.PNG)
 
 After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
 
