@@ -1,12 +1,11 @@
 ---
-title: Products
-seo-title: Supporting products with Adobe Experience Platform Web SDK
-description: Learn how to How to add data if you have products or a shopping cart with Experience Platform Web SDK
-seo-description: Learn how to How to add data if you have products or a shopping cart with Experience Platform Web SDK
+title: Collect Commerce and Product Information Using the Adobe Experience Platform Web SDK
+description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
+
 keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
 ---
 
-# Collect commerce and products
+# Collect commerce and product information
 
 If you have products on your site, then this is a default set of things you might want to send to enable the most capabilities from Adobe. Though this is a suggestion, it provides a very strong set of data right from the start.
 

@@ -1,13 +1,12 @@
 ---
-title: Adobe Experience Platform Web SDK Extension
-seo-title: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
+title: Adobe Experience Platform Web SDK Extension Release Notes
 description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
 ---
 
-# Adobe Experience Platform Web SDK Release Notes
+# Adobe Experience Platform Web SDK extension release notes
 
-[Learn More: Adobe Experience Platform Web SDK Release Notes](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html)
+This document covers the release notes for the Adobe Experience Platform Web SDK extension for Adobe Experience Platform Launch. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html).
 
 ## November 4, 2020
 
