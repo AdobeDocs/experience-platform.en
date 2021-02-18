@@ -24,7 +24,7 @@ After installing [!DNL RStudio], you will need to install the RJDBC package. Go 
 
 A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **[!DNL Repository (CRAN)]** is selected for the **[!DNL Install from]** section. The value for **[!DNL Packages]** should be `RJDBC`. Ensure **[!DNL Install dependencies]** is selected. After confirming all the values are correct, select **[!DNL Install]** to install the packages.
 
-![](../images/clients/rstudio/install-rjdbc.png)
+![](../images/clients/rstudio/install-jrdbc.png)
 
 Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
 
