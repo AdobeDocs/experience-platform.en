@@ -22,11 +22,11 @@ This tutorial requires a working understanding of the following components of Ad
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from the source level to Platform.
 
-The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identities], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
+The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
 
 ![ingestion-flow](../assets/ui/monitor-sources/ingestion-flow.png)
 
-At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
+At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
 
@@ -44,25 +44,39 @@ The graphs are enabled by default and you can disable them to expand the list of
 | Records ingested | Displays the total count of records ingested into Data Lake based on the time frame that you set. |
 | Records failed | Displays the number of records that were not ingested into Data Lake due to errors in the data, based on the time frame that you set. |
 
-The source ingestion list displays all sources that contain existing dataflows, including information on their ingestion rates, number of failed records, and total number of failed dataflows.
-
-You can filter through the list by selecting **[!UICONTROL My sources]** and then selecting your source category of choice from the dropdown menu. You can also narrow down the list by entering a specific source in the search bar.
-
-Alternatively, you can highlight all sources with errors by enabling the [!UICONTROL Show failures only] toggle. Select **[!UICONTROL Show failures only]** to strictly display sources with errors.
+The source ingestion list displays all sources that contain existing dataflows, including information on their ingestion rates, number of failed records, and total number of failed dataflows based on the time frame that you applied.
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
-With your source ingestion list sorted, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside your source name to see a list of its active dataflows.
+To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. To focus on cloud storages, select **[!UICONTRIOL Cloud storage]**
 
-![source-list-filtered](../assets/ui/monitor-sources/source-list-filtered.png)
+![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
-A list of dataflows appears. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow you want to investigate to see more information on its run status.
+Alternatively, you can enter a source into the search bar to isolate a single source. Once you have your source identified, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see a list of its active dataflows.
 
-![select-dataflow](../assets/ui/monitor-sources/select-dataflow.png)
+![search](../assets/ui/monitor-sources/search.png)
+
+A list of dataflows appears. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
+
+![only-failures](../assets/ui/monitor-sources/.png)
+
+Locate the dataflow that you want to assess from the last and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status
+
+![dataflow](../assets/ui/monitor-sources/.png)
 
 The dataflow run page displays information on your dataflow's run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
 
-![dataflow-run](../assets/ui/monitor-sources/dataflow-run.png)
+![dataflow-run-start](../assets/ui/monitor-sources/.png)
+
+![dataflow-run-details](../assets/ui/monitor-sources/.png)
+
+![dataflow-run-errors](../assets/ui/monitor-sources/.png)
+
+![files](../assets/ui/monitor-sources/.png)
+
+![error-diagnostics](../assets/ui/monitor-sources/.png)
+
+## Monitor successful dataflows
 
 ## Next steps
 
