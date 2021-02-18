@@ -18,11 +18,7 @@ An online retailer wants to reach existing customers through social platforms an
 
 ## Destination specifics {#destination-specs}
 
-### Data governance for [!DNL LinkedIn Matched Audience] destinations {#data-governance}
-
->[!IMPORTANT]
->
->Data sent to [!DNL Facebook] should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
+[!DNL LinkedIn Matched Audience] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
 
 ### Export Type {#export-type}
 
@@ -30,14 +26,9 @@ An online retailer wants to reach existing customers through social platforms an
 
 ### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
-Before you can send your audience segments to [!DNL LinkedIn], make sure you meet the following requirements:
+Before you can use the [!UICONTROL LinkedIn Matched Audience] destination, make sure your [!DNL LinkedIn Campaign Manager] account has the [!DNL Creative Manager] or higher permission level.
 
-- Your [!DNL LinkedIn] user account must have the **[!DNL Manage campaigns]** permission enabled for the Ad account that you plan to use.
-- The **Adobe Experience Cloud** business account must be added as an advertising partner in your [!DNL Facebook Ad Account]. Use `business ID=206617933627973`. See [Add Partners to Your Business Manager](https://www.facebook.com/business/help/1717412048538897) in the Facebook documentation for details.
-    >[!IMPORTANT]
-    >
-    > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
-- Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
+To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see [Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753) in the LinkedIn documentation.
 
 ### ID matching requirements {#id-matching-requirements}
 
