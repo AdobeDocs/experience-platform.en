@@ -169,7 +169,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![query 1 output](../images/jupyterlab/eda/hour-count-raw.PNG)
+![query 1 output](../images/jupyterlab/eda/hour-count-raw.png)
 
 After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
 
@@ -192,7 +192,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![bar graph output for query 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.PNG)
+![bar graph output for query 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.png)
 
 **Top 10 viewed pages for a given day**
 
@@ -233,7 +233,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten viewed pages](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.PNG)
+![top ten viewed pages](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.png)
 
 **Top ten cities grouped by user activity**
 
@@ -274,7 +274,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten cities](../images/jupyterlab/eda/top-ten-cities-by-user-activity.PNG)
+![top ten cities](../images/jupyterlab/eda/top-ten-cities-by-user-activity.png)
 
 **Top ten viewed products**
 
@@ -318,7 +318,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten product views](../images/jupyterlab/eda/top-ten-viewed-products.PNG)
+![top ten product views](../images/jupyterlab/eda/top-ten-viewed-products.png)
 
 After exploring the trends and patterns of the data, you should have a good idea as to what features you want to build for a prediction of a goal. Skimming through tables can quickly highlight the form of each data attribute, obvious misrepresentations, and large outliers in the values and start to suggest candidate relationships to explore between attributes.
 
@@ -499,7 +499,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Missing values](../images/jupyterlab/eda/missing-values.PNG)
+![Missing values](../images/jupyterlab/eda/missing-values.png)
 
 After detecting missing values, it is critical to identify outliers. Parametric statistics like means, standard deviations, correlations, and every statistic based on these are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
 
@@ -548,7 +548,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![outliers graph](../images/jupyterlab/eda/outliers.PNG)
+![outliers graph](../images/jupyterlab/eda/outliers.png)
 
 ### Univariate analysis
 
@@ -602,7 +602,7 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![catagorical columns](../images/jupyterlab/eda/graph-category.png)
+![catagorical columns](../images/jupyterlab/eda/graph-category.PNG)
 
 ### Remove columns with only a single distinct value
 
