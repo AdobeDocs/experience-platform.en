@@ -18,17 +18,17 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 
 ## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 
-After installing [!DNL RStudio], you will need to install the RJDBC package. Go to the **Packages** pane, and select **Install**. 
+After installing [!DNL RStudio], you will need to install the RJDBC package. Go to the **[!DNL Packages]** pane, and select **[!DNL Install]**. 
 
 ![](../images/clients/rstudio/install-package.png)
 
-A pop up appears, showing the **Install Packages** screen. Ensure that the **Install from** has **Repository (CRAN)** selected. The value for **Packages** should be `RJDBC`. Ensure **Install dependencies** is selected. After confirming all the values are correct, select **Install** to install the packages.
+A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **[!DNL Repository (CRAN)]** is selected for the **[!DNL Install from]** section. The value for **[!DNL Packages]** should be `RJDBC`. Ensure **[!DNL Install dependencies]** is selected. After confirming all the values are correct, select **[!DNL Install]** to install the packages.
 
 ![](../images/clients/rstudio/install-rjdbc.png)
 
 Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
 
-After RStudio has restarted, you can now connect to Query Service. Select the **RJDBC** package in the **Packages** pane, and enter the following command in the console:
+After RStudio has restarted, you can now connect to Query Service. Select the **[!DNL RJDBC]** package in the **[!DNL Packages]** pane, and enter the following command in the console:
 
 ```console
 pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
@@ -39,7 +39,7 @@ Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JD
 Now, you can create your connection to Query Service by entering the following command in the console:
 
 ```console
-qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DBNAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
 
 >[!NOTE]
