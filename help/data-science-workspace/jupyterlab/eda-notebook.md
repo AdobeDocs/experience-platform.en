@@ -17,7 +17,9 @@ The EDA notebook example was optimized with web-based data in mind and consists 
 
 Before reading this guide, please review the [[!DNL JupyterLab] user guide](./overview.md) for a high-level introduction to [!DNL JupyterLab] and its role within Data Science Workspace. Additionally, if you are using your own data, please review the [data access in [!DNL Jupyterlab] notebooks](./access-notebook-data.md) documentation. This guide contains important information on notebook data limits.
 
-This notebook uses a midvalues dataset in the form of Adobe Analytics Experience Events data found in the Analytics Analysis Workspace. In order to use the EDA notebook, you are required to define your data table with the following values `target_table` and `target_table_id`. Any midvalues dataset can be used.
+This notebook uses a midvalues dataset in the form of Adobe Analytics Experience Events data found in the Analytics Analysis Workspace. In order to use the EDA notebook, you are required to define your data table with the following values `target_table` and `target_table_id`. Any midvalues dataset can be used. 
+
+To find these values follow the steps outlined in the [write to a dataset in python](./access-notebook-data.md#write-python) section of the JupyterLab data access guide. The dataset name (`target_table`) is located in the dataset directory. Once you right click the dataset to explore or write data in a notebook, a dataset ID (`target_table_id`) is provided in the executable code entry. 
 
 ## Data discovery
 
@@ -85,7 +87,7 @@ target_table_id = "5f7c40ef488de5194ba0157a"
 
 ### Explore the dataset for available dates
 
-Using the cell provided below, you are able to view the date range covered in the table. The purpose of exploring the number of days, first date, and last date data is to assist with selecting a date range for further in depth analysis.
+Using the cell provided below, you are able to view the date range covered in the table. The purpose of exploring the number of days, first date, and last date, is to assist with selecting a date range for further analysis.
 
 ```python
 %%read_sql -c QS_CONNECTION
@@ -97,11 +99,11 @@ order by Year, Month;
 
 Running the cell produces the following output:
 
-![query date output]()
+![query date output](../images/jupyterlab/eda/query-date-output.PNG)
 
 ### Configure dates for dataset discovery
 
-After determining the available dates for dataset discovery, the parameters below need to be updated. The dates configured in this cell are only used for data discovery in the form of queries. The dates will be updated to suitable ranges for exploratory data analysis later in this guide.
+After determining the available dates for dataset discovery, the parameters below need to be updated. The dates configured in this cell are only used for data discovery in the form of queries. The dates are updated again to suitable ranges for exploratory data analysis later in this guide.
 
 ```python
 target_year = "2020" ## The target year
@@ -132,8 +134,7 @@ To view the rows of the dataset, use the following cell. In this example the num
 ```python
 Table.head(5)
 ```
-
-![table row output]()
+![table row output](../images/jupyterlab/eda/data-table-overview.PNG)
 
 Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. In this example, the output is used to check if the data type is correct or not. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
 
@@ -144,7 +145,7 @@ ColumnNames_Types.columns = ["Column_Name", "Data_Type"]
 ColumnNames_Types
 ```
 
-![column name and data types list]()
+![column name and data types list](../images/jupyterlab/eda/data-columns.PNG)
 
 ### Dataset trend exploration
 
@@ -167,7 +168,7 @@ GROUP  BY Hour
 ORDER  BY Hour;
 ```
 
-![query 1 output]()
+![query 1 output](../images/jupyterlab/eda/hour-count-raw.PNG)
 
 After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
 
@@ -190,7 +191,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![bar graph output for query 1]()
+![bar graph output for query 1](../images/jupyterlab/eda/activity-count-by-hour-of-day.PNG)
 
 **Top 10 viewed pages for a given day**
 
@@ -231,7 +232,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten viewed pages]()
+![top ten viewed pages](../images/jupyterlab/eda/top-ten-viewed-pages-for-a-given-day.PNG)
 
 **Top ten cities grouped by user activity**
 
@@ -272,7 +273,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten cities]()
+![top ten cities](../images/jupyterlab/eda/top-ten-cities-by-user-activity.PNG)
 
 **Top ten viewed products**
 
@@ -316,7 +317,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![top ten product views]()
+![top ten product views](../images/jupyterlab/eda/top-ten-viewed-products.PNG)
 
 After exploring the trends and patterns of the data, you should have a good idea as to what features you want to build for a prediction of a goal. Skimming through tables can quickly highlight the form of each data attribute, obvious misrepresentations, and large outliers in the values and start to suggest candidate relationships to explore between attributes.
 
@@ -455,7 +456,7 @@ Data.shape
 Data.head(5)
 ```
 
-![example table]()
+![example table](../images/jupyterlab/eda/raw-aggregate-data.PNG)
 
 This cell prints the number of unique profiles.
 
@@ -497,11 +498,15 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![Missing values]()
+![Missing values](../images/jupyterlab/eda/missing-values.PNG)
 
 After detecting missing values, it is critical to identify outliers. Parametric statistics like means, standard deviations, correlations, and every statistic based on these are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
 
 To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the 25th percentile, or 1.5 times the IQR above the 75th percentile. Values that fall under either of these are defined as an outlier in the following cell.
+
+>[!TIP]
+>
+>Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones. To learn more visit the [optional data cleaning step](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -542,7 +547,7 @@ fig = go.Figure(data = [trace], layout = layout)
 iplot(fig)
 ```
 
-![outliers graph]()
+![outliers graph](../images/jupyterlab/eda/outliers.PNG)
 
 ### Univariate analysis
 
@@ -560,7 +565,7 @@ distribution.columns = ['Count', 'Mean', 'Min', '1st_perc','5th_perc','25th_perc
 distribution
 ```
 
-![distribution of the features]()
+![distribution of the features](../images/jupyterlab/eda/distribution-of-features.PNG)
 
 Once you have a distribution of the features, you can create visualized data charts using an array. The following cells are used to visualize the above table with numerical data.
 
@@ -575,7 +580,7 @@ for column in Data_numerical.columns[0:]:
     sns.distplot(Data_numerical[column], color = A, kde=False, bins=6, hist_kws={'alpha': 0.4});
 ```
 
-![numerical data graphs]()
+![numerical data graphs](../images/jupyterlab/eda/univaiate-graphs.png)
 
 ### Categorical data
 
@@ -596,7 +601,7 @@ for column in Data_categorical.columns[0:]:
         sns.countplot(x=column, data = Data_categorical, palette="Set2");
 ```
 
-![catagorical columns]()
+![catagorical columns](../images/jupyterlab/eda/graph-category.png)
 
 ### Remove columns with only a single distinct value
 
@@ -655,3 +660,162 @@ for column in Missing_cat:
 ```
 
 Once complete the clean data is ready for bivariate analysis.
+
+### Bivariate analysis
+
+Bivariate analysis is used to help understand relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done seperately for each data type. The following charts are recommended for bivariate analysis:
+
+- **Correlation**: A correlation coefficient is the measure of the strength of a relationship between two features. Correlation has values between -1 and 1, where: 1 indicates a strong positive relationship, -1 indicates a strong negative relationship, and a result of zero indicates no relationship at all.
+- **Pairplot**: Pair Plots are a really simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
+- **Heatmap**: This is the correlation coefficient for all variables in the dataset.
+- **Boxplots**: Boxplots are a standardized way of displaying data distribution based on a five number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”).
+- **Countplot**: A countplot is like a histogram or a bar graph for some categorical features. It shows the number of occurrences of an item based on a certain type of category.
+
+To understand relationship between the 'goal' variable and the predictors/features we use charts based on datatypes. For numerical features it is suggested to use boxplot if the 'goal' variable is categorical, as well as, pairplot and heatmap if the 'goal' variable is numerical. For categorical features it is suggested to use countplot if the 'goal' variable is categorical, as well as, boxplot if the 'goal' variable is numerical. Using these methods helps with understanding relationships. These relationships can be in the form of features, or predictors and a goal.
+
+**Numerical predictors**
+
+```python
+if len(Data) == 1:
+    print(Fore.RED + '\033[1m' + 'THERE IS ONLY ONE PROFILE IN THE DATA, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE AT LEAST ONE MORE PROFILE TO DO BIVARIATE ANALYSIS')
+elif len(Data['TARGET'].unique()) == 1:
+    print(Fore.RED + '\033[1m' + 'TARGET HAS A SINGLE UNIQUE VALUE, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE PROFILES WITH ATLEAST ONE DIFFERENT VALUE OF TARGET TO DO BIVARIATE ANALYSIS')
+else:
+    if (goal_column_type == "categorical"):
+        TARGET_categorical = pd.DataFrame(np.where(TARGET>=threshold,"1","0"))
+        TARGET_categorical.rename(columns={TARGET_categorical.columns[0]: "TARGET_categorical" }, inplace = True)
+        Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+        Data_numerical.drop(['TARGET'],inplace=True,axis=1)
+        Data_numerical = pd.concat([Data_numerical, TARGET_categorical.astype(int)], axis = 1)
+        ncols_for_charts = len(Data_numerical.columns)-1
+        nrows_for_charts = math.ceil(ncols_for_charts/4)
+        fig, axes = plt.subplots(nrows=nrows_for_charts, ncols=4, figsize=(18, 15))
+        for idx, feat in enumerate(Data_numerical.columns[:-1]):
+            ax = axes[int(idx // 4), idx % 4]
+            sns.boxplot(x='TARGET_categorical', y=feat, data=Data_numerical, ax=ax)
+            ax.set_xlabel('')
+            ax.set_ylabel(feat)
+            fig.tight_layout();
+    else:
+        Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+        TARGET = pd.DataFrame(Data_numerical.TARGET)
+        Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+        Data_numerical.drop(['TARGET'],inplace=True,axis=1)
+        Data_numerical = pd.concat([Data_numerical, TARGET.astype(int)], axis = 1)
+        for i in Data_numerical.columns[:-1]:
+            sns.pairplot(x_vars=i, y_vars=['TARGET'], data=Data_numerical, height = 4)
+        f, ax = plt.subplots(figsize = (10,8))
+        corr = Data_numerical.corr()
+```
+
+Running the cell produces the following outputs:
+
+![plots](../images/jupyterlab/eda/bivariant-graphs.png)
+
+![heatmap](../images/jupyterlab/eda/bi-graph10.PNG)
+
+**Categorical predictors**
+
+The following example is used to plot and view the frequency plots for the top 10 categories of each categorical variable.
+
+```python
+if len(Data) == 1:
+    print(Fore.RED + '\033[1m' + 'THERE IS ONLY ONE PROFILE IN THE DATA, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE AT LEAST ONE MORE PROFILE TO DO BIVARIATE ANALYSIS')
+elif len(Data['TARGET'].unique()) == 1:
+    print(Fore.RED + '\033[1m' + 'TARGET HAS A SINGLE UNIQUE VALUE, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE PROFILES WITH ATLEAST ONE DIFFERENT VALUE OF TARGET TO DO BIVARIATE ANALYSIS')
+else:
+    if (goal_column_type == "categorical"):
+        TARGET_categorical = pd.DataFrame(np.where(TARGET>=threshold,"1","0"))
+        TARGET_categorical.rename(columns={TARGET_categorical.columns[0]: "TARGET_categorical" }, inplace = True)
+        Data_categorical = Data.select_dtypes(include='object')
+        Data_categorical.drop(["ID"], axis =1, inplace = True)
+        Cat_columns = Data_categorical
+        Data_categorical = pd.concat([TARGET_categorical,Data_categorical], axis =1)
+        for column in Cat_columns.columns:
+            A = Data_categorical[column].value_counts().iloc[:10].index
+            Data_categorical1 = Data_categorical[Data_categorical[column].isin(A)]
+            plt.figure(figsize=(12, 8))
+            sns.countplot(x="TARGET_categorical",hue=column, data = Data_categorical1, palette = 'Blues')
+            plt.xlabel("GOAL")
+            plt.ylabel("COUNT")
+            plt.show();
+    else:
+        Data_categorical = Data.select_dtypes(include='object')
+        Data_categorical.drop(["ID"], axis =1, inplace = True)
+        Target = Data.TARGET
+        Data_categorical = pd.concat([Data_categorical,Target], axis =1)
+        for column in Data_categorical.columns[:-1]:
+            A = Data_categorical[column].value_counts().iloc[:10].index
+            Data_categorical1 = Data_categorical[Data_categorical[column].isin(A)]
+            sns.catplot(x=column, y="TARGET", kind = "boxen", data =Data_categorical1, height=5, aspect=13/5);
+```
+
+Running the cell produces the following output:
+
+![category relationship](../images/jupyterlab/eda/categorical-predictor.PNG)
+
+### Important numerical features
+
+Using correlation analysis, you can create a list of the top ten important numerical features. These features can all be used to predict the 'goal' feature. This list can be used as the feature list for when you start building your model.
+
+```python
+if len(Data) == 1:
+    print(Fore.RED + '\033[1m' + 'THERE IS ONLY ONE PROFILE IN THE DATA, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE AT LEAST ONE MORE PROFILE TO FIND IMPORTANT VARIABLES')
+elif len(Data['TARGET'].unique()) == 1:
+    print(Fore.RED + '\033[1m' + 'TARGET HAS A SINGLE UNIQUE VALUE, BIVARIATE ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE PROFILES WITH ATLEAST ONE DIFFERENT VALUE OF TARGET TO FIND IMPORTANT VARIABLES')
+else:
+    Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+    Correlation = pd.DataFrame(Data_numerical.drop("TARGET", axis=1).apply(lambda x: x.corr(Data_numerical.TARGET)))
+    Correlation['Corr_abs'] = abs(Correlation)
+    Correlation = Correlation.sort_values(by = 'Corr_abs', ascending = False)
+    Imp_features = pd.DataFrame(Correlation.index[0:10])
+    Imp_features.rename(columns={0:'Important Feature'}, inplace=True)
+    print(Imp_features)
+```
+
+![important features](../images/jupyterlab/eda/important-feature-model.PNG)
+
+### Example insight
+
+While you are in the process of analysing your data, it is not uncommon to uncover insights. The following example is an insight that maps the recency and monetary value for a target event.
+
+```python
+# Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
+if len(Data) == 1:
+    print(Fore.RED + '\033[1m' + 'THERE IS ONLY ONE PROFILE IN THE DATA, INSIGHTS ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE AT LEAST ONE MORE PROFILE TO FIND IMPORTANT VARIABLES')
+elif len(Data['TARGET'].unique()) == 1:
+    print(Fore.RED + '\033[1m' + 'TARGET HAS A SINGLE UNIQUE VALUE, INSIGHTS ANALYSIS IS NOT APPLICABLE, PLEASE INCLUDE PROFILES WITH ATLEAST ONE DIFFERENT VALUE OF TARGET TO FIND IMPORTANT VARIABLES')
+else:
+    sns.lmplot("DAYS_SINCE_VISIT", "TOTAL_ORDER_REVENUE", Data, hue="TARGET", fit_reg=False);
+```
+
+![example insight](../images/jupyterlab/eda/insight.PNG)
+
+## Optional data cleaning step {#optional-data-clean}
+
+Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones.
+For more information on outliers and whether to drop them or not, read this entry from the [analysis factor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
+
+The following example cell caps and floors data points that are outliers using [interquartile range](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
+
+```python
+TARGET = Data.TARGET
+
+Data_numerical = Data.select_dtypes(include=['float64', 'int64'])
+Data_numerical.drop(['TARGET'],axis = 1,inplace = True)
+
+for i in range(0,len(Data_numerical.columns)):
+    Q1 = Data_numerical.iloc[:,i].quantile(0.25)
+    Q3 = Data_numerical.iloc[:,i].quantile(0.75)
+    IQR = Q3 - Q1
+    Data_numerical.iloc[:,i] = np.where(Data_numerical.iloc[:,i]<(Q1 - 1.5 * IQR), (Q1 - 1.5 * IQR), np.where(Data_numerical.iloc[:,i]>(Q3 + 1.5 * IQR),
+                                                                                                     (Q3 + 1.5 * IQR),Data_numerical.iloc[:,i]))
+Data_categorical = Data.select_dtypes(include='object')
+Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
+```
+
+## Next steps
+
+After you have finished your exploratory data analysis, you are ready to begin creating a model. Alternativly, you can use the data and insights you derived to create a dashboard with tools such as Power BI.
+
+Adobe Experience Platform seperates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within JupyterLab Notebooks.
