@@ -135,9 +135,9 @@ Additionally, for an accurate model it is suggested that you make use of some of
 
 Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
 
-### Scenario 3: Non-purchase conversion on an e-commerce retail website
+### Scenario 3: Churn on an e-commerce retail website
 
-**Prediction goal:** Predict the non-purchase (churn) propensity (will not occur) for the eligible profiles to purchase a new smartwatch.
+**Prediction goal:** Predict the likelihood that a purchase event will not occur.
 
 **Required standard event types:**
 
@@ -184,7 +184,7 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 ## Customer AI output data
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume it from the Real-time Customer Profile. If you don't have Real-time Customer Profile you can download the Customer AI output dataset available on the data lake. 
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume insights from the Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
 >[!NOTE]
 >
