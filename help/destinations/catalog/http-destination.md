@@ -58,7 +58,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 
 ![HTTP authentication](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
+**[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
 
 Click **[!UICONTROL Create destination]**.
 
