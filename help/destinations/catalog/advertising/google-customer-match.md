@@ -1,14 +1,16 @@
 ---
 keywords: google customer match;Google customer match;Google Customer Match
-title: Google Customer Match Connection Destination
+title: Google Customer Match connection
 description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
 ---
 
-# Google Customer Match connection
+# [!DNL Google Customer Match] connection
 
 >[!IMPORTANT]
 >
->Customer migration to the new destination versions is currently in progress. Until the migration is complete, you will only see the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] available identities for this destination.
+>We are currently migrating customers to the new version of this destination.
+>
+> The instructions in this article apply to both versions, with the following note: while this migration is in progress, you will only see the current version of the [!DNL Google Customer Match] destination in the user interface, where you can only use the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] identities for activation. 
 
 [Google Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en) lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as: [!DNL Search], [!DNL Shopping], [!DNL Gmail], and [!DNL YouTube].
 

@@ -1,6 +1,6 @@
 ---
 keywords: Marketo;marketo;Marketo extension;marketo extension
-title: Marketo Extension Destination
+title: Marketo extension
 description: The Marketo extension is an email destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

@@ -1,6 +1,6 @@
 ---
 keywords: advertising; the trade desk;
-title: The Trade Desk Connection Destination
+title: The Trade Desk connection
 description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
 ---
 
@@ -43,7 +43,6 @@ In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk]
  * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
  * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
- * **[!UICONTROL Client Secret]**: The `clientSecret` parameter used in the [!DNL OAuth2] client credentials.
  * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
    
    * **[!UICONTROL Europe]**
