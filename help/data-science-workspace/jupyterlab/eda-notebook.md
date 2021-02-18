@@ -507,7 +507,7 @@ To identify outliers, this example uses inter quartile range. Inter quartile ran
 
 >[!TIP]
 >
->Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones. To learn more visit the [optional data cleaning step](#optional-data-clean).
+>Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones. To learn more about dropping outliers, visit the [optional data cleaning step](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
