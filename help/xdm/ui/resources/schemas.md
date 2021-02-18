@@ -62,7 +62,11 @@ A dialog appears, showing a list of mixins that you can select for the schema. S
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
+If you know the general activity or business area of the mixin fields you want to add, select the funnel icon (![Funnel Icon](../../images/ui/resources/schemas/filter-icon.png)) to display a list of industry verticals to filter displayed mixins by.
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+You can also use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
