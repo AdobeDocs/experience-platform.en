@@ -30,11 +30,11 @@ Please refer to the documentation on [configuring a computed attribute](configur
 
 >[!WARNING]
 >
->In order to proceed with the API guide you must have a computed attribute configured.
+>In order to proceed with the API guide you must have a computed attribute field configured.
 
 ## Create a computed attribute {#create-a-computed-attribute}
 
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute. See the [configuring a computed attribute](configure-ui.md) documentation if you have not done this already.
+With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute. If you have not done this already, please follow the workflow outlined in the [configuring a computed attribute](configure-ui.md) documentation.
 
 To create a computed attribute, begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
@@ -144,7 +144,10 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 
 When working with computed attributes using the API, there are two options for accessing computed attributes that have been defined by your organization. The first is to list all computed attributes, the second is to view a specific computed attribute by its unique `id`.
 
-Steps for both listing all computed attributes and viewing a specific computed attribute are outlined in the sections that follow.
+Steps for both access patterns are outlined in this document. Select one of the following to begin:
+
+* **[List all existing computed attributes](#list-all-computed-attributes):** Return a list of all existing computed attributes that your organization has created.
+* **[View a specific computed attribute](#view-a-computed-attribute):** Return the details of a single computed attribute by specifying its ID during the request.
 
 ### List all computed attributes {#list-all-computed-attributes}
 
@@ -286,7 +289,7 @@ The response also includes a `children` array composed of one or more objects, e
 
 ### View a computed attribute {#view-a-computed-attribute}
 
-You can also view a specific computed attribute by making a GET request to the `/config/computedAttributes` endpoint and including the computed attribute ID in the request path.
+You can view a specific computed attribute by making a GET request to the `/config/computedAttributes` endpoint and including the computed attribute ID in the request path.
 
 **API format**
 

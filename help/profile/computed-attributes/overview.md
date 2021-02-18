@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Computed Attributes Overview
+title: Introduction to Computed Attributes
 topic: guide
 type: Documentation
-description: Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Adobe Experience Platform. 
+description: Computed attributes in Adobe Experience Platform enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Platform. 
 ---
 
 # (Alpha) Computed attributes overview

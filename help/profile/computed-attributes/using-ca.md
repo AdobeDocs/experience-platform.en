@@ -6,7 +6,7 @@ type: Documentation
 description: Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Adobe Experience Platform. 
 ---
 
-# Using computed attributes in Experience Platform
+# (Alpha) Using computed attributes in Experience Platform
 
 >[!IMPORTANT]
 >
