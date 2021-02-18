@@ -18,29 +18,35 @@ This tutorial requires a working understanding of the following components of Ad
 - [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 - [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor dataflows
+## Monitor failed dataflows
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from the source level to Platform.
 
-The upper part of the dashboard contains a horizontal path of ingestion from the source level, to [!DNL Identities], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
+The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identities], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
 
 ![ingestion-flow](../assets/ui/monitor-sources/ingestion-flow.png)
 
-At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. The graphs are enabled by default and you can disable them to expand the list of sources below.
-
-Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+
+A calendar pop-up window appears, providing you options for alternative ingestion time frames. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**
+
+![adjust-time-frame](../assets/ui/monitor-sources/adjust-timeframe.png)
+
+The graphs are enabled by default and you can disable them to expand the list of sources below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
+
+![metrics-and-graphs](../assets/ui/monitor-sources/metrics-graphs.png)
 
 | Source ingestion | Description |
 | ---------------- | ----------- |
 | Metrics | Displays information on the total number of records ingested, records failed, and failed dataflows. |
-| Records ingested | Displays a graph representing the rate of records ingested based on the time frame that you set. |
-| Records failed | Displays a graph representing the rate of records failed based on the time frame that you set. |
+| Records ingested | Displays the total count of records ingested into Data Lake based on the time frame that you set. |
+| Records failed | Displays the number of records that were not ingested into Data Lake due to errors in the data, based on the time frame that you set. |
 
 The source ingestion list displays all sources that contain existing dataflows, including information on their ingestion rates, number of failed records, and total number of failed dataflows.
 
-You can filter through the list by selecting **[!UICONTROL My sources]** and then selecting your source category of choice from the dropdown menu. You can also narrow down the list by entering the specific source you want to access in the search bar.
+You can filter through the list by selecting **[!UICONTROL My sources]** and then selecting your source category of choice from the dropdown menu. You can also narrow down the list by entering a specific source in the search bar.
 
 Alternatively, you can highlight all sources with errors by enabling the [!UICONTROL Show failures only] toggle. Select **[!UICONTROL Show failures only]** to strictly display sources with errors.
 
@@ -57,7 +63,6 @@ A list of dataflows appears. Select the filter icon ![filter](../assets/ui/monit
 The dataflow run page displays information on your dataflow's run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
 
 ![dataflow-run](../assets/ui/monitor-sources/dataflow-run.png)
-
 
 ## Next steps
 
