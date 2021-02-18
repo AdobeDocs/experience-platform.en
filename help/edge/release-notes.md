@@ -1,12 +1,10 @@
 ---
-title: Adobe Experience Platform Web SDK release notes
-seo-title: Adobe Experience Platform Web SDK release notes
-description: Adobe Experience Platform Web SDK release notes.
-seo-description: Adobe Experience Platform Web SDK release notes.
+title: Adobe Experience Platform Web SDK Release Notes
+description: The latest release notes for the Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 ---
 
-# Release Notes
+# Release notes
 
 ## Version 2.3.0
 
