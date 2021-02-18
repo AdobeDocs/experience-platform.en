@@ -1,6 +1,6 @@
 ---
 keywords: voice destinations;Voice destinations
-title: Voice of the Customer Destinations Overview
+title: Voice of the Customer destinations overview
 description: Voice platforms gather and collate data from various sources including voice messages, call data and chat conversations. The collated information can be filtered and analyzed to enable companies to optimize their website to meet their requirements.
 ---
 

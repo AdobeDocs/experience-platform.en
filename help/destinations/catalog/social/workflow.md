@@ -1,6 +1,6 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
-title: Create a Social Network Destination
+title: Create a social network destination
 type: Tutorial
 description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
 ---

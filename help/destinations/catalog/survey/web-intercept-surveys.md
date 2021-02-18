@@ -1,6 +1,6 @@
 ---
 keywords: QuestionPro Intercept Surveys;questionpro intercept surveys;QuestionPro;questionpro
-title: QuestionPro Intercept Surveys Extension Destination
+title: QuestionPro Intercept Surveys extension
 description: The QuestionPro Intercept Surveys extension is a survey destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

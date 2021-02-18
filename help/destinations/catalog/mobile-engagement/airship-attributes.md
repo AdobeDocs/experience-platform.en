@@ -1,6 +1,6 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes Connection Destination
+title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 ---
 

@@ -1,6 +1,6 @@
 ---
 keywords: activate destination;activate destinations;activate data
-title: Activate Profiles and Segments to a Destination
+title: Activate profiles and segments to a destination
 type: Tutorial
 seo-title: Activate profiles and segments to a destination
 description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
@@ -53,7 +53,7 @@ Applies to: social destinations and Google Customer Match advertising destinatio
 
 For social destinations, you must select source attributes or identity namespaces to map as target identities in the destination.
 
-#### Example: activating audience data in [!DNL Facebook] {#example-facebook}
+#### Example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
 This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Platform
 solution: Experience Platform
-title: Connect to Streaming Destinations and Activate Data Using API Calls
+title: Connect to streaming destinations and activate data using API calls in Adobe Experience Platform
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
 
-# Connect to streaming destinations and activate data using API calls in Adobe Experience Platform
+# Connect to streaming destinations and activate data using API calls
 
 >[!NOTE]
 >

@@ -1,6 +1,6 @@
 ---
 keywords: Analytics extension;analytics extension;destination analytics
-title: Adobe Analytics Extension Destination
+title: Adobe Analytics extension
 description: The Adobe Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
