@@ -13,39 +13,40 @@ This document walks through the steps for connecting [!DNL RStudio] with Adobe E
 >[!NOTE]
 >
 > This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
+> 
+> Additionally, to use RStudio with Query Service, you will need to install the PostgreSQL JDBC Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download.html). Ensure that you download a JDBC 4.2 version driver.
 
 ## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
 
-After installing [!DNL RStudio], on the **[!DNL Console]** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
+After installing [!DNL RStudio], you will need to install the RJDBC package. Go to the **Packages** pane, and select **Install**. 
 
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
+![](../images/clients/rstudio/install-package.png)
+
+A pop up appears, showing the **Install Packages** screen. Ensure that the **Install from** has **Repository (CRAN)** selected. The value for **Packages** should be `RJDBC`. Ensure **Install dependencies** is selected. After confirming all the values are correct, select **Install** to install the packages.
+
+![](../images/clients/rstudio/install-rjdbc.png)
+
+Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
+
+After RStudio has restarted, you can now connect to Query Service. Select the **RJDBC** package in the **Packages** pane, and enter the following command in the console:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
 ```
 
-Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
+Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JDBC JAR that was installed on your computer.
 
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
+Now, you can create your connection to Query Service by entering the following command in the console:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DBNAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
 ```
-
-| Property | Description |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | The name of the database that will be used. |
-| `{HOST_NUMBER` and `{PORT_NUMBER}` | The host endpoint and its port for Query Service. | 
-| `{USERNAME}` and `{PASSWORD}` | The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`. |
 
 >[!NOTE]
 >
 >For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
 
 ## Writing queries
 
