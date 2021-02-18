@@ -42,7 +42,7 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | -------------- | ---------------- |
 | New data to [!DNL Real-time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-time Customer Profile] (A4T **is** enabled) | < 15 minutes |
-| New data to Data Lake | < 45 minutes |
+| New data to Data Lake | < 90 minutes |
 | Backfill data (13 Months of Data or 10 Billion events, whichever is lower) | < 4 weeks |
 
 >[!NOTE]

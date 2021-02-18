@@ -1,6 +1,6 @@
 ---
 keywords: SFTP;sftp
-title: SFTP Connection Destination
+title: SFTP connection
 description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
 ---
 

@@ -1,6 +1,6 @@
 ---
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
-title: KickFire Extension Destination
+title: KickFire extension
 description: The KickFire extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

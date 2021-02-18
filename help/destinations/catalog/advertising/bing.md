@@ -1,10 +1,10 @@
 ---
 keywords: advertising; bing; 
-title: Microsoft Bing Connection Destination
+title: Microsoft Bing connection
 description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
 
-# [!DNL Microsoft Bing] connection
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 

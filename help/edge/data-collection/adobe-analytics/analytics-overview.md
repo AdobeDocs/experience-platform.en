@@ -1,8 +1,6 @@
 ---
-title: Sending Data to Adobe Analytics
-seo-title: Sending Data to Adobe Analytics with Adobe Experience Platform Web SDK
-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
-seo-description: Learn how to send Data to Adobe Analytics with Experience Platform Web SDK
+title: Sending Data to Adobe Analytics Using the Adobe Experience Platform Web SDK
+description: Learn how to send data to Adobe Analytics with the Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
 ---
 
@@ -16,7 +14,7 @@ Adobe Analytics automatically picks up the data you are sending if you have a re
 
 ## Automatically mapped data
 
-The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables automatically. The complete list of automatically mapped variables is listed [here](automatically-mapped-vars.md).
+The Adobe Experience Platform [!DNL Edge Network] automatically maps many XDM variables. The complete list of these variables is listed [here](automatically-mapped-vars.md).
 
 ## Manually mapped data
 

@@ -1,13 +1,11 @@
 ---
-title: Configuring the SDK
-seo-title: Configuring Adobe Experience Platform Web SDK
-description: Learn how to configure the Experience Platform Web SDK
+title: Configure the Adobe Experience Platform Web SDK
+description: Learn how to configure the Adobe Experience Platform Web SDK.
 seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 ---
 
-# Configuring the SDK
+# Configure the Platform Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -60,6 +58,7 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | **Type** | **Required** | **Default Value**  |
 | -------- | ------------ | ------------------ |
 | String   | No           | `beta.adobedc.net` |
+| String   | No           | `omtrdc.net`       |
 
 The domain used to interact with Adobe services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
 
@@ -87,7 +86,7 @@ Indicates whether data associated with link clicks should be automatically colle
 | -------- | ------------ | ----------------- |
 | Function | No           | () => undefined   |
 
-Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information.  For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
+Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
 ## Privacy options
 
