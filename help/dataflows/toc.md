@@ -13,3 +13,4 @@ user-guide-description: Dataflows are a representation of data jobs that move da
 - UI guides {#ui}
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
+- [Dataflows API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
