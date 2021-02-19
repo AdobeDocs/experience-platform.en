@@ -12,9 +12,9 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL LinkedIn Matched Audience] destination, here is a sample use case that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL LinkedIn Matched Audience] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
 
-An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses or mobile device IDs from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
+A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] intoto Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
 ## Destination specifics {#destination-specs}
 
