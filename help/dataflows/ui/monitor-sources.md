@@ -58,23 +58,39 @@ Alternatively, you can enter a source into the search bar to isolate a single so
 
 A list of dataflows appears. To narrow down the list and focus on dataflows with errors, select **[!UICONTROL Show failures only]**.
 
-![only-failures](../assets/ui/monitor-sources/.png)
+![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
 
-Locate the dataflow that you want to assess from the last and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status
+Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status
 
-![dataflow](../assets/ui/monitor-sources/.png)
+![dataflow](../assets/ui/monitor-sources/dataflow.png)
 
 The dataflow run page displays information on your dataflow's run start date, size of data, status, as well as its processing time duration. Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see its dataflow run details.
 
-![dataflow-run-start](../assets/ui/monitor-sources/.png)
+![dataflow-run-start](../assets/ui/monitor-sources/dataflow-run-start.png)
 
-![dataflow-run-details](../assets/ui/monitor-sources/.png)
+The [!UICONTROL Dataflow run details] page displays information on the dataflow's metadata, partial ingestion status, and error summary. The error summary contains the specific top-level error that shows at which step the ingestion process encountered an error.
 
-![dataflow-run-errors](../assets/ui/monitor-sources/.png)
+Scroll down to see more specific information on the error that occurred.
 
-![files](../assets/ui/monitor-sources/.png)
+![dataflow-run-details](../assets/ui/monitor-sources/dataflow-run-details.png)
 
-![error-diagnostics](../assets/ui/monitor-sources/.png)
+The [!UICONTROL Dataflow run errors] panel displays the specific error and error code that resulted in the dataflow's ingestion failure. In this scenario, a mapper transformation error occurred, resulting in the failure of 24 records.
+
+Select **[!UICONTROL Files]** for more information.
+
+![dataflow-run-errors](../assets/ui/monitor-sources/dataflow-run-errors.png)
+
+The [!UICONTROL Files] panel contains information on the file's name and path.
+
+For a more granular representation of the error, select **[!UICONTROL Preview error diagnostics]**
+
+![files](../assets/ui/monitor-sources/files.png)
+
+The [!UICONTROL Error diagnostics preview] window appears, displaying a preview of up to 100 errors in the dataflow. You can select **[!UICONTROL Download]** to retrieve a curl command, which then allows you to download the error diagnostics.
+
+When you are finished, select **[!UICONTROL Close]**
+
+![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
 
 ## Monitor successful dataflows
 
