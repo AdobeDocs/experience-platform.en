@@ -94,6 +94,16 @@ When you are finished, select **[!UICONTROL Close]**
 
 ## Monitor successful dataflows
 
+![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
+
+![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
+
+![sources](../assets/ui/monitor-sources/sources.png)
+
+![identities](../assets/ui/monitor-sources/identities.png)
+
+![profiles](../assets/ui/monitor-sources/profiles.png)
+
 ## Next steps
 
 By following this tutorial, you have successfully accessed existing accounts and dataflows from the **[!UICONTROL Sources]** workspace. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
