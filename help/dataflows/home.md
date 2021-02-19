@@ -12,7 +12,7 @@ In Adobe Experience Platform, data is ingested from a wide variety of sources, a
 
 ## Using dataflows
 
-Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, to Identity and Profile Service, and to destinations. 
+Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
 
 To learn more about using dataflows in source connectors, please read the [sources overview](../sources/home.md).
 
@@ -24,5 +24,5 @@ To learn more about preparing data after it's been ingested, please read the [Da
 
 ## Monitoring dataflows
 
-Monitoring dataflows can be done by using either the Platform APIs or Platform UI. To learn how to monitor dataflows using the API, please read the [monitoring dataflows API tutorial](./api/monitor.md). To learn how to monitor dataflows within the Platform UI, please read either the [monitoring dataflows for sources tutorial](./ui/monitor-sources.md) or the [monitoring dataflows for destinations tutorial](./ui/monitor-destinations.md).
+Monitoring dataflows can be done by using either Platform APIs or the Platform UI. To learn how to monitor dataflows using the API, please read the [monitoring dataflows API tutorial](./api/monitor.md). To learn how to monitor dataflows within the Platform UI, please read the tutorials on [monitoring dataflows for sources](./ui/monitor-sources.md) and [monitoring dataflows for destinations](./ui/monitor-destinations.md).
 
