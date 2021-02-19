@@ -94,19 +94,33 @@ When you are finished, select **[!UICONTROL Close]**
 
 ## Monitor successful dataflows
 
+You can use the breadcrumb system at the top header to navigate your way back to the dataflows screen and monitor successful dataflows. Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page, and then select **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** to return to the dataflows page.
+
 ![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
+
+From the dataflows page, disable the **[!UICONTROL Show failures only]** toggle, and then locate the successful dataflow that you want to monitor. Once you have identified your dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see its dataflow run information.
 
 ![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
 
+The [!UICONTROL Source ingestion] page contains information that confirms the successful ingestion of your dataflow. From here, you can start monitoring your dataflow's journey from the source-level, to [!DNL Identity Service], and then to [!DNL Profile].
+
+Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identities] stage.
+
 ![sources](../assets/ui/monitor-sources/sources.png)
 
+The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
+
+Select the [!UICONTROL Profiles] to see the state records ingestion in the [!DNL Profiles] stage.
+
 ![identities](../assets/ui/monitor-sources/identities.png)
+
+The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
 ![profiles](../assets/ui/monitor-sources/profiles.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully accessed existing accounts and dataflows from the **[!UICONTROL Sources]** workspace. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have successfully monitored the ingestion flow of a dataflow from the source-level, to [!DNL Identity Service], and to [!DNL Profile], using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../profile/home.md)
 - [Data Science Workspace overview](../../data-science-workspace/home.md)
