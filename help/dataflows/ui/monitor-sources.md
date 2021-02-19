@@ -48,7 +48,7 @@ The source ingestion list displays all sources that contain existing dataflows, 
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
-To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. To focus on cloud storages, select **[!UICONTRIOL Cloud storage]**
+To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. To focus on cloud storages, select **[!UICONTROL Cloud storage]**
 
 ![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
