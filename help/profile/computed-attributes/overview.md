@@ -36,9 +36,16 @@ Use cases for computed attributes can range from simple calculations to very com
 
 ## Known limitations
 
-Availability of new CA in UPS may be delayed up to 2 hours after the corresponding schema attribute is added to the profile union schema.
-This is due to the current caching configuration in UPS services (Logos and Streaming Segmentation). Post-Alpha it could be reduced to an upper bound of 1 hour once Streaming Segmentation addresses the issue.
+### Delayed availability of new computed attributes
 
-Schema attributes that have already been used in a segment definition expression, but later turned into a Computed Attribute will not be tracked as a dependency of that segment. Because no dependency has been detected, we will not automatically evaluate the associated Computed Attribute each time we evaluate that segment definition. 
+The availability of new computed attributes may be delayed up to 2 hours after the corresponding schema attribute is added to the union schema.
 
-Alternatively, the creation of CAs could be managed by UPS/Ansible UI through a specific mixin that adds new CA attributes that do not conflict with existing attributes. Another alternative is to simply recreate the segment with the correct dependency tracking for the new CA.
+This delay is due to the current caching configuration. Post-Alpha the delay could be reduced to an upper bound of 1 hour once Streaming Segmentation addresses the issue.
+
+### Dependency tracking in segments
+
+Schema attributes that have already been used in a segment definition expression, but later turned into a Computed Attribute will not be tracked as a dependency of that segment. 
+
+Due to the fact that no dependency has been detected, Experience Platform will not automatically evaluate the associated computed attribute each time the segment definition is evaluated.
+
+Alternatively, the creation of computed attributes could be managed through a specific mixin that adds new computed attributes that do not conflict with existing attributes. Another alternative is to simply recreate the segment with the correct dependency tracking for the new computed attributes.
