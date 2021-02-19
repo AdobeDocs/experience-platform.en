@@ -225,7 +225,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >* The fields are used in the segment definition.
 >* The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 

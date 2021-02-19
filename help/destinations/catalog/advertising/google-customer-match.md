@@ -122,13 +122,13 @@ Once your credentials are confirmed and Adobe Experience Cloud is connected to y
 
 In the **[!UICONTROL Authentication]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill your Google the [!UICONTROL Account ID].
 
-Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
+Also in this step, you can select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
 
 Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
 >[!IMPORTANT]
 >
-> * The **[!UICONTROL Combine with PII]** marketing use case is selected by default for the [!DNL Google Customer Match] destination and cannot be removed. 
+> * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed. 
 > * For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx.  
 
 ![Connect Google Customer Match - authentication step](../../assets/catalog/advertising/google-customer-match/authentication.png)
