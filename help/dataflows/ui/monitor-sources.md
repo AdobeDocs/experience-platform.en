@@ -15,8 +15,11 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-- [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Dataflows](../home.md): 
+* [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Identity Service](../../identity-service/home.md):
+* [Real-time Customer Profile](../../profile/home.md):
+* [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Monitor failed dataflows
 
@@ -110,17 +113,42 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
-Select the [!UICONTROL Profiles] to see the state records ingestion in the [!DNL Profiles] stage.
+Select the **[!UICONTROL Profiles]** to see the state records ingestion in the [!DNL Profiles] stage.
 
 ![identities](../assets/ui/monitor-sources/identities.png)
+
+| Identity metrics | Description |
+| ---------------- | ----------- |
+| Records received | The number of records received from a source. |
+| Records failed | The number of records that were not ingested into Platform due to errors in the data. |
+| Records skipped | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
+| Records ingested | The number of records ingested into [!DNL Identity Service]. |
+| Total records | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records.
+| [!DNL Identities] added | The number of net new identifiers added to [!DNL Identity Service]
+| Graphs created | The number of net new identity graphs created in [!DNL Identity Service]. |
+| Graphs updated | The number of existing identity graphs updated with new edges. |
+| Failed dataflow runs | The number of dataflow runs that failed.
+| Processing time | The timestamp from the start of the ingestion to completion. |
+| Status |
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
 ![profiles](../assets/ui/monitor-sources/profiles.png)
 
+| Profile metrics | Description |
+| --------------- | ----------- |
+| Records received | 
+| Records failed |
+| [!DNL Profile fragments added] |
+| [!DNL Profile fragments updated] |
+| Failed dataflow runs |
+| Total [!DNL Profile] fragments |
+| Processing time |
+| Status |
+
 ## Next steps
 
 By following this tutorial, you have successfully monitored the ingestion flow of a dataflow from the source-level, to [!DNL Identity Service], and to [!DNL Profile], using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
-- [Real-time Customer Profile overview](../../profile/home.md)
-- [Data Science Workspace overview](../../data-science-workspace/home.md)
+* [Real-time Customer Profile overview](../../profile/home.md)
+* [Data Science Workspace overview](../../data-science-workspace/home.md)
