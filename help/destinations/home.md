@@ -46,12 +46,12 @@ For more information about access controls, see the [Access control user guide](
 
 Data governance is enforced for Platform destinations through:
 
-* *Marketing use cases* that you can select in the create destinations workflow;
-* *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing use cases.
+* *Marketing actions* that you can select in the create destinations workflow;
+* *Data usage policies* that restrict data containing certain usage labels from being activated to destinations with certain marketing actions.
   
-See the [!DNL Data Governance] in Platform documentation for more information about [marketing use cases](../data-governance/policies/overview.md) and [resolving data policy violations](../data-governance/enforcement/auto-enforcement.md).
+See the [!DNL Data Governance] in Platform documentation for more information about [marketing actions](../data-governance/policies/overview.md) and [resolving data policy violations](../data-governance/enforcement/auto-enforcement.md).
 
-For more information about selecting marketing use cases in the create destination workflow, see the following pages for the different destination types in Platform:
+For more information about selecting marketing actions in the create destination workflow, see the following pages for the different destination types in Platform:
 
 * [Advertising destinations - Google Ad Manager ](./catalog/advertising/google-ad-manager.md)
 * [Advertising destinations - Google Ads](./catalog/advertising/google-ads-destination.md)
