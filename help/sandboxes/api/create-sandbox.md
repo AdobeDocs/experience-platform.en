@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
-title: Create a sandbox
+title: Create a Sandbox in the API
 topic: developer guide
+description: You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
 ---
 
-# Create a sandbox
+# Create a sandbox in the API
 
 You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
 

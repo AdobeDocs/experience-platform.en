@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ETL;etl;etl workflow;ETL workflow
 solution: Experience Platform
-title: ETL workflow
+title: ETL Workflow
 topic: overview
+description: Various extract, transform, and load (ETL) tools may differ in format, but most expose similar functionality to assist with the combining of multiple data sources.
 ---
 
 # ETL workflow

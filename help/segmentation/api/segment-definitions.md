@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
-title: Segment definitions
+title: Segment Definitions API Endpoint
 topic: developer guide
+description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
 ---
 
 # Segment definitions endpoint

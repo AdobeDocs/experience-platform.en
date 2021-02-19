@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
-title: Data access overview
+title: Data Access Overview
 topic: overview
+description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested Platform datasets.
 ---
 
 # [!DNL Data Access] overview
@@ -15,17 +16,11 @@ topic: overview
 
 Detailed information on using the [!DNL Data Access] API to connect with [!DNL Platform] can be found in the [Data Access developer guide](api.md).
 
-## [!DNL Python] SDK
+## Accessing data in Data Science Workspace
 
-You can read and write with datasets using the [!DNL Python] SDK. More detailed information about the [!DNL Python] SDK can be found in the [Python SDK tutorial](./tutorials/python-sdk.md). 
+You can read and write to datasets using [!DNL Python] and [!DNL Spark] for recipe and model development in Data Science Workspace. To learn more about accessing your data, visit the [Python data access](../data-science-workspace/authoring/python.md) or [Spark data access](../data-science-workspace/authoring/spark.md) documentation.
 
-[!DNL Data Science Workspace] uses the [!DNL Python] SDK within Notebooks and Recipes. For more information about [!DNL Data Science Workspace], please start by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
-
-## [!DNL Spark] SDK
-
-You can read and write with datasets using the [!DNL Spark] SDK. More detailed information about the [!DNL Spark] SDK can be found in the [Spark SDK tutorial](./tutorials/spark-sdk.md).
-
-[!DNL Data Science Workspace] uses the [!DNL Spark] SDK within Notebooks and Recipes. For more information about [!DNL Data Science Workspace], please start by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
+For more information about [!DNL Data Science Workspace], start by reading the [Data Science Workspace overview](../data-science-workspace/home.md).
 
 ## Subscribe to data ingestion events
 

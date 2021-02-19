@@ -1,15 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
-title: Connect with RStudio
+title: Connect RStudio to Query Service
 topic: connect
+description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL RStudio]
+# Connect [!DNL RStudio] to Query Service
 
-This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
+This document walks through the steps for connecting [!DNL RStudio] with Adobe Experience Platform [!DNL Query Service].
 
-After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
+>[!NOTE]
+>
+> This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
+
+## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
+
+After installing [!DNL RStudio], on the **[!DNL Console]** screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
 
 ```r
 install.packages("RPostgreSQL")
@@ -38,13 +45,13 @@ con <- dbConnect(drv,
 
 >[!NOTE]
 >
->For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+>For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-## Next steps
+## Writing queries
 
 Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
-The following query uses a dataset containing [ExperienceEvents](../creating-queries/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
+The following query uses a dataset containing [Experience Events](../best-practices/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -79,4 +86,6 @@ df_pageviews
 7 600-699 3097040
 ```
 
-For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).
+## Next steps
+
+For more information on how to write and run queries, please read the guide on [running queries](../best-practices/writing-queries.md).

@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service FAQ
+title: Privacy Service Troubleshooting Guide
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
 ---
 
 # [!DNL Privacy Service] troubleshooting guide
@@ -87,7 +88,7 @@ For more details, see the section on [looking up a job by its ID](api/privacy-jo
 
 ### Using the UI
 
-On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Click the ID of the job to open the _Job Details_ page. From here, click **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
+On the [!DNL Privacy Service] UI dashboard, find the job you want to download from the **Job Requests** widget. Select the ID of the job to open the Job Details page. From here, select **Download** in the top-right corner to download the ZIP file. See the [Privacy Service user guide](ui/user-guide.md) for more detailed steps.
 
 ## Common error messages
 

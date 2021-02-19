@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
-title: Segment jobs
+title: Segment Jobs API Endpoint
 topic: developer guide
+description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
 ---
 
 # Segment jobs endpoint
@@ -88,9 +89,9 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
                             "format": "pql/json",
                             "value": "{PQL_EXPRESSION}"
                         },
-                        "mergePolicyId": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                        "mergePolicyId": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                         "mergePolicy": {
-                            "id": "b83185bb-0bc6-489c-9363-0075eb30b4c8",
+                            "id": "25c548a0-ca7f-4dcd-81d5-997642f178b9",
                             "version": 1
                         }
                     }
@@ -107,14 +108,25 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
                     "endTimeInMs": 1573204395655,
                     "totalTimeInMs": 128928
                 },
-                "totalProfiles": 0,
-                "segmentedProfileCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": 0,
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": 0
+                "totalProfiles":13146432,
+                "segmentedProfileCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":1033
                 },
-                "segmentedProfileByNamespaceCounter": {
-                    "30230300-ccf1-48ad-8012-c5563a007069": {},
-                    "ca763983-5572-4ea4-809c-b7dff7e0d79b": {}
+                "segmentedProfileByNamespaceCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "tenantiduserobjid":1033,
+                        "campaign_profile_mscom_mkt_prod2":1033
+                    }
+                },
+                "segmentedProfileByStatusCounter":{
+                    "94509dba-7387-452f-addc-5d8d979f6ae8":{
+                        "exited":144646,
+                        "existing":10,
+                        "realized":2056
+                    }
+                },
+                "totalProfilesByMergePolicy":{
+                    "25c548a0-ca7f-4dcd-81d5-997642f178b9":13146432
                 }
             },
             "requestId": "4e538382-dbd8-449e-988a-4ac639ebe72b-1573203600264",
@@ -154,6 +166,12 @@ A successful response returns HTTP status 200 with a list of segment jobs for th
 | `segments.segment.id` | The ID of the segment definition. |
 | `segments.segment.expression` | An object that contains information about the segment definition's expression, written in PQL. |
 | `metrics` | An object that contains diagnostic information about the segment job. |
+| `metrics.totalTime` | An object that contains information on the times the segmentation job started and ended, as well as the total time taken. |
+| `metrics.profileSegmentationTime` | An object that contains information on the times the segmentation evaluation started and ended, as well as the total time taken. | 
+| `metrics.segmentProfileCounter` | The number of profiles qualified on a per segment basis. | 
+| `metrics.segmentedProfileByNamespaceCounter` | The number of profiles qualified for each identity namespace on a per segment basis. |
+| `metrics.segmentProfileByStatusCounter` | The count of profiles for each statuses. The following three statuses are supported: <ul><li>"realized" - The number of new profiles that entered into the segment.</li><li>"existing" - The number of profiles that continue to exist in the segment.</li><li>"exited" - The number of profile segments that no longer exist in the segment.</li></ul>|
+| `metrics.totalProfilesByMergePolicy` | The total number of merged profiles on a per merge policy basis. | 
 
 ## Create a new segment job {#create}
 
@@ -184,7 +202,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentId` | The ID of the segment definition that you want to create a segment job for. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
 
 **Response**
 

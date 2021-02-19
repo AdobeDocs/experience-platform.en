@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
-title: View effective policies
+title: Effective Policies API Endpoint
 topic: developer guide
+description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to view effective policies using the access control API for Adobe Experience Platform.
 ---
 
-# View effective policies
+# Effective policies endpoint
 
 To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. The permissions and resource types you want to retrieve must be provided in the request payload in the form of an array. This is demonstrated in the example API call below.
 
@@ -71,45 +72,77 @@ The following is a list of permissions and resource types you can include in the
 **Permissions**
 
 ```plaintext
-"permissions/activate-destinations"
-"permissions/export-audience-for-segments"
-"permissions/manage-datasets"
-"permissions/manage-destinations"
-"permissions/manage-identity-namespaces"
-"permissions/manage-profiles"
-"permissions/manage-sandboxes"
-"permissions/manage-schemas"
-"permissions/reset-sandboxes"
-"permissions/view-datasets"
-"permissions/view-destinations"
-"permissions/view-identity-namespaces"
-"permissions/view-monitoring-dashboard"
-"permissions/view-profiles"
-"permissions/view-sandboxes"
-"permissions/view-schemas"
+permissions/activate-destinations
+permissions/evaluate-segments
+permissions/execute-decisioning-activities
+permissions/export-audience-for-segment
+permissions/manage-datasets
+permissions/manage-decisioning-activities
+permissions/manage-decisioning-options
+permissions/manage-destinations
+permissions/manage-dsw
+permissions/manage-dule-labels
+permissions/manage-dule-policies
+permissions/manage-identity-namespaces
+permissions/manage-privacy-workflows
+permissions/manage-profile-configs
+permissions/manage-profiles
+permissions/manage-queries
+permissions/manage-schemas
+permissions/manage-segments
+permissions/manage-sources
+permissions/reset-sandboxes
+permissions/view-datasets
+permissions/view-destinations
+permissions/view-dule-labels
+permissions/view-dule-policies
+permissions/view-identity-namespaces
+permissions/view-monitoring-dashboard
+permissions/view-privacy-workflows
+permissions/view-profile-configs
+permissions/view-profiles
+permissions/view-sandboxes
+permissions/view-schemas
+permissions/view-segments
+permissions/view-sources
 ```
 
 **Resource types**
 
 ```plaintext
-"resource-types/classes"
-"resource-types/connections"
-"resource-types/data-types"
-"resource-types/dataset-data"
-"resource-types/datasets"
-"resource-types/destinations"
-"resource-types/dule-labels"
-"resource-types/identity-descriptors"
-"resource-types/identity-namespaces"
-"resource-types/mixins"
-"resource-types/monitoring"
-"resource-types/profile-configs
-"resource-types/profile-datasets"
-"resource-types/profiles"
-"resource-types/relationship-descriptors"
-"resource-types/reset-sandboxes"
-"resource-types/sandboxes"
-"resource-types/schemas"
-"resource-types/segment-jobs"
-"resource-types/segments"
+resource-types/activation-associations
+resource-types/activations
+resource-types/activities
+resource-types/analytics-source
+resource-types/audience-manager-source
+resource-types/bizible-source
+resource-types/connection
+resource-types/customer-attributes-source
+resource-types/data-science-workspace
+resource-types/dataset-preview
+resource-types/datasets
+resource-types/dule-label
+resource-types/dule-policy
+resource-types/enterprise-source
+resource-types/identity-descriptor
+resource-types/identity-namespaces
+resource-types/launch-source
+resource-types/marketing-action
+resource-types/marketo-source
+resource-types/monitoring
+resource-types/offers
+resource-types/placements
+resource-types/privacy-consent
+resource-types/privacy-content-delivery
+resource-types/privacy-job
+resource-types/profile-configs
+resource-types/profile-datasets
+resource-types/profiles
+resource-types/query
+resource-types/relationship-descriptor
+resource-types/sandboxes
+resource-types/schemas
+resource-types/segment-jobs
+resource-types/segments
+resource-types/streaming-source
 ```

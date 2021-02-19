@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;query service;run scheduled queries;run scheduled query;Query service;scheduled queries;scheduled query;
 solution: Experience Platform
-title: Query Service developer guide
+title: Scheduled Query Runs API Endpoint
 topic: runs for scheduled queries
+description: The following sections walks through the various API calls you can make for running scheduled queries with the Query Service API.
 ---
 
-# Runs for scheduled queries
+# Scheduled query runs endpoint
 
 ## Sample API calls
 

@@ -9,6 +9,8 @@ getting-started-url: https://docs.adobe.com/content/help/en/experience-platform/
 tutorials-title: Tutorials
 tutorials-url: https://docs.adobe.com/content/help/en/experience-platform/tutorials/home.html
 git-repo: https://github.com/AdobeDocs/experience-platform.en
+solution: Experience Platform
+type: Documentation
 index: yes
 ---
 

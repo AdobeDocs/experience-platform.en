@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
-title: Create a dataset
+title: Create a Batch in the API
 topic: developer guide
+description: You can create a batch by making a POST request to the /batches endpoint in the Catalog API.
 ---
 
 # Create a batch

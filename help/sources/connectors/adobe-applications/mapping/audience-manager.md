@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Audience Manager mapping;audience manager mapping
 solution: Experience Platform
-title: Audience Manager mapping field
+title: Mapping Fields for the Adobe Audience Manager Source Connector
 topic: overview
+description: Learn how to map Adobe Audience Manager data (Realtime, Onboarded, and Profile data) to corresponding Experience Data Model (XDM) fields for the Audience Manager source connector.
 ---
 
-# Audience Manager mapping fields
+# Audience Manager field mappings
 
 The tables below contain the mappings between the fields in Adobe Audience Manager data (Realtime, Onboarded, and Profile data) and their corresponding XDM fields.
 
@@ -29,23 +30,6 @@ Type: Realtime data
 | `location` | `ExperienceEvent.placeContext.geo` <ul><li>d_country → countryCode</li><li>d_state → stateProvince</li><li>d_city → city</li><li>d_postal → postalCode</li><li>d_lat → latitude</li><li>d_longitude → longitude</li></ul> |
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
-| `Signals` | ExperienceEvent.signals |
-
-## Inbound data **(Deprecated)**
-
-Type: ExperienceEvent
-
-| Inbound Field |  XDM Field | 
-| --- | --- |
-| `uuid` | `ExperienceEvent.identityMap[<ID Type>]` |
-| `deviceIds` | `ExperienceEvent.identityMap["CORE"] And calculated ECIDs  ExperienceEvent.identityMap["ECID"]` |
-| `signals` | `ExperienceEvent.signals` |
-| `b_time` | `ExperienceEvent.timeStamp` |
-| `overwrite` | `overwriteTraits` |
-
->[!NOTE]
->
->Inbound Fields are scheduled to be deprecated in a future release.
 
 ## Profile data
 

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Customer Attributes connector
 solution: Experience Platform
-title: Customer Attributes connector
+title: Customer Attributes Source Connector Overview
 topic: overview
+description: Learn how to connect Customer Attributes to Adobe Experience Platform using APIs or the user interface
 ---
 
 # Customer Attributes connector
@@ -11,8 +12,8 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 Experience Platform provides support for ingesting Customer Attributes profile data into Adobe Experience Platform. 
 
-The documentation below provides information on how to connect Customer Attributes to Platform using APIs or the user interface:
+The documentation below provides information on how to connect Customer Attributes to Adobe Experience Platform using APIs or the user interface:
 
 ## Connect Customer Attributes to Platform using the UI
 
-- [Create a Customer Attributes source connector in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Create a Customer Attributes source connection in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)

@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
-title: Create a dataset
+title: Create a Dataset in the API
 topic: developer guide
+description: This document covers how to create a dataset object in the Catalog Service API.
 ---
 
-# Create a dataset
+# Create a dataset in the API
 
 In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
 
@@ -52,7 +53,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->This example uses the [parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
+>This example uses the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format for its `containerFormat` property. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).
 
 **Response**
 

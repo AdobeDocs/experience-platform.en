@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;score a model;Data Science Workspace;popular topics
+keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
-title: Score a model (UI)
-topic: Tutorial
+title: Score a Model in the Data Science Workspace UI
+topic: tutorial
+type: Tutorial
+description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 ---
 
-# Score a model (UI)
+# Score a model in the Data Science Workspace UI
 
 Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
@@ -23,7 +25,7 @@ A scoring run is created using optimized configurations from a previously comple
 
 1. Find the most optimal training run to use its configurations for scoring. Open the desired Training run by clicking on its name.
 
-2. From the Training Run **[!UICONTROL Evaluation]** tab, click on the **[!UICONTROL Score]** button on the top right of the screen. This will initiate a new *Run Scoring* workflow.
+2. From the Training Run **[!UICONTROL Evaluation]** tab, click on the **[!UICONTROL Score]** button on the top right of the screen. This will initiate a new **Run Scoring** workflow.
 ![](../images/models-recipes/score/training_run_overview.png)
 
 3. Select the input scoring dataset and click **[!UICONTROL Next]**.
@@ -35,7 +37,7 @@ A scoring run is created using optimized configurations from a previously comple
 5. The final step in the workflow prompts you to configure your scoring run. These configurations are used by the Model for the scoring run.
 Note that you will not be able to remove inherited parameters that were set during the Model creation. You can edit or revert non-inherited parameters by double clicking the value or clicking on the revert icon while hovering over the entry. 
 ![](../images/models-recipes/score/configuration.png) 
-Review and confirm the scoring configurations and click **[!UICONTROL Finish]**  to create and execute the scoring run. You will be directed to the *Scoring Runs* tab and the new scoring run will show a status.
+Review and confirm the scoring configurations and click **[!UICONTROL Finish]**  to create and execute the scoring run. You will be directed to the **[!UICONTROL Scoring Runs]** tab and the new scoring run will show a status.
 ![](../images/models-recipes/score/scoring_runs_tab.png)
 A scoring run will display either of the four following statuses: Pending, Complete, Failed, or Running, and are updated automatically. Proceed to the next step if the status is either "Completed" or "Failed".
 

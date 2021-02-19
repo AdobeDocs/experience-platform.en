@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform API fundamentals
+title: Experience Platform API fundamentals
 topic: getting started
+description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
 ---
 
-# Adobe Experience Platform API fundamentals
+# Experience Platform API fundamentals
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 
@@ -15,70 +16,80 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
+The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core mixins (such as `fullName`) are not.
+
 ```json
 {
-    "type": "object",
-    "title": "Loyalty Member Details",
-    "meta:intendedToExtend": [
-        "https://ns.adobe.com/xdm/context/profile"
-    ],
-    "description": "Loyalty Program Mixin.",
-    "definitions": {
-        "loyalty": {
-            "properties": {
-                "_{TENANT_ID}": {
-                    "type": "object",
-                    "properties": {
-                        "loyaltyId": {
-                            "title": "Loyalty Identifier",
-                            "type": "string",
-                            "description": "Loyalty Identifier.",
-                            "meta:xdmType": "string"
-                        },
-                        "loyaltyLevel": {
-                            "title": "Loyalty Level",
-                            "description": "The current loyalty program level to which the individual member belongs.",
-                            "type": "string",
-                            "enum": [
-                                "platinum",
-                                "gold",
-                                "silver",
-                                "bronze"
-                            ],
-                            "meta:enum": {
-                                "platinum": "Platinum",
-                                "gold": "Gold",
-                                "silver": "Silver",
-                                "bronze": "Bronze"
-                            },
-                            "meta:xdmType": "string"
-                        }
-                    },
-                    "meta:xdmType": "object"
-                }
-            },
-            "type": "object",
-            "meta:xdmType": "object"
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:altId": "_{TENANT_ID}.schemas.85a4bdaa168b01bf44384e049fbd3d2e9b2ffaca440d35b9",
+  "meta:resourceType": "schemas",
+  "version": "1.0",
+  "title": "Example schema",
+  "type": "object",
+  "description": "This is an example schema.",
+  "properties": {
+    "_{TENANT_ID}": {
+      "type": "object",
+      "properties": {
+        "loyaltyLevel": {
+          "title": "Loyalty Level",
+          "description": "",
+          "type": "string",
+          "isRequired": false,
+          "enum": [
+            "platinum",
+            "gold",
+            "silver",
+            "bronze"
+          ]
         }
+      }
+    },
+    "person": {
+      "title": "Person",
+      "description": "An individual actor, contact, or owner.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "title": "Full name",
+          "description": "The person's full name.",
+          "type": "object",
+          "properties": {
+            "fullName": {
+              "title": "Full name",
+              "type": "string",
+              "description": "The full name of the person, in writing order most commonly accepted in the language of the name.",
+            },
+            "suffix": {
+              "title": "Suffix",
+              "type": "string",
+              "description": "A group of letters provided after a person's name to provide additional information. The `suffix` is used at the end of someones name. For example Jr., Sr., M.D., PhD, I, II, III, etc.",
+            }
+          },
+          "meta:referencedFrom": "https://ns.adobe.com/xdm/context/person-name",
+          "meta:xdmField": "xdm:name"
+        }
+      }
     }
+  }
 }
 ```
 
 ### Example JSON Pointers based on schema object
 
-|JSON Pointer | Resolves to|
-|--- | ---|
-|`"/title"` | "Loyalty Member Details"|
-|`"/definitions/loyalty"` | (Returns the contents of the `loyalty` object)|
-|`"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]`|
-|`"/definitions/loyalty/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"`|
+| JSON Pointer | Resolves to |
+| --- | --- |
+| `"/title"` | `"Example schema"` |
+|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core mixin.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom mixin.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
->[!Note]
->
+>[!NOTE]
 >
 >When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
 
-## JSON Patch
+## JSON Patch {#json-patch}
 
 There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON Patch is a standardized format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) for describing changes to a JSON document. It allows you to define partial updates to JSON without needing to send the entire document in a request body.
 
@@ -102,7 +113,7 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 
 Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](http://jsonpatch.com/).
 
-## JSON Schema
+## JSON Schema {#json-schema}
 
 JSON Schema is a format used to describe and validate the structure of JSON data. [Experience Data Model (XDM)](../xdm/home.md) leverages JSON Schema capabilities to enforce constraints on the structure and format of ingested customer experience data. For more information on JSON Schema, please refer to the [official documentation](https://json-schema.org/).
 

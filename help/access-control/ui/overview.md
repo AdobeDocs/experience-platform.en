@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Access control;Adobe admin console
 solution: Experience Platform
-title: Access control user guide
+title: Access control UI overview
 topic: user guide
+description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to navigate the Admin Console to manage access control for Platform.
 ---
 
-# Access control user guide
+# Access control UI overview
 
 Access control in Adobe Experience Platform allows you to manage roles and permissions for various [!DNL Platform] capabilities by using the [Adobe Admin Console](https://adminconsole.adobe.com). This document serves as a guide for how to navigate the [!DNL Admin Console] to manage access control for [!DNL Platform]. For a high-level overview of access control in [!DNL Experience Platform], see the [access control overview](./../home.md).
 

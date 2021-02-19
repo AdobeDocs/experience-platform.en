@@ -1,26 +1,35 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;tableau;Tableau;query service;Query service;connect to query service;
 solution: Experience Platform
-title: Connect with Tableau
+title: Connect Tableau to Query Service
 topic: connect
+description: This document walks through the steps for connecting Tableau with Adobe Experience Platform Query Service.
 ---
 
-# Connect with [!DNL Tableau]
+# Connect [!DNL Tableau] to Query Service
 
-Install [!DNL Tableau], if it is not already installed.
+This document covers the steps for connecting Tableau with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->You can get a 14-day trial of "[!DNL Tableau] Desktop" [here](https://www.tableau.com/products/desktop/download).
->    
-> The version `2018.1.2 (20181.18.0615.1128 64 bit)` has been successful in connecting to [!DNL Query Service].
+> This guide assumes you already have access to [!DNL Tableau] and are familiar with how to navigate its interface. More information about [!DNL Tableau] can be found in the [official [!DNL Tableau] documentation](https://help.tableau.com/current/pro/desktop/en-us/default.htm).
 
-Run [!DNL Tableau], and on the opening screen click to open a [!DNL Postgres] connection.
+To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in the **[!DNL To a Server]** section select **[!DNL More]** followed by **[!DNL PostgreSQL]** 
 
-![Image](../images/clients/tableau/open-connection.png)
+![](../images/clients/tableau/open-connection.png)
 
-Individually copy `Host, Port, Database, Username, Password` from the [!DNL Platform] UI's **[!UICONTROL Connect BI Tools]** page into the corresponding Tableau fields.
+You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
-Confirm that you have checked the **[!UICONTROL SSL Required]** box before trying to connect.
+Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying to connect.
+
+After filling in all your credentials, select **[!DNL Sign In]** to continue.
     
-![Image](../images/clients/tableau/ssl-required.png)
+![](../images/clients/tableau/sign-in.png)
+
+You have now connected with Adobe Experience Platform, with a list of your tables displayed on the side.
+
+![](../images/clients/tableau/connected.png)
+
+## Next steps
+
+Now that you've connected with [!DNL Query Service], you can use [!DNL Tableau] to write queries. For more information on how to write and run queries, please read the guide on [running queries](../best-practices/writing-queries.md).

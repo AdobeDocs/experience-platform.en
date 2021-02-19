@@ -1,18 +1,20 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
 solution: Experience Platform
-title: Getting started with Real-time Machine Learning
+title: Getting Started with Real-time Machine Learning
 topic: Getting started
+description: The following document outlines the steps that are required to create a Real-time Machine Learning model in Adobe Experience Platform.
 ---
 
 # Getting started with Real-time Machine Learning (Alpha)
 
 >[!IMPORTANT]
+>
 >Real-time Machine Learning is not available to all users yet. This feature is in alpha and still being tested. This document is subject to change.
 
 In order to utilize Real-time Machine Learning, you need to have access to an organization provisioned with Adobe Experience Platform and [!DNL Data Science Workspace]. Additionally, you need to have a complete dataset for use in training and scoring.
 
-The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter notebooks](../jupyterlab/overview.md), data science, and machine learning.
+The guides for Real-time Machine Learning require a working understanding of Python 3, [Jupyter Notebooks](../jupyterlab/overview.md), data science, and machine learning.
 
 **Key Terms:**
 
@@ -26,6 +28,7 @@ The guides for Real-time Machine Learning require a working understanding of Pyt
 To start using Real-time Machine Learning, you must have access to a dataset. You have the option to use an external dataset and upload it to your [!DNL JupyterLab] environment or create a new dataset within Platform if you have not done so already.
 
 >[!NOTE]
+>
 >If you already have a dataset you wish to use, you can skip to [Next steps](#next-steps).
 
 ### Use an external dataset

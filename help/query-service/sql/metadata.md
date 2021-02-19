@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;PSQL;psql;Query service;query service;metadata;commands;metadata commands;
 solution: Experience Platform
-title: Metadata commands
+title: Metadata PostgreSQL Commands in Query Service
 topic: metadata
+description: A list of PostgreSQL commands that are currently supported for querying metadata in Adobe Experience Platform Query Service.
 ---
 
-# Metadata commands
+# Metadata PostgreSQL commands in Query Service
 
-For metadata on your dataset, the following PSQL commands are currently supported for querying:
+For metadata on your dataset, the following PostgreSQL commands are currently supported for querying:
 
 >[!NOTE]
 >

@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service troubleshooting guide
+title: Identity Service Troubleshooting Guide
 topic: troubleshooting
+description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 ---
 
 # Identity Service troubleshooting guide
@@ -65,22 +66,9 @@ Identity fields must be associated with an existing identity namespace when they
 
 For step-by-step instructions for defining a namespace when creating an identity descriptor using the API, please see the section on [creating a descriptor](../xdm/tutorials/create-schema-ui.md) in the Schema Registry developer guide. For marking a schema field as an identity in the UI, follow the steps in the [Schema Editor tutorial](../xdm/tutorials/create-schema-api.md).
 
-## What are the standard identity namespaces provided by Experience Platform?
+## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
-The following standard namespaces are provided for use by all organizations within Experience Platform:
-
-| Display Name | ID | Code | Description |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
-| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| Email | 6 | Email | |
-| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
-| Phone | 7 | Phone | |
-| Windows AID | 8 | WAID | |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Target ID |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID for Advertisers |
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
 
 ## Where can I find the list of identity namespaces available for my organization?
 
@@ -92,7 +80,7 @@ Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/ho
 
 ## What are composite identities and XIDs?
 
-Identities are referenced in API calls either by their composite identity or XID. A **composite identity** is a representation of an identity that contains an ID value and a namespace. An **XID** is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
+Identities are referenced in API calls either by their composite identity or XID. A composite identity is a representation of an identity that contains an ID value and a namespace. An XID is a single-value identifier that represents the same construct as a composite identity (an ID and a namespace), and is automatically assigned to new identities when persisted by Identity Service. See the [Identity Service API overview](./home.md) for more information.
 
 ## How does Identity Service handle personally identifiable information (PII)?
 
@@ -225,7 +213,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -237,7 +225,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -249,7 +237,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
+This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
 
 ### Internal error when getting native XID from identity and namespace code
 

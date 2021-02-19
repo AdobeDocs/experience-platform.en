@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Query editor;query editor;Query service;query service;
 solution: Experience Platform
-title: Adobe Experience Platform Query Service Query Editor guide
+title: Query Editor UI Guide
 topic: query editor
+description: The Query Editor is an interactive tool provided by Adobe Experience Platform Query Service, which allows you to write, validate, and run queries for customer experience data within the Experience Platform user interface. Query Editor supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in Experience Platform.
 ---
 
-# [!DNL Query Editor] user guide
+# [!DNL Query Editor] UI guide
 
 [!DNL Query Editor] is an interactive tool provided by Adobe Experience Platform [!DNL Query Service], which allows you to write, validate, and run queries for customer experience data within the [!DNL Experience Platform] user interface. [!DNL Query Editor] supports developing queries for analysis and data exploration, and allows you to run interactive queries for development purposes as well as non-interactive queries to populate datasets in [!DNL Experience Platform].
 
@@ -69,19 +70,19 @@ When errors are detected, you can view the specific error messages by hovering o
 
 ### Query details
 
-While you are viewing a query in [!DNL Query Editor], the *[!UICONTROL Query Details]* panel provides tools to manage the selected query.
+While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query Details]** panel provides tools to manage the selected query.
 
 ![Image](../images/queries/query-editor-overview/query-details.png)
 
-This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the *[!UICONTROL SQL Query]* tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, click **[!UICONTROL Output Dataset]**. The *[!UICONTROL Output Dataset]* dialog appears. Enter a name and description, then click **[!UICONTROL Run Query]**. The new dataset is displayed in the *[!UICONTROL Datasets]* tab on the [!DNL Query Service] user interface on [!DNL Platform].
+This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the **[!UICONTROL SQL Query]** tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, click **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then click **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
 ### Saving queries
 
-[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the *[!UICONTROL Query Details]* panel.
+[!DNL Query Editor] provides a save function that allows you to save a query and work on it later. To save a query, click **[!UICONTROL Save]** in the top right corner of [!DNL Query Editor]. Before a query can be saved, a name must be provided for the query using the **[!UICONTROL Query Details]** panel.
 
 ### How to find previous queries
 
-All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the *[!UICONTROL Log]* tab to find query executions. Saved queries are listed in the *[!UICONTROL Browse]* tab. 
+All queries executed from [!DNL Query Editor] are captured in the Log table. You can use the search functionality in the **[!UICONTROL Log]** tab to find query executions. Saved queries are listed in the **[!UICONTROL Browse]** tab. 
 
 See the [Query Service UI overview][query-service-ui] for more information. 
 
@@ -91,7 +92,7 @@ See the [Query Service UI overview][query-service-ui] for more information.
 
 ## Executing queries using Query Editor
 
-To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the *Log* or *[!UICONTROL Browse]* tab, and click **Play**. The status of query execution is displayed in the *[!UICONTROL Console]* tab below, and output data is shown in the *[!UICONTROL Results]* tab.
+To run a query in [!DNL Query Editor], you can enter SQL in the editor or load a previous query from the **[!UICONTROL Log]** or **[!UICONTROL Browse]** tab, and click **Play**. The status of query execution is displayed in the **[!UICONTROL Console]** tab below, and output data is shown in the **[!UICONTROL Results]** tab.
 
 ### Console
 
@@ -105,7 +106,7 @@ The console provides information on the status and operation of [!DNL Query Serv
 
 ### Query results
 
-After a query has completed, the results are displayed in the *[!UICONTROL Results]* tab, next to the *[!UICONTROL Console]* tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
+After a query has completed, the results are displayed in the **[!UICONTROL Results]** tab, next to the **[!UICONTROL Console]** tab. This view shows the tabular output of your query, displaying up to 100 rows. This view allows you to verify that your query produces the expected output. To generate a dataset with your query, remove limits on rows returned, and run the query with `CREATE TABLE tablename AS SELECT` to generate a dataset with the output. See the [generating datasets tutorial][query-service-create-datasets] for instructions on how to generate a dataset from query results in [!DNL Query Editor].
 
 ![Image](../images/queries/query-editor-overview/query-results.png)
 
@@ -117,10 +118,9 @@ The following video shows how to run queries in the Adobe Experience Platform in
 
 ## Next steps
 
-Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries][query-service-running-queries]. For sample SQL queries for working with Adobe Analytics and Adobe Target data, see the [sample queries reference][query-service-sample-queries].
+Now that you know what features are available in [!DNL Query Editor] and how to navigate the application, you can start authoring your own queries directly in [!DNL Platform]. For more information about running SQL queries against datasets in [!DNL Data Lake], see the guide on [running queries][query-service-running-queries]. 
 
 [query-service-overview]: ../home.md
 [query-service-ui]: overview.md
-[query-service-running-queries]: ../creating-queries/creating-queries.md
-[query-service-sample-queries]: ../sample-queries/overview.md
-[query-service-create-datasets]: ../creating-queries/create-datasets.md
+[query-service-running-queries]: ../best-practices/writing-queries.md
+[query-service-create-datasets]: ./create-datasets.md

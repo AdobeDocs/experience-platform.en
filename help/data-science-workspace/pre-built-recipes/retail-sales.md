@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
-title: Retail sales recipe
+title: Retail Sales Recipe
 topic: overview
+description: The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
 ---
 
 # Retail sales recipe
@@ -26,7 +27,7 @@ The Retail Sales Forecasting recipe uses machine learning to predict sale trends
 
 You can get started by following this [tutorial](../jupyterlab/create-a-recipe.md).
 
-This tutorial will go over creating the Retail Sales recipe in a Jupyter notebook and using the notebook to recipe workflow to create the recipe in Adobe Experience Platform.
+This tutorial will go over creating the Retail Sales recipe in a Jupyter Notebook and using the notebook to recipe workflow to create the recipe in Adobe Experience Platform.
 
 ## Data schema
 

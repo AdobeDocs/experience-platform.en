@@ -1,11 +1,10 @@
 ---
-title: Interacting with multiple properties
-seo-title: Adobe Experience Platform Web SDK Interacting with multiple properties
-description: Learn how to interact with multiple Experience Platform Web SDK properties
-seo-description: Learn how to interact with multiple Experience Platform Web SDK properties
+title: Interact with Multiple Properties in the Adobe Experience Platform Web SDK
+description: Learn how to interact with multiple Experience Platform Web SDK properties.
+keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
 ---
 
-# Interacting with multiple properties
+# Interact with multiple properties
 
 There are certain cases where you might want to interact with two different properties on the same page. These include:
 

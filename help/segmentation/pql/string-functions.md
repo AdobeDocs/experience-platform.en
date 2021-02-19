@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
 solution: Experience Platform
-title: String functions
+title: PQL String Functions
 topic: developer guide
+description: Profile Query Language (PQL) offers functions to make interaction with strings simpler.
 ---
 
 # String functions
 
-[!DNL Profile Query Language] (PQL) offers functions to make interaction with strings simpler. More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+[!DNL Profile Query Language] (PQL) offers functions to make interaction with strings simpler. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Like
 

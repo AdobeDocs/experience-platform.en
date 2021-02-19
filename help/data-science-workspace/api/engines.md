@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;engines;sensei machine learning api
 solution: Experience Platform
-title: Engines
+title: Engines API Endpoint
 topic: Developer guide
+description: Engines are the foundations for machine learning Models in Data Science Workspace. They contain machine learning algorithms that solve specific problems, feature pipelines to perform feature engineering, or both.
 ---
 
-# Engines
+# Engines endpoint
 
 Engines are the foundations for machine learning Models in Data Science Workspace. They contain machine learning algorithms that solve specific problems, feature pipelines to perform feature engineering, or both. 
 
 ## Look up your Docker registry
 
 >[!TIP]
+>
 >If you do not have a Docker URL, visit the [Package source files into a recipe](../models-recipes/package-source-files-recipe.md) tutorial for a step-by-step walkthrough on creating a Docker host URL.
 
 Your Docker registry credentials are required in order to upload a packaged Recipe file, including your Docker host URL, username, and password. You can look up this information by performing the following GET request:
@@ -37,7 +39,6 @@ curl -X GET https://platform.adobe.io/data/sensei/engines/dockerRegistry \
 A successful response returns a payload containing the details of your Docker registry including the Docker URL (`host`), username (`username`), and password (`password`).
 
 >[!NOTE]
->
 >
 >Your Docker password changes whenever your `{ACCESS_TOKEN}` is updated.
 

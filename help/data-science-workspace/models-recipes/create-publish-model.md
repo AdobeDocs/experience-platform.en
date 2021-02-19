@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics
+keywords: Experience Platform;machine learning model;Data Science Workspace;popular topics;create and publish a model
 solution: Experience Platform
-title: Create and publish a machine learning model walkthrough
-topic: Tutorial
+title: Create and Publish a Machine Learning Model
+topic: tutorial
+type: Tutorial
+description: Adobe Experience Platform Data Science Workspace provides the means to achieve your goal using the prebuilt Product Recommendations Recipe. Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in Data Science Workspace.
 ---
 
-# Create and publish a machine learning model walkthrough
+# Create and publish a machine learning model
 
 ![](../images/models-recipes/model-walkthrough/objective.png)
 
@@ -35,13 +37,13 @@ Before starting this tutorial, you must have the following prerequisites:
     *   Golden Data Set postValues
     *   Golden Data Set Schema
 
-*   Download the three required [!DNL Jupyter Notebook] files from the <a href="https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs" target="_blank">Adobe public [!DNL Git] repository</a>, these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
+*   Download the three required [!DNL Jupyter Notebook] files from the [Adobe public [!DNL Git] repository](https://github.com/adobe/experience-platform-dsw-reference/tree/master/Summit/2019/resources/Notebooks-Thurs), these will be used to demonstrate the [!DNL JupyterLab] workflow in [!DNL Data Science Workspace].
 
 *   A working understanding of the following key concepts used in this tutorial:
-    *   [!DNL Experience Data Model](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
+    *   [[!DNL Experience Data Model]](../../xdm/home.md): The standardization effort led by Adobe to define standard schemas such as [!DNL Profile] and ExperienceEvent, for Customer Experience Management. 
     *   Datasets: A storage and management construct for actual data. A physical instantiated instance of an [XDM Schema](../../xdm/schema/field-dictionary.md).
     *   Batches: Datasets are made up of batches. A batch is a set of data collected over a period of time and processed together as a single unit.
-    *   [!DNL JupyterLab]: [!DNL JupyterLab](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
+    *   [!DNL JupyterLab]: [[!DNL JupyterLab]](https://blog.jupyter.org/jupyterlab-is-ready-for-users-5a6f039b8906) is an open-source web-based interface for Project [!DNL Jupyter] and is tightly integrated into [!DNL Experience Platform].
 
 ## Prepare your data {#prepare-your-data}
 
@@ -76,7 +78,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
     ![](../images/models-recipes/model-walkthrough/browse_recipes.png)
 2.  Locate and open the provided **[!UICONTROL Recommendations Recipe]** by clicking its name.
     ![](../images/models-recipes/model-walkthrough/recommendations_recipe_110.png)
-3.  In the right-hand rail, click **[!UICONTROL Recommendations Input Schema]** to view the schema powering the recipe. The schema fields **[!UICONTROL itemId]** and **[!UICONTROL userId]** correspond to a product purchased (**[!UICONTROL interactionType]**) by that customer at a specific time (**[!UICONTROL timestamp]**). Follow the same steps to review the fields for the **[!UICONTROL Recommendations Output Schema]**.
+3.  In the right-hand rail, click **[!UICONTROL Recommendations Input Schema]** to view the schema powering the recipe. The schema fields "[!UICONTROL itemId]" and "[!UICONTROL userId]" correspond to a product purchased ([!UICONTROL interactionType]) by that customer at a specific time ([!UICONTROL timestamp]). Follow the same steps to review the fields for the **[!UICONTROL Recommendations Output Schema]**.
     ![](../images/models-recipes/model-walkthrough/preview_schemas.png)
 
 You have now reviewed the input and output schemas required by the Product Recommendations Recipe. You can now continue to the next section to find out how to create, train, and evaluate a Product Recommendations Model.
@@ -104,13 +106,15 @@ You can choose to wait for the training run to finish, or continue to create a n
 
 ### Train the Model using custom Hyperparameters
 
-1.  On the *Model Overview* page, click **[!UICONTROL Train]** near the top right to create a new training run. Select the same input dataset you used when creating the Model and click **[!UICONTROL Next]**.
+1.  On the **Model Overview** page, click **[!UICONTROL Train]** near the top right to create a new training run. Select the same input dataset you used when creating the Model and click **[!UICONTROL Next]**.
     ![](../images/models-recipes/model-walkthrough/training_select_dataset.png)
-2.  The *Configuration* page appears. Here you can configure the training run's **[!UICONTROL num_recommendations]** value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
+2.  The **Configuration** page appears. Here you can configure the training run's "[!UICONTROL num_recommendations]" value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
 
     Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
-    >[!TIP] Set **[!UICONTROL num_recommendations]** to 10. 
+    >[!TIP]
+    >
+    >Set **[!UICONTROL num_recommendations]** to 10. 
 
     ![](../images/models-recipes/model-walkthrough/configure_hyperparameter.png)
 3.  An additional data point will appear on the Model evaluation chart once the new training run completes, this may take up to several minutes.
@@ -148,7 +152,7 @@ Once the scoring run has successfully completed, you will be able to preview the
 
 1.  On the scoring runs page, click on the completed scoring run, then click **[!UICONTROL Preview Scoring Results Dataset]** on the right rail.
     ![](../images/models-recipes/model-walkthrough/score_complete.png)
-2.  In the preview table, each row contains product recommendations for a particular customer, labeled as **[!UICONTROL recommendations]** and **[!UICONTROL userId]** respectively. Since the **[!UICONTROL num_recommendations]** Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
+2.  In the preview table, each row contains product recommendations for a particular customer, labeled as [!UICONTROL recommendations] and [!UICONTROL userId] respectively. Since the [!UICONTROL num_recommendations] Hyperparameter was set to 10 in the sample screenshots, each row of recommendations can contain up to 10 product identities delimited by a number sign (#).
     ![](../images/models-recipes/model-walkthrough/preview_score_results.png)
 
 ## Next steps {#next-steps}

@@ -1,74 +1,66 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
-title: Collect data from a third-party database through source connectors and APIs
+title: Collect Data From a Database Using Source Connectors and APIs
 topic: overview
+type: Tutorial
+description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect data from a third-party database through source connectors and APIs
+# Collect data from a database using source connectors and APIs
 
-[!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
-
-This tutorial covers the steps for retrieving data from a third-party database and ingesting it into [!DNL Platform] through source connectors and APIs.
+This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have a valid connection to a third-party database, as well as information about the file you wish to bring into [!DNL Platform] (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
+This tutorial requires you to have a valid connection to a database, as well as information about the file you wish to bring into Platform (including the file's path and structure). If you do not have this information, see the tutorial on [exploring a database using the Flow Service API](../explore/database-nosql.md) before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-*   [Catalog Service](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-*   [Batch ingestion](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into [!DNL Experience Platform] as batch files.
-*   [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  * [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+* [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
+* [[!DNL Batch ingestion]](../../../../ingestion/batch-ingestion/overview.md): The Batch Ingestion API allows you to ingest data into Experience Platform as batch files.
+* [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+The following sections provide additional information that you will need to know in order to successfully connect to a third-parry database using the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
-*   Authorization: Bearer `{ACCESS_TOKEN}`
-*   x-api-key: `{API_KEY}`
-*   x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-*   x-sandbox-name: `{SANDBOX_NAME}`
+* `x-sandbox-name: {SANDBOX_NAME}`
 
 All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
 
-*   Content-Type: `application/json`
-
-## Create an ad-hoc XDM class and schema
-
-In order to bring external data into [!DNL Platform] through source connectors, an ad-hoc XDM class and schema must be created for the raw source data.
-
-To create an ad-hoc class and schema, follow the steps outlined in the [ad-hoc schema tutorial](../../../../xdm/tutorials/ad-hoc.md). When creating an ad-hoc class, all fields found in the source data must be described within the request body.
-
-Continue following the steps outlined in the developer guide until you have created an ad-hoc schema. Obtain and store the unique identifier (`$id`) of the ad-hoc schema and then proceed to the next step of this tutorial.
+* `Content-Type: application/json`
 
 ## Create a source connection {#source}
 
-With an ad-hoc XDM schema created, a source connection can now be created using a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a source data file, and a reference to the schema that describes the source data.
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for **file-based connectors**:
+Use the following enum values for file-based connectors:
 
-| Data.format | Enum value |
+| Data format | Enum value |
 | ----------- | ---------- |
-| Delimited files | `delimited` |
-| JSON files | `json` |
-| Parquet files | `parquet` |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
 
-For all **table-based connectors** use the enum value: `tabular`.
+For all table-based connectors, set the value to `tabular`.
 
 **API format**
 
@@ -87,21 +79,42 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Database Source Connector",
-        "baseConnectionId": "d5cbb5bc-44cc-41a2-8bb5-bc44ccf1a2fb",
-        "description": "A test source connector for a third-party database",
+        "name": "Database source connection",
+        "baseConnectionId": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+        "description": "Database source connection",
         "data": {
-            "format": "tabular",
-            "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/21b30fa2c00a2a8d7c3010272dffa16d3cc9eec504aa6c7",
-                "version": "application/vnd.adobe.xed-full-notext+json; version=1"
-            }
+            "format": "tabular"
         },
         "params": {
-            "path": "ADMIN.E2E"
+            "tableName": "test1.Mytable",
+            "columns": [
+                {
+                    "name": "TestID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Datefield",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
-            "id": "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+            "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
         }
     }'
@@ -109,10 +122,9 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `baseConnectionId`| The connection ID of your third-party database source. |
-| `data.schema.id`| The `$id` of the ad-hoc XDM schema. |
+| `baseConnectionId`| The connection ID of your database source. |
 | `params.path`| The path of the source file. |
-| `connectionSpec.id`| The connection spec ID of your third-party database source. See the [Appendix](#appendix) for a list of database spec IDs. |
+| `connectionSpec.id`| The connection specification ID of your database source. See the [Appendix](#appendix) for a list of database spec IDs. |
 
 **Response**
 
@@ -120,16 +132,16 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "2f7356d9-a866-47ea-b356-d9a86687ea7a",
-    "etag": "\"c8006055-0000-0200-0000-5ecd79520000\""
+    "id": "b7581b59-c603-4df1-a689-d23d7ac440f3",
+    "etag": "\"ef05d265-0000-0200-0000-6019e0080000\""
 }
 ```
 
-## Create a target XDM schema {#target}
+## Create a target XDM schema {#target-schema}
 
-In earlier steps, an ad-hoc XDM schema was created to structure the source data. In order for the source data to be used in [!DNL Platform], a target schema must also be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
+In order for the source data to be used in Platform, a target XDM schema must be created to structure the source data according to your needs. The target XDM schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). If you would prefer to use the user interface in [!DNL Experience Platform], the [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md) provides step-by-step instructions for performing similar actions in the Schema Editor.
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **API format**
 
@@ -151,8 +163,8 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "type": "object",
-        "title": "Database Source Connector Target Schema",
-        "description": "Target schema for a third-party database",
+        "title": "Database target XDM schema",
+        "description": "Database target XDM schema",
         "allOf": [
             {
                 "$ref": "https://ns.adobe.com/xdm/context/profile"
@@ -177,13 +189,13 @@ A successful response returns details of the newly created schema including its 
 
 ```json
 {
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
-    "meta:altId": "_{TENANT_ID}.schemas.c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
+    "meta:altId": "_{TENANT_ID}.schemas.52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
     "meta:resourceType": "schemas",
     "version": "1.0",
-    "title": "Target schema for an Oracle connector 5/26/20",
+    "title": "Database target XDM schema",
     "type": "object",
-    "description": "Target schema for Database",
+    "description": "Database target XDM schema",
     "allOf": [
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile",
@@ -218,17 +230,19 @@ A successful response returns details of the newly created schema including its 
     ],
     "meta:xdmType": "object",
     "meta:registryMetadata": {
-        "repo:createdDate": 1590523478581,
-        "repo:lastModifiedDate": 1590523478581,
+        "repo:createdDate": 1612308675206,
+        "repo:lastModifiedDate": 1612308675206,
         "xdm:createdClientId": "{CREATED_CLIENT_ID}",
-        "xdm:lastModifiedClientId": "{LAST_MODIFIED_CLIENT_ID}",
+        "xdm:lastModifiedClientId": "{MODIFIEDD_CLIENT_ID}",
         "xdm:createdUserId": "{CREATED_USER_ID}",
         "xdm:lastModifiedUserId": "{LAST_MODIFIED_USER_ID}",
-        "eTag": "34fdf36fc3029999a07270c4e7719d8a627f7e93e2fbc13888b3c11fb08983c0",
-        "meta:globalLibVersion": "1.10.2.1"
+        "eTag": "7c5c09e62421e6b172c925f059ac524a99f348dd837b5f13abd77ee91aa6bb61",
+        "meta:globalLibVersion": "1.18.4"
     },
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
     "meta:containerId": "tenant",
+    "meta:sandboxId": "{SANDBOX_ID}",
+    "meta:sandboxType": "production",
     "meta:tenantNamespace": "_{TENANT_ID}"
 }
 ```
@@ -254,9 +268,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target dataset for a third-party database source connector",
+        "name": "Database target dataset",
         "schemaRef": {
-            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
         }
     }'
@@ -272,13 +286,15 @@ A successful response returns an array containing the ID of the newly created da
 
 ```json
 [
-    "@/dataSets/5ecd766e4bab17191b78e892"
+    "@/dataSets/6019e0e7c5dcf718db5ebc71"
 ]
 ```
 
-## Create a target connection
+## Create a target connection {#target-connection}
 
-You now have the unique identifiers for a dataset base connection, a target schema, and a target dataset. Using these identifiers, you can create a target connection using the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API to specify the dataset that will contain the inbound source data.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake.. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using the [!DNL Flow Service] API, you can create a target connection by specifying these identifiers along with the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -297,16 +313,16 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Target Connection for a third-party database source connector",
-        "description": "Target Connection for a third-party database source connector",
+        "name": "Database target connection",
+        "description": "Database target connection",
         "data": {
             "schema": {
-                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
                 "version": "application/vnd.adobe.xed-full+json;version=1.0"
             }
         },
         "params": {
-            "dataSetId": "5ecd766e4bab17191b78e892"
+            "dataSetId": "6019e0e7c5dcf718db5ebc71"
         },
             "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
@@ -319,7 +335,7 @@ curl -X POST \
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
 | `params.dataSetId` | The ID of the target dataset gathered in the previous step. |
-| `connectionSpec.id` | The fixed connection spec ID for data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
 **Response**
 
@@ -327,8 +343,8 @@ A successful response returns the new target connection's unique identifier (`id
 
 ```json
 {
-    "id": "e66fdb22-06df-48ac-afdb-2206dff8ac10",
-    "etag": "\"7e03773a-0000-0200-0000-5ecd768d0000\""
+    "id": "320f119a-5ac1-4ab1-88ea-eb19e674ea2e",
+    "etag": "\"c0038936-0000-0200-0000-6019e1190000\""
 }
 ```
 
@@ -354,29 +370,29 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/c44dd18673370dbf16243ba6e6fd9ae62c7916ec10477727",
+        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
         "xdmVersion": "1.0",
         "id": null,
         "mappings": [
             {
-                "destinationXdmPath": "person.name.fullName",
-                "sourceAttribute": "NAME",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "_repo.createDate",
-                "sourceAttribute": "DOB",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
                 "destinationXdmPath": "_id",
-                "sourceAttribute": "ID",
+                "sourceAttribute": "TestID",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.name.fullName",
+                "sourceAttribute": "Name",
+                "identity": false,
+                "identityGroup": null,
+                "namespaceCode": null,
+                "version": 0
+            },
+            {
+                "destinationXdmPath": "person.birthDate",
+                "sourceAttribute": "Datefield",
                 "identity": false,
                 "identityGroup": null,
                 "namespaceCode": null,
@@ -396,10 +412,10 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "d9d94124417d4df48ea3d00e28eb4327",
+    "id": "0b090130b58b4819afc78b6dc98b484d",
     "version": 0,
-    "createdDate": 1590523552440,
-    "modifiedDate": 1590523552440,
+    "createdDate": 1612309018666,
+    "modifiedDate": 1612309018666,
     "createdBy": "{CREATED_BY}",
     "modifiedBy": "{MODIFIED_BY}"
 }
@@ -407,7 +423,7 @@ A successful response returns details of the newly created mapping including its
 
 ## Retrieve dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
+A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API. Dataflow specifications are responsible for collecting data from an external database or NoSQL system.
 
 **API format**
 
@@ -427,7 +443,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your database or NoSQL system into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+A successful response returns the details of the dataflow specification responsible for bringing data from your source into Platform. The response includes the unique flow spec `id` required to create a new dataflow.
 
 ```json
 {
@@ -437,6 +453,59 @@ A successful response returns the details of the dataflow specification that is 
             "name": "CRMToAEP",
             "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
             "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "3416976c-a9ca-4bba-901a-1f08f66978ff",
+                "38ad80fe-8b06-4938-94f4-d4ee80266b07",
+                "d771e9c1-4f26-40dc-8617-ce58c4b53702",
+                "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
+                "cc6a4487-9e91-433e-a3a3-9cf6626c1806",
+                "3000eb99-cd47-43f3-827c-43caf170f015",
+                "26d738e0-8963-47ea-aadf-c60de735468a",
+                "74a1c565-4e59-48d7-9d67-7c03b8a13137",
+                "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+                "4f63aa36-bd48-4e33-bb83-49fbcd11c708",
+                "cb66ab34-8619-49cb-96d1-39b37ede86ea",
+                "eb13cb25-47ab-407f-ba89-c0125281c563",
+                "1f372ff9-38a4-4492-96f5-b9a4e4bd00ec",
+                "37b6bf40-d318-4655-90be-5cd6f65d334b",
+                "a49bcc7d-8038-43af-b1e4-5a7a089a7d79",
+                "221c7626-58f6-4eec-8ee2-042b0226f03b",
+                "a8b6a1a4-5735-42b4-952c-85dce0ac38b5",
+                "6a8d82bc-1caf-45d1-908d-cadabc9d63a6",
+                "aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f",
+                "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
+                "ecde33f2-c56f-46cc-bdea-ad151c16cd69",
+                "102706fb-a5cd-42ee-afe0-bc42f017ff43",
+                "09182899-b429-40c9-a15a-bf3ddbc8ced7",
+                "0479cc14-7651-4354-b233-7480606c2ac3",
+                "d6b52d86-f0f8-475f-89d4-ce54c8527328",
+                "a8f4d393-1a6b-43f3-931f-91a16ed857f4",
+                "1fe283f6-9bec-11ea-bb37-0242ac130002"
+            ],
+            "targetConnectionSpecIds": [
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
+            ],
+            "optionSpec": {
+                "name": "OptionSpec",
+                "spec": {
+                    "$schema": "http://json-schema.org/draft-07/schema#",
+                    "type": "object",
+                    "properties": {
+                        "errorDiagnosticsEnabled": {
+                            "title": "Error diagnostics.",
+                            "description": "Flag to enable detailed and sample error diagnostics summary.",
+                            "type": "boolean",
+                            "default": false
+                        },
+                        "partialIngestionPercent": {
+                            "title": "Partial ingestion threshold.",
+                            "description": "Percentage which defines the threshold of errors allowed before the run is marked as failed.",
+                            "type": "number",
+                            "exclusiveMinimum": 0
+                        }
+                    }
+                }
+            },
             "transformationSpecs": [
                 {
                     "name": "Copy",
@@ -495,21 +564,18 @@ A successful response returns the details of the dataflow specification that is 
                             "description": "epoch time",
                             "type": "integer"
                         },
-                        "endTime": {
-                            "description": "epoch time",
-                            "type": "integer"
-                        },
-                        "interval": {
-                            "type": "integer"
-                        },
                         "frequency": {
                             "type": "string",
                             "enum": [
+                                "once",
                                 "minute",
                                 "hour",
                                 "day",
                                 "week"
                             ]
+                        },
+                        "interval": {
+                            "type": "integer"
                         },
                         "backfill": {
                             "type": "boolean",
@@ -518,31 +584,88 @@ A successful response returns the details of the dataflow specification that is 
                     },
                     "required": [
                         "startTime",
-                        "frequency",
-                        "interval"
+                        "frequency"
                     ],
                     "if": {
                         "properties": {
                             "frequency": {
-                                "const": "minute"
+                                "const": "once"
                             }
                         }
                     },
                     "then": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 15
+                        "allOf": [
+                            {
+                                "not": {
+                                    "required": [
+                                        "interval"
+                                    ]
+                                }
+                            },
+                            {
+                                "not": {
+                                    "required": [
+                                        "backfill"
+                                    ]
+                                }
                             }
-                        }
+                        ]
                     },
                     "else": {
-                        "properties": {
-                            "interval": {
-                                "minimum": 1
+                        "required": [
+                            "interval"
+                        ],
+                        "if": {
+                            "properties": {
+                                "frequency": {
+                                    "const": "minute"
+                                }
+                            }
+                        },
+                        "then": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 15
+                                }
+                            }
+                        },
+                        "else": {
+                            "properties": {
+                                "interval": {
+                                    "minimum": 1
+                                }
                             }
                         }
                     }
                 }
+            },
+            "attributes": {
+                "notification": {
+                    "category": "sources",
+                    "flowRun": {
+                        "enabled": true
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "EnterpriseSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
             }
         }
     ]
@@ -553,12 +676,12 @@ A successful response returns the details of the dataflow specification that is 
 
 The last step towards collecting data is to create a dataflow. At this point, you should have the following required values prepared:
 
-*   [Source connection ID](#source)
-*   [Target connection ID](#target)
-*   [Mapping ID](#mapping)
-*   [Dataflow specification ID](#specs)
+* [Source connection ID](#source)
+* [Target connection ID](#target)
+* [Mapping ID](#mapping)
+* [Dataflow specification ID](#specs)
 
-A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
+A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the request payload.
 
 To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
 
@@ -578,35 +701,39 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Dataflow for a third-party database and Platform,
-        "description": "collecting ADMIN.E2E",
+        "name": "Database dataflow using BigQuery",
+        "description": "collecting test1.Mytable",
         "flowSpec": {
             "id": "14518937-270c-4525-bdec-c2ba7cce3860",
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "89cf81c9-47b4-463a-8f81-c947b4863afb"
+            "b7581b59-c603-4df1-a689-d23d7ac440f3"
         ],
         "targetConnectionIds": [
-            "e66fdb22-06df-48ac-afdb-2206dff8ac10"
+            "320f119a-5ac1-4ab1-88ea-eb19e674ea2e"
         ],
         "transformations": [
             {
                 "name": "Copy",
                 "params": {
-                    "deltaColumn": "date-time"
+                    "deltaColumn": {
+                        "name": "Datefield",
+                        "dateFormat": "YYYY-MM-DD",
+                        "timezone": "UTC"
+                    }
                 }
             },
             {
                 "name": "Mapping",
                 "params": {
-                    "mappingId": "d9d94124417d4df48ea3d00e28eb4327",
+                    "mappingId": "0b090130b58b4819afc78b6dc98b484d",
                     "mappingVersion": "0"
                 }
             }
         ],
         "scheduleParams": {
-            "startTime": "1590523836",
+            "startTime": "1612310466",
             "frequency":"minute",
             "interval":"15",
             "backfill": "true"
@@ -616,13 +743,14 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `flowSpec.id`| The dataflow specification ID associated with your database. |
-| `sourceConnectionIds`| The source connection ID associated with your database. |
-| `targetConnectionIds`| The target connection ID associated with your database. |
-| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. |
+| `flowSpec.id` | The [flow spec ID](#specs) retrieved in the previous step. |
+| `sourceConnectionIds` | The [source connection ID](#source) retrieved in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) retrieved in an earlier step. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) retrieved in an earlier step.|
+| `transformations.params.deltaColum` | The designated column used to differentiate between new and existing data. Incremental data will be ingested based on the timestamp of selected column. The supported date format for `deltaColumn` is `yyyy-MM-dd HH:mm:ss`. If you are using Azure Table Storage, the supported format for `deltaColumn` is `yyyy-MM-ddTHH:mm:ssZ`. |
 | `transformations.params.mappingId`| The mapping ID associated with your database. |
-| `scheduleParams.startTime` | The start time for the dataflow in epoch time in seconds. |
-| `scheduleParams.frequency` | The selectable frequency values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.startTime` | The start time for the dataflow in epoch time. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
 | `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
@@ -631,17 +759,21 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 
 ```json
 {
-    "id": "e0bd8463-0913-4ca1-bd84-6309134ca1f6",
-    "etag": "\"04004fe9-0000-0200-0000-5ebc4c8b0000\""
+    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "etag": "\"770029f8-0000-0200-0000-6019e7d40000\""
 }
 ```
 
+## Monitor your dataflow
+
+Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the API ](../monitor.md)
+
 ## Next steps
 
-By following this tutorial, you have created a source connector to collect data from a third-party database on a scheduled basis. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a source connector to collect data from a database on a scheduled basis. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-*   [Real-time Customer Profile overview](../../../../profile/home.md)
-*   [Data Science Workspace overview](../../../../data-science-workspace/home.md)
+* [Real-time Customer Profile overview](../../../../profile/home.md)
+* [Data Science Workspace overview](../../../../data-science-workspace/home.md)
 
 ## Appendix
 
@@ -657,8 +789,9 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL Azure Data Explorer] | `0479cc14-7651-4354-b233-7480606c2ac3` |
 | [!DNL Azure Synapse Analytics] | `a49bcc7d-8038-43af-b1e4-5a7a089a7d79` |
 | [!DNL Azure Table Storage] | `ecde33f2-c56f-46cc-bdea-ad151c16cd69` |
-| [!DNL CouchBase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
+| [!DNL Couchbase] | `1fe283f6-9bec-11ea-bb37-0242ac130002` |
 | [!DNL Google BigQuery] | `3c9b37f8-13a6-43d8-bad3-b863b941fedd` |
+| [!DNL Greenplum] | `37b6bf40-d318-4655-90be-5cd6f65d334b` |
 | [!DNL IBM DB2] | `09182899-b429-40c9-a15a-bf3ddbc8ced7` |
 | [!DNL MariaDB] | `000eb99-cd47-43f3-827c-43caf170f015` |
 | [!DNL Microsoft SQL Server] | `1f372ff9-38a4-4492-96f5-b9a4e4bd00ec` |

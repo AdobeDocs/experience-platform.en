@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest Parquet;ingest json;
 solution: Experience Platform
-title: Adobe Experience Platform Batch Ingestion developer guide
+title: Batch Ingestion API Guide
 topic: developer guide
+description: This document provides a comprehensive overview of using batch ingestion APIs.
 ---
 
-# Batch ingestion developer guide
+# Batch ingestion API guide
 
 This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
 
@@ -20,8 +21,8 @@ The following sections provide additional information that you will need to know
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-- [!DNL Experience Data Model (XDM) System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [!DNL Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Reading sample API calls
 
@@ -29,24 +30,21 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
 All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
 
-- x-sandbox-name: `{SANDBOX_NAME}`
+- `x-sandbox-name: {SANDBOX_NAME}`
 
 >[!NOTE]
 >
 >For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
-Requests that contain a payload (POST, PUT, PATCH) may require an additional `Content-Type` header. The accepted values specific to each call are provided in the call parameters. The following content types are used in this guide:
-
-- Content-Type: application/json
-- Content-Type: application/octet-stream
+Requests that contain a payload (POST, PUT, PATCH) may require an additional `Content-Type` header. The accepted values specific to each call are provided in the call parameters. 
 
 ## Types
 
@@ -169,7 +167,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -189,7 +187,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 **Response**
 
@@ -304,7 +302,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -324,7 +322,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
 
 **Response**
 
@@ -477,7 +475,7 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -499,7 +497,7 @@ curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONTENT_RANGE}` | In integers, the beginning and the end of the requested range. |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 
 **Response**
@@ -646,7 +644,7 @@ An explanation of what the different part of the "fileDescription" section of th
 | `header` | The uploaded file **must** contain headers. Since schema validation is done, this must be set to true. In addition, headers may **not** contain any spaces - if you have any spaces in your header, please replace them with underscores instead. |
 | `charset` | An optional field. Other supported charsets include "US-ASCII" and "ISO-8869-1". If left empty, UTF-8 is assumed by default. |
 
-The dataset referenced must have the file description block listed above and must point to a valid schema in the registry. Otherwise, the file will not be mastered into parquet.
+The dataset referenced must have the file description block listed above and must point to a valid schema in the registry. Otherwise, the file will not be mastered into Parquet.
 
 ### Create batch
 
@@ -729,7 +727,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -749,7 +747,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`.|
 
 
 **Response**
@@ -936,7 +934,7 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 | --------- | ----------- |
 | `{BATCH_ID}` | The ID of the batch you want to upload to. |
 | `{DATASET_ID}` | The ID of the batch's reference dataset. |
-| `{FILE_NAME}` | The name of the file you want to upload. |
+| `{FILE_NAME}` | The name of the file you want to upload. This file path is the location where the file will be saved on the Adobe side. |
 
 **Request**
 
@@ -956,7 +954,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{FILE_PATH_AND_NAME}` | The full path and name of the file you're trying to upload. |
+| `{FILE_PATH_AND_NAME}` | The full path and name of the file you are trying to upload. This file path is the local file path, such as `Users/sample-user/Downloads/sample.json`. |
 
 **Response**
 

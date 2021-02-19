@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;filter functions;filter;
 solution: Experience Platform
-title: Filter functions
+title: PQL Filter Functions
 topic: developer guide
+description: Filter functions are used to filter data within arrays in Profile Query Language (PQL).
 ---
 
 # Filter functions
 
-Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [Profile Query Language overview](./overview.md).
+Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
 
 ## Filter 
 

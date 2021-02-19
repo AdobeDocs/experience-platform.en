@@ -3,19 +3,22 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Ingestion tutorials
 topic: tutorial
+type: Tutorial
+description: Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors.
+
 ---
 
 # Ingest data into [!DNL Experience Platform]
 
 Adobe Experience Platform brings data from multiple sources together in order to help marketers better understand the behavior of their customers. Adobe [!DNL Experience Platform Data Ingestion] represents the multiple methods by which [!DNL Platform] ingests data from these sources, as well as how that data is persisted within the Data Lake for use by downstream [!DNL Platform services]. [!DNL Data Ingestion] includes batch ingestion, streaming ingestion, and ingestion using source connectors. To learn more, read the [Data Ingestion overview](../ingestion/home.md) or proceed directly to the [Sources documentation](../sources/home.md).
 
-## Create a source connector in the UI and API
+## Create a source connection in the UI and API
 
 Source connectors allow you to ingest data from multiple sources, where it can then be labeled, structured, and enhanced using [!DNL Platform services]. To begin creating a source connector, see the [sources overview](../sources/home.md).
 
 ## Ingest batch data
 
-Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry. To get started, visit the [ingestion data into Platform tutorial](../ingestion/tutorials/ingest-batch-data.md).
+Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry. To get started, visit the [ingestion data into Platform tutorial](../ingestion/tutorials/ingest-batch-data.md).
 
 ## Map a CSV file to an XDM Schema
 

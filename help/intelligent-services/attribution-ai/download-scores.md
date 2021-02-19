@@ -1,17 +1,18 @@
 ---
-keywords: Experience Platform;attribution ai;access scores;popular topics
-solution: Experience Platform
-title: Accessing scores in Attribution AI
-topic: Accessing scores
+keywords: Experience Platform;attribution ai;access scores;popular topics;download scores;attribution ai scores;export;Export
+solution: Experience Platform, Intelligent Services
+title: Download Scores in Attribution AI
+topic: Downloading scores
+description: This document serves as a guide for downloading scores for Attribution AI.
 ---
 
-# Downloading scores in Attribution AI
+# Download scores in Attribution AI
 
 This document serves as a guide for downloading scores for Attribution AI. 
 
 ## Getting started
 
-Attribution AI allows you to download scores in the parquet file format. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
+Attribution AI allows you to download scores in the Parquet file format. This tutorial requires that you have read and finished the downloading Attribution AI scores section in the [getting started](./getting-started.md) guide.
 
 Additionally, in order to access scores for Attribution AI, you need to have a service instance with a successful run status available. To create a new service instance, visit the [Attribution AI user guide](./user-guide.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 
@@ -54,6 +55,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?&dataSet=
 A successful response returns a payload containing a batch ID object. In this example, the Key value to the object returned is the batch ID `01E5QSWCAASFQ054FNBKYV6TIQ`. Copy your batch ID to use in the next API call.
 
 >[!NOTE]
+>
 > The following response has had the `tags` object reformated for readability.
 
 ```json
@@ -252,9 +254,11 @@ The response downloads the file you requested in in your current directory. In t
 
 ![Terminal](./images/download-scores/terminal-output.png)
 
-## Next Steps
+The scores downloaded will be in Parquet format and will either need a [!DNL Spark]-shell or Parquet reader to view the scores. For raw score viewing, you can use [Apache Parquet tools](https://github.com/apache/parquet-mr/tree/master/parquet-tools). Parquet tools can analyze the data with [!DNL Spark].
 
-This document outlined the steps required for downloading Attribution AI scores. You can now continue to browse the other [Intelligent Services](../home.md) and guides that are offered.
+## Next steps
+
+This document outlined the steps required for downloading Attribution AI scores. For more information on the score outputs, please visit the [Attribtuion AI input and output](./input-output.md) documentation.
 
 ## Accessing scores using Snowflake
 

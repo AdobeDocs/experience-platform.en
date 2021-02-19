@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics
+keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
-title: JupyterLab user guide
+title: JupyterLab UI Overview
 topic: Overview
+description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
 ---
 
-# [!DNL JupyterLab] user guide
+# [!DNL JupyterLab] UI overview
 
-[!DNL JupyterLab] is a web-based user interface for <a href="https://jupyter.org/" target="_blank">Project Jupyter</a> and is tightly integrated into [!DNL Adobe Experience Platform]. It provides an interactive development environment for data scientists to work with Jupyter notebooks, code, and data.
+[!DNL JupyterLab] is a web-based user interface for [Project Jupyter](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data.
 
 This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
@@ -52,7 +53,6 @@ Information regarding key features of [!DNL JupyterLab] and instructions on perf
 *  [Code cells](#code-cells)
 *  [Kernels](#kernels)
 *  [Kernel sessions](#kernel-sessions)
-*  [PySpark/Spark execution resource](#execution-resource)
 *  [Launcher](#launcher)
 
 ### Access [!DNL JupyterLab] {#access-jupyterlab}
@@ -147,8 +147,8 @@ The customized *Launcher* provides you with useful notebook templates for their 
 | --- | --- |
 | Blank | An empty notebook file. |
 | Starter | A pre-filled notebook demonstrating data exploration using sample data. |
-| Retail Sales | A pre-filled notebook featuring the <a href="https://adobe.ly/2wOgO3L" target="_blank">Retail Sales Recipe</a> using sample data. |
-| Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the <a href="https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en" target="_blank">notebook to recipe tutorial</a> for a detailed walkthrough. |
+| Retail Sales | A pre-filled notebook featuring the [retail sales recipe](https://adobe.ly/2wOgO3L) using sample data. |
+| Recipe Builder | A notebook template for creating a recipe in [!DNL JupyterLab]. It is pre-filled with code and commentary that demonstrates and describes the recipe creation process. Refer to the [notebook to recipe tutorial](https://www.adobe.com/go/data-science-create-recipe-notebook-tutorial-en) for a detailed walkthrough. |
 | [!DNL Query Service] | A pre-filled notebook demonstrating the usage of [!DNL Query Service] directly in [!DNL JupyterLab] with provided sample workflows that analyzes data at scale. |
 | XDM Events | A pre-filled notebook demonstrating data exploration on postvalue Experience Event data, focusing on features common across the data structure. |
 | XDM Queries | A pre-filled notebook demonstrating sample business queries on Experience Event data. |
@@ -229,378 +229,14 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
 
 >[!NOTE]
+>
 >Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-## Access [!DNL Platform] data using Notebooks
+## Next steps
 
-Each supported kernel provides built-in functionalities that allow you to read [!DNL Platform] data from a dataset within a notebook. However, support for paginating data is limited to [!DNL Python] and R notebooks.
-
-### Notebook data limits
-
-The following information defines the max amount of data that can be read, what type of data was used, and the estimated timeframe reading the data takes. For [!DNL Python] and R, a notebook server configured at 40GB RAM was used for the benchmarks. For PySpark and Scala, a databricks cluster configured at 64GB RAM, 8 cores, 2 DBU with a maximum of 4 workers was used for the benchmarks outlined below.
-
-The ExperienceEvent schema data used varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows. Note that for the PySpark and [!DNL Spark] metrics, a date span of 10 days was used for the XDM data.
-
-The ad-hoc schema data was pre-processed using [!DNL Query Service] Create Table as Select (CTAS). This data also varied in size starting from one thousand (1K) rows ranging up-to one billion (1B) rows.
-
-#### [!DNL Python] notebook data limits
-
-**XDM ExperienceEvent schema:** You should be able to read a maximum of 2 million rows (~6.1 GB data on disk) of XDM data in less than 22 minutes. Adding additional rows may result in errors.
-
-| Number of Rows          | 1K     | 10K    | 100K  | 1M    | 2M    |
-| ----------------------- | ------ | ------ | ----- | ----- | ----- |
-| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  | 6050  |
-| SDK (in seconds)        | 20.3   | 86.8   | 63    | 659   | 1315  | 
-
-**ad-hoc schema:** You should be able to read a maximum of 5 million rows (~5.6 GB data on disk) of non-XDM (ad-hoc) data in less than 14 minutes. Adding additional rows may result in errors.
-
-| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    | 5M     |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- | ------ |
-| Size on disk (in MB)    | 1.21    | 11.72   | 115   | 1120  | 2250  | 3380  | 5630   |
-| SDK (in seconds)        | 7.27    | 9.04    | 27.3  | 180   | 346   | 487   | 819    |
-
-#### R notebook data limits
-
-**XDM ExperienceEvent schema:** You should be able to read a maximum of 1 million rows of XDM data (3GB data on disk) in under 13 minutes.
-
-| Number of Rows          | 1K     | 10K    | 100K  | 1M    |
-| ----------------------- | ------ | ------ | ----- | ----- |
-| Size on disk (MB)       | 18.73  | 187.5  | 308   | 3000  |
-| R Kernel  (in seconds)  | 14.03  | 69.6   | 86.8  | 775   |
-
-**ad-hoc schema:** You should be able to read a maximum of 3 million rows of ad-hoc data (293MB data on disk) in around 10 minutes.
-
-| Number of Rows          | 1K      | 10K     | 100K  | 1M    | 2M    | 3M    |
-| ----------------------- | ------- | ------- | ----- | ----- | ----- | ----- |
-| Size on disk (in MB)    | 0.082   | 0.612   | 9.0   | 91    | 188   | 293   |
-| R SDK (in sec)          | 7.7     | 4.58    | 35.9  | 233   | 470.5 | 603   |
-
-#### PySpark ([!DNL Python] kernel) notebook data limits:
-
-**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 20 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
-
-| Number of rows          | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
-|-------------------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Size on disk            | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
-| SDK (Interactive mode)  | 33s    | 32.4s  | 55.1s | 253.5s| 489.2s| 729.6s| 1206.8s |    -    |    -     |   -    |  -     |
-| SDK (Batch mode)        | 815.8s | 492.8s |379.1s |637.4s |624.5s | 869.2s| 1104.1s | 1786s   | 5387.2s  |10624.6s| 50547s |
-
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 18 minutes.
-
-| Number of rows| 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M     | 10M    | 50M     | 100M   | 500M    | 1B    |
-|--------------|--------|---------|---------|-------|-------|-------|--------|--------|---------|--------|---------|-------|
-| Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB | 10.71GB| 53.58GB |107.52GB| 535.88GB| 1.05TB|
-| SDK Interactive mode (in seconds) | 28.2s  | 18.6s   |20.8s    |20.9s  |23.8s  |21.7s  |24.7s   | 22s    |28.4s    |40s     |97.4s    |154.5s |
-| SDK Batch mode (in seconds) | 428.8s | 578.8s  |641.4s  |538.5s |630.9s |467.3s |411s    | 675s    |702s     |719.2s  |1022.1s  |1122.3s|
-
-#### [!DNL Spark] (Scala kernel) notebook data limits:
-
-**XDM ExperienceEvent schema:** On Interactive mode you should be able to read a maximum of 5 million rows (~13.42GB data on disk) of XDM data in around 18 minutes. Interactive mode only supports up-to 5 million rows. If you wish to read larger datasets, it's suggested you switch to Batch mode. On Batch mode you should be able to read a maximum of 500 million rows (~1.31TB data on disk) of XDM data in around 14 hours.
-
-| Number of rows | 1K     | 10K    | 100K  | 1M    | 2M    | 3M    | 5M      | 10M     | 50M      | 100M   | 500M   |
-|---------------|--------|--------|-------|-------|-------|-------|---------|---------|----------|--------|--------|
-| Size On Disk  | 2.93MB | 4.38MB | 29.02 | 2.69GB| 5.39GB| 8.09GB| 13.42GB | 26.82GB | 134.24GB |268.39GB| 1.31TB |
-| SDK Interactive mode (in seconds) | 37.9s  | 22.7s  | 45.6s | 231.7s| 444.7s| 660.6s | 1100s  |     -   |    -     |   -    |  -     |
-| SDK Batch mode (in seconds) | 374.4s | 398.5s |527s   |487.9s |588.9s |829s   |939.1s   | 1441s    |5473.2s  |10118.8 |49207.6 |
-
-**ad-hoc schema:** On Interactive mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in less than 3 minutes. On Batch mode you should be able to read a maximum of 1 billion rows (~1.05TB data on disk) of non-XDM data in around 16 minutes.
-
-| Number of rows | 1K     | 10K     | 100K    | 1M    | 2M    | 3M    | 5M      | 10M     | 50M     | 100M   | 500M    | 1B    |
-|--------------|--------|---------|---------|-------|-------|-------|---------|---------|---------|--------|---------|-------|
-| Size On Disk | 1.12MB | 11.24MB | 109.48MB| 2.69GB| 2.14GB| 3.21GB| 5.36GB  | 10.71GB | 53.58GB |107.52GB| 535.88GB| 1.05TB|
-| SDK Interactive mode (in seconds)   | 35.7s  | 31s     |19.5s    |25.3s  |23s    |33.2s  |25.5s    | 29.2s   |29.7s    |36.9s   |83.5s    |139s   |
-| SDK Batch mode (in seconds)   | 448.8s | 459.7s  |519s    |475.8s |599.9s |347.6s |407.8s   | 397s    |518.8s   |487.9s  |760.2s   |975.4s |
-
-### Read from a dataset in [!DNL Python]/R
-
-[!DNL Python] and R notebooks allow you to paginate data when accessing datasets. Sample code to read data with and without pagination is demonstrated below.
-
-[//]: # (In the following samples, the first step is currently required but once the SDK is complete, users are no longer required to explicitly define client_context)
-
-#### Read from a dataset in [!DNL Python]/R without pagination
-
-Executing the following code will read the entire dataset. If the execution is successful, then data will be saved as a Pandas dataframe referenced by the variable `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.read()
-df.head()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$read() 
-df
-```
-
-*   `{DATASET_ID}`: The unique identity of the dataset to be accessed
-
-#### Read from a dataset in [!DNL Python]/R with pagination
-
-Executing the following code will read data from the specified dataset. Pagination is achieved by limiting and offsetting data through the functions `limit()` and `offset()` respectively. Limiting data refers to the maximum number of data points to be read, while offsetting refers to the number of data points to skip prior to reading data. If the read operation executes successfully, then data will be saved as a Pandas dataframe referenced by the variable `df`.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.limit(100).offset(10).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$limit(100L)$offset(10L)$read() 
-```
-
-*   `{DATASET_ID}`: The unique identity of the dataset to be accessed
-
-### Read from a dataset in PySpark/[!DNL Spark]/Scala
-
-With an an active PySpark or Scala notebook opened, expand the **Data Explorer** tab from the left sidebar and double click **Datasets** to view a list of available datasets. Right-click on the dataset listing you wish to access and click **Explore Data in Notebook**. The following code cells are generated:
-
-#### PySpark ([!DNL Spark] 2.4) {#pyspark2.4}
-
-With the introduction of Spark 2.4, [`%dataset`](#magic) custom magic is supplied. 
-
-```python
-# PySpark 3 (Spark 2.4)
-
-%dataset read --datasetId {DATASET_ID} --dataFrame pd0
-pd0.describe()
-pd0.show(10, False)
-```
-
-#### Scala ([!DNL Spark] 2.4) {#spark2.4}
-
-```scala
-// Scala (Spark 2.4)
-
-// initialize the session
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = SparkSession.builder().master("local").getOrCreate()
-
-val dataFrame = spark.read.format("com.adobe.platform.query")
-    .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-    .option("ims-org", sys.env("IMS_ORG_ID"))
-    .option("api-key", sys.env("PYDASDK_IMS_CLIENT_ID"))
-    .option("service-token", sys.env("PYDASDK_IMS_SERVICE_TOKEN"))
-    .option("mode", "batch")
-    .option("dataset-id", "{DATASET_ID}")
-    .load()
-dataFrame.printSchema()
-dataFrame.show()
-```
-
->[!TIP]
->In Scala, you can use `sys.env()` to declare and return a value from within `option`.
-
-### Using %dataset magic in PySpark 3 ([!DNL Spark] 2.4) notebooks {#magic}
-
-With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied for use in new PySpark 3 ([!DNL Spark] 2.4) notebooks ([!DNL Python] 3 kernel).
-
-**Usage**
-
-`%dataset {action} --datasetId {id} --dataFrame {df}`
-
-**Description**
-
-A custom [!DNL Data Science Workspace] magic command for reading or writing a dataset from a [!DNL Python] notebook ([!DNL Python] 3 kernel).
-
-* **{action}**: The type of action to perform on the dataset. Two actions are available "read" or "write".
-* **--datasetId {id}**: Used to supply the id of the dataset to read or write. This is a required argument.
-* **--dataFrame {df}**: The pandas dataframe. This is a required argument.
-  * When the action is "read", {df} is the variable where results of the dataset read operation are available.
-  * When the action is "write", this dataframe {df} is written to the dataset.
-* **--mode (optional)**: Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data.
-
-**Examples**
-
-* **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-* **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
-
-### Query data using [!DNL Query Service] in [!DNL Python]
-
-[!DNL JupyterLab] on [!DNL Platform] allows you to use SQL in a [!DNL Python] notebook to access data through <a href="https://www.adobe.com/go/query-service-home-en" target="_blank">Adobe Experience Platform Query Service</a>. Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
-
-Before you use [!DNL Query Service] in [!DNL JupyterLab], ensure you have a working understanding of the <a href="https://www.adobe.com/go/query-service-sql-syntax-en" target="_blank">[!DNL Query Service] SQL syntax</a>.
-
-Querying data using [!DNL Query Service] requires you to provide the name of the target dataset. You can generate the necessary code cells by finding the desired dataset using the **Data explorer**. Right click on the dataset listing and click **Query Data in Notebook** to generate the following two code cells in your notebook:
-
-
-In order to utilize [!DNL Query Service] in [!DNL JupyterLab], you must first create a connection between your working [!DNL Python] notebook and [!DNL Query Service]. This can be achieved by executing the first generated cell.
-
-```python
-qs_connect()
-```
-
-In the second generated cell, the first line must be defined before the SQL query. By default, the generated cell defines an optional variable (`df0`) which saves the query results as a Pandas dataframe. <br>The `-c QS_CONNECTION` argument is mandatory and tells the kernel to execute the SQL query against [!DNL Query Service]. See the [appendix](#optional-sql-flags-for-query-service) for a list of additional arguments.
-
-```python
-%%read_sql df0 -c QS_CONNECTION
-SELECT *
-FROM name_of_the_dataset
-LIMIT 10
-/* Querying table "name_of_the_dataset" (datasetId: {DATASET_ID})*/
-```
-
-Python variables can be directly referenced within a SQL query by using string-formatted syntax and wrapping the variables in curly brackets (`{}`), as shown in the following example:
-
-```python
-table_name = 'name_of_the_dataset'
-table_columns = ','.join(['col_1','col_2','col_3'])
-```
-
-```python
-%%read_sql demo -c QS_CONNECTION
-SELECT {table_columns}
-FROM {table_name}
-```
-
-### Filter ExperienceEvent data in [!DNL Python]/R
-
-In order to access and filter an ExperienceEvent dataset in a [!DNL Python] or R notebook, you must provide the ID of the dataset (`{DATASET_ID}`) along with the filter rules that define a specific time range using logical operators. When a time range is defined, any specified pagination is ignored and the entire dataset is considered. 
-
-A list of filtering operators are described below: 
-
-*   `eq()`: Equal to
-*   `gt()`: Greater than
-*   `ge()`: Greater than or equal to
-*   `lt()`: Less than
-*   `le()`: Less than or equal to
-*   `And()`: Logical AND operator
-*   `Or()`: Logical OR operator
-
-The following cells filter an ExperienceEvent dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
-
-```python
-# Python
-
-client_context = PLATFORM_SDK_CLIENT_CONTEXT
-from platform_sdk.dataset_reader import DatasetReader
-
-dataset_reader = DatasetReader(client_context, "{DATASET_ID}")
-df = dataset_reader.\
-    where(dataset_reader["timestamp"].gt("2019-01-01 00:00:00").\
-    And(dataset_reader["timestamp"].lt("2019-12-31 23:59:59"))\
-).read()
-```
-
-```R
-# R
-
-library(reticulate)
-use_python("/usr/local/bin/ipython")
-psdk <- import("platform_sdk")
-py_run_file("../.ipython/profile_default/startup/platform_sdk_context.py")
-client_context <- py$PLATFORM_SDK_CLIENT_CONTEXT
-
-DatasetReader <- psdk$dataset_reader$DatasetReader
-dataset_reader <- DatasetReader(client_context, "{DATASET_ID}") 
-df <- dataset_reader$
-    where(dataset_reader["timestamp"]$gt("2019-01-01 00:00:00")$
-    And(dataset_reader["timestamp"]$lt("2019-12-31 23:59:59"))
-)$read()
-```
-
-### Filter ExperienceEvent data in PySpark/[!DNL Spark]
-
-Accessing and filtering an ExperienceEvent dataset in a PySpark or Scala notebook requires you to provide the dataset identity (`{DATASET_ID}`), your organization's IMS identity, and the filter rules defining a specific time range. A Filtering time range is defined by using the function `spark.sql()`, where the function parameter is a SQL query string.
-
-The following cells filter an ExperienceEvent dataset to data existing exclusively between January 1, 2019 and the end of December 31, 2019.
-
-#### PySpark 3 ([!DNL Spark] 2.4) {#pyspark3-spark2.4}
-
-```python
-# PySpark 3 (Spark 2.4)
-
-from pyspark.sql import SparkSession
-spark = SparkSession.builder.getOrCreate()
-
-%dataset read --datasetId {DATASET_ID} --dataFrame df
-
-df.createOrReplaceTempView("event")
-timepd = spark.sql("""
-    SELECT *
-    FROM event
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timepd.show()
-```
-
-#### Scala ([!DNL Spark] 2.4) {#scala-spark}
-
-```scala
-// Spark (Spark 2.4)
-
-// Turn off extra logging
-import org.apache.log4j.{Level, Logger}
-Logger.getLogger("org").setLevel(Level.OFF)
-Logger.getLogger("com").setLevel(Level.OFF)
-
-import org.apache.spark.sql.{Dataset, SparkSession}
-val spark = org.apache.spark.sql.SparkSession.builder().appName("Notebook")
-  .master("local")
-  .getOrCreate()
-
-// Stage Exploratory
-val dataSetId: String = "{DATASET_ID}"
-val orgId: String = sys.env("IMS_ORG_ID")
-val clientId: String = sys.env("PYDASDK_IMS_CLIENT_ID")
-val userToken: String = sys.env("PYDASDK_IMS_USER_TOKEN")
-val serviceToken: String = sys.env("PYDASDK_IMS_SERVICE_TOKEN")
-val mode: String = "batch"
-
-var df = spark.read.format("com.adobe.platform.query")
-  .option("user-token", userToken)
-  .option("ims-org", orgId)
-  .option("api-key", clientId)
-  .option("mode", mode)
-  .option("dataset-id", dataSetId)
-  .option("service-token", serviceToken)
-  .load()
-df.createOrReplaceTempView("event")
-val timedf = spark.sql("""
-    SELECT * 
-    FROM event 
-    WHERE timestamp > CAST('2019-01-01 00:00:00.0' AS TIMESTAMP)
-    AND timestamp < CAST('2019-12-31 23:59:59.9' AS TIMESTAMP)
-""")
-timedf.show()
-```
-
->[!TIP]
->
->
->In Scala, you can use `sys.env()` to declare and return a value from within `option`. This eliminates the need to define variables if you know they are only going to be used a single time. The following example takes `val userToken` from the above example and declares it in-line within `option` as an alternative:
-> ```scala
-> .option("user-token", sys.env("PYDASDK_IMS_USER_TOKEN"))
-> ```
+To learn more about each of the supported notebooks and how to use them, visit the [Jupyterlab notebooks data access](./access-notebook-data.md) developer guide. This guide focuses on how to use JupyterLab notebooks to access your data including reading, writing, and querying data. The data access guide also contains information on the maximum amount of data that can be read by each supported notebook.
 
 ## Supported libraries {#supported-libraries}
 
@@ -726,15 +362,3 @@ timedf.show()
 | azure-storage-blob | 1.4.0 |
 | [!DNL python] | 3.6.7 |
 | mkl-rt | 11.1 |
-
-## Optional SQL flags for [!DNL Query Service] {#optional-sql-flags-for-query-service}
-
-This table outlines the optional SQL flags that can be used for [!DNL Query Service].
-
-| **Flag** | **Description** |
-| --- | --- |
-| `-h`, `--help` | Show the help message and exit. |
-| `-n`, `--notify` | Toggle option for notifying query results. |
-| `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
-| `-d`, `--display` | Using this flag prevents results from being displayed. |
-

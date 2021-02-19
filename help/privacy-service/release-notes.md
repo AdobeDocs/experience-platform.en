@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service release notes
+title: Privacy Service Release Notes
 topic: release notes
+description: The latest release notes for Adobe Experience Platform Privacy Service.
 ---
 
 # [!DNL Privacy Service] release notes
@@ -12,6 +13,14 @@ This document contains information about new features for Adobe Experience Platf
 >[!NOTE]
 >
 >The latest release notes for other [!DNL Experience Platform] services can be found [here](../release-notes/latest/latest.md).
+
+## September 9, 2020
+
+### New features
+
+| Feature | Description |
+| --- | --- |
+| Support for LGPD (Brazil) | Privacy jobs can now be created under Brazil's [!DNL Lei Geral de Proteção de Dados] (LGPD) regulation. These jobs are tracked under the regulation code `lgpd_bra`. |
 
 ## April 8, 2020
 
@@ -38,7 +47,7 @@ This document contains information about new features for Adobe Experience Platf
 
 * [!DNL Privacy Service] UI enhancements:
     * Separate job tracking pages for GDPR and CCPA regulations.
-    * New _Regulation Type_ dropdown to switch between tracking data for GDPR and CCPA.
+    * New *Regulation Type* dropdown to switch between tracking data for GDPR and CCPA.
 
 ## July 25, 2019
 

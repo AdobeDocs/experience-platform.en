@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
-title: Enforce data usage policies using the Policy Service API
-topic: enforcement
+title: Enforce Data Usage Policies Using the Policy Service API
+topic: guide
+type: Tutorial
+description: Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the Policy Service API to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 ---
 
 # Enforce data usage policies using the [!DNL Policy Service] API
 
-Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [!DNL DULE Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
+Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the [[!DNL Policy Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 
 >[!NOTE]
 >
@@ -17,18 +19,18 @@ This document provides steps on how to use the [!DNL Policy Service] API to chec
 
 ## Getting started
 
-This tutorial requires a working understanding of the following key concepts involved in enforcing DULE policies:
+This tutorial requires a working understanding of the following key concepts involved in enforcing data usage policies:
 
 * [Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
     * [Data usage labels](../labels/overview.md): Data usage labels are applied to datasets (and/or individual fields within those datasets), specifying restrictions for how that data can be used.
-    * [Data usage policies](../policies/overview.md): Data usage policies are rules that describe the kinds of marketing actions that are allowed or restricted for certain sets of DULE labels.
+    * [Data usage policies](../policies/overview.md): Data usage policies are rules that describe the kinds of marketing actions that are allowed or restricted for certain sets of data usage labels.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the DULE [!DNL Policy Service] API, including required headers and how to read example API calls.
+Before starting this tutorial, please review the [developer guide](../api/getting-started.md) for important information that you need to know in order to successfully make calls to the [!DNL Policy Service] API, including required headers and how to read example API calls.
 
-## Evaluate using DULE labels and a marketing action
+## Evaluate using labels and a marketing action
 
-You can evaluate a policy by testing a marketing action against a set of DULE labels that would hypothetically be present within a dataset. This is done through the use of the `duleLabels` query parameter, where DULE labels are provided as a comma-separated list of values, as shown in the example below.
+You can evaluate a policy by testing a marketing action against a set of data usage labels that would hypothetically be present within a dataset. This is done through the use of the `duleLabels` query parameter, where labels are provided as a comma-separated list of values, as shown in the example below.
 
 **API format**
 
@@ -39,7 +41,7 @@ GET /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints?duleLabels={LAB
 
 | Parameter | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action associated with the DULE policy you are evaluating. |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action associated with the data usage policy you are evaluating. |
 | `{LABEL_1}` | A data usage label to test the marketing action against. At least one label must be provided. When providing multiple labels, they must be separated by commas. |
 
 **Request**
@@ -61,7 +63,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the URL for the marketing action, the DULE labels it was tested against, and a list of any DULE policies that were violated as a result of testing the action against those labels. In this example, the "Export Data to Third Party" policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered the expected policy violation.
+A successful response returns the URL for the marketing action, the usage labels it was tested against, and a list of any policies that were violated as a result of testing the action against those labels. In this example, the "Export Data to Third Party" policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered the expected policy violation.
 
 ```json
 {
@@ -121,11 +123,11 @@ A successful response returns the URL for the marketing action, the DULE labels 
 
 | Property | Description |
 | --- | --- |
-| `violatedPolicies` | An array listing any DULE policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
+| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
 ## Evaluate using datasets
 
-You can evaluate a DULE policy by testing a marketing action against one or more datasets from which DULE labels can be collected. This is done by making a POST request to `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` and providing dataset IDs within the request body, as shown in the example below.
+You can evaluate a data usage policy by testing a marketing action against one or more datasets from which labels can be collected. This is done by making a POST request to `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` and providing dataset IDs within the request body, as shown in the example below.
 
 **API format**
 
@@ -136,7 +138,7 @@ POST /marketingActions/custom/{MARKETING_ACTION_NAME}/constraints
 
 | Parameter | Description |
 | --- | --- |
-| `{MARKETING_ACTION_NAME}` | The name of the marketing action associated with the DULE policy you are evaluating. |
+| `{MARKETING_ACTION_NAME}` | The name of the marketing action associated with the policy you are evaluating. |
 
 **Request**
 
@@ -161,7 +163,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -170,10 +178,11 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Each item in the payload array must indicate the type of entity being defined. For this use case, the value will always be "dataSet". |
 | `entityId` | Each item in the payload array must provide the unique ID for a dataset. |
+| `entityMeta.fields` | (Optional) An array of [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) strings, referencing specific fields in the dataset's schema. If this array is included, only the fields contained in the array participate in evaluation. Any schema fields that are not included in the array will not participate in evaluation.<br><br>If this field is not included, all fields within the dataset schema will be included in evaluation. |
 
 **Response**
 
-A successful response returns the URL for the marketing action, the DULE labels that were collected from the provided datasets, and a list of any DULE policies that were violated as a result of testing the action against those labels. In this example, the "Export Data to Third Party" policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered the expected policy violation.
+A successful response returns the URL for the marketing action, the usage labels that were collected from the provided datasets, and a list of any policies that were violated as a result of testing the action against those labels. In this example, the "Export Data to Third Party" policy is shown in the `violatedPolicies` array, indicating that the marketing action triggered the expected policy violation.
 
 ```json
 {
@@ -295,13 +304,13 @@ A successful response returns the URL for the marketing action, the DULE labels 
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
@@ -354,12 +363,12 @@ A successful response returns the URL for the marketing action, the DULE labels 
 
 | Property | Description |
 | --- | --- |
-| `duleLabels` | A list of DULE labels that were extracted from the datasets provided in the request payload. |
-| `discoveredLabels` | A list of the datasets that were provided in the request payload, displaying the dataset-level and field-level DULE labels that were found in each. |
-| `violatedPolicies` | An array listing any DULE policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
+| `duleLabels` | A list of data usage labels that were extracted from the datasets provided in the request payload. |
+| `discoveredLabels` | A list of the datasets that were provided in the request payload, displaying the dataset-level and field-level labels that were found in each. |
+| `violatedPolicies` | An array listing any policies that were violated by testing the marketing action (specified in `marketingActionRef`) against the provided `duleLabels`. |
 
 ## Next steps
 
-By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of DULE labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
+By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of data usage labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+For information on how Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).

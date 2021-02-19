@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
-title: Streaming record data
+title: Stream Record Data Using Streaming Ingestion APIs
 topic: tutorial
+type: Tutorial
+description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
-# Stream record data to Adobe Experience Platform
+# Stream record data using Streaming Ingestion APIs
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
@@ -13,8 +15,8 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
 - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
@@ -27,7 +29,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -89,7 +91,7 @@ curl -X POST https://platform.adobe.io/data/foundation/schemaregistry/tenant/sch
 | -------- | ----------- |
 | `title` | The name you want to use for your schema. This name must be unique. |
 | `description` | A meaningful description for the schema you are creating. |
-| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [!DNL Real-time Customer Profile](../../profile/home.md). |
+| `meta:immutableTags` | In this example, the `union` tag is used to persist your data into [[!DNL Real-time Customer Profile]](../../profile/home.md). |
 
 **Response**
 
@@ -272,6 +274,10 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 **Request**
 
+Ingesting record data to a streaming connection can be done either with or without the source name.
+
+The example request below ingests a record with a missing source name to Platform. If a record is missing the source name, it will add the source ID from the streaming connection definition.
+
 >[!NOTE]
 >
 >The following API call does **not** require any authentication headers.
@@ -317,6 +323,22 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
 }'
 ```
 
+If you want to include a source name, the following example shows how you would include it.
+
+```json
+    "header": {
+        "schemaRef": {
+            "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
+            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        },
+        "imsOrgId": "{IMS_ORG}",
+        "datasetId": "{DATASET_ID}",
+        "source": {
+            "name": "Sample source name"
+        }
+    }
+```
+
 **Response**
 
 A successful response returns HTTP status 200 with details of the newly streamed [!DNL Profile].
@@ -341,11 +363,11 @@ A successful response returns HTTP status 200 with details of the newly streamed
 
 ## Retrieve the newly ingested record data
 
-To validate the previously ingested records, you can use the [!DNL Profile Access API](../../profile/api/entities.md) to retrieve the record data.
+To validate the previously ingested records, you can use the [[!DNL Profile Access API]](../../profile/api/entities.md) to retrieve the record data.
 
 >[!NOTE]
 >
->If the merge policy ID is not defined and the schema.</span>name or relatedSchema</span>.name is `_xdm.context.profile`, [!DNL Profile Access] will fetch **all** related identities.
+>If the merge policy ID is not defined and the `schema.name` or `relatedSchema.name` is `_xdm.context.profile`, [!DNL Profile Access] will fetch **all** related identities.
 
 **API format**
 
@@ -424,7 +446,7 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-flows.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md). 
 

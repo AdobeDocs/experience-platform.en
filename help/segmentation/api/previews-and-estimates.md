@@ -1,13 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
-title: Previews and estimates endpoints
+title: Previews and Estimates API Endpoints
 topic: developer guide
+description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
 ---
 
 # Previews and estimates endpoints
 
-As you develop your segment definition, you can use the estimate and preview tools within [!DNL Adobe Experience Platform] to view summary-level information to help ensure you are isolating the expected audience. **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. **Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
+As you develop a segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure that you are isolating the audience you expect. 
+
+* **Previews** provide paginated lists of qualifying profiles for a segment definition, allowing you to compare the results against what you expect. 
+
+* **Estimates** provide statistical information on a segment definition, such as the projected audience size, confidence interval, and error standard deviation. 
+
+>[!NOTE]
+>
+>To access similar metrics related to Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please refer to the [profile preview (preview sample status) endpoint guide](../../profile/api/preview-sample-status.md), part of the Profile API developer guide.
 
 ## Getting started
 
@@ -15,11 +24,10 @@ The endpoints used in this guide are part of the [!DNL Adobe Experience Platform
 
 ## How estimates are generated
 
-The way data sampling gets triggered depends on the method of ingestion.
+When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way data sampling is triggered depends on the method of ingestion:
 
-For batch ingestion, the profile store is automatically scanned every fifteen minutes to see if a new batch was successfully ingested since the last sampling job was run. If that is the case, the profile store is subsequently scanned to see if there's been at least a 5% change in the number of records. If these conditions are met, a new sampling job is triggered.
-
-For streaming ingestion, the profile store is automatically scanned every hour to see if there's been at least a 5% change in the number of records. If this condition is met, a new sampling job is triggered.
+* **Batch ingestion:** For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count.
+* **Streaming ingestion:** For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count.
 
 The sample size of the scan depends on the overall number of entities in your profile store. These sample sizes are represented in the following table:
 
@@ -29,13 +37,17 @@ The sample size of the scan depends on the overall number of entities in your pr
 | 1 to 20 million | 1 million |
 | Over 20 million | 5% of total |
 
->[!NOTE] Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
+>[!NOTE]
+>
+>Estimates generally take 10 to 15 seconds to run, beginning with a rough estimate and refining as more records are read.
 
 ## Create a new preview {#create-preview}
 
 You can create a new preview by making a POST request to the `/preview` endpoint.
 
->[!NOTE] An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
+>[!NOTE]
+>
+>An estimate job is automatically created when a preview job is created. These two jobs will share the same ID.
 
 **API format**
 
@@ -64,7 +76,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | -------- | ----------- |
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is `pql/text`. |
-| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema the profile data is based on. |
+| `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema class the profile data is based on. |
 
 **Response**
 
@@ -143,14 +155,14 @@ A successful response returns HTTP status 200 with detailed information about th
         },
         "XID_ADOBE-MARKETING-CLOUD-ID-3": {
             "_href": "https://platform.adobe.io/data/core/ups/models/profile/XID_ADOBE-MARKETING-CLOUD-ID-1000"
-        },
-        "state": "RESULT_READY",
-        "links": {
-            "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
-            "next": "",
-            "prev": ""
         }
     }],
+    "state": "RESULT_READY",
+    "links": {
+        "_self": "https://platform.adobe.io/data/core/ups/preview?expression=<expr-1>&limit=1000",
+        "next": "",
+        "prev": ""
+    },
     "page": {
         "offset": 0,
         "size": 3
@@ -160,7 +172,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 | Property | Description | 
 | -------- | ----------- |
-| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [!DNL Profile Access API](../../profile/api/entities.md). |
+| `results` | A list of entity IDs, along with their related identities. The links provided can be used to look up the specified entities, using the [profile access API endpoint](../../profile/api/entities.md). |
 
 ## Retrieve the results of a specific estimate job {#get-estimate}
 
@@ -194,17 +206,27 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ```json
 {
-    "estimatedSize": 0,
-    "numRowsToRead": 1,
+    "estimatedSize": 4275,
+    "numRowsToRead": 4275,
+    "estimatedNamespaceDistribution": [
+        {
+            "namespaceId": "4",
+            "profilesMatchedSoFar": 35
+        },
+        {
+            "namespaceId": "6",
+            "profilesMatchedSoFar": 4275
+        }
+    ],
     "state": "RESULT_READY",
-    "profilesReadSoFar": 1,
+    "profilesReadSoFar": 4275,
     "standardError": 0,
     "error": {
         "description": "",
         "traceback": ""
     },
-    "profilesMatchedSoFar": 0,
-    "totalRows": 1,
+    "profilesMatchedSoFar": 4275,
+    "totalRows": 4275,
     "confidenceInterval": "95%",
     "_links": {
         "preview": "https://platform.adobe.io/data/core/ups/preview/app-32be0328-3f31-4b64-8d84-acd0c4fbdad3/execution/0?previewQueryId=e890068b-f5ca-4a8f-a6b5-af87ff0caac3"
@@ -214,9 +236,10 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 | Property | Description |
 | -------- | ----------- |
-| `state` | The current state of the preview job. Will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
-| `_links.preview` | When the preview job's current state is "RESULT_READY", this attribute provides a URL to view the estimate. |
+|`estimatedNamespaceDistribution`|An array of objects showing the number of profiles within the segment broken down by identity namespace. The total number of profiles by namespace (adding together the values shown for each namespace) may be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.|
+| `state` | The current state of the preview job. The state will be "RUNNING" until processing is complete, at which point it becomes "RESULT_READY" or "FAILED". |
+| `_links.preview` | When the `state` is "RESULT_READY", this field provides a URL to view the estimate. |
 
 ## Next steps
 
-After reading this guide you now have a better understanding of how to work with  previews and estimates. To learn more about the other [!DNL Segmentation Service] API endpoints, please read the [Segmentation Service developer guide overview](./overview.md).
+After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md). 

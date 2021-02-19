@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Data Science Workspace troubleshooting guide
+title: Data Science Workspace Troubleshooting Guide
 topic: Troubleshooting
+description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace.
 ---
 
 # [!DNL Data Science Workspace] troubleshooting guide
@@ -23,7 +24,7 @@ To remedy this issue use the following steps:
    
 ![chrome advanced](./images/faq/chrome-advanced.png)
 
-The *Privacy and security* section appears. Next, click on **Site settings** followed by **Cookies and site data**.
+The **Privacy and security** section appears. Next, click on **Site settings** followed by **Cookies and site data**.
    
 ![chrome advanced](./images/faq/privacy-security.png)
 
@@ -55,7 +56,7 @@ Within the Safari preferences window, select **Advanced**. Then check the *Show 
 
 ![Safari advanced](./images/faq/advanced.png)
 
-Next, from the top navigation bar select the **Develop** menu. From within the *Develop* dropdown, hover over *User Agent*. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
+Next, from the top navigation bar select the **Develop** menu. From within the **Develop** dropdown, hover over **User Agent**. You can select the **[!DNL Chrome]** or **[!DNL Firefox]** User Agent string you would like to use.
 
 ![Develop menu](./images/faq/user-agent.png)
 
@@ -104,3 +105,15 @@ You can configure resources by adding the following block to the first cell of y
 ```
 
 For more information on [!DNL Spark] cluster resource configuration, including the complete list of configurable properties, see the [JupyterLab User Guide](./jupyterlab/overview.md#kernels).
+
+## Why am I receiving an error when trying execute certain tasks for larger datasets?
+
+If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.
+
+## [!DNL Docker Hub] limit restrictions in Data Science Workspace
+
+As of November 20, 2020, rate limits for anonymous and free authenticated use of Docker Hub went into effect. Anonymous and Free [!DNL Docker Hub] users are limited to 100 container image pull requests every six hours. If you are affected by these changes you will receive this error message: `ERROR: toomanyrequests: Too Many Requests.` or `You have reached your pull rate limit. You may increase the limit by authenticating and upgrading: https://www.docker.com/increase-rate-limits.`.
+
+Currently, this limit will only affect your organization if you are attempting to build 100 Notebook to Recipes within the six hour timeframe or if you are using Spark based Notebooks within Data Science Workspace that are frequently scaling up and down. However, this is unlikely, since the cluster these run on remain active for two hours before idling out. This reduces the number of pulls required when the cluster is active. If you receive any of the above errors, you will need to wait until your [!DNL Docker] limit is reset.
+
+For more information about [!DNL Docker Hub] rate limits, visit the [DockerHub documentation](https://www.docker.com/increase-rate-limits). A solution for this is being worked on and expected in a subsequent release.

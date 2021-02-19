@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics
+keywords: Experience Platform;developer guide;SDK;Model authoring;Data Science Workspace;popular topics;testing
 solution: Experience Platform
-title: SDK developer guide
+title: Model Authoring SDK
 topic: Overview
+description: The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in Adobe Experience Platform Data Science Workspace, providing implementable templates in PySpark and Spark (Scala).
 ---
 
-# SDK developer guide
+# Model Authoring SDK
 
 The Model Authoring SDK enables you to develop custom machine learning Recipes and Feature Pipelines which can be used in [!DNL Adobe Experience Platform] Data Science Workspace, providing implementable templates in [!DNL PySpark] and [!DNL Spark (Scala)].
 
@@ -29,14 +30,14 @@ The following table describes the abstract methods of a PySpark Data Loader clas
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(self, configProperties, spark)</code></p>
+                <p><code>load(self, configProperties, spark)</code></p>
                 <p>Load and return Platform data as a Pandas DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">spark</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>spark</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -57,13 +58,13 @@ The following table describes the abstract methods of a [!DNL Spark] Data Loader
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">load(configProperties, sparkSession)</code></p>
+                <p><code>load(configProperties, sparkSession)</code></p>
                 <p>Load and return Platform data as a DataFrame</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -203,14 +204,14 @@ The following table describes the abstract methods of a [!DNL PySpark] Data Save
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(self, configProperties, dataframe)</code></p>
+                <p><code>save(self, configProperties, dataframe)</code></p>
                 <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataframe</code>: Data to be stored in the form of a DataFrame</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataframe</code>: Data to be stored in the form of a DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -231,13 +232,13 @@ The following table describes the abstract methods of a [!DNL Spark] Data Saver 
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">save(configProperties, dataFrame)</code></p>
+                <p><code>save(configProperties, dataFrame)</code></p>
                 <p>Receive output data as a DataFrame and stores it in a Platform dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataFrame</code>: Data to be stored in the form of a DataFrame</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataFrame</code>: Data to be stored in the form of a DataFrame</li>
                 </ul>
             </td>
         </tr>
@@ -405,14 +406,14 @@ The following table describes the class methods of a PySpark dataset transformer
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">transform(self, configProperties, dataset)</code></p>
+                <p><i>abstract</i><br/><code>transform(self, configProperties, dataset)</code></p>
                 <p>Takes a dataset as input and output a new derived dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataset</code>: The input dataset for transformation</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataset</code>: The input dataset for transformation</li>
                 </ul>
             </td>
         </tr>
@@ -433,13 +434,13 @@ The following table describes the abstract methods of a [!DNL Spark] dataset tra
     <tbody>
         <tr>
             <td>
-                <p><code class=" language-undefined">transform(configProperties, dataset)</code></p>
+                <p><code>transform(configProperties, dataset)</code></p>
                 <p>Takes a dataset as input and output a new derived dataset</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
-                    <li><code class=" language-undefined">dataset</code>: The input dataset for transformation</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
+                    <li><code>dataset</code>: The input dataset for transformation</li>
                 </ul>
             </td>
         </tr>
@@ -464,26 +465,26 @@ The following table describes the class methods of a PySpark FeaturePipelineFact
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">create_pipeline(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>create_pipeline(self, configProperties)</code></p>
                 <p>Create and return a Spark Pipeline that contains a series of Spark Transformers</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -504,24 +505,24 @@ The following table describes the class methods of a [!DNL Spark] FeaturePipelin
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">createPipeline(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>createPipeline(configProperties)</code></p>
                 <p>Create and return a Pipeline that contains a series of Transformers</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties map</li>
+                    <li><code>configProperties</code>: Configuration properties map</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -546,53 +547,53 @@ The following table describes the class methods of a PySpark PipelineFactory:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(self, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(self, configProperties)</code></p>
                 <p>Create and Return a Spark Pipeline which contains the logic and algorithm for model training and scoring</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">train(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>train(self, configProperties, dataframe)</code></p>
                 <p>Return a custom Pipeline which contains the logic and algorithm to train a model. This method is not required if a Spark Pipeline is used</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Feature dataset for training input</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Feature dataset for training input</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">score(self, configProperties, dataframe, model)</code></p>
+                <p><i>abstract</i><br/><code>score(self, configProperties, dataframe, model)</code></p>
                 <p>Score using the trained model and return the results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Input dataset for scoring</li>
-                    <li><code class=" language-undefined">model</code>: A trained model used for scoring</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Input dataset for scoring</li>
+                    <li><code>model</code>: A trained model used for scoring</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">get_param_map(self, configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>get_param_map(self, configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -613,24 +614,24 @@ The following table describes the class methods of a [!DNL Spark] PipelineFactor
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">apply(configProperties)</code></p>
+                <p><i>abstract</i><br/><code>apply(configProperties)</code></p>
                 <p>Create and Return a Pipeline which contains the logic and algorithm for model training and scoring</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">getParamMap(configProperties, sparkSession)</code></p>
+                <p><i>abstract</i><br/><code>getParamMap(configProperties, sparkSession)</code></p>
                 <p>Retrieve and return param map from configuration properties</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">sparkSession</code>: Spark session</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>sparkSession</code>: Spark session</li>
                 </ul>
             </td>
         </tr>
@@ -655,28 +656,28 @@ The following table describes the class methods of a PySpark MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(self, configProperties, dataframe)</code></p>
+                <p><i>abstract</i><br/><code>split(self, configProperties, dataframe)</code></p>
                 <p>Splits the input dataset into training and testing subsets</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">dataframe</code>: Input dataset to be split</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>dataframe</code>: Input dataset to be split</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(self, dataframe, model, configProperties)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(self, dataframe, model, configProperties)</code></p>
                 <p>Evaluates a trained model and return the evaluation results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">self</code>: Self reference</li>
-                    <li><code class=" language-undefined">dataframe</code>: A DataFrame consisting of training and testing data</li>
-                    <li><code class=" language-undefined">model</code>: A trained model</li>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
+                    <li><code>self</code>: Self reference</li>
+                    <li><code>dataframe</code>: A DataFrame consisting of training and testing data</li>
+                    <li><code>model</code>: A trained model</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
                 </ul>
             </td>
         </tr>
@@ -697,26 +698,26 @@ The following table describes the class methods of a [!DNL Spark] MLEvaluator:
     <tbody>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">split(configProperties, data)</code></p>
+                <p><i>abstract</i><br/><code>split(configProperties, data)</code></p>
                 <p>Splits the input dataset into training and testing subsets</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">data</code>: Input dataset to be split</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>data</code>: Input dataset to be split</li>
                 </ul>
             </td>
         </tr>
         <tr>
             <td>
-                <p><i>abstract</i><br/><code class=" language-undefined">evaluate(configProperties, model, data)</code></p>
+                <p><i>abstract</i><br/><code>evaluate(configProperties, model, data)</code></p>
                 <p>Evaluates a trained model and return the evaluation results</p>
             </td>
             <td>
                 <ul>
-                    <li><code class=" language-undefined">configProperties</code>: Configuration properties</li>
-                    <li><code class=" language-undefined">model</code>: A trained model</li>
-                    <li><code class=" language-undefined">data</code>: A DataFrame consisting of training and testing data</li>
+                    <li><code>configProperties</code>: Configuration properties</li>
+                    <li><code>model</code>: A trained model</li>
+                    <li><code>data</code>: A DataFrame consisting of training and testing data</li>
                 </ul>
             </td>
         </tr>

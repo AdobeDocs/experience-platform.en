@@ -1,17 +1,19 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;data access;data access api;query data access
 solution: Experience Platform
-title: Data access overview
+title: View Dataset Data Using the Data Access API
 topic: tutorial
+type: Tutorial
+description: Learn how to locate, access, and download data stored within a dataset using the Data Access API in Adobe Experience Platform. You will also be introduced to some of the unique features of the Data Access API, such as paging and partial downloads.
 ---
 
-# Query dataset data using [!DNL Data Access] API
+# View dataset data using [!DNL Data Access] API
 
 This document provides a step-by-step tutorial that covers how to locate, access, and download data stored within a dataset using the [!DNL Data Access] API in Adobe Experience Platform. You will also be introduced to some of the unique features of the [!DNL Data Access] API, such as paging and partial downloads.
 
 ## Getting started
 
-This tutorial working understanding of how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
+This tutorial requires a working understanding on how to create and populate a dataset. See the [dataset creation tutorial](../../catalog/datasets/create.md) for more information.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to the Platform APIs.
 
@@ -21,7 +23,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -358,7 +360,7 @@ HEAD /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet) |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet) |
 
 **Request**
 
@@ -389,7 +391,7 @@ GET /files/{FILE_ID}?path={FILE_NAME}
 | Property | Description |
 | -------- | ----------- |
 | `{FILE_ID}` | The file's identifier. |
-| `{FILE_NAME`} | The file name (for example, profiles.parquet). |
+| `{FILE_NAME}` | The file name (for example, profiles.parquet). |
 
 **Request**
 
@@ -442,7 +444,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/export/files/8dcedb36-1cb
 The response body includes the first 100 bytes of the file (as specified by the "Range" header in the request) along with HTTP Status 206 (Partial Contents). The response also includes the following headers:
 
 - Content-Length: 100 (the number of bytes returned)
-- Content-type: application/parquet (a parquet file was requested, therefore the response content type is parquet)
+- Content-type: application/parquet (a Parquet file was requested, therefore the response content type is `parquet`)
 - Content-Range: bytes 0-99/249058 (the range requested (0-99) out of the total number of bytes (249058))
 
 ## Configure API response pagination

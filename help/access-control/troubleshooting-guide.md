@@ -1,15 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;troubleshooting;access control
 solution: Experience Platform
-title: Access control troubleshooting guide
+title: Access Control Troubleshooting Guide
 topic: troubleshooting guide
+description: This document provides answers to frequently asked questions about access control in Adobe Experience Platform.
 ---
 
 # Access control troubleshooting guide
 
 This document provides answers to frequently asked questions about access control in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
-[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](http://adminconsole.adobe.com) to provide role-based **access control**, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
+[!DNL Experience Platform] leverages product profiles in the [Adobe Admin Console](http://adminconsole.adobe.com) to provide role-based access control, linking users with permissions and sandboxes.  See the [access control overview](home.md) for more information.
 
 ## Where can I find my current access permissions?
 

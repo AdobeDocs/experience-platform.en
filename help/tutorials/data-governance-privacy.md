@@ -3,11 +3,13 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Governance and Privacy tutorials
 topic: tutorial
+type: Tutorial
+description: This document provides an overview of the different available tutorials related to Adobe Experience Platform Data Governance and Adobe Experience Platform Privacy Service.
 ---
 
 # [!DNL Data Governance] and [!DNL Privacy] Tutorials
 
-[!DNL Data Usage Labeling and Enforcement] (DULE) is the core mechanism of Adobe Experience Platform [!DNL Data Governanc]e. DULE features enable you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. Before getting started with labels, please see the [Data Governance overview](../data-governance/home.md) for a more robust introduction to the DULE framework within [!DNL Platform].
+Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies, and evaluate for policy violations when certain actions are performed on those datasets and/or fields. Before getting started with the tutorials listed in this document, please see the [[!DNL Data Governance] overview](../data-governance/home.md) for a more robust introduction to the framework.
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to coordinate privacy and compliance requests across various solutions. To learn more, please begin by reading the [Privacy Service overview](../privacy-service/home.md).
 
@@ -17,11 +19,11 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 ## Create data usage policies
 
-The DULE [!DNL Policy Service] API allows you to create and manage DULE policies to determine what marketing actions can be taken against data that contains certain DULE labels. To get started, read the [data usage policies overview](../data-governance/policies/overview.md).
+The [!DNL Policy Service] API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain usage labels. To get started, read the [data usage policies overview](../data-governance/policies/overview.md).
 
 ## Enforce data usage policies
 
-Once you have created Data Usage Labeling and Enforcement (DULE) labels for your data, and have created DULE policies for marketing actions against those labels, you can use the DULE [!DNL Policy Service] API to evaluate whether a marketing action performed on a dataset, or an arbitrary group of DULE labels, constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response. To get started, visit the [policy enforcement overview](../data-governance/enforcement/overview.md).
+Once you have added usage labels for your data, and have created policies for marketing actions against those labels, you can use the [!DNL Policy Service API] to evaluate whether a marketing action constitutes a policy violation when performed on a dataset or an arbitrary group of usage labels. You can then set up your own internal protocols to handle policy violations based on the API response. To get started, visit the [policy enforcement overview](../data-governance/enforcement/overview.md).
 
 ## Enforce data usage compliance for an audience segment
 

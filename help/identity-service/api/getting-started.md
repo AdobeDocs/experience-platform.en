@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;identity service api;identity service developer guide;region
 solution: Experience Platform
-title: Getting started
+title: Identity Service API Guide
 topic: API guide
+description: The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
-# [!DNL Identity Service] API developer guide
+# [!DNL Identity Service] API guide
 
 Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cross-channel, and near real-time identification of your customers in what is known as an identity graph within Adobe Experience Platform. 
 
@@ -13,9 +14,9 @@ Adobe Experience Platform [!DNL Identity Service] manages the cross-device, cros
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-- [!DNL Identity Service](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with you brand.
-- [!DNL Real-time Customer Profile](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources. 
-- [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+- [[!DNL Identity Service]](../home.md): Solves the fundamental challenge posed by the fragmentation of customer profile data. It does this by bridging identities across devices and systems where customers interact with you brand.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources. 
+- [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Identity Service] API.
 
@@ -25,7 +26,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -80,4 +81,4 @@ The examples in this document do not cover the complete functionality of the [!D
 
 ## Next steps
 
-Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general **API format**, a sample **request** showing required headers and properly formatted payloads, and a sample **response** for a successful call.
+Now that you have gathered the required credentials, you can now continue to read the rest of the developer guide. Each section provides important information regarding their endpoints and demonstrate example API calls for performing CRUD operations. Each call includes the general API format, a sample request showing required headers and properly formatted payloads, and a sample response for a successful call.

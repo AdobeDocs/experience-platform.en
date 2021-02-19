@@ -1,8 +1,7 @@
 ---
-title: Debugging
-seo-title: Adobe Experience Platform Web SDK debugging
-description: Learn how to toggle Experience Platform Web SDK debugging
-seo-description: Learn how to toggle Experience Platform Web SDK debugging
+title: Debugging in the Adobe Experience Platform Web SDK
+description: Learn how to toggle debugging capabilities in the Experience Platform Web SDK.
+keywords: debugging web sdk;debugging;configure;configure command;debug command;edgeConfigId;setDebug;debugEnabled;debug;
 ---
 
 # Debugging
@@ -60,3 +59,17 @@ When debugging is set through the `debug` command or query string parameter, it 
 * The end of your session 
 * You run the `debug` command 
 * You set the query string parameter again
+
+## Retrieving library information
+
+It's often helpful to access some of the details behind the library you have loaded onto your website. To do this, execute the `getLibraryInfo` command as follows:
+
+```js
+alloy("getLibraryInfo").then(function(result) {
+  console.log(result.libraryInfo.version);
+});
+```
+
+Currently, the provided `libraryInfo` object contains the following properties:
+
+* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`.

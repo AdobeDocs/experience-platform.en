@@ -1,11 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog;object lookup;api
 solution: Experience Platform
-title: Look up an object
+title: Look Up a Catalog Object
 topic: developer guide
+description: If you know the unique identifier for a specific Catalog object, you can perform a GET request to view that object's details. 
 ---
 
-# Look up an object
+# Look up a Catalog object
 
 If you know the unique identifier for a specific [!DNL Catalog] object, you can perform a GET request to view that object's details. 
 

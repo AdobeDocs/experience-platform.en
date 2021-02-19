@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;schedules;schedule;api;API;
 solution: Experience Platform
-title: Schedules
+title: Schedules API Endpoint
 topic: developer guide
+description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.
 ---
 
 # Schedules endpoint
@@ -48,7 +49,9 @@ curl -X GET https://platform.adobe.io/data/core/ups/config/schedules?limit=10 \
 
 A successful response returns HTTP status 200 with a list of schedules for the specified IMS organization as JSON. 
 
->[!NOTE] The following response has been truncated for space, and shows only the first schedule returned.
+>[!NOTE]
+>
+>The following response has been truncated for space, and shows only the first schedule returned.
 
 ```json
 {

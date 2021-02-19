@@ -1,15 +1,14 @@
 ---
-title: Getting started with Adobe Real-time Customer Data Platform
-seo-title: Getting started with Adobe Real-time Customer Data Platform
-description: Sample scenario for Adobe Real-time Customer Data Platform
-seo-description: Sample scenario for Adobe Real-time Customer Data Platform
+keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
+title: Getting Started with Real-time Customer Data Platform
+description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
 ---
 
-# Getting started with Adobe Real-time Customer Data Platform
+# Getting started with Real-time Customer Data Platform
 
-This getting started guide leads you through a sample implementation of Adobe Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
+This getting started guide leads you through a sample implementation of Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
 
-This example shows the power of Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
+This example shows the power of Real-time Customer Data Platform, powered by Adobe Experience Platform, to:
 
 * Ingest data from multiple sources
 * Merge them into a single [!DNL real-time customer profile]
@@ -70,7 +69,7 @@ For example, an unidentifed visitor navigates to the Men’s section on the Luma
 
 ![image](assets/luma-sweatshirts.png)
 
-As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].  
+As the customer navigates to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].  
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -97,7 +96,7 @@ Based on the browsing behavior of the anonymous visitor in the Men's section of 
 
 Sarah is welcomed with a loyalty message and thanked for being a Bronze member with more information on benefits and how to increase her status and points.
 
-She clicks to the home page to browse some more.  
+She navigates to the home page to browse some more.  
 
 ![image](assets/luma-personal.png)
 
@@ -113,7 +112,7 @@ This personalized content helps Sarah find relevant items quickly. This increase
 
 Sarah gets distracted and leaves the site, ending her session. Luma can use her data in Adobe Experience Platform to help bring her back to the site.
 
-Adobe Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
+Real-time Customer Data Platform, powered by Adobe Experience Platform, is built for customer experience management. It enables organizations to:
 
 * Simplify data integration and activation 
 * Govern known and unknown data usage 
@@ -136,7 +135,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use [!DNL Real-time Customer Data Platform] to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
+Use [!DNL Real-time Customer Data Platform] to bring new sources of data into Platform. Real-time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
 
 ![image](assets/luma-source-cat.png)
 
@@ -208,7 +207,7 @@ The Luma data science team has created models around propensity to buy. One mode
 
 Modify or create a segment that represents cart abandoners who appear to be in the process of buying a gift:  
 
-```
+```sql
 Profile: Category != Preferred Category 
 AND 
 Product Size != Preferred Size 
@@ -227,9 +226,9 @@ Because Sarah added an apparent gift item in the cart and abandoned it, Luma can
 
 When you've added the “Gift Giving Cart Abandoners” segment, you can see roughly how many people are part of this segment. You can take action on it and make it available for personalization across channels.  
 
-Click **[!UICONTROL Send to destinations]**.
+Select **[!UICONTROL Send to destinations]**.
 
-In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)
@@ -249,9 +248,10 @@ In this scenario, Luma wants to retarget this audience with personalization acro
 You can also schedule the segment to start or end at a particular time. The segment will be posted and automatically update in the configured platforms on the scheduled dates. 
 
 >[!NOTE]
->Optionally, if you click in the date field, it automatically schedules for 90 days out. 
+>
+>Optionally, if you select the date field, it automatically schedules for 90 days out. 
 
-Click **[!UICONTROL Save]** to go to the next page. 
+Select **[!UICONTROL Save]** to go to the next page. 
 
 When a customer in this audience makes a purchase, their membership to this audience is suppressed in real-time. They don’t qualify anymore because their status has changed. 
 
@@ -275,7 +275,7 @@ When you save, a visual data flow canvas shows the segment mapped from the unifi
 
 Sarah browses a social media site on her mobile device, and she sees a Luma ad. It reminds her of the item she left in her cart.
 
-Later, she opens her email and sees the retargeted emails. She clicks a link to Luma from an email.
+Later, she opens her email and sees the retargeted emails. She selects a link to Luma from an email.
 
 The link takes Sarah to the mobile Luma homepage, where she sees a highly personalized experience powered by Adobe Target.
 

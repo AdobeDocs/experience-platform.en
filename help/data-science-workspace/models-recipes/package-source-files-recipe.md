@@ -1,8 +1,10 @@
 ---
-keywords: Experience Platform;package source files;Data Science Workspace;popular topics
+keywords: Experience Platform;package source files;Data Science Workspace;popular topics;Docker;docker image
 solution: Experience Platform
-title: Package source files into a recipe
-topic: Tutorial
+title: Package Source Files Into a Recipe
+topic: tutorial
+type: Tutorial
+description: This tutorial provides instructions on how you can package the provided Retail Sales sample source files into an archive file, which can be used to create a recipe in Adobe Experience Platform Data Science Workspace by following the recipe import workflow either in the UI or using the API.
 ---
 
 # Package source files into a recipe
@@ -16,10 +18,10 @@ Concepts to understand:
 
 ## Prerequisites
 
-- [!DNL Docker](https://docs.docker.com/install/#supported-platforms)
-- [!DNL Python 3 and pip](https://docs.conda.io/en/latest/miniconda.html)
-- [!DNL Scala](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
-- [!DNL Maven](https://maven.apache.org/install.html)
+- [[!DNL Docker]](https://docs.docker.com/install/#supported-platforms)
+- [[!DNL Python 3 and pip]](https://docs.conda.io/en/latest/miniconda.html)
+- [[!DNL Scala]](https://www.scala-sbt.org/download.html?_ga=2.42231906.690987621.1558478883-2004067584.1558478883)
+- [[!DNL Maven]](https://maven.apache.org/install.html)
 
 ## Recipe creation
 
@@ -31,20 +33,22 @@ A Docker image allows a developer to package up an application with all the part
 
 The built Docker image is pushed to the Azure Container Registry using credentials supplied to you during the recipe creation workflow.
 
-To obtain your Azure Container Registry credentials, log into <a href="https://platform.adobe.com" target="_blank">Adobe Experience Platform</a>. On the left navigation column, navigate to **[!UICONTROL Workflows]**. Select **[!UICONTROL Import Recipe]** followed by selecting **[!UICONTROL Launch]**. See the screen shot below for reference.
+To obtain your Azure Container Registry credentials, log into [Adobe Experience Platform](https://platform.adobe.com). On the left navigation column, navigate to **[!UICONTROL Workflows]**. Select **[!UICONTROL Import Recipe]** followed by selecting **[!UICONTROL Launch]**. See the screen shot below for reference.
 
 ![](../images/models-recipes/package-source-files/import.png)
 
-The *Configure* page opens. Provide an appropriate *Recipe Name*, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
+The **[!UICONTROL Configure]** page opens. Provide an appropriate **[!UICONTROL Recipe Name]**, for example, "Retail Sales recipe", and optionally provide a description or documentation URL. Once complete, click **[!UICONTROL Next]**.
 
 ![](../images/models-recipes/package-source-files/configure.png)
 
 Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** for *Type*. Your Azure Container Registry credentials are generated once complete.
 
 >[!NOTE]
+>
 >*Type* is the class of machine learning problem the recipe is designed for and is used after training to help tailor evaluating the training run.
 
 >[!TIP]
+>
 >- For [!DNL Python] recipes select the **[!UICONTROL Python]** runtime. 
 >- For R recipes select the **[!UICONTROL R]** runtime.
 >- For PySpark recipes select the **[!UICONTROL PySpark]** runtime. An artifact type auto populates. 
@@ -52,9 +56,10 @@ Select the appropriate *Runtime*, then choose a **[!UICONTROL Classification]** 
 
 ![](../images/models-recipes/package-source-files/docker-creds.png)
 
-Note the values for *Docker Host*, *Username*, and *Password*. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
+Note the values for Docker host, username, and password. These are used to build and push your [!DNL Docker] image in the workflows outlined below.
 
 >[!NOTE]
+>
 >The Source URL is provided after completing the steps outlined below. The configuration file is explained in subsequent tutorials found in [next steps](#next-steps).
 
 ### Package the source files
@@ -172,6 +177,7 @@ Next, navigate to the directory `experience-platform-dsw-reference/recipes/scala
 ```
 
 >[!TIP]
+>
 >If you are receiving a permission error when trying to login to Docker using the `login.sh` script, try using the command `bash login.sh`.
 
 When executing the login script, you need to provide the Docker host, username, and password. When building, you are required to provide the Docker host and a version tag for the build.

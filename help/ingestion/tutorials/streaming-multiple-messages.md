@@ -1,11 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
 solution: Experience Platform
-title: Streaming multiple messages in a single HTTP request
+title: Send Multiple Messages in a Single HTTP Request
 topic: tutorial
+type: Tutorial
+description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 ---
 
-# Sending multiple messages in a single HTTP request
+# Send multiple messages in a single HTTP request
 
 When streaming data to Adobe Experience Platform, making numerous HTTP calls can be expensive. For instance, instead of creating 200 HTTP requests with 1KB payloads, it is much more efficient to create 1 HTTP request with 200 messages of 1KB each, with a single payload of 200KB. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
 
@@ -18,7 +20,7 @@ This tutorial requires a working understanding of Adobe Experience Platform [!DN
 - [Data Ingestion overview](../home.md): Covers the core concepts of [!DNL Experience Platform Data Ingestion], including ingestion methods and data connectors.
 - [Streaming ingestion overview](../streaming-ingestion/overview.md): The workflow and building blocks of streaming ingestion, such as streaming connections, datasets, [!DNL XDM Individual Profile], and [!DNL XDM ExperienceEvent].
 
-This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](../../tutorials/authentication.md) tutorial in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
+This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 
@@ -36,7 +38,7 @@ After registering a streaming connection, you, as the data producer, will have a
 
 The following example shows how to send multiple messages to a specific dataset within a single HTTP request. Insert the dataset ID in the message header to have that message directly ingested into it.
 
-You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the **[!UICONTROL Dataset ID]** field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
+You can get the ID for an existing dataset using the [!DNL Platform] UI or using a listing operation in the API. The dataset ID can be found on [Experience Platform](https://platform.adobe.com) by going to the **[!UICONTROL Datasets]** tab, clicking on the dataset you want the ID for, and copying the string from the dataset ID field on the **[!UICONTROL Info]** tab. See the [Catalog Service overview](../../catalog/home.md) for information on how to retrieve datasets using the API.
 
 Instead of using an existing dataset, you can create a new dataset. Please read the [create a dataset using APIs](../../catalog/api/create-dataset.md) tutorial for more information on creating a dataset using APIs.
 
@@ -501,7 +503,7 @@ The second message failed because it lacked a message body. The collection reque
     },
 ```
 
-The third message failed due to an invalid IMS organization ID being used in the header. The IMS organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [!DNL Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
+The third message failed due to an invalid IMS organization ID being used in the header. The IMS organization must match with the {CONNECTION_ID} that you are trying to post to. To determine which IMS organization ID matches the streaming connection you are using, you can perform a `GET inlet` request using the [[!DNL Data Ingestion API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). See [retrieving a streaming connection](./create-streaming-connection.md#get-data-collection-url) for an example of how to retrieve previously created streaming connections. 
 
 The fourth message failed because it did not follow the expected XDM schema. The `xdmSchema` included in the header and body of the request do not match the XDM schema of the `{DATASET_ID}`. Correcting the schema in the message header and body allows it to pass DCCS validation and be successfully sent to [!DNL Platform]. The message body must also be updated to match the XDM schema of the `{DATASET_ID}` for it to pass streaming validation on [!DNL Platform]. For more information on what happens to messages that successfully stream to Platform, see the [confirm messages ingested](#confirm-messages-ingested) section of this tutorial.
 
@@ -522,7 +524,7 @@ Batch messages that pass streaming validation on [!DNL Platform] are ingested in
 
 ## Next steps
 
-Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [!DNL Data Access](../../data-access/tutorials/dataset-data.md) guide.
+Now that you know how to send multiple messages in a single request and verify when messages are successfully ingested into the target dataset, you can start streaming your own data to [!DNL Platform]. For an overview of how to query and retrieve ingested data from [!DNL Platform], see the [[!DNL Data Access]](../../data-access/tutorials/dataset-data.md) guide.
 
 ## Appendix
 
@@ -534,7 +536,7 @@ The following table shows status codes returned by successful and failed respons
 
 | Status code | Description |
 | :---: | --- |
-| 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multistatus response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
+| 207  | Although '207' is used as the overall response status code, the recipient needs to consult the contents of the multi-status response body for further information about the success or failure of the method execution. The response code is used in success, partial success, and also in failure situations. |
 | 400 | There was a problem with the request. See the response body for a more specific error message (For example, Message payload was missing required fields, or Message was unknown xdm format). |
 | 401  | Unauthorized: request missing valid authorization header. This is only returned for inlets that have authentication enabled. |
 | 403  | Unauthorized:  Provided authorization token is invalid or expired. This is only returned for inlets that have authentication enabled. |

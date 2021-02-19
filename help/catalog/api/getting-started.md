@@ -1,13 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
-title: Catalog Service developer guide
+title: Catalog Service API Guide
 topic: developer guide
+description: The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 ---
 
-# [!DNL Catalog Service] developer guide
+# [!DNL Catalog Service] API guide
 
-[!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [Catalog overview](../home.md) for more information.
+[!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [[!DNL Catalog] overview](../home.md) for more information.
 
 This developer guide provides steps to help you start using the [!DNL Catalog] API. The guide then provides sample API calls for performing key operations using [!DNL Catalog].
 
@@ -15,7 +16,7 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 [!DNL Catalog] tracks metadata for several kinds of resources and operations within [!DNL Experience Platform]. This developer guide requires a working understanding of the various [!DNL Experience Platform] services involved with creating and managing these resources:
 
-* [!DNL Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Batch ingestion](../../ingestion/batch-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from data files, such as CSV and Parquet.
 * [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from client- and server-side devices in real-time.
 
@@ -27,7 +28,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ## Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

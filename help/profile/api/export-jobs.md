@@ -1,13 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
-title: Export jobs - Real-time Customer Profile API
+title: Export Jobs API Endpoint
 topic: guide
+type: Documentation
+description: Real-time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
 ---
 
 # Export jobs endpoint
 
-[!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Data available within [!DNL Profile] can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
+[!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
 
 This document provides step-by-step instructions for creating and managing export jobs using the [Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
 
@@ -139,7 +140,9 @@ curl -X POST \
 | `destination` | **(Required)** Destination information for the exported data:<ul><li>`destination.datasetId`: **(Required)** The ID of the dataset where data is to be exported.</li><li>`destination.segmentPerBatch`: *(Optional)* A Boolean value that, if not provided, defaults to `false`. A value of `false` exports all segment IDs into a single batch ID. A value of `true` exports one segment ID into one batch ID. Note that setting the value to be `true` may affect batch export performance.</li></ul> |
 | `schema.name` | **(Required)** The name of the schema associated with the dataset where data is to be exported. |
 
->[!NOTE] To export only Profile data and not include related time-series data, remove the "additionalFields" object from the request.
+>[!NOTE]
+>
+>To export only Profile data and not include related time-series data, remove the "additionalFields" object from the request.
 
 **Response**
 
@@ -428,7 +431,7 @@ curl -X POST \
 
 A successful delete request returns HTTP Status 204 (No Content) and an empty response body, indicating the cancel operation was successful. 
 
-## Next Steps
+## Next steps
 
 Once the export has completed successfully, your data is available within the Data Lake in Experience Platform. You can then use the [Data Access API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml) to access the data using the `batchId` associated with the export. Depending on the size of the export, the data may be in chunks and the batch may consist of several files.
 

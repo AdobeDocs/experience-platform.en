@@ -1,8 +1,9 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-solution: Adobe Experience Platform
-title: Entities - Real-time Customer Profile API
+title: Entities (Profile Access) API Endpoint
 topic: guide
+type: Documentation
+description: Adobe Experience Platform enables you to access Real-time Customer Profile data using RESTful APIs or the user interface. This guide outlines how to access entities, more commonly known as "profiles", using the Profile API.
 ---
 
 # Entities endpoint (Profile access)
@@ -11,7 +12,7 @@ Adobe Experience Platform enables you to access [!DNL Real-time Customer Profile
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [!DNL Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Access profile data by identity
 
@@ -108,6 +109,7 @@ curl -X GET \
 ```
 
 >[!NOTE]
+>
 >If a related graph links more than 50 identities, this service will return HTTP status 422 and the message "Too many related identities". If you receive this error, consider adding more query parameters to narrow your search.
 
 ## Access profile data by list of identities
@@ -354,6 +356,7 @@ curl -X GET \
 A successful response returns a paginated list of time series events and associated fields that were specified in the request query parameters. 
 
 >[!NOTE]
+>
 >The request specified a limit of one (`limit=1`), therefore the `count` in the response below is 1 and only one entity is returned.
 
 ```json
@@ -408,6 +411,7 @@ A successful response returns a paginated list of time series events and associa
 Results are paginated when retrieving time series events. If there are subsequent pages of results, the `_page.next` property will contain an ID. Additionally, the `_links.next.href` property provides a request URI for retrieving the next page. To retrieve the results, make another GET request to the `/access/entities` endpoint, however you must be sure to replace `/entities` with the value of the provided URI.
 
 >[!NOTE]
+>
 >Be sure that you do not accidentally repeat `/entities/` in the request path. It should only appear once like, `/access/entities?start=...`
 
 **API format**
@@ -903,4 +907,5 @@ The following parameters are used in the path for GET requests to the `/access/e
 |`startTime`|Specify the start time to filter time-series objects (in milliseconds).|`startTime=1539838505`|
 |`endTime`|Specify the end time to filter time-series objects (in milliseconds).|`endTime=1539838510`|
 |`limit`|Numeric value specifying the maximum number of objects to return. Default: 1000|`limit=100`|
+|`property`|Filters by the property value. Supports the following evaluators: =, !=, <, <=, >, >=. Can only be used with experience events, with a maximum of three properties being supported.|`property=webPageDetails.isHomepage=true&property=localTime<="2020-07-20"`|
 |`withCA`|Feature flag for enabling computed attributes for lookup. Default: false|`withCA=true`|

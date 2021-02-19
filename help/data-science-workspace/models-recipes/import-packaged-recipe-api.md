@@ -1,13 +1,15 @@
 ---
-keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics
+keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
-title: Import a packaged recipe (API)
-topic: Tutorial
+title: Import a Packaged Recipe Using the Sensei Machine Learning API
+topic: tutorial
+type: Tutorial
+description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface. 
 ---
 
-# Import a packaged recipe (API)
+# Import a packaged recipe using the Sensei Machine Learning API
 
-This tutorial uses the [!DNL Sensei Machine Learning API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
+This tutorial uses the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 
 
 Before getting started, it is important to note that Adobe Experience Platform [!DNL Data Science Workspace] uses different terms to refer to similar elements within the API and UI. The API terms are used throughout this tutorial and the following table outlines the correlating terms:
 
@@ -28,7 +30,7 @@ This tutorial requires a packaged Recipe file in the form of a Docker URL. Follo
  
 -   `{DOCKER_URL}`: An URL address to a Docker image of an intelligent service.
 
-This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+This tutorial requires you to have completed the [Authentication to Adobe Experience Platform tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 -   `{ACCESS_TOKEN}`: Your specific bearer token value provided after authentication.
 -   `{IMS_ORG}`: Your IMS org credentials found in your unique Adobe Experience Platform integration.
@@ -43,6 +45,7 @@ Engines can be created by making a POST request to the /engines endpoint. The cr
 In order to create an Engine with a packaged Recipe file stored in a Docker container, you must provide the Docker URL to the packaged Recipe file.
 
 >[!CAUTION]
+>
 > If you are using [!DNL Python] or R use the request below. If you are using PySpark or Scala, use the PySpark/Scala request example located below the Python/R example.
 
 **API format**

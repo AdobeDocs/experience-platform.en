@@ -1,8 +1,9 @@
 ---
-keywords: Experience Platform;home;popular topics
+keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
-title: Identity data for privacy requests
+title: Identity Data for Privacy Requests
 topic: overview
+description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
 ---
 
 # Identity data for privacy requests
@@ -17,7 +18,7 @@ When a customer can interact with your brand through several different channels,
 
 For example, when handling customer data requests in [!DNL Privacy Service], an identity may represent a cookie value set under an Adobe-controlled domain, a cookie value under a third-party domain and shared with Adobe, or a custom identifier that you explicitly define within your IMS Organization.
 
-It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a **namespace** that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
+It is therefore required that each identity sent to [!DNL Privacy Service] is accompanied with a namespace that provides context by relating the identity value to its system of origin. A namespace can represent a generic concept such as an email address ("Email") or associate the identity with a specific application, such as an Adobe Advertising Cloud ID ("AdCloud") or Adobe Target ID ("TNTID").
 
 Adobe Experience Platform Identity Service maintains a store of globally defined and user-defined identity namespaces. For more detailed information on namespaces, see the [identity namespace overview](../identity-service/namespaces.md). For a list of standard namespaces and namespace qualifiers that are commonly used in [!DNL Privacy Service], see the [appendix section](api/appendix.md) in the developer guide.
 
