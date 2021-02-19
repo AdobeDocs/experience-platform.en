@@ -11,15 +11,17 @@ description: This guide focuses on how to use the exploratory data analysis (EDA
 
 The exploratory data analysis (EDA) notebook is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models.
 
-The EDA notebook example was optimized with web-based data in mind and consists of two parts. Part one starts with using Query Service to view trends and data snapshots. Next, with a goal in mind for exploratory data analysis, the data is aggregated at the profile and visitor level. Part two starts by performing descriptive analysis on aggregated data using Python libraries. This notebook showcases visualizations such as histograms, scatter plots, boxplots, and a correlation matrix to derive actionable insights used to determine which features are most likely to be helpful in predicting a goal.
+The EDA notebook example was optimized with web-based data in mind and consists of two parts. Part one starts with using Query Service to view trends and data snapshots. Next, with a goal in mind for exploratory data analysis, the data is aggregated at the profile and visitor level. 
+
+Part two starts by performing descriptive analysis on aggregated data using Python libraries. This notebook showcases visualizations such as histograms, scatter plots, boxplots, and a correlation matrix to derive actionable insights used to determine which features are most likely to be helpful in predicting a goal.
 
 ## Getting started
 
-Before reading this guide, please review the [[!DNL JupyterLab] user guide](./overview.md) for a high-level introduction to [!DNL JupyterLab] and its role within Data Science Workspace. Additionally, if you are using your own data, please review the [data access in [!DNL Jupyterlab] notebooks](./access-notebook-data.md) documentation. This guide contains important information on notebook data limits.
+Before reading this guide, please review the [[!DNL JupyterLab] user guide](./overview.md) for a high-level introduction to [!DNL JupyterLab] and its role within Data Science Workspace. Additionally, if you are using your own data, please review the documentation for [data access in [!DNL Jupyterlab] notebooks](./access-notebook-data.md). This guide contains important information on notebook data limits.
 
 This notebook uses a midvalues dataset in the form of Adobe Analytics Experience Events data found in the Analytics Analysis Workspace. In order to use the EDA notebook, you are required to define your data table with the following values `target_table` and `target_table_id`. Any midvalues dataset can be used. 
 
-To find these values follow the steps outlined in the [write to a dataset in python](./access-notebook-data.md#write-python) section of the JupyterLab data access guide. The dataset name (`target_table`) is located in the dataset directory. Once you right click the dataset to explore or write data in a notebook, a dataset ID (`target_table_id`) is provided in the executable code entry. 
+To find these values, follow the steps outlined in the [write to a dataset in python](./access-notebook-data.md#write-python) section of the JupyterLab data access guide. The dataset name (`target_table`) is located in the dataset directory. Once you right click the dataset to explore or write data in a notebook, a dataset ID (`target_table_id`) is provided in the executable code entry. 
 
 ## Data discovery
 
@@ -55,7 +57,7 @@ pd.set_option('display.expand_frame_repr', False)
 pd.set_option('display.max_colwidth', -1)
 ```
 
-### Connect to Adobe Experience Platform Query Service
+### Connect to Adobe Experience Platform [!DNL Query Service]
 
 [!DNL JupyterLab] on Platform allows you to use SQL in a [!DNL Python] notebook to access data through [Query Service](https://www.adobe.com/go/query-service-home-en). Accessing data through [!DNL Query Service] can be useful for dealing with large datasets due to its superior running times. Be advised that querying data using [!DNL Query Service] has a processing time limit of ten minutes.
 
@@ -71,14 +73,12 @@ qs_connect()
 
 In order to begin querying and exploring data, a midvalues dataset table must be supplied. Copy and replace the `table_name` and `table_id` values with your own data table values.
 
-<!-- how do we find the table name and table id? -->
-
 ```python
 target_table = "table_name"
 target_table_id = "table_id"
 ```
 
-once complete this cell should look similar to the following example:
+Once complete, this cell should look similar to the following example:
 
 ```python
 target_table = "cross_industry_demo_midvalues"
@@ -113,7 +113,7 @@ target_day = "(01,02,03)" ## The target days
 
 ### Dataset discovery
 
-Once you have configured all your parameters, started query service, and have a date range, you are ready to begin reading rows of data. It is suggested that you limit the number of rows.
+Once you have configured all your parameters, started [!DNL Query Service], and have a date range, you are ready to begin reading rows of data. You should limit the number of rows you read.
 
 ```python
 from platform_sdk.dataset_reader import DatasetReader
@@ -123,13 +123,13 @@ dataset_reader = DatasetReader(PLATFORM_SDK_CLIENT_CONTEXT, dataset_id=target_ta
 Table = dataset_reader.limit(5).read()
 ```
 
-To view the number of columns available in the dataset use the following cell:
+To view the number of columns available in the dataset, use the following cell:
 
 ```python
 print("\nNumber of columns:",len(Table.columns))
 ```
 
-To view the rows of the dataset, use the following cell. In this example the number of rows are limited to five.
+To view the rows of the dataset, use the following cell. In this example, the number of rows are limited to five.
 
 ```python
 Table.head(5)
@@ -137,7 +137,7 @@ Table.head(5)
 
 ![table row output](../images/jupyterlab/eda/data-table-overview.PNG)
 
-Once you have an idea of what data is contained in the dataset, it can be valuable to further breakdown the dataset. In this example, the column names and data types for each of the columns are listed. In this example, the output is used to check if the data type is correct or not. You may create only a few breakdowns or a dozen depending on the data and what you are trying to understand from it.
+Once you have an idea of what data is contained in the dataset, it can be valuable to further break down the dataset. In this example, the column names and data types for each of the columns are listed, while the output is used to check if the data type is correct or not.
 
 ```python
 ColumnNames_Types = pd.DataFrame(Table.dtypes)
@@ -328,7 +328,7 @@ Exploratory data analysis is used to refine your understanding of the data and b
 
 After finishing the data discovery step, you will have explored at the event level data with some aggregations at the event, city, or user ID level to see trends for a day. Although this data is important, it does not give a full picture. You still do not understand what drives a purchase on your website. 
 
-To understand this, you need to aggregate data at a profile/visitor level, define a purchase goal, apply statistical concepts such as correlation, box plots, scatter plots, and more. These methods are used to compare patterns of activities for buyers vs non-buyers in the prediction window you define.
+To understand this, you need to aggregate data at a profile/visitor level, define a purchase goal, and apply statistical concepts such as correlation, box plots, and scatter plots. These methods are used to compare patterns of activities for buyers vs non-buyers in the prediction window you define.
 
 The following features are created and explored in this section:
 
@@ -339,14 +339,14 @@ The following features are created and explored in this section:
 - `NUMBER_VISITS` : The number of visits.
 - `COUNT_PAID_SEARCHES`: The number of paid searches.
 - `DAYS_SINCE_VISIT`: The number of days since the last visit.
-- `TOTAL_ORDER_REVENUE`: The total oder revenue.
+- `TOTAL_ORDER_REVENUE`: The total order revenue.
 - `DAYS_SINCE_PURCHASE`: The number of days since the previous purchase.
 - `AVG_GAP_BETWEEN_ORDERS_DAYS`: The average gap between purchases in days.
-- `STATE_CITY`: Contains the State and City.
+- `STATE_CITY`: Contains the state and city.
 
-Before you continue with your data aggregation, you need to define the parameters for the prediction variable used in exploratory data analysis. In other words, what do you want from your data science model? Common parameters include a goal, prediction period, and analysis period. The goal is our objective
+Before you continue with your data aggregation, you need to define the parameters for the prediction variable used in exploratory data analysis. In other words, what do you want from your data science model? Common parameters include a goal, prediction period, and analysis period.
 
- If you are using the EDA notebook, you are required to replace the values below before continuing.
+If you are using the EDA notebook, you are required to replace the values below before continuing.
 
 ```python
 goal = "commerce.`order`.purchaseID" #### prediction variable
@@ -355,13 +355,14 @@ prediction_window_day_start = "2020-01-01" #### YYYY-MM-DD
 prediction_window_day_end = "2020-01-31" #### YYYY-MM-DD
 analysis_period_day_start = "2020-02-01" #### YYYY-MM-DD
 analysis_period_day_end = "2020-02-28" #### YYYY-MM-DD
-### If the goal is a categorical goal then select threshold for the defining category and creating bins (say 0 is no order placed and 1 is at least one order placed):
+
+### If the goal is a categorical goal then select threshold for the defining category and creating bins. 0 is no order placed, and 1 is at least one order placed:
 threshold = 1
 ```
 
 ### Data aggregation for feature and goal creation
 
-To begin exploratory analysis the creation of a goal at the profile level is needed followed by the aggregation of your dataset. In this example, two queries are provided. The first query contains the creation of a goal. The second query needs to be updated to include any variables other than the ones in the first query. You may want to update the `limit` for your query. After performing the following queries, aggregated data is now available for exploration.
+To begin exploratory analysis, you need to create a goal at the profile level, followed by aggregating your dataset. In this example, two queries are provided. The first query contains the creation of a goal. The second query needs to be updated to include any variables other than the ones in the first query. You may want to update the `limit` for your query. After performing the following queries, aggregated data is now available for exploration.
 
 ```sql
 %%read_sql target_df -d -c QS_CONNECTION
@@ -467,11 +468,13 @@ print("Count of unique profiles :", (len(Data)))
 
 ### Detect missing values and outliers
 
-Once you have completed your data aggregation and merged it with your goal, you need to review the data sometimes referred to as a data health check. This process involves identifying missing values and outliers. When issues are identified, the next task is to come up with specific strategies for handling them.
+Once you have completed your data aggregation and merged it with your goal, you need to review the data sometimes referred to as a data health check.
+
+This process involves identifying missing values and outliers. When issues are identified, the next task is to come up with specific strategies for handling them.
 
 >[!NOTE]
 >
->During this step, you sometimes spot corruption in the values that may signal a fault in the data logging process.
+>During this step, you may spot corruption in the values that can signal a fault in the data logging process.
 
 ```python
 Missing = pd.DataFrame(round(Data.isnull().sum()*100/len(Data),2))
@@ -501,13 +504,13 @@ iplot(fig)
 
 ![Missing values](../images/jupyterlab/eda/missing-values.png)
 
-After detecting missing values, it is critical to identify outliers. Parametric statistics like means, standard deviations, correlations, and every statistic based on these are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
+After detecting missing values, it is critical to identify outliers. Parametric statistics like the mean, standard deviation, and correlation are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
 
 To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the 25th percentile, or 1.5 times the IQR above the 75th percentile. Values that fall under either of these are defined as an outlier in the following cell.
 
 >[!TIP]
 >
->Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones. To learn more about dropping outliers, visit the [optional data cleaning step](#optional-data-clean).
+>Correcting outliers requires you to have an understanding of the business and industry you're working in. Sometimes, you can't drop an observation just because it is an outlier. Outliers can be legitimate observations and are often the most interesting ones. To learn more about dropping outliers, visit the [optional data cleaning step](#optional-data-clean).
 
 ```python
 TARGET = Data.TARGET
@@ -552,7 +555,7 @@ iplot(fig)
 
 ### Univariate analysis
 
-Once your data has been corrected for missing values and outliers you are able to start your analysis. There are three types of analysis, univariate, bivariate, and multivariate analysis. Univariate analysis takes data, summarizes, and finds patterns in the data using single variable relationships. If you were to look at more than one variable at a time, it becomes bivariate analysis or in the case of three or more multivariate analysis.
+Once your data has been corrected for missing values and outliers, you are able to start your analysis. There are three types of analysis: univariate, bivariate, and multivariate analysis. Univariate analysis takes data, summarizes, and finds patterns in the data using single variable relationships. Bivariate analysis looks at more than one variable at a time, while multivariate analysis looks at three or more variables at a time.
 
 The following example produces a table to visualize the distribution of the features.
 
@@ -606,7 +609,7 @@ for column in Data_categorical.columns[0:]:
 
 ### Remove columns with only a single distinct value
 
-Columns that have only one value do not add any information to the analysis, these columns can be removed.
+Columns that have only value one do not add any information to the analysis, and can be removed.
 
 ```python
 for col in Data.columns:
@@ -660,19 +663,21 @@ for column in Missing_cat:
     Data[column].fillna(Data[column].mode()[0], inplace=True)
 ```
 
-Once complete the clean data is ready for bivariate analysis.
+Once complete, the clean data is ready for bivariate analysis.
 
 ### Bivariate analysis
 
 Bivariate analysis is used to help understand relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done seperately for each data type. The following charts are recommended for bivariate analysis:
 
 - **Correlation**: A correlation coefficient is the measure of the strength of a relationship between two features. Correlation has values between -1 and 1, where: 1 indicates a strong positive relationship, -1 indicates a strong negative relationship, and a result of zero indicates no relationship at all.
-- **Pairplot**: Pair Plots are a really simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
-- **Heatmap**: This is the correlation coefficient for all variables in the dataset.
-- **Boxplots**: Boxplots are a standardized way of displaying data distribution based on a five number summary (“minimum”, first quartile (Q1), median, third quartile (Q3), and “maximum”).
+- **Pairplot**: Pairplots are a simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
+- **Heatmap**: Heatmaps are the correlation coefficient for all variables in the dataset.
+- **Boxplots**: Boxplots are a standardized way of displaying data distribution based on a five number summary (minimum, first quartile (Q1), median, third quartile (Q3), and maximum).
 - **Countplot**: A countplot is like a histogram or a bar graph for some categorical features. It shows the number of occurrences of an item based on a certain type of category.
 
-To understand relationship between the 'goal' variable and the predictors/features we use charts based on datatypes. For numerical features it is suggested to use boxplot if the 'goal' variable is categorical, as well as, pairplot and heatmap if the 'goal' variable is numerical. For categorical features it is suggested to use countplot if the 'goal' variable is categorical, as well as, boxplot if the 'goal' variable is numerical. Using these methods helps with understanding relationships. These relationships can be in the form of features, or predictors and a goal.
+To understand relationship between the 'goal' variable and the predictors/features, charts are used based on datatypes. For numerical features, you should use a boxplot if the 'goal' variable is categorical, as well as, a pairplot and heatmap if the 'goal' variable is numerical. 
+
+For categorical features, you should use a countplot if the 'goal' variable is categorical, as well as, a boxplot if the 'goal' variable is numerical. Using these methods helps with understanding relationships. These relationships can be in the form of features, or predictors and a goal.
 
 **Numerical predictors**
 
@@ -794,7 +799,8 @@ else:
 
 ## Optional data cleaning step {#optional-data-clean}
 
-Correcting outliers requires you to have a business and industry understanding. Sometimes it is not acceptable to drop an observation just because it is an outlier. Outliers can be legitimate observations and are sometimes the most interesting ones.
+Correcting outliers requires you to have an understanding of the business and industry you're working in. Sometimes, you can't drop an observation just because it is an outlier. Outliers can be legitimate observations and are often the most interesting ones.
+
 For more information on outliers and whether to drop them or not, read this entry from the [analysis factor](https://www.theanalysisfactor.com/outliers-to-drop-or-not-to-drop/).
 
 The following example cell caps and floors data points that are outliers using [interquartile range](https://www.thoughtco.com/what-is-the-interquartile-range-rule-3126244).
