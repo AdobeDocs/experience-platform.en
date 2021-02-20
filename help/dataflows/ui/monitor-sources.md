@@ -55,7 +55,7 @@ To sort through the list of sources, select **[!UICONTROL My sources]** and then
 
 ![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
-To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**
+To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**.
 
 ![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
 
@@ -105,7 +105,7 @@ You can use the breadcrumb system at the top header to navigate your way back to
 
 ## Cross-service monitoring
 
-The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
+The upper part of the dashboard contains a representation of the ingestion flow from the source-level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
 
 ![cross-service-monitoring](../assets/ui/monitor-sources/cross-service-monitoring.png)
 
@@ -133,11 +133,11 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 | Records failed | The number of records that were not ingested into Platform due to errors in the data. |
 | Records skipped | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | Records ingested | The number of records ingested into [!DNL Identity Service]. |
-| Total records | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records.
-| [!DNL Identities] added | The number of net new identifiers added to [!DNL Identity Service]
+| Total records | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records. |
+| [!DNL Identities] added | The number of net new identifiers added to [!DNL Identity Service] |
 | Graphs created | The number of net new identity graphs created in [!DNL Identity Service]. |
 | Graphs updated | The number of existing identity graphs updated with new edges. |
-| Failed dataflow runs | The number of dataflow runs that failed.
+| Failed dataflow runs | The number of dataflow runs that failed. |
 | Processing time | The timestamp from the start of ingestion to completion. |
 | Status | Defines the overall status of a dataflow. The possible status values are: `Success`, `Failed`, and `Processing`. |
 
