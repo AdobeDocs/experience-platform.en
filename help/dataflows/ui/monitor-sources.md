@@ -43,9 +43,9 @@ The graphs are enabled by default and you can disable them to expand the list of
 
 | Source ingestion | Description |
 | ---------------- | ----------- |
-| Metrics | Displays information on the total number of records ingested, records failed, and failed dataflows. |
-| Records ingested | Displays the total count of records ingested into Data Lake based on the time frame that you set. |
-| Records failed | Displays the number of records that were not ingested into Data Lake due to errors in the data, based on the time frame that you set. |
+| Records ingested | The total number of records ingested. |
+| Records failed | The total number of records that were not ingested due to errors in the data. |
+| Total failed dataflows | The total number of dataflows with a `failed` status. |
 
 The source ingestion list displays all sources that contain at least one existing account. The list also includes information on each source's ingestion rate, number of failed records, and total number of failed dataflows based on the time frame that you applied.
 
@@ -139,7 +139,7 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 | Graphs updated | The number of existing identity graphs updated with new edges. |
 | Failed dataflow runs | The number of dataflow runs that failed.
 | Processing time | The timestamp from the start of ingestion to completion. |
-| Status |
+| Status | Defines the overall status of a dataflow. The possible status values are: `Success`, `Failed`, and `Processing`. |
 
 The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
 
@@ -168,7 +168,7 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 | Total [!DNL Profile] fragments | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
 | Failed dataflow runs | The number of dataflow runs that failed. |
 | Processing time | The timestamp from the start of ingestion to completion. |
-| Status | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: All records that were ingested in a 1hr event time window, none of them were bad records/got dropped.</li><li>`Failure`: All good records failed to make it to Datalake/target due to some outage/severe failure.<li>`Processing`: All records that were ingested in a 1hr event time window, a few bad records were dropped/skipped/failed due to validation failure.</li></ul>
+| Status | Defines the overall status of a dataflow. The possible status values are: `Success`, `Failed`, and `Processing`. |
 
 The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
 
