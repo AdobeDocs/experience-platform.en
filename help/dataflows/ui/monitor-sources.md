@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;sources
-description: In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+description: This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 solution: Experience Platform
 title: Monitor Dataflows for Sources in the UI
 topic: overview
