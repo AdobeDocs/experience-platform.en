@@ -119,7 +119,7 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 
 ![sources](../assets/ui/monitor-sources/sources.png)
 
-### [!DNL Identity] processing
+### [!DNL Identity] metrics
 
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
@@ -151,7 +151,7 @@ From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]**
 
 ![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
 
-### [!DNL Profile] processing
+### [!DNL Profile] metrics
 
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
 
