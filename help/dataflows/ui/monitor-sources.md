@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;sources
-description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the Sources workspace.
+description: In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 solution: Experience Platform
 title: Monitor Dataflows for Sources in the UI
 topic: overview
@@ -9,25 +9,25 @@ type: Tutorial
 
 # Monitor dataflows for sources in the UI
 
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for monitoring dataflows and troubleshooting errors from failed flow runs using the [!UICONTROL Sources] workspace.
+In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+
+The monitoring dashboard provides you with a visual representation of the the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's successful ingestion, or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
+
+This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Dataflows](../home.md): 
+* [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-* [Identity Service](../../identity-service/home.md):
-* [Real-time Customer Profile](../../profile/home.md):
+* [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
+* [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-## Monitor failed dataflows
+## Aggregated monitoring view
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from the source level to Platform.
-
-The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
-
-![ingestion-flow](../assets/ui/monitor-sources/ingestion-flow.png)
+In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
 At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
 
@@ -47,7 +47,7 @@ The graphs are enabled by default and you can disable them to expand the list of
 | Records ingested | Displays the total count of records ingested into Data Lake based on the time frame that you set. |
 | Records failed | Displays the number of records that were not ingested into Data Lake due to errors in the data, based on the time frame that you set. |
 
-The source ingestion list displays all sources that contain existing dataflows, including information on their ingestion rates, number of failed records, and total number of failed dataflows based on the time frame that you applied.
+The source ingestion list displays all sources that contain at least one existing account. The list also includes information on each source's ingestion rate, number of failed records, and total number of failed dataflows based on the time frame that you applied.
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
@@ -55,7 +55,11 @@ To sort through the list of sources, select **[!UICONTROL My sources]** and then
 
 ![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
-Alternatively, you can enter a source into the search bar to isolate a single source. Once you have your source identified, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see a list of its active dataflows.
+To view all existing dataflows across all sources, select **[!UICONTROL Dataflows]**
+
+![view-all-dataflows](../assets/ui/monitor-sources/view-all-dataflows.png)
+
+Alternatively, you can enter a source into the search bar to isolate a single source. Once you have your source identified, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it to see a list of its active dataflows.
 
 ![search](../assets/ui/monitor-sources/search.png)
 
@@ -95,13 +99,17 @@ When you are finished, select **[!UICONTROL Close]**
 
 ![error-diagnostics](../assets/ui/monitor-sources/error-diagnostics.png)
 
-## Monitor successful dataflows
-
-You can use the breadcrumb system at the top header to navigate your way back to the dataflows screen and monitor successful dataflows. Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page, and then select **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** to return to the dataflows page.
+You can use the breadcrumb system at the top header to navigate your way back to the [!UICONTROL Monitoring] dashboard. Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page, and then select **[!UICONTROL Dataflow: Loyalty Data Ingestion Demo - Failed]** to return to the dataflows page.
 
 ![breadcrumbs](../assets/ui/monitor-sources/breadcrumbs.png)
 
-From the dataflows page, disable the **[!UICONTROL Show failures only]** toggle, and then locate the successful dataflow that you want to monitor. Once you have identified your dataflow, select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see its dataflow run information.
+## Cross-service monitoring
+
+The upper part of the dashboard contains a representation of the ingestion flow from the source level, to [!DNL Identity Service], and to [!DNL Profile]. Each cell includes a dot marker that indicates the presence of errors that occurred at that stage of ingestion. A green dot means an error-free ingestion, while a red dot means that an error occurred in that particular stage of ingestion.
+
+![cross-service-monitoring](../assets/ui/monitor-sources/cross-service-monitoring.png)
+
+From the dataflows page, locate a successful dataflow and select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see its dataflow run information.
 
 ![dataflow-success](../assets/ui/monitor-sources/dataflow-success.png)
 
@@ -111,9 +119,11 @@ Select **[!UICONTROL Identities]** to see ingestion in the [!UICONTROL Identitie
 
 ![sources](../assets/ui/monitor-sources/sources.png)
 
+### [!DNL Identity] processing
+
 The [!UICONTROL Identity processing] page contains information on records ingested to [!DNL Identity Service], including number of identities added, graphs created, and graphs updated.
 
-Select the **[!UICONTROL Profiles]** to see the state records ingestion in the [!DNL Profiles] stage.
+Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see more information on your [!DNL Identity] dataflow run.
 
 ![identities](../assets/ui/monitor-sources/identities.png)
 
@@ -128,23 +138,41 @@ Select the **[!UICONTROL Profiles]** to see the state records ingestion in the [
 | Graphs created | The number of net new identity graphs created in [!DNL Identity Service]. |
 | Graphs updated | The number of existing identity graphs updated with new edges. |
 | Failed dataflow runs | The number of dataflow runs that failed.
-| Processing time | The timestamp from the start of the ingestion to completion. |
+| Processing time | The timestamp from the start of ingestion to completion. |
 | Status |
 
+The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
+
+Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page.
+
+![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
+
+From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]** to see the status of records ingestion in the [!DNL Profiles] stage.
+
+![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
+
+### [!DNL Profile] processing
+
 The [!UICONTROL Profile processing] page contains information on records ingested to [!DNL Profile], including number of profile fragments created, profile fragments updated, and the total number of profile fragments.
+
+Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside the dataflow run start time to see more information on your [!DNL Profile] dataflow run.
 
 ![profiles](../assets/ui/monitor-sources/profiles.png)
 
 | Profile metrics | Description |
 | --------------- | ----------- |
-| Records received | 
-| Records failed |
-| [!DNL Profile fragments added] |
-| [!DNL Profile fragments updated] |
-| Failed dataflow runs |
-| Total [!DNL Profile] fragments |
-| Processing time |
-| Status |
+| Records received |  The number of records received from a source. |
+| Records failed | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
+| [!UICONTROL Profile fragments added] | The number of net new [!DNL Profile] fragments added. |
+| [!UICONTROL Profile fragments updated] | The number of existing [!DNL Profile] fragments updated |
+| Total [!DNL Profile] fragments | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
+| Failed dataflow runs | The number of dataflow runs that failed. |
+| Processing time | The timestamp from the start of ingestion to completion. |
+| Status | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: All records that were ingested in a 1hr event time window, none of them were bad records/got dropped.</li><li>`Failure`: All good records failed to make it to Datalake/target due to some outage/severe failure.<li>`Processing`: All records that were ingested in a 1hr event time window, a few bad records were dropped/skipped/failed due to validation failure.</li></ul>
+
+The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
+
+![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
 ## Next steps
 
