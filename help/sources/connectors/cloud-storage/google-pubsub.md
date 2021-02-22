@@ -6,13 +6,13 @@ topic: overview
 description: Learn how to connect Google PubSub to Adobe Experience Platform using APIs or the user interface.
 ---
 
-# (Beta) [!DNL Google Cloud Storage] connector
+# (Beta) [!DNL Google PubSub] connector
 
 >[!NOTE]
 >
 >The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].c
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Event Hubs] in real-time.
 

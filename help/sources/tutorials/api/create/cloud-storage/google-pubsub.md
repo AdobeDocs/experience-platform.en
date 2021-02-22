@@ -13,7 +13,7 @@ description: Learn how to connect Adobe Experience Platform to a Google PubSub a
 >
 >The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "PubSub") to Adobe Experience Platform.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]) to Adobe Experience Platform.
 
 ## Getting started
 
