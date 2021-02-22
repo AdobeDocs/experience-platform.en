@@ -24,7 +24,7 @@ default-src 'self';
 connect-src 'self' EDGE-DOMAIN
 ```
 
-In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first party domain is configured for the [edgeDomain](configuring-the-sdk.md#edge-domain) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), the `connect-src` directive also needs to include `*.demdex.net`.
+In the above example, `EDGE-DOMAIN` should be replaced with the first-party domain. The first-party domain is configured for the [edgeDomain](configuring-the-sdk.md#edge-domain) setting. If no first-party domain has been configured, `EDGE-DOMAIN` should be replaced with `*.adobedc.net`. If visitor migration is turned on using [idMigrationEnabled](configuring-the-sdk.md#id-migration-enabled), the `connect-src` directive also needs to include `*.demdex.net`.
 
 ### Use NONCE to allow inline script and style elements
 
