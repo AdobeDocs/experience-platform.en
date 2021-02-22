@@ -31,6 +31,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
@@ -78,6 +79,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
+      - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -158,6 +160,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
