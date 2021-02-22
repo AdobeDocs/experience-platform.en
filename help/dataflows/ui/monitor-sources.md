@@ -11,7 +11,7 @@ type: Tutorial
 
 In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
-The monitoring dashboard provides you with a visual representation of the the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's successful ingestion, or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
+The monitoring dashboard provides you with a visual representation of the the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's success or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
 
 This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 
@@ -20,6 +20,7 @@ This tutorial provides steps to monitor your dataflow, using both aggregated mon
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Dataflows](../home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+  * [Dataflow runs](../../sources/notifications.md): Dataflow runs are the recurring scheduled jobs based on the frequency configuration of selected dataflows.
 * [Sources](../../sources/home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Identity Service](../../identity-service/home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
 * [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
@@ -129,7 +130,7 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 
 | Identity metrics | Description |
 | ---------------- | ----------- |
-| Records received | The number of records received from a source. |
+| Records received | The number of records received from [!DNL Data Lake]. |
 | Records failed | The number of records that were not ingested into Platform due to errors in the data. |
 | Records skipped | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
 | Records ingested | The number of records ingested into [!DNL Identity Service]. |
@@ -161,7 +162,7 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 
 | Profile metrics | Description |
 | --------------- | ----------- |
-| Records received |  The number of records received from a source. |
+| Records received |  The number of records received from [!DNL Data Lake]. |
 | Records failed | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | [!UICONTROL Profile fragments added] | The number of net new [!DNL Profile] fragments added. |
 | [!UICONTROL Profile fragments updated] | The number of existing [!DNL Profile] fragments updated |
