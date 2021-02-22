@@ -1,26 +1,22 @@
 ---
 keywords: SessionCam;session cam;sessioncam
 title: SessionCam extension
-seo-title: SessionCam extension
-description: The SessionCam extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The SessionCam extension is an analytics destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The SessionCam extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL SessionCam] Extension {#sessioncam-extension}
-
-## Overview {#overview}
+# [!DNL SessionCam] extension {#sessioncam-extension}
 
 [!DNL SessionCam] provides an essential suite of tools that reveal user behavior and show you the most important problems to fix.
 
-[!DNL SessionCam] is an analytics extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
+[!DNL SessionCam] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Platform, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![SessionCam Extension](../../assets/catalog/analytics/sessioncam/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
 
 To use this extension, you need access to Adobe Experience Platform Launch. Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Platform Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
@@ -28,7 +24,7 @@ To use this extension, you need access to Adobe Experience Platform Launch. Plat
 
 To install the [!DNL SessionCam] extension:
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
@@ -54,6 +50,6 @@ You can configure, upgrade, and delete extensions in the Platform Launch interfa
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
+>If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.

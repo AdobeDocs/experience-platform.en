@@ -1,20 +1,18 @@
 ---
 keywords: destinations;experience cloud solutions; target;target destination; ad cloud; advertising cloud; audience manager; adobe target destination; target; audience manager destination;
-title: Adobe Destinations
-seo-title: Adobe Destinations
-description: Manage your customer experience by connecting your data in Real-time CDP to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
-seo-description: Manage your customer experience by connecting your data in Real-time CDP to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
+title: Adobe destinations overview
+description: Manage your customer experience by connecting your data in Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more
 ---
 
-# Adobe Destinations {#adobe-destinations}
+# Adobe destinations overview {#adobe-destinations}
 
-Manage your customer experience by connecting your data in Real-time CDP to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more.
+Manage your customer experience by connecting your data in Adobe Experience Platform to other Adobe Experience Cloud solutions for ad targeting, personalization, marketing automation and more.
 
 ## Connections
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
-- [Adobe Campaign](../email-marketing/adobe-campaign.md)
+- [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
 
 ## Extensions
 

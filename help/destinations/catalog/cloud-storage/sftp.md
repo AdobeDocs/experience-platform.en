@@ -1,14 +1,10 @@
 ---
 keywords: SFTP;sftp
-title: SFTP destination
-seo-title: SFTP destination
+title: SFTP connection
 description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
-seo-description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
 ---
 
-# SFTP destination
-
-## Overview
+# SFTP connection
 
 Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
 
@@ -30,4 +26,4 @@ For SFTP destinations, enter the following information in the create destination
 
 ## Exported data {#exported-data}
 
-For SFTP destinations, Real-time CDP creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.

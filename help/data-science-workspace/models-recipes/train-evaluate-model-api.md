@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
-title: Train and evaluate a model (API)
+title: Train and Evaluate a Model using the Sensei Machine Learning API
 topic: tutorial
 type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
 ---
 
-# Train and evaluate a model (API)
+# Train and evaluate a model using the [!DNL Sensei Machine Learning] API
 
 
 This tutorial will show you how to create, train, and evaluate a Model using API calls. Refer to [this document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) for a detailed list of API documentation.
@@ -16,7 +16,7 @@ This tutorial will show you how to create, train, and evaluate a Model using API
 
 Follow the [Import a packaged Recipe using the API](./import-packaged-recipe-api.md) for creating an Engine, which is required to train and evaluate a Model using the API.
 
-Follow this [Tutorial](../../tutorials/authentication.md) for authorization to start making API calls.
+Follow the [Experience Platform API authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to start making API calls.
 
 From the tutorial you should now have the following values:
 

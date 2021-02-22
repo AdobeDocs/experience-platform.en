@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Batch Ingestion overview
+title: Batch Ingestion Overview
 topic: overview
-description: The Batch Ingestion API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
+description: The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 ---
 
-# [!DNL Batch Ingestion] overview
+# Batch ingestion overview
 
-The [!DNL Batch Ingestion] API allows you to ingest data into Adobe Experience Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
 The [Data Ingestion API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) provides additional information on these API calls.
 
@@ -29,7 +29,7 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 
 - Data to upload must be either in Parquet or JSON formats.
 - A dataset created in the [[!DNL Catalog services]](../../catalog/home.md).
-- Contents of the parquet file must match a subset of the schema of the dataset being uploaded into.
+- Contents of the Parquet file must match a subset of the schema of the dataset being uploaded into.
 - Have your unique Access Token after authentication.
 
 ### Batch ingestion best practices
@@ -45,7 +45,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -124,7 +124,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!NOTE]
 >
->The examples below use the [parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
+>The examples below use the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
 
 ### Small file upload
 

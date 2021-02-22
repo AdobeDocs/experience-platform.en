@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
-title: Collect CRM data through source connectors and APIs
+title: Collect CRM Data Through Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform using source connectors and APIs.
 ---
 
-# Collect CRM data through source connectors and APIs
+# Collect CRM data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party CRM and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -80,13 +80,36 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Salesforce source connection",
-        "connectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
+        "baseConnectionId": "4cb0c374-d3bb-4557-b139-5712880adc55",
         "description": "Salesforce source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Accounts"
+            "tableName": "Accounts",
+            "columns": [
+                {
+                    "name": "first_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "last_name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                },
+                {
+                    "name": "email",
+                    "type": "string",
+                    "xdm": {
+                        "type": "String"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "ccfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
@@ -97,7 +120,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `connectionId` | The unique connection ID of the third-party CRM system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party CRM system you are accessing. |
 | `params.path` | The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party CRM system. See the [appendix](#appendix) for a list of connection spec IDs. |
 

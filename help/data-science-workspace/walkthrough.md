@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
-title: Data Science Workspace walkthrough
+title: Data Science Workspace Walkthrough
 topic: Walkthrough
 description: This document provides a walkthrough for Adobe Experience Platform Data Science Workspace. Specifically the general workflow a data scientist would go through to solve a problem using machine learning.
 ---

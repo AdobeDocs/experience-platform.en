@@ -1,22 +1,21 @@
 ---
-title: Retrieving Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK Retrieving Experience Cloud ID
-description: Learn how to get Adobe Experience Cloud Id.
+title: Retrieve Experience Cloud IDs using the Adobe Experience Platform Web SDK
+description: Learn how to retrieve Adobe Experience Cloud IDs (ECIDs) using the Adobe Experience Platform Web SDK.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 ---
 
-# Identity - Retrieving the Experience Cloud ID
+# Retrieve Adobe Experience Cloud IDs
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
-## First party identity
+## First-party identity
 
-The [!DNL Identity Service] stores the identity in a cookie in a first party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
+The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
 
-## 3rd party identity
+## 3rd-party identity
 
-The [!DNL Identity Service] has the ability to sync an ID with a 3rd party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (e.g. someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it (e.g. Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
+The [!DNL Identity Service] has the ability to sync an ID with a 3rd-party domain (demdex.net) to enable tracking across sites. When this is enabled the first request for a visitor (for example, someone without an ECID) will be made to demdex.net. This will only be done on browsers that allow it such as Chrome) and is controlled by the `thirdPartyCookiesEnabled` parameter in the configuration. If you would like to disable this feature all together, set `thirdPartyCookiesEnabled` to false.
 
 ## ID migration
 
@@ -25,6 +24,14 @@ When migrating from using Visitor API, you can also migrate existing AMCV cookie
 * When some pages of a domain are using Visitor API and other pages are using this SDK. To support this case, the SDK reads existing AMCV cookies and writes a new cookie with the existing ECID. Additionally, the SDK writes AMCV cookies so that if the ECID is obtained first on a page instrumented with the SDK, subsequent pages that are instrumented with Visitor API have the same ECID.
 * When Adobe Experience Platform Web SDK is set up on a page that also has Visitor API. To support this case, if the AMCV cookie is not set, the SDK looks for Visitor API on the page and calls it to get the ECID.
 * When the entire site is using Adobe Experience Platform Web SDK and does not have Visitor API, it is useful to migrate the ECIDs so that the return visitor information is retained. After the SDK is deployed with `idMigrationEnabled` for a period of time so that most of the visitor cookies are migrated, the setting can be turned off.
+
+## Updating traits for migration
+
+When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
+
+## Server Side Forwarding
+
+If you currently have server side forwarding enabled and are using `appmeasurement.js`. and `visitor.js` you can keep the server side forwarding feature enabled and this won't cause any issues. In the backend, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won’t call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.
 
 ## Retrieving the Visitor ID
 

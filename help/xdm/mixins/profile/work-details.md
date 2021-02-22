@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
-title: Work Contact Details mixin
+title: Work Contact Details Mixin
 topic: overview
 description: This document provides an overview of the Work Contact Details mixin.
 ---

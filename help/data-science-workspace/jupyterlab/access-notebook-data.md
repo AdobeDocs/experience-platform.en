@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;%dataset;interactive mode;batch mode;Spark sdk;python sdk;access data;notebook data access
 solution: Experience Platform
-title: Data access in Jupyterlab notebooks
+title: Data Access in Jupyterlab Notebooks
 topic: Developer Guide
-description: This guide focuses on how to use Jupyter notebooks, built within Data Science Workspace to access your data.
+description: This guide focuses on how to use Jupyter Notebooks, built within Data Science Workspace to access your data.
 ---
 
 # Data access in [!DNL Jupyterlab] notebooks

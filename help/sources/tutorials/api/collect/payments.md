@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect payment data;payment data
 solution: Experience Platform
-title: Collect payment data through source connectors and APIs
+title: Collect Payment Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect payments data through source connectors and APIs
+# Collect payment data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party payments application and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -80,14 +80,46 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "PayPal source connection",
-        "connectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
+        "baseConnectionId": "24151d58-ffa7-4960-951d-58ffa7396097",
         "description": "PayPal source connection",
         "data": {
             "format": "tabular",
             }
         },
         "params": {
-            "path": "PayPal.Catalog_Products"
+            "tableName": "PayPal.Catalog_Products",
+            "columns": [
+                {
+                    "name": "Product_Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Product_Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Description",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Create_Time",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "221c7626-58f6-4eec-8ee2-042b0226f03b",
@@ -98,7 +130,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId` | The unique connection ID of the third-party payments application you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party payments application you are accessing. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id`| The connection spec ID of your payments application. |
 

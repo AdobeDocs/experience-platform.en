@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;dule;DULE
 solution: Experience Platform
-title: Data usage policies overview
+title: Data Usage Policies Overview
 topic: policies
 description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
 ---
@@ -38,7 +38,7 @@ See the appendix to this document for a list of [available Adobe-defined marketi
 
 Experience Platform has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent marketing use cases recognized by Experience Platform Data Governance.
 
-For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/data-export-controls.html).
+For a reference on how specific Data Export Controls map to marketing actions in Platform, please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-export-controls.html).
 -->
 
 ## Managing data usage policies {#manage}

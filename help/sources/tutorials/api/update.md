@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics; flow service; update connections
 solution: Experience Platform
-title: Update connection information using the Flow Service API
+title: Update Connection Information Using the Flow Service API
 topic: overview
 type: Tutorial
 description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
@@ -30,7 +30,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

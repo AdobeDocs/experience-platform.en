@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
-title: Privacy regulation FAQ
+title: Privacy Regulations FAQ
 topic: troubleshooting
 description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
 ---
 
-# Privacy regulation FAQ
+# Privacy regulations FAQ
 
 This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
 
@@ -60,7 +60,7 @@ For many regulations like the GDPR, explicit consent is required for processing 
 
 ### Can data subjects under a certain age give consent? 
 
-All privacy regulations stipulate that if a data subject is below a certain age, they cannot legally provide consent for the collection of their personal data. Some regulations allow for consent to be given by the holder of parental responsibility for that data subject in these cases, but not all. The following table lists the minimum age for data subjects to provide their own consent for each regulation, with notes for further information:
+Many privacy regulations stipulate that if a data subject is below a certain age, they cannot legally provide consent for the collection of their personal data. Some regulations allow for consent to be given by the holder of parental responsibility for that data subject in these cases, but not all. The following table lists the minimum age for data subjects to provide their own consent for each regulation, with notes for further information:
 
 | Regulation | Age of consent | Notes |
 | --- | --- | --- |
@@ -68,6 +68,8 @@ All privacy regulations stipulate that if a data subject is below a certain age,
 | GDPR (European Union) | 16 | <ul><li>Some member states of the EU may provide a law for a lower age for this purpose, but no lower than 13.</li><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
 | LGPD (Brazil) | 13 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li><li>Consent may be given by a 13 to 18 year old natural person, as long as the processing of their personal data is undergone in their best interest.</li></ul> |
 | PDPA (Thailand) | 10 | <ul><li>Parental consent must be provided for all data subjects below the age limit.</li></ul> |
+
+<!-- | New Zealand [!DNL Privacy Act] | 16 | <ul><li>Parental consent must be provided for all data subjects below the age limit in cases where consent is required.</li></ul> | -->
 
 ### How many days does a business have to respond to a consumer request to access or delete personal information?
 
@@ -79,6 +81,8 @@ Assuming that the business has collected personal information and that it can au
 | GDPR (European Union) | 30 days | If the request is complex, or numerous requests have been made by the same data subject, then the request can be extended to 60 days. |
 | LGPD (Brazil) | 15 days | |
 | PDPA (Thailand) | 30 days | If a company cannot respond to a data subject's request within the compliance window, the company will have an additional 30 days from the date they were unable to fulfill the request to respond in writing to the data subject. |
+
+<!-- | New Zealand [!DNL Privacy Act] | 20 working days | | -->
 
 ### Does my business need to appoint a data protection officer?
 
@@ -100,12 +104,6 @@ Once you have taken the necessary steps to authenticate consumers that fall with
 >
 >Further guidance from the California regulator is still forthcoming as to which types of data are eligible for consumer privacy requests.
 
-### Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
-
-Adobe Experience Cloud applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
-
-Adobe has received various certifications of its privacy and security practices, such as an ISO 27001 certification and a TrustArc GDPR validation.
-
 ## CCPA questions
 
 The following questions relate specifically to the CCPA.
@@ -122,6 +120,12 @@ As a Service Provider, Adobe collects and processes personal information on beha
 Given this relationship and Adobe's contract language, disclosures to Adobe likely would not be considered a "sale" for which businesses would need to provide notice and request consent.  
 
 However, Adobe services may be used to enable certain data sharing and transfers to third parties. These third-party transfers could be considered a "sale" and legally require disclosure and consent. Customers should work with their legal counsel to evaluate specific use cases to assess applicable requirements.
+
+### Does Adobe offer other tools that may be helpful in addressing CCPA requirements?
+
+Adobe Experience Cloud applications provide data management and governance functions that can be helpful for companies' privacy needs. Among these tools are data usage labeling, role-based access controls, IP obfuscation, and hashing capabilities.
+
+Adobe has received various certifications of its privacy and security practices, such as an ISO 27001 certification and a TrustArc GDPR validation.
 
 ## GDPR questions
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
-title: Collect protocols data through source connectors and APIs
+title: Collect Protocols Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect protocols data through source connectors and APIs
+# Collect protocols data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party protocol application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -30,7 +30,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -78,13 +78,49 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Generic OData source connection",
-        "connectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
+        "baseConnectionId": "a5c6b647-e784-4b58-86b6-47e784ab580b",
         "description": "Generic OData source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Orders"
+            "tableName": "Orders",
+            "columns": [
+                {
+                "name": "OrderID",
+                "type": "integer",
+                "xdm": {
+                    "type": "integer",
+                    "minimum": -2147483648,
+                    "maximum": 2147483647
+                }
+                },
+                {
+                    "name": "CustomerID",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "OrderDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                {
+                    "name": "ShippedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "8e6b41a8-d998-4545-ad7d-c6a9fff406c3",
@@ -95,7 +131,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId`| The connection ID of your protocols application |
+| `baseConnectionId`| The connection ID of your protocols application |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id`| The connection specification ID of your protocols application. |
 

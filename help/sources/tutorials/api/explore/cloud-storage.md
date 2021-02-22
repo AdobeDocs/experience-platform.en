@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
-title: Explore a cloud storage system using the Flow Service API
+title: Explore a cLoud Storage System Using the Flow Service API
 topic: overview
-description: This tutorial uses the Flow Service API to explore a third party cloud storage system.
+description: This tutorial uses the Flow Service API to explore a third-party cloud storage system.
 ---
 
 # Explore a cloud storage system using the [!DNL Flow Service] API
@@ -38,7 +38,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

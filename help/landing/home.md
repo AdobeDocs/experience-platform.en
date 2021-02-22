@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
-title: Adobe Experience Platform overview
+title: Adobe Experience Platform Overview
 topic: getting started
-description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
+description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
 # Adobe Experience Platform overview
@@ -26,14 +26,16 @@ To begin learning more about a specific [!DNL Platform] service, return to the [
 
 Adobe has built multiple application services on top of Experience Platform. You can find documentation for these services in their own guides, linked below:
 
-* [[!DNL Customer Journey Analytics]](https://docs.adobe.com/content/help/en/analytics-platform/using/cja-landing.html) 
-* [[!DNL Journey Orchestration]](https://docs.adobe.com/content/help/en/journeys/using/journey-orchestration-home.html)
+* [[!DNL Customer Journey Analytics]](https://experienceleague.adobe.com/docs/customer-journey-analytics.html) 
+* [[!DNL Journey Orchestration]](https://experienceleague.adobe.com/docs/journey-orchestration.html)
 * [[!DNL Offer Decisioning]](https://experienceleague.adobe.com/docs/offer-decisioning.html)
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../rtcdp/overview.md)
 
 ## [!DNL Experience Platform] tutorials
 
-You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. Visit the [Experience Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html) to get started.
+You can get started with [!DNL Platform] quickly and easily by following along with step-by-step tutorials covering everything from preparing your data for ingestion to advanced machine-learning algorithms. These tutorials have been designed to supplement the information found within the [!DNL Experience Platform] documentation, so for best results keep the documentation on-hand while completing the tutorials. 
+
+Visit the [Experience Platform tutorials](https://www.adobe.com/go/platform-tutorials-home-en) landing page to get started.
 
 ## Reference documents and resources
 

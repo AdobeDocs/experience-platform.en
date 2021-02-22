@@ -1,14 +1,14 @@
 ---
-keywords: Experience Platform;home;popular topics;;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
+keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile
 solution: Experience Platform
-title: Experience Data Model (XDM) System troubleshooting guide
-description: This document provides answers to frequently asked questions about Experience Data Model (XDM) System, as well as a troubleshooting guide for common errors.
+title: XDM System Troubleshooting Guide
+description: This document provides answers to frequently asked questions about Experience Data Model (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors.
 topic: troubleshooting
 ---
 
-# [!DNL Experience Data Model] (XDM) System troubleshooting guide
+# XDM System troubleshooting guide
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) System, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 **[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
@@ -46,7 +46,7 @@ For more information on field types, see the document on [XDM field type constra
 
 ### How do I define identities for my schema?
 
-In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://docs.adobe.com/content/help/en/id-service/using/home.html), CRM ID, and other unique ID fields.
+In [!DNL Experience Platform], identities are used to identify a subject (typically an individual person) regardless of the sources of data being interpreted. They are defined in schemas by marking key fields as "Identity". Commonly used fields for identity include email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, and other unique ID fields.
 
 Fields can be marked as identities using either the API or user interface.
 
@@ -60,7 +60,7 @@ For more details on creating identity descriptors in the API, see the document o
 
 #### Defining identities in the UI
 
-With your schema open in the Schema Editor, click on the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, click on the **[!UICONTROL Identity]** checkbox. 
+With your schema open in the Schema Editor, select the field in the **[!UICONTROL Structure]** section of the editor that you wish to mark as an identity. Under **[!UICONTROL Field Properties]** on the right-hand side, select the **[!UICONTROL Identity]** checkbox. 
 
 For more details on managing identities in the UI, see the section on [defining identity fields](./tutorials/create-schema-ui.md#identity-field) section in the Schema Editor tutorial.
 
@@ -80,7 +80,7 @@ For more information on using the API to enable a schema for use in [!DNL Real-t
 
 #### Enabling an existing schema for [!DNL Profile] using the UI
 
-In [!DNL Experience Platform], click on **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, click on **[!UICONTROL Profile]** to toggle it on.
+In [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left-navigation, and select the name of the schema you wish to enable from the list of schemas. Then, on the right-hand side of the editor under **[!UICONTROL Schema Properties]**, select **[!UICONTROL Profile]** to toggle it on.
 
 
 For more information, see the section on [use in Real-time Customer Profile](./tutorials/create-schema-ui.md#profile) in the [!UICONTROL Schema Editor] tutorial.
