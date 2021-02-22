@@ -59,16 +59,22 @@ Now, this schema is enabled for Profile, with the primary identification assigne
 
 After configuring the schema, you will need to create a dataset for the segment metadata. 
 
-To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You'll want to follow the *Create dataset from schema* option, using the schema you previously created.
+To create a dataset, follow the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#create). You'll want to follow the **[!UICONTROL Create dataset from schema]** option, using the schema you previously created.
 
 After creating the dataset, continue following the instructions in the [dataset user guide](../../catalog/datasets/user-guide.md#enable-profile) to enable this dataset for Real-time Customer Profile.
 
-With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. For more information on data ingestion, please read the [data ingestion overview](../../ingestion/home.md).
+## Set up and import audience data
 
-## Import audience data
+With the dataset enabled, data can now be sent into Platform either through the UI or using the Experience Platform APIs. To ingest this data into Platform, you will need to create a streaming connection.
 
+To create a streaming connection, you can follow the instructions in either the [API tutorial](../../sources/tutorials/api/create/streaming/http.md) or the [UI tutorial](../../sources/tutorials/ui/create/streaming/http.md).
 
+Once you have created your streaming connection, you will have access to your unique streaming endpoint which you can send your data to. To learn how to send data to these endpoints, please read the [tutorial on streaming record data](../../ingestion/tutorials/streaming-record-data.md#ingest-data).
 
-## Using imported audiences
+## Building segments using imported audiences
+
+Once the imported audiences have been set up, they can be used as part of the segmentation process. To find external audiences, go the Segment Builder, and select **Audiences** tab in the **Fields**.
+
+(picture of audiences in segment builder)
 
 ## Next steps
