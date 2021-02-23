@@ -30,17 +30,17 @@ In to connect to [!DNL Oracle Object Storage], you must provide values for the f
 | `bucketName` | The allowed bucket name required if the user has restricted access. The bucket name must be between three and 63 characters long, it must begin and end with either a letter or a number, and can only contain lowercase letters, numbers, or hyphens (`-`). The bucket name cannot be formatted like an IP address. |
 | `folderPath` | The allowed folder path required if the user has restricted access. |
 
-For more information about getting started, refer to this [Oracle Object Storage authentication](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) document.
+For more information on how to obtain these values, refer to the [Oracle Object Storage authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 Once you have gathered your required credentials, you can follow the steps below to create a new Oracle Object Storage account to connect to Platform.
 
 ## Connect to Oracle Object Storage
 
-In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
-Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Oracle Object Storage]**, and then select **[!UICONTROL Add data]**.
+Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Oracle Object Storage]** and then select **[!UICONTROL Add data]**.
 
 ![catalog](../../../../images/tutorials/create/oracle-object-storage/catalog.png)
 
@@ -58,4 +58,4 @@ If you are creating a new account, select **[!UICONTROL New account]**, and then
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL Oracle Object Storage] account. You can now continue on to the next tutorial and [configure a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).
+By following this tutorial, you have established a connection to your [!DNL Oracle Object Storage] account. You can now proceed to the next tutorial on [configuring a dataflow to bring data from your cloud storage into Platform](../../dataflow/batch/cloud-storage.md).

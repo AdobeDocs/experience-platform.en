@@ -9,7 +9,7 @@ description: Learn how to connect Adobe Experience Platform to Oracle Object Sto
 
 # Create an [!DNL Oracle Object Storage] source connection using the [!DNL Flow Service] API
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to walk you through the steps to connect Experience Platform to [!DNL Oracle Object Storage].
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to walk you through the steps to connect Adobe Experience Platform to [!DNL Oracle Object Storage].
 
 ## Getting started
 
@@ -32,7 +32,7 @@ In order for [!DNL Flow Service] to connect to [!DNL Oracle Object Storage], you
 | `bucketName` | The allowed bucket name required if the user has restricted access. The bucket name must be between three and 63 characters long, it must begin and end with either a letter or a number, and can only contain lowercase letters, numbers, or hyphens (`-`). The bucket name cannot be formatted like an IP address. |
 | `folderPath` | The allowed folder path required if the user has restricted access. |
 
-For more information about getting started, refer to this [Oracle Object Storage authentication](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials) document.
+For more information on how to obtain these values, refer to the [Oracle Object Storage authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
 ### Reading sample API calls
 
