@@ -6,15 +6,17 @@ topic: tutorial
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
-# (Beta) Identity graph viewer overview
-
->[!NOTE]
->
->The identity graph viewer is currently in beta. Its features are subject to change.
+# Identity graph viewer overview
 
 An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service in near real-time, in response to customer activity.
 
 The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
+
+## Tutorial video
+
+The following video is intended to support your understanding of the identity graph viewer.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Getting started
 
@@ -115,12 +117,6 @@ Errors may happen when accessing the identity graph viewer. The following is a l
 ## Next steps
 
 By reading this document, you have learned how to explore your customers' identity graphs in the Platform UI. For more information on identities in Platform, please refer to the [Identity Service overview](../home.md)
-
-## Additional resources
-
-The following video is intended to support your understanding of the identity graph viewer.
-
->[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Changelog
 
