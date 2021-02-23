@@ -49,6 +49,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
