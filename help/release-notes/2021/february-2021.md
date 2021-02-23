@@ -55,9 +55,10 @@ Adobe Experience Platform [!DNL Identity Service] helps you to gain a better vie
 
 | Feature | Description |
 | --- | --- |
-| Identity graph viewer | You can now use the identity graph viewer in the UI to verify and see identities that are stitched together, allowing for improved troubleshooting, transparency, and visualization. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
+| Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
 
-For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md)
+For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+
 ## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
