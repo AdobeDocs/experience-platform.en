@@ -56,7 +56,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 >Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 > Attribute source data is not automatically hashed.
 > 
-> During the [Identity Mapping](destinations/ui/activate-destinations.md#identity-mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> During the [Identity Mapping](../../ui/activate-destinations.md#identity-mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
