@@ -7,7 +7,7 @@ description: Learn how to connect to your social network ad accounts in Adobe Ex
 
 # Create a social network destination {#social-network-destinations-workflow}
 
-This tutorial uses [!DNL Facebook] as an example, but the workflow in Adobe Experience Platform will be the same for all social network destinations, once more are added to the product.
+This tutorial uses [!DNL Facebook] as an example, but the Adobe Experience Platform workflow is the same for all social network destinations.
 
 In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
 

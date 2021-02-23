@@ -1,12 +1,12 @@
 ---
 keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin;
 title: LinkedIn Matched Audience connection
-description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization and suppression based on hashed emails.
+description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
 ---
 
 # [!DNL LinkedIn Matched Audience] connection
 
-Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization and suppression based on hashed emails and mobile IDs.
+Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization, and suppression, based on hashed emails and mobile IDs.
 
 ![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)
 
@@ -14,7 +14,7 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 To help you better understand how and when you should use the [!DNL LinkedIn Matched Audience] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
 
-A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] intoto Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
+A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
 ## Destination specifics {#destination-specs}
 
@@ -26,7 +26,7 @@ A software company organizes a conference and wants to keep in touch with partic
 
 ### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
-Before you can use the [!UICONTROL LinkedIn Matched Audience] destination, make sure your [!DNL LinkedIn Campaign Manager] account has the [!DNL Creative Manager] or higher permission level.
+Before you can use the [!UICONTROL LinkedIn Matched Audience] destination, make sure your [!DNL LinkedIn Campaign Manager] account has the [!DNL Creative Manager] permission level or higher.
 
 To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see [Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753) in the LinkedIn documentation.
 
@@ -40,11 +40,11 @@ Depending on the type of IDs that you ingest into Adobe Experience Platform, you
 
 You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements:
 
-- Trim all leading and trailing spaces from the email string; example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
+- Trim all leading and trailing spaces from the email string. For example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
 - When hashing the email strings, make sure to hash the lowercase string;
   - Example: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
 - Make sure the hashed string is all lowercase
@@ -54,7 +54,10 @@ If you select to hash the email addresses yourself, make sure to comply with the
 >[!NOTE]
 >
 >Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
-> Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> Attribute source data is not automatically hashed.
+> 
+> During the [Identity Mapping](destinations/ui/activate-destinations.md#identity-mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
