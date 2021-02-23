@@ -30,9 +30,13 @@ This tutorial requires a working understanding of the following components of Ad
 
 In the [Platform UI](https://platform.adobe.com), select **[!UICONTROL Monitoring]** from the left navigation to access the [!UICONTROL Monitoring] dashboard. The [!UICONTROL Monitoring] dashboard contains metrics and information on all sources dataflows, including insights into the health of data traffic from a source to [!DNL Identity Service], and to [!DNL Profile].
 
-At the center of the dashboard is the [!UICONTROL Source ingestion panel], which contains metrics and graphs that display data on records ingested and records failed. By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
+At the center of the dashboard is the [!UICONTROL Source ingestion] panel, which contains metrics and graphs that display data on records ingested and records failed.
 
 ![monitoring-dashboard](../assets/ui/monitor-sources/monitoring-dashboard.png)
+
+By default, the data displayed contains ingestion rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed.
+
+![change-date](../assets/ui/monitor-sources/change-date.png)
 
 A calendar pop-up window appears, providing you options for alternative ingestion time frames. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**
 
@@ -52,7 +56,7 @@ The source ingestion list displays all sources that contain at least one existin
 
 ![source-ingestion](../assets/ui/monitor-sources/source-ingestion.png)
 
-To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. To focus on cloud storages, select **[!UICONTROL Cloud storage]**
+To sort through the list of sources, select **[!UICONTROL My sources]** and then select your category of choice from the dropdown menu. For example, to focus on cloud storages, select  **[!UICONTROL Cloud storage]**
 
 ![sort-by-category](../assets/ui/monitor-sources/sort-by-category.png)
 
@@ -68,7 +72,7 @@ A list of dataflows appears. To narrow down the list and focus on dataflows with
 
 ![show-failures-only](../assets/ui/monitor-sources/show-failures-only.png)
 
-Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status
+Locate the dataflow that you want to monitor and then select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside it, to see more information on its run status.
 
 ![dataflow](../assets/ui/monitor-sources/dataflow.png)
 
@@ -90,7 +94,7 @@ Select **[!UICONTROL Files]** for more information.
 
 The [!UICONTROL Files] panel contains information on the file's name and path.
 
-For a more granular representation of the error, select **[!UICONTROL Preview error diagnostics]**
+For a more granular representation of the error, select **[!UICONTROL Preview error diagnostics]**.
 
 ![files](../assets/ui/monitor-sources/files.png)
 
@@ -130,25 +134,25 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 
 | Identity metrics | Description |
 | ---------------- | ----------- |
-| Records received | The number of records received from [!DNL Data Lake]. |
-| Records failed | The number of records that were not ingested into Platform due to errors in the data. |
-| Records skipped | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
-| Records ingested | The number of records ingested into [!DNL Identity Service]. |
-| Total records | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records. |
-| [!DNL Identities] added | The number of net new identifiers added to [!DNL Identity Service] |
-| Graphs created | The number of net new identity graphs created in [!DNL Identity Service]. |
-| Graphs updated | The number of existing identity graphs updated with new edges. |
-| Failed dataflow runs | The number of dataflow runs that failed. |
-| Processing time | The timestamp from the start of ingestion to completion. |
-| Status | Defines the overall status of a dataflow. The possible status values are: `Success`, `Failed`, and `Processing`. |
+| [!UICONTROL Records received] | The number of records received from [!DNL Data Lake]. |
+| [!UICONTROL Records failed] | The number of records that were not ingested into Platform due to errors in the data. |
+| [!UICONTROL Records skipped] | The number of records that were ingested, but not into [!DNL Identity Service] because there was only one identifier in the record row. |
+| [!UICONTROL Records ingested] | The number of records ingested into [!DNL Identity Service]. |
+| [!UICONTROL Total records] | The total count of all records, including records failed, records skipped, [!DNL Identities] added, and duplicated records. |
+| [!UICONTROL Identities added] | The number of net new identifiers added to [!DNL Identity Service]. |
+| [!UICONTROL Graphs created] | The number of net new identity graphs created in [!DNL Identity Service]. |
+| [!UICONTROL Graphs updated] | The number of existing identity graphs updated with new edges. |
+| [!UICONTROL Failed dataflow runs] | The number of dataflow runs that failed. |
+| [!UICONTROL Processing time] | The timestamp from the start of ingestion to completion. |
+| [!UICONTROL Status] | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: Indicates that a dataflow is active and is ingesting data according to the schedule it was provided..</li><li>`Failed`: Indicates that the activation process of a dataflow has been disrupted due to errors. </li><li>`Processing`: Indicates that the dataflow is not yet active. This status is often encountered immediately after a new dataflow is created.</li></ul> |
 
-The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
+The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Identity] dataflow run, including its IMS Org ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Identity Service], should any errors occur in the ingestion process.
 
 Select **[!UICONTROL Run start: 2/14/2021, 9:47 PM]** to return to the previous page.
 
 ![identities-dataflow-run](../assets/ui/monitor-sources/identities-dataflow-run.png)
 
-From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]** to see the status of records ingestion in the [!DNL Profiles] stage.
+From the [!UICONTROL Identity processing] page, select **[!UICONTROL Profiles]** to see the status of records ingestion in the [!UICONTROL Profiles] stage.
 
 ![select-profiles](../assets/ui/monitor-sources/select-profiles.png)
 
@@ -162,22 +166,22 @@ Select the filter icon ![filter](../assets/ui/monitor-sources/filter.png) beside
 
 | Profile metrics | Description |
 | --------------- | ----------- |
-| Records received |  The number of records received from [!DNL Data Lake]. |
-| Records failed | The number of records that were ingested, but not into [!DNL Profile] due to errors. |
+| [!UICONTROL Records received] |  The number of records received from [!DNL Data Lake]. |
+| [!UICONTROL Records failed ]| The number of records that were ingested, but not into [!DNL Profile] due to errors. |
 | [!UICONTROL Profile fragments added] | The number of net new [!DNL Profile] fragments added. |
 | [!UICONTROL Profile fragments updated] | The number of existing [!DNL Profile] fragments updated |
-| Total [!DNL Profile] fragments | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
-| Failed dataflow runs | The number of dataflow runs that failed. |
-| Processing time | The timestamp from the start of ingestion to completion. |
-| Status | Defines the overall status of a dataflow. The possible status values are: `Success`, `Failed`, and `Processing`. |
+| [!UICONTROL Total Profile fragments] | The total number of records written into [!DNL Profile], including all existing [!DNL Profile] fragments updated and new [!DNL Profile] fragments created. |
+| [!UICONTROL Failed dataflow runs] | The number of dataflow runs that failed. |
+| [!UICONTROL Processing time] | The timestamp from the start of ingestion to completion. |
+| [!UICONTROL Status] | Defines the overall status of a dataflow. The possible status values are: <ul><li>`Success`: Indicates that a dataflow is active and is ingesting data according to the schedule it was provided..</li><li>`Failed`: Indicates that the activation process of a dataflow has been disrupted due to errors. </li><li>`Processing`: Indicates that the dataflow is not yet active. This status is often encountered immediately after a new dataflow is created.</li></ul> |
 
-The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its IMS Org ID and Dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
+The [!UICONTROL Dataflow run details] page displays more information on your [!DNL Profile] dataflow run, including its IMS Org ID and dataflow run ID. This page also displays the corresponding error code and error message provided by [!DNL Profile], should any errors occur in the ingestion process.
 
 ![profiles-dataflow-run](../assets/ui/monitor-sources/profiles-dataflow-run.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully monitored the ingestion flow of a dataflow from the source-level, to [!DNL Identity Service], and to [!DNL Profile], using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
+By following this tutorial, you have successfully monitored the ingestion dataflow from the source-level, to [!DNL Identity Service], and to [!DNL Profile], using the **[!UICONTROL Monitoring]** dashboard. You have also successfully identified errors that contributed to the failure of dataflows during the ingestion process. See the following documents for more details:
 
 * [Real-time Customer Profile overview](../../profile/home.md)
 * [Data Science Workspace overview](../../data-science-workspace/home.md)
