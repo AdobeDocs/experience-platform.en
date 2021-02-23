@@ -16,7 +16,6 @@ The table below contains the mappings between the fields in the Marketo marketin
 | `marketingListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
-| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
 ## Next steps
 
