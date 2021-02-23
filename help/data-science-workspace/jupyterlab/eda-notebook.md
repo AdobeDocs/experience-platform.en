@@ -667,7 +667,7 @@ Once complete, the clean data is ready for bivariate analysis.
 
 ### Bivariate analysis
 
-Bivariate analysis is used to help understand relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done seperately for each data type. The following charts are recommended for bivariate analysis:
+Bivariate analysis is used to help understand the relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done seperately for each data type. The following charts are recommended for bivariate analysis:
 
 - **Correlation**: A correlation coefficient is the measure of the strength of a relationship between two features. Correlation has values between -1 and 1, where: 1 indicates a strong positive relationship, -1 indicates a strong negative relationship, and a result of zero indicates no relationship at all.
 - **Pairplot**: Pairplots are a simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
@@ -823,6 +823,6 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 ## Next steps
 
-After you have finished your exploratory data analysis, you are ready to begin creating a model. Alternativly, you can use the data and insights you derived to create a dashboard with tools such as Power BI.
+After you have finished your exploratory data analysis, you are ready to begin creating a model. Alternatively, you can use the data and insights you derived to create a dashboard with tools such as Power BI.
 
-Adobe Experience Platform seperates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within JupyterLab Notebooks.
+Adobe Experience Platform seperates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within [!DNL JupyterLab] Notebooks.
