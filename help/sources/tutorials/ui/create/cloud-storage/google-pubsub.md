@@ -30,7 +30,7 @@ In order to connect [!DNL PubSub] to Platform, you must provide a valid value fo
 
 | Credential | Description |
 | ---------- | ----------- |
-| `projectId` | The Project ID required to authenticate [!DNL PubSub]. |
+| `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document.

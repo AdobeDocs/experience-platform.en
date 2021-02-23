@@ -13,7 +13,7 @@ description: Learn how to connect Adobe Experience Platform to a Google PubSub a
 >
 >The [!DNL Google PubSub] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]) to Adobe Experience Platform.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to walk you through the steps to connect [!DNL Google PubSub] (hereinafter referred to as "[!DNL PubSub]") to Adobe Experience Platform.
 
 ## Getting started
 
@@ -26,11 +26,11 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide values for the following connection property:
+In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `projectId` | The Project ID required to authenticate [!DNL PubSub]. |
+| `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 
 For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document.
@@ -67,7 +67,7 @@ POST /connections
 
 **Request**
 
-In order to create a s[!DNL PubSub] connection, the provider ID and connection spec ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `70116022-a743-464a-bbfe-e226a7f8210c`.
+In order to create a [!DNL PubSub] connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `70116022-a743-464a-bbfe-e226a7f8210c`.
 
 **API format**
 
@@ -103,7 +103,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.projectId` | The Project ID required to authenticate [!DNL PubSub]. |
+| `auth.params.projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `auth.params.credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 | `connectionSpec.id` | The [!DNL PubSub] connection spec ID: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
