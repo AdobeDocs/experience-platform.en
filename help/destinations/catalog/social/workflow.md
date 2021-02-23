@@ -1,6 +1,6 @@
 ---
 keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
-title: Create a Social Network Destination
+title: Create a social network destination
 type: Tutorial
 description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
 ---
@@ -31,7 +31,7 @@ Once your credentials are confirmed and Adobe Experience Cloud is connected to y
 
 In the **[!UICONTROL Setup]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill in the [!UICONTROL Account ID] of your social network ad account. 
 
-Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+Also in this step, you can select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
  
 Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 

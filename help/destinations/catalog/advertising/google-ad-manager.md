@@ -1,6 +1,6 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
-title: Google Ad Manager Connection Destination
+title: Google Ad Manager connection
 description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.  
 ---
 
@@ -61,7 +61,7 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
    * Use `DFP by Google` for [!DNL DoubleClick] for Publishers
    * Use `AdX buyer` for [!DNL Google AdX]
 *  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google]. This can be your Network ID or your Audience Link ID. Typically, this is an eight digit ID.
-*  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
+*  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
 
 >[!NOTE]
 >

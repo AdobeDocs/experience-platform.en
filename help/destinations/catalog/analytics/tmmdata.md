@@ -1,6 +1,6 @@
 ---
 keywords: TMMData;tmm data;tmmdata;TMM data
-title: TMMData Extension Destination
+title: TMMData extension
 description: The TMMData extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

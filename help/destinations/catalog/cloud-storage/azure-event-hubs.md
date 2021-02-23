@@ -1,6 +1,6 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) Azure Event Hubs Connection Destination
+title: (Beta) Azure Event Hubs connection
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
@@ -48,6 +48,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![Data required in the setup step](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 

@@ -1,13 +1,11 @@
 ---
-title: Configuring the SDK
-seo-title: Configuring Adobe Experience Platform Web SDK
-description: Learn how to configure the Experience Platform Web SDK
+title: Configure the Adobe Experience Platform Web SDK
+description: Learn how to configure the Adobe Experience Platform Web SDK.
 seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 ---
 
-# Configuring the SDK
+# Configure the Platform Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -55,7 +53,7 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Type** | **Required** | **Default Value**  |
 | -------- | ------------ | ------------------ |
@@ -136,7 +134,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 
 ## Identity options
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |

@@ -1,6 +1,6 @@
 ---
 keywords: connect destination;destination connect;how to connect destination
-title: Connect to a Destination in Adobe Experience Platform
+title: Connect to a destination
 type: Tutorial
 description: This tutorial lists the steps to connect a destination in Adobe Experience Platform
 ---

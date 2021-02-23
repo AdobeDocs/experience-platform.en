@@ -1,12 +1,10 @@
 ---
-title: Tracking events
-seo-title: Tracking Adobe Experience Platform Web SDK events
-description: Learn how to track Experience Platform Web SDK events
-seo-description: Learn how to track Experience Platform Web SDK events
+title: Track Events Using the Adobe Experience Platform Web SDK
+seo-description: Learn how to track Adobe Experience Platform Web SDK events.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 ---
 
-# Tracking events
+# Track events
 
 To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 

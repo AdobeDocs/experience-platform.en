@@ -1,12 +1,10 @@
 ---
-title: Prerequisites for using Adobe Experience Platform Web SDK
-seo-title: Prerequisites for using Adobe Experience Platform Web SDK
-description: Prerequisites for using Adobe Experience Platform Web SDK
-seo-description: Prerequisites for using Adobe Experience Platform Web SDK
+title: Prerequisites for Using the Adobe Experience Platform Web SDK
+description: Learn about the prerequisites for using Adobe Experience Platform Web SDK.
 keywords: 1st-party domain;CNAME;schema;create schema;launch;aep web sdk extension;extension;configuration id;configuration tool;data element;create data element;XDM Object;sendEvent;send Event;
 ---
 
-# Prerequisites for using Adobe Experience Platform Web SDK
+# Prerequisites for using the Adobe Experience Platform Web SDK
 
 To use the Platform Web SDK, you must first:
 

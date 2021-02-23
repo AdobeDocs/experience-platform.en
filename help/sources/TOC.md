@@ -31,6 +31,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
@@ -78,6 +79,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
+      - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -110,6 +112,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/api/create/protocols/odata.md)
+    - Streaming {#streaming}
+      - [HTTP API](tutorials/api/create/streaming/http.md)
   - Explore data {#explore}
     - [Explore advertising data](tutorials/api/explore/advertising.md)
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
@@ -156,6 +160,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
@@ -189,6 +194,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
       - [Generic OData](tutorials/ui/create/protocols/odata.md)
+    - Streaming {#streaming}
+      - [HTTP API](tutorials/ui/create/streaming/http.md)
   - Configure a dataflow {#dataflow}
     - [Advertising connection dataflow](tutorials/ui/dataflow/advertising.md)
     - [Batch cloud storage connection dataflow](tutorials/ui/dataflow/batch/cloud-storage.md)

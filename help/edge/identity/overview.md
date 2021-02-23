@@ -1,12 +1,11 @@
 ---
-title: Retrieving Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK Retrieving Experience Cloud ID
-description: Learn how to get Adobe Experience Cloud Id.
+title: Retrieve Experience Cloud IDs using the Adobe Experience Platform Web SDK
+description: Learn how to retrieve Adobe Experience Cloud IDs (ECIDs) using the Adobe Experience Platform Web SDK.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 ---
 
-# Identity - Retrieving the Experience Cloud ID
+# Retrieve Adobe Experience Cloud IDs
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
