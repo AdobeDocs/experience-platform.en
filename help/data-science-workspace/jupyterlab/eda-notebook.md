@@ -7,13 +7,13 @@ type: Tutorial
 description: This guide focuses on how to use the exploratory data analysis (EDA) Notebook to discover patterns in web data, aggregate events with a prediction goal, clean aggregated data, and understand the relationship between predictors and a goal.
 ---
 
-# Exploring web based data for predictive models using the exploratory data analysis (EDA) notebook
+# Exploring web-based data for predictive models using the exploratory data analysis (EDA) notebook
 
 The exploratory data analysis (EDA) notebook is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models.
 
 The EDA notebook example was optimized with web-based data in mind and consists of two parts. Part one starts with using Query Service to view trends and data snapshots. Next, with a goal in mind for exploratory data analysis, the data is aggregated at the profile and visitor level. 
 
-Part two starts by performing descriptive analysis on aggregated data using Python libraries. This notebook showcases visualizations such as histograms, scatter plots, boxplots, and a correlation matrix to derive actionable insights used to determine which features are most likely to be helpful in predicting a goal.
+Part two starts by performing descriptive analysis on aggregated data using Python libraries. This notebook showcases visualizations such as histograms, scatter plots, box plots, and a correlation matrix to derive actionable insights used to determine which features are most likely to be helpful in predicting a goal.
 
 ## Getting started
 
@@ -171,7 +171,7 @@ ORDER  BY Hour;
 
 ![query 1 output](../images/jupyterlab/eda/hour-count-raw.PNG)
 
-After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+After confirming the query works, the data can be presented in a univariate plot histogram for visual clarity.
 
 ```python
 trace = go.Bar(
@@ -212,7 +212,7 @@ ORDER  BY page_views DESC
 LIMIT  10;
 ```
 
-After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+After confirming the query works, the data can be presented in a univariate plot histogram for visual clarity.
 
 ```python
 trace = go.Bar(
@@ -253,7 +253,7 @@ ORDER  BY Count DESC
 LIMIT  10;
 ```
 
-After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+After confirming the query works, the data can be presented in a univariate plot histogram for visual clarity.
 
 ```python
 trace = go.Bar(
@@ -297,7 +297,7 @@ ORDER BY Total_Product_Views DESC
 LIMIT  10;
 ```
 
-After confirming the query works, the data can presented in a univariate plot histogram for visual clarity.
+After confirming the query works, the data can be presented in a univariate plot histogram for visual clarity.
 
 ```python
 trace = go.Bar(
@@ -506,7 +506,7 @@ iplot(fig)
 
 After detecting missing values, it is critical to identify outliers. Parametric statistics like the mean, standard deviation, and correlation are highly sensitive to outliers. Additionally, the assumptions of common statistical procedures such as linear regressions are also based on these statistics. This means outliers can really mess up an analysis.
 
-To identify outliers, this example uses inter quartile range. Inter quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the 25th percentile, or 1.5 times the IQR above the 75th percentile. Values that fall under either of these are defined as an outlier in the following cell.
+To identify outliers, this example uses inter-quartile range. Inter-quartile range (IQR) is the range between the first and third quartiles (25th and 75th percentiles). This example gathers all the data points that fall under either 1.5 times the IQR below the 25th percentile, or 1.5 times the IQR above the 75th percentile. Values that fall under either of these are defined as an outlier in the following cell.
 
 >[!TIP]
 >
@@ -667,17 +667,17 @@ Once complete, the clean data is ready for bivariate analysis.
 
 ### Bivariate analysis
 
-Bivariate analysis is used to help understand the relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done seperately for each data type. The following charts are recommended for bivariate analysis:
+Bivariate analysis is used to help understand the relationship between two sets of values, such as your features and a target variable. Since different plots cater to categorical and numerical data types, this analysis should be done separately for each data type. The following charts are recommended for bivariate analysis:
 
 - **Correlation**: A correlation coefficient is the measure of the strength of a relationship between two features. Correlation has values between -1 and 1, where: 1 indicates a strong positive relationship, -1 indicates a strong negative relationship, and a result of zero indicates no relationship at all.
-- **Pairplot**: Pairplots are a simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
+- **Pair plot**: Pair plots are a simple way to visualize relationships between each variable. It produces a matrix of relationships between each variable in the data.
 - **Heatmap**: Heatmaps are the correlation coefficient for all variables in the dataset.
-- **Boxplots**: Boxplots are a standardized way of displaying data distribution based on a five number summary (minimum, first quartile (Q1), median, third quartile (Q3), and maximum).
-- **Countplot**: A countplot is like a histogram or a bar graph for some categorical features. It shows the number of occurrences of an item based on a certain type of category.
+- **Box plots**: Box plots are a standardized way of displaying data distribution based on a five number summary (minimum, first quartile (Q1), median, third quartile (Q3), and maximum).
+- **Count plot**: A count plot is like a histogram or a bar graph for some categorical features. It shows the number of occurrences of an item based on a certain type of category.
 
-To understand relationship between the 'goal' variable and the predictors/features, charts are used based on datatypes. For numerical features, you should use a boxplot if the 'goal' variable is categorical, as well as, a pairplot and heatmap if the 'goal' variable is numerical. 
+To understand relationship between the 'goal' variable and the predictors/features, charts are used based on datatypes. For numerical features, you should use a box plot if the 'goal' variable is categorical, as well as, a pairplot and heatmap if the 'goal' variable is numerical. 
 
-For categorical features, you should use a countplot if the 'goal' variable is categorical, as well as, a boxplot if the 'goal' variable is numerical. Using these methods helps with understanding relationships. These relationships can be in the form of features, or predictors and a goal.
+For categorical features, you should use a countplot if the 'goal' variable is categorical, as well as, a box plot if the 'goal' variable is numerical. Using these methods helps with understanding relationships. These relationships can be in the form of features, or predictors and a goal.
 
 **Numerical predictors**
 
@@ -783,7 +783,7 @@ else:
 
 ### Example insight
 
-While you are in the process of analysing your data, it is not uncommon to uncover insights. The following example is an insight that maps the recency and monetary value for a target event.
+While you are in the process of analyzing your data, it is not uncommon to uncover insights. The following example is an insight that maps the recency and monetary value for a target event.
 
 ```python
 # Proxy for monetary value is TOTAL_ORDER_REVENUE and proxy for frequency is NUMBER_VISITS
@@ -825,4 +825,4 @@ Data = pd.concat([Data_categorical, Data_numerical, TARGET], axis = 1)
 
 After you have finished your exploratory data analysis, you are ready to begin creating a model. Alternatively, you can use the data and insights you derived to create a dashboard with tools such as Power BI.
 
-Adobe Experience Platform seperates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within [!DNL JupyterLab] Notebooks.
+Adobe Experience Platform separates the model creation process into two distinct stages, Recipes (a model instance) and Models. To begin the recipe creation process, visit the documentation for [creating a recipe in JupyerLab Notebooks](./create-a-recipe.md). This document contains information and examples for creating, training, and scoring, a recipe within [!DNL JupyterLab] Notebooks.
