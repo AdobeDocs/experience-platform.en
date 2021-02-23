@@ -411,7 +411,7 @@ curl -X PATCH \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: "0100d610-0000-0200-0000-6025a8800000"' \
+    -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
     {
         "op": "replace",
@@ -432,7 +432,7 @@ curl -X PATCH \
 ```json
 {
     "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"1a0037e4-0000-0200-0000-602e06f60000\""
+    "etag": "\"5400d99c-0000-0200-0000-60358d540000\""
 }
 ```
 
