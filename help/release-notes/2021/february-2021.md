@@ -28,7 +28,7 @@ Dataflows are a representation of data jobs that move data across Platform. Thes
 | --- | --- |
 | New monitoring dashboard | You can now use the monitoring dashboard for cross-service transparency and actionable insights for source data ingestions. The new monitoring dashboard provides a comprehensive view of data processed from [!DNL Data Lake] to [!DNL Identity Service] and to [!DNL Profile], while also allowing you to monitor ingestion rates, successes, and failures. See the tutorial on [monitoring source dataflows in the UI](../../dataflows/ui/monitor-sources.md) for more information. |
 
-For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
+For more general information on dataflows, refer to the [dataflows overview](../../xdm/home.md).
 
 ## Experience Data Model (XDM) System {#xdm}
 
