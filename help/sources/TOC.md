@@ -140,7 +140,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Ingest Parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
-  - [Update connections](tutorials/api/update.md)
+  - [Update connections and dataflows](tutorials/api/update.md)
   - [Delete connections](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}

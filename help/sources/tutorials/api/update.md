@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; flow service; update connections
 solution: Experience Platform
-title: Update Connection Information Using the Flow Service API
+title: Update Connections and Dataflows Using the Flow Service API
 topic: overview
 type: Tutorial
-description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
+description: This tutorial covers the steps for updating the details and credentials of an existing connection, as well as the details and schedule of an existing dataflow using the Flow Service API.
 ---
 
-# Update connection information using the Flow Service API
+# Update connections and dataflows using the Flow Service API
 
 In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials. Additionally, [!DNL Flow Service] also allows you to update the information and schedule of an existing dataflow.
 
@@ -44,10 +44,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Look up connection details
+## Update a connection
 
->[!NOTE]
->This tutorial uses the [Salesforce source connector](../../connectors/crm/salesforce.md) as an example, but the steps outlined apply to any of the [available source connectors](../../home.md).
+### Look up connection details
 
 The first step in updating your connection information is to retrieve connection details using your connection ID.
 
@@ -112,7 +111,7 @@ A successful response returns the current details of your connection including i
 }
 ```
 
-## Update connection
+### Update connection information
 
 Once you have an existing connection ID, perform a PATCH request to the [!DNL Flow Service] API.
 
@@ -172,7 +171,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your connection ID and an updated etag.
+A successful response returns your connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
 
 ```json
 {
@@ -181,72 +180,9 @@ A successful response returns your connection ID and an updated etag.
 }
 ```
 
-## Look up updated connection details
+## Update a dataflow 
 
-You can retrieve the same connection ID you updated to see the changes you made by making a GET request to the [!DNL Flow Service] API.
-
-**API format**
-
-```http
-GET /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
-
-**Request**
-
-The following request retrieves updated information regarding your connection ID.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the updated details of your connection ID, including its new name, description, and version.
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1597973312000,
-            "updatedAt": 1598038319627,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-            "name": "Test salesforce connection",
-            "description": "A test salesforce connection",
-            "connectionSpec": {
-                "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Basic Authentication",
-                "params": {
-                    "securityToken": "{NEW_SECURITY_TOKEN}",
-                    "password": "{PASSWORD}",
-                    "username": "salesforce-connector-username"
-                }
-            },
-            "version": "\"3600e378-0000-0200-0000-5f40212f0000\"",
-            "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-        }
-    ]
-}
-```
-
-## Look up dataflow details
+### Look up dataflow details
 
 The first step in updating your dataflow is to retrieve dataflow details using your flow ID.
 
@@ -387,7 +323,7 @@ A successful response returns the current details of your dataflow including its
 }
 ```
 
-## Update a dataflow
+### Update dataflow schedule
 
 >[!IMPORTANT]
 >A PATCH request requires the use of the `If-Match` header. The value for this header is your dataflow's unique version.
