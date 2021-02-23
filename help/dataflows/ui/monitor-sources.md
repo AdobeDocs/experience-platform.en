@@ -11,7 +11,7 @@ type: Tutorial
 
 In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
-The monitoring dashboard provides you with a visual representation of the the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's success or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
+The monitoring dashboard provides you with a visual representation of the journey of a dataflow. You can use an aggregated monitoring view and navigate vertically from the source level, to a dataflow, and to a dataflow run, allowing you to view the corresponding metrics that contribute to a dataflow's success or failure. You can also use the monitoring dashboard's cross-service monitoring capacity to monitor a dataflow's journey from a source, to [!DNL Identity Service], and to [!DNL Profile].
 
 This tutorial provides steps to monitor your dataflow, using both aggregated monitoring view and cross-service monitoring.
 
@@ -48,9 +48,9 @@ The graphs are enabled by default and you can disable them to expand the list of
 
 | Source ingestion | Description |
 | ---------------- | ----------- |
-| Records ingested | The total number of records ingested. |
-| Records failed | The total number of records that were not ingested due to errors in the data. |
-| Total failed dataflows | The total number of dataflows with a `failed` status. |
+| [!UICONTROL Records ingested ]| The total number of records ingested. |
+| [!UICONTROL Records failed] | The total number of records that were not ingested due to errors in the data. |
+| [!UICONTROL Total failed dataflows] | The total number of dataflows with a `failed` status. |
 
 The source ingestion list displays all sources that contain at least one existing account. The list also includes information on each source's ingestion rate, number of failed records, and total number of failed dataflows based on the time frame that you applied.
 
