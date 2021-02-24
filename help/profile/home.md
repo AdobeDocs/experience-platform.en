@@ -29,11 +29,11 @@ The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platfo
 
 Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
 
-### (Alpha) Profile dashboard {#profile-dashboard}
+### (Beta) Profile dashboard {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+>The dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
 
@@ -73,7 +73,7 @@ To learn more about union schemas, including how to access union schemas in the 
 >
 >Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
 
 ## Profiles and segments
 

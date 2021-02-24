@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Introduction to Computed Attributes
 topic: guide
 type: Documentation
-description: Computed attributes are functions to aggregate event-level data into profile levels attributes. These functions are automatically computed so that they can be used across Segmentation, Activation, and Personalization. 
+description: Computed attributes are functions to aggregate event-level data into profile levels attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 ---
 
 # (Alpha) Computed attributes overview
@@ -44,7 +44,7 @@ This delay is due to the current caching configuration. Post-Alpha the cache ref
 
 ### Dependency tracking in segments
 
-Schema attributes that have already been used in a segment definition expression, but later turned into a Computed Attribute will not be tracked as a dependency of that segment. 
+Schema attributes that have already been used in a segment definition expression, but later turned into a computed attribute will not be tracked as a dependency of that segment. 
 
 Due to the fact that no dependency has been detected, Experience Platform will not automatically evaluate the associated computed attribute each time the segment definition is evaluated.
 

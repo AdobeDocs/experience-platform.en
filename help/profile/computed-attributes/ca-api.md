@@ -26,7 +26,7 @@ Before continuing, please review the [Profile API getting started guide](../api/
 
 In order to create a computed attribute, you first need to identify the field in a schema that will hold the computed attribute value. 
 
-Please refer to the documentation on [configuring a computed attribute](configure-ui.md) for a complete end-to-end guide to creating a computed attribute field in a schema.
+Please refer to the documentation on [configuring a computed attribute](configure-api.md) for a complete end-to-end guide to creating a computed attribute field in a schema.
 
 >[!WARNING]
 >
@@ -34,7 +34,7 @@ Please refer to the documentation on [configuring a computed attribute](configur
 
 ## Create a computed attribute {#create-a-computed-attribute}
 
-With your computed attribute field identified, and confirmation that the schema is enabled for [!DNL Profile], you can now configure a computed attribute. If you have not done this already, please follow the workflow outlined in the [configuring a computed attribute](configure-ui.md) documentation.
+With your computed attribute field defined in your Profile enabled schema, you can now configure a computed attribute. If you have not done this already, please follow the workflow outlined in the [configuring a computed attribute](configure-api.md) documentation.
 
 To create a computed attribute, begin by making a POST request to the `/config/computedAttributes` endpoint with a request body containing the details of the computed attribute that you wish to create.
 
