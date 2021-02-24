@@ -12,3 +12,4 @@ Adobe Experience Platform currently supports the following social network destin
 
 - [Adobe Livefyre extension](./adobe-livefyre.md)
 - [[!DNL Facebook] extension](./facebook.md)
+- [LinkedIn Matched Audience connection](./linkedin.md)
