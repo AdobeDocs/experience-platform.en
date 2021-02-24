@@ -12,12 +12,25 @@ author: ens70167
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Dataflows](#dataflows)
-- [Experience Data Model (XDM) System](#xdm)
-- [Identity Service](#identity)
-- [Sources](#sources)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Sources]](#sources)
 
-## Dataflows {#dataflows}
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| JupyterLab EDA notebook | The exploratory data analysis (EDA) notebook available in JupyterLab is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models. See the tutorial on [exploring web-based data for predictive models](../../data-science-workspace/jupyterlab/eda-notebook.md) for more information. |
+
+For more general information on Data Science Workspace, refer to the [Data Science Workspace overview](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
 
 In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
@@ -31,7 +44,7 @@ Dataflows are a representation of data jobs that move data across Platform. Thes
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
 
-## Experience Data Model (XDM) System {#xdm}
+## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
 
@@ -45,7 +58,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 For more general information on XDM, refer to the [XDM System overview](../../xdm/home.md).
 
-## Identity Service {#identity}
+## [!DNL Identity Service] {#identity}
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
@@ -59,7 +72,7 @@ Adobe Experience Platform [!DNL Identity Service] helps you to gain a better vie
 
 For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
 
-## Sources {#sources}
+## [!DNL Sources] {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
