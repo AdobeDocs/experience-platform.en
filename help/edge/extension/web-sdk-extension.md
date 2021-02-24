@@ -7,7 +7,7 @@ description: Learn about the Adobe Experience Platform Web SDK Extension for Ado
 
 The Adobe Experience Platform Web SDK Extension sends data to the Adobe Experience Cloud from web properties, through the Adobe Experience Platform Edge Network. The Adobe Experience Platform Web SDK extension allows for streaming data into platform, syncing identities, opt-in and automatically collecting context data. 
 
-## Configure the AEP Web SDK extension
+## Configure the extension
 
 This section provides a reference for the options available when configuring the Adobe Experience Platform Web SDK extension.
 
@@ -40,11 +40,11 @@ By default, if there is an error with the extension, it logs the error to the co
 
 ### **[!UICONTROL Enable Opt-in]**
 
-If **[!UICONTROL Enable Opt-in]** is enabled, AEP Web SDK extension can hold hits until opt-in is received. The extension exposes an action to set the opt-in preferences. 
+If **[!UICONTROL Enable Opt-in]** is enabled, the extension can hold hits until opt-in is received. The extension exposes an action to set the opt-in preferences. 
 
 ### **[!UICONTROL Enable Migrate ECID]**
 
-The AEP Web SDK extension uses a new cookie to store the ECID. This setting enables compatibility between the new cookie and the old cookie for migration purposes. Adobe highly recommends this be enabled, unless you have no existing visitors with an ECID. 
+The Platform Web SDK extension uses a new cookie to store the ECID. This setting enables compatibility between the new cookie and the old cookie for migration purposes. Adobe highly recommends this be enabled, unless you have no existing visitors with an ECID. 
 
 ### **[!UICONTROL Use 3rd Party Cookies]**
 
