@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Computed Attributes API Endpoint
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. 
+description: In Adobe Experience Platform, computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide shows how to create, update, and delete computed attributes using the Real-time Customer Profile API.
 ---
 
 # (Alpha) Computed attributes API endpoint
@@ -12,9 +12,9 @@ description: Computed attributes are functions used to aggregate event-level dat
 >
 >The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. This guide includes sample API calls for performing basic CRUD operations using the `/computedAttributes` endpoint. 
 
-This guide includes sample API calls for performing basic CRUD operations using the `/computedAttributes` endpoint. 
+To learn more about computed attributes, please begin by reading the [computed attributes overview](overview.md).
 
 ## Getting started
 
@@ -77,7 +77,7 @@ curl -X POST \
 |`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
 |`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
 |`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
+|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. Computed attributes currently support the following functions: sum, count, min, max, and boolean. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
 |`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
@@ -190,7 +190,7 @@ curl -X POST \
 |`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
 |`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
 |`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid PQL expression. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.<br/><br/>In this example, the expression references two existing computed attributes. The attributes are referenced using the `path` and the `name` of the computed attribute as they appear in the schema in which the computed attributes were defined. For example, the `path` of the first referenced computed attribute is `_{TENANT_ID}.purchaseSummary` and the `name` is `totalSpend`.|
+|`expression.value`|A valid PQL expression. Computed attributes currently support the following functions: sum, count, min, max, and boolean. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.<br/><br/>In this example, the expression references two existing computed attributes. The attributes are referenced using the `path` and the `name` of the computed attribute as they appear in the schema in which the computed attributes were defined. For example, the `path` of the first referenced computed attribute is `_{TENANT_ID}.purchaseSummary` and the `name` is `totalSpend`.|
 |`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
@@ -528,7 +528,7 @@ curl -X PATCH \
 
 |Property|Description|
 |---|---|
-|`{NEW_EXPRESSION_VALUE}`|A valid [!DNL Profile Query Language] (PQL) expression. For more information on PQL and links to supported queries, please read the [PQL overview](../../segmentation/pql/overview.md).|
+|`{NEW_EXPRESSION_VALUE}`|A valid [!DNL Profile Query Language] (PQL) expression. Computed attributes currently support the following functions: sum, count, min, max, and boolean. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
 
 **Response**
 

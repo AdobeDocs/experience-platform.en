@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
-description: Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Adobe Experience Platform. 
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a mixin to add the field to an existing schema, or by selecting a field that you have already defined within a schema.
 ---
 
 # (Alpha) Configure a computed attribute field in the UI
