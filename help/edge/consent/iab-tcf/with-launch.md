@@ -58,7 +58,7 @@ This custom code does two things:
 * Value: "%IAB TCF Consent String%"
 * GDPR Applies: "%IAB TCF Consent GDPR%"
 
-![IAB Set Consent Action](../../../assets/iab_set_consent_action.png)
+![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
