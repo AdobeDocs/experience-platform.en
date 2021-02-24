@@ -12,17 +12,17 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL LinkedIn Matched Audience] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when you should use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
 
 A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
 ## Destination specifics {#destination-specs}
 
-[!DNL LinkedIn Matched Audience] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
+[!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
 
 ### Export Type {#export-type}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL LinkedIn Matched Audience] destination.
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL LinkedIn Matched Audiences] destination.
 
 ### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
@@ -32,7 +32,7 @@ To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see
 
 ### ID matching requirements {#id-matching-requirements}
 
-[!DNL LinkedIn Matched Audience] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL LinkedIn Matched Audience] can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
+[!DNL LinkedIn Matched Audiences] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL LinkedIn Matched Audiences] can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
 
@@ -64,11 +64,11 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ## Connect to destination {#connect-destination}
 
-To connect to the [!DNL LinkedIn Matched Audience] destination, see [Social network destinations authentication workflow](./workflow.md). 
+To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social network destinations authentication workflow](./workflow.md). 
 
-## Activate segments to [!DNL LinkedIn Matched Audience] {#activate-segments}
+## Activate segments to [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL LinkedIn Matched Audience], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate Data to Destinations](../../ui/activate-destinations.md).
 
 ## Exported data {#exported-data}
 
@@ -76,4 +76,4 @@ A successful activation means that a [!DNL LinkedIn] custom audience would be cr
 
 >[!TIP]
 >
->The integration between Adobe Experience Platform and [!DNL LinkedIn Matched Audience] supports historical audience backfills. All historical segment qualifications get sent to [!DNL LinkedIn] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL LinkedIn Matched Audiences] supports historical audience backfills. All historical segment qualifications get sent to [!DNL LinkedIn] when you activate the segments to the destination.
