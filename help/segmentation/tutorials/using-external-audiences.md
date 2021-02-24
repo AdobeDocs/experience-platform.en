@@ -7,7 +7,7 @@ topic: tutorial
 
 # Importing and using external audiences
 
-Adobe Experience Platform supports the ability to import external audience, which can subsequently used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
+Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
 
 ## Getting started
 
