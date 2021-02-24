@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This requires using the Schema Registry API to create a custom mixin and schema into which your computed attribute field can be defined.
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom mixin that will hold the computed attribute field.
 ---
 
 # (Alpha) Configure a computed attribute field using the Schema Registry API
