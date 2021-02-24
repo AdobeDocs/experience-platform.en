@@ -1,79 +1,75 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes January 27, 2021
+description: Experience Platform release notes for February 24, 2021.
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: January 27, 2021**
+**Release date: February 24, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
-- [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
+- [Dataflows](#dataflows)
+- [Experience Data Model (XDM) System](#xdm)
+- [Identity Service](#identity)
+- [Sources](#sources)
 
-## [!DNL Data Prep] {#data-prep}
+## Dataflows {#dataflows}
 
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
 
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
-
-For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## Destinations {#destinations}
-
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
+Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to [!DNL Destinations].
 
 **New features**
 
 | Feature | Description |
-| ------- | ----------- |
-| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
+| --- | --- |
+| New monitoring dashboard | You can now use the monitoring dashboard for cross-service transparency and actionable insights for source data ingestions. The new monitoring dashboard provides a comprehensive view of data processed from [!DNL Data Lake] to [!DNL Identity Service] and to [!DNL Profile], while also allowing you to monitor ingestion rates, successes, and failures. See the tutorial on [monitoring source dataflows in the UI](../../dataflows/ui/monitor-sources.md) for more information. |
 
-To learn more, visit the [destinations overview](../../destinations/home.md).
+For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
 
-## [!DNL Sources] {#sources}
+## Experience Data Model (XDM) System {#xdm}
+
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Upgraded search UI | Improved search capabilities are now available in the [!UICONTROL Browse] tab in the [!UICONTROL Schemas] workspace and the mixin selection dialog in the [!DNL Schema Editor].<br><br>When searching for a term previously, results would only include XDM resources whose name matches the search query. Now, in addition to resources whose name match the query, resources containing individual attributes that match the term will also be included. This allows you to search for XDM resources based on the attributes they contain rather than by resource name.<br><br>See the documents on [exploring XDM resources](../../xdm/ui/explore.md) and [managing schemas](../../xdm/ui/resources/schemas.md) in the UI for more information. |
+
+For more general information on XDM, refer to the [XDM System overview](../../xdm/home.md).
+
+## Identity Service {#identity}
+
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
+
+For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+
+## Sources {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New features**
+**New sources**
 
 | Feature | Description |
-| ------- | ----------- |
-| Adobe Audience Manager source connector enhancements | You can now filter and select individual first-party segments from Audience Manager to ingest into Platform, as well as filter out first-party traits. See the tutorial on [creating an Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
-| [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
-| Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
-| Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
-| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
+| --- | --- |
+| [!DNL Google PubSub] | You can now connect [!DNL Google PubSub] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [[!DNL Google PubSub] connector overview](../../sources/connectors/cloud-storage/google-pubsub.md) for more information. |
+| [!DNL Oracle Object Storage] | You can now connect [!DNL Oracle Object Storage] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [[!DNL Oracle Object Storage] connector overview](../../sources/connectors/cloud-storage/oracle-object-storage.md) for more information. |
 
-To learn more about sources, see the [sources overview](../../sources/home.md).
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Platform Launch Server Side rules can transform and send data to new destinations without changing client-side implementations.
-
-Platform Launch Server Side, combined with the Adobe Experience Platform Web and Mobile SDKs, makes it possible to:
-
-- Make a single call from the page that contains a payload of data and then federate this data server-side to reduce client-side network traffic and deliver a faster experience for customers.
-- Decrease the amount of time it takes for web pages to load so your site conforms to industry best practices around performance.
-- Increase transparency and control over which types of data are sent where, across all client-side properties.
-- Create a server-side rule to send previously tracked data to a new destination.
-
-For information, refer to the [Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).
+For more general information on sources, refer to the [sources overview](../../sources/home.md).
