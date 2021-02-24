@@ -257,7 +257,7 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 ]
 ```
 
-## Ingest record data to the streaming connection
+## Ingest record data to the streaming connection {#ingest-data}
 
 With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Platform].
 
