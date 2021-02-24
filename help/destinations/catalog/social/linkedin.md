@@ -4,7 +4,7 @@ title: Linkedin Matched Audiences connection
 description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
 ---
 
-# [!DNL LinkedIn Matched Audience] connection
+# [!DNL LinkedIn Matched Audiences] connection
 
 Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization, and suppression, based on hashed emails and mobile IDs.
 
