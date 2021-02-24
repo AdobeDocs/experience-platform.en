@@ -1,21 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics; flow service; update connections
 solution: Experience Platform
-title: Update Connections and Dataflows Using the Flow Service API
+title: Update Dataflows Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for updating the details and credentials of an existing connection, as well as the details and schedule of an existing dataflow using the Flow Service API.
+description: This tutorial covers the steps for updating the details and schedule of a dataflow using the Flow Service API.
 ---
 
-# Update connections and dataflows using the Flow Service API
+# Update Dataflows Using the Flow Service API
 
-In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials. Additionally, [!DNL Flow Service] also allows you to update the information and schedule of an existing dataflow.
-
-This tutorial covers the steps for updating the details and credentials of an existing connection, as well as the details and schedule of an existing dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for updating the details and schedule of a dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have a valid connection ID and a valid flow ID. If you do not have these values, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have a valid flow ID. If you do not have a valid flow ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
@@ -44,150 +42,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Update a connection
+## Look up dataflow details
 
-The following walks you through the steps to update the information of an existing connection.
-
-### Look up connection details
-
-The first step in updating your connection information is to retrieve connection details using your connection ID. To retrieve your connection's current information, make a GET request to the [!DNL Flow Service] API while providing the connection ID, of the connection you want to update.
-
-**API format**
-
-```http
-GET /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
-
-**Request**
-
-The following retrieves information regarding your connection.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the current details of your connection including its credentials, unique identifier (`id`), and version. The version value is required to update your connection.
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1597973312000,
-            "updatedAt": 1597973312000,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-            "name": "E2E_SF Base_Connection",
-            "connectionSpec": {
-                "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Basic Authentication",
-                "params": {
-                    "securityToken": "{SECURITY_TOKEN}",
-                    "password": "{PASSWORD}",
-                    "username": "my-salesforce-account",
-                    "environmentUrl": "login.salesforce.com"
-                }
-            },
-            "version": "\"1400dd53-0000-0200-0000-5f3f23450000\"",
-            "etag": "\"1400dd53-0000-0200-0000-5f3f23450000\""
-        }
-    ]
-}
-```
-
-### Update connection information
-
-Once you have identified the values you want to update and retrieved your connection's unique version, perform a PATCH request to the [!DNL Flow Service] API.
-
->[!IMPORTANT]
->
->A PATCH request requires the use of the `If-Match` header. The value for this header is your connection's unique version.
-
-**API format**
-
-```http
-PATCH /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to update. |
-
-**Request**
-
-The following request provides new information to update your connection with.
-
-```shell
-curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-    -H 'If-Match: 1400dd53-0000-0200-0000-5f3f23450000' \
-    -d '[
-        {
-            "op": "replace",
-            "path": "/auth/params",
-            "value": {
-                "username": "salesforce-connector-username",
-                "password": "{NEW_PASSWORD}",
-                "securityToken": "{NEW_SECURITY_TOKEN}"
-            }
-        },
-        {
-            "op": "replace",
-            "path": "/name",
-            "value": "Test salesforce connection"
-        },
-        {
-            "op": "add",
-            "path": "/description",
-            "value": "A test salesforce connection"
-        }
-    ]'
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the connection. Operations include: `add`, `replace`, and `remove`. |
-| `path` | The path of the parameter to be updated. |
-| `value` | The new value you want to update your parameter with. |
-
-**Response**
-
-A successful response returns your connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
-
-```json
-{
-    "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-    "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Update a dataflow
-
-### Look up dataflow details
-
-The first step in updating your dataflow is to retrieve dataflow details using your flow ID.
+The first step in updating your dataflow is to retrieve dataflow details using your flow ID. You can view the current details of an existing dataflow by making a GET request to the `/flows` endpoint.
 
 **API format**
 
@@ -214,7 +71,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the current details of your dataflow including its schedule, unique identifier (`id`), and version.
+A successful response returns the current details of your dataflow including its version, schedule, and unique identifier (`id`).
 
 ```json
 {
@@ -374,7 +231,3 @@ curl -X PATCH \
     "etag": "\"5400d99c-0000-0200-0000-60358d540000\""
 }
 ```
-
-## Next steps
-
-By following this tutorial, you have updated the credentials and information associated with your connection using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
