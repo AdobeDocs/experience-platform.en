@@ -60,6 +60,10 @@ By default, synchronous validation is not turned on. To enable it, you must pass
 
 If a message fails during synchronous validation, the message will not be written to the output queue, which provides immediate feedback for users.
 
+>[!NOTE]
+>
+>Schema changes may not be immediately available since changes are cached. Allow up to fifteen minutes for the cache to refresh.
+
 **API format**
 
 ```http
