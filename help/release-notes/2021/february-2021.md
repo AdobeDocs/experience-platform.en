@@ -26,7 +26,7 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 
 | Feature | Description |
 | --- | --- |
-| JupyterLab EDA notebook | The exploratory data analysis (EDA) notebook available in JupyterLab is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models. See the tutorial on [exploring web-based data for predictive models](../../data-science-workspace/jupyterlab/eda-notebook.md) for more information. |
+| JupyterLab EDA notebook | The exploratory data analysis (EDA) Python notebook is now available in Jupyterlab. This notebook is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models. See the tutorial on [exploring web-based data for predictive models](../../data-science-workspace/jupyterlab/eda-notebook.md) for more information. |
 
 For more general information on Data Science Workspace, refer to the [Data Science Workspace overview](../../data-science-workspace/home.md).
 
