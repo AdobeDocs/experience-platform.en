@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Introduction to Computed Attributes
 topic: guide
 type: Documentation
-description: Computed attributes in Adobe Experience Platform enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Platform. 
+description: Computed attributes are functions to aggregate event-level data into profile levels attributes. These functions are automatically computed so that they can be used across Segmentation, Activation, and Personalization. 
 ---
 
 # (Alpha) Computed attributes overview
@@ -12,9 +12,9 @@ description: Computed attributes in Adobe Experience Platform enable you to auto
 >
 >Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-Computed attributes enable you to create fields containing values that are automatically computed from other values, calculations, and expressions. 
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
-Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
 
 This guide will help you to better understand the role of computed attributes within Adobe Experience Platform.
 
@@ -24,7 +24,7 @@ Adobe Experience Platform enables you to easily import and merge data from multi
 
 Some of the information collected in the profile is easily understood when reading the data fields directly (for example, "first name") whereas other data requires performing multiple calculations or relying on other fields and values in order to generate the information (for example, "lifetime purchase total"). To make this data easier to understand at a glance, [!DNL Platform] allows you to create computed attributes that automatically perform these references and calculations, returning the value in the appropriate field.
 
-Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute or event. Expressions can be defined in multiple different ways, allowing you to specify that a rule evaluate incoming events only, an incoming event and profile data, or an incoming event, profile data, and historical events.
+Computed attributes include creating an expression, or "rule", that operates on incoming data and stores the resulting value in a profile attribute. Expressions can be defined in multiple different ways, allowing you to specify that a rule evaluate incoming events only, an incoming event and profile data, or an incoming event, profile data, and historical events.
 
 ### Use cases
 
@@ -40,7 +40,7 @@ Use cases for computed attributes can range from simple calculations to very com
 
 The availability of new computed attributes may be delayed up to 2 hours after the corresponding schema attribute is added to the union schema.
 
-This delay is due to the current caching configuration. Post-Alpha the delay could be reduced to an upper bound of 1 hour once Streaming Segmentation addresses the issue.
+This delay is due to the current caching configuration. Post-Alpha the cache refresh frequency could be increased.
 
 ### Dependency tracking in segments
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Computed Attributes API Endpoint
 topic: guide
 type: Documentation
-description: Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on Real-time Customer Profile data, meaning you can aggregate values across all records and events stored in Adobe Experience Platform. 
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across Segmentation, Activation, and Personalization. 
 ---
 
 # (Alpha) Computed attributes API endpoint
@@ -12,7 +12,7 @@ description: Computed attributes enable you to automatically compute the value o
 >
 >The computed attribute functionality outlined in this document is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-Computed attributes enable you to create fields containing values that are automatically computed from other values, calculations, and expressions. 
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 
 This guide includes sample API calls for performing basic CRUD operations using the `/computedAttributes` endpoint. 
 
@@ -140,6 +140,134 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
 |`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
 |`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
 
+## Create a computed attribute that references existing computed attributes
+
+It is also possible to create a computed attribute that references existing computed attributes. To do so, begin by making a POST request to the `/config/computedAttributes` endpoint. The request body will contain references to the computed attributes in the `expression.value` field as shown in the example that follows. 
+
+**API format**
+
+```http
+POST /config/computedAttributes
+```
+
+**Request**
+
+In this example, two computed attributes have already been created and will be used to define a third. The existing computed attributes are:
+
+* **`totalSpend`:** Captures the total dollar amount that a customer has spent.
+* **`countPurchases`:** Counts the number of purchases that a customer has made.
+
+The request below references the two existing computed attributes, dividing them in order to calculate the new `averageSpend` computed attribute.
+
+```shell
+curl -X POST \
+  https://platform.adobe.io/data/core/ups/config/computedAttributes \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}'\
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+        "name" : "averageSpend",
+        "path" : "_{TENANT_ID}.purchaseSummary",
+        "description" : "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+        "expression" : {
+            "type" : "PQL", 
+            "format" : "pql/text", 
+            "value":  "_{TENANT_ID}.totalSpend/_{TENANT_ID}.countPurchases"
+        },
+        "schema": 
+          {
+            "name":"_xdm.context.profile"
+          }
+          
+      }'
+```
+
+|Property|Description|
+|---|---|
+|`name`|The name of the computed attribute field, as a string.|
+|`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
+|`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
+|`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
+|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. In this example, the expression references two existing computed attributed. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
+|`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
+
+**Response**
+
+A successfully created computed attribute returns HTTP Status 200 (OK) and a response body containing the details of the newly created computed attribute. These details include a unique, read-only, system-generated `id` that can be used for referencing the computed attribute during other API operations.
+
+```json
+{
+    "id": "2afcf410-450e-4a39-984d-2de99ab58877",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "{SANDBOX_NAME}",
+        "type": "production",
+        "default": true
+    },
+    "name": "averageSpend",
+    "path": "_{TENANT_ID}.purchaseSummary",
+    "positionPath": [
+        "_{TENANT_ID}",
+        "purchaseSummary"
+    ],
+    "description": "Computed attribute to capture the average dollar amount that a customer spends on each purchase.",
+    "expression" : {
+            "type" : "PQL", 
+            "format" : "pql/text", 
+            "value":  "_{TENANT_ID}.totalSpend/_{TENANT_ID}.countPurchases"
+    },
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "returnSchema": {
+        "meta:xdmType": "number"
+    },
+    "definedOn": [
+        {
+          "meta:resourceType": "unions",
+          "meta:containerId": "tenant",
+          "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+        }
+    ],
+    "encodedDefinedOn":"\bVR)JMSR())(+KLOJKկHO+I(/(OI/S8{E:",
+    "dependencies": [
+        "c08a92f3-2418-4a3d-89d0-96f15fda3e5d",
+        "4ed9e3aa-57ae-4705-9e8a-7fba9a6a7010"
+    ],
+    "dependents": [],
+    "active": true,
+    "evaluationInfo": {
+        "batch": {
+          "enabled": false
+        },
+        "continuous": {
+          "enabled": true
+        },
+        "synchronous": {
+          "enabled": false
+        }
+      },
+    "type": "ComputedAttribute",
+    "createEpoch": 1613696592,
+    "updateEpoch": 1613696593
+}
+```
+
+|Property|Description|
+|---|---|
+|`id`|A unique, read-only, system-generated ID that can be used for referencing the computed attribute during other API operations.|
+|`imsOrgId`| The IMS Organization related to the computed attribute, should match the value sent in the request.|
+|`sandbox`|The sandbox object contains details of the sandbox within which the computed attribute was configured. This information is drawn from the sandbox header sent in the request. For more information, please see the [sandboxes overview](../../sandboxes/home.md).|
+|`positionPath`|An array containing the deconstructed `path` to the field that was sent in the request.|
+|`returnSchema.meta:xdmType`|The type of the field where the computed attribute will be stored.|
+|`definedOn`|An array showing the union schemas upon which the computed attribute has been defined. Contains one object per union schema, meaning there may be multiple objects within the array if the computed attribute has been added to multiple schemas based on different classes.|
+|`active`|A boolean value displaying whether or not the computed attribute is currently active. By default the value is `true`.|
+|`type`|The type of resource created, in this case "ComputedAttribute" is the default value.|
+|`createEpoch` and `updateEpoch`|The time at which the computed attribute was created and last updated, respectively.|
+
 ## Access computed attributes
 
 When working with computed attributes using the API, there are two options for accessing computed attributes that have been defined by your organization. The first is to list all computed attributes, the second is to view a specific computed attribute by its unique `id`.
@@ -174,7 +302,7 @@ curl -X GET \
 
 A successful response includes a `_page` attribute providing the total number of computed attributes (`totalCount`) and the number of computed attributes on the page (`pageSize`). 
 
-The response also includes a `children` array composed of one or more objects, each containing the details of one computed attribute. If you organization does not have any computed attributes, the `totalCount` and `pageSize` will be 0 (zero) and the `children` array will be empty.
+The response also includes a `children` array composed of one or more objects, each containing the details of one computed attribute. If your organization does not have any computed attributes, the `totalCount` and `pageSize` will be 0 (zero) and the `children` array will be empty.
 
 ```json
 {
@@ -438,6 +566,125 @@ curl -X DELETE \
 **Response**
 
 A successful delete request returns HTTP Status 200 (OK) and an empty response body. To confirm the deletion was successful, you can perform a GET request to lookup the computed attribute by its ID. If the attribute was deleted, you will receive an HTTP Status 404 (Not Found) error.
+
+## Create a segment definition referencing a computed attribute
+
+Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition includes an expression that encapsulates a query written in PQL. These expressions can also reference computed attributes.
+
+The following example creates a segment definition that references an existing computed attribute. To learn more about segment definitions, and how to work with them in the Segmentation Service API, please refer to the [segment definitions API endpoint guide](../../segmentation/api/segment-definitions.md).
+
+To begin, make a POST request to the `/segment/definitions` endpoint, providing the computed attribute in the request body.
+
+**API format**
+
+```http
+POST /segment/definitions
+```
+
+**Request**
+
+```shell 
+curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "downloadedInLast7Days",
+        "description": "Has product been downloaded in last 7 days?",
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "ttlInDays": 30,
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "_{TENANT_ID}.downloadsLast7Days > 0",
+            "meta": "m"
+        },
+        "dataGovernancePolicy": {
+            "excludeOptOut": true
+        }
+    }'
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `name` | A unique name for the segment, as a string. |
+| `description` | A human-readable description of the definition. |
+|`schema.name`|The schema associated with the entities in the segment. Consists of either an `id` or `name` field. |
+| `expression` | An object containing fields with information about the segment definition. |
+| `expression.type` | Specifies the expression type. Currently, only "PQL" is supported. |
+| `expression.format` | Indicates the structure of the expression in value. Currently, only `pql/text` is supported.|
+| `expression.value` | A valid PQL expression, in this example it includes a reference to an existing computed attribute. |
+
+For more information on schema definition attributes, please refer to the examples provided in the [segment definitions API endpoint guide](../../segmentation/api/segment-definitions.md).
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly created segment definition. To learn more about segment definition response objects, refer to the [segment definitions API endpoint guide](../../segmentation/api/segment-definitions.md).
+
+```json
+
+{
+    "id": "add3933f-ac5c-4240-8259-3a4528ee4885",
+    "schema": {
+        "name": "_xdm.context.profile"
+    },
+    "ttlInDays": 60,
+    "id": "119835c3-5fab-4c18-ae01-4ccab328fc5c",
+    "imsOrgId": "{IMS_ORG}",
+    "sandbox": {
+        "sandboxId": "{SANDBOX_ID}",
+        "sandboxName": "{SANDBOX_NAME}",
+        "type": "production",
+        "default": true
+    },
+    "name": "segment-downloadedInLast7Days",
+    "description": "Has product been downloaded in last 7 days?",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/text",
+        "value": "_coresvc.downloadsLast7Days > 0",
+        "meta": "m"
+    },
+    "evaluationInfo": {
+        "batch": {
+            "enabled": false
+        },
+        "continuous": {
+            "enabled": true
+        },
+        "synchronous": {
+            "enabled": false
+        }
+    },
+    "dataGovernancePolicy": {
+        "excludeOptOut": true
+    },
+    "creationTime": 1602016581000,
+    "updateEpoch": 1610609459,
+    "updateTime": 1610609459000,
+    "createEpoch": 1602016554,
+    "_etag": "\"8b01611a-0000-0200-0000-5ffff3330000\"",
+    "dependents": [
+        "023d46c9-a27c-4ea9-a887-2c91ba83f2d1"
+    ],
+    "definedOn": [
+        {
+            "meta:resourceType": "unions",
+            "meta:containerId": "tenant",
+            "$ref": "https://ns.adobe.com/xdm/context/profile__union"
+        }
+    ],
+    "dependencies": [
+    "103d46c9-a27c-4ea9-a887-2c91ba83f2d1"
+    ],
+    "type": "SegmentDefinition"
+}
+
+```
 
 ## Next steps
 

@@ -18,6 +18,10 @@ The expressions used in computed attributes are created using [!DNL Profile Quer
 
 This guide outlines some of the most commonly used PQL expressions that you can use when defining your own computed attributes for your organization. For more information on PQL and links to additional formatting guidelines and samples of supported queries, please visit the [PQL overview](../../segmentation/pql/overview.md).
 
+## Streaming expressions
+
+The following table provides details for commonly used query expressions supported in streaming mode.
+
 |Description|PQL expression|Input type:<br/>Profile or Experience Event (EE[])|Result type|
 |---|---|---|---|
 |Count of downloads of PhotoShop in the last 7 days.|xEvent[(timestamp occurs < 7 days before now) and eventType="download" and product = "PS"].count()|Profile & EE[]|Integer|
@@ -30,11 +34,18 @@ This guide outlines some of the most commonly used PQL expressions that you can 
 |Count of downloads of each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.count()))|Profile & EE[]|Map[String, Integer]|
 |Sum of numeric property over downloads of each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.sum(commerce.order.priceTotal)))|Profile & EE[]|Map[String, Integer] or Map[String, Double]|
 |Average of numeric property over downloads of each downloaded product, in the last 7 days, indexed by product.<br/><br/>**Note:** Requires the creation of three computed attributes.|**ca1:** xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.sum(commerce.order.priceTotal)))<br/><br/>**ca2:** xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.count()))<br/><br/>**ca3:** ca2 / ca1|Profile & EE[]|Map[String, Double]|
-|Whether or not the sum of numeric expression over product downloads in the last 7 days exceeds 100, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.sum(commerce.order.priceTotal) > 100))|Profile & EE[]|Map[String, Boolean]|
-|Whether or not the average of numeric expression over product downloads in the last 7 days exceeds 100, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.average(commerce.order.priceTotal) > 100))|Profile & EE[]|Map[String, Boolean]|
 |Minimum of numeric property over downloads of each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.min(commerce.order.priceTotal)))|Profile & EE[]|Map[String, Integer] or Map[String, Double]|
 |Maximum of numeric property over downloads of each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.max(commerce.order.priceTotal)))|Profile & EE[]|Map[String, Integer] or Map[String, Double]|
-|Accumulation of various metrics for each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, {"count": G.count(), "sum": G.sum(commerce.order.priceTotal)}))|Profile & EE[]|Map[String, Object] where Object is a custom XDM type|
 |Numeric expression on profile, not referencing events.|if(person.gender = "female", 60, 65)|Profile|Integer or Double|
 |Boolean expression on profile, not referencing events.|person.birthYear >= 2000|Profile|Boolean|
 |String expression on profile, not referencing events.|if(homeAddress.countryCode in ["US","MX","CA"], "NA", "ROW")|Profile|String|
+
+## Batch expressions
+
+The following table provides details for query expressions that are only available in batch mode, meaning they are not currently available in streaming.
+
+|Description|PQL expression|Input type:<br/>Profile or Experience Event (EE[])|Result type|
+|---|---|---|---|
+|Whether or not the sum of numeric expression over product downloads in the last 7 days exceeds 100, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.sum(commerce.order.priceTotal) > 100))|Profile & EE[]|Map[String, Boolean]|
+|Whether or not the average of numeric expression over product downloads in the last 7 days exceeds 100, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, G.average(commerce.order.priceTotal) > 100))|Profile & EE[]|Map[String, Boolean]|
+|Accumulation of various metrics for each downloaded product, in the last 7 days, indexed by product.|xEvent[(timestamp occurs < 7 days before now) and eventType="download"].groupBy(product).map((K, G) => mapEntry(K, {"count": G.count(), "sum": G.sum(commerce.order.priceTotal)}))|Profile & EE[]|Map[String, Object] where Object is a custom XDM type|

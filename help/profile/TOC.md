@@ -32,7 +32,6 @@ user-guide-description: Merge customer data to create a unified view of customer
   * [Computed attributes API](computed-attributes/ca-api.md)
   * [Configure a computed attribute field](computed-attributes/configure-ui.md)
   * [Sample expressions](computed-attributes/expressions.md)
-  * [Using computed attributes in Platform](computed-attributes/using-ca.md)
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
   * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
