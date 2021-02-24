@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Computed Attributes API Endpoint
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across Segmentation, Activation, and Personalization. 
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. 
 ---
 
 # (Alpha) Computed attributes API endpoint
@@ -157,7 +157,7 @@ In this example, two computed attributes have already been created and will be u
 * **`totalSpend`:** Captures the total dollar amount that a customer has spent.
 * **`countPurchases`:** Counts the number of purchases that a customer has made.
 
-The request below references the two existing computed attributes, dividing them in order to calculate the new `averageSpend` computed attribute.
+The request below references the two existing computed attributes, using valid PQL to divide in order to calculate the new `averageSpend` computed attribute.
 
 ```shell
 curl -X POST \
@@ -174,7 +174,7 @@ curl -X POST \
         "expression" : {
             "type" : "PQL", 
             "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.totalSpend/_{TENANT_ID}.countPurchases"
+            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
         },
         "schema": 
           {
@@ -190,7 +190,7 @@ curl -X POST \
 |`path`|The path to the field containing the computed attribute. This path is found within the `properties` attribute of the schema and should NOT include the field name in the path. When writing the path, omit the multiple levels of `properties` attributes.|
 |`{TENANT_ID}`|If you are unfamiliar with your tenant ID, please refer to the steps for finding your tenant ID in the [Schema Registry developer guide](../../xdm/api/getting-started.md#know-your-tenant_id).|
 |`description`|A description of the computed attribute. This is especially useful once multiple computed attributes have been defined as it will help others within your IMS Organization to determine the correct computed attribute to use.|
-|`expression.value`|A valid [!DNL Profile Query Language] (PQL) expression. In this example, the expression references two existing computed attributed. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.|
+|`expression.value`|A valid PQL expression. For a list of sample expressions, refer to the [sample PQL expressions](expressions.md) documentation.<br/><br/>In this example, the expression references two existing computed attributes. The attributes are referenced using the `path` and the `name` of the computed attribute as they appear in the schema in which the computed attributes were defined. For example, the `path` of the first referenced computed attribute is `_{TENANT_ID}.purchaseSummary` and the `name` is `totalSpend`.|
 |`schema.name`|The class upon which the schema containing the computed attribute field is based. Example: `_xdm.context.experienceevent` for a schema based on the XDM ExperienceEvent class.|
 
 **Response**
@@ -217,7 +217,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
     "expression" : {
             "type" : "PQL", 
             "format" : "pql/text", 
-            "value":  "_{TENANT_ID}.totalSpend/_{TENANT_ID}.countPurchases"
+            "value":  "_{TENANT_ID}.purchaseSummary.totalSpend/_{TENANT_ID}.purchaseSummary.countPurchases"
     },
     "schema": {
         "name": "_xdm.context.profile"
@@ -646,7 +646,7 @@ A successful response returns HTTP status 200 with details of your newly created
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "_coresvc.downloadsLast7Days > 0",
+        "value": "_{TENANT_ID}.downloadsLast7Days > 0",
         "meta": "m"
     },
     "evaluationInfo": {
