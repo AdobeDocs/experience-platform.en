@@ -5,7 +5,7 @@ description: Learn about the Adobe Experience Platform Web SDK Extension for Ado
 
 # Adobe Experience Platform Web SDK extension overview
 
-The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer opt-in and opt-out signals, and automatically collect context data. 
+The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data. 
 
 This document covers how to configure the extension in the Adobe Experience Platform Launch user interface.
 
@@ -19,13 +19,13 @@ If you have not installed the extension yet, select the **[!UICONTROL Catalog]**
 
 ![](../images/extension/overview/install.png)
 
-In both cases, you will arrive at the configuration page for the Platform Web SDK. The sections below explain the extension's configuration options.
+In both cases, you arrive at the configuration page for the Platform Web SDK. The sections below explain the extension's configuration options.
 
 ![](../images/extension/overview/config-screen.png)
 
 ## General configuration options
 
-The configuration options at the top of the page tell Adobe Experience Platform where the data should be routed and what configurations should be used on the server. 
+The configuration options at the top of the page tell Adobe Experience Platform where to route the data and what configurations should be used on the server. 
 
 ### [!UICONTROL Name]
 
@@ -35,7 +35,7 @@ The extension's name defaults to "[!DNL alloy]". However, you can change the ins
 
 ### **[!UICONTROL IMS Organization ID]**
 
-The [!UICONTROL IMS Organization ID] is the organization that you would like the data sent to at Adobe. Most of the time, you should use the default value that is autopopulated. When you have multiple instances on the page,  populate this with the value of the second organization you want to send data to. 
+The [!UICONTROL IMS Organization ID] is the organization that you would like the data sent to at Adobe. Most of the time, you should use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to. 
 
 ### **[!UICONTROL Edge Domain]**
 
@@ -49,7 +49,7 @@ See the guide on [edge configurations](../fundamentals/edge-configuration.md) fo
 
 ## [!UICONTROL Privacy]
 
-The [!UICONTROL Privacy] sections allows you to configure how the SDK handles customer consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a customer if no other explicit consent preference has been provided. The following table breaks down what each options entails:
+The [!UICONTROL Privacy] section allows you to configure how the SDK handles customer consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a customer if no other explicit consent preference has been provided. The following table breaks down what each option entails:
 
 | [!UICONTROL Default Consent Level] | Description |
 | --- | --- |
