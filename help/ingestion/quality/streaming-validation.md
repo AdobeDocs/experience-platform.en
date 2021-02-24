@@ -62,7 +62,7 @@ If a message fails during synchronous validation, the message will not be writte
 
 >[!NOTE]
 >
->Schema changes may not be immediately available since changes are cached, and the cache is refreshed every fifteen minutes.
+>Schema changes may not be immediately available since changes are cached. Allow up to fifteen minutes for the cache to refresh.
 
 **API format**
 
