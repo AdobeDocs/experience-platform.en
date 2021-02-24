@@ -41,7 +41,7 @@ Now that your schema has been created, you will need to specify which field will
 
 ![](../images/tutorials/external-audiences/mark-primary-identifier.png)
 
-After marking the `_id` field as the primary identity, select the title of the schema, followed by the toggle labelled **[!UICONTROL Profile]**. Select **[!UICONTROL Enable]** to enable the schema for Real-time Customer Profile.
+After marking the `_id` field as the primary identity, select the title of the schema, followed by the toggle labelled **[!UICONTROL Profile]**. Select **[!UICONTROL Enable]** to enable the schema for [!DNL Real-time Customer Profile].
 
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
@@ -71,7 +71,7 @@ Once you have created your streaming connection, you will have access to your un
 
 ## Building segments using imported audiences
 
-Once the imported audiences have been set up, they can be used as part of the segmentation process. To find external audiences, go the Segment Builder, and select **[!UICONTROL Audiences]** tab in the **[!UICONTROL Fields]** section.
+Once the imported audiences have been set up, they can be used as part of the segmentation process. To find external audiences, go to the Segment Builder, and select **[!UICONTROL Audiences]** tab in the **[!UICONTROL Fields]** section.
 
 ![](../images/tutorials/external-audiences/external-audiences.png)
 
