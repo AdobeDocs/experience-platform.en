@@ -1,6 +1,6 @@
 ---
 keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin;
-title: LinkedIn Matched Audience connection
+title: Linkedin Matched Audiences connection
 description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
 ---
 
