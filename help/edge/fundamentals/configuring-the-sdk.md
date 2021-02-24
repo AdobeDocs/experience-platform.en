@@ -140,7 +140,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | true              |
 
-If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the Adobe Experience Platform Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 
