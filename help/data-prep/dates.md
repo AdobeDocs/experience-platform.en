@@ -10,6 +10,10 @@ description: This document introduces the date functions used with Data Prep.
 
 Data Prep supports date functions, both as strings and as datetime objects.
 
+## Date function
+
+The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object. For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".
+
 ## Date function conversions
 
 When string fields from incoming data are mapped to date fields in schemas using Experience Data Model (XDM), the date format should be explicitly mentioned. If not explicitly mentioned, Data Prep will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it wil stop evaluating any subsequent formats.
@@ -70,7 +74,3 @@ The following table shows which pattern letters are defined for format strings. 
 | V | Time zone ID | Text | America/Los_Angeles |
 | O | Time zone offset | Text | GMT+8 |
 | Q/q | Quarter of the year | Number/Text | 3; 03; Q3; 3rd quarter |
-
-**Example**
-
-The expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".

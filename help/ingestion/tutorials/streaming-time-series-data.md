@@ -309,9 +309,9 @@ Ingesting time series data to a streaming connection can be done either with or 
 
 The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
+>You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Both `xdmEntity._id` and `xdmEntity.timestamp` are the only required  Additionally, the following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
