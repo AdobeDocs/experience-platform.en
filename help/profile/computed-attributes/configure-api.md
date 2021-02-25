@@ -364,7 +364,7 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 
 ```json
 {
-  "$id": "https://ns.adobe.com/coresvc/schemas/699c1f16821c51086394fef8233d7fdb61e6f5b574b5a230",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/699c1f16821c51086394fef8233d7fdb61e6f5b574b5a230",
   "meta:altId": "_{TENANT}.schemas.699c1f16821c51086394fef8233d7fdb61e6f5b574b5a230",
   "meta:resourceType": "schemas",
   "version": "1.0",
