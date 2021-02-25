@@ -124,10 +124,10 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
   "meta:registryMetadata": {
     "repo:createdDate": 1612861108205,
     "repo:lastModifiedDate": 1612861108205,
-    "xdm:createdClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:lastModifiedClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:createdUserId": "acp_core_unifiedProfile_feeds@AdobeID",
-    "xdm:lastModifiedUserId": "acp_core_unifiedProfile_feeds@AdobeID",
+    "xdm:createdClientId": "{CLIENT_ID}",
+    "xdm:lastModifiedClientId": "{CLIENT_ID}",
+    "xdm:createdUserId": "{USER_ID}",
+    "xdm:lastModifiedUserId": "{USER_ID}",
     "eTag": "627faa3346d3004aef2010e9bd2b7e721b19ae7857b276f3ef733e6e732d495f",
     "meta:globalLibVersion": "1.19.4"
   },
@@ -147,7 +147,7 @@ For more information regarding updating a mixin using the Schema Registry API, p
 **API Format**
 
 ```http
-POST /tenant/mixins/{MIXIN_ID}
+PUT /tenant/mixins/{MIXIN_ID}
 ```
 
 **Request**
@@ -289,10 +289,10 @@ A successful response returns the details of the updated mixin.
   "meta:registryMetadata": {
     "repo:createdDate": 1612861108205,
     "repo:lastModifiedDate": 1612861108205,
-    "xdm:createdClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:lastModifiedClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:createdUserId": "acp_core_unifiedProfile_feeds@AdobeID",
-    "xdm:lastModifiedUserId": "acp_core_unifiedProfile_feeds@AdobeID",
+    "xdm:createdClientId": "{CLIENT_ID}",
+    "xdm:lastModifiedClientId": "{CLIENT_ID}",
+    "xdm:createdUserId": "{USER_ID}",
+    "xdm:lastModifiedUserId": "{USER_ID}",
     "eTag": "627faa3346d3004aef2010e9bd2b7e721b19ae7857b276f3ef733e6e732d495f",
     "meta:globalLibVersion": "1.19.4"
   },
@@ -338,7 +338,7 @@ curl -X POST \
         "meta:extends": [
           "https://ns.adobe.com/xdm/context/profile",
           "https://ns.adobe.com/xdm/context/identitymap",
-          "https://ns.adobe.com/coresvc/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+          "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
         ],
         "description": "Description of schema.",
         "definitions": {
@@ -351,7 +351,7 @@ curl -X POST \
             "$ref": "https://ns.adobe.com/xdm/context/identitymap"
           },
           {
-            "$ref": "https://ns.adobe.com/coresvc/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
           }
         ],
         "meta:class": "https://ns.adobe.com/xdm/context/profile"
@@ -384,7 +384,7 @@ A successful response returns HTTP status 201 (Created) and a payload containing
       "meta:xdmType": "object"
     },
     {
-      "$ref": "https://ns.adobe.com/coresvc/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+      "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -392,7 +392,7 @@ A successful response returns HTTP status 201 (Created) and a payload containing
   "refs": [
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/coresvc/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "imsOrg": "{IMS_ORG}",
   "meta:extensible": false,
@@ -402,16 +402,16 @@ A successful response returns HTTP status 201 (Created) and a payload containing
     "https://ns.adobe.com/xdm/data/record",
     "https://ns.adobe.com/xdm/context/profile",
     "https://ns.adobe.com/xdm/context/identitymap",
-    "https://ns.adobe.com/coresvc/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
+    "https://ns.adobe.com/{TENANT_ID}/mixins/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352"
   ],
   "meta:xdmType": "object",
   "meta:registryMetadata": {
     "repo:createdDate": 1612385766411,
     "repo:lastModifiedDate": 1612385766411,
-    "xdm:createdClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:lastModifiedClientId": "acp_core_unifiedProfile_feeds",
-    "xdm:createdUserId": "acp_core_unifiedProfile_feeds@AdobeID",
-    "xdm:lastModifiedUserId": "acp_core_unifiedProfile_feeds@AdobeID",
+    "xdm:createdClientId": "{CLIENT_ID}",
+    "xdm:lastModifiedClientId": "{CLIENT_ID}",
+    "xdm:createdUserId": "{USER_ID}",
+    "xdm:lastModifiedUserId": "{USER_ID}",
     "eTag": "a9c6b5c25c109970ffa5eaeb3db2b47b59c696e1d9407fb39ccf7e48b74b558e",
     "meta:globalLibVersion": "1.18.4"
   },
