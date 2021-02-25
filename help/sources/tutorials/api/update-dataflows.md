@@ -1,15 +1,15 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;update dataflows
 solution: Experience Platform
 title: Update Dataflows Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for updating a dataflow using the Flow Service API.
+description: This tutorial covers the steps for updating a dataflow, including its name, description, and schedule, using the Flow Service API.
 ---
 
 # Update dataflows using the Flow Service API
 
-This tutorial covers the steps for updating a dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for updating a dataflow, including its name, description, and schedule using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -230,7 +230,7 @@ curl -X PATCH \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `op` | The operation call used to define the action needed to update the connection. Operations include: `add`, `replace`, and `remove`. |
+| `op` | The operation call used to define the action needed to update the dataflow. Operations include: `add`, `replace`, and `remove`. |
 | `path` | The path of the parameter to be updated. |
 | `value` | The new value you want to update your parameter with. |
 
