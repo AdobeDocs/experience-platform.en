@@ -16,9 +16,19 @@ A query can be evaluated with edge segmentation if it meets any of the following
 
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
-| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
-| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
+| Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. | ![](../images/ui/edge-segmentation/relative-hit-success.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | |
-| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
-| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
+| Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-relative-success.png) |
+| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/edge-segmentation/event-history-success.png) |
 
+If the query matches any of the above query types, you can enable it for edge segmentation by turning the **[!UICONTROL Evaluate as streaming segment on the edge]** toggle on.
+
+![](../images/ui/edge-segmentation/mark-on-edge.png)
+
+## Next steps
+
+This user guide explains how segment definitions evaluated with edge segmentation work on Adobe Experience Platform. 
+
+To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
