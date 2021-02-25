@@ -1,6 +1,6 @@
 ---
 keywords: email;Email;e-mail;email destinations
-title: Email Marketing Destinations Overview
+title: Email marketing destinations overview
 type: Tutorial
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
 ---
@@ -33,7 +33,7 @@ In the **[!UICONTROL Setup]** step, enter a name and a description for your new 
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
 
-Also in this step, you can select any marketing use case that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Email setup step](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 

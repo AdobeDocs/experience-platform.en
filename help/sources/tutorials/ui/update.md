@@ -11,7 +11,9 @@ type: Tutorial
 
 In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
-This tutorial provides steps for updating the details and credentials of an existing account from the [!UICONTROL Sources] workspace.
+The [!UICONTROL Sources] workspace also provides you with the ability to edit the schedule of batch dataflows, allowing you to update its ingestion frequency and interval rate.
+
+This tutorial provides steps for updating the details and credentials of an existing account from the [!UICONTROL Sources] workspace, as well as updating the ingestion schedule of a dataflow.
 
 ## Getting started
 
@@ -46,12 +48,39 @@ The **[!UICONTROL Edit account details]** dialog box allows you to update an acc
 
 ![edit-account-details](../../images/tutorials/update/edit-account-details.png)
 
-After a few moments, a green confirmation box appears on the bottom of the screen to confirm a successful update.
+After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful update.
 
 ![update-confirmed](../../images/tutorials/update/update-confirmed.png)
 
+## Edit schedule
+
+You can edit the ingestion schedule of a dataflow from the **[!UICONTROL Accounts]** page. From the list of accounts, select the account that contains the dataflow that you want to reschedule.
+
+![select-account](../../images/tutorials/update/select-account.png)
+
+The dataflows page appears. This page contains a list of existing dataflows associated with the account you selected. Select the ellipses (`...`) beside the dataflow that you want to reschedule.
+
+![reschedule](../../images/tutorials/update/reschedule.png)
+
+A dropdown menu appears, providing you with options to **[!UICONTROL Edit schedule]**, **[!UICONTROL Enable dataflow]**, **[!UICONTROL View in monitoring]**, and **[!UICONTROL Delete]**. Select **[!UICONTROL Edit schedule]** from the menu.
+
+![edit-schedule](../../images/tutorials/update/edit-schedule.png)
+
+The **[!UICONTROL Edit schedule]** dialog box provides you with options to update your dataflow's ingestion frequency and interval rate. Once you set your updated frequency and interval values, select **[!UICONTROL Save]**.
+
+![schedule-dialog-box](../../images/tutorials/update/schedule-dialog-box.png)
+
+| Scheduling | Description |
+| ---------- | ----------- |
+| Frequency | The frequency at which the dataflow will collect data. Acceptable values for editing frequency schedule for an already existing dataflow include: `minute`, `hour`, `day`, or `week`. |
+| Interval | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer and must be greater than or equal to `15`. |
+
+After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful update.
+
+![schedule-confirm](../../images/tutorials/update/schedule-confirm.png)
+
 ## Next steps
 
-By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to update account information.
+By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to update account information and edit your dataflow schedule.
 
 For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [updating connection information using the Flow Service API](../../tutorials/api/update.md).

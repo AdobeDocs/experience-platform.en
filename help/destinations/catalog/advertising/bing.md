@@ -1,10 +1,10 @@
 ---
 keywords: advertising; bing; 
-title: Microsoft Bing Connection Destination
+title: Microsoft Bing connection
 description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
 
-# [!DNL Microsoft Bing] connection
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 
@@ -47,7 +47,7 @@ In the [!UICONTROL Authentication] step, you must enter the destination connecti
  *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
  *  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads CID].
- *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+ *  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Microsoft Bing Destination Authentication](../../assets/catalog/advertising/bing/authentication.png)
     

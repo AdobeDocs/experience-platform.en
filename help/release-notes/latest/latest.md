@@ -1,51 +1,103 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes January 27, 2021
+description: Experience Platform release notes for February 24, 2021.
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: February 24, 2021
+author: ens70167
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: January 27, 2021**
+**Release date: February 24, 2021**
+
+New features in Adobe Experience Platform:
+
+- [(Beta) Dashboards](#dashboards)
 
 Updates to existing features in Adobe Experience Platform:
 
-- [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Data Science Workspace]](#dsw)
+- [[!DNL Dataflows]](#dataflows)
+- [[!DNL Experience Data Model (XDM) System]](#xdm)
+- [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
-## [!DNL Data Prep] {#data-prep}
+## (Beta) Dashboards {#dashboards}
 
-[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+|Profiles, Segments, Destinations, and License Usage Dashboards (Beta)| **Note: Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.**<br/><br/>Dashboards provide out-of-the-box reporting on your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.|
+
+## [!DNL Data Science Workspace] {#dsw}
+
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| JupyterLab EDA notebook | The exploratory data analysis (EDA) Python notebook is now available in Jupyterlab. This notebook is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models. See the tutorial on [exploring web-based data for predictive models](../../data-science-workspace/jupyterlab/eda-notebook.md) for more information. |
+
+For more general information on Data Science Workspace, refer to the [Data Science Workspace overview](../../data-science-workspace/home.md).
+
+## [!DNL Dataflows] {#dataflows}
+
+In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+
+Dataflows are a representation of data jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and [!DNL Real-time Customer Profile] before ultimately being activated to [!DNL Destinations].
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| New monitoring dashboard | You can now use the monitoring dashboard for cross-service transparency and actionable insights for source data ingestions. The new monitoring dashboard provides a comprehensive view of data processed from [!DNL Data Lake] to [!DNL Identity Service] and to [!DNL Profile], while also allowing you to monitor ingestion rates, successes, and failures. See the tutorial on [monitoring source dataflows in the UI](../../dataflows/ui/monitor-sources.md) for more information. |
+
+For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
+
+## [!DNL Experience Data Model (XDM) System] {#xdm}
+
+Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
+
+XDM is a publicly documented specification designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation delivering insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Upgraded search UI | Improved search capabilities are now available in the [!UICONTROL Browse] tab in the [!UICONTROL Schemas] workspace and the mixin selection dialog in the [!DNL Schema Editor].<br><br>When searching for a term previously, results would only include XDM resources whose name matches the search query. Now, in addition to resources whose name match the query, resources containing individual attributes that match the term will also be included. This allows you to search for XDM resources based on the attributes they contain rather than by resource name.<br><br>See the documents on [exploring XDM resources](../../xdm/ui/explore.md) and [managing schemas](../../xdm/ui/resources/schemas.md) in the UI for more information. |
+
+For more general information on XDM, refer to the [XDM System overview](../../xdm/home.md).
+
+## [!DNL Identity Service] {#identity}
+
+Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
+
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
+
+For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
+| Computed Attributes (Alpha) | ***Note: This functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.*** <br/><br/>Computed attributes are functions used to aggregate event-level data into profile-level attributes. You can then use the aggregates in segmentation, activation and personalization. Some examples of these functions include count, sum, average, min, max, true/false. Computed attributes are currently available via API only. For more information, see the [computed attributes overview](../../profile/computed-attributes/overview.md).|
 
-For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
-
-## Destinations {#destinations}
-
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
-
-To learn more, visit the [destinations overview](../../destinations/home.md).
+For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 
@@ -53,27 +105,11 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New features**
+**New sources**
 
 | Feature | Description |
-| ------- | ----------- |
-| Adobe Audience Manager source connector enhancements | You can now filter and select individual first-party segments from Audience Manager to ingest into Platform, as well as filter out first-party traits. See the tutorial on [creating an Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
-| [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
-| Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
-| Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
-| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
+| --- | --- |
+| [!DNL Google PubSub] | You can now connect [!DNL Google PubSub] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [[!DNL Google PubSub] connector overview](../../sources/connectors/cloud-storage/google-pubsub.md) for more information. |
+| [!DNL Oracle Object Storage] | You can now connect [!DNL Oracle Object Storage] to [!DNL Experience Platform] using the [!DNL Flow Service] API or the UI. See the [[!DNL Oracle Object Storage] connector overview](../../sources/connectors/cloud-storage/oracle-object-storage.md) for more information. |
 
-To learn more about sources, see the [sources overview](../../sources/home.md).
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Platform Launch Server Side rules can transform and send data to new destinations without changing client-side implementations.
-
-Platform Launch Server Side, combined with the Adobe Experience Platform Web and Mobile SDKs, makes it possible to:
-
-- Make a single call from the page that contains a payload of data and then federate this data server-side to reduce client-side network traffic and deliver a faster experience for customers.
-- Decrease the amount of time it takes for web pages to load so your site conforms to industry best practices around performance.
-- Increase transparency and control over which types of data are sent where, across all client-side properties.
-- Create a server-side rule to send previously tracked data to a new destination.
-
-For information, refer to the [Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).
+For more general information on sources, refer to the [sources overview](../../sources/home.md).
