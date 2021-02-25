@@ -89,7 +89,7 @@ A successfully created computed attribute returns HTTP Status 200 (OK) and a res
     "id": "2afcf410-450e-4a39-984d-2de99ab58877",
     "imsOrgId": "{IMS_ORG}",
     "sandbox": {
-        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxId": "{SANDBOX_ID}",
         "sandboxName": "prod",
         "type": "production",
         "default": true
