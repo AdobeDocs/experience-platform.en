@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Introduction to Computed Attributes
 topic: guide
 type: Documentation
-description: Computed attributes are functions to aggregate event-level data into profile levels attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+description: Computed attributes are functions to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
 ---
 
 # (Alpha) Computed attributes overview
