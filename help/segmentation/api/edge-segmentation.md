@@ -12,8 +12,6 @@ description: This document contains examples on how to use streaming segmentatio
 >
 >The following document states how to use edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
 
-# Edge segmentation
-
 Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
 
 ## Getting started
