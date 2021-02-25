@@ -13,7 +13,7 @@ To respect your user's privacy, you might want to ask for the user's consent bef
 If the user opts in to all purposes, the SDK is allowed to perform the following tasks:
 
 * Send data to and from Adobe's servers.
-* Read and write cookies or web storage items (except for persisting the user's opt-in preferences).
+* Read and write cookies or web storage items.
 
 If the user opts out of all purposes, the SDK does not perform any of these tasks.
 
