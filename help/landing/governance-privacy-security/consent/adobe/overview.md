@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Consent processing in Adobe Experience Platform
+title: Consent Processing in Adobe Experience Platform
 topic: getting started
-description: Consent processing in Adobe Experience Platform
+description: Learn how to process customer consent signals in Adobe Experience Platform using the Adobe 2.0 standard.
 ---
 
 # Consent processing in Adobe Experience Platform
@@ -62,132 +62,13 @@ For more information on how to work with merge policies, refer to the [merge pol
 
 Once you have your datasets and merge policies to represent the required consent fields in your customer profiles, the next step is to bring the consent data itself into Platform.
 
-Primarily, you should be using the Adobe Experience Platform Web SDK to send consent-change signals to Platform whenever they occur on your website. If you already have consent data stored elsewhere, however, you can also opt to ingest your collected consent data directly by mapping it to your consent dataset's XDM schema and sending it to Platform through batch ingestion.
+Primarily, you should be using the Adobe Experience Platform Web SDK to send consent data to Platform whenever consent-change events are detected by your CMP. If you already have consent data stored elsewhere, however, you can also opt to ingest your collected consent data directly by mapping it to your consent dataset's XDM schema and sending it to Platform through batch ingestion.
 
-Refer to the sections below for details on each of these methods:
-
-* [Integrate the SDK to process customer consent data](#sdk)
-* [Ingest XDM-compliant consent data directly](#batch)
+Details for each of these methods are provided in the subsections below.
 
 ### Integrate the Experience Platform Web SDK to process customer consent data {#sdk}
 
-Once you have configured your CMP to listen for consent-change events on your website, you can integrate the Experience Platform Web SDK to receive the updated consent settings and send them to Platform whenever a consent-change event occurs. The SDK provides two commands that can be used to send consent data to Platform (explained in the subsections below), and should be used when a customer provides consent information for the first time, and anytime that consent changes thereafter.
-
-**The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. The sections below provide general guidance on how to integrate your CMP with the Platform Web SDK.
-
-#### Set up an edge configuration
-
-In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/edge-configuration.md).
-
-After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
-
-| Edge configuration field | Value |
-| --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
-| [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
-| [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
-
-![](../../../images/governance-privacy-security/consent/overview/edge-config.png)
-
-When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
-
-#### Making consent-change commands
-
-Once you have created the edge configuration described in the previous section, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
-
-There are two scenarios where `setConsent` should be called on your site:
-
-1. When consent is loaded on the page (in other words, on every page load)
-1. As part of a CMP hook or event listener that detects changes in consent settings
-
->[!NOTE]
->
->For an introduction to the common syntax for Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
-
-The `setConsent` command expects two arguments:
-
-1. A string that indicates the command type (in this case, `"setConsent"`)
-1. A payload object that contains a single array-type property: `consent`. The `consent` array must contain at least one object that provides the required consent fields for the Adobe standard.
-
-The required consent fields for the Adobe standard are shown in the following example `setConsent` call:
-
-```js
-alloy("setConsent", {
-  consent: [{
-    standard: "Adobe",
-    version: "2.0",
-    value: {
-      collect: {
-        val: "y"
-      },
-      share: {
-        val: "y"
-      },
-      personalize: {
-        content: {
-          val: "y"
-        }
-      },
-      metadata: {
-        time: "2020-10-12T15:52:25+00:00"
-      }
-    }
-  }]
-});
-```
-
-| Payload property | Description |
-| --- | --- |
-| `standard` | The consent standard being used. For the Adobe standard, this value must be set to `Adobe`. |
-| `version` | The version number of the consent standard indicated under `standard`. This value must be set to `2.0` for Adobe-standard consent processing. |
-| `value` | The customer's updated consent information, provided as an XDM object that conforms to the structure of the Profile-enabled dataset's consent fields. |
-
->[!NOTE]
->
->If you are using additional consent standards in conjunction with `Adobe` (such as `IAB TCF`), you can add additional objects to the `consent` array for each standard. Each object must contain appropriate values for `standard`, `version`, and `value` for the consent standard they represent.
-
-The following JavaScript provides an example of how you may define a function that handles consent preference changes on your site, to be used as a callback in an event listener or a CMP hook:
-
-```js
-var handleConsentChange = function () {
-  // Retrieve the consent data and generate a timestamp
-  var categories = getConsentData();
-  var d = new Date();
-  var collectedAt = d.toISOString();
-
-  //  Map the consent values and timestamp to XDM
-  var consentXDM = {
-    collect: {
-      val: categories.collect !== -1 ? "y" : "n"
-    },
-    personalize: {
-      content: {
-        val: categories.personalizeContent !== -1 ? "y" : "n"
-      }
-    },
-    share: {
-      val: categories.share !== -1 ? "y" : "n"
-    },
-    metadata: {
-      time: collectedAt
-    }
-  };
-
-  // Pass the XDM object to the Platform Web SDK
-  alloy("setConsent", {
-    consent: [{
-      standard: "Adobe",
-      version: "2.0",
-      value: consentXDM
-    }]
-  });
-});
-```
-
-#### Handling SDK responses
-
-All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+Once you have configured your CMP to listen for consent-change events on your website, you can integrate the Experience Platform Web SDK to receive the updated consent settings and send them to Platform whenever a consent-change event occurs. Follow the guide on [configuring the SDK to process customer consent data](./sdk.md) for more information.
 
 ### Ingest XDM-compliant consent data directly {#batch}
 

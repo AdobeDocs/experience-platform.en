@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Configure a dataset to capture consent and preference data
+title: Configure a Dataset to Capture Consent and Preference Data
 topic: getting started
-description: Configure a dataset to capture consent and preference data
+description: Learn how to configure an Experience Data Model (XDM) schema and dataset to capture consent and preference data in Adobe Experience Platform.
 ---
 
 # Configure a dataset to capture consent and preference data
