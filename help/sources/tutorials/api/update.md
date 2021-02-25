@@ -46,7 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Look up connection details
 
-The first step in updating your connection is to retrieve its details using your connection ID. To retrieve your connection's current details, make a GET request to the [!DNL Flow Service] API while providing the connection ID, of the connection you want to update.
+The first step in updating your connection is to retrieve its details using your connection ID. To retrieve your connection's current details make a GET request to the [!DNL Flow Service] API while providing the connection ID, of the connection you want to update.
 
 **API format**
 
@@ -60,7 +60,7 @@ GET /connections/{CONNECTION_ID}
 
 **Request**
 
-The following retrieves information regarding your connection.
+The following request retrieves information regarding your connection.
 
 ```shell
 curl -X GET \
