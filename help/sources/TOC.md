@@ -141,6 +141,7 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
   - [Update connections](tutorials/api/update.md)
+  - [Update dataflows](tutorials/api/update-dataflows.md)
   - [Delete connections](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}

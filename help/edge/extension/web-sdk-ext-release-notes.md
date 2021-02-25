@@ -26,7 +26,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 
 #### Bug Fixes
 
-* When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls AEP is now aware of environments so users are only presented with those schemas that they have access to edit. 
+* When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls Platform is now aware of environments so users are only presented with those schemas that they have access to edit. 
 
 #### Features
 
@@ -55,7 +55,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 * Support overriding the dataset ID in the `sendEvent` action.
 * Add a new Data Element of type `IdentityMap` which can be used to populate the `identityMap` entry in the XDM Object Data Element which is now enabled, and in the `setConsent` action.
 * Support passing an identity map in the `setConsent` action.
-* Support choosing an AEP sandbox in the XDM Object Data Element.
+* Support choosing an Platform sandbox in the XDM Object Data Element.
 
 
 ## May 26, 2020
@@ -85,7 +85,7 @@ Those decisions return from the `sendEvent` command only if `renderDecisions` is
 * Fixed issue in Event Merge ID where it was being reset every time the data element was referenced.
 * Renamed the `setCustomerIds` action to `syncIdentity`.
 * Added a `getIdentity` command. This can be consumed via custom code only for now.
-* Enabling debug using `_satellite` now enables debugging in the AEP Web SDK.
+* Enabling debug using `_satellite` now enables debugging in the Adobe Experience Platform Web SDK.
 * Added support for typed values in the XDM Object: Booleans, Numbers and Decimals.
 
 ## March 16, 2020
@@ -162,7 +162,7 @@ Those decisions return from the `sendEvent` command only if `renderDecisions` is
 * Extension winked into existence
 * ECID support with no additional libraries or networks calls
 * Opt-in support
-* Support sending XDM to AEP
+* Support sending XDM to Platform
 * First-party domain support
 * Automatically collect browser context
 * Fully open source ([extension](https://github.com/adobe/reactor-extension-alloy), [SDK](https://github.com/adobe/reactor-extension-alloy))

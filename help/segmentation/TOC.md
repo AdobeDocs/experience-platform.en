@@ -51,6 +51,7 @@ user-guide-description: Build segments and generate audiences from your Real-tim
   - [Create a dynamic segment (Video)](video/create-a-dynamic-segment.md)
   - [Create a multi-entity segment (video)](video/create-multi-entity-segments.md)
   - [Evaluate a segment](tutorials/evaluate-a-segment.md)
+  - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)
