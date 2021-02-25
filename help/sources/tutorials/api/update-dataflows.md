@@ -7,7 +7,7 @@ type: Tutorial
 description: This tutorial covers the steps for updating a dataflow using the Flow Service API.
 ---
 
-# Update Dataflows Using the Flow Service API
+# Update dataflows using the Flow Service API
 
 This tutorial covers the steps for updating a dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
