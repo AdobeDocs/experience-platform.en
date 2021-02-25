@@ -74,7 +74,7 @@ curl -X GET \
 A successful response returns the current details of your dataflow including its version, schedule, and unique identifier (`id`).
 
 ```json
-{{
+{
     "items": [
         {
             "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
