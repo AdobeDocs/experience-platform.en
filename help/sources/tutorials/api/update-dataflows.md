@@ -4,12 +4,12 @@ solution: Experience Platform
 title: Update Dataflows Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for updating the details and schedule of a dataflow using the Flow Service API.
+description: This tutorial covers the steps for updating a dataflow using the Flow Service API.
 ---
 
 # Update Dataflows Using the Flow Service API
 
-This tutorial covers the steps for updating the details and schedule of a dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for updating a dataflow using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -20,7 +20,7 @@ This tutorial also requires you to have a working understanding of the following
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully update your connection's information using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully update your dataflow using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
@@ -74,19 +74,19 @@ curl -X GET \
 A successful response returns the current details of your dataflow including its version, schedule, and unique identifier (`id`).
 
 ```json
-{
+{{
     "items": [
         {
             "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
             "createdAt": 1612310475905,
-            "updatedAt": 1613629174714,
+            "updatedAt": 1614122324830,
             "createdBy": "{CREATED_BY}",
             "updatedBy": "{UPDATED_BY}",
-            "createdClient": "exc_app",
-            "updatedClient": "exc_app",
+            "createdClient": "{CREATED_CLIENT}",
+            "updatedClient": "{UPDATED_CLIENT}",
             "sandboxId": "{SANDBOX_ID}",
-            "sandboxName": "prod",
-            "imsOrgId": "{IMS_ORG}}",
+            "sandboxName": "{SANDBOX_NAME}",
+            "imsOrgId": "{IMS_ORG}",
             "name": "Database dataflow using BigQuery",
             "description": "collecting test1.Mytable from Google BigQuery",
             "flowSpec": {
@@ -94,8 +94,8 @@ A successful response returns the current details of your dataflow including its
                 "version": "1.0"
             },
             "state": "enabled",
-            "version": "\"1a0037e4-0000-0200-0000-602e06f60000\"",
-            "etag": "\"1a0037e4-0000-0200-0000-602e06f60000\"",
+            "version": "\"5400d99c-0000-0200-0000-60358d540000\"",
+            "etag": "\"5400d99c-0000-0200-0000-60358d540000\"",
             "sourceConnectionIds": [
                 "b7581b59-c603-4df1-a689-d23d7ac440f3"
             ],
@@ -131,7 +131,7 @@ A successful response returns the current details of your dataflow including its
             },
             "scheduleParams": {
                 "startTime": "1612310466",
-                "frequency": "day",
+                "frequency": "week",
                 "interval": "15",
                 "backfill": "true"
             },
@@ -156,8 +156,8 @@ A successful response returns the current details of your dataflow including its
             ],
             "runs": "/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c/runs",
             "lastOperation": {
-                "started": 1613629169724,
-                "updated": 1613629174714,
+                "started": 1614122316652,
+                "updated": 1614122324830,
                 "percentCompleted": 100.0,
                 "status": {
                     "value": "completed",
@@ -167,7 +167,7 @@ A successful response returns the current details of your dataflow including its
                     {
                         "op": "replace",
                         "path": "/scheduleParams/frequency",
-                        "value": "day"
+                        "value": "week"
                     }
                 ],
                 "operation": "update"
@@ -183,12 +183,13 @@ A successful response returns the current details of your dataflow including its
 }
 ```
 
-### Update dataflow schedule
+## Update dataflow
+
+To update your dataflow's run schedule, name, and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
 
 >[!IMPORTANT]
->A PATCH request requires the use of the `If-Match` header. The value for this header is your dataflow's unique version.
-
-To update the run schedule of a flow, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update.
 
 **API format**
 
@@ -198,7 +199,7 @@ PATCH /flows/{FLOW_ID}
 
 **Request**
 
-The following request updates your flow run schedule.
+The following request updates your flow run schedule, as well as your dataflow's name and description.
 
 ```shell
 curl -X PATCH \
@@ -209,12 +210,22 @@ curl -X PATCH \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
     -H 'If-Match: "1a0037e4-0000-0200-0000-602e06f60000"' \
     -d '[
-    {
-        "op": "replace",
-        "path": "/scheduleParams/frequency",
-        "value": "week"
-    }
-]'
+            {
+                "op": "replace",
+                "path": "/scheduleParams/frequency",
+                "value": "day"
+            },
+            {
+                "op": "replace",
+                "path": "/name",
+                "value": "Database Dataflow Feb2021"
+            },
+            {
+                "op": "replace",
+                "path": "/description",
+                "value": "Database dataflow for testing update API"
+            }
+        ]'
 ```
 
 | Parameter | Description |
@@ -225,9 +236,15 @@ curl -X PATCH \
 
 **Response**
 
+A successful response returns your flow ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your flow ID.
+
 ```json
 {
     "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
-    "etag": "\"5400d99c-0000-0200-0000-60358d540000\""
+    "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
+
+## Next steps
+
+By following this tutorial, you have updated run schedule, name, and description of your dataflow using the [!DNL Flow Service] API. For more information on using source connectors, see the [sources overview](../../home.md).
