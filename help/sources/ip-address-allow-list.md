@@ -19,6 +19,15 @@ You can define network access controls through your network firewall. By specify
 - `40.71.14.32/28`
 - `40.78.229.96/28`
 
+## East US 2 region
+
+- `20.41.2.0/23`
+- `20.41.4.0/26`
+- `20.44.17.80/28`
+- `20.49.102.16/29`
+- `40.70.148.160/28`
+- `52.167.107.224/28`
+
 ## West Europe region
 
 - `13.69.67.192/28`
