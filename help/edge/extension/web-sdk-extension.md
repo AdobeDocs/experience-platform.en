@@ -5,61 +5,54 @@ description: Learn about the Adobe Experience Platform Web SDK Extension for Ado
 
 # Adobe Experience Platform Web SDK extension overview
 
-The Adobe Experience Platform Web SDK Extension sends data to the Adobe Experience Cloud from web properties, through the Adobe Experience Platform Edge Network. The Adobe Experience Platform Web SDK extension allows for streaming data into platform, syncing identities, opt-in and automatically collecting context data. 
+The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data. 
+
+This document covers how to configure the extension in the Adobe Experience Platform Launch user interface.
 
 ## Configure the extension
 
-This section provides a reference for the options available when configuring the Adobe Experience Platform Web SDK extension.
+If the Platform Web SDK extension has already been installed for a property, open the property in the Platform Launch UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
-If the Adobe Experience Platform Web SDK extension is not yet installed, open your property, then select **[!UICONTROL Extensions > Catalog]**, hover over the Adobe Experience Platform Web SDK extension, and select **[!UICONTROL Install]**.
+![](../images/extension/overview/configure.png)
 
-To configure the extension, open the **[!UICONTROL Extensions]** tab, hover over the extension, and then select **[!UICONTROL Configure]**.
+If you have not installed the extension yet, select the **[!UICONTROL Catalog]** tab. From the list of available extensions, find the Platform Web SDK extension and select **[!UICONTROL Install]**.
 
-![](./assets/ext-aep-config.png)
+![](../images/extension/overview/install.png)
 
-### Instance Name
+In both cases, you arrive at the configuration page for the Platform Web SDK. The sections below explain the extension's configuration options.
 
-The Adobe Experience Platform Web SDK extension supports multiple instances on the page. This is used to send data to multiple organizations with a single Adobe Experience Platform Launch configuration. The **[!UICONTROL Name]** defaults to alloy. However, you can change the instance name to any valid JavaScript object name. The Adobe Experience Platform extension requires that each instance have a different **[!UICONTROL Config ID]** and a different **[!UICONTROL Organization ID]**. 
+![](../images/extension/overview/config-screen.png)
 
-## **[!UICONTROL Config ID]**
+## General configuration options
 
-The **[!UICONTROL Config ID]** is what tells Adobe Experience Platform where the data should be routed and what configurations should be used on the server. This is required for the Adobe Experience Platform extension to work. You can obtain a configuration ID by contacting client care. 
+The configuration options at the top of the page tell Adobe Experience Platform where to route the data and what configurations should be used on the server. 
 
+### [!UICONTROL Name]
 
-### **[!UICONTROL Organization ID]**
+The Adobe Experience Platform Web SDK extension supports multiple instances on the page. This is used to send data to multiple organizations with a single Platform Launch configuration. 
 
-The **[!UICONTROL Organization ID]** is the organization that you would like the data sent to at Adobe. Most of the time, you should use the default value that is autopopulated. When you have multiple instances on the page,  populate this with the value of the second organization you want to send data to. 
+The extension's name defaults to "[!DNL alloy]". However, you can change the instance name to any valid JavaScript object name.
+
+### **[!UICONTROL IMS Organization ID]**
+
+The [!UICONTROL IMS Organization ID] is the organization that you would like the data sent to at Adobe. Most of the time, you should use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to. 
 
 ### **[!UICONTROL Edge Domain]**
 
-The **[!UICONTROL Edge Domain]** is the domain that the Adobe Experience Platform extension sends and receives data from. The extension requires that you use a 1st-party CNAME for production traffic. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html). 
+The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform extension sends and receives data from. The extension requires that you use a 1st-party CNAME for production traffic. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html). 
 
-### **[!UICONTROL Enable Errors]**
+## [!UICONTROL Edge Configurations]
 
-By default, if there is an error with the extension, it logs the error to the console. If you want to hide the errors in a production environment, you can uncheck the **[!UICONTROL Enable Errors]** checkbox. Errors still print out when debugging is turned on in Platform Launch. 
+When a request is sent to the Adobe Experience Platform Edge Network, an edge configuration ID is used to reference the server-side configuration. This allows you to update the configuration without having to make code changes on your website.
 
-### **[!UICONTROL Enable Opt-in]**
+See the guide on [edge configurations](../fundamentals/edge-configuration.md) for more information.
 
-If **[!UICONTROL Enable Opt-in]** is enabled, the extension can hold hits until opt-in is received. The extension exposes an action to set the opt-in preferences. 
+## [!UICONTROL Privacy]
 
-### **[!UICONTROL Enable Migrate ECID]**
+The [!UICONTROL Privacy] section allows you to configure how the SDK handles customer consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a customer if no other explicit consent preference has been provided. The following table breaks down what each option entails:
 
-The Platform Web SDK extension uses a new cookie to store the ECID. This setting enables compatibility between the new cookie and the old cookie for migration purposes. Adobe highly recommends this be enabled, unless you have no existing visitors with an ECID. 
-
-### **[!UICONTROL Use 3rd Party Cookies]**
-
-The Adobe Experience Platform will store a cookie in the first party domain always. This option allows you to use a third-party cookie set on demdex.net in addition to the cookie on the first-party domain. This can be helpful when you have users that move between multiple domains. This will disable calls to demdex.net. 
-
-### **[!UICONTROL Context]**
-
-The extension collects information automatically about the context of the request (for example, details about the URL and the browser). This can be disabled by deselecting specific contexts. 
-
-- **[!UICONTROL web]** - Details about the webpage such as url, referrer, etc. 
-- **[!UICONTROL device]** - Details about the device such as the screen orientation, screen height and screen width.
-- **[!UICONTROL environment]** - Information about the computing environment (Browser, connection, and so on)
-- **[!UICONTROL location]** - Limited information about the location of the user
-
-## What's next
-
-1. Set [action types](action-types.md).
-2. Set [data element types](data-element-types.md).
+| [!UICONTROL Default Consent Level] | Description |
+| --- | --- |
+| [!UICONTROL In] | Opt-in. Use this option if you assume customer consent by default and only honor opt-out signals. |
+| [!UICONTROL Pending] | Customers with "pending" consent are assumed to be opted out until an opt-in signal is sent. Use this option if you require explicit customer consent for your business operations. |
+| [!UICONTROL Provided by data element] | The default consent level is determined by a separate data element that you define. When using this option, you must specify the data element using the provided dropdown menu. |
