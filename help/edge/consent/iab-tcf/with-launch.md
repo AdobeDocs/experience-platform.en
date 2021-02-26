@@ -17,13 +17,9 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Setting default consent
 
-Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`.
+Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. You can also use a data element to dynamically set the default consent value.
 
->[!NOTE]
->
->Currently, there is no way to set this dynamically through the Experience Platform Launch extension.
-
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on how to configure default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration guide.
 
 ## Updating Profile with consent information {#consent-code-1}
 
@@ -62,7 +58,7 @@ This custom code does two things:
 * Value: "%IAB TCF Consent String%"
 * GDPR Applies: "%IAB TCF Consent GDPR%"
 
-![IAB Set Consent Action](../../../assets/iab_set_consent_action.png)
+![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >

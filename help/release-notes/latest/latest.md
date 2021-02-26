@@ -18,6 +18,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -58,6 +59,18 @@ Dataflows are a representation of data jobs that move data across Platform. Thes
 | New monitoring dashboard | You can now use the monitoring dashboard for cross-service transparency and actionable insights for source data ingestions. The new monitoring dashboard provides a comprehensive view of data processed from [!DNL Data Lake] to [!DNL Identity Service] and to [!DNL Profile], while also allowing you to monitor ingestion rates, successes, and failures. See the tutorial on [monitoring source dataflows in the UI](../../dataflows/ui/monitor-sources.md) for more information. |
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
+
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
