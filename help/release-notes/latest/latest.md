@@ -67,7 +67,7 @@ For more general information on dataflows, refer to the [dataflows overview](../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
