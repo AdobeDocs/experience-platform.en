@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;api;
 solution: Experience Platform
-title: Segmentation Service developer guide
+title: Getting Started with the Segmentation Service API
 topic: developer guide
 description: The following documentation provides additional information that you need to know in order to successfully work with the Segmentation API.
 ---
 
-# Getting started with [!DNL Segmentation Service] {#getting-started}
+# Getting started with the Segmentation Service API {#getting-started}
 
 Adobe Experience Platform [!DNL Segmentation Service] allows you to build segments and generate audiences in Adobe Experience Platform from your [!DNL Real-time Customer Profile] data.
 
@@ -25,7 +25,7 @@ The [!DNL Segmentation Service] API documentation provides example API calls to 
 
 ## Required headers
 
-The API documentation also requires you to have completed the [authentication tutorial](../../tutorials/authentication.md) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
+The API documentation also requires you to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) in order to successfully make calls to [!DNL Platform] endpoints. Completing the authentication tutorial provides the values for each of the required headers in [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

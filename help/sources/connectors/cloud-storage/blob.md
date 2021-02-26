@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics;Blob;blob;Azure Blob;azure blob
 solution: Experience Platform
-title: Azure Blob connector
+title: Azure Blob Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Azure Blob to Platform using APIs or the user interface.
+description: Learn how to connect Azure Blob to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # Azure Blob connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] through batches.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Azure Blob] through batches.
 
 ## IP address allow list
 
@@ -29,15 +29,15 @@ The following is a list of constraints you must account for when naming your clo
 
 ## Connect [!DNL Azure Blob] to [!DNL Platform]
 
-The documentation below provides information on how to connect Azure Blob to Platform using APIs or the user interface:
+The documentation below provides information on how to connect Azure Blob to Adobe Experience Platform using APIs or the user interface:
 
 ### Using APIs
 
-- [Create an Azure Blob connector using the Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
+- [Create an Azure Blob source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/blob.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an Azure Blob source connector in the UI](../../tutorials/ui/create/cloud-storage/blob.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create an Azure Blob source connection in the UI](../../tutorials/ui/create/cloud-storage/blob.md)
+- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

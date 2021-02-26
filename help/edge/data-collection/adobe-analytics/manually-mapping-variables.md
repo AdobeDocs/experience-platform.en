@@ -1,8 +1,7 @@
 ---
-title: Manually mapping variables in Adobe Analytics
-seo-title: Manually mapping variables in Adobe Analytics with Web SDK
-description: How to manurally map variables into Adobe Analytics using processing rules
-seo-description: manurally map variables into Adobe Analytics using processing rules with Web SDK
+title: Manually Mapping Adobe Analytics Variables in the Adobe Experience Platform Web SDK
+description: Learn how to manually map variables into Adobe Analytics using processing rules in the Experience Platform Web SDK.
+seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
 ---
 
@@ -45,9 +44,9 @@ To be used by [!DNL Analytics], XDM data is flattened using dot notation and mad
 
 All data collected by the edge network can be accessed via [processing rules](https://docs.adobe.com/content/help/en/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). In [!DNL Analytics], you can use processing rules to incorporate context data into [!DNL Analytics] variables. 
 
-For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x_atag.search.term(Context Data)**.
+For example, in the following rule, Adobe Analytics is set to populate **Internal Search terms (eVar2)** with the data associated with **a.x._atag.search.term(Context Data)**.
 
-  ![](assets/examplerule.png)
+![](assets/examplerule.png)
 
 
 ## XDM schema
@@ -79,4 +78,4 @@ alloy("event",{
 });
 ```
 
-For more information on tracking events with Adobe Experience Platform  [!DNL Web SDK], see [Tracking events](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).
+For more information on tracking events with Adobe Experience Platform [!DNL Web SDK], see [Tracking events](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/tracking-events.html).

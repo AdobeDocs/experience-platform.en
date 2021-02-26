@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
-title: Streaming segmentation
+title: Streaming Segmentation UI Guide
 topic: ui guide
 description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 ---
@@ -16,7 +16,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segmented job.
+>Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segment job.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Streaming segmentation query types
 
@@ -35,20 +37,17 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
-The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
-| Query type | Details |
-| ---------- | ------- |
-| Incoming hit that refers to a profile within a relative window | A segment definition that includes [!DNL Adobe Audience Manager (AAM)] segments or traits. |
-| Multiple events that refer to a profile | A segment definition that includes Adobe Audience Manager (AAM) segments or traits. |
-| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
+- The segment definition includes Adobe Audience Manager (AAM) segments or traits.
+- The segment definition includes multiple entities (multi-entity queries).
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
 | Single event query | There are no limits to the lookback window. |
-| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 If a segment definition is modified so it no longer meets the criteria for streaming segmentation, the segment definition will automatically switch from "Streaming" to "Batch".
 
@@ -69,12 +68,6 @@ Additional information about the last segment evaluation can be found by selecti
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
-
-## Streaming segmentation video demo
-
-The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Next steps
 

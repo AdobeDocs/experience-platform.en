@@ -96,7 +96,7 @@ Data Science Workspace uses machine learning and artificial intelligence to crea
 | ------- | ----------- |
 | [!DNL JupyterLab] Recipe Builder template | Notebook to recipe requirements usage and versions updated. [!DNL Python] ML Runtime base image has been updated to use [!DNL Python] 3.6.7 and a [!DNL Conda] environment exclusively. |
 
-For more information, please read the document on [creating a recipe using Jupyter notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
+For more information, please read the document on [creating a recipe using Jupyter Notebooks](../../data-science-workspace/jupyterlab/create-a-recipe.md).
 
 ## [!DNL Destinations] Service {#destinations}
 
@@ -119,7 +119,7 @@ In [Real-time Customer Data Platform](../../rtcdp/overview.md), destinations are
 | File scheduling | For both email-based and cloud storage destinations, users can create a one-time export or create daily snapshots. |
 | Mandatory fields | Users can mark fields as mandatory, ensuring that only fields that contain the mandatory field are exported. |
 
-For more information, please see the [Destinations overview](../../rtcdp/destinations/destinations-overview.md).
+For more information, please see the [Destinations overview](../../destinations/home.md).
 
 ## Intelligent Services {#intelligent-services}
 

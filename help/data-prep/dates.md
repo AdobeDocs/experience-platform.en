@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
 solution: Experience Platform
-title: Date functions
+title: Data Prep Date Functions
 topic: overview
 description: This document introduces the date functions used with Data Prep.
 ---
 
-# Date functions
+# Data Prep date functions
 
 Data Prep supports date functions, both as strings and as datetime objects.
 
@@ -73,4 +73,4 @@ The following table shows which pattern letters are defined for format strings. 
 
 **Example**
 
-The expression `date(orderDate, 'yyyy-MM-dd')` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".
+The expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".

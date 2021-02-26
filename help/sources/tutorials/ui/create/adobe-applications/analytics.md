@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Analytics source connector;Analytics connector;Analytics source;analytics
 solution: Experience Platform
-title: Create an Adobe Analytics source connector in the UI
+title: Create an Adobe Analytics  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating an Adobe Analytics source connector in the UI to bring consumer data into Adobe Experience Platform.
+description: Learn how to create an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
 ---
 
-# Create an Adobe Analytics source connector in the UI
+# Create an Adobe Analytics source connection in the UI
 
-This tutorial provides steps for creating an Adobe Analytics source connector in the UI to bring consumer data into Adobe Experience Platform.
+This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
 
 ## Getting started
 

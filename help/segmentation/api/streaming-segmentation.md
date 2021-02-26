@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
-title: Streaming segmentation
+title: Evaluate Events in Near Real-Time with Streaming Segmentation 
 topic: developer guide
-description: This document contains examples on how to use streaming segmentation with the Streaming Segmentation API.
+description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Evaluate events in near real-time with streaming segmentation 
@@ -36,7 +36,7 @@ This developer guide provides example API calls to demonstrate how to format you
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -73,20 +73,17 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
-The following section lists segment definition examples that will **not** be enabled for streaming segmentation.
+A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
 
-| Query type | Details |
-| ---------- | ------- | 
-| Incoming hit that refers to a profile within a relative window | A segment definition that includes Adobe Audience Manager (AAM) segments or traits. | 
-| Multiple events that refer to a profile | A segment definition that includes Adobe Audience Manager (AAM) segments or traits. |
-| Multi-entity queries | Multi-entity queries are, as a whole, **not** supported by streaming segmentation. |
+- The segment definition includes Adobe Audience Manager (AAM) segments or traits.
+- The segment definition includes multiple entities (multi-entity queries).
 
 Additionally, some guidelines apply when doing streaming segmentation:
 
 | Query type | Guideline |
 | ---------- | -------- |
 | Single event query | There are no limits to the lookback window. |
-| Query with event history | <ul><li>The look-back window is limited to **one day**.</li><li>A strict time ordering condition **must** exist between the events.</li><li>Only simple time orderings (before and after) between the events are allowed.</li><li>The individual events **cannot** be negated. However, the entire query **can** be negated.</li></ul>|
+| Query with event history | <ul><li>The lookback window is limited to **one day**.</li><li>A strict time-ordering condition **must** exist between the events.</li><li>Queries with at least one negated event are supported. However, the entire event **cannot** be a negation.</li></ul>|
 
 ## Retrieve all segments enabled for streaming segmentation
 

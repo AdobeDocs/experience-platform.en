@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
-title: Explore a cloud storage system using the Flow Service API
+title: Explore a cLoud Storage System Using the Flow Service API
 topic: overview
-description: This tutorial uses the Flow Service API to explore a third party cloud storage system.
+description: This tutorial uses the Flow Service API to explore a third-party cloud storage system.
 ---
 
 # Explore a cloud storage system using the [!DNL Flow Service] API
@@ -23,13 +23,15 @@ The following sections provide additional information that you will need to know
 
 In order to explore a third party cloud storage using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the storage you wish to work with, you can create one through the following tutorials:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
-* [Azure File Storage](../create/cloud-storage/azure-file-storage.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Reading sample API calls
 
@@ -37,7 +39,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
-title: Adobe Experience Platform browser and language support
+title: Browser and Language Support for the Experience Platform UI
 topic: getting started
 description: Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. Experience Platform enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 ---
 
-# Experience Platform browser and language support
+# Browser and language support for the Experience Platform UI
 
 The Adobe Experience Platform user interface (UI) is designed to support multiple browsers and languages.
 
@@ -42,7 +42,7 @@ Your default UI language is determined by the region specified in your user prof
 To change your language:
 
 1. Select the current language in the footer of the [!DNL Experience Platform] user interface.
-2. In your profile settings, click **[!UICONTROL Change Region]**.
+2. In your profile settings, select **[!UICONTROL Change Region]**.
 3. Select your region. 
 
 >[!NOTE]

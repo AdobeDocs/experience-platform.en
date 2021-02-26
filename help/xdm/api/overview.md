@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
-title: Schema Registry API developer guide
-description: The Schema Registry API allows you to programmatically manage all schemas and related XDM resources available to you within Experience Platform. 
+title: Schema Registry API Guide
+description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 topic: developer guide
 ---
 
-# [!DNL Schema Registry] API developer guide
+# [!DNL Schema Registry] API guide
 
 The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
@@ -26,9 +26,13 @@ XDM schemas represent and validate the structure and format of data ingested int
 
 For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding mixins and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
 
+## Behaviors
+
+Behaviors define the nature of data that a schema describes. Each XDM class must reference a specific behavior, which all schemas that employ that class will inherit. See the [behaviors endpoint guide](./behaviors.md) to learn how to view available behaviors in the API.
+
 ## Classes
 
-Classes define the behavioral aspects of the data that a schema will contain (record or time series). In addition, a class determines the base structure of common properties that all schemas based on that class must contain. A schema's class determines which mixins are eligible for use in that schema. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
+A class defines the base structure of common properties that all schemas based on that class must contain, and determines which mixins are eligible for use in those schemas. Every class must be associated with an existing behavior. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
 
 ## Mixins
 
@@ -40,7 +44,7 @@ Data types are used as reference-type fields in classes or mixins in the same wa
 
 ## Descriptors
 
-Descriptors are sets of metadata that are assigned specific fields within a schema, providing various contextual details including how those fields (and the schema itself) are related to other schemas. Each schema can have one or more descriptor entities applied to it, and there are several different descriptor types to serve different purposes. See the [descriptors endpoint guide](./descriptors.md) for more information on working with descriptors in the API, and an overview of the different descriptor types and their use cases.
+Descriptors are sets of metadata that are assigned to specific fields within a schema, providing various contextual details including how those fields (and the schema itself) are related to other schemas. Each schema can have one or more descriptor entities applied to it, and there are several different descriptor types to serve different purposes. See the [descriptors endpoint guide](./descriptors.md) for more information on working with descriptors in the API, and an overview of the different descriptor types and their use cases.
 
 ## Unions
 
@@ -52,19 +56,19 @@ To learn how to view unions in the Schema Registry API, see the [unions endpoint
 
 The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, mixin, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [export/import endpoints guide](./export-import.md) for more information on how to use these endpoints.
 
 ## Sample data
 
 You can generate sample data for any specified schema within the Schema Library. The response object returned can then be used as a source of data ingestion.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [sample data endpoint guide](./sample-data.md) for more information on the use of this endpoint.
 
 ## Audit log
 
 The Schema Registry maintains a log of all the changes that have occurred to a resource (class, mixin, data type, or schema) between different updates. You can retrieve the log for a particular resource by providing its `$id` or `meta:altId` in the path of a GET request to this endpoint.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [audit log endpoint guide](./audit-log.md) for more information on the use of this endpoint.
 
 ## Next steps
 

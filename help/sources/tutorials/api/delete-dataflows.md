@@ -1,15 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;API;api;delete;delete dataflows
 solution: Experience Platform
-title: Delete a dataflow using the Flow Service API
+title: Delete a Dataflow Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for deleting a dataflow using the Flow Service API.
+description: Learn how to delete batch and streaming dataflows using the Flow Service API.
 ---
 
 # Delete a dataflow using the Flow Service API
 
-This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+You can delete batch and streaming dataflows that contain errors or have become obsolete using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+
+This tutorial covers the steps for deleting dataflows made with both batch and streaming sources using [!DNL Flow Service].
 
 ## Getting started
 
@@ -28,7 +30,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

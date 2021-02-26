@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
-title: Analytics data connector
+title: Adobe Analytics Source Connector for Report-Suite Data
 topic: overview
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 ---
 
-# Analytics Data Connector
+# Adobe Analytics connector for report-suite data
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by [!DNL Analytics] to [!DNL Platform] in real-time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by [!DNL Platform].
 
@@ -42,7 +42,7 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 | -------------- | ---------------- |
 | New data to [!DNL Real-time Customer Profile] (A4T **not** enabled) | < 2 minutes |
 | New data to [!DNL Real-time Customer Profile] (A4T **is** enabled) | < 15 minutes |
-| New data to Data Lake | < 45 minutes |
+| New data to Data Lake | < 90 minutes |
 | Backfill data (13 Months of Data or 10 Billion events, whichever is lower) | < 4 weeks |
 
 >[!NOTE]
