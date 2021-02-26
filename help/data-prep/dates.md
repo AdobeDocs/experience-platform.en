@@ -6,13 +6,11 @@ topic: overview
 description: This document introduces the date functions used with Data Prep.
 ---
 
-# Data Prep date functions
+# Date functions
 
 Data Prep supports date functions, both as strings and as datetime objects.
 
-## Date function
-
-The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object. For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".
+The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object. For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31T00:00Z".
 
 ## Date function conversions
 
