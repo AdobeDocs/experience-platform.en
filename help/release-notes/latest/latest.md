@@ -18,6 +18,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
 - [[!DNL Real-time Customer Profile]](#profile)
@@ -68,6 +69,8 @@ For more general information on dataflows, refer to the [dataflows overview](../
 | Destination | Description |
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
