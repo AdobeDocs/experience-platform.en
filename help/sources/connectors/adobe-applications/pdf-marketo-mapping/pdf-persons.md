@@ -43,10 +43,12 @@ The table below contains the mappings between the Marketo persons dataset and th
 | `address` | `workAddress.street1` |
 | `phone` | `workPhone.number` |
 | `company` | `organizations` |
-| `leadScore` | `personComponents.personSegmentTraits.personScore` |
-| `leadSource` | `personComponents.personSegmentTraits.personSource` |
-| `leadStatus` | `personComponents.personSegmentTraits.personStatus` |
-| `personType` | `personComponents.personSegmentTraits.personType` |
+| `leadScore` | `personComponents.personScore` |
+| `leadSource` | `personComponents.personSource` |
+| `leadStatus` | `personComponents.personStatus` |
+| `personType` | `personComponents.personType` |
+| `leadPartitionId` | `personComponents.personGroupID` |
+| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
 | `contactCompany` | `personComponents.sourceAccountID` |
 | `sfdcContactId` | `personComponents.sourceExternalID` | Recommended only if you use the Salesforce integration. |
 | `id` | `personComponents.sourcePersonID` |
