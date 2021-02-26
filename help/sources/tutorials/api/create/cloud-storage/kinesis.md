@@ -83,7 +83,7 @@ curl -X POST \
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
         "auth": {
-            "specName": "Basic Authentication for Kinesis",
+            "specName": "Aws Kinesis authentication credentials",
             "params": {
                 "accessKeyId": "accessKeyId",
                 "secretKey": "secretKey"
