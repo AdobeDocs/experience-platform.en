@@ -20,6 +20,10 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
+>[!IMPORTANT]
+>
+>The [!DNL Azure Table Storage] source connector currently does not support same-region connectivity to Platform. This means that if your Azure instance is using the same network region as Platform, then a connection to Platform sources cannot be established. Currently, only cross-region connectivity is supported. Please contact your Adobe account manager for more information.
+
 The documentation below provides information on how to connect [!DNL Azure Table Storage] to [!DNL Platform] using APIs or the user interface:
 
 ## Connect [!DNL Azure Table Storage] to [!DNL Platform] using APIs
