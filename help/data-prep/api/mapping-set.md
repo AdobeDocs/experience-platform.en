@@ -82,6 +82,44 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 }
 ```
 
+## Validate mappings
+
+**API format**
+
+```http
+POST /mappingSets/validate
+```
+
+**Request**
+
+**Response**
+
+## Preview data for mappings
+
+**API format**
+
+```http
+POST /mappingSets/preview
+```
+
+**Request**
+
+**Response**
+
+## Get mapping metadata
+
+**API format**
+
+```http
+GET /mappingSets/metadata
+```
+
+**Request**
+
+**Response**
+
+
+
 ## Get a mapping set
 
 **API format**
@@ -218,18 +256,3 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/SOM
     ]
 }
 ```
-
-
-## Delete a mapping set
-
-Not sure if this still exists????
-
-**API format**
-
-```http
-DELETE /mappingSets/{MAPPING_SET_ID}
-```
-
-**Request**
-
-**Response**
