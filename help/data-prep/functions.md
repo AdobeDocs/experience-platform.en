@@ -16,7 +16,7 @@ A field name can be any legal identifier - an unlimited-length sequence of Unico
 
 If a field name does not follow this convention, the field name must be wrapped with `${}`. So, for example, if the field name is "First Name" or "First.Name", then the name must be wrapped like `${First Name}` or `${First.Name}` respectively.
 
-Additionally, field names is **any** of the following reserved keywords, it must be wrapped with `${}`:
+Additionally, if a field name is **any** of the following reserved keywords, it must be wrapped with `${}`:
 
 ```console
 new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continue, else, and, ne, true, le, if, ge, return
@@ -177,7 +177,7 @@ Function | Description | Parameters | Syntax | Expression | Sample output
 to_bigint | Converts a string to a BigInteger. | <ul><li>STRING: **Required** The string that is to be converted to a BigInteger.</li></ul> | to_bigint(STRING) | to_bigint​("1000000.34") | 1000000.34
 to_decimal | Converts a string to a Double. | <ul><li>STRING: **Required** The string that is to be converted to a Double.</li></ul> | to_decimal(STRING) | to_decimal("20.5") | 20.5
 to_float | Converts a string to a Float. | <ul><li>STRING: **Required** The string that is to be converted to a Float.</li></ul> | to_float(STRING) | to_float("12.3456") | 12.34566
-to_integer | Converts a string to an Integer. | <ul><li>STRING: **Required** The string that is to be converted to a Integer.</li></ul> | to_integer(STRING) | to_integer("12") | 12
+to_integer | Converts a string to an Integer. | <ul><li>STRING: **Required** The string that is to be converted to an Integer.</li></ul> | to_integer(STRING) | to_integer("12") | 12
 
 ### JSON functions
 

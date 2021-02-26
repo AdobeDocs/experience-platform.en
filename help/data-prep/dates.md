@@ -14,7 +14,7 @@ The date function converts strings and datetime objects to become an ISO 8601 fo
 
 ## Date function conversions
 
-When string fields from incoming data are mapped to date fields in schemas using Experience Data Model (XDM), the date format should be explicitly mentioned. If not explicitly mentioned, Data Prep will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it wil stop evaluating any subsequent formats.
+When string fields from incoming data are mapped to date fields in schemas using Experience Data Model (XDM), the date format should be explicitly mentioned. If not explicitly mentioned, Data Prep will attempt to convert the input data by matching it to the following formats. Once a matching format is found, it will stop evaluating any subsequent formats.
 
 ```console
 "yyyy-MM-dd HH:mm:ssZ",
