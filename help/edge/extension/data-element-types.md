@@ -19,7 +19,7 @@ The identity map data element allows you to create identities from other data el
 
 ![](./assets/identity-map-data-element.png)
 
-## XDM Object
+## XDM Object {#xdm-object}
 
 Any data that you send to the Adobe Experience Platform Web SDK should be in XDM format. Formatting your data is easier with the XDM object data element. When you first open this data element, select the correct Adobe Experience Platform sandbox and schema. After you have selected your schema you will see the structure of your schema, which you can easily fill out.
 

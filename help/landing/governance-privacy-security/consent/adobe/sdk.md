@@ -26,7 +26,7 @@ In order for the SDK to send data to Experience Platform, you must have an exist
 
 After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the values listed below to complete the form.
 
-![](../../../images/governance-privacy-security/consent/overview/edge-config.png)
+![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
 | Edge configuration field | Value |
 | --- | --- |
@@ -35,18 +35,38 @@ After creating a new configuration or selecting an existing one to edit, select 
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
 
-
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
-## Configure and install the Platform Web SDK extension
 
-Once you have created an edge configuration as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site.
+## Install and configure the Platform Web SDK extension
 
+Once you have created an edge configuration as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your Platform Launch property, select **[!UICONTROL Extensions]** in the left navigation followed by the **[!UICONTROL Catalog]** tab, and then select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
 
+![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
+
+When configuring the SDK, under **[!UICONTROL Edge Configurations]**, select the configuration you created in the previous step.
+
+![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
+
+Select **[!UICONTROL Save]** to install the extension.
+
+### Create a data element to set default consent
+
+With the SDK extension installed, the next step is to create a data element to represent the default consent values for your customers. Select **[!UICONTROL Data Elements]** in the left navigation to navigate to the data element creation dialog. 
+
+From here, you must create an [!UICONTROL XDM Object] data element based on the `consents` object. See the [Web SDK extension documentation](../../../../edge/extension/data-element-types.md#xdm-object) for specific steps on creating an XDM Object data element, and how to set its default values.
+
+Once the data element is created, navigate back to the Web SDK extension config page. Under the [!UICONTROL Privacy] section, select **[!UICONTROL Provided by data element]**, and use the provided dialog to select the default consent data element you created earlier.
+
+![](../../../images/governance-privacy-security/consent/adobe/sdk/default-consent.png)
+
+### Deploy the extension on your website
+
+Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in the Platform Launch documentation for detailed information on how to deploy your updated library build.
 
 ## Making consent-change commands
 
-Once you have created the edge configuration described in the previous section, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
+Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
 
 There are two scenarios where `setConsent` should be called on your site:
 
@@ -142,3 +162,5 @@ var handleConsentChange = function () {
 All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
 
 ## Next steps
+
+By following this guide, you have configured the Platform Web SDK extension to send consent data to Experience Platform. You can now return to the consent processing overview for steps on how to [test your implementation](./overview.md#test-implementation).
