@@ -42,7 +42,7 @@ In addition to SDK commands triggered by CMP consent-change hooks, consent data 
 
 Since each CMP system is unique, you must determine the best way to allow your customers to provide consent as they interact with your service. A common way to achieve this is through the use of a cookie consent dialog, similar to the following example:
 
-![](../../../images/governance-privacy-security/consent/overview/consent-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/overview/consent-dialog.png)
 
 This dialog should allow the customer to opt in or out of specific marketing and personalization use cases for their data. These consents and preferences should conform to the data model that you define for the [!DNL Profile]-enabled dataset in the next step.
 

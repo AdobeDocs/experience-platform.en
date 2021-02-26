@@ -94,7 +94,7 @@ The mixin provides a single object-type field, `xdm:consents`, whose sub-propert
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then select the **[!UICONTROL Browse]** tab to display a list of existing schemas. From here, select the name of the [!DNL Profile]-enabled schema that you want to add consent fields to. The screenshots in this section use the "Loyalty Members" schema built in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md) as an example.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/select-schema.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-schema.png)
 
 >[!TIP]
 >
@@ -102,15 +102,15 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then
 
 The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. On the left side of the canvas, select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
 
 The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, select **[!UICONTROL Add mixin]**.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
 
 The canvas reappears, showing that the `consents` field has been added to the schema structure. Select **[!UICONTROL Save]** to finalize the changes to the schema.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/save-schema.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
 If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
 
@@ -122,29 +122,29 @@ Once you have created a schema with consent fields, you must create a dataset th
 
 To begin, select **[!UICONTROL Datasets]** in the left navigation, then select **[!UICONTROL Create dataset]** in the top-right corner.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/create-dataset.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/create-dataset.png)
 
 On the next page, select **[!UICONTROL Create dataset from schema]**.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/from-schema.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/from-schema.png)
 
 The **[!UICONTROL Create dataset from schema]** workflow appears, starting at the **[!UICONTROL Select schema]** step. In the provided list, locate one of the consent schemas that you created earlier. You can optionally use the search bar to narrow down results and locate your schema easier. Select the radio button next to the desired schema, then select **[!UICONTROL Next]** to continue.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/select-dataset-schema.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/select-dataset-schema.png)
 
 The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily identifiable name and description for the dataset before selecting **[!UICONTROL Finish]**.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/dataset-details.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/dataset-details.png)
 
 The details page for the newly created dataset appears. If the dataset is based on your time-series schema, then the process is complete. If the dataset is based on your record schema, the final step in the process is to enable the dataset for use in [!DNL Real-time Customer Profile].
 
 In the right rail, select the **[!UICONTROL Profile]** toggle.
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/profile-toggle.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/profile-toggle.png)
 
 Finally, select **[!UICONTROL Enable]** in the confirmation popover to enable the schema for [!DNL Profile].
 
-![](../../../images/governance-privacy-security/consent/dataset-prep/enable-dataset.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
 The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [edge configuration](../../../../edge/fundamentals/edge-configuration.md).
 
