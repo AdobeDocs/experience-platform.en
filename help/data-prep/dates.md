@@ -1,16 +1,32 @@
 ---
-keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;
+keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;date;date functions;dates;date function;date
 solution: Experience Platform
 title: Data Prep Date Functions
 topic: overview
-description: This document introduces the date functions used with Data Prep.
+description: This document introduces the date function used with Data Prep.
 ---
 
-# Date functions
+# Date function
 
 Data Prep supports date functions, both as strings and as datetime objects.
 
-The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object. For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31T00:00Z".
+## Date function format
+
+The date function converts strings and datetime objects to become an ISO 8601 formatted ZonedDateTime object.
+
+**Format**
+
+```http
+date({DATE}, {FORMAT}, {DEFAULT_DATE})
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{DATE}` | Required. The string that represents the date. |
+| `{FORMAT}` | Optional. The string representing the format of the date. More information on string formatting can be found in the [date/time format string section](#format). |
+| `{DEFAULT_DATE}` | Optional. The default date to be returned if the provided date is null. |
+
+For example, the expression `date(orderDate, "yyyy-MM-dd")` will convert an `orderDate` value of "December 31st, 2020" into a datetime value of "2020-12-31".
 
 ## Date function conversions
 
@@ -41,7 +57,7 @@ When string fields from incoming data are mapped to date fields in schemas using
 >
 > Data Prep will try to convert strings to dates as best as possible. However, these conversions can lead to undesirable results. For example, the string value "12112020" matches the pattern "MMddyyyy", but the user may have intended for the date to be read with the pattern "ddMMyyyy". As a result, users should explicitly mention the date format for strings.
 
-## Date/time format strings
+## Date/time format strings {#format}
 
 The following table shows which pattern letters are defined for format strings. Please note that the letters are case sensitive.
 
