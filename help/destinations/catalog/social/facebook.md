@@ -6,12 +6,6 @@ description: Activate profiles for your Facebook campaigns for audience targetin
 
 # [!DNL Facebook] connection
 
->[!IMPORTANT]
->
->We are currently migrating customers to the new version of this destination, [!DNL Facebook Custom Audience].
->
-> The instructions in this article apply to both versions, with the following note: while this migration is in progress, you will only see the current version of the [!DNL Facebook] destination in the user interface, where you can only use the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] identities for activation. 
-
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
 You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
@@ -79,7 +73,7 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 
 You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements:
 
