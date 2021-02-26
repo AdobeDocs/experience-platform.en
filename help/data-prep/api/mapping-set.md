@@ -106,20 +106,6 @@ POST /mappingSets/preview
 
 **Response**
 
-## Get mapping metadata
-
-**API format**
-
-```http
-GET /mappingSets/metadata
-```
-
-**Request**
-
-**Response**
-
-
-
 ## Get a mapping set
 
 **API format**
