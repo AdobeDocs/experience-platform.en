@@ -77,7 +77,7 @@ Select a namespace to see more specific information on the right rail.
 
 ![](./images/browse-namespaces.png)
 
-## Managing custom namespaces
+## Managing custom namespaces {#manage-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
