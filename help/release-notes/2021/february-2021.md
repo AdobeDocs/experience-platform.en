@@ -70,6 +70,8 @@ For more general information on dataflows, refer to the [dataflows overview](../
 | ----------- | ----------- |
 | [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
 
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
