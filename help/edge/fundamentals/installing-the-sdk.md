@@ -1,7 +1,7 @@
 ---
 title: Install the Adobe Experience Platform Web SDK
 description: Learn how to install the Experience Platform Web SDK.
-keywords: web sdk installation;installing web sdk;internet explorer;promise;
+keywords: web sdk installation;installing web sdk;internet explorer;promise;npm package
 ---
 
 # Install the SDK {#installing-the-sdk}
@@ -16,7 +16,7 @@ There are three supported ways to use Adobe Experience Platform Web SDK:
 
 For documentation on the Adobe Experience Platform Web SDK Launch extension, see the [launch documentation](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
 
-## Option 2: Installing the Prebuilt Standalone Version
+## Option 2: Installing the prebuilt standalone version
 
 The prebuilt version is available on a CDN. You can reference the library on the CDN directly on your page, or download and host it on your own infrastructure. It is available in minified and unminified formats. The unminified version is helpful for debugging purposes.
 
@@ -109,27 +109,27 @@ Adobe Experience Platform Web SDK is also available as an NPM package. [NPM](htt
 npm install @adobe/alloy
 ```
 
-The NPM package of the Adobe Experience Platform Web SDK exposes a `createInstance` function. This function is used to create an instance. The instanceName option passed to the function controls the prefix used in logging. Below are examples of using the package.
+The NPM package of the Adobe Experience Platform Web SDK exposes a `createInstance` function. This function is used to create an instance. The name option passed to the function controls the prefix used in logging. Below are examples of using the package.
 
 ### Using the package as an ECMAScript 2015 (ES6) module
 
 ```javascript
 import { createInstance } from "@adobe/alloy";
-const alloy = createInstance({ instanceName: "alloy" });
+const alloy = createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
 
-### Using the package as a ECMAScript 5 module
+### Using the package as an ECMAScript 5 module
 
 ```javascript
 var alloyLibrary = require("@adobe/alloy");
-var alloy = alloyLibrary.createInstance({ instanceName: "alloy" });
+var alloy = alloyLibrary.createInstance({ name: "alloy" });
 alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
 
-### Supporting Internet Explorer {#support-internet-explore}
+### Supporting Internet Explorer
 
 The Adobe Experience Platform SDK makes use of promises, which is a method of communicating the completion of asynchronous tasks. The [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) implementation used by the SDK is natively supported by all target browsers except [!DNL Internet Explorer]. To use the SDK on [!DNL Internet Explorer], you need to have `window.Promise` [polyfilled](https://remysharp.com/2010/10/08/what-is-a-polyfill).
 
