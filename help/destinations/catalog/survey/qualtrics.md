@@ -1,28 +1,24 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback extension
-seo-title: Qualtrics Website Feedback extension
-description: The Qualtrics Website Feedback extension is a surveys destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Qualtrics Website Feedback extension is a surveys destination in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+description: The Qualtrics Website Feedback extension is a surveys destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Qualtrics Website Feedback] Extension {#qualtrics-extension}
-
-## Overview {#overview}
+# [!DNL Qualtrics Website Feedback] extension {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] enables you to engage your website visitors with the right message, at the right time. Whether you want to improve visitor experience with website feedback surveys or increase conversion, [!DNL Qualtrics Website Feedback] has got you covered.
 
 Create and deploy highly-targeted, branded web messages within minutes using an intuitive point-and-click interface. The data and insights you gather from your website are surfaced alongside customer feedback data across all channels offering a complete view of your customer experience - all on one platform.
 
-[!DNL Qualtrics Website Feedback] is a survey extension in Real-time Customer Data Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
+[!DNL Qualtrics Website Feedback] is a survey extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101569.qualtrics-website-feedback.html).
 
-This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Real-time CDP, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
+This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Platform, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
 ![Qualtrics Website Feedback Extension](../../assets/catalog/survey/qualtrics/catalog.png)
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Real-time CDP.
+This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
 
 To use this extension, you need access to Adobe Experience Platform Launch. Platform Launch is offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to Platform Launch and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
@@ -30,7 +26,7 @@ To use this extension, you need access to Adobe Experience Platform Launch. Plat
 
 To install the [!DNL Qualtrics Website Feedback] extension:
 
-In the [Real-time CDP interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
@@ -56,6 +52,6 @@ You can configure, upgrade, and delete extensions in the Platform Launch interfa
 
 >[!TIP]
 >
->If the extension is already installed on one of your properties, the Real-time CDP UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
+>If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.

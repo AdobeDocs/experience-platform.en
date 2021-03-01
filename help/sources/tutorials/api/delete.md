@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;delete connections;delete;api
 solution: Experience Platform
-title: Delete a connection using the Flow Service API
+title: Delete a Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for deleting a connection using the Flow Service API.
+description: Learn how to delete a connection using the Flow Service API.
 ---
 
 # Delete a connection using the Flow Service API
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

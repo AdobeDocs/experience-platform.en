@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;workflows ui guide;workflows;workflows user guide;
 solution: Experience Platform
-title: Adobe Experience Platform workflows UI guide
+title: Workflows UI guide
 topic: ui guide
-description: Adobe Experience Platform 
+description: Learn how to follow multi-step workflows for performing common operations within the Adobe Experience Platform user interface.
 ---
 
-# Adobe Experience Platform workflows UI guide
+# [!UICONTROL Workflows] UI guide
 
 The **[!UICONTROL Workflows]** section within the Adobe Experience Platform user interface shows a list of multi-step workflows for performing operations within Platform. These workflows cover areas including data ingestion and data science.
 

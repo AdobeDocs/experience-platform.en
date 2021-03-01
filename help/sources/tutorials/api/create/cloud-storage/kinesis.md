@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
-title: Create an Amazon Kinesis connector using the Flow Service API
+title: Create an Amazon Kinesis Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Amazon Kinesis account.
+description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis account using the Flow Service API.
 ---
 
-# Create an [!DNL Amazon Kinesis] connector using the Flow Service API
+# Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
 >[!NOTE]
 >
@@ -21,8 +21,8 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-*   [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to an [!DNL Amazon Kinesis] account using the [!DNL Flow Service] API.
 
@@ -45,7 +45,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -83,7 +83,7 @@ curl -X POST \
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
         "auth": {
-            "specName": "Basic Authentication for Kinesis",
+            "specName": "Aws Kinesis authentication credentials",
             "params": {
                 "accessKeyId": "accessKeyId",
                 "secretKey": "secretKey"

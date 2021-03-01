@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment service;segment;Segment;Segments;segments
 solution: Experience Platform
-title: Adobe Experience Platform Segmentation Service
+title: Segmentation Service Overview
 topic: overview
-description: This document provides an overview of Segmentation Service and the role it plays in Adobe Experience Platform.
+description: Learn about Adobe Experience Platform Segmentation Service and the role it plays in the Platform ecosystem.
 
 ---
 
-# Adobe Experience Platform [!DNL Segmentation Service] overview
+# [!DNL Segmentation Service] overview
 
 Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
 
@@ -40,6 +40,8 @@ For information on building segment definitions using the API, see the tutorial 
 >In the event a schema is extended, all future uploads must update newly added fields accordingly. For more information on customizing [!DNL Experience Data Model] (XDM), visit the [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md).
 
 ## Evaluate segments
+
+Platform currently supports two methods of evaluating segments: streaming segmentation and batch segmentation.
 
 ### Streaming segmentation
 

@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api;data usage labels overview
 solution: Experience Platform
-title: Data usage labels overview
+title: Data Usage Labels Overview
 topic: labels
 description: Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies. This document provides an overview of data usage labels in Experience Platform.
 ---
@@ -24,17 +24,17 @@ In addition to the labels provided by Adobe, you can also define your own custom
 
 ## Label inheritance for audience segments
 
-All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows applications built on top of Experience Platform (such as [!DNL Real-time Customer Data Platform]) to provide automatic data usage policy enforcement when activating segments to destinations.
+All audience segments created by [Adobe Experience Platform Segmentation Service](../../segmentation/home.md) inherit the usage labels of their corresponding datasets. This allows Experience Platform to provide automatic data usage policy enforcement when activating segments to destinations.
 
-In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Depending on how your [!DNL Platform]-based application consumes segments, you can potentially specify which fields are used, thereby preventing the segment from inheriting labels from excluded fields.
+In addition to inheriting dataset-level labels, segments inherit all field-level labels from their associated datasets by default. Therefore, you can more easily identify which attributes should be excluded from your segments and prevent them from inheriting labels from excluded fields.
 
-For more information on how automatic enforcement works in Real-time CDP, see the overview on [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#enforce-data-usage-compliance).
+For more information on how automatic enforcement works in Platform, see the overview on [automatic policy enforcement](../enforcement/auto-enforcement.md).
 
 ### Inheritance from Adobe Audience Manager Data Export Controls
 
 [!DNL Experience Platform] has the ability to share segments with Adobe Audience Manager. Any Data Export Controls that have been applied to Audience Manager segments are translated to equivalent labels and marketing actions recognized by [!DNL Experience Platform] [!DNL Data Governance].
 
-For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://docs.adobe.com/content/help/en/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
+For a reference on how specific Data Export Controls map to data usage labels in [!DNL Platform], please refer to the [Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html#aam-data-export-control-in-aep).
 
 ## Managing data usage labels in [!DNL Experience Platform] {#manage-labels}
 

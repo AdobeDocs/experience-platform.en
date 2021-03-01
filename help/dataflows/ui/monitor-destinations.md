@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
-description: Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for viewing existing dataflows from the Sources workspace.
+description: Destinations allow you to activate your data from Adobe Experience Platform to countless external partners. This tutorial provides instructions on how you can monitor dataflows for your destinations using the Experience Platform user interface.
 solution: Experience Platform
-title: Monitor dataflows
+title: Monitor Dataflows for Destinations in the UI
 topic: overview
 type: Tutorial
 ---

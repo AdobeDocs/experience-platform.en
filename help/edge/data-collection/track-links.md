@@ -1,8 +1,6 @@
 ---
-title: Link tracking with Adobe Analytics
-seo-title: Link tracking to Adobe Analytics with Adobe Experience Platform Web SDK
+title: Track Links Using the Adobe Experience Platform Web SDK
 description: Learn how to send Link Data to Adobe Analytics with Experience Platform Web SDK
-seo-description: Learn how to send Link Data to Adobe Analytics with Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 ---
 

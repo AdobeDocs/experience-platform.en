@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
-title: Streaming segmentation
+title: Evaluate Events in Near Real-Time with Streaming Segmentation 
 topic: developer guide
-description: This document contains examples on how to use streaming segmentation with the Streaming Segmentation API.
+description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Evaluate events in near real-time with streaming segmentation 
@@ -36,7 +36,7 @@ This developer guide provides example API calls to demonstrate how to format you
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

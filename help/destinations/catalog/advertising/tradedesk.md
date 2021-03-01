@@ -1,14 +1,10 @@
 ---
 keywords: advertising; the trade desk;
-title: The Trade Desk Destination
-seo-title: The Trade Desk Destination
+title: The Trade Desk connection
 description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
-seo-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
 ---
 
-# [!DNL The Trade Desk] destination 
-
-## Overview {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
 
@@ -47,7 +43,6 @@ In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk]
  * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
  * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
- * **[!UICONTROL Client Secret]**: The `clientSecret` parameter used in the [!DNL OAuth2] client credentials.
  * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
    
    * **[!UICONTROL Europe]**
@@ -57,7 +52,7 @@ In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk]
    * **[!UICONTROL North America West]**
    * **[!UICONTROL Latin America]**
  
- * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
+ * **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![The Trade Desk Authentication Step](../../assets/catalog/advertising/tradedesk/authenticate.png)
 

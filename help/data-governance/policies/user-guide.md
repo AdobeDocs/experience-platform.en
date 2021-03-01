@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage policy user guide
 solution: Experience Platform
-title: Data usage policies user guide
+title: Manage Data Usage Policies in the UI
 topic: policies
 description: Adobe Experience Platform Data Governance provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the Policies workspace in the Experience Platform user interface.
 ---
 
-# Data usage policies user guide
+# Manage data usage policies in the UI
 
 Adobe Experience Platform [!DNL Data Governance] provides a user interface that allows you to create and manage data usage policies. This document provides an overview of the actions you can perform in the **Policies** workspace in the [!DNL Experience Platform] user interface.
 
@@ -21,19 +21,19 @@ This guide requires a working understanding of the following [!DNL Experience Pl
 - [[!DNL Data Governance]](../home.md)
 - [Data usage policies](./overview.md)
 
-## View data usage policies {#view-policies}
+## View existing policies {#view-policies}
 
-In the [!DNL Experience Platform] UI, click **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
+In the [!DNL Experience Platform] UI, select **[!UICONTROL Policies]** to open the **[!UICONTROL Policies]** workspace. In the **[!UICONTROL Browse]** tab, you can see a list of available policies, including their associated labels, marketing actions, and status.
 
 ![](../images/policies/browse-policies.png)
 
-Click on a listed policy to view its description and type. If a custom policy is selected, additional controls are displayed to edit, delete, or [enable/disable the policy](#enable).
+Select a listed policy to view its description and type. If a custom policy is selected, additional controls are displayed to edit, delete, or [enable/disable the policy](#enable).
 
 ![](../images/policies/policy-details.png)
 
-## Create a custom data usage policy {#create-policy}
+## Create a custom policy {#create-policy}
 
-To create a new custom data usage policy, click **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
+To create a new custom data usage policy, select **[!UICONTROL Create policy]** in the top-right corner of the **[!UICONTROL Browse]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-policy-button.png)
 
@@ -41,11 +41,11 @@ The **[!UICONTROL Create policy]** workflow appears. Start by providing a name a
 
 ![](../images/policies/create-policy-description.png)
 
-Next, select the data usage labels that the policy will be based on. When selecting multiple labels, you are given the option to choose whether the data should contain all the labels or just one of them in order for the policy to apply. Click **[!UICONTROL Next]** when finished.
+Next, select the data usage labels that the policy will be based on. When selecting multiple labels, you are given the option to choose whether the data should contain all the labels or just one of them in order for the policy to apply. Select **[!UICONTROL Next]** when finished.
 
 ![](../images/policies/add-labels.png)
 
-The **[!UICONTROL Select marketing actions]** step appears. Choose the appropriate marketing actions from the provided list, then click **[!UICONTROL Next]** to continue.
+The **[!UICONTROL Select marketing actions]** step appears. Choose the appropriate marketing actions from the provided list, then select **[!UICONTROL Next]** to continue.
 
 >[!NOTE]
 >
@@ -53,7 +53,7 @@ The **[!UICONTROL Select marketing actions]** step appears. Choose the appropria
 
 ![](../images/policies/add-marketing-actions.png)
 
-The **[!UICONTROL Review]** step appears, allowing you to review the details of the new policy before creating it. Once you are satisfied, click **[!UICONTROL Finish]** to create the policy.
+The **[!UICONTROL Review]** step appears, allowing you to review the details of the new policy before creating it. Once you are satisfied, select **[!UICONTROL Finish]** to create the policy.
 
 ![](../images/policies/policy-review.png)
 
@@ -61,7 +61,7 @@ The **[!UICONTROL Browse]** tab reappears, which now lists the newly created pol
 
 ![](../images/policies/created-policy.png)
 
-## Enable or disable a data usage policy {#enable}
+## Enable or disable a policy {#enable}
 
 All data usage policies (including core policies provided by Adobe) are disabled by default. In order for an individual policy to be considered for enforcement, you must manually enable that policy through the API or UI.
 
@@ -77,11 +77,11 @@ In the **[!UICONTROL Policies]** workspace, select the **[!UICONTROL Marketing a
 
 ## Create a marketing action {#create-marketing-action}
 
-To create a new custom marketing action, click **[!UICONTROL Create marketing action]** in the top-right corner of the **[!UICONTROL Marketing actions]** tab in the **[!UICONTROL Policies]** workspace.
+To create a new custom marketing action, select **[!UICONTROL Create marketing action]** in the top-right corner of the **[!UICONTROL Marketing actions]** tab in the **[!UICONTROL Policies]** workspace.
 
 ![](../images/policies/create-marketing-action.png)
 
-The **[!UICONTROL Create marketing action]** dialog appears. Enter a name and description for the marketing action, then click **[!UICONTROL Create]**.
+The **[!UICONTROL Create marketing action]** dialog appears. Enter a name and description for the marketing action, then select **[!UICONTROL Create]**.
 
 ![](../images/policies/create-marketing-action-details.png)
 
@@ -99,7 +99,7 @@ In the **[!UICONTROL Policies]** workspace, select the **[!UICONTROL Marketing a
 
 ![](../images/policies/edit-marketing-action.png)
 
-If the marketing action is not being used by any existing usage policies, you can delete it by clicking **[!UICONTROL Delete marketing action]**.
+If the marketing action is not being used by any existing usage policies, you can delete it by selecting **[!UICONTROL Delete marketing action]**.
 
 >[!NOTE]
 >

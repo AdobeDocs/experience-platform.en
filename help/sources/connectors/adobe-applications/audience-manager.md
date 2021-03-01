@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
 solution: Experience Platform
-title: Audience Manager connector
+title: Audience Manager Source Connector Overview
 topic: overview
-description: The Adobe Audience Manager data connector streams first party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests three categories of data to Platform.
+description: The Adobe Audience Manager source connector streams first-party data collected in Audience Manager to Adobe Experience Platform.
 ---
 
 # Audience Manager connector
 
-The Adobe Audience Manager data connector streams first party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests three categories of data to Platform:
+The Adobe Audience Manager data connector streams first-party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests two categories of data to Platform:
 
 - **Real-time data:** Data captured in real time on Audience Manager's data collection server. This data is used in Audience Manager to populate rule based traits and will surface in Platform in the shortest latency time.
-- **Profile data:** Audience Manager uses real-time and onboarded data to derive customer profiles. These profiles are used to populate identity graphs and traits on segment realizations.
+- **Profile data:** Audience Manager uses real-time and on-boarded data to derive customer profiles. These profiles are used to populate identity graphs and traits on segment realizations.
 
 The Audience Manager connector maps these data categories to Experience Data Model (XDM) schema and sends them to Platform. Real-time data are sent as XDM ExperienceEvent data, while Profile data is sent as XDM Individual Profiles.
 
@@ -51,12 +51,14 @@ Audience Manager datasets are disabled for Profile by default and users have the
 
 | Dataset Name | Description |
 | ------------ | ----------- |
-| Audience Manager Real-time | This dataset contains data collected by direct hits on Audience Manager DCS endpoints and identity maps for Audience Manager Profiles. Keep this dataset enabled for Profile ingestion. |
-| Audience Manager Real-time Profile Updates | This dataset enables Real-time targeting of Audience Manager traits and segments. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. Data is not visible as batches in the dataset. You can enable the Profile toggle, to directly ingest the data to Profile. |
-| Audience Manager Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the Profile toggle, to directly ingest the data to Profile.  |
-| Audience Manager Device Profile Data | Used for Audience Manager connector diagnostics. Data is not visible as batches in the dataset. You can enable the Profile toggle, to directly ingest the data to Profile.  |
-| Audience Manager Authenticated Profiles | This dataset contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the Profile toggle, to directly ingest the data to Profile. |
-| Audience Manager Authenticated Profiles Meta Data | Used for Audience Manager Connector diagnostics. Data is not visible as batches in the dataset. You can enable the Profile toggle, to directly ingest the data to Profile. |
+| AAM Real-time | This dataset contains data collected by direct hits on Audience Manager DCS endpoints and identity maps for Audience Manager Profiles. Keep this dataset enabled for Profile ingestion. |
+| AAM Real-time Profile Updates | This dataset enables Real-time targeting of Audience Manager traits and segments. It includes information for Edge regional routing, trait, and segment membership. Keep this dataset enabled for Profile ingestion. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
+| AAM Devices Data | Device data with ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  |
+| AAM Device Profile Data | Used for Audience Manager connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile.  |
+| AAM Authenticated Profiles | This dataset contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
+| AAM Authenticated Profiles Meta Data | Used for Audience Manager Connector diagnostics. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle, to directly ingest the data to Profile. |
+| AAM Devices Data Backfill | Dataset from bringing in past devices data. This contains ECIDs and corresponding segment realizations aggregated in Audience Manager. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. |
+| AAM Authenticated Profiles Backfill | Dataset from bringing in past authenticated data. This contains Audience Manager authenticated profiles. Data is not visible as batches in the dataset. You can enable the **[!UICONTROL Profile]** toggle to directly ingest the data to Profile. |
 
 ### Connections
 

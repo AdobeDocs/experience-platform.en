@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
-title: Create an SFTP source connector in the UI
+title: Create an SFTP  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a SFTP source connector using the Platform user interface.
+description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an SFTP source connector in the UI
+# Create an SFTP source connection in the UI
 
 >[!NOTE]
 >
 >The SFTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial provides steps for creating an SFTP source connector using the Platform user interface.
+This tutorial provides steps for creating an SFTP source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
@@ -23,6 +23,10 @@ This tutorial requires a working understanding of the following components of Ad
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+
+>[!IMPORTANT]
+>
+>It is recommended to avoid newlines or carriage returns when ingesting JSON objects with an SFTP source connection. To work around the limitation, use a single JSON object per line and use multi-lines for ensuing files.
 
 If you already have a valid SFTP connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 

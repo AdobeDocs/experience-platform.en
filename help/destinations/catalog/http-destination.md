@@ -1,22 +1,18 @@
 ---
 keywords: streaming;
-title: The HTTP destination is a Real-time Customer Data Platform destination that helps you send profile data to third-party HTTP endpoints.
-seo-title: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
-seo-description: The HTTP destination is a Real-time Customer Data Platform  destination that helps you send profile data to third-party HTTP endpoints.
+title: HTTP connection
+description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
 ---
 
-# (Alpha) [!DNL HTTP] Destination 
+# (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
->The [!DNL HTTP] destination in Real-time CDP is currently in alpha. The documentation and the functionality are subject to change.
+>The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
 
-## Overview {#overview}
+The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
-The [!DNL HTTP] destination is an [!DNL Real-time Customer Data Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
-
-To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in the [[!DNL Real-time Customer Data Platform]](#connect-destination).
+To send profile data to [!DNL HTTP] endpoints, you must first connect to the destination in [[!DNL Adobe Experience Platform]](#connect-destination).
 
 ## Use Cases {#use-cases}
 
@@ -55,6 +51,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 -  **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
 -  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
 -  **[!UICONTROL Custom Headers]**: enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
+-  **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](/help/data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -62,7 +59,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 
 ![HTTP authentication](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md#core-actions). 
+**[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
 
 Click **[!UICONTROL Create destination]**.
 

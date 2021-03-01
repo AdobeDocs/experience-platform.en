@@ -1,18 +1,14 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes destination
-seo-title: Airship Attributes destination
+title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
 >The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
@@ -86,7 +82,7 @@ Once your credentials are confirmed and Adobe Experience Platform is connected t
 
 In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
 
-Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
+Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more **[!UICONTROL Marketing Actions]** for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
 
@@ -161,7 +157,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../data-governance/enforcement/auto-enforcement.md) in the data governance documentation section.
     
 ![confirm-selection](../../assets/common/data-policy-violation.png)
 
@@ -171,4 +167,4 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Data usage and governance {#data-usage-governance}
 
-All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md).
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](../../../data-governance/home.md).
