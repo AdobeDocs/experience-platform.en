@@ -8,7 +8,7 @@ seo-description: Answers to the most frequently asked questions about Adobe Expe
 
 # Destinations FAQ {#faq}
 
-## Destination latency {#latency}
+## Destinations latency {#latency}
 
 **How long do Adobe Experience Platform destinations take to process audience data?**
 
@@ -39,7 +39,7 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
 - Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
 
-**Do I need to add any apps or pixels to my Facebook advertiser account?**
+**Do I need to add any apps or pixels to my [!DNL Facebook] advertiser account?**
 
 No. As this is not a pixel-based integration, there is no need to add any pixels to your advertiser account.
 
@@ -65,7 +65,15 @@ Yes, the integration supports removing users from [!DNL Facebook Custom Audience
 
 For detailed explanations on the ID matching requirements, see [ID matching requirements](catalog/social/facebook.md#id-matching-requirements).
 
+**What kind of identities can I activate in [!DNL Facebook Custom Audiences]?**
+
+[!DNL Facebook Custom Audiences] supports the activation of the following identities: hashed emails, hashed phone numbers, [!DNL GAID], [!DNL IDFA], and custom external IDs.
+
 ## LinkedIn Matched Audiences {#linkedin}
+
+**Do I need to add any apps or pixels to my [!DNL LinkedIn] advertiser account?**
+
+No. As this is not a pixel-based integration, there is no need to add any pixels to your advertiser account.
 
 **What do I need to do before I can activate audiences in [!DNL LinkedIn Matched Audiences]?**
 
@@ -79,3 +87,6 @@ To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see
 
 For detailed explanations on the ID matching requirements, see [ID matching requirements](catalog/social/linkedin.md#id-matching-requirements).
 
+**What kind of identities can I activate in [!DNL LinkedIn]?**
+
+[!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
