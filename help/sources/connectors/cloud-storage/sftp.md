@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
-title: SFTP connector
+title: SFTP Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect an SFTP server to Platform using APIs or the user interface.
+description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) SFTP connector
@@ -41,11 +41,11 @@ The documentation below provides information on how to connect an an SFTP server
 
 ### Using the APIs
 
-- [Create an SFTP connector using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
+- [Create an SFTP source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/sftp.md)
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
-- [Create an SFTP source connector in the UI](../../tutorials/ui/create/cloud-storage/sftp.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create an SFTP source connection in the UI](../../tutorials/ui/create/cloud-storage/sftp.md)
+- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

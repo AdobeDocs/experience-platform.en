@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming segmentation;Segmentation;Segmentation Service;segmentation service;ui guide;
 solution: Experience Platform
-title: Streaming segmentation
+title: Streaming Segmentation UI Guide
 topic: ui guide
 description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
 ---
@@ -16,7 +16,9 @@ Streaming segmentation on [!DNL Adobe Experience Platform] allows customers to d
 
 >[!NOTE]
 >
->Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segmented job.
+>Streaming segmentation can only be used to evaluate data that is streamed into Platform. In other words, data ingested through batch ingestion will not be evaluated through streaming segmentation, and will be evaluated along with the nightly scheduled segment job.
+>
+>Additionally, segments evaluated with streaming segmentation may drift between ideal and actual membership if the segment is based off of another segment that is evaluated using batch segmentation. For example, if Segment A is based off of Segment B, and Segment B is evaluated using batch segmentation, since Segment B only updates every 24 hours, Segment A will move further away from the actual data until it re-syncs with the Segment B update.
 
 ## Streaming segmentation query types
 
@@ -66,12 +68,6 @@ Additional information about the last segment evaluation can be found by selecti
 ![](../images/ui/streaming-segmentation/info-bubble.png)
 
 For more information about segment definitions, please read the previous section on [segment definition details](#segment-details).
-
-## Streaming segmentation video demo
-
-The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface.
-
->[!VIDEO](https://video.tv.adobe.com/v/36184?quality=12&learn=on)
 
 ## Next steps
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
-title: Create a HubSpot source connector in the UI
+title: Create a HubSpot  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a HubSpot source connector using the Platform user interface.
+description: Learn how to create a HubSpot source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL HubSpot] source connector in the UI
+# Create a [!DNL HubSpot] source connection in the UI
 
 >[!NOTE]
 >

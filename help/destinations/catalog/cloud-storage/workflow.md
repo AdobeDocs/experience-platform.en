@@ -1,15 +1,12 @@
 ---
 keywords: cloud storage destination;cloud storage
-title: Cloud storage destinations workflow
-seo-title: Cloud storage destinations workflow
+title: Create a cloud storage destination
 type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations
 ---
 
-# Workflow to create cloud storage destinations
-
-## Overview
+# Create a cloud storage destination
 
 This page explains how you can connect to cloud storage locations in Adobe Experience Platform.
 
@@ -33,7 +30,7 @@ See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-ki
 
 In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
 
-Also in this step, you can select any **[!UICONTROL Marketing use case]** that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+Also in this step, you can select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 For Amazon S3 destinations, insert the **[!UICONTROL Bucket name]** and the **[!UICONTROL Folder path]** in your cloud storage destination where the files will be delivered. Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 

@@ -1,14 +1,10 @@
 ---
 keywords: TMMData;tmm data;tmmdata;TMM data
 title: TMMData extension
-seo-title: TMMData extension
 description: The TMMData extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The TMMData extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL TMMData] Extension {#tmmdata-extension}
-
-## Overview {#overview}
+# [!DNL TMMData] extension {#tmmdata-extension}
 
 [!DNL TMMData's] Foundation platform for Adobe Marketing Cloud provides marketing teams with the tools to access and blend all their critical data sources - including internal/external and online/off-line data - for confident, comprehensive cross-channel analysis, with automated campaign setup and direct imports to Adobe and other analytics and BI tools.
 

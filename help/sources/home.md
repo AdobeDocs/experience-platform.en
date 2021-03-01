@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
-title: Adobe Experience Platform Source Connectors overview
+title: Source Connectors Overview
 topic: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 ---
@@ -23,12 +23,12 @@ Sources in Experience Platform are grouped into the following categories:
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. See the following related documents for more information:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
-- [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
-- [Create an Adobe Analytics Classifications Data source connector in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
-- [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 
 ### Advertising
 
@@ -49,6 +49,8 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
+- [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)

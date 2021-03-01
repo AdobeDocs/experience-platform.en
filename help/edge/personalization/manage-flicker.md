@@ -1,8 +1,6 @@
 ---
-title: Manage Flicker for Personalized Experiences
-seo-title: Adobe Experience Platform Web SDK managing flicker
-description: Learn how to manage flicker on user experiences
-seo-description: Learn how to manage flicker with the Experience Platform Web SDK properties
+title: Manage Flicker for Personalized Experiences Using the Adobe Experience Platform Web SDK
+description: Learn how to use the Adobe Experience Platform Web SDK to manage flicker on user experiences.
 keywords: target;flicker;prehidingStyle;asynchronously;asynchronous;
 ---
 

@@ -1,12 +1,12 @@
 ---
 keywords: insights;attribution ai;attribution ai insights;AAI query service;attribution queries;attribution scores
 solution: Intelligent Services, Experience Platform
-title: AAI Query Service quick start guide
+title: Analyzing Attribution Scores Using Query Service
 topic: Attribution AI queries
-description: This document provides a guide and templates for using Query Service to analyze your attribution scores.
+description: Learn how to use Adobe Experience Platform Query Service to analyze Attribution AI scores.
 ---
 
-# Adobe Experience Platform Query Service quick start guide for analyzing attribution scores
+# Analyzing attribution scores using Query Service
 
 Each row in the data represents a conversion, in which information for related touchpoints are stored as an array of structs under the `touchpointsDetail` column.
 
@@ -14,7 +14,7 @@ Each row in the data represents a conversion, in which information for related t
 | ---------------------- | ------ |
 | Touchpoint name | `touchpointsDetail. touchpointName` |
 | Touchpoint channel | `touchpointsDetail.touchPoint.mediaChannel` |
-| Touchpoint AAI algorithmic scores | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
+| Touchpoint Attribution AI algorithmic scores | <li>`touchpointsDetail.scores.algorithmicSourced`</li> <li> `touchpointsDetail.scores.algorithmicInfluenced` </li> |
 
 ## Finding your data paths
 

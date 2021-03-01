@@ -1,12 +1,11 @@
 ---
 keywords: destinations;destination;destination types
-title: Destinations Types and Categories
-seo-title: Destinations Types and Categories
-description: In Adobe Experience Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations. 
-seo-description: In Adobe Experience Platform, Profile/Segment Export destinations capture event data, combine it with other data sources, apply segmentation, and export segments and qualified profiles to destinations. Experience Platform Launch extensions forward raw event data to several types of destinations.
+title: Destination types and categories
+seo-title: Destination types and categories
+description: Learn about the different types and categories of destinations in Adobe Experience Platform.
 ---
 
-# Destination Types and Categories
+# Destination types and categories
 
 Read this page to understand the different types and categories of Adobe Experience Platform destinations.
 
@@ -56,7 +55,7 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 ## Destination categories
 
-The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
+The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
 ![Destination categories](./assets/destination-types/destination-categories-menu.png)
 

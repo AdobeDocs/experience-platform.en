@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
 solution: Experience Platform
-title: Postal address data type
+title: Postal Address Data Type
 topic: overview
 description: This document provides an overview of the Postal Address XDM data type.
 ---

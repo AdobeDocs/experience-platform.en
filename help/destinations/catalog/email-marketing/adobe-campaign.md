@@ -1,14 +1,10 @@
 ---
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
-seo-description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
 ---
 
-# Adobe Campaign
-
-## Overview
+# Adobe Campaign connection
 
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [About Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
@@ -44,6 +40,7 @@ In **[!UICONTROL Basic Information]**, fill in the relevant information for your
    - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
    - **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
    - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Campaign basic information](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 

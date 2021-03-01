@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;namespace list;list namespace
 solution: Experience Platform
-title: List available namespaces
+title: List Available Identity Namespaces
 topic: API guide
 description: List all available namespaces.
 ---
 
-# List available namespaces
+# List available identity namespaces
 
 **API format**
 

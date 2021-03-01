@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment definition;segment definitions;api;API;
 solution: Experience Platform
-title: Segment definitions
+title: Segment Definitions API Endpoint
 topic: developer guide
-description: This guide provides information to help you better understand segment definitions and includes sample API calls for performing basic actions using the API.
+description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
 ---
 
 # Segment definitions endpoint
@@ -190,6 +190,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.format` | Indicates the structure of the expression in value. Currently, the following format is supported: <ul><li>`pql/text`: A textual representation of a segment definition, according to the published PQL grammar.  For example, `workAddress.stateProvince = homeAddress.stateProvince`.</li></ul> |
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human-readable description of the definition. |
+
+>[!NOTE]
+>
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
+>
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
 **Response**
 

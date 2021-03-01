@@ -1,14 +1,10 @@
 ---
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire extension
-seo-title: KickFire extension
 description: The KickFire extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The KickFire extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL KickFire] extension {#kickfire-extension}
-
-## Overview {#overview}
 
 [!DNL KickFire's] IP address intelligence & B2B firmographic data allows you to translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
 

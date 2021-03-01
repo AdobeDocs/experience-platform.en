@@ -1,14 +1,10 @@
 ---
 keywords: dialogtech extension;dialogtech;dialogtech destination;DialogTech;DialogTech SourceTrak
 title: DialogTech extension
-seo-title: DialogTech extension
 description: The DialogTech extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The DialogTech extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL DialogTech] extension {#dialogtech-extension}
-
-## Overview {#overview}
 
 Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 

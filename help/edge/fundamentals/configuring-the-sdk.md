@@ -1,13 +1,11 @@
 ---
-title: Configuring the SDK
-seo-title: Configuring Adobe Experience Platform Web SDK
-description: Learn how to configure the Experience Platform Web SDK
+title: Configure the Adobe Experience Platform Web SDK
+description: Learn how to configure the Adobe Experience Platform Web SDK.
 seo-description: Learn how to configure the Experience Platform Web SDK
-keywords: configuring;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
-
+keywords: configure;configuration;SDK;edge;Web SDK;configure;edgeConfigId;context;web;device;environment;placeContext;debugEnabled;edgeDomain;orgId;clickCollectionEnabled;onBeforeEventSend;defaultConsent;web sdk settings;prehidingStyle;opacity;cookieDestinationsEnabled;urlDestinationsEnabled;idMigrationEnabled;thirdPartyCookiesEnabled;
 ---
 
-# Configuring the SDK
+# Configure the Platform Web SDK
 
 Configuration for the SDK is done with the `configure` command.
 
@@ -55,11 +53,12 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 | Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
-### `edgeDomain`
+### `edgeDomain` {#edge-domain}
 
 | **Type** | **Required** | **Default Value**  |
 | -------- | ------------ | ------------------ |
 | String   | No           | `beta.adobedc.net` |
+| String   | No           | `omtrdc.net`       |
 
 The domain used to interact with Adobe services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe edge infrastructure.
 
@@ -87,7 +86,7 @@ Indicates whether data associated with link clicks should be automatically colle
 | -------- | ------------ | ----------------- |
 | Function | No           | () => undefined   |
 
-Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information.  For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
+Set this to configure a callback that is called for every event just before it is sent.  An object with the field `xdm` is sent in to the callback.  Modify the `xdm` object to change what is sent.  Inside the callback, the `xdm` object will already have the data passed in the event command, and the automatically collected information. For more information on the timing of this callback and an example, see [Modifying Events Globally](tracking-events.md#modifying-events-globally).
 
 ## Privacy options
 
@@ -135,13 +134,13 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 
 ## Identity options
 
-### `idMigrationEnabled`
+### `idMigrationEnabled` {#id-migration-enabled}
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | true              |
 
-If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the Adobe Experience Platform Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

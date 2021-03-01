@@ -1,14 +1,10 @@
 ---
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics extension
-seo-title: Parse.ly Analytics extension
 description: The Parse.ly Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Parse.ly Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Parse.ly Analytics] Extension {#parsely-analytics-extension}
-
-## Overview {#overview}
+# [!DNL Parse.ly Analytics] extension {#parsely-analytics-extension}
 
 [!DNL Parse.ly Analytics] helps 2,500+ companies use data to understand their online audience. This extension installs a JavaScript snippet, which tracks how visitors interact with content on your site.
 

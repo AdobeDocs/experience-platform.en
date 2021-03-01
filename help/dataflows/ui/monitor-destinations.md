@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows;destinations
 description: Destinations allow you to activate your data from Adobe Experience Platform to countless external partners. This tutorial provides instructions on how you can monitor dataflows for your destinations using the Experience Platform user interface.
 solution: Experience Platform
-title: Monitor dataflows
+title: Monitor Dataflows for Destinations in the UI
 topic: overview
 type: Tutorial
 ---

@@ -1,14 +1,10 @@
 ---
 keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
-title: Google Display & Video 360 Destination
-seo-title: Google Display & Video 360 Destination
+title: Google Display & Video 360 connection
 description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources.
-seo-description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
 ---
 
-# [!DNL Google Display & Video 360] Destination
-
-## Overview
+# [!DNL Google Display & Video 360] connection
 
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
 
@@ -53,7 +49,7 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Go
 >
 >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between [!UICONTROL Activate] and [!UICONTROL Configure], refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
-In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing use cases that should apply to this destination.
+In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing actions that should apply to this destination.
 
 ![Basic information Google Display & Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
 
@@ -63,7 +59,7 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
    * Use `Invite Advertiser` to allow audiences to be shared only to a specific brand in your Display & Video 360 account.
    * Use `Invite Partner` to allow audiences to be shared to all brands in your Display & Video 360 account.
 *  **[!UICONTROL Account ID]**: Fill in your **[!DNL Invite partner]** or **[!DNL Invite advertiser]** account ID with Google. Typically, this is a six or seven digit ID.
-*  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
+*  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
 
 >[!NOTE]
 >
