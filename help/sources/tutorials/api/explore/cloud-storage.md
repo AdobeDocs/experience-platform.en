@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
-title: Explore a cloud storage system using the Flow Service API
+title: Explore a cLoud Storage System Using the Flow Service API
 topic: overview
-description: This tutorial uses the Flow Service API to explore a third party cloud storage system.
+description: This tutorial uses the Flow Service API to explore a third-party cloud storage system.
 ---
 
 # Explore a cloud storage system using the [!DNL Flow Service] API
@@ -23,14 +23,15 @@ The following sections provide additional information that you will need to know
 
 In order to explore a third party cloud storage using [!DNL Platform] APIs, you must possess a valid connection ID. If you do not already have a connection for the storage you wish to work with, you can create one through the following tutorials:
 
-* [Amazon S3](../create/cloud-storage/s3.md)
-* [Azure Blob](../create/cloud-storage/blob.md)
-* [Azure Data Lake Storage Gen2](../create/cloud-storage/adls-gen2.md)
-* [Azure File Storage](../create/cloud-storage/azure-file-storage.md)
-* [FTP](../create/cloud-storage/ftp.md)
-* [Google Cloud Store](../create/cloud-storage/google.md)
+* [[!DNL Amazon S3]](../create/cloud-storage/s3.md)
+* [[!DNL Azure Blob]](../create/cloud-storage/blob.md)
+* [[!DNL Azure Data Lake Storage Gen2]](../create/cloud-storage/adls-gen2.md)
+* [[!DNL Azure File Storage]](../create/cloud-storage/azure-file-storage.md)
+* [[!DNL FTP]](../create/cloud-storage/ftp.md)
+* [[!DNL Google Cloud Storage]](../create/cloud-storage/google.md)
 * [HDFS](../create/cloud-storage/hdfs.md)
-* [SFTP](../create/cloud-storage/sftp.md)
+* [[!DNL Oracle Object Storage]](../create/cloud-storage/oracle-object-storage.md)
+* [[!DNL SFTP]](../create/cloud-storage/sftp.md)
 
 ### Reading sample API calls
 

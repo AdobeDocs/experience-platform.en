@@ -1,14 +1,10 @@
 ---
 keywords: facebook pixel extensions;facebook pixel extension;facebook pixel destinations;facebook pixel
 title: Facebook Pixel extension
-seo-title: Facebook Pixel extension
 description: The Facebook Pixel extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Facebook Pixel extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Facebook Pixel] extension {#facebook-pixel-extension}
-
-## Overview {#overview}
 
 The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
 

@@ -1,14 +1,10 @@
 ---
 keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
 title: Pinterest Conversion Tracking extension
-seo-title: Pinterest Conversion Tracking extension
 description: The Pinterest Conversion Tracking extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Pinterest Conversion Tracking extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Pinterest Conversion Tracking] Extension {#pinterest-extension}
-
-## Overview {#overview}
+# [!DNL Pinterest Conversion Tracking] extension {#pinterest-extension}
 
 Track visitor actions on your website after views of your Promoted Pin. Measure return on ad spend and create targeted audiences. Learn more [here](https://ads.pinterest.com/).
 

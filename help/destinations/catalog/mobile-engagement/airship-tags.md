@@ -1,12 +1,10 @@
 ---
 keywords: airship tags;airship destination
-title: Airship Tags Destination
-seo-title: Airship Tags destination
+title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 ---
 
-# (Beta) [!DNL Airship Tags] destination {#airship-tags-destination}
+# (Beta) [!DNL Airship Tags] connection {#airship-tags-destination}
 
 >[!IMPORTANT]
 >
@@ -94,7 +92,7 @@ Once your credentials are confirmed and Adobe Experience Platform is connected t
 
 In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. 
 
-Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more **[!UICONTROL Marketing Actions]** for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
 

@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
 solution: Experience Platform
-title: Explore XDM resources in the UI
-description: Learn how to explore existing schemas, classes, mixins, and data types in the Experience Platform user inteface.
+title: Explore XDM Resources in the UI
+description: Learn how to explore existing schemas, classes, mixins, and data types in the Experience Platform user interface.
 topic: tutorial
 type: Tutorial
 ---
@@ -27,7 +27,7 @@ The **[!UICONTROL Included in Profile]** toggle allows you to filter results to 
 
 ![](../images/ui/explore/filter.png)
 
-You can also use the search bar to narrow down results to resources whose names match the search query.
+You can also use the search bar to narrow down results further. When you search for a term, the top items represent resources whose names match the search query. Below these items, under **[!UICONTROL Standard Fields]**, any resources containing fields that match the query will be listed. This allows you to search for XDM resources based on the type of data they contain, without having to know the name of the resource beforehand.
 
 ![](../images/ui/explore/search.png)
 

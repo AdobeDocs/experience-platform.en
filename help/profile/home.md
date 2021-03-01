@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
-title: Real-time Customer Profile overview
+title: Real-time Customer Profile Overview
 topic: guide
 description: Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 ---
@@ -29,11 +29,11 @@ The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platfo
 
 Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
 
-### (Alpha) Profile dashboard {#profile-dashboard}
+### (Beta) Profile dashboard {#profile-dashboard}
 
 >[!IMPORTANT]
 >
->The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+>The dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
 The Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
 
@@ -71,9 +71,9 @@ To learn more about union schemas, including how to access union schemas in the 
 
 >[!IMPORTANT]
 >
->The computed attribute functionality is in alpha. The documentation and the functionality are subject to change.
+>Computed attribute functionality is in alpha. The documentation and functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, and step-by-step instructions for working with them using the [!DNL Real-time Customer Profile] API, please see the [computed attributes endpoint guide](api/computed-attributes.md). This guide will help you better understand the role computed attributes play within Adobe Experience Platform, and it includes sample API calls for performing basic CRUD operations.
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. For more information on computed attributes, including understanding the role computed attributes play within Adobe Experience Platform, please begin by reading the [computed attributes overview](computed-attributes/overview.md).
 
 ## Profiles and segments
 

@@ -1,4 +1,6 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/iab/overview.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/iab/dataset-preparation.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/dataset.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/use-cases/privacy-consent.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/sensei/customer-ai.html,https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/destinations/email-marketing-api.html,https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/email-marketing-api.html

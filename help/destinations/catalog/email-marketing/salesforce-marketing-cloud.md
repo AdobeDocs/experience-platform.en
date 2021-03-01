@@ -1,14 +1,10 @@
 ---
 keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
-title: Salesforce Marketing Cloud
-seo-title: Salesforce Marketing Cloud
-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+title: Salesforce Marketing Cloud connection
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 ---
 
-# [!DNL Salesforce Marketing Cloud]
-
-## Overview
+# [!DNL Salesforce Marketing Cloud] connection
 
 [[!DNL Salesforce Marketing Cloud]](https://www.salesforce.com/products/marketing-cloud/email-marketing/) is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
 
@@ -35,8 +31,10 @@ For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Por
 In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
 - **[!UICONTROL Name]**: Pick a relevant name for your destination.
 - **[!UICONTROL Description]**: Enter a description for your destination.
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
-- **[!UICONTROL File Format]**: **[!UICONTROL CSV]** or **[!UICONTROL TAB_DELIMITED]**. Select which file format to export to your storage location.
+- **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
+- **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Salesforce basic information](../../assets/catalog/email-marketing/salesforce/basic-information.png)
 

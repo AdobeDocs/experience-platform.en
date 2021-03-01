@@ -1,12 +1,12 @@
 ---
 keywords: advertising destinations;destinations;platform destinations
-title: Advertising Destinations
-seo-title: Advertising Destinations
+title: Advertising destinations overview
+seo-title: Advertising destinations overview
 description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 seo-description: Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 ---
 
-# Advertising destinations {#advertising-destinations}
+# Advertising destinations overview {#advertising-destinations}
 
 Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
 
@@ -18,12 +18,12 @@ Currently, Platform supports the advertising destinations listed below. For info
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
-- [Google Display & Video 360](./google-dv360.md)
-- [Google Ads](./google-ads-destination.md)
-- [Google Ad Manager](./google-ad-manager.md)
-- [Google Customer Match](./google-customer-match.md)
-- [Microsoft Bing](./bing.md)
-- [The Trade Desk destination](./tradedesk.md)
+- [Google Display & Video 360 connection](./google-dv360.md)
+- [Google Ads connection](./google-ads-destination.md)
+- [Google Ad Manager connection](./google-ad-manager.md)
+- [Google Customer Match connection](./google-customer-match.md)
+- [Microsoft Bing connection](./bing.md)
+- [The Trade Desk connection](./tradedesk.md)
 
 ## Extensions
 

@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest parquet;ingest json;
+keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest Parquet;ingest json;
 solution: Experience Platform
-title: Batch Ingestion developer guide
+title: Batch Ingestion API Guide
 topic: developer guide
 description: This document provides a comprehensive overview of using batch ingestion APIs.
 ---
 
-# Batch ingestion developer guide
+# Batch ingestion API guide
 
 This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
 
@@ -644,7 +644,7 @@ An explanation of what the different part of the "fileDescription" section of th
 | `header` | The uploaded file **must** contain headers. Since schema validation is done, this must be set to true. In addition, headers may **not** contain any spaces - if you have any spaces in your header, please replace them with underscores instead. |
 | `charset` | An optional field. Other supported charsets include "US-ASCII" and "ISO-8869-1". If left empty, UTF-8 is assumed by default. |
 
-The dataset referenced must have the file description block listed above and must point to a valid schema in the registry. Otherwise, the file will not be mastered into parquet.
+The dataset referenced must have the file description block listed above and must point to a valid schema in the registry. Otherwise, the file will not be mastered into Parquet.
 
 ### Create batch
 

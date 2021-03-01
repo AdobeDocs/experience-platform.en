@@ -1,14 +1,10 @@
 ---
 keywords: beemray,beemray extension
 title: Beemray extension
-seo-title: Beemray extension
 description: The Beemray extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Beemray extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Beemray] extension {#beemray-extension}
-
-## Overview {#overview}
 
 [!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the Adobe Experience Cloud and the rest of your tech partners. Everything takes place in real-time. This extension installs [!DNL Beemray] SDK on your site.
 

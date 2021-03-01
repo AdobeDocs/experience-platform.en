@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming;streaming ingestion;streaming ingestion validation;validation;Streaming ingestion validation;validate;Synchronous validation;synchronous validation;Asynchronous validation;asynchronous validation;
 solution: Experience Platform
-title: Streaming ingestion validation
+title: Streaming Ingestion Validation
 topic: tutorial
 type: Tutorial
 description: Streaming ingestion allows you to upload your data to Adobe Experience Platform using streaming endpoints in real-time. Streaming ingestion APIs support two modes of validation - synchronous and asynchronous.
@@ -59,6 +59,10 @@ Synchronous validation is a method of validation that provides immediate feedbac
 By default, synchronous validation is not turned on. To enable it, you must pass in the optional query parameter `synchronousValidation=true` when making API calls. In addition, synchronous validation is currently only available if your stream endpoint is on the VA7 data center.
 
 If a message fails during synchronous validation, the message will not be written to the output queue, which provides immediate feedback for users.
+
+>[!NOTE]
+>
+>Schema changes may not be immediately available since changes are cached. Allow up to fifteen minutes for the cache to refresh.
 
 **API format**
 

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
-title: Collect streaming data through source connectors and APIs
+title: Collect Streaming Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
 ---
 
-# Collect streaming data through source connectors and APIs
+# Collect streaming data using source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -19,7 +19,8 @@ This tutorial requires you to have a valid connection ID for a streaming connect
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../../../../ingestion/tutorials/create-streaming-connection.md)
+- [[!DNL HTTP API]](../create/streaming/http.md)
+- [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 

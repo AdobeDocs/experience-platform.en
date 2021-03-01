@@ -1,7 +1,8 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
-title: Real-time Customer Profile UI guide
+title: Union Schema UI Guide
 topic: guide
+type: Documentation
 description: In the Adobe Experience Platform user interface (UI) you can easily view any union schema within your organization and preview the fields, identities, relationships, and contributing schemas for a specific class. This guide provides detailed information on how to view and explore union schemas using the Platform UI.
 ---
 

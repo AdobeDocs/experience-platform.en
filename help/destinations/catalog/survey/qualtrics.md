@@ -1,14 +1,10 @@
 ---
 keywords: Qualtrics;qualtrics;Qualtrics Website Feedback;qualtrics website feedback;Qualtricks website feedback
 title: Qualtrics Website Feedback extension
-seo-title: Qualtrics Website Feedback extension
 description: The Qualtrics Website Feedback extension is a surveys destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Qualtrics Website Feedback extension is a surveys destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
-# [!DNL Qualtrics Website Feedback] Extension {#qualtrics-extension}
-
-## Overview {#overview}
+# [!DNL Qualtrics Website Feedback] extension {#qualtrics-extension}
 
 [!DNL Qualtrics Website Feedback] enables you to engage your website visitors with the right message, at the right time. Whether you want to improve visitor experience with website feedback surveys or increase conversion, [!DNL Qualtrics Website Feedback] has got you covered.
 

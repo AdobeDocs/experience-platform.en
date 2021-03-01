@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: Observability notifications overview
+title: Observability Notifications Overview
 topic: overview
 description: Observability Insights allows you to subscribe to event notifications regarding Adobe Experience Platform activities. They reduce or eliminate the need to poll the Observability Insights API in order to check if a job has completed or if a certain milestone within a workflow has been reached.
 ---

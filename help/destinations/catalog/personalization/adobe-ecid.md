@@ -1,14 +1,10 @@
 ---
 Keywords: ECID;ecid
 title: Experience Cloud ID Service extension
-seo-title: Experience Cloud ID Service extension
 description: The Experience Cloud ID Service extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Experience Cloud ID Service extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
 # [!DNL Experience Cloud] ID Service extension {#adobe-ecid-extension}
-
-## Overview {#overview}
 
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 

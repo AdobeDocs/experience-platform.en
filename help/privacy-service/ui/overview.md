@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service UI overview
+title: Privacy Service UI Overview
 topic: UI guide
 description: Get started using the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
 ---

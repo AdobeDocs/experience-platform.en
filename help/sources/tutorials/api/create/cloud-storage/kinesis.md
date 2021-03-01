@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Kinesis;kinesis;Amazon Kinesis;amazon kinesis
 solution: Experience Platform
-title: Create an Amazon Kinesis connector using the Flow Service API
+title: Create an Amazon Kinesis Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Amazon Kinesis account.
+description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis account using the Flow Service API.
 ---
 
-# Create an [!DNL Amazon Kinesis] connector using the Flow Service API
+# Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ curl -X POST \
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
         "auth": {
-            "specName": "Basic Authentication for Kinesis",
+            "specName": "Aws Kinesis authentication credentials",
             "params": {
                 "accessKeyId": "accessKeyId",
                 "secretKey": "secretKey"

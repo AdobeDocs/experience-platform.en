@@ -1,42 +1,42 @@
 ---
-keywords: Experience Platform;home;popular topics; flow service; update connections
+keywords: Experience Platform;home;popular topics;flow service;update connections
 solution: Experience Platform
-title: Update connection information using the Flow Service API
+title: Update Connections Using the Flow Service API
 topic: overview
 type: Tutorial
-description: In some circumstances, it may be required to update the details of an existing source connection. The Flow Service API provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
+description: This tutorial covers the steps for updating the details and credentials of a connection using the Flow Service API.
 ---
 
-# Update connection information using the Flow Service API
+# Update connections using the Flow Service API
 
 In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.
 
-This tutorial covers the steps for updating the details and credentials of an existing connection using the [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for updating the details and credentials of a connection using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
-This tutorial requires you to have a valid connection ID. If you do not have a valid connection ID, select your connector of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
+This tutorial requires you to have an existing connection and a valid connection ID. If you do not have an existing connection, select your source of choice from the [sources overview](../../home.md) and follow the steps outlined before attempting this tutorial.
 
 This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+* [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully update your connection's information using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully update a connection using the [!DNL Flow Service] API.
 
 ### Reading sample API calls
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
 * `x-gw-ims-org-id: {IMS_ORG}`
 
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
+All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
@@ -46,10 +46,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Look up connection details
 
->[!NOTE]
->This tutorial uses the [Salesforce source connector](../../connectors/crm/salesforce.md) as an example, but the steps outlined apply to any of the [available source connectors](../../home.md).
-
-The first step in updating your connection information is to retrieve connection details using your connection ID.
+The first step in updating your connection is to retrieve its details using your connection ID. To retrieve your connection's current details make a GET request to the [!DNL Flow Service] API while providing the connection ID, of the connection you want to update.
 
 **API format**
 
@@ -63,7 +60,7 @@ GET /connections/{CONNECTION_ID}
 
 **Request**
 
-The following retrieves information regarding your connection ID.
+The following request retrieves information regarding your connection.
 
 ```shell
 curl -X GET \
@@ -76,7 +73,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the current details of your connection including its credentials, unique identifier (`id`), and version.
+A successful response returns the current details of your connection including its credentials, unique identifier (`id`), and version. The version value is required to update your connection.
 
 ```json
 {
@@ -114,10 +111,11 @@ A successful response returns the current details of your connection including i
 
 ## Update connection
 
-Once you have an existing connection ID, perform a PATCH request to the [!DNL Flow Service] API.
+To update your connection's name, description, and credentials, perform a PATCH request to the [!DNL Flow Service] API while providing your connection ID, version, and the new information you want to use.
 
 >[!IMPORTANT]
->A PATCH request requires the use of the `If-Match` header. The value for this header is your connection's unique version.
+>
+>The `If-Match` header is required when making a PATCH request. The value for this header is the unique version of the connection you want to update.
 
 **API format**
 
@@ -131,7 +129,7 @@ PATCH /connections/{CONNECTION_ID}
 
 **Request**
 
-The following request provides new information to update your connection with.
+The following request provides a new name and description, as well as a new set of credentials, to update your connection with.
 
 ```shell
 curl -X PATCH \
@@ -172,77 +170,12 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your connection ID and an updated etag.
+A successful response returns your connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
 
 ```json
 {
     "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
     "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-}
-```
-
-## Look up updated connection details
-
-You can retrieve the same connection ID you updated to see the changes you made by making a GET request to the [!DNL Flow Service] API.
-
-**API format**
-
-```http
-GET /connections/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to retrieve. |
-
-**Request**
-
-The following request retrieves updated information regarding your connection ID.
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/139f6a5f-a78b-4744-9f6a-5fa78bd74431' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}'
-```
-
-**Response**
-
-A successful response returns the updated details of your connection ID, including its new name, description, and version.
-
-```json
-{
-    "items": [
-        {
-            "createdAt": 1597973312000,
-            "updatedAt": 1598038319627,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxName": "{SANDBOX_NAME}",
-            "id": "139f6a5f-a78b-4744-9f6a-5fa78bd74431",
-            "name": "Test salesforce connection",
-            "description": "A test salesforce connection",
-            "connectionSpec": {
-                "id": "cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-                "version": "1.0"
-            },
-            "state": "enabled",
-            "auth": {
-                "specName": "Basic Authentication",
-                "params": {
-                    "securityToken": "{NEW_SECURITY_TOKEN}",
-                    "password": "{PASSWORD}",
-                    "username": "salesforce-connector-username"
-                }
-            },
-            "version": "\"3600e378-0000-0200-0000-5f40212f0000\"",
-            "etag": "\"3600e378-0000-0200-0000-5f40212f0000\""
-        }
-    ]
 }
 ```
 

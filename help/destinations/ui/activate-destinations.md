@@ -23,7 +23,7 @@ The steps in the activation workflow vary slightly between destination types. Th
 
 Applies to: All destinations
 
-In the Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+In the Adobe Experience Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
 
 ![browse to destination](../assets/ui/activate-destinations/connect.png)
 
@@ -51,21 +51,81 @@ Applies to: social destinations and Google Customer Match advertising destinatio
 
 ![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
 
-For social destinations, you can select source attributes to map as target identities in the destination. This step is either optional or mandatory, depending on which primary identity you are using in the schema.
+For social destinations, you must select source attributes or identity namespaces to map as target identities in the destination.
 
-If you are using email address as primary identity in your schema, you can skip the Identity mapping step, as shown below:
+#### Example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
-![Email address as identity](../assets/ui/activate-destinations/email-as-identity.gif)
+This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 
-If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to manually map the email address from your identity schema as a target identity in the social destination, as shown below:
+Selecting source fields:
 
-![Loyalty ID as identity](../assets/ui/activate-destinations/rewardsid-as-identity.gif)
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
+* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
 
-Select `Email_LC_SHA256` as target identity if you hashed customer email addresses on data ingestion into Adobe Experience Platform, according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
+Selecting target fields:
 
-Select `Email` as target identity if the email addresses you are using are not hashed. Platform will hash the email addresses to comply with [!DNL Facebook] requirements.
-   
-![identity mapping after filling in fields](../assets/common/identity-mapping.png)
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Select the `Extern_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../assets/ui/activate-destinations/identity-mapping.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-transformation.png)
+
+&nbsp;
+
+#### Example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
+
+This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
+
+Selecting source fields:
+
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Google Customer Match] [email hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
+
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Select the `User_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../assets/ui/activate-destinations/identity-mapping-gcm.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
+
+<!-- 
+`IDFA` IDs will be mapped to:
+
+* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
+
+Select `GAID` as target identity if your data consists of Android device IDs. `GAID` IDs will be mapped to:
+
+* [MADID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#hash) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [mobileId](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#mobileid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md).
+
+If you are using another ID, such as "Rewards ID" or "Loyalty ID", as primary identity in your schema, you need to map it to the following target identities:
+
+* [EXTERN_ID](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences#external_identifiers) if you are activating audiences in [[!DNL Facebook]](../../destinations/catalog/social/facebook.md).
+* [USER_ID](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.Member#userid) if you are activating audiences in [[!DNL Google Customer Match]](../../destinations/catalog/advertising/google-customer-match.md). -->
 
 ### **[!UICONTROL Configure]** step {#configure}
 
@@ -81,9 +141,9 @@ To add a schedule for the segment, select **[!UICONTROL Create schedule]**.
 
 A popover appears, showing options to create the segment schedule.  
 
-- **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-- **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
-- **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
+* **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+* **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
+* **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
 
 ![](../assets/ui/activate-destinations/export-full-file.png)
 
@@ -95,9 +155,9 @@ Select the pencil icon to open a modal window and edit the file names. Note that
 
 In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
-- **[!UICONTROL Segment name]**: You can append the segment name to the file name.
-- **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
-- **[!UICONTROL Custom text]**: Add custom text to the file names.
+* **[!UICONTROL Segment name]**: You can append the segment name to the file name.
+* **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
+* **[!UICONTROL Custom text]**: Add custom text to the file names.
 
 Select **[!UICONTROL Apply changes]** to confirm your selection. 
 
@@ -121,7 +181,13 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >
 >For social destinations, you must select the origin of your audience in this step. You can proceed to the next step only after selecting one of the options in the image below.
 
-![choose data origin](../assets/ui/activate-destinations/choose-data-origin.png) 
+![Facebook Origin of Audience](../assets/catalog/social/facebook/facebook-origin-audience.png)
+
+>[!IMPORTANT]
+>
+>For Google Customer Match, you must provide the [!UICONTROL App ID] in this step, when activating [!DNL IDFA] or [!DNL GAID] segments.
+
+![enter app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 ### **[!UICONTROL Scheduling]** step {#scheduling}
 
@@ -141,11 +207,11 @@ On the **[!UICONTROL Select attributes]** page, select **[!UICONTROL Add new fie
 
 >[!NOTE] 
 >
-> Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
+> Adobe Experience Platform prefills your selection with four recommended, commonly used attributes from your schema: `person.name.firstName`, `person.name.lastName`, `personalEmail.address`, `segmentMembership.status`.
 
 File exports will vary in the following ways, depending on whether `segmentMembership.status` is selected:
-- If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
-- If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
+* If the `segmentMembership.status` field is selected, exported files include **[!UICONTROL Active]** members in the initial full snapshot and **[!UICONTROL Active]** and **[!UICONTROL Expired]** members in subsequent incremental exports.
+* If the `segmentMembership.status` field is not selected, exported files include only **[!UICONTROL Active]** members in the initial full snapshot and in subsequent incremental exports.
 
 ![recommended attributes](../assets/ui/activate-destinations/mark-mandatory.png) 
 
@@ -156,10 +222,10 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >[!NOTE] 
 > 
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
->- The fields are used in the segment definition.
->- The fields are configured as projected attributes for the target destination.
+>* The fields are used in the segment definition.
+>* The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see the [data usage policies guide](../../data-governance/policies/overview.md).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 
@@ -171,7 +237,7 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 
 >[!IMPORTANT]
 >
->In this step, Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
+>In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../rtcdp/privacy/data-governance-overview.md#enforcement) in the data governance documentation section.
  
 ![data policy violation](../assets/common/data-policy-violation.png)
 
@@ -181,7 +247,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Edit activation {#edit-activation}
 
-Follow the steps below to edit existing activation flows in Platform: 
+Follow the steps below to edit existing activation flows in Adobe Experience Platform: 
 
 1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
 2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
@@ -190,7 +256,7 @@ Follow the steps below to edit existing activation flows in Platform:
 
 ### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
-For email marketing destinations and cloud storage destinations, Platform creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
 `<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
 
 Note that you can edit the file format. For more information, go to the [Configure](#configure) step for cloud storage destinations and email marketing destinations. 
@@ -215,7 +281,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 >[!TIP]
 >
->The integration between Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+>The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
 
 ## Disable activation {#disable-activation}
 

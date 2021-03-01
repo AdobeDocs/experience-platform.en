@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
 solution: Experience Platform
-title: Create an FTP connector using the Flow Service API
+title: Create an FTP Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an FTP (File Transfer Protocol) server.
+description: Learn how to connect Adobe Experience Platform to an FTP (File Transfer Protocol) server using the Flow Service API.
 ---
 
-# Create an FTP connector using the [!DNL Flow Service] API
+# Create an FTP source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -118,4 +118,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have created an FTP connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest parquet data using the Flow Service API](../../cloud-storage-parquet.md).
+By following this tutorial, you have created an FTP connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest Parquet data using the Flow Service API](../../cloud-storage-parquet.md).

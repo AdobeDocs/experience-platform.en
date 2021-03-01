@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;record data;stream record data;
 solution: Experience Platform
-title: Streaming record data
+title: Stream Record Data Using Streaming Ingestion APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
-# Stream record data to Adobe Experience Platform
+# Stream record data using Streaming Ingestion APIs
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
@@ -257,7 +257,7 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 ]
 ```
 
-## Ingest record data to the streaming connection
+## Ingest record data to the streaming connection {#ingest-data}
 
 With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest record data into [!DNL Platform].
 

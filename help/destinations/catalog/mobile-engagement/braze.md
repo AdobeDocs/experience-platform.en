@@ -1,18 +1,14 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze destination
-seo-title: Braze destination
+title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
-seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 ---
 
-# (Beta) [!DNL Braze] destination
+# (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
 >
 >The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
@@ -61,7 +57,7 @@ Click **[!UICONTROL Next]**. In the [!UICONTROL Authentication] step, you need t
  * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
  * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
  * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
- * **[!UICONTROL Marketing use case]**: marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+ * **[!UICONTROL Marketing action]**: marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![Braze Authentication Step](../../assets/catalog/mobile-engagement/braze/authentication.png)
 

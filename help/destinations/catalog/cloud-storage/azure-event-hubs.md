@@ -1,18 +1,14 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) Azure Event Hubs destination
-seo-title: (Beta) Azure Event Hubs destination
+title: (Beta) Azure Event Hubs connection
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
-seo-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
 ---
 
-# (Beta) [!DNL Azure Event Hubs] destination
+# (Beta) [!DNL Azure Event Hubs] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL Azure Event Hubs] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
 
 [!DNL Azure Event Hubs] is a big data streaming platform and event ingestion service. It can receive and process millions of events per second. Data sent to an event hub can be transformed and stored by using any real-time analytics provider or batching/storage adapters.
 
@@ -52,13 +48,13 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
+* **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![Data required in the setup step](../../assets/catalog/cloud-storage/event-hubs/setup.png)
 
 ## Activate segments {#activate-segments}
 
 See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
-
 
 ## Exported data {#exported-data}
 

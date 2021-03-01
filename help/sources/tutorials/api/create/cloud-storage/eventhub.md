@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
 solution: Experience Platform
-title: Create an Azure Event Hubs connector using the Flow Service API
+title: Create an Azure Event Hubs Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Event Hubs account.
+description: Learn how to connect Adobe Experience Platform to an Azure Event Hubs account using the Flow Service API.
 ---
 
-# Create an [!DNL Azure Event Hubs] connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure Event Hubs] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -83,7 +83,7 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
                 "sasKeyName": "sasKeyName",
                 "sasKey": "sasKey",

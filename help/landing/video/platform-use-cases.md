@@ -1,5 +1,5 @@
 ---
-title: Adobe Experience Platform Use Cases
+title: Key Use Cases of Experience Platform
 description: This video gives an overview of the four key use cases of Adobe Experience Platform&mdash;real-time customer data platform, customer journey intelligence, delivery and cross-channel experience, and customer experience application development.
 feature: platform
 topics:
@@ -10,7 +10,7 @@ activity: understand
 thumbnail: 32806.jpg
 ---
 
-# Adobe Experience Platform use cases
+# Key use cases of Experience Platform
 
 This video provides an overview of four key use cases of Experience Platform:
 

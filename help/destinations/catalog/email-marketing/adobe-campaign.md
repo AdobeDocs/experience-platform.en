@@ -1,14 +1,10 @@
 ---
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
-title: Adobe Campaign
-seo-title: Adobe Campaign
+title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
-seo-description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
 ---
 
-# Adobe Campaign
-
-## Overview
+# Adobe Campaign connection
 
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [About Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
@@ -24,13 +20,14 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Ca
 
 ![Connect to adobe campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
-In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+In the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]**, and **[!UICONTROL Azure Blob]**. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 ![Set up Campaign wizard](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
 - For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
 - For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
 - For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+- For **[!UICONTROL Azure Blob]** connections, you must provide a connection string.
 
 Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string. 
 
@@ -41,7 +38,9 @@ In **[!UICONTROL Basic Information]**, fill in the relevant information for your
    - **[!UICONTROL Description]**: Enter a description for your destination.
    - **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where Platform will deposit your export data as CSV or tab-delimited files. 
    - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
+   - **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
    - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
+   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Campaign basic information](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 

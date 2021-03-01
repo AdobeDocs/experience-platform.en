@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;schema;schemas;
 solution: Experience Platform
-title: Create and edit schemas in the UI
+title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
 topic: user guide
 ---
@@ -46,7 +46,7 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
 
 ## Add mixins to a schema {#add-mixins}
 
@@ -58,15 +58,23 @@ Once you have opened a schema within the [!DNL Schema Editor], you can add field
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
-In the dialog that appears, you can select the desired mixins from the list. You can select multiple mixins from the list, with each selected mixin appearing in the right rail.
+A dialog appears, showing a list of mixins that you can select for the schema. Since mixins are only compatible with one class, only those mixins that are associated with the schema's selected class will be listed. By default, listed mixins are sorted based on their usage popularity within your organization.
+
+![](../../images/ui/resources/schemas/mixin-popularity.png)
+
+You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
+
+![](../../images/ui/resources/schemas/mixin-search.png)
+
+Select the checkbox next to the name of the mixin that you wish to add to the schema. You can select multiple mixins from the list, with each selected mixin appearing in the right rail.
 
 ![](../../images/ui/resources/schemas/add-mixin.png)
 
 >[!TIP]
 >
->For any listed mixin, you can select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
+>For any listed mixin, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the mixin captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
 
-Once you have finished choosing mixin, select **[!UICONTROL Add mixin]** to add them to the schema.
+Once you have chosen your mixins, select **[!UICONTROL Add mixin]** to add them to the schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
@@ -101,6 +109,22 @@ To finish the process, select **[!UICONTROL Save]** to save the schema.
 ![](../../images/ui/resources/schemas/profile-enabled.png)
 
 The schema is now enabled for use in Real-time Customer Profile. When Platform ingests data into datasets based on this schema, that data will be incorporated into your amalgamated Profile data.
+
+## Edit display names for schema fields {#display-names}
+
+Once you have assigned a class and added mixins to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
+
+>[!NOTE]
+>
+>Keep in mind that the display names of fields that belong to standard classes or mixins can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or mixin.
+
+To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
+
+![](../../images/ui/resources/schemas/display-name.png)
+
+Select **[!UICONTROL Apply]** in the right rail, and the canvas updates to show the field's new display name. Select **[!UICONTROL Save]** to apply the changes to the schema.
+
+![](../../images/ui/resources/schemas/display-name-changed.png)
 
 ## Change a schema's class {#change-class}
 
