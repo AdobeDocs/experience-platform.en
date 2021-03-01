@@ -1,12 +1,12 @@
 ---
-keywords: destinations; questions; frequently asked questions
-title: Destinations Frequently Asked Questions
-seo-title: Destinations Frequently Asked Questions
+keywords: destinations; questions; frequently asked questions; faq; destinations faq
+title: Destinations FAQ
+seo-title: Destinations FAQ
 description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
 ---
 
-# Frequently Asked Questions {#faq}
+# Destinations FAQ {#faq}
 
 ## Destination latency {#latency}
 
@@ -24,9 +24,12 @@ Audience activation in destinations based on [!DNL REST APIs] and event hubs is 
 
 Audience activation for file-based destinations can take up to 24 hours.
 
-Profile exports take place on a daily basis.
+Profile data exports take place on a daily basis.
 
-## Facebook destination (#facebook-faq)
+## [!DNL Facebook Custom Audiences] (#facebook-faq)
+
+**What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?**
+
 
 **Do I need to add any apps or pixels to my Facebook advertiser account?**
 
