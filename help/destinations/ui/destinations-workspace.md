@@ -90,7 +90,7 @@ Element | Description
  [!UICONTROL Destination] | The destination platform that you selected for your activation flow.
  [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li></ul>
  [!UICONTROL Username] | The account credentials you selected for the destination flow.
- [!UICONTROL Segments] | The number of segments that are being activated to this destination.
+ [!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments. 
  [!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.
  [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).
 
