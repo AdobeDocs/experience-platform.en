@@ -28,11 +28,11 @@ For more information on sandboxes in Platform, see the [sandbox overview documen
 
 ### Specifying the content type
 
-All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters. If a specific content type is needed, the service developer guide will provide an example.
+All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters. If a specific content type is needed, the [individual Platform service guide](#api-guides) will provide an example.
 
 ## JSON fundamentals for Experience Platform APIs
 
-Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources.
+Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based Platform resources.
 
 To learn more about JSON including example JSON schema objects, visit the [Experience Platform API fundamentals](api-fundamentals.md) guide.
 
@@ -108,11 +108,13 @@ The following API guides are available:
 - [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md)
 - [[!DNL Sensei Machine Learning] API guide (Data Science Workspace)](.././data-science-workspace/api/getting-started.md)
 
-## API reference documentation
-
-
+For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 ## Error messages
+
+The [Platform troubleshooting guide](troubleshooting.md#errors-and-troubleshooting) provides a list of errors that you may encounter when using any Experience Platform service. 
+
+For troubleshooting guides on individual Platform services, see the [service troubleshooting directory](troubleshooting.md#service-troubleshooting-directory).
 
 ## Reading sample API calls {#sample-api}
 
@@ -173,7 +175,3 @@ The response illustrates what you would expect to receive following a successful
 ```
 
 For more information on specific endpoints in Platform APIs, including required headers and request bodies, please see the [Platform API guides](#api-guides).
-
-## Additional information
-
-[Platform troubleshooting guide](troubleshooting.md)

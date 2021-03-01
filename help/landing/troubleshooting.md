@@ -58,7 +58,7 @@ Many PATCH operations in [!DNL Platform] APIs use [JSON Pointer](https://tools.i
 
 ## Can I use Postman to make calls to [!DNL Platform] APIs? {#how-do-i-use-postman-to-make-calls-to-platform-apis}
 
-[Postman](https://www.postman.com/) is a useful tool for visualizing calls to RESTful APIs. The Platform API getting started documentation contains a video and instructions for importing Postman collections.
+[Postman](https://www.postman.com/) is a useful tool for visualizing calls to RESTful APIs. The [Platform API getting started guide](api-guide.md) contains a video and instructions for importing Postman collections. Additionally, a list of Postman collections for each service is provided.
 
 ## What are the system requirements for [!DNL Platform]? {#what-are-the-system-requirements-for-platform}
 
