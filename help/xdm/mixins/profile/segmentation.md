@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: Profile segmentation mixin
+title: Segment Membership Details Mixin
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Segment Membership Details mixin.
 ---
 
-# [!UICONTROL Profile segmentation] mixin
+# [!UICONTROL Segment Membership Details] mixin
 
-[!UICONTROL Profile segmentation] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+
+[!UICONTROL Segment Membership Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
 
 >[!WARNING]
 >

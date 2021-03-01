@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api;export;Export
 solution: Experience Platform
-title: Data Access developer guide
+title: Data Access API Guide
 topic: developer guide
-description: The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+description: The Data Access API supports Adobe Experience Platform by providing developers with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
 ---
 
-# Data Access developer guide
+# Data Access API guide
 
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
 

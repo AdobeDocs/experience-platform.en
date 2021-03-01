@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;crm schema;crm;CRM;dataflow;Dataflow
 solution: Experience Platform
-title: Configure a dataflow for a CRM connector in the UI
+title: Configure a Dataflow for a CRM Source Connection in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your CRM account.
 ---
 
-# Configure a dataflow for a CRM connector in the UI
+# Configure a dataflow for a CRM connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your CRM account.
 
@@ -15,7 +15,7 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model] (XDM) System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.

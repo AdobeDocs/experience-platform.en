@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
-title: XDM Individual Profile class
+title: XDM Individual Profile Class
 topic: overview
 description: This document provides an overview of the XDM Individual Profile class.
 ---
@@ -27,10 +27,14 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 
 ## Compatible mixins {#mixins}
 
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+
 Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of the most commonly used mixins for the class:
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Profile person details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Profile personal details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Profile work details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Profile segmentation]](../mixins/profile/segmentation.md)
+* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
+* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
+* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
+* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)

@@ -1,119 +1,38 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;union;Union;unions;Unions;segmentMembership;timeSeriesEvents;
 solution: Experience Platform
-title: Unions
-description: Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class (XDM ExperienceEvent or XDM Individual Profile) and are enabled for Real-time Customer Profile.
+title: Unions API Endpoint
+description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
 topic: developer guide
 ---
 
-# Unions
+# Unions endpoint
 
 Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
 
 This document covers essential concepts for working with unions in the Schema Registry API, including sample calls for various operations. For more general information about unions in XDM, see the section on unions in the [basics of schema composition](../schema/composition.md#union).
 
-## Union mixins
+## Union schema fields
 
-The [!DNL Schema Registry] automatically includes three mixins within the union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
+The [!DNL Schema Registry] automatically includes three key fields within a union schema: `identityMap`, `timeSeriesEvents`, and `segmentMembership`.
 
 ### Identity map
 
-A union schema's `identityMap` is a representation of the known identities within the union's associated record schemas. The identity map separates identities into different arrays keyed by namespace. Each listed identity is itself an object containing a unique `id` value.
-
-See the [Identity Service documentation](../../identity-service/home.md) for more information.
+A union schema's `identityMap` is a representation of the known identities within the union's associated record schemas. The identity map separates identities into different arrays keyed by namespace. Each listed identity is itself an object containing a unique `id` value. See the [Identity Service documentation](../../identity-service/home.md) for more information.
 
 ### Time-series events
 
-The `timeSeriesEvents` array is a list of time-series events that relate to the record schemas that are associated with the union. When [!DNL Profile] data is exported to datasets, this array is included for each record. This is useful for various use-cases, such as machine learning where models need a profile's entire behavior history in addition to its record attributes.
+The `timeSeriesEvents` array is a list of time-series events that relate to the record schemas that are associated with the union. When profile data is exported to datasets, this array is included for each record. This is useful for various use-cases, such as machine learning where models need a profile's entire behavior history in addition to its record attributes.
 
 ### Segment membership map
 
-The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager.
+The `segmentMembership` map stores the results of segment evaluations. When segment jobs are successfully run using the [Segmentation API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml), the map is updated. `segmentMembership` also stores any pre-evaluated audience segments that are ingested into Platform, allowing for integration with other solutions like Adobe Audience Manager. See the tutorial on [creating segments using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
 
-See the tutorial on [creating segments using APIs](../../segmentation/tutorials/create-a-segment.md) for more information.
+## Retrieve a list of unions {#list}
 
-## Enable a schema for union membership
+When you set the `union` tag on a schema, the [!DNL Schema Registry] automatically adds the schema to the union for the class upon which the schema is based. If no union exists for the class in question, a new union is automatically created. The `$id` for the union is similar to the standard `$id` of other [!DNL Schema Registry] resources, with the only difference being that is appended by two underscores and the word "union" (`__union`).
 
-In order for a schema to be included in the merged union view, the "union" tag must be added to the `meta:immutableTags` attribute of the schema. This is done through a PATCH request to update the schema and add the `meta:immutableTags` array with a value of "union".
-
->[!NOTE]
->
->Immutable tags are tags that are intended to be set, but never removed.
-
-**API format**
-
-```http
-PATCH /tenant/schemas/{SCHEMA_ID}
-```
-
-| Parameter | Description |
-| --- | --- |
-| `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable for use in [!DNL Profile]. |
-
-**Request**
-
-```SHELL
-curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/schemas/_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67 \
-  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
-  -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '[
-        { "op": "add", "path": "/meta:immutableTags", "value": ["union"]}
-      ]'
-```
-
-**Response**
-
-A successful response returns the details of the updated schema, which now includes a `meta:immutableTags` array containing the string value, "union".
-
-```JSON
-{
-    "title": "Property Information",
-    "description": "Property-related information.",
-    "type": "object",
-    "allOf": [
-        {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590"
-        },
-        {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
-        }
-    ],
-    "meta:class": "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
-    "meta:abstract": false,
-    "meta:extensible": false,
-    "meta:extends": [
-        "https://ns.adobe.com/{TENANT_ID}/classes/19e1d8b5098a7a76e2c10a81cbc99590",
-        "https://ns.adobe.com/xdm/data/record",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/e49cbb2eec33618f686b8344b4597ecf"
-    ],
-    "meta:containerId": "tenant",
-    "imsOrg": "{IMS_ORG}",
-    "meta:immutableTags": [
-        "union"
-    ],
-    "meta:altId": "_{TENANT_ID}.schemas.d5cc04eb8d50190001287e4c869ebe67",
-    "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/d5cc04eb8d50190001287e4c869ebe67",
-    "version": "1.2",
-    "meta:resourceType": "schemas",
-    "meta:registryMetadata": {
-        "repo:createDate": 1552088461236,
-        "repo:lastModifiedDate": 1552091263267,
-        "xdm:createdClientId": "{CREATED_CLIENT}",
-        "xdm:repositoryCreatedBy": "{CREATED_BY}"
-    }
-}
-```
-
-## List unions
-
-When you set the "union" tag on a schema, the [!DNL Schema Registry] automatically creates and maintains a union for the class upon which the schema is based. The `$id` for the union is similar to the standard `$id` of a class, with the only difference being that is appended by two underscores and the word "union" (`"__union"`).
-
-To view a list of available unions, you can perform a GET request to the `/unions` endpoint.
+You can view a list of available unions by making GET request to the `/tenant/unions` endpoint.
 
 **API format**
 
@@ -133,9 +52,16 @@ curl -X GET \
   -H 'Accept: application/vnd.adobe.xed-id+json'
 ```
 
+The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing unions:
+
+| `Accept` header | Description |
+| --- | --- |
+| `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
 **Response**
 
-A successful response returns HTTP status 200 (OK) and a `results` array in the response body. If unions have been defined, the `title`, `$id`, `meta:altId`, and `version` for each union are provided as objects within the array. If no unions have been defined, HTTP status 200 (OK) is still returned but the `results` array will be empty.
+A successful response returns HTTP status 200 (OK) and a `results` array in the response body. If unions have been defined, the details for each union are provided as objects within the array. If no unions have been defined, HTTP status 200 (OK) is still returned but the `results` array will be empty.
 
 ```JSON
 {
@@ -156,7 +82,7 @@ A successful response returns HTTP status 200 (OK) and a `results` array in the 
 }
 ```
 
-## Look up a specific union
+## Look up a union {#lookup}
 
 You can view a specific union by performing a GET request that includes the `$id` and, depending on the Accept header, some or all of the details of the union.
 
@@ -173,7 +99,7 @@ GET /tenant/schemas/{UNION_ID}
 
 | Parameter | Description |
 | --- | --- |
-| `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to lookup. URIs for union schemas are appended with "__union". |
+| `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to look up. URIs for union schemas are appended with "__union". |
 
 **Request**
 
@@ -241,11 +167,13 @@ The response format depends on the Accept header sent in the request. Experiment
 }
 ```
 
-## List schemas in a union
+## Enable a schema for union membership {#enable}
 
-In order to see which schemas are part of a specific union, you can perform a GET request using query parameters to filter the schemas within the tenant container. 
+In order for a schema to be included in the union for its class, a `union` tag must be added to the schema's `meta:immutableTags` attribute. You can accomplish this by making a PATCH request to add an `meta:immutableTags` array with a single string value of `union` to the schema in question. See the [schemas endpoint guide](./schemas.md#union) for a detailed example.
 
-Using the `property` query parameter, you can configure the response to only return schemas containing a `meta:immutableTags` field and a `meta:class` equal to the class whose union you are accessing.
+## List schemas in a union {#list-schemas}
+
+In order to see which schemas are part of a specific union, you can perform a GET request to the `/tenant/schemas` endpoint. Using the `property` query parameter, you can configure the response to only return schemas containing a `meta:immutableTags` field and a `meta:class` equal to the class whose union you are accessing.
 
 **API Format**
 
@@ -255,11 +183,11 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 
 | Parameter | Description |
 | --- | --- |
-| `{CLASS_ID}` | The `$id` of the class whose union you want to access. |
+| `{CLASS_ID}` | The `$id` of the class whose union-enabled schemas you want to list. |
 
 **Request**
 
-The following request looks up all schemas that are part of the [!DNL XDM Individual Profile] class union.
+The following request retrieves a list of all schemas that are part of the union for the [!DNL XDM Individual Profile] class.
 
 ```SHELL
 curl -X GET \
@@ -271,9 +199,16 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
+The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing schemas:
+
+| `Accept` header | Description |
+| --- | --- |
+| `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
 **Response**
 
-A successful response returns a filtered list of schemas, containing only those that satisfy both requirements. Remember that when using multiple query parameters, an AND relationship is assumed. The format of the response depends on the Accept header sent in the request.
+A successful response returns a filtered list of schemas, containing only those that belong to the specified class which have been enabled for union membership. Remember that when using multiple query parameters, an AND relationship is assumed.
 
 ```JSON
 {

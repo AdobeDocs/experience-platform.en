@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;create batch;catalog service;api
 solution: Experience Platform
-title: Create a dataset
+title: Create a Batch in the API
 topic: developer guide
-description: In order for a dataset to ingest data, it must have a batch associated with it. Using the id value of an existing dataset, you can create a batch by making a POST request to the /batches endpoint in the Catalog API.
+description: You can create a batch by making a POST request to the /batches endpoint in the Catalog API.
 ---
 
 # Create a batch

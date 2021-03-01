@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Create a Salesforce Service Cloud source connector in the UI
+title: Create a Salesforce Service Cloud  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Salesforce Service Cloud (hereinafter referred to as "SSC") source connector using the Platform user interface.
+description: Learn how to create a Salesforce Service Cloud source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL Salesforce Service Cloud] source connector in the UI
+# Create a [!DNL Salesforce Service Cloud] source connection in the UI
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.

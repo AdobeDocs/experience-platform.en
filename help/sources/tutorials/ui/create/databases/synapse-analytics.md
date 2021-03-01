@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure Synapse Analytics;Synapse;synapse;azure synapse analytics
 solution: Experience Platform
-title: Create a Azure Synapse Analytics source connector in the UI
+title: Create a Azure Synapse Analytics  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a Azure Synapse Analytics (hereinafter referred to as "Synapse") source connector using the Platform user interface.
+description: Learn how to create a Azure Synapse Analytics (hereinafter referred to as "Synapse") source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL Azure Synapse Analytics] source connector in the UI
+# Create a [!DNL Azure Synapse Analytics] source connection in the UI
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ Source connectors in Adobe Experience Platform provide the ability to ingest ext
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model] (XDM) System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
     *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 *   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.

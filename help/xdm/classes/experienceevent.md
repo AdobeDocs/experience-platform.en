@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
-title: XDM ExperienceEvent class
+title: XDM ExperienceEvent Class
 topic: overview
 description: This document provides an overview of the XDM ExperienceEvent class.
 ---
@@ -22,14 +22,18 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 | `eventMergeId` | The ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. |
 | `eventType` | A string that indicates the primary event type for the record. Accepted values and their definitions are provided in the [appendix section](#eventType). |
 | `identityMap` | A map field that contains a set of namespaced identities for the individual the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
-| `timestamp` | The time when the event or observation occurred. |
+| `timestamp` | The time when the event or observation occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
 
 ## Compatible mixins {#mixins}
 
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+
 Adobe provides several standard mixins for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used mixins for the class:
 
-* [[!UICONTROL ExperienceEvent EndUserIDs]](../mixins/event/enduserids.md)
-* [[!UICONTROL ExperienceEvent environment details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
 
 ## Appendix
 
@@ -52,7 +56,7 @@ The following table outlines the accepted values for `xdm:eventType`, along with
 |`advertising.starts` | A digital video ad has started playing. |
 |`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
 |`web.webpagedetails.pageViews` | A webpage has received one or more views. |
-|`web.webinteraction.linkClicks` | A link has received one or more clicks. |
+|`web.webinteraction.linkClicks` | A link has been selected one or more times. |
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify the each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |

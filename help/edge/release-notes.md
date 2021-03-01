@@ -1,12 +1,20 @@
 ---
-title: Adobe Experience Platform Web SDK release notes
-seo-title: Adobe Experience Platform Web SDK release notes
-description: Adobe Experience Platform Web SDK release notes.
-seo-description: Adobe Experience Platform Web SDK release notes.
+title: Adobe Experience Platform Web SDK Release Notes
+description: The latest release notes for the Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
 ---
 
-# Release Notes
+# Release notes
+
+## Version 2.3.0
+
+* Added nonce support to allow for stricter content security policies.
+* Added personalization support for single-page applications.
+* Improved compatibility with other on-page JavaScript code that may be overwriting `window.console` APIs.
+* Bug Fix: `sendBeacon` was not being used when `documentUnloading` was set to `true` or when link clicks were automatically tracked.
+* Bug Fix: A link wouldn't be automatically tracked if the anchor element contained HTML content.
+* Bug Fix: Certain browser errors containing a read-only `message` property were not handled appropriately, resulting in a different error being exposed to the customer.
+* Bug Fix: Running the SDK within an iframe would result in an error if the iframe's HTML page was from a different subdomain than the parent window's HTML page. 
 
 ## Version 2.2.0
 

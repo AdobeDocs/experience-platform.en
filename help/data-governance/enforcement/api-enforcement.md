@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance;testing
 solution: Experience Platform
-title: Enforce data usage policies using the Policy Service API
-topic: enforcement
+title: Enforce Data Usage Policies Using the Policy Service API
+topic: guide
 type: Tutorial
 description: Once you have created data usage labels for your data, and have created usage policies for marketing actions against those labels, you can use the Policy Service API to evaluate whether a marketing action performed on a dataset or an arbitrary group of labels constitutes a policy violation. You can then set up your own internal protocols to handle policy violations based on the API response.
 ---
@@ -163,7 +163,13 @@ curl -X POST \
     },
     {
       "entityType": "dataSet",
-      "entityId": "5cc1fb685410ef14b748c55f"
+      "entityId": "5cc1fb685410ef14b748c55f",
+      "entityMeta": {
+          "fields": [
+              "/properties/personalEmail/properties/address",
+              "/properties/person/properties/name/properties/fullName"
+          ]
+      }
     }
   ]'
 ```
@@ -172,6 +178,7 @@ curl -X POST \
 | --- | --- |
 | `entityType` | Each item in the payload array must indicate the type of entity being defined. For this use case, the value will always be "dataSet". |
 | `entityId` | Each item in the payload array must provide the unique ID for a dataset. |
+| `entityMeta.fields` | (Optional) An array of [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) strings, referencing specific fields in the dataset's schema. If this array is included, only the fields contained in the array participate in evaluation. Any schema fields that are not included in the array will not participate in evaluation.<br><br>If this field is not included, all fields within the dataset schema will be included in evaluation. |
 
 **Response**
 
@@ -297,13 +304,13 @@ A successful response returns the URL for the marketing action, the usage labels
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/createdByBatchID"
+                        "path": "/properties/personalEmail/properties/address",
                     },
                     {
                         "labels": [
                             "C5"
                         ],
-                        "path": "/properties/faxPhone"
+                        "path": "/properties/person/properties/name/properties/fullName"
                     }
                 ]
             }
@@ -364,4 +371,4 @@ A successful response returns the URL for the marketing action, the usage labels
 
 By reading this document, you have successfully checked for policy violations when performing a marketing action on a dataset or a set of data usage labels. Using the data returned in API responses, you can set up protocols within your experience application to appropriately enforce policy violations when they occur.
 
-For steps on how to enforce data usage policies for audience segments in [!DNL Real-time Customer Profile], please refer to the following [tutorial](../../segmentation/tutorials/governance.md).
+For information on how Platform automatically provides policy enforcement for activated segments, see the guide on [automatic enforcement](./auto-enforcement.md).

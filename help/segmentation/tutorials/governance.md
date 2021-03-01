@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data usage compliance;enforce;enforce data usage compliance;Segmentation Service;segmentation;Segmentation;
 solution: Experience Platform
-title: Enforce data usage compliance for audience segments
+title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
@@ -15,7 +15,7 @@ This tutorial covers the steps for enforcing data usage compliance for [!DNL Rea
 
 This tutorial requires a working understanding of the following components of [!DNL Adobe Experience Platform]:
 
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model] (XDM) data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): [!DNL Real-time Customer Profile] is a generic lookup entity store, and is used to manage [!DNL Experience Data Model (XDM)] data within [!DNL Platform]. Profile merges data across various enterprise data assets and provides access to that data in a unified presentation.
     - [Merge policies](../../profile/api/merge-policies.md): Rules used by [!DNL Real-time Customer Profile] to determine what data can be merged into a unified view under certain conditions. Merge policies can be configured for [!DNL Data Governance] purposes.
 - [[!DNL Segmentation]](../home.md): How [!DNL Real-time Customer Profile] divides a large group of individuals contained in the profile store into smaller groups that share similar traits and will respond similarly to marketing strategies.
 - [[!DNL Data Governance]](../../data-governance/home.md): [!DNL Data Governance] provides the infrastructure for data usage labeling and enforcement, using the following components:
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

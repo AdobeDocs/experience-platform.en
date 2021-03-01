@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;geo;geo shape;datatype;data-type;data type;
 solution: Experience Platform
-title: Geo Shape data type
+title: Geo Shape Data Type
 topic: overview
 description: This document provides an overview of the Geo Shape XDM data type.
 ---

@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
-solution: Experience Platform
-title: Getting started in Content and Commerce AI]
+solution: Experience Platform, Intelligent Services
+title: Getting Started with Content and Commerce AI
 topic: Getting started 
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
 ---
 
-# Getting started with [!DNL Content and Commerce AI]
+# Getting started with Content and Commerce AI
 
 >[!NOTE]
 >
 >Content and Commerce AI is in beta. The documentation is subject to change.
 
-[!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](../../tutorials/authentication.md).
+[!DNL Content and Commerce AI] utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 However, when you get to the **Add API** step, the API is located under Experience Cloud instead of Adobe Experience Platform, as shown in the following screenshot: 
 
@@ -44,7 +44,7 @@ You are redirected and asked to select an environment file from your computer. S
 
 ![](./images/click-open.png)
 
-You are redirected back to the *Manage environments* tab with a new environment name populated. Select the environment name to view and edit the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](../../tutorials/authentication.md).
+You are redirected back to the *Manage environments* tab with a new environment name populated. Select the environment name to view and edit the variables available in Postman. You still need to manually populate the `JWT_TOKEN` and `ACCESS_TOKEN`. These values should have been obtained while completing the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en).
 
 ![](./images/re-direct.png)
 

@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: ExperienceEvent EndUserIDs mixin
+title: End User ID Details Mixin
 topic: overview
-description: This document provides an overview of the ExperienceEvent EndUserIDs mixin.
+description: This document provides an overview of the End User ID Details mixin.
 ---
 
-# [!UICONTROL ExperienceEvent EndUserIDs] mixin
+# [!UICONTROL End User ID Details] mixin
 
-[!UICONTROL ExperienceEvent EndUserIDs] is a standard mixin for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The mixin provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+
+[!UICONTROL End User ID Details] is a standard mixin for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The mixin provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
 
 <img src='../../images/mixins/enduserids.png' width=700 /><br />
 

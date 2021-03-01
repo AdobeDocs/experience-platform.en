@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot;HubSpot
 solution: Experience Platform
-title: HubSpot connector
+title: HubSpot Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect HubSpot to Platform using APIs or the user interface.
+description: Learn how to connect HubSpot to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL HubSpot] connector
@@ -18,45 +18,17 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 ## IP address allow list
 
-The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
-
-### East US region
-
-- `20.41.2.0/23`
-- `20.41.4.0/26`
-- `20.44.17.80/28`
-- `20.49.102.16/29`
-- `40.70.148.160/28`
-- `52.167.107.224/28`
-
-### West Europe region
-
-- `13.69.67.192/28`
-- `13.69.107.112/28`
-- `13.69.112.128/28`
-- `40.74.24.192/26`
-- `40.74.26.0/23`
-- `40.113.176.232/29`
-- `52.236.187.112/28`
-
-### Australia East
-
-- `13.70.74.144/28`
-- `20.37.193.0/25`
-- `20.37.193.128/26`
-- `20.37.198.224/29`
-- `40.79.163.80/28`
-- `40.79.171.160/28`
+A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
 The documentation below provides information on how to connect [!DNL HubSpot] to [!DNL Platform] using APIs or the user interface:
 
 ## Connect [!DNL HubSpot] to [!DNL Platform] using APIs
 
-- [Create a HubSpot connector using the Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Create a HubSpot source connection using the Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
 - [Explore a marketing automation system using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
 - [Collect marketing automation data using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL HubSpot] to [!DNL Platform] using the UI
 
-- [Create a HubSpot source connector in the UI](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Configure a dataflow for a marketing automation connector in the UI](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Create a HubSpot source connection in the UI](../../tutorials/ui/create/marketing-automation/hubspot.md)
+- [Configure a dataflow for a marketing automation connection in the UI](../../tutorials/ui/dataflow/marketing-automation.md)

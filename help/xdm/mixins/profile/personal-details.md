@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
-title: Profile personal details mixin
+title: Personal Contact Details Mixin
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Personal Contact Details mixin.
 ---
 
-# [!UICONTROL Profile personal details] mixin
+# [!UICONTROL Personal Contact Details] mixin
 
-[!UICONTROL Profile personal details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe contact information about an individual person.
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+
+[!UICONTROL Personal Contact Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
 
 <img src='../../images/mixins/profile-personal-details.png' width=700 /><br />
 

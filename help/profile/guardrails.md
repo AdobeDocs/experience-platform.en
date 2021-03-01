@@ -1,14 +1,18 @@
 ---
-keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Experience Platform guidelines
+keywords: Experience Platform;profile;real-time customer profile;troubleshooting;guardrails;guidelines;limit;entity;primary entity;dimension entity;
+title: Guardrails for Real-time Customer Profile Data
+solution: Experience Platform
+product: experience platform
 topic: guide
+type: Documentation
+description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines best practices and constraints to keep in mind when modeling Profile data. 
 ---
 
-# [!DNL Platform] guardrails for [!DNL Real-time Customer Profile]
+# Guardrails for [!DNL Real-time Customer Profile] data
 
 [!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile] and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it extremely important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines the best practices and constraints when using dimension entities, specifically in batch segmentation. 
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines these guardrails as well as best practices and constraints when using Profile data for segmentation. 
 
 >[!NOTE]
 >
@@ -90,3 +94,13 @@ The following guardrails refer to data size and are recommended to ensure data c
 | --- | --- | --- | --- |
 | Maximum total size for all dimensional entities | 5GB | Soft | **The maximum recommended total size for all dimensional entities is 5GB.** Ingesting large dimension entities will result in degraded system performance. For example, attempting to load a 10GB product catalog as a dimension entity is not recommended.|
 | Datasets per dimensional entity schema | 5 | Soft | **A maximum of 5 datasets associated with each dimensional entity schema is recommended.** For example, if you create a schema for "products" and add five contributing datasets, you should not create a sixth dataset tied to the products schema.|
+
+## Segmentation guardrails
+
+The guardrails outlined in this section refer to the number and nature of segments an organization can create within Experience Platform, as well as mapping and activating segments to destinations.
+
+| Guardrail | Limit | Limit Type | Description|
+| --- | --- | --- | --- |
+| Maximum number of segments per sandbox | 10K | Soft | **The maximum number of segments an organization can create is 10K per sandbox.** An organization can have more than 10K segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments will results in degraded system performance.|
+| Maximum number of streaming segments per sandbox | 500 | Soft | **The maximum number of streaming segments an organization can create is 500 per sandbox.** An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments will result in degraded system performance.|
+| Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 batch segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|

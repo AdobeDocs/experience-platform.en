@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data location;Data Location;Data management;data management;Lineage;lineage;data type;data types;Data types;Data type
 solution: Experience Platform
-title: Datasets overview
+title: Datasets Overview
 topic: datasets
 description: This document provides a high-level overview of datasets in Experience Platform.
 ---
@@ -55,7 +55,6 @@ The following is a list of downstream services that use datasets for various ope
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): Allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These audiences can then be exported to their own datasets within the [!DNL Data Lake].
 * [Adobe Experience Platform Data Science Workspace](../../data-science-workspace/home.md): Uses machine learning and artificial intelligence to uncover insights in large datasets.
 * [Adobe Experience Platform Query Service](../../query-service/home.md): Allows you to use standard SQL to query data in [!DNL Experience Platform], joining any datasets within the [!DNL Data Lake] and capturing query results as a new dataset for use in reporting, [!DNL Data Science Workspace], or [!DNL Real-time Customer Profile].
-* [Adobe Experience Platform Decisioning Service](../../decisioning-service/home.md): Leverages [!DNL Real-time Customer Profile] to determine the most likely choice a customer will make from a set of options, based on the behavioral data that [!DNL Profile] pulls from enabled datasets.
 
 ## Next steps
 

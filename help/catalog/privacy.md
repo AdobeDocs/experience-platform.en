@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
-title: Privacy request processing in the Data Lake
+title: Privacy Request Processing in the Data Lake
 topic: overview
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
 ---
@@ -129,6 +129,10 @@ A successful response returns HTTP status 201 (Created) and the details of the n
 >This section covers how to format privacy requests for the [!DNL Data Lake]. It is strongly recommended that you review the [[!DNL Privacy Service] UI](../privacy-service/ui/overview.md) or [[!DNL Privacy Service] API](../privacy-service/api/getting-started.md) documentation for complete steps on how to submit a privacy job, including how to properly format submitted user identity data in request payloads.
 
 The following section outlines how to make privacy requests for the [!DNL Data Lake] using the [!DNL Privacy Service] UI or API.
+
+>[!IMPORTANT]
+>
+>The amount of time a privacy request can take to complete cannot be guaranteed. If changes occur within the Data Lake while a request is still processing, whether or not those records are processed also cannot be guaranteed.
 
 ### Using the UI
 

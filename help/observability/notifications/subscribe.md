@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: Subscribe to Adobe I/O Event notifications
+title: Subscribe to Adobe I/O Event Notifications
 topic: developer guide
 description: This document provides steps on how to subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how to interpret returned event data for each applicable [!DNL Platform] service.
 ---
@@ -55,7 +55,7 @@ The next screen displays a list of event types to subscribe to. Select the event
 >
 >* [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
 >* [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
->* [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
+>* [[!DNL Flow Service (sources)] notifications](../../sources/notifications.md)
 
 ![](../images/notifications/choose-event-subscriptions.png)
 
@@ -91,6 +91,6 @@ By following this tutorial, you have registered a webhook to receive [!DNL I/O E
 
 * [[!DNL Privacy Service] notifications](../../privacy-service/privacy-events.md)
 * [[!DNL Data Ingestion] notifications](../../ingestion/quality/subscribe-events.md)
-* [[!DNL Flow Service] (sources) notifications](../../sources/notifications.md)
+* [[!DNL Flow Service (sources)] notifications](../../sources/notifications.md)
 
 See the [[!DNL Observability Insights] overview](../home.md) for more information on how you can monitor your activities on [!DNL Experience Platform] and [!DNL Privacy Service].

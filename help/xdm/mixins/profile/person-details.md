@@ -1,14 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
-title: Profile person details mixin
+title: Demographic Details Mixin
 topic: overview
-description: This document provides an overview of the XDM Individual Profile class.
+description: This document provides an overview of the Demographic Details mixin.
 ---
 
-# [!UICONTROL Profile person details] mixin
+# [!UICONTROL Demographic Details] mixin
 
-[!UICONTROL Profile person details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe information about an individual person.
+>[!NOTE]
+>
+>The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+
+[!UICONTROL Demographic Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe information about an individual person.
 
 <img src='../../images/mixins/profile-person-details.png' width=600 /><br />
 
@@ -27,3 +31,4 @@ For more details on the mixin, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
+å
