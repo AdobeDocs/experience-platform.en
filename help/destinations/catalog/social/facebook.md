@@ -4,7 +4,7 @@ title: Facebook connection
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
-# [!DNL Facebook] connection
+# [!DNL Facebook Custom Audiences] connection
 
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
