@@ -24,6 +24,8 @@ The following is a list of answers to frequently asked questions about Adobe Exp
 
 Request formats vary depending on the [!DNL Platform] API being used. The best way to learn how to structure your API calls is by following along with the examples provided in the documentation for the particular [!DNL Platform] service you are using.
 
+For more information on reading example API calls, please visit the [reading sample API calls](./api-guide.md#sample-api) section of the Platform API getting started guide.
+
 ### Reading example API calls
 
 The documentation for [!DNL Experience Platform] shows example API calls in two different ways. First, the call is presented in its **API format**, a template representation showing only the operation (GET, POST, PUT, PATCH, DELETE) and the endpoint being used (for example, `/global/classes`). Some templates also show the location of variables to help illustrate how a call should be formulated, such as `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
