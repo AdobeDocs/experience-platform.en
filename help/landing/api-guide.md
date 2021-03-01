@@ -30,6 +30,12 @@ For more information on sandboxes in Platform, see the [sandbox overview documen
 
 All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters. If a specific content type is needed, the service developer guide will provide an example.
 
+## JSON fundamentals for Experience Platform APIs
+
+Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources.
+
+To learn more about JSON including example JSON schema objects, visit the [Experience Platform API fundamentals](api-fundamentals.md) guide.
+
 ## Postman collections for Experience Platform APIs
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
@@ -170,4 +176,4 @@ For more information on specific endpoints in Platform APIs, including required 
 
 ## Additional information
 
-[Platform troubleshooting guide](./troubleshooting.md)
+[Platform troubleshooting guide](troubleshooting.md)
