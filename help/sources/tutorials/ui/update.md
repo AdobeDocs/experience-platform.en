@@ -19,8 +19,8 @@ This tutorial provides steps for updating the details and credentials of an exis
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Sources](../../home.md): DNL Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
-- [Sandboxes](../../../sandboxes/home.md): DNL Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+- [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
+- [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Update accounts
 
