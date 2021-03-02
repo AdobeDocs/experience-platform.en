@@ -1,6 +1,6 @@
 ---
 keywords: facebook connection;facebook connection;facebook destinations;facebook;instagram;messenger;facebook messenger
-title: Facebook connection
+title: Facebook Custom Audiences connection
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 

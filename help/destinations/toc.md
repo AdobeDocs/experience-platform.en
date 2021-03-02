@@ -109,7 +109,7 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Social network destinations overview](./catalog/social/overview.md)
         * [Create a social network destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
-        * [Facebook connection](./catalog/social/facebook.md)
+        * [Facebook Custom Audiences connection](./catalog/social/facebook.md)
         * [Linkedin Matched Audiences connection](./catalog/social/linkedin.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
