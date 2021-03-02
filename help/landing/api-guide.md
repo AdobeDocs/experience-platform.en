@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Adobe Experience Platform API guide
-topic: ui guide
+topic: api guide
 description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and provides sample API calls.
 ---
 
@@ -12,7 +12,7 @@ Using an API endpoint, you can perform basic CRUD operations against data, such 
 
 ## Authentication and headers
 
-In order to successfully make calls to Platform endpoints, you are required to have completed the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
+In order to successfully make calls to Platform endpoints, you are required to complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in Experience Platform API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -64,7 +64,7 @@ For more information on specific endpoints and operations available for each ser
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
 
-### How to setup a Postman environment for Experience Platform
+### How to set up a Postman environment for Experience Platform
 
 The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, anytime a value expires such as an `ACCESS_TOKEN`, you can update the current value in the environment and this new value is used across all your collections.
 
@@ -90,7 +90,7 @@ To learn more about Postman and its available features, visit the [Postman docum
 
 ### Postman collections
 
-The following services have postman collections available. To download a Postman collection, select **Raw** from the Github page to load the raw JSON file in a new tab. Next, right-click and select **Save as** to save the file.
+The following services have postman collections available. To download a Postman collection, select **Raw** from the GitHub page to load the raw JSON file in a new tab. Next, right-click and select **Save as** to save the file.
 
 ![raw Json](./images/api-guide/raw-collection.PNG)
 
