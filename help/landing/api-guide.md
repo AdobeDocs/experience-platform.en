@@ -68,7 +68,7 @@ The following video guide outlines creating and setting up your Postman environm
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-### Importing a Postman collection
+### Import a Postman collection
 
 In order to utilize a postman collection, you need to have an environment set up. Once you have completed your environment setup, select the **Manage Environments** selector in the top-right corner.
 
@@ -86,7 +86,7 @@ Each collection has different key value pairs that may be required to perform a 
 
 To learn more about Postman and its available features, visit the [Postman documentation](https://learning.postman.com/docs/getting-started/navigating-postman/).
 
-### Generating an Access Token with Postman for non-production use
+### Generate an Access Token with Postman for non-production use
 
 >[!WARNING]
 >
