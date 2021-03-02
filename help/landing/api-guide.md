@@ -38,8 +38,6 @@ To learn more about JSON including example JSON schema objects, visit the [Exper
 
 ## Platform API guides {#api-guides}
 
-The following API guides are available:
-
 | API guide | Description |
 | --- | --- |
 | [[!DNL Access Control] API guide](.././access-control/api/getting-started.md) |  The [!DNL Access Control] API endpoint can retrieve current policies in effect for a user on given resources within a specified sandbox. All other access control capabilities are provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). |
@@ -87,6 +85,16 @@ You are asked to choose a file to import. Select the JSON Postman collection fil
 Each collection has different key value pairs that may be required to perform a successful CRUD operation. Please review the services [API developer guide](#api-guides) to learn about required values, tips, and see examples.
 
 To learn more about Postman and its available features, visit the [Postman documentation](https://learning.postman.com/docs/getting-started/navigating-postman/).
+
+### Generating an Access Token with Postman for non-production use
+
+>[!WARNING]
+>
+>As noted in the Adobe I/O Access Token Generation Postman collection, the denoted generation methods are suitable for **non-production use**. Local Signing loads a JavaScript library from a 3rd-party host, and Remote signing sends the private key to an Adobe owned and operated web service. While Adobe does not store this private key, production keys should never be shared with anyone.
+
+The video below uses the [Adobe IO Access Token generation collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) which can be downloaded from the public GitHub repository.
+
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
 ### Postman collections
 
