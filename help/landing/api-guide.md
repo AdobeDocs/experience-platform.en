@@ -98,7 +98,7 @@ The video below uses the [Adobe IO Access Token generation collection](https://g
 
 ### Postman collections
 
-The following services have postman collections available. To download a Postman collection, select **Raw** from the GitHub page to load the raw JSON file in a new tab. Next, right-click and select **Save as** to save the file.
+The following services have postman collections available. To download a Postman collection, select **Raw** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **Save as** to save the file to a local destination of your choice.
 
 ![raw Json](./images/api-guide/raw-collection.PNG)
 
