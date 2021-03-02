@@ -36,6 +36,31 @@ Adobe Experience Platform APIs employ several underlying technologies and syntax
 
 To learn more about JSON including example JSON schema objects, visit the [Experience Platform API fundamentals](api-fundamentals.md) guide.
 
+## Platform API guides {#api-guides}
+
+The following API guides are available:
+
+| API guide | Description |
+| --- | --- |
+| [[!DNL Access Control] API guide](.././access-control/api/getting-started.md) |  The [!DNL Access Control] API endpoint can retrieve current policies in effect for a user on given resources within a specified sandbox. All other access control capabilities are provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). |
+| [Batch ingestion API guide](.././ingestion/batch-ingestion/api-overview.md) | The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry. |
+| [[!DNL Catalog Service] API guide](.././catalog/api/getting-started.md) | The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API. |
+| [[!DNL Data Access] API guide](.././data-access/api.md) | The Data Access API allows developers to retrieve information on ingested datasets within Experience Platform. This includes accessing and downloading dataset files, retrieving header information, listing failed and succeeded batches, and downloading preview CSV / Parquet files. |
+| [[!DNL Flow Service] API guide (sources)](.././sources/tutorials/api/create-dataset-base-connection.md) | The Flow Service API is used to collect and centralize your data from various disparate sources and is used to create and activate data to various destinations within Adobe Experience Platform. The service provides a RESTful API from which all supported sources are connectable. |
+| [[!DNL Identity Service] API guide](.././identity-service/api/getting-started.md) | The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. |
+| [[!DNL Observability Insights] API guide](.././observability/api/overview.md) | Observability Insights is a RESTful API that allows developers to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities. |
+| [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) | The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. |
+| [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md) | The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. |
+| [[!DNL Query Service] API guide](.././query-service/api/getting-started.md) | The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. |
+| [[!DNL Real-time Customer Profile] API guide](.././profile/api/overview.md) | The Real-time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. |
+| [Sandbox API guide](.././sandboxes/api/getting-started.md) | The Sandbox API allows developers to programmatically manage isolated virtual sandbox environments in Adobe Experience Platform. |
+| [[!DNL Schema Registry] API guide (XDM)](.././xdm/api/overview.md) | The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. |
+| [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The Segmentation Service API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
+| [[!DNL Sensei Machine Learning] API guide (Data Science Workspace)](.././data-science-workspace/api/getting-started.md) | The Sensei Machine Learning API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
+
+
+For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+
 ## Postman collections for Experience Platform APIs
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
@@ -87,28 +112,6 @@ The following services have postman collections available. To download a Postman
 - [Schema Registry Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Schema%20Registry%20API.postman_collection.json)
 - [Segmentation Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Segmentation%20Service%20API.postman_collection.json)
 - [Sensei Machine Learning API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sensei%20Machine%20Learning%20API.postman_collection.json)
-
-## Platform API guides {#api-guides}
-
-The following API guides are available:
-
-- [[!DNL Access Control] API guide](.././access-control/api/getting-started.md)
-- [Batch ingestion API guide](.././ingestion/batch-ingestion/api-overview.md)
-- [[!DNL Catalog Service] API guide](.././catalog/api/getting-started.md)
-- [[!DNL Data Access] API guide](.././data-access/api.md)
-- [[!DNL Flow Service] API guide (sources)](.././sources/tutorials/api/create-dataset-base-connection.md)
-- [[!DNL Identity Service] API guide](.././identity-service/api/getting-started.md)
-- [[!DNL Observability Insights] API guide](.././observability/api/overview.md)
-- [[!DNL Policy Service] API guide](.././data-governance/api/overview.md)
-- [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md)
-- [[!DNL Query Service] API guide](.././query-service/api/getting-started.md)
-- [[!DNL Real-time Customer Profile] API guide](.././profile/api/overview.md)
-- [Sandbox API guide](.././sandboxes/api/getting-started.md)
-- [[!DNL Schema Registry] API guide (XDM)](.././xdm/api/overview.md)
-- [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md)
-- [[!DNL Sensei Machine Learning] API guide (Data Science Workspace)](.././data-science-workspace/api/getting-started.md)
-
-For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 ## Error messages
 
@@ -175,3 +178,7 @@ The response illustrates what you would expect to receive following a successful
 ```
 
 For more information on specific endpoints in Platform APIs, including required headers and request bodies, please see the [Platform API guides](#api-guides).
+
+## Next steps
+
+Now that you have the required values needed to make API calls on Adobe Experience Platform, select an API endpoint you wish to explore from the [Platform API guides table](#api-guides).
