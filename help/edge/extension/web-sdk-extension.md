@@ -25,17 +25,17 @@ In both cases, you arrive at the configuration page for the Platform Web SDK. Th
 
 ## General configuration options
 
-The configuration options at the top of the page tell Adobe Experience Platform where to route the data and what configurations should be used on the server. 
+The configuration options at the top of the page tell Adobe Experience Platform where to route the data and what configurations to use on the server. 
 
 ### [!UICONTROL Name]
 
-The Adobe Experience Platform Web SDK extension supports multiple instances on the page. This is used to send data to multiple organizations with a single Platform Launch configuration. 
+The Adobe Experience Platform Web SDK extension supports multiple instances on the page. The name is used to send data to multiple organizations with a single Platform Launch configuration. 
 
 The extension's name defaults to "[!DNL alloy]". However, you can change the instance name to any valid JavaScript object name.
 
 ### **[!UICONTROL IMS Organization ID]**
 
-The [!UICONTROL IMS Organization ID] is the organization that you would like the data sent to at Adobe. Most of the time, you should use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to. 
+The [!UICONTROL IMS Organization ID] is the organization that you would like the data sent to at Adobe. Most of the time, use the default value that is autopopulated. When you have multiple instances on the page, populate this field with the value of the second organization you want to send data to. 
 
 ### **[!UICONTROL Edge Domain]**
 
@@ -43,7 +43,7 @@ The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform ex
 
 ## [!UICONTROL Edge Configurations]
 
-When a request is sent to the Adobe Experience Platform Edge Network, an edge configuration ID is used to reference the server-side configuration. This allows you to update the configuration without having to make code changes on your website.
+When a request is sent to the Adobe Experience Platform Edge Network, an edge configuration ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
 
 See the guide on [edge configurations](../fundamentals/edge-configuration.md) for more information.
 
@@ -54,5 +54,5 @@ The [!UICONTROL Privacy] section allows you to configure how the SDK handles cus
 | [!UICONTROL Default Consent Level] | Description |
 | --- | --- |
 | [!UICONTROL In] | Opt-in. Use this option if you assume customer consent by default and only honor opt-out signals. |
-| [!UICONTROL Pending] | Customers with "pending" consent are assumed to be opted out until an opt-in signal is sent. Use this option if you require explicit customer consent for your business operations. |
+| [!UICONTROL Pending] | Customers with "pending" consent are opted out until an opt-in signal is sent. Use this option if you require explicit customer consent for your business operations. |
 | [!UICONTROL Provided by data element] | The default consent level is determined by a separate data element that you define. When using this option, you must specify the data element using the provided dropdown menu. |
