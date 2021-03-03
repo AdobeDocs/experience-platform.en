@@ -1,13 +1,11 @@
 ---
-title: Web SDK FAQ
-seo-title: Adobe Experience Platform Web SDK FAQ
-description: Frequently asked questions about Adobe Experience Platform Web SDK
-seo-description: Frequently asked questions about Adobe Experience Platform Web SDK
+title: Adobe Experience Platform Web SDK FAQ
+description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
 ---
 
 # Frequently asked questions
 
-This FAQ includes questions that are often asked about the Adobe Web SDK.
+This guide provides answers to questions that are often asked about the Adobe Experience Platform Web SDK.
 
 ## What is Adobe Experience Platform Web SDK?
 

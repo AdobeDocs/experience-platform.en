@@ -53,7 +53,7 @@ Applies to: social destinations and Google Customer Match advertising destinatio
 
 For social destinations, you must select source attributes or identity namespaces to map as target identities in the destination.
 
-#### Example: activating audience data in [!DNL Facebook] {#example-facebook}
+#### Example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
 This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 
@@ -225,7 +225,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >* The fields are used in the segment definition.
 >* The fields are configured as projected attributes for the target destination.
 >
-> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing use case, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
+> For example, if the field `person.name.firstName` has certain data usage labels that conflict with the destination's marketing action, you would be shown a data usage policy violation in the review step. For more information, see [Data Governance in Adobe Experience Platform](../../rtcdp/privacy/data-governance-overview.md#destinations).
 
 ### **[!UICONTROL Review]** step {#review}
 

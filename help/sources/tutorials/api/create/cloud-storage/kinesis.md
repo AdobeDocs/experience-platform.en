@@ -83,10 +83,11 @@ curl -X POST \
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
         "auth": {
-            "specName": "Basic Authentication for Kinesis",
+            "specName": "Aws Kinesis authentication credentials",
             "params": {
-                "accessKeyId": "accessKeyId",
-                "secretKey": "secretKey"
+                "accessKeyId": "{ACCESS_KEY_ID}",
+                "secretKey": "{SECRET_KEY}",
+                "region: "{REGION}
             }
         },
         "connectionSpec": {
@@ -100,7 +101,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID for your [!DNL Kinesis] account. |
 | `auth.params.secretKey` | The secret access key for your [!DNL Kinesis] account. |
-| `auth.params.region` | The region for your [!DNL Kinesis] account. |
+| `auth.params.region` | The region for your [!DNL Kinesis] account. For more information on regions, see the document on [IP address allow list](../../../../ip-address-allow-list.md) |
 | `connectionSpec.id` | The [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Response**

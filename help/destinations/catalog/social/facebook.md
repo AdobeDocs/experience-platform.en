@@ -6,10 +6,6 @@ description: Activate profiles for your Facebook campaigns for audience targetin
 
 # [!DNL Facebook] connection
 
->[!IMPORTANT]
->
->Customer migration to the new destination versions is currently in progress. Until the migration is complete, you will only see the [!UICONTROL EMAIL] and [!UICONTROL EMAIL_LC_SHA_256] available identities for this destination.
-
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization and suppression based on hashed emails.
 
 You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network] and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
@@ -77,7 +73,7 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 
 You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
-To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [steaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
+To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements:
 
@@ -88,9 +84,12 @@ If you select to hash the email addresses yourself, make sure to comply with the
   - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Do not salt the string.
 
-Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+>[!NOTE]
+>
+>Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+> Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
-Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
 #### Using custom namespaces {#custom-namespaces}

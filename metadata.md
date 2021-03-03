@@ -1,6 +1,7 @@
 ---
 cloud: experience-cloud
 product: adobe experience platform
+feature-set: Platform
 solution-title: Platform Overview
 solution-hub-url: https://docs.adobe.com/content/help/en/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
