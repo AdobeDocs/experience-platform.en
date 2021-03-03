@@ -1,6 +1,6 @@
 ---
 keywords: social network;social network destinations;Livefyre;facebook;Facebook
-title: Social Network Destinations Overview
+title: Social network destinations overview
 description: With social network destinations, you can activate profiles for your campaigns for audience targeting, personalization and suppression based on hashed emails.
 ---
 
@@ -11,4 +11,5 @@ With social network destinations, you can activate profiles for your campaigns f
 Adobe Experience Platform currently supports the following social network destinations:
 
 - [Adobe Livefyre extension](./adobe-livefyre.md)
-- [[!DNL Facebook]](./facebook.md)
+- [[!DNL Facebook] extension](./facebook.md)
+- [Linkedin Matched Audiences connection](./linkedin.md)

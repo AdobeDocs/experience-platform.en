@@ -1,11 +1,11 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
-title: View the Details of a Destination in the UI
+title: View destination details
 description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 seo-description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
 ---
 
-# View the details of a destination
+# View destination details
 
 In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 
@@ -72,7 +72,7 @@ To view the details of a particular dataflow run, select the run's start time fr
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Activation data]
+## [!UICONTROL Activation data] {#activation-data}
 
 The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 

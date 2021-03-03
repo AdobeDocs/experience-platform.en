@@ -1,7 +1,7 @@
 ---
 keywords: destinations;destination;destination types
-title: Destinations Types and Categories
-seo-title: Destinations Types and Categories
+title: Destination types and categories
+seo-title: Destination types and categories
 description: Learn about the different types and categories of destinations in Adobe Experience Platform.
 ---
 
@@ -55,7 +55,7 @@ Extensions are helpful when event data is used to trigger an action, or to condu
 
 ## Destination categories
 
-The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing use case that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
+The connections and extensions in the [destinations catalog](https://platform.adobe.com/destination/catalog) are grouped by destination category (**Advertising**, **Cloud storage**, **Survey platforms**, **Email marketing**, etc.), depending on the marketing action that they help you achieve. For more information on each of the categories, as well as the destinations included in each category, see the [Destinations catalog documentation](./catalog/overview.md).
 
 ![Destination categories](./assets/destination-types/destination-categories-menu.png)
 

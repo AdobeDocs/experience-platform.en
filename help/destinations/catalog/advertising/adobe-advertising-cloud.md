@@ -1,6 +1,6 @@
 ---
 keywords: Advertising Cloud;advertising cloud extension; advertising cloud destination
-title: Adobe Advertising Cloud Extension Destination
+title: Adobe Advertising Cloud extension
 description: The Adobe Advertising Cloud extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 

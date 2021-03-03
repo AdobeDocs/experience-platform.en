@@ -1,6 +1,6 @@
 ---
 keywords: foresee;foresee extension;foresee destination
-title: Foresee Extension Destination
+title: Foresee extension destination
 description: The Foresee extension is a survey destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 ---
 
