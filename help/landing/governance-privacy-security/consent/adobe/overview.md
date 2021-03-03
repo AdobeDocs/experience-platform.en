@@ -38,6 +38,16 @@ The following describes how consent data is processed after the system has been 
 
 In addition to SDK commands triggered by CMP consent-change hooks, consent data can also flow into Experience Platform through any customer-generated XDM data that is uploaded directly to a [!DNL Profile]-enabled dataset.
 
+### Consent enforcement
+
+In the current release of consent processing support in Platform, only the data collection permission (`collect.val`) is automatically enforced by the Platform Web SDK. While more granular consents and preferences can be collected and persisted in customer profiles, these additional signals must be manually enforced in your own downstream processes.
+
+>[!NOTE]
+>
+>For more information on the structure of the XDM consent fields mentioned above, refer to the guide on the [Consents & Preferences data type](../../../../xdm/data-types/consents.md).
+
+Once the system has been configured, the Platform Web SDK interprets the data collection consent value for the current user to determine if the data should be sent to the Adobe Experience Platform Edge Network, dropped from the client, or persisted until the data collection permission is set to either yes or no.
+
 ## Determine how to generate customer consent data within your CMP {#consent-data}
 
 Since each CMP system is unique, you must determine the best way to allow your customers to provide consent as they interact with your service. A common way to achieve this is through the use of a cookie consent dialog, similar to the following example:
