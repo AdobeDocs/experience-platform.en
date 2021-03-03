@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Science Workspace Help
 breadcrumb-title: Data Science Workspace Guide

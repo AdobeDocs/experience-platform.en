@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 solution: Experience Platform, Intelligent Services
 audience: user
 user-guide-title: Intelligent Services Help
