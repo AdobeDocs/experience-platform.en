@@ -72,7 +72,7 @@ In this example, the data layer is cloned by serializing it to JSON, then deseri
 
 Currently, sending data that does not match an XDM schema is unsupported. Support is planned for a future date.
 
-### Setting `eventType`
+### Setting `eventType` {#event-types}
 
 In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. [Read more in the XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
@@ -228,10 +228,48 @@ alloy("configure", {
 2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
-If the `onBeforeEventSend` callback throws an exception, the event is still sent; however, none of the changes that were made inside the callback are applied to the final event.
+A few notes on the `onBeforeEventSend` callback:
+
+1. Event xdm can be modified during the callback. Modified data in the callback is then merged with the event xdm and 
+sent with the event
+
+    ```javascript
+    onBeforeEventSend: function(event){
+      //sets a query parameter in XDM
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      event.xdm.marketing.trackingCode = urlParams.get('cid')
+    }
+    ```
+
+2. If the callback throws an exception, processing for the event will discontinue and the event will not be sent.
+3. If the callback returns the boolean value of `false`, event processing will discontinue, 
+without an error, and the event will not be sent. This mechanism allows for certain events to be easily ignored by 
+examining the event data and returning `false` if the event should not be sent. NOTE: Care should be taken to avoid
+returning false on the first event on a page as this may negatively impact personalization
+
+   ```javascript
+   onBeforeEventSend: function(event) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+   ```
+   Any return value other than the boolean `false` will allow the event to process and send after the callback. See [Event Types](#event-types) for more information
+
+4. Events may be filtered by examining the event type (See [Event Types](#event-types)):
+    ```javascript
+   onBeforeEventSend: function(event) {  
+     // augments xdm if link click event is to a partner website
+     if (
+       event.xdm.eventType === "web.webinteraction.linkClicks" 
+         && event.xdm.web.webInteraction.URL === "http://example.com/partner-page.html") {
+           event.xdm.partnerWebsiteClick = true;
+     }
+   }
+   ```
 
 ## Potential actionable errors
 
 When sending an event, an error might be thrown if the data being sent is too large (over 32KB for the full request). In this case, you need to reduce the amount of data being sent.
-
-When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown.
