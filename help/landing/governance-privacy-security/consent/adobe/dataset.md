@@ -38,57 +38,57 @@ This tutorial requires a working understanding of the following components of Ad
 
 The [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin (hereinafter referred to as the "Consents & Preferences mixin") provides standardized consent fields to a schema. Currently, this mixin is only compatible with schemas based on the [!DNL XDM Individual Profile] class.
 
-The mixin provides a single object-type field, `xdm:consents`, whose sub-properties capture a set of standardized consent fields. The following JSON is an example of the kind of data `xdm:consents` expects upon data ingestion:
+The mixin provides a single object-type field, `consents`, whose sub-properties capture a set of standardized consent fields. The following JSON is an example of the kind of data `consents` expects upon data ingestion:
 
 ```json
 {
-  "xdm:consents": {
-    "xdm:collect": {
-      "xdm:val": "y",
+  "consents": {
+    "collect": {
+      "val": "y",
     },
-    "xdm:adID": {
-      "xdm:val": "VI"
+    "adID": {
+      "val": "VI"
     },
-    "xdm:share": {
-      "xdm:val": "y",
+    "share": {
+      "val": "y",
     },
-    "xdm:personalize": {
-      "xdm:content": {
-        "xdm:val": "y"
+    "personalize": {
+      "content": {
+        "val": "y"
       }
     },
-    "xdm:marketing": {
-      "xdm:preferred": "email",
-      "xdm:any": {
-        "xdm:val": "y"
+    "marketing": {
+      "preferred": "email",
+      "any": {
+        "val": "y"
       },
-      "xdm:push": {
-        "xdm:val": "n",
-        "xdm:reason": "Too Frequent",
-        "xdm:time": "2019-01-01T15:52:25+00:00"
+      "push": {
+        "val": "n",
+        "reason": "Too Frequent",
+        "time": "2019-01-01T15:52:25+00:00"
       }
     },
-    "xdm:idSpecific": {
+    "idSpecific": {
       "email": {
         "jdoe@example.com": {
-          "xdm:marketing": {
-            "xdm:email": {
-              "xdm:val": "n"
+          "marketing": {
+            "email": {
+              "val": "n"
             }
           }
         }
       }
     }
   },
-  "xdm:metadata": {
-    "xdm:time": "2019-01-01T15:52:25+00:00"
+  "metadata": {
+    "time": "2019-01-01T15:52:25+00:00"
   }
 }
 ```
 
 >[!NOTE]
 >
->For more information on the structure and meaning of the sub-properties in `xdm:consents`, see the overview on the [Consents & Preferences data type](../../../../xdm/data-types/consents.md).
+>For more information on the structure and meaning of the sub-properties in `consents`, see the overview on the [Consents & Preferences data type](../../../../xdm/data-types/consents.md).
 
 ## Add the Consents & Preferences mixin to your [!DNL Profile] schema {#add-mixin}
 
