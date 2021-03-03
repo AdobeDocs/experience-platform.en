@@ -8,7 +8,7 @@ description: Adobe Experience Platform provides API services that are closely li
 
 # Getting started with Adobe Experience Platform APIs
 
-Using an API endpoint, you can perform basic CRUD operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. Adobe Experience Platform API services are closely linked to one another. The following guide is intended to outline the basics and fundamentals for getting started with Platform APIs. After reading this guide, you should be prepared to work with any of the individual Platform developer API guides such as [!DNL Flow Service], [!DNL Identity Service], and [!DNL Segmentation Service].
+Using an API endpoint, you can perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. Adobe Experience Platform API services are closely linked to one another. The following guide is intended to outline the basics and fundamentals for getting started with Platform APIs. After reading this guide, you should be prepared to work with any of the individual Platform developer API guides such as [!DNL Flow Service], [!DNL Identity Service], and [!DNL Segmentation Service].
 
 ## Authentication and headers
 
@@ -28,33 +28,33 @@ For more information on sandboxes in Platform, see the [sandbox overview documen
 
 ### Specifying the content type
 
-All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters. If a specific content type is needed, the [individual Platform service guide](#api-guides) will provide an example.
+All requests with a payload in the request body (such as POST, PUT, and PATCH calls) must include a `Content-Type` header. Accepted values specific to each call are provided in the call parameters. If a specific content type is needed, the [individual Platform services guides](#api-guides) will provide an example.
 
 ## JSON fundamentals for Experience Platform APIs
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based Platform resources.
 
-To learn more about JSON including example JSON schema objects, visit the [Experience Platform API fundamentals](api-fundamentals.md) guide.
+To learn more about JSON, including example JSON schema objects, visit the [Experience Platform API fundamentals](api-fundamentals.md) guide.
 
 ## Platform API guides {#api-guides}
 
 | API guide | Description |
 | --- | --- |
 | [[!DNL Access Control] API guide](.././access-control/api/getting-started.md) |  The [!DNL Access Control] API endpoint can retrieve current policies in effect for a user on given resources within a specified sandbox. All other access control capabilities are provided through the [Adobe Admin Console](https://adminconsole.adobe.com/). |
-| [Batch ingestion API guide](.././ingestion/batch-ingestion/api-overview.md) | The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry. |
-| [[!DNL Catalog Service] API guide](.././catalog/api/getting-started.md) | The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API. |
-| [[!DNL Data Access] API guide](.././data-access/api.md) | The Data Access API allows developers to retrieve information on ingested datasets within Experience Platform. This includes accessing and downloading dataset files, retrieving header information, listing failed and succeeded batches, and downloading preview CSV / Parquet files. |
-| [[!DNL Flow Service] API guide (sources)](.././sources/tutorials/api/create-dataset-base-connection.md) | The Flow Service API is used to collect and centralize your data from various disparate sources and is used to create and activate data to various destinations within Adobe Experience Platform. The service provides a RESTful API from which all supported sources are connectable. |
-| [[!DNL Identity Service] API guide](.././identity-service/api/getting-started.md) | The Identity Service API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. |
-| [[!DNL Observability Insights] API guide](.././observability/api/overview.md) | Observability Insights is a RESTful API that allows developers to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities. |
-| [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) | The Policy Service API allows developers to manage data usage labels and policies in Experience Platform. |
-| [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md) | The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. |
-| [[!DNL Query Service] API guide](.././query-service/api/getting-started.md) | The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. |
-| [[!DNL Real-time Customer Profile] API guide](.././profile/api/overview.md) | The Real-time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. |
+| [Batch ingestion API guide](.././ingestion/batch-ingestion/api-overview.md) | The Adobe Experience Platform [!DNL Data Ingestion] API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry. |
+| [[!DNL Catalog Service] API guide](.././catalog/api/getting-started.md) | The [!DNL Catalog Service] API allows developers to manage dataset metadata in Adobe Experience Platform. This includes data locations, processing stages, errors that occurred during processing, and data reports.|
+| [[!DNL Data Access] API guide](.././data-access/api.md) | The [!DNL Data Access] API allows developers to retrieve information on ingested datasets within Experience Platform. This includes accessing and downloading dataset files, retrieving header information, listing failed and succeeded batches, and downloading preview CSV / Parquet files. |
+| [[!DNL Flow Service] API guide (sources)](.././sources/tutorials/api/create-dataset-base-connection.md) | The [!DNL Flow Service] API is used to collect and centralize your data from various disparate sources and is used to create and activate data to various destinations within Adobe Experience Platform. The service provides a RESTful API from which all supported sources are connectable. |
+| [[!DNL Identity Service] API guide](.././identity-service/api/getting-started.md) | The [!DNL Identity Service] API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. |
+| [[!DNL Observability Insights] API guide](.././observability/api/overview.md) | [!DNL Observability Insights] is a RESTful API that allows developers to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities. |
+| [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) | The [!DNL Policy Service] API allows developers to manage data usage labels and policies in Experience Platform. |
+| [[!DNL Privacy Service] API guide](.././privacy-service/api/getting-started.md) | The [!DNL Privacy Service] API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. |
+| [[!DNL Query Service] API guide](.././query-service/api/getting-started.md) | The [!DNL Query Service] API allows developers to query their Adobe Experience Platform data using standard SQL. |
+| [[!DNL Real-time Customer Profile] API guide](.././profile/api/overview.md) | The Real-time Customer Profile API allows developers to explore and work with Profile data, including viewing profiles, creating and updating merge policies, exporting or sampling Profile data, and deleting Profile data that is no longer required or was added in error. |
 | [Sandbox API guide](.././sandboxes/api/getting-started.md) | The Sandbox API allows developers to programmatically manage isolated virtual sandbox environments in Adobe Experience Platform. |
-| [[!DNL Schema Registry] API guide (XDM)](.././xdm/api/overview.md) | The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. |
-| [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The Segmentation Service API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
-| [[!DNL Sensei Machine Learning] API guide (Data Science Workspace)](.././data-science-workspace/api/getting-started.md) | The Sensei Machine Learning API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
+| [[!DNL Schema Registry] API guide (XDM)](.././xdm/api/overview.md) | The [!DNL Schema Registry] API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. |
+| [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
+| [[!DNL Sensei Machine Learning] API guide (Data Science Workspace)](.././data-science-workspace/api/getting-started.md) | The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
 
 For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
@@ -64,13 +64,13 @@ Postman is a collaboration platform for API development that allows you to set u
 
 ### How to set up a Postman environment for Experience Platform
 
-The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, anytime a value expires such as an `ACCESS_TOKEN`, you can update the current value in the environment and this new value is used across all your collections.
+The following video guide outlines creating and setting up your Postman environment. The Postman environment will contain all your required headers for making API calls to the various collections provided below. Once set up, any time a value expires, such as an `ACCESS_TOKEN`, you can update the current value in the environment and this new value is used across all your collections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
 ### Import a Postman collection
 
-In order to utilize a postman collection, you need to have an environment set up. Once you have completed your environment setup, select the **Manage Environments** selector in the top-right corner.
+In order to utilize a Postman collection, you need to have an environment set up. Once you have completed your environment setup, select the **[!DNL Manage Environments]** selector in the top-right corner.
 
 ![manage environment selector](./images/api-guide/environment-selector.png)
 
@@ -86,11 +86,11 @@ Each collection has different key value pairs that may be required to perform a 
 
 To learn more about Postman and its available features, visit the [Postman documentation](https://learning.postman.com/docs/getting-started/navigating-postman/).
 
-### Generate an Access Token with Postman for non-production use
+### Generate an access token with Postman for non-production use
 
 >[!WARNING]
 >
->As noted in the Adobe I/O Access Token Generation Postman collection, the denoted generation methods are suitable for **non-production use**. Local signing loads a JavaScript library from a 3rd-party host, and remote signing sends the private key to an Adobe owned and operated web service. While Adobe does not store this private key, production keys should never be shared with anyone.
+>As noted in the Adobe I/O access token generation Postman collection, the denoted generation methods are suitable for **non-production use**. Local signing loads a JavaScript library from a 3rd-party host, and remote signing sends the private key to an Adobe owned and operated web service. While Adobe does not store this private key, production keys should never be shared with anyone.
 
 The video below uses the [Adobe IO Access Token generation collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/ims/Adobe%20IO%20Access%20Token%20Generation.postman_collection.json) which can be downloaded from the public GitHub repository.
 
@@ -98,27 +98,27 @@ The video below uses the [Adobe IO Access Token generation collection](https://g
 
 ### Postman collections
 
-The following services have postman collections available. To download a Postman collection, select **Raw** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **Save as** to save the file to a local destination of your choice.
+The following services have Postman collections available. To download a Postman collection, select **[!DNL Raw]** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **[!DNL Save as]** to save the file to a local destination of your choice.
 
 ![raw Json](./images/api-guide/raw-collection.PNG)
 
-- [Access Control Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Access%20Control%20API.postman_collection.json)
-- [Catalog Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json)
-- [Data Access Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Access%20API.postman_collection.json)
-- [Data Ingestion Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Ingestion%20API.postman_collection.json)
-- [Flow Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Flow%20Service%20API.postman_collection.json)
-- [Identity Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Identity%20Service.postman_collection.json)
-- [Mapping Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Mapping%20Service%20API%20Resource.postman_collection.json)
-- [Observability Insights Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
-- [Offer Decisioning Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
-- [Policy Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Policy%20Service%20API.postman_collection.json)
-- [Privacy Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-- [Query Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Query%20Service%20API.postman_collection.json)
+- [[!DNL Access Control] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Access%20Control%20API.postman_collection.json)
+- [[!DNL Catalog Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json)
+- [[!DNL Data Access] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Access%20API.postman_collection.json)
+- [[!DNL Data Ingestion] Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Ingestion%20API.postman_collection.json)
+- [[!DNL Flow Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Flow%20Service%20API.postman_collection.json)
+- [[!DNL Identity Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Identity%20Service.postman_collection.json)
+- [[!DNL Mapping Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Mapping%20Service%20API%20Resource.postman_collection.json)
+- [[!DNL Observability Insights] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
+- [[!DNL Offer Decisioning] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
+- [[!DNL Policy Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Policy%20Service%20API.postman_collection.json)
+- [[!DNL Privacy Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
+- [[!DNL Query Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Query%20Service%20API.postman_collection.json)
 - [Real-time Customer Profile Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Real-time%20Customer%20Profile%20API.postman_collection.json)
 - [Sandbox API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sandbox%20API.postman_collection.json)
-- [Schema Registry Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Schema%20Registry%20API.postman_collection.json)
-- [Segmentation Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Segmentation%20Service%20API.postman_collection.json)
-- [Sensei Machine Learning API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sensei%20Machine%20Learning%20API.postman_collection.json)
+- [[!DNL Schema Registry] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Schema%20Registry%20API.postman_collection.json)
+- [[!DNL Segmentation Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Segmentation%20Service%20API.postman_collection.json)
+- [[!DNL Sensei Machine Learning] API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sensei%20Machine%20Learning%20API.postman_collection.json)
 
 ## Error messages
 
@@ -148,7 +148,7 @@ GET /{CONTAINER_ID}/classes
 
 **Request**
 
-In this example request, the variables from the API format are given actual values in the request path. All required headers are shown as well, as either sample header values or variables where sensitive information (such as security tokens and access IDs) should be included.
+In this example request, the variables from the API format are given actual values in the request path. Additionally, all required headers are shown as either sample header values or variables where sensitive information (such as security tokens and access IDs) should be included.
 
 ```shell
 curl -X GET \
