@@ -354,6 +354,12 @@ A successful response contains the base connection's unique identifier (`id`). S
 
 ### Specify storage location and data format
 
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
+
 **API format**
 
 ```http
