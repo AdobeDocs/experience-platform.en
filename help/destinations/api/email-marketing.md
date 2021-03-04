@@ -359,6 +359,8 @@ A successful response contains the base connection's unique identifier (`id`). S
 >[!IMPORTANT]
 > 
 >[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
+>
+>Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
 **API format**
 
