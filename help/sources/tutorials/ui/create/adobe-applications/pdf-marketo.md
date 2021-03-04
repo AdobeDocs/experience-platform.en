@@ -125,16 +125,18 @@ Once you have selected a schema, scroll down to view the mapping dialog to start
 
 Each Marketo dataset has its own specific mapping rules. For more information on mapping rules for Marketo datasets, open the **Mappings** folder and select the dataset you want to use.
 
-* Activities
-* Campaigns
-* Campaign memberships
-* Companies
-* Marketing lists
-* Marketing list memberships
-* Named Accounts
-* Opportunities
-* Opportunity person relations
-* Persons
+The following is the recommended order of operations to follow when setting up dataflows for Marketo:
+
+1. Persons
+2. Companies
+3. Named Accounts
+4. Opportunities
+5. Activities
+6. Opportunity person relations
+7. Marketing lists
+8. Marketing list memberships
+9. Campaigns
+10. Campaign memberships
 
 Select **Preview data** to see mapping results based on your selected dataset.
 
