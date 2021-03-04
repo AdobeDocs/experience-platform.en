@@ -31,7 +31,9 @@ Select the name of the destination to navigate to the activation workflow.
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+>[!NOTE]
+>
+>If an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 
 Once you have selected a destination, select **[!UICONTROL Activate]**.
 
@@ -55,7 +57,7 @@ For social destinations, you must select source attributes or identity namespace
 
 #### Example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
-This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
+Below is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 
 Selecting source fields:
 
@@ -69,7 +71,7 @@ Selecting source fields:
 
 Selecting target fields:
 
-* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
 * Select the `Extern_ID` namespace as target identity when your source namespace is a custom one.
@@ -143,7 +145,7 @@ To add a schedule for the segment, select **[!UICONTROL Create schedule]**.
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-A popover appears, showing options to create the segment schedule.  
+A dialog appears, showing options to create the segment schedule.  
 
 * **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
 * **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
