@@ -18,7 +18,7 @@ The following video guide outlines creating and setting up your Postman environm
 
 ## Postman collections {#collections}
 
-A folder containing all the available Postman collections can be found by, visiting the [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform).
+A folder containing all the available Postman collections can be found by, visiting the [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternatively, a Postman collection link can be found in each individual swagger file in the [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O..
 
 To download a Postman collection, select **[!DNL Raw]** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **[!DNL Save as]** to save the file to a local destination of your choice.
 
