@@ -294,7 +294,7 @@ GET /schemas/{ID}
 The following request retrieves information about the specified schema.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/sdfssdf3f4bc182c9aeaa74ac5e7d \
+curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas/0f868d3a1b804fb0abf738306290ae79 \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -307,14 +307,53 @@ A successful response returns HTTP status 200 with information about the specifi
 
 ```json
 {
-    "id": "sdfssdf3f4bc182c9aeaa74ac5e7d",
+    "id": "0f868d3a1b804fb0abf738306290ae79",
     "version": 0,
-    "name": "schemaname1",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"sampleschema45439a93d48d47d098d26e0f0840cc02\",\"description\":null,\"type\":\"object\",\"format\":null,\"properties\":{\"firstname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"firstname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null},\"lastname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"lastname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}},\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}",
-    "sampleId": "45439a93d48d47d098d26e0f0840cc02",
+    "jsonSchema": {
+        "title": "Sample schema",
+        "description": "Sample description",
+        "type": "object",
+        "properties": {
+            "_id": {
+                "title": "Identifier",
+                "description": "A unique identifier for the record.",
+                "type": "string",
+                "format": "uri-reference",
+                "meta:xdmField": "@id",
+                "meta:xdmType": "string"
+            },
+            "personalEmail": {
+                "title": "Personal Email",
+                "description": "A personal email address.",
+                "type": "object",
+                "properties": {
+                    "primary": {
+                        "title": "Primary",
+                        "description": "Primary email indicator.\n\nA Profile can have only one `primary` email address at a given point of time.\n",
+                        "type": "boolean",
+                        "meta:xdmField": "xdm:primary",
+                        "meta:xdmType": "boolean"
+                    },
+                    "address": {
+                        "title": "Address",
+                        "description": "The technical address, e.g 'name@domain.com' as commonly defined in RFC2822 and subsequent standards.",
+                        "type": "string",
+                        "format": "email",
+                        "meta:xdmField": "xdm:address",
+                        "meta:xdmType": "string"
+                    }
+                },
+                "meta:xdmField": "xdm:personalEmail",
+                "meta:referencedFrom": "https://ns.adobe.com/xdm/context/emailaddress",
+                "meta:xdmType": "object"
+            }
+        },
+        "imsOrg": "6A29340459CA8D350A49413A@AdobeOrg",
+        "$id": "https://ns.adobe.com/stardust/schemas/833b1d8a749943d49fe7e925ea19b5dc"
+    },
     "schemaRef": {
-        "id": null,
-        "contentType": null
+        "id": "https://ns.adobe.com/stardust/schemas/833b1d8a749943d49fe7e925ea19b5dc",
+        "contentType": "1.0"
     }
 }
 ```
