@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
 ---
 
-# File drag & drop
+# File drag and drop accessibility
 
 Summary:
 Use the react-spectrum `<DropZone />` and `<IllustratedMessage /> `components instead of custom UI components for all file drag-n-drops. (FileDropHeader.js and UploadArea.js)

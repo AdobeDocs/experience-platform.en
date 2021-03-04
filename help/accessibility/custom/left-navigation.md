@@ -5,7 +5,7 @@ type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
 ---
 
-# Left Navigation Accessibility
+# Left navigation accessibility
 
 Summary:
 Color contrast of left nav items, including normal, hover and selection states are now accessible. 

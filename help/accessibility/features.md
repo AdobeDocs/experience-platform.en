@@ -6,20 +6,11 @@ type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
 ---
 
-# General accessibility features
+# Accessibility features in Experience Platform
 
-## Keyboard accessibility
-Experience Platform supports full keyboard accessibility
+Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices, such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including assistive devices, keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, assistive technology support, and clear element labels.
 
-Keyboard navigation in Experience Platform works top > down, and left > right. The following navigational elements facilitate accessibility: the tab key moves between UI elements, shift + tab moves backwards through the tab order. The Return ( Enter ) and Spacebar keys activate the selected item.
-
-Blue border around the selected element indicates a focus is applied to display a clear indication of which UI element currently has focus. Experience Platform has an equivalent keyboard navigation for drag & drop interactions.
-
-## Color palettes & contrast
-Experience Platform strives for WCAG 2.1 AA conformance, including requirements for color contrast. Experience Platform user interface strives to provide enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
-
-## Required field validation in various features
-When adding data, creating schemas and segments, required fields are validated when you enter invalid data in fields and or upon saving. If a required field does not pass validation, it will be outlined in red with an error icon. A written description appears of the issue that needs to be fixed.
+For information regarding accessibility features in specific sections of the Platform user interface (UI), please select a document from the custom accessibility dropdown in the left rail.
 
 ## Support for Assistive Technologies
 
@@ -40,3 +31,20 @@ Partially supports: Some functionality of the product does not meet the criterio
 Does not support: The majority of product functionality does not meet the criterion.
 Not applicable: The criterion is not relevant to the product.
 Not evaluated: The product has not been evaluated against the criterion. This can only be used in WCAG 2.0 Level AAA.
+
+## Keyboard accessibility
+
+Experience Platform supports full keyboard accessibility.
+
+Keyboard navigation in Experience Platform works top > down, and left > right. The following navigational elements facilitate accessibility: the tab key moves between UI elements, shift + tab moves backwards through the tab order. The Return ( Enter ) and Spacebar keys activate the selected item.
+
+Blue border around the selected element indicates a focus is applied to display a clear indication of which UI element currently has focus. Experience Platform has an equivalent keyboard navigation for drag & drop interactions.
+
+## Color palettes & contrast
+
+Experience Platform strives for WCAG 2.1 AA conformance, including requirements for color contrast. The Experience Platform UI strives to provide enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
+
+## Required field validation in various features
+
+When adding data, creating schemas and segments, required fields are validated when you enter invalid data in fields and or upon saving. If a required field does not pass validation, it will be outlined in red with an error icon. A written description appears of the issue that needs to be fixed.
+
