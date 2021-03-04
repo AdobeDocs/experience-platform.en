@@ -9,7 +9,7 @@ seo-description: Activate the data you have in Adobe Experience Platform by mapp
 
 # Activate profiles and segments to a destination
 
-Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in [!DNL Adobe Experience Platform] by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -133,7 +133,11 @@ Applies to: Email marketing destinations and cloud storage destinations
 
 ![Configure step](../assets/ui/activate-destinations/configure-icon.png)
 
-In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
 
 To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
 
@@ -159,7 +163,7 @@ In the file name editor, you can select different components to add to the file 
 * **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
 * **[!UICONTROL Custom text]**: Add custom text to the file names.
 
-Select **[!UICONTROL Apply changes]** to confirm your selection. 
+Select **[!UICONTROL Apply changes]** to confirm your selection.
 
 >[!IMPORTANT] 
 > 
