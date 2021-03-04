@@ -73,7 +73,7 @@ Within the identity value object is a single field, `xdm:identityIABConsent`. Th
 
 ### Event mixin {#event-mixin}
 
-For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] mixin provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for an TCF consent string, similar to the `xdm:consentString` field in the profile mixin. For more information on these sub-properties, see the [next section](#consent-string).
+For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] mixin provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for a TCF consent string, similar to the `xdm:consentString` field in the profile mixin. For more information on these sub-properties, see the [next section](#consent-string).
 
 ```json
 {
