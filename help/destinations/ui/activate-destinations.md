@@ -181,7 +181,7 @@ Applies to: advertising destinations, social destinations
 
 ![segment schedule step](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, and the frequency of sending data to the destination.
 
 >[!IMPORTANT]
 >
