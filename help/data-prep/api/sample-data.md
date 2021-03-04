@@ -1,4 +1,4 @@
-# Sample data
+# Sample data endpoints
 
 ## Get all sample data
 
