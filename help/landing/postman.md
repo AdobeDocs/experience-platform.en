@@ -16,7 +16,15 @@ The following video guide outlines creating and setting up your Postman environm
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832)
 
-## Import a Postman collection
+## Postman collections {#collections}
+
+A folder containing all the available Postman collections can be found by, visiting the [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform).
+
+To download a Postman collection, select **[!DNL Raw]** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **[!DNL Save as]** to save the file to a local destination of your choice.
+
+![raw Json](./images/api-guide/raw-collection.PNG)
+
+## Import a Postman collection {#import}
 
 In order to utilize a [Postman collection](#collections), you need to have an environment set up. Once you have completed your environment setup, select the **[!DNL Manage Environments]** selector in the top-right corner.
 
@@ -44,26 +52,3 @@ The video below uses the [Adobe I/O access token generation collection](https://
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
-## Postman collections {#collections}
-
-The following services have Postman collections available. To download a Postman collection, select **[!DNL Raw]** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **[!DNL Save as]** to save the file to a local destination of your choice.
-
-![raw Json](./images/api-guide/raw-collection.PNG)
-
-- [[!DNL Access Control] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Access%20Control%20API.postman_collection.json)
-- [[!DNL Catalog Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json)
-- [[!DNL Data Access] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Access%20API.postman_collection.json)
-- [[!DNL Data Ingestion] Service Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Data%20Ingestion%20API.postman_collection.json)
-- [[!DNL Flow Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Flow%20Service%20API.postman_collection.json)
-- [[!DNL Identity Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Identity%20Service.postman_collection.json)
-- [[!DNL Mapping Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Mapping%20Service%20API%20Resource.postman_collection.json)
-- [[!DNL Observability Insights] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
-- [[!DNL Offer Decisioning] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Observability%20Insights%20API.postman_collection.json)
-- [[!DNL Policy Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Policy%20Service%20API.postman_collection.json)
-- [[!DNL Privacy Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-- [[!DNL Query Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Query%20Service%20API.postman_collection.json)
-- [Real-time Customer Profile Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Real-time%20Customer%20Profile%20API.postman_collection.json)
-- [Sandbox API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sandbox%20API.postman_collection.json)
-- [[!DNL Schema Registry] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Schema%20Registry%20API.postman_collection.json)
-- [[!DNL Segmentation Service] Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Segmentation%20Service%20API.postman_collection.json)
-- [[!DNL Sensei Machine Learning] API Postman collection](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Sensei%20Machine%20Learning%20API.postman_collection.json)
