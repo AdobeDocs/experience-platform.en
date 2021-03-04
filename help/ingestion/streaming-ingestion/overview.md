@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;data ingestion;ingested data;s
 solution: Experience Platform
 title: Streaming Ingestion Overview
 topic: overview
-description: Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real-time.
+description: Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to Experience Platform in real time.
 ---
 
 # Streaming ingestion overview
 
-Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time.
+Streaming ingestion for Adobe Experience Platform provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real time.
 
 ## What can you do with streaming ingestion?
 
