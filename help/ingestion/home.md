@@ -22,7 +22,7 @@ See the [batch ingestion overview](./batch-ingestion/overview.md) for more infor
 
 ## Streaming ingestion
 
-Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. [!DNL Platform] supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
+Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real time. [!DNL Platform] supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
 
 See the [streaming ingestion overview](./streaming-ingestion/overview.md) for more information.
 

@@ -68,7 +68,7 @@ To work with merge policies in the [!DNL Platform] UI, visit the [merge policies
 
 ## Configure edge projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
 
 **This guide will help you:**
 - List, create, view, update, and delete an edge projection destination.

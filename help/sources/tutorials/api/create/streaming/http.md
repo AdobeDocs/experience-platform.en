@@ -18,7 +18,7 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 
