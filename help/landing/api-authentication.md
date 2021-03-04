@@ -154,6 +154,6 @@ If your response is similar to the one shown below, then your credentials are va
 
 ## Next steps
 
-By reading this document, you have gathered and successfully tested your access credentials for [!DNL Platform] APIs. You can now follow along with the examples provided in the [Platform API introduction guide](api-guide.md). This guide contains links to each of the individual services and additional information on errors, Postman, and JSON.
+By reading this document, you have gathered and successfully tested your access credentials for [!DNL Platform] APIs. You can now follow along with the examples provided in the [getting started guide for Platform APIs](api-guide.md). This guide contains links to the API guides for each Platform service, and provides additional information. on errors, Postman, and JSON.
 
 In addition to the authentication values you have gathered in this tutorial, many [!DNL Platform] APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.
