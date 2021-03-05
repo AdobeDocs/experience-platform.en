@@ -78,7 +78,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
 
 ### Explore the Product Recommendations Recipe
 
-In Adobe Experience Platform], navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation to view a list of available Recipes for your organization.
+In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation to view a list of available Recipes for your organization.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
