@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Create and Publish a Machine Learning Model
 topic: tutorial
 type: Tutorial
-description: Adobe Experience Platform Data Science Workspace provides the means to achieve your goal using the prebuilt Product Recommendations Recipe. Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in Data Science Workspace.
+description: Adobe Experience Platform Data Science Workspace provides the means to achieve your goal using the prebuilt Product Recommendations Recipe. Follow this tutorial to see how you can access and understand your retail data, create and optimize a machine learning Model, and generate insights in Data Science Workspace.
 ---
 
 # Create and publish a machine learning model
@@ -13,7 +13,7 @@ description: Adobe Experience Platform Data Science Workspace provides the means
 
 Pretend you own an online retail website. When your customers shop at your retail website, you want to present them with personalized product recommendations to expose a variety of other products your business offers. Over the span of your website's existence, you have continuously gathered customer data and want to somehow use this data towards generating personalized product recommendations. 
 
-[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] provides the means to achieve your goal using the prebuilt [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Follow this tutorial to see how you can access and understand your retail data, create and optimise a machine learning Model, and generate insights in [!DNL Data Science Workspace].
+[!DNL Adobe Experience Platform] [!DNL Data Science Workspace] provides the means to achieve your goal using the prebuilt [Product Recommendations Recipe](../pre-built-recipes/product-recommendations.md). Follow this tutorial to see how you can access and understand your retail data, create and optimize a machine learning Model, and generate insights in [!DNL Data Science Workspace].
 
 This tutorial reflects the workflow of [!DNL Data Science Workspace], and covers the following steps for creating a machine learning Model:
 
