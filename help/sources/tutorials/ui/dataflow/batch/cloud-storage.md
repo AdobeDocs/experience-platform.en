@@ -53,6 +53,10 @@ Alternatively, you can inspect other files in the folder by selecting the previe
 
 ![switch-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/switch-preview.png)
 
+![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
+
 ### Set a custom delimiter for delimited files
 
 You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). Alternatively, you can select **[!UICONTROL Custom]** and enter a custom delimiter of your choice in the pop up input bar.
