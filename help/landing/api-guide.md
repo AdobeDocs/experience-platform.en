@@ -10,7 +10,7 @@ description: Adobe Experience Platform provides API services that are closely li
 
 Adobe Experience Platform is developed under an "API first" philosophy. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
 
-The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide is intended to outline the necessary steps for getting started with Platform APIs. After reading this guide, you should be prepared to work with any of the individual Platform API guides such as [!DNL Flow Service], [!DNL Identity Service], and [!DNL Segmentation Service].
+The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide outlines the necessary steps for getting started with Platform APIs. After reading this guide, you should be prepared to work with any of the individual Platform API guides.
 
 ## Authentication and headers
 
@@ -42,7 +42,7 @@ To learn more about the underlying API technologies Platform utilizes, including
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
 
-To learn more about Postman including how to set up an environment, a list of available collections, and how to importing collections, visit the [Platform Postman documentation](postman.md)
+To learn more about Postman including how to set up an environment, a list of available collections, and how to import collections, visit the [Platform Postman documentation](postman.md).
 
 ## Reading sample API calls {#sample-api}
 
@@ -50,7 +50,7 @@ Request formats vary depending on the Platform API being used. The best way to l
 
 The documentation for [!DNL Experience Platform] shows example API calls in two different ways. First, the call is presented in its **API format**, a template representation showing only the operation (GET, POST, PUT, PATCH, DELETE) and the endpoint being used (for example, `/global/classes`). Some templates also show the location of variables to help illustrate how a call should be formulated, such as `GET /{VARIABLE}/classes/{ANOTHER_VARIABLE}`.
 
-The calls are then shown as cURL commands in a **Request**, which includes the necessary headers and full "base path" needed to successfully interact with the API. The base path should be pre-pended to all endpoints. For example, the aforementioned `/global/classes` endpoint becomes `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. You will see the API format / Request pattern throughout the documentation, and are expected to use the complete path shown in the example Request when making your own calls to Platform APIs.
+The calls are then shown as cURL commands in a **Request**, which includes the necessary headers and full "base path" needed to successfully interact with the API. The base path should be pre-pended to all endpoints. For example, the aforementioned `/global/classes` endpoint becomes `https://platform.adobe.io/data/foundation/schemaregistry/global/classes`. You will see the API format / request pattern throughout the documentation, and are expected to use the complete path shown in the example request when making your own calls to Platform APIs.
 
 ### Example API request
 
@@ -119,7 +119,7 @@ For more information on specific endpoints in Platform APIs, including required 
 | [[!DNL Catalog Service] API guide](.././catalog/api/getting-started.md) | The [!DNL Catalog Service] API allows developers to manage dataset metadata in Adobe Experience Platform. This includes data locations, processing stages, errors that occurred during processing, and data reports.|
 | [[!DNL Data Access] API guide](.././data-access/api.md) | The [!DNL Data Access] API allows developers to retrieve information on ingested datasets within Experience Platform. This includes accessing and downloading dataset files, retrieving header information, listing failed and succeeded batches, and downloading preview CSV / Parquet files. |
 | [[!DNL Dataset Service] API guide](.././data-governance/labels/dataset-api.md) | The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata. |
-| [[!DNL Flow Service] API guide](.././sources/tutorials/api/create-dataset-base-connection.md) <br> (Sources) | The [!DNL Flow Service] API is used to collect and centralize your data from various disparate sources and is used to create and activate data to various destinations within Adobe Experience Platform. The service provides a RESTful API from which all supported sources are connectable. |
+| [[!DNL Flow Service] API guide](.././sources/tutorials/api/create-dataset-base-connection.md) <br> (Sources & Destinations) | The [!DNL Flow Service] API is used to collect and centralize your data from various disparate sources and is used to create and activate data to various destinations within Adobe Experience Platform. The service provides a RESTful API from which all supported sources are connectable. |
 | [[!DNL Identity Service] API guide](.././identity-service/api/getting-started.md) | The [!DNL Identity Service] API allows developers to manage the cross-device, cross-channel, and near real-time identification of your customers using identity graphs in Adobe Experience Platform. |
 | [[!DNL Observability Insights] API guide](.././observability/api/overview.md) | [!DNL Observability Insights] is a RESTful API that allows developers to expose key observability metrics in Adobe Experience Platform. These metrics provide insights into Platform usage statistics, health-checks for Platform services, historical trends, and performance indicators for various Platform functionalities. |
 | [[!DNL Policy Service] API guide](.././data-governance/api/overview.md) <br> (Data Governance) | The [!DNL Policy Service] API allows you to create and manage data usage labels and policies to determine what marketing actions can be taken against data that contains certain data usage labels. To apply labels to datasets and fields, refer to the [[!DNL Dataset Service] API](.././data-governance/labels/dataset-api.md) guide |
