@@ -18,7 +18,7 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Batch ingestion](../../ingestion/batch-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from data files, such as CSV and Parquet.
-* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from client- and server-side devices in real-time.
+* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from client- and server-side devices in real time.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
 
