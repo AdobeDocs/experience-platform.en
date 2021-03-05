@@ -10,7 +10,7 @@ description: Adobe Experience Platform provides API services that are closely li
 
 Adobe Experience Platform is developed under an "API first" philosophy. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
 
-The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide outlines the necessary steps for getting started with Platform APIs. After reading this guide, you should be prepared to work with any of the individual Platform API guides.
+The APIs for each Experience Platform service all share the same set of authentication headers and use similar syntaxes for their CRUD operations. The following guide outlines the necessary steps for getting started with Platform APIs.
 
 ## Authentication and headers
 
