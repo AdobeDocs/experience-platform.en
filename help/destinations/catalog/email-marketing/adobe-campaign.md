@@ -69,7 +69,7 @@ For [!DNL Adobe Campaign] destinations, Platform creates a tab-delimited `.txt` 
 >[!IMPORTANT]
 >
 >- Please keep in mind the SFTP storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
->- You need to schedule, import, and map your exported segment(s) in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/general-operation/importing-data.html#automating-with-workflows) in Adobe Campaign documentation.
+>- You need to schedule, import, and map your exported segment(s) in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign documentation.
 >- The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
 
