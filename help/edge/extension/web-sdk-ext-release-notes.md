@@ -8,6 +8,19 @@ seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience
 
 This document covers the release notes for the Adobe Experience Platform Web SDK extension for Adobe Experience Platform Launch. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://docs.adobe.com/content/help/en/experience-platform/edge/release-notes.html).
 
+## March 9, 2020
+
+### Adobe Experience Platform Web SDK 2.4.0
+
+Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
+
+* Added "document unloading" checkbox to Send Event action UI
+* Added support for an `out` option when configuring default consent which will drop all events until consent is received (the existing `pending` option queues events and sends them once consent was received)
+* Added a tooltip to the default consent field
+* Added support for Adobe's Consent 2.0 standard
+* A better error is now displayed in the XDM Object data element UI if the user's access token is invalid or improperly provisioned
+* Fixed a cross-origin error (which did not affect the operation of the extension) that showed up on the browser developer console when viewing an XDM Object data element
+
 ## November 4, 2020
 
 ### Adobe Experience Platform Web SDK 2.3.0

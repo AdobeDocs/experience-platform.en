@@ -6,6 +6,19 @@ keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release not
 
 # Release notes
 
+## Version 2.4.0
+
+* The SDK can now be installed as an [npm package](https://www.npmjs.com/package/@adobe/alloy).
+* Added support for an `out` option when configuring default consent which will drop all events until consent is received (the existing `pending` option queues events and sends them once consent was received). 
+* The onBeforeEventSend callback can now be used to prevent an event from being sent
+* Now uses an XDM mixin instead of `meta.personalization` when sending events about personalized content being rendered or clicked
+* The getIdentity command now returns the edge region ID alongside the identity
+* Warnings and errors received from the server have been improved and are handled in a more appropriate fashion 
+* Added support for Adobe's Consent 2.0 standard
+* Consent preferences, when received, are hashed and stored in local storage for an optimized integration amongst CMPs, Platform Web SDK, and Platform Edge Network
+* Bug Fix: Personalization interaction notification events would contain duplicate information about the same activity when a user navigated to a new single-page app view, back to the original view, and clicked an element qualifying for conversion
+* Bug Fix: If the first event sent by the SDK had `documentUnloading` set to `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) would be used to send the event, resulting in an error regarding an identity not being established  
+
 ## Version 2.3.0
 
 * Added nonce support to allow for stricter content security policies.
