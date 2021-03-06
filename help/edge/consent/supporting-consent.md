@@ -33,7 +33,7 @@ When the default consent for the general purpose is set to pending, attempting t
 >
 >Commands are only queued in memory. They are not saved across page loads.
 
-If you do not want to collect events that occurred before the user's opt-in preferences, you can pass `"defaultConsent": "out"` during SDK configuration. Attempting to execute any commands that depend on user opt-in preferences will have no effect until you have communicated the user's opt-in preferences to the SDK.
+If you do not want to collect events that occurred before the user's opt-in preferences are set, you can pass `"defaultConsent": "out"` during SDK configuration. Attempting to execute any commands that depend on user opt-in preferences will have no effect until you have communicated the user's opt-in preferences to the SDK.
 
 >[!NOTE]
 >
@@ -43,11 +43,11 @@ At this point, you might prefer to ask the user to opt in somewhere within your 
 
 ## Communicating consent preferences via the Adobe Experience Platform standard
 
-The SDK supports versions 1.0 and 2.0 of the Adobe Experience Platform consent standard. Currently, the 1.0, and 2.0 standards only support automatic enforcement of an all or nothing consent preference. The 1.0 standard is being phased out in favor of the 2.0 standard. The 2.0 standard allows you to add additional consent preferences that can be used to manually enforce consent preference.
+The SDK supports versions 1.0 and 2.0 of the Adobe Experience Platform consent standard. Currently, the 1.0 and 2.0 standards only support automatic enforcement of an all or nothing consent preference. The 1.0 standard is being phased out in favor of the 2.0 standard. The 2.0 standard allows you to add additional consent preferences that can be used to manually enforce consent preference.
 
 ### Using the Adobe standard version 2.0
 
-If you are using Adobe Experience Platform, you will need include a privacy mixin to your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe standard version 2.0. You can add additional data inside the value object below corresponding to the schema of the `consents` field of the Consents & Preferences profile mixin.
+If you are using Adobe Experience Platform, you will need include a privacy mixin to your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe standard version 2.0. You can add data inside the value object below corresponding to the schema of the `consents` field of the Consents & Preferences profile mixin.
 
 If the user opts in, execute the `setConsent` command with the collect preference set to `y` as follows:
 
