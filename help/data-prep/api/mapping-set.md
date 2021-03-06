@@ -293,7 +293,7 @@ A successful response returns HTTP status 200 with validation information for th
 
 ## Preview data for mappings
 
-You can preview ??????
+You can preview what your data will be mapped to by making a POST request to the `/mappingSets/preview` endpoint.
 
 **API format**
 
@@ -303,7 +303,71 @@ POST /mappingSets/preview
 
 **Request**
 
+```shell
+curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/preview \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '
+{
+    "data": [
+        {
+            "id": 1234,
+            "firstName": "Jim",
+            "lastName": "Seltzer"
+        }
+    ],
+    "mappingSet": {
+        "outputSchema": {
+            "schemaRef": {
+                "id": "https://ns.adobe.com/stardust/schemas/89abc189258b1cb1a816d8f2b2341a6d98000ed8f4008305",
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
+            }
+        },
+        "mappings": [
+            {
+                "sourceType": "text/x.schema-path",
+                "source": "id",
+                "destination": "_id",
+                "name": "id",
+                "description": "Identifier field"
+            },
+            {
+                "sourceType": "text/x.schema-path",
+                "source": "firstName",
+                "destination": "person.name.firstName"
+            },
+            {
+                "sourceType": "text/x.schema-path",
+                "source": "lastName",
+                "destination": "person.name.lastName"
+            }
+        ]
+    }
+}'
+```
+
 **Response**
+
+A successful response returns HTTP status 200 with a preview of your mapped data. 
+
+```json
+[
+    {
+        "data": {
+            "person": {
+                "name": {
+                    "firstName": "Jim",
+                    "lastName": "Seltzer"
+                }
+            },
+            "_id": "1234"
+        },
+        "errors": null
+    }
+]
+```
 
 ## Get a mapping set
 
