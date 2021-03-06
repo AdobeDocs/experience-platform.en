@@ -39,47 +39,45 @@ After creating your cloud storage account, the **[!UICONTROL Select data]** step
 
 ![interface](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, select the appropriate data format from the dropdown menu. For JSON files, select **[!UICONTROL JSON]**.
+Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, select the corresponding data format from the [!UICONTROL Select data format] dropdown menu.
+
+The following table displays the appropriate data format for the supported file types:
+
+| File type | Data format |
+| --- | --- |
+| CSV | [!UICONTROL Delimited]|
+| JSON | [!UICONTROL JSON] |
+| Parquet | [!UICONTROL XDM Parquet] |
+
+Select **[!UICONTROL JSON]** and allow for a few seconds for the preview interface to populate.
 
 ![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-The data preview validation interface allows you to preview up to 100 rows of data from your selected file or folder. By default, the preview interface displays the first file in the folder you selected. On the preview screen, you can select whether the JSON is XDM compliant by using the **[!UICONTROL XDM compliant]** dropdown.
+>[!NOTE]
+>
+>Unlike delimited and JSON file types, Parquet formatted files are not available for preview.
 
-If you want to ingest the entire folder, select **[!UICONTROL Next]**
+The preview interface allows you to inspect the contents and structure of a file. By default, the preview interface displays the first file in the folder you selected.
 
-Alternatively, you can inspect other files in the folder by selecting the preview icon beside the file name.
+To preview a different file, select the preview icon beside the name of the file you want to inspect.
 
 ![default-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
 
-![switch-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/switch-preview.png)
+Once you have inspected the contents and structure of the files in your folder, select **[!UICONTROL Next]** to ingest the entire folder.
 
 ![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
+
+If you prefer to select a specific file, select the file you want to ingest, and then select **[!UICONTROL Next]**.
 
 ![select-file](../../../../images/tutorials/dataflow/cloud-storage/batch/select-file.png)
 
 ### Set a custom delimiter for delimited files
 
-You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). Alternatively, you can select **[!UICONTROL Custom]** and enter a custom delimiter of your choice in the pop up input bar.
+You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). If you prefer to use a custom delimiter, select **[!UICONTROL Custom]** and enter a single-character delimiter of your choice in the pop up input bar.
 
 Once you have selected your data format and set your delimiter, select **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
-
-### Ingest Parquet or JSON files
-
-Cloud storage accounts also support JSON and Parquet files. Parquet files must be XDM-compliant, while JSON files do not need to be XDM-complaint. To ingest JSON or Parquet files, select the appropriate file format from the directory browser and apply compatible data format from the right interface. 
-
-
-
-Select **[!UICONTROL Next]** to proceed.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/json-preview.png)
-
->[!IMPORTANT]
->
->Unlike delimited and JSON file types, Parquet formatted files are not available for preview.
-
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-parquet.png)
 
 ## Map data fields to an XDM schema
 
