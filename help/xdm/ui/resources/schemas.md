@@ -62,7 +62,7 @@ A dialog appears, showing a list of field groups that you can select for the sch
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-You can use the search bar to help locate your desired field group. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, field groups containing fields that describe desired data attributes are displayed.
+You can use the search bar to help locate your desired field group. Field groups whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, field groups containing fields that describe desired data attributes are displayed.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 
@@ -132,7 +132,7 @@ You can change the class of a schema at any point during the initial composition
 
 >[!WARNING]
 >
->Reassigning the class for a schema should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
+>Reassigning the class for a schema should be done with extreme caution. Field groups are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
 To reassign a class, select **[!UICONTROL Assign]** in the left-hand side of the canvas.
 

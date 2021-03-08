@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;
 solution: Experience Platform
-title: End User ID Details Mixin
+title: End User ID Details Field Group
 topic: overview
 description: This document provides an overview of the End User ID Details field group.
 ---

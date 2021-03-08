@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
-title: IdentityMap Mixin
+title: IdentityMap Field Group
 topic: overview
 description: This document provides an overview of the XDM Individual Profile class.
 ---

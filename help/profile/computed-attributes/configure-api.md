@@ -18,26 +18,26 @@ The workflow in this document outlines how to use the Schema Registry API to cre
 
 ## Create a computed attributes field group
 
-To create a field group using the Schema Registry API, begin by making a POST request to the `/tenant/mixins` endpoint and providing the details of the field group in the request body. For details regarding working with field groups using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
+To create a field group using the Schema Registry API, begin by making a POST request to the `/tenant/fieldgroups` endpoint and providing the details of the field group in the request body. For details regarding working with field groups using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
 
 **API format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Request**
 
 ```shell
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'content-type: application/json' \
   -d '{
-        "title":"Computed Attributes Mixin",
+        "title":"Computed Attributes Field Group",
         "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
@@ -46,7 +46,7 @@ curl -X POST \
           "https://ns.adobe.com/xdm/context/profile"
         ],
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -65,7 +65,7 @@ curl -X POST \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -83,14 +83,14 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 ```json
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
   "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
   "description": "Description of the field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -109,7 +109,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -140,7 +140,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 
 ## Update field group with additional computed attributes
 
-As more computed attributes are needed, you can update the computed attributes field group with additional attributes by making a PUT request to the `/tenant/mixins` endpoint. This request requires you to include the unique ID of the field group that you created in the path and the all new fields that you would like to add in the body.
+As more computed attributes are needed, you can update the computed attributes field group with additional attributes by making a PUT request to the `/tenant/fieldgroups` endpoint. This request requires you to include the unique ID of the field group that you created in the path and the all new fields that you would like to add in the body.
 
 For more information regarding updating a field group using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
 
@@ -160,7 +160,7 @@ This request adds new fields related to `purchaseSummary` information.
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -168,7 +168,7 @@ curl -X PUT \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
         "type": "object",
-        "title": "Computed Attributes Mixin",
+        "title": "Computed Attributes Field Group",
         "meta:extensible": true,
         "meta:abstract": true,
         "meta:intendedToExtend": [
@@ -176,7 +176,7 @@ curl -X PUT \
         ],
         "description": "Description of field group.",
         "definitions": {
-          "computedAttributesMixin": {
+          "computedAttributesFieldGroup": {
             "type": "object",
             "meta:xdmType": "object",
             "properties": {
@@ -215,7 +215,7 @@ curl -X PUT \
         },
         "allOf": [
           {
-            "$ref": "#/definitions/computedAttributesMixin"
+            "$ref": "#/definitions/computedAttributesFieldGroup"
           }
         ]
       }'
@@ -228,14 +228,14 @@ A successful response returns the details of the updated field group.
 ```json
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
-  "meta:altId": "_{TENANT_ID}.mixins.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.860ad1b1b35e0a88ecf6df92ebce08335c180313d5805352",
   "meta:resourceType": "fieldgroups",
   "version": "1.0",
-  "title": "Computed Attributes Mixin",
+  "title": "Computed Attributes Field Group",
   "type": "object",
   "description": "Description of field group.",
   "definitions": {
-    "computedAttributesMixin": {
+    "computedAttributesFieldGroup": {
       "type": "object",
       "meta:xdmType": "object",
       "properties": {
@@ -274,7 +274,7 @@ A successful response returns the details of the updated field group.
   },
   "allOf": [
     {
-      "$ref": "#/definitions/computedAttributesMixin",
+      "$ref": "#/definitions/computedAttributesFieldGroup",
       "type": "object",
       "meta:xdmType": "object"
     }
@@ -317,7 +317,7 @@ POST /tenants/schemas
 
 **Request**
 
-The follow request creates a new schema that references the `computedAttributesMixin` created earlier in this document (using its unique ID) and is enabled for the Profile union schema (using the `meta:immutableTags` array). For detailed instructions on how to create a schema using the Schema Registry API, please refer to the [schemas API endpoint guide](../../xdm/api/schemas.md).
+The follow request creates a new schema that references the `computedAttributesFieldGroup` created earlier in this document (using its unique ID) and is enabled for the Profile union schema (using the `meta:immutableTags` array). For detailed instructions on how to create a schema using the Schema Registry API, please refer to the [schemas API endpoint guide](../../xdm/api/schemas.md).
 
 ```shell
 curl -X POST \

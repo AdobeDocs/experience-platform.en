@@ -28,7 +28,7 @@ feature: Schemas
   * Event field groups {#event}
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
-  * [Mixin name updates](./field-groups/name-updates.md)
+  * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)
@@ -64,7 +64,7 @@ feature: Schemas
   * Create and edit resources {#resources}
     * [Schemas](./ui/resources/schemas.md)
     * [Classes](./ui/resources/classes.md)
-    * [Mixins](./ui/resources/field-groups.md)
+    * [Field groups](./ui/resources/field-groups.md)
     * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
     * [Overview](./ui/fields/overview.md)

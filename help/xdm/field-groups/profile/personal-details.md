@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;field group;Mixin;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;field group;Field group;
 solution: Experience Platform
-title: Personal Contact Details Mixin
+title: Personal Contact Details Field Group
 topic: overview
 description: This document provides an overview of the Personal Contact Details field group.
 ---

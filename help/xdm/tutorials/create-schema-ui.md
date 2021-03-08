@@ -47,7 +47,7 @@ The [!DNL Schema Editor] appears. This is the canvas upon which you will compose
 
 >[!NOTE]
 >
->You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added.
+>You can [change the class of a schema](#change-class) at any point during the initial composition process before the schema has been saved, but this should be done with extreme caution. Field groups are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added.
 
 Use the fields on the right-hand side of the editor to provide a display name and optional description for the schema. Once a name is entered, the canvas updates to reflect the new name of the schema.
 
@@ -339,6 +339,6 @@ You can change the class of a schema at any point during the initial composition
 
 >[!WARNING]
 >
->Reassigning the class for a schema should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
+>Reassigning the class for a schema should be done with extreme caution. Field groups are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
 To learn how to change the class of a schema, see the guide on [managing schemas in the UI](../ui/resources/schemas.md).

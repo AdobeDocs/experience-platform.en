@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;field group;Mixin;Mixins;field groups;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
+keywords: Experience Platform;home;popular topics;schema;Schema;field group;Field group;Field groups;field groups;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
 solution: Experience Platform
 title: XDM Field Type Constraints
 topic: overview

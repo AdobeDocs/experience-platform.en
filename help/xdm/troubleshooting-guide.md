@@ -24,7 +24,7 @@ For details on creating new field groups in the [!DNL Schema Registry] API, see 
 
 ### What are the best uses for field groups vs data types?
 
-[Mixins](./schema/composition.md#mixin) are components that define one or more fields in a schema. Mixins enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Mixins are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. 
+[Field groups](./schema/composition.md#mixin) are components that define one or more fields in a schema. Field groups enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. 
 
 [Data types](./schema/composition.md#data-type) can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
 
@@ -142,7 +142,7 @@ This error message displays when you attempt to create a resource with a title t
 }
 ```
 
-This error message displays when you attempt to create a new field group with improperly namespaced fields. Mixins that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for field groups can be found in the [field groups endpoint guide](./api/mixins.md#create).
+This error message displays when you attempt to create a new field group with improperly namespaced fields. Field groups that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for field groups can be found in the [field groups endpoint guide](./api/mixins.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errors

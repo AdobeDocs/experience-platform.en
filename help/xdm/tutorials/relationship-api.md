@@ -118,12 +118,12 @@ In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` f
 
 ### Create a new field group
 
-In order to add a new field to a schema, it must first be defined in a field group. You can create a new field group by making a POST request to the `/tenant/mixins` endpoint.
+In order to add a new field to a schema, it must first be defined in a field group. You can create a new field group by making a POST request to the `/tenant/fieldgroups` endpoint.
 
 **API format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Request**
@@ -132,7 +132,7 @@ The following request creates a new field group that adds a `favoriteHotel` fiel
 
 ```shell
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -174,7 +174,7 @@ A successful response returns the details of the newly created field group.
 ```json
 {
     "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/3387945212ad76ee59b6d2b964afb220",
-    "meta:altId": "_{TENANT_ID}.mixins.3387945212ad76ee59b6d2b964afb220",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.3387945212ad76ee59b6d2b964afb220",
     "meta:resourceType": "fieldgroups",
     "version": "1.0",
     "type": "object",

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
-title: Mixin Name Updates
+title: Field Group Name Updates
 topic: overview
 description: A list of recent XDM field group name changes.
 ---
 
-# Mixin name updates
+# Field group name updates
 
 The names of several Experience Data Model (XDM) field groups have changed. Since the field structure of these field groups remains the same, the name changes alone should not affect any existing schemas that employ these field groups. In order to look up and use these field groups in the Adobe Experience Platform user interface, however, their new names must be used.
 

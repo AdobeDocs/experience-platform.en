@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
+keywords: Experience Platform;home;popular topics;schema;Schema;enum;mixin;Field group;Field groups;mixins;data type;data types;Data types;Data type;primary identity;primary idenity;XDM individual profile;XDM fields;enum datatype;Experience event;XDM Experience Event;XDM ExperienceEvent;experienceEvent;experienceevent;XDM Experienceevenet;schema design;class;Class;classes;Classes;datatype;Datatype;data type;Data type;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 tiTle: Basics of Schema Composition
 topic: overview
@@ -126,7 +126,7 @@ In order to ingest data into [!DNL Experience Platform], a dataset must first be
 
 Schemas are composed using the following formula:
 
-**Class + Mixin&ast; = XDM Schema**
+**Class + Field Group&ast; = XDM Schema**
 
 &ast;A schema is composed of a class and zero or more field groups. This means that you could compose a dataset schema without using field groups at all.
 
@@ -138,11 +138,11 @@ A schema's class determines which field groups will be eligible for use in that 
 
 Adobe provides two standard ("core") XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
-### Mixin {#mixin}
+### Field group {#mixin}
 
-A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 
+A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
-Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all field groups are available for use with all classes.
+Field groups define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all field groups are available for use with all classes.
 
 [!DNL Experience Platform] includes many standard Adobe field groups while also allowing vendors to define field groups for their users, and individual users to define field groups for their own specific concepts.
 

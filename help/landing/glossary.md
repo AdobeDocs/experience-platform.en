@@ -316,7 +316,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
-**Mixin**: In Experience Data Model (XDM), a field group allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
+**Field group**: In Experience Data Model (XDM), a field group allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
 
 **Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 

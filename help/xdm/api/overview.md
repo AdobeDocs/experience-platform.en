@@ -34,9 +34,9 @@ Behaviors define the nature of data that a schema describes. Each XDM class must
 
 A class defines the base structure of common properties that all schemas based on that class must contain, and determines which field groups are eligible for use in those schemas. Every class must be associated with an existing behavior. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
 
-## Mixins
+## Field groups
 
-Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [field groups endpoint guide](./mixins.md) to learn how to work with field groups in the API.
+Field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [field groups endpoint guide](./mixins.md) to learn how to work with field groups in the API.
 
 ## Data types
 

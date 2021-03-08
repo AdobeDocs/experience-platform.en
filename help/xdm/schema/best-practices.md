@@ -195,7 +195,7 @@ Experience Platform provides several out-of-the-box XDM field groups for capturi
 * Adobe Campaign
 * Adobe Target
 
-For example, the [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) allows you to map [!DNL Analytics]-specific fields to your XDM schemas. Depending on the Adobe applications you are working with, you should be using these Adobe-provided field groups in your schemas.
+For example, the [[!UICONTROL Adobe Analytics ExperienceEvent Template] field group](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) allows you to map [!DNL Analytics]-specific fields to your XDM schemas. Depending on the Adobe applications you are working with, you should be using these Adobe-provided field groups in your schemas.
 
 <img src="../images/best-practices/analytics-mixin.png" width=700><br>
 
