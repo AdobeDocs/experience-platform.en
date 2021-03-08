@@ -46,11 +46,13 @@ After selecting a sandbox, you can use the date range dropdown to select the tim
 
 ![](../images/license-usage/select-date-range.png)
 
-### Widget types
+## Widgets
 
-The license usage dashboard is composed of widgets, which display read-only metrics providing important information regarding your organization's license usage. The visible metrics depend on your organization's licensing (see the [available metrics](#available-metrics) section for details), however the widget type
+The license usage dashboard is composed of widgets, which display read-only metrics providing important information regarding your organization's license usage. The visible metrics depend on your organization's specific licensing (see the [available metrics](#available-metrics) section for details).
 
-![](../images/license-usage/addressable-audiences.png)
+Each widget displays a line graphs comparing actual numbers for your organization to the total available with your organization's licensing and provide a percentage of total usage.
+
+![](../images/license-usage/widgets.png)
 
 ## Available metrics
 
@@ -63,4 +65,6 @@ The metrics that are available in the [!UICONTROL License usage] dashboard depen
 
 ## Next steps
 
-By following this document you should now be able to locate the license usage dashboard and select a sandbox to view. You should also understand the metrics displayed in the available widgets. To learn more about the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).
+By following this document you should now be able to locate the license usage dashboard and select a sandbox to view. You should also be able to find more information about available metrics for your organization, based on the licensing your organization has purchased. 
+
+To learn more about other features available in the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).
