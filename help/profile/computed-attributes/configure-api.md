@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom mixin that will hold the computed attribute field.
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom field group that will hold the computed attribute field.
 ---
 
 # (Alpha) Configure a computed attribute field using the Schema Registry API
@@ -12,13 +12,13 @@ description: Computed attributes are functions used to aggregate event-level dat
 >
 >Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom mixin that will hold the computed attribute field. It is a recommended best practice to create a separate "Computed Attributes" schema and mixin into which your organization can add any attributes to be used as computed attributes. This enables your organization to cleanly separate the computed attribute schema from other schemas that are being used for data ingestion.
+In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom field group that will hold the computed attribute field. It is a recommended best practice to create a separate "Computed Attributes" schema and field group into which your organization can add any attributes to be used as computed attributes. This enables your organization to cleanly separate the computed attribute schema from other schemas that are being used for data ingestion.
 
-The workflow in this document outlines how to use the Schema Registry API to create a Profile-enabled "Computed Attribute" schema that references a custom mixin. This document contains sample code specific to computed attributes, however please refer to the [Schema Registry API guide](../../xdm/api/overview.md) for detailed information about defining mixins and schemas using the API.
+The workflow in this document outlines how to use the Schema Registry API to create a Profile-enabled "Computed Attribute" schema that references a custom field group. This document contains sample code specific to computed attributes, however please refer to the [Schema Registry API guide](../../xdm/api/overview.md) for detailed information about defining field groups and schemas using the API.
 
-## Create a computed attributes mixin
+## Create a computed attributes field group
 
-To create a mixin using the Schema Registry API, begin by making a POST request to the `/tenant/mixins` endpoint and providing the details of the mixin in the request body. For details regarding working with mixins using the Schema Registry API, please refer to the [mixins API endpoint guide](../../xdm/api/mixins.md).
+To create a field group using the Schema Registry API, begin by making a POST request to the `/tenant/mixins` endpoint and providing the details of the field group in the request body. For details regarding working with field groups using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
 
 **API format**
 
@@ -38,7 +38,7 @@ curl -X POST \
   -H 'content-type: application/json' \
   -d '{
         "title":"Computed Attributes Mixin",
-        "description":"Description of the mixin.",
+        "description":"Description of the field group.",
         "type":"object",
         "meta:extensible": true,
         "meta:abstract": true,
@@ -73,12 +73,12 @@ curl -X POST \
 
 |Property|Description|
 |---|---|
-|`title`|The name of the mixin that you are creating.|
-|`meta:intendedToExtend`|The XDM class with which the mixin can be used.|
+|`title`|The name of the field group that you are creating.|
+|`meta:intendedToExtend`|The XDM class with which the field group can be used.|
 
 **Response**
 
-A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created mixin, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the Schema Registry.
+A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created field group, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the Schema Registry.
 
 ```json
 {
@@ -88,7 +88,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
   "version": "1.0",
   "title": "Computed Attributes Mixin",
   "type": "object",
-  "description": "Description of the mixin.",
+  "description": "Description of the field group.",
   "definitions": {
     "computedAttributesMixin": {
       "type": "object",
@@ -138,11 +138,11 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 }
 ```
 
-## Update mixin with additional computed attributes
+## Update field group with additional computed attributes
 
-As more computed attributes are needed, you can update the computed attributes mixin with additional attributes by making a PUT request to the `/tenant/mixins` endpoint. This request requires you to include the unique ID of the mixin that you created in the path and the all new fields that you would like to add in the body.
+As more computed attributes are needed, you can update the computed attributes field group with additional attributes by making a PUT request to the `/tenant/mixins` endpoint. This request requires you to include the unique ID of the field group that you created in the path and the all new fields that you would like to add in the body.
 
-For more information regarding updating a mixin using the Schema Registry API, please refer to the [mixins API endpoint guide](../../xdm/api/mixins.md).
+For more information regarding updating a field group using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
 
 **API Format**
 
@@ -156,7 +156,7 @@ This request adds new fields related to `purchaseSummary` information.
 
 >[!NOTE]
 >
->When updating a mixin through a PUT request, the body must include all of the fields that would be required when creating a new mixin in a POST request.
+>When updating a field group through a PUT request, the body must include all of the fields that would be required when creating a new field group in a POST request.
 
 ```shell
 curl -X PUT \
@@ -174,7 +174,7 @@ curl -X PUT \
         "meta:intendedToExtend": [
           "https://ns.adobe.com/xdm/context/profile"
         ],
-        "description": "Description of mixin.",
+        "description": "Description of field group.",
         "definitions": {
           "computedAttributesMixin": {
             "type": "object",
@@ -223,7 +223,7 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns the details of the updated mixin.
+A successful response returns the details of the updated field group.
 
 ```json
 {
@@ -233,7 +233,7 @@ A successful response returns the details of the updated mixin.
   "version": "1.0",
   "title": "Computed Attributes Mixin",
   "type": "object",
-  "description": "Description of mixin.",
+  "description": "Description of field group.",
   "definitions": {
     "computedAttributesMixin": {
       "type": "object",
@@ -428,4 +428,4 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 
 ## Next steps
 
-Now that you have created a schema and mixin into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).
+Now that you have created a schema and field group into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).

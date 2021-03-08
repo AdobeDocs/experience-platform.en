@@ -751,13 +751,13 @@ In order to use a custom timestamp, the [[!DNL External Source System Audit Deta
 >
 >You must ensure that the `xdm:lastUpdatedDate` timestamp is populated when sending a PATCH on the same record.
 
-For step-by-step instructions on working with schemas using the Schema Registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
+For step-by-step instructions on working with schemas using the Schema Registry API, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
 To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
 
 #### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
 
-The following example shows correctly populated fields in the [!DNL External Source System Audit Details Mixin]. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
+The following example shows correctly populated fields in the [!DNL External Source System Audit Details Mixin]. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
 
 ```json
 {
