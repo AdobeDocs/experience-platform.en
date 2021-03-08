@@ -57,15 +57,28 @@ To access the widget library, select **[!UICONTROL Widget library]** from the mo
 
 ![](images/customization/widget-library-button.png)
 
+The [!UICONTROL Widget library] contains two tabs, [!UICONTROL Standard] and [!UICONTROL Custom].
+
+* The **[!UICONTROL Standard]** tab contains widgets created by Adobe and allows you update your dashboard using these standard metrics. To learn more about adding standard widgets to your dashboard, see the section in this guide on [adding widgets](#add-widgets).
+* The **[!UICONTROL Custom]** tab allows you to create and share widgets within your organization. For complete steps to creating your own widgets, please refer to the [creating custom widgets](#create-custom-widgets) section in this guide.
+
 ### Add widgets {#add-widgets}
 
+From the **[!UICONTROL Standard]** tab, you can select the category related to the dashboard that you would like to update. The available widgets for the selected dashboard are displayed as cards, each providing the title, description, and a sample visualization for the metric.
 
+![](images/customization/standard-widgets.png)
 
-### Create custom widgets
+After choosing a widget to add to your dashboard, select the checkbox to highlight the widget. The counter in the top-right of the widget library will increase to show the total number of widgets selected, and with at least one widget selected the **[!UICONTROL Add widget]** button will be illuminated.
+
+Select **[!UICONTROL Add widget]** to add the selected widget or widgets to your dashboard.
+
+![](images/customization/add-widgets.png)
+
+### Create custom widgets {#create-custom-widgets}
 
 >[!NOTE]
 >
->Permissions required to create custom widgets.
+>What permissions required to create custom widgets? 
 
 To further customize the look of dashboards within Experience Platform, you can elect to create new widgets and share them with other users in your organization. To begin, select **[!UICONTROL Modify dashboard]** from the dashboard you wish edit, then select **[!UICONTROL Widget library]**.
 
