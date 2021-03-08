@@ -99,6 +99,25 @@ The main work area in [!DNL JupyterLab] enables you to arrange documents and oth
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
 
+### GPU and memory server configuration in [!DNL Python]/R
+
+In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
+
+>[!NOTE]
+>
+>Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+### Terminate & restart JupyterLab
+
+In JupyterLab, you can terminate the session by selecting the power icon, then select **[!UICONTROL Shut Down]** from the popover that appears. This terminates your jupyterlab session and prevents further resources from being used. Notebook sessions auto-terminate after 12 hours of no activity.
+
+To restart the container, select the restart icon located directly left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+
+![terminate jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
+
+
 ### Code cells {#code-cells}
 
 Code cells are the primary content of notebooks. They contain source code in the language of the notebook's associated kernel and the output as a result of executing the code cell. An execution count is displayed to the right of every code cell which represents its order of execution.
@@ -223,16 +242,6 @@ Some notebook templates are limited to certain kernels. Template availability fo
 To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand the **File browser** from the left sidebar and click the plus symbol (**+**):
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
-
-### GPU and memory server configuration in [!DNL Python]/R
-
-In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
-
->[!NOTE]
->
->Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
-
-![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
 ## Next steps
 
