@@ -82,7 +82,7 @@ feature: Schemas
   * [Schemas](api/schemas.md)
   * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
-  * [Mixins](api/mixins.md)
+  * [Field groups](api/field-groups.md)
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
@@ -90,6 +90,7 @@ feature: Schemas
   * [Sample data](api/sample-data.md)
   * [Audit log](api/audit-log.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
+  * [Mixins (Deprecated)](api/mixins.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
   * [Create a schema (UI)](tutorials/create-schema-ui.md)
