@@ -72,7 +72,7 @@ After choosing a widget to add to your dashboard, select the checkbox to highlig
 
 Select **[!UICONTROL Add widget]** to add the selected widget or widgets to your dashboard.
 
-![](images/customization/add-widgets.png)
+![](images/customization/add-widget.png)
 
 ### Create custom widgets {#create-custom-widgets}
 
