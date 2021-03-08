@@ -109,14 +109,13 @@ In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Noteb
 
 ![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
 
-### Terminate & restart JupyterLab
+### Terminate & restart [!DNL JupyterLab]
 
-In JupyterLab, you can terminate the session by selecting the power icon, then select **[!UICONTROL Shut Down]** from the popover that appears. This terminates your jupyterlab session and prevents further resources from being used. Notebook sessions auto-terminate after 12 hours of no activity.
+In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon**, then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
 
-To restart the container, select the restart icon located directly left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+To restart [!DNL JupyterLab], select the **restart icon** located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
 
 ![terminate jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
-
 
 ### Code cells {#code-cells}
 
@@ -249,125 +248,6 @@ To learn more about each of the supported notebooks and how to use them, visit t
 
 ## Supported libraries {#supported-libraries}
 
-### [!DNL Python] / R
+For a list of supported packages in Python, R, and PySpark, copy and paste `!pip list --format=columns` in a new cell, then run the cell. A list of supported packages populates in alphabetical order.
 
-| Library | Version|
-| :------ | :------ |
-| notebook | 6.0.0 |
-| requests | 2.22.0 |
-| plotly | 4.0.0 |
-| folium | 0.10.0 |
-| ipywidgets | 7.5.1 |
-| bokeh | 1.3.1 |
-| gensim | 3.7.3 |
-| ipyparallel | 0.5.2 |
-| jq | 1.6 |
-| keras | 2.2.4 |
-| nltk | 3.2.5 |
-| pandas | 0.22.0 |
-| pandasql | 0.7.3 |
-| pillow | 6.0.0 |
-| scikit-image | 0.15.0 |
-| scikit-learn | 0.21.3 |
-| scipy | 1.3.0 |
-| scrapy | 1.3.0 |
-| seaborn | 0.9.0 |
-| statsmodels | 0.10.1 |
-| elastic | 5.1.0.17 |
-| ggplot | 0.11.5 |
-| py-xgboost | 0.90 |
-| opencv | 3.4.1 |
-| pyspark | 2.4.3 |
-| pytorch | 1.0.1 |
-| wxpython | 4.0.6  |
-| colorlover | 0.3.0 |
-| geopandas | 0.5.1 |
-| pyshp | 2.1.0 |
-| shapely | 1.6.4 |
-| rpy2 | 2.9.4 |
-| r-essentials | 3.6 |
-| r-arules | 1.6_3 |
-| r-fpc | 2.2_3 |
-| r-e1071 | 1.7_2 |
-| r-gam | 1.16.1 |
-| r-gbm | 2.1.5 |
-| r-ggthemes | 4.2.0 |
-| r-ggvis | 0.4.4 |
-| r-igraph | 1.2.4.1 |
-| r-leaps | 3.0 |
-| r-manipulate | 1.0.1 |
-| r-rocr | 1.0_7 |
-| r-rmysql | 0.10.17 |
-| r-rodbc | 1.3_15 |
-| r-rsqlite | 2.1.2 |
-| r-rstan | 2.19.2 |
-| r-sqldf | 0.4_11 |
-| r-survival | 2.44_1.1 |
-| r-zoo | 1.8_6 |
-| r-stringdist | 0.9.5.2 |
-| r-quadprog | 1.5_7 |
-| r-rjson| 0.2.20 |
-| r-forecast | 8.7 |
-| r-rsolnp | 1.16 |
-| r-reticulate | 1.12 |
-| r-mlr | 2.14.0 |
-| r-viridis | 0.5.1 |
-| r-corrplot | 0.84 |
-| r-fnn | 1.1.3 |
-| r-lubridate | 1.7.4 |
-| r-randomforest | 4.6_14 |
-| r-tidyverse | 1.2.1 |
-| r-tree | 1.0_39 |
-| pymongo | 3.8.0 |
-| pyarrow | 0.14.1 |
-| boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
-| fastparquet | 0.3.2 |
-| python-snappy | 0.5.4 |
-| ipywebrtc | 0.5.0 |
-| jupyter_client | 5.3.1 |
-| wordcloud | 1.5.0 |
-| graphviz | 2.40.1 |
-| python-graphviz | 0.11.1 |
-| azure-storage | 0.36.0 |
-| [!DNL jupyterlab] | 1.0.4 |
-| pandas_ml | 0.6.1 |
-| tensorflow-gpu | 1.14.0 |
-| nodejs | 12.3.0 |
-| mock | 3.0.5 |
-| ipympl | 0.3.3 |
-| fonts-anacond | 1.0 |
-| psycopg2 | 2.8.3 |
-| nose | 1.3.7 |
-| autovizwidget | 0.12.9 |
-| altair | 3.1.0 |
-| vega_datasets | 0.7.0 |
-| papermill | 1.0.1 |
-| sql_magic | 0.0.4 |
-| iso3166 | 1.0 |
-| nbimporter | 0.3.1 |
-
-### PySpark
-
-| Library | Version |
-| :------ | :------ |
-| requests | 2.18.4 |
-| gensim | 2.3.0 |
-| keras | 2.0.6 |
-| nltk | 3.2.4 |
-| pandas | 0.20.1 |
-| pandasql | 0.7.3 |
-| pillow | 5.3.0 |
-| scikit-image | 0.13.0 |
-| scikit-learn | 0.19.0 |
-| scipy | 0.19.1 |
-| scrapy | 1.3.3 |
-| statsmodels | 0.8.0 |
-| elastic | 4.0.30.44 |
-| py-xgboost | 0.60 |
-| opencv | 3.1.0 |
-| pyarrow | 0.8.0 |
-| boto3 | 1.5.18 |
-| azure-storage-blob | 1.4.0 |
-| [!DNL python] | 3.6.7 |
-| mkl-rt | 11.1 |
+![example](../images/jupyterlab/user-guide/libraries.PNG)
