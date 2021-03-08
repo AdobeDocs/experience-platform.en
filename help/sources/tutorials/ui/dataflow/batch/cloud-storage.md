@@ -49,7 +49,7 @@ The following table displays the appropriate data format for the supported file 
 | JSON | [!UICONTROL JSON] |
 | Parquet | [!UICONTROL XDM Parquet] |
 
-Select **[!UICONTROL JSON]** and allow for a few seconds for the preview interface to populate.
+Select **[!UICONTROL JSON]** and wait a few seconds for the preview interface to populate.
 
 ![select-data](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
