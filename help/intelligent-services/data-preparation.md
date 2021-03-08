@@ -41,13 +41,13 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
+Like all XDM schemas, the CEE field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if required.
 
-A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
+A complete example of the field group can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
 
 ## Key fields
 
-There are several key fields within the CEE mixin which should be utilized in order for [!DNL Intelligent Services] to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
+There are several key fields within the CEE field group which should be utilized in order for [!DNL Intelligent Services] to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
 
 ### Mandatory fields
 
@@ -249,16 +249,16 @@ This section outlines the workflow for mapping and ingesting data into Experienc
 
 #### Create a CEE schema and dataset
 
-When you are ready to start preparing your data for ingestion, the first step is to create a new XDM schema that employs the CEE mixin. The following tutorials walk through the process of creating a new schema in the UI or API:
+When you are ready to start preparing your data for ingestion, the first step is to create a new XDM schema that employs the CEE field group. The following tutorials walk through the process of creating a new schema in the UI or API:
 
 * [Create a schema in the UI](../xdm/tutorials/create-schema-ui.md)
 * [Create a schema in the API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE mixin to the schema.
+>The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE field group to the schema.
 
-After adding the CEE mixin to the schema, you can add other mixins as required for additional fields within your data.
+After adding the CEE field group to the schema, you can add other field groups as required for additional fields within your data.
 
 Once you have created and saved the schema, you can create a new dataset based on that schema. The following tutorials walk through the process of creating a new dataset in the UI or API:
 

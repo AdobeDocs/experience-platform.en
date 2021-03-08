@@ -9,7 +9,7 @@ keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;produc
 
 If you have products on your site, then this is a default set of things you might want to send to enable the most capabilities from Adobe. Though this is a suggestion, it provides a very strong set of data right from the start.
 
-This document uses the [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) mixin. The `commerce` mixin is broken into two parts: the `commerce` object and the `productListItems` array. The `commerce` object lets you indicate which actions are happening to the `productListItems` array.
+This document uses the [ExperienceEvent Commerce Details](https://github.com/adobe/xdm/blob/1c22180490558e3c13352fe3e0540cb7e93c69ca/docs/reference/context/experienceevent-commerce.schema.md) field group. The `commerce` field group is broken into two parts: the `commerce` object and the `productListItems` array. The `commerce` object lets you indicate which actions are happening to the `productListItems` array.
 
 >[!TIP]
 >

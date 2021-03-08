@@ -316,7 +316,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
-**Mixin**: In Experience Data Model (XDM), a mixin allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
+**Mixin**: In Experience Data Model (XDM), a field group allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
 
 **Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
@@ -430,7 +430,7 @@ description: A glossary of important terminology in Experience Platform.
 
 **Scoring**: Scoring is the process of generating insights from data using a trained model.
 
-**Schema**: A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional mixin(s) and is used to create datasets and datastreams. A schema may include behavioral attributes, timestamps, identities, attribute definitions, relationships, and more.
+**Schema**: A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional field group(s) and is used to create datasets and datastreams. A schema may include behavioral attributes, timestamps, identities, attribute definitions, relationships, and more.
 
 **Schema Library**: The Schema Library contains industry-standard XDM resources made available by Adobe, as well as custom resources defined by your organization.
 

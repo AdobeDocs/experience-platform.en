@@ -27,15 +27,15 @@ This tutorial requires a working understanding of the following components of Ad
     * [Identity namespaces](../../../../identity-service/namespaces.md): Customer identity data must be provided under a specific identity namespace recognized by Identity Service.
 * [Real-time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to let you create detailed customer profiles from your datasets in real time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
-## [!UICONTROL Privacy Details] mixin structure {#structure}
+## [!UICONTROL Privacy Details] field group structure {#structure}
 
-The [!UICONTROL Privacy Details] mixin provides customer consent fields that are required for TCF 2.0 support. There are two versions of this mixin: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
+The [!UICONTROL Privacy Details] field group provides customer consent fields that are required for TCF 2.0 support. There are two versions of this field group: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
 
-The sections below explain the structure of each of these mixins, including the data they expect during ingestion.
+The sections below explain the structure of each of these field groups, including the data they expect during ingestion.
 
-### Profile mixin {#profile-mixin}
+### Profile field group {#profile-mixin}
 
-For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL Privacy Details] mixin provides a single map-type field, `xdm:identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. The following JSON is an example of the kind of data `xdm:identityPrivacyInfo` expects upon data ingestion:
+For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL Privacy Details] field group provides a single map-type field, `xdm:identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. The following JSON is an example of the kind of data `xdm:identityPrivacyInfo` expects upon data ingestion:
 
 ```json
 {
@@ -71,9 +71,9 @@ Within the identity value object is a single field, `xdm:identityIABConsent`. Th
 | `xdm:consentTimestamp` | An [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) timestamp of when the TCF consent values changed. |
 | `xdm:consentString` | An object containing the customer's updated consent data and other contextual information. See the section on [consent string properties](#consent-string) to learn about this object's required sub-properties. |
 
-### Event mixin {#event-mixin}
+### Event field group {#event-mixin}
 
-For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] mixin provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for a TCF consent string, similar to the `xdm:consentString` field in the profile mixin. For more information on these sub-properties, see the [next section](#consent-string).
+For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] field group provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for a TCF consent string, similar to the `xdm:consentString` field in the profile field group. For more information on these sub-properties, see the [next section](#consent-string).
 
 ```json
 {
@@ -91,7 +91,7 @@ For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details
 
 ### Consent string properties {#consent-string}
 
-Both versions of the [!UICONTROL Privacy Details] mixin require at least one object that captures the necessary fields that describe the TCF consent string for the customer. These properties are explained below:
+Both versions of the [!UICONTROL Privacy Details] field group require at least one object that captures the necessary fields that describe the TCF consent string for the customer. These properties are explained below:
 
 | Property | Description |
 | --- | --- |
@@ -123,7 +123,7 @@ The [!DNL Schema Editor] appears, showing the structure of the schema in the can
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -131,7 +131,7 @@ The canvas reappears, showing that the `identityPrivacyInfo` field has been adde
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-From here, repeat the above steps to add the following additional mixins to the schema:
+From here, repeat the above steps to add the following additional field groups to the schema:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Data capture region for Profile]
@@ -174,7 +174,7 @@ The [!DNL Schema Editor] appears, showing the structure of the schema in the can
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once you have chosen a mixin, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once you have chosen a field group, select **[!UICONTROL Add mixin]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -182,14 +182,14 @@ The canvas reappears, showing that the `consentStrings` array has been added to 
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-From here, repeat the above steps to add the following additional mixins to the schema:
+From here, repeat the above steps to add the following additional field groups to the schema:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Environment Details]
 * [!UICONTROL Web Details]
 * [!UICONTROL Implementation Details]
 
-Once the mixins have been added, finish by selecting **[!UICONTROL Save]**.
+Once the field groups have been added, finish by selecting **[!UICONTROL Save]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
 
