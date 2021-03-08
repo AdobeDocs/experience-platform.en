@@ -14,7 +14,7 @@ description: This document provides an overview of the Work Contact Details mixi
 
 [!UICONTROL Work Contact Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides several fields that capture occupational information regarding an individual person, such as work address, work email, work phone number, and organizations to which the person belongs.
 
-<img src='../../images/mixins/profile-work-details.png' width=550 /><br />
+<img src='../../images/field-groups/profile-work-details.png' width=550 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |

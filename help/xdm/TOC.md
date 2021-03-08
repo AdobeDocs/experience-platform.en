@@ -18,17 +18,17 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Mixins {#mixins}
-  * Profile mixins {#profile}
-    * [IdentityMap](./mixins/profile/identitymap.md)
-    * [Demographic Details](./mixins/profile/person-details.md)
-    * [Personal Contact Details](./mixins/profile/personal-details.md)
-    * [Segment Membership Details](./mixins/profile/segmentation.md)
-    * [Work Contact Details](./mixins/profile/work-details.md)
-  * Event mixins {#event}
-    * [End User ID Details](./mixins/event/enduserids.md)
-    * [Environment Details](./mixins/event/environment-details.md)
-  * [Mixin name updates](./mixins/name-updates.md)
+* Field groups {#mixins}
+  * Profile field groups {#profile}
+    * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Demographic Details](./field-groups/profile/person-details.md)
+    * [Personal Contact Details](./field-groups/profile/personal-details.md)
+    * [Segment Membership Details](./field-groups/profile/segmentation.md)
+    * [Work Contact Details](./field-groups/profile/work-details.md)
+  * Event field groups {#event}
+    * [End User ID Details](./field-groups/event/enduserids.md)
+    * [Environment Details](./field-groups/event/environment-details.md)
+  * [Mixin name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)

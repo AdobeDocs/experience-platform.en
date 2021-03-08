@@ -14,7 +14,7 @@ description: This document provides an overview of the Personal Contact Details 
 
 [!UICONTROL Personal Contact Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
 
-<img src='../../images/mixins/profile-personal-details.png' width=700 /><br />
+<img src='../../images/field-groups/profile-personal-details.png' width=700 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |

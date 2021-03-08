@@ -87,7 +87,7 @@ A successful response returns information regarding your organization's use of t
     {
       "title": "Sample Mixin",
       "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -104,7 +104,7 @@ A successful response returns information regarding your organization's use of t
     {
       "title": "Sample Mixin",
       "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },

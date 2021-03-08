@@ -29,12 +29,12 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+>The names of several mixins have changed. See the document on [mixin name updates](../field-groups/name-updates.md) for more information.
 
 Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of the most commonly used mixins for the class:
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/person-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)

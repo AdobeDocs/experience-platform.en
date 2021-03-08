@@ -26,11 +26,11 @@ To create a new mixin, you must first select a schema that the mixin will be add
 
 Once you have the schema open in the [!DNL Schema Editor], select **[!UICONTROL Add]** next to the [!UICONTROL Mixins] section in the left rail.
 
-![](../../images/ui/resources/mixins/add-mixin-button.png)
+![](../../images/ui/resources/field-groups/add-mixin-button.png)
 
 A dialog appears, showing a list of existing mixins for your organization. Near the top of the dialog, select **[!UICONTROL Create new mixin]**. Here you can provide a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the mixin. When finished, select **[!UICONTROL Add mixin]**.
 
-![](../../images/ui/resources/mixins/create-mixin.png)
+![](../../images/ui/resources/field-groups/create-mixin.png)
 
 The [!DNL Schema Editor] reappears, with the new mixin listed in the left rail. Since this is a brand new mixin, it currently does not provide any fields to the schema, and therefore the canvas remains unchanged. You can now start [adding fields to the mixin](#add-fields).
 
@@ -50,13 +50,13 @@ Once you have the schema open in the editor, you can start [adding fields to the
 
 To add fields to a mixin in the [!DNL Schema Editor], start by selecting the mixin's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
 
-![](../../images/ui/resources/mixins/add-field-button.png)
+![](../../images/ui/resources/field-groups/add-field-button.png)
 
 A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the mixin.
 
 Continue to add as many fields as required to the mixin. When finished, select **[!UICONTROL Save]** to save both the schema and the mixin.
 
-![](../../images/ui/resources/mixins/complete-mixin.png)
+![](../../images/ui/resources/field-groups/complete-mixin.png)
 
 If the same mixin is already employed in other schemas, the newly added fields will automatically appear in those schemas.
 

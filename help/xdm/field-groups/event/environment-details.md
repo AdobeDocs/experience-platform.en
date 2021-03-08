@@ -14,7 +14,7 @@ description: This document provides an overview of the ExperienceEvent Environme
 
 [!UICONTROL Environment Details] is a standard mixin for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
 
-<img src='../../images/mixins/environment-details.png' width=500 /><br />
+<img src='../../images/field-groups/environment-details.png' width=500 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |

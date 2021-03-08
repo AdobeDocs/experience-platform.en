@@ -36,7 +36,7 @@ Before you can send your Adobe Experience Platform segments to [!DNL Airship], y
 
 ### Tag groups
 
-The concept of segments in Adobe Experience Platorm is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Experience Platform segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) to the presence or non-presence of an [!DNL Airship] tag. For example, in a Platform segment where the `xdm:status` changes to `realized`, the tag is added to the [!DNL Airship] channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
+The concept of segments in Adobe Experience Platorm is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Experience Platform segment](../../../xdm/field-groups/profile/segmentation.md#mixins) to the presence or non-presence of an [!DNL Airship] tag. For example, in a Platform segment where the `xdm:status` changes to `realized`, the tag is added to the [!DNL Airship] channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
 
 To enable this integration, create a *tag group* in [!DNL Airship] named `adobe-segments`.
 

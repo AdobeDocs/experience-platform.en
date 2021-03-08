@@ -14,7 +14,7 @@ description: This document provides an overview of the Demographic Details mixin
 
 [!UICONTROL Demographic Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe information about an individual person.
 
-<img src='../../images/mixins/profile-person-details.png' width=600 /><br />
+<img src='../../images/field-groups/profile-person-details.png' width=600 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |

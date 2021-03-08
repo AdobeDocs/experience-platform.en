@@ -28,12 +28,12 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+>The names of several mixins have changed. See the document on [mixin name updates](../field-groups/name-updates.md) for more information.
 
 Adobe provides several standard mixins for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used mixins for the class:
 
-* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
 
 ## Appendix
 

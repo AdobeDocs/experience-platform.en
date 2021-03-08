@@ -14,7 +14,7 @@ description: This document provides an overview of the End User ID Details mixin
 
 [!UICONTROL End User ID Details] is a standard mixin for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The mixin provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
 
-<img src='../../images/mixins/enduserids.png' width=700 /><br />
+<img src='../../images/field-groups/enduserids.png' width=700 /><br />
 
 | Property | Data type | Description |
 | --- | --- | --- |
