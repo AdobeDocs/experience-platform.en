@@ -38,7 +38,7 @@ The [!DNL Schema Editor] appears, showing a new schema in the canvas that is bas
 
 >[!IMPORTANT]
 >
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new mixins](./mixins.md#create) for use with that class. The next time you compose a schema that implements the new class, the mixins that you defined will be listed and available for use.
+>When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new mixins](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the mixins that you defined will be listed and available for use.
 
 You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
 
@@ -70,7 +70,7 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 
 >[!IMPORTANT]
 >
->Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./mixins.md#create) instead.
+>Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./field-groups.md#create) instead.
 
 A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class.
 

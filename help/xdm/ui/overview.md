@@ -26,7 +26,7 @@ The [!UICONTROL Schemas] workspace provides powerful tools for creating and cust
 
 * [Schemas](./resources/schemas.md)
 * [Classes](./resources/classes.md)
-* [Mixins](./resources/mixins.md)
+* [Mixins](./resources/field-groups.md)
 * [Data types](./resources/data-types.md)
 
 ## Defining XDM fields

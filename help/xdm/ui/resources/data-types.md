@@ -82,7 +82,7 @@ Once you have finished adding fields to the data type, select **[!UICONTROL Save
 
 Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more mixins, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a mixin.
 
-Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a mixin](./mixins.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
+Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a mixin](./field-groups.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
 
 ## Convert a multi-field object into a data type {#convert}
 

@@ -26,7 +26,7 @@ Once you have the [!DNL Schema Editor] open, use the left rail to select the cla
 
 >[!NOTE]
 >
->If the class or mixin you select is a core resource provided by Adobe, it cannot be edited and therefore the controls shown above will not appear. If the schema you want to add fields to is based on a core XDM class and does not contain any custom mixins, you can [create a new mixin](../resources/mixins.md#create) to add to the schema instead.
+>If the class or mixin you select is a core resource provided by Adobe, it cannot be edited and therefore the controls shown above will not appear. If the schema you want to add fields to is based on a core XDM class and does not contain any custom mixins, you can [create a new mixin](../resources/field-groups.md#create) to add to the schema instead.
 
 To add a new field to the resource, select the **plus (+)** icon next to the schema's name in the canvas, or next to the object-type field that you want to define the field under.
 
@@ -100,6 +100,6 @@ While technically not a special field type, it is also recommended that you visi
 
 ## Next steps
 
-This guide provided an overview of how to define XDM fields in the UI. Remember that fields can only be added to schemas through the use of classes and mixins. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [mixins](../resources/mixins.md).
+This guide provided an overview of how to define XDM fields in the UI. Remember that fields can only be added to schemas through the use of classes and mixins. To learn more about how to manage these resources in the UI, see the guides on creating and editing [classes](../resources/classes.md) and [mixins](../resources/field-groups.md).
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).

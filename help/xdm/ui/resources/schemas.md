@@ -46,13 +46,13 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom mixins](./field-groups.md#edit) if the schema employs any.
 
 ## Add mixins to a schema {#add-mixins}
 
 >[!NOTE]
 >
->This section covers how to add existing mixins to a schema. If you want to create a new custom mixin, see the guide on [creating and editing mixins](./mixins.md#create) instead.
+>This section covers how to add existing mixins to a schema. If you want to create a new custom mixin, see the guide on [creating and editing mixins](./field-groups.md#create) instead.
 
 Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of mixins. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Mixins]** in the left rail.
 
