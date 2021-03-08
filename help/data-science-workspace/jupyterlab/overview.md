@@ -25,7 +25,7 @@ The following list outlines some of the features that are unique to JupyterLab o
 | **[!DNL Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
 | **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
-| **Library controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
+| **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Information regarding key features of [!DNL JupyterLab] and instructions on perf
 
 ### Access [!DNL JupyterLab] {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), select **Notebooks** from the left navigation column. Allow some time for [!DNL JupyterLab] to fully initialize.
+In [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Notebooks]** from the left navigation column. Allow some time for [!DNL JupyterLab] to fully initialize.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -80,7 +80,7 @@ The menu bar at the top of the interface has top-level menus that expose actions
 
 **Left sidebar**
 
-The left sidebar contains clickable tabs that provides access to the following features:
+The left sidebar contains clickable tabs that provide access to the following features:
 
 *   **File browser:** A list of saved notebook documents and directories
 *   **Data explorer:** Browse, access, and explore datasets and schemas
@@ -89,7 +89,7 @@ The left sidebar contains clickable tabs that provides access to the following f
 *   **Cell inspector:** A cell editor that provides access to tools and metadata useful for setting up a notebook for presentation purposes
 *   **tabs:** A list of open tabs
 
-Click on a tab to expose its features, or click on an expanded tab to collapse the left sidebar as demonstrated below:
+Select a tab to expose its features, or select on an expanded tab to collapse the left sidebar as demonstrated below:
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
@@ -135,7 +135,7 @@ Common cell actions are described below:
 
 ### Kernels {#kernels}
 
-Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to [!DNL Python], [!DNL JupyterLab] provides additional language support in R, PySpark, and [!DNL Spark] (Scala). When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
+Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to [!DNL Python], [!DNL JupyterLab] provides additional language support in R, PySpark, and [!DNL Spark] (Scala). When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut down.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -151,7 +151,7 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
-If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!** with a solid circle is shown. Activate a kernel by clicking the kernel status and selecting the appropriate kernel type as demonstrated below:
+If the kernel is shut down or inactive for a prolonged period, then **No Kernel!** with a solid circle is shown. Activate a kernel by clicking the kernel status and selecting the appropriate kernel type as demonstrated below:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
