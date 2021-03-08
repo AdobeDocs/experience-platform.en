@@ -12,7 +12,7 @@ description: This document provides an overview of the XDM Individual Profile cl
 
 Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
-The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible mixins](#mixins):
+The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible field groups](#mixins):
 
 ![](../images/classes/individual-profile.png)
 
@@ -25,13 +25,13 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | The ID of the user who last modified the record. |
 
-## Compatible mixins {#mixins}
+## Compatible field groups {#mixins}
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../field-groups/name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../field-groups/name-updates.md) for more information.
 
-Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of the most commonly used mixins for the class:
+Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of the most commonly used field groups for the class:
 
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Demographic Details]](../field-groups/profile/person-details.md)

@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;field group;field group;person;person details;profile person details;person;
 solution: Experience Platform
 title: Demographic Details Mixin
 topic: overview
-description: This document provides an overview of the Demographic Details mixin.
+description: This document provides an overview of the Demographic Details field group.
 ---
 
-# [!UICONTROL Demographic Details] mixin
+# [!UICONTROL Demographic Details] field group
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Demographic Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a root-level `person` object, whose sub-fields describe information about an individual person.
+[!UICONTROL Demographic Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a root-level `person` object, whose sub-fields describe information about an individual person.
 
 <img src='../../images/field-groups/profile-person-details.png' width=600 /><br />
 
@@ -27,7 +27,7 @@ description: This document provides an overview of the Demographic Details mixin
 | `person.nationality` | String | The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code. |
 | `person.taxId` | String | The tax/fiscal ID of the person, such the TIN in the US or the CIF/NIF in Spain. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)

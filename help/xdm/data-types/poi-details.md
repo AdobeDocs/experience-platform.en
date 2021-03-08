@@ -23,7 +23,7 @@ description: This document provides an overview of the Point Of Interest Details
 | `poiID` | String | A unique identifier of the POI. |
 | `type` | String | The general type of the POI using a typing schema selected by the administrator of the POI definitions. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

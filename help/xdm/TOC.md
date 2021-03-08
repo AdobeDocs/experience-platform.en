@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
-user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
+user-guide-description: Use Experience Data Model (XDM) classes and field groups to standardize experience data.
 feature: Schemas
 ---
 

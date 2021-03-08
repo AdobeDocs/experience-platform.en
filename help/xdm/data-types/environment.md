@@ -34,7 +34,7 @@ description: This document provides an overview of the Environment XDM data type
 | `viewportHeight` | Integer | The vertical size in pixels of the window the experience was displayed inside. For a web-view event, this is the browser viewport height. |
 | `viewPortWidth` | Integer | The horizontal size in pixels of the window the experience was displayed inside. For a web-view event, this is the browser viewport width. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/environment.schema.json)

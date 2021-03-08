@@ -14,7 +14,7 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 >[!NOTE]
 >
->You can also use the Schema Registry API to export other resources in addition to schemas, including classes, mixins, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
+>You can also use the Schema Registry API to export other resources in addition to schemas, including classes, field groups, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
 
 ## Prerequisites
 
@@ -196,7 +196,7 @@ This copies a JSON payload to your clipboard, generated based on the schema stru
 ]
 ```
 
-The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom mixin and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and IMS Organizations.
+The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom field group and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and IMS Organizations.
 
 Note that each instance of your organization's tenant ID appears as `<XDM_TENANTID_PLACEHOLDER>` in the payload. These placeholders will be automatically replaced with the appropriate tenant ID value depending on where you import the schema in the next step.
 

@@ -128,37 +128,37 @@ Schemas are composed using the following formula:
 
 **Class + Mixin&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and zero or more mixins. This means that you could compose a dataset schema without using mixins at all.
+&ast;A schema is composed of a class and zero or more field groups. This means that you could compose a dataset schema without using field groups at all.
 
 ### Class {#class}
 
 Composing a schema begins by assigning a class. Classes define the behavioral aspects of the data the schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged. 
 
-A schema's class determines which mixins will be eligible for use in that schema. This is discussed in more detail in the [next section](#mixin). 
+A schema's class determines which field groups will be eligible for use in that schema. This is discussed in more detail in the [next section](#mixin). 
 
 Adobe provides two standard ("core") XDM classes: [!DNL XDM Individual Profile] and [!DNL XDM ExperienceEvent]. In addition these core classes, you can also create your own custom classes to describe more specific use cases for your organization. Custom classes are defined by an organization when there are no Adobe-defined core classes available to describe a unique use case.
 
 ### Mixin {#mixin}
 
-A mixin is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 
+A field group is a reusable component that defines one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 
 
-Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all mixins are available for use with all classes.
+Mixins define which class(es) they are compatible with based on the behavior of the data they represent (record or time series). This means that not all field groups are available for use with all classes.
 
-[!DNL Experience Platform] includes many standard Adobe mixins while also allowing vendors to define mixins for their users, and individual users to define mixins for their own specific concepts.
+[!DNL Experience Platform] includes many standard Adobe field groups while also allowing vendors to define field groups for their users, and individual users to define field groups for their own specific concepts.
 
-For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard mixins that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined mixin. In this case, you must define your own mixin to capture this information.
+For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined field group. In this case, you must define your own field group to capture this information.
 
-Remember that schemas are composed of "zero or more" mixins, so this means that you could compose a valid schema without using any mixins at all.
+Remember that schemas are composed of "zero or more" field groups, so this means that you could compose a valid schema without using any field groups at all.
 
-For a list of all current standard mixins, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/mixins).
+For a list of all current standard field groups, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/mixins).
 
 ### Data type {#data-type}
 
-Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a mixin, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a mixin because a data type can be included anywhere in a schema by adding it as the "data type" of a field. 
+Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a field group, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a field group because a data type can be included anywhere in a schema by adding it as the "data type" of a field. 
 
 >[!NOTE]
 >
->See the [appendix](#mixins-v-datatypes) for more information on the differences between mixins and data types, and the pros and cons of using one over the other for similar use cases.
+>See the [appendix](#mixins-v-datatypes) for more information on the differences between field groups and data types, and the pros and cons of using one over the other for similar use cases.
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
 
@@ -211,13 +211,13 @@ See the [XDM field dictionary](field-dictionary.md) for a complete list of avail
 
 ## Composition example
 
-Schemas represent the format and structure of data that will be ingested into [!DNL Platform], and are built using a composition model. As previously mentioned, these schemas are composed of a class and zero or more mixins that are compatible with that class.
+Schemas represent the format and structure of data that will be ingested into [!DNL Platform], and are built using a composition model. As previously mentioned, these schemas are composed of a class and zero or more field groups that are compatible with that class.
 
-For example, a schema describing purchases made at a retail store might be called "[!UICONTROL Store Transactions]". The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] mixin and a user-defined [!UICONTROL Product Info] mixin. 
+For example, a schema describing purchases made at a retail store might be called "[!UICONTROL Store Transactions]". The schema implements the [!DNL XDM ExperienceEvent] class combined with the standard [!UICONTROL Commerce] field group and a user-defined [!UICONTROL Product Info] field group. 
 
-Another schema which tracks website traffic might be called "[!UICONTROL Web Visits]". It also implements the [!DNL XDM ExperienceEvent] class, but this time combines the standard [!UICONTROL Web] mixin.
+Another schema which tracks website traffic might be called "[!UICONTROL Web Visits]". It also implements the [!DNL XDM ExperienceEvent] class, but this time combines the standard [!UICONTROL Web] field group.
 
-The diagram below shows these schemas and the fields contributed by each mixin. It also contains two schemas based on the [!DNL XDM Individual Profile] class, including the "[!UICONTROL Loyalty Members]" schema mentioned previously in this guide.
+The diagram below shows these schemas and the fields contributed by each field group. It also contains two schemas based on the [!DNL XDM Individual Profile] class, including the "[!UICONTROL Loyalty Members]" schema mentioned previously in this guide.
 
 ![](../images/schema-composition/composition.png)
 
@@ -239,12 +239,12 @@ All datafiles that are ingested into [!DNL Experience Platform] must conform to 
 
 Now that you understand the basics of schema composition, you are ready to begin exploring and building schemas using the [!DNL Schema Registry].
 
-To review the structure of the two core XDM classes and their commonly used compatible mixins, see the following reference documentation:
+To review the structure of the two core XDM classes and their commonly used compatible field groups, see the following reference documentation:
 
 * [[!DNL XDM Individual Profile]](../classes/individual-profile.md)
 * [[!DNL XDM ExperienceEvent]](../classes/experienceevent.md)
 
-The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, mixins, data types, and schemas that have been composed by members of your organization.
+The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform, and provides a user interface and RESTful API from which all available library resources are accessible. The [!DNL Schema Library] contains Industry resources defined by Adobe, Vendor resources defined by [!DNL Experience Platform] partners, and classes, field groups, data types, and schemas that have been composed by members of your organization.
 
 To begin composing schema using the UI, follow along with the [Schema Editor tutorial](../tutorials/create-schema-ui.md) to build the "Loyalty Members" schema mentioned throughout this document.
 

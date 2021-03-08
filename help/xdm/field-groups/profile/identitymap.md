@@ -6,13 +6,13 @@ topic: overview
 description: This document provides an overview of the XDM Individual Profile class.
 ---
 
-# [!UICONTROL IdentityMap] mixin
+# [!UICONTROL IdentityMap] field group
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL IdentityMap] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a single map field, which contains a set of user identities keyed by namespace.
+[!UICONTROL IdentityMap] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single map field, which contains a set of user identities keyed by namespace.
 
 >[!WARNING]
 >

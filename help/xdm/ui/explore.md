@@ -1,17 +1,17 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;mixin;data type;schema;
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;explore;class;field group;data type;schema;
 solution: Experience Platform
 title: Explore XDM Resources in the UI
-description: Learn how to explore existing schemas, classes, mixins, and data types in the Experience Platform user interface.
+description: Learn how to explore existing schemas, classes, field groups, and data types in the Experience Platform user interface.
 topic: tutorial
 type: Tutorial
 ---
 
 # Explore XDM resources in the UI
 
-In Adobe Experience Platform, all Experience Data Model (XDM) resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, mixin, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
+In Adobe Experience Platform, all Experience Data Model (XDM) resources are stored in the [!DNL Schema Library], including standard resources provided by Adobe and custom resources defined by your organization. In the Experience Platform UI, you can view the structure and fields of any existing schema, class, field group, or data type in the [!DNL Schema Library]. This is especially useful when planning and preparing for data ingestion, as the UI provides information on the expected data types and use cases of each field provided by these XDM resources.
 
-This tutorial covers the steps for exploring existing schemas, classes, mixins, and data types in the Experience Platform UI.
+This tutorial covers the steps for exploring existing schemas, classes, field groups, and data types in the Experience Platform UI.
 
 ## Look up an XDM resource {#lookup}
 
@@ -73,7 +73,7 @@ If the field you are inspecting is an enum field, the right rail will also displ
 
 ### Identity fields {#identity}
 
-When inspecting schemas that contain identity fields, these fields are listed in the left rail under the class or mixin that provides them to the schema. Select the identity field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
+When inspecting schemas that contain identity fields, these fields are listed in the left rail under the class or field group that provides them to the schema. Select the identity field name in the left rail to reveal the field in the canvas, regardless of how deeply it is nested.
 
 Identity fields are highlighted in the canvas with a fingerprint icon (![Fingerprint Icon Image](../images/ui/explore/identity-symbol.png)). If you select the identity field's name, you can view additional information such as the [identity namespace](../../identity-service/namespaces.md) and whether or not the field is the primary identity for the schema.
 

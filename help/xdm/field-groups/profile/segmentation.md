@@ -3,20 +3,20 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual p
 solution: Experience Platform
 title: Segment Membership Details Mixin
 topic: overview
-description: This document provides an overview of the Segment Membership Details mixin.
+description: This document provides an overview of the Segment Membership Details field group.
 ---
 
-# [!UICONTROL Segment Membership Details] mixin
+# [!UICONTROL Segment Membership Details] field group
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Segment Membership Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The mixin provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
+[!UICONTROL Segment Membership Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
 
 >[!WARNING]
 >
->While the `segmentMembership` field must be manually added to your profile schema using this mixin, you should not attempt to manually populate or update this field. The system automatically updates the `segmentMembership` map for each profile as segmentation jobs are performed.
+>While the `segmentMembership` field must be manually added to your profile schema using this field group, you should not attempt to manually populate or update this field. The system automatically updates the `segmentMembership` map for each profile as segmentation jobs are performed.
 
 <img src='../../images/data-types/profile-segmentation.png' width=400 /><br />
 
@@ -71,7 +71,7 @@ The following is an example `segmentMembership` map that the system has populate
 | `xdm:status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` indicates the type of payload (`boolean`, `number`, `propensity`, or `string`), while its sibling property provides the value for the payload type. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)

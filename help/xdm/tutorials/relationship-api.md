@@ -104,21 +104,21 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a mixin with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a field group with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
 >[!IMPORTANT]
 >
 >Unlike the destination schema, the source schema cannot use its primary identity as a reference field.
 
-In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new mixin that adds a new field to the schema: `favoriteHotel`.
+In this tutorial, the destination schema "[!DNL Hotels]" contains an `hotelId` field that serves as the schema's primary identity, and therefore will also act as its reference field. However, the source schema "[!DNL Loyalty Members]" does not have a dedicated field to be used as a reference, and must be given a new field group that adds a new field to the schema: `favoriteHotel`.
 
 >[!NOTE]
 >
 >If your source schema already has a dedicated field that you plan to use as a reference field, you can skip ahead to the step on [creating a reference descriptor](#reference-identity).
 
-### Create a new mixin
+### Create a new field group
 
-In order to add a new field to a schema, it must first be defined in a mixin. You can create a new mixin by making a POST request to the `/tenant/mixins` endpoint.
+In order to add a new field to a schema, it must first be defined in a field group. You can create a new field group by making a POST request to the `/tenant/mixins` endpoint.
 
 **API format**
 
@@ -128,7 +128,7 @@ POST /tenant/mixins
 
 **Request**
 
-The following request creates a new mixin that adds a `favoriteHotel` field under the `_{TENANT_ID}` namespace of any schema it is added to.
+The following request creates a new field group that adds a `favoriteHotel` field under the `_{TENANT_ID}` namespace of any schema it is added to.
 
 ```shell
 curl -X POST\
@@ -142,7 +142,7 @@ curl -X POST\
         "type": "object",
         "title": "Favorite Hotel",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Favorite hotel mixin for the Loyalty Members schema.",
+        "description": "Favorite hotel field group for the Loyalty Members schema.",
         "definitions": {
             "favoriteHotel": {
               "properties": {
@@ -169,7 +169,7 @@ curl -X POST\
 
 **Response**
 
-A successful response returns the details of the newly created mixin.
+A successful response returns the details of the newly created field group.
 
 ```json
 {
@@ -182,7 +182,7 @@ A successful response returns the details of the newly created mixin.
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Favorite hotel mixin for the Loyalty Members schema.",
+    "description": "Favorite hotel field group for the Loyalty Members schema.",
     "definitions": {
         "favoriteHotel": {
             "properties": {
@@ -222,13 +222,13 @@ A successful response returns the details of the newly created mixin.
 
 | Property | Description |
 | --- | --- |
-| `$id` | The read-only, system generated unique identifier of the new mixin. Takes the form of a URI. |
+| `$id` | The read-only, system generated unique identifier of the new field group. Takes the form of a URI. |
 
-Record the `$id` URI of the mixin, to be used in the next step of adding the mixin to the source schema.
+Record the `$id` URI of the field group, to be used in the next step of adding the field group to the source schema.
 
-### Add the mixin to the source schema
+### Add the field group to the source schema
 
-Once you have created a mixin, you can add it to the source schema by making a PATCH request to the `/tenant/schemas/{SCHEMA_ID}` endpoint.
+Once you have created a field group, you can add it to the source schema by making a PATCH request to the `/tenant/schemas/{SCHEMA_ID}` endpoint.
 
 **API format**
 
@@ -242,7 +242,7 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 
 **Request**
 
-The following request adds the "[!DNL Favorite Hotel]" mixin to the "[!DNL Loyalty Members]" schema.
+The following request adds the "[!DNL Favorite Hotel]" field group to the "[!DNL Loyalty Members]" schema.
 
 ```shell
 curl -X PATCH \
@@ -266,12 +266,12 @@ curl -X PATCH \
 | Property | Description |
 | --- | --- |
 | `op` | The PATCH operation to be performed. This request uses the `add` operation. |
-| `path` | The path to the schema field where the new resource will be added. When adding  mixins to schemas, the value must be "/allOf/-". |
-| `value.$ref` | The `$id` of the mixin to be added. |
+| `path` | The path to the schema field where the new resource will be added. When adding  field groups to schemas, the value must be "/allOf/-". |
+| `value.$ref` | The `$id` of the field group to be added. |
 
 **Response**
 
-A successful response returns the details of the updated schema, which now includes the `$ref` value of the added mixin under its `allOf` array.
+A successful response returns the details of the updated schema, which now includes the `$ref` value of the added field group under its `allOf` array.
 
 ```json
 {

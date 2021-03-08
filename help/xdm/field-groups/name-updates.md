@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;updates;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
 title: Mixin Name Updates
 topic: overview
-description: A list of recent XDM mixin name changes.
+description: A list of recent XDM field group name changes.
 ---
 
 # Mixin name updates
 
-The names of several Experience Data Model (XDM) mixins have changed. Since the field structure of these mixins remains the same, the name changes alone should not affect any existing schemas that employ these mixins. In order to look up and use these mixins in the Adobe Experience Platform user interface, however, their new names must be used.
+The names of several Experience Data Model (XDM) field groups have changed. Since the field structure of these field groups remains the same, the name changes alone should not affect any existing schemas that employ these field groups. In order to look up and use these field groups in the Adobe Experience Platform user interface, however, their new names must be used.
 
-The following table outlines the existing mixins that have been updated, along with their corresponding new names:
+The following table outlines the existing field groups that have been updated, along with their corresponding new names:
 
 | Previous name | Updated name |
 | --- | --- |

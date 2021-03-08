@@ -25,7 +25,7 @@ description: This document provides an overview of the Device XDM data type.
 | `typeID` | String | An identifier for the device. This may be an identifier from DeviceAtlas or another service that identifies the hardware that is being used.|
 | `typeIDService` | String | The namespace of the service that is used to identify the device type. See the [appendix](#typeIDService) for details on accepted values. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/device.schema.json)

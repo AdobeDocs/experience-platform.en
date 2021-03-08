@@ -48,7 +48,7 @@ In order to use a custom timestamp, the **[!UICONTROL External Source System Aud
 >
 >You must ensure that the `lastUpdatedDate` timestamp is populated when ingesting an update on the same record.
 
-The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details Mixin]. For step-by-step instructions on working with schemas using the Platform UI, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
+The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details Mixin]. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 

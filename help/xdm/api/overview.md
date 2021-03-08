@@ -22,9 +22,9 @@ To view all available endpoints and CRUD operations, visit the [Schema Registry 
 
 ## Schemas
 
-XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more mixins. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
+XDM schemas represent and validate the structure and format of data ingested into Platform. A schema is composed of a class and zero or more field groups. You can create, view, edit, and delete schemas using the `/schemas` endpoint. To learn how to use this endpoint, see the [schemas endpoint guide](./schemas.md).
 
-For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding mixins and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
+For a step-by-step guide on how to create a complete schema in the Schema Registry API, including creating and adding field groups and data types, see the [API schema creation tutorial](../tutorials/create-schema-api.md).
 
 ## Behaviors
 
@@ -32,15 +32,15 @@ Behaviors define the nature of data that a schema describes. Each XDM class must
 
 ## Classes
 
-A class defines the base structure of common properties that all schemas based on that class must contain, and determines which mixins are eligible for use in those schemas. Every class must be associated with an existing behavior. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
+A class defines the base structure of common properties that all schemas based on that class must contain, and determines which field groups are eligible for use in those schemas. Every class must be associated with an existing behavior. See the [classes endpoint guide](./classes.md) for details on working with classes in the API.
 
 ## Mixins
 
-Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [mixins endpoint guide](./mixins.md) to learn how to work with mixins in the API.
+Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [field groups endpoint guide](./mixins.md) to learn how to work with field groups in the API.
 
 ## Data types
 
-Data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. See the [data types endpoint guide](./data-types.md) for more information on working with data types in the API.
+Data types are used as reference-type fields in classes or field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. See the [data types endpoint guide](./data-types.md) for more information on working with data types in the API.
 
 ## Descriptors
 
@@ -54,7 +54,7 @@ To learn how to view unions in the Schema Registry API, see the [unions endpoint
 
 ## Export/Import
 
-The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, mixin, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
+The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, field group, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
 
 See the [export/import endpoints guide](./export-import.md) for more information on how to use these endpoints.
 
@@ -66,7 +66,7 @@ See the [sample data endpoint guide](./sample-data.md) for more information on t
 
 ## Audit log
 
-The Schema Registry maintains a log of all the changes that have occurred to a resource (class, mixin, data type, or schema) between different updates. You can retrieve the log for a particular resource by providing its `$id` or `meta:altId` in the path of a GET request to this endpoint.
+The Schema Registry maintains a log of all the changes that have occurred to a resource (class, field group, data type, or schema) between different updates. You can retrieve the log for a particular resource by providing its `$id` or `meta:altId` in the path of a GET request to this endpoint.
 
 See the [audit log endpoint guide](./audit-log.md) for more information on the use of this endpoint.
 

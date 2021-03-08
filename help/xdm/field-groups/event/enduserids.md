@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;enduserids;end-user;end user;ids;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;
 solution: Experience Platform
 title: End User ID Details Mixin
 topic: overview
-description: This document provides an overview of the End User ID Details mixin.
+description: This document provides an overview of the End User ID Details field group.
 ---
 
-# [!UICONTROL End User ID Details] mixin
+# [!UICONTROL End User ID Details] field group
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL End User ID Details] is a standard mixin for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The mixin provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
+[!UICONTROL End User ID Details] is a standard field group for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The field group provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
 
 <img src='../../images/field-groups/enduserids.png' width=700 /><br />
 
@@ -27,7 +27,7 @@ description: This document provides an overview of the End User ID Details mixin
 | `phonenumberid` | [Identity](../../data-types/identity.md) | Phone number IDs. |
 | `tntid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Target. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)

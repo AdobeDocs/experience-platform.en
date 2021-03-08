@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
+keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;field group;Mixin;
 solution: Experience Platform
 title: Personal Contact Details Mixin
 topic: overview
-description: This document provides an overview of the Personal Contact Details mixin.
+description: This document provides an overview of the Personal Contact Details field group.
 ---
 
-# [!UICONTROL Personal Contact Details] mixin
+# [!UICONTROL Personal Contact Details] field group
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Personal Contact Details] is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
+[!UICONTROL Personal Contact Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
 
 <img src='../../images/field-groups/profile-personal-details.png' width=700 /><br />
 
@@ -24,7 +24,7 @@ description: This document provides an overview of the Personal Contact Details 
 | `mobilePhone` | [Phone number](../../data-types/phone-number.md) | Describes the person's mobile phone number. |
 | `personalEmail` | [Email address](../../data-types/email-address.md) | Describes the person's email address. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.schema.json)

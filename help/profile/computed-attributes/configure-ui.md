@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a mixin to add the field to an existing schema, or by selecting a field that you have already defined within a schema.
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema.
 ---
 
 # (Alpha) Configure a computed attribute field in the UI
@@ -12,19 +12,19 @@ description: Computed attributes are functions used to aggregate event-level dat
 >
 >Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a mixin to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
+In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
 
 >[!NOTE]
 >
->Computed attributes cannot be added to fields within Adobe-defined mixins. The field must be within the `tenant` namespace, meaning it must be a field that you define and add to a schema.
+>Computed attributes cannot be added to fields within Adobe-defined field groups. The field must be within the `tenant` namespace, meaning it must be a field that you define and add to a schema.
 
 In order to successfully define a computed attribute field, the schema must be enabled for [!DNL Profile] and appear as part of the union schema for the class upon which the schema is based. For more information on [!DNL Profile]-enabled schemas and unions, please review the section of the [!DNL Schema Registry] developer guide section on [enabling a schema for Profile and viewing union schemas](../../xdm/api/getting-started.md). It is also recommended to review the [section on unions](../../xdm/schema/composition.md) in the schema composition basics documentation.
 
-The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new mixin containing the computed attribute field and ensuring it is the correct namespace. If you already have a field that is in the correct namespace within a Profile-enabled schema, you can proceed directly to the step for [creating a computed attribute](#create-a-computed-attribute).
+The workflow in this tutorial uses a [!DNL Profile]-enabled schema and follows the steps for defining a new field group containing the computed attribute field and ensuring it is the correct namespace. If you already have a field that is in the correct namespace within a Profile-enabled schema, you can proceed directly to the step for [creating a computed attribute](#create-a-computed-attribute).
 
 ## View a schema
 
-The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a mixin, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a mixin, add a mixin to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
+The steps that follow use the Adobe Experience Platform user interface to locate a schema, add a field group, and define a field. If you prefer to use the [!DNL Schema Registry] API, please refer to the [Schema Registry developer guide](../../xdm/api/getting-started.md) for steps on how to create a field group, add a field group to a schema, and enable a schema for use with [!DNL Real-time Customer Profile].
 
 In the user interface, click **[!UICONTROL Schemas]** in the left-rail and use the search bar on the **[!UICONTROL Browse]** tab to quickly find the schema you wish to update.
 
@@ -34,17 +34,17 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ![](../images/computed-attributes/Schema-Editor.png)
 
-## Create a mixin
+## Create a field group
 
-To create a new mixin, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing mixins. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new mixin.
+To create a new field group, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing field groups. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new field group.
 
-Give the mixin a name and description, and click **[!UICONTROL Add mixin]** when complete.
+Give the field group a name and description, and click **[!UICONTROL Add mixin]** when complete.
 
 ![](../images/computed-attributes/Add-mixin.png)
 
 ## Add a computed attribute field to the schema
 
-Your new mixin should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the mixin and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
+Your new field group should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the field group and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
 
 Select **[!UICONTROL Add field]** next to the name of the schema in order to add a top-level field, or you can select to add the field anywhere within the schema you prefer.
 

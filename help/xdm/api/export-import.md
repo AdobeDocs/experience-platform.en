@@ -8,7 +8,7 @@ topic: developer guide
 
 # Export/Import endpoints
 
-All resources within the [!DNL Schema Library] are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs. The [!DNL Schema Registry] API provides two endpoints that allow you generate an export payload for any schema, mixin, or data type in the[!DNL  Schema Library], and then use that payload to import that resource (and all dependent resources) into a target sandbox and IMS Org.
+All resources within the [!DNL Schema Library] are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs. The [!DNL Schema Registry] API provides two endpoints that allow you generate an export payload for any schema, field group, or data type in the[!DNL  Schema Library], and then use that payload to import that resource (and all dependent resources) into a target sandbox and IMS Org.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ The export/import endpoints are part of the remote procedure calls (RPCs) that a
 
 ## Retrieve an export payload for a resource {#export}
 
-For any existing schema, mixin, or data type in the [!DNL Schema Library], you can generate an export payload by making a GET request to the `/export` endpoint, providing the ID of the resource in the path.
+For any existing schema, field group, or data type in the [!DNL Schema Library], you can generate an export payload by making a GET request to the `/export` endpoint, providing the ID of the resource in the path.
 
 **API format**
 
@@ -32,7 +32,7 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Request**
 
-The following request retrieves an export payload for a `Restaurant` mixin.
+The following request retrieves an export payload for a `Restaurant` field group.
 
 ```shell
 curl -X GET \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` mixin employs, while the second object is the `Restaurant` mixin itself. This payload can then be used to [import the resource](#import) into a different sandbox or IMS Organization.
+A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` field group employs, while the second object is the `Restaurant` field group itself. This payload can then be used to [import the resource](#import) into a different sandbox or IMS Organization.
 
 Note that all instances of the resource's tenant ID are replaced with `<XDM_TENANTID_PLACEHOLDER>`. This allows the Schema Registry to automatically apply the correct tenant ID to the resources depending on where they are sent in the subsequent import call.
 
@@ -200,7 +200,7 @@ POST /rpc/import
 
 **Request**
 
-The following request takes the payload returned in the previous [export example](#export) to import the `Restaurant` mixin into a new IMS Org and sandbox, as determined by the `x-gw-ims-org-id` and `x-sandbox-name` headers, respectively.
+The following request takes the payload returned in the previous [export example](#export) to import the `Restaurant` field group into a new IMS Org and sandbox, as determined by the `x-gw-ims-org-id` and `x-sandbox-name` headers, respectively.
 
 ```shell
 curl -X POST \

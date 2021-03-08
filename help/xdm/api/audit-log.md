@@ -8,7 +8,7 @@ topic: developer guide
 
 # Audit log endpoint
 
-For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, mixin, data type, or schema specified by ID.
+For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, field group, data type, or schema specified by ID.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ The `/auditlog` endpoint is part of the remote procedure calls (RPCs) that are s
 
 ## Retrieve an audit log for a resource
 
-You can retrieve an audit log for any class, mixin, data type, or schema within the Schema Library by specifying the resource's ID in the path of a GET request to the `/auditlog` endpoint.
+You can retrieve an audit log for any class, field group, data type, or schema within the Schema Library by specifying the resource's ID in the path of a GET request to the `/auditlog` endpoint.
 
 **API format**
 
@@ -32,7 +32,7 @@ GET /rpc/auditlog/{RESOURCE_ID}
 
 **Request**
 
-The following request retrieves the audit log for a `Restaurant` mixin.
+The following request retrieves the audit log for a `Restaurant` field group.
 
 ```shell
 curl -X GET \
@@ -54,7 +54,7 @@ A successful response returns a chronological list of changes made to the resour
     "auditTrails": [
       {
         "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/definitions/customFields/properties/_{TENANT_ID}/properties/brand",
         "value": {
@@ -67,7 +67,7 @@ A successful response returns a chronological list of changes made to the resour
       },
       {
         "id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "xdmType": "mixins",
+        "xdmType": "fieldgroups",
         "action": "add",
         "path": "/meta:usageCount",
         "value": 0
