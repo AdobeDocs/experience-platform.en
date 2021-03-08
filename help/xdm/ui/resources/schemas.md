@@ -78,7 +78,7 @@ Once you have chosen your field groups, select **[!UICONTROL Add mixin]** to add
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
-The [!DNL Schema Editor] reappears with the field group-provided fields represented in the canvas.
+The [!DNL Schema Editor] reappears with the field-group-provided fields represented in the canvas.
 
 ![](../../images/ui/resources/schemas/mixins-added.png)
 
