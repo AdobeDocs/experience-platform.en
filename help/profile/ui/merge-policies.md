@@ -42,13 +42,13 @@ As profile records are ingested into Experience Platform, a system timestamp is 
 
 Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
 
-In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details] field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >
 >You must ensure that the `lastUpdatedDate` timestamp is populated when ingesting an update on the same record.
 
-The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details field group. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
+The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details] field group. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
 
 ![](../images/merge-policies/custom-timestamp-mixin.png)
 
