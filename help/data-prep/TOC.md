@@ -3,6 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Data Prep Guide
 user-guide-description: Prepare your data for ingestion into Adobe Experience Platform.
+feature: Data Management, Data Ingestion
 ---
 
 # Data Prep {#data-prep}

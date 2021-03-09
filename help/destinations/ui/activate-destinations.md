@@ -9,7 +9,7 @@ seo-description: Activate the data you have in Adobe Experience Platform by mapp
 
 # Activate profiles and segments to a destination
 
-Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+Activate the data you have in [!DNL Adobe Experience Platform] by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
 
@@ -31,7 +31,9 @@ Select the name of the destination to navigate to the activation workflow.
 
 ![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
 
-Note that if an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
+>[!NOTE]
+>
+>If an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
 
 Once you have selected a destination, select **[!UICONTROL Activate]**.
 
@@ -55,7 +57,7 @@ For social destinations, you must select source attributes or identity namespace
 
 #### Example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
 
-This is an example of correct identity mapping when activating audience data in [!DNL Facebook].
+Below is an example of correct identity mapping when activating audience data in [!DNL Facebook].
 
 Selecting source fields:
 
@@ -69,7 +71,7 @@ Selecting source fields:
 
 Selecting target fields:
 
-* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
 * Select the `Extern_ID` namespace as target identity when your source namespace is a custom one.
@@ -133,13 +135,20 @@ Applies to: Email marketing destinations and cloud storage destinations
 
 ![Configure step](../assets/ui/activate-destinations/configure-icon.png)
 
-In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
+>
+>Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 
 To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
 
 ![](../assets/ui/activate-destinations/configure-destination-schedule.png)
 
-A popover appears, showing options to create the segment schedule.  
+A dialog appears, showing options to create the segment schedule.  
 
 * **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
 * **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
@@ -159,7 +168,7 @@ In the file name editor, you can select different components to add to the file 
 * **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
 * **[!UICONTROL Custom text]**: Add custom text to the file names.
 
-Select **[!UICONTROL Apply changes]** to confirm your selection. 
+Select **[!UICONTROL Apply changes]** to confirm your selection.
 
 >[!IMPORTANT] 
 > 
@@ -175,7 +184,7 @@ Applies to: advertising destinations, social destinations
 
 ![segment schedule step](../assets/ui/activate-destinations/segment-schedule-icon.png)
 
-On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, as well as the frequency of sending data to the destination.
+On the **[!UICONTROL Segment schedule]** page, you can set the start date for sending data to the destination, and the frequency of sending data to the destination.
 
 >[!IMPORTANT]
 >
@@ -215,7 +224,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 ![recommended attributes](../assets/ui/activate-destinations/mark-mandatory.png) 
 
-Additionally, you can mark different attributes as mandatory. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additionally form of filtering. Marking an attribute as mandatory is **not** required.
+Additionally, you can mark different attributes as mandatory. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
 It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
    
