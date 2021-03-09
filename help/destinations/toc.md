@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 description: This document lists the table of contents for Adobe Experience Platform destinations
+feature: Destinations
 ---
 
 # Destinations {#destinations}
