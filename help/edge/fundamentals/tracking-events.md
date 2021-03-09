@@ -230,7 +230,7 @@ alloy("configure", {
 
 A few notes on the `onBeforeEventSend` callback:
 
-1. Event XDM can be modified during the callback. After the callback has returned, any modified fields and values of 
+* Event XDM can be modified during the callback. After the callback has returned, any modified fields and values of 
 the content.xdm and content.data objects are sent with the event.
 
     ```javascript
@@ -242,8 +242,8 @@ the content.xdm and content.data objects are sent with the event.
     }
     ```
 
-2. If the callback throws an exception, processing for the event discontinues and the event is not sent.
-3. If the callback returns the boolean value of `false`, event processing discontinues, 
+* If the callback throws an exception, processing for the event discontinues and the event is not sent.
+* If the callback returns the boolean value of `false`, event processing discontinues, 
 without an error, and the event is not sent. This mechanism allows for certain events to be easily ignored by 
 examining the event data and returning `false` if the event should not be sent. 
 
@@ -261,9 +261,9 @@ examining the event data and returning `false` if the event should not be sent.
    
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
-4. Events can be filtered by examining the event type (See [Event Types](#event-types).):
+* Events can be filtered by examining the event type (See [Event Types](#event-types).):
 
-    ```javascript
+  ```javascript
     onBeforeEventSend: function(content) {  
       // augments XDM if link click event is to a partner website
       if (
@@ -274,7 +274,7 @@ examining the event data and returning `false` if the event should not be sent.
         content.xdm.partnerWebsiteClick = true;
       }
    }
-   ```
+  ```
 
 ## Potential actionable errors
 
