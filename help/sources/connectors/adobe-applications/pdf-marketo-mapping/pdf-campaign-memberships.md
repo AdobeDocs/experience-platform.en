@@ -25,6 +25,9 @@ The table below contains the mappings between the Marketo Campaign memberships d
 | `Track Name` | `nurtureTrackName` |
 | `Webinar Url` | `webinarConfirmationUrl` |
 | `Registration Code` | `webinarRegistrationID` |
+| `reachedSuccessDate` | `reachedSuccessDate` |
+| `createdAt` | `extSourceSystemAudit.createdDate` |
+| `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
 ## Next steps
 
