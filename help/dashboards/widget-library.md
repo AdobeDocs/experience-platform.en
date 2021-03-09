@@ -90,7 +90,7 @@ Choosing to create a new widget opens the **[!UICONTROL Create widget]** dialog 
 
 A preview of the widget appears, showing a horizontal bar chart with mock data. 
 
->[!NOTE
+>[!NOTE]
 >
 >Data shown in the example widget is for illustration purposes only. The preview does not display actual data from your organization.
 
