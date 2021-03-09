@@ -258,9 +258,11 @@ examining the event data and returning `false` if the event should not be sent.
      }
    }
    ```
+   
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
 4. Events can be filtered by examining the event type (See [Event Types](#event-types).):
+
     ```javascript
     onBeforeEventSend: function(content) {  
       // augments XDM if link click event is to a partner website
