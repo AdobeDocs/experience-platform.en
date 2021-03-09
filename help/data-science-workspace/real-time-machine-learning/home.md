@@ -42,7 +42,7 @@ Deploy your model to [!DNL Experience Edge] to create a Real-time Machine Learni
 
 ### Inference
 
-Use the Prediction REST API endpoint to generate machine learning insights in real-time.
+Use the Prediction REST API endpoint to generate machine learning insights in real time.
 
 ### Delivery
 

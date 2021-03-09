@@ -10,7 +10,7 @@ description: This document provides answers to frequently asked questions about 
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real-time. For more information, see the [Identity Service overview](./home.md).
+Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real time. For more information, see the [Identity Service overview](./home.md).
 
 ## FAQ
 
