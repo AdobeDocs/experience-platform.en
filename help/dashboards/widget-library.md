@@ -60,11 +60,7 @@ Select **[!UICONTROL Add widget]** to add any selected widgets to your dashboard
 >
 >Your organization can create a maximum of 20 custom widgets in the widget library.
 
-To further customize the look of dashboards within Experience Platform, you can elect to create new widgets and share them with other users in your organization. To begin, select **[!UICONTROL Modify dashboard]** from the dashboard you wish edit, then select **[!UICONTROL Widget library]**.
-
-![](images/customization/widget-library-button.png)
-
-From the widget library, select the **[!UICONTROL Custom]** tab to begin creating custom widgets. On the [!UICONTROL Custom] tab, all custom widgets created by your organization will be visible. If no custom widgets have been created, messaging appears encouraging you to create your first custom widget.
+To further customize the look of dashboards within Experience Platform, you can create new widgets and share them with other users in your organization. From the widget library, select the **[!UICONTROL Custom]** tab to begin creating custom widgets. On the [!UICONTROL Custom] tab, all widgets created by your organization are visible. In this example, no custom widgets have been created yet.
 
 ![](images/customization/custom-widgets.png)
 
