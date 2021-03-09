@@ -242,11 +242,13 @@ the content.xdm and content.data objects are sent with the event.
     }
     ```
 
-2. If the callback throws an exception, processing for the event will discontinue and the event will not be sent.
-3. If the callback returns the boolean value of `false`, event processing will discontinue, 
-without an error, and the event will not be sent. This mechanism allows for certain events to be easily ignored by 
-examining the event data and returning `false` if the event should not be sent. NOTE: Care should be taken to avoid
-returning false on the first event on a page as this may negatively impact personalization.
+2. If the callback throws an exception, processing for the event discontinues and the event is not sent.
+3. If the callback returns the boolean value of `false`, event processing discontinues, 
+without an error, and the event is not sent. This mechanism allows for certain events to be easily ignored by 
+examining the event data and returning `false` if the event should not be sent. 
+
+  >[!NOTE]
+  >Care should be taken to avoid returning false on the first event on a page. Returning false on the first event can negatively impact personalization.
 
    ```javascript
    onBeforeEventSend: function(content) {
@@ -258,7 +260,7 @@ returning false on the first event on a page as this may negatively impact perso
    ```
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
-4. Events may be filtered by examining the event type (See [Event Types](#event-types).):
+4. Events can be filtered by examining the event type (See [Event Types](#event-types).):
     ```javascript
     onBeforeEventSend: function(content) {  
       // augments XDM if link click event is to a partner website
