@@ -250,7 +250,7 @@ examining the event data and returning `false` if the event should not be sent.
   >[!NOTE]
   >Care should be taken to avoid returning false on the first event on a page. Returning false on the first event can negatively impact personalization.
 
-   ```javascript
+```javascript
    onBeforeEventSend: function(content) {
      // ignores events from bots
      if (MyBotDetector.isABot()) {
@@ -258,13 +258,13 @@ examining the event data and returning `false` if the event should not be sent.
      }
    }
    
-  ```
+```
    
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
 * Events can be filtered by examining the event type (See [Event Types](#event-types).):
 
-  ```javascript
+```javascript
     onBeforeEventSend: function(content) {  
       // augments XDM if link click event is to a partner website
       if (
@@ -275,7 +275,7 @@ examining the event data and returning `false` if the event should not be sent.
         content.xdm.partnerWebsiteClick = true;
       }
    }
-  ```
+```
 
 ## Potential actionable errors
 
