@@ -42,8 +42,8 @@ Optionally, you can attach your RSA-formatted public key to add encryption with 
 In **[!UICONTROL Account authentication]**, fill in the relevant information for your destination, as shown below:
    - **[!UICONTROL Name]**: Pick a relevant name for your destination.
    - **[!UICONTROL Description]**: Enter a description for your destination.
-   - **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where Platform will deposit your export data as CSV or tab-delimited files. 
-   - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
+   - **[!UICONTROL Bucket Name]**: *For S3 connections*. Enter the location of your S3 bucket where [!DNL Platform] will deposit your export data as CSV or tab-delimited files. 
+   - **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV or tab-delimited files.
    - **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
    - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
    - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md) page. Refer also to [Adobe-defined marketing actions](../../../data-governance/policies/overview.md#core-actions) in the same document.
@@ -62,7 +62,7 @@ When [activating segments](../../ui/activate-destinations.md) to the Adobe Campa
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 
@@ -73,6 +73,6 @@ For [!DNL Adobe Campaign] destinations, Platform creates a tab-delimited `.txt` 
 >- The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
 
-After connecting Platform to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to the following Adobe Campaign documentation pages:
+After connecting [!DNL Platform] to your [!DNL Amazon S3] or [!DNL Azure Blob] storage, you must set up the data import from your storage location into Adobe Campaign. To learn how to accomplish this, refer to the following Adobe Campaign documentation pages:
 - [Get started with data import and export](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/importing-and-exporting-data/get-started-data-import-export.html) and [Data loading (file)](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/action-activities/data-loading--file-.html) in the Adobe Campaign Classic documentation.
 - [Get started with processes and data management](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/get-started-workflows.html) and [Load file](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/load-file.html) in the Adobe Campaign Standard documentation.
