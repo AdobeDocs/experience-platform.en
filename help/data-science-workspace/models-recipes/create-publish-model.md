@@ -55,7 +55,7 @@ Log in to [Adobe Experience Platform](https://platform.adobe.com/) and select **
 
 ![](../images/models-recipes/model-walkthrough/dataset-browse.png)
 
-The dataset activity page opens, this page lists information relating to your dataset. You can select **[!UICONTROL Preview Dataset]** near the top-right to examine sample records. You can also view the schema for the selected dataset. Select the schema link in the right-rail. A popover appears, selecting the link under **[!UICONTROL schema name]** opens the schema in a new tab.
+The dataset activity page opens, listing information relating to your dataset. You can select **[!UICONTROL Preview Dataset]** near the top-right to examine sample records. You can also view the schema for the selected dataset. Select the schema link in the right-rail. A popover appears, selecting the link under **[!UICONTROL schema name]** opens the schema in a new tab.
 
 ![](../images/models-recipes/model-walkthrough/dataset-activity.png)
 
@@ -78,7 +78,7 @@ Recipes are the basis for a Model as they contain machine learning algorithms an
 
 ### Explore the Product Recommendations Recipe
 
-In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation to view a list of available Recipes for your organization.
+In Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation to view a list of available recipes for your organization.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
@@ -100,7 +100,7 @@ Now that your data is prepared and the Recipe is ready, you can create, train, a
 
 A Model is an instance of a Recipe, enabling you to train and score with data at scale.
 
-In Adobe Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation to view a list of available Recipes for your organization then select the product recommendation recipe.
+In Experience Platform, navigate to **[!UICONTROL Models]** from the left navigation column, then select **[!UICONTROL Recipes]** in the top navigation. tThis displays a list of available recipes for your organization.Select the product recommendation recipe.
 
 ![](../images/models-recipes/model-walkthrough/recipe-tab.png)
 
@@ -112,7 +112,7 @@ The create model workflow begins by selecting a recipe. Select the **[!UICONTROL
 
 ![](../images/models-recipes/model-walkthrough/create-model.png)
 
-Next, provide a model name, for example "Product Recommendations Model". Available configurations for the model are listed, containing settings for the model's default training and scoring behaviors. Review the configurations and select **[!UICONTROL Finish]**.
+Next, provide a model name. Available configurations for the model are listed containing settings for the model's default training and scoring behaviors. Review the configurations and select **[!UICONTROL Finish]**.
 
 ![](../images/models-recipes/model-walkthrough/configure-model.png)
 
@@ -128,17 +128,17 @@ On the **Model Overview** page, select **[!UICONTROL Train]** near the top right
 
 ![](../images/models-recipes/model-walkthrough/select-train.png)
 
-The **Configuration** page appears. Here you can configure the training runs[!UICONTROL num_recommendations] value, also known as a Hyperparameter. A trained and optimized Model will utilize the best-performing Hyperparameters based on the results of the training run.
+The **[!UICONTROL Configuration]** page appears. Here you can configure the training runs `num_recommendations` value, also known as a hyperparameter. A trained and optimized model will utilize the best-performing hyperparameters based on the results of the training run.
 
-Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting Hyperparameters may change the accuracy of the Trained Model. Since optimizing a Model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
+Hyperparameters cannot be learned, therefore they must be assigned before training runs occur. Adjusting hyperparameters may change the accuracy of the trained model. Since optimizing a model is an iterative process, multiple training runs may be required before a satisfactory evaluation is achieved.
 
 >[!TIP]
 >
->Set **[!UICONTROL num_recommendations]** to 10. 
+>Set `num_recommendations` to 10. 
 
 ![](../images/models-recipes/model-walkthrough/training-configuration.png)
 
-An additional data points appear on the Model evaluation chart once a training run completes, this may take up to several minutes.
+Additional data points appear on the model evaluation chart. It can take up to several minutes for this to appear once a run is complete.
 
 ![](../images/models-recipes/model-walkthrough/training-graphs.png)
 
@@ -166,7 +166,7 @@ On the product recommendations model overview page, select the name of the best-
 
 ![score the best run](../images/models-recipes/model-walkthrough/select-training-run.png)
 
-Then, On the top-right of the training run details page, select **[!UICONTROL Score]**.
+Then, on the top-right of the training run details page, select **[!UICONTROL Score]**.
 
 ![select score](../images/models-recipes/model-walkthrough/select-score.png)
 
