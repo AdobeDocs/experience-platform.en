@@ -28,7 +28,7 @@ This tutorial also requires you to have a working understanding of the following
     - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
     - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
 - [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within [!DNL Experience Platform].
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real-time..
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to [!DNL Experience Platform] in real time..
 - [Sandboxes](../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully collect streaming data using the [!DNL Flow Service] API.
