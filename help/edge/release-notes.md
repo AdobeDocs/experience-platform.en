@@ -9,7 +9,7 @@ keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release not
 ## Version 2.4.0
 
 * The SDK can now be [installed as an npm package](/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
-* Added support for an `out` option when [configuring default consent](/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) which will drop all events until consent is received (the existing `pending` option queues events and sends them once consent was received). 
+* Added support for an `out` option when [configuring default consent](/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received). 
 * The [onBeforeEventSend callback](/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) can now be used to prevent an event from being sent.
 * Now uses an XDM mixin instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
 * The [getIdentity command](/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) now returns the edge region ID alongside the identity.
