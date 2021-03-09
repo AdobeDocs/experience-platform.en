@@ -257,7 +257,8 @@ examining the event data and returning `false` if the event should not be sent.
        return false;
      }
    }
-   ```
+   
+  ```
    
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
