@@ -35,7 +35,7 @@ If you currently have server side forwarding enabled and are using `appmeasureme
 
 ## Retrieving the visitor ID and region ID
 
-If you want to use the unique visitor ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID. `getIdentity` also returns the region ID for the visitor. The region ID is the same as the Adobe Audience Manager location hint.
+If you want to use the unique visitor ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID. `getIdentity` also returns the region ID for the visitor. See the [Adobe Audience Manager User Guide](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) for more information.
 
 >[!NOTE]
 >
