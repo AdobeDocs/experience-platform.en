@@ -15,7 +15,7 @@ keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release not
 * The [getIdentity command](/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) now returns the edge region ID alongside the identity.
 * Warnings and errors received from the server have been improved and are handled in a more appropriate fashion. 
 * Added support for [Adobe's Consent 2.0 standard](/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
-* Consent preferences, when received, are hashed and stored in local storage for an optimized integration amongst CMPs, Platform Web SDK, and Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
+* Consent preferences, when received, are hashed and stored in local storage for an optimized integration among CMPs, Platform Web SDK, and Platform Edge Network. If you are collecting consent preferences, we now encourage you to call `setConsent` on every page load.
 * Two [monitoring hooks](https://github.com/adobe/alloy/wiki/Monitoring-Hooks), `onCommandResolved` and `onCommandRejected`, have been added.
 * Bug Fix: Personalization interaction notification events would contain duplicate information about the same activity when a user navigated to a new single-page app view, back to the original view, and clicked an element qualifying for conversion.
 * Bug Fix: If the first event sent by the SDK had `documentUnloading` set to `true`, [`sendBeacon`](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/sendBeacon) would be used to send the event, resulting in an error regarding an identity not being established.  
