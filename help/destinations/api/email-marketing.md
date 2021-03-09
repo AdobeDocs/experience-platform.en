@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Connect to email marketing destinations and activate data using API calls
+title: Connect to email marketing destinations and activate data using the Flow Service API
 description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
 
-# Connect to email marketing destinations and activate data using API calls
+# Connect to email marketing destinations and activate data using the Flow Service API
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
@@ -60,7 +60,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation 
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
