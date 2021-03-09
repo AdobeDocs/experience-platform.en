@@ -33,7 +33,7 @@ From any dashboard (for example, the Profiles dashboard), you can select **[!UIC
 
 The [!UICONTROL Widget library] contains two tabs, [!UICONTROL Standard] and [!UICONTROL Custom].
 
-* The **[!UICONTROL Standard]** tab contains widgets created by Adobe and allows you update your dashboard using these standard metrics. To learn more about adding standard widgets to your dashboard, see the [standard widgets](#standard-widgets) seciton in this guide.
+* The **[!UICONTROL Standard]** tab contains widgets created by Adobe and allows you to update your dashboard using these standard metrics. To learn more about adding standard widgets to your dashboard, see the [standard widgets](#standard-widgets) section in this guide.
 * The **[!UICONTROL Custom]** tab allows you to create and share widgets within your organization. For complete steps to creating your own widgets, please refer to the [custom widgets](#custom-widgets) section in this guide.
 
 ![](images/customization/widget-library.png)
@@ -44,7 +44,7 @@ From the **[!UICONTROL Standard]** tab, you can select the category related to t
 
 ![](images/customization/standard-widgets.png)
 
-To choose a standard widget to add to your dashboard, highlight the widget and select the checkbox for the widget. With at least one widget selected the **[!UICONTROL Add widget]** button will be illuminated.
+To choose a standard widget to add to your dashboard, highlight the widget and select the checkbox for the widget. With at least one widget selected, the **[!UICONTROL Add widget]** button is illuminated.
 
 >[!NOTE]
 >
@@ -72,7 +72,7 @@ When at least one custom attribute has been selected, the [!UICONTROL Edit schem
 
 >[!IMPORTANT]
 >
->An organization can select a maximum of 20 attributes. In order for an attribute to be visible for selection, it must be one of the following: String, Date, Date-Time, Boolean, Short, Long, Integer, or Byte. Map and Double data types are not supported and will be greyed out so that they cannot be selected.
+>An organization can select a maximum of 20 attributes. In order for an attribute to be visible for selection, it must be one of the following: String, Date, Date-Time, Boolean, Short, Long, Integer, or Byte. Map and Double data types are not supported and are grayed out so that they cannot be selected.
 
 To select an attribute, navigate to the attribute in the union schema (or use search) and select the checkbox next to the attribute. This adds the attribute to the **[!UICONTROL Selected Attributes]** list. After choosing all of the attributes that you wish to add, select **[!UICONTROL Save]** to save your attributes and return to the custom widgets tab.
 
@@ -94,7 +94,7 @@ A preview of the widget appears, showing a horizontal bar chart with mock data.
 >
 >Data shown in the example widget is for illustration purposes only. The preview does not display actual data from your organization.
 
-In order to save your new widget, add a **[!UICONTROL Title]** and **[!UICONTROL Description]**, then select **[!UICONTROL Create]** and you will be returned to the [!UICONTROL Custom] tab. Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
+In order to save your new widget, add a **[!UICONTROL Title]** and **[!UICONTROL Description]**, then select **[!UICONTROL Create]** and you are returned to the [!UICONTROL Custom] tab. Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
 
 ![](images/customization/custom-tab-new-widget.png)
 
@@ -102,4 +102,4 @@ After a widget has been added to the library, it can be archived using the **[!U
 
 ## Next steps
 
-By following this document you should now be able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To learn more about each specific dashboard, please select a dashboard guide from the available dashboards documentation.
+After reading this document, you now are able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To learn more about each specific dashboard, please select a dashboard guide from the available dashboards documentation.
