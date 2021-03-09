@@ -204,20 +204,20 @@ alloy("sendEvent", {
 
 ## Modifying events globally {#modifying-events-globally}
 
-If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `event.xdm` to change the data that is sent in the event.
+If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `content.xdm` to change the data that is sent with the event.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -230,15 +230,15 @@ alloy("configure", {
 
 A few notes on the `onBeforeEventSend` callback:
 
-1. Event xdm can be modified during the callback. Modified data in the callback is then merged with the event xdm and 
-sent with the event
+1. Event XDM can be modified during the callback. After the callback has returned, any modified fields and values of 
+the content.xdm and content.data objects are sent with the event.
 
     ```javascript
-    onBeforeEventSend: function(event){
+    onBeforeEventSend: function(content){
       //sets a query parameter in XDM
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
-      event.xdm.marketing.trackingCode = urlParams.get('cid')
+      content.xdm.marketing.trackingCode = urlParams.get('cid')
     }
     ```
 
@@ -246,27 +246,29 @@ sent with the event
 3. If the callback returns the boolean value of `false`, event processing will discontinue, 
 without an error, and the event will not be sent. This mechanism allows for certain events to be easily ignored by 
 examining the event data and returning `false` if the event should not be sent. NOTE: Care should be taken to avoid
-returning false on the first event on a page as this may negatively impact personalization
+returning false on the first event on a page as this may negatively impact personalization.
 
    ```javascript
-   onBeforeEventSend: function(event) {
+   onBeforeEventSend: function(content) {
      // ignores events from bots
      if (MyBotDetector.isABot()) {
        return false;
      }
    }
    ```
-   Any return value other than the boolean `false` will allow the event to process and send after the callback. See [Event Types](#event-types) for more information
+   Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
-4. Events may be filtered by examining the event type (See [Event Types](#event-types)):
+4. Events may be filtered by examining the event type (See [Event Types](#event-types).):
     ```javascript
-   onBeforeEventSend: function(event) {  
-     // augments xdm if link click event is to a partner website
-     if (
-       event.xdm.eventType === "web.webinteraction.linkClicks" 
-         && event.xdm.web.webInteraction.URL === "http://example.com/partner-page.html") {
-           event.xdm.partnerWebsiteClick = true;
-     }
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
    }
    ```
 
