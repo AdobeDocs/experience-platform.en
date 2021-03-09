@@ -258,7 +258,7 @@ examining the event data and returning `false` if the event should not be sent.
      }
    }
 ```
-   
+
    Any return value other than the boolean `false` will allow the event to process and send after the callback.
 
 * Events can be filtered by examining the event type (See [Event Types](#event-types).):
