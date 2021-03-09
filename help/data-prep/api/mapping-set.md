@@ -25,7 +25,7 @@ GET /mappingSets?start={START}
 | `{LIMIT}` | **Required**. Specifies the number of mapping sets returned. |
 | `{NAME}` | Filters the mapping sets based on the name. |
 | `{ORDER_BY}` | Sorts the order of the results. The only supported field is `lastUpdateDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
-| `{PROPERTY}` | Filters the mapping sets based on a property within the mapping set. The supported properties are `xdmSchema` and `status`.
+| `{PROPERTY}` | Filters the mapping sets based on a property within the mapping set. The supported properties are `xdmSchema` and `status`. |
 | `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
 
 **Request**
