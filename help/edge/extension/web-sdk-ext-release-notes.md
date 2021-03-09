@@ -14,12 +14,12 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 Contains version 2.4.0 of the Adobe Experience Platform Web SDK library.
 
-* Added "document unloading" checkbox to Send Event action UI
-* Added support for an `out` option when configuring default consent which will drop all events until consent is received (the existing `pending` option queues events and sends them once consent was received)
-* Added a tooltip to the default consent field
-* Added support for Adobe's Consent 2.0 standard
-* A better error is now displayed in the XDM Object data element UI if the user's access token is invalid or improperly provisioned
-* Fixed a cross-origin error (which did not affect the operation of the extension) that showed up on the browser developer console when viewing an XDM Object data element
+* Added ["document unloading"](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) checkbox to Send Event action UI.
+* Added support for an `out` option when [configuring default consent](/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent) which will drop all events until consent is received (the existing `pending` option queues events and sends them once consent was received).
+* Added a tooltip to the default consent field.
+* Added support for [Adobe's Consent 2.0 standard](/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).
+* A better error is now displayed in the XDM Object data element UI if the user's access token is invalid or improperly provisioned.
+* Fixed a cross-origin error (which did not affect the operation of the extension) that showed up on the browser developer console when viewing an XDM Object data element.
 
 ## November 4, 2020
 
