@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Platform
 solution: Experience Platform
-title: Connect to streaming destinations and activate data using API calls in Adobe Experience Platform
+title: Connect to streaming destinations and activate data using the Flow Service API in Adobe Experience Platform
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
 
-# Connect to streaming destinations and activate data using API calls
+# Connect to streaming destinations and activate data using the Flow Service API
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation {#swagger-docs}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 

@@ -15,7 +15,7 @@ The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
+* To connect to [!DNL Amazon Kinesis] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -111,6 +111,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in 
 
 >[!MORELIKETHIS]
 >
->* [Connect to Amazon Kinesis and activate data using API calls](../../api/streaming-destinations.md)
+>* [Connect to Amazon Kinesis and activate data using the Flow Service API](../../api/streaming-destinations.md)
 >* [Azure Event Hubs destination](./azure-event-hubs.md)
 >* [Destination types and categories](../../destination-types.md) 
