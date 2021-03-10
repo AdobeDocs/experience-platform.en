@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
 title: Modify Platform Dashboards in the UI
-description: This guide provides step-by-step instructions for customizing how your organization's Adobe Experience Platform data is displayed within dashboard widgets. 
+description: This guide provides step-by-step instructions for customizing how your organization's Adobe Experience Platform data is displayed within dashboards. 
 topic: guide
 ---
 
@@ -11,9 +11,9 @@ topic: guide
 >
 >Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data and widgets can be created and shared between users in the same organization. 
+Within the Adobe Experience Platform user interface (UI), you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data and widgets can be created and shared between users in the same organization. 
 
-This guide provides step-by-step instructions for customizing how dashboard data is displayed within the profiles, segments, and destinations dashboards in the Platform UI.
+This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
 
 >[!NOTE]
 >
@@ -21,23 +21,23 @@ This guide provides step-by-step instructions for customizing how dashboard data
 
 ## Getting started
 
-From any dashboard (for example, the Profiles dashboard), you can select **[!UICONTROL Modify dashboard]** in order to resize and reorder existing widgets.
+From any dashboard (for example, the [!UICONTROL Profiles] dashboard), you can select **[!UICONTROL Modify dashboard]** in order to resize and reorder existing widgets.
 
 ![](images/customization/modify-dashboard.png)
 
 ## Reorder widgets
 
-After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles by identity namespace]** widget is moved to the top row and the [!UICONTROL Profile Count] widget now appears on the second row.
-
->[!NOTE]
->
->As widgets are adjusted in size, surrounding widgets are repositioned dynamically. This could cause some widgets to be moved to additional rows, requiring you to scroll in order to see all widgets.
+After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles by identity namespace]** widget is moved to the top row and the [!UICONTROL Profile Count] widget now appears in the second row.
 
 ![](images/customization/move-widget.png)
 
 ## Resize widgets
 
 You can also resize a widget by selecting the angle symbol in the bottom-right corner of the widget (`⌟`) and dragging the widget to the desired size. In this example, the **[!UICONTROL Profiles by identity namespace]** widget is resized to fill the entire top row, automatically moving the other widgets to the second row. Note how the horizontal axis adjusts to provide more detailed increments as the widget gets larger.
+
+>[!NOTE]
+>
+>As widgets are adjusted in size, surrounding widgets are repositioned dynamically. This could cause some widgets to be moved to additional rows, requiring you to scroll in order to see all widgets.
 
 ![](images/customization/resize-widget.png)
 
