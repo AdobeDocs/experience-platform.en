@@ -39,7 +39,9 @@ After creating your cloud storage account, the **[!UICONTROL Select data]** step
 
 ![interface](../../../../images/tutorials/dataflow/cloud-storage/batch/interface.png)
 
-Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. Once you have a compatible file or folder selected, select the corresponding data format from the [!UICONTROL Select data format] dropdown menu.
+Selecting a listed folder allows you to traverse the folder hierarchy into deeper folders. You can select single folder to ingest all files in the folder recursively. When ingesting an entire folder, you must ensure that all files in the folder share the same schema.
+
+Once you have a compatible file or folder selected, select the corresponding data format from the [!UICONTROL Select data format] dropdown menu.
 
 The following table displays the appropriate data format for the supported file types:
 
@@ -63,7 +65,7 @@ To preview a different file, select the preview icon beside the name of the file
 
 ![default-preview](../../../../images/tutorials/dataflow/cloud-storage/batch/default-preview.png)
 
-Once you have inspected the contents and structure of the files in your folder, select **[!UICONTROL Next]** to ingest the entire folder.
+Once you have inspected the contents and structure of the files in your folder, select **[!UICONTROL Next]** to ingest all files in the folder recursively.
 
 ![select-folder](../../../../images/tutorials/dataflow/cloud-storage/batch/select-folder.png)
 
