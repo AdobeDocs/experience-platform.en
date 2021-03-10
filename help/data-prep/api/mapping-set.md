@@ -8,7 +8,11 @@ You can retrieve a list of all the mapping sets for your IMS Organization by mak
 
 **API format**
 
-The `/mappingSets` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Making a call to this endpoint with no parameters will retrieve all mapping sets available for your organization. Multiple parameters can be included, separated by ampersands (`&`). 
+The `/mappingSets` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Multiple parameters can be included, separated by ampersands (`&`). 
+
+>[!NOTE]
+>
+>Currently, you must include both the `start` and `limit` parameters as part of your request.
 
 
 ```http
@@ -371,7 +375,7 @@ A successful response returns HTTP status 200 with a preview of your mapped data
 
 ## Get a mapping set
 
-You can retrieve a specific mapping set by making a GET request to the `/mappingSets/{MAPPING_SET_ID}` endpoint.
+You can retrieve a specific mapping set by making a GET request to the `/mappingSets` endpoint and providing the ID of the mapping set you wish to retrieve in the request path.
 
 **API format**
 
@@ -553,6 +557,8 @@ A successful response returns HTTP status 200 with detailed information about th
 ```
 
 ## Update a mapping set
+
+You can update a mapping set by making a `PUT` request to the `mappingSets` endpoint and providing the ID of the mapping set you wish to update in the request path
 
 **API format**
 
@@ -769,5 +775,150 @@ A successful response returns HTTP status 200 with detailed information about yo
         "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/89abc189258b1cb1a816d8f2b2341a6d98000ed8f4008305"
+}
+```
+
+## Return all mappings
+
+You can view all the mappings that belong to a specific mapping set by making a GET request to the following endpoint and providing the ID of the mapping set you wish to retrieve in the request path.
+
+**API format**
+
+```http
+GET /mappingSets/{MAPPING_SET_ID}/mappings
+```
+
+**Request**
+
+The following request returns all the mappings in the specified mapping set.
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+```json
+[
+    {
+        "id": "1bb13ec5929f4847a8ea0f1d9e60d3e6",
+        "version": 0,
+        "createdDate": 1614909614000,
+        "modifiedDate": 1614909614000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceType": "text/x.schema-path",
+        "source": "id",
+        "destination": "_id",
+        "name": "id",
+        "description": "Identifier field",
+        "identity": false,
+        "primaryIdentity": false,
+        "matchScore": 0.0,
+        "functionVersion": 1,
+        "sourceAttribute": "id",
+        "destinationXdmPath": "_id"
+    },
+    {
+        "id": "394bec970d54410b98e1d4c55a3843ca",
+        "version": 0,
+        "createdDate": 1614909614000,
+        "modifiedDate": 1614909614000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceType": "text/x.schema-path",
+        "source": "firstName",
+        "destination": "person.name.firstName",
+        "identity": false,
+        "primaryIdentity": false,
+        "matchScore": 0.0,
+        "functionVersion": 1,
+        "sourceAttribute": "firstName",
+        "destinationXdmPath": "person.name.firstName"
+    },
+    {
+        "id": "a78729629b22418998b528755b3e0fb1",
+        "version": 0,
+        "createdDate": 1614909614000,
+        "modifiedDate": 1614909614000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceType": "text/x.schema-path",
+        "source": "lastName",
+        "destination": "person.name.lastName",
+        "identity": false,
+        "primaryIdentity": false,
+        "matchScore": 0.0,
+        "functionVersion": 1,
+        "sourceAttribute": "lastName",
+        "destinationXdmPath": "person.name.lastName"
+    },
+    {
+        "id": "c5211e1e295f48018c125c24a04e925a",
+        "version": 0,
+        "createdDate": 1614909614000,
+        "modifiedDate": 1614909614000,
+        "createdBy": "{CREATED_BY}",
+        "modifiedBy": "{MODIFIED_BY}",
+        "sourceType": "text/x.schema-path",
+        "source": "nationality",
+        "destination": "person.nationality",
+        "identity": false,
+        "primaryIdentity": false,
+        "matchScore": 0.0,
+        "functionVersion": 1,
+        "sourceAttribute": "nationality",
+        "destinationXdmPath": "person.nationality"
+    }
+]
+```
+
+## Retrieve a mapping
+
+You can retrieve a specific mapping for a mapping set by making a GET request to the following endpoint and providing both the ID of the mapping set and the mapping you wish to retrieve in the request path.
+
+**API format**
+
+```http
+GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
+```
+
+**Request**
+
+The following request retrieves information about a specific mapping in the specified mapping set.
+
+```shell
+curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635/mappings/394bec970d54410b98e1d4c55a3843ca \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
+  -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with detailed information about the specified mapping.
+
+```json
+{
+    "id": "394bec970d54410b98e1d4c55a3843ca",
+    "version": 0,
+    "createdDate": 1614909614000,
+    "modifiedDate": 1614909614000,
+    "createdBy": "{CREATED_BY}",
+    "modifiedBy": "{MODIFIED_BY}",
+    "sourceType": "text/x.schema-path",
+    "source": "firstName",
+    "destination": "person.name.firstName",
+    "identity": false,
+    "primaryIdentity": false,
+    "matchScore": 0.0,
+    "functionVersion": 1,
+    "sourceAttribute": "firstName",
+    "destinationXdmPath": "person.name.firstName"
 }
 ```

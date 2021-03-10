@@ -39,7 +39,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/schemas&start=0
 
 **Response**
 
-The following response returns HTTP status 200 with the following  
+The following response returns HTTP status 200 with a list of the requested schemas. 
 
 >[!NOTE]
 >
@@ -281,7 +281,7 @@ A successful response returns HTTP status 200 with information about your newly 
 
 ## Retrieve a specific schema
 
-You can retrieve information about a specific schema by making a GET request to the `/schemas/{ID}` endpoint.
+You can retrieve information about a specific schema by making a GET request to the `/schemas/` endpoint and providing the ID of the schema you wish to retrieve in the request path.
 
 **API format**
 
