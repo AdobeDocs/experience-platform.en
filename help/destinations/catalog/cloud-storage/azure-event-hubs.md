@@ -15,7 +15,7 @@ description: Create a real-time outbound connection to your Azure Event Hubs sto
 You can create a real-time outbound connection to your [!DNL Azure Event Hubs] storage to stream data from Adobe Experience Platform.
 
 * For more information about [!DNL Azure Event Hubs], see the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-about).
-* To connect to [!DNL Azure Event Hubs] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
+* To connect to [!DNL Azure Event Hubs] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Azure Event Hubs] using the Platform user interface, see the sections below.
 
 ![AWS Kinesis in the UI](../../assets/catalog/cloud-storage/event-hubs/catalog.png)
@@ -102,6 +102,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] i
 
 >[!MORELIKETHIS]
 >
->* [Connect to Azure Event Hubs and activate data using API calls](../../api/streaming-destinations.md)
+>* [Connect to Azure Event Hubs and activate data using the Flow Service API](../../api/streaming-destinations.md)
 >* [AWS Kinesis destination](./amazon-kinesis.md)
 >* [Destination types and categories](../../destination-types.md) 
