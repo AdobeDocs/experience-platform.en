@@ -49,7 +49,7 @@ After you have finished moving and resizing widgets, select **[!UICONTROL Save]*
 
 ## Widget library
 
-In addition to resizing and reordering widgets, you can select additional widgets to display on your dashboard or create new widgets using the **[!UICONTROL Widget library]**. 
+In addition to resizing and reordering widgets, in the [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards you can select additional widgets to display or create new widgets using the **[!UICONTROL Widget library]**. 
 
 For step-by-step instructions on how to access and work with the [!UICONTROL Widget library], please refer to the [widget library guide](widget-library.md).
 

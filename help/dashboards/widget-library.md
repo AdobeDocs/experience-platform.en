@@ -11,9 +11,11 @@ topic: guide
 >
 >Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. You can also update these dashboards by adding new widgets to your dashboard view. In addition to the standard widgets provided by Adobe, you have the ability to create custom widgets and share them throughout your organization. 
+Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. You can also update some of these dashboards by adding new widgets to your dashboard view. In addition to the standard widgets provided by Adobe, you have the ability to create custom widgets and share them throughout your organization. 
 
-This guide provides step-by-step instructions for adding standard widgets and creating custom widgets to customize the information that is displayed within the profiles, segments, and destinations dashboards in the Platform UI.
+This guide provides step-by-step instructions for adding standard widgets and creating custom widgets to customize the information that is displayed within the [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards in the Platform UI.
+
+For information on how to modify the location and size of widgets in the [!UICONTROL Profiles], [!UICONTROL Destinations], and [!UICONTROL Segments] dashboards, please refer to the [modify dashboards guide](modify.md).
 
 >[!NOTE]
 >
@@ -64,42 +66,60 @@ To further customize the look of dashboards within Experience Platform, you can 
 
 ![](images/customization/custom-widgets.png)
 
-### Schema
+### Select attributes
 
-In order to create custom widgets, Real-time Customer Profile attributes must be specified to ensure the data is included as part of the daily snapshot. If your organization has not selected any Profile attributes, the [!UICONTROL Configure schema] button appears in the top-right corner of the widget library.
+In order to create custom widgets, Real-time Customer Profile attributes must be identified to ensure the data is included as part of the daily snapshot. If your organization has not selected any Profile attributes, the [!UICONTROL Configure schema] button appears in the top-right corner of the widget library.
 
-When at least one custom attribute has been selected, the [!UICONTROL Edit schema] button appears in the top-right corner of the widget library. Select **[!UICONTROL Edit schema]** to open the **[!UICONTROL Select union schema field]** dialog to view the selected attributes.
+When at least one custom attribute has been selected, the [!UICONTROL Edit schema] button appears in the top-right corner of the widget library. Select **[!UICONTROL Edit schema]** to open the **[!UICONTROL Select union schema field]** dialog to view the selected attributes and add more attributes.
 
 >[!IMPORTANT]
 >
->An organization can select a maximum of 20 attributes. In order for an attribute to be visible for selection, it must be one of the following: String, Date, Date-Time, Boolean, Short, Long, Integer, or Byte. Map and Double data types are not supported and are grayed out so that they cannot be selected.
+>An organization can select a maximum of 20 attributes. 
 
-To select an attribute, navigate to the attribute in the union schema (or use search) and select the checkbox next to the attribute. This adds the attribute to the **[!UICONTROL Selected Attributes]** list. After choosing all of the attributes that you wish to add, select **[!UICONTROL Save]** to save your attributes and return to the custom widgets tab.
+![](images/customization/edit-schema.png)
+
+To select an attribute, navigate to the attribute in the union schema (or use search) and select the checkbox next to the attribute. This adds the attribute to the **[!UICONTROL Selected Attributes]** list. 
+
+>[!NOTE]
+>
+>In order for an attribute to be visible for selection, it must be one of the following: String, Date, Date-Time, Boolean, Short, Long, Integer, or Byte. Map and Double data types are not supported and are grayed out so that they cannot be selected.
+
+After choosing all of the attributes that you wish to add, select **[!UICONTROL Save]** to save your attributes and return to the custom widgets tab.
 
 Newly selected attributes are available following the daily snapshot when the data is refreshed.
 
+![](images/customization/select-attribute.png)
+
 ### Create a custom widget
 
-Choosing to create a new widget opens the **[!UICONTROL Create widget]** dialog where you can provide a title and description for the new widget and choose the attribute that you wish the widget to display. To add an attribute to the widget, select the radio button beside the attribute you wish to add.
+To create a new widget, select **[!UICONTROL Create]** from the center of the widget library, or if custom widgets have already been created, select **[!UICONTROL Create widget]** from the top-right corner of the widget library. 
+
+![](images/customization/create-widget.png)
+
+On the **[!UICONTROL Create widget]** dialog, you can provide a title and description for your new widget and choose the attribute that you wish the widget to display. To add an attribute to the widget, select the radio button beside the attribute you wish to add.
 
 >[!NOTE]
 >
 >Only one attribute can be selected per widget. Also, if a widget has already been created for an attribute, the attribute will appear greyed out.
 
-![](images/customization/create-widget.png)
+![](images/customization/create-widget-dialog.png)
 
-A preview of the widget appears, showing a horizontal bar chart with mock data. 
+A preview of the new widget appears in the dialog, showing a horizontal bar graph with mock data. 
 
 >[!NOTE]
 >
+>The only metric currently supported for all attributes is profile count and the only visualization currently supported for custom widgets is a horizontal bar graph. 
+>
 >Data shown in the example widget is for illustration purposes only. The preview does not display actual data from your organization.
 
-In order to save your new widget, add a **[!UICONTROL Title]** and **[!UICONTROL Description]**, then select **[!UICONTROL Create]** and you are returned to the [!UICONTROL Custom] tab. Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
+![](images/customization/create-widget-select-attribute.png)
 
-![](images/customization/custom-tab-new-widget.png)
+To save your new widget and return to the [!UICONTROL Custom] tab, select **[!UICONTROL Create]**. Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
 
-After a widget has been added to the library, it can be archived using the **[!UICONTROL Archive]** button or you can edit the widget to update the title and description.
+### Archive a custom widget
+
+After a widget has been added to the library, it can be archived using the **[!UICONTROL Archive]** button. You can also edit the widget to update the title or description fields.
 
 ## Next steps
 
-After reading this document, you now are able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To learn more about each specific dashboard, please select a dashboard guide from the available dashboards documentation.
+After reading this document, you now are able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To modify the size and location of widgets in the dashboard, please refer to the [modify dashboards guide](modify.md). 
