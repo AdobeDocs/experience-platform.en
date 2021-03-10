@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
-title: Adding and Creating Dashboard Widgets in the Widget Library
+title: Using the Widget Library to Add and Create Dashboard Widgets
 description: This guide provides step-by-step instructions for adding standard widgets and creating custom widgets for visualizing dashboard data in Adobe Experience Platform. 
 topic: guide
 ---
@@ -11,7 +11,7 @@ topic: guide
 >
 >Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. You can also update some of these dashboards by adding new widgets to your dashboard view. In addition to the standard widgets provided by Adobe, you have the ability to create custom widgets and share them throughout your organization. 
+Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. You can also update some of these dashboards by adding new widgets to your dashboard view. In addition to the standard widgets provided by Adobe, you can create custom widgets and share them throughout your organization. 
 
 This guide provides step-by-step instructions for adding standard widgets and creating custom widgets to customize the information that is displayed within the [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards in the Platform UI.
 
@@ -19,7 +19,7 @@ For information on how to modify the location and size of widgets in the [!UICON
 
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. Please refer to the [license usage dashboard documentation](guides/license-usage.md) to learn more about this unique dashboard.
+>The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. To learn more about this unique dashboard, read the [license usage dashboard documentation](guides/license-usage.md).
 
 ## Access the widget library
 
@@ -62,13 +62,13 @@ Select **[!UICONTROL Add widget]** to add any selected widgets to your dashboard
 >
 >Your organization can create a maximum of 20 custom widgets in the widget library.
 
-To further customize the look of dashboards within Experience Platform, you can create new widgets and share them with other users in your organization. From the widget library, select the **[!UICONTROL Custom]** tab to begin creating custom widgets. On the [!UICONTROL Custom] tab, all widgets created by your organization are visible. In this example, no custom widgets have been created yet.
+To further customize the look of dashboards within Experience Platform, you can create widgets and share them with other users in your organization. From the widget library, select the **[!UICONTROL Custom]** tab to begin creating custom widgets. On the [!UICONTROL Custom] tab, all widgets created by your organization are visible. In this example, no custom widgets have been created yet.
 
 ![](images/customization/custom-widgets.png)
 
 ### Select attributes
 
-In order to create custom widgets, Real-time Customer Profile attributes must be identified to ensure the data is included as part of the daily snapshot. If your organization has not selected any Profile attributes, the [!UICONTROL Configure schema] button appears in the top-right corner of the widget library.
+In order to create custom widgets, Real-time Customer Profile attributes must be identified to ensure that the data is included as part of the daily snapshot. If your organization has not selected any Profile attributes, the [!UICONTROL Configure schema] button appears in the top-right corner of the widget library.
 
 When at least one custom attribute has been selected, the [!UICONTROL Edit schema] button appears in the top-right corner of the widget library. Select **[!UICONTROL Edit schema]** to open the **[!UICONTROL Select union schema field]** dialog to view the selected attributes and add more attributes.
 
@@ -78,13 +78,13 @@ When at least one custom attribute has been selected, the [!UICONTROL Edit schem
 
 ![](images/customization/edit-schema.png)
 
-To select an attribute, navigate to the attribute in the union schema (or use search) and select the checkbox next to the attribute. This adds the attribute to the **[!UICONTROL Selected Attributes]** list. 
+To select an attribute, navigate to the attribute in the union schema (or use search) and select the checkbox next to the attribute. Selecting the checkbox also adds the attribute to the **[!UICONTROL Selected Attributes]** list on the right-hand side of the dialog. 
 
 >[!NOTE]
 >
 >In order for an attribute to be visible for selection, it must be one of the following: String, Date, Date-Time, Boolean, Short, Long, Integer, or Byte. Map and Double data types are not supported and are grayed out so that they cannot be selected.
 
-After choosing all of the attributes that you wish to add, select **[!UICONTROL Save]** to save your attributes and return to the custom widgets tab.
+After choosing the attributes that you wish to add, select **[!UICONTROL Save]** to save your attributes and return to the custom widgets tab.
 
 Newly selected attributes are available following the daily snapshot when the data is refreshed.
 
@@ -92,15 +92,15 @@ Newly selected attributes are available following the daily snapshot when the da
 
 ### Create a custom widget
 
-To create a new widget, select **[!UICONTROL Create]** from the center of the widget library, or if custom widgets have already been created, select **[!UICONTROL Create widget]** from the top-right corner of the widget library. 
+To create a custom widget, select **[!UICONTROL Create]** from the center of the widget library, or if custom widgets have already been created, select **[!UICONTROL Create widget]** from the top-right corner of the widget library. 
 
 ![](images/customization/create-widget.png)
 
-On the **[!UICONTROL Create widget]** dialog, you can provide a title and description for your new widget and choose the attribute that you wish the widget to display. To add an attribute to the widget, select the radio button beside the attribute you wish to add.
+On the **[!UICONTROL Create widget]** dialog, you can provide a title and description for your new widget and choose the attribute that you want the widget to display. To choose an attribute, select the radio button beside the attribute you want to add.
 
 >[!NOTE]
 >
->Only one attribute can be selected per widget. Also, if a widget has already been created for an attribute, the attribute will appear greyed out.
+>Only one attribute can be selected per widget. Also, if a widget has already been created for an attribute, the attribute appears grayed out.
 
 ![](images/customization/create-widget-dialog.png)
 
