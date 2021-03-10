@@ -25,7 +25,7 @@ The following list outlines some of the features that are unique to JupyterLab o
 | **[!DNL Platform] service integration** | Built-in integrations allows you to utilize other [!DNL Platform] services directly from within [!DNL JupyterLab]. A complete list of supported integrations is provided in the section on [Integration with other Platform services](#service-integration). |
 | **Authentication** | In addition to <a href="https://jupyter-notebook.readthedocs.io/en/latest/security.html" target="_blank">JupyterLab's built-in security model</a>, every interaction between your application and Experience Platform, including Platform service-to-service communication is encrypted and authenticated through the <a href="https://www.adobe.io/authentication/auth-methods.html" target="_blank">[!DNL Adobe Identity Management System] (IMS)</a>. |
 | **Development libraries** | In [!DNL Experience Platform], [!DNL JupyterLab] provides pre-installed libraries for [!DNL Python], R, and PySpark. See the [appendix](#supported-libraries) for a complete list of supported libraries. |
-| **Library controller** | When the the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
+| **Library controller** | When the pre-installed libraries are lacking for your needs, additional libraries can be installed for Python and R, and are temporarily stored in isolated containers to maintain the integrity of [!DNL Platform] and keep your data safe. See the [kernels](#kernels) section for more details. |
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Information regarding key features of [!DNL JupyterLab] and instructions on perf
 
 ### Access [!DNL JupyterLab] {#access-jupyterlab}
 
-In [Adobe Experience Platform](https://platform.adobe.com), select **Notebooks** from the left navigation column. Allow some time for [!DNL JupyterLab] to fully initialize.
+In [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Notebooks]** from the left navigation column. Allow some time for [!DNL JupyterLab] to fully initialize.
 
 ![](../images/jupyterlab/user-guide/access_jupyterlab.png)
 
@@ -80,7 +80,7 @@ The menu bar at the top of the interface has top-level menus that expose actions
 
 **Left sidebar**
 
-The left sidebar contains clickable tabs that provides access to the following features:
+The left sidebar contains clickable tabs that provide access to the following features:
 
 *   **File browser:** A list of saved notebook documents and directories
 *   **Data explorer:** Browse, access, and explore datasets and schemas
@@ -89,7 +89,7 @@ The left sidebar contains clickable tabs that provides access to the following f
 *   **Cell inspector:** A cell editor that provides access to tools and metadata useful for setting up a notebook for presentation purposes
 *   **tabs:** A list of open tabs
 
-Click on a tab to expose its features, or click on an expanded tab to collapse the left sidebar as demonstrated below:
+Select a tab to expose its features, or select on an expanded tab to collapse the left sidebar as demonstrated below:
 
 ![](../images/jupyterlab/user-guide/left_sidebar_collapse.gif)
 
@@ -98,6 +98,24 @@ Click on a tab to expose its features, or click on an expanded tab to collapse t
 The main work area in [!DNL JupyterLab] enables you to arrange documents and other activities into panels of tabs that can be resized or subdivided. Drag a tab to the center of a tab panel to migrate the tab. Divide a panel by dragging a tab to the left, right, top, or bottom of the panel:
 
 ![](../images/jupyterlab/user-guide/main_work_area.gif)
+
+### GPU and memory server configuration in [!DNL Python]/R
+
+In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
+
+>[!NOTE]
+>
+>Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
+
+![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+### Terminate & restart [!DNL JupyterLab]
+
+In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon**, then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
+
+To restart [!DNL JupyterLab], select the **restart icon** located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+
+![terminate jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
 ### Code cells {#code-cells}
 
@@ -117,7 +135,7 @@ Common cell actions are described below:
 
 ### Kernels {#kernels}
 
-Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to [!DNL Python], [!DNL JupyterLab] provides additional language support in R, PySpark, and [!DNL Spark] (Scala). When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut-down.
+Notebook kernels are the language-specific computing engines for processing notebook cells. In addition to [!DNL Python], [!DNL JupyterLab] provides additional language support in R, PySpark, and [!DNL Spark] (Scala). When you open a notebook document, the associated kernel is launched. When a notebook cell is executed, the kernel performs the computation and produces results which may consume significant CPU and memory resources. Note that allocated memory is not freed until the kernel is shut down.
 
 Certain features and functionalities are limited to particular kernels as described in the table below:
 
@@ -133,7 +151,7 @@ Each active notebook or activity on [!DNL JupyterLab] utilizes a kernel session.
 
 ![](../images/jupyterlab/user-guide/kernel_and_state_1.png)
 
-If the kernel is shut-down or inactive for a prolonged period, then **No Kernel!** with a solid circle is shown. Activate a kernel by clicking the kernel status and selecting the appropriate kernel type as demonstrated below:
+If the kernel is shut down or inactive for a prolonged period, then **No Kernel!** with a solid circle is shown. Activate a kernel by clicking the kernel status and selecting the appropriate kernel type as demonstrated below:
 
 ![](../images/jupyterlab/user-guide/switch_kernel.gif)
 
@@ -224,141 +242,12 @@ To open a new *Launcher*, click **File > New Launcher**. Alternatively, expand t
 
 ![](../images/jupyterlab/user-guide/new_launcher.gif)
 
-### GPU and memory server configuration in [!DNL Python]/R
-
-In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Notebook server configuration*. You can toggle GPU on and allocate the amount of memory you need by using the slider. The amount of memory you can allocate depends on how much your organization has provisioned. Select **[!UICONTROL Update configs]** to save.
-
->[!NOTE]
->
->Only one GPU is provisioned per organization for Notebooks. If the GPU is in use, you need to wait for the user that has currently reserved the GPU to release it. This can be done by logging out or leaving the GPU in an idle state for four or more hours.
-
-![](../images/jupyterlab/user-guide/notebook-gpu-config.png)
-
 ## Next steps
 
 To learn more about each of the supported notebooks and how to use them, visit the [Jupyterlab notebooks data access](./access-notebook-data.md) developer guide. This guide focuses on how to use JupyterLab notebooks to access your data including reading, writing, and querying data. The data access guide also contains information on the maximum amount of data that can be read by each supported notebook.
 
 ## Supported libraries {#supported-libraries}
 
-### [!DNL Python] / R
+For a list of supported packages in Python, R, and PySpark, copy and paste `!pip list --format=columns` in a new cell, then run the cell. A list of supported packages populates in alphabetical order.
 
-| Library | Version|
-| :------ | :------ |
-| notebook | 6.0.0 |
-| requests | 2.22.0 |
-| plotly | 4.0.0 |
-| folium | 0.10.0 |
-| ipywidgets | 7.5.1 |
-| bokeh | 1.3.1 |
-| gensim | 3.7.3 |
-| ipyparallel | 0.5.2 |
-| jq | 1.6 |
-| keras | 2.2.4 |
-| nltk | 3.2.5 |
-| pandas | 0.22.0 |
-| pandasql | 0.7.3 |
-| pillow | 6.0.0 |
-| scikit-image | 0.15.0 |
-| scikit-learn | 0.21.3 |
-| scipy | 1.3.0 |
-| scrapy | 1.3.0 |
-| seaborn | 0.9.0 |
-| statsmodels | 0.10.1 |
-| elastic | 5.1.0.17 |
-| ggplot | 0.11.5 |
-| py-xgboost | 0.90 |
-| opencv | 3.4.1 |
-| pyspark | 2.4.3 |
-| pytorch | 1.0.1 |
-| wxpython | 4.0.6  |
-| colorlover | 0.3.0 |
-| geopandas | 0.5.1 |
-| pyshp | 2.1.0 |
-| shapely | 1.6.4 |
-| rpy2 | 2.9.4 |
-| r-essentials | 3.6 |
-| r-arules | 1.6_3 |
-| r-fpc | 2.2_3 |
-| r-e1071 | 1.7_2 |
-| r-gam | 1.16.1 |
-| r-gbm | 2.1.5 |
-| r-ggthemes | 4.2.0 |
-| r-ggvis | 0.4.4 |
-| r-igraph | 1.2.4.1 |
-| r-leaps | 3.0 |
-| r-manipulate | 1.0.1 |
-| r-rocr | 1.0_7 |
-| r-rmysql | 0.10.17 |
-| r-rodbc | 1.3_15 |
-| r-rsqlite | 2.1.2 |
-| r-rstan | 2.19.2 |
-| r-sqldf | 0.4_11 |
-| r-survival | 2.44_1.1 |
-| r-zoo | 1.8_6 |
-| r-stringdist | 0.9.5.2 |
-| r-quadprog | 1.5_7 |
-| r-rjson| 0.2.20 |
-| r-forecast | 8.7 |
-| r-rsolnp | 1.16 |
-| r-reticulate | 1.12 |
-| r-mlr | 2.14.0 |
-| r-viridis | 0.5.1 |
-| r-corrplot | 0.84 |
-| r-fnn | 1.1.3 |
-| r-lubridate | 1.7.4 |
-| r-randomforest | 4.6_14 |
-| r-tidyverse | 1.2.1 |
-| r-tree | 1.0_39 |
-| pymongo | 3.8.0 |
-| pyarrow | 0.14.1 |
-| boto3 | 1.9.199 |
-| ipyvolume | 0.5.2 |
-| fastparquet | 0.3.2 |
-| python-snappy | 0.5.4 |
-| ipywebrtc | 0.5.0 |
-| jupyter_client | 5.3.1 |
-| wordcloud | 1.5.0 |
-| graphviz | 2.40.1 |
-| python-graphviz | 0.11.1 |
-| azure-storage | 0.36.0 |
-| [!DNL jupyterlab] | 1.0.4 |
-| pandas_ml | 0.6.1 |
-| tensorflow-gpu | 1.14.0 |
-| nodejs | 12.3.0 |
-| mock | 3.0.5 |
-| ipympl | 0.3.3 |
-| fonts-anacond | 1.0 |
-| psycopg2 | 2.8.3 |
-| nose | 1.3.7 |
-| autovizwidget | 0.12.9 |
-| altair | 3.1.0 |
-| vega_datasets | 0.7.0 |
-| papermill | 1.0.1 |
-| sql_magic | 0.0.4 |
-| iso3166 | 1.0 |
-| nbimporter | 0.3.1 |
-
-### PySpark
-
-| Library | Version |
-| :------ | :------ |
-| requests | 2.18.4 |
-| gensim | 2.3.0 |
-| keras | 2.0.6 |
-| nltk | 3.2.4 |
-| pandas | 0.20.1 |
-| pandasql | 0.7.3 |
-| pillow | 5.3.0 |
-| scikit-image | 0.13.0 |
-| scikit-learn | 0.19.0 |
-| scipy | 0.19.1 |
-| scrapy | 1.3.3 |
-| statsmodels | 0.8.0 |
-| elastic | 4.0.30.44 |
-| py-xgboost | 0.60 |
-| opencv | 3.1.0 |
-| pyarrow | 0.8.0 |
-| boto3 | 1.5.18 |
-| azure-storage-blob | 1.4.0 |
-| [!DNL python] | 3.6.7 |
-| mkl-rt | 11.1 |
+![example](../images/jupyterlab/user-guide/libraries.PNG)

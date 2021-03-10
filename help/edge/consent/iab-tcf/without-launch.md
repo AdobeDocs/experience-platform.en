@@ -6,7 +6,7 @@ seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience P
 
 # Integrate IAB TCF 2.0 support with the Platform Web SDK
 
-This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
+This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md).
 
 ## Getting started
 
@@ -22,13 +22,13 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set the default consent to `pending`. This queues Experience Events until consent preferences are received.
+If you want to treat all unknown users the same, you can set the default consent to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the Platform Web SDK configuration documentation.
 
 ### Setting the default consent based on `gdprApplies`
 
-Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call. 
+Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call.
 
 The following example shows one way to do this:
 
@@ -50,7 +50,7 @@ In this example, the `configure` command is called after the `tcData` is obtaine
 
 ## Using the setConsent event
 
-IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. 
+IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences.
 
 The following example shows one way to do this:
 
