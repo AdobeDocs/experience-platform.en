@@ -86,9 +86,9 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 Element | Description 
 ---------|----------
-Name | The name you provided for your activation flow to this destination.
-Last Flow Run Status | The status of the last dataflow run.
-Last Flow Run Date | Time and date when the last dataflow run occured.
+Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate destination] and [!UICONTROL Delete destination].
+Last Flow Run Status | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+Last Flow Run Date | Time and date when the last dataflow run occured. See [View destination details](destination-details-page.md) for more information about dataflow runs.
 [!UICONTROL Destination] | The destination platform that you selected for your activation flow.
 [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li></ul>
 [!UICONTROL Username] | The account credentials you selected for the destination flow.
