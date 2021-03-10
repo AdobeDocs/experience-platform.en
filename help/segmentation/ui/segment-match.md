@@ -24,13 +24,13 @@ The first step to getting started with segment match is to set up your identity 
 
 You must provide a consent configuration and set up its default value as either opt-in or opt-out for a consent check.
 
-### Configure data usage policy
+### Configure data usage label
 
-The last prerequisite you must establish is to configure a new data usage policy to prevent data sharing.
+The last prerequisite you must establish is to configure a new data usage label to prevent data sharing.
 
 ## Segment Match end-to-end workflow
 
-Once you have set up your identity data and namespaces, consent configuration, and data usage policy, you can start working with segment match and its features.
+Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with segment match and its features.
 
 ### Connect partner
 
@@ -45,10 +45,24 @@ The following happens during the connection process:
 
 ### Create feed
 
-A **feed** is a grouping of data (segments) and the rules for how that data can be exposed or used. A feed can be managed independently and exchanged with other Platform users using segment match.
+A **feed** is a grouping of data (segments) and the rules for how that data can be exposed or used. A feed can be managed independently and exchanged with other Platform users through segment match.
 
 A feed requires a name, description, a minimum of two identity namespaces, and a minimum of two segments.
 
-Once a feed is created, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with, from your list of linked partners.
+Once a feed is created, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with from your list of linked partners.
 
 ### Publish feed
+
+When a feed is created, a partner user can view the feed under the **Receiving** section of the Segments UI. During this process, a receiving partner can review details and terms prior to accepting the shared feed. 
+
+Once a partner accepts the shared feed, they can start using the shared data to build new segments.
+
+You can edit an "active" feed to add or remove segments or identity namespaces:
+
+**Add a new segment** 
+
+To add a new segment, select the segment you intend to add and then save and publish the feed. Your partner must then confirm that the shared feed contains the new metadata, associated with the segment you added.
+
+**Add a new identity namespace**
+
+To add a new namespace, select the namespaces you intend to add an
