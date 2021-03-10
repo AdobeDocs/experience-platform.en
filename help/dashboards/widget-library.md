@@ -42,7 +42,7 @@ The [!UICONTROL Widget library] contains two tabs, [!UICONTROL Standard] and [!U
 
 ## Standard widgets {#standard-widgets}
 
-From the **[!UICONTROL Standard]** tab, you can select the category related to the dashboard that you would like to update. The available widgets for the selected dashboard are displayed as cards, each providing the title, description, and a sample visualization for the metric.
+From the **[!UICONTROL Standard]** tab, you can categories related to the dashboards that you are able to update. The available widgets for the selected dashboard are displayed as cards, each providing the title, description, and a sample visualization for the metric.
 
 ![](images/customization/standard-widgets.png)
 
@@ -52,7 +52,7 @@ To choose a standard widget to add to your dashboard, highlight the widget and s
 >
 >The counter in the top-right corner of the widget library shows the total number of widgets selected.
 
-Select **[!UICONTROL Add widget]** to add any selected widgets to your dashboard.
+Select **[!UICONTROL Add widget]** to add selected widgets to your dashboard.
 
 ![](images/customization/add-widget.png)
 
