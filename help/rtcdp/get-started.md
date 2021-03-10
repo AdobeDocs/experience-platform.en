@@ -59,7 +59,7 @@ When customers first visit your site, you don't know anything about them.
 
 ![image](assets/luma-site.png)
 
-As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
+As they navigate, data is captured in real time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
 
 Many visitors to the website are probably repeat customers who have previously purchased from Luma.  It's important for Luma to personalize messaging and offerings to address both new and repeat visitors, as well as known customers.
 
@@ -253,7 +253,7 @@ You can also schedule the segment to start or end at a particular time. The segm
 
 Select **[!UICONTROL Save]** to go to the next page. 
 
-When a customer in this audience makes a purchase, their membership to this audience is suppressed in real-time. They don’t qualify anymore because their status has changed. 
+When a customer in this audience makes a purchase, their membership to this audience is suppressed in real time. They don’t qualify anymore because their status has changed. 
 
 This saves the director of the Luma media team  hundreds of thousands of dollars by not using up inventory for an audience that is not qualified.
 
