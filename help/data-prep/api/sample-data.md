@@ -1,6 +1,6 @@
 # Sample data endpoints
 
-Sample data can be used when creating a schema for your mapping set. You can use the `/samples` endpoint in the Adobe Experience Platform API to programatically retrieve, create, and update sample data.
+Sample data can be used when creating a schema for your mapping set. You can use the `/samples` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update sample data.
 
 ## Get all sample data
 
