@@ -73,11 +73,11 @@ Now, we will go over accessing [!DNL Experience Platform] data.
 
 For this section, we are using the Retail Sales dataset which is the same dataset used in the Retail Sales sample notebook.
 
-In our Jupyter Notebook, we can access our data from the **Data** tab on the left. Upon clicking the tab, you will be able to see a list of Datasets.
+In Jupyter Notebook, you can access your data from the **Data** tab ![data tab](../images/jupyterlab/analyze-data/dataset-tab.png) on the left. Upon selecting the tab, two folders are provided. Select the **[!UICONTROL Datasets]** folder.
 
 ![](../images/jupyterlab/analyze-data/dataset_tab.png)
 
-Now in the Datasets directory, we will be able to see all the ingested datasets. Note that it may take a minute to load all the entries if your directory is heavily populated with datasets.
+Now in the Datasets directory, you can see all the ingested datasets. Note that it may take a minute to load all the entries if your directory is heavily populated with datasets.
 
 Since the dataset is the same, we want to replace the load data from the previous section which uses external data. Select the code block under **Load Data** and press the **'d'** key on your keyboard twice. Make sure the focus is on the block and not in the text. You can press **'esc'** to escape the text focus before pressing **'d'** twice.
 
