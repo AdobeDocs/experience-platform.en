@@ -75,6 +75,6 @@ The definition of each of these metrics varies depending on the licensing that y
 
 ## Next steps
 
-By following this document you should now be able to locate the license usage dashboard and select a sandbox to view. You should also be able to find more information about available metrics for your organization, based on the licensing your organization has purchased. 
+After reading this document, you are able to locate the license usage dashboard and select a sandbox to view. You can also find more information about available metrics for your organization, based on the licensing your organization has purchased. 
 
 To learn more about other features available in the Experience Platform UI, please refer to the [Platform UI guide](../../landing/ui-guide.md).
