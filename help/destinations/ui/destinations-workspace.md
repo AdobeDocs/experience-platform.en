@@ -80,19 +80,22 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
->Use the ![Add data button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to activate additional segments to that destination.
+> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to activate additional segments to that destination.
+> * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to delete an existing connection to a destination.
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
 Element | Description 
 ---------|----------
- Name | The name you provided for your activation flow to this destination.
- [!UICONTROL Destination] | The destination platform that you selected for your activation flow.
- [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li></ul>
- [!UICONTROL Username] | The account credentials you selected for the destination flow.
- [!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments. 
- [!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.
- [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).
+Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].
+Last Flow Run Status | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+Last Flow Run Date | Time and date when the last dataflow run occured. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+[!UICONTROL Destination] | The destination platform that you selected for your activation flow.
+[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>
+[!UICONTROL Username] | The account credentials you selected for the destination flow.
+[!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments. 
+[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.
+[!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).
 
 Click on a destination row to bring up more information about the destination in the right rail.
 

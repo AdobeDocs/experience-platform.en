@@ -23,19 +23,11 @@ The steps in the activation workflow vary slightly between destination types. Th
 
 Applies to: All destinations
 
-In the Adobe Experience Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and select the destination where you want to activate your segments.
+In the Adobe Experience Platform user interface, navigate to **[!UICONTROL Destinations]** > **[!UICONTROL Browse]**, and press the **[!UICONTROL Activate]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-![browse to destination](../assets/ui/activate-destinations/connect.png)
+![activate to destination](../assets/ui/activate-destinations/browse-tab-activate.png)
 
-Select the name of the destination to navigate to the activation workflow.
-
-![activate-flow](../assets/ui/activate-destinations/activate-flow.png)
-
->[!NOTE]
->
->If an activation workflow already exists for a destination, you can see the segments that are currently being activated to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details.
-
-Once you have selected a destination, select **[!UICONTROL Activate]**.
+Follow the steps in the next section to select the segments that you want to activate.
 
 ### [!UICONTROL Select Segments] step {#select-segments}
 
