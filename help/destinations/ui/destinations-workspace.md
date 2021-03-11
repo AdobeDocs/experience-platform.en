@@ -109,6 +109,6 @@ The **[!UICONTROL System View]** tab displays a graphic representation of the ac
 
 ![Data-flows1](../assets/ui/workspace/data-flows1.png)
 
-Select any of the destinations displayed on the page and press **[!UICONTROL View flows]** to see information on all the connections you have set up for each destination.
+Select any of the destinations displayed on the page and click **[!UICONTROL View flows]** to see information on all the connections you have set up for each destination.
 
 ![Data-flows2](../assets/ui/workspace/data-flows2.png)
