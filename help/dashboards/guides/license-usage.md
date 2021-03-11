@@ -36,7 +36,7 @@ To choose a sandbox to view in the dashboard, select either [!UICONTROL Producti
 
 >[!NOTE]
 >
->Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] will report on all production or development sandboxes, respectively.
+>Consumption reporting for sandboxes is cumulative for all sandboxes of the same type. In other words, selecting [!UICONTROL Production] or [!UICONTROL Development] provides consumption reports for all production or development sandboxes, respectively.
 
 ![](../images/license-usage/select-sandbox.png)
 
@@ -56,7 +56,7 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-There are currently four metrics available in the license usage dashboard, these are:
+There are currently four metrics available in the license usage dashboard:
 
 * [!UICONTROL Addressable audiences]
 * [!UICONTROL Average profile richness]
