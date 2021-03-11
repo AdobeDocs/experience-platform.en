@@ -62,7 +62,7 @@ A dialog appears, showing a list of mixins that you can select for the schema. S
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-If you know the general activity or business area of the mixin fields you want to add, select the funnel icon (![Funnel Icon](../../images/ui/resources/schemas/filter-icon.png)) to display a list of industry verticals to filter displayed mixins by.
+If you know the general activity or business area of the mixin fields you want to add, select one or more of the industry vertical categories in the left rail to filter the displayed list of mixins.
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
