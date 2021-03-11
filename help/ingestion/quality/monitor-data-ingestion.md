@@ -10,7 +10,7 @@ description: This user guide provides a steps on how to monitor your data within
 
 Data ingestion allows you to ingest your data to Adobe Experience Platform. You can either use batch ingestion, which allows you to insert your data using various file types (such as CSVs), or streaming ingestion, which allows you to ingest your data to [!DNL Platform] using streaming endpoints in real time.
 
-This user guide provides a steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
+This user guide provides steps on how to monitor your data within Adobe Experience Platform user interface. This guide requires you to have an Adobe ID and access to Adobe Experience Platform.
 
 ## Monitor streaming end-to-end data ingestion
 
@@ -46,7 +46,7 @@ The details of a failed streaming record displays the same information as a succ
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-In addition, failed records provide details on the errors that ocurred while processing the batch. In the example below, there was a REPLACE ME.
+In addition, failed records provide details on the errors that occurred while processing the batch. In the example below, there was a REPLACE ME.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
@@ -68,6 +68,6 @@ The details of a failed batch displays the same information as a successful batc
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-In addition, failed batches provide details on the errors that ocurred while processing the batch. In the example below, there was an error with the ingested batch because it used an unknown field of `_experience`.
+In addition, failed batches provide details on the errors that occurred while processing the batch. In the example below, there was an error with the ingested batch because it used an unknown field of `_experience`.
 
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
