@@ -42,7 +42,11 @@ The [!UICONTROL Widget library] contains two tabs, [!UICONTROL Standard] and [!U
 
 ## Standard widgets {#standard-widgets}
 
-From the **[!UICONTROL Standard]** tab, you can categories related to the dashboards that you are able to update. The available widgets for the selected dashboard are displayed as cards, each providing the title, description, and a sample visualization for the metric.
+The **[!UICONTROL Standard]** tab contains widgets created by Adobe, broken down into categories. Selecting a category displays the available widgets for that dashboard. Each widget appears as a card, providing the title, description, and a sample visualization of the metric.
+
+>[!NOTE]
+>
+>Widgets may only be added to the dashboard that matches the selected category. For example, only widgets from the [!UICONTROL Profiles] category may be added to the [!UICONTROL Profiles] dashboard.
 
 ![](images/customization/standard-widgets.png)
 
