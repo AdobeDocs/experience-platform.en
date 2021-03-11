@@ -41,7 +41,11 @@ For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]*
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. Since you chose a standard XDM class to base the schema on, an untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
+Since you chose a standard XDM class to base the schema on, the **[!UICONTROL Add mixin]** dialog appears, allowing you to immediately start adding fields to the schema. For now, select **[!UICONTROL Cancel]** to exit the dialog.
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. An untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
