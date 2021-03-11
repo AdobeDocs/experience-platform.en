@@ -47,9 +47,9 @@ The following happens during the connection process:
 
 A **feed** is a grouping of data (segments) and the rules for how that data can be exposed or used. A feed can be managed independently and exchanged with other Platform users through segment match.
 
-A feed requires a name, description, a minimum of two identity namespaces, and a minimum of two segments.
+The basic set up of a feed includes a name, a description, and configurations regarding data usage labels and identity namespaces.
 
-Once a feed is created, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with from your list of linked partners.
+Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with from your list of linked partners. During this process, you can **Analyze by Segment** and view the pre-share estimates prior to finalizing your feed, view the number of overlapping identities by namespace between you and your partner, as well as view how many of the overlapped identities are given consent to share data.
 
 ### Publish feed
 
@@ -65,4 +65,8 @@ To add a new segment, select the segment you intend to add and then save and pub
 
 **Add a new identity namespace**
 
-To add a new namespace, select the namespaces you intend to add an
+To add a new namespace, select the namespace you intend to add and then share the new estimate of overlapped namespaces with your partner for confirmation.
+
+**Remove a segment**
+
+You can unshare a segment from an active feed by selecting a segment for removal, and then confirming that the segment is no longer "active".
