@@ -215,6 +215,7 @@ feature: Data Ingestion, Sources
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor dataflows](tutorials/ui/monitor.md)
   - [Update accounts](tutorials/ui/update.md)
+  - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
