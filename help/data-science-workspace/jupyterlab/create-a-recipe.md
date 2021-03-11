@@ -85,9 +85,9 @@ Users must fill in the following variables before running training and scoring:
 - `ACP_DSW_SCORING_RESULTS_XDM_SCHEMA`
 - `scoringResultsDataSetId`
 
-To find the dataset and schema IDs, go to the Data Tab within notebooks on the left navigation bar (under the folder icon).
+To find the dataset and schema IDs, go to the Data Tab ![Data Tab](../images/jupyterlab/create-recipe/dataset-tab.png) within notebooks on the left navigation bar (under the folder icon).
 
-![](../images/jupyterlab/create-recipe/datasets.png)
+![](../images/jupyterlab/create-recipe/dataset_tab.png)
 
 The same information can be found on [Adobe Experience Platform](https://platform.adobe.com/) under the **[Schema](https://platform.adobe.com/schema)** and **[Datasets](https://platform.adobe.com/dataset/overview)** tabs.
 
