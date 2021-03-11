@@ -26,7 +26,7 @@ Additionally, this tutorial requires that you have an established cloud storage 
 
 [!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
-* Delimiter-separated values (DSV): Support for DSV-formatted data files is available to any single-character value. The value of field headers within DSV-formatted files must only consist of alphanumeric characters and underscores.
+* Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
 
