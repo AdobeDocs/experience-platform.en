@@ -6,7 +6,7 @@ topic: guide
 type: Documentation
 ---
 
-# (Beta) [!UICONTROL License usage] dashboard {#license-usage-dashboard}
+# (Beta) License usage dashboard {#license-usage-dashboard}
 
 >[!IMPORTANT]
 >
@@ -56,12 +56,22 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-The metrics that are available in the [!UICONTROL License usage] dashboard depend on the licensing that your organization has purchased. For detailed definitions of each metric, please reference the appropriate Product Description documentation:
+There are currently four metrics available in the license usage dashboard, these are:
 
-* [Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)
-* [Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)
-* [Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)
-* [Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)
+* [!UICONTROL Addressable audiences]
+* [!UICONTROL Average profile richness]
+* [!UICONTROL Total consumed storage]
+* [!UICONTROL Data scanned per segmentation ratio]
+
+The definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, please reference the appropriate Product Description documentation:
+
+|License|Product Description|
+|---|---|
+|<ul><li>ADOBE EXPERIENCE PLATFORM:OD LITE</li><li>ADOBE EXPERIENCE PLATFORM:OD STANDARD</li><li>ADOBE EXPERIENCE PLATFORM:OD HEAVY</li></ul>|[Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)|
+|<ul><li>ADOBE EXPERIENCE PLATFORM:OD</li></ul>|[Adobe Experience Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)|
+|<ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 50M</li></ul>|[Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform.html)|
+|<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
+|<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
 
 ## Next steps
 
