@@ -22,7 +22,7 @@ The **[!UICONTROL Streaming end-to-end]** monitoring page appears. This workspac
 
 By default, the top graph shows the rate of ingestion over the past seven days. This date range can be adjusted to show various periods of time by selecting the highlighted button.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-top-graph.png)
+![](../images/quality/monitor-data-flows/events-received.png)
 
 The bottom graph shows the rate of successfully processed streamed events by [!DNL Profile] over the past seven days. This date range can be adjusted to show various periods of time by selecting the highlighted button.
 
@@ -30,17 +30,17 @@ The bottom graph shows the rate of successfully processed streamed events by [!D
 >
 >In order for data to show up on this graph, the data must be **explicitly** enabled for [!DNL Profile]. To learn how to enable streaming data for [!DNL Profile], read the [datasets user guide](../../catalog/datasets/user-guide.md#enable-a-dataset-for-real-time-customer-profile).
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-bottom-graph.png)
+![](../images/quality/monitor-data-flows/ingested-by-profile.png)
 
 Underneath the graphs is a list of all the streaming ingestion records that correspond with the date range displayed above. Each listed batch displays its ID, dataset name, when it was last updated, the number of records in the batch, as well as the number of errors (if any exist). You can select any of the records for more detailed information about that record.
 
-![](../images/quality/monitor-data-flows/list-streams-focus-on-streams.png)
+![](../images/quality/monitor-data-flows/streams.png)
 
 ### Viewing streaming records
 
 When viewing the details of a successfully streamed record, information such as the number of records ingested, file size, and ingestion start and end times are shown.
 
-![](../images/quality/monitor-data-flows/successful-streaming-record.png)
+![](../images/quality/monitor-data-flows/successful-streaming.png)
 
 The details of a failed streaming record displays the same information as a successful record.
 
