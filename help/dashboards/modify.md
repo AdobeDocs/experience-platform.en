@@ -17,7 +17,7 @@ This guide provides step-by-step instructions for customizing how dashboard data
 
 >[!NOTE]
 >
->The widgets shown in the [!UICONTROL License usage] dashboard cannot be customized. Please refer to the [license usage dashboard documentation](guides/license-usage.md) to learn more about this unique dashboard.
+>The widgets shown in the license usage dashboard cannot be customized. Please refer to the [license usage dashboard documentation](guides/license-usage.md) to learn more about this unique dashboard.
 
 ## Getting started
 
@@ -55,4 +55,4 @@ For step-by-step instructions on how to access and work with the [!UICONTROL Wid
 
 ## Next steps
 
-After reading this document, you have learned how to use the [!UICONTROL Modify dashboard] functionality to reorder and resize widgets to customize your dashboard view. To learn how to create and add widgets to your dashboards, read the [widget library guide](widget-library.md).
+After reading this document, you have learned how to use the modify dashboard functionality to reorder and resize widgets to customize your dashboard view. To learn how to create and add widgets to your dashboards, read the [widget library guide](widget-library.md).
