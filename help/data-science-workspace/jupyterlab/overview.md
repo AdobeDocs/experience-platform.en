@@ -111,9 +111,9 @@ In [!DNL JupyterLab] select the gear icon in the top-right corner to open *Noteb
 
 ### Terminate & restart [!DNL JupyterLab]
 
-In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon**, then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
+In [!DNL JupyterLab], you can terminate your session to prevent further resources from being used. Start by selecting the **power icon** ![power icon](../images/jupyterlab/user-guide/power_button.png), then select **[!UICONTROL Shut Down]** from the popover that appears to terminate your session. Notebook sessions auto-terminate after 12 hours of no activity.
 
-To restart [!DNL JupyterLab], select the **restart icon** located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
+To restart [!DNL JupyterLab], select the **restart icon** ![restart icon](../images/jupyterlab/user-guide/restart_button.png) located directly to the left of the power icon, then select **[!UICONTROL Restart]** from the popover that appears.
 
 ![terminate jupyterlab](../images/jupyterlab/user-guide/shutdown-jupyterlab.gif)
 
