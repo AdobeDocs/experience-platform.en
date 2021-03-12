@@ -15,4 +15,6 @@ feature: Data Management
   * [Segments](guides/segments.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
+* [Modify dashboards](modify.md)
+* [Widget library](widget-library.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
