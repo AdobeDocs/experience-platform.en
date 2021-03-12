@@ -11,10 +11,10 @@ This developer guide provides steps for performing various operations in the Ado
 Using the developer guide requires a working understanding of the various Adobe Experience Platform services involved in working with [!DNL Data Prep]. Before beginning to work with the [!DNL Data Prep] API, please review the documentation for the following services:
 
 - [Data Prep](../home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
-- [[!DNL Data Ingestion]](../../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
 - [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
-In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the [getting started with Platform APIs guide](../../landing/api-guide.md).
+In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
 
 ## Next steps
 

@@ -21,16 +21,19 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/v
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-
+    "expression": "concat(\"Hi\", \",\", \"there\", \"!\")"
   }'
 ```
 
 **Response**
 
-A successful response returns HTTP status 200 with
+A successful response returns HTTP status 200 with the validation status of the expression.
 
 ```json
-
+{
+    "validationStatus": "succeeded",
+    "error": "none"
+}
 ```
 
 ## Get list of expressions

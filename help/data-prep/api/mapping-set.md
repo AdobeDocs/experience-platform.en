@@ -1,6 +1,14 @@
-# Mapping set endpoints
+---
+keywords: Experience Platform;home;popular topics;data prep;api guide;mapping sets;
+solution: Experience Platform
+title: Mapping Sets API Endpoint
+topic: mapping sets
+description: You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets. 
+---
 
-Mapping sets can be used define the mapping between the source and destination schemas. You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets. 
+# Mapping sets endpoint
+
+Mapping sets can be used to define how data in a source schema maps to that of a destination schema. You can use the `/mappingSets` endpoint in the Data Prep API to programmatically retrieve, create, update, and validate mapping sets. 
 
 ## List mapping sets
 
@@ -18,26 +26,26 @@ The `/mappingSets` endpoint supports several query parameters to help filter you
 ```http
 GET /mappingSets
 GET /mappingSets?limit={LIMIT}
+GET /mappingSets?start={START}
 GET /mappingSets?name={NAME}
 GET /mappingSets?orderBy={ORDER_BY}
 GET /mappingSets?property={PROPERTY}
-GET /mappingSets?start={START}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
 | `{LIMIT}` | **Required**. Specifies the number of mapping sets returned. |
-| `{NAME}` | Filters the mapping sets based on the name. |
-| `{ORDER_BY}` | Sorts the order of the results. The only supported field is `lastUpdateDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
-| `{PROPERTY}` | Filters the mapping sets based on a property within the mapping set. The supported properties are `xdmSchema` and `status`. |
 | `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
+| `{NAME}` | Filters the mapping sets by name. |
+| `{ORDER_BY}` | Sorts the order of the results. The only supported fields are `createdDate` and `updatedDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
+| `{PROPERTY}` | Filters the mapping sets based on a property within the mapping set. The supported properties are `xdmSchema` and `status`. |
 
 **Request**
 
 The following request will retrieve the last two mapping sets within your IMS Organization.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2 \
+curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
@@ -207,6 +215,14 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `outputSchema.schemaRef.id` | |
+| `outputSchema.schemaRef.contentType` | |
+| `mappings.sourceType` | ??? |
+| `mappings.source` | ABC |
+| `mappings.destination` | |
+
 **Response**
 
 A successful response returns HTTP status 200 with information about your newly created mapping set.
@@ -373,15 +389,19 @@ A successful response returns HTTP status 200 with a preview of your mapped data
 ]
 ```
 
-## Get a mapping set
+## Look up a mapping set
 
-You can retrieve a specific mapping set by making a GET request to the `/mappingSets` endpoint and providing the ID of the mapping set you wish to retrieve in the request path.
+You can retrieve a specific mapping set by providing its ID in the path of a GET request to the `/mappingSets` endpoint.
 
 **API format**
 
 ```http
 GET /mappingSets/{MAPPING_SET_ID}
 ```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `{MAPPING_SET_ID}` | The ID of the mapping set that you want to retrieve. |
 
 **Request**
 
@@ -558,13 +578,17 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Update a mapping set
 
-You can update a mapping set by making a `PUT` request to the `mappingSets` endpoint and providing the ID of the mapping set you wish to update in the request path
+You can update a mapping set by providing its ID in the path of a `PUT` request to the `mappingSets` endpoint.
 
 **API format**
 
 ```http
 PUT /mappingSets/{MAPPING_SET_ID}
 ```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `{MAPPING_SET_ID}` | The ID of the mapping set that you want to update. |
 
 **Request**
 
@@ -778,15 +802,19 @@ A successful response returns HTTP status 200 with detailed information about yo
 }
 ```
 
-## Return all mappings
+## List the mappings for a mapping set
 
-You can view all the mappings that belong to a specific mapping set by making a GET request to the following endpoint and providing the ID of the mapping set you wish to retrieve in the request path.
+You can view all the mappings that belong to a specific mapping set by providing its ID in the path of a GET request to the following endpoint.
 
 **API format**
 
 ```http
 GET /mappingSets/{MAPPING_SET_ID}/mappings
 ```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `{MAPPING_SET_ID}` | The ID of the mapping set that you want to retrieve mappings for. |
 
 **Request**
 
@@ -877,15 +905,20 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
 ]
 ```
 
-## Retrieve a mapping
+## Look up a mapping within a mapping set
 
-You can retrieve a specific mapping for a mapping set by making a GET request to the following endpoint and providing both the ID of the mapping set and the mapping you wish to retrieve in the request path.
+You can retrieve a specific mapping for a mapping set by providing their IDs in the path of a GET request to the following endpoint.
 
 **API format**
 
 ```http
 GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 ```
+
+| Parameters | Description |
+| ---------- | ----------- |
+| `{MAPPING_SET_ID}` | The ID of the mapping set that you want to look up mapping information about. |
+| `{MAPPING_ID}` | The ID of the mapping you want to look up. |
 
 **Request**
 

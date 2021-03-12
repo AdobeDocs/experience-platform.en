@@ -10,7 +10,7 @@ feature: Data Management, Data Ingestion
 
 - [Data Prep overview](home.md)
 - [Data Prep functions](functions.md)
-- [Data Prep API]{#api}
+- Mapping Service API {#api}
   - [Getting started](./api/getting-started.md)
   - [Functions](./api/functions.md)
   - [Mapping set](./api/mapping-set.md)
