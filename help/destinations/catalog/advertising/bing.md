@@ -30,7 +30,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 
 ## Prerequisites {#prerequisites}
 
-When configuring the destination you will asked to provide the following information:
+When configuring the destination, you must provide the following information:
 
 * [!UICONTROL Account ID]: this is your [!DNL Bing Ads CID], in integer format.
 
