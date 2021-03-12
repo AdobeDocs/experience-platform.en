@@ -18,6 +18,10 @@ Note the following details that are specific to the [!DNL The Trade Desk] destin
 
 * You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL The Trade Desk] destinations: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
 
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
 ## Use cases {#use-cases}
 
 As a marketer, I want to be able to use segments built off of [!DNL Trade Desk IDs] or device IDs to create retargeting or audience targeted digital campaigns.
