@@ -58,7 +58,7 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 There are currently four metrics available in the license usage dashboard:
 
-* [!UICONTROL Addressable audiences]
+* [!UICONTROL Addressable Audience]
 * [!UICONTROL Average profile richness]
 * [!UICONTROL Total consumed storage]
 * [!UICONTROL Data scanned per segmentation ratio]
