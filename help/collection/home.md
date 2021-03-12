@@ -13,7 +13,7 @@ Adobe Experience Platform Collection is a suite of technologies that enable clie
 * Websites
 * Native mobile applications
 * OTT
-* Servers 
+<!-- * Servers --> 
 
 Data can be enriched, transformed, and sent to Adobe or non-Adobe destinations in seconds. 
 
@@ -21,9 +21,9 @@ Data can be enriched, transformed, and sent to Adobe or non-Adobe destinations i
 
 Adobe Experience Platform Collection Developer includes the following technologies: 
 
-* [Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform.html) 
 * Adobe Experience Platform Data Streams
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
+* [Adobe Experience Platform Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) 
 * [Adobe Experience Platform Launch Client Side](https://experienceleague.adobe.com/docs/launch.html)
 * [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 
@@ -41,7 +41,7 @@ Adobe Experience Platform Edge Network is a globally distributed, fast, and reli
 
 ![](./images/deploy.png)
 
-## Transform, enrich, and send data Fast and secure
+## Transform, enrich, and send data fast and securely
 
 Adobe Experience Platform Launch Server Side can tap into any Adobe Experience Platform Data Stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
 
