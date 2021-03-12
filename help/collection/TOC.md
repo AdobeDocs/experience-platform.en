@@ -7,7 +7,7 @@ user-guide-description: Collect Data within Platform.
 feature: Data Collection, Launch
 ---
 
-# Adobe Experience Platform Data Access {#data-access}
+# Adobe Experience Platform Collection {#collection}
 
 - [Data Collection overview](home.md)
 -
