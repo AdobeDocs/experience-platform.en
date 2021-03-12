@@ -13,6 +13,7 @@ Adobe Experience Platform Collection is a suite of technologies that enable clie
 * Websites
 * Native mobile applications
 * OTT
+
 <!-- * Servers --> 
 
 Data can be enriched, transformed, and sent to Adobe or non-Adobe destinations in seconds. 
