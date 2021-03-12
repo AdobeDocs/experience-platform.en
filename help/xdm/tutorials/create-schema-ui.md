@@ -117,11 +117,13 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Define a new mixin {#define-mixin}
+## Define a custom mixin {#define-mixin}
 
-The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
+The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields.
 
-This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a display name and description for your mixin. 
+There is a standard [!UICONTROL Loyalty Details] mixin that you can add to the schema to capture common fields related to a loyalty program. While you are strongly encouraged to use standard mixins to represent concepts captured by your schemas, the structure of the standard loyalty mixin might not be able to capture all relevant data for your particular loyalty program. In this scenario, you can choose to define a new custom mixin to capture these fields instead.
+
+Open the **[!UICONTROL Add Mixin]** dialog again, but this time select **[!UICONTROL Create New Mixin]** near the top. You are then asked to provide a display name and description for your mixin. 
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 
