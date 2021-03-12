@@ -11,11 +11,15 @@ This page describes the available action types.
 
 ## Send Event
 
-Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). If you would like to make sure that the events reach the server even if the user navigates away from the page you will want to check the **[!UICONTROL Document will unload]** checkbox. This will allow events to reach the server but responses will be ignored.
+Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
 
-Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+There are a few other fields in the Send Event action type that could also be useful depending on your implementation. Please note that these fields are all optional.
 
-If you need to render personlization content you will want to check the **[UICONTROL Render visual personalization decisions]** checkbox. When doing this you can also specify decision scopes if necessary. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) on personalization for more information on rendering personalized content. 
+* **Type:** This field allows you specify an event type that will be recorded in you XDM schema. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) for more information on the default event types.
+* **Merge ID:** If you would like to specify a [merge ID](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) for you event you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this moment. 
+* **Dataset ID:** If you need to send data to a dataset other than the one you specified in you edge configuration you can specify that dataset ID here.
+* **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page you will want to check the **[!UICONTROL Document will unload]** checkbox. This will allow events to reach the server but responses will be ignored.
+* **Render visual personalization decisions:** If you want to render personalized content on your page you will want to check the **[UICONTROL Render visual personalization decisions]** checkbox. When doing this you can also specify decision scopes if necessary. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) on personalization for more information on rendering personalized content. 
 
 ## Set Consent
 
