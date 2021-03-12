@@ -11,9 +11,11 @@ This page describes the available action types.
 
 ## Send Event
 
-Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). If the event happens at the beginning of a page load or during a view change in a single page application, select **[!UICONTROL Occurs at the start of a view]**.
+Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). If you would like to make sure that the events reach the server even if the user navigates away from the page you will want to check the **[!UICONTROL Document will unload]** checkbox. This will allow events to reach the server but responses will be ignored.
 
 Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
+
+If you need to render personlization content you will want to check the **[UICONTROL Render visual personalization decisions]** checkbox. When doing this you can also specify decision scopes if necessary. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) on personalization for more information on rendering personalized content. 
 
 ## Set Consent
 
@@ -27,4 +29,4 @@ If you would like to reset your event merge ID on your page, you can do so with 
 
 ## What's next
 
-After you set your action types, [configure your data element types](data-element-types.md).
+After you set your actions, [configure your data element types](data-element-types.md).
