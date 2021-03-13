@@ -15,17 +15,17 @@ Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Plat
 
 There are a few other fields in the Send Event action type that could also be useful depending on your implementation. Please note that these fields are all optional.
 
-* **Type:** This field allows you specify an event type that will be recorded in you XDM schema. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) for more information on the default event types.
-* **Merge ID:** If you would like to specify a [merge ID](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) for you event you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this moment. 
-* **Dataset ID:** If you need to send data to a dataset other than the one you specified in you edge configuration you can specify that dataset ID here.
-* **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page you will want to check the **[!UICONTROL Document will unload]** checkbox. This will allow events to reach the server but responses will be ignored.
-* **Render visual personalization decisions:** If you want to render personalized content on your page you will want to check the **[UICONTROL Render visual personalization decisions]** checkbox. When doing this you can also specify decision scopes if necessary. See our [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) on personalization for more information on rendering personalized content. 
+* **Type:** This field allows you specify an event type that will be recorded in you XDM schema. See the [documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#using-the-sendbeacon-api) for more information on the default event types.
+* **Merge ID:** If you would like to specify a [merge ID](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/merging-event-data.html?lang=en#fundamentals) for your event, you can do so in this field. Please note that the solutions downstream are not able to merge your event data at this time. 
+* **Dataset ID:** If you need to send data to a dataset other than the one you specified in your edge configuration, you can specify that dataset ID here.
+* **Document will unload:** If you would like to make sure that the events reach the server even if the user navigates away from the page, check the **[!UICONTROL Document will unload]** checkbox. This allows events to reach the server but responses are ignored.
+* **Render visual personalization decisions:** If you want to render personalized content on your page, check the **[UICONTROL Render visual personalization decisions]** checkbox. You can also specify decision scopes if necessary. See the [personalization documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) for more information on rendering personalized content. 
 
 ## Set Consent
 
 After you have received consent from your user, this consent must be communicated to the Adobe Experience Platform Web SDK by using the "Set Consent" action type. Currently, two types of standards are supported: "Adobe" and "IAB TCF." See [Supporting Customer Consent Preferences](../consent/supporting-consent.md). When using Adobe version 2.0, only a data element value is supported. You will need to create a data element that resolves to the consent object.
 
-In this action, you are also provided with an optional field to include an Identity Map so that identities can be synced once consent is received. Syncing is useful when the consent is configured as "Pending", or "Out" because the consent call is likely the first call to fire.
+In this action, you are also provided with an optional field to include an Identity Map so that identities can be synced once consent is received. Syncing is useful when the consent is configured as "Pending" or "Out" because the consent call is likely the first call to fire.
 
 ## Reset Event Merge ID
 
