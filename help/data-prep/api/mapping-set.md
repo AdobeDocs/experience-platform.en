@@ -16,20 +16,13 @@ You can retrieve a list of all the mapping sets for your IMS Organization by mak
 
 **API format**
 
-The `/mappingSets` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Multiple parameters can be included, separated by ampersands (`&`). 
-
->[!NOTE]
->
->Currently, you must include both the `start` and `limit` parameters as part of your request.
-
+The `/mappingSets` endpoint supports several query parameters to help filter your results. While most of these parameters are optional, their use is strongly recommended to help reduce expensive overhead. However, you must include both the `start` and `limit` parameters as part of your request. Multiple parameters can be included, separated by ampersands (`&`). 
 
 ```http
-GET /mappingSets
-GET /mappingSets?limit={LIMIT}
-GET /mappingSets?start={START}
-GET /mappingSets?name={NAME}
-GET /mappingSets?orderBy={ORDER_BY}
-GET /mappingSets?property={PROPERTY}
+GET /mappingSets?limit={LIMIT}&start={START}
+GET /mappingSets?limit={LIMIT}&start={START}&name={NAME}
+GET /mappingSets?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
+GET /mappingSets?limit={LIMIT}&start={START}&property={PROPERTY}
 ```
 
 | Parameter | Description |
@@ -182,6 +175,7 @@ The following request creates a new mapping set, configured by the parameters pr
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -255,6 +249,7 @@ The following request validates the mappings provided in the payload.
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/validate \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -326,6 +321,7 @@ POST /mappingSets/preview
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/preview \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -399,8 +395,8 @@ You can retrieve a specific mapping set by providing its ID in the path of a GET
 GET /mappingSets/{MAPPING_SET_ID}
 ```
 
-| Parameters | Description |
-| ---------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{MAPPING_SET_ID}` | The ID of the mapping set that you want to retrieve. |
 
 **Request**
@@ -586,8 +582,8 @@ You can update a mapping set by providing its ID in the path of a `PUT` request 
 PUT /mappingSets/{MAPPING_SET_ID}
 ```
 
-| Parameters | Description |
-| ---------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{MAPPING_SET_ID}` | The ID of the mapping set that you want to update. |
 
 **Request**
@@ -595,6 +591,7 @@ PUT /mappingSets/{MAPPING_SET_ID}
 ```shell
 curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c80e4c0d8f4a98a7d400b4e178b635 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -812,8 +809,8 @@ You can view all the mappings that belong to a specific mapping set by providing
 GET /mappingSets/{MAPPING_SET_ID}/mappings
 ```
 
-| Parameters | Description |
-| ---------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{MAPPING_SET_ID}` | The ID of the mapping set that you want to retrieve mappings for. |
 
 **Request**
@@ -915,8 +912,8 @@ You can retrieve a specific mapping for a mapping set by providing their IDs in 
 GET /mappingSets/{MAPPING_SET_ID}/mappings/{MAPPING_ID}
 ```
 
-| Parameters | Description |
-| ---------- | ----------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `{MAPPING_SET_ID}` | The ID of the mapping set that you want to look up mapping information about. |
 | `{MAPPING_ID}` | The ID of the mapping you want to look up. |
 

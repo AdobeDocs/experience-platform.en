@@ -1,36 +1,38 @@
-# Sample data endpoints
+---
+keywords: Experience Platform;home;popular topics;data prep;api guide;sample data;
+solution: Experience Platform
+title: Sample Data API Endpoint
+topic: sample data
+description: You can use the `/sanokes` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sample data. 
+---
 
-Sample data can be used when creating a schema for your mapping set. You can use the `/samples` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update sample data.
+# Sample data endpoint
 
-## Get all sample data
+Sample data can be used when creating a schema for your mapping set. You can use the `/samples` endpoint in the Data Prep API to programmatically retrieve, create, and update sample data.
 
-You can retrieve a list of all the sample data for your IMS Organization by making a GET request to the `/samples` endpoint.
+## List sample data
+
+You can retrieve a list of all the mapping sample data for your IMS Organization by making a GET request to the `/samples` endpoint.
 
 **API format**
 
-The `/samples` endpoint supports several query parameters to help filter your results. While these parameters are optional, their use is strongly recommended to help reduce expensive overhead. Multiple parameters can be included, separated by ampersands (`&`). 
-
->[!NOTE]
->
->Currently, you must include both the `start` and `limit` parameters as part of your request.
+The `/samples` endpoint supports several query parameters to help filter your results. Currently, you must include both the `start` and `limit` parameters as part of your request.
 
 ```http
-GET /samples
-GET /samples?limit={LIMIT}
-GET /samples?start={START}
+GET /samples?limit={LIMIT}&start={START}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{LIMIT}` | **Required**. Specifies the number of mapping sets returned. |
+| `{LIMIT}` | **Required**. Specifies the number of mapping sample data returned. |
 | `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
 
 **Request**
 
-The following request will retrieve the last two sample data within your IMS Organization.
+The following request will retrieve the last two mapping sample data within your IMS Organization.
 
 ```shell
-curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2 \
+curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2&start=0 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
@@ -39,7 +41,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples?limit=2
 
 **Response**
 
-A successful response returns HTTP status 200 with information about the last two sample data.
+A successful response returns HTTP status 200 with information about the last two objects of mapping sample data.
 
 ```json
 {
@@ -72,6 +74,11 @@ A successful response returns HTTP status 200 with information about the last tw
 }
 ```
 
+| Property | Description |
+| -------- | ----------- |
+| `sampleData` | |
+| `sampleType` | |
+
 ## Create sample data
 
 You can create sample data by making a POST request to the `/samples` endpoint.
@@ -85,6 +92,7 @@ POST /samples
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -112,7 +120,7 @@ A successful response returns HTTP status 200 with information about your newly 
 }
 ```
 
-## Create sample data using file upload
+## Create sample data by uploading a file
 
 You can create sample data using a file by making a POST request to the `/samples/upload` endpoint.
 
@@ -127,6 +135,7 @@ POST /samples/upload
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/samples \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: multipart/form-data' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
@@ -150,15 +159,19 @@ A successful response returns HTTP status 200 with information about your newly 
 }
 ```
 
-## Retrieve specific sample data
+## Look up a specific sample data object
 
-You can retrieve a specific sample data by making a GET request to the `/samples` endpoint and providing the ID of the sample data you wish to retrieve in the request path.
+You can look up a specific object of sample data by providing its ID in the path of a GET request to the `/samples` endpoint.
 
 **API format**
 
 ```http
-GET /samples/{ID}
+GET /samples/{SAMPLE_ID}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{SAMPLE_ID}` | The ID of the sample data object you want to retrieve. |
 
 **Request**
 
@@ -172,7 +185,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/samples/1fc0b6c
 
 **Response**
 
-A successful response returns HTTP status 200 with information of the sample data you wanted to retrieve.
+A successful response returns HTTP status 200 with information of the sample data object you wanted to retrieve.
 
 ```json
 {
@@ -189,13 +202,17 @@ A successful response returns HTTP status 200 with information of the sample dat
 
 ## Update sample data
 
-You can update the sample data by making a PUT request to the `/samples` endpoint and providing the ID of the sample data you wish to update in the request path.
+You can update a specific sample data object by providing its ID in the path of a PUT request to the `/samples` endpoint.
 
 **API format**
 
 ```http
-PUT /samples/{ID}
+PUT /samples/{SAMPLE_ID}
 ```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{SAMPLE_ID}` | The ID of the sample data object you want to update. |
 
 **Request**
 
