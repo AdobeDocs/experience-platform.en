@@ -16,6 +16,10 @@ Note the following details that are specific to the [!DNL Microsoft Bing] destin
 
 * You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
 
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
 ## Use cases {#use-cases}
 
 As a marketer, I want to be able to use segments built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
@@ -26,7 +30,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 
 ## Prerequisites {#prerequisites}
 
-When configuring the destination you will asked to provide the following information:
+When configuring the destination, you must provide the following information:
 
 * [!UICONTROL Account ID]: this is your [!DNL Bing Ads CID], in integer format.
 

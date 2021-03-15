@@ -12,8 +12,8 @@ feature: Destinations
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
 * API tutorials {#api}
-    * [Connect to streaming destinations and activate data using API calls](./api/streaming-destinations.md)
-    * [Connect to email marketing destinations and activate data using API calls](./api/email-marketing.md)
+    * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
+    * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace overview](./ui/destinations-workspace.md)
     * [View destination details](./ui/destination-details-page.md)
