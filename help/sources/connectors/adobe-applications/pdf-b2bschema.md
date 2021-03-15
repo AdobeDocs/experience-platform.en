@@ -39,7 +39,7 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Base class**: XDM Business Opportunity
 * **Mixins**: XDM Business Opportunity Details
 * **Profile in schema**: Enabled
-* **Primary identity**: `opportunityPersonID` in the base class.
+* **Primary identity**: `opportunityID` in the base class.
 * **Primary identity namespace**: `opportunity_{MUNCHKIN_ID}_marketo`
 * **Secondary identity**: `extSourceSystemAudit.externalID` in the base class.
 * **Secondary identity namespace**: `opportunity_{SFDC_Organization_ID}_salesforce`
