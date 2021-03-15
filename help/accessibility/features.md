@@ -40,19 +40,27 @@ Not evaluated: The product has not been evaluated against the criterion. This ca
 
 ## Keyboard accessibility
 
-Experience Platform supports full keyboard accessibility, ensuring that any user interface elements that are clickable or actionable with a pointer can also be engaged with a keyboard. To indicate which UI element currently has focus, a blue border appears around selected elements to indicate that focus is applied. Using a keyboard, users can navigate around the Platform user interface, as well as focus upon UI elements and take appropriate actions. Users can also use keyboard navigation for drag and drop interactions within Platform.
+Experience Platform supports full keyboard accessibility, ensuring that any user interface elements that are clickable or actionable with a pointer can also be engaged with a keyboard. Using a keyboard, users can navigate around the Platform user interface, as well as focus upon UI elements and take appropriate actions. Users can also use keyboard navigation for drag and drop interactions within Platform.
 
 The following navigational elements help to facilitate accessibility: 
 
-* **Tab:** The tab key moves between UI elements.
+* **Tab:** The tab key moves between UI elements, shifting focus.
 * **Shift + Tab:** Selecting shift and the tab key together moves backwards through the tab order. 
 * **Return (Enter):** The return or enter key activates a selected item.
 * **Spacebar:** The spacebar can also be used to activate a selected item.
+
+To indicate which UI element currently has focus, a blue border appears around selected elements to indicate that focus is applied. 
+
+![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
 ## Color palettes & contrast
 
 Experience Platform strives for [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformance, including requirements for color contrast. The Experience Platform UI provides enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
 
-## Required field validation in various features
+![An image showing the color palette and contrast present on the homepage of the Experience Platform UI.](images/homepage.png)
 
-When adding data, creating schemas, and generating segments, required fields are validated when you enter invalid data in fields and or upon saving. If a required field does not pass validation, it will be outlined in red with an error icon. A written description of the issue that needs to be fixed also appears to the reader.
+## Required field validation
+
+Required fields are validated during multiple workflows such as adding data, creating schemas, and generating segments. If invalid data is entered into a required field or it does not pass validation during saving, the field is highlighted in red and an error icon appears.
+
+![A close up of a required field that has not passed validation. The field appears in red and an error icon is present.](images/field-validation.png)
