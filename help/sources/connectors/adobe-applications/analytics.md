@@ -38,6 +38,8 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 
 ## What is the expected latency for Analytics Data on Platform?
 
+The expected latency for Analytics Data on Platform is outlined in the table below. Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+
 | Analytics Data | Expected Latency |
 | -------------- | ---------------- |
 | New data to [!DNL Real-time Customer Profile] (A4T **not** enabled) | < 2 minutes |
@@ -47,7 +49,7 @@ For detailed information on the field mapping that occurs between [!DNL Analytic
 
 >[!NOTE]
 >
->Latency will vary depending on customer configuration, data volumes, and consumer applications. For example, if the Analytics implementation is configured with `A4T` the latency to Pipeline will increase to 5-10 minutes.
+>Analytics backfill data is not ingested into [!DNL Profile] and thus is not accounted for in license profiles.
 
 ## Primary identifiers in Analytics data
 
