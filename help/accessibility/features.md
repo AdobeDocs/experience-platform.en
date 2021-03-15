@@ -3,20 +3,26 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: General Accessibility Features in Platform
 topic: guide
 type: Documentation
-description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
+description: Learn more about the general accessibility features supported by Adobe Experience Platform, including keyboard navigation, color palettes and contrast, and assistive technology support.
 ---
 
 # Accessibility features in Experience Platform
 
-Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices, such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including assistive devices, keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, assistive technology support, and clear element labels.
+Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices, such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, and support for assistive technologies.
 
-For information regarding accessibility features in specific sections of the Platform user interface (UI), please select a document from the custom accessibility dropdown in the left rail.
+## Assistive Technologies
 
-## Support for Assistive Technologies
+Users with disabilities frequently rely on hardware and software known as "assistive technologies" to access web content and use software products. Adobe Experience Platform supports several types of assistive technologies (AT), including:
 
-Users with disabilities frequently rely on hardware and software known as "assistive technologies" to access web content and use software products. Adobe Experience Platform supports several types of assistive technologies (AT) such as screen readers.
+* Screen readers and screen magnifiers.
+* Speech recognition software.
+* Keyboard usage – navigation and shortcuts.
+* Assistive hardware, including switch controls, refreshable Braille displays, and other computer input devices.
+* UI magnifying tools.
 
-A screen reader reads text that appears on the computer screen. It also reads non-textual information, such as button labels or image descriptions in the application, provided in accessibility tags or attributes. Through the use of semantic code and ARIA, interactive elements within Experience Platform user interface includes corresponding labels, accessible names, and roles that identify both their purpose and their current state. This ensures that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls. All interactive elements within the Experience Platform user interface include corresponding labels. This ensures that assistive technologies, such as screen readers, can read out the labels to users.
+## Screen readers
+
+A screen reader reads text that appears on the computer screen. It also reads non-textual information, such as button labels or image descriptions within an application that are provided in accessibility tags or attributes. Through the use of semantic code and ARIA, interactive elements within the Experience Platform user interface include corresponding labels, accessible names, and roles that identify both their purpose and their current state. This helps to ensure that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls. All interactive elements within Experience Platform include corresponding labels. This ensures that assistive technologies, such as screen readers, can read out the labels to users.
 
 ### Recommended screen readers & browsers
 
@@ -34,17 +40,19 @@ Not evaluated: The product has not been evaluated against the criterion. This ca
 
 ## Keyboard accessibility
 
-Experience Platform supports full keyboard accessibility.
+Experience Platform supports full keyboard accessibility, ensuring that any user interface elements that are clickable or actionable with a pointer can also be engaged with a keyboard. To indicate which UI element currently has focus, a blue border appears around selected elements to indicate that focus is applied. Using a keyboard, users can navigate around the Platform user interface, as well as focus upon UI elements and take appropriate actions. Users can also use keyboard navigation for drag and drop interactions within Platform.
 
-Keyboard navigation in Experience Platform works top > down, and left > right. The following navigational elements facilitate accessibility: the tab key moves between UI elements, shift + tab moves backwards through the tab order. The Return ( Enter ) and Spacebar keys activate the selected item.
+The following navigational elements help to facilitate accessibility: 
 
-Blue border around the selected element indicates a focus is applied to display a clear indication of which UI element currently has focus. Experience Platform has an equivalent keyboard navigation for drag & drop interactions.
+* **Tab:** The tab key moves between UI elements.
+* **Shift + Tab:** Selecting shift and the tab key together moves backwards through the tab order. 
+* **Return (Enter):** The return or enter key activates a selected item.
+* **Spacebar:** The spacebar can also be used to activate a selected item.
 
 ## Color palettes & contrast
 
-Experience Platform strives for WCAG 2.1 AA conformance, including requirements for color contrast. The Experience Platform UI strives to provide enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
+Experience Platform strives for [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformance, including requirements for color contrast. The Experience Platform UI provides enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
 
 ## Required field validation in various features
 
-When adding data, creating schemas and segments, required fields are validated when you enter invalid data in fields and or upon saving. If a required field does not pass validation, it will be outlined in red with an error icon. A written description appears of the issue that needs to be fixed.
-
+When adding data, creating schemas, and generating segments, required fields are validated when you enter invalid data in fields and or upon saving. If a required field does not pass validation, it will be outlined in red with an error icon. A written description of the issue that needs to be fixed also appears to the reader.
