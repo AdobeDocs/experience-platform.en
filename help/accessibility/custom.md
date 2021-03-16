@@ -127,18 +127,13 @@ Query Service supports keyboard navigation outside of the editor UI (editor UI i
 ## Sources and Destinations: System View tab
 
 Accessibility: keyboard navigation
-1) Tab sets focus on first source connection card
-
-• Second tab will focus on button inside of card
-• Enter will activate the call to action button inside the card
-
-
-2) Enter on connection card, activates more details in the right panel
-
-• If right rail activated, tab will focus on right rail options
-
-• If more than 1 sources connection card tab will move down the connections
-• Up/down arrow keys move up/down from the card lists
-• Tab tabs to middle Profile card
-• Tab tabs to destinations card(s)
-• Tab tabs to right panel UI
+* Tab sets focus on first source connection card
+  * Second tab will focus on button inside of card
+  * Enter will activate the call to action button inside the card
+* Enter on connection card, activates more details in the right panel
+  * If right rail activated, tab will focus on right rail options
+  * If more than 1 sources connection card tab will move down the connections
+  * Up/down arrow keys move up/down from the card lists
+  * Tab tabs to middle Profile card
+  * Tab tabs to destinations card(s)
+  * Tab tabs to right panel UI
