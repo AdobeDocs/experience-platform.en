@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;data prep;api guide;sample dat
 solution: Experience Platform
 title: Sample Data API Endpoint
 topic: sample data
-description: You can use the `/sanokes` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sample data. 
+description: You can use the `/samples` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sample data. 
 ---
 
 # Sample data endpoint

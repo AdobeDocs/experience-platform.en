@@ -1,6 +1,14 @@
+---
+keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
+solution: Experience Platform
+title: Schemas API Endpoint
+topic: schemas
+description: You can use the `/functions` endpoint in the Adobe Experience Platform API to validate your mapping expressions and list available mapping set functions. 
+---
+
 # Functions endpoints
 
-Mapping set functions allow you to transform your data between source and destination schemas. You can use the `functions` endpoint to validate your expressions as well as get a list of all the available mapping set functions.
+Mapping-set functions allow you to transform your data between source and destination schemas. You can use the `/languages/el` endpoint to validate your expressions as well as get a list of all the available mapping-set functions.
 
 ## Validate expressions
 
@@ -17,10 +25,12 @@ POST /languages/el/validate
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/languages/el/validate \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \ 
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
+  -d '
+  {
     "expression": "concat(\"Hi\", \",\", \"there\", \"!\")"
   }'
 ```
@@ -36,9 +46,9 @@ A successful response returns HTTP status 200 with the validation status of the 
 }
 ```
 
-## Get list of expressions
+## List mapping set functions
 
-You can see a list of all the mapping set functions available to you by making a GET request to the `/languages/el/functions` endpoint.
+You can retrieve a list of all the mapping-set functions available to you by making a GET request to the `/languages/el/functions` endpoint.
 
 **API format**
 
@@ -58,7 +68,7 @@ curl -X GET https://platform.adobe.io/data/foundation/conversion/languages/el/fu
 
 **Response**
 
-A successful response returns HTTP status 200 with a list of all the available mapping set functions.
+A successful response returns HTTP status 200 with a list of all the available mapping-set functions.
 
 >[!NOTE]
 >
