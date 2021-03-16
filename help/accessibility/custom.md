@@ -18,6 +18,8 @@ UI items are now keyboard accessible, tab and arrow keys
 Focused links + enter open content in 2nd browser window
 aria-labels added
 
+![An image showing the homepage of the Adobe Experience Platform UI.](images/homepage.png)
+
 ## Left navigation
 
 Summary:
@@ -45,18 +47,27 @@ Left nav items have aria-labels
 
 ## Embedded video dialog
 
-ESC key closes the dialog
-1) Tab sets focus on play button - spacebar plays video
-2) Second tab focuses the scrubber - left/right keys skips ahead/back 5 seconds
-3) Tab to play/pause affordance, spacebar plays/pauses video
-4) Tab to mute/unmute affordance spacebar mute/unmute
-5) Tab to volume up/down affordance - left/right keys volume up/down
-6) Tab to close caption affordance, enter opens the menu, arrow up/down select langauge, enter confirms
-7) Tab to cog affordance, enter opens the menu, arrow up/down select video quality, enter confirms
-8) Tab to full screen, enter to activate full screen view, escape to exit full screen mode.
-9) Tab to close button to exit video dialog
+Videos can be viewed within Experience Platform by using keyboard navigation to highlight and select an available video link. This opens an embedded video dialog within the Platform UI.
 
-![](images/video-dialog.png)
+![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
+
+The embedded video dialog can also be navigated using the keyboard. The following steps demonstrate the complete keyboard navigation available for the embedded video dialog:
+
+1) Tab to set focus on play button. Spacebar begins video playback.
+2) While video is playing, tab to focus the scrubber. With the scrubber in focus, left and right arrow keys skip video playback ahead and back 5 seconds, respectively.
+3) Tab to focus pause/play button. Spacebar pauses/plays video.
+4) Tab to focus mute/unmute. Spacebar mutes/unmutes video.
+5) Tab to volume up/down affordance. Left and right arrow keys move volume up and down, respectively.
+6) Tab to [!UICONTROL Closed Captions] ("cc") affordance. Enter opens the menu, up and down arrows keys select language. Enter key confirms selection.
+7) Tab to [!UICONTROL Quality] affordance. Enter opens the menu, up and down arrow keys select video quality. Enter key confirms selection.
+8) Tab to full screen affordance. Spacebar or enter key activates full screen view.Escape ("esc") exits full screen mode.
+9) Tab to close button. Spacebar or enter key exits video dialog. 
+
+>[!NOTE]
+>
+>At any time during playback, the escape ("esc") key can be used to close the embedded video dialog.
+
+![An image showing the embedded video dialog with numbers identifying keyboard navigation elements.](images/video-dialog.png)
 
 ## File drag and drop accessibility
 
