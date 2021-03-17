@@ -2,8 +2,8 @@
 keywords: Experience Platform;data prep;data prep api;troubleshooting;API
 title: Getting started with Data Prep API
 topic: guide
+description: The Data Prep API getting started guide outlines the key concepts and basic functionality that you need to know in order to use the Data Prep API endpoints to perform basic CRUD operations for use with Mapper.
 ---
-
 # Getting started with the [!DNL Data Prep] API {#getting-started}
 
 This developer guide provides steps for performing various operations in the Adobe Experience Platform Data Prep API.

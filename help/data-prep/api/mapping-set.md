@@ -172,6 +172,10 @@ POST /mappingSets
 
 The following request creates a new mapping set, configured by the parameters provided in the payload.
 
+>[!NOTE]
+>
+>For the output schema, you can either use the `schemaRef` object to refer to an existing XDM schema or create your own JSON Schema. The following example shows how to refer to an existing XDM schema.
+
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -211,11 +215,11 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
 
 | Property | Description |
 | -------- | ----------- |
-| `outputSchema.schemaRef.id` | |
-| `outputSchema.schemaRef.contentType` | |
-| `mappings.sourceType` | ??? |
-| `mappings.source` | ABC |
-| `mappings.destination` | |
+| `outputSchema.schemaRef.id` | The ID of the XDM schema you are referencing. |
+| `outputSchema.schemaRef.contentType` | Determines the response format of the referenced schema. More information this field can be found in the [schema registry developer guide](../../xdm/api/schemas.md#lookup) |
+| `mappings.sourceType` | The source type describes how the value will be extracted from the source to the destination. |
+| `mappings.source` | The location where you want the data to be mapped from. |
+| `mappings.destination` | The location where you want the data to be mapped to. |
 
 **Response**
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;data prep;api guide;schemas;
 solution: Experience Platform
 title: Schemas API Endpoint
 topic: schemas
-description: You can use the `/schemas` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update schemas. 
+description: You can use the `/schemas` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, and update schemas for use with Mapper in Platform. 
 ---
 
 
@@ -11,9 +11,13 @@ description: You can use the `/schemas` endpoint in the Adobe Experience Platfor
 
 Schemas can be used with Mapper to ensure the data you've ingested into Adobe Experience Platform matches what you want to ingest. You can use the `/schemas` endpoint to programmatically create, list, and get custom schemas for use with Mapper in Platform. 
 
+>[!NOTE]
+>
+>Schemas created using this endpoint are used exclusively with Mapper and mapping sets. To create schemas accessible by other Platform services, please read the [Schema Registry developer guide](../../xdm/api/schemas.md).
+
 ## Get all schemas
 
-You can retrieve a list of all available schemas for your IMS Organization by making a GET request to the `/schemas` endpoint.
+You can retrieve a list of all available Mapper schemas for your IMS Organization by making a GET request to the `/schemas` endpoint.
 
 **API format**
 
@@ -30,7 +34,7 @@ GET /schemas?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
 | `{LIMIT}` | **Required**. Specifies the number of schemas returned. |
 | `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
 | `{NAME}` | Filters the schema based on the name. |
-| `{ORDER_BY}` | Sorts the order of the results. The only supported field is `lastUpdateDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
+| `{ORDER_BY}` | Sorts the order of the results. The supported fields are `modifiedDate` and `createdDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
 
 **Request**
 
@@ -123,7 +127,7 @@ The following response returns HTTP status 200 with a list of the requested sche
 
 ## Create a schema
 
-You can create a schema to validate against by making a POST request to the `/schemas` endpoint. There are three ways of creating a schema: sending a [JSON Schema](https://json-schema.org/), using sample data, or using an existing XDM schema.
+You can create a schema to validate against by making a POST request to the `/schemas` endpoint. There are three ways of creating a schema: sending a [JSON Schema](https://json-schema.org/), using sample data, or referencing an existing XDM schema.
 
 ```http
 POST /schemas
@@ -143,9 +147,13 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}'
  -d '
- {
-     "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"sampleschema45439a93d48d47d098d26e0f0840cc02\",\"description\":null,\"type\":\"object\",\"format\":null,\"properties\":{\"firstname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"firstname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null},\"lastname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"lastname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}},\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}",   
- }'
+{
+    "jsonSchema": {
+        "id": "string",
+        "firstName": "string",
+        "lastName": "string"
+    }
+}'
 ```
 
 **Response**
@@ -153,16 +161,13 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/schemas \
 A successful response returns HTTP status 200 with information about your newly created schema.
 
 ```json
-
 {
-    "id": "sdfssdf3f4bc182c9aeaa74ac5e7d",
+    "id": "6daffabf14b1425292add3719afc8fab",
     "version": 0,
-    "name": "schemaname1",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"sampleschema45439a93d48d47d098d26e0f0840cc02\",\"description\":null,\"type\":\"object\",\"format\":null,\"properties\":{\"firstname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"firstname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null},\"lastname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"lastname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}},\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}",
-    "sampleId": "45439a93d48d47d098d26e0f0840cc02",
-    "schemaRef": {
-        "id": null,
-        "contentType": null
+    "jsonSchema": {
+        "id": "string",
+        "firstName": "string",
+        "lastName": "string"
     }
 }
 ```
@@ -232,7 +237,7 @@ A successful response returns HTTP status 200 with information about your newly 
 }
 ```
 
-### Using an XDM schema
+### Refer to an XDM schema
 
 **Request**
 
@@ -313,13 +318,12 @@ A successful response returns HTTP status 200 with information about your newly 
 
 ```json
 {
-    "id": "35bbe7b05c3f4bc182c9aeaa74ac5e7d",
+    "id": "292add3716daffabf14b14259afc8fab",
     "version": 0,
-    "name": "schemaname1",
-    "jsonSchema": "{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"sampleschema45439a93d48d47d098d26e0f0840cc02\",\"description\":null,\"type\":\"object\",\"format\":null,\"properties\":{\"firstname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"firstname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null},\"lastname\":{\"id\":null,\"schema\":null,\"_refId\":null,\"title\":\"lastname\",\"description\":null,\"type\":\"string\",\"format\":null,\"properties\":null,\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}},\"items\":null,\"required\":null,\"created\":null,\"updated\":null,\"xdmVersion\":null,\"minimum\":null,\"maximum\":null,\"default\":null,\"enum\":null,\"pattern\":null}",
-    "schemaRef": {
-        "id": null,
-        "contentType": null
+    "jsonSchema": {
+        "id": "string",
+        "firstName": "string",
+        "lastName": "string"
     }
 }
 ```
@@ -336,7 +340,7 @@ GET /schemas/{SCHEMA_ID}
 
 | Property | Description |
 | -------- | ----------- |
-| `{SCHEMA_ID}` | The ID of the schema you are looking up.
+| `{SCHEMA_ID}` | The ID of the schema you are looking up. |
 
 **Request**
 
