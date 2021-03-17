@@ -6,7 +6,11 @@ description: Create a live outbound connection to your SFTP Server to periodical
 
 # SFTP connection
 
-Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
+Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+> While Adobe supports data exports to SFTP servers, the recommended method to export data to a cloud storage location is through [!DNL Amazon S3] or [!DNL Azure Blob].
 
 ## Export Type {#export-type}
 
@@ -27,3 +31,27 @@ For SFTP destinations, enter the following information in the create destination
 ## Exported data {#exported-data}
 
 For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+
+## IP address allow list
+
+This section provides you with a way to allow list IP addresses so that you can safely export data from Experience Platform to your SFTP.
+
+You can define network access controls through your network firewall. By specifying the appropriate destination IP range, you can allow traffic for the data transfer service. 
+
+Add the following IP addresses to an allow list prior to working with the SFTP destination connection. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using the SFTP destination connection.
+
+>[!IMPORTANT]
+>
+> Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
+
+### East US region
+
+- `52.252.71.64/29`
+
+### West Europe region
+
+- `51.137.8.208/29`
+
+### Australia East region
+
+- `20.53.201.168/29`
