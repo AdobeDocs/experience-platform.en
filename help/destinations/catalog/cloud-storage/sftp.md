@@ -1,7 +1,7 @@
 ---
 keywords: SFTP;sftp
 title: SFTP connection
-description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
+description: Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
 ---
 
 # SFTP connection
@@ -36,7 +36,7 @@ For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in
 
 This section provides IP ranges that you can allow list to safely export data from Experience Platform to your SFTP.
 
-You can define network access controls through your network firewall. By specifying the appropriate destination IP range, you can allow traffic for the data transfer service.
+You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
 Add the following IP ranges to an allow list prior to working with the SFTP destination connection. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the SFTP destination connection.
 
