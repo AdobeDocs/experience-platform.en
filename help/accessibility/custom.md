@@ -71,17 +71,13 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 
 ## File drag and drop accessibility
 
-Summary:
-Use the react-spectrum `<DropZone />` and `<IllustratedMessage /> `components instead of custom UI components for all file drag-n-drops. (FileDropHeader.js and UploadArea.js)
-Hide the dropzone from keyboard users. No more using the keyboard on the dropzone to open the file menu, so we don't have a redundant keyboard experience with the "choose" button 
-For FileDropHeader.js, also hide "choose" button when the dropzone is hidden, after successful upload
-File chooser works in a variety of experiences, workflows, dialogs, and right panels
+In Experience Platform, all file selection drag and drop zones are keyboard accessible. Using the tab button to highlight [!UICONTROL Choose files] and using enter or spacebar to select the button, invokes the file selection UI for the users operating system.
 
-Accessibility Specifications:
-Drag and drop component is keyboard accessible (Choose files) button.
-Mouse users have drag and drop zone for file upload, invokes the OS file picker UI.
-Once file has been uploaded, delete UI is keyboard navigable.
-Enter key deletes the upload, choose button is enabled and focused.
+After a file has been uploaded, a delete icon becomes keyboard navigable to remove the selected file and upload a new one. Users can use the tab key to focus on the delete icon and enter or spacebar to select it. Once the file is removed, the [!UICONTROL Choose files] button is automatically in focus and able to be selected.
+
+Alternatively, if the file that is uploaded is not in the correct format, an error message appears with an error icon displayed to alert the user and the [!UICONTROL Choose files] button is automatically in focus and selectable.
+
+![An image showing a file drag and drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
 
 ## Browse table keyboard navigation
 
