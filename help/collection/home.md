@@ -16,7 +16,7 @@ Data collection is supported for the following client-side sources:
 * Native mobile applications
 * Over-the-top (OTT) applications
 
-The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets within. These technologies encompass the following:
+The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets. These technologies encompass the following:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
 * [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
