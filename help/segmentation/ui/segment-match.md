@@ -41,8 +41,8 @@ The list of supported namespaces are as follows:
 
 | Namespace | Description |
 | --------- | ----------- |
-| Hashed email |
-| Hashed phone |
+| Hashed email | A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
+| Hashed phone | A namespace that represents a phone number. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels. |
 | ECID | A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
 | Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
 | Google Ad ID | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
@@ -51,18 +51,16 @@ The list of supported namespaces are as follows:
 
 You must provide a consent configuration and set its default value to either opt-in or opt-out for a consent check.
 
-The opt-in and opt-out consent check determines whether you can operate with the knowledge that you have the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared to other users unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts-in.
+The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts-in.
 
 <!--
-
-opt-in vs opt-out refers to whether our customers operate under the understanding that they are allowed to share user data by default unless a user explicitly opts out OR if the default is user data cannot be shared unless the user explicitly opts-in
 
 and thats based on regional restrictions (EMEA vs US, US vs CA, etc.) and the customers own privacy policy (what they disclose they do with yoour data)
 
 and then based on that default, when we are doing the overlap process we know whether to look for an explicit opt-in signle (i.e. consenttoshare = y) or if we should assume their data can be shared unless we receive the opt-out signal (consenttoshare=n)
 -->
 
-The default consent setting for Segment Match is opt-out. To enforce an opt-in model for your data, please send an email request to [email contact here].
+The default consent configuration for Segment Match is set to opt-out. To enforce an opt-in model for your data, please send an email request to [email contact here].
 
 ### Configure data usage label
 
@@ -72,7 +70,7 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 Through data usage labels, you can manage what data is allowed to be shared through Segment Match.
 
-For more information on data usage labels, see the [data usage labels overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels).
+For a list of data usage labels and their definitions, see the [data usage labels glossary](https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/reference.html?lang=en#contract-labels).
 
 ## Segment Match end-to-end workflow
 
