@@ -46,12 +46,12 @@ Add the following IP addresses to an allow list prior to working with the SFTP d
 
 ### East US region
 
-- `52.252.71.64/29`
+* `52.252.71.64/29`
 
 ### West Europe region
 
-- `51.137.8.208/29`
+* `51.137.8.208/29`
 
 ### Australia East region
 
-- `20.53.201.168/29`
+* `20.53.201.168/29`
