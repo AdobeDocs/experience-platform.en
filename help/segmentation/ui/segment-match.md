@@ -53,14 +53,7 @@ You must provide a consent configuration and set its default value to either opt
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts-in.
 
-<!--
-
-and thats based on regional restrictions (EMEA vs US, US vs CA, etc.) and the customers own privacy policy (what they disclose they do with yoour data)
-
-and then based on that default, when we are doing the overlap process we know whether to look for an explicit opt-in signle (i.e. consenttoshare = y) or if we should assume their data can be shared unless we receive the opt-out signal (consenttoshare=n)
--->
-
-The default consent configuration for Segment Match is set to opt-out. To enforce an opt-in model for your data, please send an email request to [email contact here].
+The default consent configuration for Segment Match is set to opt-out. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager
 
 ### Configure data usage label
 
