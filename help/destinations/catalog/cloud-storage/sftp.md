@@ -10,7 +10,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 >[!IMPORTANT]
 >
-> While Adobe supports data exports to SFTP servers, the recommended method to export data to a cloud storage location is through [!DNL Amazon S3] or [!DNL Azure Blob].
+> While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Export Type {#export-type}
 
@@ -32,13 +32,13 @@ For SFTP destinations, enter the following information in the create destination
 
 For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
 
-## IP address allow list
+## IP address allow list {#ip-address-allow-list}
 
-This section provides you with a way to allow list IP addresses so that you can safely export data from Experience Platform to your SFTP.
+This section provides IP ranges that you can allow list to safely export data from Experience Platform to your SFTP.
 
-You can define network access controls through your network firewall. By specifying the appropriate destination IP range, you can allow traffic for the data transfer service. 
+You can define network access controls through your network firewall. By specifying the appropriate destination IP range, you can allow traffic for the data transfer service.
 
-Add the following IP addresses to an allow list prior to working with the SFTP destination connection. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using the SFTP destination connection.
+Add the following IP ranges to an allow list prior to working with the SFTP destination connection. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the SFTP destination connection.
 
 >[!IMPORTANT]
 >
