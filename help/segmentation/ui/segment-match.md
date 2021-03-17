@@ -29,7 +29,13 @@ The following prerequisites must be set up before you start working with Segment
 
 ### Set up identity data and namespace
 
-The first step to getting started with started with Segment Match is to make sure you're ingesting data against the supported identity namespaces. In the context of Segment Match, namespaces are used in the overlap process when sharing data. (EXPAND)
+The first step to getting started with started with Segment Match is to make sure you're ingesting data against the supported identity namespaces.
+
+Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
+
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments, as when Real-time Customer Profile merges profile data, both the identity value and the namespace must match.
+
+In the context of Segment Match, namespaces are used in the overlap process when sharing data.
 
 The list of supported namespaces are as follows:
 
@@ -43,7 +49,18 @@ The list of supported namespaces are as follows:
 
 ### Set up consent configuration
 
-You must provide a consent configuration and set up its default value as either opt-in or opt-out for a consent check.
+You must provide a consent configuration and set its default value to either opt-in or opt-out for a consent check.
+
+<!--
+
+opt-in vs opt-out refers to whether our customers operate under the understanding that they are allowed to share user data by default unless a user explicitly opts out OR if the default is user data cannot be shared unless the user explicitly opts-in
+
+and thats based on regional restrictions (EMEA vs US, US vs CA, etc.) and the customers own privacy policy (what they disclose they do with yoour data)
+
+so kind of complicated which is why we ask customers to tell us what they want their default to be
+
+and then based on that default, when we are doing the overlap process we know whether to look for an explicit opt-in signle (i.e. consenttoshare = y) or if we should assume their data can be shared unless we receive the opt-out signal (consenttoshare=n)
+-->
 
 The default consent setting for Segment Match is opt-out. To enforce an opt-in model for your data, please send an email request to [email contact here].
 
@@ -83,6 +100,13 @@ A **feed** is a grouping of data (segments), the rules for how that data can be 
 The basic set up of a feed includes a name, a description, and configurations regarding data usage labels and identity namespaces.
 
 Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with from your list of linked partners. During this process, you can **Analyze by Segment** and view the pre-share estimates prior to finalizing your feed, view the number of overlapping identities by namespace between you and your partner, as well as view how many of the overlapped identities are given consent to share data.
+
+**Overlap estimates report**
+
+The overlap estimates report allows you to manage overlap and consent checks per partner and per segment prior to sharing your feed.
+
+| Metrics | Description |
+| ------- | ----------- |
 
 ### Publish feed
 
