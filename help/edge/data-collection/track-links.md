@@ -1,8 +1,6 @@
 ---
-title: Link tracking with Adobe Analytics
-seo-title: Link tracking to Adobe Analytics with Adobe Experience Platform Web SDK
+title: Track Links Using the Adobe Experience Platform Web SDK
 description: Learn how to send Link Data to Adobe Analytics with Experience Platform Web SDK
-seo-description: Learn how to send Link Data to Adobe Analytics with Experience Platform Web SDK
 keywords: adobe analytics;analytics;sendEvent;s.t();s.tl();webPageDetails;pageViews;webInteraction;web Interaction;page views;link tracking;links;track links;clickCollection;click collection;
 ---
 
@@ -39,9 +37,9 @@ The link type can be one of three values:
 
 ## Automatic link tracking {#automaticLinkTracking}
 
-By default, the Web SDK captures, [labels](#labelingLinks), and [records](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/webinteraction.schema.md) clicks on [qualifying](#qualifyingLinks) link tags. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document.
+By default, the Web SDK captures, labels, and records clicks on qualifying link tags. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document.
 
-Disabling automatic link tracking can be done by [configuring](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) the Web SDK.
+Automatic link tracking can be disabled by [configuring](../fundamentals/configuring-the-sdk.md#clickCollectionEnabled) the Web SDK.
 
 ```javascript
 clickCollectionEnabled: false

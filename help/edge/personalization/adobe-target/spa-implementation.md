@@ -1,32 +1,30 @@
 ---
-title: Adobe Target and The Adobe Experience Platform Web SDK. 
-seo-title: Adobe Experience Platform Web SDK and using Adobe Target
-description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
-seo-description: Learn how to render personalized content with Experience Platform Web SDK using Adobe Target
+title: Single-Page Application Implementation for the Adobe Experience Platform Web SDK
+description: Learn how to create a single-page application (SPA) implementation of the Adobe Experience Platform Web SDK using Adobe Target.
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
 ---
 
-# Single Page Application implementation 
+# Single-page application implementation 
 
-Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies such as Single Page Applications (SPAs).
+Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies such as single-page applications (SPAs).
 
 Traditional websites worked on "Page-to-Page" navigation models, otherwise known as Multi Page Applications, where website designs were tightly coupled to URLs and transitions from one webpage to another required a page load. 
 
-Modern web applications, such as Single Page Applications, have instead adopted a model that propels rapid use of browser UI rendering, which is often independent of page reloads. These experiences can be triggered by customer interactions, such as scrolls, clicks, and cursor movements. As the paradigms of the modern web have evolved, the relevance of traditional generic events, such as a page load, to deploy personalization and experimentation no longer work.   
+Modern web applications, such as single-page applications, have instead adopted a model that propels rapid use of browser UI rendering, which is often independent of page reloads. These experiences can be triggered by customer interactions, such as scrolls, clicks, and cursor movements. As the paradigms of the modern web have evolved, the relevance of traditional generic events, such as a page load, to deploy personalization and experimentation no longer work.   
 
 ![](assets/spa-vs-traditional-lifecycle.png)
 
 ## Benefits of Platform Web SDK for SPAs
 
-Here are some benefits to using the Adobe Experience Platform Web SDK for your Single Page Applications: 
+Here are some benefits to using Adobe Experience Platform Web SDK for your single-page applications: 
 
 * Ability to cache all offers on page-load to reduce multiple server calls to a single server call. 
 * Tremendously improve the user experience on your site because offers are shown immediately via the cache without lag time introduced by traditional server calls. 
 * A single line of code and one-time developer setup enables marketers to create and run A/B and Experience Targeting (XT) activities via the Visual Experience Composer (VEC) on your SPA. 
 
-## XDM Views and Single Page Applications 
+## XDM Views and single-page applications 
 
-The Adobe Target VEC for SPAs takes advantage of a new concept called Views: a logical group of visual elements that together make up an SPA experience. A single page application can, therefore, be considered as transitioning through Views, instead of URLs, based on user interactions. A View can typically represent a whole site or grouped visual elements within a site. 
+The Adobe Target VEC for SPAs takes advantage of a concept called Views: a logical group of visual elements that together make up an SPA experience. A single-page application can, therefore, be considered as transitioning through Views, instead of URLs, based on user interactions. A View can typically represent a whole site or grouped visual elements within a site. 
 
 To further explain what Views are, the following example uses a hypothetical online e-commerce site implemented in React to explore example Views.  
 
@@ -57,19 +55,19 @@ The concept of Views can be extended much further than this. These are just a fe
 XDM Views can be leveraged in Adobe Target to empower marketers to run A/B and XT tests on SPAs via the Visual Experience Composer. This requires performing the following steps in order to complete a one-time developer setup: 
 
 1. Install [Adobe Experience Platform Web SDK](../../fundamentals/installing-the-sdk.md)
-2. Determine all XDM Views in your Single Page Application that you want to personalize.  
+2. Determine all XDM Views in your single-page application that you want to personalize.  
 3. After defining the XDM Views, in order to deliver AB or XT VEC activities, implement the `sendEvent()` function with `renderDecisions` set to `true` and the corresponding XDM View in your Single Page Application. The XDM View must be passed in `xdm.web.webPageDetails.viewName`. This step allows marketers to leverage the Visual Experience Composer to launch A/B and XT tests for those XDM.  
 
     ```javascript
-    alloy("sendEvent",  { 
-      "renderDecisions": true, 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-             "viewName":"home" 
-          }      
+    alloy("sendEvent", { 
+      "renderDecisions": true, 
+      "xdm": { 
+        "web": { 
+          "webPageDetails": { 
+          "viewName":"home" 
+          }
         } 
-      } 
+      } 
     });
     ```
  
@@ -89,7 +87,7 @@ The marketing team want to run A/B tests on the entire home page.
 
 To run A/B tests on the whole home site, `sendEvent()` must be invoked with the XDM `viewName` set to `home`: 
 
-```javascript
+```jsx
 function onViewChange() { 
   
   var viewName = window.location.hash; // or use window.location.pathName if router works on path and not hash 
@@ -102,14 +100,15 @@ function onViewChange() {
     viewName = viewName.substr(1); 
   }
    
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
           "viewName":"home" 
         } 
       } 
+    }
   }); 
 } 
 
@@ -122,7 +121,6 @@ history.listen(onViewChange);
 // react router v3 
 
 <Router history={hashHistory} onUpdate={onViewChange} > 
-
 ```
 
 ### Example 2: Personalized products
@@ -131,18 +129,18 @@ The marketing team want to personalize the second row of products by changing th
 
 ![](assets/use-case-2.png)
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
 
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
-       "web": { 
+      "web": { 
         "webPageDetails": { 
           "viewName": viewName
         }
       } 
-    } 
+    } 
   }); 
 } 
 
@@ -171,17 +169,16 @@ The marketing team want to run an A/B test to see whether changing the color of 
 
 To personalize content on the site depending on which delivery preference is selected, a View can be created for each delivery preference. When **Normal Delivery** is selected, the View can be named "checkout-normal". If **Express Delivery** is selected, the View can be named "checkout-express". 
 
-```javascript
+```jsx
 function onViewChange(viewName) { 
-
-  alloy("sendEvent",  { 
-    "renderDecisions": true, 
+  alloy("sendEvent", { 
+    "renderDecisions": true, 
     "xdm": { 
       "web": { 
         "webPageDetails": { 
-          "viewName": viewName   
+          "viewName": viewName 
         }
-      }
+      }
     }
   }); 
 } 
@@ -213,7 +210,7 @@ class Checkout extends Component {
 
 ## Using the Visual Experience Composer for a SPA 
 
-When you have finished defining your XDM Views and implemented `sendEvent()` with those XDM Views passed in, the VEC will be able to detect these Views and allow users to create actions and modifications for A/B or XT activities. 
+When you have finished defining your XDM Views and implemented `sendEvent()` with those XDM Views passed in, the VEC will be able to detect these Views and allow users to create actions and modifications for A/B or XT activities. 
 
 >[!NOTE]
 >

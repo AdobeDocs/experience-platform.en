@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;segment jobs;segment job;API;api;
 solution: Experience Platform
-title: Segment jobs
+title: Segment Jobs API Endpoint
 topic: developer guide
-description: This guide provides information to help you better understand segment jobs and includes sample API calls for performing basic actions using the API.
+description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
 ---
 
 # Segment jobs endpoint

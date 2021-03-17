@@ -1,12 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
-title: Edge projections - Real-time Customer Profile API
+title: Edge Projection API Endpoints
 topic: guide
+type: Documentation
+description: Adobe Experience Platform enables you to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, by making the right data readily available and continuously updated as changes happen. This is done through the use of edges, a geographically placed server that stores data and makes it readily accessible to applications.
 ---
 
 # Edge projection configurations and destinations endpoints
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real-time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe Experience Platform enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. For example, Adobe applications such as Adobe Target and Adobe Campaign use edges in order to provide personalized customer experiences in real time. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. This guide provides detailed instructions for using the [!DNL Real-time Customer Profile] API to work with edge projections, including destinations and configurations.
 
 ## Getting started
 

@@ -1,12 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;merge policies;UI;user interface;timestamp ordered;dataset precedence
-title: Merge policies UI guide
+title: Merge Policies UI Guide
 topic: guide
+type: Documentation
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view. 
 ---
 
 # Merge policies UI guide
 
-Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create that unified view. 
+Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 
 
 For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
@@ -16,11 +18,11 @@ If you would prefer to work with merge policies using the [!DNL Real-time Custom
 
 ## Getting started
 
-This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide, or using Profile APIs, please review the documentation for the following services:
+This guide requires a working understanding of several important [!DNL Experience Platform] features. Before following this guide or using Profile APIs, please review the documentation for the following services:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Real-time Customer Profile](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Adobe Experience Platform Identity Service](../../identity-service/home.md): Enables Real-time Customer Profile by bridging identities from disparate data sources being ingested into [!DNL Platform].
-* [[!DNL Experience Data Model] (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
+* [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
 ## Merge methods {#merge-methods}
 
@@ -104,7 +106,7 @@ On the **[!UICONTROL New merge policy]** workflow screen, you can provide import
 The first step in the workflow allows you to configure your merge policy by providing basic information. This information includes: 
 
 * **[!UICONTROL Name]**: The name of your merge policy should be descriptive yet concise.
-* **[!UICONTROL Schema class]**: The XDM schema class associated with the merge policy. This specifies the schema class for which this merge policy is created. Organizations can create multiple merge policies per schema class. Currently only the [!UICONTROL XDM Individual Profile] class is available in the UI.
+* **[!UICONTROL Schema class]**: The XDM schema class associated with the merge policy. This specifies the schema class for which this merge policy is created. Organizations can create multiple merge policies per schema class. Currently only the [!UICONTROL XDM Individual Profile] class is available in the UI. You can preview the union schema for the schema class by selecting **[!UICONTROL View Union Schema]**. For more information, see the section on [viewing the union schema](#view-union-schema) that follows.
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. See the section on [ID stitching](#id-stitching) earlier in this guide to learn more. There are two possible values:
     * **[!UICONTROL None]**: Perform no identity stitching.
     * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
@@ -114,6 +116,19 @@ The first step in the workflow allows you to configure your merge policy by prov
 Once the required fields have been completed, you can select **[!UICONTROL Next]** to continue with the workflow.
 
 ![A complete Configure screen with the Next button highlighted.](../images/merge-policies/create-complete.png)
+
+#### [!UICONTROL View Union Schema] {#view-union-schema}
+
+When creating or editing a merge policy, you can view the union schema for the chosen schema class by selecting **[!UICONTROL View Union Schema]**. 
+
+![](../images/merge-policies/view-union-schema.png)
+
+This opens the [!UICONTROL View Union Schema] dialog, showing all contributing schemas, identities, and relationships associated with the union schema. You can use the dialog to explore the union schema in the same way that you would by accessing the [!UICONTROL Union Schema] tab in the [!UICONTROL Profiles] section of the Platform UI.
+
+For detailed information on union schemas, including how to interact with them in the [!UICONTROL Union Schema] tab or the [!UICONTROL View Union Schema] dialog shown in the merge policies workflow, please visit the [union schema UI guide](union-schema.md).
+
+![](../images/merge-policies/view-union-schema-dialog.png)
+
 
 ### [!UICONTROL Select Profile datasets] {#select-profile-datasets}
 
@@ -129,7 +144,11 @@ Selecting **[!UICONTROL Timestamp ordered]** as the merge method means that attr
 
 #### Dataset precedence {#dataset-precedence-profile}
 
-Selecting **[!UICONTROL Dataset precedence]** as the merge method requires you to select Profile datasets and manually prioritize them. You can select up to 50 datasets from the dataset list. As datasets are selected, they appear on the right-hand side of the screen, allowing you to drag and drop the datasets and order them. As the datasets are adjusted in the list, the ordinal (1, 2, 3, etc) next to the dataset will update, displaying priority (1 being given the highest priority, then 2, and onward).
+Selecting **[!UICONTROL Dataset precedence]** as the merge method requires you to select Profile datasets and manually prioritize them. Each dataset listed also includes the status of the last batch ingested or displays a notice that no batches has been ingested into that dataset. 
+
+You can select up to 50 datasets from the dataset list to include in the merge policy. As datasets are selected, they are added to the **[!UICONTROL Select datasets]** section, allowing you to drag and drop the datasets and order them according to your desired precedence. As the datasets are adjusted in the list, the ordinal (1, 2, 3, etc) next to the dataset will update, displaying priority (1 being given the highest priority, then 2, and onward).
+
+Selecting a dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [union schema UI guide](union-schema.md)  
 
 ![](../images/merge-policies/dataset-precedence.png)
 
@@ -147,7 +166,11 @@ If you selected **[!UICONTROL Timestamp ordered]** as the merge method for Profi
 
 #### Dataset precedence {#dataset-precedence-experienceevent}
 
-If you selected **[!UICONTROL Dataset precedence]** as the merge method for Profile datasets, you will need to select ExperienceEvent datasets to include. You can select up to 50 ExperienceEvent datasets from the dataset list. As datasets are selected, they appear on the right-hand side of the screen. ExperienceEvent datasets cannot be manually ordered, instead the attributes in the ExperienceEvent datasets are appended to the Profile datasets if they are part of the same profile fragment.
+If you selected **[!UICONTROL Dataset precedence]** as the merge method for Profile datasets, you will need to select ExperienceEvent datasets to include. You can select up to 50 ExperienceEvent datasets from the dataset list. As datasets are selected, they appear in the [!UICONTROL Select datasets] section. 
+
+ExperienceEvent datasets cannot be manually ordered, instead the attributes in the ExperienceEvent datasets are appended to the Profile datasets if they are part of the same profile fragment.
+
+Similar to selecting Profile datasets, selecting an ExperienceEvent dataset also updates the **[!UICONTROL Union schema]** section, showing the fields in the union schema to which each dataset contributes data. For more information on union schemas, including how to interact with the visualizations in the UI, please reference the [union schema UI guide](union-schema.md)  
 
 ![](../images/merge-policies/dataset-precedence-experienceevent.png)
 

@@ -1,31 +1,25 @@
 ---
-title: Using IAB TCF 2.0 with Experience Platform Launch
-seo-title: Setting up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK
-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and Adobe Experience Platform Web SDK
-seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and Adobe Experience Platform Web SDK
+title: Integrate IAB TCF 2.0 Support using Platform Launch and the Platform Web SDK Extension
+description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK extension.
 ---
 
-# Using IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension
+# Integrate IAB TCF 2.0 support using Platform Launch and the Platform Web SDK extension
 
-The Adobe Experience Platform Web Software Development Kit (Adobe Experience Platform Web SDK) supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the AEP Web SDK extension for Experience Platform Launch.
+Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK extension for Experience Platform Launch.
 
 If you do not wish to use Experience Platform Launch, please refer to the guide on [using IAB TCF 2.0 without Experience Platform Launch](./without-launch.md).
 
 ## Getting started
 
-In order to use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema and dataset available. If you have not set either of these up, start by viewing this Adobe Experience Platform Web SDK Launch quick start guide before proceeding.
+In order to use IAB TCF 2.0 with Experience Platform Launch and the Platform Web SDK extension, you need to have an XDM schema and dataset available.
 
-Additionally, this guide requires you to have a working understanding of the Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
+Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 
 ## Setting default consent
 
-Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`.
+Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. If you want to discard Experience Events for customers who do not have a consent cookie, set this to `out`. You can also use a data element to dynamically set the default consent value.
 
->[!NOTE]
->
->Currently, there is no way to set this dynamically through the Experience Platform Launch extension.
-
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on how to configure default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration guide.
 
 ## Updating Profile with consent information {#consent-code-1}
 
@@ -55,7 +49,7 @@ addEventListener();
 
 This custom code does two things:
 
-* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action. 
+* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action.
 
 * Triggers the rule when the consent preferences have changed. The "Set Consent" action should be used whenever consent preferences have changed. Add a "Set Consent" action in the extension and fill out the form as follows:
 
@@ -64,11 +58,11 @@ This custom code does two things:
 * Value: "%IAB TCF Consent String%"
 * GDPR Applies: "%IAB TCF Consent GDPR%"
 
-![IAB Set Consent Action](../../../assets/iab_set_consent_action.png)
+![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
->You cannot choose these data elements using the data element selector because they were created through custom code. You must type in the data element name with the percent signs. This code updates your customer's profile with their new consent preferences whenever they change. Additionally, the server returns a cookie value, which could prevent the Adobe Experience Platform Web SDK from recording Experience Events.
+>You cannot choose these data elements using the data element selector because they were created through custom code. You must type in the data element name with the percent signs. This code updates your customer's profile with their new consent preferences whenever they change. Additionally, the server returns a cookie value, which could prevent Adobe Experience Platform Web SDK from recording Experience Events.
 
 ## Creating an XDM data element for Experience Events
 
@@ -76,7 +70,7 @@ The consent string should be included in the XDM Experience Event. To do this, u
 
 1. Select **[!UICONTROL consentStrings]**.
 
-1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**. 
+1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**.
 
 1. Expand the **[!UICONTROL consentString]** heading, and expand the first item, then fill in the following values:
 
@@ -115,12 +109,12 @@ addEventListener();
 
 This code is identical to the previous custom code, except that both `useractioncomplete` and `tcloaded` events are handled. The [previous custom code](#consent-code-1) only triggers when the customer chooses their preferences for the first time. This code also triggers when the customer has already chosen their preferences. For example, on the second page load.
 
-Add a "Send Event" action from the Adobe Experience Platform Web SDK extension. Within the XDM field, choose the XDM data element you created in the previous section.
+Add a "Send Event" action from the Platform Web SDK extension. Within the XDM field, choose the XDM data element you created in the previous section.
 
 ## Sending other events with IAB TCF 2.0 consent information
 
-When events are triggered after the initial Experience Event, the two data elements are still defined and can be used to send the IAB consent information. Use the same XDM data element to send future events. The IAB TCF 2.0 information is included.
+When events are triggered after the initial Experience Event, the two data elements are still defined and can be used to send the IAB consent information. Use the same XDM data element to send future events. IAB TCF 2.0 information is included.
 
 ## Next steps
 
-Now that you have learned how to use IAB TCF 2.0 with the Adobe Experience Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.
+Now that you have learned how to use IAB TCF 2.0 with the Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.

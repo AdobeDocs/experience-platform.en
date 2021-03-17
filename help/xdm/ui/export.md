@@ -1,0 +1,209 @@
+---
+solution: Experience Platform
+title: Export XDM Schemas in the UI
+description: Learn how to export an existing schema to a different sandbox or IMS Organization in the Adobe Experience Platform user interface.
+topic: user guide
+type: Tutorial
+---
+
+# Export XDM schemas in the UI
+
+All resources within the Schema Library are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs.
+
+To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience Platform UI allows you to generate an export payload for any schema within in the Schema Library. This payload can then be used in a call to the Schema Registry API to import the schema (and all dependent resources) into a target sandbox and IMS Org.
+
+>[!NOTE]
+>
+>You can also use the Schema Registry API to export other resources in addition to schemas, including classes, mixins, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
+
+## Prerequisites
+
+While the Platform UI allows you export XDM resources, you must use the Schema Registry API to import those resources into other sandboxes or IMS Orgs to complete the workflow. Refer to guide on [getting started with the Schema Registry API](../api/getting-started.md) for important information regarding required authentication headers before following this guide.
+
+## Generate an export payload
+
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. Within the [!UICONTROL Schemas] workspace, locate the schema that you want to export and open it in the [!DNL Schema Editor].
+
+>[!TIP]
+>
+>See the guide on [exploring XDM resources](./explore.md) for details on how to find the XDM resource you are looking for.
+
+Once you have the schema open, select the **[!UICONTROL Copy JSON]** icon (![Copy Icon](../images/ui/export/icon.png)) in the top-right of the canvas.
+
+![](../images/ui/export/copy-json.png)
+
+This copies a JSON payload to your clipboard, generated based on the schema structure. For the "[!DNL Loyalty Members]" schema shown above, the following JSON is generated:
+
+```json
+[
+  {
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+    "meta:resourceType": "mixins",
+    "version": "1.0",
+    "title": "Loyalty details",
+    "type": "object",
+    "description": "",
+    "definitions": {
+      "customFields": {
+        "type": "object",
+        "properties": {
+          "_<XDM_TENANTID_PLACEHOLDER>": {
+            "type": "object",
+            "properties": {
+              "loyalty": {
+                "title": "Loyalty",
+                "description": "",
+                "type": "object",
+                "isRequired": false,
+                "required": [
+                  
+                ],
+                "properties": {
+                  "loyaltyId": {
+                    "title": "Loyalty ID",
+                    "description": "",
+                    "type": "string",
+                    "isRequired": false,
+                    "required": [
+                      
+                    ],
+                    "meta:xdmType": "string"
+                  },
+                  "memberSince": {
+                    "title": "Member Since",
+                    "description": "",
+                    "type": "string",
+                    "isRequired": false,
+                    "required": [
+                      
+                    ],
+                    "format": "date",
+                    "meta:xdmType": "date"
+                  },
+                  "points": {
+                    "title": "Points",
+                    "description": "",
+                    "type": "integer",
+                    "isRequired": false,
+                    "required": [
+                      
+                    ],
+                    "meta:xdmType": "int"
+                  },
+                  "loyaltyLevel": {
+                    "title": "Loyalty Level",
+                    "description": "",
+                    "type": "string",
+                    "isRequired": false,
+                    "required": [
+                      
+                    ],
+                    "enum": [
+                      "platinum",
+                      "gold",
+                      "silver",
+                      "bronze"
+                    ],
+                    "meta:enum": {
+                      "platinum": "Platinum",
+                      "gold": "Gold",
+                      "silver": "Silver",
+                      "bronze": "Bronze"
+                    },
+                    "meta:xdmType": "string"
+                  }
+                },
+                "meta:xdmType": "object"
+              }
+            },
+            "meta:xdmType": "object"
+          }
+        },
+        "meta:xdmType": "object"
+      }
+    },
+    "allOf": [
+      {
+        "$ref": "#/definitions/customFields",
+        "type": "object",
+        "meta:xdmType": "object"
+      }
+    ],
+    "meta:extensible": true,
+    "meta:abstract": true,
+    "meta:intendedToExtend": [
+      
+    ],
+    "meta:xdmType": "object",
+    "meta:sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
+    "meta:sandboxType": "production"
+  },
+  {
+    "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/schemas/1e5a739ded8fd1d766a0e06e881a38031874dddd1c7020ad",
+    "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.schemas.1e5a739ded8fd1d766a0e06e881a38031874dddd1c7020ad",
+    "meta:resourceType": "schemas",
+    "version": "1.4",
+    "title": "Loyalty Members",
+    "type": "object",
+    "description": "Describes customers who are members of a loyalty program.",
+    "allOf": [
+      {
+        "$ref": "https://ns.adobe.com/xdm/context/profile",
+        "type": "object",
+        "meta:xdmType": "object"
+      },
+      {
+        "$ref": "https://ns.adobe.com/xdm/context/profile-person-details",
+        "type": "object",
+        "meta:xdmType": "object"
+      },
+      {
+        "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details",
+        "type": "object",
+        "meta:xdmType": "object"
+      },
+      {
+        "$ref": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+        "type": "object",
+        "meta:xdmType": "object"
+      },
+      {
+        "$ref": "https://ns.adobe.com/xdm/mixins/profile-consents",
+        "type": "object",
+        "meta:xdmType": "object"
+      }
+    ],
+    "meta:extensible": false,
+    "meta:abstract": false,
+    "meta:extends": [
+      "https://ns.adobe.com/xdm/context/profile-person-details",
+      "https://ns.adobe.com/xdm/context/profile-personal-details",
+      "https://ns.adobe.com/xdm/common/auditable",
+      "https://ns.adobe.com/xdm/data/record",
+      "https://ns.adobe.com/xdm/context/profile",
+      "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/9ecfd881d0053568d277b792e4d24c6b70ffa7782bd31265",
+      "https://ns.adobe.com/xdm/mixins/profile-consents"
+    ],
+    "meta:xdmType": "object",
+    "meta:class": "https://ns.adobe.com/xdm/context/profile",
+    "meta:sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
+    "meta:sandboxType": "production",
+    "meta:immutableTags": [
+      
+    ]
+  }
+]
+```
+
+The payload takes the form of an array, with each array item being an object that represents a custom XDM resource to be exported. In the example above, the "[!DNL Loyalty details]" custom mixin and the "[!DNL Loyalty Members]" schema are included. Any core resources employed by the schema are not included in the export, as these resources are available in all sandboxes and IMS Organizations.
+
+Note that each instance of your organization's tenant ID appears as `<XDM_TENANTID_PLACEHOLDER>` in the payload. These placeholders will be automatically replaced with the appropriate tenant ID value depending on where you import the schema in the next step.
+
+## Import the resource using the API
+
+Once you have copied the export JSON for the schema, you can use it as the payload for a POST request to the `/import` endpoint in the Schema Registry API. See the section on [importing an XDM resource in the API](../api/export-import.md#import) for details on how to configure the call to send the schema to the desired IMS Org and sandbox.
+
+## Next steps
+
+By following this guide, you have successfully exported an XDM schema to a different IMS Org or sandbox. For more information on the capabilities of the [!UICONTROL Schemas] UI, refer to the [[!UICONTROL Schemas] UI overview](./overview.md).

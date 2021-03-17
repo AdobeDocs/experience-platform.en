@@ -1,9 +1,7 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Getting started with Real-time Customer Data Platform
-seo-title: Getting started with Real-time Customer Data Platform
-description: Sample scenario for Real-time Customer Data Platform
-seo-description: Sample scenario for Real-time Customer Data Platform
+title: Getting Started with Real-time Customer Data Platform
+description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
 ---
 
 # Getting started with Real-time Customer Data Platform
@@ -61,7 +59,7 @@ When customers first visit your site, you don't know anything about them.
 
 ![image](assets/luma-site.png)
 
-As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
+As they navigate, data is captured in real time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
 
 Many visitors to the website are probably repeat customers who have previously purchased from Luma.  It's important for Luma to personalize messaging and offerings to address both new and repeat visitors, as well as known customers.
 
@@ -71,7 +69,7 @@ For example, an unidentifed visitor navigates to the Men’s section on the Luma
 
 ![image](assets/luma-sweatshirts.png)
 
-As the customer clicks to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].  
+As the customer navigates to learn more about these products, these product views are collected in Adobe Analytics and sent to [!DNL Experience Platform].  
 
 <!--![image](assets/luma-shirt-detail.png)-->
 
@@ -98,7 +96,7 @@ Based on the browsing behavior of the anonymous visitor in the Men's section of 
 
 Sarah is welcomed with a loyalty message and thanked for being a Bronze member with more information on benefits and how to increase her status and points.
 
-She clicks to the home page to browse some more.  
+She navigates to the home page to browse some more.  
 
 ![image](assets/luma-personal.png)
 
@@ -137,7 +135,7 @@ All this data from disparate sources is merged into a single unified customer pr
 
 ## Configuring a data source
 
-Use [!DNL Real-time Customer Data Platform] to bring new sources of data into platform. Real-time CDP includes a catalog of data sources that can be added to the profile in just a few clicks.  
+Use [!DNL Real-time Customer Data Platform] to bring new sources of data into Platform. Real-time CDP includes a catalog of data sources that can be quickly and easily added to the profile.  
 
 ![image](assets/luma-source-cat.png)
 
@@ -228,9 +226,9 @@ Because Sarah added an apparent gift item in the cart and abandoned it, Luma can
 
 When you've added the “Gift Giving Cart Abandoners” segment, you can see roughly how many people are part of this segment. You can take action on it and make it available for personalization across channels.  
 
-Click **[!UICONTROL Send to destinations]**.
+Select **[!UICONTROL Send to destinations]**.
 
-In Adobe Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
+In Real-time CDP, Luma can seamlessly act on their audience segments for personalization.  
 Here we see all of the destinations available for Luma to send this destination to, both Adobe and non-Adobe solutions:
 
 ![image](assets/luma-dest.png)
@@ -251,11 +249,11 @@ You can also schedule the segment to start or end at a particular time. The segm
 
 >[!NOTE]
 >
->Optionally, if you click in the date field, it automatically schedules for 90 days out. 
+>Optionally, if you select the date field, it automatically schedules for 90 days out. 
 
-Click **[!UICONTROL Save]** to go to the next page. 
+Select **[!UICONTROL Save]** to go to the next page. 
 
-When a customer in this audience makes a purchase, their membership to this audience is suppressed in real-time. They don’t qualify anymore because their status has changed. 
+When a customer in this audience makes a purchase, their membership to this audience is suppressed in real time. They don’t qualify anymore because their status has changed. 
 
 This saves the director of the Luma media team  hundreds of thousands of dollars by not using up inventory for an audience that is not qualified.
 
@@ -277,7 +275,7 @@ When you save, a visual data flow canvas shows the segment mapped from the unifi
 
 Sarah browses a social media site on her mobile device, and she sees a Luma ad. It reminds her of the item she left in her cart.
 
-Later, she opens her email and sees the retargeted emails. She clicks a link to Luma from an email.
+Later, she opens her email and sees the retargeted emails. She selects a link to Luma from an email.
 
 The link takes Sarah to the mobile Luma homepage, where she sees a highly personalized experience powered by Adobe Target.
 

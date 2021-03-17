@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
-title: Configure a dataflow for a cloud storage batch connector in the UI
+title: Configure a Dataflow for a Cloud Storage Batch Connector in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 ---
 
-# Configure a dataflow for a cloud storage batch connector in the UI
+# Configure a dataflow for a cloud storage batch connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
 
@@ -15,10 +15,10 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-    *   [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    *   [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
-*   [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Experience Data Model (XDM)] System](../../../../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 Additionally, this tutorial requires that you have an established cloud storage account. A list of tutorials for creating different cloud storage accounts in the UI can be found in the [source connectors overview](../../../../home.md).
 
@@ -26,13 +26,13 @@ Additionally, this tutorial requires that you have an established cloud storage 
 
 [!DNL Experience Platform] supports the following file formats to be ingested from external storages:
 
-* Delimiter-separated values (DSV): Support for DSV-formatted data files is currently limited to comma-separated values. The value of field headers within DSV formatted files must only consist of alphanumeric characters and underscores. Support for general DSV files will be provided in the future.
+* Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
 
 ## Select data
 
-After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your cloud storage hierarchy. 
+After creating your cloud storage account, the **[!UICONTROL Select data]** step appears, providing an interface for you to explore your cloud storage file hierarchy.
 
 * The left half of the interface is a directory browser, displaying your server's files and directories.
 * The right half of the interface lets you preview up to 100 rows of data from a compatible file.
@@ -41,9 +41,15 @@ Selecting a listed folder allows you to traverse the folder hierarchy into deepe
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data.png)
 
-Once the preview window populates, you can select **[!UICONTROL Next]** to upload all files within the selected folder. If you want to upload to a specific file, select that file from the listing before selecting **[!UICONTROL Next]**.
+Select the appropriate data format for the file you want to ingest and allow for a few seconds for the preview window to populate.
 
-![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-data-preview.png)
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/data-format.png)
+
+You can set a custom delimiter when ingesting delimited files. Select the **[!UICONTROL Delimiter]** option and then select a delimiter from the dropdown menu. The menu displays the most frequently used options for delimiters, including a comma (`,`), a tab (`\t`), and a pipe (`|`). Alternatively, you can select **[!UICONTROL Custom]** and enter a custom delimiter of your choice in the pop up input bar.
+
+Once you have selected your data format and set your delimiter, select **[!UICONTROL Next]**.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
 ### Ingest Parquet or JSON files
 
@@ -95,7 +101,7 @@ Based on your needs, you can choose to map fields directly, or use mapper functi
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
-For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays.
+For JSON files, in addition to directly mapping fields to other fields, you can directly map objects to other objects and arrays to other arrays You can also preview and map complex data types such as arrays in JSON files using a cloud storage source connector.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/source-field-json.png)
 
@@ -136,11 +142,11 @@ Provide values for the schedule and select **[!UICONTROL Next]**.
 
 ### Set up a one-time ingestion dataflow
 
-To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited.
+To set up one-time ingestion, select the frequency drop down arrow and select **[!UICONTROL Once]**. You can continue to make edits to a dataflow set for a one-time frequency ingestion, so long as the start time remains in the future. Once the start time has passed, the one-time frequency value can no longer be edited. **[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible when setting up a one-time ingestion dataflow.
 
->[!TIP]
+>[!IMPORTANT]
 >
->**[!UICONTROL Interval]** and **[!UICONTROL Backfill]** are not visible during a one-time ingestion.
+>It is strongly recommended to schedule your dataflow for one-time ingestion when using the [FTP connector](../../../../connectors/cloud-storage/ftp.md).
 
 Once you have provided appropriate values to the schedule, select **[!UICONTROL Next]**.
 

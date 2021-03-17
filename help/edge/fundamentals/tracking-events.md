@@ -1,14 +1,12 @@
 ---
-title: Tracking events
-seo-title: Tracking Adobe Experience Platform Web SDK events
-description: Learn how to track Experience Platform Web SDK events
-seo-description: Learn how to track Experience Platform Web SDK events
+title: Track Events Using the Adobe Experience Platform Web SDK
+description: Learn how to track Adobe Experience Platform Web SDK events.
 keywords: sendEvent;xdm;eventType;datasetId;sendBeacon;send Beacon;documentUnloading;document Unloading;onBeforeEventSend;
 ---
 
-# Tracking events
+# Track events
 
-To send event data to the Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
+To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `sendEvent` command is the primary way to send data to the [!DNL Experience Cloud], and to retrieve personalized content, identities, and audience destinations.
 
 Data sent to Adobe Experience Cloud falls into two categories:
 
@@ -37,6 +35,35 @@ alloy("sendEvent", {
 });
 ```
 
+Some time may pass between when the `sendEvent` command is executed and when the data is sent to the server (for example, if the Web SDK library has not fully loaded or consent has not yet been received). If you intend to modify any part of the `xdm` object after executing the `sendEvent` command, it is highly recommended that you clone the `xdm` object _before_ executing the `sendEvent` command. For example:
+
+```javascript
+var clone = function(value) {
+  return JSON.parse(JSON.stringify(value));
+};
+
+var dataLayer = {
+  "commerce": {
+    "order": {
+      "purchaseID": "a8g784hjq1mnp3",
+      "purchaseOrderNumber": "VAU3123",
+      "currencyCode": "USD",
+      "priceTotal": 999.98
+    }
+  }
+};
+
+alloy("sendEvent", {
+  "xdm": clone(dataLayer)
+});
+
+// This change will not be reflected in the data sent to the 
+// server for the prior sendEvent command.
+dataLayer.commerce = null;
+```
+
+In this example, the data layer is cloned by serializing it to JSON, then deserializing it. Next, the cloned result is passed into the `sendEvent` command. Doing so ensures that the `sendEvent` command has a snapshot of the data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes. This is also handled for you automatically if you are using the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
+
 >[!NOTE]
 >
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
@@ -45,7 +72,7 @@ alloy("sendEvent", {
 
 Currently, sending data that does not match an XDM schema is unsupported. Support is planned for a future date.
 
-### Setting `eventType`
+### Setting `eventType` {#event-types}
 
 In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. [Read more in the XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
 
@@ -177,20 +204,20 @@ alloy("sendEvent", {
 
 ## Modifying events globally {#modifying-events-globally}
 
-If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `event.xdm` to change the data that is sent in the event.
+If you want to add, remove, or modify fields from the event globally, you can configure an `onBeforeEventSend` callback.  This callback is called every time an event is sent.  This callback is passed in an event object with an `xdm` field.  Modify `content.xdm` to change the data that is sent with the event.
 
 
 ```javascript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
   "orgId": "ADB3LETTERSANDNUMBERS@AdobeOrg",
-  "onBeforeEventSend": function(event) {
+  "onBeforeEventSend": function(content) {
     // Change existing values
-    event.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
+    content.xdm.web.webPageDetails.URL = xdm.web.webPageDetails.URL.toLowerCase();
     // Remove existing values
-    delete event.xdm.web.webReferrer.URL;
+    delete content.xdm.web.webReferrer.URL;
     // Or add new values
-    event.xdm._adb3lettersandnumbers.mycustomkey = "value";
+    content.xdm._adb3lettersandnumbers.mycustomkey = "value";
   }
 });
 ```
@@ -201,10 +228,54 @@ alloy("configure", {
 2. Automatically collected values.  (See [Automatic Information](../data-collection/automatic-information.md).)
 3. The changes made in the `onBeforeEventSend` callback.
 
-If the `onBeforeEventSend` callback throws an exception, the event is still sent; however, none of the changes that were made inside the callback are applied to the final event.
+A few notes on the `onBeforeEventSend` callback:
+
+* Event XDM can be modified during the callback. After the callback has returned, any modified fields and values of 
+the content.xdm and content.data objects are sent with the event.
+
+    ```javascript
+    onBeforeEventSend: function(content){
+      //sets a query parameter in XDM
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      content.xdm.marketing.trackingCode = urlParams.get('cid')
+    }
+    ```
+
+* If the callback throws an exception, processing for the event discontinues and the event is not sent.
+* If the callback returns the boolean value of `false`, event processing discontinues, 
+without an error, and the event is not sent. This mechanism allows for certain events to be easily ignored by 
+examining the event data and returning `false` if the event should not be sent. 
+
+  >[!NOTE]
+  >Care should be taken to avoid returning false on the first event on a page. Returning false on the first event can negatively impact personalization.
+
+```javascript
+   onBeforeEventSend: function(content) {
+     // ignores events from bots
+     if (MyBotDetector.isABot()) {
+       return false;
+     }
+   }
+```
+
+   Any return value other than the boolean `false` will allow the event to process and send after the callback.
+
+* Events can be filtered by examining the event type (See [Event Types](#event-types).):
+
+```javascript
+    onBeforeEventSend: function(content) {  
+      // augments XDM if link click event is to a partner website
+      if (
+        content.xdm.eventType === "web.webinteraction.linkClicks" &&
+        content.xdm.web.webInteraction.URL ===
+          "http://example.com/partner-page.html"
+      ) {
+        content.xdm.partnerWebsiteClick = true;
+      }
+   }
+```
 
 ## Potential actionable errors
 
 When sending an event, an error might be thrown if the data being sent is too large (over 32KB for the full request). In this case, you need to reduce the amount of data being sent.
-
-When debugging is enabled, the server synchronously validates event data being sent against the configured XDM schema. If the data does not match the schema, details about the mismatch are returned from the server and an error is thrown. In this case, modify the data to match the schema. When debugging is not enabled, the server validates data asynchronously and, therefore, no corresponding error is thrown.

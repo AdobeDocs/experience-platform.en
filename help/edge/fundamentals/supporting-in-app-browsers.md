@@ -1,8 +1,6 @@
 ---
-title: Supporting in-app browsers
-seo-title: Supporting in-app browsers with Adobe Experience Platform Web SDK
-description: Learn how to support in-app browsers with Experience Platform Web SDK
-seo-description: Learn how to support in-app browsers with Experience Platform Web SDK
+title: Supporting in-app browsers with the Adobe Experience Platform Web SDK
+description: Learn how to support in-app browsers with the Adobe Experience Platform Web SDK.
 keywords: in-app browsers;browsers;
 ---
 

@@ -1,16 +1,16 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service developer guide
-description: Use the RESTful API to manage the personal data of your data subjects across Adobe Experience Cloud applications
+title: Privacy Service API Guide
+description: The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. Follow this guide to learn how to perform key operations using the API.
 topic: developer guide
 ---
 
-# [!DNL Privacy Service] developer guide
+# [!DNL Privacy Service] API guide
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to manage (access and delete) the personal data of your data subjects (customers) across Adobe Experience Cloud applications. [!DNL Privacy Service] also provides a central audit and logging mechanism that allows you to access the status and results of jobs involving [!DNL Experience Cloud] applications.
 
-This guide covers how to use the [!DNL Privacy Service] API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the [!DNL Privacy Service] API, please see the [API reference](https://www.adobe.io/apis/experiencecloud/gdpr/api-reference.html).
+This guide covers how to use the [!DNL Privacy Service] API. For details on how to use the UI, see the [Privacy Service UI overview](../ui/overview.md). For a comprehensive list of all available endpoints in the [!DNL Privacy Service] API, please see the [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml).
 
 ## Getting started {#getting-started}
 
@@ -36,7 +36,7 @@ This involves obtaining developer permissions for [!DNL Experience Platform] in 
 
 ### Gain developer access to [!DNL Experience Platform]
 
-To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](../../tutorials/authentication.md). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to [!DNL Privacy Service].
+To gain developer access to [!DNL Platform], follow the beginning steps in the [Experience Platform authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Once you arrive at the step "Generate access credentials in Adobe Developer Console", return to this tutorial to generate the credentials specific to [!DNL Privacy Service].
 
 ### Generate access credentials
 
@@ -54,15 +54,15 @@ The steps for generating these values are covered in detail below.
 
 Go to [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui) and sign in with your Adobe ID. Next, follow the steps outlined in the tutorial on [creating an empty project](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/projects-empty.md) in the Adobe Developer Console documentation.
 
-Once you have created a new project, click **[!UICONTROL Add API]** on the **[!UICONTROL Project Overview]** screen.
+Once you have created a new project, select **[!UICONTROL Add API]** on the **[!UICONTROL Project Overview]** screen.
 
 ![](../images/api/getting-started/add-api-button.png)
 
-The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Privacy Service API]** from the list of available APIs before clicking **[!UICONTROL Next]**.
+The **[!UICONTROL Add an API]** screen appears. Select **[!UICONTROL Privacy Service API]** from the list of available APIs before selecting **[!UICONTROL Next]**.
 
 ![](../images/api/getting-started/add-privacy-service-api.png)
 
-The **[!UICONTROL Configure API]** screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then click **[!UICONTROL Generate keypair]** in the bottom-right corner.
+The **[!UICONTROL Configure API]** screen appears. Select the option to **[!UICONTROL Generate a key pair]**, then select **[!UICONTROL Generate keypair]** in the bottom-right corner.
 
 ![](../images/api/getting-started/generate-key-pair.png)
 
@@ -81,7 +81,7 @@ Once the API has been added to the project, the project page reappears on the **
 
 The final required credential you must gather is your `{ACCESS_TOKEN}`, which is used in the Authorization header. Unlike the values for `{API_KEY}` and `{IMS_ORG}`, a new token must be generated every 24 hours to continue using [!DNL Platform] APIs.
 
-To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before clicking **[!UICONTROL Generate Token]**.
+To generate a new `{ACCESS_TOKEN}`, open the previously downloaded private key and paste its contents into the text box beside **[!UICONTROL Generate access token]** before selecting **[!UICONTROL Generate Token]**.
 
 ![](../images/api/getting-started/paste-private-key.png)
 

@@ -1,11 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform API fundamentals
+title: Experience Platform API fundamentals
 topic: getting started
+description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
 ---
 
-# Adobe Experience Platform API fundamentals
+# Experience Platform API fundamentals
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 
@@ -88,7 +89,7 @@ The following JSON represents a simplified XDM schema whose fields can be refere
 >
 >When dealing with the `xdm:sourceProperty` and `xdm:destinationProperty` attributes of [!DNL Experience Data Model] (XDM) descriptors, any `properties` keys must be **excluded** from the JSON Pointer string. See the [!DNL Schema Registry] API developer guide sub-guide on [descriptors](../xdm/api/descriptors.md) for more information.
 
-## JSON Patch
+## JSON Patch {#json-patch}
 
 There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch objects for their request payloads. JSON Patch is a standardized format ([RFC 6902](https://tools.ietf.org/html/rfc6902)) for describing changes to a JSON document. It allows you to define partial updates to JSON without needing to send the entire document in a request body.
 
@@ -112,10 +113,10 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 
 Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](http://jsonpatch.com/).
 
-## JSON Schema
+## JSON Schema {#json-schema}
 
 JSON Schema is a format used to describe and validate the structure of JSON data. [Experience Data Model (XDM)](../xdm/home.md) leverages JSON Schema capabilities to enforce constraints on the structure and format of ingested customer experience data. For more information on JSON Schema, please refer to the [official documentation](https://json-schema.org/).
 
 ## Next steps
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. For more information on working with [!DNL Platform] APIs, including best practices and answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).

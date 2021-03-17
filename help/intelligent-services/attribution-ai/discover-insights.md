@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;insights;attribution ai;popular topics;attribution ai insights
-solution: Experience Platform
-title: Discovering insights in Attribution AI
+solution: Intelligent Services, Experience Platform
+title: Discover Insights in Attribution AI
 topic: Attribution AI insights
 description: This document serves as a guide for interacting with service instance insights in the Adobe Intelligent Services user interface.
 ---
 
-# Discovering insights in Attribution AI
+# Discover insights in Attribution AI
 
 Attribution AI service instances provide insights which can be used to assist in making and measuring marketing decisions related to marketing performance and return on investment. Selecting a service instance provides visualizations and filters to assist you in understanding the impact of every customer interaction in each phase of the customer journey.
 

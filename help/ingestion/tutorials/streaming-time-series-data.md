@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
 solution: Experience Platform
-title: Streaming time series data
+title: Stream Time-Series Data Using Streaming Ingestion APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 ---
 
-# Stream time series data to Adobe Experience Platform
+# Stream time-series data using Streaming Ingestion APIs
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
 
@@ -16,7 +16,7 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
@@ -29,7 +29,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`
@@ -309,9 +309,11 @@ Ingesting time series data to a streaming connection can be done either with or 
 
 The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
+>You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use the UUID function in Data Prep. More information about the UUID function can be found in the [Data Prep functions guide](../../data-prep/functions.md). The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID Of the person or device whose record it is. The person or device ID will be specific in any attributes that is assigned as a person or device identifier of the schema.
+>
+>Both `xdmEntity._id` and `xdmEntity.timestamp` are the only required fields for time-series data. Additionally, the following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
@@ -519,6 +521,6 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 ## Next steps
 
-By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-flows.md) guide.
+By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
 For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md). 
