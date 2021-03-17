@@ -1,44 +1,73 @@
 ---
-keywords: Experience Platform;home;popular topics;segmentation;Segmentation;segment match;Segment Match
+keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;Segment Match
 solution: Experience Platform
 title: Segment Match overview
 topic: overview
-description: Segment match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
+description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 ---
 
-# Segment match overview (Alpha)
+# Segment Match overview (Alpha)
 
 >[!IMPORTANT]
 >
->Segment match is currently in alpha. The documentation and the functionality are subject to change.
+>Segment Match is currently in alpha. The documentation and the functionality are subject to change.
 
-Segment match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. Segment match uses Platform privacy standards and global identities such as a hashed email, hashed phone number, and global device identifiers like IDFAs and GAIDs. Segment match aims to provide workflows for broader ID transformation and first-party matching, allowing users to collaborate on Platform using their first-party data.
+Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. Segment Match uses Platform privacy standards and global identities such as a hashed email, hashed phone number, and global device identifiers like IDFAs and GAIDs.
+
+With Segment Match you can:
+
+* Manage the Identity overlap process.
+* View pre-share estimates.
+* Apply data usage labels to control the that data can and cannot be shared with partners.
+* Maintain shared audience lifecycle management after publishing a feed and continue a dynamic exchange of data through abilities to add, delete, and unshare.
 
 The documentation below provides more information about Segment Match, including details on set up and its end-to-end workflow.
 
 ## Prerequisites
 
-The following prerequisites must be set up before you start working with segment match:
+The following prerequisites must be set up before you start working with Segment Match:
 
 ### Set up identity data and namespace
 
-The first step to getting started with segment match is to set up your identity data and namespaces.
+The first step to getting started with started with Segment Match is to make sure you're ingesting data against the supported identity namespaces. In the context of Segment Match, namespaces are used in the overlap process when sharing data. (EXPAND)
+
+The list of supported namespaces are as follows:
+
+| Namespace | Description |
+| --------- | ----------- |
+| Hashed email |
+| Hashed phone |
+| ECID | A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID". |
+| Apple IDFA (ID for Advertisers) | A namespace that represents Apple ID for Advertisers. See the following document on [interest-based ads](https://support.apple.com/en-us/HT202074) for more information. |
+| Google Ad ID | A namespace that represents a Google Advertising ID. See the following document on [Google Advertising ID](https://support.google.com/googleplay/android-developer/answer/6048248?hl=en) for more information. |
 
 ### Set up consent configuration
 
 You must provide a consent configuration and set up its default value as either opt-in or opt-out for a consent check.
 
+The default consent setting for Segment Match is opt-out. To enforce an opt-in model for your data, please send an email request to [email contact here].
+
 ### Configure data usage label
 
 The last prerequisite you must establish is to configure a new data usage label to prevent data sharing.
 
+Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Platform.
+
+Through data usage labels, you can manage what data is allowed to be shared through Segment Match.
+
+For more information on data usage labels, see the [data usage labels overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/labels/overview.html?lang=en#understanding-data-usage-labels).
+
 ## Segment Match end-to-end workflow
 
-Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with segment match and its features.
+Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with Segment Match and its features.
 
 ### Connect partner
 
-The first step with using segment match is to establish a connection between you and your partner. This "two-way handshake" acts as a self-service means for users to connect their Platform organizations together, at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
+The first step with using Segment Match is to establish a connection between you and your partner. This "two-way handshake" acts as a self-service means for users to connect their Platform organizations together, at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
+
+>[!NOTE]
+>
+>The "two-way handshake" between you and your partner is strictly a connection, no data is exchanged during this process.
 
 The following happens during the connection process:
 
@@ -49,7 +78,7 @@ The following happens during the connection process:
 
 ### Create feed
 
-A **feed** is a grouping of data (segments) and the rules for how that data can be exposed or used. A feed can be managed independently and exchanged with other Platform users through segment match.
+A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Platform users through Segment Match.
 
 The basic set up of a feed includes a name, a description, and configurations regarding data usage labels and identity namespaces.
 
