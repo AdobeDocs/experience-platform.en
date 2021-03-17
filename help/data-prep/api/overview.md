@@ -33,7 +33,7 @@ For detailed information on how to use sample data, please read the [sample data
 
 Schemas can be used with Mapper to ensure the data you've ingested into Adobe Experience Platform matches what you want to ingest. You can use the `/schemas` endpoint to programmatically create, list, and get custom schemas for use with Mapper in Platform. 
 
-For detailed information on how to use schemas within Mapping Service, please read the [schemas endpoint guide](./schemas.md).
+For detailed information on how to use schemas within the Mapping Service API, please read the [schemas endpoint guide](./schemas.md).
 
 ## Next steps
 
