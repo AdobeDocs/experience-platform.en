@@ -34,7 +34,7 @@ For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in
 
 ## IP address allow list {#ip-address-allow-list}
 
-This section provides IP ranges that you can allow list to safely export data from Experience Platform to your SFTP.
+This section provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server.
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
@@ -44,11 +44,11 @@ Add the following IP ranges to an allow list prior to working with the SFTP dest
 >
 > Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
 
-### East US region
+### US East region
 
 * `52.252.71.64/29`
 
-### West Europe region
+### Europe West region
 
 * `51.137.8.208/29`
 
