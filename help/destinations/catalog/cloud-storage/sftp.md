@@ -34,4 +34,4 @@ For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in
 
 ## IP address allow list
 
-Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IDs to an allow list.
+Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
