@@ -38,10 +38,10 @@ Entity relationships are marked as non-dependent, since cookie-based events ofte
 
 ERDs are provided for the following industry verticals:
 
-* Retail
-* Banking, financial services, and insurance (BFSI)
-* Travel and hospitality
-* Telecom
+* [Retail](./retail.md)
+* [Banking, financial services, and insurance (BFSI)](./bfsi.md)
+* [Travel and hospitality](./travel-hospitality.md)
+* [Telecom](./telecom.md)
 
 ## Next steps
 
