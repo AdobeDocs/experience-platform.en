@@ -24,7 +24,7 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to 
 
 ![catalog](../../images/tutorials/update-dataflows/catalog.png)
 
-The [!UICONTROL Dataflows] page appears contains a list of all existing dataflows, including information about their run status, last run date, and account name.
+The [!UICONTROL Dataflows] page contains a list of all existing dataflows, including information about their run status, last run date, and account name.
 
 Select the filter icon ![filter](../../images/tutorials/update/filter.png) on the top left to launch the sort panel.
 
