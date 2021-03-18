@@ -31,3 +31,7 @@ For SFTP destinations, enter the following information in the create destination
 ## Exported data {#exported-data}
 
 For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+
+## IP address allow list
+
+Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IDs to an allow list.
