@@ -34,7 +34,7 @@ The destinations in Experience Platform may have certain rules and obligations f
 
 [!DNL Google Customer Match] supports the activation of identities described in the table below.
 
-|Target Identity|Format|Description|
+|Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|

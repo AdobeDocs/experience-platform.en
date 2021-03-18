@@ -40,7 +40,7 @@ Next, they can use their offline data including associated membership IDs and cu
 
 [!DNL Facebook Custom Audiences] supports the activation of identities described in the table below.
 
-|Target Identity|Format|Description|
+|Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|

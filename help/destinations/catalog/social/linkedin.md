@@ -24,7 +24,7 @@ A software company organizes a conference and wants to keep in touch with partic
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below.
 
-|Target Identity|Format|Description|
+|Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
