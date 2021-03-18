@@ -20,7 +20,7 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including SFTP.
+Refer to the [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including SFTP.
 
 For SFTP destinations, enter the following information in the create destination workflow, in the **Authentication** step:
 
@@ -31,27 +31,3 @@ For SFTP destinations, enter the following information in the create destination
 ## Exported data {#exported-data}
 
 For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
-
-## IP address allow list {#ip-address-allow-list}
-
-This section provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your SFTP server.
-
-You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
-
-Add the following IP ranges to an allow list prior to working with the SFTP destination connection. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the SFTP destination connection.
-
->[!IMPORTANT]
->
-> Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
-
-### US East region
-
-* `52.252.71.64/29`
-
-### Europe West region
-
-* `51.137.8.208/29`
-
-### Australia East region
-
-* `20.53.201.168/29`
