@@ -68,7 +68,7 @@ alloy("setConsent", {
 });
 ```
 
-The time field should snow when the user last updated their consent preferences. If the user chooses to opt out, execute the `setConsent` command with the collect preference set to `n` as follows:
+The time field should specify when the user last updated their consent preferences. If the user chooses to opt out, execute the `setConsent` command with the collect preference set to `n` as follows:
 
 ```javascript
 alloy("setConsent", {
