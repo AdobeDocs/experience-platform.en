@@ -12,11 +12,11 @@ Adobe Experience Platform is continuously enhanced to meet the needs of all type
 
 ## Homepage and UI overview
 
-Color contrast of left nav items, including normal, hover and selection states are now accessible.
-Added accessible expand / collapse affordance in the banners
-UI items are now keyboard accessible, tab and arrow keys
-Focused links + enter open content in 2nd browser window
-aria-labels added
+The Experience Platform user interface meets required contrast ratios for normal text, graphics, and UI components. The colors of the user interface have also been chosen to support accessibility for all users, including those with visual disabilities. 
+
+In Platform, UI elements that are clickable or actionable with a pointed can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
+
+Experience Platform strives to meet the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) web standards, including the addition of ARIA labels to UI elements.
 
 ![An image showing the homepage of the Adobe Experience Platform UI.](images/homepage.png)
 
@@ -51,17 +51,20 @@ Videos can be viewed within Experience Platform by using keyboard navigation to 
 
 ![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
-The embedded video dialog can also be navigated using the keyboard. The following steps demonstrate the complete keyboard navigation available for the embedded video dialog:
+## Video dialog keyboard accessibility
 
-1) Tab to set focus on play button. Spacebar begins video playback.
-2) While video is playing, tab to focus the scrubber. With the scrubber in focus, left and right arrow keys skip video playback ahead and back 5 seconds, respectively.
-3) Tab to focus pause/play button. Spacebar pauses/plays video.
-4) Tab to focus mute/unmute. Spacebar mutes/unmutes video.
-5) Tab to volume up/down affordance. Left and right arrow keys move volume up and down, respectively.
-6) Tab to [!UICONTROL Closed Captions] ("cc") affordance. Enter opens the menu, up and down arrows keys select language. Enter key confirms selection.
-7) Tab to [!UICONTROL Quality] affordance. Enter opens the menu, up and down arrow keys select video quality. Enter key confirms selection.
-8) Tab to full screen affordance. Spacebar or enter key activates full screen view.Escape ("esc") exits full screen mode.
-9) Tab to close button. Spacebar or enter key exits video dialog. 
+The embedded video dialog can also be navigated using the keyboard. The following table outlines the complete keyboard navigation available for the embedded video dialog.
+
+|Dialog Element|Keyboard accessibility|Description|
+|---|---|---|
+|Play & Pause|Tab<br/>Spacebar|Use the tab key to set focus on play button. The spacebar begins video playback and pauses video playback.|
+|Scrubber|Tab<br/>Left arrow<br/>Right arrow|When video is playing, use tab key to focus scrubber. With the scrubber in focus, left and right arrow keys skip video playback ahead and back 5 seconds, respectively.|
+|Mute|Tab<br/>Spacebar|Use the tab key to focus the mute volume element. Use the spacebar to mute or unmute video playback.|
+|Volume|Tab<br/>Left arrow<br/>Right arrow|Use tab key to focus on volume element. Left and right arrow keys move volume up and down, respectively.|
+|[!UICONTROL Closed Captions] ("cc")|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|Tab to [!UICONTROL Closed Captions] ("cc") element. Use the enter key to open the menu, and up and down arrows keys to select a language for captions. The enter key confirms your selection.|
+|[!UICONTROL Quality]|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|Use tab to focus the [!UICONTROL Quality] element. Use enter to open the menu and the up and down arrow keys to select video quality. The enter key confirms your selection.|
+|Full Screen|Tab<br/>Spacebar or Enter<br/>Escape|Use tab to focus the full screen element. Use the spacebar or enter key to activate full screen view. The escape ("esc") key exits full screen mode.|
+|Close|Tab<br/>Spacebar or Enter|Use tab to focus the close button. Use the spacebar or enter key to exit the video dialog.|
 
 >[!NOTE]
 >
@@ -69,7 +72,7 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 
 ![An image showing the embedded video dialog with numbers identifying keyboard navigation elements.](images/video-dialog.png)
 
-## File drag and drop accessibility
+## File drag and drop
 
 In Experience Platform, all file selection drag and drop zones are keyboard accessible. Using the tab button to highlight [!UICONTROL Choose files] and using enter or spacebar to select the button, invokes the file selection UI for the users operating system.
 
@@ -79,22 +82,30 @@ Alternatively, if the file that is uploaded is not in the correct format, an err
 
 ![An image showing a file drag and drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
 
-## Browse table keyboard navigation
+Using a mouse to select the drag and drop zone also invokes the file selection UI, or a mouse user can select a file and drag onto the zone to begin uploading.
 
-Accessibility for browse tables:
+![An image showing a file drag and drop zone in focus as a mouse user drags a file into the zone.](images/drag-and-drop-mouse-over.png)
+
+## Table browse
+
+All tables within the Experience Platform user interface are keyboard accessible. Browsing and interacting with table rows and columns is possible through a series of keyboard shortcuts.
+
 1) Table header, arrow down to enter the browse table. Table headers are selectable when navigating via the Tab key, and you can change the sorting order by pressing Space.
 2) Arrow up / down moves down through the rows in the table
 3) Row selected/focused, enter key on row provides details in right rail
 4) Select enter to select item in the row (screen reader will alert user if new window will open)
 5) Row selected/focused use arrow keys to move through each item in the row
 
-Browse table keyboard shortcuts:
-HOME: When row focused, HOME will take users to the first item in the row
-END: When row focused, END will take users to the last item in the row
-Page up key traverses 10 rows up in the table (per page)
-Page down key traverses 10 rows down in the table (per page)
-Control + HOME goes to first time in table
-Control + END goes to first time in table per page
+### Browse table keyboard accessibility
+
+|Keyboard accessibility|Description|
+|---|---|
+|HOME (Function + left arrow)|When row focused, takes users to the first item in the row|
+|END (Function + right arrow)|When row focused, takes users to the last item in the row|
+|Page up|Page up key traverses 10 rows up in the table (per page)|
+|Page down|Page down key traverses 10 rows down in the table (per page)|
+|Control + HOME|goes to first time in table|
+|Control + END|goes to first time in table per page|
 
 ## Schema Editor UI
 
