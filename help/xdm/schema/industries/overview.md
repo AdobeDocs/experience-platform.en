@@ -17,10 +17,10 @@ In order to help guide your data modeling strategy based on your particular indu
 
 Reading the ERDs referenced in this guide requires a working understanding of how XDM components interact to form schemas, and how XDM schemas operate in Experience Platform as a whole. Ensure that you have read the following overview documentation before continuing:
 
-* [XDM System overview](../home.md): Learn how XDM operates in the Platform ecosystem.
-* [Basics of schema composition](../schema/composition.md): Learn how XDM components (such as mixins, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
+* [XDM System overview](../../home.md): Learn how XDM operates in the Platform ecosystem.
+* [Basics of schema composition](../../schema/composition.md): Learn how XDM components (such as mixins, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
 
-It is also recommended that you review the [data modeling best practices guide](../schema/best-practices.md) for general guidelines on how to map your data to XDM.
+It is also recommended that you review the [data modeling best practices guide](../../schema/best-practices.md) for general guidelines on how to map your data to XDM.
 
 ## Industry data model ERDs {#erds}
 

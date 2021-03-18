@@ -15,12 +15,12 @@ feature: Schemas
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
-  * Industry data models {#verticals}
-    * [Overview](./verticals/overview.md)
-    * [Retail data model ERD](./verticals/retail.md)
-    * [BFSI data model ERD](./verticals/bfsi.md)
-    * [Travel and hospitality data model ERD](./verticals/travel-hospitality.md)
-    * [Telecom data model ERD](./verticals/telecom.md)
+  * Industry data models {#industries}
+    * [Overview](./schema/industries/overview.md)
+    * [Retail data model ERD](../schema/industries/retail.md)
+    * [BFSI data model ERD](../schema/industries/bfsi.md)
+    * [Travel and hospitality data model ERD](../schema/industries/travel-hospitality.md)
+    * [Telecom data model ERD](../schema/industries/telecom.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
