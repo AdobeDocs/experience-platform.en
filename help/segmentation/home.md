@@ -51,7 +51,9 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 ### Batch segmentation
 
-As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use.
+As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
+
+Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, profile updates are run every hour to ensure segments evaluated using batch segmentation remain fresh. These profile updates are not run on newly created segments nor newly updated segments until a full batch segmentation job has been run.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
