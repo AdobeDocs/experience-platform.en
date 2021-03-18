@@ -30,11 +30,21 @@ To promote the release, they upload email addresses from their CRM database into
 
 The destinations in Experience Platform may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
 
-### Export Type and Identities {#export-type}
+### Supported Identities {#supported-identities}
+
+[!DNL Google Customer Match] supports the activation of identities described in the table below.
+
+|Target Identity|Format|Description|
+|---|---|---|
+|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
+### Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
-
-**Identities** - you can use raw or hashed emails as customer IDs in Google.
 
 ### [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 

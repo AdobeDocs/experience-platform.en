@@ -36,6 +36,18 @@ Next, they can use their offline data including associated membership IDs and cu
 >
 >Data sent to [!DNL Facebook] should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
 
+### Supported Identities {#supported-identities}
+
+[!DNL Facebook Custom Audiences] supports the activation of identities described in the table below.
+
+|Target Identity|Format|Description|
+|---|---|---|
+|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+|phone_sha256|Phone numbers hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
 ### Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Facebook destination.
