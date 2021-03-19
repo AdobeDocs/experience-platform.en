@@ -26,16 +26,20 @@ If you already have a valid [!DNL PubSub] connection, you may skip the remainder
 
 ### Gather required credentials
 
-In order to connect [!DNL PubSub] to Platform, you must provide a valid value for the following credential:
+In order to connect [!DNL PubSub] to Platform, you must provide a valid value for the following credentials:
 
 | Credential | Description |
 | ---------- | ----------- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
-| `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
+| `credentials` | The credential or private key ID required to authenticate [!DNL PubSub]. |
 
-For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document.
+For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL Blob] account to Platform.
+>[!TIP]
+>
+>If you are using service account-based authentication, ensure that there are no extra white spaces in the JSON, when copying and pasting your credentials.
+
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PubSub] account to Platform.
 
 ## Connect your [!DNL PubSub] account
 
