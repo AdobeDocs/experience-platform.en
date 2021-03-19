@@ -24,29 +24,27 @@ A prominent technology company has just released a new phone. In an effort to pr
 
 To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube]. 
 
-## Destination specifics {#destination-specs}
-
-### Data governance for [!DNL Google Customer Match] destinations {#data-governance}
+## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
 The destinations in Experience Platform may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
 
-### Supported Identities {#supported-identities}
+## Supported Identities {#supported-identities}
 
-[!DNL Google Customer Match] supports the activation of identities described in the table below.
+[!DNL Google Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|Considerations|
 |---|---|---|
 |GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
 |IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
-|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
-|email_lc_sha256|Email addresses hashed with the SHA256 algorithm.|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-### Export Type {#export-type}
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
 
-### [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
+## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
 Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
 
