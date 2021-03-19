@@ -18,9 +18,9 @@ feature: Schemas
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
     * [Retail data model ERD](./schema/industries/retail.md)
-    * [BFSI data model ERD](./schema/industries/financial.md)
+    * [Financial services data model ERD](./schema/industries/financial.md)
     * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
-    * [Telecom data model ERD](./schema/industries/telecom.md)
+    * [Telecommunications data model ERD](./schema/industries/telecom.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
