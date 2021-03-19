@@ -12,9 +12,9 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when to use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
 
-A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
+A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform. Then, they can build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
 ## Destination specifics {#destination-specs}
 
@@ -33,7 +33,7 @@ A software company organizes a conference and wants to keep in touch with partic
 
 ### Export Type {#export-type}
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL LinkedIn Matched Audiences] destination.
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL LinkedIn Matched Audiences] destination.
 
 ### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
@@ -45,11 +45,11 @@ To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see
 
 [!DNL LinkedIn Matched Audiences] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL LinkedIn Matched Audiences] can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
 
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
+Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
 #### Email hashing requirements {#email-hashing-requirements}
 
-You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
 
 To learn about ingesting email addresses in Experience Platform, see the [batch ingestion overview](/help/ingestion/batch-ingestion/overview.md) and the [streaming ingestion overview](/help/ingestion/streaming-ingestion/overview.md).
 
@@ -58,7 +58,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 - Trim all leading and trailing spaces from the email string. For example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
 - When hashing the email strings, make sure to hash the lowercase string;
   - Example: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
-- Make sure the hashed string is all lowercase
+- Ensure that the hashed string is all lowercase
   - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
 - Do not salt the string.
 
