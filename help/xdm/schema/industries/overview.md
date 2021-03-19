@@ -26,7 +26,7 @@ It is also recommended that you review the [data modeling best practices guide](
 
 The industry vertical models represented by ERDs below are intentionally created in a de-normalized fashion and with consideration for how the data will be stored in Platform.
 
-For a given ERD, each entity shown in is based on an underlying XDM class. For a given entity, each row marked in **bold** represents a mixin or a data type, with relevant fields it provides listed below in unbolded text. The most important fields for a given entity are highlighted in red.
+For a given ERD, each entity shown in is based on an underlying XDM class. For a given entity, each row marked in **bold** represents a mixin or a data type, with the relevant fields it provides listed below in unbolded text. The most important fields for a given entity are highlighted in red.
 
 >[!NOTE]
 >
