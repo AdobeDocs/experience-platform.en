@@ -34,6 +34,20 @@ Once you have selected the permissions you would like to grant, select **Create*
 
 ![create-new-role](./images/marketo/create-new-role.png)
 
+You can manage restricted permissions on the API when creating roles with Marketo. Instead of selecting "Access API", you can provide a role with the minimum level of access by selecting the following permissions:
+
+* Read-Only Activity
+* Read-Only Assets
+* Read-Only Campaign
+* Read-Only Company
+* Read-Only Custom Object
+* Read-Only Custom Object Type
+* Read-Only Named Account
+* Read-Only Named Account List
+* Read-Only Opportunity
+* Read-Only Person
+* Read-Only Sales Person
+
 ## Set up a new user
 
 Similar to roles, you can set up a new user from the **Users & Roles** page. The *Users* page provides a list of active users currently provisioned in Marketo. Select **Invite New User** to provision a new user.
