@@ -5,7 +5,7 @@ topic: overview
 description: View an entity relationship diagram (ERD) that describes a standardized data model for the travel and hospitality industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 ---
 
-# Travel and hospitality industry data model ERD
+# [!UICONTROL Travel and hospitality] industry data model ERD
 
 The following entity relationship diagram (ERD) represents a standardized data model for the travel and hospitality industry.
 

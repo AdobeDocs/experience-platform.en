@@ -7,15 +7,15 @@ description: Learn about the standardized data models for various industry verti
 
 # Industry data models overview
 
-Experience Data Model (XDM) allows you to create highly customizable schemas to capture key customer experience data related to your business. To help streamline the process of modeling your data to conform to XDM, Adobe Experience Platform provides a versatile suite standard XDM components, which capture concepts that are commonly used across several industries.
+Experience Data Model (XDM) allows you to create highly customizable schemas to capture key customer experience data related to your business. To help streamline the process of modeling your data to conform to XDM, Adobe Experience Platform provides a versatile suite of standard XDM components, which capture concepts that are commonly used across several industries.
 
-Some XDM components are more relevant to some industries than others, however. In addition, the relationships you establish between your XDM schemas will vary depending on your industry.
+Depending on the industry that your business operates under, some XDM components will be more relevant to your needs than others. In addition, the relationships you establish between your XDM schemas will vary depending on your industry.
 
 In order to help guide your data modeling strategy based on your particular industry, this guide provides a reference of entity relationship diagrams (ERDs) for several supported industry verticals.
 
 ## Prerequisites
 
-Reading the ERDs referenced in this guide requires a working understanding of how XDM components interact to form schemas, and how XDM schemas operate in Experience Platform as a whole. Ensure that you have read the following overview documentation before continuing:
+To read the ERDs referenced in this guide, you must have a working understanding of how XDM components interact to form schemas and how XDM schemas operate in Experience Platform as a whole. Ensure that you have read the following overview documentation before continuing:
 
 * [XDM System overview](../../home.md): Learn how XDM operates in the Platform ecosystem.
 * [Basics of schema composition](../../schema/composition.md): Learn how XDM components (such as mixins, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
@@ -30,18 +30,18 @@ For a given ERD, each entity shown in is based on an underlying XDM class. For a
 
 >[!NOTE]
 >
->Some entities may include an "_ID" field. This represents a unique identifier that Platform automatically assigns to event or profile entities when they are ingested. However, you can choose to use your own unique ID values for this field if you wish.
+>Some entities may include an "_ID" field. This represents the unique identifier (`_id`) that Platform automatically assigns to event or profile entities when they are ingested. However, you can choose to use your own unique ID values for this field if you wish.
 
-All the properties that could be used to identify individual customers are marked as "identity", with one of these properties  marked as a "primary identity".
+All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
 
 Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
 ERDs are provided for the following industry verticals:
 
-* [Retail](./retail.md)
-* [Banking, financial services, and insurance (BFSI)](./bfsi.md)
-* [Travel and hospitality](./travel-hospitality.md)
-* [Telecom](./telecom.md)
+* [[!UICONTROL Retail]](./retail.md)
+* [[!UICONTROL Financial services]](./financial.md)
+* [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
+* [[!UICONTROL Telecommunications]](./telecom.md)
 
 ## Next steps
 

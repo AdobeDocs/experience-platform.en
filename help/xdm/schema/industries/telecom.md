@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Telecom Industry Data Model ERD
+title: Telecommunications Industry Data Model ERD
 topic: overview
-description: View an entity relationship diagram (ERD) that describes a standardized data model for the telecom industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
+description: View an entity relationship diagram (ERD) that describes a standardized data model for the telecommunication industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 ---
 
-# Telecom industry data model ERD
+# [!UICONTROL Telecommunications] industry data model ERD
 
 The following entity relationship diagram (ERD) represents a standardized data model for the telecom industry.
 
