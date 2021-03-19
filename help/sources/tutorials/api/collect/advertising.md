@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
-title: Collect advertising data through source connectors and APIs
+title: Collect Advertising Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform through source connectors and the Flow Service API.
+description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
 ---
 
-# Collect advertising data through source connectors and APIs
+# Collect advertising data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -78,15 +78,49 @@ curl -X POST \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
-        -d '{
+    -d '{
         "name": "Google AdWords source connection",
-        "connectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
+        "baseConnectionId": "2484f2df-c057-4ab5-84f2-dfc0577ab592",
         "description": "Google AdWords source connection",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "v201809.AD_PERFORMANCE_REPORT"
+            "tableName": "v201809.AD_PERFORMANCE_REPORT",
+            "columns": [
+                {
+                    "name": "CallOnlyPhoneNumber",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "AdGroupId",
+                    "type": "long",
+                    "xdm": {
+                        "type": "integer",
+                        "minimum": -9007199254740992,
+                        "maximum": 9007199254740991
+                    }
+                },
+                {
+                    "name": "AdGroupName",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Date",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "d771e9c1-4f26-40dc-8617-ce58c4b53702",
@@ -97,7 +131,7 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId` | The unique connection ID of the advertising application you are accessing. |
+| `baseConnectionId` | The unique connection ID of the advertising application you are accessing. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your advertising application. |
 

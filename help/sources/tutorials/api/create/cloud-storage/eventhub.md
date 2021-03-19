@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;event hub;Azure event hub;Event hub
 solution: Experience Platform
-title: Create an Azure Event Hubs connector using the Flow Service API
+title: Create an Azure Event Hubs Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to an Azure Event Hubs account.
+description: Learn how to connect Adobe Experience Platform to an Azure Event Hubs account using the Flow Service API.
 ---
 
-# Create an [!DNL Azure Event Hubs] connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure Event Hubs] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -83,11 +83,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
-                "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey",
-                "namespace": "namespace"
+                "sasKeyName": "{SAS_KEY_NAME}",
+                "sasKey": "{SAS_KEY}",
+                "namespace": "{NAMESPACE}"
             }
         },
         "connectionSpec": {

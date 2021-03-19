@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
+user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time.
 ---
 
 # Adobe Experience Platform overview {#landing}
@@ -23,17 +23,26 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
 * Experience Platform APIs {#platform-apis}
+  * [Getting started with Platform APIs](api-guide.md)
+  * [Authenticate and access Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
+  * [Using Postman with Platform APIs](postman.md)
   * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
-  * [Authenticate to Experience Platform APIs](http://www.adobe.com/go/platform-api-authentication-en)
 * Platform documentation {#documentation}
-  * [Documentation overview](documentation/overview.md)
+  * [Overview](documentation/overview.md)
+  * [Language support](documentation/language-support.md)
 * Platform in the Adobe ecosystem {#ecosystem}
   * [Application Services](application-services.md)
   * [Application and Intelligent Services (Video)](video/application-intelligent-services.md)
   * [Platform integrations with Experience Cloud (Video)](video/experience-cloud-integrations.md)
+* Governance, privacy, and security {#governance-privacy-security}
+  * [Overview](./governance-privacy-security/overview.md)
+  * Consent management {#consent}
+    * IAB TCF 2.0 {#iab}
+      * [Overview](./governance-privacy-security/consent/iab/overview.md)
+      * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
-* [ADLS Gen2 Migration](adls2-gen2-migration.md)
+* [Gen2 data lake migration](adls2-gen2-migration.md)
 * [Glossary](glossary.md)
 * [Release notes](https://www.adobe.com/go/platform-release-notes-en)

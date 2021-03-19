@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
-title: Collect cloud storage data through source connectors and APIs
+title: Collect Cloud Storage Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
 ---
 
-# Collect cloud storage data through source connectors and APIs
+# Collect cloud storage data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -31,7 +31,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - `Authorization: Bearer {ACCESS_TOKEN}`
 - `x-api-key: {API_KEY}`
@@ -83,7 +83,7 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Cloud storage source connector",
-        "connectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "description": "Cloud storage source connector",
         "data": {
             "format": "delimited",
@@ -102,7 +102,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `connectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
+| `baseConnectionId` | The unique connection ID of the third-party cloud storage system you are accessing. |
 | `data.format` | An enum value that defines the data format attribute. |
 | `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
@@ -334,6 +334,10 @@ A successful response returns the new target connection's unique identifier (`id
 ## Create a mapping {#mapping}
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
+
+>[!TIP]
+>
+>You can map complex data types such as arrays in JSON files using a cloud storage source connector.
 
 **API format**
 
@@ -662,5 +666,6 @@ The following section lists the different cloud storage source connectors and th
 | [!DNL Azure Event Hubs] (Event Hubs) | `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | [!DNL Azure File Storage] | `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
 | [!DNL Google Cloud Storage] | `32e8f412-cdf7-464c-9885-78184cb113fd` |
-| HDFS | `54e221aa-d342-4707-bcff-7a4bceef0001` |
-| SFTP | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |
+| [!DNL HDFS] | `54e221aa-d342-4707-bcff-7a4bceef0001` |
+| [!DNL Oracle Object Storage] | `c85f9425-fb21-426c-ad0b-405e9bd8a46c` |
+| [!DNL SFTP] | `bf367b0d-3d9b-4060-b67b-0d3d9bd06094` |

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
 solution: Experience Platform
-title: Create a Google AdWords connector using the Flow Service API
+title: Create a Google AdWords Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Google AdWords.
+description: Learn how to connect Adobe Experience Platform to Google AdWords using the Flow Service API.
 ---
 
-# Create a [!DNL Google AdWords] connector using the [!DNL Flow Service] API
+# Create a [!DNL Google AdWords] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -32,12 +32,12 @@ In order for [!DNL Flow Service] to connect with AdWords, you must provide value
 
 | **Credential** | **Description** |
 | -------------- | --------------- |
-| Client Customer ID | The Client customer ID of the AdWords account. |
-| Developer Token | The developer token associated with the manager account. |
-| Refresh Token | The refresh token obtained from [!DNL Google] for authorizing access to AdWords. |
-| Client ID | The client ID of the [!DNL Google] application used to acquire the refresh token. |
-| Client secret | The client secret of the [!DNL Google] application used to acquire the refresh token. |
-| Connection specification ID | The unique identifier needed to create a connection. The connection specification ID for [!DNL Google AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `clientCustomerId` | The Client customer ID of the AdWords account. |
+| `developerToken` | The developer token associated with the manager account. |
+| `refreshToken` | The refresh token obtained from [!DNL Google] for authorizing access to AdWords. |
+| `clientId` | The client ID of the [!DNL Google] application used to acquire the refresh token. |
+| `clientSecret` | The client secret of the [!DNL Google] application used to acquire the refresh token. |
+| `connectionSpec` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Google AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
 
 For more information about these values, refer to this [Google AdWords document](https://developers.google.com/adwords/api/docs/guides/authentication).
 
@@ -47,7 +47,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

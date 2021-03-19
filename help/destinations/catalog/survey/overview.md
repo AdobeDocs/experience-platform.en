@@ -1,16 +1,14 @@
 ---
 keywords: Survey destinations;survey;foresee;inmoment;web intercept surveys;qualtrics
-title: Survey Destinations
-seo-title: Survey Destinations
-description: Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Real-time CDP.
-seo-description: Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Real-time CDP.
+title: Survey destinations overview
+description: Surveys platforms detect survey events, capture customer feedback in real time through data elements, and share data with Adobe Experience Platform.
 ---
 
-# Survey destinations {#survey-destinations}
+# Survey destinations overview {#survey-destinations}
 
-Surveys platforms detect survey events, capture customer feedback in real-time through data elements, and share data with Real-time CDP.
+Surveys platforms detect survey events, capture customer feedback in real time through data elements, and share data with Adobe Experience Platform.
 
-Currently, Real-time Customer Data Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
+Currently, Platform supports the survey destinations listed below. For information on how to connect to these destinations, see the individual links:
 
 - [Foresee extension](./foresee.md)
 - [InMoment extension](./inmoment.md)

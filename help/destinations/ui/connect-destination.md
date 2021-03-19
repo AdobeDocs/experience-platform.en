@@ -1,14 +1,13 @@
 ---
 keywords: connect destination;destination connect;how to connect destination
-title: Connect to a Destination in Real-time Customer Data Platform
-seo-title: Connect to a Destination in Real-time Customer Data Platform
+title: Connect to a destination
 type: Tutorial
-description: This tutorial lists the steps to connect a destination in Real-time Customer Data Platform
+description: This tutorial lists the steps to connect a destination in Adobe Experience Platform
 ---
 
-# How to connect a destination 
+# Connect to a destination 
 
-Follow the steps below to connect to a destination in Real-time Customer Data Platform:
+Follow the steps below to connect to a destination in Adobe Experience Platform:
 
 1. Navigate to  **[!UICONTROL Destinations]** from the left navigation bar.
 2. In the [[!UICONTROL Catalog]](./destinations-workspace.md#catalog) tab, select the destination that you want to connect to.

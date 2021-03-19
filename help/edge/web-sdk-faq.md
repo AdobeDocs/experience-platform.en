@@ -1,13 +1,11 @@
 ---
-title: Web SDK FAQ
-seo-title: Adobe Experience Platform Web SDK FAQ
-description: Frequently asked questions about Adobe Experience Platform Web SDK
-seo-description: Frequently asked questions about Adobe Experience Platform Web SDK
+title: Adobe Experience Platform Web SDK FAQ
+description: Get answers to frequently asked questions about the Adobe Experience Platform Web SDK.
 ---
 
 # Frequently asked questions
 
-This FAQ includes questions that are often asked about the Adobe Web SDK.
+This guide provides answers to questions that are often asked about the Adobe Experience Platform Web SDK.
 
 ## What is Adobe Experience Platform Web SDK?
 
@@ -117,7 +115,7 @@ In other words, if you decide to use Adobe Experience Platform Web SDK for non-s
 
 ## Can I migrate the ECIDs when I start using Alloy so my website visitors don't start showing up as new visitors?
 
-Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions in [this document](https://docs.adobe.com/content/help/en/experience-platform/edge/fundamentals/identity.html#id-migration) for more details.
+Yes, Adobe Experience Platform Web SDK provides an Identity Migration feature. Follow the instructions for ID migration in the [Platform Web SDK identity documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#id-migration) for more details.
 
 ## How is the Web SDK different than Adobe Experience Platform Launch?
 
@@ -146,6 +144,18 @@ Later in 2020, Experience Platform Launch will release server-side forwarding fe
 ## What is a CNAME or First Party Domain and why does it matter?
 
 More information about a CNAME is available in the [Adobe documentation](https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html)
+
+## Does the Adobe Experience Platform Web SDK use cookies? If so, what cookies does it use?
+
+Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your implementation. Below is a list of the 4 cookies that you might see with the Web SDK and the way that they are used: 
+
+**kndct_orgid_identity:** The identity cookie is used to store the ECID, as well as some other information related to the ECID.
+
+**kndctr_orgid_consent:** This cookie stores the user's consent preference for the website. 
+
+**kndctr_orgid_personalization:** This cookie includes session information that Adobe Target uses to personalize webpages. 
+
+**kndctr_orgid_consentcheck:** This session-based cookie signals the server to look up the consent preferences server side.
 
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 

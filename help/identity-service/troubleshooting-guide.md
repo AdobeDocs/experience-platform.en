@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;identity namespace;Identity namespace
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service troubleshooting guide
+title: Identity Service Troubleshooting Guide
 topic: troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Identity Service, as well as a troubleshooting guide for common errors.
 ---
@@ -10,7 +10,7 @@ description: This document provides answers to frequently asked questions about 
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Identity Service], as well as a troubleshooting guide for common errors. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
-Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real-time. For more information, see the [Identity Service overview](./home.md).
+Data that identifies a single customer is often fragmented across the various devices and systems that they use to engage with your brand. [!DNL Identity Service] gathers these fragmented identities together, facilitating a complete understanding of customer behavior so you can deliver impactful digital experiences in real time. For more information, see the [Identity Service overview](./home.md).
 
 ## FAQ
 
@@ -68,20 +68,7 @@ For step-by-step instructions for defining a namespace when creating an identity
 
 ## What are the standard identity namespaces provided by Experience Platform? {#standard-namespaces}
 
-The following standard namespaces are provided for use by all organizations within Experience Platform:
-
-| Display Name | ID | Code | Description |
-| ------------ | --- | --- | ----------- |
-| CORE | 0 | CORE | legacy name: "Adobe AudienceManager" |
-| ECID | 4 | ECID | alias: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID" |
-| Email | 6 | Email | |
-| Email (SHA256, lowercased) | 11 | Emails | Standard namespace for pre-hashed email. Values provided in this namespace are converted to lowercase before hashing with SHA-256. |
-| Phone | 7 | Phone | |
-| Windows AID | 8 | WAID | |
-| AdCloud | 411 | AdCloud | alias: Ad Cloud |
-| Adobe Target | 9 | TNTID | Target ID |
-| Google Ad ID | 20914 | GAID | GAID |
-| Apple IDFA | 20915 | IDFA | ID for Advertisers |
+Standard identity namespaces are namespaces available to all organizations. See the [Identity namespaces overview](./namespaces.md) for a full list of available standard namespaces.
 
 ## Where can I find the list of identity namespaces available for my organization?
 
@@ -226,7 +213,7 @@ This error message displays when your IMS Organization has not been provisioned 
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### Authorization service token is not valid
 
@@ -238,7 +225,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens.
+In the case of this error, your access token is invalid. Access tokens expire every 24 hours and must be regenerated to continue using [!DNL Platform] APIs. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens.
 
 ### User token does not have valid product context
 
@@ -250,7 +237,7 @@ In the case of this error, your access token is invalid. Access tokens expire ev
 }
 ```
 
-This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](../tutorials/authentication.md) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
+This error message displays when your access token has not been generated from an [!DNL Experience Platform] integration. See the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) for instructions on generating new access tokens for an [!DNL Experience Platform] integration.
 
 ### Internal error when getting native XID from identity and namespace code
 

@@ -1,30 +1,24 @@
 ---
 keywords: Amazon Kinesis;kinesis destination;kinesis
-title: Amazon Kinesis destination
-seo-title: Amazon Kinesis destination
+title: Amazon Kinesis connection
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
-seo-description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
 ---
 
-# (Beta) [!DNL Amazon Kinesis] destination
-
+# (Beta) [!DNL Amazon Kinesis] connection
 
 >[!IMPORTANT]
 >
->The [!DNL Amazon Kinesis] destination in Real-time CDP is currently in beta. The documentation and the functionality are subject to change.
-
-## Overview {#overview}
+>The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
 The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time. 
 
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
-* To connect to [!DNL Amazon Kinesis] using the Real-time CDP user interface, see the sections below.
+* To connect to [!DNL Amazon Kinesis] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
+* To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
-
 
 ## Use Cases {#use-cases}
 
@@ -44,7 +38,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 ### In the Authentication step {#authentication-step}
 
-* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Real-time CDP access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
@@ -53,7 +47,8 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
-* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Real-time CDP will export data to this stream.
+* **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
+* **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
 
@@ -61,7 +56,7 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 >[!IMPORTANT]
 >
->Real-time CDP needs `write` permissions on the bucket object where the export files will be delivered.
+>Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
 -->
 
@@ -116,6 +111,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in 
 
 >[!MORELIKETHIS]
 >
->* [Connect to Amazon Kinesis and activate data using API calls](../../api/streaming-destinations.md)
+>* [Connect to Amazon Kinesis and activate data using the Flow Service API](../../api/streaming-destinations.md)
 >* [Azure Event Hubs destination](./azure-event-hubs.md)
 >* [Destination types and categories](../../destination-types.md) 

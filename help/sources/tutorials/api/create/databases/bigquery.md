@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;bigquery;Google;google;Google BigQuery
 solution: Experience Platform
-title: Create a Google BigQuery connector using the Flow Service API
+title: Create a Google BigQuery Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Google BigQuery (hereinafter referred to as "BigQuery").
+description: Learn how to connect Adobe Experience Platform to Google BigQuery using the Flow Service API.
 ---
 
-# Create a [!DNL Google BigQuery] connector using the [!DNL Flow Service] API
+# Create a [!DNL Google BigQuery] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with BigQuery, you must provide the following connection properties:
+In order for [!DNL Flow Service] to connect BigQuery to Platform, you must provide the following OAuth 2.0 authentication values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -45,7 +45,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -82,20 +82,22 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "BigQuery base connection",
-        "description": "Base connection for Google BigQuery",
+        "name": "Google BigQuery connection",
+        "description": "Google BigQuery connection",
         "auth": {
             "specName": "Basic Authentication",
+            "type": "OAuth2.0",
             "params": {
-                "project": "{PROJECT}",
-                "clientId": "{CLIENT_ID}",
-                "clientSecret": "{CLIENT_SECRET}",
-                "refreshToken": "{REFRESH_TOKEN}"
-            }
+                    "project": "{PROJECT}",
+                    "clientId": "{CLIENT_ID},
+                    "clientSecret": "{CLIENT_SECRET}",
+                    "refreshToken": "{REFRESH_TOKEN}"
+                }
         },
         "connectionSpec": {
             "id": "3c9b37f8-13a6-43d8-bad3-b863b941fedd",
             "version": "1.0"
+        }
     }'
 ```
 
@@ -113,8 +115,8 @@ A successful response returns details of the newly created connection, including
 
 ```json
 {
-    "id": "26ced882-729b-470f-8ed8-82729b570f03",
-    "etag": "\"6507cfd8-0000-0200-0000-5e18fc600000\""
+    "id": "6990abad-977d-41b9-a85d-17ea8cf1c0e4",
+    "etag": "\"ca00acbf-0000-0200-0000-60149e1e0000\""
 }
 ```
 

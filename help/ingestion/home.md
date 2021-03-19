@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;data location;Data Location;Data management;data management;Lineage;lineage;batch;Batch;ingested data
 solution: Experience Platform
-title: Adobe Experience Platform Data Ingestion overview
+title: Data Ingestion Overview
 topic: overview
 description: This document introduces the three main ways in which data is ingested into Platform, with links to their respective overview documentation for more detailed information.
 ---
@@ -22,7 +22,7 @@ See the [batch ingestion overview](./batch-ingestion/overview.md) for more infor
 
 ## Streaming ingestion
 
-Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. [!DNL Platform] supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
+Streaming ingestion allows you to send data from client- and server-side devices to [!DNL Experience Platform] in real time. [!DNL Platform] supports the use of data inlets to stream incoming experience data, which is persisted in streaming-enabled datasets within the Data Lake. Data inlets can be configured to automatically authenticate the data they collect, ensuring that the data is coming from a trusted source. 
 
 See the [streaming ingestion overview](./streaming-ingestion/overview.md) for more information.
 

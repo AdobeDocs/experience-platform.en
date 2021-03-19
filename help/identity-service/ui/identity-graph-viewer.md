@@ -1,20 +1,22 @@
 ---
 keywords: Experience Platform;home;popular topics;identity graph viewer;Identity graph viewer;graph viewer;Graph viewer;identity namespace;Identity namespace;identity;Identity;Identity service;identity service
 solution: Experience Platform
-title: Adobe Experience Platform Identity Service
+title: Identity Graph Viewer Overview
 topic: tutorial
 description: An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels.
 ---
 
-# (Beta) Identity graph viewer
-
->[!NOTE]
->
->The identity graph viewer is currently in beta. Its features are subject to change.
+# Identity graph viewer overview
 
 An identity graph is a map of relationships between different identities for a particular customer, providing you with a visual representation of how your customer interacts with your brand across different channels. All customer identity graphs are collectively managed and updated by Adobe Experience Platform Identity Service in near real-time, in response to customer activity.
 
 The identity graph viewer in the Platform user interface allows you to visualize and better understand what customer identities are stitched together, and in what ways. The viewer allows you to drag and interact with different parts of the graph, allowing you to examine complex identity relationships, debug more efficiently, and benefit from increased transparency with how information is being utilized.
+
+## Tutorial video
+
+The following video is intended to support your understanding of the identity graph viewer.
+
+>[!VIDEO](https://video.tv.adobe.com/v/331030/?quality=12&learn=on)
 
 ## Getting started
 
@@ -43,6 +45,20 @@ Select the namespace you intend to use and click **[!UICONTROL Select]** to proc
 Once you have selected a namespace, enter its corresponding value for a particular customer in the **[!UICONTROL Identity value]** text box and select **[!UICONTROL View]**.
 
 ![add-identity-value](../images/identity-graph-viewer/identity-value-filled.png)
+
+### Access the identity graph viewer from datasets
+
+You can also access the identity graph viewer using the datasets interface. From the datasets [!UICONTROL Browse] page, select a dataset you want to interact with, and then select **[!UICONTROL Preview dataset]**
+
+![preview-dataset](../images/identity-graph-viewer/preview-dataset.png)
+
+From the preview window, select a fingerprint icon to see the identities represented through the identity graph viewer.
+
+>[!TIP]
+>
+>The fingerprint icon only appears if the dataset has two or more identities.
+
+![fingerprint](../images/identity-graph-viewer/fingerprint.png)
 
 The identity graph viewer appears. On the left side of the screen is the identity graph displaying all the identities linked to the namespace you selected and the identity value you entered. Each identity node consists of a namespace and its corresponding ID value. You can select and hold any identity to drag and interact with the graph. Alternatively, you can hover over an identity to see information about its ID value. The graph output is also displayed as a tabled list in the center of the screen.
 
@@ -93,13 +109,18 @@ The following section provides additional information for working with the ident
 Errors may happen when accessing the identity graph viewer. The following is a list of prerequisites and limitations to take note of when working with the identity graph viewer.
 
 - An identity value must exist in the selected namespace.
-- The identity graph viewer requires a minimum of two linked identities to generate.
+- The identity graph viewer requires a minimum of two linked identities to generate. It is possible that there is only one identity value and no linked identities, and in this case, the value would only exist in [!DNL Profile] viewer.
 - The identity graph viewer cannot exceed the maximum of 150 identities.
-- The identity graph viewer is currently not accessible in non-production sandboxes.
-- The identity graph viewer currently only supports batch ingested data and does not display data ingested using streaming sources.
 
 ![error-screen](../images/identity-graph-viewer/error-screen.png)
 
 ## Next steps
 
 By reading this document, you have learned how to explore your customers' identity graphs in the Platform UI. For more information on identities in Platform, please refer to the [Identity Service overview](../home.md)
+
+## Changelog
+
+| Date | Action |
+| ---- | ------ |
+| 2021-01 | <ul><li>Added support for streaming ingested data and non-production sandbox.</li><li>Minor bug fixes.</li></ul> |
+| 2021-02 | <ul><li>Identity graph viewer is made accessible through dataset preview.</li><li>Minor bug fixes.</li><li>Identity graph viewer is made Generally Available.</li></ul> |

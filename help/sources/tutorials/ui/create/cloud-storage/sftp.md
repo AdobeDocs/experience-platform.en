@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
-title: Create an SFTP source connector in the UI
+title: Create an SFTP  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a SFTP source connector using the Platform user interface.
+description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
 ---
 
-# Create an SFTP source connector in the UI
+# Create an SFTP source connection in the UI
 
 >[!NOTE]
 >
 >The SFTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial provides steps for creating an SFTP source connector using the Platform user interface.
+This tutorial provides steps for creating an SFTP source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
@@ -23,6 +23,10 @@ This tutorial requires a working understanding of the following components of Ad
   * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Schema Editor tutorial](../../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+
+>[!IMPORTANT]
+>
+>It is recommended to avoid newlines or carriage returns when ingesting JSON objects with an SFTP source connection. To work around the limitation, use a single JSON object per line and use multi-lines for ensuing files.
 
 If you already have a valid SFTP connection, you may skip the remainder of this document and proceed to the tutorial on [configuring a dataflow](../../dataflow/batch/cloud-storage.md).
 
@@ -35,7 +39,7 @@ In order to connect to SFTP, you must provide values for the following connectio
 | `host` | The name or IP address associated with your SFTP server. |
 | `username` | The username with access to your SFTP server. |
 | `password` | The password for your SFTP server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 Once you have gathered your required credentials, you can follow the steps below to create a new SFTP account to connect to Platform.
@@ -64,13 +68,13 @@ Alternatively, you can select **[SSH public key]** and connect your SFTP account
 
 >[!IMPORTANT]
 >
->The SFTP connector supports an RSA/DSA OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
+>The SFTP connector supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credential | Description |
 | ---------- | ----------- |
-| Private key content | A Base64 encoded SSH private key content. The SSH private key should should be OpenSSH format. |
+| Private key content | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Existing account

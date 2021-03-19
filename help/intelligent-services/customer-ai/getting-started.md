@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;getting started;customer ai;popular topics
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Getting started in Customer AI
+title: Getting Started in Customer AI
 topic: Getting started
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
 ---
@@ -23,7 +23,7 @@ The guides for Customer AI require a working understanding of the various Platfo
 >
 >If you do not need to download raw scores, you can skip this step and proceed to the [configuration guide](./user-guide/configure.md).
 
-Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+Downloading Customer AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

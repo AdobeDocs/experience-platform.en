@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;place context;placeContext;datatype;data-type;data type;
 solution: Experience Platform
-title: Place context data type
+title: Place Context Data Type
 topic: overview
 description: This document provides an overview of the Place Context XDM data type.
 ---

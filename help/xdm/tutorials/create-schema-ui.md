@@ -1,7 +1,7 @@
 ---
-keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
+keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
-title: Create a schema using the Schema Editor
+title: Create a Schema Using the Schema Editor
 topic: tutorial
 type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
@@ -31,7 +31,7 @@ The [!UICONTROL Schemas] workspace in the [!DNL Platform] UI provides a visualiz
 
 After logging into [!DNL Experience Platform], select **[!UICONTROL Schemas]** in the left navigation to open the **[!UICONTROL Schemas]** workspace. The **[!UICONTROL Browse]** tab displays a list of schemas (a representation of the [!DNL Schema Library]) which you can view and customize. The list includes the name, type, class, and behavior (record or time-series) on which the schema is based, as well as the date and time the schema was last modified. 
 
-See the guide on [exploring existing XDM resources in the UI](./explore.md) for more information.
+See the guide on [exploring existing XDM resources in the UI](../ui/explore.md) for more information.
 
 ## Create and name a schema {#create}
 
@@ -191,6 +191,12 @@ When defining fields in the [!DNL Schema Editor], there are some additional opti
 | [!UICONTROL Identity] | Indicates that this field is an identity field. More information regarding identity fields is provided [later in this tutorial](#identity-field). |
 | [!UICONTROL Relationship] | While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. The [!UICONTROL Relationship] constraint indicates that this field references the primary identity of a schema based on a different class, implying a relationship between the two schemas. See the tutorial on [defining a relationship](./relationship-ui.md) for more information. |
 
+>[!NOTE]
+>
+>Any required, identity, or relationship fields are shown in the left rail, allowing you to locate these fields easily regardless of the schema's complexity.
+>
+>![](../images/tutorials/create-schema/left-rail-special.png)
+
 For this tutorial, the [!DNL "loyalty"] object in the schema requires a new enum field that describes the "loyalty level" of a customer, where the value can only be one of four possible options. To add this field to the schema, select the **plus (+)** icon beside the `loyalty` object and fill in the required fields for **[!UICONTROL Field name]** and **[!UICONTROL Display name]**. For **[!UICONTROL Type]**, select "[!UICONTROL String]".
 
 ![](../images/tutorials/create-schema/loyalty-level-type.png)
@@ -221,7 +227,7 @@ In a future schema, you could now assign a field as a "[!DNL Loyalty]" type and 
 
 >[!NOTE]
 >
->You can also create and edit custom data types independently from editing schemas. See the tutorial on [creating and editing data types](./create-data-type.md) for more information.
+>You can also create and edit custom data types independently from editing schemas. See the guide on [creating and editing data types](../ui/resources/data-types.md) for more information.
 
 ## Search and filter schema fields
 
@@ -325,19 +331,7 @@ The following sections provide addition information information regarding the us
 
 ### Create a new class {#create-new-class}
 
-[!DNL Experience Platform] provides the flexibility to define a schema based on a class that is unique to your organization. 
-
-In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then select **[!UICONTROL Browse]** from the dropdown.
-
-![](../images/tutorials/create-schema/browse-classes.png)
-
-A dialog appears that allows you select from a list of available classes. At the top of the dialog, select **[!UICONTROL Create new class]**. You can then give your new class a display name (a short, descriptive, unique, and user-friendly name for the class), a description, and a behavior ("[!UICONTROL Record]" or "[!UICONTROL Time Series]") for the data the schema will define. 
-
-![](../images/tutorials/create-schema/create_new_class.png)
-
->[!IMPORTANT]
->
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to select **[!UICONTROL Create new mixin]** and define a mixin for use with that class. The next time you compose a schema that implements the new class, the mixin that you defined will be listed and available for use. 
+[!DNL Experience Platform] provides the flexibility to define a schema based on a class that is unique to your organization. To learn how to create a new class, see the guide on [creating and editing classes in the UI](../ui/resources/classes.md#create).
 
 ### Change the class of a schema {#change-class}
 
@@ -347,18 +341,4 @@ You can change the class of a schema at any point during the initial composition
 >
 >Reassigning the class for a schema should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
-To reassign a class, select **[!UICONTROL Assign]** in the left-hand side of the canvas.
-
-![](../images/tutorials/create-schema/assign_class_button.png)
-
-A dialog appears that displays a list of all available classes, including any defined by your organization (the owner being "[!UICONTROL Customer]") as well as standard classes defined by Adobe. 
-
-Select a class from the list to display its description on the right-hand side of the dialog. You can also select **[!UICONTROL Preview class structure]** to see the fields and metadata associated with the class. Select **[!UICONTROL Assign class]** to continue.
-
-![](../images/tutorials/create-schema/assign_class.png)
-
-A new dialog opens asking you to confirm that you wish to assign a new class. Select **[!UICONTROL Assign]** to confirm.
-
-![](../images/tutorials/create-schema/assign-confirm.png)
-
-After confirming the class change, the canvas will be reset and all composition progress will be lost.
+To learn how to change the class of a schema, see the guide on [managing schemas in the UI](../ui/resources/schemas.md).

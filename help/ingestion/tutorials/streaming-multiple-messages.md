@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;streaming multiple messages;multiple messages;
 solution: Experience Platform
-title: Streaming multiple messages in a single HTTP request
+title: Send Multiple Messages in a Single HTTP Request
 topic: tutorial
 type: Tutorial
 description: This document provides a tutorial for sending multiple messages to Adobe Experience Platform within a single HTTP request using streaming ingestion.
 ---
 
-# Sending multiple messages in a single HTTP request
+# Send multiple messages in a single HTTP request
 
 When streaming data to Adobe Experience Platform, making numerous HTTP calls can be expensive. For instance, instead of creating 200 HTTP requests with 1KB payloads, it is much more efficient to create 1 HTTP request with 200 messages of 1KB each, with a single payload of 200KB. When used correctly, grouping multiple messages within a single request is an excellent way to optimize data being sent to [!DNL Experience Platform].
 
@@ -20,7 +20,7 @@ This tutorial requires a working understanding of Adobe Experience Platform [!DN
 - [Data Ingestion overview](../home.md): Covers the core concepts of [!DNL Experience Platform Data Ingestion], including ingestion methods and data connectors.
 - [Streaming ingestion overview](../streaming-ingestion/overview.md): The workflow and building blocks of streaming ingestion, such as streaming connections, datasets, [!DNL XDM Individual Profile], and [!DNL XDM ExperienceEvent].
 
-This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](../../tutorials/authentication.md) tutorial in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
+This tutorial also requires you to have completed the [Authentication to Adobe Experience Platform](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to successfully make calls to [!DNL Platform] APIs. Completing the authentication tutorial provides the value for the Authorization header required by all API calls in this tutorial. The header is shown in sample calls as follows:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 

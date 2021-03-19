@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
-title: Profile preview - Real-time Customer Profile API
-description: Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into Platform, it is stored within the Profile data store. As the number of records in the Profile store increases or decreases, a sample job is run that includes information regarding how many profile fragments and merged profiles are in the data store. Using the Profile API you can preview the latest successful sample, as well as list profile distribution by dataset and by identity namespace.
+title: Preview Sample Status (Profile Preview) API Endpoint
+description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, as well as list profile distribution by dataset and by identity namespace within Adobe Experience Platform.
 topic: guide
 ---
 
@@ -9,13 +9,20 @@ topic: guide
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. 
 
-When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a job is triggered to update the count. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+
+* For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 These metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
 
+>[!NOTE]
+>
+>There are estimate and preview endpoints available as part of the Adobe Experience Platform Segmentation Service API that allow you to view summary-level information regarding segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with segment preview and estimate endpoints, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
+
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
+The API endpoint used in this guide is part of the [[!DNL Real-time Customer Profile] API](https://www.adobe.com/go/profile-apis-en). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any [!DNL Experience Platform] API.
 
 ## Profile fragments vs merged profiles
 
@@ -82,7 +89,7 @@ The response includes the details for the last successful sample job that was ru
 |`totalFragmentCount`|Total number of profile fragments in the Profile store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
 |`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
-|`totalRows`|Total number of merged profiles in Experience platform, also know as the 'profile count.'|
+|`totalRows`|Total number of merged profiles in Experience Platform, also know as the 'profile count.'|
 |`lastBatchId`|Last batch ingestion ID.|
 |`status`|Status of last sample.|
 |`samplingRatio`|Ratio of merged profiles sampled (`numRowsToRead`) to total merged profiles (`totalRows`), expressed as a percentage in decimal format.|
@@ -182,8 +189,6 @@ The response includes a `data` array, containing a list of dataset objects. The 
 |`createdUser`|The user ID of the user who created the dataset.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
-
-
 ## List profile distribution by namespace
 
 You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).
@@ -281,5 +286,4 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Next steps
 
-You can also use similar estimates and previews to view summary-level information regarding your segment definitions to help ensure you are isolating the expected audience. To find detailed steps for working with segment previews and estimates using the [!DNL Adobe Experience Platform Segmentation Service] API, please visit the [previews and estimates endpoints guide](../../segmentation/api/previews-and-estimates.md), part of the [!DNL Segmentation] API developer guide.
-
+Now that you know how to preview sample data in the Profile store, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).

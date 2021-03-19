@@ -1,14 +1,10 @@
 ---
 keywords: advertising; bing; 
-title: Microsoft Bing Destination
-seo-title: The Microsoft Bing destination helps you send profile data to Microsoft Display Advertising.
-description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
-seo-description: With the Microsoft Bing destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+title: Microsoft Bing connection
+description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
 ---
 
-# [!DNL Microsoft Bing] destination 
-
-## Overview {#overview}
+# [!DNL Microsoft Bing] connection {#bing-destination}
 
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 
@@ -20,6 +16,10 @@ Note the following details that are specific to the [!DNL Microsoft Bing] destin
 
 * You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
 
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
 ## Use cases {#use-cases}
 
 As a marketer, I want to be able to use segments built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
@@ -30,7 +30,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 
 ## Prerequisites {#prerequisites}
 
-When configuring the destination you will asked to provide the following information:
+When configuring the destination, you must provide the following information:
 
 * [!UICONTROL Account ID]: this is your [!DNL Bing Ads CID], in integer format.
 
@@ -51,7 +51,7 @@ In the [!UICONTROL Authentication] step, you must enter the destination connecti
  *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
  *  **[!UICONTROL Account ID]**: Your [!DNL Bing Ads CID].
- *  **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions).
+ *  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Microsoft Bing Destination Authentication](../../assets/catalog/advertising/bing/authentication.png)
     

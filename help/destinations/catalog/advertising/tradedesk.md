@@ -1,26 +1,26 @@
 ---
 keywords: advertising; the trade desk;
-title: The Trade Desk Destination
-seo-title: The Trade Desk Destination
-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources. 
-seo-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video and mobile inventory sources.
+title: The Trade Desk connection
+description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. 
 ---
 
-# [!DNL The Trade Desk] destination 
-
-## Overview {#overview}
+# [!DNL The Trade Desk] connection
 
 [!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.
 
-To send profile data to [!DNL The Trade Desk], you must first connect to the destination.
+To send profile data to [!DNL Trade Desk], you must first connect to the destination.
 
 ## Destination specs {#destination-specs}
 
-Note the following details that are specific to the [!DNL The Trade Desk] destination:
+Note the following details that are specific to the [!DNL Trade Desk] destination:
 
 * You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL The Trade Desk] destinations: [!DNL The Trade Desk ID], [!DNL IDFA], [!DNL GAID].
+
+>[!IMPORTANT]
+>
+>If you are looking to create your first destination with [!DNL The Trade Desk] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL The Trade Desk] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 ## Use cases {#use-cases}
 
@@ -47,8 +47,7 @@ In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk]
  * **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  * **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
  * **[!UICONTROL Account ID]**: Your [!DNL Trade Desk] [!UICONTROL Account ID].
- * **[!UICONTROL Client Secret]**: The `clientSecret` parameter used in the [!DNL OAuth2] client credentials.
- * **[!UICONTROL Server Location]**: Ask your [!DNL The Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
+ * **[!UICONTROL Server Location]**: Ask your [!DNL Trade Desk] representative which regional server you should use. These are the available regional servers you can choose from:
    
    * **[!UICONTROL Europe]**
    * **[!UICONTROL Singapore]**
@@ -57,7 +56,7 @@ In the [!UICONTROL Authentication] step, you need to enter [!DNL The Trade Desk]
    * **[!UICONTROL North America West]**
    * **[!UICONTROL Latin America]**
  
- * **[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions). 
+ * **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![The Trade Desk Authentication Step](../../assets/catalog/advertising/tradedesk/authenticate.png)
 
@@ -77,4 +76,4 @@ If you are using multiple device mappings (cookie IDs, [!DNL IDFA], [!DNL GAID])
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to [!DNL The Trade Desk] destination, check your [!DNL The Trade Desk] account. If activation was successful, audiences are populated in your account. 
+To verify if data has been exported successfully to [!DNL The Trade Desk] destination, check your [!DNL Trade Desk] account. If activation was successful, audiences are populated in your account.

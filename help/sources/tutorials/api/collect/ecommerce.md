@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Collect eCommerce data;eCommerce data
 solution: Experience Platform
-title: Collect eCommerce data through source connectors and APIs
+title: Collect eCommerce Data using Source Connectors and APIs
 topic: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
 ---
 
-# Collect eCommerce data through source connectors and APIs
+# Collect eCommerce data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

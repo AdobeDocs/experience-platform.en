@@ -1,21 +1,19 @@
 ---
 keywords: email;Email;e-mail;email destinations
-title: Email Marketing Destinations
-seo-title: Email Marketing Destinations
+title: Email marketing destinations overview
 type: Tutorial
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
-seo-description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
 ---
 
-# Email marketing destinations {#email-marketing-destinations}
+# Email marketing destinations overview {#email-marketing-destinations}
 
-Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Real-time Customer Data Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
+Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
 
-To send segments to email marketing destinations for your campaigns, Real-time CDP must first connect to the destination.
+To send segments to email marketing destinations for your campaigns, Platform must first connect to the destination.
 
 Connecting to email marketing destinations is a three-step process. Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Real-time CDP exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Real-time CDP. The process to import data varies for each partner. See the individual destinations articles for more information. 
+In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Platform exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Platform. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
 ## Configure destination {#connect-destination}
 
@@ -35,7 +33,7 @@ In the **[!UICONTROL Setup]** step, enter a name and a description for your new 
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
 
-Also in this step, you can select any marketing use case that should apply to this destination. Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Real-time CDP](../../../rtcdp/privacy/data-governance-overview.md#destinations) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md#core-actions).
+Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Email setup step](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 

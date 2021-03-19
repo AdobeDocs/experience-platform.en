@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
-title: Datasets user guide
+title: Datasets UI Guide
 topic: datasets
-description: This datasets user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.
+description: Learn how to perform common actions when working with datasets in the Adobe Experience Platform user interface.
 ---
 
-# Datasets user guide
+# Datasets UI guide
 
 This user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.
 
@@ -90,7 +90,7 @@ The **[!UICONTROL Add data]** step appears. Upload the CSV file by either draggi
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Enable a dataset for Real-time Customer Profile
+## Enable a dataset for Real-time Customer Profile {#enable-profile}
 
 Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-time Customer Profile]. A compatible schema satisfies the following requirements:
 
@@ -101,9 +101,11 @@ For more information on enabling a schema for [!DNL Profile], see the [Schema Ed
 
 To enable a dataset for Profile, access its **[!UICONTROL Dataset activity]** screen and click the **[!UICONTROL Profile]** toggle within the **[!UICONTROL Properties]** column. Once enabled, data that is ingested into the dataset will also be used to populate customer profiles.
 
-![](../images/datasets/user-guide/enable_dataset_profiles.png)
+>[!NOTE]
+>
+>If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not automatically consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have it contribute to customer profiles.
 
-If a dataset already contains data and is then enabled for [!DNL Profile], the existing data is not consumed by [!DNL Profile]. After a dataset is enabled for [!DNL Profile], it is recommended that you re-ingest any existing data to have them populate customer profiles.
+![](../images/datasets/user-guide/enable_dataset_profiles.png)
 
 ## Manage and enforce data governance on a dataset
 
@@ -125,7 +127,9 @@ A confirmation box appears. Click **[!UICONTROL Delete]** to confirm the deletio
 
 ## Delete a Profile-enabled dataset
 
-If a dataset is enabled for [!DNL Profile], deleting it through the UI disables the dataset for ingestion, but does not automatically delete the dataset in the backend. In order to fully delete the dataset including the profile and identity data that it provides, an additional delete request must be made. For steps on how to properly delete data from the [!DNL Profile] store, see the [!DNL Real-time Customer Profile] API [sub-guide on profile system jobs, also known as "delete requests"](../../profile/api/profile-system-jobs.md).
+If a dataset is enabled for [!DNL Profile], deleting that dataset through the UI will delete it from both the Data Lake and the Profile store within Platform. 
+
+You can delete a dataset from the [!DNL Profile] store only (leaving the data in the Data Lake) using the Real-time Customer Profile API. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).
 
 ## Monitor data ingestion
 

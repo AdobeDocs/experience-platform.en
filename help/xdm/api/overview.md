@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;
 solution: Experience Platform
-title: Schema Registry API developer guide
-description: The Schema Registry API allows you to programmatically manage all schemas and related XDM resources available to you within Experience Platform. 
+title: Schema Registry API Guide
+description: The Schema Registry API allows developers to programmatically manage all schemas and related Experience Data Model (XDM) resources within Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
 topic: developer guide
 ---
 
-# [!DNL Schema Registry] API developer guide
+# [!DNL Schema Registry] API guide
 
 The [!DNL Schema Registry] is used to access the Schema Library within Adobe Experience Platform, providing a user interface and RESTful API from which all available library resources are accessible.
 
@@ -56,19 +56,19 @@ To learn how to view unions in the Schema Registry API, see the [unions endpoint
 
 The Schema Registry API allows you to transfer and share XDM resources between sandboxes and IMS Organizations. For any schema, mixin, or data type, you can generate an export payload containing the structure of the resource and any dependent resources. This payload can then be used to import the resource into a destination sandbox and IMS Org.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [export/import endpoints guide](./export-import.md) for more information on how to use these endpoints.
 
 ## Sample data
 
 You can generate sample data for any specified schema within the Schema Library. The response object returned can then be used as a source of data ingestion.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [sample data endpoint guide](./sample-data.md) for more information on the use of this endpoint.
 
 ## Audit log
 
 The Schema Registry maintains a log of all the changes that have occurred to a resource (class, mixin, data type, or schema) between different updates. You can retrieve the log for a particular resource by providing its `$id` or `meta:altId` in the path of a GET request to this endpoint.
 
-See the [Schema Registry API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) for more information on the use of this endpoint.
+See the [audit log endpoint guide](./audit-log.md) for more information on the use of this endpoint.
 
 ## Next steps
 

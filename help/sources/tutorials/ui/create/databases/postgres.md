@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;PSQL;psql;PostgreSQL
 solution: Experience Platform
-title: Create a PostgreSQL source connector in the UI
+title: Create a PostgreSQL  Source Connection in the UI
 topic: overview
 type: Tutorial
-description: This tutorial provides steps for creating a PostgreSQL (hereinafter referred to as "PSQL") source connector using the Platform user interface.
+description: Learn how to create a PostgreSQL source connection using the Adobe Experience Platform UI.
 ---
 
-# Create a [!DNL PostgreSQL] source connector in the UI
+# Create a [!DNL PostgreSQL] source connection in the UI
 
 >[!NOTE]
 >

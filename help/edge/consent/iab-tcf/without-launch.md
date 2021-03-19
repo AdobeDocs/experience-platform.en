@@ -1,13 +1,12 @@
 ---
-title: Using IAB TCF 2.0 without Experience Platform Launch
-seo-title: Setting up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
+title: Integrate IAB TCF 2.0 Support Using the Adobe Experience Platform Web SDK
+description: Learn how to set up IAB TCF 2.0 support for your website without using Adobe Experience Platform Launch.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
 ---
 
-# Using IAB TCF 2.0 with the AEP Web SDK extension
+# Integrate IAB TCF 2.0 support with the Platform Web SDK
 
-This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md). 
+This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md).
 
 ## Getting started
 
@@ -17,19 +16,19 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs can provide a hook where you could run these functions when the `__tcfapi` object is ready.
 
-To use IAB TCF 2.0 with Experience Platform Launch and the AEP Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
+To use IAB TCF 2.0 with Experience Platform Launch and the Adobe Experience Platform Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
 
 Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 
 ## Enabling default consent
 
-If you want to treat all unknown users the same, you can set the default consent to `pending`. This queues Experience Events until consent preferences are received.
+If you want to treat all unknown users the same, you can set the default consent to `pending` or `out`. This queues or discards Experience Events until consent preferences are received.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the Platform Web SDK configuration documentation.
 
 ### Setting the default consent based on `gdprApplies`
 
-Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call. 
+Some CMPs provide the ability to determine whether General Data Protection Regulation (GDPR) applies to the customer. If you want to assume consent for customers where GDPR does not apply, you can use the `gdprApplies` flag in the TCF API call.
 
 The following example shows one way to do this:
 
@@ -51,7 +50,7 @@ In this example, the `configure` command is called after the `tcData` is obtaine
 
 ## Using the setConsent event
 
-IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences. 
+IAB TCF 2.0 API provides an event for when the consent is updated by the customer. This occurs when the customer initially sets their preferences and when the customer updates their preferences.
 
 The following example shows one way to do this:
 
@@ -103,4 +102,4 @@ The other way to add the consent information to every request is with the `onBef
 
 ## Next steps
 
-Now that you have learned how to use IAB TCF 2.0 with the AEP Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.
+Now that you have learned how to use IAB TCF 2.0 with the Platform Web SDK extension, you can also choose to integrate with other Adobe solutions such as Adobe Analytics or Real-time Customer Data platform. See the [IAB Transparency & Consent Framework 2.0 overview](./overview.md) for more information.

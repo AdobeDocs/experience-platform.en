@@ -1,9 +1,9 @@
 ---
 keywords: Experience Platform;home;popular topics;Amazon Kinesis;amazon kinesis;Kinesis;kinesis
 solution: Experience Platform
-title: Amazon Kinesis connector
+title: Amazon Kinesis Source Connector Overview
 topic: overview
-description: The documentation below provides information on how to connect Amazon Kinesis to Platform using APIs or the user interface.
+description: Learn how to connect Amazon Kinesis to Adobe Experience Platform using APIs or the user interface.
 ---
 
 # (Beta) [!DNL Amazon Kinesis] connector
@@ -14,7 +14,7 @@ description: The documentation below provides information on how to connect Amaz
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real-time.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real time.
 
 ## IP address allow list
 
@@ -26,10 +26,10 @@ The documentation below provides information on how to connect [!DNL Amazon Kine
 
 ### Using APIs
 
-- [Create a Amazon Kinesis connector using the Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
+- [Create a Amazon Kinesis source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/kinesis.md)
 - [Collect streaming data using the Flow Service API](../../tutorials/api/collect/streaming.md)
 
 ### Using the UI
 
-- [Create a Amazon Kinesis source connector in the UI](../../tutorials/ui/create/cloud-storage/kinesis.md)
-- [Configure a dataflow for a cloud storage connector in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)
+- [Create a Amazon Kinesis source connection in the UI](../../tutorials/ui/create/cloud-storage/kinesis.md)
+- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/streaming/cloud-storage-streaming.md)

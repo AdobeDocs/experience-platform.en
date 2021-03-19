@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Create email marketing destinations
+title: Connect to email marketing destinations and activate data using the Flow Service API
+description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
 ---
 
-# Create email marketing destinations and activate data using API calls in Adobe's [!DNL Real-time Customer Data Platform]
+# Connect to email marketing destinations and activate data using the Flow Service API
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.
 
@@ -14,7 +15,7 @@ This tutorial uses the Adobe Campaign destination in all examples, but the steps
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the user interface in Adobe's Real-time CDP to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
 
 ## Get started
 
@@ -24,7 +25,7 @@ This guide requires a working understanding of the following components of Adobe
 *   [[!DNL Catalog Service]](../../catalog/home.md): [!DNL Catalog] is the system of record for data location and lineage within [!DNL Experience Platform].
 *   [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Real-time CDP.
+The following sections provide additional information that you will need to know in order to activate data to email marketing destinations in Platform.
 
 ### Gather required credentials
 
@@ -39,7 +40,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -59,7 +60,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation 
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 
@@ -353,6 +354,14 @@ A successful response contains the base connection's unique identifier (`id`). S
 
 ### Specify storage location and data format
 
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files.
+
+>[!IMPORTANT]
+> 
+>[!DNL Adobe Experience Platform] automatically splits the export files at 5 million records (rows) per file. Each row represents one profile.
+>
+>Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
+
 **API format**
 
 ```http
@@ -427,8 +436,8 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 
 *   `{BASE_CONNECTION_ID}`: Use the base connection ID you obtained in the step above.
 *   `{CONNECTION_SPEC_ID}`: Use the connection spec you obtained in the step [Get the list of available destinations](#get-the-list-of-available-destinations).
-*   `{BUCKETNAME}`: Your [!DNL Amazon] S3 bucket, where Real-time CDP will deposit the data export.
-*   `{FILEPATH}`: The path in your [!DNL Amazon] S3 bucket directory where Real-time CDP will deposit the data export.
+*   `{BUCKETNAME}`: Your [!DNL Amazon] S3 bucket, where Platform will deposit the data export.
+*   `{FILEPATH}`: The path in your [!DNL Amazon] S3 bucket directory where Platform will deposit the data export.
 
 **Response**
 
@@ -644,7 +653,7 @@ The returned response should include in the `transformations` parameter the segm
 
 ## Next steps
 
-By following this tutorial, you have successfully connected Real-time CDP to one of your preferred email marketing destinations and set up a dataflow to the respective destination. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
+By following this tutorial, you have successfully connected Platform to one of your preferred email marketing destinations and set up a dataflow to the respective destination. Outgoing data can now be used in the destination for email campaigns, targeted advertising, and many other use cases. See the following pages for more details:
 
 *   [Destinations overview](../home.md)
 *   [Destinations Catalog overview](../catalog/overview.md)
