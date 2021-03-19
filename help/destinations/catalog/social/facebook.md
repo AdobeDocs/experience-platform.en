@@ -28,19 +28,29 @@ To target them across social media, they can onboard the customer data from thei
 
 Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
 
-## Destination specifics {#destination-specs}
-
-### Data governance for [!DNL Facebook] destinations {#data-governance}
+## Data governance for [!DNL Facebook] destinations {#data-governance}
 
 >[!IMPORTANT]
 >
 >Data sent to [!DNL Facebook] should not include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
 
-### Export Type {#export-type}
+## Supported Identities {#supported-identities}
+
+[!DNL Facebook Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+|phone_sha256|Phone numbers hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
+
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the Facebook destination.
 
-### Facebook account prerequisites {#facebook-account-prerequisites}
+## Facebook account prerequisites {#facebook-account-prerequisites}
 
 Before you can send your audience segments to [!DNL Facebook], make sure you meet the following requirements:
 
@@ -51,13 +61,13 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. This is required for the [!DNL Adobe Experience Platform] integration.
 - Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do this, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
 
-### ID matching requirements {#id-matching-requirements}
+## ID matching requirements {#id-matching-requirements}
 
 [!DNL Facebook] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Facebook] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
 
-#### Phone number hashing requirements {#phone-number-hashing-requirements}
+### Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Facebook]:
 
@@ -69,7 +79,7 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 >Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Facebook].
 
 
-#### Email hashing requirements {#email-hashing-requirements}
+### Email hashing requirements {#email-hashing-requirements}
 
 You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
 
@@ -92,7 +102,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-#### Using custom namespaces {#custom-namespaces}
+### Using custom namespaces {#custom-namespaces}
 
 Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], make sure you synchronize your own identifiers using [!DNL Facebook Pixel]. See the [official documentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) for detailed information.
 
