@@ -50,7 +50,6 @@ Indicates whether debugging should be enabled. Setting this config to `true` ena
 
 | **Feature**            | **Function** |
 | ---------------------- | ------------------ |
-| Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
 ### `edgeDomain` {#edge-domain}

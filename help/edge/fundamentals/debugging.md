@@ -6,7 +6,7 @@ keywords: debugging web sdk;debugging;configure;configure command;debug command;
 
 # Debugging
 
-When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
+When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving.
 
 Debugging is disabled by default, but can be toggled on in three different ways: 
 
