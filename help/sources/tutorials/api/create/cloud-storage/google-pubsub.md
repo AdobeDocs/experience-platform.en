@@ -37,7 +37,7 @@ For more information about these values, see the following [PubSub authenticatio
 
 >[!TIP]
 >
->If you are using service account-based authentication, ensure that there are no extra white spaces in the JSON, when copying and pasting your credentials.
+>If you are using service account-based authentication, ensure that you have granted sufficient user access to your service account and that there are no extra white spaces in the JSON, when copying and pasting your credentials.
 
 ### Reading sample API calls
 
