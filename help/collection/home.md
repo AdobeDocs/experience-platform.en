@@ -3,47 +3,40 @@ keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
 title: Data Collection Overview
 topic: overview
-description: Data Collection supports Adobe Experience Platform by providing users tools focused on tagging pages to collect data.
+description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 ---
 
-# [!DNL Collection] overview
+# Data collection overview
 
-Adobe Experience Platform Collection is a suite of technologies that enable client-side data collection for Adobe Experience Platform Edge Network from: 
+Adobe Experience Platform provides a suite of technologies that allow you to collect customer experience data from client-side sources, and send it to the Adobe Experience Platform Edge Network where it can be enriched, transformed, and distributed to Adobe or non-Adobe destinations in seconds.
 
-* Websites
+Data collection is supported for the following client-side sources:
+
+* Web-based applications
 * Native mobile applications
-* OTT
+* Over-the-top (OTT) applications
 
-<!-- * Servers --> 
+The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets. These technologies encompass the following:
 
-Data can be enriched, transformed, and sent to Adobe or non-Adobe destinations in seconds. 
-
-[!DNL Data Collection] supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].
-
-Adobe Experience Platform Collection Developer includes the following technologies: 
-
-* Adobe Experience Platform Data Streams
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Experience Data Model (XDM)](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) 
-* [Adobe Experience Platform Launch Client Side](https://experienceleague.adobe.com/docs/launch.html)
-* [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
+* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Adobe Experience Platform Web SDK](../edge/home.md)
+* [Experience Data Model (XDM)](../xdm/home.md) 
 
 ![](./images/Collection.png)
 
 ## Simpler implementations, faster client-side performance
 
-Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe product libraries into a single web or mobile SDK. Compressing the libraries speeds up and simplifies data collection into a single stream from these devices to Adobe Experience Platform Edge Network.
-
-Adobe Experience Platform Server SDK streams data from any server to Adobe Experience Platform Edge Network.
+Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe product libraries into a single development kit for web or mobile platforms. Compressing these libraries speeds up data collection and consolidates operations into a single stream from client-side devices to Adobe Experience Platform Edge Network.
 
 ## Flip-the-switch process to deploy Adobe technology
 
-Adobe Experience Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Adobe Experience Platform Data Streams you can turn on Adobe products server-side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [edge configurations](../edge/fundamentals/edge-configuration.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![](./images/deploy.png)
 
 ## Transform, enrich, and send data fast and securely
 
-Adobe Experience Platform Launch Server Side can tap into any Adobe Experience Platform Data Stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
+[Adobe Experience Platform Launch Server Side](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) can tap into any Platform data stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
 
 ![](./images/launch.png)

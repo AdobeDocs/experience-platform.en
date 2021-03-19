@@ -141,9 +141,9 @@ feature: Data Ingestion, Sources
   - [Ingest Parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
-  - [Update connections](tutorials/api/update.md)
+  - [Update accounts](tutorials/api/update.md)
   - [Update dataflows](tutorials/api/update-dataflows.md)
-  - [Delete connections](tutorials/api/delete.md)
+  - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
@@ -215,6 +215,7 @@ feature: Data Ingestion, Sources
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor dataflows](tutorials/ui/monitor.md)
   - [Update accounts](tutorials/ui/update.md)
+  - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
