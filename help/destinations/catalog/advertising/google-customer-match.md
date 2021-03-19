@@ -12,31 +12,39 @@ description: Google Customer Match lets you use your online and offline data to 
 
 ## Use Cases
 
-To help you better understand how and when you should use the [!DNL Google Customer Match] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
+To help you better understand how and when to use the [!DNL Google Customer Match] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
 ### Use Case #1
 
-An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Experience Platform, build segments from their own offline data, and send these segments to [!DNL Google Customer Match] to be used across [!DNL Search] and [!DNL Shopping], optimizing their advertising spending.  
+An athletic apparel brand wants to reach existing customers through [!DNL Google Search] and [!DNL Google Shopping] to personalize offers and items based on their past purchases and browsing history. The apparel brand can ingest email addresses from their own CRM to Experience Platform, and build segments from their own offline data. Then, they can send these segments to [!DNL Google Customer Match] to be used across [!DNL Search] and [!DNL Shopping], optimizing their advertising spending.  
 
 ### Use Case #2
 
-A prominent technology company has just released a new phone. In an effort to promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
+A prominent technology company launched a new phone. To promote this new phone model, they are looking to drive awareness of the new features and functionality of the phone to customers who own previous models of their phones. 
 
-To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Segments are created based on customers who own older phone models and sent to [!DNL Google Customer Match] so that they can target current customers, customers who own older phone models, as well as similar customers on [!DNL YouTube]. 
+To promote the release, they upload email addresses from their CRM database into Experience Platform, using the email addresses as identifiers. Segments are created based on customers who own older phone models. Then segments get sent to [!DNL Google Customer Match], so the company can target current customers, customers who own older phone models, and similar customers on [!DNL YouTube]. 
 
-## Destination specifics {#destination-specs}
+## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
-### Data governance for [!DNL Google Customer Match] destinations {#data-governance}
+Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
 
-The destinations in Experience Platform may have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
+## Supported Identities {#supported-identities}
 
-### Export Type and Identities {#export-type}
+[!DNL Google Customer Match] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
-**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, etc.) used in the [!DNL Google Customer Match] destination.
+|Target Identity|Description|Considerations|
+|---|---|---|
+|GAID|Google Advertising ID|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|Apple ID for Advertisers|Select this target identity when your source identity is an IDFA namespace.|
+|phone_sha256_e.164|Phone numbers in E164 format, hashed with the SHA256 algorithm|Both plain text and SHA256 hashed phone numbers are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed phone numbers, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
+|user_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-**Identities** - you can use raw or hashed emails as customer IDs in Google.
+## Export Type {#export-type}
 
-### [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL Google Customer Match] destination.
+
+## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
 Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
 
@@ -48,19 +56,19 @@ Before setting up a [!DNL Google Customer Match] destination in Experience Platf
 
 Before creating the [!DNL Google Customer Match] destination in Experience Platform, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
 
-Additionally, there is a second Google allow list that you must add your account to if you are planning to upload data using Google's [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). Contact your Google account manager to make sure you are added to the allow lists.
+There is also a second Google allow list that you must add your account to if you are planning to upload data using Google's [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). To add your account to the allow list, contact your Google account manager.
 
 ### ID matching requirements {#id-matching-requirements}
 
 [!DNL Google] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL Google Customer Match] can be keyed off *hashed* identifiers, such as email addresses or phone numbers.
 
-Depending on the type of IDs that you ingest into Adobe Experience Platform, you need to adhere to their corresponding requirements.
+Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
 #### Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
-* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform], which will be automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
+* **Ingesting raw phone numbers**: you can ingest raw phone numbers in the [!DNL E.164] format into [!DNL Platform], and they are automatically hashed upon activation. If you choose this option, make sure to always ingest your raw phone numbers into the `Phone_E.164` namespace.
 * **Ingesting hashed phone numbers**: you can pre-hash your phone numbers before ingestion into [!DNL Platform]. If you choose this option, make sure to always ingest your hashed phone numbers into the `PHONE_SHA256_E.164` namespace.
 
 >[!NOTE]
@@ -69,7 +77,7 @@ There are two methods to activate phone numbers in [!DNL Google Customer Match]:
 
 #### Email hashing requirements {#hashing-requirements}
 
-You can choose to hash email addresses before ingesting them into Adobe Experience Platform, or you can choose to work with email addresses in clear in Experience Platform and have our algorithm hash them on activation.
+You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
 
 For more information about Google's hashing requirements and other restrictions on activation, see the following sections in Google's documentation:
 
@@ -100,13 +108,13 @@ In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!U
 
 >[!NOTE]
 >
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+>If a connection with this destination exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
-In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. Select **[!UICONTROL Connect to destination]** to log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account.
+In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. To log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account, select **[!UICONTROL Connect to destination]**.
 
 >[!NOTE]
 >
->Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Google Ad] account. This ensures that you don't complete the workflow with incorrect credentials.
+>Experience Platform supports credentials validation in the authentication process. It displays an error message if you input incorrect credentials to your [!DNL Google Ad] account, to ensure that you don't complete the workflow with incorrect credentials.
 
 ![Connect to Google Customer Match destination - authentication step](../../assets/catalog/advertising/google-customer-match/connection.png)
 
@@ -116,7 +124,7 @@ Once your credentials are confirmed and Adobe Experience Cloud is connected to y
 
 In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill in your Google **[!UICONTROL Account ID]**.
 
-In this step, you can also select any **[!UICONTROL Marketing actions]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+In this step, you can also select any **[!UICONTROL Marketing actions]** that apply to this destination. Marketing actions indicate the intent for which the data is exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
@@ -189,10 +197,10 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify that segment activation was successful {#verify-activation}
 
-After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments will now show up in your Google account as customer lists. Please note that depending on your segment size, some audiences will not populate unless there are over 100 active users to serve.
+After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments are shown in your Google account as customer lists. Please note that depending on your segment size, some audiences do not populate unless there are over 100 active users to serve.
 
-When mapping a segment to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate segment for each ID mapping. Your [!DNL Google Ads] account will show two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
+When mapping a segment to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate segment for each ID mapping. Your [!DNL Google Ads] account shows two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
 
-## Additional resources {#additional-resources}
+## Extra resources {#additional-resources}
 
 * [Integrate Google Customer Match - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)

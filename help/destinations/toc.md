@@ -12,8 +12,8 @@ feature: Destinations
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
 * API tutorials {#api}
-    * [Connect to streaming destinations and activate data using API calls](./api/streaming-destinations.md)
-    * [Connect to email marketing destinations and activate data using API calls](./api/email-marketing.md)
+    * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
+    * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace overview](./ui/destinations-workspace.md)
     * [View destination details](./ui/destination-details-page.md)
@@ -75,6 +75,7 @@ feature: Destinations
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
         * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
+        * [IP address allow list](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
