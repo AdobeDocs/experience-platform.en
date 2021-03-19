@@ -47,6 +47,20 @@ For more information on mapping rules for Marketo datasets, open the **Mappings*
 * Opportunity person relations
 * Persons
 
+You can manage restricted permissions on the API when creating roles with Marketo. Instead of selecting "Access API", you can provide a role with the minimum level of access by selecting the following permissions:
+
+* Read-Only Activity
+* Read-Only Assets
+* Read-Only Campaign
+* Read-Only Company
+* Read-Only Custom Object
+* Read-Only Custom Object Type
+* Read-Only Named Account
+* Read-Only Named Account List
+* Read-Only Opportunity
+* Read-Only Person
+* Read-Only Sales Person
+
 ## Expected latency of Marketo data on Platform
 
 The following table outlines the expected latency for bringing Marketo data into Platform, based on the nature of ingestion and the desired destination:
