@@ -75,6 +75,7 @@ feature: Destinations
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
         * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
+        * [IP address allow list](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -122,6 +123,6 @@ feature: Destinations
         * [Voice of the Customer destinations overview](./catalog/voice/overview.md)
         * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
         * [Invoca Tags extension](./catalog/voice/invoca.md)
-        * [Medallia etension](./catalog/voice/medallia.md)
+        * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
