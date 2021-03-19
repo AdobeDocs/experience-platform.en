@@ -12,14 +12,26 @@ description: Display & Video 360, formerly known as DoubleClick Bid Manager is a
 
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
-  * Google will use [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) to target users in California, and the Google Cookie ID for all other users.
 * Activated audiences are created programmatically in the Google platform.
 * Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >
 >If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
+### Supported Identities {#supported-identities}
+
+[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|GAID|[!DNL Google Advertising ID]|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|[!DNL Apple ID for Advertisers]|Select this target identity when your source identity is an IDFA namespace.|
+|AAM UUID|[Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), also known as [!DNL Device ID]. A numerical, 38-digit device ID that Audience Manager associates to each device it interacts with.|Google uses [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) to target users in California, and the Google Cookie ID for all other users.|
+|[!DNL Google] cookie ID|[!DNL Google] cookie ID|[!DNL Google] uses this ID to target users outside of California.|
+|RIDA|Roku ID for Advertising. This ID uniquely identifies Roku devices.||
+|MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
+|Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
 ### Export Type {#export-type}
 
