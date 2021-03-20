@@ -22,7 +22,7 @@ The `/mappingSets` endpoint supports several query parameters to help filter you
 GET /mappingSets?limit={LIMIT}&start={START}
 GET /mappingSets?limit={LIMIT}&start={START}&name={NAME}
 GET /mappingSets?limit={LIMIT}&start={START}&orderBy={ORDER_BY}
-GET /mappingSets?limit={LIMIT}&start={START}&property={PROPERTY}
+GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 ```
 
 | Parameter | Description |
@@ -31,7 +31,7 @@ GET /mappingSets?limit={LIMIT}&start={START}&property={PROPERTY}
 | `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
 | `{NAME}` | Filters the mapping sets by name. |
 | `{ORDER_BY}` | Sorts the order of the results. The only supported fields are `createdDate` and `updatedDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
-| `{PROPERTY}` | Filters the mapping sets based on a property within the mapping set. The supported properties are `xdmSchema` and `status`. |
+| `{EXPAND_SCHEMA}` | A boolean that determines whether the full output schema is returned as part of the response. |
 
 **Request**
 
@@ -193,19 +193,19 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
     },
     "mappings": [
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "id",
             "destination": "_id",
             "name": "id",
             "description": "Identifier field"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "firstName",
             "destination": "person.name.firstName"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "lastName",
             "destination": "person.name.lastName"
         }
