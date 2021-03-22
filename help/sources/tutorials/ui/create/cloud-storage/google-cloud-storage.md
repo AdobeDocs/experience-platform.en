@@ -37,9 +37,9 @@ In order to access your GCS data on [!DNL Platform], you must provide the follow
 | Credential | Description |
 | ---------- | ----------- |
 | Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
-| Secret access key | A 40-character Base-64 encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
 
-For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage]](../../../../connectors/cloud-storage/google-cloud-storage.md) overview.
+For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ## Connect your [!DNL Google Cloud Storage] account
 

@@ -10,7 +10,7 @@ description: Learn how to connect Google Cloud Storage to Adobe Experience Platf
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. Platform allows you to bring in data from [!DNL Google Cloud Storage] through batches.
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as JSON or Parquet that is compliant with Experience Data Model (XDM), or in a delimited format. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Google Cloud Storage] through batches.
 
 ## IP address allow list
 
