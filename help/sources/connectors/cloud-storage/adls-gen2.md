@@ -41,7 +41,7 @@ The documentation below provides information on how to connect [!DNL Azure Data 
 - [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
 - [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
-## Using the UI
+### Using the UI
 
 - [Create an ADLS-Gen2 source connection in the UI](../../tutorials/ui/create/cloud-storage/adls-gen2.md)
 - [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

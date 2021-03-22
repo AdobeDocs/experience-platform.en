@@ -6,6 +6,8 @@ description: The Adobe Livefyre extension is a social destination in Adobe Exper
 
 # Adobe Livefyre extension {#adobe-livefyre-extension}
 
+## Overview {#overview}
+
 Adobe Livefyre enables you to discover, organize, and publish a constant flow of user generated content onto your website to create authentic and highly personalized experiences.
 
 Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).

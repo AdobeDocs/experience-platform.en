@@ -55,7 +55,7 @@ In this step, you are selecting which fields to export to email marketing destin
 
 For more information about this step, refer to the [Select attributes](../../ui/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
 
-### Identity {#identity}
+## Identity {#identity}
 
 We recommend that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. See the table below for the most common unique identifiers and their XDM field in the schema. 
 
@@ -65,7 +65,7 @@ Unique Identifier | XDM field in Unified Schema
  Phone | `mobilePhone.number` 
  Loyalty program ID | `Customer-defined XDM field` 
 
-### Other destination attributes
+## Other destination attributes
 
 In the Schema field selector, choose which other fields you want to export to the email destination. Some recommended options are:
 

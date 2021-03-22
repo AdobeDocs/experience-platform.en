@@ -6,6 +6,8 @@ description: The DialogTech extension is an analytics destination in Adobe Exper
 
 # [!DNL DialogTech] extension {#dialogtech-extension}
 
+## Overview {#overview}
+
 Include the [!DNL DialogTech SourceTrak] javascript snippet in Adobe Launch
 
 [!DNL DialogTech] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the [Dialogtech website](https://www.dialogtech.com/).

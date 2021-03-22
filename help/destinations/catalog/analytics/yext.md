@@ -6,6 +6,8 @@ description: The Yext Conversion Tracking extension is an analytics destination 
 
 # [!DNL Yext Conversion Tracking] extension {#yext-extension}
 
+## Overview {#overview}
+
 The [!DNL Yext Conversion Tracking] Extension allows you to measure conversions that can be attributed to your use of Yext products.
 
 [!DNL Yext Conversion Tracking] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103174.yext-conversion-tracking.html).

@@ -6,6 +6,8 @@ description: The KickFire extension is a personalization destination in Adobe Ex
 
 # [!DNL KickFire] extension {#kickfire-extension}
 
+## Overview {#overview}
+
 [!DNL KickFire's] IP address intelligence & B2B firmographic data allows you to translate IP addresses to companies, identify anonymous web visitors, and integrate account data into your technology stack – all based on a company's IP address.
 
 [!DNL KickFire] is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see [Kickfire website](https://www.kickfire.com/).
