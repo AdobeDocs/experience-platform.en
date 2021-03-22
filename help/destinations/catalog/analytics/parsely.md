@@ -6,6 +6,8 @@ description: The Parse.ly Analytics extension is an analytics destination in Ado
 
 # [!DNL Parse.ly Analytics] extension {#parsely-analytics-extension}
 
+## Overview {#overview}
+
 [!DNL Parse.ly Analytics] helps 2,500+ companies use data to understand their online audience. This extension installs a JavaScript snippet, which tracks how visitors interact with content on your site.
 
 Parse.ly is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see [Parse.ly Analytics](https://www.parse.ly/).

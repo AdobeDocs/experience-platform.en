@@ -6,6 +6,8 @@ description: The Bizible extension is an email destination in Adobe Experience P
 
 # [!DNL Bizible] extension {#bizible-extension}
 
+## Overview {#overview}
+
 [!DNL Bizible] is the industry-leading B2B attribution solution that gives you unparallelled visibility into your data, so you can make smart decisions that power growth.
 
 [!DNL Bizible] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
