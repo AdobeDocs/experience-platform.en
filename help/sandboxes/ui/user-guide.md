@@ -66,7 +66,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
-Select the sandbox you want to reset from the list of sandboxes. In the right-navigation panel that appears, select **[!UICTONROL Sandbox reset]**.
+Select the sandbox you want to reset from the list of sandboxes. In the right-navigation panel that appears, select **[!UICONTROL Sandbox reset]**.
 
 ![](../images/ui/reset-sandbox.png)
 
@@ -80,7 +80,7 @@ A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Cont
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
-Select the sandbox you want to delete from the list of sandboxes. In the right-navigation panel that appears, select **[!UICTONROL Delete]**.
+Select the sandbox you want to delete from the list of sandboxes. In the right-navigation panel that appears, select **[!UICONTROL Delete]**.
 
 ![](../images/ui/delete-sandbox.png)
 
