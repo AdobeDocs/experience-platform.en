@@ -8,7 +8,7 @@ description: Google Ads, formerly known as Google AdWords, is an online advertis
 
 [!DNL Google Ads], formerly known as [!DNL Google AdWords], is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, [!DNL YouTube] videos, and in-app mobile displays.
 
-## Destination specs
+## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Ads] destinations:
 
@@ -19,7 +19,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 >
 >If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
-### Supported Identities {#supported-identities}
+## Supported Identities {#supported-identities}
 
 [!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
@@ -33,7 +33,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-### Export Type {#export-type}
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 

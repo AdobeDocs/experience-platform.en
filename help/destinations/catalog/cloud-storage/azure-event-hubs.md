@@ -36,14 +36,14 @@ See [Cloud storage destinations workflow ](./workflow.md)for instructions on how
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
-### In the Authentication step {#authentication-step}
+## Authentication step {#authentication-step}
 
 * **[!UICONTROL SAS Key Name]** and **[!UICONTROL SAS Key]**: Fill in your SAS key name and key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
 ![Input required in the authentication step](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
-### In the Setup step {#setup-step}
+## Setup step {#setup-step}
 
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
