@@ -17,7 +17,7 @@ To activate data to destinations, you must have successfully [connected a destin
 
 ## Activate data {#activate-data}
 
-The steps in the activation workflow vary slightly between destination types. The complete workflow for all destination types is outlined below. 
+The steps in the activation workflow vary slightly between destination types. The complete workflow for all destination types is outlined below.
 
 ### Select which destination to activate data to {#select-destination}
 
@@ -168,7 +168,7 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 
 ![edit file name options](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
-Once you have finishing configuring all your segments, select **[!UICONTROL Next]** to continue.
+Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
 
 ### **[!UICONTROL Segment schedule]** step {#segment-schedule}
 
