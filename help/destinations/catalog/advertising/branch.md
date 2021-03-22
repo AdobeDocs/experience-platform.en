@@ -6,6 +6,8 @@ description: The Branch extension is an advertising destination in Adobe Experie
 
 # [!DNL Branch] extension {#branch-extension}
 
+## Overview {#overview}
+
 Branch provides powerful links and solutions that help you acquire, engage, and measure across all devices, channels, and platforms.
 
 Branch is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the [features page](https://branch.io/features/) on the Branch website.

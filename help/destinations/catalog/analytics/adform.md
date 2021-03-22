@@ -6,6 +6,8 @@ description: The Adform extension is an analytics destination in Adobe Experienc
 
 # Adform Website Tracking extension {#adform-extension}
 
+## Overview {#overview}
+
 The Adform Website Tracking extension enables advertisers to implement Adform Tracking Points effortlessly across their sites using the [!DNL Experience Platform Launch] platform.
 
 [!DNL Adform] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.103195.adform-website-tracking.html)

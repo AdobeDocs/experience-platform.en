@@ -15,7 +15,7 @@ feature: Destinations
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
-    * [Destinations workspace overview](./ui/destinations-workspace.md)
+    * [Destinations workspace](./ui/destinations-workspace.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Connect to a destination](./ui/connect-destination.md)
     * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
@@ -123,6 +123,6 @@ feature: Destinations
         * [Voice of the Customer destinations overview](./catalog/voice/overview.md)
         * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
         * [Invoca Tags extension](./catalog/voice/invoca.md)
-        * [Medallia etension](./catalog/voice/medallia.md)
+        * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

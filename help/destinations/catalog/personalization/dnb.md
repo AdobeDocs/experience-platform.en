@@ -6,6 +6,8 @@ description: The D&B Visitor Intelligence extension is a personalization destina
 
 # [!DNL D&B Visitor Intelligence] extension {#dnb-extension}
 
+## Overview {#overview}
+
 Analyze your unknown visitors and convert them into leads.
 
 [!DNL D&B Visitor Intelligence] is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the [D&B website](https://www.dnb.com/).
