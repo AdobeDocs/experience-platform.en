@@ -6,6 +6,8 @@ description: Create a real-time outbound connection to your Amazon Kinesis stora
 
 # (Beta) [!DNL Amazon Kinesis] connection
 
+## Overview {#overview}
+
 >[!IMPORTANT]
 >
 >The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
@@ -36,14 +38,14 @@ See [Cloud storage destinations workflow ](./workflow.md)for instructions on how
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
-### In the Authentication step {#authentication-step}
+## Authentication step {#authentication-step}
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### In the Setup step {#setup-step}
+## Setup step {#setup-step}
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].

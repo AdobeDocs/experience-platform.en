@@ -8,6 +8,8 @@ seo-description: Instructions to connect to your cloud storage locations
 
 # Create a cloud storage destination
 
+## Overview {#overview}
+
 This page explains how you can connect to cloud storage locations in Adobe Experience Platform.
 
 In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your preferred cloud storage destination, then select **[!UICONTROL Configure]**.
@@ -18,6 +20,8 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your pre
 >
 >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.   
 
+## Authentication step {#authentication}
+
 In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Note that this public key **must** be written as a Base64 encoded string. 
 
 See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-kinesis.md) destination, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) destination, and [SFTP](./sftp.md) destination for specifics around credentials input in the **Authentication** step.
@@ -27,6 +31,8 @@ See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-ki
 >Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
 
 ![Connect to cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+
+## Setup step {#setup}
 
 In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
 

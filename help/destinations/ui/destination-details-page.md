@@ -7,6 +7,8 @@ seo-description: The details page for an individual destination provides an over
 
 # View destination details
 
+## Overview {#overview}
+
 In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 
 >[!NOTE]
