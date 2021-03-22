@@ -14,7 +14,5 @@ feature: Data Management, Data Ingestion
   - [Getting started](./api/getting-started.md)
   - [Functions](./api/functions.md)
   - [Mapping set](./api/mapping-set.md)
-  - [Sample data](./api/sample-data.md)
-  - [Schemas](./api/schemas.md)
 - [Datetime objects](dates.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

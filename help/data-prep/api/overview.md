@@ -23,18 +23,6 @@ Mapping sets can be used to define how data in a source schema maps to that of a
 
 For detailed information on how to use mapping sets, please read the [mapping set endpoint guide](./mapping-set.md).
 
-## Sample data
-
-Sample data can be used when creating a schema for a mapping set. You can use the `/samples` endpoint in the Data Prep API to programmatically retrieve, create, and update sample data.
-
-For detailed information on how to use sample data, please read the [sample data endpoint guide](./sample-data.md).
-
-## Schemas
-
-Schemas can be used with Mapper to ensure the data you've ingested into Adobe Experience Platform matches what you want to ingest. You can use the `/schemas` endpoint to programmatically create, list, and get custom schemas for use with Mapper in Platform. 
-
-For detailed information on how to use schemas within the Mapping Service API, please read the [schemas endpoint guide](./schemas.md).
-
 ## Next steps
 
 To begin making calls using the Mapping Service API, please read the [getting started guide](./getting-started.md) then select one of the endpoint guide to learn how to use the specific endpoints. 

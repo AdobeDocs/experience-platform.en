@@ -172,10 +172,6 @@ POST /mappingSets
 
 The following request creates a new mapping set, configured by the parameters provided in the payload.
 
->[!NOTE]
->
->For the output schema, you can either use the `schemaRef` object to refer to an existing XDM schema or use a `jsonSchema` object to create your own JSON Schema. The following example shows how to refer to an existing XDM schema. 
-
 ```shell
 curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
@@ -391,17 +387,21 @@ A successful response returns HTTP status 200 with a preview of your mapped data
 
 ## Look up a mapping set
 
-You can retrieve a specific mapping set by providing its ID in the path of a GET request to the `/mappingSets` endpoint.
+You can retrieve a specific mapping set by providing its ID in the path of a GET request to the `/mappingSets` endpoint. This endpoint also supports several query parameters to help you retrieve details about the specified mapping set version.
 
 **API format**
 
 ```http
 GET /mappingSets/{MAPPING_SET_ID}
+GET /mappingSets/{MAPPING_SET_ID}?expandSchema={EXPAND_SCHEMA}
+GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | The ID of the mapping set that you want to retrieve. |
+| `{MAPPING_SET_ID}` | **Required**. The ID of the mapping set that you want to retrieve. |
+| `{EXPAND_SCHEMA}` | A boolean query parameter that determines whether to return the output schema as part of the response. |
+| `{VERSION}` | An integer query parameter that determines which version of the mapping set to retrieve. |
 
 **Request**
 
