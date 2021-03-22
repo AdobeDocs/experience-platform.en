@@ -33,7 +33,7 @@ Fill in the information below, depending on your connection type, and select **[
 - For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
 - For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
 
-Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string.
+Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a Base64 encoded string.
 
 ![Eloqua connect to destination](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
 
@@ -62,7 +62,7 @@ See [Activate profiles and segments to a destination](../../ui/activate-destinat
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the [!DNL Oracle Eloqua] destination, we recommend that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes) in Email Marketing Destinations.
+When [activating segments](../../ui/activate-destinations.md) to the [!DNL Oracle Eloqua] destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes) in Email Marketing Destinations.
 
 ## Exported data {#exported-data}
 
