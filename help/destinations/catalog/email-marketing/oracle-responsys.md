@@ -6,6 +6,8 @@ description: Responsys is an enterprise email marketing tool for cross-channel m
 
 # [!DNL Oracle Responsys] connection
 
+## Overview {#overview}
+
 [Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by [!DNL Oracle] to personalize interactions across email, mobile, display, and social.
 
 To send segment data to [!DNL Oracle Responsys], you must first [connect to the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into [!DNL Oracle Responsys].

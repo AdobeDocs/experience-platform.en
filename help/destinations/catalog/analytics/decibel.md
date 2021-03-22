@@ -6,6 +6,8 @@ description: The Decibel extension is an analytics destination in Adobe Experien
 
 # [!DNL Decibel] extension {#decibel-extension}
 
+## Overview {#overview}
+
 Quickly and seamlessly deploy [!DNL Decibel] on your web properties. Additional advanced configurations may also be deployed with rules using actions made available through the extension.
 
 [!DNL Decibel] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100913.html).

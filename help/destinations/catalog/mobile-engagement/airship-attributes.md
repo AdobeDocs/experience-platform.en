@@ -10,6 +10,8 @@ description: Seamlessly pass Adobe Audience Data to Airship as Audience Attribut
 >
 >The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
 
+## Overview {#overview}
+
 [!DNL Airship] is the leading Customer Engagement Platform, helping you deliver meaningful, personalized omnichannel messaging to your users at every stage of the customer lifecycle.
 
 This integration passes Adobe profile data into [!DNL Airship] as [Attributes](https://docs.airship.com/guides/audience/attributes/) for targeting or triggering.
@@ -32,13 +34,13 @@ Before you can send your audience segments to [!DNL Airship], you must:
 >
 >Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
-### Enable attributes {#enable-attributes}
+## Enable attributes {#enable-attributes}
 
 Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
 
 [!DNL Airship] projects have several predefined and default attributes. If you have a custom attribute, you must define it in [!DNL Airship] first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
-### Bearer token {#bearer-token}
+## Generate bearer token {#bearer-token}
 
 Go to **[!UICONTROL Settings]** » **[!UICONTROL APIs & Integrations]** in the [Airship dashboard](https://go.airship.com) and select **[!UICONTROL Tokens]** in the left-hand menu.
 
