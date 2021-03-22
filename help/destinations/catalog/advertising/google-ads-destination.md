@@ -15,7 +15,7 @@ description: Google Ads, formerly known as Google AdWords, is an online advertis
 Note the following details that are specific to [!DNL Google Ads] destinations:
 
 * Activated audiences are created programmatically in the [!DNL Google] platform.
-* Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >

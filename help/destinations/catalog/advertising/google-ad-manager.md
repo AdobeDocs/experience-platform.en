@@ -10,16 +10,12 @@ description: Google Ad Manager, formerly known as DoubleClick for Publishers or 
 
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick] for Publishers or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 
-## Destination specs
+## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Ad Manager] destinations:
 
 * Activated audiences are created programmatically in the [!DNL Google] platform.
-* Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
-
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 ## Supported Identities {#supported-identities}
 
@@ -41,7 +37,9 @@ Note the following details that are specific to [!DNL Google Ad Manager] destina
 
 ## Prerequisites
 
-### Allow list
+If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
+## Allow list
 
 >[!NOTE]
 >
