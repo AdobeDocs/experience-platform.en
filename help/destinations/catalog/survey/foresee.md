@@ -6,6 +6,8 @@ description: The Foresee extension is a survey destination in Adobe Experience P
 
 # [!DNL Foresee] extension {#foresee-extension}
 
+## Overview {#overview}
+
 Configure [!DNL ForeSee] product deployments using Experience Platform Launch.
 
 [!DNL Foresee] is a survey extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100164.html).

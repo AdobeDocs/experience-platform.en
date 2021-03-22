@@ -6,6 +6,8 @@ description: Create a live outbound connection to your Azure Blob storage to per
 
 # [!DNL Azure Blob] connection
 
+## Overview {#overview}
+
 [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
 
 ## Getting started

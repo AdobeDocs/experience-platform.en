@@ -6,6 +6,8 @@ description: Activate profiles for your LinkedIn campaigns for audience targetin
 
 # [!DNL LinkedIn Matched Audiences] connection
 
+## Overview {#overview}
+
 Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, personalization, and suppression, based on hashed emails and mobile IDs.
 
 ![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)

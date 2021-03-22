@@ -6,6 +6,8 @@ description: Create a real-time outbound connection to your Amazon Kinesis stora
 
 # (Beta) [!DNL Amazon Kinesis] connection
 
+## Overview {#overview}
+
 >[!IMPORTANT]
 >
 >The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.

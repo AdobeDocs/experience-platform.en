@@ -6,6 +6,8 @@ description: The Gainsight extension is a personalization destination in Adobe E
 
 # [!DNL Gainsight] extension {#gainsight-extension}
 
+## Overview {#overview}
+
 [!DNL Gainsight] empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
 
 [!DNL Gainsight] is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.103343.html).

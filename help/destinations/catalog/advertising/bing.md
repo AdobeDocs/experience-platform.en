@@ -6,6 +6,8 @@ description: With the Microsoft Bing connection destination, you can execute ret
 
 # [!DNL Microsoft Bing] connection {#bing-destination}
 
+## Overview {#overview}
+
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.

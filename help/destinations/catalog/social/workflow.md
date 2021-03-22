@@ -7,6 +7,8 @@ description: Learn how to connect to your social network ad accounts in Adobe Ex
 
 # Create a social network destination {#social-network-destinations-workflow}
 
+## Overview {#overview}
+
 This tutorial uses [!DNL Facebook] as an example, but the Adobe Experience Platform workflow is the same for all social network destinations.
 
 In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
@@ -16,6 +18,8 @@ In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!U
 >[!NOTE]
 >
 >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.   
+
+## Authentication step {#authentication}
 
 In the **Authentication** step, if you had previously set up a connection to your social network destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your social network destination. Select **[!UICONTROL Connect to destination]** and this will take you to the selected social network destination to log in and connect Adobe Experience Cloud to your social network Ad account.
 
@@ -28,6 +32,8 @@ In the **Authentication** step, if you had previously set up a connection to you
 Once your credentials are confirmed and Adobe Experience Cloud is connected to your social network, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
 
 ![Credentials confirmed](../../assets/catalog/social/workflow/post-connect.png)
+
+## Setup step {#setup}
 
 In the **[!UICONTROL Setup]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill in the [!UICONTROL Account ID] of your social network ad account. 
 

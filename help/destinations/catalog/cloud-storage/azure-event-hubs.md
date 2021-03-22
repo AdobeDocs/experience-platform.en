@@ -6,6 +6,8 @@ description: Create a real-time outbound connection to your Azure Event Hubs sto
 
 # (Beta) [!DNL Azure Event Hubs] connection
 
+## Overview {#overview}
+
 >[!IMPORTANT]
 >
 >The [!DNL Azure Event Hubs] destination in Platform is currently in beta. The documentation and the functionality are subject to change.

@@ -6,6 +6,8 @@ description: The Quantum Metric extension is an analytics destination in Adobe E
 
 # [!DNL Quantum Metric] extension {#quantum-metric-extension}
 
+## Overview {#overview}
+
 [!DNL Quantum Metric's] integration with Adobe Launch facilitates codeless deployment of [!DNL Quantum Metric's] data collection tag. In addition, this extension offers the ability to capture Launch Data Elements containing useful information from the [!DNL Quantum Metric] API.
 
 [!DNL Quantum Metric] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101535.quantum-metric-extension-for-adobe-launch.html).

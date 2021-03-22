@@ -6,6 +6,8 @@ description: The Trade Desk is a self-service platform for ad buyers to execute 
 
 # [!DNL The Trade Desk] connection
 
+## Overview {#overview}
+
 [!DNL The Trade Desk] destination helps you send profile data to [!DNL The Trade Desk].
 
 [!DNL The Trade Desk] is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.

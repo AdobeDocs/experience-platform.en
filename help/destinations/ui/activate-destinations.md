@@ -9,6 +9,8 @@ seo-description: Activate the data you have in Adobe Experience Platform by mapp
 
 # Activate profiles and segments to a destination
 
+## Overview {#overview}
+
 Activate the data you have in [!DNL Adobe Experience Platform] by mapping segments to destinations. To accomplish this, follow the steps below.
 
 ## Prerequisites {#prerequisites}
