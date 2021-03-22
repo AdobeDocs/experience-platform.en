@@ -59,6 +59,12 @@ Each stage in the above timeline represents an entity that may contribute to a p
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a data usage policy. In other words, the marketing use case you define for a destination determines which data usage policies are applicable to that destination. Policy violations will occur if you activate a segment whose usage labels are restricted by the target destination's applicable policies. |
 
+>[!WARNING]
+>
+>Some data usage policies may specify two or more labels that are "mutually exclusive". For example, a policy could restrict a segment from being activated if it contains both a `C1` AND a `C2` label, but not a segment that only contains one or the other.
+>
+>While these kinds policies prevent mutually exclusive labels from being activated to a destination through the same segment, **they do not prevent separate segments (containing one label or the other) from being activated to the same destination**. Ensure that you carefully construct your policy and segment definitions so that undesired usage labels do not get activated to your destinations.
+
 When policy violations occur, the resulting messages that appear in the UI provide useful tools for exploring the violation's contributing data lineage to help resolve the issue. More details are provided in the next section.
 
 ## Policy violation messages {#enforcement}
