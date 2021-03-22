@@ -15,16 +15,19 @@ This page provides IP ranges that you can add to your allow list, to safely expo
 
 You can define network access controls through your network firewall. By specifying the appropriate IP range, you can allow traffic for the data transfer service.
 
-You can add the following IP ranges to an allow list prior to working with cloud storage destination connections. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the cloud storage destination connections.
+Adobe recommends that you add / You can add the following IP ranges to an allow list prior to working with cloud storage destination connections. Failing to add your region-specific IP range to your allow list may lead to errors or non-performance when using the cloud storage destination connections.
 
 ## US customers
 
+* `52.247.108.70`
 * `52.252.71.64/29`
 
 ## EMEA customers
 
+* `52.247.108.70`
 * `51.137.8.208/29`
 
 ## APAC customers
 
+* `52.247.108.70`
 * `20.53.201.168/29`
