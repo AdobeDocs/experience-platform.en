@@ -263,19 +263,19 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/va
     },
     "mappings": [
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "id",
             "destination": "_id",
             "name": "id",
             "description": "Identifier field"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "firstName",
             "destination": "person.name.firstName"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "lastName",
             "destination": "person.name.lastName"
         }
@@ -343,19 +343,19 @@ curl -X POST https://platform.adobe.io/data/foundation/conversion/mappingSets/pr
         },
         "mappings": [
             {
-                "sourceType": "text/x.schema-path",
+                "sourceType": "ATTRIBUTE",
                 "source": "id",
                 "destination": "_id",
                 "name": "id",
                 "description": "Identifier field"
             },
             {
-                "sourceType": "text/x.schema-path",
+                "sourceType": "ATTRIBUTE",
                 "source": "firstName",
                 "destination": "person.name.firstName"
             },
             {
-                "sourceType": "text/x.schema-path",
+                "sourceType": "ATTRIBUTE",
                 "source": "lastName",
                 "destination": "person.name.lastName"
             }
@@ -609,24 +609,24 @@ curl -X PUT https://platform.adobe.io/data/foundation/conversion/mappingSets/e7c
     },
     "mappings": [
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "id",
             "destination": "_id",
             "name": "id",
             "description": "Identifier field"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "firstName",
             "destination": "person.name.firstName"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "lastName",
             "destination": "person.name.lastName"
         },
         {
-            "sourceType": "text/x.schema-path",
+            "sourceType": "ATTRIBUTE",
             "source": "nationality",
             "destination": "person.nationality"           
         }
