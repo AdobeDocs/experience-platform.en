@@ -18,7 +18,7 @@ The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
 To send profile data to [!DNL Braze], you must first connect to the destination.
 
-## Destination specs {#destination-specs}
+## Destination specifics {#specifics}
 
 Note the following details that are specific to the [!DNL Braze] destination:
 
