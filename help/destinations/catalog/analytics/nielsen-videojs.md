@@ -6,6 +6,8 @@ description: The Nielsen VideoJS Player Handler extension is an analytics destin
 
 # [!DNL Nielsen VideoJS Player Handler] extension {#nielsen-vjs-extension}
 
+## Overview {#overview}
+
 [!DNL Nielsen Digital SDK] launch extension offers audience measurement via the following digital measurement products:
 
 DCR: A measurement solution that provides daily measurement of non-linear digital content, including content with ads will enable a comprehensive view of digital content audience consumption across Desktop, Mobile, Tablet and Connected Devices.

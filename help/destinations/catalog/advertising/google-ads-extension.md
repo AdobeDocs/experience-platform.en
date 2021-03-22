@@ -6,6 +6,8 @@ description: The Google Ads extension is an advertising destination in Adobe Exp
 
 # [!DNL Google Ads] extension
 
+## Overview {#overview}
+
 This extension tracks conversions from users that click on your [!DNL Google Ads]. You will need to also install the gtag.js extension and add it to your library, as [!DNL Google Ads] depends on it.
 
 [!DNL Google Ads] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://www.adobeexchange.com/experiencecloud.details.101383.google-ads.html).
