@@ -13,7 +13,7 @@ The Mapping Service API, also known as the Data Prep API, includes multiple endp
 
 ## Functions
 
-Mapping-set functions allow you to transform your data between source and destination schemas. You can use the `/languages/el` endpoint to validate your expressions as well as get a list of all the available mapping-set functions.
+Mapping-set functions allow you to transform your data between source and destination schemas. You can use the `/languages/el` endpoint to validate your expressions as well as get a list of all the available mapping-set functions and operations.
 
 For detailed information on how to use mapping-set functions, please read the [functions endpoint guide](./functions.md).
 

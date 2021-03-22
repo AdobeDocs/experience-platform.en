@@ -30,4 +30,4 @@ A set of mappings that transform one schema to another are collectively known as
 
 ## Next steps
 
-This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./dates.md).
+This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./dates.md). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).

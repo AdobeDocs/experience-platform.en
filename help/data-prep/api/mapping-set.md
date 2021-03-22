@@ -27,8 +27,8 @@ GET /mappingSets?limit={LIMIT}&start={START}&expandSchema={EXPAND_SCHEMA}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{LIMIT}` | **Required**. Specifies the number of mapping sets returned. |
-| `{START}` | **Required**. Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
+| `{LIMIT}` | (**Required**) Specifies the number of mapping sets returned. |
+| `{START}` | (**Required**) Specifies the offset of the pages of results. To get the first page of results, set the value to `start=0`. |
 | `{NAME}` | Filters the mapping sets by name. |
 | `{ORDER_BY}` | Sorts the order of the results. The only supported fields are `createdDate` and `updatedDate`. You can prepend the property with `+` or `-` to sort it by ascending or descending order respectively. |
 | `{EXPAND_SCHEMA}` | A boolean that determines whether the full output schema is returned as part of the response. |
@@ -399,7 +399,7 @@ GET /mappingSets/{MAPPING_SET_ID}?version={VERSION}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{MAPPING_SET_ID}` | **Required**. The ID of the mapping set that you want to retrieve. |
+| `{MAPPING_SET_ID}` | (**Required**) The ID of the mapping set that you want to retrieve. |
 | `{EXPAND_SCHEMA}` | A boolean query parameter that determines whether to return the output schema as part of the response. |
 | `{VERSION}` | An integer query parameter that determines which version of the mapping set to retrieve. |
 
