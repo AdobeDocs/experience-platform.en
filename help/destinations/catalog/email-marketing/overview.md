@@ -11,7 +11,7 @@ Email Service Providers (ESPs) enable you to manage your email marketing activit
 
 To send segments to email marketing destinations for your campaigns, Platform must first connect to the destination.
 
-Connecting to email marketing destinations is a three-step process. Each of the steps is described further below on this page.
+Connecting to email marketing destinations is a three-step process ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from storage location into the destination](#import-data-into-destination)). Each of the steps is described further below on this page.
 
 In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Platform exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Platform. The process to import data varies for each partner. See the individual destinations articles for more information. 
 
@@ -21,7 +21,7 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the emai
 
 ![Connect to destination](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In the **[!UICONTROL Connection type]** selector, you can select between Amazon S3, SFTP with Password, or SFTP with SSH Key. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+In the **[!UICONTROL Account]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In the **[!UICONTROL Connection type]** selector, you can select between Amazon S3, SFTP with Password, or SFTP with SSH Key. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 - For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key. 
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
@@ -29,7 +29,7 @@ In the **[!UICONTROL Authentication]** step, if you had previously set up a conn
 
 Optionally, you can attach your RSA-formatted public key to add encryption to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string.
 
-In the **[!UICONTROL Setup]** step, enter a name and a description for your new destination, as well as the file format for the exported files.
+In the **[!UICONTROL Authentication]** step, enter a name and a description for your new destination, as well as the file format for the exported files.
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
 
@@ -80,7 +80,7 @@ Schema | XDM field
  Birthday | `person.birthDayAndMonth`
  Segment membership | `segmentMembership.status`
 
-## Import data from your storage location into the destination
+## Import data from your storage location into the destination {#import-data-into-destination}
 
 See the individual email marketing destination articles to learn how to import data from your storage location into destinations: 
 
@@ -91,7 +91,7 @@ See the individual email marketing destination articles to learn how to import d
 
 ## Activate segments to email marketing destinations
 
-For instructions on how to activate segments to email marketing destinations, see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to email marketing destinations, see [Activate profiles and segments to a destination](../../ui/activate-destinations.md).
 
 ## Additional resources
 

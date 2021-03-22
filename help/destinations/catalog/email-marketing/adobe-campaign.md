@@ -47,7 +47,7 @@ In **[!UICONTROL Account authentication]**, fill in the relevant information for
    - **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV or tab-delimited files.
    - **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
    - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
-   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md) page. Refer also to [Adobe-defined marketing actions](../../../data-governance/policies/overview.md#core-actions) in the same document.
+   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md) page.
 
 ![Campaign basic information](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 

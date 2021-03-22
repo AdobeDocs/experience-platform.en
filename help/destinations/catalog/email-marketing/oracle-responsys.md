@@ -8,7 +8,7 @@ description: Responsys is an enterprise email marketing tool for cross-channel m
 
 ## Overview {#overview}
 
-[Responsys](https://www.oracle.com/marketingcloud/products/cross-channel-orchestration/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by [!DNL Oracle] to personalize interactions across email, mobile, display, and social.
+[Responsys](https://www.oracle.com/cx/marketing/campaign-management/) is an enterprise email marketing tool for cross-channel marketing campaigns offered by [!DNL Oracle] to personalize interactions across email, mobile, display, and social.
 
 To send segment data to [!DNL Oracle Responsys], you must first [connect to the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-responsys) from your storage location into [!DNL Oracle Responsys].
 
@@ -22,21 +22,33 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Or
 
 ![Connect to Responsys](../../assets/catalog/email-marketing/oracle-responsys/catalog.png)
 
-In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For [!DNL Oracle Responsys], you can select between **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+In the **[!UICONTROL Account]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For [!DNL Oracle Responsys], you can select between **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**.
 
-For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+![Connect Responsys account](../../assets/catalog/email-marketing/oracle-responsys/connection-type.png)
 
-For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+Fill in the information below, depending on your connection type, and select **[!UICONTROL Configure]**.
+
+- For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
+- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+
+Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string.
 
 ![Fill in Responsys information](../../assets/catalog/email-marketing/oracle-responsys/account-info.png)
 
-In the **[!UICONTROL Setup]** step, fill in the relevant information for your destination as shown below:
+In the **[!UICONTROL Authentication]** step, fill in the relevant information for your destination as shown below:
 - **[!UICONTROL Name]**: Pick a relevant name for your destination.
 - **[!UICONTROL Description]**: Enter a description for your destination.
-- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
 - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
 - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
-- **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+- **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+
+<!--
+
+Commenting out Amazon S3 bucket part for now until support is clarified
+
+- **[!UICONTROL Bucket name]**: Your Amazon S3 bucket, where Platform will deposit the data export. Your input must be between 3 and 63 characters long. Must begin and end with a letter or number. Must contain only lowercase letters, numbers, or hyphens ( - ). Must not be formatted as an IP address (for example, 192.100.1.1).
+
+-->
 
 ![Responsys basic information](../../assets/catalog/email-marketing/oracle-responsys/basic-information.png)
 
@@ -56,4 +68,4 @@ For [!DNL Oracle Responsys] destinations, Platform creates a tab-delimited `.txt
 
 ## Set up data import into [!DNL Oracle Responsys] {#import-data-into-responsys}
 
-After connecting Platform to your [!DNL Amazon S3] or SFTP storage, you must set up the data import from your storage location into [!DNL Oracle Responsys]. To learn how to accomplish this, see [Importing contacts or accounts](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in the [!DNL Oracle Responsys Help Center].
+After connecting Platform to your SFTP storage, you must set up the data import from your storage location into [!DNL Oracle Responsys]. To learn how to accomplish this, see [Importing contacts or accounts](https://docs.oracle.com/cloud/latest/marketingcs_gs/OMCEA/Connect_WizardUpload.htm) in the [!DNL Oracle Responsys Help Center].
