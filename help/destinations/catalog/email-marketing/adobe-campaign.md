@@ -27,7 +27,6 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Ca
 In the **[!UICONTROL Account]** step of the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]**, and **[!UICONTROL Azure Blob]**. The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob]. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 
-
 ![Set up Campaign wizard](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
 - For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 

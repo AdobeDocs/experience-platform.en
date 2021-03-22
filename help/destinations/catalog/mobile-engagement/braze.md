@@ -30,7 +30,7 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
-### Supported Identities {#supported-identities}
+## Supported Identities {#supported-identities}
 
 [!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
@@ -42,7 +42,6 @@ As a marketer, I want to target users in a mobile engagement destination, with s
 
 **[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
 [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
-
 
 ## Connect to destination {#connect-destination}
 
@@ -121,7 +120,7 @@ You should now see your field mapping in the list.
    
 To add more mappings, repeat the previous steps.
 
-### Example {#mapping-example}
+## Mapping Example {#mapping-example}
 
 Let's say your XDM profile schema and your [!DNL Braze] instance contain the following attributes and identities:
 

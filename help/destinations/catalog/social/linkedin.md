@@ -16,11 +16,7 @@ To help you better understand how and when to use the [!DNL LinkedIn Matched Aud
 
 A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform. Then, they can build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
-## Destination specifics {#destination-specs}
-
-[!DNL LinkedIn Matched Audiences] supports the activation of the following identities: hashed emails, [!DNL GAID], and [!DNL IDFA].
-
-### Supported Identities {#supported-identities}
+## Supported Identities {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
@@ -31,23 +27,23 @@ A software company organizes a conference and wants to keep in touch with partic
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 
 
-### Export Type {#export-type}
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL LinkedIn Matched Audiences] destination.
 
-### LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
+## LinkedIn account prerequisites {#LinkedIn-account-prerequisites}
 
 Before you can use the [!UICONTROL LinkedIn Matched Audience] destination, make sure your [!DNL LinkedIn Campaign Manager] account has the [!DNL Creative Manager] permission level or higher.
 
 To learn how to edit your [!DNL LinkedIn Campaign Manager] user permissions, see [Add, Edit, and Remove User Permissions on Advertising Accounts](https://www.linkedin.com/help/lms/answer/5753) in the LinkedIn documentation.
 
-### ID matching requirements {#id-matching-requirements}
+## ID matching requirements {#id-matching-requirements}
 
 [!DNL LinkedIn Matched Audiences] requires that no personally identifiable information (PII) is sent in clear. Therefore, the audiences activated to [!DNL LinkedIn Matched Audiences] can be keyed off *hashed* identifiers, such as email addresses or mobile device IDs.
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
-#### Email hashing requirements {#email-hashing-requirements}
+## Email hashing requirements {#email-hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
 
