@@ -9,6 +9,10 @@ description: Learn about the standardized data models for various industry verti
 
 Experience Data Model (XDM) allows you to create highly customizable schemas to capture key customer experience data related to your business. To help streamline the process of modeling your data to conform to XDM, Adobe Experience Platform provides a versatile suite of standard XDM components, which capture concepts that are commonly used across several industries.
 
+>[!NOTE]
+>
+>New standard XDM components are being continuously released to best fit consumer needs. For a list of the most up-to-date components, you can [explore existing resources in the UI](../../ui/explore.md) or refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components) on GitHub.
+
 Depending on the industry that your business operates under, some XDM components will be more relevant to your needs than others. In addition, the relationships you establish between your XDM schemas will vary depending on your industry.
 
 In order to help guide your data modeling strategy based on your particular industry, this guide provides a reference of entity relationship diagrams (ERDs) for several supported industry verticals.
@@ -24,7 +28,7 @@ It is also recommended that you review the [data modeling best practices guide](
 
 ## Industry data model ERDs {#erds}
 
-The industry vertical models represented by ERDs below are intentionally created in a de-normalized fashion and with consideration for how the data will be stored in Platform.
+The industry vertical models represented by ERDs below are intentionally created in a de-normalized fashion and with consideration for how data is stored in Platform.
 
 For a given ERD, each entity shown in is based on an underlying XDM class. For a given entity, each row marked in **bold** represents a mixin or a data type, with the relevant fields it provides listed below in unbolded text. The most important fields for a given entity are highlighted in red.
 
