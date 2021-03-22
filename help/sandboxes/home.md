@@ -16,9 +16,9 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 ## Understanding sandboxes
 
-Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. An Experience Platform instance supports one production sandbox and multiple non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).  All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
+Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. An Experience Platform instance supports multiple production sandboxes and multiple non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
 
-Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, both production and non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
 
 >[!NOTE]
 >
@@ -34,7 +34,7 @@ In summary, sandboxes provide the following benefits:
 
 By default, all users for an organization have access to a production sandbox. Access to non-production sandboxes must be granted by a system administrator, product administrator, or product profile administrator through the [Adobe Admin Console](https://adminconsole.adobe.com).
 
-In order to view, create, update, or delete non-production sandboxes, users must also be granted Sandbox Administration permissions.
+In order to view, create, update, or delete production and non-production sandboxes, users must also be granted Sandbox Administration permissions.
 
 For more information on managing roles and permissions for sandboxes, see the [access control overview](../access-control/home.md).
 
