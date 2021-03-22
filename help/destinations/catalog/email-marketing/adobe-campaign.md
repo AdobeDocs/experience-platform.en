@@ -6,6 +6,8 @@ description: Adobe Campaign is a set of solutions that help you personalize and 
 
 # Adobe Campaign connection
 
+## Overview {#overview}
+
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [Get Started with Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
 To send segment data to Adobe Campaign, you must first [connect the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-campaign) from your storage location into Adobe Campaign.

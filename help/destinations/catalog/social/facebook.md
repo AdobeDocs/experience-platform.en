@@ -6,6 +6,8 @@ description: Activate profiles for your Facebook campaigns for audience targetin
 
 # [!DNL Facebook] connection
 
+## Overview {#overview}
+
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
 
 You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].

@@ -6,6 +6,8 @@ description: Google Ad Manager, formerly known as DoubleClick for Publishers or 
 
 # [!DNL Google Ad Manager] connection
 
+## Overview {#overview}
+
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick] for Publishers or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 
 ## Destination specs

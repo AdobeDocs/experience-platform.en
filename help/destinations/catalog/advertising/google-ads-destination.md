@@ -6,6 +6,8 @@ description: Google Ads, formerly known as Google AdWords, is an online advertis
 
 # [!DNL Google Ads] connection
 
+## Overview {#overview}
+
 [!DNL Google Ads], formerly known as [!DNL Google AdWords], is an online advertising service that allows businesses to pay-per-click advertising across text-based searches, graphic displays, [!DNL YouTube] videos, and in-app mobile displays.
 
 ## Destination specifics {#specifics}
