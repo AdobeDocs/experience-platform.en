@@ -6,6 +6,8 @@ description: Create a live outbound connection to your SFTP server to periodical
 
 # SFTP connection
 
+## Overview {#overview}
+
 Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
 
 >[!IMPORTANT]

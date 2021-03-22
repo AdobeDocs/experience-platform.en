@@ -6,6 +6,8 @@ description: Adobe Campaign is a set of solutions that help you personalize and 
 
 # Adobe Campaign connection
 
+## Overview {#overview}
+
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [Get Started with Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
 To send segment data to Adobe Campaign, you must first [connect the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-campaign) from your storage location into Adobe Campaign.
@@ -25,7 +27,6 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Ca
 ![Connect to Adobe Campaign](../../assets/catalog/email-marketing/adobe-campaign/catalog.png)
 
 In the **[!UICONTROL Account]** step of the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]**, and **[!UICONTROL Azure Blob]**. The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob]. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
-
 
 
 ![Set up Campaign wizard](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
