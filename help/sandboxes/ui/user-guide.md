@@ -42,7 +42,7 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-To create a new sandbox in the UI, select the **[!UICONTROL Create Sandbox]** button on the top right side of the screen.
+To create a new sandbox, select the **[!UICONTROL Create Sandbox]** button on the top right side of the screen.
 
 ![](../images/ui/create-sandbox.png)
 
@@ -60,6 +60,10 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 ## Reset a sandbox
 
+>[!NOTE]
+>
+>You can reset any production or development sandboxes in your organization, except the default production sandbox.
+
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
 Select the sandbox you want to reset from the list of sandboxes. In the right-navigation panel that appears, select **[!UICTONROL Sandbox reset]**.
@@ -69,6 +73,10 @@ Select the sandbox you want to reset from the list of sandboxes. In the right-na
 A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
 ## Delete a sandbox
+
+>[!NOTE]
+>
+>You can delete any production or development sandboxes in your organization, except the default production sandbox.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
