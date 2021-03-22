@@ -93,7 +93,7 @@ Selecting source fields:
 
 Selecting target fields:
 
-* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are eiher `Email` or `Email_LC_SHA256`.
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
 * Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
 * Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
 * Select the `User_ID` namespace as target identity when your source namespace is a custom one.
@@ -150,7 +150,7 @@ A dialog appears, showing options to create the segment schedule.
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
-Select the pencil icon to open a modal window and edit the file names. Note that file names are limited to 255 characters.
+Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
 ![configure file name](../assets/ui/activate-destinations/configure-name.png)
 
