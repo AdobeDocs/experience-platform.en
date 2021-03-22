@@ -6,6 +6,8 @@ description: The Marketo extension is an email destination in Adobe Experience P
 
 # [!DNL Marketo] extension {#marketo-extension}
 
+## Overview {#overview}
+
 [!DNL Marketo]'s powerful marketing automation software helps marketers master the art & science of digital marketing to engage customers and prospects.
 
 [!DNL Marketo] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).

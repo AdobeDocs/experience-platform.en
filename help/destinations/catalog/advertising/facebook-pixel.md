@@ -6,6 +6,8 @@ description: The Facebook Pixel extension is an advertising destination in Adobe
 
 # [!DNL Facebook Pixel] extension {#facebook-pixel-extension}
 
+## Overview {#overview}
+
 The [!DNL Facebook Pixel] is an analytics tool that allows you to measure the effectiveness of your advertising by understanding the actions people take on your website.
 
 [!DNL Facebook Pixel] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the [Facebook Pixel website](https://developers.facebook.com/docs/facebook-pixel/).

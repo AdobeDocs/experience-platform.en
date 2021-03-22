@@ -6,6 +6,8 @@ description: The SessionCam extension is an analytics destination in Adobe Exper
 
 # [!DNL SessionCam] extension {#sessioncam-extension}
 
+## Overview {#overview}
+
 [!DNL SessionCam] provides an essential suite of tools that reveal user behavior and show you the most important problems to fix.
 
 [!DNL SessionCam] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100517.html).
