@@ -7,12 +7,12 @@ description: This page provides IP ranges that you can add to your allow list, t
 
 # IP address allow list for cloud storage destinations {#ip-address-allow-list}
 
-## Overview {#overview}
-
 >[!IMPORTANT]
 >
 > * Adobe recommends that you bookmark this page and revisit it every three months to check for the latest IP addresses. Adobe does not provide notification of new IP ranges.
 > * While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
+
+## Overview {#overview}
 
 This page provides IP ranges that you can add to your allow list, to safely export data from Experience Platform to your [SFTP server](./sftp.md), [Amazon S3](./amazon-s3.md), or [Azure Blob](./azure-blob.md) storage.
 
