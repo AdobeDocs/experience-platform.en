@@ -11,7 +11,7 @@ seo-description: In Adobe Experience Platform, select Destinations from the left
 
 In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
-The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], which are described in the sections below.
+The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
 ![Destinations-overview](../assets/ui/workspace/destinations-overview.png)
 
@@ -19,7 +19,7 @@ The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL C
 
 The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Platform, that you can send data to. 
 
-The Platform user interface provides a number of search and filter options on the destinations catalog page:
+The Platform user interface provides several search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
@@ -28,7 +28,7 @@ The Platform user interface provides a number of search and filter options on th
 
 ![destinations filtering and search demo](../assets/ui/workspace/destinations-search-and-filter.gif)
 
-The destination cards contain either a **[!UICONTROL Configure]** or an **[!UICONTROL Activate]** control, and a secondary control that brings up more options. These are all described below:
+The destination cards contain either a **[!UICONTROL Configure]** or an **[!UICONTROL Activate]** control, and a secondary control that brings up more options. These controls are described below:
 
 Control | Description 
 ---------|----------
@@ -40,7 +40,7 @@ Control | Description
 
 ![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png)
 
-Select a destination card in the catalog to open the right rail.  Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
+Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
 
 ![Destination catalog options](../assets/ui/workspace/destination-right-rail.png)
 
@@ -78,7 +78,7 @@ Once you are finished editing your account details, select **[!UICONTROL Save]**
 
 ## [!UICONTROL Browse] {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice-versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
 >[!TIP]
 >
@@ -90,14 +90,14 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 Element | Description 
 ---------|----------
 Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].
-Last Flow Run Status | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.
-Last Flow Run Date | Time and date when the last dataflow run occured. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+[!UICONTROL Last Flow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+[!UICONTROL Last Flow Run Date] | Time and date when the last dataflow run occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.
 [!UICONTROL Destination] | The destination platform that you selected for your activation flow.
 [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>
 [!UICONTROL Username] | The account credentials you selected for the destination flow.
 [!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments. 
 [!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.
-[!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is currently being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).
+[!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).
 
 Click on a destination row to bring up more information about the destination in the right rail.
 
