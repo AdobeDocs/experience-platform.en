@@ -21,8 +21,8 @@ The following table outlines some common terminology used in this document:
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
 | XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more field groups. |
 | XDM class | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
-| [Field groups](../../xdm/schema/composition.md) | A Component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
-| [Data type](../../xdm/schema/composition.md) | A Component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
+| [Field groups](../../xdm/schema/composition.md) | A component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | Churn | A measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
@@ -32,7 +32,7 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports Adobe Analytics Data. To use Adobe Analytics data, you must populate the data types listed in the standard events [data type table](#standard-events). The data types work with both the CEE and Analytics schema.
+Customer AI supports both the CEE and Adobe Analytics schemas. To use either of the schemas, you must populate the data types listed in the standard events [data type table](#standard-events) below.
 
 ### Standard events {#standard-events}
 
@@ -112,7 +112,7 @@ In this section, different scenarios for Customer AI instances are described as 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
 ### Scenario 2: Subscription conversion on a media streaming service website
 
@@ -132,7 +132,7 @@ Additionally, for an accurate model it is suggested that you make use of some of
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
 ### Scenario 3: Churn on an e-commerce retail website
 
@@ -148,9 +148,9 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
-### Scenario 4: Up-sell conversion on an e-commerce retail website
+### Scenario 4: Upsell conversion on an e-commerce retail website
 
 **Prediction goal:** Predict the purchase propensity of the population that has purchased a specific product to purchase a new related product.
 
@@ -164,9 +164,9 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
-### Scenario 5: Un-subscribe (churn) on an online news outlet
+### Scenario 5: Unsubscribe (churn) on an online news outlet
 
 **Prediction goal:** Predict the propensity of the eligible population to unsubscribe from a service next month. 
 
@@ -179,11 +179,11 @@ Additionally, for an accurate model it is suggested that you make use of some of
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
 ### Scenario 6: Launch mobile application
 
-**Prediction goal:** Predict the propensity of eligible profiles to launch a paid mobile application in the next X days. This is similar to predicting the KPI of "Monthly Active Users".
+**Prediction goal:** Predict the propensity of eligible profiles to launch a paid mobile application in the next X days. This is similar to predicting the Key Performance Indicator (KPI) of "Monthly Active Users".
 
 **Required standard event types:**
 
@@ -203,11 +203,11 @@ In this example, `order`, `checkouts`, and `purchases` are used when a mobile ap
 
 **Additional recommended standard event types:**
 
-Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
 
 ## Customer AI output data
 
-Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have Real-time Customer Profile enabled for your dataset, you can consume insights from the Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
+Customer AI generates several attributes for individual profiles that are deemed eligible. There are two ways to consume the score (output) based on what you have provisioned. If you have a Real-time Customer Profile-enabled dataset, you can consume insights from Real-time Customer Profile in the [Segment Builder](../../segmentation/ui/segment-builder.md). If you don't have a Profile-enabled dataset, you can [download the Customer AI output](./user-guide/download-scores.md) dataset available on the data lake.
 
 >[!NOTE]
 >
