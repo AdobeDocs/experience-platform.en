@@ -24,6 +24,10 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 1. Using your access credentials, upload your data to the Blob container.
 1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into [!DNL Intelligent Services].
 
+### Adobe Analytics preparation (Customer AI)
+
+Customer AI natively supports Adobe Analytics data. To use Adobe Analytics data, you must map your data to the supported data types. Visit the [Customer AI input documentation](./customer-ai/input-output.md) for more information on supported data types.
+
 ### [!DNL Experience Platform] data preparation
 
 If your data is already stored in [!DNL Platform], follow the steps below:

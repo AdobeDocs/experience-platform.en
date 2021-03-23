@@ -19,26 +19,26 @@ The following table outlines some common terminology used in this document:
 | Term | Definition |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
-| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more mixins. |
+| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more field groups. |
 | XDM class | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
-| [Mixin](../../xdm/schema/composition.md) | A Component that define one or more fields in a schema. Mixins enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Mixins are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
-| [Data type](../../xdm/schema/composition.md) | A Component that can also provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. |
+| [Field groups](../../xdm/schema/composition.md) | A Component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Data type](../../xdm/schema/composition.md) | A Component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | Churn | A measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
 ## Customer AI input data
 
-
-
 >[!TIP]
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
+
+Customer AI supports Adobe Analytics Data. To use Adobe Analytics data, you must populate the data types listed in the standard events [data type table](#standard-events). The data types work with both the CEE and Analytics schema.
 
 ### Standard events {#standard-events}
 
 XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
-It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
+It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE / Adobe Analytics schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
 To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Data types]** tab.
 
@@ -120,7 +120,6 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Required standard event types:**
 
-
 - order
 - checkouts
 - purchases
@@ -177,6 +176,30 @@ Any of the remaining [event types](#standard-events) might be required based on 
 - search
 
 Additionally, for an accurate model it is suggested that you make use of some of the available properties in the [subscription data type](../../xdm/data-types/subscription.md).
+
+**Additional recommended standard event types:**
+
+Any of the remaining [event types](#standard-events) might be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for an event type, that this data is included in your CEE schema.
+
+### Scenario 6: Launch mobile application
+
+**Prediction goal:** Predict the propensity of eligible profiles to launch a paid mobile application in the next X days. This is similar to predicting the KPI of "Monthly Active Users".
+
+**Required standard event types:**
+
+- order (if the mobile application needs to be purchased)
+- checkouts (if the mobile application needs to be purchased)
+- purchases (if the mobile application needs to be purchased)
+- webVisit
+- applicationCloses
+- applicationCrashes
+- applicationFeatureUsages
+- applicationFirstLaunches
+- applicationInstalls
+- applicationLaunches
+- applicationUpgrades
+
+In this example, `order`, `checkouts`, and `purchases` are used when a mobile application needs to be  purchased.
 
 **Additional recommended standard event types:**
 
