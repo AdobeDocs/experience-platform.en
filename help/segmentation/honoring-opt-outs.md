@@ -16,7 +16,7 @@ Once a customer has opted-out, it is important that your organization honor thos
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before working with opt-out requests, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].

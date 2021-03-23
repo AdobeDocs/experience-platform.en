@@ -6,6 +6,8 @@ description: The Adobe Media Analytics for Audio and Video extension is an analy
 
 # Adobe Media Analytics for Audio and Video extension {#adobe-analytics-for-video-extension}
 
+## Overview {#overview}
+
 Adobe Media Analytics for Audio and Video is an add-on to the base Analytics offering that provides clients with robust measurement for video, audio and advertisements. 
 
 Adobe Media Analytics for Audio and Video is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100157.html).

@@ -6,6 +6,8 @@ description: The Adobe Target v2 extension is a personalization destination in A
 
 # Adobe Target v2 extension {#adobe-target-v2-extension}
 
+## Overview {#overview}
+
 Adobe Target is the Adobe Experience Cloud solution that provides everything you need to tailor and personalize your customers' experience to maximize revenue on your web and mobile sites, apps, social media, and other digital channels.
 
 Adobe Target v2 is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102722.adobe-target-v2-launch-extension.html).

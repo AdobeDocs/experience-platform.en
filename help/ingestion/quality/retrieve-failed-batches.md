@@ -9,7 +9,7 @@ description: This tutorial covers steps for retrieving information about a faile
 
 # Retrieving failed batches using the Data Access API
 
-Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real-time.
+Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert their data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real time.
 
 This tutorial covers steps for retrieving information about a failed batch using [!DNL Data Ingestion] APIs.
 

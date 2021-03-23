@@ -6,6 +6,8 @@ description: The Demandbase extension is an analytics destination in Adobe Exper
 
 # [!DNL Demandbase] extension {#demandbase-extension}
 
+## Overview {#overview}
+
 Get [!DNL Demandbase] B2B account insights right into Adobe Analytics where you can segment traffic and behavior by Industry, Revenue and your target accounts. This account based view delivers unique insights on engagement, conversion and the source for your most valuable visitors.
 
 [!DNL Demandbase] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101605.html).

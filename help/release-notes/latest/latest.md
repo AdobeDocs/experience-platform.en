@@ -10,13 +10,29 @@ author: ens70167
 
 **Release date: February 24, 2021**
 
+New features in Adobe Experience Platform:
+
+- [(Beta) Dashboards](#dashboards)
+
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Science Workspace]](#dsw)
 - [[!DNL Dataflows]](#dataflows)
+- [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM) System]](#xdm)
 - [[!DNL Identity Service]](#identity)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
+
+## (Beta) Dashboards {#dashboards}
+
+Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization’s data, as captured during daily snapshots.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+|Profiles, Segments, Destinations, and License Usage Dashboards (Beta)| **Note: Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.**<br/><br/>Dashboards provide out-of-the-box reporting on your organization’s data and are built directly into the marketer workflow within Platform. These dashboards are available without the need for additional IT support or the time and effort it would otherwise take to export and process data with additional data warehousing design and implementation.|
 
 ## [!DNL Data Science Workspace] {#dsw}
 
@@ -44,6 +60,18 @@ Dataflows are a representation of data jobs that move data across Platform. Thes
 
 For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md).
 
+## [!DNL Destinations] {#destinations}
+
+[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
 ## [!DNL Experience Data Model (XDM) System] {#xdm}
 
 Standardization and interoperability are key concepts behind [!DNL Experience Platform]. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management.
@@ -62,7 +90,7 @@ For more general information on XDM, refer to the [XDM System overview](../../xd
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
-Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
 **New features**
 
@@ -71,6 +99,18 @@ Adobe Experience Platform [!DNL Identity Service] helps you to gain a better vie
 | Identity graph viewer | The identity graph viewer allows you to validate and visualize identities that are stitched together in the UI, allowing for improved debugging and transparency. See the [identity graph viewer document](../../identity-service/ui/identity-graph-viewer.md) for more information. |
 
 For more general information on [!DNL Identity Service], refer to the [Identity Service overview](../../identity-service/home.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Computed Attributes (Alpha) | ***Note: This functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.*** <br/><br/>Computed attributes are functions used to aggregate event-level data into profile-level attributes. You can then use the aggregates in segmentation, activation and personalization. Some examples of these functions include count, sum, average, min, max, true/false. Computed attributes are currently available via API only. For more information, see the [computed attributes overview](../../profile/computed-attributes/overview.md).|
+
+For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

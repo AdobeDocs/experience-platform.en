@@ -6,6 +6,8 @@ description: The QuestionPro Intercept Surveys extension is a survey destination
 
 # [!DNL QuestionPro Intercept Surveys] extension {#questionpro-extension}
 
+## Overview {#overview}
+
 [!DNL QuestionPro Intercept Surveys] is a platform for deploying surveys and collecting attitudinal data at the point of transaction or when users enter / exit your website.
 
 [!DNL QuestionPro Intercept Surveys] is a survey extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.90096.questionpro-surveys.html).
