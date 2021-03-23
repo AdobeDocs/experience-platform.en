@@ -187,9 +187,9 @@ Any of the remaining [event types](#standard-events) might be required based on 
 
 **Required standard event types:**
 
-- order (if the mobile application needs to be purchased)
-- checkouts (if the mobile application needs to be purchased)
-- purchases (if the mobile application needs to be purchased)
+- order
+- checkouts
+- purchases
 - webVisit
 - applicationCloses
 - applicationCrashes
