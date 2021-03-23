@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Data Governance Help
 breadcrumb-title: Data Governance Guide
 user-guide-description: Enforce data usage restrictions through the use of labels, marketing actions, and policies.
+feature: Data Governance
 ---
 
 # Adobe Experience Platform Data Governance {#data-governance}

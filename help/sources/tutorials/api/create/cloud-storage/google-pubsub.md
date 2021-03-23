@@ -33,7 +33,11 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
 
-For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document.
+For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
+
+>[!TIP]
+>
+>If you are using service account-based authentication, ensure that you have granted sufficient user access to your service account and that there are no extra white spaces in the JSON, when copying and pasting your credentials.
 
 ### Reading sample API calls
 

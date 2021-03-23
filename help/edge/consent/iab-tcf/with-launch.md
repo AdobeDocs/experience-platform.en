@@ -17,13 +17,9 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Setting default consent
 
-Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`.
+Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. If you want to discard Experience Events for customers who do not have a consent cookie, set this to `out`. You can also use a data element to dynamically set the default consent value.
 
->[!NOTE]
->
->Currently, there is no way to set this dynamically through the Experience Platform Launch extension.
-
-For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
+For more information on how to configure default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration guide.
 
 ## Updating Profile with consent information {#consent-code-1}
 
@@ -53,7 +49,7 @@ addEventListener();
 
 This custom code does two things:
 
-* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action. 
+* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action.
 
 * Triggers the rule when the consent preferences have changed. The "Set Consent" action should be used whenever consent preferences have changed. Add a "Set Consent" action in the extension and fill out the form as follows:
 
@@ -62,7 +58,7 @@ This custom code does two things:
 * Value: "%IAB TCF Consent String%"
 * GDPR Applies: "%IAB TCF Consent GDPR%"
 
-![IAB Set Consent Action](../../../assets/iab_set_consent_action.png)
+![IAB Set Consent Action](../../images/consent/iab-tcf/with-launch/iab-action.png)
 
 >[!IMPORTANT]
 >
@@ -74,7 +70,7 @@ The consent string should be included in the XDM Experience Event. To do this, u
 
 1. Select **[!UICONTROL consentStrings]**.
 
-1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**. 
+1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**.
 
 1. Expand the **[!UICONTROL consentString]** heading, and expand the first item, then fill in the following values:
 

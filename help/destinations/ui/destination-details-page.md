@@ -7,6 +7,8 @@ seo-description: The details page for an individual destination provides an over
 
 # View destination details
 
+## Overview {#overview}
+
 In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 
 >[!NOTE]
@@ -72,7 +74,7 @@ To view the details of a particular dataflow run, select the run's start time fr
 
 ![](../assets/ui/details-page/dataflow.png)
 
-## [!UICONTROL Activation data]
+## [!UICONTROL Activation data] {#activation-data}
 
 The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
