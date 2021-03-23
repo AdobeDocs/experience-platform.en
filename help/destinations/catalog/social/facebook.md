@@ -6,6 +6,8 @@ description: Activate profiles for your Facebook campaigns for audience targetin
 
 # [!DNL Facebook] connection
 
+## Overview {#overview}
+
 Activate profiles for your [!DNL Facebook] campaigns for audience targeting, personalization, and suppression based on hashed emails.
 
 You can use this destination for audience targeting across [!DNL Facebook’s] family of apps that are supported by [!DNL Custom Audiences], including [!DNL Facebook], [!DNL Instagram], [!DNL Audience Network], and [!DNL Messenger]. Selection of the app that you want to run campaign against is indicated at the placement level in [!DNL Facebook Ads Manager].
@@ -67,7 +69,7 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
 
 Depending on the type of IDs that you ingest into Adobe Experience Platform, you must adhere to their corresponding requirements.
 
-### Phone number hashing requirements {#phone-number-hashing-requirements}
+## Phone number hashing requirements {#phone-number-hashing-requirements}
 
 There are two methods to activate phone numbers in [!DNL Facebook]:
 
@@ -79,7 +81,7 @@ There are two methods to activate phone numbers in [!DNL Facebook]:
 >Phone numbers ingested into the `Phone` namespace cannot be activated in [!DNL Facebook].
 
 
-### Email hashing requirements {#email-hashing-requirements}
+## Email hashing requirements {#email-hashing-requirements}
 
 You can hash email addresses before ingesting them into Adobe Experience Platform, or use email addresses in clear in Experience Platform, and have [!DNL Platform] hash them on activation.
 
@@ -102,7 +104,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-### Using custom namespaces {#custom-namespaces}
+## Using custom namespaces {#custom-namespaces}
 
 Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], make sure you synchronize your own identifiers using [!DNL Facebook Pixel]. See the [official documentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) for detailed information.
 

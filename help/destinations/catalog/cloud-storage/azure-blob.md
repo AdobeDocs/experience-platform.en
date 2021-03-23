@@ -6,6 +6,8 @@ description: Create a live outbound connection to your Azure Blob storage to per
 
 # [!DNL Azure Blob] connection
 
+## Overview {#overview}
+
 [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") is Microsoft's object storage solution for the cloud. This tutorial provides steps for creating a [!DNL Blob] destination using the [!DNL Platform] user interface.
 
 ## Getting started
@@ -19,7 +21,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 If you already have a valid Blob destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-destinations.md).
 
-### Supported file formats
+## Supported file formats {#file-formats}
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
@@ -41,17 +43,17 @@ Under the **[!UICONTROL Cloud Storage]** category, select **[!UICONTROL Azure Bl
 
 The **[!UICONTROL Connect to Azure Blob Storage]** page appears. On this page, you can either use new credentials or existing credentials.
 
-### New account {#new-account}
+## New account {#new-account}
 
 If you are using new credentials, select **[!UICONTROL New account]**. On the input form that appears, provide the connection string. The connection string is required to access data in your Blob storage. The [!DNL Blob] connection string pattern starts with: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. 
 
 For more information about configuring your [!DNL Blob] connection string, see [Configure a connection string for an Azure storage account](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string#configure-a-connection-string-for-an-azure-storage-account) in the Microsoft documentation.
 
-Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Note that this public key **must** be written as a Base64 encoded string. 
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
 ![New account](../../assets/catalog/cloud-storage/blob/new.png)
 
-### Existing account
+## Existing account {#existing-account}
 
 To connect an existing account, select the [!DNL Blob] account you want to connect with, then select **Next** to proceed.
 

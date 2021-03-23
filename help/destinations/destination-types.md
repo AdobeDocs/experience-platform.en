@@ -15,25 +15,25 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 
 ![Types of destinations](./assets/destination-types/types-of-destinations.png)
 
-### Connections {#connections}
+## Connections {#connections}
 
 **[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
-#### Profile export destinations
+## Profile export destinations
 
 Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key. The [Amazon S3 cloud storage destination](./catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
 
-#### Segment export destinations
+## Segment export destinations
 
 Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
 
-#### Profile export and Segment export destinations - video overview
+## Profile export and Segment export destinations - video overview
 
 The video below runs you through the particularities of the two types of destinations: 
 
 >[!VIDEO](https://video.tv.adobe.com/v/29707?quality=12)
 
-### Extensions {#extensions}
+## Extensions {#extensions}
 
 Platform leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Platform interface. 
 
@@ -45,7 +45,7 @@ Platform Launch extensions forward raw event data to several types of destinatio
 
 ![Experience Platform Launch extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
 
-### When to use connections and extensions
+## When to use connections and extensions
 
 As a marketer, you could use a combination of connections and extensions to address your use cases.
 

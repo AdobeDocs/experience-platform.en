@@ -6,20 +6,22 @@ description: Display & Video 360, formerly known as DoubleClick Bid Manager is a
 
 # [!DNL Google Display & Video 360] connection
 
+## Overview {#overview}
+
 [!DNL Display & Video 360], formerly known as [!DNL DoubleClick Bid Manager], is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources. 
 
-## Destination specs
+## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Display & Video 360] destinations:
 
 * Activated audiences are created programmatically in the Google platform.
-* Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
 >[!IMPORTANT]
 >
 >If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
-### Supported Identities {#supported-identities}
+## Supported Identities {#supported-identities}
 
 [!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
@@ -33,7 +35,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-### Export Type {#export-type}
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
