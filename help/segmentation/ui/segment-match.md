@@ -21,6 +21,10 @@ With Segment Match you can:
 * Apply data usage labels to control the that data can and cannot be shared with partners.
 * Maintain shared audience lifecycle management after publishing a feed and continue a dynamic exchange of data through abilities to add, delete, and unshare.
 
+[ADD INFORMATION ABOUT IDENTITY OVERLAP ARCHITECTURE]
+
+[NEED THE WORKFLOW ILLUSTRATION HERE]
+
 The documentation below provides more information about Segment Match, including details on set up and its end-to-end workflow.
 
 ## Prerequisites
@@ -52,6 +56,8 @@ The list of supported namespaces are as follows:
 You must provide a consent configuration and set its default value to either opt-in or opt-out for a consent check.
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts-in.
+
+[ADD LINK TO PUBLIC GITHUB CONTAINING CONSENT MIXIN/FIELD GROUP]
 
 The default consent configuration for Segment Match is set to opt-out. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager
 
