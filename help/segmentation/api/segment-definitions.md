@@ -191,6 +191,12 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/definitions
 | `expression.value` | An expression that conforms to the type indicated in `expression.format`. |
 | `description` | A human-readable description of the definition. |
 
+>[!NOTE]
+>
+>A segment definition expression may also reference a computed attribute. To learn more, please refer to the [computed attribute API endpoint guide](../../profile/computed-attributes/ca-api.md)
+>
+>Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
+
 **Response**
 
 A successful response returns HTTP status 200 with details of your newly created segment definition.
@@ -575,6 +581,67 @@ A successful response returns HTTP status 200 with details of your newly updated
     "creationTime": 0,
     "updateEpoch": 1579295340,
     "updateTime": 1579295340000
+}
+```
+
+## Convert segment definition
+
+You can convert a segment definition between `pql/text` and `pql/json` or `pql/json` to `pql/text` by making a POST request to the `/segment/conversion` endpoint.
+
+**API format**
+
+```http
+POST /segment/conversion
+```
+
+**Request**
+
+The following request will change the segment definition's format from `pql/text` to `pql/json`.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string",
+        "ttlInDays": 60
+    }'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly converted segment definition.
+
+```json
+{
+    "ttlInDays": 60,
+    "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/json",
+        "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"country\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"workAddress\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}},{\"nodeType\":\"literal\",\"literalType\":\"String\",\"value\":\"US\"}]}"
+    }
 }
 ```
 

@@ -96,7 +96,11 @@ Set this to configure a callback that is called for every event just before it i
 | -------- | ------------ | ----------------- |
 | Object   | No           | `"in"`|
 
-Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid value is `"pending"`. When this is set, work will be queued until the user provides consent preferences. After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](../consent/supporting-consent.md) for more information.
+Sets the user's default consent. This is used when there is no consent preference already saved for the user. The other valid values are `"pending"` and `"out"`. This default value is not persisted to the user's profile. Only when setConsent is called is the user's profile updated.
+* `"in"`: When this is set or no value is provided, work proceeds without user consent preferences.
+* `"pending"`: When this is set, work will be queued until the user provides consent preferences.
+* `"out"`: When this is set, work will be discarded until the user provides consent preferences.
+After the user's preferences have been provided, work either proceeds or is aborted based on the user's preferences. See [Supporting Consent](../consent/supporting-consent.md) for more information.
 
 ## Personalization options
 
@@ -140,7 +144,7 @@ Enables [!DNL Audience Manager] URL destinations, which allows the firing of URL
 | -------- | ------------ | ----------------- |
 | Boolean  | No           | true              |
 
-If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the AEP Web SDK and still have the same ECID.
+If true, the SDK will read and set old AMCV cookies. This helps with transitioning to using Adobe Experience Platform Web SDK while some parts of the site may still be using Visitor.js. Additionally, if Visitor API is defined on the page, the SDK will query Visitor API for the ECID. This enables you to dual tag pages with the Adobe Experience Platform Web SDK and still have the same ECID.
 
 ### `thirdPartyCookiesEnabled`
 

@@ -83,11 +83,11 @@ curl -X POST \
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
         "auth": {
-            "specName": "Basic Authentication for Event Hubs",
+            "specName": "Azure EventHub authentication credentials",
             "params": {
-                "sasKeyName": "sasKeyName",
-                "sasKey": "sasKey",
-                "namespace": "namespace"
+                "sasKeyName": "{SAS_KEY_NAME}",
+                "sasKey": "{SAS_KEY}",
+                "namespace": "{NAMESPACE}"
             }
         },
         "connectionSpec": {

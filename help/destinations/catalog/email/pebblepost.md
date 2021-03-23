@@ -6,7 +6,9 @@ description: The PebblePost extension is an email destination in Adobe Experienc
 
 # [!DNL PebblePost] extension {#pebblepost-extension}
 
-[!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real-time based on response path activity and on-site conversions.
+## Overview {#overview}
+
+[!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real time based on response path activity and on-site conversions.
 
 [!DNL PebblePost] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
 

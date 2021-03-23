@@ -16,7 +16,7 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
@@ -309,9 +309,11 @@ Ingesting time series data to a streaming connection can be done either with or 
 
 The example request below ingests time series data with a missing source name to Platform. If the data is missing the source name, it will add the source ID from the streaming connection definition.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use a UUID. Additionally, the following API call does **not** require any authentication headers.
+>You will need to generate your own `xdmEntity._id` and `xdmEntity.timestamp`. A good way to generate an ID is to use the UUID function in Data Prep. More information about the UUID function can be found in the [Data Prep functions guide](../../data-prep/functions.md). The `xdmEntity._id` attribute represents a unique identifier for the record itself, **not** a unique ID Of the person or device whose record it is. The person or device ID will be specific in any attributes that is assigned as a person or device identifier of the schema.
+>
+>Both `xdmEntity._id` and `xdmEntity.timestamp` are the only required fields for time-series data. Additionally, the following API call does **not** require any authentication headers.
 
 ```shell
 curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
