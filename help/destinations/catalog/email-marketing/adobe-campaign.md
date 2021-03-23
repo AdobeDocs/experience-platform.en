@@ -31,12 +31,12 @@ In the **[!UICONTROL Account]** step of the Connect destination workflow, select
 
 ![Set up Campaign wizard](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
-- For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+- For **[!UICONTROL Amazon S3]** connections, you must provide your [!UICONTROL Access Key ID] and [!UICONTROL Secret Access Key]. 
+- For **[!UICONTROL SFTP with Password]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL Password].
+- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL SSH Key].
 - For **[!UICONTROL Azure Blob]** connections, you must provide a connection string.
 
-Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a Base64 encoded string.
+Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 
 ![Fill in Campaign information](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -59,7 +59,7 @@ See [Activate profiles and segments to a destination](../../ui/activate-destinat
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes) in email marketing destinations documentation. 
+When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes). 
 
 ## Exported data {#exported-data}
 

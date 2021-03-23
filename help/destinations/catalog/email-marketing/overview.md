@@ -21,19 +21,19 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select the emai
 
 ![Connect to destination](../../assets/catalog/email-marketing/overview/connect-email-marketing.png)
 
-In the **[!UICONTROL Account]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In the **[!UICONTROL Connection type]** selector, you can select between Amazon S3, SFTP with Password, or SFTP with SSH Key. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
+In the **[!UICONTROL Account]** step, if you had previously set up a connection to your email marketing destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your email marketing destination. In the **[!UICONTROL Connection type]** selector, you can select between [!UICONTROL Amazon S3], [!UICONTROL Azure Blob], [!UICONTROL SFTP with Password], or [!UICONTROL SFTP with SSH Key]. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 - For **S3 connections**, you must provide your Amazon Access Key ID and Secret Access Key. 
 - For **SFTP with Password** connections, you must provide Domain, Port, Username, and Password for your SFTP server.
 - For **SFTP with SSH Key** connections, you must provide Domain, Port, Username, and SSH Key for your SFTP server.
 
-Optionally, you can attach your RSA-formatted public key to add encryption to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a Base64 encoded string.
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 
 In the **[!UICONTROL Authentication]** step, enter a name and a description for your new destination, and the file format for the exported files.
 
 If you selected Amazon S3 as storage option in the previous step, insert the bucket name and the folder path in your cloud storage destination where the files will be delivered. For the SFTP storage option, insert the folder path where the files will be delivered. 
 
-Also in this step, you can select any marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, read the [Data usage policies overview](../../../data-governance/policies/overview.md).
+At this step, you can also select any Marketing action that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, read the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
 ![Email setup step](../../assets/catalog/email-marketing/overview/email-setup-step.png)
 
@@ -50,14 +50,11 @@ For information about the segment schedule and file name editing options, refer 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
 In this step, you are selecting which fields to export to email marketing destinations, and marking which fields are mandatory.
-
-![Destination attributes](../../assets/catalog/email-marketing/overview/recommended-attributes.png)
-
-For more information about this step, refer to the [Select attributes](../../ui/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
+For information about this step, refer to the [Select attributes](../../ui/activate-destinations.md#select-attributes) step in the activate destinations tutorial.
 
 ## Identity {#identity}
 
-Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your users' identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. Refer to the table below for the most common unique identifiers and their XDM field in the schema. 
+Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your user identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. Refer to the table below for the most common unique identifiers and their XDM field in the schema.
 
 Unique Identifier | XDM field in Unified Schema
 ----------------- | ---------------------------
