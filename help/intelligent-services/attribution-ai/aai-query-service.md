@@ -99,7 +99,7 @@ The queries below can be used as a template for different score analysis senario
         conversionName
 ```
 
-### Trend analysis examples
+### Trend analysis example
 
 **Number of conversions per day**
 
@@ -122,7 +122,7 @@ The queries below can be used as a template for different score analysis senario
     LIMIT 20
 ```
 
-### Distribution analysis examples
+### Distribution analysis example
 
 **Amount of touchpoints on conversion paths by defined type (within in a conversion window)**
 
@@ -292,4 +292,54 @@ Get the distribution for the number of distinct touchpoints on a conversion path
         conversionName, num_dist_tp
     ORDER BY
         conversionName, num_dist_tp
+```
+
+### Schema flatten and explosion example
+
+This query flattens the struct column into multiple singular columns and explode arrays into multiple rows. This helps with transforming attribution scores into a CSV format. The output of this query has one conversion and one of the touchpoints corresponding to that conversion in each row.
+
+```sql
+SELECT 
+  segmentation,
+  conversionName,
+  scoreCreatedTime,
+  aaid, _id, eventMergeId,
+  conversion.eventType as conversion_eventType,
+  conversion.quantity as conversion_quantity,
+  conversion.eventSource as conversion_eventSource,
+  conversion.priceTotal as conversion_priceTotal,
+  conversion.timestamp as conversion_timestamp,
+  conversion.geo as conversion_geo,
+  conversion.receivedTimestamp as conversion_receivedTimestamp,
+  conversion.dataSource as conversion_dataSource,
+  conversion.productType as conversion_productType,
+  conversion.passThrough.{COLUMN_NAME} as conversion_passThru_column,
+  conversion.skuId as conversion_skuId,
+  conversion.product as conversion_product,
+  touchpointName,
+  touchPoint.campaignGroup as tp_campaignGroup, 
+  touchPoint.mediaType as tp_mediaType,
+  touchPoint.campaignTag as tp_campaignTag,
+  touchPoint.timestamp as tp_timestamp,
+  touchPoint.geo as tp_geo,
+  touchPoint.receivedTimestamp as tp_receivedTimestamp,
+  touchPoint.passThrough.{{COLUMN_NAME}} as tp_passThru_column,
+  touchPoint.campaignName as tp_campaignName,
+  touchPoint.mediaAction as tp_mediaAction,
+  touchPoint.mediaChannel as tp_mediaChannel,
+  touchPoint.eventid as tp_eventid,
+  scores.*
+FROM (
+  SELECT
+        _tenantId.your_score_output_dataset.segmentation,
+        _tenantId.your_score_output_dataset.conversionName,
+        _tenantId.your_score_output_dataset.scoreCreatedTime,
+        _tenantId.your_score_output_dataset.conversion,
+        _id,
+        eventMergeId,
+        map_values(identityMap)[0][0].id as aaid,
+        inline(_tenantId.your_score_output_dataset.touchpointsDetail)
+  FROM
+        your_score_output_dataset
+)
 ```
