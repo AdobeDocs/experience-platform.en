@@ -52,7 +52,7 @@ For more information on the Query Editor, visit the [Query Editor user guide](..
 
 ## Query templates for attribution score analysis
 
-The queries below can be used as a template for different score analysis senarios. You need to replace the `_tenantId` and `your_score_output_dataset` with the proper values found in your scoring output schema.
+The queries below can be used as a template for different score analysis scenarios. You need to replace the `_tenantId` and `your_score_output_dataset` with the proper values found in your scoring output schema.
 
 >[!NOTE]
 >
