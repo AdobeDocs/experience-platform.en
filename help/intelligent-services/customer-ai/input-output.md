@@ -104,13 +104,13 @@ In this section, different scenarios for Customer AI instances are described as 
 
 **Required standard event types:**
 
-Although it is recommended that you include all these event types, 
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
 - order
 - checkouts
 - purchases
 - webVisit
-- search 
+- search
 
 **Additional recommended standard event types:**
 
@@ -121,6 +121,8 @@ Any of the remaining [event types](#standard-events) may be required based on th
 **Prediction goal:** Predict the subscription conversion propensity for the eligible profiles to commit to a certain level of subscription such as a standard or premium plan.
 
 **Required standard event types:**
+
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
 - order
 - checkouts
@@ -142,6 +144,8 @@ Any of the remaining [event types](#standard-events) may be required based on th
 
 **Required standard event types:**
 
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
+
 - order
 - checkouts
 - purchases
@@ -157,6 +161,8 @@ Any of the remaining [event types](#standard-events) may be required based on th
 **Prediction goal:** Predict the purchase propensity of the population that has purchased a specific product to purchase a new related product.
 
 **Required standard event types:**
+
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
 - order
 - checkouts
@@ -174,6 +180,8 @@ Any of the remaining [event types](#standard-events) may be required based on th
 
 **Required standard event types:**
 
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
+
 - webVisit
 - search
 
@@ -188,6 +196,8 @@ Any of the remaining [event types](#standard-events) may be required based on th
 **Prediction goal:** Predict the propensity of eligible profiles to launch a paid mobile application in the next X days. This is similar to predicting the Key Performance Indicator (KPI) of "Monthly Active Users".
 
 **Required standard event types:**
+
+The event types listed below are required for an optimal Customer AI output with this particular prediction goal. It is possible to exclude a required event depending on your prediction goal, however, excluding multiple events can lead to poor results.
 
 - order
 - checkouts
