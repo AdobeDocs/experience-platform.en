@@ -300,7 +300,7 @@ This query flattens the struct column into multiple singular columns and explode
 
 >[!TIP]
 >
-> In this example, you need to replace `{COLUMN_NAME}` in addition to `_tenantId` and `your_score_output_dataset`. The `COLUMN_NAME` variable can take the values of optional pass through column names that were added during the configuring of your Attribution AI instance. Please review your scoring output schema to find the `{COLUMN_NAME}` values needed to complete this query.
+> In this example, you need to replace `{COLUMN_NAME}` in addition to `_tenantId` and `your_score_output_dataset`. The `COLUMN_NAME` variable can take the values of optional pass through column names (reporting columns) that were added during the configuring of your Attribution AI instance. Please review your scoring output schema to find the `{COLUMN_NAME}` values needed to complete this query.
 
 ```sql
 SELECT 
