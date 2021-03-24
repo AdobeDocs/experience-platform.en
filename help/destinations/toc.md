@@ -16,8 +16,10 @@ feature: Destinations
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
-    * [View destination details](./ui/destination-details-page.md)
     * [Connect to a destination](./ui/connect-destination.md)
+    * [View destination details](./ui/destination-details-page.md)
+    * [Monitor dataflows in the UI](./ui/destinations/ui/monitor-dataflows.md)
+        
     * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
