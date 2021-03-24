@@ -19,7 +19,6 @@ A query can be evaluated with edge segmentation if it meets any of the following
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/edge-segmentation/event-history-success.png) |
 | Frequency query | Any segment definition that refers to an event happening a certain number of times. | |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. | |
 
