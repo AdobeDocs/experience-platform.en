@@ -68,6 +68,7 @@ The following query types ware **not** currently supported by edge segmentation:
 | ---------- | ------- |
 | Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
 | Negation | If a query contains a negation, it cannot be evaluated using edge segmentation. | 
+| Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
 
 ## Retrieve all segments enabled for edge segmentation
 
