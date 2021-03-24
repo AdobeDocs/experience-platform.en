@@ -298,6 +298,10 @@ Get the distribution for the number of distinct touchpoints on a conversion path
 
 This query flattens the struct column into multiple singular columns and explode arrays into multiple rows. This helps with transforming attribution scores into a CSV format. The output of this query has one conversion and one of the touchpoints corresponding to that conversion in each row.
 
+>[!TIP]
+>
+> In this example, you need to replace `{COLUMN_NAME}` in addition to `_tenantId` and `your_score_output_dataset`. The `COLUMN_NAME` variable can take the values of optional pass through column names that were added during the configuring of your Attribution AI instance. Please review your scoring output schema to find the `{COLUMN_NAME}` values needed to complete this query.
+
 ```sql
 SELECT 
   segmentation,
@@ -323,7 +327,7 @@ SELECT
   touchPoint.timestamp as tp_timestamp,
   touchPoint.geo as tp_geo,
   touchPoint.receivedTimestamp as tp_receivedTimestamp,
-  touchPoint.passThrough.{{COLUMN_NAME}} as tp_passThru_column,
+  touchPoint.passThrough.{COLUMN_NAME} as tp_passThru_column,
   touchPoint.campaignName as tp_campaignName,
   touchPoint.mediaAction as tp_mediaAction,
   touchPoint.mediaChannel as tp_mediaChannel,
