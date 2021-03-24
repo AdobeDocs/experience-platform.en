@@ -13,7 +13,7 @@ In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left
 
 The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
-![Destinations-overview](../assets/ui/workspace/destinations-overview.png)
+![Destinations-overview](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
@@ -46,16 +46,14 @@ Select a destination card in the catalog to open the right rail. Here, you can s
 
 For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
 
-
-
 ## [!UICONTROL Browse] {#browse}
 
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
 >[!TIP]
 >
-> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to activate additional segments to that destination.
-> * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to delete an existing connection to a destination.
+> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to [activate](activate-destinations.md) additional segments to that destination.
+> * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to [delete](delete-destinations.md) an existing connection to a destination.
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 

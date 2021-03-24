@@ -15,27 +15,32 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 >
 >The destinations details page is part of the [!UICONTROL Destinations] workspace in the Platform UI. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
+## View destination details {#view-details}
 
-![](../assets/ui/details-page/select-destination.png)
+Follow the steps below to more details about an existing destination.
 
-The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
-![](../assets/ui/details-page/details.png)
+    ![Browse destinations](/destinations/assets/ui/details-page/browse-destinations.png)
 
-Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon. Any segments that are activated to destinations will be unmapped before the dataflow is deleted.
 
-![](../assets/ui/details-page/delete-flow.png)
+1. Select the name of the destination that you want to view.
 
-## Right rail
+    ![Select destination](/destinations/assets/ui/details-page/destination-select.png)
 
-The right rail displays the basic information about the destination.
+1. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
 
-![](../assets/ui/details-page/right-rail.png)
+    ![Destination details](/destinations/assets/ui/details-page/destination-details.png)
+
+## right rail
+
+The right rail displays the basic information about the selected destination.
+
+![right rail](/destinations/assets/ui/details-page/right-sidebar.png)
 
 The following table covers the controls and details provided by the right rail:
 
-| Right-rail item | Description |
+| right rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
@@ -53,26 +58,9 @@ The following table covers the controls and details provided by the right rail:
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
-You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
+The  **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle on the upper right side of the screen starts and pauses all data exports to the destination.
 
 ![](../assets/ui/details-page/enable-disable.png)
-
-## [!UICONTROL Dataflow runs]
-
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
-
-* **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
-* **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
-
-![](../assets/ui/details-page/dataflow-runs.png)
-
->[!NOTE]
->
->Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each merge policy applied to a segment.
-
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred with details for error diagnostics.
-
-![](../assets/ui/details-page/dataflow.png)
 
 ## [!UICONTROL Activation data] {#activation-data}
 
@@ -83,7 +71,3 @@ The [!UICONTROL Activation data] tab displays a list of segments that have been 
 >[!NOTE]
 >
 >For details on exploring the details page of a segment, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
-
-## Next steps
-
-This document covered the capabilities of the destination details page. For more information on managing destinations in the UI, see the overview on the [[!UICONTROL Destinations] workspace](./destinations-workspace.md).

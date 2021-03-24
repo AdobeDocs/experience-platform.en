@@ -55,7 +55,7 @@ Follow the steps below to delete a destination from the destination details page
         ![Destination details](/destinations/assets/ui/delete-destinations/destination-details-empty.png)
 
 
-1. Select **[!UICONTROL Delete]** on the right sidebar.
+1. Select **[!UICONTROL Delete]** on the right rail.
 
     ![Delete destination](/destinations/assets/ui/delete-destinations/delete-destinations-button.png)
 
