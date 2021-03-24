@@ -19,8 +19,11 @@ feature: Destinations
     * [Connect to a destination](./ui/connect-destination.md)
     * [View destination details](./ui/destination-details-page.md)
     * [Monitor dataflows in the UI](./ui/destinations/ui/monitor-dataflows.md)
-        
+    * [Update destination accounts](/destinations/ui/update-accounts.md)
     * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
+
+    * [Delete destinations](/destinations/ui/delete-destinations.md)
+
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)

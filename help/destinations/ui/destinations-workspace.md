@@ -46,35 +46,7 @@ Select a destination card in the catalog to open the right rail. Here, you can s
 
 For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
 
-## [!UICONTROL Accounts] {#accounts}
 
-In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
-
->[!TIP]
->
->Use the ![Add data button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
-
-![Accounts tab](../assets/ui/workspace/edit-account-destinations.png)
-
-Element | Description
----------|----------
-[!UICONTROL Platform] | The destination for which you have set up the connection.
-[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
-[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).
-[!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
-[!UICONTROL Authorized] | The date when the connection to this destination was authorized.
-
-Additionally, you can edit or update your account information. Select the ![Edit account button](../assets/ui/workspace/pencil-icon.png) in the **[!UICONTROL Platform]** column to edit the account's information.
-
-For accounts that use an `OAuth2` connection type, you can select **[!UICONTROL Reconnect OAuth]** to renew your account credentials.
-
-![Oauth image](../assets/ui/workspace/reconnect-oauth.png)
-
-For accounts that use an `Access Key` or `ConnectionString` connection type, you can edit your account authentication information, including information such as access ID, secret keys, or connection strings.
-
-![Account information image](../assets/ui/workspace/edit-account-details.png)
-
-Once you are finished editing your account details, select **[!UICONTROL Save]** to complete the update.
 
 ## [!UICONTROL Browse] {#browse}
 
