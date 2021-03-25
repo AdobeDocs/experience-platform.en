@@ -12,19 +12,19 @@ The table below contains the mappings between the Marketo Campaign memberships d
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `Id` | `campaignMemberID` | Primary Identity |
-| `Campaign-key` | `campaignID` |
-| `Person-key` | `personID` |
-| `AcquiredByCampaign-key` | `acquiredByCampaignID` |
-| `Success` | `hasReachedSuccess` |
-| `Exhausted` | `isExhausted` |
-| `Status` | `memberStatus` |
-| `Status Reason` | `memberStatusReason` |
-| `Member Date` | `membershipDate` |
-| `Cadence` | `nurtureCadence` |
-| `Track Name` | `nurtureTrackName` |
-| `Webinar Url` | `webinarConfirmationUrl` |
-| `Registration Code` | `webinarRegistrationID` |
+| `id` | `campaignMemberID` | Primary Identity |
+| `programId` | `campaignID` | Relationship |
+| `leadId` | `personID` | Relationship |
+| `acquiredByCampaignID` | `acquiredByCampaignID` |
+| `reachedSuccess` | `hasReachedSuccess` |
+| `isExhausted` | `isExhausted` |
+| `statusName` | `memberStatus` |
+| `statusReason` | `memberStatusReason` |
+| `membershipDate` | `membershipDate` |
+| `nurtureCadence` | `nurtureCadence` |
+| `trackName` | `nurtureTrackName` |
+| `webinarUrl` | `webinarConfirmationUrl` |
+| `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
