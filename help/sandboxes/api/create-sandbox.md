@@ -41,7 +41,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. Cannot contain any spaces or capital letters. |
+| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or capital letters. |
 | `title` | A human-readable name used for display purposes in the Platform user interface. |
 | `type` | The type of sandbox to be created. The value for the `type` property can be either development or production. |
 

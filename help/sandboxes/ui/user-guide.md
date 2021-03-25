@@ -48,15 +48,13 @@ To create a new sandbox, select the **[!UICONTROL Create Sandbox]** button on th
 
 The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a type, a title, and a name for the sandbox. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel that appears. If you are creating a production sandbox, select **[!UICONTROL Production]**.
 
-The **title** is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens **(-)**, it must begin with a letter, and has a maximum of 256 characters.
+The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens (`-`), it must begin with a letter, and has a maximum of 256 characters.
 
 When finished, select **[!UICONTROL Create]**.
 
 ![](../images/ui/create-dialog.png)
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
-
-![](../images/ui/creating.png)
 
 ## Reset a sandbox
 
