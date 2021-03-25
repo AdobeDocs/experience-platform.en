@@ -6,6 +6,8 @@ description: The Google Global Site Tag extension is an analytics destination in
 
 # [!DNL Google Global Site Tag] extension {#gtag-analytics-extension}
 
+## Overview {#overview}
+
 Send data to [!DNL Google Analytics], [!DNL Google Ads], and the [!DNL Google Marketing Platform] via [!DNL Google's Global Site Tag], or gtag.js. Multiple accounts per product can be configured.
 
 [!DNL Google Global Site Tag] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101437.google-global-site-tag-gtag.html).

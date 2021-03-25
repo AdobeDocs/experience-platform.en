@@ -6,6 +6,8 @@ description: The Pinterest Conversion Tracking extension is an advertising desti
 
 # [!DNL Pinterest Conversion Tracking] extension {#pinterest-extension}
 
+## Overview {#overview}
+
 Track visitor actions on your website after views of your Promoted Pin. Measure return on ad spend and create targeted audiences. Learn more [here](https://ads.pinterest.com/).
 
 [!DNL Pinterest Conversion Tracking] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).

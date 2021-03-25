@@ -6,6 +6,8 @@ description: The LinkedIn Insight Tag extension is an advertising destination in
 
 # [!DNL LinkedIn Insight Tag] extension {#linkedin-insights-extension}
 
+## Overview {#overview}
+
 Install the [!DNL LinkedIn Insight Tag] to use conversion tracking, retargeting and website demographics features.
 
 [!DNL LinkedIn Insight Tag] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see [LinkedIn Insight Tag](https://business.linkedin.com/marketing-solutions/insight-tag).
