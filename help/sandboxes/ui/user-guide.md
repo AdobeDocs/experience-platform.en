@@ -70,6 +70,12 @@ Select the sandbox you want to reset from the list of sandboxes. In the right-na
 
 A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
+![](../images/ui/reset-confirm.png)
+
+In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**
+
+![](../images/ui/reset-final-confirm.png)
+
 ## Delete a sandbox
 
 >[!NOTE]
@@ -86,7 +92,9 @@ A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Cont
 
 ![](../images/ui/delete-confirm.png)
 
-A confirmation message appears and the sandbox is removed from the **[!UICONTROL Sandboxes]** workspace.
+In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Delete]**
+
+![](../images/ui/delete-final-confirm.png)
 
 ## Next steps
 
