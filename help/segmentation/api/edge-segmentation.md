@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: Evaluate Events in Near Real-Time with Edge Segmentation 
 topic: developer guide
-description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
+description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
 ---
 
 # Edge segmentation 
@@ -12,11 +12,11 @@ description: This document contains examples on how to use streaming segmentatio
 >
 >The following document states how to use edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
 
-Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
+Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
 
 ## Getting started
 
-This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with streaming segmentation. Before beginning this tutorial, please review the documentation for the following services:
+This developer guide requires a working understanding of the various [!DNL Adobe Experience Platform] services involved with edge segmentation. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified consumer profile in real-time, based on aggregated data from multiple sources.
 - [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
@@ -57,7 +57,6 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | Query type | Details |
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
-| Profile only | Any segment definition that refers to only a profile attribute. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Frequency query | Any segment definition that refers to an event happening a certain number of times. |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. |
@@ -96,7 +95,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your IMS Organization that are enabled for streaming segmentation.
+A successful response returns an array of segments in your IMS Organization that are enabled for edge segmentation.
 
 ```json
 {

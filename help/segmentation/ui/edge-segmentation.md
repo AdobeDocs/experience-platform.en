@@ -8,7 +8,7 @@ description: Edge segmentation is the ability to do segmentation on Platform nea
 
 # Edge segmentation
 
-Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
+Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
 
 ## Edge segmentation query types
 
@@ -17,7 +17,6 @@ A query can be evaluated with edge segmentation if it meets any of the following
 | Query type | Details | Example |
 | ---------- | ------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
-| Profile only | Any segment definition that refers to only a profile attribute. | |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
 | Frequency query | Any segment definition that refers to an event happening a certain number of times. | |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. | |
