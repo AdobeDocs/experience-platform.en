@@ -129,6 +129,10 @@ A successful response returns the URL for the marketing action, the usage labels
 
 You can evaluate a data usage policy by testing a marketing action against one or more datasets from which labels can be collected. This is done by making a POST request to `/marketingActions/core/{MARKETING_ACTION_NAME}/constraints` and providing dataset IDs within the request body, as shown in the example below.
 
+>[!IMPORTANT]
+>
+>Policies that include an AND relationship in their clauses (for example `C1 AND C2`) are only enforced when both restricted labels are included in the same dataset. If the restricted labels are located in separate datasets, the AND policy is not enforced.
+
 **API format**
 
 ```http

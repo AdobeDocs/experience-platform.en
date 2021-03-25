@@ -61,9 +61,9 @@ Each stage in the above timeline represents an entity that may contribute to a p
 
 >[!IMPORTANT]
 >
->Some data usage policies may specify two or more labels that are "mutually exclusive". For example, a policy could restrict a segment from being activated if it contains both a `C1` AND a `C2` label, but not a segment that only contains one or the other.
+>Some data usage policies may specify two or more labels with an AND relationship. For example, a policy could restrict a marketing action if labels `C1` AND `C2` are both present, but does not restrict the same action if only one of the those labels are present.
 >
->While these kinds policies prevent mutually exclusive labels from being activated to a destination through the same segment, **they do not prevent separate segments (containing one label or the other) from being activated to the same destination**. Ensure that you carefully construct your policy and segment definitions so that undesired usage labels do not get activated to your destinations.
+>When it comes to automatic enforcement, the Data Governance framework does not consider the activation of separate segments to a destination as a combination of data. Therefore, the example `C1 AND C2` policy is enforced if these labels are included in separate segments. Instead, this policy is only enforced when both labels present in the same segment upon activation.
 
 When policy violations occur, the resulting messages that appear in the UI provide useful tools for exploring the violation's contributing data lineage to help resolve the issue. More details are provided in the next section.
 
