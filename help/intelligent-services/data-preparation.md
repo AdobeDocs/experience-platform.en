@@ -3,7 +3,7 @@ keywords: Experience Platform;home;Intelligent Services;popular topics;intellige
 solution: Experience Platform, Intelligent Services
 title: Prepare Data for Use in Intelligent Services
 topic: Intelligent Services
-description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema. 
+description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this.
 ---
 
 # Prepare data for use in [!DNL Intelligent Services]
@@ -23,10 +23,6 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 1. Contact Adobe Consulting Services to request access credentials for a dedicated Azure Blob Storage container.
 1. Using your access credentials, upload your data to the Blob container.
 1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into [!DNL Intelligent Services].
-
-### Adobe Analytics preparation (Customer AI)
-
-Customer AI natively supports Adobe Analytics data. To use Adobe Analytics data, you must map your data to the supported data types. Visit the [Customer AI input documentation](./customer-ai/input-output.md) for more information on supported data types.
 
 ### [!DNL Experience Platform] data preparation
 
@@ -52,6 +48,10 @@ A complete example of the mixin can be found in the [public XDM repository](http
 ## Key fields
 
 There are several key fields within the CEE mixin which should be utilized in order for [!DNL Intelligent Services] to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
+
+### Adobe Analytics preparation (Customer AI)
+
+Customer AI natively supports Adobe Analytics data. To use Adobe Analytics data, you must map your data to the supported data types the same way you would with the CEE schema. Visit the [Customer AI input documentation](./customer-ai/input-output.md) for more information on supported data types.
 
 ### Mandatory fields
 
@@ -262,7 +262,7 @@ When you are ready to start preparing your data for ingestion, the first step is
 >
 >The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE mixin to the schema.
 
-After adding the CEE mixin to the schema, you can add other mixins and data types as required for additional fields within your data.
+After adding the CEE mixin to the schema, you can add other mixins as required for additional fields within your data.
 
 Once you have created and saved the schema, you can create a new dataset based on that schema. The following tutorials walk through the process of creating a new dataset in the UI or API:
 
