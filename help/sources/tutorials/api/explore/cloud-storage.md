@@ -217,7 +217,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&prev
 
 | Parameter | Description |
 | --------- | ----------- |
-| `compressionType` | A query parameter required if you are previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `compressionType` | A query parameter required if you are previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`:</li><li>`gzip`:</li><li>`deflate`:</li><li>`zipDeflate`:</li><li>`tarGzip`:</li><li>`tar`:</li></ul> |
 
 
 **Request**
