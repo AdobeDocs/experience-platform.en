@@ -252,9 +252,6 @@ curl -X POST \
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1.1"
         },
-        "fileDescription": {
-            "format": "parquet"
-        },
         "tags": {
             "identity": [
             "enabled:true"

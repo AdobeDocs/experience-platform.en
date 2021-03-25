@@ -266,11 +266,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
         "id": "{SCHEMA_REF_ID}",
         "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
     },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
-    },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
         "unifiedProfile": ["enabled:true"]
