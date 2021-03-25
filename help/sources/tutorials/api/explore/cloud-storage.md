@@ -96,21 +96,21 @@ A successful response returns an array of files and folders found within the que
     {
         "type": "file",
         "name": "account.csv",
-        "path": "/test-connectors-shefali/testFolder-fileIngestion/account.csv",
+        "path": "/test-connectors/testFolder-fileIngestion/account.csv",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "file",
         "name": "profileData.json",
-        "path": "/test-connectors-shefali/testFolder-fileIngestion/profileData.json",
+        "path": "/test-connectors/testFolder-fileIngestion/profileData.json",
         "canPreview": true,
         "canFetchSchema": true
     },
     {
         "type": "file",
         "name": "sampleprofile--3.parquet",
-        "path": "/test-connectors-shefali/testFolder-fileIngestion/sampleprofile--3.parquet",
+        "path": "/test-connectors/testFolder-fileIngestion/sampleprofile--3.parquet",
         "canPreview": true,
         "canFetchSchema": true
     }
