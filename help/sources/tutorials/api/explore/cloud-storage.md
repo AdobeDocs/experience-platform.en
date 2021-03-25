@@ -192,7 +192,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&file
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=DELIMITEDcolumnDelimiter=\t' \
+    'http://platform.adobe.io/data/foundation/flowservice/connections/{CONNECTION_ID}/explore?objectType=file&object=/some/path/data.csv&fileType=delimited&columnDelimiter=\t' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -201,10 +201,32 @@ curl -X GET \
 
 **Response**
 
+A successful response returns the structure of the queried file including table names and data types.
+
 ```json
-
+[
+    {
+        "name": "Id",
+        "type": "String"
+    },
+    {
+        "name": "FirstName",
+        "type": "String"
+    },
+    {
+        "name": "LastName",
+        "type": "String"
+    },
+    {
+        "name": "Email",
+        "type": "String"
+    },
+    {
+        "name": "Phone",
+        "type": "String"
+    }
+]
 ```
-
 ### Inspect a compressed JSON or delimited file
 
 To inspect the structure and contents of a compressed JSON or delimited file, perform a GET request and provide the `compressionType` as part of the query parameters.
@@ -217,7 +239,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=FILE&object={FILE_PATH}&prev
 
 | Parameter | Description |
 | --------- | ----------- |
-| `compressionType` | A query parameter required if you are previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`:</li><li>`gzip`:</li><li>`deflate`:</li><li>`zipDeflate`:</li><li>`tarGzip`:</li><li>`tar`:</li></ul> |
+| `compressionType` | A query parameter required if you are previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 
 **Request**
@@ -233,10 +255,32 @@ curl -X GET \
 
 **Response**
 
+A successful response returns the structure of the queried file including table names and data types.
+
 ```json
-
+[
+    {
+        "name": "Id",
+        "type": "String"
+    },
+    {
+        "name": "FirstName",
+        "type": "String"
+    },
+    {
+        "name": "LastName",
+        "type": "String"
+    },
+    {
+        "name": "Email",
+        "type": "String"
+    },
+    {
+        "name": "Phone",
+        "type": "String"
+    }
+]
 ```
-
 
 ## Next steps
 
