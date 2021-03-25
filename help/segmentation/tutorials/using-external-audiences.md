@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Importing and using external audiences
-description: Follow this tutorial to learn how to learn how to use external audiences with Adobe Experience Platform.
+description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
 topic: tutorial
 ---
 
