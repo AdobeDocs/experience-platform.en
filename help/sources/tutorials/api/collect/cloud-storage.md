@@ -61,9 +61,16 @@ Use the following the enum values for file-based connectors:
 
 For all table-based connectors, set the value to `tabular`.
 
->[!NOTE]
->
->You can ingest CSV and TSV files with a cloud storage source connector by specifying a column delimiter as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+During this step, you can specify a custom delimiter when ingesting delimited files by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+
+You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. The list of supported compressed file types are:
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
 
 **API format**
 
@@ -72,6 +79,8 @@ POST /sourceConnections
 ```
 
 **Request**
+
+The following example request creates a source connection for a delimited file type using tab-separated values.
 
 ```shell
 curl -X POST \
@@ -82,9 +91,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -93,7 +102,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -107,6 +116,42 @@ curl -X POST \
 | `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
+
+**Request**
+
+The following example request creates a source connection for a compressed delimited file using a `gzip` file type.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| Property | Description |
+| --- | --- |
+| `data.properties.compressionType` | Determines the compressed file type for ingestion. This property is only required when ingesting compressed JSON or delimited files. |
 
 **Response**
 
