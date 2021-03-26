@@ -41,7 +41,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or capital letters. |
+| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces, capital letters, or special characters. |
 | `title` | A human-readable name used for display purposes in the Platform user interface. |
 | `type` | The type of sandbox to be created. The value for the `type` property can be either development or production. |
 
@@ -95,7 +95,7 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. Cannot contain any spaces or capital letters. |
+| `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces, capital letters, or special characters. |
 | `title` | A human-readable name used for display purposes in the Platform user interface. |
 | `type` | The type of sandbox to be created. The value for the `type` property can be either development or production. |
 | `isDefault` | A boolean value that determines if the production sandbox to be created is the default production sandbox. |
@@ -116,4 +116,4 @@ A successful response returns the details of the newly created sandbox, showing 
 
 >[!NOTE]
 >
->Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".
+>Sandboxes take under 30 seconds to be provisioned by the system, after which their `state` will become "active" or "failed".
