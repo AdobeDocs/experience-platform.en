@@ -78,6 +78,8 @@ You can also ingest compressed JSON or delimited files by specifying its `compre
 POST /sourceConnections
 ```
 
+### Delimited files
+
 **Request**
 
 The following example request creates a source connection for a delimited file type using tab-separated values.
@@ -116,6 +118,8 @@ curl -X POST \
 | `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
+
+### Compressed files
 
 **Request**
 
