@@ -30,7 +30,7 @@ See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-ki
 >
 >Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
 
-![Connect to cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Connect to cloud storage destination - account step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
 ## Authentication step {#authentication}
 
@@ -54,7 +54,32 @@ For [!DNL Azure Event Hubs] destinations, provide the name of your existing data
 
 ![Connect to Event Hubs cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)   
 
-Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
+Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. Read the section [Activate segments](#activate-segments), for the rest of the workflow to export data.
+
+## Use macros to create a folder in your storage location{#use-macros}
+
+To create a custom folder per segment file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
+
+![Connect to Event Hubs cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
+
+The examples below reference a sample segment `Luxury Audience` with ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+### Macro 1 - `%SEGMENT_NAME%`
+
+Input: `acme/campaigns/2021/%SEGMENT_NAME%`
+Folder path in your storage location: `acme/campaigns/2021/Luxury Audience`
+
+### Macro 2 - `%SEGMENT_ID%`
+
+Input: `acme/campaigns/2021/%SEGMENT_ID%`
+Folder path in your storage location: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+
+Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Activate segments {#activate-segments}
 
