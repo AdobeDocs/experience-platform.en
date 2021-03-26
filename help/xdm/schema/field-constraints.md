@@ -441,3 +441,5 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
   </tr>
 </table>
+
+{style="table-layout:auto"}
