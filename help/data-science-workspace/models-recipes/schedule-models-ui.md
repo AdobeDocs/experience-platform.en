@@ -26,45 +26,44 @@ This tutorial requires an existing Service. If you do not have an accessible Ser
 
 Model scoring can be configured to be an automated process on a scheduled basis. Once a Service is created, you can follow the steps below to configure and apply a scoring schedule:
 
-In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!DNL Service Gallery]**. Find the Service you wish to schedule scoring runs on and click **[!UICONTROL Open]** to view its **Overview** page.
+In Adobe Experience Platform, select the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!DNL Service Gallery]**. Find the Service you wish to schedule scoring runs on and select **[!UICONTROL Open]** to view its **[!UICONTROL Overview]** page.
 
-![](../images/models-recipes/schedule/click_to_open.png)
+![](../images/models-recipes/schedule/select_service.png)
 
-The Overview page displays the Service's scoring information. Click the **[!UICONTROL Update Schedule]** link to configure a scoring schedule.
+The Overview page displays the Service's scoring information. Select the **[!UICONTROL Update Schedule]** link to configure a scoring schedule.
 
-![](../images/models-recipes/schedule/service_overview_score.png)
+![](../images/models-recipes/schedule/update_scoring.png)
 
-Configure the frequency, start date, end date, input dataset, and output dataset for the scoring schedule. Once you are satisfied with the configurations, click **[!UICONTROL Create]** to update the Service's scoring schedule.
+Configure the frequency, start date, end date, input dataset, and output dataset for the scoring schedule. Once you are satisfied with the configurations, select **[!UICONTROL Create]** to update the service's scoring schedule.
 
-![](../images/models-recipes/schedule/14_configure_scoring_schedule.png)
+![](../images/models-recipes/schedule/set_scoring_schedule.png)
 
-Your updated scoring schedule is shown in the Service's **Overview** page.
+Your updated scoring schedule is shown in the service's **[!UICONTROL Overview]** page.
 
-![](../images/models-recipes/schedule/service_with_scoring_schedule.png)
-
+![](../images/models-recipes/schedule/scoring_set.png)
 
 ## Configure scheduled training {#configure-scheduled-training}
 
-Configuring scheduled training runs on a Service ensures that the machine learning Model is updated to the most recent data patterns. Whenever a scheduled training run completes, the resulting trained Model is used to power the Service until the next scheduled training run. 
+Configuring scheduled training runs on a service ensures that the machine learning model is updated to the most recent data patterns. Whenever a scheduled training run completes, the resulting trained model is used to power the service until the next scheduled training run. 
 
-Once a Service is created, you can follow the steps below to configure and apply a training schedule:
+Once a service is created, you can follow the steps below to configure and apply a training schedule:
 
-In Adobe Experience Platform, click the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the Service you wish to schedule training runs on and click **[!UICONTROL Open]** to view its **Overview** page.
+In Adobe Experience Platform, select the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!UICONTROL Service Gallery]**. Find the service you wish to schedule training runs on and select **[!UICONTROL Open]** to view its **[!UICONTROL Overview]** page.
 
-![](../images/models-recipes/schedule/click_to_open.png)
+![](../images/models-recipes/schedule/select_service.png)
 
-The Overview page displays the Service's training information. Click the **[!UICONTROL Update Schedule]** link to configure a training schedule.
+The Overview page displays the service's training information. Select the **[!UICONTROL Update Schedule]** link to configure a training schedule.
 
-![](../images/models-recipes/schedule/service_overview_train.png)
+![](../images/models-recipes/schedule/update_training.png)
 
-Configure the frequency, start date, end date, and input dataset used for the training schedule. Once you are satisfied with the configurations, click **[!UICONTROL Create]** to update the Service's training schedule.
+Configure the frequency, start date, end date, and input dataset used for the training schedule. Once you are satisfied with the configurations, select **[!UICONTROL Create]** to update the service's training schedule.
 
-![](../images/models-recipes/schedule/12_configure_training_schedule.png)
+![](../images/models-recipes/schedule/set_training_schedule.png)
 
-Your updated training schedule is shown in the Service's **Overview** page.
+Your updated training schedule is shown in the service's **[!UICONTROL Overview]** page.
 
-![](../images/models-recipes/schedule/service_with_training_schedule.png)
+![](../images/models-recipes/schedule/training_set.png)
 
 ## Next steps
 
-By following this tutorial, you have successfully scheduled automated training and scoring runs on a Service, and completed the [!DNL Data Science Workspace] tutorial UI workflow. If you have not done so already, consider [restarting the tutorial](./create-retails-sales-dataset.md) and follow the API workflow to create, train, score, and publish a Model.
+By following this tutorial, you have successfully scheduled automated training and scoring runs on a service, and completed the [!DNL Data Science Workspace] tutorial UI workflow. If you have not done so already, consider [restarting the tutorial](./create-retails-sales-dataset.md) and follow the API workflow to create, train, score, and publish a model.
