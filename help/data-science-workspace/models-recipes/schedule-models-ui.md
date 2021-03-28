@@ -9,9 +9,9 @@ description: Adobe Experience Platform Data Science Workspace allows you to set 
 
 # Schedule a model in the Data Science Workspace UI
 
-Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning Service. Automating the training and scoring process can help maintain and improve a Service's efficiency through time by keeping up with patterns within your data.
+Adobe Experience Platform [!DNL Data Science Workspace] allows you to set up scheduled scoring and training runs on a machine learning service. Automating the training and scoring process can help maintain and improve a service's efficiency through time by keeping up with patterns within your data.
 
-This tutorial walks through the steps to configure training and scoring schedules on an existing Service through the [!UICONTROL Service Gallery]. It is broken into the following main sections:
+This tutorial walks through the steps to configure training and scoring schedules on an existing service through the [!UICONTROL Service Gallery]. It is broken into the following main sections:
 
 -   [Configure scheduled scoring](#configure-scheduled-scoring)
 -   [Configure scheduled training](#configure-scheduled-training)
@@ -20,13 +20,13 @@ This tutorial walks through the steps to configure training and scoring schedule
 
 In order to complete this tutorial, you must have access to [!DNL Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
 
-This tutorial requires an existing Service. If you do not have an accessible Service to work with, you can create one by following the [Publish your Model as a Service in the UI](./publish-model-service-ui.md) tutorial.
+This tutorial requires an existing service. If you do not have an accessible service to work with, you can create one by following the tutorial for [publishing a model as a service](./publish-model-service-ui.md).
 
 ## Configure scheduled scoring {#configure-scheduled-scoring}
 
-Model scoring can be configured to be an automated process on a scheduled basis. Once a Service is created, you can follow the steps below to configure and apply a scoring schedule:
+Model scoring can be configured to be an automated process on a scheduled basis. Once a service is created, you can follow the steps below to configure and apply a scoring schedule:
 
-In Adobe Experience Platform, select the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!DNL Service Gallery]**. Find the Service you wish to schedule scoring runs on and select **[!UICONTROL Open]** to view its **[!UICONTROL Overview]** page.
+In Adobe Experience Platform, select the **[!UICONTROL Services]** tab located in the left navigation column to access the **[!DNL Service Gallery]**. Find the service you wish to schedule scoring runs on and select **[!UICONTROL Open]** to view its **[!UICONTROL Overview]** page.
 
 ![](../images/models-recipes/schedule/select_service.png)
 
