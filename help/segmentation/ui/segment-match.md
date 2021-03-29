@@ -16,12 +16,12 @@ Segment Match is a segment-sharing service in Adobe Experience Platform that all
 
 With Segment Match you can:
 
-* Manage the Identity overlap process.
+* Manage the identity overlap process.
 * View pre-share estimates.
 * Apply data usage labels to control the that data can and cannot be shared with partners.
 * Maintain shared audience lifecycle management after publishing a feed and continue a dynamic exchange of data through abilities to add, delete, and unshare.
 
-Segment Match uses an Identity overlap process to ensure that segment sharing is done in a secure and privacy-focused manner. Prior to sharing a segment between a sender and a receiver, the Identity overlap process checks for an overlap in identity namespaces and consent checks between sender and receiver(s). Both overlap checks must pass in order for a segment to be shared.
+Segment Match uses an identity overlap process to ensure that segment sharing is done in a secure and privacy-focused manner. An **overlapped identity** defines an identity that has a match in both your segment and your selected partner's segment. Prior to sharing a segment between a sender and a receiver, the identity overlap process checks for an overlap in namespaces and consent checks between sender and receiver(s). Both overlap checks must pass in order for a segment to be shared.
 
 The documentation below provides more information about Segment Match, including details on set up and its end-to-end workflow.
 
@@ -102,6 +102,8 @@ The overlap estimates report allows you to manage overlap and consent checks per
 
 | Metrics | Description |
 | ------- | ----------- |
+| Estimated overlapped identities | The number of identities that qualify for the selected segment and also have a match with the selected partner. These identities are displayed by namespace and do not represent individual Profile identities. The overlap estimates are based on Profile sketches. |
+| Estimated identities with consent | The total number of overlapped identities that meet the consent requirements configured for your organization. |
 
 ### Publish feed
 
