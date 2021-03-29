@@ -6,6 +6,8 @@ description: The JW Player Analytics (Beta) extension is an analytics destinatio
 
 # [!DNL JW Player Analytics] (Beta) extension {#jw-player-analytics-extension}
 
+## Overview {#overview}
+
 This extension installs the [!DNL JW Player] adapter to connect [!DNL JW Player] events to Adobe Video Analytics. Harness the power of Adobe Video Analytics to gain detailed insights to understanding your customers’ video viewing habits.
 
 [!DNL JW Player Analytics] (Beta) is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101523.jw-player-analytics-launch-extension.html).
