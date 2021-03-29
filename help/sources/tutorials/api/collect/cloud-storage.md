@@ -61,13 +61,16 @@ Use the following the enum values for file-based sources:
 
 For all table-based sources, set the value to `tabular`.
 
+- [Create a source connection using custom delimited files](#create-a-source-connection-using-custom-delimited-files)
+- [Create a source connection using compressed files](#create-a-source-connection-using-compressed-files)
+
 **API format**
 
 ```http
 POST /sourceConnections
 ```
 
-### Using custom delimited files {#using-custom-delimited-files}
+### Create a source connection using custom delimited files {#using-custom-delimited-files}
 
 **Request**
 
@@ -121,7 +124,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Using compressed files {#using-compressed-files}
+### Create a source connection using compressed files {#using-compressed-files}
 
 **Request**
 
