@@ -205,7 +205,7 @@ The following table outlines the appropriate formatting to define different fiel
 
 To begin, find the desired field type and use the sample code provided to build your API request for [creating a mixin](../api/mixins.md#create) or [creating a data type](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM type</th>
     <th>Optional properties</th>
@@ -441,5 +441,3 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
   </tr>
 </table>
-
-{style="table-layout:auto"}
