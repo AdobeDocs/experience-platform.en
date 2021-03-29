@@ -16,7 +16,7 @@ A schema is a set of rules that represent and validate the structure and format 
 
 In addition to describing the structure of data, schemas apply constraints and expectations to data so it can be validated as it moves between systems. These standard definitions allow data to be interpreted consistently, regardless of origin, and remove the need for translation across applications.
 
-[!DNL Experience Platform] maintains this semantic normalization through the use of schemas. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reused across an organization without conflicts, or even shared between multiple organizations.
+[!DNL Experience Platform] maintains this semantic normalization by using schemas. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reused across an organization without conflicts, or even shared between multiple organizations.
 
 XDM schemas are ideal for storing vast amounts of complex data in a self-contained format. See the sections on [embedded objects](#embedded) and [big data](#big-data) in the appendix to this document for more information on how XDM accomplishes this.
 
@@ -26,7 +26,7 @@ Standardization is a key concept behind [!DNL Experience Platform]. XDM, driven 
 
 The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
-There are several key benefits to building and utilizing schemas in [!DNL Experience Platform]. First, schemas allows for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
+There are several key benefits to building and utilizing schemas in [!DNL Experience Platform]. First, schemas allow for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
 
 ## Planning your schema
 
@@ -51,9 +51,9 @@ To help with this process, key fields within your schemas can be marked as ident
 
 Fields that are commonly marked as "[!UICONTROL Identity]" include: email address, phone number, [[!DNL Experience Cloud ID (ECID)]](https://experienceleague.adobe.com/docs/id-service/using/home.html), CRM ID, or other unique ID fields. You should also consider any unique identifiers specific to your organization, as they may be good "[!UICONTROL Identity]" fields as well.
 
-It is important to think about customer identities during the schema planning phase in order to help ensure data is being brought together to build the most robust profile possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
+It is important to think about customer identities during the schema planning phase in order to help ensure that data is being brought together to build the most robust profile possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
-#### xdm:identityMap {#identityMap}
+#### `xdm:identityMap` {#identityMap}
 
 `xdm:identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
@@ -90,7 +90,7 @@ As the example above shows, each key in the `identityMap` object represents an i
 
 >[!NOTE]
 >
->A boolean value for whether or not the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
+>A boolean value for whether the value is a primary identity (`primary`) can also be provided for each identity value. Primary identities only need to be set for schemas intended to be used in [!DNL Real-time Customer Profile]. See the section on [union schemas](#union) for more information.
 
 ### Schema evolution principles {#evolution}
 
@@ -160,7 +160,7 @@ Data types are used as reference field types in classes or schemas in the same w
 >
 >See the [appendix](#mixins-v-datatypes) for more information on the differences between mixins and data types, and the pros and cons of using one over the other for similar use cases.
 
-[!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become more clear as you walk through the steps to define data types.
+[!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
 
 The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the ([!UICONTROL Demographic Details]) mixin uses the "[!UICONTROL Person name]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
@@ -258,7 +258,7 @@ To begin using the [!DNL Schema Registry] API, start by reading the [Schema Regi
 
 ## Appendix
 
-The following sections contains additional information regarding the principles of schema composition.
+The following sections contain additional information regarding the principles of schema composition.
 
 ### Relational tables versus embedded objects {#embedded}
 
@@ -307,4 +307,4 @@ The pros and cons of using free-form fields over objects are listed below.
 
 **Cons**:
 
-* The location of free-form fields within the schema is ad-hoc, meaning they appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.
+* The location of free-form fields within the schema is ad hoc, meaning they appear in alphabetical order within the Schema Editor. This can make schemas less structured, and similar free-form fields can end up being far separated depending on their names.

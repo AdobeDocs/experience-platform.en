@@ -7,7 +7,7 @@ description: This document provides an overview of the Segment definition class 
 
 # [!UICONTROL Segment definition] class
 
-"[!UICONTROL Segment definition]" is a standard Experience Data Model (XDM) class that captures the details of a segment definition. The class includes required fields such as the ID and name of a segment, along with additional optional attributes. This class should be used if you are bringing in segment definitions from external systems into Adobe Experience Platform.
+"[!UICONTROL Segment definition]" is a standard Experience Data Model (XDM) class that captures the details of a segment definition. The class includes required fields such as the ID and name of a segment, along with other optional attributes. This class should be used if you are bringing in segment definitions from external systems into Adobe Experience Platform.
 
 >[!NOTE]
 >
@@ -26,5 +26,5 @@ description: This document provides an overview of the Segment definition class 
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | The ID of the user who last modified the record. |
 | `segmentName` | **(Required)** A name for the segment definition. |
-| `segmentStatus` | The current status of the segment from the external system. The following values are accepted: <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
+| `segmentStatus` | The status of the segment from the external system. The following values are accepted: <ul><li>`ACTIVE`</li><li>`INACTIVE`</li><li>`DELETED`</li><li>`DRAFT`</li><li>`REVOKED`</li></ul> |
 | `version` | The latest version number of the segment definition. |
