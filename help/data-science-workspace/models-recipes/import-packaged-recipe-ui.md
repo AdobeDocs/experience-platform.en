@@ -243,7 +243,7 @@ Once you are on the **Select source** page, paste the Docker URL corresponding t
 
 Next, select the Retail Sales input and output schemas using the **Manage Schemas** selector, the schemas were created using the provided bootstrap script in the [create the retail sales schema and dataset](../models-recipes/create-retails-sales-dataset.md) tutorial. 
 
-![manage schemas](../images/models-recipes/import-package-ui/Manage-schemas.png)
+![manage schemas](../images/models-recipes/import-package-ui/manage-schemas.png)
 
 Under the **Feature Management** section, select on your tenant identification in the schema viewer to expand the Retail Sales input schema. Select the input and output features by highlighting the desired feature, and selecting either **[!UICONTROL Input Feature]** or **[!UICONTROL Target Feature]** in the right **[!UICONTROL Field Properties]** window. For the purpose of this tutorial, set "[!UICONTROL weeklySales]" as the  **[!UICONTROL Target Feature]** and everything else as **[!UICONTROL Input Feature]**. Select **[!UICONTROL Next]** to review your new configured recipe.
 
