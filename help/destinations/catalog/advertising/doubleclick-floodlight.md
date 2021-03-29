@@ -6,6 +6,8 @@ description: The DoubleClick Floodlight (Beta) extension is an advertising desti
 
 # [!DNL DoubleClick Floodlight] (Beta) extension
 
+## Overview {#overview}
+
 This extension allows for quick and easy deployment of [!DNL DoubleClick Floodlight] tags using the traditional floodlight format (not Global Site Tag). Note: This extension is in beta.
 
 [!DNL DoubleClick Floodlight] (Beta) is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the [!DNL Google] support documentation for [DoubleClick Floodlight](https://support.google.com/dcm/answer/2823388?hl=en).

@@ -57,10 +57,6 @@ You customers may interact with your brand through a combination of online and o
 
 The following video is intended to support your understanding of identities and identity graphs. The following video covers the three capabilities of Identity Collection, Identity Graphs, and the APIs. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses the role of private identity graphs, Adobe Experience Platform Identity Service Co-Op Graph, and third-party graphs.
 
->[!IMPORTANT]
->
-> Probabilistic private graphs is still in development and set to release at a later date.
-
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 
 ### Identity namespaces

@@ -6,6 +6,8 @@ description: The Adobe Target extension is a personalization destination in Adob
 
 # Adobe Target extension {#adobe-target-extension}
 
+## Overview {#overview}
+
 Adobe Target is the Adobe Experience Cloud solution that provides everything you need to tailor and personalize your customers' experience to maximize revenue on your web and mobile sites, apps, social media, and other digital channels.
 
 Adobe Target is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100162.html).
