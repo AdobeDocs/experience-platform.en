@@ -47,6 +47,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ## Create a source connection {#source}
 
+- [Create a source connection using custom delimited files](#create-a-source-connection-using-custom-delimited-files)
+- [Create a source connection using compressed files](#create-a-source-connection-using-compressed-files)
+
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
 To create a source connection, you must also define an enum value for the data format attribute.
@@ -60,9 +63,6 @@ Use the following the enum values for file-based sources:
 | Parquet | `parquet` |
 
 For all table-based sources, set the value to `tabular`.
-
-- [Create a source connection using custom delimited files](#create-a-source-connection-using-custom-delimited-files)
-- [Create a source connection using compressed files](#create-a-source-connection-using-compressed-files)
 
 **API format**
 
