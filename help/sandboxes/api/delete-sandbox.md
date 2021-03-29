@@ -42,7 +42,6 @@ A successful response returns the sandbox's updated details, showing that its `s
 
 ```json
 {
-    "id": "79c44092-d16e-4202-8440-92d16e12024c",
     "name": "dev-2",
     "title": "Development 2",
     "state": "deleted",
