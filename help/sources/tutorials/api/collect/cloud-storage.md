@@ -51,7 +51,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for file-based connectors:
+Use the following the enum values for file-based sources:
 
 | Data format | Enum value |
 | ----------- | ---------- |
@@ -59,18 +59,7 @@ Use the following the enum values for file-based connectors:
 | JSON | `json` |
 | Parquet | `parquet` |
 
-For all table-based connectors, set the value to `tabular`.
-
-During this step, you can specify a custom delimiter when ingesting delimited files by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
-
-You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. The list of supported compressed file types are:
-
-- `bzip2`
-- `gzip`
-- `deflate`
-- `zipDeflate`
-- `tarGzip`
-- `tar`
+For all table-based sources, set the value to `tabular`.
 
 **API format**
 
@@ -78,9 +67,11 @@ You can also ingest compressed JSON or delimited files by specifying its `compre
 POST /sourceConnections
 ```
 
-### Delimited files
+### Custom delimited files
 
 **Request**
+
+You can ingested a delimited file with a custom delimiter by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
 
 The following example request creates a source connection for a delimited file type using tab-separated values.
 
@@ -119,9 +110,29 @@ curl -X POST \
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
+**Response**
+
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
 ### Compressed files
 
 **Request**
+
+You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. The list of supported compressed file types are:
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
 
 The following example request creates a source connection for a compressed delimited file using a `gzip` file type.
 
