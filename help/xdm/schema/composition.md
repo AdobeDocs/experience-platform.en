@@ -154,11 +154,7 @@ For the most up-to-date list of available standard XDM mixins, refer to the [off
 
 ### Data type {#data-type}
 
-Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a mixin, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a mixin because a data type can be included anywhere in a schema by adding it as the "data type" of a field. 
-
->[!NOTE]
->
->See the [appendix](#mixins-v-datatypes) for more information on the differences between mixins and data types, and the pros and cons of using one over the other for similar use cases.
+Data types are used as reference field types in classes or schemas in the same way as basic literal fields. The key difference is that data types can define multiple sub-fields. Similar to a mixin, a data type allows for the consistent use of a multi-field structure, but has more flexibility than a mixin because a data type can be included anywhere in a schema by adding it as the "data type" of a field.
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
 
@@ -240,6 +236,13 @@ For more information on working with [!DNL Profile], see the [Real-time Customer
 ## Mapping datafiles to XDM schemas
 
 All datafiles that are ingested into [!DNL Experience Platform] must conform to the structure of an XDM schema. For more information on how to format datafiles to comply with XDM hierarchies (including sample files), see the document on [sample ETL transformations](../../etl/transformations.md). For general information about ingesting datafiles into [!DNL Experience Platform], see the [batch ingestion overview](../../ingestion/batch-ingestion/overview.md).
+
+## Schemas for external segments
+
+If you are bringing segments from external systems into Platform, you must use the following components to capture them in your schemas:
+
+* [[!UICONTROL Segment definition] class](../classes/segment-definition.md): Use this standard class to capture key attributes of an external segment definition.
+* [[!UICONTROL Segment Membership Details] mixin](../mixins/profile/segmentation.md): Add this mixin to your [!UICONTROL XDM Individual Profile] schema in order to associate customer profiles with specific segments.
 
 ## Next steps
 
