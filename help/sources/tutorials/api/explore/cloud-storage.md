@@ -136,7 +136,7 @@ GET /connections/{CONNECTION_ID}/explore?objectType=file&object={FILE_PATH}&prev
 | `{CONNECTION_ID}` | The connection ID of your cloud storage source connector. |
 | `{FILE_PATH}` | The path to the file you want to inspect. |
 | `{FILE_TYPE}` | The type of the file. Supported file types include:<ul><li><code>DELIMITED</code>: Delimiter-separated value. DSV files must be comma-separated.</li><li><code>JSON</code>: JavaScript Object Notation. JSON files must be XDM compliant</li><li><code>PARQUET</code>: Apache Parquet. Parquet files must be XDM compliant.</li></ul> |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters that can be used to filter results. See the section on [query parameters](#query) for more information. |
 
 **Request**
 
@@ -185,7 +185,7 @@ The [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/
 | Parameter | Description |
 | --------- | ----------- |
 | `columnDelimiter` | The single character value you specified as a column delimiter to inspect CSV or TSV files. If the parameter is unprovided, the value defaults to a comma `(,)`. |
-| `compressionType` | A query parameter required if you are previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
+| `compressionType` | A required query parameter for previewing a compressed delimited or JSON file. The supported compressed files are: <ul><li>`bzip2`</li><li>`gzip`</li><li>`deflate`</li><li>`zipDeflate`</li><li>`tarGzip`</li><li>`tar`</li></ul> |
 
 ## Next steps
 

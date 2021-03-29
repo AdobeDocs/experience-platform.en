@@ -67,11 +67,11 @@ For all table-based sources, set the value to `tabular`.
 POST /sourceConnections
 ```
 
-### Custom delimited files
+### Using custom delimited files {#using-custom-delimited-files}
 
 **Request**
 
-You can ingested a delimited file with a custom delimiter by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+You can ingest a delimited file with a custom delimiter by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
 
 The following example request creates a source connection for a delimited file type using tab-separated values.
 
@@ -121,7 +121,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Compressed files
+### Using compressed files {#using-compressed-files}
 
 **Request**
 
