@@ -59,10 +59,6 @@ A successful response returns the details of the newly created sandbox, showing 
 }
 ```
 
->[!NOTE]
->
->Sandboxes take roughly 15 minutes to be provisioned by the system, after which their `state` will become "active" or "failed".
-
 ## Create a production sandbox
 
 To create a production sandbox, make a POST request to the `/sandboxes` endpoint and provide the value `production` for the property `type`.
@@ -113,7 +109,3 @@ A successful response returns the details of the newly created sandbox, showing 
     "region": "VA7"
 }
 ```
-
->[!NOTE]
->
->Sandboxes take under 30 seconds to be provisioned by the system, after which their `state` will become "active" or "failed".
