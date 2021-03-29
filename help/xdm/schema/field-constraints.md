@@ -26,7 +26,7 @@ XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar s
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM type</th>
@@ -178,6 +178,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
+{style="table-layout:auto"}
+
 ### MongoDB, Aerospike, and Protobuf 2 {#mongo}
 
 | XDM type | MongoDB | Aerospike | Protobuf 2 | 
@@ -192,6 +194,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL DateTime] | `timestamp` | `Integer`<br>(Unix milliseconds) | `int64`<br>(Unix milliseconds) |
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binary) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
+
+{style="table-layout:auto"}
 
 ## Defining XDM field types in the API {#define-fields}
 
