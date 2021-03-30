@@ -55,6 +55,12 @@ As an alternative to an ongoing data selection process, batch segmentation moves
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
+### Edge segmentation
+
+Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
+
+To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
+
 ## Access segmentation results
 
 To learn how to access an exported segment, see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md).

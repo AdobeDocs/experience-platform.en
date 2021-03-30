@@ -163,7 +163,7 @@ More information about streaming segmentation can be found in the [streaming seg
 
 ## Edge segmentation {#edge-segmentation}
 
-Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
+Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
 
 More information about edge segmentation can be found in the [edge segmentation user guide](./edge-segmentation.md)
 
