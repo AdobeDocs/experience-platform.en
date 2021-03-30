@@ -60,7 +60,7 @@ Your destination is now created. You can select **[!UICONTROL Save & Exit]** if 
 
 To create a custom folder per segment file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
 
-![Connect to Event Hubs cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
+![How to use macros to create a folder in your storage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
 
 The examples below reference a sample segment `Luxury Audience` with ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
