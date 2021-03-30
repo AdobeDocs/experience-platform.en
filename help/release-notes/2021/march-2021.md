@@ -10,20 +10,17 @@ author: ens72741
 
 **Release date: March 31, 2021**
 
-New features in Adobe Experience Platform:
-
-
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New features**
+The following updates to sources are included in the March 2021 release of Experience Platform:
 
 | Feature | Description |
 | ------- | ----------- |
