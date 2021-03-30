@@ -40,7 +40,7 @@ You can navigate through the list of sandboxes available to you by using the sea
 
 >[!NOTE]
 >
->Multiple Production Sandboxes is in beta. The feature and documentation are subject to change.
+>The Multiple Production Sandboxes feature is in beta.
 
 Use the following video for a quick overview on how to use Sandboxes in Experience Platform.
 

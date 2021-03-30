@@ -18,7 +18,7 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 >[!NOTE]
 >
->Multiple Production Sandboxes is in beta. The feature and documentation are subject to change.
+>The Multiple Production Sandboxes feature is in beta.
 
 Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. An Experience Platform instance supports multiple production and non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
 

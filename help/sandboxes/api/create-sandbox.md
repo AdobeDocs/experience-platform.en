@@ -62,7 +62,7 @@ A successful response returns the details of the newly created sandbox, showing 
 
 >[!NOTE]
 >
->Multiple Production Sandboxes is in beta. The feature and documentation are subject to change.
+>The Multiple Production Sandboxes feature is in beta.
 
 To create a production sandbox, make a POST request to the `/sandboxes` endpoint and provide the value `production` for the property `type`.
 
