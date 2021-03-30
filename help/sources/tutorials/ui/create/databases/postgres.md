@@ -9,10 +9,6 @@ description: Learn how to create a PostgreSQL source connection using the Adobe 
 
 # Create a [!DNL PostgreSQL] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL PostgreSQL] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PostgreSQL] (hereinafter referred to as "PSQL") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
