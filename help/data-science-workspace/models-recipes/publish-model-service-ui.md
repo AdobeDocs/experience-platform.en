@@ -29,7 +29,7 @@ Select **[!UICONTROL Publish]** near the top right of the Model overview page to
 
 ![](../images/models-recipes/publish-model/view_training.png)
 
-Input a desired name for the Service and optionally provide a Service description, click **[!UICONTROL Next]** when finished.
+Input a desired name for the Service and optionally provide a Service description, select **[!UICONTROL Next]** when finished.
 
 ![](../images/models-recipes/publish-model/configure_training.png)
 

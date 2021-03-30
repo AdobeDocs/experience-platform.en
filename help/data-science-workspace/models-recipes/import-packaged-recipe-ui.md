@@ -163,7 +163,7 @@ The **Configure** page for the **Import recipe** workflow appears. Enter a name 
 >
 > In the [Package source files into a Recipe](./package-source-files-recipe.md) tutorial, a Docker URL was provided at the end of building the Retail Sales recipe using R source files.
 
-Once you are on the **Select source** page, paste the Docker URL corresponding to the packaged recipe built using R source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Select **[!UICONTROL R]** in the **Runtime** drop down and **[!UICONTROL Classification]** in the **Type** drop down.. Once everything has been filled out, select **[!UICONTROL Next]** in the top-right corner to proceed to **Manage schemas**.
+Once you are on the **Select source** page, paste the Docker URL corresponding to the packaged recipe built using R source files in the **[!UICONTROL Source URL]** field. Next, import the provided configuration file by dragging and dropping, or use the file system **Browser**. The provided configuration file can be found at `experience-platform-dsw-reference/recipes/R/Retail\ -\ GradientBoosting/retail.config.json`. Select **[!UICONTROL R]** in the **Runtime** drop down and **[!UICONTROL Classification]** in the **Type** drop down. Once everything has been filled out, select **[!UICONTROL Next]** in the top-right corner to proceed to **Manage schemas**.
 
 >[!NOTE]
 >
