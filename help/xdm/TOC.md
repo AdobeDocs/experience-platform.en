@@ -15,15 +15,10 @@ feature: Schemas
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
-  * Industry data models {#industries}
-    * [Overview](./schema/industries/overview.md)
-    * [Retail data model ERD](./schema/industries/retail.md)
-    * [Financial services data model ERD](./schema/industries/financial.md)
-    * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
-    * [Telecommunications data model ERD](./schema/industries/telecom.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Segment definition](./classes/segment-definition.md)
 * Mixins {#mixins}
   * Profile mixins {#profile}
     * [IdentityMap](./mixins/profile/identitymap.md)

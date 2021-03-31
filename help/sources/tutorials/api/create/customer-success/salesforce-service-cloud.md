@@ -9,10 +9,6 @@ description: Learn how to connect Adobe Experience Platform to Salesforce Servic
 
 # Create a [!DNL Salesforce Service Cloud] source connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Salesforce Service Cloud] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to [!DNL Salesforce Service Cloud] (hereinafter referred to as "SSC").

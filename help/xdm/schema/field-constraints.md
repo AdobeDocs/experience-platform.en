@@ -26,7 +26,7 @@ XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar s
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM type</th>
@@ -178,6 +178,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
+{style="table-layout:auto"}
+
 ### MongoDB, Aerospike, and Protobuf 2 {#mongo}
 
 | XDM type | MongoDB | Aerospike | Protobuf 2 | 
@@ -193,6 +195,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binary) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
+{style="table-layout:auto"}
+
 ## Defining XDM field types in the API {#define-fields}
 
 All XDM fields are defined using the standard [JSON Schema](https://json-schema.org/) constraints that apply to their field type, with additional constraints for field names that are enforced by [!DNL Experience Platform]. The Schema Registry API allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
@@ -205,7 +209,7 @@ The following table outlines the appropriate formatting to define different fiel
 
 To begin, find the desired field type and use the sample code provided to build your API request for [creating a mixin](../api/mixins.md#create) or [creating a data type](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM type</th>
     <th>Optional properties</th>
@@ -441,5 +445,3 @@ To begin, find the desired field type and use the sample code provided to build 
     </td>
   </tr>
 </table>
-
-{style="table-layout:auto"}
