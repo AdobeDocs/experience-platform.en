@@ -161,6 +161,12 @@ More information about streaming segmentation can be found in the [streaming seg
 >
 >In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
 
+## Edge segmentation {#edge-segmentation}
+
+Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+
+More information about edge segmentation can be found in the [edge segmentation UI guide](./edge-segmentation.md)
+
 ## Policy violations
 
 >[!NOTE]
