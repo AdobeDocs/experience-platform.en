@@ -36,7 +36,7 @@ In order to address this need, Experience Platform provides sandboxes which part
 
 | Feature | Description |
 | ------- | ----------- |
-| (Beta) Multiple production sandboxes | You can now create and manage multiple production sandboxes in your IMS Org and dedicate specific production sandboxes to distinct lines of business, brands, projects or regions. For more information, see the the tutorials on creating a production sandbox [in the UI](../../sandboxes/ui/user-guide.md) or [using the API](../../sandboxes/api/create-sandbox.md) for more information. |
+| (Beta) Multiple production sandboxes | You can now create and manage multiple production sandboxes in your IMS Org and dedicate specific production sandboxes to distinct lines of business, brands, projects or regions. See the tutorials on creating a production sandbox [in the UI](../../sandboxes/ui/user-guide.md) or [using the API](../../sandboxes/api/create-sandbox.md) for more information. |
 
 For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md).
 
