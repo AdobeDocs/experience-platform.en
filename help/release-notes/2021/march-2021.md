@@ -13,6 +13,7 @@ author: ens72741
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Sandboxes]](#sandboxes)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
 
@@ -26,6 +27,18 @@ Updates to existing features in Adobe Experience Platform:
 | `to_array` function | Updated functionality to support objects as a parameter. |
 
 For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance.
+
+In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+| Feature | Description |
+| ------- | ----------- |
+| (Beta) Multiple production sandboxes | You can now create and manage multiple production sandboxes in your IMS Org and dedicate specific production sandboxes to distinct lines of business, brands, projects or regions. For more information, see the the tutorials on creating a production sandbox [in the UI](../../sandboxes/ui/user-guide.md) or [using the API](../../sandboxes/api/create-sandbox.md) for more information. |
+
+For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md).
 
 ## Segmentation Service {#segmentation}
 
@@ -47,8 +60,6 @@ For more information on [!DNL Segmentation Service], please see the [Segmentatio
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
-
-The following updates to sources are included in the March 2021 release of Experience Platform:
 
 | Feature | Description |
 | ------- | ----------- |
