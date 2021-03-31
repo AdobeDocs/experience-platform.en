@@ -27,7 +27,7 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
     ![Browse destinations](./destinations/assets/ui/delete-destinations/browse-destinations.png)
 
 2. Select the ![Delete button](./destinations/assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** button in the **[!UICONTROL Platform]** column to remove an existing destination.
-    ![Delete destinations](/destinations/assets/ui/delete-destinations/delete-destinations.png)
+    ![Delete destinations](./destinations/assets/ui/delete-destinations/delete-destinations.png)
 
 3. Select **[!UICONTROL Delete]** to confirm the removal of the destination.
 
