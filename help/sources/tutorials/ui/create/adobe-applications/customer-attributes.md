@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;customer attributes
 solution: Experience Platform
-title: Create a Customer Attributes  Source Connection in the UI
+title: Create a Customer Attributes Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a source connection in the UI for collecting customer attributes profile data into Adobe Experience Platform.
@@ -25,7 +25,7 @@ Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Custome
 
 >[!NOTE]
 >
->If you've already established a source connection for Customer Attributes profile data, the option to connect with the source will be disabled.
+>If you've already established a source connection for Customer Attributes profile data, the option to connect with the source is disabled.
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
@@ -33,11 +33,11 @@ The [!UICONTROL Add data] screen lists all available data sources for Customer A
 
 >[!NOTE]
 >
->Only one dataset can be selected per customer attributes source connection.
+>Only one dataset can be selected per Customer Attributes source connection.
 
 ![](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-The [!UICONTROL Dataflow detail] step appears, allowing you to name and give a brief description about your new dataflow.
+The [!UICONTROL Dataflow detail] step appears, allowing you to name and provide a brief description for your new dataflow.
 
 During this process, you can also enable [!UICONTROL Partial ingestion] and [!UICONTROL Error diagnostics]. [!UICONTROL Partial ingestion] provides the ability to ingest data containing errors, up to a certain threshold that you can set, while [!UICONTROL Error diagnostics] provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
 
@@ -45,7 +45,7 @@ During this process, you can also enable [!UICONTROL Partial ingestion] and [!UI
 
 The [!UICONTROL Review] step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the number of columns within that source file.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
