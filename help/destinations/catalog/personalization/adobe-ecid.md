@@ -6,6 +6,8 @@ description: The Experience Cloud ID Service extension is a personalization dest
 
 # [!DNL Experience Cloud] ID Service extension {#adobe-ecid-extension}
 
+## Overview {#overview}
+
 This extension implements the [!DNL Experience Cloud] ID Service, which identifies visitors across all [!DNL Experience Cloud] solutions.
 
 [!DNL Experience Cloud] ID Service is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the [Experience Cloud ID Service extension page](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) in [!DNL Experience Platform Launch] documentation.

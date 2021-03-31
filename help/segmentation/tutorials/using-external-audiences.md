@@ -1,7 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Enforce data usage compliance for audience segments
+title: Importing and using external audiences
+description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
 topic: tutorial
 ---
 

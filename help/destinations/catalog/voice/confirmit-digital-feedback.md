@@ -6,6 +6,8 @@ description: The Confirmit Digital Feedback extension is a Voice of the Customer
 
 # [!DNL Confirmit Digital Feedback] extension
 
+## Overview {#overview}
+
 [!DNL Confirmit Digital Feedback] solution helps you turn your website traffic into real-time insights. With [!DNL Confirmit], unobtrusive and highly-targeted surveys can be displayed according to your requirements, encouraging visitors to provide feedback, such as:
 
 * Website feedback 

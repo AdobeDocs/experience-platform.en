@@ -6,6 +6,8 @@ description: The Google Universal Analytics extension is an analytics destinatio
 
 # [!DNL Google Universal Analytics] extension {#google-universal-analytics-extension}
 
+## Overview {#overview}
+
 [!DNL Google Universal Analytics] lets you measure your advertising ROI, as well as track your Flash, video, and social networking sites and applications.
 
 [!DNL Google Universal Analytics] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.102829.google-universal-analytics.html).
