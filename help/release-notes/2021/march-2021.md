@@ -12,7 +12,35 @@ author: ens72741
 
 Updates to existing features in Adobe Experience Platform:
 
+- [[!DNL Data Prep]](#data-prep)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+
+| Feature | Description |
+| ------- | ----------- |
+| `add_to_array` function | Updated functionality to support arrays as a parameter. |
+| `to_array` function | Updated functionality to support objects as a parameter. |
+
+For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## Segmentation Service {#segmentation}
+
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
+
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| (Beta) Edge segmentation | Edge segmentation evaluates segments in real-time, which allow for same page and next page personalization use cases. More information about edge segmentation can be found in the [Segmentation UI overview](../../segmentation/ui/overview.md).  |
+| (Beta) Incremental segmentation | Increases the freshness of existing segment definitions evaluated in batch segmentation to up to an hour. |
+
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
