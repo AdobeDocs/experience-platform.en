@@ -12,7 +12,7 @@ description: This document contains examples on how to use edge segmentation wit
 >
 >The following document states how to perform edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
 
-Edge segmentation is the ability to evaluate segments on Platform instantaneously, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
 ## Getting started
 
@@ -34,6 +34,7 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Frequency query | Any segment definition that refers to an event happening a certain number of times. |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. |
+
 {style="table-layout:auto"}
 
 The following query types are **not** currently supported by edge segmentation:
@@ -43,6 +44,7 @@ The following query types are **not** currently supported by edge segmentation:
 | Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
 | Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
+
 {style="table-layout:auto"}
 
 ## Retrieve all segments enabled for edge segmentation
@@ -159,7 +161,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a segment that is enabled for edge segmentation
 
-In addition to matching one of the [edge segmentation query types listed above](#query-types), you must set the `evaluationInfo.synchronous.enabled` flag in the payload to true.
+You can create a segment that is enabled for edge segmentation by making a POST request to the `/segment/definitions` endpoint. In addition to matching one of the [edge segmentation query types listed above](#query-types), you must set the `evaluationInfo.synchronous.enabled` flag in the payload to true.
 
 **API format**
 
@@ -168,6 +170,10 @@ POST /segment/definitions
 ```
 
 **Request**
+
+>[!NOTE]
+>
+>The example below is a standard request to create a segment. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
 
 ```shell
 curl -X POST \
@@ -197,17 +203,13 @@ curl -X POST \
 }'
 ```
 
->[!NOTE]
->
->The example above is a standard request to create a segment. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
-
 | Property | Description |
 | -------- | ----------- |
-| `evaluationInfo` | The object that determines the type of evaluation the segment definition will undergo. To use edge segmentation, this value should be set as `synchronous.enabled`. |
+| `evaluationInfo.synchronous.enabled` | The `evaluationInfo` object determines the type of evaluation the segment definition will undergo. To use edge segmentation, set `evaluationInfo.synchronous.enabled` with a value of `true`. |
 
 **Response**
 
-A successful response returns the details of the newly created edge-segmentation-evaluated segment definition.
+A successful response returns the details of the newly created segment definition that is enabled for edge segmentation.
 
 ```json
 {
@@ -249,6 +251,6 @@ A successful response returns the details of the newly created edge-segmentation
 
 ## Next steps
 
-Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same page and next page personalization use cases. 
+Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same-page and next-page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).

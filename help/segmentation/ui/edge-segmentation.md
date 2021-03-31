@@ -8,7 +8,7 @@ description: Edge segmentation is the ability to do segmentation on Platform nea
 
 # Edge segmentation UI guide
 
-Edge segmentation is the ability to evaluate segments on Platform instantaneously, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
 ## Edge segmentation query types
 
