@@ -56,6 +56,8 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
 | [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
 
+{style="table-layout:auto"}
+
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
 You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.

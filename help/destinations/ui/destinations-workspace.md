@@ -38,6 +38,8 @@ Control | Description
 [!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
 [!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
 
+{style="table-layout:auto"}
+
 ![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png)
 
 Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
