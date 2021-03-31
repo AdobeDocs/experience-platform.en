@@ -25,7 +25,7 @@ It is important to understand the following key terms used throughout this docum
 
 Segmentation is the process of defining specific attributes or behaviors shared by a subset of profiles from your profile store to distinguish a marketable group of people from your customer base. For example, in an email campaign called "Did you forget to buy your sneakers?", you may want an audience of all users who searched for running shoes within the last 30 days, but who did not complete a purchase. 
 
-Once a segment has been conceptually defined it is built in [!DNL Experience Platform]. Typically, segments are built by the marketer or audience specialist although some organizations prefer they be created by their marketing department, in collaboration with their data analysts. Upon reviewing the data being sent to [!DNL Platform], the data analyst composes the segment definition by selecting which fields and values will be used to build the rules or conditions of the segment. This is done using either the UI or API. 
+Once a segment has been conceptually defined, it is built in [!DNL Experience Platform]. Typically, segments are built by the marketer or audience specialist although some organizations prefer they be created by their marketing department, in collaboration with their data analysts. Upon reviewing the data being sent to [!DNL Platform], the data analyst composes the segment definition by selecting which fields and values will be used to build the rules or conditions of the segment. This is done using either the UI or API. 
 
 ## Create segments
 
@@ -51,7 +51,9 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 ### Batch segmentation
 
-As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use.
+As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
+
+Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
@@ -73,7 +75,7 @@ Composing your segments (through either the API or [!DNL Segment Builder]) requi
 
 ### Segment names
 
-When creating a new segment, you are required to provide a segment name. The segment name is used to identify a particular segment amongst the collection built by [!DNL Segmentation Service]. Segment names should therefore be descriptive, concise, and unique.
+When creating a new segment, you are required to provide a segment name. The segment name is used to identify a particular segment among the collection built by [!DNL Segmentation Service]. Segment names should therefore be descriptive, concise, and unique.
 
 >[!NOTE]
 >
@@ -105,7 +107,7 @@ These advanced features are discussed in more detail in the following sections.
 
 ## Sequential segmentation {#sequential}
 
-A standard user journey is sequential in nature. Adobe Experience Platform allows you to define an ordered series of segments to reflect this journey thereby capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!DNL Segment Builder].
+A standard user journey is sequential in nature. Adobe Experience Platform allows you to define an ordered series of segments to reflect this journey therefore capturing sequences of events as they occur. You can arrange events into their desired order by using the visual event timeline in the [!DNL Segment Builder].
 
 An example of a customer journey that would require sequential segmentation would be product view > product add > checkout > No purchase. 
 
@@ -131,7 +133,7 @@ By assigning a variable to the purchase state attribute, your dynamic segment si
  
 ## Multi-entity segmentation {#multi-entity}
 
-With the advanced multi-entity segmentation feature, you have the ability to extend [!DNL Real-time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
+With the advanced multi-entity segmentation feature, you can extend [!DNL Real-time Customer Profile] data with additional data based on products, stores, or other non-person, also known as "dimension" entities. As a result, [!DNL Segmentation Service] can access additional fields during segment definition as if they were native to the [!DNL Profile] data store. Multi-entity segmentation provides flexibility when identifying audiences based on data relevant to your unique business needs. For more information, including use cases and workflows, refer to the [multi-entity segmentation guide](multi-entity-segmentation.md).
 
 ## [!DNL Segmentation Service] data types
 
