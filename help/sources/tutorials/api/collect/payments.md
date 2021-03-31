@@ -332,7 +332,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/14d89c5bb88e2ff488f23db896be469e7e30bb166bda8722",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -340,7 +340,7 @@ curl -X POST \
         },
             "connectionSpec": {
             "id": "221c7626-58f6-4eec-8ee2-042b0226f03b",
-            "version": "1"
+            "version": "1.0"
         }
     }'
 ```
