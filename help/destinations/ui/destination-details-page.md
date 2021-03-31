@@ -17,7 +17,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 ## View destination details {#view-details}
 
-Follow the steps below to more details about an existing destination.
+Follow the steps below to view more details about an existing destination.
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
@@ -32,7 +32,7 @@ Follow the steps below to more details about an existing destination.
 
     ![Destination details](/destinations/assets/ui/details-page/destination-details.png)
 
-## right rail
+## Right rail
 
 The right rail displays the basic information about the selected destination.
 
@@ -40,7 +40,7 @@ The right rail displays the basic information about the selected destination.
 
 The following table covers the controls and details provided by the right rail:
 
-| right rail item | Description |
+| Right rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
@@ -58,15 +58,19 @@ The following table covers the controls and details provided by the right rail:
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 
-The  **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle on the upper right side of the screen starts and pauses all data exports to the destination.
+You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
 ![](../assets/ui/details-page/enable-disable.png)
+
+## [!UICONTROL Dataflow runs]
+
+The Dataflow runs tab provides metric data on your dataflow runs to batch destinations. See [Monitor dataflows](monitor-dataflows.md) for details.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
 The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
-![](../assets/ui/details-page/activation-data.png)
+![Activation data](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >

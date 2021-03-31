@@ -61,7 +61,7 @@ Selecting **[!UICONTROL Create segment]** will take you to the Segment Builder. 
 
 ![](../images/ui/overview/segment-browse-top.png)
 
-The right rail contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
+The right sidebar contains information about all the segments within the IMS organization, listing the total number of segments, the last evaluation date, the next evaluation date, as well as a breakdown of the segments by evaluation method.
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 

@@ -23,8 +23,8 @@ Follow the steps below to connect to a destination in Adobe Experience Platform:
    >
    >If a connection with a destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
 
-4. Refer to the destination pages. See [cloud storage destinations](../catalog/cloud-storage/workflow.md), [email marketing destinations](../catalog/email-marketing/overview.md), and [advertising destinations](../catalog/advertising/overview.md), for step-by-step instructions on how to connect to specific destinations,
+4. See [Destinations catalog overview](/destinations/catalog/overview.md) for instructions on how to connect to specific types of destinations.
 
-Watch the video below for an overview of how to connect to a destination and activate segments to it.
-
->[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)
+5. Optionally, watch the video below for an overview of how to connect to a destination and activate segments to it.
+   
+   >[!VIDEO](https://video.tv.adobe.com/v/29710?quality=12)

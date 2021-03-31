@@ -46,6 +46,10 @@ Select a destination card in the catalog to open the right rail. Here, you can s
 
 For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
 
+## [!UICONTROL Accounts] {#accounts}
+
+The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update edisting connection details. See [Update accounts](update-accounts.md) for detailed instructions.
+
 ## [!UICONTROL Browse] {#browse}
 
 The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
