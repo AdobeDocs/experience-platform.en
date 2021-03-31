@@ -39,6 +39,7 @@ feature: Schemas
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)
