@@ -9,44 +9,46 @@ description: Learn how to create a source connection in the UI for collecting cu
 
 # Create a Customer Attributes source connection in the UI
 
-This tutorial provides steps for creating a source connection in the UI for collecting Customer Attributes profile data into Adobe Experience Platform. For more information about Customer Attributes, see the [overview document](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
+This tutorial provides steps for creating a source connection in the UI for collecting Customer Attributes profile data into Adobe Experience Platform. For more information about Customer Attributes, see the [Customer Attributes overview](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
 ## Create a source connection
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The **[!UICONTROL Catalog]** screen displays available sources to create inbound connections with, and each source shows the number of existing connections associated to them. Select the option for **[!UICONTROL Customer Attributes]** and then select **[!UICONTROL Add data]**. Allow some time for the connection to establish, you will be redirected if a connection is successfully made.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create a connection with.
+
+You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
+
+Under the [!UICONTROL Adobe applications] category, select **[!UICONTROL Customer Attributes]** and then select **[!UICONTROL Add data]**.
 
 >[!NOTE]
 >
->If you've already established a source connector for customer attributes profile data, the option to connect with the source will be disabled.
+>If you've already established a source connection for Customer Attributes profile data, the option to connect with the source will be disabled.
 
 ![](../../../../images/tutorials/create/customer-attributes/catalog.png)
 
-The **Source activity** screen lists all previously established connections for customer attributes profile data, you can create a new connection by clicking **Select data**. 
-
->[!NOTE]
->
->Multiple inbound connections to a source can be made for bringing in different data. 
-
-![](../../../../images/tutorials/create/customer-attributes/source_activity.png)
-
-From the list of available customer attributes profile datasets, select the one you want to bring into [!DNL Platform] and click **Next**.
+The [!UICONTROL Add data] screen lists all available data sources for Customer Attributes. To create a new connection, select a data source from the list, and then select **[!UICONTROL Next]**.
 
 >[!NOTE]
 >
 >Only one dataset can be selected per customer attributes source connection.
 
-![](../../../../images/tutorials/create/customer-attributes/select_data.png)
+![](../../../../images/tutorials/create/customer-attributes/add-data.png)
 
-The **Review** step appears, allowing you to review your new inbound connection before it is created. Details of the connection are grouped by categories, including:
+The [!UICONTROL Dataflow detail] step appears, allowing you to name and give a brief description about your new dataflow.
 
-*   **Source details**: Shows the type of the source connection and the selected source data.
-*   **Target details**: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. Customer attributes profile data is automatically mapped and ingested into Real-time Customer Profiles.
+During this process, you can also enable [!UICONTROL Partial ingestion] and [!UICONTROL Error diagnostics]. [!UICONTROL Partial ingestion] provides the ability to ingest data containing errors, up to a certain threshold that you can set, while [!UICONTROL Error diagnostics] provide details on any incorrect data that is batched separately. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
+
+![](../../../../images/tutorials/create/customer-attributes/dataflow-detail.png)
+
+The [!UICONTROL Review] step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
+
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
 ![](../../../../images/tutorials/create/customer-attributes/review.png)
 
 ## Next steps
 
-Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
+Once the connection is created, a target schema and dataset is automatically created to contain the incoming data. When the initial ingestion completes, customer attributes profile data can be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Segmentation Service]. See the following documents for more details:
 
 * [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
