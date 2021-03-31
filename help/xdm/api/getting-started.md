@@ -208,15 +208,13 @@ The following table lists compatible `Accept` header values, including those wit
 
 >[!NOTE]
 >
->Platform only supports one major version for each schema, and therefore the value for `version` must always be `1` when performing lookup requests. See the subsection below for more information on schema versioning.
+>Platform currently supports only one major version for each schema (`1`). Therefore, the value for `version` must always be `1` when performing lookup requests in order to return the latest minor version of the schema. See the subsection below for more information on schema versioning.
 
 ### Schema versioning {#versioning}
 
 Schema versions are referenced by `Accept` headers in the Schema Registry API and in `schemaRef.contentType` properties in downstream Platform service API payloads.
 
-Currently, Platform only supports a single major version (`1`) for each schema, which is expected to remain backwards compatible after it is used. Therefore, a schema's version is always indicated as `version=1` in these property values. 
-
-However, the Schema Registry always returns the **latest** major version `1` of a schema (for example, `1.4`), meaning that previous minor versions (`1.3` and below) are not returned.
+Currently, Platform only supports a single major version (`1`) for each schema. According to the [rules of schema evolution](../schema/composition.md#evolution), each update to a schema must be non-destructive, meaning that new minor versions of a schema (`1.2`, `1.3`, etc.) are always backward compatible with previous minor versions. Therefore, when specifying `version=1`, the Schema Registry always returns the **latest** major version `1` of a schema , meaning that previous minor versions are not returned.
 
 ## XDM field constraints and best practices
 
