@@ -10,7 +10,7 @@ description: This document contains examples on how to use edge segmentation wit
 
 >[!NOTE]
 >
->The following document states how to perform edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
+>The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
