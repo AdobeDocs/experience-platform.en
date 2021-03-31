@@ -6,9 +6,9 @@ topic: ui guide
 description: Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
 ---
 
-# Edge segmentation
+# Edge segmentation UI guide
 
-Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
+Edge segmentation is the ability to evaluate segments on Platform instantaneously, enabling same page and next page personalization use cases. 
 
 ## Edge segmentation query types
 
@@ -35,6 +35,6 @@ The following query types are **not** currently supported for edge segmentation:
 
 ## Next steps
 
-This user guide explains how segment definitions evaluated with edge segmentation work on Adobe Experience Platform. 
+This user guide explains how to evaluate segments with edge segmentation on Adobe Experience Platform. 
 
-To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md).
+To learn more about using the Adobe Experience Platform user interface, please read the [Segmentation user guide](./overview.md). To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [edge segmentation API guide](../api/edge-segmentation.md).

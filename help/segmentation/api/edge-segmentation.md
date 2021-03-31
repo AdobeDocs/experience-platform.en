@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;edge segmentation;Edge segmentation;streaming edge;
 solution: Experience Platform
-title: Evaluate Events in Near Real-Time with Edge Segmentation 
+title: Edge Segmentation using the API 
 topic: developer guide
 description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
 ---
@@ -10,9 +10,9 @@ description: This document contains examples on how to use edge segmentation wit
 
 >[!NOTE]
 >
->The following document states how to use edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
+>The following document states how to perform edge segmentation using the API. For information on using edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
 
-Edge segmentation is the ability to do segmentation on Platform instantaneously, allowing segments to quickly and efficiently be evaluated.
+Edge segmentation is the ability to evaluate segments on Platform instantaneously, enabling same page and next page personalization use cases. 
 
 ## Getting started
 
@@ -22,37 +22,11 @@ This developer guide requires a working understanding of the various [!DNL Adobe
 - [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
-The following sections provide additional information that you will need to know in order to successfully make calls to [!DNL Platform] APIs.
+In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
 
-### Reading sample API calls
+## Edge segmentation query types {#query-types}
 
-This developer guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
-
-Additional headers may be required to complete specific requests. The correct headers are shown in each of the examples within this document. Please pay special attention to the sample requests in order to ensure that all required headers are included.
-
-## Edge segmentation query types {#edge-segmentation-query-types}
-
-In order for a segment to be evaluated using edge segmentation, the query must conform to the following guidelines.
+In order for a segment to be evaluated using edge segmentation, the query must conform to the following guidelines:
 
 | Query type | Details |
 | ---------- | ------- |
@@ -60,22 +34,24 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Frequency query | Any segment definition that refers to an event happening a certain number of times. |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. |
+{style="table-layout:auto"}
 
-The following query types ware **not** currently supported by edge segmentation:
+The following query types are **not** currently supported by edge segmentation:
 
 | Query type | Details |
 | ---------- | ------- |
 | Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
-| Negation | If a query contains a negation, it cannot be evaluated using edge segmentation. | 
+| Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
+{style="table-layout:auto"}
 
 ## Retrieve all segments enabled for edge segmentation
 
-You can retrieve a list of all your segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
+You can retrieve a list of all segments that are enabled for edge segmentation within your IMS Organization by making a GET request to the `/segment/definitions` endpoint.
 
 **API format**
 
-To retrieve edge segmentation enabled segments, you must include the query parameter `evaluationInfo.synchronous.enabled=true` in the request path.
+To retrieve segments enabled for edge segmentation, you must include the query parameter `evaluationInfo.synchronous.enabled=true` in the request path.
 
 ```http
 GET /segment/definitions?evaluationInfo.synchronous.enabled=true
@@ -87,7 +63,6 @@ GET /segment/definitions?evaluationInfo.synchronous.enabled=true
 curl -X GET \
   'https://platform.adobe.io/data/core/ups/segment/definitions?evaluationInfo.synchronous.enabled=true' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-  -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG_ID}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
@@ -95,7 +70,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of segments in your IMS Organization that are enabled for edge segmentation.
+A successful response returns an array of segments in your IMS Organization that are enabled for edge segmentation. More detailed information about the segment definition returned can be found in the [segment definitions endpoint guide](./segment-definitions.md).
 
 ```json
 {
@@ -182,9 +157,9 @@ A successful response returns an array of segments in your IMS Organization that
 }
 ```
 
-## Create an edge segmentation evaluated segment
+## Create a segment that is enabled for edge segmentation
 
-In addition to matching one of the [edge segmentation query types listed above](#edge-segmentation-query-types), you must set the `evaluationInfo.synchronous.enabled` flag to true.
+In addition to matching one of the [edge segmentation query types listed above](#query-types), you must set the `evaluationInfo.synchronous.enabled` flag in the payload to true.
 
 **API format**
 
@@ -224,11 +199,15 @@ curl -X POST \
 
 >[!NOTE]
 >
->This is a standard "create a segment" request. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
+>The example above is a standard request to create a segment. For more information about creating a segment definition, please read the tutorial on [creating a segment](../tutorials/create-a-segment.md).
+
+| Property | Description |
+| -------- | ----------- |
+| `evaluationInfo` | The object that determines the type of evaluation the segment definition will undergo. To use edge segmentation, this value should be set as `synchronous.enabled`. |
 
 **Response**
 
-A successful response returns the details of the newly created edge segmentation evaluated segment definition.
+A successful response returns the details of the newly created edge-segmentation-evaluated segment definition.
 
 ```json
 {
@@ -270,6 +249,6 @@ A successful response returns the details of the newly created edge segmentation
 
 ## Next steps
 
-Now that you have enabled both new and existing segments for edge segmentation, you can begin to create segments for your organization.
+Now that you know how to create edge-segmentation-enabled segments, you can use them to enable same page and next page personalization use cases. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).
