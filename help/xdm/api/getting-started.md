@@ -200,15 +200,23 @@ The following table lists compatible `Accept` header values, including those wit
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Returns a list of IDs only. This is most commonly used for listing resources. |
 | `application/vnd.adobe.xed+json` | Returns a list of full JSON schema with original `$ref` and `allOf` included. This is used to return a list of full resources. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
 >[!NOTE]
 >
->If supplying the major version only (e.g. 1, 2, 3), the registry will return the latest minor version (e.g. .1, .2, .3) automatically.
+>Platform only supports one major version for each schema, and therefore the value for `version` must always be `1` when performing lookup requests. See the subsection below for more information on schema versioning.
+
+### Schema versioning {#versioning}
+
+Schema versions are referenced by `Accept` headers in the Schema Registry API and in `schemaRef.contentType` properties in downstream Platform service API payloads.
+
+Currently, Platform only supports a single major version (`1`) for each schema, which is expected to remain backwards compatible after it is used. Therefore, a schema's version is always indicated as `version=1` in these property values. 
+
+However, the Schema Registry always returns the **latest** major version `1` of a schema (for example, `1.4`), meaning that previous minor versions (`1.3` and below) are not returned.
 
 ## XDM field constraints and best practices
 

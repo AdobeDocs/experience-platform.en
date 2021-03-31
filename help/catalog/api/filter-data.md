@@ -149,6 +149,10 @@ Based on the response above, the following can be inferred:
 * A dataset may return a requested property as an empty object if it contains the property but there is no value. (`Dataset3`)
 * Otherwise, the dataset will display the full value of all requested properties. (`Dataset4`)
 
+>[!NOTE]
+>
+>In the `schemaRef` property for each dataset, the version number indicates the latest minor version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.
+
 ## Offset starting index of response list
 
 The `start` query parameter offsets the response list forward by a specified number, using zero-based numbering. For example, `start=2` would offset the response to start on the third listed object.

@@ -206,6 +206,11 @@ curl -X POST \
 }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
+| `schemaRef.contentType` | Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
+
 >[!NOTE]
 >
 >This tutorial uses the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format for all its examples. An example that uses the JSON file format can be found in the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md) 
