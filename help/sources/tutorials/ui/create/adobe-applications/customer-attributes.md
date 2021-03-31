@@ -11,6 +11,10 @@ description: Learn how to create a source connection in the UI for collecting cu
 
 This tutorial provides steps for creating a source connection in the UI for collecting Customer Attributes profile data into Adobe Experience Platform. For more information about Customer Attributes, see the [Customer Attributes overview](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html).
 
+>[!IMPORTANT]
+>
+>The disable, enable, and delete dataflows functionalities are currently not supported for the Customer Attributes source.
+
 ## Create a source connection
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create a connection with.
