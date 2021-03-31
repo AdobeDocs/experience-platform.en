@@ -57,7 +57,7 @@ To learn how to evaluate segments see the [segment evaluation tutorial](./tutori
 
 ### Edge segmentation
 
-Edge segmentation is the ability to evaluate segments on Platform instantaneously, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
 To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
 

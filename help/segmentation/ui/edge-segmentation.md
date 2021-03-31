@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;edge segmentation;Segmentation
 solution: Experience Platform
 title: Edge Segmentation UI Guide
 topic: ui guide
-description: Edge segmentation is the ability to do segmentation on Platform near instantaneously, allowing segments to quickly and efficiently be evaluated.
+description: Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 ---
 
 # Edge segmentation UI guide
