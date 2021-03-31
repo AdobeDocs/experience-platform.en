@@ -57,6 +57,12 @@ Segments evaluated using batch segmentation are evaluated every 24 hours. Howeve
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
+### Edge segmentation
+
+Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+
+To learn more about edge segmentation, please read either the [API documentation](./api/edge-segmentation.md) or the [UI documentation](./ui/edge-segmentation.md).
+
 ## Access segmentation results
 
 To learn how to access an exported segment, see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md).
