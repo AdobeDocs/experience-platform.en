@@ -21,22 +21,22 @@ Follow the steps below to view more details about an existing destination.
 
 1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
-    ![Browse destinations](/destinations/assets/ui/details-page/browse-destinations.png)
+    ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
 
-1. Select the name of the destination that you want to view.
+2. Select the name of the destination that you want to view.
 
-    ![Select destination](/destinations/assets/ui/details-page/destination-select.png)
+    ![Select destination](../assets/ui/details-page/destination-select.png)
 
-1. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+3. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
 
-    ![Destination details](/destinations/assets/ui/details-page/destination-details.png)
+    ![Destination details](../assets/ui/details-page/destination-details.png)
 
 ## Right rail
 
 The right rail displays the basic information about the selected destination.
 
-![right rail](/destinations/assets/ui/details-page/right-sidebar.png)
+![right rail](../assets/ui/details-page/right-sidebar.png)
 
 The following table covers the controls and details provided by the right rail:
 
@@ -60,7 +60,7 @@ The following table covers the controls and details provided by the right rail:
 
 You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
-![](../assets/ui/details-page/enable-disable.png)
+![Enable disable toggle](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
