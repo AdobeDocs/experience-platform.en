@@ -55,17 +55,13 @@ As an alternative to an ongoing data selection process, batch segmentation moves
 
 **Incremental segmentation (beta)**
 
-Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation and multi-entity segmentation fresh for up to an hour.
+Batch segments are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments fresh for up to an hour.
 
-Incremental segmentation can be run in the following situations:
+Incremental segmentation runs on new data coming into the profile store. However, the following caveats applies for incremental segmentation:
 
-- Batch segments containing profiles with new or updated data.
-- Multi-entity segments containing profiles with new or updated data.
-
-However, the following caveats apply for incremental segmentation:
-
-- Any new or recently modified segments will need to wait until the next full batch segmentation job has been run for all the data to be finalized.
-- Audience data that would drop off will only be evaluated in the next full batch segmentation job.
+- For any new or recently modified segments, profiles with new data will start getting qualified in the next incremental run. However, profiles without changes will catch up in the next full batch segmentation job.
+- Multi-entity segments will be refreshed in incremental segmentation. If there are entity updates, any profiles with new data will start using them in the next incremental run. However, profiles without changes will catch up in next full batch segmentation job.
+- Events dropping off a segment's time window will be reconciled in the next full batch segmentation job.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
