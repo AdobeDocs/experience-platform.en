@@ -23,12 +23,15 @@ Follow the steps below to view more details about an existing destination.
 
     ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
+1. Select the filter icon ![Filter-icon](../assets/ui/details-page/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-2. Select the name of the destination that you want to view.
+    ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
+
+1. Select the name of the destination that you want to view.
 
     ![Select destination](../assets/ui/details-page/destination-select.png)
 
-3. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+1. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
 
     ![Destination details](../assets/ui/details-page/destination-details.png)
 

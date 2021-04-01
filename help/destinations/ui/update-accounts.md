@@ -29,11 +29,15 @@ Follow the steps below to update connection details to existing destinations.
 
     ![Accounts tab](../assets/ui/update-accounts/accounts-tab.png)
 
-1. Select the ![Edit account button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit]** button in the **[!UICONTROL Platform]** column to edit the account's information.
+2. Select the filter icon ![Filter-icon](../assets/ui/update-accounts/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of accounts associated with the selected destinations.
+
+    ![Filter destinations](../assets/ui/update-accounts/filter-accounts.png)
+
+3. Select the ![Edit account button](../assets/ui/workspace/pencil-icon.png) **[!UICONTROL Edit]** button in the **[!UICONTROL Platform]** column to edit the account's information.
 
     ![Accounts tab](../assets/ui/update-accounts/accounts-edit.png)
 
-1. Enter your updated account credentials.
+4. Enter your updated account credentials.
    
    * For accounts that use an `OAuth2` connection type, select **[!UICONTROL Reconnect OAuth]** to renew your account credentials.
     
@@ -44,4 +48,4 @@ Follow the steps below to update connection details to existing destinations.
 
         ![Edit details Access Key](../assets/ui/update-accounts/edit-details-key.png)
 
-1. Select **[!UICONTROL Save]** to finish the credentials update.
+5. Select **[!UICONTROL Save]** to finish the credentials update.

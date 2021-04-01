@@ -26,10 +26,14 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Select the ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** button in the **[!UICONTROL Platform]** column to remove an existing destination.
+2. Select the filter icon ![Filter-icon](../assets/ui/delete-destinations/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+
+    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
+
+3. Select the ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** button in the **[!UICONTROL Platform]** column to remove an existing destination.
     ![Delete destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
-3. Select **[!UICONTROL Delete]** to confirm the removal of the destination.
+4. Select **[!UICONTROL Delete]** to confirm the removal of the destination.
 
     ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
@@ -42,7 +46,11 @@ Follow the steps below to delete a destination from the destination details page
 
     ![Browse destinations](../assets/ui/delete-destinations/browse-destinations.png)
 
-2. Select the name of the destination that you want to delete.
+1. Select the filter icon ![Filter-icon](../assets/ui/delete-destinations/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
+
+    ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
+
+1. Select the name of the destination that you want to delete.
 
     ![Select destination](../assets/ui/delete-destinations/delete-destination-select.png)
 
@@ -55,11 +63,11 @@ Follow the steps below to delete a destination from the destination details page
         ![Destination details](../assets/ui/delete-destinations/destination-details-empty.png)
 
 
-3. Select **[!UICONTROL Delete]** on the right rail.
+1. Select **[!UICONTROL Delete]** on the right rail.
 
     ![Delete destination](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-4. Select **[!UICONTROL Delete]** on the confirmation dialog to remove the destination.
+1. Select **[!UICONTROL Delete]** on the confirmation dialog to remove the destination.
 
     ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
