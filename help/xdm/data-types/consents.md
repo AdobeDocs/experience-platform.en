@@ -274,7 +274,7 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 | Property | Description |
 | --- | --- |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
-| `source` | The source that the preference originated from. This can be any descriptive string, provided it is 15 characters or less. |
+| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
 ### `metadata`
 

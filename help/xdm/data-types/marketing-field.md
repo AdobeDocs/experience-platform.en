@@ -1,23 +1,27 @@
 ---
 solution: Experience Platform
-title: Generic Personalization Preference Field Data Type
+title: Generic Marketing Preference Field Data Type
 topic: overview
-description: This document provides an overview of the Generic Personalization Preference Field XDM data type.
+description: This document provides an overview of the Generic Marketing Preference Field XDM data type.
 ---
 
-# [!UICONTROL Generic Personalization Preference Field] data type
+# [!UICONTROL Generic Marketing Preference Field] data type
 
-[!UICONTROL Generic Personalization Preference Field] is a standard XDM data type that describes a customer's selection for a particular personalization preference.
+[!UICONTROL Generic Marketing Preference Field] is a standard XDM data type that describes a customer's selection for a particular marketing preference.
 
 >[!NOTE]
 >
 >This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) as a baseline.
+>
+>If you require a `subscriptions` map for a particular marketing preference field, you must use the [marketing field with subscriptions data type](./marketing-field-subscriptions.md) instead.
 
-![](../images/data-types/personalization-field.png)
+![](../images/data-types/marketing-field.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `val` | String | The customer-provided preference choice for this personalization use case. See the table below for accepted values and definitions. |
+| `reason` | String | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
+| `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
+| `val` | String | The customer-provided preference choice for this marketing use case. See the table below for accepted values and definitions. |
 
 The following table outlines the accepted values for `val`:
 
@@ -33,9 +37,7 @@ The following table outlines the accepted values for `val`:
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
 
-
-
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/personalization-field.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/marketing-field-basic.schema.json)
