@@ -30,7 +30,7 @@ The following screenshot shows how the structure of the mixin is represented in 
 
 >[!TIP]
 >
->See the guide on [exploring XDM resources](../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
+>See the guide on [exploring XDM resources](../../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
 
 The following JSON shows an example of the type of data that the [!DNL Consents & Preferences] mixin can process. Information on the specific use of each of these fields is provided in the sections that follow.
 
@@ -93,8 +93,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 >
 >You can generate sample JSON data for any XDM schema that you define in Experience Platform in order to help visualize how your customer consent and preference data should be mapped. See the following documentation for more information:
 >
->* [Generate sample data in the UI](../ui/sample.md)
->* [Generate sample data in the API](../api/sample-data.md)
+>* [Generate sample data in the UI](../../ui/sample.md)
+>* [Generate sample data in the API](../../api/sample-data.md)
 
 ## Field use cases
 
@@ -257,7 +257,7 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 >* If the customer has opted out at the channel level, then any equivalent consents or preferences in `idSpecific` are ignored.
 >* If the channel-level consent or preference is not set, or the customer has opted in, then the equivalent consents or preferences in `idSpecific` are honored.
 
-Each key in the `idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md) in the Identity Service documentation.
+Each key in the `idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](../../../identity-service/namespaces.md) in the Identity Service documentation.
 
 The keys for each namespace object represent the unique identity values that the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as `consents`.
 
@@ -296,13 +296,13 @@ The keys for each namespace object represent the unique identity values that the
 
 In order to use the [!DNL Consents & Preferences] mixin to ingest consent data from your customers, you must create a dataset based on a schema that contains that mixin.
 
-See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign mixins to fields. Once you have created a schema containing a field with the [!DNL Consents & Preferences] mixin, refer to the the section on [creating a dataset](../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign mixins to fields. Once you have created a schema containing a field with the [!DNL Consents & Preferences] mixin, refer to the the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
 >If you want to send consent data to [!DNL Real-time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!DNL Consents & Preferences] mixin. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-time Customer Profile] requirements for schemas and datasets.
 >
->In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](../../rtcdp/profile/merge-policies.md) for more information.
+>In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](../../../rtcdp/profile/merge-policies.md) for more information.
 
 ## Handling consent and preference changes
 
