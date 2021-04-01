@@ -55,7 +55,7 @@ trim | Removes the whitespace from the beginning and the end of the string. | <u
 equals | Compares two strings to confirm if they are equal. This function is case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.​equals(​STRING2) | "string1".​equals​("STRING1") | false
 equalsIgnoreCase | Compares two strings to confirm if they are equal. This function is **not** case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.​equalsIgnoreCase​(STRING2) | "string1".​equalsIgnoreCase​("STRING1) | true
 
-​{style="table-layout:auto"}
+{style="table-layout:auto"}
 
 ### Regular expression functions
 
