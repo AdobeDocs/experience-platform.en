@@ -24,6 +24,7 @@ feature: Schemas
     * [IdentityMap](./mixins/profile/identitymap.md)
     * [Demographic Details](./mixins/profile/person-details.md)
     * [Personal Contact Details](./mixins/profile/personal-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./mixins/profile/consents.md)
     * [Segment Membership Details](./mixins/profile/segmentation.md)
     * [Work Contact Details](./mixins/profile/work-details.md)
   * Event mixins {#event}
