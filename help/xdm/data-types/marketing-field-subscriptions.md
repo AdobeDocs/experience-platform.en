@@ -46,15 +46,12 @@ The following JSON represents an example marketing field for an email channel, w
 
 ```json
 "email-marketing-field": {
-  // Channel-level opt in
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
-    // First subscription
     "daily-mail": {
-      "val": "y",        // Opt in to daily-email
-      "type": "paid",    // Type of subscription
-      // Metadata for each subscriber
+      "val": "y",
+      "type": "paid",
       "subscribers": {
         "john@xyz.com": {
           "time": "2019-01-01T15:52:25+00:00",
@@ -62,10 +59,8 @@ The following JSON represents an example marketing field for an email channel, w
         }
       }
     },
-    // Second subscription
     "shipped": {
-      "val": "y",      // Opt in to shipment notifications
-      // Both John and his manager get shipment notifications (shared profile for business)
+      "val": "y",
       "subscribers": {
         "john@xyz.com": {
           "time": "2021-01-01T08:32:53+07:00",
@@ -73,7 +68,7 @@ The following JSON represents an example marketing field for an email channel, w
         },
         "jane@xyz.com": {
           "time": "2020-02-03T07:54:21+07:00",
-          "source": "call center",
+          "source": "call center"
         }
       }
     }

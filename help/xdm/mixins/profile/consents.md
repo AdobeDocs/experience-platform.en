@@ -192,14 +192,11 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 ```json
 "marketing": {
   "email": {
-    // Channel-level opt in
     "val": "y",
     "subscriptions": {
-      // First subscription
       "daily-mail": {
-        "val": "y",        // Opt in to daily-email
-        "type": "paid",    // Type of subscription
-        // Metadata for each subscriber
+        "val": "y",
+        "type": "paid",
         "subscribers": {
           "john@xyz.com": {
             "time": "2019-01-01T15:52:25+00:00",
@@ -207,10 +204,9 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
           }
         }
       },
-      // Second subscription
       "shipped": {
-        "val": "y",      // Opt in to shipment notifications
-        // Both John and his manager get shipment notifications (shared profile for business)
+        "val": "y",
+
         "subscribers": {
           "john@xyz.com": {
             "time": "2021-01-01T08:32:53+07:00",
@@ -230,7 +226,8 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 | Property | Description |
 | --- | --- |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
-| `source` | The source that the preference originated from. This can be any descriptive string, provided it is 15 characters or less. |
+| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
+
 
 ### `metadata`
 
