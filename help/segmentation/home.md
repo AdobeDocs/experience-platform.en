@@ -41,7 +41,7 @@ For information on building segment definitions using the API, see the tutorial 
 
 ## Evaluate segments
 
-Platform currently supports two methods of evaluating segments: streaming segmentation and batch segmentation.
+Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation.
 
 ### Streaming segmentation
 
@@ -53,7 +53,9 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
 
-Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation.
+**Incremental segmentation (beta)**
+
+Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation. Additionally, segments that are based on older events will only drop off the segment time window at the next full batch segmentation job.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
