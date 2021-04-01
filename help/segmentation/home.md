@@ -55,7 +55,11 @@ As an alternative to an ongoing data selection process, batch segmentation moves
 
 **Incremental segmentation (beta)**
 
-Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation. Additionally, segments that are based on older events will only drop off the segment time window at the next full batch segmentation job.
+Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. However, the following caveats apply for incremental segmentation:
+
+- Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation. Updates to the profiles, however, can 
+- Profiles with new or updated data will be qualified with incremental segmentation. However, profiles without any changes will be evaluated in the next full batch segmentation job.
+- Audience data that would drop off will only be evaluated in the next full batch segmentation job.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 
