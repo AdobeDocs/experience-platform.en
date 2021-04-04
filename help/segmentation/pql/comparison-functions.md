@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PQL Comparison Functions
 topic: developer guide
 description: Comparison functions are used to compare between different expressions and values, returning "true" or "false" accordingly.
+exl-id: 15f106c7-b88b-4042-b925-703e2a309573
 ---
-
 # Comparison functions
 
 Comparison functions are used to compare between different expressions and values, returning `true` or `false` accordingly. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -120,4 +120,4 @@ person.birthMonth <= 2
 
 ## Next steps
 
-Now that you have learned about comparison functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about comparison functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

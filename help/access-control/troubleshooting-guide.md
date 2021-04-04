@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Access Control Troubleshooting Guide
 topic: troubleshooting guide
 description: This document provides answers to frequently asked questions about access control in Adobe Experience Platform.
+exl-id: c299c0c4-dbee-4e6d-8af4-2446444bed69
 ---
-
 # Access control troubleshooting guide
 
 This document provides answers to frequently asked questions about access control in Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).

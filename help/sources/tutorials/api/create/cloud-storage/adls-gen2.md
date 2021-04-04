@@ -5,8 +5,8 @@ title: Create an Azure Data Lake Storage Gen2 Source Connection Using the Flow S
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Data Lake Storage Gen2 using the Flow Service API.
+exl-id: cad5e2a0-e27c-4130-9ad8-888352c92f04
 ---
-
 # Create an [!DNL Azure] Data Lake Storage Gen2 source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

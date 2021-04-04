@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Automatic Policy Enforcement
 topic: guide
 description: This document covers how data usage policies are automatically enforced when activating segments to destinations in Experience Platform.
+exl-id: c6695285-77df-48c3-9b4c-ccd226bc3f16
 ---
-
 # Automatic policy enforcement
 
 Once data is labeled and usage policies are defined, you can enforce data usage compliance with policies. When activating audience segments to destinations, Adobe Experience Platform automatically enforces usage policies should any violations occur.

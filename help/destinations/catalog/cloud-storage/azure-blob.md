@@ -2,8 +2,8 @@
 keywords: Azure Blob;Blob destination;s3;azure blob destination
 title: Azure Blob connection
 description: Create a live outbound connection to your Azure Blob storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform.
+exl-id: 8099849b-e3d2-48a5-902a-ca5a5ec88207
 ---
-
 # [!DNL Azure Blob] connection
 
 ## Overview {#overview}

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Define Identity Fields in the UI
 description: Learn how to define an identity field in the Experience Platform user interface.
 topic: user guide
+exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 ---
-
 # Define identity fields in the UI
 
 In Experience Data Model (XDM), an identity field represents a field that that can be used to identify an individual person related to a record or time-series event. This document covers how to define an identity field in the Adobe Experience Platform UI.

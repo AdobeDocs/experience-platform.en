@@ -8,8 +8,8 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: 32502.jpg
+exl-id: 6fa45d97-5aba-4764-9b31-6151b2238169
 ---
-
 # Key capabilities of Experience Platform
 
 This video reviews the key capabilities of Experience Platform:

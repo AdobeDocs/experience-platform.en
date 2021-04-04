@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Access in Jupyterlab Notebooks
 topic: Developer Guide
 description: This guide focuses on how to use Jupyter Notebooks, built within Data Science Workspace to access your data.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 ---
-
 # Data access in [!DNL Jupyterlab] notebooks
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
@@ -612,4 +612,3 @@ This table outlines the optional SQL flags that can be used for [!DNL Query Serv
 | `-n`, `--notify` | Toggle option for notifying query results. |
 | `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
 | `-d`, `--display` | Using this flag prevents results from being displayed. |
-

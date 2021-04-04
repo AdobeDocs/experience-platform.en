@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Create and Edit Mixins in the UI
 description: Learn how to create and edit mixins in the Experience Platform user interface.
 topic: user guide
+exl-id: 240b857d-75ad-42fd-9249-050cbc5306a9
 ---
-
 # Create and edit mixins in the UI
 
 In Experience Data Model (XDM), mixins are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Mixins are intended to be included as part of a schema that implements a compatible class. 

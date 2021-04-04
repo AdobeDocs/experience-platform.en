@@ -5,8 +5,8 @@ title: Real-time Customer Profile tutorials
 topic: tutorial
 type: Tutorial
 description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 ---
-
 # Configure [!DNL Real-time Customer Profile]
 
 In order to configure [!DNL Real-time Customer Profile] for your organization, you are required to complete multiple separate workflows. This document outlines the steps involved and provides links to tutorials for completing each individual workflow. 

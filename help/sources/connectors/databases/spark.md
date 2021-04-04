@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Apache Spark on Azure HDInsights Source Connector Overview
 topic: overview
 description: Learn how to connect Apache Spark on Azure HDInsights to Adobe Experience Platform using APIs or the user interface.
+exl-id: c4a2a14e-5e16-44b7-b3f1-a98b7229f69e
 ---
-
 # (Beta) [!DNL Apache Spark] on [!DNL Azure HDInsights] connector
 
 >[!NOTE]

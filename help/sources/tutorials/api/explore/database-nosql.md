@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Explore a Database Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore the contents and file structure of a third-party database.
+exl-id: 94935492-a7be-48dc-8089-18476590bf98
 ---
-
 # Explore a database using the [!DNL Flow Service] API
 
 This tutorial uses the [!DNL Flow Service] API to explore the contents and file structure of a third-party database.

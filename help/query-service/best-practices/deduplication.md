@@ -5,8 +5,8 @@ title: Data Deduplication in Query Service
 topic: queries
 type: Tutorial
 description: This document outlines sub-select and full sample query examples for deduplicating three common use cases Experience Events, purchases, and metrics.
+exl-id: 46ba6bb6-67d4-418b-8420-f2294e633070
 ---
-
 # Data deduplication in [!DNL Query Service]
 
 Adobe Experience Platform [!DNL Query Service] supports data deduplication. Data deduplication may be done when it is required to remove an entire row from a calculation or ignore a specific set of fields because only part of the data in the row is duplicate information. 

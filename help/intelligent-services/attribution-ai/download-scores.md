@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services
 title: Download Scores in Attribution AI
 topic: Downloading scores
 description: This document serves as a guide for downloading scores for Attribution AI.
+exl-id: 8821e3fb-c520-4933-8eb7-0b0aa10db916
 ---
-
 # Download scores in Attribution AI
 
 This document serves as a guide for downloading scores for Attribution AI. 

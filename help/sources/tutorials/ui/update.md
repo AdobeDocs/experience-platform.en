@@ -5,8 +5,8 @@ solution: Experience Platform
 title: Update Source Connection Account Details in the UI
 topic: overview
 type: Tutorial
+exl-id: de264bd4-fe3d-4622-9f24-f1612d8334c9
 ---
-
 # Update account details in the UI
 
 In some circumstances, it may be required to update the details of an existing sources account. The [!UICONTROL Sources] workspace provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.

@@ -5,8 +5,8 @@ title: Create a Schema Using the Schema Editor
 topic: tutorial
 type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 ---
-
 # Create a schema using the [!DNL Schema Editor]
 
 The Adobe Experience Platform user interface allows you to create and manage [!DNL Experience Data Model] (XDM) schemas in an interactive visual canvas called the [!DNL Schema Editor]. This tutorial covers how to create a schema using the [!DNL Schema Editor].

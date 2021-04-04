@@ -8,8 +8,8 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: 32806.jpg
+exl-id: 400280bd-3366-4982-b5a6-9f68c85de5e0
 ---
-
 # Key use cases of Experience Platform
 
 This video provides an overview of four key use cases of Experience Platform:

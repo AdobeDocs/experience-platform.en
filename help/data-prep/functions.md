@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 topic: overview
 description: This document introduces the mapping functions used with Data Prep.
+exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 ---
-
 # Data Prep mapping functions
 
 Data Prep functions can be used to compute and calculate values based on what is entered in source fields.

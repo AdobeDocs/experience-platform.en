@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Manage Data Usage Labels in the UI
 topic: labels
 description: This guide covers steps for working with data usage labels within the Adobe Experience Platform user interface.
+exl-id: aa44d5cc-416a-4ef2-be14-b4f32aec162c
 ---
-
 # Manage data usage labels in the UI
 
 This user guide covers steps for working with data usage labels within the [!DNL Experience Platform] user interface. Before using the guide, please see the [[!DNL Data Governance] overview](../home.md) for a more robust introduction to the [!DNL Data Governance] framework.

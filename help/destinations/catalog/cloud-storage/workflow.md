@@ -4,8 +4,8 @@ title: Create a cloud storage destination
 type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 ---
-
 # Create a cloud storage destination
 
 ## Overview {#overview}

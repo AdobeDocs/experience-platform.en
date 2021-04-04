@@ -5,8 +5,8 @@ title: Create an Azure Blob Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
+exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 ---
-
 # Create an [!DNL Azure Blob] source connection using the [!DNL Flow Service] API
 
 This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Azure Blob] (hereinafter referred to as "Blob") to Adobe Experience Platform.
