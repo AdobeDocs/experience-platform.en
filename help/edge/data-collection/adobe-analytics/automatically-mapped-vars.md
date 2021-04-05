@@ -96,3 +96,5 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | `web.webPageDetails.server` | `sv` | AppMeasurement query parameter USER_SERVER mapping. |
 | `web.webPageDetails.siteSection` | `ch` | AppMeasurement query parameter CHANNEL mapping. |
 | `web.webReferrer.URL` | `r` | AppMeasurement query parameter REFERRER mapping. |
+
+{style="table-layout:auto"}
