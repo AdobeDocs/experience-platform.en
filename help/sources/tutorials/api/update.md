@@ -5,8 +5,8 @@ title: Update Accounts Using the Flow Service API
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for updating the details and credentials of an account using the Flow Service API.
+exl-id: a93385fd-ed36-457f-8882-41e37f6f209d
 ---
-
 # Update accounts using the Flow Service API
 
 In some circumstances, it may be required to update the details of an existing source connection. [!DNL Flow Service] provides you with the ability to add, edit, and delete details of an existing batch or streaming connection, including its name, description, and credentials.

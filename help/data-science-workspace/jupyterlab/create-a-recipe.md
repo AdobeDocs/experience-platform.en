@@ -5,8 +5,8 @@ title: Create a Recipe Using Jupyter Notebooks
 topic: tutorial
 type: Tutorial
 description: This tutorial will go over two main sections. First, you will create a machine learning model using a template within JupyterLab Notebook. Next, you will exercise the notebook to recipe workflow within JupyterLab to create a recipe within Data Science Workspace.
+exl-id: d3f300ce-c9e8-4500-81d2-ea338454bfde
 ---
-
 # Create a recipe using Jupyter Notebooks
 
 This tutorial will go over two main sections. First, you will create a machine learning model using a template within [!DNL JupyterLab Notebook]. Next, you will exercise the notebook to recipe workflow within [!DNL JupyterLab] to create a recipe within [!DNL Data Science Workspace]. 
@@ -491,5 +491,3 @@ To continue learning how to work with resources within [!DNL Data Science Worksp
 The following video is designed to support your understanding of building and deploying models.
 
 >[!VIDEO](https://video.tv.adobe.com/v/30575?quality=12&enable10seconds=on&speedcontrol=on)
-
-

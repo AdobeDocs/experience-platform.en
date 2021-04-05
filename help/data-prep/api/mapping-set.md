@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;data prep;api guide;mapping se
 solution: Experience Platform
 title: Mapping Sets API Endpoint
 topic: mapping sets
-description: You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets. 
+description: You can use the `/mappingSets` endpoint in the Adobe Experience Platform API to programmatically retrieve, create, update, and validate mapping sets.
+exl-id: a4e4ddcd-164e-42aa-b7d1-ba59d70da142
 ---
-
 # Mapping sets endpoint
 
 Mapping sets can be used to define how data in a source schema maps to that of a destination schema. You can use the `/mappingSets` endpoint in the Data Prep API to programmatically retrieve, create, update, and validate mapping sets. 

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Subscribe to Privacy Service Events
 topic: privacy events
 description: Learn how to subscribe to Privacy Service events using a preconfigured webhook.
+exl-id: 9bd34313-3042-46e7-b670-7a330654b178
 ---
-
 # Subscribe to [!DNL Privacy Service Events]
 
 [!DNL Privacy Service Events] are messages provided by Adobe Experience Platform [!DNL Privacy Service], which leverage Adobe I/O Events sent to a configured webhook to facilitate efficient job request automation. They reduce or eliminate the need to poll the [!DNL Privacy Service] API in order to check if a job is complete or if a certain milestone within a workflow has been reached.

@@ -5,8 +5,8 @@ title: Create a Google PubSub  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a Google PubSub source connector using the Platform user interface.
+exl-id: fb8411f2-ccae-4bb5-b1bf-52b1144534ed
 ---
-
 # Create a [!DNL Google PubSub] source connection in the UI
 
 >[!NOTE]

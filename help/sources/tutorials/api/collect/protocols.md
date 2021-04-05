@@ -5,8 +5,8 @@ title: Collect Protocols Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
+exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
 ---
-
 # Collect protocols data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party protocol application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.

@@ -5,8 +5,8 @@ title: Create a MySQL Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to MySQL using the Flow Service API.
+exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a
 ---
-
 # Create a MySQL source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

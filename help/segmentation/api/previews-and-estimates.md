@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Previews and Estimates API Endpoints
 topic: developer guide
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
+exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 ---
-
 # Previews and estimates endpoints
 
 As you develop a segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure that you are isolating the audience you expect. 
@@ -242,4 +242,4 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Next steps
 
-After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md). 
+After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md).

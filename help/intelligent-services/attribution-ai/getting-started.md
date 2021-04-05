@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services
 title: Getting Started in Attribution AI
 topic: Getting started
 description: The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents.
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 ---
-
 # Getting started in Attribution AI
 
  The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. Before beginning the tutorials, please review the following documents:

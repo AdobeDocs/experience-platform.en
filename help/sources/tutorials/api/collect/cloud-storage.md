@@ -5,8 +5,8 @@ title: Collect Cloud Storage Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 ---
-
 # Collect cloud storage data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).

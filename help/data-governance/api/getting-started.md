@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Getting Started with the Policy Service API
 topic: developer guide
 description: The Policy Service API allows you to create and manage various resources related to Adobe Experience Platform Data Governance. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Policy Service API.
+exl-id: 5539976c-8433-45af-a147-2ab82ae308b2
 ---
-
 # Getting started with the [!DNL Policy Service] API
 
 The [!DNL Policy Service] API allows you to create and manage various resources related to Adobe Experience Platform [!DNL Data Governance]. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Policy Service] API.

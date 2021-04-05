@@ -4,8 +4,8 @@ title: Viewing profiles in Real-time Customer Data Platform
 seo-title: View Real-time Customer Profile data on Real-time Customer Data Platform
 description: View Real-time Customer Profile data on Real-time Customer Data Platform
 seo-description: View Real-time Customer Profile data on Real-time Customer Data Platform
+exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 ---
-
 # Viewing profiles in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. As individual profiles are aggregated based on data being brought into the system from various sources, each profile becomes an actionable, timestamped account of every interaction your customer has with your brand.

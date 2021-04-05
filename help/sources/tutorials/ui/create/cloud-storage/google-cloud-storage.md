@@ -5,8 +5,8 @@ title: Create a Google Cloud Storage  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
+exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 ---
-
 # Create a [!DNL Google Cloud Storage] source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google Cloud Storage] (hereinafter referred to as "GCS") source connector using the [!DNL Platform] user interface.

@@ -5,8 +5,8 @@ title: Create an Azure Synapse Analytics Source Connection Using the Flow Servic
 topic: overview
 type: Tutorial
 description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using the Flow Service API.
+exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 ---
-
 # Create an [!DNL Azure Synapse Analytics] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services
 title: Color Extraction in the Content and Commerce AI API
 topic: Developer guide
 description: The color extraction service, when given an image, can compute the histogram of pixel colors and sort them by dominant colors into buckets.
+exl-id: 6b3b6314-cb67-404f-888c-4832d041f5ed
 ---
-
 # Color extraction
 
 >[!NOTE]

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Postal Address Data Type
 topic: overview
 description: This document provides an overview of the Postal Address XDM data type.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 ---
-
 # [!UICONTROL Postal address] data type
 
 [!UICONTROL Postal address] is a standard XDM data type that describes the details of a mailing address.

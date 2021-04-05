@@ -3,8 +3,8 @@ keywords: Experience Platform;data prep;data prep api;troubleshooting;API
 title: Data Prep API Overview
 topic: guide
 description: The Data Prep API lets you programatically create mapping sets and functions, allowing you to transform your data between source and destination schemas.
+exl-id: 740944ae-93ba-4099-a65e-18d6b384c307
 ---
-
 # Mapping Service API guide
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow. 
@@ -25,4 +25,4 @@ For detailed information on how to use mapping sets, please read the [mapping se
 
 ## Next steps
 
-To begin making calls using the Mapping Service API, please read the [getting started guide](./getting-started.md) then select one of the endpoint guide to learn how to use the specific endpoints. 
+To begin making calls using the Mapping Service API, please read the [getting started guide](./getting-started.md) then select one of the endpoint guide to learn how to use the specific endpoints.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Mapping Fields for the Adobe Audience Manager Source Connector
 topic: overview
 description: Learn how to map Adobe Audience Manager data (Realtime, Onboarded, and Profile data) to corresponding Experience Data Model (XDM) fields for the Audience Manager source connector.
+exl-id: b800ba43-c308-4334-adce-3d554d50cefb
 ---
-
 # Audience Manager field mappings
 
 The tables below contain the mappings between the fields in Adobe Audience Manager data (Realtime, Onboarded, and Profile data) and their corresponding XDM fields.

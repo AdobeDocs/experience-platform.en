@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Order Data Type
 topic: overview
 description: This document provides an overview of the Order Experience Data Model (XDM) data type.
+exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 ---
-
 # [!UICONTROL Order] data type
 
 [!UICONTROL Order] is a standard Experience Data Model (XDM) data type that describes the order placed for a product list.

@@ -3,8 +3,8 @@ keywords: Facebook;facebook;Social network;Social Network;social network authent
 title: Create a social network destination
 type: Tutorial
 description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
+exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 ---
-
 # Create a social network destination {#social-network-destinations-workflow}
 
 ## Overview {#overview}

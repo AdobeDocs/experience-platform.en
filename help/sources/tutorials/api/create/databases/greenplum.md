@@ -5,8 +5,8 @@ title: Create a GreenPlum Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect GreenPlum to Adobe Experience Platform using the Flow Service API.
+exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 ---
-
 # Create a [!DNL GreenPlum] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

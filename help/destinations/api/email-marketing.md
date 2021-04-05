@@ -5,8 +5,8 @@ title: Connect to email marketing destinations and activate data using the Flow 
 description: This document covers the creation of email marketing destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
+exl-id: 41fd295d-7cda-4ab1-a65e-b47e6c485562
 ---
-
 # Connect to email marketing destinations and activate data using the Flow Service API
 
 This tutorial demonstrates how to use API calls to connect to your Adobe Experience Platform data, create an [email marketing destination](../catalog/email-marketing/overview.md), create a dataflow to your new created destination, and activate data to your new created destination.

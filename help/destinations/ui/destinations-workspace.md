@@ -3,8 +3,8 @@ keywords: platform;destinations;destinations workspace;workspace;ui;destinations
 title: Destinations workspace
 description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
-
 # Destinations workspace {#destinations-workspace}
 
 ## Overview {#overview}

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Delete an Object in the API
 topic: developer guide
 description: You can delete a Catalog object by providing its ID in the path of a DELETE request.
+exl-id: 2ac9c378-2340-43e1-8279-7c365df652e4
 ---
-
 # Delete an object in the API
 
 You can delete a [!DNL Catalog] object by providing its ID in the path of a DELETE request. 

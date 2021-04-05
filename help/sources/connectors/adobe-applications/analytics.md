@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Adobe Analytics Source Connector for Report-Suite Data
 topic: overview
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
+exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---
-
 # Adobe Analytics connector for report-suite data
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). ADC streams data collected by [!DNL Analytics] to [!DNL Platform] in real time, converting SCDS-formatted [!DNL Analytics] data into [!DNL Experience Data Model] (XDM) fields for consumption by [!DNL Platform].
