@@ -22,26 +22,17 @@ Experience Platform strives to meet the Web Accessibility Initiative - Accessibl
 
 ## Left navigation
 
-Summary:
-Color contrast of left nav items, including normal, hover and selection states are now accessible. 
-Added accessible expand / collapse affordance at the bottom of the left nav panel
-Left nav items are now keyboard accessible
-aria-labels added
-Tooltips added when left navigation panel is collapsed
+The left navigation within the Experience Platform UI is keyboard accessible and provides color contrast in normal, hover, and selection states that meet accessibility standards.
 
-Accessibility Specifications:
-User will tab into the left navigation starting with Home, next tab will take users to the expand / collapse affordance at the bottom of the left nav panel.
-Shift + tab goes back to Home.
-Focus is shown for tab selection
-Current selection is shown with highlight and bolded text
-Expand / collapse affordance is activated with the enter key
-When left nav collapsed, on keyboard nav, tooltip appears and focus ring
-Arrow up/down, navigates to each item in the left nav and cycles through (stays in the left nav until tabbed)
-Sections are expanded and collapsed with the left/right arrows. 
-Enter will open the UI in the right panel, focus remains in left nav until tab is selected
-Some feature can be disabled in the left nav. If this occurs, item will be disabled (skips arrow, no enter functionality).
-Tooltip appears (aria-label enabled)
-Left nav items have aria-labels
+When using the left navigation, the following functionality improves accessibility: 
+* From the Home screen, users can tab into the left navigation. Selecting `Shift + tab` returns the user to the Home screen.
+* With the left navigation in focus, selecting tab takes users to the expand and collapse affordance at the bottom of the navigation panel. The ability to expand or collapse the left navigation is activated with the Enter (Return) key.
+* With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and continuously cycles (in other words, the focus does not shift away until the user tabs away from the left navigation).
+* Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text.
+* Sections within the left navigation can be expanded and collapsed using the left and right arrow keys. 
+* When selecting a left navigation item, the Enter (Return) key will open the selected UI item in the right panel, however focus remains in left navigation until the user tabs away.
+* Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items will be skipped during arrow navigation and the user will not be able to select the item using the Enter (Return) key.
+* All items in the left navigation have [ARIA-labels]((https://www.w3.org/WAI/standards-guidelines/aria/)).
 
 ![An image showing multiple versions of the Experience Platform left navigation with accessibility features highlighted.](images/left-navigation.png)
 
@@ -88,13 +79,13 @@ Using a mouse to select the drag and drop zone also invokes the file selection U
 
 ## Table browse
 
-All tables within the Experience Platform user interface are keyboard accessible. Browsing and interacting with table rows and columns is possible through a series of keyboard shortcuts.
+All tables within the Experience Platform user interface are keyboard accessible. Browsing and interacting with table rows and columns is possible through a series of keyboard shortcuts:
 
-1) Table header, arrow down to enter the browse table. Table headers are selectable when navigating via the Tab key, and you can change the sorting order by pressing Space.
-2) Arrow up / down moves down through the rows in the table
-3) Row selected/focused, enter key on row provides details in right rail
-4) Select enter to select item in the row (screen reader will alert user if new window will open)
-5) Row selected/focused use arrow keys to move through each item in the row
+* Table header, arrow down to enter the browse table. Table headers are selectable when navigating via the Tab key, and you can change the sorting order by pressing Space.
+* Arrow up / down moves down through the rows in the table
+* Row selected/focused, enter key on row provides details in right rail
+* Select enter to select item in the row (screen reader will alert user if new window will open)
+* Row selected/focused use arrow keys to move through each item in the row
 
 ### Browse table keyboard accessibility
 
@@ -109,31 +100,37 @@ All tables within the Experience Platform user interface are keyboard accessible
 
 ## Schema Editor UI
 
-Accessibility in Schema Editor UI
-Tabbing starts with left nav panel
-Tab top, left to right to bottom through the UI elements
-Tab enters into middle panel at the search field, then into the schema tree.
-Schema tree use arrow keys to navigate through the schema tree UI
-Arrow up/down to traverse the tree
-Arrow left/right to expand/collapse nodes or move between inline actions on the schema tree.
-Enter key to activate node details in the right panel
-HOME goes top of the tree
-END goes bottom of the tree
-Schema tree includes aria-labels for screen readers
+The Schema Editor UI is made accessible by the following functionality:
+
+* The Schema Editor supports keyboard navigation, including use of the tab key to navigation through the UI elements.
+* Tab enters the search field, then into the schema tree.
+* Schema tree supports the use of arrow keys to navigate through the schema tree UI
+  * Up and down arrows can be used to traverse the tree.
+  * Left and right arrows can be used to expand and collapse nodes or move between inline actions on the schema tree.
+* The Enter (Return) key activates individual node details in the detail panel on the right.
+* The Home key returns to the top of the tree.
+* The End key navigates to the bottom of the tree.
+* Schema tree includes [ARIA-labels]((https://www.w3.org/WAI/standards-guidelines/aria/)). for screen readers
 
 ## Segment Builder UI
 
-The Segment Builder UI is accessible via keyboard navigation and screen readers should recognize markup tags for headings, and can announce the heading along with its level, or provide another audible cue like a beep. Other assistive technologies can change the visual display of a page, using properly coded headings to display an outline or alternate view.
+When using the Segment Builder UI to create, edit, and interact with segments within Experience Platform, the following features improve accessibility:
+
+* The Segment Builder UI is accessible via keyboard navigation.
+* Screen readers should recognize markup tags for headings, and can announce the heading along with its level, or provide additional audible cues such as a beep. 
+* Other assistive technologies can change the visual display of a page, using properly coded headings to display an outline or alternate view.
 
 ## Query Service Editor
 
-Accessibility in Query Service Editor UI
-QS editor color contrast accessibility compliance
-Query Service supports keyboard navigation outside of the editor UI (editor UI is embedded Code Mirror)
+The following accessibility features are available in the Query Service editor:
 
-## Sources and Destinations: System View tab
+* Color contrast in the Query Service editor UI meets accessibility compliance.
+* Keyboard navigation is supported outside of the editor UI. The editor UI is an embedded Code Mirror.
 
-Accessibility: keyboard navigation
+## System View tab in Sources and Destinations
+
+When browsing the [!UICONTROL System View] tab in Sources and Destinations, the following functionality improves accessibility:
+
 * Tab sets focus on first source connection card
   * Second tab will focus on button inside of card
   * Enter will activate the call to action button inside the card

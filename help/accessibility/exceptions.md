@@ -6,3 +6,5 @@ description: Adobe Experience Platform is committed to providing accessible and 
 ---
 
 # Accessibility exceptions and workarounds for Experience Platform
+
+At this time there are no noted exceptions with workarounds in Experience Platform.

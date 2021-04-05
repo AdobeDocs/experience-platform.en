@@ -20,23 +20,28 @@ Users with disabilities frequently rely on hardware and software known as "assis
 * Assistive hardware, including switch controls, refreshable Braille displays, and other computer input devices.
 * UI magnifying tools.
 
+The terms used in the conformance level information are defined as follows:
+
+* Supports: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.
+* Partially supports: Some functionality of the product does not meet the criterion.
+* Does not support: The majority of product functionality does not meet the criterion.
+* Not applicable: The criterion is not relevant to the product.
+* Not evaluated: The product has not been evaluated against the criterion. This can only be used in WCAG 2.0 Level AAA.
+
 ## Screen readers
 
-A screen reader reads text that appears on the computer screen. It also reads non-textual information, such as button labels or image descriptions within an application that are provided in accessibility tags or attributes. Through the use of semantic code and ARIA, interactive elements within the Experience Platform user interface include corresponding labels, accessible names, and roles that identify both their purpose and their current state. This helps to ensure that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls. All interactive elements within Experience Platform include corresponding labels. This ensures that assistive technologies, such as screen readers, can read out the labels to users.
+A screen reader reads text that appears on the computer screen. It also reads non-textual information, such as button labels or image descriptions within an application that are provided in accessibility tags or attributes. 
+
+Through the use of semantic code and [ARIA labels]((https://www.w3.org/WAI/standards-guidelines/aria/)), interactive elements within the Experience Platform user interface include corresponding labels, accessible names, and roles that identify both their purpose and their current state. 
+
+All interactive elements within Experience Platform include these labels. This helps to ensure that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls. 
 
 ### Recommended screen readers & browsers
 
-Windows latest version, using NVDA or JAWS screen readers (latest version) with the latest version of Google Chrome.
+The following screen readers and browsers are recommended for Experience Platform to support accessibility features:
 
-Experience Platform supports built-in MS Windows and macOS accessibility features like high-contrast mode, sticky keys, and slow keys/filter keys. It also provides information about the user interface to the operating system to enable interaction with assistive technologies, including screen readers such as VoiceOver for macOS and NVDA on Windows.
-
-The terms used in the conformance level information are defined as follows:
-
-Supports: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.
-Partially supports: Some functionality of the product does not meet the criterion.
-Does not support: The majority of product functionality does not meet the criterion.
-Not applicable: The criterion is not relevant to the product.
-Not evaluated: The product has not been evaluated against the criterion. This can only be used in WCAG 2.0 Level AAA.
+* Windows latest version, using NVDA or JAWS screen readers (latest version) with the latest version of Google Chrome.
+* Experience Platform supports built-in MS Windows and macOS accessibility features like high-contrast mode, sticky keys, and slow keys/filter keys. It also provides information about the user interface to the operating system to enable interaction with assistive technologies, including screen readers such as VoiceOver for macOS and NVDA on Windows.
 
 ## Keyboard accessibility
 
