@@ -4,8 +4,8 @@ solution: Experience Platform
 title: MLServices API Endpoint
 topic: Developer guide
 description: An MLService is a published trained model that provides your organization with the ability to access and reuse previously developed models. A key feature of MLServices is the ability to automate training and scoring on a scheduled basis. Scheduled training runs can help upkeep a model's efficiency and accuracy, while scheduled scoring runs can ensure that new insights are consistently generated.
+exl-id: cd236e0b-3bfc-4d37-83eb-432f6ad5c5b6
 ---
-
 # MLServices endpoint
 
 An MLService is a published trained model that provides your organization with the ability to access and reuse previously developed models. A key feature of MLServices is the ability to automate training and scoring on a scheduled basis. Scheduled training runs can help upkeep a model's efficiency and accuracy, while scheduled scoring runs can ensure that new insights are consistently generated.

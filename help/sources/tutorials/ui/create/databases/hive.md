@@ -5,8 +5,8 @@ title: Create an Apache Hive on Azure HDInsights  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create an Apache Hive on Azure HDInsights source connection using the Adobe Experience Platform UI.
+exl-id: 3eb3cb02-9867-451a-b847-ab895310eedf
 ---
-
 # Create an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connection in the UI
 
 >[!NOTE]

@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: f6d15ca7-375c-4c8a-96a8-9079e5a44810
 ---
-
 # Create multi-entity segments in the Experience Platform UI
 
 The following video is intended to support your understanding of creating dynamic segments. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about multi-entity segmentation, please read the guide on [multi-entity segmentation](../multi-entity-segmentation.md).

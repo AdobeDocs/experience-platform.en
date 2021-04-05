@@ -2,8 +2,8 @@
 keywords: SFTP;sftp
 title: SFTP connection
 description: Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 ---
-
 # SFTP connection
 
 ## Overview {#overview}

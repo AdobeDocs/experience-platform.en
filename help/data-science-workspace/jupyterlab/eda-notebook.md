@@ -5,8 +5,8 @@ title: Exploratory Data Analysis (EDA) Notebook
 topic: overview
 type: Tutorial
 description: This guide focuses on how to use the exploratory data analysis (EDA) Notebook to discover patterns in web data, aggregate events with a prediction goal, clean aggregated data, and understand the relationship between predictors and a goal.
+exl-id: 48209326-0a07-4b5c-8b49-a2082a78fa47
 ---
-
 # Exploring web-based data for predictive models using the exploratory data analysis (EDA) notebook
 
 The exploratory data analysis (EDA) notebook is designed to assist you with discovering patterns in data, checking data sanity, and summarizing the relevant data for predictive models.

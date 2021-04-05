@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Commerce Data Type
 topic: overview
 description: This document provides an overview of the Commerce Experience Data Model (XDM) data type.
+exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 ---
-
 # [!UICONTROL Commerce] data type
 
 [!UICONTROL Commerce] is a standard Experience Data Model (XDM) data type that describes the records related to buying and selling activity.

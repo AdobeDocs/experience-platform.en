@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Prep Date Functions
 topic: overview
 description: This document introduces the date function used with Data Prep.
+exl-id: e92579eb-1708-4869-96f8-2f3986046ee5
 ---
-
 # Date function
 
 Data Prep supports date functions, both as strings and as datetime objects.

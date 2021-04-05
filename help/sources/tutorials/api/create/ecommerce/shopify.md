@@ -5,8 +5,8 @@ title: Create a Shopify connector Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Shopify to Adobe Experience Platform using the Flow Service API.
+exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2
 ---
-
 # Create a [!DNL Shopify] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Geo Interaction Details Data Type
 topic: overview
 description: This document provides an overview of the Geo Interaction Details XDM data type.
+exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 ---
-
 # [!UICONTROL Geo interaction details] data type
 
 [!UICONTROL Geo interaction details] is a standard XDM data type that describes the current state of inclusion in a geographically defined area.

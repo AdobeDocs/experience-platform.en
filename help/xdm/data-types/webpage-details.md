@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Web Page Details Data Type
 topic: overview
 description: This document provides an overview of the web page details Experience Data Model (XDM) data type.
+exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 ---
-
 # [!UICONTROL Web page details] data type
 
 [!UICONTROL Web page details] is a standard Experience Data Model (XDM) data type that describes details about a web page that has just been loaded and viewed, as recorded by an ExperienceEvent.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Identity Service Overview
 topic: overview
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 ---
-
 # [!DNL Identity Service] overview
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities". Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.

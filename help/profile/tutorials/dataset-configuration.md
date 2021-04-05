@@ -4,8 +4,8 @@ title: Configure a Dataset for Profile and Identity Service using APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial shows you how to enable a dataset for use with Real-time Customer Profile and Identity Service using Adobe Experience Platform APIs.
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 ---
-
 # Configure a dataset for [!DNL Profile] and [!DNL Identity Service] using APIs
 
 This tutorial covers the process of enabling a dataset for use in [!DNL Real-time Customer Profile] and [!DNL Identity Service], broken down into the following steps:

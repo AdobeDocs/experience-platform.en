@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Delete a Sandbox in the API
 topic: developer guide
 description: You can delete a sandbox by making a DELETE request that includes the sandbox's name in the request path.
+exl-id: c900325e-bc28-42f1-bc9a-eecb33fa9be4
 ---
-
 # Delete a sandbox in the API
 
 You can delete a sandbox by making a DELETE request that includes the sandbox's `name` in the request path.

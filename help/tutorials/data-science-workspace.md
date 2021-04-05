@@ -5,8 +5,8 @@ title: Data Science Workspace tutorials
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+exl-id: 7cfd71b1-584f-4588-bbcd-bc42a08a0bc0
 ---
-
 # [!DNL Data Science Workspace] tutorials
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions. Data scientists of all skill levels have sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity. 

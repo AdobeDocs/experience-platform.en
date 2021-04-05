@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Segmentation Service UI Guide
 topic: ui guide
 description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
+exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 ---
-
 # Segmentation Service UI guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Geo Data Type
 topic: overview
 description: This document provides an overview of the Geo XDM data type.
+exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 ---
-
 # [!UICONTROL Geo] data type
 
 [!UICONTROL Geo] is a standard XDM data type that describes the geographic area where an event was observed.

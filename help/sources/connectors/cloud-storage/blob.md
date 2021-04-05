@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Azure Blob Source Connector Overview
 topic: overview
 description: Learn how to connect Azure Blob to Adobe Experience Platform using APIs or the user interface.
+exl-id: 62adc74f-3570-42c7-9ae6-3ddbc09eccc7
 ---
-
 # Azure Blob connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].

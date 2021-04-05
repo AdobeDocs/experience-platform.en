@@ -2,8 +2,8 @@
 keywords: facebook connection;facebook connection;facebook destinations;facebook;instagram;messenger;facebook messenger
 title: Facebook connection
 description: Activate profiles for your Facebook campaigns for audience targeting, personalization, and suppression based on hashed emails.
+exl-id: 51e8c8f0-5e79-45b9-afbc-110bae127f76
 ---
-
 # [!DNL Facebook] connection
 
 ## Overview {#overview}

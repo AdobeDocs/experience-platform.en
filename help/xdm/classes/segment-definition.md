@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Segment Definition Class
 topic: overview
 description: This document provides an overview of the Segment definition class in Experience Data Model (XDM).
+exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 ---
-
 # [!UICONTROL Segment definition] class
 
 "[!UICONTROL Segment definition]" is a standard Experience Data Model (XDM) class that captures the details of a segment definition. The class includes required fields such as the ID and name of a segment, along with other optional attributes. This class should be used if you are bringing in segment definitions from external systems into Adobe Experience Platform.
