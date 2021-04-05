@@ -32,8 +32,8 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Frequency query | Any segment definition that refers to an event happening a certain number of times. |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. |
+| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
+| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
 
 {style="table-layout:auto"}
 
