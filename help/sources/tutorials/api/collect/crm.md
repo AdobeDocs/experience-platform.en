@@ -5,8 +5,8 @@ title: Collect CRM Data Through Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform using source connectors and APIs.
+exl-id: b07dd640-bce6-4699-9d2b-b7096746934a
 ---
-
 # Collect CRM data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party CRM and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.

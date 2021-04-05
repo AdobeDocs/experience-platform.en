@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Activate profiles and segments to a destination
 description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 seo-description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 ---
-
 # Activate profiles and segments to a destination
 
 ## Overview {#overview}

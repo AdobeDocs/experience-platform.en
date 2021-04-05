@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Prep Overview
 topic: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
-
 # Data Prep overview
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow. Data engineers can use Data Prep to perform the following data manipulation during ingestion:

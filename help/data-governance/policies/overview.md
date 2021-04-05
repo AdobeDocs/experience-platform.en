@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Usage Policies Overview
 topic: policies
 description: In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within Experience Platform.
+exl-id: 1b372aa5-3e49-4741-82dc-5701a4bc8469
 ---
-
 # Data usage policies overview
 
 In order for data usage labels to effectively support data compliance, data usage policies must be implemented. Data usage policies are rules that describe the kinds of marketing actions that you are allowed to, or restricted from, performing on data within [!DNL Experience Platform].

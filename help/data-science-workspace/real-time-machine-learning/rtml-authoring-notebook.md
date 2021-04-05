@@ -4,8 +4,8 @@ solution: Experience Platform
 title:  Manage Real-time Machine Learning Notebooks
 topic: Training and scoring a ML model
 description: The following guide outlines the steps needed to build a Real-time Machine Learning application in Adobe Experience Platform JupyterLab.
+exl-id: 604c4739-5a07-4b5a-b3b4-a46fd69e3aeb
 ---
-
 # Manage Real-time Machine Learning notebooks (Alpha)
 
 >[!IMPORTANT]

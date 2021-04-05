@@ -2,8 +2,8 @@
 title: Render Personalized Content Using the Adobe Experience Platform Web SDK
 description: Learn how to render personalized content with the Adobe Experience Platform Web SDK.
 keywords: personalization;renderDecisions;sendEvent;decisionScopes;result.decisions;
+exl-id: 6a3252ca-cdec-48a0-a001-2944ad635805
 ---
-
 # Render personalized content
 
 Adobe Experience Platform [!DNL Web SDK] supports querying the personalization solutions at Adobe, including Adobe Target. There are two modes for personalization: retrieving content that can be rendered automatically and content that the developer must render. The SDK also provides facilities to [manage flicker](../personalization/manage-flicker.md).

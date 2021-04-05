@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Environment Data Type
 topic: overview
 description: This document provides an overview of the Environment XDM data type.
+exl-id: ec806ee5-ed65-4148-9dbe-e297d9e8cd73
 ---
-
 # [!UICONTROL Environment] data type
 
 [!UICONTROL Environment] is a standard XDM data type that describes the surrounding environment of an observed event, specifically detailing transitory information such as network and software versions.

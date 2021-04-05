@@ -2,8 +2,8 @@
 keywords: twitter;Twitter;twitter universal website tag;Twitter universal website tag;Twitter UWT Tag;Twitter uwt;twitter uwt
 title: Twitter Universal Website Tag extension
 description: The Twitter Universal Website Tag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
 ---
-
 # [!DNL Twitter Universal Website Tag] extension {#twitter-uwt-extension}
 
 ## Overview {#overview}

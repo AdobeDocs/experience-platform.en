@@ -3,8 +3,8 @@ keywords: connect destination;destination connect;how to connect destination
 title: Connect to a destination
 type: Tutorial
 description: This tutorial lists the steps to connect a destination in Adobe Experience Platform
+exl-id: 56d7799a-d1da-4727-ae79-fb2c775fe5a5
 ---
-
 # Connect to a destination 
 
 Follow the steps below to connect to a destination in Adobe Experience Platform:

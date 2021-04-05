@@ -1,8 +1,8 @@
 ---
 title: Integrate IAB TCF 2.0 Support using Platform Launch and the Platform Web SDK Extension
 description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK extension.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 ---
-
 # Integrate IAB TCF 2.0 support using Platform Launch and the Platform Web SDK extension
 
 Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK extension for Experience Platform Launch.

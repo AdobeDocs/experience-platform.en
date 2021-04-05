@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Basics of Schema Composition
 topic: overview
 description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 ---
-
 # Basics of schema composition
 
 This document provides an introduction to [!DNL Experience Data Model] (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Platform], see the [XDM System overview](../home.md).

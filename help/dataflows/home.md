@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Dataflows Overview
 topic: overview
 description: This document introduces dataflows, expressing how they are used in Adobe Experience Platform.
+exl-id: 8fe08ffa-f095-4e9f-8bab-d060985f0236
 ---
-
 # Dataflows overview
 
 In Adobe Experience Platform, data is ingested from a wide variety of sources, analyzed within Experience Platform, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows. 
@@ -25,4 +25,3 @@ To learn more about preparing data after it's been ingested, please read the [Da
 ## Monitoring dataflows
 
 Monitoring dataflows can be done by using either Platform APIs or the Platform UI. To learn how to monitor dataflows using the API, please read the [monitoring dataflows API tutorial](./api/monitor.md). To learn how to monitor dataflows within the Platform UI, please read the tutorials on [monitoring dataflows for sources](./ui/monitor-sources.md) and [monitoring dataflows for destinations](./ui/monitor-destinations.md).
-

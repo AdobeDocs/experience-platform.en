@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Supported Data Types in Segmentation Service
 topic: overview
 description: All Experience Data Model (XDM) data types are supported within Adobe Segmentation Service. The rules that constitute a segment definition are contextualized by the following data types.
+exl-id: 73f932a7-f864-4566-ade7-c148a12dc83c
 ---
-
 # Supported data types in Segmentation Service
 
 All Experience Data Model (XDM) data types are supported within Adobe Experience Platform Segmentation Service. The rules that constitute a segment definition are contextualized by the following data types.
