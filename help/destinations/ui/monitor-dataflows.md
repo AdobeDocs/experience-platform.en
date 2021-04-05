@@ -9,6 +9,8 @@ type: Tutorial
 
 # Monitor dataflows
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+[!UICONTROL Destinations] allow you to activate your data from Adobe Experience Platform to countless external partners. 
+
+Dataflows are a representation of data jobs that move data across [!DNL Platform]. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by [!DNL Identity Service] and[!DNL Real-time Customer Profile] before ultimately being activated to destinations.
 
 To learn more about monitoring dataflows for destinations, please read the [Monitor dataflows for destinations in the UI](../../dataflows/ui/monitor-destinations.md) tutorial.

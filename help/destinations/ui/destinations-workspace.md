@@ -17,9 +17,9 @@ The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL C
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Platform, that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Platform], that you can send data to. 
 
-The Platform user interface provides several search and filter options on the destinations catalog page:
+The [!DNL Platform] user interface provides several search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
@@ -46,7 +46,7 @@ Select a destination card in the catalog to open the right rail. Here, you can s
 
 ![Destination catalog options](../assets/ui/workspace/destination-right-rail.png)
 
-For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
+For more information on destination categories and information on each destination, see the [Destination catalog](../catalog/overview.md) and [Destination types and categories](../destination-types.md).
 
 ## [!UICONTROL Accounts] {#accounts}
 

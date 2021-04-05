@@ -13,7 +13,7 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 >[!NOTE]
 >
->The destinations details page is part of the [!UICONTROL Destinations] workspace in the Platform UI. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>The destinations details page is part of the [!UICONTROL Destinations] workspace in the [!DNL Platform] [!DNL UI]. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
 ## View destination details {#view-details}
 
@@ -53,8 +53,8 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |
 | [!UICONTROL Category] | Indicates the destination type. See the [destinations catalog](../catalog/overview.md) for more information. |
-| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include "[!UICONTROL Cookie]" and "[!UICONTROL Profile-based]". |
-| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include "[!UICONTROL Streaming]" and "[!UICONTROL Batch]".  |
+| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include [!UICONTROL Cookie] and [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include [!UICONTROL Streaming] and [!UICONTROL Batch].  |
 | [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
 | [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
@@ -69,7 +69,7 @@ You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start a
 
 ## [!UICONTROL Dataflow runs]
 
-The Dataflow runs tab provides metric data on your dataflow runs to batch destinations. See [Monitor dataflows](monitor-dataflows.md) for details.
+The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. Refer to [Monitor dataflows](monitor-dataflows.md) for details.
 
 ## [!UICONTROL Activation data] {#activation-data}
 

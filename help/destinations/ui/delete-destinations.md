@@ -13,7 +13,7 @@ In the Adobe Experience Platform user interface, you can delete existing connect
 
 Deleting a destination removes any existing dataflows to that destination. All segments activated to the destinations that you delete are unmapped before the dataflow is deleted.
 
-There are two ways you can delete destinations from the Platform [!DNL UI]. You can:
+There are two ways you can delete destinations from the [!DNL Platform] [!DNL UI]. You can:
 
 * [Delete destinations from the [!UICONTROL Browse] tab](#delete-browse-tab)
 * [Delete destinations from the destination details page](#delete-destination-details-page)
@@ -63,11 +63,11 @@ Follow the steps below to delete a destination from the destination details page
         ![Destination details](../assets/ui/delete-destinations/destination-details-empty.png)
 
 
-4. Select **[!UICONTROL Delete]** on the right rail.
+4. Select **[!UICONTROL Delete]** in the right rail.
 
     ![Delete destination](../assets/ui/delete-destinations/delete-destinations-button.png)
 
-5. Select **[!UICONTROL Delete]** on the confirmation dialog to remove the destination.
+5. Select **[!UICONTROL Delete]** in the confirmation dialog to remove the destination.
 
     ![Delete destination confirm](..//assets/ui/delete-destinations/delete-destinations-delete.png)
 
