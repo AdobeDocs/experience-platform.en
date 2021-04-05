@@ -216,11 +216,20 @@ Schema versions are referenced by `Accept` headers in the Schema Registry API an
 
 Currently, Platform only supports a single major version (`1`) for each schema. According to the [rules of schema evolution](../schema/composition.md#evolution), each update to a schema must be non-destructive, meaning that new minor versions of a schema (`1.2`, `1.3`, etc.) are always backward compatible with previous minor versions. Therefore, when specifying `version=1`, the Schema Registry always returns the **latest** major version `1` of a schema , meaning that previous minor versions are not returned.
 
+>[!NOTE]
+>
+>The non-destructive requirement for schema evolution is only enforced after the schema has been referenced by a dataset and one of the following cases is true:
+>
+>* Data has been ingested into the dataset.
+>* The dataset has been enabled for use in Real-time Customer Profile (even if no data has been ingested).
+>
+>If the schema has not been associated with a dataset that meets one of the above criteria, then any change can be made to it. However, in all cases the `version` component still remains at `1`.
+
 ## XDM field constraints and best practices
 
 The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. 
 
-More information about defining field types in the API can be found in the [appendix](appendix.md) for this guide, including code samples and optional constraints for the most commonly used data types.
+More information about defining field types in the API can be found in the [field constraints guide](../schema/field-constraints.md) for this guide, including code samples and optional constraints for the most commonly used data types.
 
 The following sample field illustrates a properly formatted XDM field, with further details on naming constraints and best practices provided below. These practices can also be applied when defining other resources that contain similar attributes.
 
