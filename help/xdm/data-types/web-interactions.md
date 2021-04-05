@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Web Interaction Data Type
 topic: overview
 description: This document provides an overview of the web interaction Experience Data Model (XDM) data type.
+exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 ---
-
 # [!UICONTROL Web interaction] data type
 
 [!UICONTROL Web interaction] is a standard Experience Data Model (XDM) data type that describes information about interactions that happened on a web page after the initial page load was completed. It is intended for recording interactions in rich web applications that do not trigger a new page load such as single-page web apps (SPAs).

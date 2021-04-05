@@ -5,8 +5,8 @@ title: Create a Salesforce Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Salesforce account using the Flow Service API.
+exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6
 ---
-
 # Create a [!DNL Salesforce] source connection using the [!DNL Flow Service] API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

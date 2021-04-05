@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Azure Data Explorer Source Connector Overview
 topic: overview
 description: Learn how to connect Azure Data Explorer to Adobe Experience Platform using APIs or the user interface.
+exl-id: 869bd8bb-51e6-4e0c-a3ec-ff083dda5789
 ---
-
 # (Beta) [!DNL Azure Data Explorer] connector
 
 >[!NOTE]

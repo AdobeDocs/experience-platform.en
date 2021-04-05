@@ -4,8 +4,8 @@ solution: Experience Platform
 title: XDM ExperienceEvent Class
 topic: overview
 description: This document provides an overview of the XDM ExperienceEvent class.
+exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
-
 # [!DNL XDM ExperienceEvent] class
 
 [!DNL XDM ExperienceEvent] is a standard XDM class which allows you to create a timestamped snapshot of the system when a specific event occurs or a certain set of conditions have been reached.

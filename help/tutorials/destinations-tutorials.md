@@ -5,8 +5,8 @@ title: Create a destination and activate data using APIs
 topic: tutorial
 type: Tutorial
 description: Learn to create different types of destinations and activate data.
+exl-id: f9c421e5-7e07-4587-8cf7-dc14b716865c
 ---
-
 # Create a destination and activate data using APIs
 
 Learn to create different types of destinations and activate data. This functionality is available for users of [Adobe's Real-time Customer Data Platform](../rtcdp/overview.md).

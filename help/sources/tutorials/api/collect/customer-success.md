@@ -5,8 +5,8 @@ title: Collect Data From A Customer Success System Using Source Connectors and A
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
+exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
-
 # Collect data from a customer success system using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Privacy Service Release Notes
 topic: release notes
 description: The latest release notes for Adobe Experience Platform Privacy Service.
+exl-id: 66ee38f1-f0d5-44ff-823d-d1b8a9765c6d
 ---
-
 # [!DNL Privacy Service] release notes
 
 This document contains information about new features for Adobe Experience Platform [!DNL Privacy Service], as well as enhancements and significant bug fixes.

@@ -5,8 +5,8 @@ title: Create an Oracle DB  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create an Oracle DB source connection using the Adobe Experience Platform UI.
+exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 ---
-
 # Create an [!DNL Oracle DB] source connection in the UI
 
 >[!NOTE]

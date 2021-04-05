@@ -4,8 +4,8 @@ title: Real-time Customer Data Platform Overview
 seo-title: Real-time Customer Data Platform Overview
 description: Overview of Real-time Customer Data Platform
 seo-description: Overview of Real-time Customer Data Platform
+exl-id: 8be51bf0-b372-4a81-ba45-f4fe4b7e1718
 ---
-
 # Real-time Customer Data Platform overview
 
 Built on Adobe Experience Platform, Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real time.

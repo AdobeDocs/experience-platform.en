@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Catalog Service API Guide
 topic: developer guide
 description: The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 ---
-
 # [!DNL Catalog Service] API guide
 
 [!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [[!DNL Catalog] overview](../home.md) for more information.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Retrieving Data Ingestion Error Diagnostics
 topic: overview
 description: This document provides information on monitoring batch ingestion, managing partial batch ingestion errors, as well as a reference for partial batch ingestion types.
+exl-id: b885fb00-b66d-453b-80b7-8821117c2041
 ---
-
 # Retrieving data ingestion error diagnostics
 
 Adobe Experience Platform provides two methods for uploading and ingesting data. You can either use batch ingestion, which allows you to insert data using various file types (such as CSVs), or streaming ingestion, which allows you to insert their data to [!DNL Platform] using streaming endpoints in real time.
