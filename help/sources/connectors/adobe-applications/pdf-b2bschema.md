@@ -33,7 +33,7 @@ The following are B2B schemas required to create a Marketo source connector. For
 * **Primary identity namespace**: `person_{MUNCHKIN_ID}_marketo`
 * **Secondary identity**: `extSourceSystemAudit.externalID` of XDM Business Person Details mixin.
 * **Secondary identity namespace**: `person_{SFDC_Organization_ID}_salesforce`
-* **Relationship**: <ul><li>`personComponents.sourceAccountID` of XDM Business Person Components mixim</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul>
+* **Relationship**: <ul><li>`personComponents.sourceAccountID` of XDM Business Person Components mixin</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul>
 
 ### Marketo Opportunity
 
@@ -75,8 +75,7 @@ _marketo`</li></ul>
 * **Profile in schema**: Enabled
 * **Primary identity**: `campaignMemberID` in base class.
 * **Primary identity namespace**: `campaign_member_{MUNCHKIN_ID}_marketo`
-* **Relationship**: <ul><li>`personID` in the base class</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul><ul><br><li>`campaignID` in the base class</li><li>Schema: Marketo Campaign</li><li>Namespace: `campaign_{MUNCHKIN_ID}
-_marketo`</li></ul>
+* **Relationship**: <ul><li>`personID` in the base class</li><li>Schema: Marketo Person</li><li>Namespace: `person_{MUNCHKIN_ID}_marketo`</li></ul><ul><br><li>`campaignID` in the base class</li><li>Schema: Marketo Campaign</li><li>Namespace: `campaign_{MUNCHKIN_ID}_marketo`</li></ul>
 
 ### Marketo Marketing List
 
@@ -94,7 +93,7 @@ _marketo`</li></ul>
 * **Profile in schema**: Enabled
 * **Primary identity**: `marketingListMemberID` in base class.
 * **Primary identity namespace**: `marketing_list_member_{MUNCHKIN_ID}_marketo`
-* **Relationship**: <ul><li>`personID` in the base class</li><li>Schema: Marketo Company</li><li>Namespace: `company_{MUNCHKIN_ID}_marketo`</li></ul><ul><br><li>`marketingListID` in the base class</li><li>Schema: Marketo Opportunity</li><li>Namespace: `marketing_list_{MUNCHKIN_ID}_marketo`</li></ul>
+* **Relationship**: <ul><li>`personID` in the base class</li><li>Schema: Marketo Person</li><li>Namespace: `person_{MUNCHKIN_ID}_marketo`</li></ul><ul><br><li>`marketingListID` in the base class</li><li>Schema: Marketo Marketing List</li><li>Namespace: `marketing_list_{MUNCHKIN_ID}_marketo`</li></ul>
 * **Notes**: Marketing list is not synced from Salesforce, so there is no secondary identity.
 
 ### Marketo Named Account
