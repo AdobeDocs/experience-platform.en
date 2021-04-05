@@ -4,8 +4,8 @@ title: Sources in Real-time Customer Data Platform
 seo-title: Sources in Real-time Customer Data Platform
 description: This document provides an overview of Sources in Real-Time Customer Data Platform
 seo-description: This document provides an overview of Sources in Real-Time Customer Data Platform
+exl-id: 15b3ee9b-6faf-4091-9641-e653e4cdd7fb
 ---
-
 # Sources in Real-time Customer Data Platform
 
 [!DNL Real-Time Customer Data Platform] allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe Solutions, cloud-based storage, third party software, and your CRM.

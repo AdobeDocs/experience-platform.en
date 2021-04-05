@@ -3,8 +3,8 @@ keywords: platform;destinations;destinations workspace;workspace;ui;destinations
 title: Destinations workspace
 description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View, which are described in the sections below.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
+exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
-
 # Destinations workspace {#destinations-workspace}
 
 ## Overview {#overview}
@@ -38,6 +38,8 @@ Control | Description
 [!UICONTROL View dataflows] | View the data activation flows that exist for a destination.
 [!UICONTROL View documentation] | Opens a link to the documentation page for that specific destination, for more information and to help you set it up.
 
+{style="table-layout:auto"}
+
 ![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png)
 
 Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
@@ -63,6 +65,8 @@ Element | Description
 [!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).
 [!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
 [!UICONTROL Authorized] | The date when the connection to this destination was authorized.
+
+{style="table-layout:auto"}
 
 Additionally, you can edit or update your account information. Select the ![Edit account button](../assets/ui/workspace/pencil-icon.png) in the **[!UICONTROL Platform]** column to edit the account's information.
 

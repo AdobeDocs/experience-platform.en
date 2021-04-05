@@ -5,8 +5,8 @@ title: Create a Google BigQuery Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Google BigQuery using the Flow Service API.
+exl-id: 51f90366-7a0e-49f1-bd57-b540fa1d15af
 ---
-
 # Create a [!DNL Google BigQuery] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

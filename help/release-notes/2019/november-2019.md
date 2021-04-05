@@ -1,13 +1,11 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes November 18, 2019
 doc-type: release notes
 last-update: November 18, 2019
 author: crhoades, ens28527
-
+exl-id: 2c417c56-cc61-4788-b248-d98ea6cf89f0
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: November 18, 2019**
@@ -183,4 +181,4 @@ Adobe Experience Platform [!DNL Segmentation Service] provides a user interface 
 
 * None.
 
-To learn more about [!DNL Segmentation Service], please read the [Segmentation Service overview](../../segmentation/home.md).  
+To learn more about [!DNL Segmentation Service], please read the [Segmentation Service overview](../../segmentation/home.md).

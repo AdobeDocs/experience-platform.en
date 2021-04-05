@@ -3,8 +3,8 @@ keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
 solution: Experience Platform
 title: PayPal Source Connector Overview
 description: Learn how to connect PayPal to Adobe Experience Platform using APIs or the user interface.
+exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 ---
-
 # (Beta) [!DNL PayPal] connector
 
 >[!NOTE]

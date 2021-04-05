@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Datasets Overview
 topic: datasets
 description: This document provides a high-level overview of datasets in Experience Platform.
+exl-id: 51ecefb0-a699-4b1a-80f1-26c6ba92fcbf
 ---
-
 # Datasets overview
 
 All data that is successfully ingested into Adobe Experience Platform is persisted within the [!DNL Data Lake] as datasets. A dataset is a storage and management construct for a collection of data, typically a table, that contains a schema (columns) and fields (rows). Datasets also contain metadata that describes various aspects of the data they store. 

@@ -5,8 +5,8 @@ title: Create an Azure File Storage Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using the Flow Service API.
+exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 ---
-
 # Create an [!DNL Azure File Storage] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

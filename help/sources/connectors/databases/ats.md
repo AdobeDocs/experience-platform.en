@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Azure Table Storage Source Connector Overview
 topic: overview
 description: Learn how to connect Azure Table Storage to Adobe Experience Platform using APIs or the user interface.
+exl-id: 096e01b1-7e95-4e30-87de-d0976f8b438a
 ---
-
 # (Beta) [!DNL Azure Table Storage] connector
 
 >[!NOTE]

@@ -4,8 +4,8 @@ title: Destinations Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's active destinations.
 topic: guide
 type: Documentation
+exl-id: 6a34a796-24a1-450a-af39-60113928873e
 ---
-
 # (Beta) [!UICONTROL Destinations] dashboard
 
 >[!IMPORTANT]

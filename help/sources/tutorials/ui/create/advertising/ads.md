@@ -5,8 +5,8 @@ title: Create a Google AdWords  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a Google AdWords source connection using the Adobe Experience Platform UI.
+exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638
 ---
-
 # Create a [!DNL Google AdWords] source connection in the UI
 
 >[!NOTE]

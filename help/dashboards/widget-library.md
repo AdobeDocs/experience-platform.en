@@ -3,8 +3,8 @@ keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;se
 title: Using the Widget Library to Add and Create Dashboard Widgets
 description: This guide provides step-by-step instructions for adding standard widgets and creating custom widgets for visualizing dashboard data in Adobe Experience Platform. 
 topic: guide
+exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 ---
-
 # (Beta) Widget library {#widget-library}
 
 >[!IMPORTANT]
@@ -126,4 +126,4 @@ After a widget has been added to the library, it can be archived using the **[!U
 
 ## Next steps
 
-After reading this document, you now are able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To modify the size and location of widgets in the dashboard, please refer to the [modify dashboards guide](modify.md). 
+After reading this document, you now are able to access the [!UICONTROL Widget library] and use it to add widgets to a dashboard or create custom widgets for your organization. To modify the size and location of widgets in the dashboard, please refer to the [modify dashboards guide](modify.md).

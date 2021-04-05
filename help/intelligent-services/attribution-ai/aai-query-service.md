@@ -4,8 +4,8 @@ solution: Intelligent Services, Experience Platform
 title: Analyzing Attribution Scores Using Query Service
 topic: Attribution AI queries
 description: Learn how to use Adobe Experience Platform Query Service to analyze Attribution AI scores.
+exl-id: 35d7f6f2-a118-4093-8dbc-cb020ec35e90
 ---
-
 # Analyzing attribution scores using Query Service
 
 Each row in the data represents a conversion, in which information for related touchpoints are stored as an array of structs under the `touchpointsDetail` column.
