@@ -174,7 +174,7 @@ The [!DNL Schema Editor] reappears with the new custom mixin selected in the lef
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
-A new field appears within the `consents` object. Since you are adding a custom field to a standard object, the new field is created under an object that is namespaced to your tenant ID.
+A new field appears within the `consents` object. Since you are adding a custom field to a standard XDM object, the new field is created under an object that is namespaced to your tenant ID.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
 
@@ -189,11 +189,11 @@ When finished, select **[!UICONTROL Apply]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
 
-The consent or preference field is added to the schema structure. Note that the [!UICONTROL Path] displayed in the right rail contains the `_tenantId` namespace. This namespace must be included whenever you reference the path to this field.
+The consent or preference field is added to the schema structure. Note that the [!UICONTROL Path] displayed in the right rail contains the `_tenantId` namespace. This namespace must be included whenever you reference the path to this field in your data operations.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 
-Continue following the steps above to add the consent and preference fields that you require. When finished, select **[!UICONTROL Save]** to confirm your changes.
+Follow the steps above to continue adding the consent and preference fields that you require. When finished, select **[!UICONTROL Save]** to confirm your changes.
 
 If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
 
