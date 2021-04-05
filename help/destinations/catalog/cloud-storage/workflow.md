@@ -58,6 +58,10 @@ Your destination is now created. You can select **[!UICONTROL Save & Exit]** if 
 
 ## Use macros to create a folder in your storage location{#use-macros}
 
+>[!NOTE]
+>
+> The functionality described in this section is currently available for [Amazon S3](./amazon-s3.md) destinations only.
+
 To create a custom folder per segment file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
 
 ![How to use macros to create a folder in your storage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
