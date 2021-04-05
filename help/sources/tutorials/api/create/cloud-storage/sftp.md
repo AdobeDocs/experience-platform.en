@@ -5,13 +5,9 @@ title: Create an SFTP Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an SFTP (Secure File Transfer Protocol) server using the Flow Service API.
+exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 ---
-
 # Create an SFTP source connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The SFTP connector is in beta. The features and documentation are subject to change. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect Experience Platform to an SFTP (Secure File Transfer Protocol) server.
 

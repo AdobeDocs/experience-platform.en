@@ -5,8 +5,8 @@ title: Enforce Data Usage Compliance for an Audience Segment Using APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
+exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 ---
-
 # Enforce data usage compliance for an audience segment using APIs
 
 This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-time Customer Profile] audience segments using APIs.

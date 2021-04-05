@@ -4,8 +4,8 @@ title: Real-time Customer Profile Overview
 seo-title: Real-time Customer Profile in Real-time Customer Data Platform
 description: Learn how Real-time Customer Data Platform enables you to drive coordinated, consistent, relevant experiences for your customers using Real-time Customer Profiles.
 seo-description: Real-time Customer Data Platform, Profile, data, experiences, channels
+exl-id: de70948c-ffc1-49d3-a57c-25ad415752ff
 ---
-
 # [!DNL Real-time Customer Profile] overview
 
 [!DNL Real-time Customer Profile] enables you to see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate your disparate customer data into a unified view offering an actionable, timestamped account of every customer interaction.

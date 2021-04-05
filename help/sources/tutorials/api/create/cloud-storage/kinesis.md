@@ -5,8 +5,8 @@ title: Create an Amazon Kinesis Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an Amazon Kinesis account using the Flow Service API.
+exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 ---
-
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
 >[!NOTE]

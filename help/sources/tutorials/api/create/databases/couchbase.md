@@ -5,8 +5,8 @@ title: Create a Couchbase Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Couchbase to Adobe Experience Platform using the Flow Service API.
+exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 ---
-
 # Create a [!DNL Couchbase] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

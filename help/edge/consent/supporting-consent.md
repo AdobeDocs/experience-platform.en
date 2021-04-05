@@ -2,8 +2,8 @@
 title: Supporting Customer Consent Preferences Using the Adobe Experience Platform Web SDK
 description: Learn how to support consent preferences with the Adobe Experience Platform Web SDK.
 keywords: consent;defaultConsent;default consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;
+exl-id: 647e4a84-4a66-45d6-8b05-d78786bca63a
 ---
-
 # Supporting customer consent preferences
 
 To respect your user's privacy, you might want to ask for the user's consent before allowing the SDK to use user-specific data for certain purposes. Currently, the SDK only allows users to opt in or out of all purposes, but in the future Adobe hopes to provide more granular control over specific purposes.
@@ -59,13 +59,16 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     }]
 });
 ```
 
-If the user chooses to opt out, execute the `setConsent` command with the collect preference set to `n` as follows:
+The time field should specify when the user last updated their consent preferences. If the user chooses to opt out, execute the `setConsent` command with the collect preference set to `n` as follows:
 
 ```javascript
 alloy("setConsent", {
@@ -75,6 +78,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "n"
+        },
+        metadata: {
+          time: "2021-03-17T15:51:30-07:00"
         }
       }
     }]
@@ -148,6 +154,9 @@ alloy("setConsent", {
       value: {
         collect: {
           val: "y"
+        },
+        metadata: {
+          time: "2021-03-17T15:48:42-07:00"
         }
       }
     },{
@@ -168,4 +177,3 @@ You will need to store the user preferences independently to be able to show the
 ## Syncing identities while setting consent
 
 When the default consent is pending or out, the `setConsent` may be the first request that goes out and establishes identity. Because of this, it may be important to sync identities on the first request. The identity map can be added to `setConsent` command just like on the `sendEvent` command. See [Retrieving Experience Cloud ID](../identity/overview.md)
-

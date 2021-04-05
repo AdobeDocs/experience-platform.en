@@ -1,11 +1,13 @@
 ---
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
-description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
-seo-description: The details page for an individual destination provides an overview of the destination details, such as the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
+exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 ---
-
 # View destination details
+
+## Overview {#overview}
 
 In the Adobe Experience Platform user interface, you can view and monitor the attributes and activities of your destinations. These details include the destination's name and ID, controls to activate or disable the destinations, and more. Details for batch destinations also include metrics for activated profile records and a history of dataflow runs.
 
@@ -21,7 +23,7 @@ The details page for the destination appears, showing its available controls. If
 
 ![](../assets/ui/details-page/details.png)
 
-Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon. Any segments that are activated to a destinations will be unmapped before the dataflow is deleted.
+Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon. Any segments that are activated to destinations will be unmapped before the dataflow is deleted.
 
 ![](../assets/ui/details-page/delete-flow.png)
 
@@ -36,7 +38,7 @@ The following table covers the controls and details provided by the right rail:
 | Right-rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
-| [!UICONTROL Delete] | Allows you to delete this dataflow and un-maps the segments that were previously activated, if any exist. |
+| [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
 | [!UICONTROL Destination] | Represents the destination platform that audiences are sent to. See the [destinations catalog](../catalog/overview.md) for more information. |
@@ -48,6 +50,8 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
 | [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
+
+{style="table-layout:auto"}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 

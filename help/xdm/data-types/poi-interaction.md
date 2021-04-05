@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Point of Interest Interaction Data Type
 topic: overview
 description: This document provides an overview of the Point Of Interest Interaction XDM data type.
+exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 ---
-
 # [!UICONTROL Point of interest interaction] data type
 
 [!UICONTROL Point of interest interaction] is a standard XDM data type that describes the wireless device that communicates identity information to mobile applications as mobile devices come within range.

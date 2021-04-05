@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Privacy Service Overview
 topic: overview
 description: Privacy Service allows you to facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 ---
-
 # [!DNL Privacy Service] overview
 
 In order to deliver better customer experiences, you need to collect and store your customers' personal data. When using this data, it is important to understand and respect your customers' privacy. New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request.

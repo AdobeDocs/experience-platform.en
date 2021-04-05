@@ -2,33 +2,35 @@
 keywords: advertising; bing; 
 title: Microsoft Bing connection
 description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 ---
-
 # [!DNL Microsoft Bing] connection {#bing-destination}
+
+## Overview {#overview}
 
 The [!DNL Microsoft Bing] destination helps you send profile data to [!DNL Microsoft Display Advertising].
 
 To send profile data to [!DNL Microsoft Bing], you must first connect to the destination.
 
-## Destination specs {#destination-specs}
-
-Note the following details that are specific to the [!DNL Microsoft Bing] destination:
-
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Microsoft Bing] destinations: [!DNL Microsoft ID].
-
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
-
 ## Use cases {#use-cases}
 
 As a marketer, I want to be able to use segments built off of [!DNL Microsoft Advertising IDs] to target users via display advertising across [!DNL Microsoft Advertising] channels.
+
+## Supported Identities {#supported-identities}
+
+[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+
+|Target Identity|Description|
+|---|---|
+|MAID|Microsoft Advertising ID|
 
 ## Export type {#export-type}
 
 **[!DNL Segment Export]** - you are exporting all members of a segment (audience) to the [!DNL Microsoft Bing] destination.
 
 ## Prerequisites {#prerequisites}
+
+If you are looking to create your first destination with [!DNL Microsoft Bing] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Microsoft Bing] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
 When configuring the destination, you must provide the following information:
 
@@ -40,13 +42,13 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Mi
 
 ![Configure Microsoft Bing Destination](../../assets/catalog/advertising/bing/configure.png)
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
->
->![Activate Microsoft Bing Destination](../../assets/catalog/advertising/bing/activate.png)
+If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
 
-In the [!UICONTROL Authentication] step, you must enter the destination connection details:
+![Activate Microsoft Bing Destination](../../assets/catalog/advertising/bing/activate.png)
+
+## Authentication step {#authentication}
+
+In the **[!UICONTROL Authentication]** step, you must enter the destination connection details:
    
  *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
  *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
@@ -69,4 +71,4 @@ When mapping segments, we recommend you use the [!DNL Platform] segment name or 
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account. 
+To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account.

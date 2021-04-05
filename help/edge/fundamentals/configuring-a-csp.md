@@ -4,9 +4,8 @@ seo-title: Configuring a CSP for Adobe Experience Platform Web SDK
 description: Learn how to configure a CSP for the Experience Platform Web SDK
 seo-description: Learn how to configure a CSP for the Experience Platform Web SDK
 keywords: configuring;configuration;SDK;edge;Web SDK;configure;context;web;device;environment;web sdk settings;content security policy;
-
+exl-id: 661d0001-9e10-479e-84c1-80e58f0e9c0b
 ---
-
 # Configuring a CSP
 
 A [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy) (CSP) is used to restrict the resources a browser is allowed to use. The CSP can also limit the functionality of script and style resources. Adobe Experience Platform Web SDK does not require a CSP, but adding one can reduce the attack surface to prevent against malicious attacks.

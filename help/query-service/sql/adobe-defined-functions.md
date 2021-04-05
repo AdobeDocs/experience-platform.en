@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Adobe-Defined SQL Functions in Query Service
 topic: functions
 description: This document provides information for Adobe-defined functions available in Adobe Experience Platform Query Service.
+exl-id: 275aa14e-f555-4365-bcd6-0dd6df2456b3
 ---
-
 # Adobe-defined SQL functions in Query Service
 
 Adobe-defined functions, herein referred to as ADFs, are prebuilt functions in Adobe Experience Platform Query Service that help perform common business-related tasks on [!DNL Experience Event] data. These include functions for [Sessionization](https://experienceleague.adobe.com/docs/analytics/components/virtual-report-suites/vrs-mobile-visit-processing.html) and [Attribution](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/attribution/overview.html) like those found in Adobe Analytics. 

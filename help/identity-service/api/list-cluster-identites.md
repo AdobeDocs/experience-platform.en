@@ -4,8 +4,8 @@ solution: Experience Platform
 title: List All Identities in a Cluster
 topic: API guide
 description: Identities that are related in an identity graph, regardless of namespace, are considered to be part of the same "cluster" in that identity graph. The options below provide the means to access all cluster members.
+exl-id: 0fb9eac9-2dc2-4881-8598-02b3053d0b31
 ---
-
 # List all identities in a cluster
 
 Identities that are related in an identity graph, regardless of namespace, are considered to be part of the same "cluster" in that identity graph. The options below provide the means to access all cluster members.

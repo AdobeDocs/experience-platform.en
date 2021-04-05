@@ -2,9 +2,11 @@
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 ---
-
 # Adobe Campaign connection
+
+## Overview {#overview}
 
 Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels. See [Get Started with Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/starting-with-adobe-campaign/about-adobe-campaign-classic.html) for more information.
 
@@ -27,15 +29,14 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Ca
 In the **[!UICONTROL Account]** step of the Connect destination workflow, select the **[!UICONTROL Connection type]** for your storage location. For Adobe Campaign, you can select between **[!UICONTROL Amazon S3]**, **[!UICONTROL SFTP with Password]**, **[!UICONTROL SFTP with SSH Key]**, and **[!UICONTROL Azure Blob]**. The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob]. Fill in the information below, depending on your connection type, then select **[!UICONTROL Connect]**.
 
 
-
 ![Set up Campaign wizard](../../assets/catalog/email-marketing/adobe-campaign/connection-type.png)
 
-- For **[!UICONTROL Amazon S3]** connections, you must provide your Access Key ID and Secret Access Key. 
-- For **[!UICONTROL SFTP with Password]** connections, you must provide Domain, Port, Username, and Password.
-- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide Domain, Port, Username, and SSH Key.
+- For **[!UICONTROL Amazon S3]** connections, you must provide your [!UICONTROL Access Key ID] and [!UICONTROL Secret Access Key]. 
+- For **[!UICONTROL SFTP with Password]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL Password].
+- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL SSH Key].
 - For **[!UICONTROL Azure Blob]** connections, you must provide a connection string.
 
-Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Note that this public key **must** be written as a Base64 encoded string. 
+Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
 
 ![Fill in Campaign information](../../assets/catalog/email-marketing/adobe-campaign/account-info.png)
 
@@ -46,7 +47,7 @@ In **[!UICONTROL Account authentication]**, fill in the relevant information for
    - **[!UICONTROL Folder Path]**: Provide the path in your storage location where [!DNL Platform] will deposit your export data as CSV or tab-delimited files.
    - **[!UICONTROL Container]**: *For Blob connections*. The container that holds the Blob your folder path is in.
    - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location. 
-   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md) page. Refer also to [Adobe-defined marketing actions](../../../data-governance/policies/overview.md#core-actions) in the same document.
+   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md) page.
 
 ![Campaign basic information](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
@@ -58,7 +59,7 @@ See [Activate profiles and segments to a destination](../../ui/activate-destinat
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, we recommend that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, see [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes) in email marketing destinations documentation. 
+When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes). 
 
 ## Exported data {#exported-data}
 
