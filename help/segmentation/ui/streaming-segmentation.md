@@ -32,7 +32,7 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | ---------- | ------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
-| Incoming hit with a historic time window | Any segment definition that refers to a single incoming event with a historic time window. | ![](../images/ui/streaming-ingestion/historic-time-window.png) |
+| Incoming hit with a historic time window | Any segment definition that refers to a single incoming event with a historic time window. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Incoming hit with a future time window | Any segment definition that refers to a single incoming event with a future time window. | ![](../images/ui/streaming-segmentation/future-time-window.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
