@@ -108,7 +108,7 @@ The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL P
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
 
-The canvas reappears, showing that the `consents` field has been added to the schema structure. Select **[!UICONTROL Save]** to finalize the changes to the schema.
+The canvas reappears, showing that the `consents` object has been added to the schema structure. If you require additional consent and preference fields not captured by the standard mixin, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -153,3 +153,48 @@ The dataset is now saved and enabled for use in [!DNL Profile]. If you are plann
 By following this tutorial, you have added consent fields to a [!DNL Profile]-enabled schema, whose dataset will be used to ingest consent data using the Platform Web SDK or direct XDM ingestion.
 
 You can now return to the [consent processing overview](./overview.md#merge-policies) to continue configuring Experience Platform to process consent data.
+
+## Appendix
+
+The following section contains additional information about creating a dataset to ingest customer consent and preference data.
+
+### Add custom consent and preference fields to the schema {#custom-consent}
+
+If you need to capture additional consent signals outside of those represented by the standard [!DNL Consents & Preferences] mixin, you can use custom XDM components to enhance your consent schema to suit your particular business needs. This section outlines the basic principles of how to customize your consent schema in a way that is compatible with consent-change commands made by Adobe Experience Platform Mobile and Web SDKs.
+
+>[!IMPORTANT]
+>
+>You must use the [!DNL Consents & Preferences] mixin as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
+
+To add custom fields to the structure of a standard mixin, you must first create a custom mixin. After adding the [!DNL Consents & Preferences] mixin to the schema, select the **plus (+)** icon in the **[!UICONTROL Mixins]** section, and then select **[!UICONTROL Create new mixin]**. Provide a name and optional description for the mixin, and then select **[!UICONTROL Add mixin]**.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+
+The [!DNL Schema Editor] reappears with the new custom mixin selected in the left rail. In the canvas, controls appear that allow you to add custom fields to the schema structure. To add a new consent or preference field, select the **plus (+)** icon next to the `consents` object.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
+
+A new field appears within the `consents` object. Since you are adding a custom field to a standard object, the new field is created under an object that is namespaced to your tenant ID.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/nested-tenantId.png)
+
+In the right rail under **[!UICONTROL Field properties]**, provide a name and description for the field. When selecting the field's **[!UICONTROL Type]**, you must use the appropriate standard data type for a custom consent or preference field:
+
+* [!UICONTROL Generic Consent Field]
+* [!UICONTROL Generic Marketing Preference Field]
+* [!UICONTROL Generic Marketing Preference Field with Subscriptions]
+* [!UICONTROL Generic Personalization Preference Field]
+
+When finished, select **[!UICONTROL Apply]**.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-properties.png)
+
+The consent or preference field is added to the schema structure. Note that the [!UICONTROL Path] displayed in the right rail contains the `_tenantId` namespace. This namespace must be included whenever you reference the path to this field.
+
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
+
+Continue following the steps above to add the consent and preference fields that you require. When finished, select **[!UICONTROL Save]** to confirm your changes.
+
+If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
+
+If you have not created a dataset for this schema, continue to the section on [creating a dataset](#dataset).
