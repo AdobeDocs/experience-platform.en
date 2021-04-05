@@ -64,22 +64,19 @@ To create a custom folder per segment file in your storage location, you can use
 
 The examples below reference a sample segment `Luxury Audience` with ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
 
-### Macro 1 - `%SEGMENT_NAME%`
+**Macro 1: `%SEGMENT_NAME%`**
 
 Input: `acme/campaigns/2021/%SEGMENT_NAME%`
-
 Folder path in your storage location: `acme/campaigns/2021/Luxury Audience`
 
-### Macro 2 - `%SEGMENT_ID%`
+**Macro 2: `%SEGMENT_ID%`**
 
 Input: `acme/campaigns/2021/%SEGMENT_ID%`
-
 Folder path in your storage location: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
 
-### Macro 3 - `%SEGMENT_NAME%/%SEGMENT_ID%`
+**Macro 3: `%SEGMENT_NAME%/%SEGMENT_ID%`**
 
 Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
-
 Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
 
 
