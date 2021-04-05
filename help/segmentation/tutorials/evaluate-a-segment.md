@@ -5,8 +5,8 @@ title: Evaluate and Access Segment Results
 topic: tutorial
 type: Tutorial
 description: Follow this tutorial to learn how to evaluate segments and access segment results using the Adobe Experience Platform Segmentation Service API.
+exl-id: 47702819-f5f8-49a8-a35d-034ecac4dd98
 ---
-
 # Evaluate and access segment results
 
 This document provides a tutorial for evaluating segments and accessing segment results using the [[!DNL Segmentation API]](../api/getting-started.md). 

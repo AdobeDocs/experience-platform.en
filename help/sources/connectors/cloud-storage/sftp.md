@@ -4,13 +4,9 @@ solution: Experience Platform
 title: SFTP Source Connector Overview
 topic: overview
 description: Learn how to connect an SFTP server to Adobe Experience Platform using APIs or the user interface.
+exl-id: d5bced3d-cd33-40ea-bce0-32c76ecd2790
 ---
-
-# (Beta) SFTP connector
-
->[!NOTE]
->
->The SFTP connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# SFTP connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 

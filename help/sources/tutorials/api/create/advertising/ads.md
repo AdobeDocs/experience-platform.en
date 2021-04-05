@@ -5,8 +5,8 @@ title: Create a Google AdWords Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Google AdWords using the Flow Service API.
+exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 ---
-
 # Create a [!DNL Google AdWords] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

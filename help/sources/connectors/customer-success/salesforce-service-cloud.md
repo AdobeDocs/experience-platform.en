@@ -4,13 +4,9 @@ solution: Experience Platform
 title: Salesforce Service Cloud Source Connector Overview
 topic: overview
 description: Learn how to connect Salesforce Service Cloud to Adobe Experience Platform using APIs or the user interface.
+exl-id: 9bebbc00-55b3-4aec-9357-4127c05844e2
 ---
-
-# (Beta) [!DNL Salesforce Service Cloud] connector
-
->[!NOTE]
->
->The [!DNL Salesforce Service Cloud] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Salesforce Service Cloud] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

@@ -5,8 +5,8 @@ title: Connect to streaming destinations and activate data using the Flow Servic
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
 topic: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
-
 # Connect to streaming destinations and activate data using the Flow Service API
 
 >[!NOTE]

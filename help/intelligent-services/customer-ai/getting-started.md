@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services, Real-time Customer Data Pla
 title: Getting Started in Customer AI
 topic: Getting started
 description: This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads.
+exl-id: 90c9a83a-8e66-4239-b2d6-2049a6319b25
 ---
-
 # Getting started in Customer AI
 
 The guides for Customer AI require a working understanding of the various Platform services involved in using Customer AI. Before you start, please review the following documents:

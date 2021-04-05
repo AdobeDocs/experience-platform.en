@@ -5,8 +5,8 @@ title: Create an IBM DB2 Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect IBM DB2 to Adobe Experience Platform using the Flow Service API.
+exl-id: 83c1dbe6-975f-4e3b-a7bf-166eb5106dd2
 ---
-
 # Create an IBM DB2 source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

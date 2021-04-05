@@ -5,8 +5,8 @@ title: Configure a Dataflow for an Advertising Source Connection in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.
+exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
 ---
-
 # Configure a dataflow for an advertising connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.

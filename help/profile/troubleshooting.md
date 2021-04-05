@@ -4,8 +4,8 @@ title: Real-time Customer Profile Troubleshooting Guide
 topic: guide
 type: Documentation
 description: This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors when working with Profile data using Adobe Experience Platform.
+exl-id: 0b340025-093b-41e4-8053-969a8e80e889
 ---
-
 # Real-time Customer Profile troubleshooting guide
 
 This document provides answers to frequently asked questions about Real-time Customer Profile, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).

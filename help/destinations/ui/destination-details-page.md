@@ -2,9 +2,9 @@
 keywords: destinations;destination;destinations detail page;destinations details page
 title: View destination details
 description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
-seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow. 
+seo-description: The details page for an individual destination provides an overview of the destination details. Destination details include the destination name, ID, segments mapped to the destination, and controls to edit the activation and to enable and disable the data flow.
+exl-id: e44e2b2d-f477-4516-8a47-3e95c2d85223
 ---
-
 # View destination details
 
 ## Overview {#overview}
@@ -50,6 +50,8 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
 | [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
+
+{style="table-layout:auto"}
 
 ## [!UICONTROL Enabled]/[!UICONTROL Disabled] toggle
 

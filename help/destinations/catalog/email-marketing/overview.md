@@ -3,8 +3,8 @@ keywords: email;Email;e-mail;email destinations
 title: Email marketing destinations overview
 type: Tutorial
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 ---
-
 # Email marketing destinations overview {#email-marketing-destinations}
 
 Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
