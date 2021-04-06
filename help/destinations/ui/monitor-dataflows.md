@@ -5,8 +5,8 @@ solution: Experience Platform
 title: Monitor Dataflows
 topic: overview
 type: Tutorial
+exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 ---
-
 # Monitor dataflows
 
 [!UICONTROL Destinations] allow you to activate your data from Adobe Experience Platform to countless external partners. 

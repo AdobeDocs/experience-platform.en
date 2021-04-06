@@ -3,8 +3,8 @@ keywords: delete destinations; how to delete destinations
 title: Delete destinations
 type: Tutorial
 description: This tutorial lists the steps to delete an existing destination in the Adobe Experience Platform UI
+exl-id: 7b672859-e61a-4b3c-9db9-62048258f0aa
 ---
-
 # Delete destinations {#delete-destinations}
 
 ## Overview {#overview}
