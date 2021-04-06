@@ -5,8 +5,8 @@ title: Create a Salesforce Service Cloud  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a Salesforce Service Cloud source connection using the Adobe Experience Platform UI.
+exl-id: 38480a29-7852-46c6-bcea-5dc6bffdbd15
 ---
-
 # Create a [!DNL Salesforce Service Cloud] source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce Service Cloud] (hereinafter referred to as "SSC") source connector using the [!DNL Platform] user interface.

@@ -5,8 +5,8 @@ title: Create a Google PubSub Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Google PubSub account using the Flow Service API.
+exl-id: f5b8f9bf-8a6f-4222-8eb2-928503edb24f
 ---
-
 # Create a [!DNL Google PubSub] Source Connection Using the Flow Service API
 
 >[!NOTE]

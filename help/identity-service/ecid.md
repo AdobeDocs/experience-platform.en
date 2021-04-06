@@ -4,8 +4,8 @@ solution: Experience Platform
 title: ECID Overview
 topic: overview
 description: The Experience Cloud Identifier (ECID) is the client side module providing access to identity management, serving three primary functions.
+exl-id: da7717d2-da2e-414b-978d-2eab8ff2c5a0
 ---
-
 # ECID overview
 
 The [!DNL Experience Cloud Identity Service] (ECID) is the client side module providing access to identity management, serving three primary functions:
@@ -23,4 +23,3 @@ If you are working with a mobile app, see how ECID is used to [track visitors be
 Deploying these tools can be simple and easy to manage if you use [Adobe Launch](https://docs.adobe.com/content/help/en/launch/using/overview.html).
 
 Also, see the [Privacy Service documentation](../privacy-service/identity-data.md) for information on using ECID for GDPR compliance.
-

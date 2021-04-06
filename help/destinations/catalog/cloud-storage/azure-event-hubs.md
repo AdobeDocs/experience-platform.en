@@ -2,8 +2,8 @@
 keywords: Azure event hub destination;azure event hub;azure eventhub
 title: (Beta) Azure Event Hubs connection
 description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
+exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 ---
-
 # (Beta) [!DNL Azure Event Hubs] connection
 
 ## Overview {#overview}
@@ -106,4 +106,4 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Azure Event Hubs] i
 >
 >* [Connect to Azure Event Hubs and activate data using the Flow Service API](../../api/streaming-destinations.md)
 >* [AWS Kinesis destination](./amazon-kinesis.md)
->* [Destination types and categories](../../destination-types.md) 
+>* [Destination types and categories](../../destination-types.md)

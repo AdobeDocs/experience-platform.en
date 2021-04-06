@@ -5,8 +5,8 @@ title: Collect Data From a Database Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
+exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
-
 # Collect data from a database using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).

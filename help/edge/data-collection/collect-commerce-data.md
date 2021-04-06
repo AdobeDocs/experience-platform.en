@@ -3,8 +3,8 @@ title: Collect Commerce and Product Information Using the Adobe Experience Platf
 description: Learn how to add data related to products or a shopping cart using the Adobe Experience Platform Web SDK.
 
 keywords: products;commerce;measures;measure;order;cartAbandons;checkouts;productListAdds;productListOpens;productListRemovals;productListReopens;productListViews;productViews;purchases;saveForLaters;currencyCode;payments;paymentAmount;paymentType;transactionID;priceTotal;purchaseID;purchaseOrderNumber;
+exl-id: 3c79e776-89ef-494b-a2ea-3c23efce09ae
 ---
-
 # Collect commerce and product information
 
 If you have products on your site, then this is a default set of things you might want to send to enable the most capabilities from Adobe. Though this is a suggestion, it provides a very strong set of data right from the start.

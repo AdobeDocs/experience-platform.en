@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
 topic: developer guide
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 ---
-
 # Unions endpoint
 
 Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PAL Arithmetic Functions
 topic: developer guide
 description: Arithmetic functions are used to perform basic calculations on values in Profile Query Language (PQL).
+exl-id: 3540ef7c-dbe4-4302-a414-3cf85618f870
 ---
-
 # Arithmetic functions
 
 Arithmetic functions are used to perform basic calculations on values in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -102,4 +102,4 @@ person.age % 5 = 0
 
 ## Next steps
 
-Now that you have learned about arithmetic functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about arithmetic functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

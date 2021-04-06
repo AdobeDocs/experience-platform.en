@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Metrics API Endpoint
 topic: developer guide
 description: Learn how to retrieve observability metrics in Experience Platform using the Observability Insights API.
+exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 ---
-
 # Metrics endpoint
 
 Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization's activity in [!DNL Platform].

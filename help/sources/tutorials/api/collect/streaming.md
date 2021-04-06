@@ -5,8 +5,8 @@ title: Collect Streaming Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
+exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 ---
-
 # Collect streaming data using source connectors and APIs
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

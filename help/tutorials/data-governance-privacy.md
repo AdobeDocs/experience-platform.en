@@ -5,8 +5,8 @@ title: Data Governance and Privacy tutorials
 topic: tutorial
 type: Tutorial
 description: This document provides an overview of the different available tutorials related to Adobe Experience Platform Data Governance and Adobe Experience Platform Privacy Service.
+exl-id: c3cef447-b343-445b-a3ed-54f873f6dfb9
 ---
-
 # [!DNL Data Governance] and [!DNL Privacy] Tutorials
 
 Adobe Experience Platform Data Governance enables you to apply data usage labels to datasets and fields, categorizing each according to related data usage policies, and evaluate for policy violations when certain actions are performed on those datasets and/or fields. Before getting started with the tutorials listed in this document, please see the [[!DNL Data Governance] overview](../data-governance/home.md) for a more robust introduction to the framework.

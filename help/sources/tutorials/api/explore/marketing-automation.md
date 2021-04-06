@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Explore a Marketing Automation System Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore marketing automation systems.
+exl-id: 250c1ba0-1baa-444f-ab2b-58b3a025561e
 ---
-
 # Explore a marketing automation system using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

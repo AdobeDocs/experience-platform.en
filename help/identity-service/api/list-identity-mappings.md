@@ -4,8 +4,8 @@ solution: Experience Platform
 title: List Identity Mappings
 topic: API guide
 description: A mapping is a collection of all identities in a cluster, for a specified namespace.
+exl-id: db80c783-620b-4ba3-b55c-75c1fd6e90b1
 ---
-
 # List identity mappings
 
 A mapping is a collection of all identities in a cluster, for a specified namespace.

@@ -2,8 +2,8 @@
 keywords: Medallia;medallia
 title: Medallia extension
 description: The Medallia extension is a voice of the customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: c28cf31a-890c-4dcd-b936-5a030dc6e83e
 ---
-
 # [!DNL Medallia] extension {#medallia-extension}
 
 ## Overview {#overview}

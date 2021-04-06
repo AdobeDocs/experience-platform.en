@@ -5,8 +5,8 @@ title: Create an Apache Spark on Azure HDInsights Source Connection Using the Fl
 topic: overview
 type: Tutorial
 description: Learn how to connect Apache Spark on Azure HDInsights to Adobe Experience Platform using the Flow Service API.
+exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 ---
-
 # Create an [!DNL Apache Spark] on [!DNL Azure] HDInsights source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

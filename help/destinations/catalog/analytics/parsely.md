@@ -2,8 +2,8 @@
 keywords: Parse. ly;parsely;Parsely;parse.ly;Parse.ly
 title: Parse.ly Analytics extension
 description: The Parse.ly Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 84d98e74-3e34-406c-9b80-81100c766dc8
 ---
-
 # [!DNL Parse.ly Analytics] extension {#parsely-analytics-extension}
 
 ## Overview {#overview}

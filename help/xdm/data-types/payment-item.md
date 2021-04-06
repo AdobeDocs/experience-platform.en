@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Payment Item Data Type
 topic: overview
 description: This document provides an overview of the Payment Item Experience Data Model (XDM) data type.
+exl-id: d25a358b-73c1-468b-a9c5-808385689932
 ---
-
 # [!UICONTROL Payment Item] data type
 
 [!UICONTROL Payment Item] is a standard Experience Data Model (XDM) data type that describes a payment associated with an order that defines the type of payment, the amount, and the associated currency.

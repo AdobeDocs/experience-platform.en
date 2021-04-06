@@ -5,8 +5,8 @@ title: Create a MySQL  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a MySQL source connection using the Adobe Experience Platform UI.
+exl-id: 75e74bde-6199-4970-93d2-f95ec3a59aa5
 ---
-
 # Create a [!DNL MySQL] source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL MySQL] source connection using the Adobe Experience Platform UI.

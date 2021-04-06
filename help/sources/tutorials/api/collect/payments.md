@@ -5,8 +5,8 @@ title: Collect Payment Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a payments application and ingesting it into Platform using source connectors and APIs.
+exl-id: b75e2a3d-6590-4079-a261-fa4e9626e8dc
 ---
-
 # Collect payment data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party payments application and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
