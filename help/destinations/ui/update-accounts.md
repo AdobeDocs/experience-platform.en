@@ -13,13 +13,13 @@ The **[!UICONTROL Accounts]** tab shows you details about the connections that y
 
 ![Accounts tab](../assets/ui/update-accounts/destination-accounts.png)
 
-Element | Description
----------|----------
-[!UICONTROL Platform] | The destination for which you have set up the connection.
-[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
-[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).
-[!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
-[!UICONTROL Authorized] | The date when the connection to this destination was authorized.
+| Element | Description |
+|---|---|
+|[!UICONTROL Platform] | The destination for which you have set up the connection.|
+|[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>|
+|[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).|
+|[!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.|
+|[!UICONTROL Authorized] | The date when the connection to this destination was authorized.|
 
 ## Update accounts {#update}
 
