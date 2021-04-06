@@ -17,11 +17,12 @@ feature: Destinations
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
     * [Connect to a destination](./ui/connect-destination.md)
-    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
-    * [Monitor dataflows](./ui/monitor-dataflows.md)
+    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
     * [Update destination accounts](./ui/update-accounts.md)
+    * [Edit activation flows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
+    * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)
