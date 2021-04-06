@@ -1,7 +1,7 @@
 ---
 keywords: platform;destinations;destinations workspace;workspace;ui;destinations ui;catalog;destinations catalog;
 title: Destinations workspace
-description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View, which are described in the sections below.
+description: The Destinations workspace consists of four sections, Catalog, Browse, Accounts, and System View. They are described in the sections below.
 seo-description: In Adobe Experience Platform, select Destinations from the left navigation bar to access the destinations workspace.
 exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
@@ -13,17 +13,17 @@ In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left
 
 The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
-![Destinations-overview](../assets/ui/workspace/destinations-overview.png)
+![Destinations-overview](../assets/ui/workspace/destinations-workspace.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 
-The **[!UICONTROL Catalog]** tab displays a list of all destinations available in Platform, that you can send data to. 
+The **[!UICONTROL Catalog]** tab displays a list of all destinations available in [!DNL Platform], that you can send data to. 
 
-The Platform user interface provides several search and filter options on the destinations catalog page:
+The [!DNL Platform] user interface provides several search and filter options on the destinations catalog page:
 
 * Use the search functionality on the page to locate a specific destination.
 * Filter destinations using the [!UICONTROL Categories] control.
-* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When **[!UICONTROL All destinations]** is selected, all available Platform destinations are displayed. When **[!UICONTROL My destinations]** is selected, you can only see the destinations with which you have established a connection.
+* Toggle between [!UICONTROL All destinations] and [!UICONTROL My destinations]. When you select **[!UICONTROL All destinations]**, all available [!DNL Platform] destinations are displayed. When you select **[!UICONTROL My destinations]**, you can only see the destinations with which you have established a connection.
 * Select to view **[!UICONTROL Connections]** and/or **[!UICONTROL Extensions]**. To understand the difference between the two categories, see [Destination Types and Categories](../destination-types.md).
 
 ![destinations filtering and search demo](../assets/ui/workspace/destinations-search-and-filter.gif)
@@ -42,52 +42,24 @@ Control | Description
 
 ![Controls on the destinations card](../assets/ui/workspace/destination-card-options.png)
 
-Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, as well as a description of the destination, and an indication of the destination category and type.
+Select a destination card in the catalog to open the right rail. Here, you can see a description of the destination. The right rail provides the same controls described in the table above, including a description of the destination, and an indication of the destination category and type.
 
 ![Destination catalog options](../assets/ui/workspace/destination-right-rail.png)
 
-For more information on destination categories and information on each destination, see the [Destination Catalog](../catalog/overview.md) and [Destination Types and Categories](../destination-types.md).
+For more information on destination categories and information on each destination, see the [Destination catalog](../catalog/overview.md) and [Destination types and categories](../destination-types.md).
 
 ## [!UICONTROL Accounts] {#accounts}
 
-In the **[!UICONTROL Accounts]** tab, you can learn more about the connections that you have established with various destinations. See the table below for all the information you can get on each destination:
-
->[!TIP]
->
->Use the ![Add data button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Platform]** column to create a new destination connection for that account.
-
-![Accounts tab](../assets/ui/workspace/edit-account-destinations.png)
-
-Element | Description
----------|----------
-[!UICONTROL Platform] | The destination for which you have set up the connection.
-[!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3 or FTP.</li><li>For real-time advertising destinations: Server-to-server</li><li>For Amazon S3 cloud storage destinations: Access Key </li><li>For SFTP cloud storage destinations: Basic authentication for SFTP</li></ul>
-[!UICONTROL Username] | The username you selected in the [connect destination wizard](../catalog/email-marketing/overview.md#connect-destination).
-[!UICONTROL Destinations] | Represents the number of unique successful destination flows connected with basic information created for a destination.
-[!UICONTROL Authorized] | The date when the connection to this destination was authorized.
-
-{style="table-layout:auto"}
-
-Additionally, you can edit or update your account information. Select the ![Edit account button](../assets/ui/workspace/pencil-icon.png) in the **[!UICONTROL Platform]** column to edit the account's information.
-
-For accounts that use an `OAuth2` connection type, you can select **[!UICONTROL Reconnect OAuth]** to renew your account credentials.
-
-![Oauth image](../assets/ui/workspace/reconnect-oauth.png)
-
-For accounts that use an `Access Key` or `ConnectionString` connection type, you can edit your account authentication information, including information such as access ID, secret keys, or connection strings.
-
-![Account information image](../assets/ui/workspace/edit-account-details.png)
-
-Once you are finished editing your account details, select **[!UICONTROL Save]** to complete the update.
+The **[!UICONTROL Accounts]** tab shows you details about the connections that you have established with various destinations, and allows you to update existing connection details. See [Update accounts](update-accounts.md) for detailed instructions.
 
 ## [!UICONTROL Browse] {#browse}
 
-The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled]** toggle turned on set the destination to active and vice versa. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
+The **[!UICONTROL Browse]** tab displays the destinations with which you have established a connection. Destinations with the **[!UICONTROL Enabled/Disabled]** toggle turned on set the destination to active or inactive, respectively. You can also view the destinations where you have data flowing by selecting **[!UICONTROL Segments]** > **[!UICONTROL Browse]** and selecting a segment to inspect. See the table below for all the information that is provided for each destination in the Browse tab:
 
 >[!TIP]
 >
-> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to activate additional segments to that destination.
-> * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to delete an existing connection to a destination.
+> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to [activate](activate-destinations.md) more segments to that destination.
+> * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to [delete](delete-destinations.md) an existing connection to a destination.
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
 
@@ -95,7 +67,7 @@ Element | Description
 ---------|----------
 Name | The name you provided for your activation flow to this destination. The same column includes two controls: [!UICONTROL Activate ] and [!UICONTROL Delete destination].
 [!UICONTROL Last Flow Run Status] | The status of the last dataflow run. See [View destination details](destination-details-page.md) for more information about dataflow runs.
-[!UICONTROL Last Flow Run Date] | Time and date when the last dataflow run occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.
+[!UICONTROL Last Flow Run Date] | Time and date when the last dataflow run has occurred. See [View destination details](destination-details-page.md) for more information about dataflow runs.
 [!UICONTROL Destination] | The destination platform that you selected for your activation flow.
 [!UICONTROL Connection Type] | Represents the connection type to your storage bucket or destination. <ul><li>For email marketing destinations: Can be S3, FTP, or [!DNL Azure Blob].</li><li>For real-time advertising destinations: Server-to-server.</li><li>For streaming destinations: Can be [!DNL Azure Event Hubs] or [!DNL Amazon Kinesis].</li></ul>
 [!UICONTROL Username] | The account credentials you selected for the destination flow.
