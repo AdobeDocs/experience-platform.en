@@ -1,10 +1,10 @@
 ---
-keywords: Update Destination Account,Destination Accounts
+keywords: update destination account;destination accounts;how to update accounts
 title: Update destination accounts
 type: Tutorial
 description: This tutorial lists the steps to update destination accounts in the Adobe Experience Platform UI
-exl-id: afb41878-4205-4c64-af4d-e2740f852785
 ---
+
 # Update destination accounts
 
 ## Overview {#overview}

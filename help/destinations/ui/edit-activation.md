@@ -1,12 +1,12 @@
 ---
-keywords: Edit Activation,Edit Destination
+keywords: edit activation; edit destination;
 title: Edit activation flows
 type: Tutorial
 seo-title: Edit activation flows
 description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
 seo-description: Follow the steps in this article to edit an existing activation flow in Adobe Experience Platform.
-exl-id: 0d79fbff-bfde-4109-8353-c7530e9719fb
 ---
+
 # Edit activation flows {#edit-activation-flows}
 
 Follow the steps below to edit existing activation flows in Adobe Experience Platform: 

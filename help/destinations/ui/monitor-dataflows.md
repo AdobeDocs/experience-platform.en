@@ -1,12 +1,12 @@
 ---
-keywords: Experience Platform,Home,Popular Topics,Monitor Accounts,Monitor Dataflows,Dataflows,Destinations
+keywords: Experience Platform;home;popular topics;monitor accounts;monitor dataflows;dataflows; destinations
 description: Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 solution: Experience Platform
 title: Monitor Dataflows
 topic: overview
 type: Tutorial
-exl-id: fbe35ee1-4ee8-4d67-976b-0c45f0168da4
 ---
+
 # Monitor dataflows
 
 [!UICONTROL Destinations] allow you to activate your data from Adobe Experience Platform to countless external partners. 
