@@ -24,10 +24,31 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 * **[!DNL Amazon S3] access key and [!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+## Required [!DNL Amazon S3] permissions {#required-s3-permission}
+
+To successfully connect and export data to your [!DNL Amazon S3] storage location, [!DNL Platform] needs the following permissions in [!DNL Amazon S3].
+
+```
+
+"s3:ReplicateObject",
+"s3:PutObject",
+"s3:GetObject",
+"s3:DeleteObjectVersion",
+"s3:RestoreObject",
+"s3:ListBucket",
+"s3:DeleteObject",
+'s3:GetBucketLocation",
+"s3:PutBucketVersioning",
+"s3:ListBuckets"
+"s3:GetObjectVersion"
+
+```
+
 >[!IMPORTANT]
 >
 >Platform needs `write` permissions on the bucket object where the export files will be delivered.
 
+
 ## Exported data {#exported-data}
 
-For [!DNL Amazon S3] destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+For [!DNL Amazon S3] destinations, [!DNL Platform] creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
