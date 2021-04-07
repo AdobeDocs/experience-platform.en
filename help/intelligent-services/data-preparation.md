@@ -70,10 +70,10 @@ You must determine the best field to use as a primary identity based on the sour
 
 If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution. If a primary identity is not set, the Intelligent Service application uses the following default behavior:
 
-| | Attribution AI | Customer AI |
+| Default | Attribution AI | Customer AI |
 | --- | --- | --- |
-| Default identity column | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
-| Default namespace | AAID | ECID |
+| Identity column | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Namespace | AAID | ECID |
 
 To set a primary identity, navigate to your schema from the **[!UICONTROL Schemas]** tab and select the schema name hyperlink to open the **[!DNL Schema Editor]**.
 
