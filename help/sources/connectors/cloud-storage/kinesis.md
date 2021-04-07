@@ -20,6 +20,10 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
+## Set up access policy for [!DNL Amazon Kinesis]
+
+
+
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
 The documentation below provides information on how to connect [!DNL Amazon Kinesis] to [!DNL Platform] using APIs or the user interface:
