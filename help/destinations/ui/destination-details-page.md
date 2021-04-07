@@ -13,29 +13,37 @@ In the Adobe Experience Platform user interface, you can view and monitor the at
 
 >[!NOTE]
 >
->The destinations details page is part of the [!UICONTROL Destinations] workspace in the Platform UI. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
+>The destinations details page is part of the [!UICONTROL Destinations] workspace in the [!DNL Platform] [!DNL UI]. See the [[!UICONTROL Destinations] workspace overview](./destinations-workspace.md) for more information.
 
-In the **[!UICONTROL Destinations]** workspace within the Platform UI, navigate to the **[!UICONTROL Browse]** tab and select the name of a destination that you want to view.
+## View destination details {#view-details}
 
-![](../assets/ui/details-page/select-destination.png)
+Follow the steps below to view more details about an existing destination.
 
-The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+1. Log in to the [Experience Platform UI](https://platform.adobe.com/) and select **[!UICONTROL Destinations]** from the left navigation bar. Select **[!UICONTROL Browse]** from the top header to view your existing destinations.
 
-![](../assets/ui/details-page/details.png)
+    ![Browse destinations](../assets/ui/details-page/browse-destinations.png)
 
-Additionally, on the Browse tab, you can choose to delete the selected dataflow by selecting the ![trash bin](../assets/ui/details-page/trash-icon.png) icon. Any segments that are activated to destinations will be unmapped before the dataflow is deleted.
+1. Select the filter icon ![Filter-icon](../assets/ui/details-page/filter.png) on the top left to launch the sort panel. The sort panel provides a list of all your destinations. You can select more than one destination from the list to see a filtered selection of dataflows associated with the selected destination.
 
-![](../assets/ui/details-page/delete-flow.png)
+    ![Filter destinations](../assets/ui/details-page/filter-destinations.png)
+
+1. Select the name of the destination that you want to view.
+
+    ![Select destination](../assets/ui/details-page/destination-select.png)
+
+1. The details page for the destination appears, showing its available controls. If you are viewing the details of a batch destination, a monitoring dashboard also appears.
+
+    ![Destination details](../assets/ui/details-page/destination-details.png)
 
 ## Right rail
 
-The right rail displays the basic information about the destination.
+The right rail displays the basic information about the selected destination.
 
-![](../assets/ui/details-page/right-rail.png)
+![right rail](../assets/ui/details-page/right-sidebar.png)
 
 The following table covers the controls and details provided by the right rail:
 
-| Right-rail item | Description |
+| Right rail item | Description |
 | --- | --- |
 | [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
@@ -45,8 +53,8 @@ The following table covers the controls and details provided by the right rail:
 | [!UICONTROL Status] | Indicates whether the destination is enabled or disabled. |
 | [!UICONTROL Marketing actions] | Indicates the marketing actions (use cases) that apply for this destination for data-governance purposes. |
 | [!UICONTROL Category] | Indicates the destination type. See the [destinations catalog](../catalog/overview.md) for more information. |
-| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include "[!UICONTROL Cookie]" and "[!UICONTROL Profile-based]". |
-| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include "[!UICONTROL Streaming]" and "[!UICONTROL Batch]".  |
+| [!UICONTROL Connection type] | Indicates the form by which your audiences are being sent to the destination. Possible values include [!UICONTROL Cookie] and [!UICONTROL Profile-based]. |
+| [!UICONTROL Frequency] | Indicates how often the audiences are sent to the destination. Possible values include [!UICONTROL Streaming] and [!UICONTROL Batch].  |
 | [!UICONTROL Identity] | Represents the identity namespace accepted by the destination, such as `GAID`, `IDFA`, or `email`. For more information on accepted identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md). |
 | [!UICONTROL Created by] | Indicates the user who created this destination. |
 | [!UICONTROL Created] | Indicates the UTC datetime when this destination was created. |
@@ -57,35 +65,18 @@ The following table covers the controls and details provided by the right rail:
 
 You can use the **[!UICONTROL Enabled]/[!UICONTROL Disabled]** toggle to start and pause all data exports to the destination.
 
-![](../assets/ui/details-page/enable-disable.png)
+![Enable disable toggle](../assets/ui/details-page/enable-disable.png)
 
 ## [!UICONTROL Dataflow runs]
 
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
-
-* **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
-* **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
-
-![](../assets/ui/details-page/dataflow-runs.png)
-
->[!NOTE]
->
->Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each merge policy applied to a segment.
-
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred with details for error diagnostics.
-
-![](../assets/ui/details-page/dataflow.png)
+The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. Refer to [Monitor dataflows](monitor-dataflows.md) for details.
 
 ## [!UICONTROL Activation data] {#activation-data}
 
 The [!UICONTROL Activation data] tab displays a list of segments that have been mapped to the destination, including their start date and end date (if applicable). To view the details about a particular segment, select its name from the list.
 
-![](../assets/ui/details-page/activation-data.png)
+![Activation data](../assets/ui/details-page/activation-data.png)
 
 >[!NOTE]
 >
 >For details on exploring the details page of a segment, refer to the [Segmentation UI overview](../../segmentation/ui/overview.md#segment-details).
-
-## Next steps
-
-This document covered the capabilities of the destination details page. For more information on managing destinations in the UI, see the overview on the [[!UICONTROL Destinations] workspace](./destinations-workspace.md).
