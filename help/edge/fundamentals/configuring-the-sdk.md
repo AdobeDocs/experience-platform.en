@@ -67,19 +67,6 @@ Populate this field with your first-party domain. For more details, please see t
 
 The domain is similar to `data.{customerdomain.com}` for a website at www.{customerdomain.com}.
 
-
-<!-->
-| **Type** | **Required** | **Default Value**  | **Usage** |
-| -------- | ------------ | ------------------ | --------- |
-| String   | No           | `data.adobedc.net` | Adobe Managed Certificates are recommended. For more details, please see the [documentation] (https://experienceleague.adobe.com/docs/core-services/interface/ec-cookies/cookies-first-party.html). |
-| String   | No           | `beta.adobedc.net` | The beta testing hostname (for Adobe Internal use only). Use only if you don't have a First Party SSL implementation. |
-| String   | No           | `omtrdc.net`       | One of the Adobe owned domains that FPSSL CNAMES might point to. The actual name is likely something like `{Customer.domain}.sc.omtrdc.net`. This is a legacy hostname. It works, but new implementations use the new Adobe branded CNAME. |
-
-{style="table-layout:auto"}
-
-The domain used to interact with Adobe services. This is only used if you have a first party domain (CNAME) that proxies requests to the Adobe Edge infrastructure.
--->
-
 ### `orgId`
 
 | **Type** | **Required** | **Default Value** |
