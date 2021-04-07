@@ -68,7 +68,28 @@ You must determine the best field to use as a primary identity based on the sour
 * "mcid" (for Adobe Audience Manager IDs)
 * "aaid" (for Adobe Analytics IDs)
 
-If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution.
+If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution. If a primary identity is not set, the Intelligent Service application uses the following default behavior:
+
+| | Attribution AI | Customer AI |
+| --- | --- | --- |
+| Default identity column | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Default Namespace | AAID | ECID |
+
+To set a primary identity, navigate to your schema from the Schemas tab and select the schema name hyperlink to open the Schema Editor.
+
+![Navigate to schema](./images/data-preparation/navigate_schema.png)
+
+Next, navigate to the field you wish to as a primary identity and select it. The field properties menu opens for that field.
+
+![Select the field](./images/data-preparation/find_field.png)
+
+In the Field properties menu, scroll down until you find the **[!UICONTROL identity]** checkbox. Check the box and the option to set this as the **[!UICONTROL Primary identity]** appears. Select this box as well.
+
+![Select checkbox](./images/data-preparation/set_primary_identity.png)
+
+Next, you must provide an **[!UICONTROL Identity namespace]** from the list of pre-defined namespaces in the dropdown. In this example, the ECID namesapce is selected since we are using an Adobe Audience Manager ID `mcid.id`. Select **[!UICONTROL Apply]** to confirm the updates then select **[!UICONTROL Save]** in the top-right corner to save the changes to your schema.
+
+![Save the changes](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
