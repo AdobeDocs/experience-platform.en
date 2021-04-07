@@ -83,7 +83,7 @@ Next, navigate to the field you wish to as a primary identity and select it. The
 
 ![Select the field](./images/data-preparation/find_field.png)
 
-In the Field properties menu, scroll down until you find the **[!UICONTROL identity]** checkbox. Check the box and the option to set this as the **[!UICONTROL Primary identity]** appears. Select this box as well.
+In the **[!UICONTROL Field properties]** menu, scroll down until you find the **[!UICONTROL identity]** checkbox. Check the box and the option to set this as the **[!UICONTROL Primary identity]** appears. Select this box as well.
 
 ![Select checkbox](./images/data-preparation/set_primary_identity.png)
 
