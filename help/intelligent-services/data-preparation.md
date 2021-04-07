@@ -75,7 +75,7 @@ If you are unsure which field you should use as a primary identity, contact Adob
 | Default identity column | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
 | Default Namespace | AAID | ECID |
 
-To set a primary identity, navigate to your schema from the Schemas tab and select the schema name hyperlink to open the Schema Editor.
+To set a primary identity, navigate to your schema from the **[!UICONTROL Schemas]** tab and select the schema name hyperlink to open the **Schema Editor**.
 
 ![Navigate to schema](./images/data-preparation/navigate_schema.png)
 
