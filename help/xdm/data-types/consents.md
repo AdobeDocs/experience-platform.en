@@ -49,6 +49,9 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     "collect": {
       "val": "y",
     },
+    "adID": {
+      "val": "VI"
+    },
     "share": {
       "val": "y",
     },
@@ -91,6 +94,9 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
   "collect": {
     "val": "y",
   },
+  "adID": {
+    "val": "VI"
+  },
   "share": {
     "val": "y",
   },
@@ -119,6 +125,20 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ```json
 "collect" : {
+  "val": "y"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+
+### `adID`
+
+`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
+
+```json
+"adID" : {
   "val": "y"
 }
 ```
