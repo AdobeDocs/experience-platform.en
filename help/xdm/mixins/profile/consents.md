@@ -9,6 +9,10 @@ description: This document provides an overview of the Privacy/Personalization/M
 
 [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] mixin) is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
 
+>[!NOTE]
+>
+>Since this mixin is only compatible with [!DNL XDM Individual Profile], it cannot be used for [!DNL XDM ExperienceEvent] schemas. If you want to include consent and preference data in your Experience Event schema, add the [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] data type](../../data-types/consents.md) to the schema through the use of a [custom mixin](../../ui/resources/mixins.md#create) instead.
+
 ## Mixin structure {#structure} 
 
 >[!IMPORTANT]
@@ -287,13 +291,31 @@ The keys for each namespace object represent the unique identity values that the
 }
 ```
 
-| Property | Description |
-| --- | --- |
-| `adID` | Unique to the `idSpecific` section,`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value cannot be configured at the user level. You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK automatically sets it when appropriate. |
+Within `marketing` objects provided in the `idSpecific` section, the `any` and `preferred` fields are not supported. These fields can only be configured at the user level. In addition, the `idSpecific` marketing preferences for `email`, `sms`, and `push` do not support `subscriptions` fields.
+
+There is also a marketing preference that can only be provided in the `idSpecific` section: `adID`. This field is covered in the subsection below.
+
+#### `adID`
+
+The `adID` marketing preference represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value can only be configured under the `ECID` identity namespace in the `idSpecific` section, and cannot be set for other namespaces or at the user level for this mixin.
+
+```json
+"idSpecific": {
+  "ECID" : {
+    "37784337855396895622558625508046772577": {
+      "marketing": {
+        "adID": {
+          "val": "n"
+        }
+      }
+    }
+  }
+}
+```
 
 >[!NOTE]
 >
->The `marketing.any` and `marketing.preferred` fields are not supported by the `idSpecific` section. These fields can only be configured at the user level.
+>You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK automatically sets it when appropriate.
 
 ## Ingesting data using the mixin {#ingest}
 
