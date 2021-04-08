@@ -59,7 +59,10 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     },
     "idSpecific": {
       "ECID": {
-        "12345678-abcdef09-87654321-fedcba90": {
+        "37784337855396895622558625508046772577": {
+          "adID": {
+            "val": "n",
+          },
           "share": {
             "val": "n"
           },
@@ -270,7 +273,7 @@ The keys for each namespace object represent the unique identity values that the
     }
   },
   "ECID" : {
-    "12345678-abcdef09-87654321-fedcba90": {
+    "37784337855396895622558625508046772577": {
       "marketing": {
         "adID": {
           "val": "n"
