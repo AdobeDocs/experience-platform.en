@@ -49,9 +49,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     "collect": {
       "val": "y",
     },
-    "adID": {
-      "val": "VI"
-    },
     "share": {
       "val": "y",
     },
@@ -73,17 +70,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
     },
     "metadata": {
       "time": "2019-01-01T15:52:25+00:00"
-    },
-    "idSpecific": {
-      "email": {
-        "jdoe@example.com": {
-          "marketing": {
-            "email": {
-              "val": "n"
-            }
-          }
-        }
-      }
     }
   }
 }
@@ -104,9 +90,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 "consents": {
   "collect": {
     "val": "y",
-  },
-  "adID": {
-    "val": "VI"
   },
   "share": {
     "val": "y",
@@ -136,20 +119,6 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 
 ```json
 "collect" : {
-  "val": "y"
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
-
-### `adID`
-
-`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
-
-```json
-"adID" : {
   "val": "y"
 }
 ```
@@ -222,55 +191,12 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | --- | --- |
 | `preferred` | Indicates the customer's preferred channel for receiving communications. See the [appendix](#preferred-values) for accepted values. |
 | `any` |  Represents the customer's preferences for direct marketing as a whole. The consent preference provided in this field is considered the "default" preference for any marketing channel, unless overridden by additional sub-fields provided under `marketing`. If you plan on using more granular consent options, it is recommended that you exclude this field.<br><br>If the value is set to `n`, then all more specific personalization settings should be ignored. If the value is set to `y`, then all finer-grained personalization options should also be treated as `y`, unless explicitly set to `n`. If the value is unset, then the values for each personalization option should be honored as specified. |
-| `email` | Indicates whether the customer agrees to receive email messages. The customer can also provide preferences for individual subscriptions within this channel. See the section on [subscriptions](#subscriptions) below for more information. | 
-| `push` | Indicates whether the customer permits receiving push notifications. The customer can also provide preferences for individual subscriptions within this channel. See the section on [subscriptions](#subscriptions) below for more information. | 
-| `sms` | Indicates whether the customer agrees to receive text messages. The customer can also provide preferences for individual subscriptions within this channel. See the section on [subscriptions](#subscriptions) below for more information. | 
+| `email` | Indicates whether the customer agrees to receive email messages. | 
+| `push` | Indicates whether the customer permits receiving push notifications. | 
+| `sms` | Indicates whether the customer agrees to receive text messages. | 
 | `val` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 | `time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
 | `reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
-
-#### `subscriptions` {#subscriptions}
-
-The `email`, `push`, and `sms` properties of the `marketing` object are capable of representing customer subscriptions for those individual channels. This is accomplished by adding a `subscriptions` property to the marketing channel in question.
-
-```json
-"marketing": {
-  "email": {
-    "val": "y",
-    "subscriptions": {
-      "daily-mail": {
-        "val": "y",
-        "type": "paid",
-        "subscribers": {
-          "john@xyz.com": {
-            "time": "2019-01-01T15:52:25+00:00",
-            "source": "website"
-          }
-        }
-      },
-      "shipped": {
-        "val": "y",
-
-        "subscribers": {
-          "john@xyz.com": {
-            "time": "2021-01-01T08:32:53+07:00",
-            "source": "website"
-          },
-          "jane@xyz.com": {
-            "time": "2020-02-03T07:54:21+07:00",
-            "source": "call center",
-          }
-        }
-      }
-    }
-  }
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
-| `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
 ### `metadata`
 
@@ -285,48 +211,6 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 | Property | Description |
 | --- | --- |
 | `time` | An ISO 8601 timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `time` value under an individual preference overrides the `metadata` timestamp for that particular preference. |
-
-### `idSpecific`
-
-`idSpecific` can be used when a particular consent or preference does not universally apply to a customer, but is restricted to a single device or ID. For example, a customer can opt out of receiving emails to one address, while potentially allowing emails on another.
-
->[!IMPORTANT]
->
->Channel-level consents and preferences (i.e. those provided under `consents` outside of `idSpecific`) apply to IDs within that channel. Therefore, all channel-level consents and preferences directly effect whether equivalent ID- or device-specific settings are honored:
->
->* If the customer has opted out at the channel level, then any equivalent consents or preferences in `idSpecific` are ignored.
->* If the channel-level consent or preference is not set, or the customer has opted in, then the equivalent consents or preferences in `idSpecific` are honored.
-
-Each key in the `idSpecific` object represents a specific identity namespace recognized by Adobe Experience Platform Identity Service. While you can define your own custom namespaces to categorize different identifiers, it is recommended that you use one of the standard namespaces provided by Identity Service to reduce storage sizes for Real-time Customer Profile. For more information on identity namespaces, see the [identity namespace overview](../../identity-service/namespaces.md) in the Identity Service documentation.
-
-The keys for each namespace object represent the unique identity values that the customer has set preferences for. Each identity value can contain a complete set of consents and preferences, formatted in the same way as `consents`.
-
-```json
-"idSpecific": {
-  "email": {
-    "jdoe@example.com": {
-      "marketing": {
-        "email": {
-          "val": "n"
-        }
-      }
-    }
-  },
-  "adID" : {
-    "EA7583CD-A667-48BC-B806-42ECB2B48606": {
-      "marketing": {
-        "sms": {
-          "val": "n"
-        }
-      }
-    }
-  }
-}
-```
-
-| Property | Description |
-| --- | --- |
-| `adID` | Unique to the `idSpecific` section,`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value cannot be configured at the user level. You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK sets this automatically when appropriate. |
 
 ## Ingesting data using the data type {#ingest}
 

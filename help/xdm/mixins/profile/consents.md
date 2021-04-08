@@ -9,7 +9,7 @@ description: This document provides an overview of the Privacy/Personalization/M
 
 [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] mixin) is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
 
-## Mixin structure {#structure}
+## Mixin structure {#structure} 
 
 >[!IMPORTANT]
 >
@@ -269,10 +269,13 @@ The keys for each namespace object represent the unique identity values that the
       }
     }
   },
-  "adID" : {
-    "EA7583CD-A667-48BC-B806-42ECB2B48606": {
+  "ECID" : {
+    "12345678-abcdef09-87654321-fedcba90": {
       "marketing": {
-        "sms": {
+        "adID": {
+          "val": "n"
+        },
+        "push": {
           "val": "n"
         }
       }
@@ -283,7 +286,7 @@ The keys for each namespace object represent the unique identity values that the
 
 | Property | Description |
 | --- | --- |
-| `adID` | Unique to the `idSpecific` section,`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value cannot be configured at the user level. You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK sets this automatically when appropriate. |
+| `adID` | Unique to the `idSpecific` section,`adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value cannot be configured at the user level. You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK automatically sets it when appropriate. |
 
 >[!NOTE]
 >
