@@ -76,6 +76,8 @@ To view a mixin in the Platform UI, select the **[!UICONTROL Schemas]** tab on t
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL Search Details] | search | search.keywords |
 
+Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
+
 ### Adobe Audience Manager
 
 Adobe Audience Manager data has special handling in Customer AI. Customer AI supports giving conditions on "realized trait ids" through a column named `AAMTraitsID`. For example, you can give the following condition for `prediction_goal` via the API:
@@ -92,15 +94,12 @@ Adobe Audience Manager data has special handling in Customer AI. Customer AI sup
 >
 >- `AAMTraitsID` is not a column for the XDM input data. 
 >- Customer AI only looks at traits that have `status='realized'`. 
->- The traits last qalification time is considreed as the event time. 
->- Customer AI takes care of translating trait names to trait ids so you can spcify the conditions on trait names.
+>- The traits last qualification time is considered as the event time. 
+>- Customer AI takes care of translating trait names to trait ids so you can specify the conditions on trait names.
 
 | Mixin | Event type | XDM field path |
 | --- | --- | --- |
-| Adobe Audience Manager Mixin | audienceRealization | AAMTraitsID | 
-
-
-Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
+| Adobe Audience Manager Template Mixin | audienceRealization | AAMTraitsID | 
 
 ### Historical data {#data-requirements}
 
@@ -254,6 +253,16 @@ In this example, `order`, `checkouts`, and `purchases` are used when a mobile ap
 **Additional recommended standard event types:**
 
 Any of the remaining [event types](#standard-events) may be required based on the complexity of your goal and eligible population while configuring your Customer AI instance. It is recommended that if the data is available for a particular data type, that this data is included in your schema.
+
+### Scenario 7: Traits realized (Adobe Audience Manager)
+
+**Prediction goal:** Predict the propensity for some traits to be realized. 
+
+**Required standard event types:**
+
+The event type listed below must be provided with this particular prediction goal.
+
+- audienceRealization
 
 ## Customer AI output data
 
