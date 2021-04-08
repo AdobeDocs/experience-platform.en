@@ -8,7 +8,7 @@ description: This document gives an overview of how different data types are han
 
 # Data format overview
 
-
+Data Prep can robustly handles different formats of data ingested into Platform. This document outlines how different data formats are treated with Data Prep.
 
 ## Booleans
 
