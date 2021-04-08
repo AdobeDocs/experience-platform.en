@@ -12,7 +12,17 @@ The following document outlines the different required events, inputs, and outpu
 
 ## Getting started
 
-Customer AI works by analyzing the Consumer Experience Event (CEE) dataset to predict churn or conversion propensity scores. This document requires a basic understanding of the CEE schema. Please review the [Intelligent Services data preparation](../data-preparation.md) documentation before continuing.
+Customer AI works by analyzing one of the following datasets to predict churn or conversion propensity scores:
+
+- Consumer Experience Event (CEE) dataset
+- Adobe Analytics data using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+- Adobe Audience Manager data using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md)
+
+>[!IMPORTANT]
+>
+>Source connectors take up to four weeks to backfill data. If you recently set up a connector you should verify that the dataset has the minimum length of data required for Customer AI. Please review the [historical data](#data-requirements) section to verify you have enough data for your prediction goal.
+
+This document requires a basic understanding of the CEE schema. Please review the [Intelligent Services data preparation](../data-preparation.md) documentation before continuing.
 
 The following table outlines some common terminology used in this document:
 
@@ -32,13 +42,15 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports both the CEE and Adobe Analytics schemas. To use either of the schemas, you must populate the data types listed in the standard events [data type table](#standard-events) below.
+Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add data types during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below. 
+
+For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
 ### Standard events {#standard-events}
 
 XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
-It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your CEE / Adobe Analytics schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
+It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
 To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Data types]** tab.
 
@@ -64,7 +76,7 @@ To view a datatype in the Platform UI, select the **[!UICONTROL Schemas]** tab o
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
-### Historical data
+### Historical data {#data-requirements}
 
 Customer AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
 
