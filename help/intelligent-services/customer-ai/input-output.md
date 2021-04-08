@@ -76,7 +76,24 @@ To view a mixin in the Platform UI, select the **[!UICONTROL Schemas]** tab on t
 |  | applicationUpgrades | <li> application.upgrades.value </li> <li> application.name </li> |
 | [!UICONTROL Search Details] | search | search.keywords |
 
-Adobe Audience Manager
+### Adobe Audience Manager
+
+Adobe Audience Manager data has special handling in Customer AI. Customer AI supports giving conditions on "realized trait ids" through a column named `AAMTraitsID`. For example, you can give the following condition for `prediction_goal` via the API:
+
+```json
+{
+    "col": "AAMTraitsID",
+    "op": "in",
+    "value": [8384503, 9156084, 8380600, 9064518, 12209740, 11949773],
+}
+```
+
+>[!NOTE]
+>
+>- `AAMTraitsID` is not a column for the XDM input data. 
+>- Customer AI only looks at traits that have `status='realized'`. 
+>- The traits last qalification time is considreed as the event time. 
+>- Customer AI takes care of translating trait names to trait ids so you can spcify the conditions on trait names.
 
 | Mixin | Event type | XDM field path |
 | --- | --- | --- |
