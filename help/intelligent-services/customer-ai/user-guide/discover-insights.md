@@ -30,14 +30,13 @@ The Customer AI service page appears. This page lists service instances of Custo
 
 ![Create instance](../images/insights/dashboard.png)
 
-Click on a service instance name to begin.
+Select a service instance name to begin.
 
 ![Create instance](../images/insights/click-the-name.png)
 
-Next, the insights page for that service instance appears, where you are provided with visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
+Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide. The **[!UICONTROL Performance summary]** tab contains information on the churn or conversion results of your model, see the section on [performance summary metrics](#performance-metrics) to learn more.
 
-![setup page](../images/insights/landing-page.png)
-
+![setup page](../images/insights/landing_page_insights.png)
 
 ### Service instance details
 
@@ -148,6 +147,28 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
  To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
+
+## Performance summary metrics {#performance-metrics}
+
+The **[!UICONTROL Performance summary]** tab contains the churn or conversion results of your model. The results displayed are separated into each of the propensity buckets scored by Customer AI.
+
+![Performance summary tab](../images/insights/summary_tab.png)
+
+Initially only expected rates (dotted lines) are displayed. However, once an outcome window has passed, the expected result is replaced with an actual result (solid line). Hovering over the lines displays the date and actual/expected result for that day in that bucket.
+
+![Bucket example](../images/insights/churn_tab.png)
+
+You can filter the timeframe for the expected and actual results being displayed. Select the **calendar icon** then select a new date range. The results in each of the buckets are updated to display within the new date range.
+
+![Date selector](../images/insights/date_selector.png)
+
+### Individual scoring run results
+
+The bottom half of the **[!UICONTROL Performance summary]** tab displays the results for each individual scoring run. Select the dropdown date in the top-right to display results for a different scoring run.
+
+Depending on if you are predicting churn or conversion, the [!UICONTROL Distribution of Scores] graph displays the distribution of profiles churned/converted and not churned/not converted in each increment.
+
+![individual scoring](../images/insights/scoring_tab.png)
 
 ## Next steps
 
