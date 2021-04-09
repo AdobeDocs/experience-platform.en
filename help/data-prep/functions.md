@@ -102,7 +102,7 @@ get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Re
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the [date function guide](./dates.md).
+>Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the [date function guide](./data-handling/dates.md).
 
 Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
