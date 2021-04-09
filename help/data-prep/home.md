@@ -6,6 +6,7 @@ topic: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
+
 # Data Prep overview
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow. Data engineers can use Data Prep to perform the following data manipulation during ingestion:
@@ -30,8 +31,8 @@ A set of mappings that transform one schema to another are collectively known as
 
 ## Data handling
 
-Data Prep can robustly handles different formats of data ingested into Platform. To learn more about how Data Prep transforms different data types, please read the [data handling overview](./data-handling.md).
+Data Prep can robustly handles different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data handling overview](./data-handling.md).
 
 ## Next steps
 
-This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
+This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about how Data Prep handles different data types, please read the [date handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
