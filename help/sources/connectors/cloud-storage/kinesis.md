@@ -22,7 +22,32 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 ## Set up access policy for [!DNL Amazon Kinesis]
 
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:GetShardIterator",
+                "kinesis:GetRecords",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
 
+| Property | Description |
+| -------- | ----------- |
+| `kinesis:GetShardIterator` |
+| `kinesis:GetRecords` |
+| `kinesis:DescribeStream` |
+| `kinesis:ListStreams` |
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
