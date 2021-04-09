@@ -6,7 +6,11 @@ topic: overview
 description: This document provides an overview of the Marketo Engage source connector, including information about its authentication, mapping, and data latency.
 ---
 
-# Marketo Engage connector
+# (Alpha) [!DNL Marketo Engage] connector
+
+>[!IMPORTANT]
+>
+>The [!DNL Marketo] source is currently in alpha. Its features and the documentation are subject to change.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -36,26 +40,25 @@ To establish a source connection between [!DNL Marketo] and Platform, the Market
 
 See the following documents for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
 
-* [Activities](./marketo-mapping/activities.md)
-* [Campaigns](./marketo-mapping/campaigns.md)
-* [Campaign memberships](./marketo-mapping/campaign-memberships.md)
-* [Companies](./marketo-mapping/companies.md)
-* [Marketing lists](./marketo-mapping/marketing-lists.md)
-* [Marketing list memberships](./marketo-mapping/marketing-list-memberships.md)
-* [Named Accounts](./marketo-mapping/named-accounts.md)
-* [Opportunities](./marketo-mapping/opportunities.md)
-* [Opportunity person relations](./marketo-mapping/opportunity-person-relations.md)
-* [Persons](./marketo-mapping/persons.md)
+* [Activities](./mapping/marketo.md#activities)
+* [Campaigns](./mapping/marketo.md#campaigns)
+* [Campaign memberships](./mapping/marketo.md#campaign-memberships)
+* [Companies](./mapping/marketo.md#companies)
+* [Marketing lists](./mapping/marketo.md#marketing-lists)
+* [Marketing list memberships](./mapping/marketo.md#marketing-list-memberships)
+* [Named Accounts](./mapping/marketo.md#named-accounts)
+* [Opportunities](./mapping/marketo.md#opportunities)
+* [Opportunity person relations](./mapping/marketo.md#opportunity-person-relations)
+* [Persons](./mapping/marketo.md#persons)
 
 ## Expected latency of [!DNL Marketo] data on Platform
 
 The following table outlines the expected latency for bringing [!DNL Marketo] data into Platform, based on the nature of ingestion and the desired destination:
 
-| Marketo Data | Expected Latency |
-| ------------ | ---------------- |
-| New streaming data to Data Lake | < 1 minute |
-| New batch data to Data Lake | < 5 minutes |
-| New data to B2B CDP | < 15 minutes |
+| Destination | Expected Latency |
+| ----------- | ---------------- |
+| [!DNL Real-time Customer Profile] | < 1 minute |
+| Data Lake | < 60 minutes |
 
 ## Connect [!DNL Marketo] to Platform
 
