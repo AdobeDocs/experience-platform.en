@@ -14,7 +14,7 @@ description: The tables below contains the mappings between the fields in the Ma
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
-## Activities
+## Activities {#activities}
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Campaigns
+## Campaigns {#campaigns}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -56,7 +56,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Campaign Membership
+## Campaign Memberships {#campaign-memberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -79,7 +79,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Companies
+## Companies {#companies}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -104,7 +104,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Marketing Lists
+## Marketing Lists {#marketing-lists}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -116,7 +116,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Marketing List Membership
+## Marketing List Memberships {#marketing-list-memnberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -127,7 +127,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Named Accounts
+## Named Accounts {#named-accounts}
 
 >[!IMPORTANT]
 >
@@ -153,7 +153,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Opportunities
+## Opportunities {#opportunities}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -184,7 +184,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Opportunity Person Relations
+## Opportunity Person Relations {#opportunity-person-relations}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -199,7 +199,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Persons
+## Persons {#persons}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
