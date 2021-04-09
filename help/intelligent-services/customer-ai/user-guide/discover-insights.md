@@ -34,7 +34,9 @@ Select a service instance name to begin.
 
 ![Create instance](../images/insights/click-the-name.png)
 
-Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide. The **[!UICONTROL Performance summary]** tab contains information on the churn or conversion results of your model, see the section on [performance summary metrics](#performance-metrics) to learn more.
+Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
+
+ The **[!UICONTROL Performance summary]** tab contains information on the churn or conversion results of your model. To learn more, see the section on [performance summary metrics](#performance-metrics).
 
 ![setup page](../images/insights/landing_page_insights.png)
 
@@ -158,7 +160,7 @@ Initially only expected rates (dotted lines) are displayed. However, once an out
 
 ![Bucket example](../images/insights/churn_tab.png)
 
-You can filter the timeframe for the expected and actual results being displayed. Select the **calendar icon** then select a new date range. The results in each of the buckets are updated to display within the new date range.
+You can filter the timeframe for the expected and actual results being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
 
 ![Date selector](../images/insights/date_selector.png)
 
