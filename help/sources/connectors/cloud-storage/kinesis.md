@@ -37,7 +37,7 @@ The following section provides further information on prerequisite set up requir
             "Action": [
                 "kinesis:GetShardIterator",
                 "kinesis:GetRecords",
-                "kinesis:DescribeStream",
+                "kinesis:DescribeStreamSummary",
                 "kinesis:ListStreams"
             ],
             "Resource": [
