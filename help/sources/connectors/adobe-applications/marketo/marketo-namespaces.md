@@ -6,17 +6,19 @@ topic: overview
 description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
 ---
 
-# Marketo namespaces 
+# (Alpha )[!DNL Marketo Engage] namespaces
 
-Identity namespaces are a component of Identity Service that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
+>[!IMPORTANT]
+>
+>The [!DNL Marketo Engage] source is currently in alpha. The feature and documentation are subject change.
 
-You must create a new custom namespace for every new Marketo instance and dataset combination. A Marketo source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. For more information on custom namespaces, see the [namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#managing-custom-namespaces).
+You must create a new custom namespace for every new Marketo instance and dataset combination. A Marketo source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. For more information on custom namespaces, see the [namespace overview](../../../../identity-service/namespaces.md).
 
-This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
+This document provides an overview of custom namespaces required when creating a [!DNL Marketo] source connector.
 
-## Marketo namespaces
+## [!DNL Marketo] namespaces
 
-The Marketo namespace is used in the primary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the munchkin ID of `123-ABC-789`, and the issuer type is `marketo`, then the display name is `company_123-ABC-789_marketo`.
+The [!DNL Marketo] namespace is used in the primary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the munchkin ID of `123-ABC-789`, and the issuer type is `marketo`, then the display name is `company_123-ABC-789_marketo`.
 
 >[!IMPORTANT]
 >
@@ -36,9 +38,9 @@ The Marketo namespace is used in the primary identity of the entity. The namespa
 
 {style="table-layout:auto"}
 
-## Salesforce namespaces
+## [!DNL Salesforce] namespaces
 
-The salesforce namespace is used in the secondary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the salesforce organization ID of `00DA0000000Hz79`, and the issuer type is salesforce, then the display name is `company_00DA0000000Hz79_salesforce`.
+The [!DNL Salesforce] namespace is used in the secondary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the [!DNL Salesforce] organization ID of `00DA0000000Hz79`, and the issuer type is [!DNL Salesforce], then the display name is `company_00DA0000000Hz79_salesforce`.
 
 | Display name | Identity symbol | Entity type |
 | --- | --- | --- |
@@ -54,20 +56,20 @@ The salesforce namespace is used in the secondary identity of the entity. The na
 
 ## Appendix
 
-The following are additional information that provides further context on the use of Marketo namespaces.
+The following are additional information that provides further context on the use of [!DNL Marketo] and [!DNL Salesforce] namespaces.
 
 ### Limits and constraints
 
 * The identity symbol must be composed of only alphanumeric characters and no special characters.
-* The identity symbol cannot exceed its cap of 20 characters. The Salesforce organization ID itself is the 15-character GUID.
+* The identity symbol cannot exceed its cap of 20 characters. The [!DNL Salesforce] organization ID itself is the 15-character GUID.
 
 The identity symbol follows the format of: `{ISSUER_TYPE_ABBREVIATION}{ISSUER_INSTANCE_ID}{ENTITY_TYPE_ABBREVIATION}`.
 
 ### Issuer type abbreviations
 
-* `mk` for Marketo
-* `sf` for Salesforce
-* `md` for Microsoft Dynamics
+* `mk` for [!DNL Marketo]
+* `sf` for [!DNL Salesforce]
+* `md` for [!DNL Microsoft Dynamics]
 
 ### Entity type abbreviations
 
