@@ -26,7 +26,9 @@ The following section provides further information on prerequisite set up requir
 
 ### Set up access policy
 
+A [!DNL Kinesis] stream requires the following permissions to create a source connection: `GetShardIterator`, `GetRecords`, `DescribeStream`, and `ListStreams`. These permissions are arranged through your [!DNL Kinesis] and are checked by Platform once you enter your credentials and select your data stream.
 
+The example below displays the minimum access rights required to create a [!DNL Kinesis] source connection.
 
 ```json
 {
@@ -37,7 +39,7 @@ The following section provides further information on prerequisite set up requir
             "Action": [
                 "kinesis:GetShardIterator",
                 "kinesis:GetRecords",
-                "kinesis:DescribeStreamSummary",
+                "kinesis:DescribeStream",
                 "kinesis:ListStreams"
             ],
             "Resource": [
