@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PQL Object Functions
 topic: developer guide
 description: Profile Query Language (PQL) offers functions to make interaction with objects simpler.
+exl-id: e65257d8-5bc8-46c8-8487-33bc7ce4059b
 ---
-
 # Object functions
 
 [!DNL Profile Query Language] (PQL) offers functions to make interaction with objects simpler. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -48,4 +48,4 @@ person.homeAddress.isNotNull()
 
 ## Next steps
 
-Now that you have learned about object functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about object functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

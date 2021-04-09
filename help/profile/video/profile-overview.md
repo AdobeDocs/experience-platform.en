@@ -8,8 +8,8 @@ kt: 2701
 audience: all
 doc-type: video
 activity: understand
+exl-id: cdc91194-771f-4026-808f-97d70db436d9
 ---
-
 # Real-time Customer Profile overview
 
 This video provides a basic understanding of Real-time Customer Profile within Adobe Experience Platform and outlines how data from multiple sources is brought together to form a centralized profile for each of your individual customers. To learn more about Real-time Customer Profile features and functionality, please begin by reading the [Real-time Customer Profile overview](../home.md).

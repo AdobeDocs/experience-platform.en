@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Activate profiles and segments to a destination
 description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
 seo-description: Activate the data you have in Adobe Experience Platform by mapping segments to destinations. To accomplish this, follow the steps below.
+exl-id: c3792046-ffa8-4851-918f-98ced8b8a835
 ---
-
 # Activate profiles and segments to a destination
 
 ## Overview {#overview}
@@ -231,13 +231,6 @@ On the **[!UICONTROL Review]** page, you can see a summary of your selection. Se
 If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination. 
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
-
-## Edit activation {#edit-activation}
-
-Follow the steps below to edit existing activation flows in Adobe Experience Platform: 
-
-1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
-2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
 
 ## Verify that segment activation was successful {#verify-activation}
 

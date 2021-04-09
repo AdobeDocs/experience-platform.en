@@ -2,8 +2,8 @@
 keywords: Confirmit Digital Feedback;confirmit extension;confirmit
 title: Confirmit Digital Feedback extension
 description: The Confirmit Digital Feedback extension is a Voice of the Customer destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: b45efd1f-318c-42c4-8a88-02f25fc31319
 ---
-
 # [!DNL Confirmit Digital Feedback] extension
 
 ## Overview {#overview}

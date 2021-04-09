@@ -2,8 +2,8 @@
 keywords: email;Email;e-mail;email destinations;adobe campaign;campaign
 title: Adobe Campaign connection
 description: Adobe Campaign is a set of solutions that help you personalize and deliver campaigns across all your online and offline channels.
+exl-id: 0de91738-8f56-41f5-8745-9b14b15db76a
 ---
-
 # Adobe Campaign connection
 
 ## Overview {#overview}

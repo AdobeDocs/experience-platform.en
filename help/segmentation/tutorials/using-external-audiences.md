@@ -1,10 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Enforce data usage compliance for audience segments
+title: Importing and using external audiences
+description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
 topic: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 ---
-
 # Importing and using external audiences
 
 Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.

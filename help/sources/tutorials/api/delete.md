@@ -5,8 +5,8 @@ title: Delete an Account Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to delete an account using the Flow Service API.
+exl-id: 3d07ab7d-c012-472e-8db4-b19e3936dcba
 ---
-
 # Delete an account using the Flow Service API
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.

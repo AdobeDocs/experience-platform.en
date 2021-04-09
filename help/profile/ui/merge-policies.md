@@ -3,9 +3,9 @@ keywords: Experience Platform;profile;real-time customer profile;merge policies;
 title: Merge Policies UI Guide
 topic: guide
 type: Documentation
-description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view. 
+description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
+exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
 ---
-
 # Merge policies UI guide
 
 Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a unified view. 

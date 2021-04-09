@@ -2,8 +2,8 @@
 keywords: google customer match;Google customer match;Google Customer Match
 title: Google Customer Match connection
 description: Google Customer Match lets you use your online and offline data to reach and re-engage with your customers across Google's owned and operated properties, such as Search, Shopping, Gmail, and YouTube.
+exl-id: 8209b5eb-b05c-4ef7-9fdc-22a528d5f020
 ---
-
 # [!DNL Google Customer Match] connection
 
 ## Overview {#overview}

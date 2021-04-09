@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: 4bb804f5-1ad7-47b0-bc38-ba22877490d4
 ---
-
 # Create a merge policy in the Experience Platform UI
 
 This video provides a basic understanding of merge policies within Adobe Experience Platform and outlines how to define merge policies using the Platform user interface. To learn more about merge policies, and how to create them using the Platform UI, please visit the [merge policies UI guide](../ui/merge-policies.md). 

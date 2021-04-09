@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Streaming Ingestion Troubleshooting Guide
 topic: troubleshooting
 description: This document provides answers to frequently asked questions about streaming ingestion on Adobe Experience Platform.
+exl-id: 5d5deccf-25b8-44c9-ae27-9a4713ced274
 ---
-
 # Streaming ingestion troubleshooting guide
 
 This document provides answers to frequently asked questions about streaming ingestion on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../../landing/troubleshooting.md).

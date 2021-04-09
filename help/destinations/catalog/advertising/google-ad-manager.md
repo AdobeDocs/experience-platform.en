@@ -1,9 +1,9 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
 title: Google Ad Manager connection
-description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.  
+description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
+exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 ---
-
 # [!DNL Google Ad Manager] connection
 
 ## Overview {#overview}

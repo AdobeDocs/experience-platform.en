@@ -4,8 +4,8 @@ title: License Usage Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's license usage.
 topic: guide
 type: Documentation
+exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 ---
-
 # (Beta) License usage dashboard {#license-usage-dashboard}
 
 >[!IMPORTANT]

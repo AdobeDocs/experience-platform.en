@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services, Real-time Customer Data Pla
 title: Input and Output in Customer AI
 topic: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
+exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 ---
-
 # Input and output in Customer AI
 
 The following document outlines the different required events, inputs, and outputs utilized in Customer AI. 

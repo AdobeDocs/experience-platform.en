@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Segment Jobs API Endpoint
 topic: developer guide
 description: The segment jobs endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment jobs for your organization.
+exl-id: 105481c2-1c25-4f0e-8fb0-c6577a4616b3
 ---
-
 # Segment jobs endpoint
 
 A segment job is an asynchronous process that creates a new audience segment. It references a [segment definition](./segment-definitions.md), as well as any [merge policies](../../profile/api/merge-policies.md) controlling how [!DNL Real-time Customer Profile] merges overlapping attributes across your profile fragments. When a segment job successfully completes, you can gather various information about the segment, such as any errors that may have occurred during processing and the ultimate size of your audience.

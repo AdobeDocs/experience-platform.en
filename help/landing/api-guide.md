@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Getting started with Adobe Experience Platform APIs
 topic: api guide
 description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and sample API calls.
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 ---
-
 # Getting started with Adobe Experience Platform APIs
 
 Adobe Experience Platform is developed under an "API first" philosophy. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
@@ -140,4 +140,3 @@ This document introduced the required headers, available guides, and provided an
 For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
 
 To set up a Postman environment and explore the available Postman collections, refer to the [Platform Postman guide](postman.md).
-
