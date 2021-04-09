@@ -7,7 +7,11 @@ type: Tutorial
 description: This tutorial provides steps for creating a Marketo Engage source connector in the UI to bring B2B data into Adobe Experience Platform.
 ---
 
-# Create a [!DNL Marketo Engage] source connector in the UI
+# (Alpha) Create a [!DNL Marketo Engage] source connector in the UI
+
+>[!IMPORTANT]
+>
+>The [!DNL Marketo Engage] source is currently in alpha. The feature and documentation are subject change. Furthermore, you must ensure that you are using a non-production sandbox when using the connector during the alpha program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
 
 This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring consumer data into Adobe Experience Platform.
 
@@ -17,8 +21,8 @@ This tutorial requires a working understanding of the following components of Ad
 
 * [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  * [Basics of schema composition](../../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
+* [Identity namespaces](../../../../../identity-service/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace. You must create a new custom namespace for every new Marketo instance and dataset combination. A Marketo source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace.
 * [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
@@ -32,7 +36,7 @@ In order to access your [!DNL Marketo] account on Platform, you must provide the
 | `clientId` | The unique client ID of your [!DNL Marketo] instance. |
 | `clientSecret` | The unique client secret of your [!DNL Marketo] instance. |
 
-For more information on acquiring these values, refer to the [[!DNL Marketo] source connector authentication guide](../../../../connectors/adobe-applications/marketo-auth.md).
+For more information on acquiring these values, refer to the [[!DNL Marketo] authentication guide](../../../../connectors/adobe-applications/marketo/marketo-auth.md).
 
 Once you have gathered your required credentials, you can follow the steps in the next section.
 
@@ -104,20 +108,18 @@ Once you have selected a schema, scroll down to view the mapping dialog to start
 
 ### Map your [!DNL Marketo] dataset source fields to target XDM fields
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
+Each [!DNL Marketo] dataset has its own specific mapping rules to follow. See the following for more information on how to map [!DNL Marketo] datasets to XDM:
 
-See the following documents for mapping rules for specific [!DNL Marketo] datasets:
-
-* [Activities](../../../../connectors/adobe-applications/marketo-mapping/activities.md)
-* [Campaigns](../../../../connectors/adobe-applications/marketo-mapping/campaigns.md)
-* [Campaign memberships](../../../../connectors/adobe-applications/marketo-mapping/campaign-memberships.md)
-* [Companies](../../../../connectors/adobe-applications/marketo-mapping/companies.md)
-* [Marketing lists](../../../../connectors/adobe-applications/marketo-mapping/marketing-lists.md)
-* [Marketing list memberships](../../../../connectors/adobe-applications/marketo-mapping/marketing-list-memberships.md)
-* [Named Accounts](../../../../connectors/adobe-applications/marketo-mapping/named-accounts.md)
-* [Opportunities](../../../../connectors/adobe-applications/marketo-mapping/opportunities.md)
-* [Opportunity person relations](../../../../connectors/adobe-applications/marketo-mapping/opportunity-person-relations.md)
-* [Persons](../../../../connectors/adobe-applications/marketo-mapping/persons.md)
+* [Activities](../../../../connectors/adobe-applications/mapping/marketo.md#activities)
+* [Campaigns](../../../../connectors/adobe-applications/mapping/marketo.md#campaigns)
+* [Campaign memberships](../../../../connectors/adobe-applications/mapping/marketo.md#campaign-memberships)
+* [Companies](../../../../connectors/adobe-applications/mapping/marketo.md#companies)
+* [Marketing lists](../../../../connectors/adobe-applications/mapping/marketo.md#marketing-lists)
+* [Marketing list memberships](../../../../connectors/adobe-applications/mapping/marketo.md#marketing-list-memberships)
+* [Named Accounts](../../../../connectors/adobe-applications/mapping/marketo.md#named-accounts)
+* [Opportunities](../../../../connectors/adobe-applications/mapping/marketo.md#opportunities)
+* [Opportunity person relations](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-person-relations)
+* [Persons](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
 Select **[!UICONTROL Preview data]** to see mapping results based on your selected dataset.
 
@@ -161,6 +163,10 @@ Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow s
 ## Monitor your dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on ingestion rates, success, and errors. For more information on how to monitor dataflows, see the tutorial on [monitoring dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Delete your attributes
+
+Custom attributes in datasets cannot be retroactively hidden or removed. If you want to hide or remove a custom attribute from an existing dataset, then you must create a new dataset without this custom attribute, a new XDM schema, and configure a new dataflow for the new dataset that you create. You must also disable or delete the original dataflow that consists of the dataset with the custom attribute you want to hide or remove.
 
 ## Delete your dataflow
 

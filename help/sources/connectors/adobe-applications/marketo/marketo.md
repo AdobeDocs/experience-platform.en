@@ -38,7 +38,7 @@ To learn more about XDM and its role in Platform, please see the [XDM System ove
 
 To establish a source connection between [!DNL Marketo] and Platform, the Marketo source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
 
-See the following documents for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
+See the following for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
 
 * [Activities](../mapping/marketo.md#activities)
 * [Campaigns](../mapping/marketo.md#campaigns)
