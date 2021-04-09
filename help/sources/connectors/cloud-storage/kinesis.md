@@ -20,7 +20,13 @@ Cloud storage sources can bring your own data into [!DNL Platform] without the n
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Set up access policy for [!DNL Amazon Kinesis]
+## Prerequisites
+
+The following section provides further information on prerequisite set up required before you can create a [!DNL Kinesis] source connection.
+
+### Set up access policy
+
+
 
 ```json
 {
@@ -48,6 +54,10 @@ A list of IP addresses must be added to an allow list prior to working with sour
 | `kinesis:GetRecords` | An action required to get records from a specific offset or shard ID. |
 | `kinesis:DescribeStream` | An action that returns information regarding the stream including the shard map, which is needed to generate a shard ID. |
 | `kinesis:ListStreams` | An action required to list out available streams that you can select from the UI. |
+
+For more information on controlling access for [!DNL Kinesis] data streams, see the following [[!DNL Kinesis] documentation](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+
+### Configure cross-account access
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
