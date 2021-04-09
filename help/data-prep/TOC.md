@@ -15,7 +15,5 @@ feature: Data Management, Data Ingestion
   - [Getting started](./api/getting-started.md)
   - [Functions](./api/functions.md)
   - [Mapping set](./api/mapping-set.md)
-- [Handling data]{#data-handling}
-  - [Overview](./data-handling/overview.md)
-  - [Datetime objects](./data-handling/dates.md)
+- [Handling data](./data-handling.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -34,4 +34,4 @@ Data Prep can robustly handles different formats of data ingested into Platform.
 
 ## Next steps
 
-This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./data-handling/dates.md). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
+This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
