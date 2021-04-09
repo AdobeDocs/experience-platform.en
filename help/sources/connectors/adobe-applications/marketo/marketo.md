@@ -32,7 +32,7 @@ XDM is a publicly documented specification that provides common structures and d
 
 Adhering to XDM standards allows data to be uniformly incorporated into the Platform ecosystem, making it easier to deliver data and gather information.
 
-To learn more about XDM and its role in Platform, please see the [XDM System overview](../../../xdm/home.md).
+To learn more about XDM and its role in Platform, please see the [XDM System overview](../../../../xdm/home.md).
 
 ## Field mapping from [!DNL Marketo] to XDM
 
@@ -40,16 +40,16 @@ To establish a source connection between [!DNL Marketo] and Platform, the Market
 
 See the following documents for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
 
-* [Activities](./mapping/marketo.md#activities)
-* [Campaigns](./mapping/marketo.md#campaigns)
-* [Campaign memberships](./mapping/marketo.md#campaign-memberships)
-* [Companies](./mapping/marketo.md#companies)
-* [Marketing lists](./mapping/marketo.md#marketing-lists)
-* [Marketing list memberships](./mapping/marketo.md#marketing-list-memberships)
-* [Named Accounts](./mapping/marketo.md#named-accounts)
-* [Opportunities](./mapping/marketo.md#opportunities)
-* [Opportunity person relations](./mapping/marketo.md#opportunity-person-relations)
-* [Persons](./mapping/marketo.md#persons)
+* [Activities](../mapping/marketo.md#activities)
+* [Campaigns](../mapping/marketo.md#campaigns)
+* [Campaign memberships](../mapping/marketo.md#campaign-memberships)
+* [Companies](../mapping/marketo.md#companies)
+* [Marketing lists](../mapping/marketo.md#marketing-lists)
+* [Marketing list memberships](../mapping/marketo.md#marketing-list-memberships)
+* [Named Accounts](../mapping/marketo.md#named-accounts)
+* [Opportunities](../mapping/marketo.md#opportunities)
+* [Opportunity person relations](../mapping/marketo.md#opportunity-person-relations)
+* [Persons](../mapping/marketo.md#persons)
 
 ## Expected latency of [!DNL Marketo] data on Platform
 
@@ -62,4 +62,4 @@ The following table outlines the expected latency for bringing [!DNL Marketo] da
 
 ## Connect [!DNL Marketo] to Platform
 
-To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../tutorials/ui/create/adobe-applications/marketo.md).
+To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
