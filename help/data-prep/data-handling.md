@@ -8,11 +8,11 @@ description: This document gives an overview of how different data types are han
 
 # Data format overview
 
-Data Prep can robustly handles different formats of data ingested into Platform. This document outlines how different data formats are treated with Data Prep.
+Data Prep can robustly handle different formats of data ingested into Platform. This document outlines how different data formats are treated with Data Prep.
 
 ## Booleans {#booleans}
 
-If the source is a string, Data Prep can automatically parse the value and convert that value to a boolean.
+If the source type is a string and the target type is a boolean, Data Prep can automatically parse the value and convert the source value to a boolean.
 
 The values `y`, `yes`, `Y`, `YES`, `on`, `ON`, `true`, and `TRUE` will automatically be parsed to be `true`.
 
