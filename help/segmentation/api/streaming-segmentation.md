@@ -68,9 +68,11 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. |
+| Incoming hit with a time window | Any segment definition that refers to a single incoming event with a time window. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
