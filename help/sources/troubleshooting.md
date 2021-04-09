@@ -50,7 +50,7 @@ Supported data types include integers, strings, booleans, datetime objects, arra
 
 ### What date and time formats are supported?
 
-Sources supports a wide variety of datetime formats while ingesting data. More information about supported datetime formats can be found in the [data prep date functions guide](../data-prep/dates.md).
+Sources supports a wide variety of datetime formats while ingesting data. More information about supported datetime formats can be found in the [data prep date functions guide](../data-prep/data-handling/dates.md).
 
 ### How do I format arrays in CSV, JSON, and Parquet files?
 
