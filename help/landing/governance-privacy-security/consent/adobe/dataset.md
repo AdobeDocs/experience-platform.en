@@ -46,9 +46,6 @@ The mixin provides a single object-type field, `consents`, whose sub-properties 
     "collect": {
       "val": "y",
     },
-    "adID": {
-      "val": "VI"
-    },
     "share": {
       "val": "y",
     },
