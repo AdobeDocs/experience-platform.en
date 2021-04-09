@@ -26,7 +26,7 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 
 ### Adobe Analytics data preparation {#analytics-data}
 
-Customer AI and Attribution AI natively support Adobe Analytics data. To use Adobe Analytics data, follow the steps outlined in the documentation to set up an [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md). 
+Customer AI and Attribution AI natively support Adobe Analytics data. To use Adobe Analytics data, follow the steps outlined in the documentation to set up an [Analytics source connector](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your Customer AI configuration. All of the required schema fields and mixins are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
@@ -36,7 +36,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### Adobe Audience Manager data preparation (Customer AI only) {#AAM-data}
 
-Customer AI natively supports Adobe Audience Manager data. To use Audience Manager data, follow the steps outlined in the documentation to set up an [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+Customer AI natively supports Adobe Audience Manager data. To use Audience Manager data, follow the steps outlined in the documentation to set up an [Audience Manager source connector](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
 
 Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Audience Manager as a data source followed by a dataset during your Customer AI configuration. All of the required schema fields and mixins are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
 
