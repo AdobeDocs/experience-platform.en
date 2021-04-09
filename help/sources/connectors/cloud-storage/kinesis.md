@@ -44,10 +44,10 @@ A list of IP addresses must be added to an allow list prior to working with sour
 
 | Property | Description |
 | -------- | ----------- |
-| `kinesis:GetShardIterator` |
-| `kinesis:GetRecords` |
-| `kinesis:DescribeStream` |
-| `kinesis:ListStreams` |
+| `kinesis:GetShardIterator` | An action required to traverse through records. |
+| `kinesis:GetRecords` | An action required to get records from a specific offset or shard ID. |
+| `kinesis:DescribeStream` | An action that returns information regarding the stream including the shard map, which is needed to generate a shard ID. |
+| `kinesis:ListStreams` | An action required to list out available streams that you can select from the UI. |
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
