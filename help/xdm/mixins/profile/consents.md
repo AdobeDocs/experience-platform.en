@@ -278,10 +278,13 @@ The keys for each namespace object represent the unique identity values that the
   },
   "ECID" : {
     "37784337855396895622558625508046772577": {
+      "collect": {
+        "val": "y"
+      },
+      "adID": {
+        "val": "n"
+      },
       "marketing": {
-        "adID": {
-          "val": "n"
-        },
         "push": {
           "val": "n"
         }
@@ -293,18 +296,24 @@ The keys for each namespace object represent the unique identity values that the
 
 Within `marketing` objects provided in the `idSpecific` section, the `any` and `preferred` fields are not supported. These fields can only be configured at the user level. In addition, the `idSpecific` marketing preferences for `email`, `sms`, and `push` do not support `subscriptions` fields.
 
-There is also a marketing preference that can only be provided in the `idSpecific` section: `adID`. This field is covered in the subsection below.
+There is also a consent that can only be provided in the `idSpecific` section: `adID`. This field is covered in the subsection below.
 
 #### `adID`
 
-The `adID` marketing preference represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value can only be configured under the `ECID` identity namespace in the `idSpecific` section, and cannot be set for other namespaces or at the user level for this mixin.
+The `adID` consent represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value can only be configured under the `ECID` identity namespace in the `idSpecific` section, and cannot be set for other namespaces or at the user level for this mixin.
 
 ```json
 "idSpecific": {
   "ECID" : {
     "37784337855396895622558625508046772577": {
+      "collect": {
+        "val": "y"
+      },
+      "adID": {
+        "val": "n"
+      },
       "marketing": {
-        "adID": {
+        "push": {
           "val": "n"
         }
       }

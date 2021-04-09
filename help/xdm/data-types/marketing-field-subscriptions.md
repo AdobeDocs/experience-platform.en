@@ -42,31 +42,34 @@ The following table outlines the accepted values for `val`:
 
 ## `subscriptions` {#subscriptions}
 
-The following JSON represents an example marketing field for an email channel, which contains a `subscriptions` map. Each key in the `subscriptions` object represents an individual subscription for the marketing channel (such as daily newsletters or shipping confirmations). Each subscription in turn contains an opt-in value (`val`).
+Some businesses allow customers to opt in for different subscriptions that are associated with a particular marketing channel. For example, a banking company may allow customers to subscribe to phone alerts for overdrawn accounts, or receive sales calls for loyalty program offers.
+
+The following JSON represents an example marketing field for a phone call marketing channel that contains a `subscriptions` map. Each key in the `subscriptions` object represents an individual subscription for the marketing channel. In turn, each subscription contains an opt-in value (`val`).
 
 ```json
-"email-marketing-field": {
+"phone-marketing-field": {
   "val": "y",
   "time": "2019-01-01T15:52:25+00:00",
   "subscriptions": {
-    "daily-mail": {
+    "loyalty-offers": {
       "val": "y",
-      "type": "paid",
+      "type": "sales",
       "subscribers": {
-        "john@xyz.com": {
+        "123-555-0928": {
           "time": "2019-01-01T15:52:25+00:00",
           "source": "website"
         }
       }
     },
-    "shipped": {
+    "overdrawn-account": {
       "val": "y",
+      "type": "issues",
       "subscribers": {
-        "john@xyz.com": {
+        "123-555-0928": {
           "time": "2021-01-01T08:32:53+07:00",
           "source": "website"
         },
-        "jane@xyz.com": {
+        "301-555-1527": {
           "time": "2020-02-03T07:54:21+07:00",
           "source": "call center"
         }
