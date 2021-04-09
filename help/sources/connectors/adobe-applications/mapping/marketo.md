@@ -250,4 +250,4 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Next steps
 
-By reading this document, you have gained insight on the mapping relationship between [!DNL Marketo] datasets and their corresponding XDM fields. See the [[!DNL Marketo] source connection tutorial](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your source connection.
+By reading this document, you have gained insight on the mapping relationship between your [!DNL Marketo] datasets and their corresponding XDM fields. See the tutorial on [creating a [!DNL Marketo] source connection](../../../tutorials/ui/create/adobe-applications/marketo.md) to complete your [!DNL Marketo] dataflow.
