@@ -26,7 +26,7 @@ The following section provides further information on prerequisite set up requir
 
 ### Set up access policy
 
-A [!DNL Kinesis] stream requires the following permissions to create a source connection: `GetShardIterator`, `GetRecords`, `DescribeStream`, and `ListStreams`. These permissions are arranged through your [!DNL Kinesis] and are checked by Platform once you enter your credentials and select your data stream.
+A [!DNL Kinesis] stream requires the following permissions to create a source connection: `GetShardIterator`, `GetRecords`, `DescribeStream`, and `ListStreams`. These permissions are arranged through the [!DNL Kinesis] console and are checked by Platform once you enter your credentials and select your data stream.
 
 The example below displays the minimum access rights required to create a [!DNL Kinesis] source connection.
 
@@ -59,7 +59,19 @@ The example below displays the minimum access rights required to create a [!DNL 
 
 For more information on controlling access for [!DNL Kinesis] data streams, see the following [[!DNL Kinesis] documentation](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-### Configure cross-account access
+### Configure iterator type
+
+[!DNL Kinesis] supports the following iterator types to allow you to specify the order of how your data is read:
+
+| Iterator type | Description |
+| ------------- | ----------- |
+| `AT_SEQUENCE_NUMBER` |
+| `AFTER_SEQUENCE_NUMBER` |
+| `AT_TIMESTAMP` |
+| `TRIM_HORIZON` |
+| `LATEST` |
+
+Currently, the default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
