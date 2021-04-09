@@ -8,9 +8,9 @@ description: In order for Intelligent Services to discover insights from your ma
 
 # Prepare data for use in [!DNL Intelligent Services]
 
-In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema. 
+In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema.
 
-This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
+This document provides general guidance on mapping your marketing events data from multiple channels to the CEE schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
 
 ## Workflow summary
 
@@ -24,16 +24,32 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 1. Using your access credentials, upload your data to the Blob container.
 1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into [!DNL Intelligent Services].
 
-### Adobe Analytics preparation (Customer AI)
+### Adobe Analytics data preparation
 
-Customer AI natively supports Adobe Analytics data. To use Adobe Analytics data, you must map your data to the supported data types the same way you would with the CEE schema. Visit the [Customer AI input documentation](./customer-ai/input-output.md) for more information on supported data types.
+Customer AI and Attribution AI natively support Adobe Analytics data. To use Adobe Analytics data, follow the steps outlined in the documentation to set up an [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md). 
+
+Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your Customer AI configuration. All of the required schema fields and mixins are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
+
+>[!IMPORTANT]
+>
+>The Adobe Analytics connector take up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
+
+### Adobe Audience Manager data preparation (Customer AI only)
+
+Customer AI natively supports Adobe Audience Manager data. To use Audience Manager data, follow the steps outlined in the documentation to set up an [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Audience Manager as a data source followed by a dataset during your Customer AI configuration. All of the required schema fields and mixins are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
+
+>[!IMPORTANT]
+>
+>If you recently set up a connector you should verify that the dataset has the minimum length of data required. Please review the historical data section in the [input/output documentation](./customer-ai/input-output.md) for Customer AI, and verify you have enough data for your prediction goal.
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform], follow the steps below:
+If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe AUdience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema if you plan to work with Customer AI.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
-1. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
+2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
 
 ## Understanding the CEE schema {#cee-schema}
 

@@ -42,19 +42,24 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add data types during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below. 
+Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add mixins during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. 
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
-### Standard events {#standard-events}
+### Standard events used by Customer AI {#standard-events}
 
 XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
 Customer AI relies on different event types for building model features. These event types are automatically added to your schema using multiple XDM mixins.
 
+>[!NOTE]
+>
+>If you are using Adobe Analytics or Adobe Audience Manager data, the schema is created automatically with the required standard events that are needed to capture your data. If you are creating your own custom CEE schema to capture data, you need to consider what mixins are needed to capture your data.
+
 It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
 To view a mixin in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Mixins]** tab.
+
 
 | Mixin | Event type | XDM field path |
 | --- | --- | --- |
@@ -77,29 +82,6 @@ To view a mixin in the Platform UI, select the **[!UICONTROL Schemas]** tab on t
 | [!UICONTROL Search Details] | search | search.keywords |
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
-
-### Adobe Audience Manager
-
-Adobe Audience Manager data has special handling in Customer AI. Customer AI supports giving conditions on "realized trait ids" through a column named `AAMTraitsID`. For example, you can give the following condition for `prediction_goal` via the API:
-
-```json
-{
-    "col": "AAMTraitsID",
-    "op": "in",
-    "value": [8384503, 9156084, 8380600, 9064518, 12209740, 11949773],
-}
-```
-
->[!NOTE]
->
->- `AAMTraitsID` is not a column for the XDM input data. 
->- Customer AI only looks at traits that have `status='realized'`. 
->- The traits last qualification time is considered as the event time. 
->- Customer AI takes care of translating trait names to trait ids so you can specify the conditions on trait names.
-
-| Mixin | Event type | XDM field path |
-| --- | --- | --- |
-| Adobe Audience Manager Template Mixin | audienceRealization | AAMTraitsID | 
 
 ### Historical data {#data-requirements}
 
@@ -129,11 +111,11 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the data type and its field path.
+In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the mixin and its field path.
 
 >[!NOTE]
 >
-> Required event types are used to clearly and unambiguously identify web user activity. The number of required event types will change based on the prediction goal and structure of your schema. If you are unsure a particular event type is needed, it is recommended to include that event type.
+> Required event types are used to clearly and unambiguously identify web user activity. The number of required event types will change based on the prediction goal and structure of your schema. If you are unsure a particular event type is needed, it is recommended to include that event type while building your CEE schema. If you are using Adobe Analytics or Adobe Audience Manager data, the required standard events should be available depending on the data you are streaming.
 
 ### Scenario 1: Purchase conversion on an e-commerce retail website
 
@@ -260,9 +242,9 @@ Any of the remaining [event types](#standard-events) may be required based on th
 
 **Required standard event types:**
 
-The event type listed below must be provided with this particular prediction goal.
+In order to use traits from Adobe Audience Manager, you need to create a source connection using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). The source connector automatically creates the schema with the proper mixin(s). You do not need to manually add additional event types for the schema to work with Customer AI.
 
-- audienceRealization
+When you are configuring a new customer AI instance, `audienceName` and `audienceID` can be used to select a particular trait for scoring while defining your goal.
 
 ## Customer AI output data
 

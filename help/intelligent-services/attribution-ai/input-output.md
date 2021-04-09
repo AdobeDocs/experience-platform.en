@@ -42,7 +42,7 @@ The columns below are not required but it is recommended that you include them i
 - web.webPageDetails
 - xdm:productListItems
 
-### Historical data
+### Historical data {#data-requirements}
 
 >[!IMPORTANT]
 >
