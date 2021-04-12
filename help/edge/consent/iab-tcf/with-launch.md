@@ -1,8 +1,8 @@
 ---
 title: Integrate IAB TCF 2.0 Support using Platform Launch and the Platform Web SDK Extension
 description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK extension.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 ---
-
 # Integrate IAB TCF 2.0 support using Platform Launch and the Platform Web SDK extension
 
 Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK extension for Experience Platform Launch.
@@ -17,7 +17,7 @@ Additionally, this guide requires you to have a working understanding of Adobe E
 
 ## Setting default consent
 
-Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. You can also use a data element to dynamically set the default consent value.
+Within the extension configuration, there is a setting for default consent. This controls the behavior of customers who do not have a consent cookie. If you want to queue Experience Events for customers who do not have a consent cookie, set this to `pending`. If you want to discard Experience Events for customers who do not have a consent cookie, set this to `out`. You can also use a data element to dynamically set the default consent value.
 
 For more information on how to configure default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration guide.
 
@@ -49,7 +49,7 @@ addEventListener();
 
 This custom code does two things:
 
-* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action. 
+* Sets two data elements, one with the consent string and one with the `gdprApplies` flag. This is useful later when filling out the "Set Consent" action.
 
 * Triggers the rule when the consent preferences have changed. The "Set Consent" action should be used whenever consent preferences have changed. Add a "Set Consent" action in the extension and fill out the form as follows:
 
@@ -70,7 +70,7 @@ The consent string should be included in the XDM Experience Event. To do this, u
 
 1. Select **[!UICONTROL consentStrings]**.
 
-1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**. 
+1. Choose **[!UICONTROL Provide individual items]** and select **[!UICONTROL Add Item]**.
 
 1. Expand the **[!UICONTROL consentString]** heading, and expand the first item, then fill in the following values:
 

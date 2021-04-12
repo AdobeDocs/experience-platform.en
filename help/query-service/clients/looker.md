@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Connect Looker to Query Service
 topic: connect
 description: This document walks through the steps for connecting Looker with Adobe Experience Platform Query Service.
+exl-id: 806e9077-533a-4546-b5ca-8124751957f5
 ---
-
 # Connect [!DNL Looker] to Query Service
 
 This document covers the steps for connecting [!DNL Looker] with Adobe Experience Platform [!DNL Query Service].

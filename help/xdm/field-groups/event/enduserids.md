@@ -4,6 +4,7 @@ solution: Experience Platform
 title: End User ID Details Field Group
 topic: overview
 description: This document provides an overview of the End User ID Details field group.
+exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 ---
 
 # [!UICONTROL End User ID Details] field group

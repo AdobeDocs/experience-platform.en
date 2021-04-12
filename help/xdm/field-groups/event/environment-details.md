@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Environment Details Field Group
 topic: overview
 description: This document provides an overview of the ExperienceEvent Environment Details field group.
+exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 ---
 
 # [!UICONTROL Environment Details] field group

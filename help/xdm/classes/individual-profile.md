@@ -4,8 +4,8 @@ solution: Experience Platform
 title: XDM Individual Profile Class
 topic: overview
 description: This document provides an overview of the XDM Individual Profile class.
+exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
-
 # [!DNL XDM Individual Profile] class
 
 [!DNL XDM Individual Profile] is a standard XDM class which forms a singular representation (or "profile") of the attributes and interests of both identified and partially identified individuals.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Access API Guide
 topic: developer guide
 description: The Data Access API supports Adobe Experience Platform by providing developers with a RESTful interface focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+exl-id: 278ec322-dafa-4e3f-ae45-2d20459c5653
 ---
-
 # Data Access API guide
 
 The Data Access API supports Adobe Experience Platform by providing users with a RESTful interface focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].

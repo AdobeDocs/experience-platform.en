@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Azure Event Hubs Source Connector Overview
 topic: overview
 description: Learn how to connect Azure Event Hubs to Adobe Experience Platform using APIs or the user interface.
+exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 ---
-
 # (Beta) Azure Event Hubs connector
 
 >[!NOTE]

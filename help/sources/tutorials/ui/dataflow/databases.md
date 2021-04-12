@@ -5,8 +5,8 @@ title: Configure a Dataflow for a Database Source Connection in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.
+exl-id: 9fd8a7ec-bbd8-4890-9860-e6defc6cade3
 ---
-
 # Configure a dataflow for a database connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your database account.

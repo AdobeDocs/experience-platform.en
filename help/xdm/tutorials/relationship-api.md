@@ -5,8 +5,8 @@ title: Define a Relationship Between Two Schemas Using the Schema Registry API
 description: This document provides a tutorial for defining a one-to-one relationship between two schemas defined by your organization using the Schema Registry API.
 topic: tutorial
 type: Tutorial
+exl-id: ef9910b5-2777-4d8b-a6fe-aee51d809ad5
 ---
-
 # Define a relationship between two schemas using the [!DNL Schema Registry] API
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.

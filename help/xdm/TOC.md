@@ -18,7 +18,8 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Field groups {#mixins}
+  * [Segment definition](./classes/segment-definition.md)
+* Schema field groups {#field-groups}
   * Profile field groups {#profile}
     * [IdentityMap](./field-groups/profile/identitymap.md)
     * [Demographic Details](./field-groups/profile/person-details.md)
@@ -28,7 +29,7 @@ feature: Schemas
   * Event field groups {#event}
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
-  * [Field group name updates](./field-groups/name-updates.md)
+  * [Mixin name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Point of Interest Details Data Type
 topic: overview
 description: This document provides an overview of the Point Of Interest Details XDM data type.
+exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 ---
-
 # [!UICONTROL Point of interest details] data type
 
 [!UICONTROL Point of interest details] is a standard XDM data type that describes the geographic-related data where an event was observed.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Explore a Customer Success System Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore Customer Success (CS) systems.
+exl-id: 453be69d-3d72-4987-81cd-67fa3be7ee59
 ---
-
 # Explore a customer success system using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

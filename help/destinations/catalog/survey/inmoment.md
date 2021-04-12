@@ -2,9 +2,11 @@
 keywords: InMoment;inmoment;Inmoment;launch integration
 title: InMoment extension
 description: The InMoment extension is a survey destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 61f32bc1-97a6-45ff-a962-990a2e522735
 ---
-
 # [!DNL InMoment] extension {#inmoment-extension}
+
+## Overview {#overview}
 
 The [!DNL InMoment] Launch Integration allows you to quickly and easily enable online feedback via the Digital Intercept product. In the app, intercepts can be configured and managed via the CXI Cloud Admin allowing CX managers more control of their program.
 

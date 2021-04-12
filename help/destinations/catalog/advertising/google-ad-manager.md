@@ -1,33 +1,45 @@
 ---
 keywords: google ad manager;google ad;doubleclick;DoubleClick AdX;DoubleClick;Google Ad Manager;Google ad manager
 title: Google Ad Manager connection
-description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.  
+description: Google Ad Manager, formerly known as DoubleClick for Publishers or DoubleClick AdX, is an ad serving platform from Google that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
+exl-id: e93f1bd5-9d29-43a1-a9a6-8933f9d85150
 ---
-
 # [!DNL Google Ad Manager] connection
+
+## Overview {#overview}
 
 [!DNL Google Ad Manager], formerly known as [!DNL DoubleClick] for Publishers or [!DNL DoubleClick AdX], is an ad serving platform from [!DNL Google] that gives publishers the means to manage the display of advertisements on their websites, through video and in mobile apps.
 
-## Destination specs
+## Destination specifics {#specifics}
 
 Note the following details that are specific to [!DNL Google Ad Manager] destinations:
 
-* You can send the following [identities](../../../identity-service/namespaces.md) to [!DNL Google Ads] destinations: [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en), Google cookie ID, IDFA, GAID, Roku IDs, Microsoft IDs, and Amazon Fire TV IDs.
-  * Google will use [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) to target users in California, and the Google Cookie ID for all other users.
 * Activated audiences are created programmatically in the [!DNL Google] platform.
-* Platform does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
+* [!DNL Platform] does not currently include a measurement metric to validate successful activation. Refer to the audience counts in Google to validate the integration and understand audience targeting size.
 
->[!IMPORTANT]
->
->If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+## Supported Identities {#supported-identities}
 
-### Export Type {#export-type}
+[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|GAID|[!DNL Google Advertising ID]|Select this target identity when your source identity is a GAID namespace.|
+|IDFA|[!DNL Apple ID for Advertisers]|Select this target identity when your source identity is an IDFA namespace.|
+|AAM UUID|[Adobe Audience Manager [!DNL Unique User ID]](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html), also known as [!DNL Device ID]. A numerical, 38-digit device ID that Audience Manager associates to each device it interacts with.|Google uses [AAM UUID](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/ids-in-aam.html?lang=en) to target users in California, and the Google Cookie ID for all other users.|
+|[!DNL Google] cookie ID|[!DNL Google] cookie ID|[!DNL Google] uses this ID to target users outside of California.|
+|RIDA|Roku ID for Advertising. This ID uniquely identifies Roku devices.||
+|MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
+|Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
+
+## Export Type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
 ## Prerequisites
 
-### Allow list
+If you are looking to create your first destination with [!DNL Google Ad Manager] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up [!DNL Google] integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
+
+## Allow list
 
 >[!NOTE]
 >

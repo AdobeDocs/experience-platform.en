@@ -2,9 +2,11 @@
 keywords: media analytics extension;media analytics;audio and video extension
 title: Adobe Media Analytics for Audio and Video extension
 description: The Adobe Media Analytics for Audio and Video extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: bf33e3e8-a95b-47e3-a1dc-c8f68f80b080
 ---
-
 # Adobe Media Analytics for Audio and Video extension {#adobe-analytics-for-video-extension}
+
+## Overview {#overview}
 
 Adobe Media Analytics for Audio and Video is an add-on to the base Analytics offering that provides clients with robust measurement for video, audio and advertisements. 
 
@@ -53,6 +55,3 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
-
-
-

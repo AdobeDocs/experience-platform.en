@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Connection Parameters API Endpoint
 topic: connection parameters
 description: You can retrieve your connection parameters for using the interactive service by making a GET request to the /connection_parameters endpoint.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 ---
-
 # Connection parameters endpoint
 
 ## Sample API calls

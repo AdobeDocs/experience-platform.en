@@ -2,9 +2,11 @@
 keywords: Amazon Kinesis;kinesis destination;kinesis
 title: Amazon Kinesis connection
 description: Create a real-time outbound connection to your Amazon Kinesis storage to stream data from Adobe Experience Platform.
+exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 ---
-
 # (Beta) [!DNL Amazon Kinesis] connection
+
+## Overview {#overview}
 
 >[!IMPORTANT]
 >
@@ -15,7 +17,7 @@ The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
 * For more information about [!DNL Amazon Kinesis], see the [Amazon documentation](https://docs.aws.amazon.com/streams/latest/dev/introduction.html).
-* To connect to [!DNL Amazon Kinesis] using API calls, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
+* To connect to [!DNL Amazon Kinesis] programmatically, see the [Streaming destinations API tutorial](../../api/streaming-destinations.md).
 * To connect to [!DNL Amazon Kinesis] using the Platform user interface, see the sections below.
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
@@ -36,14 +38,14 @@ See [Cloud storage destinations workflow ](./workflow.md)for instructions on how
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
-### In the Authentication step {#authentication-step}
+## Authentication step {#authentication-step}
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-### In the Setup step {#setup-step}
+## Setup step {#setup-step}
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
@@ -111,6 +113,6 @@ Your exported [!DNL Experience Platform] data lands in [!DNL Amazon Kinesis] in 
 
 >[!MORELIKETHIS]
 >
->* [Connect to Amazon Kinesis and activate data using API calls](../../api/streaming-destinations.md)
+>* [Connect to Amazon Kinesis and activate data using the Flow Service API](../../api/streaming-destinations.md)
 >* [Azure Event Hubs destination](./azure-event-hubs.md)
->* [Destination types and categories](../../destination-types.md) 
+>* [Destination types and categories](../../destination-types.md)

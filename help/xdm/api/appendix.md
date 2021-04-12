@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Schema Registry API Guide Appendix
 description: This document provides supplemental information related to working with the Schema Registry API.
 topic: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 ---
-
 # Schema Registry API guide appendix
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.

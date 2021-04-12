@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Schemas API Endpoint
 description: The /schemas endpoint in the Schema Registry API allows you to programmatically manage XDM schemas within your experience application.
 topic: developer guide
+exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 ---
-
 # Schemas endpoint
 
 A schema can be thought of as the blueprint for the data you wish to ingest into Adobe Experience Platform. Each schema is composed of a class and zero or more field groups. The `/schemas` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage schemas within your experience application.
@@ -121,11 +121,11 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 

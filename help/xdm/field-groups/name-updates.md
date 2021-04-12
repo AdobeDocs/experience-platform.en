@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Field Group Name Updates
 topic: overview
 description: A list of recent XDM field group name changes.
+exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 ---
 
 # Field group name updates

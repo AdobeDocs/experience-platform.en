@@ -4,8 +4,8 @@ title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
 description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using the Schema Registry API to define a schema and a custom field group that will hold the computed attribute field.
+exl-id: 91c5d125-8ab5-4291-a974-48dd44c68a13
 ---
-
 # (Alpha) Configure a computed attribute field using the Schema Registry API
 
 >[!IMPORTANT]
@@ -428,4 +428,4 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 
 ## Next steps
 
-Now that you have created a schema and field group into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).
+Now that you have created a schema and mixin into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).

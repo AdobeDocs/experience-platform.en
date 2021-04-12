@@ -5,8 +5,8 @@ title: Define a Relationship Between Two Schemas Using the Schema Editor
 description: This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface.
 topic: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
-
 # Define a relationship between two schemas using the [!DNL Schema Editor]
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.

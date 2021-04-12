@@ -5,8 +5,8 @@ title: Create a Schema Using the Schema Registry API
 topic: tutorial
 type: Tutorial
 description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
+exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 ---
-
 # Create a schema using the [!DNL Schema Registry] API
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. The registry provides a user interface and RESTful API from which all available library resources are accessible.

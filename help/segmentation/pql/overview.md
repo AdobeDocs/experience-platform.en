@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Profile Query Language (PQL) Overview
 topic: developer guide
 description: This guide provides a general overview of PQL, covering formatting guidelines and providing example PQL expressions.
+exl-id: 4f7ab50e-89a3-42db-b74a-c6f2d86c9bcb
 ---
-
 # [!DNL Profile Query Language] (PQL) overview
 
 [!DNL Profile Query Language] (PQL) is an [!DNL Experience Data Model] (XDM) compliant query language which is designed to support the definition and execution of segmentation queries for [!DNL Real-time Customer Profile] data.
@@ -84,4 +84,4 @@ The following table outlines the different categories of supported PQL functions
 
 ## Next steps
 
-Now that you've learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. For more information on segmentation, please read the [segmentation overview](../home.md).  
+Now that you've learned how to use [!DNL Profile Query Language], you can use PQL when creating and modifying segments. For more information on segmentation, please read the [segmentation overview](../home.md).

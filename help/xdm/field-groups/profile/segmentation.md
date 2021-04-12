@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Segment Membership Details Field Group
 topic: overview
 description: This document provides an overview of the Segment Membership Details field group.
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 ---
 
 # [!UICONTROL Segment Membership Details] field group

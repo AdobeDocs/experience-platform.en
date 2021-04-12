@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Subscription Data Type
 topic: overview
 description: This document provides an overview of the Subscription Experience Data Model (XDM) data type.
+exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 ---
-
 # [!UICONTROL Subscription] data type
 
 [!UICONTROL Subscription] is a standard Experience Data Model (XDM) data type that describes licensed entitlements to software, services, or goods that are utilized based on time or usage.

@@ -6,8 +6,8 @@ description: Find answers to frequently asked questions and a guide for troubles
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 topic: getting started
 type: Documentation
+exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
-
 # [!DNL Platform] FAQ and troubleshooting guide
 
 This document provides answers to frequently asked questions about Adobe Experience Platform, as well as a high-level troubleshooting guide for common errors that may be encountered in any [!DNL Experience Platform] API. For troubleshooting guides on individual [!DNL Platform] services, see the [service troubleshooting directory](#service-troubleshooting-directory) below.
@@ -191,4 +191,3 @@ The following is a list of troubleshooting guides and API reference documentatio
 | [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)||
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|
-

@@ -3,8 +3,8 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Data Types API Endpoint
 description: The /datatypes endpoint in the Schema Registry API allows you to programmatically manage XDM data types within your experience application.
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 ---
-
 # Data types endpoint
 
 Data types are used as reference-type fields in classes or field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
@@ -120,11 +120,11 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 

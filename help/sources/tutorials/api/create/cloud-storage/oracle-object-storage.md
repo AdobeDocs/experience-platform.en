@@ -5,8 +5,8 @@ title: Create an Oracle Object Storage Source Connection Using the Flow Service 
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Object Storage using the Flow Service API.
+exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 ---
-
 # Create an [!DNL Oracle Object Storage] source connection using the [!DNL Flow Service] API
 
 This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to walk you through the steps to connect Adobe Experience Platform to [!DNL Oracle Object Storage].

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Create a Batch in the API
 topic: developer guide
 description: You can create a batch by making a POST request to the /batches endpoint in the Catalog API.
+exl-id: 1d2cbca9-1cd6-4b89-9b77-3687268bd849
 ---
-
 # Create a batch
 
 In order for a dataset to ingest data, it must have a batch associated with it. Using the `id` value of an existing dataset, you can create a batch by making a POST request to the `/batches` endpoint in the [!DNL Catalog] API.

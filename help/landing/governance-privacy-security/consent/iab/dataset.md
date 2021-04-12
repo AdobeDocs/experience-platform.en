@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Create Datasets for Capturing IAB TCF 2.0 Consent Data
 topic: privacy events
 description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 ---
-
 # Create datasets for capturing IAB TCF 2.0 consent data
 
 In order for Adobe Experience Platform to process customer consent data in accordance with the IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, that data must be sent to datasets whose schemas contain TCF 2.0 consent fields.

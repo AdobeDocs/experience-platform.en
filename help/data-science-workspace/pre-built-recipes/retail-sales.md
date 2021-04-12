@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Retail Sales Recipe
 topic: overview
 description: The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 ---
-
 # Retail sales recipe
 
 The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.

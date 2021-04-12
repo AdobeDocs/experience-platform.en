@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Amazon Redshift Source Connector Overview
 topic: overview
 description: Learn how to connect Amazon Redshift to Adobe Experience Platform using APIs or the user interface.
+exl-id: 75e577dd-a0b0-4f82-a371-5ec9255544f8
 ---
-
 # (Beta) [!DNL Amazon Redshift] connector
 
 >[!NOTE]

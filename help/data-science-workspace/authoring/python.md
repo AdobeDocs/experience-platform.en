@@ -5,8 +5,8 @@ title: Accessing Data Using Python in Data Science Workspace
 topic: tutorial
 type: Tutorial
 description: The following document contains examples on how to access data in Python for use in Data Science Workspace.
+exl-id: 75aafd58-634a-4df3-a2f0-9311f93deae4
 ---
-
 # Accessing data using Python in Data Science Workspace 
 
 The following document contains examples on how to access data using Python for use in Data Science Workspace. For information on accessing data using JupyterLab notebooks, visit the [JupyterLab notebooks data access](../jupyterlab/access-notebook-data.md) documentation.

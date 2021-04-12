@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Segment Definitions API Endpoint
 topic: developer guide
 description: The segment definitions endpoint in the Adobe Experience Platform Segmentation Service API allows you to programmatically manage segment definitions for your organization.
+exl-id: e7811b96-32bf-4b28-9abb-74c17a71ffab
 ---
-
 # Segment definitions endpoint
 
 Adobe Experience Platform allows you to create segments that define a group of specific attributes or behaviors from a group of profiles. A segment definition is an object that encapsulates a query written in [!DNL Profile Query Language] (PQL). This object is also called a PQL predicate. PQL predicates define the rules for the segment based on conditions related to any record or time-series data you supply to [!DNL Real-time Customer Profile]. See the [PQL guide](../pql/overview.md) for more information on writing PQL queries.
@@ -584,6 +584,67 @@ A successful response returns HTTP status 200 with details of your newly updated
 }
 ```
 
+## Convert segment definition
+
+You can convert a segment definition between `pql/text` and `pql/json` or `pql/json` to `pql/text` by making a POST request to the `/segment/conversion` endpoint.
+
+**API format**
+
+```http
+POST /segment/conversion
+```
+
+**Request**
+
+The following request will change the segment definition's format from `pql/text` to `pql/json`.
+
+```shell
+curl -X POST https://platform.adobe.io/data/core/ups/segment/conversion \
+ -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
+ -H 'x-gw-ims-org-id: {IMS_ORG}' \
+ -H 'x-api-key: {API_KEY}' \
+ -H 'x-sandbox-name: {SANDBOX_NAME}'
+ -d '{
+        "name": "People who ordered in the last 30 days",
+        "profileInstanceId": "ups",
+        "description": "Last 30 days",
+        "expression": {
+            "type": "PQL",
+            "format": "pql/text",
+            "value": "workAddress.country = \"US\""
+        },
+        "schema": {
+            "name": "_xdm.context.profile"
+        },
+        "payloadSchema": "string",
+        "ttlInDays": 60
+    }'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with details of your newly converted segment definition.
+
+```json
+{
+    "ttlInDays": 60,
+    "imsOrgId": "6A29340459CA8D350A49413A@AdobeOrg",
+    "sandbox": {
+        "sandboxId": "ff0f6870-c46d-11e9-8ca3-036939a64204",
+        "sandboxName": "prod",
+        "type": "production",
+        "default": true
+    },
+    "description": "Last 30 days",
+    "expression": {
+        "type": "PQL",
+        "format": "pql/json",
+        "value": "{\"nodeType\":\"fnApply\",\"fnName\":\"=\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"country\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"workAddress\",\"object\":{\"nodeType\":\"parameterReference\",\"position\":1}}},{\"nodeType\":\"literal\",\"literalType\":\"String\",\"value\":\"US\"}]}"
+    }
+}
+```
+
 ## Next steps
 
-After reading this guide you now have a better understanding of how segment definitions work. For more information on creating a segment, please read the [creating a segment](../tutorials/create-a-segment.md) tutorial. 
+After reading this guide you now have a better understanding of how segment definitions work. For more information on creating a segment, please read the [creating a segment](../tutorials/create-a-segment.md) tutorial.

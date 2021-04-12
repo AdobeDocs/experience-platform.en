@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Work Contact Details Field Group
 topic: overview
 description: This document provides an overview of the Work Contact Details field group.
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 ---
 
 # [!UICONTROL Work Contact Details] field group

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Browser Details Data Type
 topic: overview
 description: This document provides an overview of the Browser Details XDM data type.
+exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 ---
-
 # [!UICONTROL Browser details] data type
 
 [!UICONTROL Browser details] is a standard XDM data type that describes details relating to a browser or application.

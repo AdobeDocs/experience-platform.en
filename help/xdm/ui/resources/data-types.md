@@ -5,8 +5,8 @@ title: Create and Edit Data Types Using the UI
 topic: tutorial
 type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
+exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
-
 # Create and edit data types using the UI
 
 In Experience Data Model (XDM), data types are used as reference-type fields in classes or field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.

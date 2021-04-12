@@ -5,8 +5,8 @@ title: Collect eCommerce Data using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party eCommerce system and ingesting it into Platform using source connectors and APIs.
+exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 ---
-
 # Collect eCommerce data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
@@ -264,6 +264,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -320,6 +321,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 
