@@ -6,9 +6,9 @@ description: The /fieldgroups endpoint in the Schema Registry API allows you to 
 topic: developer guide
 ---
 
-# Field groups endpoint
+# Schema field groups endpoint
 
-Field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/fieldgroups` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage field groups within your experience application.
+Schema field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/fieldgroups` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage field groups within your experience application.
 
 ## Getting started
 

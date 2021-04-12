@@ -83,7 +83,7 @@ feature: Schemas
   * [Schemas](api/schemas.md)
   * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
-  * [Field groups](api/field-groups.md)
+  * [Schema field groups](api/field-groups.md)
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
