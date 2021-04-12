@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Basics of Schema Composition
 topic: overview
 description: This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform.
+exl-id: d449eb01-bc60-4f5e-8d6f-ab4617878f7e
 ---
-
 # Basics of schema composition
 
 This document provides an introduction to [!DNL Experience Data Model] (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in Adobe Experience Platform. For general information on XDM and how it is used within [!DNL Platform], see the [XDM System overview](../home.md).
@@ -158,7 +158,7 @@ Data types are used as reference field types in classes or schemas in the same w
 
 [!DNL Experience Platform] provides a number of common data types as part of the [!DNL Schema Registry] to support the use of standard patterns for describing common data structures. This is explained in more detail in the [!DNL Schema Registry] tutorials, where it will become clearer as you walk through the steps to define data types.
 
-The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the ([!UICONTROL Demographic Details]) mixin uses the "[!UICONTROL Person name]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
+The following screenshot demonstrates how data types are represented in the Platform UI. One of the fields provided by the [!UICONTROL Demographic Details] mixin uses the "[!UICONTROL Person name]" data type, as indicated by the text following the pipe character (`|`) next to the field's name. This particular data type provides several subfields that relate to the name of an individual person, a construct that can be reused for other fields where a person's name needs to be captured.
 
 ![](../images/schema-composition/data-type.png)
 

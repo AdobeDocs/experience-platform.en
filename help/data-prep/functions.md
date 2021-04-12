@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Prep Mapping Functions
 topic: overview
 description: This document introduces the mapping functions used with Data Prep.
+exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 ---
-
 # Data Prep mapping functions
 
 Data Prep functions can be used to compute and calculate values based on what is entered in source fields.
@@ -37,13 +37,13 @@ The following tables list all supported mapping functions, including sample expr
 Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
 concat | Concatenates the given strings. | <ul><li>STRING: The strings that will be concatenated.</li></ul> | concat(STRING_1, STRING_2) | concat("Hi, ", "there", "!") | `"Hi, there!"`
-explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]`
+explode | Splits the string based on a regex and returns an array of parts. Can optionally include regex to split the string. By default, the splitting resolves to ",". The following delimiters **need** to be escaped with `\`: `+, ?, ^, |, ., [, (, {, ), *, $, \` If you include multiple characters as the delimiter, the delimiter will be treated as a multi-character delimiter. | <ul><li>STRING: **Required** The string that needs to be split.</li><li>REGEX: *Optional* The regular expression that can be used to split the string.</li></ul> | explode(STRING, REGEX) | explode("Hi, there!", " ") | `["Hi,", "there"]`
 instr | Returns the location/index of a substring.| <ul><li>INPUT: **Required** The string that is being searched.</li><li>SUBSTRING: **Required** The substring that is being searched for within the string.</li><li>START_POSITION: *Optional* The location of where to start looking in the string.</li><li>OCCURRENCE: *Optional* The nth occurrence to look for from the start position. By default, it is 1. </li></ul> | instr(INPUT, SUBSTRING, START_POSITION, OCCURRENCE) | instr("adobe.com", "com") | 6
 replacestr | Replaces the search string if present in original string. | <ul><li>INPUT: **Required** The input string.</li><li>TO_FIND: **Required** The string to look up within the input.</li><li>TO_REPLACE: **Required** The string that will replace the value within "TO_FIND".</li></ul> | replacestr(INPUT, TO_FIND, TO_REPLACE) | replacestr("This is a string re test", "re", "replace") | "This is a string replace test"
 substr | Returns a substring of a given length. | <ul><li>INPUT: **Required** The input string.</li><li>START_INDEX: **Required** The index of the input string where the substring starts.</li><li>LENGTH: **Required** The length of the substring.</li></ul> | substr(INPUT, START_INDEX, LENGTH) | substr("This is a substring test", 7, 8) | " a subst"
 lower /<br>lcase | Converts a string to lowercase. | <ul><li>INPUT: **Required** The string that will be converted to lowercase.</li></ul> | lower(INPUT) | lower("HeLLo")<br>lcase("HeLLo") | "hello"
 upper /<br>ucase | Converts a string to uppercase. | <ul><li>INPUT: **Required** The string that will be converted to uppercase.</li></ul> | upper(INPUT) | upper("HeLLo")<br>ucase("HeLLo") | "HELLO"
-split | Splits an input string on a separator. The following separator **needs** to be escaped with `\`: `\`. | <ul><li>INPUT: **Required** The input string that is going to be split.</li><li>SEPARATOR: **Required** The string that is used to split the input.</li></ul> | split(INPUT, SEPARATOR) | split("Hello world", " ") | `["Hello", "world"]`
+split | Splits an input string on a separator. The following separator **needs** to be escaped with `\`: `\`. If you include multiple delimiters, the string will split on **any** of the delimiters present in the string. | <ul><li>INPUT: **Required** The input string that is going to be split.</li><li>SEPARATOR: **Required** The string that is used to split the input.</li></ul> | split(INPUT, SEPARATOR) | split("Hello world", " ") | `["Hello", "world"]`
 join | Joins a list of objects using the separator. | <ul><li>SEPARATOR: **Required** The string that will be used to join the objects.</li><li>OBJECTS: **Required** An array of strings that will be joined.</li></ul> | `join(SEPARATOR, [OBJECTS])` | `join(" ", to_array(true, "Hello", "world"))` | "Hello world"
 lpad | Pads the left side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | lpad(INPUT, COUNT, PADDING) | lpad("bat", 8, "yz") | "yzyzybat" 
 rpad | Pads the right side of a string with the other given string. | <ul><li>INPUT: **Required** The string that is going to be padded out. This string can be null.</li><li>COUNT: **Required** The size of the string to be padded out.</li><li>PADDING: **Required** The string to pad the input with. If null or empty, it will be treated as a single space.</li></ul> | rpad(INPUT, COUNT, PADDING) | rpad("bat", 8, "yz") | "batyzyzy" 
@@ -55,7 +55,7 @@ trim | Removes the whitespace from the beginning and the end of the string. | <u
 equals | Compares two strings to confirm if they are equal. This function is case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.​equals(​STRING2) | "string1".​equals​("STRING1") | false
 equalsIgnoreCase | Compares two strings to confirm if they are equal. This function is **not** case sensitive. | <ul><li>STRING1: **Required** The first string you want to compare.</li><li>STRING2: **Required** The second string you want to compare.</li></ul> | STRING1.​equalsIgnoreCase​(STRING2) | "string1".​equalsIgnoreCase​("STRING1) | true
 
-​
+{style="table-layout:auto"}
 
 ### Regular expression functions
 
@@ -63,6 +63,8 @@ Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
 extract_regex | Extracts groups from the input string, based on a regular expression. | <ul><li>STRING: **Required** The string that you are extracting the groups from.</li><li>REGEX: **Required** The regular expression that you want the group to match.</li></ul> | extract_regex(STRING, REGEX) | extract_regex​("E259,E259B_009,1_1"​, "([^,]+),[^,]*,([^,]+)") | ["E259,E259B_009,1_1", "E259", "1_1"]
 matches_regex | Checks to see if the string matches against the inputted regular expression. | <ul><li>STRING: **Required** The string that you are checking matches the regular expression.</li><li>REGEX: **Required** The regular expression that you are comparing against.</li></ul> | matches_regex(STRING, REGEX) | matches_regex("E259,E259B_009,1_1", "([^,]+),[^,]*,([^,]+)") | true
+
+{style="table-layout:auto"}
 
 ### Hashing functions {#hashing}
 
@@ -78,6 +80,8 @@ sha512 | Takes an input and produces a hash value using Secure Hash Algorithm 51
 md5 | Takes an input and produces a hash value using MD5. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII. </li></ul>| md5(INPUT, CHARSET) | md5("my text", "UTF-8") | d3b96ce8c9fb4​e9bd0198d03ba6852c7
 crc32 | Takes an input uses a cyclic redundancy check (CRC) algorithm to produce a 32-bit cyclic code. | <ul><li>INPUT: **Required** The plain text to be hashed.</li><li>CHARSET: *Optional* The name of the character set. Possible values include UTF-8, UTF-16, ISO-8859-1, and US-ASCII.</li></ul> | crc32(INPUT, CHARSET) | crc32("my text", "UTF-8") | 8df92e80
 
+{style="table-layout:auto"}
+
 ### URL functions {#url}
 
 >[!NOTE]
@@ -91,6 +95,8 @@ get_url_host | Returns the host of the given URL. If the input is invalid, it re
 get_url_port | Returns the port of the given URL. If the input is invalid, it returns null. | <ul><li>URL: **Required** The URL from which the port needs to be extracted.</li></ul> | get_url_port(URL) | get_url_port​("sftp://example.com//home/​joe/employee.csv") | 22
 get_url_path | Returns the path of the given URL. By default, the full path is returned. | <ul><li>URL: **Required** The URL from which the path needs to be extracted.</li><li>FULL_PATH: *Optional* A boolean value that determines if the full path is returned. If set to false, only the end of the path is returned.</li></ul> | get_url_path​(URL, FULL_PATH) | get_url_path​("sftp://example.com//​home/joe/employee.csv") | "//home/joe/​employee.csv"
 get_url_query_str | Returns the query string of a given URL. | <ul><li>URL: **Required** The URL that you are trying to get the query string from.</li><li>ANCHOR: **Required** Determines what will be done with the anchor in the query string. Can be one of three values: "retain", "remove", or "append".<br><br>If the value is "retain", the anchor will be attached to the returned value.<br>If the value is "remove", the anchor will be removed from the returned value.<br>If the value is "append", the anchor will be returned as a separate value.</li></ul> | get_url_query_str​(URL, ANCHOR) | get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "retain")<br>get_url_query_str​("foo://example.com:8042​/over/there?name=​ferret#nose", "remove")<br>get_url_query_str​("foo://example.com​:8042/over/there​?name=ferret#nose", "append") | `{"name": "ferret#nose"}`<br>`{"name": "ferret"}`<br>`{"name": "ferret", "_anchor_": "nose"}`
+
+{style="table-layout:auto"}
 
 ### Date and time functions {#date-and-time}
 
@@ -113,6 +119,7 @@ make_date_time | Creates a date from parts. This function can also be induced us
 zone_date_to_utc | Converts a date in any timezone to a date in UTC. | <ul><li>DATE: **Required** The date that you are trying to convert.</li></ul> | zone_date_to_utc​(DATE) | `zone_date_to_utc​(2019-10-17T11:55:​12.000000999-​07:00[America/Los_Angeles])` | `2019-10-17T18:55:12.000000999Z[UTC]`
 zone_date_to_zone | Converts a date from one timezone to another timezone. | <ul><li>DATE: **Required** The date that you are trying to convert.</li><li>ZONE: **Required** The timezone that you are trying to convert the date to.</li></ul> | zone_date_to_zone​(DATE, ZONE) | `zone_date_to_utc​(2019-10-17T11:55:12​.000000999-07:00​[America/Los_Angeles], "Europe/Paris")` | `2019-10-17T20:55:12.000000999+02:00[Europe/Paris]`
 
+{style="table-layout:auto"}
 ​
 
 ### Hierarchies - Objects {#objects}
@@ -131,6 +138,8 @@ str_to_object | Creates an object from the input string. | <ul><li>STRING: **Req
 is_set | Checks if the object exists within the source data. | <ul><li>INPUT: **Required** The path to be checked if it exists within the source data.</li></ul> | is_set(INPUT) | is_set​("evars.evar.field1") | true
 nullify | Sets the value of the attribute to `null`. This should be used when you do not want to copy the field to the target schema. | | nullify() | nullify() | `null` 
 
+{style="table-layout:auto"}
+
 ### Hierarchies - Arrays {#arrays}
 
 >[!NOTE]
@@ -146,6 +155,8 @@ add_to_array | Adds elements to the end of the array. | <ul><li>ARRAY: **Require
 join_arrays | Combines the arrays with each other. | <ul><li>ARRAY: **Required** The array that you are adding elements to.</li><li>VALUES: The array(s) you want to append to the parent array.</li></ul> | join_arrays​(ARRAY, VALUES) | join_arrays​(['a', 'b'], ['c'], ['d', 'e']) | ['a', 'b', 'c', 'd', 'e']
 to_array | Takes a list of inputs and converts it to an array. | <ul><li>INCLUDE_NULLS: **Required** A boolean value to indicate whether or not to include nulls in the response array.</li><li>VALUES: **Required** The elements that are to be converted to an array.</li></ul> | to_array​(INCLUDE_NULLS, VALUES) | to_array(false, 1, null, 2, 3) | `[1, 2, 3]`
 
+{style="table-layout:auto"}
+
 ### Logical operators {#logical-operators}
 
 >[!NOTE]
@@ -157,6 +168,8 @@ Function | Description | Parameters | Syntax | Expression | Sample output
 decode | Given a key and a list of key value pairs flattened as an array, the function returns the value if key is found or return a default value if present in the array. | <ul><li>KEY: **Required** The key to be matched.</li><li>OPTIONS: **Required** A flattened array of key/value pairs. Optionally, a default value can be put at the end.</li></ul> | decode(KEY, OPTIONS) | decode(stateCode, "ca", "California", "pa", "Pennsylvania", "N/A") | If the stateCode given is "ca", "California".<br>If the stateCode given is "pa", "Pennsylvania".<br>If the stateCode doesn't match the following, "N/A".
 iif | Evaluates a given boolean expression and returns the specified value based on the result. | <ul><li>EXPRESSION: **Required** The boolean expression that is being evaluated.</li><li>TRUE_VALUE: **Required** The value that is returned if the expression evaluates to true.</li><li>FALSE_VALUE: **Required** The value that is returned if the expression evaluates to false.</li></ul> | iif(EXPRESSION, TRUE_VALUE, FALSE_VALUE) | iif("s".equalsIgnoreCase("S"), "True", "False") | "True"
 
+{style="table-layout:auto"}
+
 ### Aggregation {#aggregation}
 
 >[!NOTE]
@@ -167,6 +180,8 @@ Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
 min | Returns the minimum of the given arguments. Uses natural ordering. | <ul><li>OPTIONS: **Required** One or more objects that can be compared to each other.</li></ul> | min(OPTIONS) | min(3, 1, 4) | 1
 max | Returns the maximum of the given arguments. Uses natural ordering. | <ul><li>OPTIONS: **Required** One or more objects that can be compared to each other.</li></ul> | max(OPTIONS) | max(3, 1, 4) | 4
+
+{style="table-layout:auto"}
 
 ### Type conversions {#type-conversions}
 
@@ -181,6 +196,8 @@ to_decimal | Converts a string to a Double. | <ul><li>STRING: **Required** The s
 to_float | Converts a string to a Float. | <ul><li>STRING: **Required** The string that is to be converted to a Float.</li></ul> | to_float(STRING) | to_float("12.3456") | 12.34566
 to_integer | Converts a string to an Integer. | <ul><li>STRING: **Required** The string that is to be converted to an Integer.</li></ul> | to_integer(STRING) | to_integer("12") | 12
 
+{style="table-layout:auto"}
+
 ### JSON functions {#json}
 
 >[!NOTE]
@@ -191,6 +208,8 @@ Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
 json_to_object | Deserialize JSON content from the given string. | <ul><li>STRING: **Required** The JSON string to be deserialized.</li></ul> | json_to_object​(STRING) | json_to_object​({"info":{"firstName":"John","lastName" : "Doe"}}) | An object representing the JSON.
 
+{style="table-layout:auto"}
+
 ### Special operations {#special-operations}
 
 >[!NOTE]
@@ -200,6 +219,8 @@ json_to_object | Deserialize JSON content from the given string. | <ul><li>STRIN
 Function | Description | Parameters | Syntax | Expression | Sample output
 -------- | ----------- | ---------- | -------| ---------- | -------------
 uuid /<br>guid | Generates a pseudo-random ID. | | uuid()<br>guid() | uuid()<br>guid() | 7c0267d2-bb74-4e1a-9275-3bf4fccda5f4<br>c7016dc7-3163-43f7-afc7-2e1c9c206333
+
+{style="table-layout:auto"}
 
 ### User agent functions {#user-agent}
 
@@ -217,3 +238,5 @@ ua_agent_version | Extracts the agent version from the user agent string. | <ul>
 ua_agent_version_major | Extracts the agent name and major version from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_agent_version_major​(USER_AGENT) | ua_agent_version_major​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Safari 5
 ua_agent_name | Extracts the agent name from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_agent_name​(USER_AGENT) | ua_agent_name​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Safari
 ua_device_class| Extracts the device class from the user agent string. | <ul><li>USER_AGENT: **Required** The user agent string.</li></ul> | ua_device_class​(USER_AGENT) | ua_device_class​("Mozilla/5.0 (iPhone; CPU iPhone OS 5_1_1 like Mac OS X) AppleWebKit/534.46 (KHTML, like Gecko) Version/5.1 Mobile/9B206 Safari/7534.48.3") | Phone
+
+{style="table-layout:auto"}

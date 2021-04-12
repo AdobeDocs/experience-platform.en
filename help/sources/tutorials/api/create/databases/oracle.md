@@ -5,8 +5,8 @@ title: Create an Oracle Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Oracle to Experience Platform using the Flow Service API.
+exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 ---
-
 # Create an [!DNL Oracle] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

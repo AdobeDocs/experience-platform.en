@@ -2,8 +2,8 @@
 keywords: email;Email;e-mail;email destinations;salesforce;salesforce destination
 title: Salesforce Marketing Cloud connection
 seo-description: Salesforce Marketing Cloud is a digital marketing suite formerly known as ExactTarget that allows you to build and customize journeys for visitors and customers to personalize their experience.
+exl-id: e85049a7-eaed-4f8a-b670-9999d56928f8
 ---
-
 # [!DNL Salesforce Marketing Cloud] connection
 
 ## Overview {#overview}

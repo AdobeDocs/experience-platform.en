@@ -4,13 +4,13 @@ solution: Experience Platform
 title: Edge Segmentation using the API 
 topic: developer guide
 description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
+exl-id: effce253-3d9b-43ab-b330-943fb196180f
 ---
-
-# Edge segmentation 
+# Edge segmentation (beta)
 
 >[!NOTE]
 >
->The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
+>The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md). Additionally, edge segmentation is currently in beta. The documentation and the functionality are subject to change.
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 
@@ -32,8 +32,8 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Frequency query | Any segment definition that refers to an event happening a certain number of times. |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening a certain number of times and has one or more profile attributes. |
+| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
+| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
 
 {style="table-layout:auto"}
 

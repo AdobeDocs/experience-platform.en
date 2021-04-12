@@ -2,8 +2,8 @@
 keywords: airship tags;airship destination
 title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 ---
-
 # (Beta) [!DNL Airship Tags] connection {#airship-tags-destination}
 
 >[!IMPORTANT]
@@ -150,4 +150,3 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
-

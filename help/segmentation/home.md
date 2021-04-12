@@ -4,9 +4,8 @@ solution: Experience Platform
 title: Segmentation Service Overview
 topic: overview
 description: Learn about Adobe Experience Platform Segmentation Service and the role it plays in the Platform ecosystem.
-
+exl-id: 2c18a806-88ed-4659-bdfd-2377f5a09a1a
 ---
-
 # [!DNL Segmentation Service] overview
 
 Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. 
@@ -41,7 +40,7 @@ For information on building segment definitions using the API, see the tutorial 
 
 ## Evaluate segments
 
-Platform currently supports two methods of evaluating segments: streaming segmentation and batch segmentation.
+Platform currently supports three methods of evaluating segments: streaming segmentation, batch segmentation, and edge segmentation.
 
 ### Streaming segmentation
 
@@ -53,7 +52,15 @@ To learn more about streaming segmentation, please read the [streaming segmentat
 
 As an alternative to an ongoing data selection process, batch segmentation moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so that you can export it for use. 
 
-Segments evaluated using batch segmentation are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments evaluated using batch segmentation fresh for up to an hour. Any new or recently modified segments will need to wait until the next full batch segmentation job has been run to take advantage of incremental segmentation.
+**Incremental segmentation (beta)**
+
+Batch segments are evaluated every 24 hours. However, for existing segments, incremental segmentation keeps segments fresh for up to an hour.
+
+Incremental segmentation runs on new data coming into the profile store. However, the following caveats applies for incremental segmentation:
+
+- For any new or recently modified segments, profiles with new data will start getting qualified in the next incremental run. However, profiles without changes will catch up in the next full batch segmentation job.
+- Multi-entity segments will be refreshed in incremental segmentation. If there are entity updates, any profiles with new data will start using them in the next incremental run. However, profiles without changes will catch up in next full batch segmentation job.
+- Events dropping off a segment's time window will be reconciled in the next full batch segmentation job.
 
 To learn how to evaluate segments see the [segment evaluation tutorial](./tutorials/evaluate-a-segment.md). 
 

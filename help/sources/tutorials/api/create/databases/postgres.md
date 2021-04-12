@@ -5,8 +5,8 @@ title: Create a PostgreSQL Source Connection Using the Flow Service API
 topic: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to PostgreSQL using the Flow Service API.
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 ---
-
 # Create a [!DNL PostgreSQL] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Person Name Data Type
 topic: overview
 description: This document provides an overview of the Person Name XDM data type.
+exl-id: 5cf55fb1-b6b0-4d1c-93c3-7e2b7766599e
 ---
-
 # [!UICONTROL Person name] data type
 
 [!UICONTROL Person name] is a standard XDM data type that describes the full name of a person. As conventions for name structures differ widely across languages and cultures, names should always be modeled using this datatype.

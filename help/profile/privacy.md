@@ -5,8 +5,8 @@ title: Privacy Request Processing in Real-time Customer Profile
 topic: overview
 type: Documentation
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by numerous privacy regulations. This document covers essential concepts related to processing privacy requests for Real-time Customer Profile.
+exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 ---
-
 # Privacy request processing in [!DNL Real-time Customer Profile]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).

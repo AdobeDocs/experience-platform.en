@@ -1,9 +1,9 @@
 ---
 keywords: advertising; the trade desk;
 title: The Trade Desk connection
-description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources. 
+description: The Trade Desk is a self-service platform for ad buyers to execute retargeting and audience targeted digital campaigns across display, video, and mobile inventory sources.
+exl-id: b8f638e8-dc45-4aeb-8b4b-b3fa2906816d
 ---
-
 # [!DNL The Trade Desk] connection
 
 ## Overview {#overview}

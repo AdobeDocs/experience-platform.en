@@ -4,8 +4,8 @@ solution: Experience Platform
 title: IBM DB2 Source Connector Overview
 topic: overview
 description: Learn how to connect IBM DB2 to Adobe Experience Platform using APIs or the user interface.
+exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 ---
-
 # (Beta) IBM DB2 connector
 
 >[!NOTE]
