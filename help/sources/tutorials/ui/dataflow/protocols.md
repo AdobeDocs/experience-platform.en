@@ -5,8 +5,8 @@ title: Configure a Dataflow for a Protocol Source Connection in the UI
 topic: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your protocols account.
+exl-id: 94631a78-14ea-41d7-876c-468634dfc6c1
 ---
-
 # Configure a dataflow for a protocol connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your protocols account.

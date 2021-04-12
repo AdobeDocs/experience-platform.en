@@ -5,8 +5,8 @@ title: Create a Phoenix  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a Phoenix source connection using the Adobe Experience Platform UI.
+exl-id: 2ed469bc-1c72-4f04-a5f0-6a0bb519a6c2
 ---
-
 # Create a [!DNL Phoenix] source connection in the UI
 
 >[!NOTE]

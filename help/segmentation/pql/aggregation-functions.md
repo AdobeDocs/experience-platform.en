@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segm
 solution: Experience Platform
 title: PQL Aggregation Functions
 topic: developer guide
-description: Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value. 
+description: Aggregation functions are used to group together multiple values within Profile Query Language (PQL) arrays to form a single summary value.
+exl-id: 6c0c0f6d-98c5-4b5d-b440-3e5e18c0f34b
 ---
-
 # Aggregation functions
 
 Aggregation functions are used to group together multiple values within [!DNL Profile Query Language] (PQL) arrays to form a single summary value. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -102,4 +102,4 @@ orders.max(order.price)
 
 ## Next steps
 
-Now that you have learned about aggregation functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about aggregation functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PQL Filter Functions
 topic: developer guide
 description: Filter functions are used to filter data within arrays in Profile Query Language (PQL).
+exl-id: 09d66be3-30dc-4488-84a1-cfd09c44470d
 ---
-
 # Filter functions
 
 Filter functions are used to filter data within arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -55,4 +55,4 @@ xEvent[productListItems[SKU="PS" or ^^.person.gender="female"]]
 
 ## Next steps
 
-Now that you have learned about filter functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).  
+Now that you have learned about filter functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

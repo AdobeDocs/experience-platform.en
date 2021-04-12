@@ -3,8 +3,8 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Preview Sample Status (Profile Preview) API Endpoint
 description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, as well as list profile distribution by dataset and by identity namespace within Adobe Experience Platform.
 topic: guide
+exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
-
 # Preview sample status endpoint (Profile preview)
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. 

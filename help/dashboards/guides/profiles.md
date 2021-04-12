@@ -4,8 +4,8 @@ title: Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-time Customer Profile data.
 topic: guide
 type: Documentation
+exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 ---
-
 # (Beta) [!UICONTROL Profiles] dashboard
 
 >[!IMPORTANT]

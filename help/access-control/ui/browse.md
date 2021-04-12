@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Select a Product Profile to Edit Access Control Permissions
 topic: user guide
 description: This document covers the necessary steps needed to browse the access control workspace. In order to configure access control for Experience Platform through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to Experience Platform.
+exl-id: 1d3c894e-b412-43ba-ba91-ddfa35303d73
 ---
-
 # Select a product profile to manage its access control permissions
 
 In order to configure access control for [!DNL Experience Platform] through the Adobe Admin Console, you must be an administrator for an IMS Organization that has a subscription to [!DNL Experience Platform]. While Adobe supports flexible administrator hierarchies for IMS Orgs, you must have system administrator, product administrator, or product profile administrator privileges to configure access control. See the Adobe Help Center article on [administrative roles](https://helpx.adobe.com/enterprise/using/admin-roles.html) for more information.

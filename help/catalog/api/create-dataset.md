@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Create a Dataset in the API
 topic: developer guide
 description: This document covers how to create a dataset object in the Catalog Service API.
+exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 ---
-
 # Create a dataset in the API
 
 In order to create a dataset using the [!DNL Catalog] API, you must know the `$id` value of the [!DNL Experience Data Model] (XDM) schema on which the dataset will be based. Once you have the schema ID, you can create a dataset by making a POST request to the `/datasets` endpoint in the [!DNL Catalog] API.
@@ -50,6 +50,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of the dataset to be created. |
 | `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
+| `schemaRef.contentType` | Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
 
 >[!NOTE]
 >

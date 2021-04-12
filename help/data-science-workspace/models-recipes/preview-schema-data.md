@@ -5,23 +5,23 @@ title: Preview the Retail Sales Schema and Dataset
 topic: tutorial
 type: Tutorial
 description: The following document outlines previewing schemas and datasets on Adobe Experience Platform.
+exl-id: dca9835b-4f76-42cc-b262-b20323bf4356
 ---
-
 # Preview the retail sales schema and dataset
 
-Upon successful completion of the bootstrap script from the [Create the retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial. Output schemas and datasets can be viewed on [!DNL Experience Platform]. To view the schemas and datasets follow the steps below:
+Upon successful completion of the bootstrap script from the [retail sales schema and dataset](./create-retails-sales-dataset.md) tutorial. Output schemas and datasets can be viewed on [!DNL Experience Platform]. To view the schemas and datasets follow the steps below:
 
-1.  Click the **[!UICONTROL Schemas]** link located in the left navigation column and find the input schema created by the bootstrap script. The name of the schema will correspond to what was defined in `config.yaml` from the previous step. View the schema details and it's composition by clicking into it.
+Select the **[!UICONTROL Schemas]** tab located in the left-navigation and find the input schema created by the bootstrap script. The name of the schema will correspond to what was defined in `config.yaml` from the previous step. View the schema details and it's composition by clicking into it.
 
-    ![](../images/models-recipes/access-data/schema_overview.png)
+![](../images/models-recipes/access-data/schema.PNG)
 
-2.  Click the **[!UICONTROL Datasets]** link located in the left navigation column and open the input dataset that was created by clicking on the name of the listing. The name of the dataset will correspond to what was defined in `config.yaml` from the previous step. 
+Select the **[!UICONTROL Datasets]** tab located in the left navigation and open the input dataset that was created by selecting the name of the dataset. The name of the dataset corresponds to what was defined in `config.yaml` from the previous step. 
 
-    ![](../images/models-recipes/access-data/dataset_overview.png)
+![](../images/models-recipes/access-data/dataset.PNG)
 
-3.  Click **[!UICONTROL Preview Dataset]** located at the top right preview a subset of the dataset.
+Select **[!UICONTROL Preview Dataset]** located at the top-right to preview a subset of the dataset.
 
-    ![](../images/models-recipes/access-data/preview_dataset.png)
+![](../images/models-recipes/access-data/preview.PNG)
 
 ## Next steps
 

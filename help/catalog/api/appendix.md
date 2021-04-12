@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Catalog Service API Guide Appendix
 topic: developer guide
 description: This document contains additional information to help you work with the Catalog API in Adobe Experience Platform.
+exl-id: fafc8187-a95b-4592-9736-cfd9d32fd135
 ---
-
 # [!DNL Catalog Service] API guide appendix
 
 This document contains additional information to help you work with the [!DNL Catalog] API.

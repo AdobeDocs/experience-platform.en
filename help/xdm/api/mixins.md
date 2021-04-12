@@ -4,13 +4,14 @@ solution: Experience Platform
 title: Mixins API Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
 topic: developer guide
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 ---
 
 # Mixins endpoint (deprecated)
 
 >[!IMPORTANT]
 >
->Mixins have been renamed to field groups, and therefore the `/mixins` endpoint has been deprecated in favor of the `/fieldgroups` endpoint.
+>Mixins have been renamed to schema field groups, and therefore the `/mixins` endpoint has been deprecated in favor of the `/fieldgroups` endpoint.
 >
 >While `/mixins` will continue to be maintained as a legacy endpoint, it is strongly recommended that you use `/fieldgroups` for new implementations of the Schema Registry API in your experience applications. See the [field groups endpoint guide](./field-groups.md) for more information.
 
@@ -18,7 +19,7 @@ Mixins are reuseable components which define one or more fields that represent a
 
 ## Getting started
 
-The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/mixin-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of mixins {#list}
 
@@ -139,11 +140,11 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 

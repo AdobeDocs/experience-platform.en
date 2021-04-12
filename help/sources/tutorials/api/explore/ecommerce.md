@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Explore an eCommerce Connection Using the Flow Service API
 topic: overview
 description: This tutorial uses the Flow Service API to explore eCommerce connections.
+exl-id: 832ce399-6c9f-40da-8e7c-5434503c16b6
 ---
-
 # Explore an eCommerce connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
