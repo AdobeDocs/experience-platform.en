@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;Schema Registry;field group;Field group;Field groups;create
 solution: Experience Platform
 title: Field groups API Endpoint
-description: The /fieldgroups endpoint in the Schema Registry API allows you to programmatically manage XDM field groups within your experience application.
+description: The /fieldgroups endpoint in the Schema Registry API allows you to programmatically manage XDM schema field groups within your experience application.
 topic: developer guide
 ---
 
