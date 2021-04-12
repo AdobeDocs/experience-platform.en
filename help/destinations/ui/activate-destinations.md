@@ -200,9 +200,11 @@ Select **[!UICONTROL Export full files]** in the [!UICONTROL Scheduling] window.
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports.
 1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+    
     * >[!IMPORTANT]
       >
       >This option is currently in beta, and is only available to a select number of customers.
+
 1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 1. Select **[!UICONTROL Create]** to save the schedule.
   
@@ -216,13 +218,17 @@ Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] 
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports.
    * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
+     
      * >[!IMPORTANT]
        >
        >This option is currently in beta, and is only available to a select number of customers.
+
 1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+   
    * >[!IMPORTANT]
      >
      >This option is currently in beta, and is only available to a select number of customers.
+
 1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 1. Select **[!UICONTROL Create]** to save the schedule.
 
@@ -262,6 +268,7 @@ Adobe recommends selecting an identity such as a [!DNL CRM ID] or email address 
 >[!NOTE] 
 > 
 >If any data usage labels have been applied to certain fields within a dataset (rather than the entire dataset), enforcement of those field-level labels on activation occurs under the following conditions:
+>
 >* The fields are used in the segment definition.
 >* The fields are configured as projected attributes for the target destination.
 >
