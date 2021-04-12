@@ -8,7 +8,7 @@ exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 ---
 # Audit log endpoint
 
-For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, field group, data type, or schema specified by ID.
+For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, schema field group, data type, or schema specified by ID.
 
 ## Getting started
 

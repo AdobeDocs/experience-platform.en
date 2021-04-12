@@ -28,7 +28,7 @@ This tutorial walks through the steps of composing a Loyalty Members schema that
 
 ## Compose a schema with a standard class
 
-A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more field groups. In other words, you do not have to add a field group in order to define a schema, but in most cases at least one field group is used. 
+A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more schema field groups. In other words, you do not have to add a field group in order to define a schema, but in most cases at least one field group is used. 
 
 ### Assign a class
 

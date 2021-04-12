@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
-title: Segment Membership Details Field Group
+title: Segment Membership Details Schema Field Group
 topic: overview
-description: This document provides an overview of the Segment Membership Details field group.
+description: This document provides an overview of the Segment Membership Details schema field group.
 exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 ---
 
-# [!UICONTROL Segment Membership Details] field group
+# [!UICONTROL Segment Membership Details] schema field group
 
 >[!NOTE]
 >
->The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
+>The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Segment Membership Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
+[!UICONTROL Segment Membership Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a single map field which captures information regarding segment membership, including which segments the individual belongs to, the last qualification time, and when the membership is valid until.
 
 >[!WARNING]
 >

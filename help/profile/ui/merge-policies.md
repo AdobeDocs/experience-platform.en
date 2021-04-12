@@ -42,7 +42,7 @@ As profile records are ingested into Experience Platform, a system timestamp is 
 
 Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
 
-In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details] field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details] schema field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >

@@ -42,7 +42,7 @@ Whereas the Real-time CDP and Audience Manager's audiences keep track of a custo
 
 To collect consent information on events, the following is required:
 
-- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy field group.
+- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy schema field group.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
 
 For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.

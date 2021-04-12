@@ -38,7 +38,7 @@ The [!DNL Schema Editor] appears, showing a new schema in the canvas that is bas
 
 >[!IMPORTANT]
 >
->When building a schema that implements a class defined by your organization, remember that field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
+>When building a schema that implements a class defined by your organization, remember that schema field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
 
 You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
 

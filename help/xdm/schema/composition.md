@@ -116,9 +116,9 @@ In order to ingest data into [!DNL Experience Platform], a dataset must first be
 
 Schemas are composed using the following formula:
 
-**Class + Field Group&ast; = XDM Schema**
+**Class + Schema Field Group&ast; = XDM Schema**
 
-&ast;A schema is composed of a class and zero or more field groups. This means that you could compose a dataset schema without using field groups at all.
+&ast;A schema is composed of a class and zero or more schema field groups. This means that you could compose a dataset schema without using field groups at all.
 
 ### Class {#class}
 

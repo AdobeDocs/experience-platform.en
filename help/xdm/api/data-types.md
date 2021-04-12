@@ -7,7 +7,7 @@ exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 ---
 # Data types endpoint
 
-Data types are used as reference-type fields in classes or field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
+Data types are used as reference-type fields in classes or schema field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
 
 ## Getting started
 

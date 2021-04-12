@@ -21,9 +21,9 @@ Honoring opt-out requests requires an understanding of the various [!DNL Adobe E
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
 
-## Opt-out field groups
+## Opt-out schema field groups
 
-In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. There are two field groups that can be used to add opt-out fields to a schema, each is covered in more detail in the sections that follow:
+In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. There are two schema field groups that can be used to add opt-out fields to a schema, each is covered in more detail in the sections that follow:
 
 - [Profile Privacy](#profile-privacy): Used to capture different opt-out types (general or sales/sharing).
 - [Profile Preferences Details](#profile-preferences-details): Used to capture opt-out requests for specific XDM channels.

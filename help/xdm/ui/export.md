@@ -14,7 +14,7 @@ To address this need, the [!UICONTROL Schemas] workspace in the Adobe Experience
 
 >[!NOTE]
 >
->You can also use the Schema Registry API to export other resources in addition to schemas, including classes, field groups, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
+>You can also use the Schema Registry API to export other resources in addition to schemas, including classes, schema field groups, and data types. See the guide on the [export/import endpoints](../api/export-import.md) for more information.
 
 ## Prerequisites
 

@@ -8,7 +8,7 @@ exl-id: 2adb03d4-581b-420e-81f8-e251cf3d9fb9
 ---
 # Define XDM fields in the UI
 
-The [!DNL Schema Editor] in the Adobe Experience Platform user interface allows you to define your own fields within custom Experience Data Model (XDM) classes and field groups. This guide covers the steps for defining XDM fields in the UI, including the available configuration options for each field type.
+The [!DNL Schema Editor] in the Adobe Experience Platform user interface allows you to define your own fields within custom Experience Data Model (XDM) classes and schema field groups. This guide covers the steps for defining XDM fields in the UI, including the available configuration options for each field type.
 
 ## Prerequisites
 

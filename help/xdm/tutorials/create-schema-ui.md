@@ -22,7 +22,7 @@ If you prefer to compose a schema using the [!DNL Schema Registry] API instead, 
 This tutorial requires a working understanding of the various aspects of Adobe Experience Platform involved in schema creation. Before beginning this tutorial, please review the documentation for the following concepts:
 
 * [[!DNL Experience Data Model (XDM)]](../home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
-    * [Basics of schema composition](../schema/composition.md): An overview of XDM schemas and their building blocks, including classes, field groups, data types, and fields.
+    * [Basics of schema composition](../schema/composition.md): An overview of XDM schemas and their building blocks, including classes, schema field groups, data types, and individual fields.
 * [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 ## Open the [!UICONTROL Schemas] workspace {#browse}

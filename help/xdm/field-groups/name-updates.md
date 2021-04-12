@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;enduserids;end-user;end user;ids;updates;
 solution: Experience Platform
-title: Field Group Name Updates
+title: Schema Field Group Name Updates
 topic: overview
-description: A list of recent XDM field group name changes.
+description: A list of recent XDM schema field group name changes.
 exl-id: 2c775b86-7262-4f05-b421-c626867de0a4
 ---
 
-# Field group name updates
+# Schema field group name updates
 
-The names of several Experience Data Model (XDM) field groups have changed. Since the field structure of these field groups remains the same, the name changes alone should not affect any existing schemas that employ these field groups. In order to look up and use these field groups in the Adobe Experience Platform user interface, however, their new names must be used.
+The names of several Experience Data Model (XDM) schema field groups have changed. Since the field structure of these field groups remains the same, the name changes alone should not affect any existing schemas that employ these field groups. In order to look up and use these field groups in the Adobe Experience Platform user interface, however, their new names must be used.
 
 The following table outlines the existing field groups that have been updated, along with their corresponding new names:
 

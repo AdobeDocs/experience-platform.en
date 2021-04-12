@@ -232,6 +232,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Field**: A field is the lowest level element of a dataset, as defined by the dataset's XDM schema. Each field has a name for referencing purposes and a type to indicate the type of data that it contains. Field types can include (but are not limited to) integer, number, string, boolean, and object.
 
+**Field group**: See "Schema field group".
+
 **Field labels**: Field labels are data governance labels that are either inherited from a dataset or applied directly to a field.
 
 **Field name**: A field name is used to reference the value of a field in queries and downstream services.
@@ -315,8 +317,6 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Merge method**: When defining a merge policy using the Platform UI, the merge method specifies how data fragments should be prioritized when a conflict occurs. When using the Real-time Customer Profile API to define a merge policy, the merge method is determined using the `attributeMerge` object.
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
-
-**Field group**: In Experience Data Model (XDM), a field group allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
 
 **Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
@@ -431,6 +431,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Scoring**: Scoring is the process of generating insights from data using a trained model.
 
 **Schema**: A schema is a set of rules that represent and validate the structure and format of data. A schema is comprised of a class and optional field group(s) and is used to create datasets and datastreams. A schema may include behavioral attributes, timestamps, identities, attribute definitions, relationships, and more.
+
+**Schema field group**: In Experience Data Model (XDM), a schema field group allows users to extend reusable fields to define one or more attributes intended to be included in a schema.
 
 **Schema Library**: The Schema Library contains industry-standard XDM resources made available by Adobe, as well as custom resources defined by your organization.
 

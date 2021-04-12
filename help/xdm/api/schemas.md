@@ -8,7 +8,7 @@ exl-id: d0bda683-9cd3-412b-a8d1-4af700297abf
 ---
 # Schemas endpoint
 
-A schema can be thought of as the blueprint for the data you wish to ingest into Adobe Experience Platform. Each schema is composed of a class and zero or more field groups. The `/schemas` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage schemas within your experience application.
+A schema can be thought of as the blueprint for the data you wish to ingest into Adobe Experience Platform. Each schema is composed of a class and zero or more schema field groups. The `/schemas` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage schemas within your experience application.
 
 ## Getting started
 

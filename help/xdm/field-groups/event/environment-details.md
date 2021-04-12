@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;environment;environment details;
 solution: Experience Platform
-title: Environment Details Field Group
+title: Environment Details Schema Field Group
 topic: overview
-description: This document provides an overview of the ExperienceEvent Environment Details field group.
+description: This document provides an overview of the ExperienceEvent Environment Details schema field group.
 exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 ---
 
-# [!UICONTROL Environment Details] field group
+# [!UICONTROL Environment Details] schema field group
 
 >[!NOTE]
 >
->The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
+>The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Environment Details] is a standard field group for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
+[!UICONTROL Environment Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
 
 <img src='../../images/field-groups/environment-details.png' width=500 /><br />
 

@@ -41,7 +41,7 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Like all XDM schemas, the CEE field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if required.
+Like all XDM schemas, the CEE schema field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if required.
 
 A complete example of the field group can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
 

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixins;work details;profile work;
 solution: Experience Platform
-title: Work Contact Details Field Group
+title: Work Contact Details Schema Field Group
 topic: overview
-description: This document provides an overview of the Work Contact Details field group.
+description: This document provides an overview of the Work Contact Details schema field group.
 exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 ---
 
-# [!UICONTROL Work Contact Details] field group
+# [!UICONTROL Work Contact Details] schema field group
 
 >[!NOTE]
 >
->The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
+>The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Work Contact Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides several fields that capture occupational information regarding an individual person, such as work address, work email, work phone number, and organizations to which the person belongs.
+[!UICONTROL Work Contact Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides several fields that capture occupational information regarding an individual person, such as work address, work email, work phone number, and organizations to which the person belongs.
 
 <img src='../../images/field-groups/profile-work-details.png' width=550 /><br />
 

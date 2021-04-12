@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: How to Configure a Computed Attribute Field
 topic: guide
 type: Documentation
-description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema.
+description: Computed attributes are functions used to aggregate event-level data into profile-level attributes. In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a schema field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema.
 ---
 
 # (Alpha) Configure a computed attribute field in the UI
@@ -12,7 +12,7 @@ description: Computed attributes are functions used to aggregate event-level dat
 >
 >Computed attribute functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
 
-In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
+In order to configure a computed attribute, you first need to identify the field that will hold the computed attribute value. This field can be created using a schema field group to add the field to an existing schema, or by selecting a field that you have already defined within a schema. 
 
 >[!NOTE]
 >

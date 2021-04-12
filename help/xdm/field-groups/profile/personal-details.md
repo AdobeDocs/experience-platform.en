@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;field group;Field group;
 solution: Experience Platform
-title: Personal Contact Details Field Group
+title: Personal Contact Details Schema Field Group
 topic: overview
-description: This document provides an overview of the Personal Contact Details field group.
+description: This document provides an overview of the Personal Contact Details schema field group.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 ---
 
-# [!UICONTROL Personal Contact Details] field group
+# [!UICONTROL Personal Contact Details] schema field group
 
 >[!NOTE]
 >
->The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
+>The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Personal Contact Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
+[!UICONTROL Personal Contact Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
 
 <img src='../../images/field-groups/profile-personal-details.png' width=700 /><br />
 

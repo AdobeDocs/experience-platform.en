@@ -12,7 +12,7 @@ This guide provides an overview of how to create, edit, and manage Experience Da
 
 >[!IMPORTANT]
 >
->XDM schemas are extremely customizable, and therefore the steps involved in creating a schema can vary depending on what kind of data you want the schema to capture. As a result, this document only covers the basic interactions you can make with schemas in the UI, and excludes related steps such as customizing classes, field groups, data types, and fields.
+>XDM schemas are extremely customizable, and therefore the steps involved in creating a schema can vary depending on what kind of data you want the schema to capture. As a result, this document only covers the basic interactions you can make with schemas in the UI, and excludes related steps such as customizing classes, schema field groups, data types, and fields.
 >
 >For a full tour of the schema creation process, follow along with the [schema creation tutorial](../../tutorials/create-schema-ui.md) to create a complete example schema and familiarize yourself with the many capabilities of the [!DNL Schema Editor].
 
@@ -30,7 +30,7 @@ Once you select a class, the [!DNL Schema Editor] appears and the schema's base 
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-You can now start building the structure of the schema by [adding field groups](#add-mixins).
+You can now start building the structure of the schema by [adding schema field groups](#add-field-groups).
 
 ## Edit an existing schema {#edit}
 
@@ -46,9 +46,9 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema, [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
-## Add field groups to a schema {#add-mixins}
+## Add field groups to a schema {#add-field-groups}
 
 >[!NOTE]
 >

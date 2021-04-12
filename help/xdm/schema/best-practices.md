@@ -186,9 +186,9 @@ In Experience Platform, XDM fields marked as identities are used to stitch toget
 
 When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 
-### Adobe application field groups
+### Adobe application schema field groups
 
-Experience Platform provides several out-of-the-box XDM field groups for capturing data related to the following Adobe applications:
+Experience Platform provides several out-of-the-box XDM schema field groups for capturing data related to the following Adobe applications:
 
 * Adobe Analytics
 * Adobe Audience Manager

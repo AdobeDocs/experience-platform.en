@@ -104,7 +104,7 @@ Record the `$id` values of the two schemas you want to define a relationship bet
 
 ## Define a reference field for the source schema
 
-Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a field group with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
+Within the [!DNL Schema Registry], relationship descriptors work similarly to foreign keys in relational database tables: a field in the source schema acts as a reference to the primary identity field of a destination schema. If your source schema does not have a field for this purpose, you may need to create a schema field group with the new field and add it to the schema. This new field must have a `type` value of "[!DNL string]".
 
 >[!IMPORTANT]
 >

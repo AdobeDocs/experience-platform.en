@@ -29,7 +29,7 @@ exl-id: c67ff8bc-0614-4422-9bb7-689b98d7086d
 | `viewportHeight` | Integer | The vertical size in pixels of the window the event was displayed inside. For a web-view event, this is the browser viewport height. |
 | `viewportWidth` | Integer | The horizontal size in pixels of the window the event was displayed inside. For a web-view event, this is the browser viewport width. |
 
-For more details on the field group, refer to the public XDM repository:
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/browserdetails.schema.json)

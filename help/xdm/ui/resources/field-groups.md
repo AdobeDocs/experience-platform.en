@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;field group;field groups;
 solution: Experience Platform
-title: Create and Edit Field groups in the UI
-description: Learn how to create and edit field groups in the Experience Platform user interface.
+title: Create and Edit Schema Field groups in the UI
+description: Learn how to create and edit schema field groups in the Experience Platform user interface.
 topic: user guide
 ---
 
-# Create and edit field groups in the UI
+# Create and edit schema field groups in the UI
 
-In Experience Data Model (XDM), field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
+In Experience Data Model (XDM), schema field groups are reusable components that define one or more fields that implement certain functions such as personal details, hotel preferences, or address. Field groups are intended to be included as part of a schema that implements a compatible class. 
 
 A field group defines which class(es) it is compatible with, based on the behavior of the data that the field group represents (record or time series). This means that not all field groups are available for use with all classes.
 

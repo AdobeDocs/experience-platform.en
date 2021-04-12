@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;field group;field group;person;person details;profile person details;person;
 solution: Experience Platform
-title: Demographic Details Field Group
+title: Demographic Details Schema Field Group
 topic: overview
-description: This document provides an overview of the Demographic Details field group.
+description: This document provides an overview of the Demographic Details schema field group.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 ---
 
-# [!UICONTROL Demographic Details] field group
+# [!UICONTROL Demographic Details] schema field group
 
 >[!NOTE]
 >
->The names of several field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
+>The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Demographic Details] is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a root-level `person` object, whose sub-fields describe information about an individual person.
+[!UICONTROL Demographic Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a root-level `person` object, whose sub-fields describe information about an individual person.
 
 <img src='../../images/field-groups/profile-person-details.png' width=600 /><br />
 

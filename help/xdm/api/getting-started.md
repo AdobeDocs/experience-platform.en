@@ -153,7 +153,7 @@ Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. The
 
 ### Global container
 
-The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, field groups, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
+The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, schema field groups, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
 
 An example of a call that uses the `global` container would look like the following:
 

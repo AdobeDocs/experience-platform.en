@@ -12,7 +12,7 @@ In Experience Data Model (XDM) schemas, a field's type constrains what kind of d
 
 ## Getting started
 
-Before using this guide, please review the [basics of schema composition](./composition.md) for an introduction to XDM schemas, classes, and field groups.
+Before using this guide, please review the [basics of schema composition](./composition.md) for an introduction to XDM schemas, classes, and schema field groups.
 
 If you plan on defining your own field types in the API, it is strongly recommended that you start with the [Schema Registry developer guide](../api/getting-started.md) to learn how to create field groups and data types to include your custom fields in. If you are using the Experience Platform UI to create your schemas, see the guide on [defining fields in the UI](../ui/fields/overview.md) to learn how implement constraints on fields that you define within custom field groups and data types.
 

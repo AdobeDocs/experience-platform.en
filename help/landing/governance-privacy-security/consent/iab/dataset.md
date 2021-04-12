@@ -29,7 +29,7 @@ This tutorial requires a working understanding of the following components of Ad
 
 ## [!UICONTROL Privacy Details] field group structure {#structure}
 
-The [!UICONTROL Privacy Details] field group provides customer consent fields that are required for TCF 2.0 support. There are two versions of this field group: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
+The [!UICONTROL Privacy Details] schema field group provides customer consent fields that are required for TCF 2.0 support. There are two versions of this field group: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
 
 The sections below explain the structure of each of these field groups, including the data they expect during ingestion.
 

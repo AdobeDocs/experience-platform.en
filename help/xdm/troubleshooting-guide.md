@@ -18,7 +18,7 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 ### How do I add fields to a schema?
 
-You can add fields to a schema by using a field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating new field groups using the API or the user interface.
+You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating new field groups using the API or the user interface.
 
 For details on creating new field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/mixins.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
 
