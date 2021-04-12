@@ -31,7 +31,7 @@ A set of mappings that transform one schema to another are collectively known as
 
 ## Data handling
 
-Data Prep can robustly handles different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data handling overview](./data-handling.md).
+Data Prep can robustly handle different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data handling overview](./data-handling.md).
 
 ## Next steps
 
