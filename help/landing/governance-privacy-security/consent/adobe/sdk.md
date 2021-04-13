@@ -52,9 +52,25 @@ Select **[!UICONTROL Save]** to install the extension.
 
 ### Create a data element to set default consent
 
-With the SDK extension installed, the next step is to create a data element to represent the default consent values for your customers. Select **[!UICONTROL Data Elements]** in the left navigation to navigate to the data element creation dialog. 
+With the SDK extension installed, you have the option to create a data element to represent the default data collection consent value (`collect.val`) for your customers. This can be useful if you want to have different default values depending on the user, such as `pending` for European Union users and `in` for North American users.
 
-From here, you must create an [!UICONTROL XDM Object] data element based on the `consents` object. See the [Web SDK extension documentation](../../../../edge/extension/data-element-types.md#xdm-object) for specific steps on creating an XDM Object data element, and how to set its default values.
+In this use case, you could implement the following to set default consent for each customer:
+
+1. Determine the customer's region on the web server.
+1. Before the Platform Launch script tag (embed code) on the web page, render a separate script tag that sets an `adobeDefaultConsent` variable based on the customer's region.
+1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the customer.
+
+If the customer's region is determined by a CMP, you can use the following steps instead:
+
+1. Handle the "CMP loaded" event on the page.
+1. In the event handler, set an `adobeDefaultConsent` variable based on the customer's region, and then load the Platform Launch library script using JavaScript.
+1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the customer.
+
+To create a data element in the Platform Launch UI, select **[!UICONTROL Data Elements]** in the left navigation, then select **[!UICONTROL Add Data Element]** to navigate to the data element creation dialog. 
+
+From here, you must create a [!UICONTROL JavaScript Variable] data element based on `adobeDefaultConsent`. Select **[!UICONTROL Save]** when finished.
+
+![](../../../images/governance-privacy-security/consent/adobe/sdk/data-element.png)
 
 Once the data element is created, navigate back to the Web SDK extension config page. Under the [!UICONTROL Privacy] section, select **[!UICONTROL Provided by data element]**, and use the provided dialog to select the default consent data element you created earlier.
 
@@ -122,12 +138,15 @@ alloy("setConsent", {
 The following JavaScript provides an example of a function that handles consent preference changes on a website, which can used as a callback in an event listener or a CMP hook:
 
 ```js
-var handleConsentChange = function () {
+var setConsent = function () {
 
-  // Retrieve the consent data and generate a timestamp
+  // Retrieve the current consent data.
   var categories = getConsentData();
-  var d = new Date();
-  var collectedAt = d.toISOString();
+
+  // If the script is running on a consent change, generate a new timestamp.
+  // If the script is running on page load, set the timestamp to when the consent values last changed.
+  var now = new Date();
+  var collectedAt = consentChanged ? now.toISOString() : categories.collectedAt;
 
   //  Map the consent values and timestamp to XDM
   var consentXDM = {
