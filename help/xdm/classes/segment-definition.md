@@ -11,7 +11,7 @@ exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 
 >[!NOTE]
 >
->This class should only be used to capture information about segment definitions themselves. In order to capture segment membership information within your profile data, you should use the [Segment Membership Details mixin](../mixins/profile/segmentation.md) in your [!UICONTROL XDM Individual Profile] schema.
+>This class should only be used to capture information about segment definitions themselves. In order to capture segment membership information within your profile data, you should use the [Segment Membership Details mixin](../field-groups/profile/segmentation.md) in your [!UICONTROL XDM Individual Profile] schema.
 
 ![](../images/classes/segment-definition.png)
 
