@@ -20,7 +20,6 @@ feature: Schemas
     * [Retail data model ERD](./schema/industries/retail.md)
     * [Financial services data model ERD](./schema/industries/financial.md)
     * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
-    * [Telecommunications data model ERD](./schema/industries/telecom.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
