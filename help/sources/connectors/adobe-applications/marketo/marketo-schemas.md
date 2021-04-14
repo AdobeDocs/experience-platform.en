@@ -8,6 +8,10 @@ description: This document provides an overview of custom B2B schemas required w
 
 # (Beta) [!DNL Marketo Engage] schemas
 
+>[!IMPORTANT]
+>
+>The [!DNL Marketo] source is currently in beta. Its features and the documentation are subject to change.
+
 This document provides an overview of B2B schemas required when creating a [!DNL Marketo Engage] source connector.
 
 >[!NOTE]
