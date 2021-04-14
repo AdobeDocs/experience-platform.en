@@ -66,6 +66,10 @@ If you know the general activity or business area of the mixin fields you want t
 
 ![](../../images/ui/resources/schemas/industry-filter.png)
 
+>[!NOTE]
+>
+>For more information on best practices for industry-specific data modeling in XDM, see the documentation on [industry data models](../../schema/industries/overview.md).
+
 You can also use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
