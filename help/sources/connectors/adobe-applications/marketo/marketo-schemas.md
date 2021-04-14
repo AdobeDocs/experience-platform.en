@@ -6,7 +6,6 @@ topic: overview
 description: This document provides an overview of custom B2B schemas required when creating a Marketo Engage source connector.
 ---
 
-## (Beta) [!DNL Marketo Engage] schemas
+# (Beta) [!DNL Marketo Engage] schemas
 
 This document provides an overview of B2B schemas required when creating a [!DNL Marketo Engage] source connector.
-
