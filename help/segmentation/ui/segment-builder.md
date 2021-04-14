@@ -114,7 +114,17 @@ The aggregation is now added. You can now select the aggregation function, choos
 
 Count functions in Segment Builder are used to look for specified events and count the number of times they're done. The supported count functions in Segment Builder are "At least", "At most", "Exactly", "Between", and "All".
 
-To create a count function,
+To create a count function, select an event from the left rail and insert it into the [!UICONTROL Events] container.
+
+![](../images/ui/segment-builder/add-event.png)
+
+After placing the event within the Events container, select the [!UICONTROL At least 1] button. 
+
+![](../images/ui/segment-builder/add-count.png)
+
+The count function is now added. You can now select the count function and the value of the function. The example below would be to include any event that has at least one click.
+
+![](../images/ui/segment-builder/select-count.png)
 
 ## Containers
 
