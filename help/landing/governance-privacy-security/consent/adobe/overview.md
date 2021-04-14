@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Consent Processing in Adobe Experience Platform
 topic: getting started
 description: Learn how to process customer consent signals in Adobe Experience Platform using the Adobe 2.0 standard.
+exl-id: cd76a3f6-ae55-4d75-9b30-900fadb4664f
 ---
-
 # Consent processing in Adobe Experience Platform
 
 Adobe Experience Platform allows you to process the consent data you have collected from your customers and integrate it into your stored customer profiles. This data can then be used by downstream processes to determine whether data collection occurs for a specific customer, or whether their profiles are used for specific purposes. For example, the consent data for a particular profile can determine whether it can be included in an exported audience segment, or whether it can participate in specific marketing channels such as email, text messages, or push notifications.

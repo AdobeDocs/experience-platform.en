@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Configure a Dataset to Capture Consent and Preference Data
 topic: getting started
 description: Learn how to configure an Experience Data Model (XDM) schema and dataset to capture consent and preference data in Adobe Experience Platform.
+exl-id: 61ceaa2a-c5ac-43f5-b118-502bdc432234
 ---
-
 # Configure a dataset to capture consent and preference data
 
 In order for Adobe Experience Platform to process your customer consent/preference data, that data must be sent to a dataset whose schema contains fields related to consents and other permissions. Specifically, this dataset must be based on the [!DNL XDM Individual Profile] class, and enabled for use in [!DNL Real-time Customer Profile].

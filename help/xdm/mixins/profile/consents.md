@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Privacy/Personalization/Marketing Preferences (Consents) Mixin
 topic: overview
 description: This document provides an overview of the Privacy/Personalization/Marketing Preferences (Consents) mixin.
+exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 ---
-
 # [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin
 
 [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] mixin) is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
