@@ -41,14 +41,14 @@ To establish a source connection between [!DNL Marketo] and Platform, the Market
 See the following for detailed information on the field mapping rules between [!DNL Marketo] datasets and Platform:
 
 * [Activities](../mapping/marketo.md#activities)
-* [Campaigns](../mapping/marketo.md#campaigns)
-* [Campaign memberships](../mapping/marketo.md#campaign-memberships)
+* [Programs](../mapping/marketo.md#programs)
+* [Program memberships](../mapping/marketo.md#program-memberships)
 * [Companies](../mapping/marketo.md#companies)
-* [Marketing lists](../mapping/marketo.md#marketing-lists)
-* [Marketing list memberships](../mapping/marketo.md#marketing-list-memberships)
+* [Static lists](../mapping/marketo.md#static-lists)
+* [Static list memberships](../mapping/marketo.md#static-list-memberships)
 * [Named Accounts](../mapping/marketo.md#named-accounts)
 * [Opportunities](../mapping/marketo.md#opportunities)
-* [Opportunity person relations](../mapping/marketo.md#opportunity-person-relations)
+* [Opportunity contact roles](../mapping/marketo.md#opportunity-contact-roles)
 * [Persons](../mapping/marketo.md#persons)
 
 ## Expected latency of [!DNL Marketo] data on Platform
