@@ -18,67 +18,46 @@ This document provides an overview of custom namespaces required when creating a
 
 ## [!DNL Marketo] namespaces
 
-The [!DNL Marketo] namespace is used in the primary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the munchkin ID of `123-ABC-789`, and the issuer type is `marketo`, then the display name is `company_123-ABC-789_marketo`.
+The [!DNL Marketo] namespace is used in the primary identity of the entity.
 
->[!IMPORTANT]
->
->The munchkin ID for your display names and identity symbols are the same, but the munchkin ID used for the identity symbol does not contain hyphens.
-
-| Display name | Identity symbol | Entity type |
-| --- | --- | --- |
-| `person_123-ABC-789_marketo` | `mk123ABC789p` | Cross-Device ID |
-| `company_123-ABC-789_marketo` | `mk123ABC789c` | Non-people identifier |
-| `opportunity_123-ABC-789_marketo` | `mk123ABC789o` | Non-people identifier |
-| `opportunity_person_relation_123-ABC-789_marketo` | `mk123ABC789opr` | Non-people identifier |
-| `campaign_123-ABC-789_marketo` | `mk123ABC789cp` | Non-people identifier |
-| `campaign_member_123-ABC-789_marketo` | `mk123ABC789cpm` | Non-people identifier |
-| `marketing_list_123-ABC-789_marketo` | `mk123ABC789ml` | Non-people identifier |
-| `marketing_list_member_123-ABC-789_marketo` | `mk123ABC789mlm` | Non-people identifier |
-| `named_account_123-ABC-789_marketo` |`mk123ABC789na` | Non-people identifier |
+| Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | Munchkin ID example |
+| --- | --- | --- | --- | --- | --- |
+| `marketo_person_{MUNCHKIN_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
+| `marketo_company_{MUNCHKIN_ID}` | auto-generated | `B2B_ACCOUNT` | [!DNL Marketo] | `company` | `123-ABC-789` |
+| `marketo_opportunity_{MUNCHKIN_ID}` | auto-generated | `B2B_OPPORTUNITY` | [!DNL Marketo] | `opportunity` | `123-ABC-789` |
+| `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Marketo] | `opportunity contact role` | `123-ABC-789` |
+| `marketo_program_{MUNCHKIN_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Marketo] | `program` | `123-ABC-789` |
+| `marketo_program_member_{MUNCHKIN_ID}` | auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Marketo] | `program member` | `123-ABC-789` |
+| `marketo_static_list_{MUNCHKIN_ID}` | auto-generated | `B2B_MARKETING_LIST` | [!DNL Marketo] | `static list` | `123-ABC-789` |
+| `marketo_static_list_member_{MUNCHKIN_ID}` | auto-generated | `B2B_MARKETING_LIST_MEMBER` | [!DNL Marketo] | `static list member` | `123-ABC-789` |
+| `marketo_named_account_{MUNCHKIN_ID}` | auto-generated | `B2B_ACCOUNT` | [!DNL Marketo] | `named account` | `123-ABC-789` |
 
 {style="table-layout:auto"}
 
 ## [!DNL Salesforce] namespaces
 
-The [!DNL Salesforce] namespace is used in the secondary identity of the entity. The namespace display name is in the format of: `{ISSUER_ENTITY_TYPE}_{ISSUER_INSTANCE_ID}_{ISSUER_TYPE}`. This means that if the entity type is `companies`, the issuer instance ID is the [!DNL Salesforce] organization ID of `00DA0000000Hz79`, and the issuer type is [!DNL Salesforce], then the display name is `company_00DA0000000Hz79_salesforce`.
+If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce] namespace is used in the secondary identity of the entity.
 
-| Display name | Identity symbol | Entity type |
-| --- | --- | --- |
-| `person_00DA0000000Hz79_salesforce` | `sf00DA0000000Hz79p` | Cross-Device ID |
-| `company_00DA0000000Hz79_salesforce` | `sf00DA0000000Hz79c` | Non-people identifier |
-| `opportunity_00DA0000000Hz79_salesforce` | `sf00DA0000000Hz79o` | Non-people identifier |
-| `opportunity_person_relation_00DA0000000Hz79_salesforce` | `sf00DA0000000Hz79opr` | Non-people identifier |
-| `campaign_00DA0000000Hz79_salesforce` | `sf00DA0000000Hz79cp` | Non-people identifier |
-| `campaign_member_00DA0000000Hz79_salesforce` |  `sf00DA0000000Hz79cpm` | Non-people identifier |
-| `named_account_00DA0000000Hz79_salesforce` |`sf00DA0000000Hz79na` | Non-people identifier |
+| Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
+| --- | --- | --- | --- | --- | --- |
+| `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
+| `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
+| `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
+| `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79`
+| `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Salesforce] | `campaign` | `00DA0000000Hz79` |
+| `salesforce_campaign_member_{SALESFORCE_ORGANIZATION_ID}` |  auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Salesforce] | `campaign member` | `00DA0000000Hz79` |
 
 {style="table-layout:auto"}
 
-## Appendix
+## [!DNL Microsoft Dynamics] namespaces
 
-The following are additional information that provides further context on the use of [!DNL Marketo] and [!DNL Salesforce] namespaces.
+If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] namespace will be used as secondary identity of the entity.
 
-### Limits and constraints
-
-* The identity symbol must be composed of only alphanumeric characters and no special characters.
-* The identity symbol cannot exceed its cap of 20 characters. The [!DNL Salesforce] organization ID itself is the 15-character GUID.
-
-The identity symbol follows the format of: `{ISSUER_TYPE_ABBREVIATION}{ISSUER_INSTANCE_ID}{ENTITY_TYPE_ABBREVIATION}`.
-
-### Issuer type abbreviations
-
-* `mk` for [!DNL Marketo]
-* `sf` for [!DNL Salesforce]
-* `md` for [!DNL Microsoft Dynamics]
-
-### Entity type abbreviations
-
-* `p` for Persons
-* `c` for Companies
-* `na` for Named accounts
-* `o` for Opportunities
-* `opr` for Opportunity person relations
-* `cp` for Campaigns
-* `cpm` for Campaign members
-* `ml` for Marketing lists
-* `mlm` for Marketing list members
+| Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
+| --- | --- | --- | --- | --- | --- |
+| `microsoft_person_{DYNAMICS_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+| `microsoft_account_{DYNAMICS_ID}` | auto-generated | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+| `microsoft_opportunity_{DYNAMICS_ID}` | auto-generated | `B2B_OPPORTUNITY` | [!DNL Microsoft] | `opportunity` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+| `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+| `microsoft_campaign_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+| `microsoft_campaign_member_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
