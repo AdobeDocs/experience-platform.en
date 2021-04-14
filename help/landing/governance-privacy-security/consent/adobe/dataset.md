@@ -177,10 +177,10 @@ A new field appears within the `consents` object. Since you are adding a custom 
 
 In the right rail under **[!UICONTROL Field properties]**, provide a name and description for the field. When selecting the field's **[!UICONTROL Type]**, you must use the appropriate standard data type for a custom consent or preference field:
 
-* [!UICONTROL Generic Consent Field]
-* [!UICONTROL Generic Marketing Preference Field]
-* [!UICONTROL Generic Marketing Preference Field with Subscriptions]
-* [!UICONTROL Generic Personalization Preference Field]
+* [[!UICONTROL Generic Consent Field]](../../../../xdm/data-types/consent-field.md)
+* [[!UICONTROL Generic Marketing Preference Field]](../../../../xdm/data-types/marketing-field.md)
+* [[!UICONTROL Generic Marketing Preference Field with Subscriptions]](../../../../xdm/data-types/marketing-field-subscriptions.md)
+* [[!UICONTROL Generic Personalization Preference Field]](../../../../xdm/data-types/personalization-field.md)
 
 When finished, select **[!UICONTROL Apply]**.
 
