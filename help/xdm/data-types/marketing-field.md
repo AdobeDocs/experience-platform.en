@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Generic Marketing Preference Field Data Type
 topic: overview
 description: This document provides an overview of the Generic Marketing Preference Field XDM data type.
+exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 ---
-
 # [!UICONTROL Generic Marketing Preference Field] data type
 
 [!UICONTROL Generic Marketing Preference Field] is a standard XDM data type that describes a customer's selection for a particular marketing preference.
