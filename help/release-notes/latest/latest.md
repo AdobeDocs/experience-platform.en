@@ -1,79 +1,57 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes January 27, 2021
+description: Experience Platform release notes for March 31, 2021.
 doc-type: release notes
-last-update: January 27, 2021
-author: ens60013
+last-update: March 31, 2021
+author: ens70167
+exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
-
 # Adobe Experience Platform release notes 
 
-**Release date: January 27, 2021**
+**Release date: March 31, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
-- [[!DNL Destinations]](#destinations)
+- [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
-- [[!DNL Experience Platform Launch Server Side]](#launch)
 
 ## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
-**New features**
-
 | Feature | Description |
 | ------- | ----------- |
-| Regular expression functions | [!DNL Data Prep] Mapper now supports matching and extracting part of the input field based on regular expressions. |
+| `add_to_array` function | Updated functionality to support arrays as a parameter. |
+| `to_array` function | Updated functionality to support objects as a parameter. |
 
 For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
-## Destinations {#destinations}
+## Segmentation Service {#segmentation}
 
-[!DNL Destinations] are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], making them readily accessible by any Adobe application.
 
-**New destinations**
-
-| Destination | Description |
-| ----------- | ----------- |
-| [!DNL Azure Blob] | [!DNL Azure Blob] is Microsoft's object storage solution for the cloud. |
+[!DNL Segmentation Service] defines a particular subset of profiles by describing the criteria that distinguishes a marketable group of people within your customer base. Segments can be based on record data (such as demographic information) or time series events representing customer interactions with your brand.
 
 **New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
+| (Beta) Edge segmentation | Edge segmentation evaluates segments in real-time, which allow for same page and next page personalization use cases. More information about edge segmentation can be found in the [Segmentation UI overview](../../segmentation/ui/overview.md).  |
+| (Beta) Incremental segmentation | Increases the freshness of existing segment definitions evaluated in batch segmentation to up to an hour. |
 
-To learn more, visit the [destinations overview](../../destinations/home.md).
+For more information on [!DNL Segmentation Service], please see the [Segmentation overview](../../segmentation/home.md).
 
 ## [!DNL Sources] {#sources}
 
-Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM system.
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
 
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
-**New features**
-
 | Feature | Description |
 | ------- | ----------- |
-| Adobe Audience Manager source connector enhancements | You can now filter and select individual first-party segments from Audience Manager to ingest into Platform, as well as filter out first-party traits. See the tutorial on [creating an Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md) for more information. |
-| [!DNL Google BigQuery] source connector enhancements | You can now ingest files larger than 10GB in one flow run using the [!DNL BigQuery] source connector. See the [[!DNL BigQuery] source connector overview](../../sources/connectors/databases/bigquery.md) for more information. |
-| Support for complex data types for cloud storages | You can now ingest complex data types, such as arrays in JSON files, when using a cloud storage source connector. See the tutorials on creating a cloud storage dataflow [in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) or [using the [!DNL Flow Service] API](../../sources/tutorials/api/collect/cloud-storage.md) for more information. |
-| Support for service principal key-based authentication for [!DNL Microsoft Dynamics] source | You can now authenticate to your [!DNL Dynamics] account using a service principal key as an alternative to password-based authentication. See the [[!DNL Dynamics] source connector overview](../../sources/connectors/crm/ms-dynamics.md) for more information. |
-| UI support for custom separators in cloud storage sources | You can now set a custom column delimiter such as a comma (`,`), tab (`\t`), or a pipe (`|`), to collect delimited files the the UI. See the tutorial on [creating a dataflow with a cloud storage source connector](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md) for more information |
+| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL MySQL]](../../sources/connectors/databases/mysql.md)</li><li>[[!DNL PostGres]](../../sources/connectors/databases/postgres.md)</li><li>[[!DNL Salesforce Service Cloud]](../../sources/connectors/customer-success/salesforce-service-cloud.md)</li><li>[[!DNL SFTP]](../../sources/connectors/cloud-storage/sftp.md)</li><li>[[!DNL Shopify]](../../sources/connectors/ecommerce/shopify.md)</li></ul> |
+| API support for compressed file ingestion | You can now preview and ingest compressed JSON or delimited files using cloud storage sources. For more information, see the tutorial on [collecting cloud storage data using APIs](../../sources/tutorials/api/collect/cloud-storage.md). |
+| UI support for recursive file uploading | You can now ingest entire folders recursively when using a cloud storage source. When ingesting an entire folder, you must ensure that its contents share the same schema. For more information, see the tutorial on [configuring a dataflow for cloud storage connectors in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
-
-## [!DNL Experience Platform Launch Server Side] {#launch}
-
-Adobe Experience Platform Launch Server Side decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Platform Launch Server Side rules can transform and send data to new destinations without changing client-side implementations.
-
-Platform Launch Server Side, combined with the Adobe Experience Platform Web and Mobile SDKs, makes it possible to:
-
-- Make a single call from the page that contains a payload of data and then federate this data server-side to reduce client-side network traffic and deliver a faster experience for customers.
-- Decrease the amount of time it takes for web pages to load so your site conforms to industry best practices around performance.
-- Increase transparency and control over which types of data are sent where, across all client-side properties.
-- Create a server-side rule to send previously tracked data to a new destination.
-
-For information, refer to the [Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en).

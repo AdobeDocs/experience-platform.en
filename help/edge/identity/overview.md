@@ -1,12 +1,11 @@
 ---
-title: Retrieving Experience Cloud ID
-seo-title: Adobe Experience Platform Web SDK Retrieving Experience Cloud ID
-description: Learn how to get Adobe Experience Cloud Id.
+title: Retrieve Experience Cloud IDs using the Adobe Experience Platform Web SDK
+description: Learn how to retrieve Adobe Experience Cloud IDs (ECIDs) using the Adobe Experience Platform Web SDK.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
-
-# Identity - Retrieving the Experience Cloud ID
+# Retrieve Adobe Experience Cloud IDs
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
@@ -34,19 +33,20 @@ When XDM formatted data is sent into Audience Manager this data will need to be 
 
 If you currently have server side forwarding enabled and are using `appmeasurement.js`. and `visitor.js` you can keep the server side forwarding feature enabled and this won't cause any issues. In the backend, Adobe fetches any AAM segments and adds them to the call to Analytics. If the call to Analytics contains those segments, Analytics won’t call Audience Manager to forward any data, so there isn't any double data collection. There is also no need for Location Hint when using the Web SDK because the same segmentation endpoints are called in the backend.
 
-## Retrieving the Visitor ID
+## Retrieving the visitor ID and region ID
 
-If you want to use this unique ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID.
+If you want to use the unique visitor ID, use the `getIdentity` command. `getIdentity` returns the existing ECID for the current visitor. For first-time visitors who don't have an ECID yet, this command generates a new ECID. `getIdentity` also returns the region ID for the visitor. See the [Adobe Audience Manager User Guide](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-api-reference/dcs-regions.html) for more information.
 
 >[!NOTE]
 >
->This method is typically used with custom solutions that require reading the [!DNL Experience Cloud] ID. It is not used by a standard implementation.
+>This method is typically used with custom solutions that require reading the [!DNL Experience Cloud] ID or need the Adobe Audience Manager location hint. It is not used by a standard implementation.
 
 ```javascript
 alloy("getIdentity")
   .then(function(result) {
     // The command succeeded.
-    console.log(result.identity.ECID);
+    console.log("ECID:", result.identity.ECID);
+    console.log("RegionId:", result.edge.regionId);
   })
   .catch(function(error) {
     // The command failed.
@@ -86,7 +86,7 @@ alloy("sendEvent", {
 
 Each property within `identityMap` represents identities belonging to a particular [identity namespace](../../identity-service/namespaces.md). The property name should be the identity namespace symbol, which you can find listed in the Adobe Experience Platform user interface under "[!UICONTROL Identities]". The property value should be an array of identities pertaining to that identity namespace.
 
-Each identity object in the identities array is structured as follows: 
+Each identity object in the identities array is structured as follows:
 
 ### `id`
 

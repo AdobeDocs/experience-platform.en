@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Work Contact Details Mixin
 topic: overview
 description: This document provides an overview of the Work Contact Details mixin.
+exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 ---
-
 # [!UICONTROL Work Contact Details] mixin
 
 >[!NOTE]

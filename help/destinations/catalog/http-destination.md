@@ -2,13 +2,15 @@
 keywords: streaming;
 title: HTTP connection
 description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
-
 # (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
@@ -26,11 +28,9 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL HT
 
 ![Activate HTTP Destination](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
->
->![Activate HTTP Destination](../assets/catalog/http/connect.png)
+If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
+
+![Activate HTTP Destination](../assets/catalog/http/connect.png)
 
 In the [!UICONTROL Account] step, you need to define the HTTP endpoint connection details. Select **[!UICONTROL New account]** and enter the connection details for the HTTP endpoint that you want to connect to.
 - **[!UICONTROL httpEndpoint]**: the complete [!DNL URL] of the HTTP endpoint that you want to send the profile data to.
@@ -51,6 +51,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 -  **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
 -  **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
 -  **[!UICONTROL Custom Headers]**: enter any custom headers that you want to be included in the destination calls, following this format: `header1:value1,header2:value2,...headerN:valueN`.
+-  **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](/help/data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](/help/data-governance/policies/overview.md).
 
 >[!IMPORTANT]
 >
@@ -58,7 +59,7 @@ In the [!UICONTROL Authentication] step, enter the account authentication creden
 
 ![HTTP authentication](../assets/catalog/http/authenticate.png)
 
-**[!UICONTROL Marketing use case]**: Marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
+**[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../data-governance/policies/overview.md). 
 
 Click **[!UICONTROL Create destination]**.
 

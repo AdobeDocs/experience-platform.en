@@ -1,14 +1,12 @@
 ---
-title: IAB Transparency & Consent Framework 2.0 overview
-seo-title: Supporting Adobe Experience Platform Web SDK consent preferences from the Interactive Advertising Bureau Transparency & Consent Framework 2.0
-description: Learn how to support IAB TCF 2.0 consent preferences with Experience Platform Web SDK
-seo-description: Learn how to support IAB TCF 2.0 consent preferences with Experience Platform Web SDK
+title: IAB TCF 2.0 Support in the Adobe Experience Platform Web SDK
+description: Learn how to support IAB TCF 2.0 consent preferences using the Adobe Experience Platform Web SDK
 keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
+# IAB TCF 2.0 support in the Adobe Experience Platform Web SDK
 
-# IAB Transparency & Consent Framework 2.0 overview
-
-Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
+The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
 
 Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
 
@@ -61,7 +59,7 @@ The sections below describe the main integration points between IAB TCF 2.0 and 
 
 Default consent is used when there is no consent preference already saved for a customer. This means the default consent options can control the behavior of Adobe Experience Platform Web SDK and change based on a customer's region.
 
-For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your cloud management platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
+For example, if you have a customer that is not within the jurisdiction of General Data Protection Regulation (GDPR), the default consent could be set to `in`, but inside the jurisdiction of GDPR, the default consent could be set to `pending`. Your Consent Management Platform (CMP) might detect the customer's region and provide the flag `gdprApplies` to IAB TCF 2.0. This flag can be used to set the default consent.
 
 For more information on default consent, refer to the [default consent section](../../fundamentals/configuring-the-sdk.md#default-consent) in the SDK configuration documentation.
 

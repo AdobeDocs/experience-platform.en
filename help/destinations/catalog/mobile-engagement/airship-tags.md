@@ -2,8 +2,8 @@
 keywords: airship tags;airship destination
 title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
+exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 ---
-
 # (Beta) [!DNL Airship Tags] connection {#airship-tags-destination}
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ Before you can send your Adobe Experience Platform segments to [!DNL Airship], y
 > 
 >Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
-### Tag groups
+## Tag groups
 
 The concept of segments in Adobe Experience Platorm is similar to [Tags](https://docs.airship.com/guides/audience/tags/) in Airship, with slight differences in implementation. This integration maps the status of a user's [membership in an Experience Platform segment](https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/segmentation.html?lang=en#mixins) to the presence or non-presence of an [!DNL Airship] tag. For example, in a Platform segment where the `xdm:status` changes to `realized`, the tag is added to the [!DNL Airship] channel or named user this profile is mapped to. If the `xdm:status` changes to `exited`, the tag is removed.
 
@@ -46,7 +46,7 @@ To enable this integration, create a *tag group* in [!DNL Airship] named `adobe-
 
 See [Manage Tag Groups](https://docs.airship.com/tutorials/manage-project/messaging/tag-groups) for instructions on creating the tag group.
 
-### Bearer token
+## Generate bearer token
 
 Go to **[!UICONTROL Settings]** » **[!UICONTROL APIs & Integrations]** in the [Airship dashboard](https://go.airship.com) and select **[!UICONTROL Tokens]** in the left-hand menu.
 
@@ -92,7 +92,7 @@ Once your credentials are confirmed and Adobe Experience Platform is connected t
 
 In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow. 
 
-Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more **[!UICONTROL Marketing Actions]** for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
 
@@ -150,4 +150,3 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
-

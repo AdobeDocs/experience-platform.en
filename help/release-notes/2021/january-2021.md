@@ -4,8 +4,8 @@ description: Experience Platform release notes January 27, 2021
 doc-type: release notes
 last-update: January 27, 2021
 author: ens60013
+exl-id: 6fb92e35-922c-47ba-8cf4-44edd92acfa1
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: January 27, 2021**
@@ -14,6 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Destinations]](#destinations)
+- [[!DNL Real-time Customer Profile]](#profile)
 - [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
@@ -45,6 +46,19 @@ For more information, please see the [[!DNL Data Prep] overview](../../data-prep
 | Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
 
 To learn more, visit the [destinations overview](../../destinations/home.md).
+
+## Real-time Customer Profile {#profile}
+
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+
+**New features**
+
+| Feature | Description |
+| ------- | ----------- |
+| Delete dataset from Profile store | When you delete a dataset from the Experience Platform Data Lake, it will automatically be deleted from the Profile store as well. You no longer need to use the Profile System jobs API endpoint to make a delete request to delete the dataset from the Profile store explicitly. For more information, see the [profile system jobs API endpoint guide](../../profile/api/profile-system-jobs.md).|
+|Estimated ID namespace count for a given segment|For estimated profile counts, the preview API now reports:<ul><li>Total count of estimated profiles in a segment for a given namespace.</li><li>Total count of estimated profiles in the Profile Union Schema for a given namespace.</li></ul>To learn more, refer to the [profile preview API endpoint guide](../../profile/api/preview-sample-status.md).|
+
+For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## [!DNL Sources] {#sources}
 

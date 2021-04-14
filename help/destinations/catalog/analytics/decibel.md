@@ -2,9 +2,11 @@
 keywords: decibel extension;decibel;decibel destination
 title: Decibel extension
 description: The Decibel extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 0508f8f8-d512-48f1-b2ea-1429f59079db
 ---
-
 # [!DNL Decibel] extension {#decibel-extension}
+
+## Overview {#overview}
 
 Quickly and seamlessly deploy [!DNL Decibel] on your web properties. Additional advanced configurations may also be deployed with rules using actions made available through the extension.
 
@@ -53,6 +55,3 @@ You can configure, upgrade, and delete extensions in the Platform Launch interfa
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
-
-
-

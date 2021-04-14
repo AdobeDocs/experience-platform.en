@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
+feature: Segments
 ---
 
 # Adobe Experience Platform Segmentation Service {#segmentation}
@@ -13,6 +14,7 @@ user-guide-description: Build segments and generate audiences from your Real-tim
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Edge segmentation](api/edge-segmentation.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
     - [Schedules](api/schedules.md)
@@ -24,6 +26,7 @@ user-guide-description: Build segments and generate audiences from your Real-tim
     - [Overview](ui/overview.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
@@ -49,6 +52,7 @@ user-guide-description: Build segments and generate audiences from your Real-tim
   - [Create a dynamic segment (Video)](video/create-a-dynamic-segment.md)
   - [Create a multi-entity segment (video)](video/create-multi-entity-segments.md)
   - [Evaluate a segment](tutorials/evaluate-a-segment.md)
+  - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)

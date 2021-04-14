@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
 user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
+feature: Schemas
 ---
 
 # Experience Data Model (XDM) System {#xdm}
@@ -17,6 +18,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Segment definition](./classes/segment-definition.md)
 * Mixins {#mixins}
   * Profile mixins {#profile}
     * [IdentityMap](./mixins/profile/identitymap.md)

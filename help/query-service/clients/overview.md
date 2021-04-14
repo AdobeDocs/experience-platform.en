@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Connect Clients to Query Service
 topic: connect
 description: This document explains how to connect to Query Service from a variety of desktop client applications and how to verify those connections.
+exl-id: 2ba20179-5adb-4259-a120-231a40e78054
 ---
-
 # Connect clients to [!DNL Query Service]
 
 This section explains how to connect to [!DNL Query Service] from a variety of desktop client applications and how to verify those connections. [!DNL Query Service] uses the [!DNL PostgreSQL] protocol, so the instructions in this section explain how to use [!DNL PostgreSQL] tools and drivers to connect and write queries.

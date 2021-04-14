@@ -1,12 +1,10 @@
 ---
-title: Merging event data
-seo-title: Merging Adobe Experience Platform Web SDK event data
+title: Merge Event Data in the Adobe Experience Platform Web SDK
 description: Learn how to merge Experience Platform Web SDK event data
-seo-description: Learn how to merge Experience Platform Web SDK event data
 keywords: merge;event data;eventMergeId;createEventMergeId;sendEvent;mergeId;merge id;eventMergeIdPromise; Merge Id Promise;
+exl-id: 0103444e-dead-4de4-88b6-f0dc2f77fca6
 ---
-
-# Merging event data
+# Merge event data
 
 >[!IMPORTANT]
 >

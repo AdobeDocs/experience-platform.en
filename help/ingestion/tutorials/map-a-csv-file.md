@@ -5,8 +5,8 @@ title: Map a CSV File to an XDM Schema
 topic: tutorial
 type: Tutorial
 description: This tutorial covers how to map a CSV file to an XDM schema using the Adobe Experience Platform user interface.
+exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 ---
-
 # Map a CSV file to an XDM schema
 
 In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.

@@ -5,8 +5,8 @@ title: Segmentation tutorials
 topic: tutorial
 type: Tutorial
 description: Adobe Experience Platform Segmentation Service provides a user interface and RESTful API that allows you to build segments and generate audiences from your Real-time Customer Profile data. These segments are centrally configured and maintained on Platform, and are readily accessible by any Adobe solution.
+exl-id: e45de6b5-ff71-4908-ad79-898084763704
 ---
-
 # Segmentation tutorials
 
 Adobe Experience Platform [!DNL Segmentation Service] provides a user interface and RESTful API that allows you to build segments and generate audiences from your [!DNL Real-time Customer Profile] data. These segments are centrally configured and maintained on [!DNL Platform], and are readily accessible by any Adobe solution. To learn more about segmentation, begin by reading the [Segmentation Service overview](../segmentation/home.md).

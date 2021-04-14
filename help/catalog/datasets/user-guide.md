@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Datasets UI Guide
 topic: datasets
 description: Learn how to perform common actions when working with datasets in the Adobe Experience Platform user interface.
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 ---
-
 # Datasets UI guide
 
 This user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.
@@ -90,7 +90,7 @@ The **[!UICONTROL Add data]** step appears. Upload the CSV file by either draggi
 
 ![](../images/datasets/user-guide/add_csv_data.png)
 
-## Enable a dataset for Real-time Customer Profile
+## Enable a dataset for Real-time Customer Profile {#enable-profile}
 
 Every dataset has the ability to enrich customer profiles with its ingested data. To do so, the schema that the dataset adheres to must be compatible for use in [!DNL Real-time Customer Profile]. A compatible schema satisfies the following requirements:
 

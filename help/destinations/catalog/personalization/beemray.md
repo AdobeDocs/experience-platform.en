@@ -2,11 +2,13 @@
 keywords: beemray,beemray extension
 title: Beemray extension
 description: The Beemray extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 5bb639f5-42b5-48ae-a3e9-7585595ab925
 ---
-
 # [!DNL Beemray] extension {#beemray-extension}
 
-[!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the Adobe Experience Cloud and the rest of your tech partners. Everything takes place in real-time. This extension installs [!DNL Beemray] SDK on your site.
+## Overview {#overview}
+
+[!DNL Beemray] helps you accelerate your product with situational context. Enabling you to gain insights, build new experiences, drive interactions, and engage in moments that really matter. Beemray automates contextual intelligence using machine learning. Beemray connects to the Adobe Experience Cloud and the rest of your tech partners. Everything takes place in real time. This extension installs [!DNL Beemray] SDK on your site.
 
 Beemray is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101063.beemray-human-context.html).
 
@@ -53,6 +55,3 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
-
-
-

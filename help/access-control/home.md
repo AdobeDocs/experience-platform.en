@@ -4,8 +4,8 @@ solution: Experience Platform
 topic: overview
 title: Access control overview
 description: Access control for Adobe Experience Platform is provided through the Adobe Admin Console. This functionality leverages product profiles in Admin Console, which link users with permissions and sandboxes.
+exl-id: 591d59ad-2784-4ae4-a509-23649ce712c9
 ---
-
 # Access control overview
 
 Access control for [!DNL Experience Platform] is provided through the [Adobe Admin Console](https://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.

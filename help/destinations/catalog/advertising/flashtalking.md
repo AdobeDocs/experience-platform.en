@@ -2,9 +2,11 @@
 keywords: Flashtalking OneTag extensions;Flashtalking OneTag extension;Flashtalking OneTag destinations;Flashtalking OneTag;flashtalking onetag
 title: Flashtalking OneTag extension
 description: The Flashtalking OneTag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: e0dcbe9d-6fed-4b86-839e-661b7df8580e
 ---
-
 # [!DNL Flashtalking OneTag] extension {#flashtalking-extension}
+
+## Overview {#overview}
 
 The [!DNL Flashtalking OneTag] extension for Experience Platform Launch makes it easy to attribute site actions to display, video, and mobile ad activity. Deploy the [!DNL Flashtalking OneTag] to your web properties using Launch.
 

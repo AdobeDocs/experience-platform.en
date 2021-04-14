@@ -5,8 +5,8 @@ title: Create a Streaming Connection Using the API
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
+exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
-
 # Creating a streaming connection using the API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
@@ -18,7 +18,7 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 

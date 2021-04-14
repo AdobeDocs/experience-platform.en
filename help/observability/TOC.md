@@ -3,6 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Observability Insights Guide
 user-guide-description: Monitor Platform activities through the use of statistical metrics and event notifications.
+feature: Data Management
 ---
 
 # Observability Insights {#observability}

@@ -5,8 +5,8 @@ title: Create an Azure Blob  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create an Azure Blob source connector using the Platform user interface.
+exl-id: 0e54569b-7305-4065-981e-951623717648
 ---
-
 # Create an [!DNL Azure Blob] source connection in the UI
 
 This tutorial provides steps for creating an [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the Platform user interface.

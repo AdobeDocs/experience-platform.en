@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Privacy Service API Guide Appendix
 topic: developer guide
 description: This document contains additional information for working with the Privacy Service API.
+exl-id: 7099e002-b802-486e-8863-0630d66e330f
 ---
-
 # Privacy Service API guide appendix
 
 The following sections contain additional information for working with the Adobe Experience Platform Privacy Service API.

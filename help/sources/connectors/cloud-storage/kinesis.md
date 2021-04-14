@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Amazon Kinesis Source Connector Overview
 topic: overview
 description: Learn how to connect Amazon Kinesis to Adobe Experience Platform using APIs or the user interface.
+exl-id: b71fc922-7722-4279-8fc6-e5d7735e1ebb
 ---
-
 # (Beta) [!DNL Amazon Kinesis] connector
 
 >[!NOTE]
@@ -14,7 +14,7 @@ description: Learn how to connect Amazon Kinesis to Adobe Experience Platform us
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real-time.
+Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Amazon Kinesis] in real time.
 
 ## IP address allow list
 

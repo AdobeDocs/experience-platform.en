@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Query Service UI Guide
 topic: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
+exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 ---
-
 # [!DNL Query Service] guide
 
 The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. To access the UI within [Adobe Experience Platform][platform-ui], select **[!UICONTROL Queries]** in the left navigation.

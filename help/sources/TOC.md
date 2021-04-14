@@ -4,6 +4,7 @@ audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
 user-guide-description: Ingest data from a variety of sources or structure, label, and enhance already ingested data.
+feature: Data Ingestion, Sources
 ---
 
 # Source connectors {#sources}
@@ -31,6 +32,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
     - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
+    - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
+    - [Oracle Object Storage](connectors/cloud-storage/oracle-object-storage.md)
     - [SFTP connector](connectors/cloud-storage/sftp.md)
     - [Amazon S3 and Azure Blob connector](connectors/cloud-storage/blob-s3.md)
   - CRM {#crm}
@@ -78,6 +81,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
+      - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
+      - [Oracle Object Storage](tutorials/api/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/api/create/cloud-storage/sftp.md)
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
@@ -136,8 +141,9 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Ingest Parquet data from a third-party cloud storage system](tutorials/api/cloud-storage-parquet.md)
   - [Create a dataset connection](tutorials/api/create-dataset-base-connection.md)
   - [Monitor dataflows](tutorials/api/monitor.md)
-  - [Update connections](tutorials/api/update.md)
-  - [Delete connections](tutorials/api/delete.md)
+  - [Update accounts](tutorials/api/update.md)
+  - [Update dataflows](tutorials/api/update-dataflows.md)
+  - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
@@ -158,6 +164,8 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
       - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
       - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
+      - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
+      - [Oracle Object Storage](tutorials/ui/create/cloud-storage/oracle-object-storage.md)
       - [SFTP](tutorials/ui/create/cloud-storage/sftp.md)
       - [Amazon S3 and Blob](tutorials/ui/create/cloud-storage/blob-s3.md)
     - CRM {#crm}
@@ -207,8 +215,10 @@ user-guide-description: Ingest data from a variety of sources or structure, labe
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
   - [Monitor dataflows](tutorials/ui/monitor.md)
   - [Update accounts](tutorials/ui/update.md)
+  - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
+- [Frequently asked questions](./troubleshooting.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

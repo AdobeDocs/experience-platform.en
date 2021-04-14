@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Experience Platform API fundamentals
 topic: getting started
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 ---
-
 # Experience Platform API fundamentals
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
@@ -119,4 +119,4 @@ JSON Schema is a format used to describe and validate the structure of JSON data
 
 ## Next steps
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. For more information on working with [!DNL Platform] APIs, including best practices and answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).

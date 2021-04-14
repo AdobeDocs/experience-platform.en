@@ -3,8 +3,8 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Real-time Customer Profile API Guide
 topic: guide
 description: The Real-time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. Follow this guide to learn how to perform key operations using the API.
+exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 ---
-
 # [!DNL Real-time Customer Profile] API guide
 
 [!DNL Real-time Customer Profile] enables you to see a holistic view of each of your individual customers within Adobe Experience Platform. [!DNL Profile] allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction.
@@ -21,7 +21,11 @@ For a guide to working with [!DNL Real-time Customer Profile] data in the [!DNL 
 >
 >Computed attribute functionality is in alpha and is not available to all users. Documentation and functionality are subject to change.
 
-Computed attributes enable you to automatically compute the value of fields based on other values, calculations, and expressions. Computed attributes operate on the profile level, meaning you can aggregate values across all records and events. Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute or into an event. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use this endpoint, visit the [computed attributes endpoint guide](computed-attributes.md).
+Computed attributes are functions used to aggregate event-level data into profile-level attributes. These functions are automatically computed so that they can be used across segmentation, activation, and personalization.
+
+Each computed attribute contains an expression, or "rule", that evaluates incoming data and stores the resulting value in a profile attribute. These computations help you to easily answer questions related to things like lifetime purchase value, time between purchases, or number of application opens, without requiring you to manually perform complex calculations each time the information is needed. These computed attribute values can then be viewed in a profile, used to create a segment, or accessed through a number of different access patterns.
+
+You can create, view, edit, and delete computed attributes using the `config/computedAttributes` endpoint. To learn how to use computed attributes, refer to the [computed attributes overview](../computed-attributes/overview.md). For API operations, visit the [computed attributes API endpoint guide](../computed-attributes/ca-api.md).
 
 ## Edge projections {#edge-projections}
 
