@@ -52,19 +52,19 @@ Select **[!UICONTROL Save]** to install the extension.
 
 ### Create a data element to set default consent
 
-With the SDK extension installed, you have the option to create a data element to represent the default data collection consent value (`collect.val`) for your customers. This can be useful if you want to have different default values depending on the user, such as `pending` for European Union users and `in` for North American users.
+With the SDK extension installed, you have the option to create a data element to represent the default data collection consent value (`collect.val`) for your users. This can be useful if you want to have different default values depending on the user, such as `pending` for European Union users and `in` for North American users.
 
-In this use case, you could implement the following to set default consent for each customer:
+In this use case, you could implement the following to set default consent based on the user's region:
 
-1. Determine the customer's region on the web server.
-1. Before the Platform Launch script tag (embed code) on the web page, render a separate script tag that sets an `adobeDefaultConsent` variable based on the customer's region.
-1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the customer.
+1. Determine the user's region on the web server.
+1. Before the Platform Launch script tag (embed code) on the web page, render a separate script tag that sets an `adobeDefaultConsent` variable based on the user's region.
+1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the user.
 
-If the customer's region is determined by a CMP, you can use the following steps instead:
+If the user's region is determined by a CMP, you can use the following steps instead:
 
 1. Handle the "CMP loaded" event on the page.
-1. In the event handler, set an `adobeDefaultConsent` variable based on the customer's region, and then load the Platform Launch library script using JavaScript.
-1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the customer.
+1. In the event handler, set an `adobeDefaultConsent` variable based on the user's region, and then load the Platform Launch library script using JavaScript.
+1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the user.
 
 To create a data element in the Platform Launch UI, select **[!UICONTROL Data Elements]** in the left navigation, then select **[!UICONTROL Add Data Element]** to navigate to the data element creation dialog. 
 
