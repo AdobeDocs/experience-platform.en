@@ -45,7 +45,6 @@ ERDs are provided for the following industry verticals:
 * [[!UICONTROL Retail]](./retail.md)
 * [[!UICONTROL Financial services]](./financial.md)
 * [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
-* [[!UICONTROL Telecommunications]](./telecom.md)
 
 ## Next steps
 
