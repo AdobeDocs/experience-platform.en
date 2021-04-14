@@ -30,7 +30,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `web.webPageDetails.webPageID` | `web.webPageDetails.webPageID` |
 | `web.webPageDetails.name` | `web.webPageDetails.name` |
 | `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
-| `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters`
+| `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters` |
 | `web.webReferrer.URL` | `web.webReferrer.URL` |
 | `listOperations.listID` | `listOperations.listID` |
 | `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
