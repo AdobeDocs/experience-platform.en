@@ -29,6 +29,7 @@ feature: Schemas
     * [IdentityMap](./mixins/profile/identitymap.md)
     * [Demographic Details](./mixins/profile/person-details.md)
     * [Personal Contact Details](./mixins/profile/personal-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./mixins/profile/consents.md)
     * [Segment Membership Details](./mixins/profile/segmentation.md)
     * [Work Contact Details](./mixins/profile/work-details.md)
   * Event mixins {#event}
@@ -44,6 +45,10 @@ feature: Schemas
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
+    * [Generic Marketing Preference Field](./data-types/marketing-field.md)
+    * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
+    * [Generic Personalization Preference Field](./data-types/personalization-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)
