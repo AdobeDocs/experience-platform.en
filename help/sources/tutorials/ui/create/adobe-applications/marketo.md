@@ -111,14 +111,14 @@ Once you have selected a schema, scroll down to view the mapping dialog to start
 Each [!DNL Marketo] dataset has its own specific mapping rules to follow. See the following for more information on how to map [!DNL Marketo] datasets to XDM:
 
 * [Activities](../../../../connectors/adobe-applications/mapping/marketo.md#activities)
-* [Campaigns](../../../../connectors/adobe-applications/mapping/marketo.md#campaigns)
-* [Campaign memberships](../../../../connectors/adobe-applications/mapping/marketo.md#campaign-memberships)
+* [Programs](../../../../connectors/adobe-applications/mapping/marketo.md#programs)
+* [Program memberships](../../../../connectors/adobe-applications/mapping/marketo.md#program-memberships)
 * [Companies](../../../../connectors/adobe-applications/mapping/marketo.md#companies)
-* [Marketing lists](../../../../connectors/adobe-applications/mapping/marketo.md#marketing-lists)
-* [Marketing list memberships](../../../../connectors/adobe-applications/mapping/marketo.md#marketing-list-memberships)
+* [Static lists](../../../../connectors/adobe-applications/mapping/marketo.md#static-lists)
+* [Static list memberships](../../../../connectors/adobe-applications/mapping/marketo.md#static-list-memberships)
 * [Named Accounts](../../../../connectors/adobe-applications/mapping/marketo.md#named-accounts)
 * [Opportunities](../../../../connectors/adobe-applications/mapping/marketo.md#opportunities)
-* [Opportunity person relations](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-person-relations)
+* [Opportunity contact roles](../../../../connectors/adobe-applications/mapping/marketo.md#opportunity-contact-roles)
 * [Persons](../../../../connectors/adobe-applications/mapping/marketo.md#persons)
 
 Select **[!UICONTROL Preview data]** to see mapping results based on your selected dataset.
