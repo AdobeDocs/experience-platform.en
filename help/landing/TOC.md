@@ -3,7 +3,7 @@ product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Overview
 breadcrumb-title: Experience Platform overview
-user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real-time.
+user-guide-description: Learn how Experience Platform makes it possible to deliver personalized experiences to your customers in real time.
 ---
 
 # Adobe Experience Platform overview {#landing}
@@ -23,8 +23,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Workflows UI guide](workflows.md)
   * [Browser and language support](browser-language-support.md)
 * Experience Platform APIs {#platform-apis}
-  * [Authenticate and Access Platform APIs](api-authentication.md)
+  * [Getting started with Platform APIs](api-guide.md)
+  * [Authenticate and access Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
+  * [Using Postman with Platform APIs](postman.md)
   * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)

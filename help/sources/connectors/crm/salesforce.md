@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Salesforce Source Connector Overview
 topic: overview
 description: Learn how to connect Salesforce to Adobe Experience Platform using APIs or the user interface.
+exl-id: 597778ad-3cf8-467c-ad5b-e2850967fdeb
 ---
-
 # [!DNL Salesforce] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.

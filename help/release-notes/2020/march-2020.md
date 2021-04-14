@@ -5,8 +5,8 @@ doc-type: release notes
 last-update: March 10, 2020
 author: ens71067
 keywords: release notes;
+exl-id: 407c2bac-4c8a-4939-b3dd-788250f15650
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: March 11, 2020**
@@ -79,7 +79,7 @@ To learn more, visit the [destinations overview](../../destinations/home.md)
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
-Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
 **New features**
 

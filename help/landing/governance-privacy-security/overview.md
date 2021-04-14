@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Governance, Privacy, and Security Overview
 topic: overview
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 ---
-
 # Governance, privacy, and security in Adobe Experience Platform
 
 Adobe Experience Platform allows you to ingest, analyze, optimize and action your data to greatly enhance customer experiences. This data is vast, complex and incredibly valuable. Depending on the nature of your data operations, the legal jurisdictions your business operates under, and your organizational policies regarding data usage, you must carefully control and monitor the collection and use of customer experience data in order to protect your business interests.

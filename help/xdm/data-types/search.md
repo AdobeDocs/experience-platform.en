@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Search Data Type
 topic: overview
 description: This document provides an overview of the Search Experience Data Model (XDM) data type.
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 ---
-
 # [!UICONTROL Search] data type
 
 [!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains information about web search activity.

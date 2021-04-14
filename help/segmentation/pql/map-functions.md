@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PQL Map Functions
 topic: developer guide
 description: Profile Query Language (PQL) offers functions to make interaction with maps easier.
+exl-id: f23616f2-c0dd-40ce-8cfc-c757542fbd05
 ---
-
 # Map functions
 
 [!DNL Profile Query Language] (PQL) offers functions to make interaction with maps easier. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -66,4 +66,4 @@ identityMap.values()
 
 ## Next steps
 
-Now that you have learned about map functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).  
+Now that you have learned about map functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

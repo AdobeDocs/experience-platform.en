@@ -5,8 +5,8 @@ title: Create a PayPal  Source Connection in the UI
 topic: overview
 type: Tutorial
 description: Learn how to create a PayPal source connection using the Adobe Experience Platform UI.
+exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 ---
-
 # Create a [!DNL PayPal] source connection in the UI
 
 >[!NOTE]

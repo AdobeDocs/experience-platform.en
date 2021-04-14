@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Getting Started with the Schema Registry API
 description: This document provides an introduction to the core concepts you need to know before attempting to make calls to the Schema Registry API.
 topic: developer guide
+exl-id: 7daebb7d-72d2-4967-b4f7-1886736db69f
 ---
-
 # Getting started with the [!DNL Schema Registry] API
 
 The [!DNL Schema Registry] API allows you to create and manage various Experience Data Model (XDM) resources. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Schema Registry] API.
@@ -200,21 +200,36 @@ The following table lists compatible `Accept` header values, including those wit
 | ------- | ------------ |
 | `application/vnd.adobe.xed-id+json` | Returns a list of IDs only. This is most commonly used for listing resources. |
 | `application/vnd.adobe.xed+json` | Returns a list of full JSON schema with original `$ref` and `allOf` included. This is used to return a list of full resources. |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw XDM with `$ref` and `allOf`. Has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw XDM with `$ref` and `allOf`. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
 >[!NOTE]
 >
->If supplying the major version only (e.g. 1, 2, 3), the registry will return the latest minor version (e.g. .1, .2, .3) automatically.
+>Platform currently supports only one major version for each schema (`1`). Therefore, the value for `version` must always be `1` when performing lookup requests in order to return the latest minor version of the schema. See the subsection below for more information on schema versioning.
+
+### Schema versioning {#versioning}
+
+Schema versions are referenced by `Accept` headers in the Schema Registry API and in `schemaRef.contentType` properties in downstream Platform service API payloads.
+
+Currently, Platform only supports a single major version (`1`) for each schema. According to the [rules of schema evolution](../schema/composition.md#evolution), each update to a schema must be non-destructive, meaning that new minor versions of a schema (`1.2`, `1.3`, etc.) are always backward compatible with previous minor versions. Therefore, when specifying `version=1`, the Schema Registry always returns the **latest** major version `1` of a schema , meaning that previous minor versions are not returned.
+
+>[!NOTE]
+>
+>The non-destructive requirement for schema evolution is only enforced after the schema has been referenced by a dataset and one of the following cases is true:
+>
+>* Data has been ingested into the dataset.
+>* The dataset has been enabled for use in Real-time Customer Profile (even if no data has been ingested).
+>
+>If the schema has not been associated with a dataset that meets one of the above criteria, then any change can be made to it. However, in all cases the `version` component still remains at `1`.
 
 ## XDM field constraints and best practices
 
 The fields of a schema are listed within its `properties` object. Each field is itself an object, containing attributes to describe and constrain the data that the field can contain. 
 
-More information about defining field types in the API can be found in the [appendix](appendix.md) for this guide, including code samples and optional constraints for the most commonly used data types.
+More information about defining field types in the API can be found in the [field constraints guide](../schema/field-constraints.md) for this guide, including code samples and optional constraints for the most commonly used data types.
 
 The following sample field illustrates a properly formatted XDM field, with further details on naming constraints and best practices provided below. These practices can also be applied when defining other resources that contain similar attributes.
 

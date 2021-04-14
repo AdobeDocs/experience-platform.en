@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Privacy Regulations Terminology
 topic: troubleshooting
 description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
-
 # Privacy regulations terminology
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.

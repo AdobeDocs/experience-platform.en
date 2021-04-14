@@ -4,8 +4,8 @@ description: Experience Platform release notes for February 24, 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
+exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: February 24, 2021**
@@ -68,7 +68,7 @@ For more general information on dataflows, refer to the [dataflows overview](../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
@@ -90,7 +90,7 @@ For more general information on XDM, refer to the [XDM System overview](../../xd
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities".
 
-Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real-time.
+Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
 **New features**
 

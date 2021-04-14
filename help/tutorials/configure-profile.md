@@ -5,8 +5,8 @@ title: Real-time Customer Profile tutorials
 topic: tutorial
 type: Tutorial
 description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 ---
-
 # Configure [!DNL Real-time Customer Profile]
 
 In order to configure [!DNL Real-time Customer Profile] for your organization, you are required to complete multiple separate workflows. This document outlines the steps involved and provides links to tutorials for completing each individual workflow. 
@@ -68,7 +68,7 @@ To work with merge policies in the [!DNL Platform] UI, visit the [merge policies
 
 ## Configure edge projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
 
 **This guide will help you:**
 - List, create, view, update, and delete an edge projection destination.

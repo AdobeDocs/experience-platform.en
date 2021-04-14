@@ -5,8 +5,8 @@ title: Collaborate in JupyterLab Using Git
 topic: tutorial
 type: Tutorial
 description: Git is a distributed version-control system for tracking changes in source code during software development. Git is pre-installed within the Data Science Workspace JupyterLab environment.
+exl-id: d7b766f7-b97d-4007-bc53-b83742425047
 ---
-
 # Collaborate in [!DNL JupyterLab] using [!DNL Git]
 
 [!DNL Git] is a distributed version-control system for tracking changes in source code during software development. Git is pre-installed within the [!DNL Data Science Workspace JupyterLab] environment.

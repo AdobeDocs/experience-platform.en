@@ -2,9 +2,11 @@
 keywords: Audience Manager DIL extension;destination audience manager;dil extension
 title: Audience Manager DIL extension
 description: The Audience Manager DIL extension is a Data Management Platform (DMP) destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 7e1099de-0650-4ee2-b746-721afe194097
 ---
-
 # Audience Manager DIL extension {#aam-dil-extension}
+
+## Overview {#overview}
 
 This is the Adobe Audience Manager Data Integration Library extension (client-side implementation). Note: This extension is not meant to be used for server-side forwarding (SSF) of Adobe Analytics data. For SSF, use the Adobe Analytics extension. Important: Starting with version 8.0, DIL has a hard dependency on the [!DNL Experience Cloud] ID Service, version 3.3 or higher. Please implement both [!DNL Experience Cloud] ID Service and DIL for full [!DNL Audience Manager] data integration capabilities.
 
@@ -53,6 +55,3 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
-
-
-

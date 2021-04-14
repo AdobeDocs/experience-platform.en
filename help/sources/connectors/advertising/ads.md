@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Google AdWords Source Connector Overview
 topic: overview
 description: Learn how to connect Google AdWords to Adobe Experience Platform using APIs or the user interface.
+exl-id: 1f6257e0-213c-4723-a240-511c11c5833c
 ---
-
 # [!DNL Google AdWords] connector
 
 >[!NOTE]

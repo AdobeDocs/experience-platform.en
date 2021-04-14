@@ -2,9 +2,11 @@
 keywords: contentsquare extension;contentsquare destination;contentsquare
 title: Contentsquare extension
 description: The Contentsquare extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: bf836a15-b87c-4a4b-a3fc-92d3cf9bc90e
 ---
-
 # [!DNL Contentsquare] extension {#contentsquare-extension}
+
+## Overview {#overview}
 
 Visualize in-page behaviors, see WHY customers abandon and HOW you can improve. Attribute revenue to UX and content elements for each Analytics segment and Target test. Install the [!DNL Contentsquare] tag, setup custom variables and events. Start gathering data for your UX analysis in a few clicks.
 
@@ -54,6 +56,3 @@ You can configure, upgrade, and delete extensions in the Platform Launch interfa
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
-
-
-

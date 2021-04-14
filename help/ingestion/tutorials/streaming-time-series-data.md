@@ -5,8 +5,8 @@ title: Stream Time-Series Data Using Streaming Ingestion APIs
 topic: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
+exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
 ---
-
 # Stream time-series data using Streaming Ingestion APIs
 
 This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform [!DNL Data Ingestion Service] APIs.
@@ -16,7 +16,7 @@ This tutorial will help you begin using streaming ingestion APIs, part of the Ad
 This tutorial requires a working knowledge of various Adobe Experience Platform services. Before beginning this tutorial, please review the documentation for the following services:
 
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
-- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 - [Schema Registry developer guide](../../xdm/api/getting-started.md): A comprehensive guide that covers each of the available endpoints of the [!DNL Schema Registry] API and how to make calls to them. This includes knowing your `{TENANT_ID}`, which appears in calls throughout this tutorial, as well as knowing how to create schemas, which is used in creating a dataset for ingestion.
 
 Additionally, this tutorial requires that you have already created a streaming connection. For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
@@ -105,7 +105,7 @@ A successful response returns HTTP status 201 with details of your newly created
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.{SCHEMA_ID}",
     "meta:resourceType": "schemas",
-    "version": "{SCHEMA_VERSION}",
+    "version": "1",
     "type": "object",
     "title": "{SCHEMA_NAME}",
     "description": "{SCHEMA_DESCRIPTION}",
@@ -264,7 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "{DATASET_DESCRIPTION}",
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
-        "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "fileDescription": {
         "persisted": true,
@@ -322,7 +322,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -331,7 +331,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity":{
@@ -384,7 +384,7 @@ If you want to include a source name, the following example shows how you would 
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",
@@ -523,4 +523,4 @@ A successful response returns HTTP status 200 with details of the entities reque
 
 By reading this document, you now understand how to ingest record data into [!DNL Platform] using streaming connections. You can try making more calls with different values and retrieving the updated values. Additionally, you can start monitoring your ingested data through [!DNL Platform] UI. For more information, please read the [monitoring data ingestion](../quality/monitor-data-ingestion.md) guide.
 
-For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md). 
+For more information about streaming ingestion in general, please read the [streaming ingestion overview](../streaming-ingestion/overview.md).

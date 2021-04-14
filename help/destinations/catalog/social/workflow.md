@@ -3,9 +3,11 @@ keywords: Facebook;facebook;Social network;Social Network;social network authent
 title: Create a social network destination
 type: Tutorial
 description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
+exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 ---
-
 # Create a social network destination {#social-network-destinations-workflow}
+
+## Overview {#overview}
 
 This tutorial uses [!DNL Facebook] as an example, but the Adobe Experience Platform workflow is the same for all social network destinations.
 
@@ -16,6 +18,8 @@ In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!U
 >[!NOTE]
 >
 >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.   
+
+## Authentication step {#authentication}
 
 In the **Authentication** step, if you had previously set up a connection to your social network destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your social network destination. Select **[!UICONTROL Connect to destination]** and this will take you to the selected social network destination to log in and connect Adobe Experience Cloud to your social network Ad account.
 
@@ -29,6 +33,8 @@ Once your credentials are confirmed and Adobe Experience Cloud is connected to y
 
 ![Credentials confirmed](../../assets/catalog/social/workflow/post-connect.png)
 
+## Setup step {#setup}
+
 In the **[!UICONTROL Setup]** step, enter a [!UICONTROL Name] and a [!UICONTROL Description] for your activation flow and fill in the [!UICONTROL Account ID] of your social network ad account. 
 
 >[!IMPORTANT]
@@ -41,7 +47,7 @@ In the **[!UICONTROL Setup]** step, enter a [!UICONTROL Name] and a [!UICONTROL 
 >
 > For [!DNL LinkedIn] destinations, **[!UICONTROL Account ID]** is your [!DNL LinkedIn Campaign Manager Account ID]. You can find this ID in the [!DNL LinkedIn Campaign Manager].
 
-Also in this step, you can select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+At this step, you can also select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
  
 Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
