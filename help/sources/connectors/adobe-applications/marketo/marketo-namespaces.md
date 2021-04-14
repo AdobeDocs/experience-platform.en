@@ -45,7 +45,7 @@ If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
 | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
 | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
-| `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79`
+| `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
 | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Salesforce] | `campaign` | `00DA0000000Hz79` |
 | `salesforce_campaign_member_{SALESFORCE_ORGANIZATION_ID}` |  auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Salesforce] | `campaign member` | `00DA0000000Hz79` |
 
