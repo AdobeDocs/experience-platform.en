@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Handling data formats with Data Prep
 topic: overview
 description: This document gives an overview of how different data types are handled in Data Prep.
+exl-id: 4ad253b7-3f83-48cd-9c46-8b5ba627c09e
 ---
-
 # Handling data formats with Data Prep
 
 Data Prep can robustly handle different formats of data ingested into Adobe Experience Platform. This document outlines how different data formats are treated with Data Prep.
