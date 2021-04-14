@@ -64,7 +64,7 @@ The example below displays the minimum access rights required to create a [!DNL 
 | `kinesis:DescribeStream` | An action that returns information regarding the stream including the shard map, which is needed to generate a shard ID. |
 | `kinesis:ListStreams` | An action required to list out available streams that you can select from the UI. |
 
-For more information on controlling access for [!DNL Kinesis] data streams, see the following [[!DNL Kinesis] documentation](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+For more information on controlling access for [!DNL Kinesis] data streams, see the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
 ### Configure iterator type
 
@@ -72,13 +72,15 @@ For more information on controlling access for [!DNL Kinesis] data streams, see 
 
 | Iterator type | Description |
 | ------------- | ----------- |
-| `AT_SEQUENCE_NUMBER` |
-| `AFTER_SEQUENCE_NUMBER` |
-| `AT_TIMESTAMP` |
-| `TRIM_HORIZON` |
-| `LATEST` |
+| `AT_SEQUENCE_NUMBER` | The data is read starting from a position identified by a specific sequence number. |
+| `AFTER_SEQUENCE_NUMBER` | The data is read starting after position identified by a specific sequence number. |
+| `AT_TIMESTAMP` | The data is read starting from a position identified by a specific timestamp. |
+| `TRIM_HORIZON` | The data is read starting from the oldest data record. |
+| `LATEST` | The data is read starting from the most recent data record. |
 
-Currently, the default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`
+Currently, the default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`.
+
+For more information on iterator types, see the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
 ## Connect [!DNL Amazon Kinesis] to [!DNL Platform]
 
