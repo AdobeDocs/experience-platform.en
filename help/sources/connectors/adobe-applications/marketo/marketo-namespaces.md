@@ -16,6 +16,8 @@ You must create a new custom namespace for every new Marketo instance and datase
 
 This document provides an overview of custom namespaces required when creating a [!DNL Marketo] source connector.
 
+## Auto generate your [!DNL Marketo] namespaces and schemas
+
 ## [!DNL Marketo] namespaces
 
 The [!DNL Marketo] namespace is used in the primary identity of the entity.
