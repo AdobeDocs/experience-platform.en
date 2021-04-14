@@ -114,6 +114,8 @@ The aggregation is now added. You can now select the aggregation function, choos
 
 Count functions in Segment Builder are used to look for specified events and count the number of times they're done. The supported count functions in Segment Builder are "At least", "At most", "Exactly", "Between", and "All".
 
+To create a count function,
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
