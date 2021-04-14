@@ -6,11 +6,11 @@ topic: overview
 description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
 ---
 
-# (Alpha )[!DNL Marketo Engage] namespaces
+# (Beta) [!DNL Marketo Engage] namespaces
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo Engage] source is currently in alpha. The feature and documentation are subject change.
+>The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change.
 
 You must create a new custom namespace for every new Marketo instance and dataset combination. A Marketo source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. For more information on custom namespaces, see the [namespace overview](../../../../identity-service/namespaces.md).
 
