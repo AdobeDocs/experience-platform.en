@@ -2,8 +2,8 @@
 title: Adobe Experience Platform Web SDK Release Notes
 description: The latest release notes for the Adobe Experience Platform Web SDK.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;release notes;
+exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
-
 # Release notes
 
 ## Version 2.4.0

@@ -23,6 +23,7 @@ feature: Schemas
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
+  * [Segment definition](./classes/segment-definition.md)
 * Mixins {#mixins}
   * Profile mixins {#profile}
     * [IdentityMap](./mixins/profile/identitymap.md)

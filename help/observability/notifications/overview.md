@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Observability Notifications Overview
 topic: overview
 description: Observability Insights allows you to subscribe to event notifications regarding Adobe Experience Platform activities. They reduce or eliminate the need to poll the Observability Insights API in order to check if a job has completed or if a certain milestone within a workflow has been reached.
+exl-id: b0014c76-d1d7-470c-9b71-430a6d12b943
 ---
-
 # [!DNL Observability] notifications overview
 
 [!DNL Observability Insights] allows you to subscribe to event notifications regarding Adobe Experience Platform activities. They reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed or if a certain milestone within a workflow has been reached.

@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Sample Data API Endpoint
 description: The /sampledata endpoint in the Schema Registry API allows you to generate sample data mapped to the structure of any existing XDM schema.
 topic: developer guide
+exl-id: 424d33ca-0624-4891-bf83-044ac2861579
 ---
-
 # Sample data endpoint
 
 In order to ingest data into Adobe Experience Platform, the format and structure of the data must comply with an existing Experience Data Model (XDM) schema. Depending on the complexity of the schema for a particular dataset, it can be difficult to determine the exact shape of the data that the dataset expects upon ingestion.

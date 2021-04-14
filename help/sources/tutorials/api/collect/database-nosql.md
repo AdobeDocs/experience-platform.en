@@ -5,8 +5,8 @@ title: Collect Data From a Database Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
+exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683
 ---
-
 # Collect data from a database using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party database and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
@@ -279,6 +279,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The ID of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -318,7 +319,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/52b59140414aa6a370ef5e21155fd7a686744b8739ecc168",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -334,6 +335,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset gathered in the previous step. |
 | `connectionSpec.id` | The connection specification ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

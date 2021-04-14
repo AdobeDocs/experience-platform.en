@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Demographic Details Mixin
 topic: overview
 description: This document provides an overview of the Demographic Details mixin.
+exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 ---
-
 # [!UICONTROL Demographic Details] mixin
 
 >[!NOTE]

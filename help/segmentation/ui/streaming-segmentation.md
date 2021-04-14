@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Streaming Segmentation UI Guide
 topic: ui guide
 description: Streaming segmentation on Adobe Experience Platform allows you to do segmentation in near real-time while focusing on data richness. With streaming segmentation, segment qualification now happens as data lands into Platform, alleviating the need to schedule and run segmentation jobs. With this capability, most segment rules can now be evaluated as the data is passed into Platform, meaning segment membership will be kept up-to-date without running scheduled segmentation jobs.
+exl-id: cb9b32ce-7c0f-4477-8c49-7de0fa310b97
 ---
-
 # Streaming segmentation
 
 >[!NOTE]
@@ -32,9 +32,11 @@ A query will be automatically evaluated with streaming segmentation if it meets 
 | ---------- | ------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/streaming-segmentation/incoming-hit.png) |
 | Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. | ![](../images/ui/streaming-segmentation/relative-hit-success.png) |
+| Incoming hit with a time window | Any segment definition that refers to a single incoming event with a time window. | ![](../images/ui/streaming-segmentation/historic-time-window.png) |
 | Profile only | Any segment definition that refers to only a profile attribute. | |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-hit.png) |
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. | ![](../images/ui/streaming-segmentation/profile-relative-success.png) |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. | ![](../images/ui/streaming-segmentation/two-batches.png) |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. | ![](../images/ui/streaming-segmentation/event-history-success.png) |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:

@@ -2,8 +2,8 @@
 keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin;
 title: Linkedin Matched Audiences connection
 description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 ---
-
 # [!DNL LinkedIn Matched Audiences] connection
 
 ## Overview {#overview}

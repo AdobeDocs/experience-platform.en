@@ -5,8 +5,8 @@ title: Create a Streaming Connection Using the UI
 topic: tutorial
 type: Tutorial
 description: This UI guide will help you create a streaming connection using Adobe Experience Platform.
+exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 ---
-
 # Create a streaming connection using the UI
 
 This UI guide will help you create a streaming connection using Adobe Experience Platform.

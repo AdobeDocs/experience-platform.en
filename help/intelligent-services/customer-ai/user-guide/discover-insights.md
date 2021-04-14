@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services, Real-time Customer Data Pla
 title: Discover Insights with Customer AI
 topic: Discovering insights
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 ---
-
 # Discover insights with Customer AI
 
 Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
