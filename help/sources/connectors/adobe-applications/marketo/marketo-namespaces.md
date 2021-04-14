@@ -12,11 +12,26 @@ description: This document provides an overview of custom namespaces required wh
 >
 >The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change.
 
-You must create a new custom namespace for every new Marketo instance and dataset combination. A Marketo source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. For more information on custom namespaces, see the [namespace overview](../../../../identity-service/namespaces.md).
+This document provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
-This document provides an overview of custom namespaces required when creating a [!DNL Marketo] source connector.
+## Prerequisites
 
-## Auto generate your [!DNL Marketo] namespaces and schemas
+Before you can generate your B2B namespaces and schemas, you must first set up your Platform developer console and [!DNL Postman] environment. For more information, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
+
+With a Platform developer console and a [!DNL Postman] set up, apply the following variables to your [!DNL Marketo] environment:
+
+| Environment variable | Example value | Notes |
+| --- | --- | --- |
+| `PRIVATE_KEY` | `{PRIVATE_KEY}` |
+| `SANDBOX_NAME` | `prod` |
+| `TENANT_ID` | `b2bcdpproductiontest` |
+| `munchkinId` | `123-ABC-456 `| See the tutorial on [authenticating your [!DNL Marketo] instance](./marketo-auth.md) for more information. |
+| `sfdc_org_id` | 00D4W000000FgYJUA0 | See the following [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) for more information on acquiring your organization ID. |
+| `msd_org_id` | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` | See the following [[!DNL Microsoft Dynamics] guide](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) for more information on acquiring your organization ID. |
+| `has_abm` | `false` | This value is set to `true` if you are subscribed to Account-Based Marketing. |
+| `has_msi` | `false` | This value is set to `true` if you are subscribed to [!DNL Marketo Sales Insight]. |
+
+{style="table-layout:auto"}
 
 ## [!DNL Marketo] namespaces
 
@@ -63,3 +78,7 @@ If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] na
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+## Next steps
+
+To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).

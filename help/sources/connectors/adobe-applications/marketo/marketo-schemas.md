@@ -12,7 +12,7 @@ description: This document provides an overview of custom B2B schemas required w
 >
 >The [!DNL Marketo] source is currently in beta. Its features and the documentation are subject to change.
 
-This document provides an overview of B2B schemas required when creating a [!DNL Marketo Engage] source connector.
+This document provides an overview of the B2B schemas used for a [!DNL Marketo Engage] source connector.
 
 >[!NOTE]
 >
@@ -36,3 +36,7 @@ This document provides an overview of B2B schemas required when creating a [!DNL
 >[!NOTE]
 >
 >All schemas are enabled for [!DNL Real-time Customer Profile]
+
+## Next steps
+
+To learn how to connect your [!DNL Marketo] data to Platform, see the tutorial on [creating a Marketo source connector in the UI](../../../tutorials/ui/create/adobe-applications/marketo.md).
