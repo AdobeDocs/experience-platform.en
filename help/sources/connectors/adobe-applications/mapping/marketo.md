@@ -16,31 +16,76 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Activities {#activities}
 
->[!NOTE]
->
->Currently, the only activity types supported are `removeFromList` and `visitWebPage`. More activity types will be supported in future releases.
-
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `_id` |
-| `personID` | `personID` | Primary Identity |
-| `eventType` | `eventType` |
-| `timeStamp` | `timestamp`|
-| `removeFromList.listID` | `listOperations.listID` |
-| `visitWebPage.userAgent` | `environment.browserDetails.userAgent` |
-| `visitWebPage.ipV4` | `environment.ipV4` |
-| `visitWebPage.searchKeywords`| `search.keywords` |
-| `visitWebPage.searchEngine` | `search.searchEngine` |
-| `visitWebPage.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
-| `visitWebPage.webPageName` | `web.webPageDetails.name` |
-| `visitWebPage.queryParameters` | `web.webPageDetails.queryParameters` |
-| `visitWebPage.webPageID` | `web.webPageDetails.webPageID` |
-| `visitWebPage.referrerURL` | `web.webReferrer.URL`|
-| `visitWebPage.webPageURL` | `web.webPageDetails._marketo.URL` |
+| `_id` | `_id` |
+| `personID` | `personID` | Primary identity |
+| `eventType` | `eventType`|
+| `timeStamp` | `timestamp` |
+| `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
+| `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
+| `environment.ipV4` | `environment.ipV4`|
+| `search.keywords` | `search.keywords` |
+| `search.searchEngine` | `search.searchEngine` |
+| `web.webPageDetails.webPageID` | `web.webPageDetails.webPageID` |
+| `web.webPageDetails.name` | `web.webPageDetails.name` |
+| `web.webPageDetails.isPersonalizedURL` | `web.webPageDetails.isPersonalizedURL` |
+| `web.webPageDetails.queryParameters` | `web.webPageDetails.queryParameters`
+| `web.webReferrer.URL` | `web.webReferrer.URL` |
+| `listOperations.listID` | `listOperations.listID` |
+| `opportunityEvent.isPrimary` | `opportunityEvent.isPrimary` |
+| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `opportunityEvent.role` | `opportunityEvent.role` |
+| `leadOperation.newLead.createdDate` | `leadOperation.newLead.createdDate` |
+| `leadOperation.newLead.formName` | `leadOperation.newLead.formName` |
+| `leadOperation.newLead.leadSource`| `leadOperation.newLead.leadSource` |
+| `leadOperation.newLead.listName` | `leadOperation.newLead.listName` |
+| `leadOperation.newLead.sfdcType` | `leadOperation.newLead.sfdcType` |
+| `leadOperation.newLead.sourceType` | `leadOperation.newLead.sourceType` |
+| `leadOperation.convertLead.assignTo` | `leadOperation.convertLead.assignTo` |
+| `leadOperation.convertLead.convertedStatus` | `leadOperation.convertLead.convertedStatus` |
+| `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
+| `directMarketing.mailingID` | `directMarketing.mailingID` |
+| `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantID` | `directMarketing.testVariantID` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
+| `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
+| `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
+| `directMarketing.email` | `directMarketing.email` |
+| `device.isMobileDevice` | `device.isMobileDevice` |
+| `device.model` | `device.model` |
+| `environment.operatingSystem` | `environment.operatingSystem` |
+| `directMarketing.linkURL` | `directMarketing.linkURL` |
+| `web.webInteraction.linkID` | `web.webInteraction.linkID` |
+| `web.fillOutForm.webFormID` | `web.fillOutForm.webFormID` |
+| `web.fillOutForm.webFormName` | `web.fillOutForm.webFormName` |
+| `web.webInteraction.linkURL` | `web.webInteraction.linkURL` |
+| `leadOperation.changeScore.changeValue` | `leadOperation.changeScore.changeValue` |
+| `leadOperation.changeScore.newValue` | `leadOperation.changeScore.newValue` |
+| `leadOperation.changeScore.oldValue` | `leadOperation.changeScore.oldValue` |
+| `leadOperation.changeScore.priority` | `leadOperation.changeScore.priority` |
+| `leadOperation.changeScore.reason` | `leadOperation.changeScore.reason` |
+| `leadOperation.changeScore.relativeScore` | `leadOperation.changeScore.relativeScore` |
+| `leadOperation.changeScore.relativeUrgency` | `leadOperation.changeScore.relativeUrgency` |
+| `leadOperation.changeScore.scoreAttributeID` | `leadOperation.changeScore.scoreAttributeID` |
+| `leadOperation.changeScore.scoreAttributeName` | `leadOperation.changeScore.scoreAttributeName` |
+| `leadOperation.changeScore.urgency` | `leadOperation.changeScore.urgency` |
+| `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
+| `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
+| `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
+| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
+| `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
+| `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
+| `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
+| `leadOperation.campaignProgression.newStatusID` | `leadOperation.campaignProgression.newStatusID` |
+| `leadOperation.campaignProgression.newStatusName` | `leadOperation.campaignProgression.newStatusName` |
+| `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
+| `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
+| `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
 
 {style="table-layout:auto"}
 
-## Campaigns {#campaigns}
+## Programs {#programs}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -56,7 +101,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Campaign Memberships {#campaign-memberships}
+## Program Memberships {#program-memberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -104,7 +149,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Marketing Lists {#marketing-lists}
+## Static Lists {#static-lists}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -116,7 +161,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Marketing List Memberships {#marketing-list-memnberships}
+## Static List Memberships {#static-list-memnberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -184,7 +229,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Opportunity Person Relations {#opportunity-person-relations}
+## Opportunity Contact Roles {#opportunity-contact-roles}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -203,7 +248,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` |
+| `id` | `personID` | Primary identity |
 | `emailSuspended` | `b2b.personOptInOut._channels.email` |
 | `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
 | `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
@@ -216,6 +261,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
+| `mktoCdpIsConverted` | `b2b.isConverted` |
+| `mktoCdpConvertedDate` | `b2b.convertedDate` |
 | `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
