@@ -3,7 +3,7 @@ keywords: Experience Platform;home;Intelligent Services;popular topics;intellige
 solution: Experience Platform, Intelligent Services
 title: Prepare Data for Use in Intelligent Services
 topic: Intelligent Services
-description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this.
+description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services use Experience Data Model (XDM) schemas in order to achieve this.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 ---
 # Prepare data for use in [!DNL Intelligent Services]
@@ -46,7 +46,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe AUdience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema if you plan to work with Customer AI.
+If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema if you plan to work with Customer AI.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
 2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
@@ -61,7 +61,7 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
+Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if necessary.
 
 A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
 
@@ -134,7 +134,7 @@ The following table provides some examples of marketing channels mapped to the `
 
 ### Recommended fields
 
-The remainder of key fields are outlined in this section. While these fields aren't necessarily required for [!DNL Intelligent Services] to work, it is strongly recommended that you use as many of them as possible in order to gain richer insights.
+The remainder of the key fields are outlined in this section. While these fields aren't necessarily required for [!DNL Intelligent Services] to work, it is strongly recommended that you use as many of them as possible in order to gain richer insights.
 
 #### xdm:productListItems
 
