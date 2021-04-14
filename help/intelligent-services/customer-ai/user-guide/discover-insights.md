@@ -36,7 +36,7 @@ Select a service instance name to begin.
 
 Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
 
- The **[!UICONTROL Performance summary]** tab contains information on the churn or conversion results of your model. To learn more, see the section on [performance summary metrics](#performance-metrics).
+ The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates for each propensity bucket. To learn more, see the section on [performance summary metrics](#performance-metrics).
 
 ![setup page](../images/insights/landing_page_insights.png)
 
@@ -152,19 +152,21 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
 
 ## Performance summary metrics {#performance-metrics}
 
-The **[!UICONTROL Performance summary]** tab contains the churn or conversion results of your model. The results displayed are separated into each of the propensity buckets scored by Customer AI.
+The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates, separated into each of the propensity buckets scored by Customer AI.
 
 ![Performance summary tab](../images/insights/summary_tab.png)
 
-Initially only expected rates (dotted lines) are displayed. However, once an outcome window has passed, the expected result is replaced with an actual result (solid line). Hovering over the lines displays the date and actual/expected result for that day in that bucket.
+Initially only expected rates (dotted lines) are displayed. Expected rates are displayed when a scoring run has not occurred and data is not yet available. However, once an outcome window has passed, the expected rate is replaced with an actual rate (solid line).
+
+Hovering over the lines displays the date and actual/expected rate for that day in that bucket.
 
 ![Bucket example](../images/insights/churn_tab.png)
 
-You can filter the timeframe for the expected and actual results being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
+You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
 
 ![Date selector](../images/insights/date_selector.png)
 
-### Individual scoring run results
+### Individual scoring run rates
 
 The bottom half of the **[!UICONTROL Performance summary]** tab displays the results for each individual scoring run. Select the dropdown date in the top-right to display results for a different scoring run.
 
