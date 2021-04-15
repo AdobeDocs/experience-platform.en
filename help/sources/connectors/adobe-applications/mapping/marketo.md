@@ -6,7 +6,7 @@ topic: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 ---
 
-# (Beta) [!DNL Marketo Engage] Field Mappings
+# (Beta) [!DNL Marketo Engage] field mappings
 
 >[!IMPORTANT]
 >
