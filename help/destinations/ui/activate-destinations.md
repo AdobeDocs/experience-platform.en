@@ -145,7 +145,11 @@ Select **[!UICONTROL Export full files]** in the [!UICONTROL Scheduling] window.
   
 ### Export incremental files {#export-incremental-files}
 
-Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export.
+
+>[!IMPORTANT]
+>
+>The first exported incremental file includes all profiles that qualify for a segment, functioning as a backfill.
 
 Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] window.
 
