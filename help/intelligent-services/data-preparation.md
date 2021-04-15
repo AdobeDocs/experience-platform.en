@@ -88,7 +88,28 @@ You must determine the best field to use as a primary identity based on the sour
 * "mcid" (for Adobe Audience Manager IDs)
 * "aaid" (for Adobe Analytics IDs)
 
-If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution.
+If you are unsure which field you should use as a primary identity, contact Adobe Consulting Services to determine the best solution. If a primary identity is not set, the Intelligent Service application uses the following default behavior:
+
+| Default | Attribution AI | Customer AI |
+| --- | --- | --- |
+| Identity column | `endUserIDs._experience.aaid.id` | `endUserIDs._experience.mcid.id` |
+| Namespace | AAID | ECID |
+
+To set a primary identity, navigate to your schema from the **[!UICONTROL Schemas]** tab and select the schema name hyperlink to open the **[!DNL Schema Editor]**.
+
+![Navigate to schema](./images/data-preparation/navigate_schema.png)
+
+Next, navigate to the field you wish to as a primary identity and select it. The **[!UICONTROL Field properties]** menu opens for that field.
+
+![Select the field](./images/data-preparation/find_field.png)
+
+In the **[!UICONTROL Field properties]** menu, scroll down until you find the **[!UICONTROL Identity]** checkbox. After checking the box, the option to set the selected identity as the **[!UICONTROL Primary identity]** appears. Select this box as well.
+
+![Select checkbox](./images/data-preparation/set_primary_identity.png)
+
+Next, you must provide an **[!UICONTROL Identity namespace]** from the list of pre-defined namespaces in the dropdown. In this example, the ECID namesapce is selected since an Adobe Audience Manager ID `mcid.id` is being used. Select **[!UICONTROL Apply]** to confirm the updates then select **[!UICONTROL Save]** in the top-right corner to save the changes to your schema.
+
+![Save the changes](./images/data-preparation/select_namespace.png)
 
 #### xdm:timestamp {#timestamp}
 
@@ -117,7 +138,7 @@ This field represents the marketing channel related to the ExperienceEvent. The 
 
 For complete information regarding each of the required sub-fields for `xdm:channel`, please refer to the [experience channel schema](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/channels/channel.schema.md) spec. For some example mappings, see the [table below](#example-channels).
 
-##### Example channel mappings {#example-channels}
+#### Example channel mappings {#example-channels}
 
 The following table provides some examples of marketing channels mapped to the `xdm:channel` schema:
 
