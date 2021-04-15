@@ -11,7 +11,7 @@ exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 
 >[!NOTE]
 >
->Since this mixin is only compatible with [!DNL XDM Individual Profile], it cannot be used for [!DNL XDM ExperienceEvent] schemas. If you want to include consent and preference data in your Experience Event schema, add the [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] data type](../../data-types/consents.md) to the schema through the use of a [custom mixin](../../ui/resources/mixins.md#create) instead.
+>Since this mixin is only compatible with [!DNL XDM Individual Profile], it cannot be used for [!DNL XDM ExperienceEvent] schemas. If you want to include consent and preference data in your Experience Event schema, add the [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] data type](../../data-types/consents.md) to the schema through the use of a [custom mixin](../../ui/resources/field-groups.md#create) instead.
 
 ## Mixin structure {#structure} 
 
