@@ -28,7 +28,7 @@ Customer AI available in Real-time Customer Data Platform, is used to generate c
 | Support for Adobe Audience Manager data | Updated functionality to support Adobe Audience Manager datasets via the Audience Manager source connector without the need to ETL your data to conform to the Consumer Experience Event (CEE) schema. |
 | Model performance summary | Customer AI now has a [model performance summary tab](../../intelligent-services/customer-ai/user-guide/discover-insights.md#performance-metrics) within the service instance insights page. The model performance tab shows all the actual conversion and churn rates. This allows you to decipher and understand what is happening in each of your propensity buckets. |
 
-For more information on supported datasets, please see the [Intelligent Services data preparation documentation](../../intelligent-services/data-preparation.md).
+For more information on supported datasets, please see the [[!DNL Intelligent Services] data preparation documentation](../../intelligent-services/data-preparation.md).
 
 ### Attribution AI
 
@@ -36,5 +36,5 @@ For more information on supported datasets, please see the [Intelligent Services
 | ------- | ----------- |
 | Support for Adobe Analytics data | Updated functionality to support Adobe Analytics datasets via the Analytics source connector without the need to ETL your data to conform to the Consumer Experience Event (CEE) schema. |
 
-For more information on supported datasets, please see the [Intelligent Services data preparation documentation](../../intelligent-services/data-preparation.md).
+For more information on supported datasets, please see the [[!DNL Intelligent Services] data preparation documentation](../../intelligent-services/data-preparation.md).
 
