@@ -318,6 +318,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Merge policy**: Merge policies are rules that Experience Platform uses to determine how customer data fragments from multiple sources will be combined to create an individual profile. When a data conflict occurs, the merge policy determines which data should be prioritized for inclusion in the profile.
 
+**Mixin**: See "Schema field group".
+
 **Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
 ## N
