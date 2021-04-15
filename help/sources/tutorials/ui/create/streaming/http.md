@@ -54,7 +54,7 @@ When finished, select **[!UICONTROL Connect to source]** and then select **[!UIC
 
 After creating the HTTP API connection, the **[!UICONTROL Select data]** step appears, providing you with an interface to upload and preview your data.
 
-Select **[!UICIONTROL Upload files]** to upload your data. Alternatively, you can drag and drop your data into the [!UICONTROL Drag and drop files] section of the interface.
+Select **[!UICONTROL Upload files]** to upload your data. Alternatively, you can drag and drop your data into the [!UICONTROL Drag and drop files] section of the interface.
 
 ![add-data](../../../../images/tutorials/create/http/add-data.png)
 
@@ -86,7 +86,7 @@ To use an existing dataset, select **[!UICONTROL Existing dataset]**. On the for
 
 Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md).
 
-To add a new source field, select **[!UICONTROM Add new mapping]**.
+To add a new source field, select **[!UICONTROL Add new mapping]**.
 
 ![add-new-mapping](../../../../images/tutorials/create/http/add-new-mapping.png)
 
