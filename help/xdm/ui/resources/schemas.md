@@ -54,7 +54,7 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 >
 >This section covers how to add existing field groups to a schema. If you want to create a new custom field group, see the guide on [creating and editing field groups](./field-groups.md#create) instead.
 
-Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Mixins]** in the left rail.
+Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Field groups]** in the left rail.
 
 ![](../../images/ui/resources/schemas/add-mixin-button.png)
 
@@ -74,7 +74,7 @@ Select the checkbox next to the name of the field group that you wish to add to 
 >
 >For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
-Once you have chosen your field groups, select **[!UICONTROL Add mixin]** to add them to the schema.
+Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
 ![](../../images/ui/resources/schemas/add-mixin-finish.png)
 
