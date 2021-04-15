@@ -98,6 +98,11 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `channel` | `channelName` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
+| `cost` | `actualCost.amount` |
+| `parentProgramId` | `parentCampaignID` |
+| `integrationPartner` | `integrationPartnerName` |
+| `startDate` | `campaignStartDate` |
+| `endDate` | `campaignEndDate` |
 
 {style="table-layout:auto"}
 
@@ -165,8 +170,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `marketingListMemberID` | Primary Identity |
-| `marketingListID` | `marketingListID` | Relationship |
+| `marketingListMemberID` | `staticListMemberID` | Primary Identity |
+| `marketingListID` | `staticListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
