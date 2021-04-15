@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Adobe Experience Platform Glossary
 topic: getting started
 description: A glossary of important terminology in Experience Platform.
+exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 ---
-
 # Adobe Experience Platform glossary {#adobe-experience-platform-glossary}
 
 ## A

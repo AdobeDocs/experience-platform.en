@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Apache HDFS Source Connector Overview
 topic: overview
 description: Learn how to connect Apache HDFS to Adobe Experience Platform using APIs or the user interface.
+exl-id: 1f156f7b-a19d-4dcf-a51d-ab6cb396d8f7
 ---
-
 # (Beta) [!DNL Apache] HDFS connector
 
 >[!NOTE]

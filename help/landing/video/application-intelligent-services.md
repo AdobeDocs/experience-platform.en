@@ -8,8 +8,8 @@ audience: all
 doc-type: video
 activity: understand
 thumbnail: 32554.jpg
+exl-id: d2f30bba-4b49-40b2-9f2a-80905894baa6
 ---
-
 # Application and Intelligent Services built on Experience Platform
 
 This video provides an overview of the Application and Intelligent Services built on top of Experience Platform. 
@@ -23,7 +23,3 @@ To learn more, use the links to visit the documentation for each individual appl
 * [[!DNL Real-time Customer Data Platform (Real-time CDP)]](../../rtcdp/overview.md)
 
 >[!VIDEO](https://video.tv.adobe.com/v/32554?quality=12&learn=on)
-
-
-
-

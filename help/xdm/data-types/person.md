@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Person data type
 topic: overview
 description: This document provides an overview of the Person Experience Data Model (XDM) data type.
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 ---
-
 # [!UICONTROL Person] data type
 
 [!UICONTROL Person] is a standard Experience Data Model (XDM) data type that describes an individual person. This datatype can represent a person acting in various roles, such as a customer, contact, or owner.

@@ -2,8 +2,8 @@
 title: Using Offer Decisioning with the Platform Web SDK
 description: The Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 ---
-
 # Using Offer Decisioning with the Platform Web SDK
 
 >[!NOTE]

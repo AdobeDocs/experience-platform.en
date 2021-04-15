@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Developing ETL Integrations for Adobe Experience Platform
 topic: overview
 description: The ETL integration guide outlines general steps for creating high-performance, secure connectors for Experience Platform and ingesting data into Platform.
+exl-id: 7d29b61c-a061-46f8-a31f-f20e4d725655
 ---
-
 # Developing ETL Integrations for Adobe Experience Platform
 
 The ETL integration guide outlines general steps for creating high-performance, secure connectors for [!DNL Experience Platform] and ingesting data into [!DNL Platform].

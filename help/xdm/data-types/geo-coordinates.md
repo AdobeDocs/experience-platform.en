@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Geo Coordinates Data Type
 topic: overview
 description: This document provides an overview of the Geo Coordinates XDM data type.
+exl-id: 3c80eb44-852f-4a95-bd13-b6197ffe62da
 ---
-
 # [!UICONTROL Geo Coordinates] data type
 
 [!UICONTROL Geo Coordinates] is a standard XDM data type that describes the geographic coordinates of a place. This data type is based on the public specification documented on [schema.org](https://schema.org/GeoCoordinates).

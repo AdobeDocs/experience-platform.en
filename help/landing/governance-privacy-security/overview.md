@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Governance, Privacy, and Security Overview
 topic: overview
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
+exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 ---
-
 # Governance, privacy, and security in Adobe Experience Platform
 
 Adobe Experience Platform allows you to ingest, analyze, optimize and action your data to greatly enhance customer experiences. This data is vast, complex and incredibly valuable. Depending on the nature of your data operations, the legal jurisdictions your business operates under, and your organizational policies regarding data usage, you must carefully control and monitor the collection and use of customer experience data in order to protect your business interests.
@@ -48,13 +48,13 @@ Adobe Experience Platform Privacy Service provides a RESTful API and user interf
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information.
 
-### Consent collection {#consent}
+### Consent processing {#consent}
 
 Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform allows you to capture consent information in individual customer profiles and use those preferences as a determining factor in how each customer's data is used in downstream Platform workflows.
 
-To learn how to collect and process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
+To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](./consent/adobe/overview.md).
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+For information on how process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
 
 ## Security {#security}
 

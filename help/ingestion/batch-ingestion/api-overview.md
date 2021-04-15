@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Batch Ingestion API Guide
 topic: developer guide
 description: This document provides a comprehensive overview of using batch ingestion APIs.
+exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
-
 # Batch ingestion API guide
 
 This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 

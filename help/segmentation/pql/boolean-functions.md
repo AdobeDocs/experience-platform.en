@@ -4,8 +4,8 @@ solution: Experience Platform
 title: PQL Boolean Functions
 topic: developer guide
 description: Boolean functions are used to perform boolean logic on different elements in Profile Query Language (PQL).
+exl-id: 68a4a8cc-88ad-41b1-b9fc-c2b4ab7d0122
 ---
-
 # Boolean functions
 
 Boolean functions are used to perform boolean logic on different elements in [!DNL Profile Query Language] (PQL).  More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -91,4 +91,4 @@ if (homeAddress.countryISO = "CA", 1, 2)
 
 ## Next steps
 
-Now that you have learned about boolean functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about boolean functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

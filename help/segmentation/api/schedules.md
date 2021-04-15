@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Schedules API Endpoint
 topic: developer guide
 description: Schedules are a tool that can be used to automatically run batch segmentation jobs once a day.
+exl-id: 92477add-2e7d-4d7b-bd81-47d340998ff1
 ---
-
 # Schedules endpoint
 
 Schedules are a tool that can be used to automatically run batch segmentation jobs once a day. You can use the `/config/schedules` endpoint to retrieve a list of schedules, create a new schedule, retrieve details of a specific schedule, update a specific schedule, or delete a specific schedule. 

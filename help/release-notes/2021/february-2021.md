@@ -4,8 +4,8 @@ description: Experience Platform release notes for February 24, 2021.
 doc-type: release notes
 last-update: February 24, 2021
 author: ens70167
+exl-id: 8c3142af-4021-4f7e-acbd-c5277dd188d1
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: February 24, 2021**
@@ -68,7 +68,7 @@ For more general information on dataflows, refer to the [dataflows overview](../
 
 | Destination | Description |
 | ----------- | ----------- |
-| [[!DNL LinkedIn Matched Audiences]](destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
+| [[!DNL LinkedIn Matched Audiences]](../../destinations/catalog/social/linkedin.md) | The [!DNL LinkedIn Matched Audiences] connection allows you to activate audiences in the [!DNL LinkedIn] social platform. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 

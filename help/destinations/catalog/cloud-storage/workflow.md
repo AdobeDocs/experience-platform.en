@@ -4,8 +4,8 @@ title: Create a cloud storage destination
 type: Tutorial
 description: Instructions to connect to your cloud storage locations
 seo-description: Instructions to connect to your cloud storage locations
+exl-id: 58003c1e-2f70-4e28-8a38-3be00da7cc3c
 ---
-
 # Create a cloud storage destination
 
 ## Overview {#overview}
@@ -20,9 +20,9 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select your pre
 >
 >If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.   
 
-## Authentication step {#authentication}
+## Account step {#account}
 
-In the **[!UICONTROL Authentication]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
+In the **[!UICONTROL Account]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your cloud storage destination. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
 See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-kinesis.md) destination, [[!DNL Azure Event Hubs]](./azure-event-hubs.md) destination, and [SFTP](./sftp.md) destination for specifics around credentials input in the **Authentication** step.
 
@@ -30,11 +30,11 @@ See [Amazon S3](./amazon-s3.md) destination, [[!DNL Amazon Kinesis]](./amazon-ki
 >
 >Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your cloud storage location. This ensures that you don't complete the workflow with incorrect credentials.
 
-![Connect to cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
+![Connect to cloud storage destination - account step](../../assets/catalog/cloud-storage/workflow/destination-account.png)
 
-## Setup step {#setup}
+## Authentication step {#authentication}
 
-In the **[!UICONTROL Setup]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
+In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
 
 At this step, you can also select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
 
@@ -54,7 +54,36 @@ For [!DNL Azure Event Hubs] destinations, provide the name of your existing data
 
 ![Connect to Event Hubs cloud storage destination - authentication step](../../assets/catalog/cloud-storage/workflow/event-hubs-setup.png)   
 
-Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow to export data.
+Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. Read the section [Activate segments](#activate-segments), for the rest of the workflow to export data.
+
+## Use macros to create a folder in your storage location{#use-macros}
+
+>[!NOTE]
+>
+> The functionality described in this section is currently available for [Amazon S3](./amazon-s3.md) destinations only.
+
+To create a custom folder per segment file in your storage location, you can use macros in the folder path input field. Insert the macros at the end of the input field, as shown below.
+
+![How to use macros to create a folder in your storage](../../assets/catalog/cloud-storage/workflow/macros-folder-path.png)  
+
+The examples below reference a sample segment `Luxury Audience` with ID `25768be6-ebd5-45cc-8913-12fb3f348615`.
+
+**Macro 1: `%SEGMENT_NAME%`**
+
+Input: `acme/campaigns/2021/%SEGMENT_NAME%`
+Folder path in your storage location: `acme/campaigns/2021/Luxury Audience`
+
+**Macro 2: `%SEGMENT_ID%`**
+
+Input: `acme/campaigns/2021/%SEGMENT_ID%`
+Folder path in your storage location: `acme/campaigns/2021/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+**Macro 3: `%SEGMENT_NAME%/%SEGMENT_ID%`**
+
+Input: `acme/campaigns/2021/%SEGMENT_NAME%/%SEGMENT_ID%`
+Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768be6-ebd5-45cc-8913-12fb3f348615`
+
+
 
 ## Activate segments {#activate-segments}
 

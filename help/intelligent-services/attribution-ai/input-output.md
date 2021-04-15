@@ -4,8 +4,8 @@ solution: Experience Platform, Intelligent Services
 title: Input and Output in Attribution AI
 topic: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 ---
-
 # Input and output in [!DNL Attribution AI]
 
 The following document outlines the different input and outputs utilized in [!DNL Attribution AI].
@@ -42,7 +42,7 @@ The columns below are not required but it is recommended that you include them i
 - web.webPageDetails
 - xdm:productListItems
 
-### Historical data
+### Historical data {#data-requirements}
 
 >[!IMPORTANT]
 >

@@ -2,8 +2,8 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Getting Started with Real-time Customer Data Platform
 description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
+exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 ---
-
 # Getting started with Real-time Customer Data Platform
 
 This getting started guide leads you through a sample implementation of Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.

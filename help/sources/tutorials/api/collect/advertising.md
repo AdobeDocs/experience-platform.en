@@ -5,8 +5,8 @@ title: Collect Advertising Data Using Source Connectors and APIs
 topic: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
+exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
 ---
-
 # Collect advertising data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Adobe Experience Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
@@ -293,6 +293,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -332,7 +333,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -348,6 +349,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+| `data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

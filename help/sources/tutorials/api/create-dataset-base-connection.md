@@ -5,8 +5,8 @@ title: Create an Adobe Experience Platform Dataset Base Connection Using the Flo
 topic: overview
 type: Tutorial
 description: Learn how to use the Flow Service API to create a dataset base connection to Adobe Experience Platform.
+exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617
 ---
-
 # Create an [!DNL Experience Platform] dataset base connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

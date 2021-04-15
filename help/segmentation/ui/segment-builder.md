@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;Segmentation Service;segmentat
 solution: Experience Platform
 title: Segment Builder UI Guide
 topic: ui guide
-description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ---
-
 # [!DNL Segment Builder] UI guide
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
@@ -109,6 +109,22 @@ After placing the event within the Events container, select the ellipses icon (.
 The aggregation is now added. You can now select the aggregation function, choose what attribute to aggregate, the equality function, as well as the value. For the example below, this segment would qualify any profile that has a sum of purchased values that is greater than $100, even if each individual purchase is less than $100.
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
+
+### Count functions
+
+Count functions in Segment Builder are used to look for specified events and count the number of times they're done. The supported count functions in Segment Builder are "At least", "At most", "Exactly", "Between", and "All".
+
+To create a count function, select an event from the left rail and insert it into the [!UICONTROL Events] container.
+
+![](../images/ui/segment-builder/add-event.png)
+
+After placing the event within the Events container, select the [!UICONTROL At least 1] button. 
+
+![](../images/ui/segment-builder/add-count.png)
+
+The count function is now added. You can now select the count function and the value of the function. The example below would be to include any event that has at least one click.
+
+![](../images/ui/segment-builder/select-count.png)
 
 ## Containers
 

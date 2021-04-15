@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Sources troubleshooting
 topic: troubleshooting
 description: This document provides answers to frequently asked questions about sources on Adobe Experience Platform.
+exl-id: 94875121-7d4d-4eb2-8760-aa795933dd7e
 ---
-
 # (Beta) Sources troubleshooting guide
 
 This document provides answers to frequently asked questions about sources on Adobe Experience Platform. For questions and troubleshooting related to other [!DNL Platform] services, including those that are encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
@@ -50,7 +50,7 @@ Supported data types include integers, strings, booleans, datetime objects, arra
 
 ### What date and time formats are supported?
 
-Sources supports a wide variety of datetime formats while ingesting data. More information about supported datetime formats can be found in the [data prep date functions guide](../data-prep/dates.md).
+Sources supports a wide variety of datetime formats while ingesting data. More information about supported datetime formats can be found in the dates section of the [data format handling guide](../data-prep/data-handling.md#dates) in the Data Prep documentation.
 
 ### How do I format arrays in CSV, JSON, and Parquet files?
 

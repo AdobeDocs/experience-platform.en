@@ -4,8 +4,8 @@ solution: Experience Platform
 title: MLInstances API Endpoint
 topic: Developer guide
 description: An MLInstance is a pairing of an existing Engine with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.
+exl-id: e78cda69-1ff9-47ce-b25d-915de4633e11
 ---
-
 # MLInstances endpoint
 
 An MLInstance is a pairing of an existing [Engine](./engines.md) with an appropriate set of configurations that defines any training parameters, scoring parameters, or hardware resource configurations.

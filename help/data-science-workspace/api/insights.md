@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Insights API Endpoint
 topic: Developer guide
 description: Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
+exl-id: 603546d6-5686-4b59-99a7-90ecc0db8de3
 ---
-
 # Insights endpoint
 
 Insights contain metrics which are used to empower a data scientist to evaluate and choose optimal ML models by displaying relevant evaluation metrics.
