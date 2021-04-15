@@ -15,6 +15,11 @@ feature: Schemas
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+  * Industry data models {#industries}
+    * [Overview](./schema/industries/overview.md)
+    * [Retail data model ERD](./schema/industries/retail.md)
+    * [Financial services data model ERD](./schema/industries/financial.md)
+    * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -26,6 +31,7 @@ feature: Schemas
     * [Personal Contact Details](./field-groups/profile/personal-details.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Work Contact Details](./field-groups/profile/work-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
   * Event field groups {#event}
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
@@ -39,6 +45,10 @@ feature: Schemas
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
+    * [Generic Marketing Preference Field](./data-types/marketing-field.md)
+    * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
+    * [Generic Personalization Preference Field](./data-types/personalization-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)
