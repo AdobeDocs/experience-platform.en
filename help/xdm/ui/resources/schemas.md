@@ -56,19 +56,19 @@ Once you select a schema, the [!DNL Schema Editor] appears with the schema's str
 
 Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Field groups]** in the left rail.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
 A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
 You can use the search bar to help locate your desired field group. Field groups whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, field groups containing fields that describe desired data attributes are displayed.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/field-group-search.png)
 
 Select the checkbox next to the name of the field group that you wish to add to the schema. You can select multiple field groups from the list, with each selected field group appearing in the right rail.
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
@@ -76,11 +76,11 @@ Select the checkbox next to the name of the field group that you wish to add to 
 
 Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
 The [!DNL Schema Editor] reappears with the field-group-provided fields represented in the canvas.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Enable a schema for Real-time Customer Profile {#profile}
 
