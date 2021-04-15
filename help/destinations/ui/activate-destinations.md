@@ -107,13 +107,13 @@ Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon ac
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../assets/ui/activate-destinations/identity-mapping-gcm-transformation.png)
 
-## **[!UICONTROL Configure]** step {#configure}
+## **[!UICONTROL Scheduling]** step {#scheduling}
 
 Applies to: Email marketing destinations and cloud storage destinations
 
-![Configure step](../assets/ui/activate-destinations/configure-icon.png)
+![Scheduling step](../assets/ui/activate-destinations/scheduling-icon.png)
 
-[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Configure]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
+[!DNL Adobe Experience Platform] exports data for email marketing and cloud storage destinations in the form of [!DNL CSV] files. In the **[!UICONTROL Scheduling]** step, you can configure the schedule and the file names for each segment you are exporting. Configuring the schedule is mandatory, but configuring the file name is optional.
 
 >[!IMPORTANT]
 > 
@@ -121,18 +121,53 @@ Applies to: Email marketing destinations and cloud storage destinations
 >
 >Split file names are appended with a number that indicates the file is part of a larger export, as such: `filename.csv`, `filename_2.csv`, `filename_3.csv`.
 
+Select the **[!UICONTROL Create schedule]** button corresponding to the segment that you want to send to your destination.
 
-To add a schedule for the segment, select **[!UICONTROL Create schedule]**. 
+![Create schedule button](../assets/ui/activate-destinations/create-schedule-button.png)
 
-![](../assets/ui/activate-destinations/configure-destination-schedule.png)
+### Export full files {#export-full-files}
 
-A dialog appears, showing options to create the segment schedule.  
+Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment.
 
-* **File export**: You have the option to either export either full files or incremental files. Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment. Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
-* **Frequency**: If **[!UICONTROL Export full files]** is selected, you have the option to export **[!UICONTROL Once]** or **[!UICONTROL Daily]**. If **[!UICONTROL Export incremental files]** is selected, you only have the option to export **[!UICONTROL Daily]**. Exporting a file **[!UICONTROL Once]** exports the file one time. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST) if full files is selected and 12:00 PM UTC (7:00 AM EST) if incremental files is selected. 
-* **Date**: If **[!UICONTROL Once]** is selected, you can select the date for the one time export. If **[!UICONTROL Daily]** is selected, you can select the start and end dates for the exports.
+Select **[!UICONTROL Export full files]** in the [!UICONTROL Scheduling] window.
 
-![](../assets/ui/activate-destinations/export-full-file.png)
+![Export full files](../assets/ui/activate-destinations/export-full-files.png)
+
+1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports.
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file [!UICONTROL Daily] exports the file every day from the start date to the end date at the time you select.
+    
+      >[!IMPORTANT]
+      >
+      >This option is currently in beta, and is only available to a select number of customers.
+
+3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+4. Select **[!UICONTROL Create]** to save the schedule.
+  
+### Export incremental files {#export-incremental-files}
+
+Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export. 
+
+Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] window.
+
+![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
+
+1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports.
+   * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
+     
+       >[!IMPORTANT]
+       >
+       >This option is currently in beta, and is only available to a select number of customers.
+
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+   
+     >[!IMPORTANT]
+     >
+     >This option is currently in beta, and is only available to a select number of customers.
+
+3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+4. Select **[!UICONTROL Create]** to save the schedule.
+
+### Configure file names {#file-names}
 
 The default file names consist of destination name, segment ID, and a date and time indicator. For example, you can edit your exported file names to distinguish between different campaigns or to have the data export time appended to the files.
 
@@ -140,7 +175,11 @@ Select the pencil icon to open a modal window and edit the file names. File name
 
 ![configure file name](../assets/ui/activate-destinations/configure-name.png)
 
-In the file name editor, you can select different components to add to the file name. The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
+In the file name editor, you can select different components to add to the file name. 
+
+![edit file name options](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
+
+The destination name and segment ID cannot be removed from file names. In addition to these, you can add the following:
 
 * **[!UICONTROL Segment name]**: You can append the segment name to the file name.
 * **[!UICONTROL Date and time]**: Select between adding a `MMDDYYYY_HHMMSS` format or a Unix 10-digit timestamp of the time when the files are generated. Choose one of these options if you would like your files to have a dynamic file name generated with each incremental export.
@@ -151,8 +190,6 @@ Select **[!UICONTROL Apply changes]** to confirm your selection.
 >[!IMPORTANT] 
 > 
 >If you don't select the **[!UICONTROL Date and Time]** component, the file names will be static and the new exported file will overwrite the previous file in your storage location with each export. When running a recurring import job from a storage location into an email marketing platform, this is the recommended option.
-
-![edit file name options](../assets/ui/activate-destinations/activate-workflow-configure-step-2.png)
 
 Once you have finished configuring all your segments, select **[!UICONTROL Next]** to continue.
 
@@ -175,62 +212,6 @@ On the **[!UICONTROL Segment schedule]** page, you can set the start date for se
 >For Google Customer Match, you must provide the [!UICONTROL App ID] in this step, when activating [!DNL IDFA] or [!DNL GAID] segments.
 
 ![enter app id](../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
-
-## **[!UICONTROL Scheduling]** step {#scheduling}
-
-Applies to: email marketing destinations and cloud storage destinations
-
-![segment schedule step](../assets/ui/activate-destinations/scheduling-icon.png)
-
-On the **[!UICONTROL Scheduling]** page, you can schedule when you want [!DNL Platform] to send data to your destination, see the existing schedule of your segments, and adjust it based on your needs.
-
-[!DNL Platform] can export profiles to the destination either as full files, or as incremental files.
-
-Select the **[!UICONTROL Create schedule]** button corresponding to the segment that you want to send to your destination.
-
-![Create schedule button](../assets/ui/activate-destinations/create-schedule-button.png)
-
-## Export full files {#export-full-files}
-
-Follow the steps below to send segments as full files to your destination.
-
-Select **[!UICONTROL Export full files]** in the [!UICONTROL Scheduling] window.
-
-![Export full files](../assets/ui/activate-destinations/export-full-files.png)
-
-1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports.
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
-    
-      >[!IMPORTANT]
-      >
-      >This option is currently in beta, and is only available to a select number of customers.
-
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-1. Select **[!UICONTROL Create]** to save the schedule.
-  
-## Export incremental files {#export-incremental-files}
-
-Follow the steps below to send segments as incremental files to your destination.
-
-Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] window.
-
-![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
-
-1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports.
-   * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
-     
-       >[!IMPORTANT]
-       >
-       >This option is currently in beta, and is only available to a select number of customers.
-
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
-   
-     >[!IMPORTANT]
-     >
-     >This option is currently in beta, and is only available to a select number of customers.
-
-1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-1. Select **[!UICONTROL Create]** to save the schedule.
 
 ## **[!UICONTROL Select attributes]** step {#select-attributes}
 
@@ -255,7 +236,7 @@ Additionally, you can mark different attributes as mandatory. Marking an attribu
 It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
 
 
-In addition to marking attributes as mandatory, you can also use attributes as a **[!UICONTROL Deduplication key]**. This option reduces the possibility of having multiple records of the same profile in one export file.
+You can also use attributes as **[!UICONTROL Deduplication keys]**. This option reduces the possibility of having multiple records of the same profile in one export file.
 
 >[!IMPORTANT]
 >
