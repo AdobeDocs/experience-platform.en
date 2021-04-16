@@ -58,7 +58,11 @@ Under **[!UICONTROL Basic information]**, provide a name and optional descriptio
 
 After filling out the basic information, click the dropdown labeled **Select Dataset** to select your dataset. The dataset is used to train the model and score the subsequent data it produces. When selecting a dataset from the dropdown selector, only ones that are compatible with Attribution AI and conform to the Experience Data Model (XDM) schema are listed. Once a dataset is chosen, click **Next** in the top-right corner to proceed to the define events page.
 
-![setup page](./images/user-guide/initial_creation_attribution.png)
+>[!TIP]
+>
+>Adobe Analytics datasets are supported via the Analytics Source Connector.
+
+![setup page](./images/user-guide/dataset_selector.png)
 
 ## Defining events
 
