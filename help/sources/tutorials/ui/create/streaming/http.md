@@ -10,7 +10,7 @@ exl-id: 7932471c-a9ce-4dd3-8189-8bc760ced5d6
 
 # Create a streaming connection using the UI
 
-This UI guide will help you create a streaming connection using Adobe Experience Platform.
+This tutorial provides steps for creating a streaming source connection using the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
@@ -44,7 +44,7 @@ To use an existing account, select the HTTP API account you want to create a new
 If you are creating a new account, select **[!UICONTROL New account]**. On the input form that appears, provide an account name and an optional description. You will also get the option of providing the following configuration properties:
 
 - **[!UICONTROL Authentication]:** This property determines whether or not the streaming connection requires authentication. Authentication ensures that data is collected from trusted sources. If you're dealing with Personally Identifiable Information (PII), this property should be turned on. By default, this property is turned off.
-- **[!UICONTROL XDM compatible]:** This property denotes if this streaming connection will be sending events which are compatible with XDM schemas.
+- **[!UICONTROL XDM compatible]:** This property denotes if this streaming connection will be sending events which are compatible with XDM schemas. By default, this property is turned off.
 
 When finished, select **[!UICONTROL Connect to source]** and then select **[!UICONTROL Next]** to proceed.
 
