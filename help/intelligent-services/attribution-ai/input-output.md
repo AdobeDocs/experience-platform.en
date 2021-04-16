@@ -21,7 +21,7 @@ Attribution AI works by analyzing one of the following datasets to calculate alg
 >
 >The Adobe Analytics source connector can take up to four weeks to backfill data. If you recently set up a connector you should verify that the dataset has the minimum length of data required for Attribution AI. Please review the [historical data](#data-requirements) section to verify you have enough data to calculate accurate algorithmic scores.
 
-For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema, please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
+For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema, please refer to the [Intelligent Services data preparation](../data-preparation.md) guide. For more information on mapping Adobe Analytics data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) documentation.
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
