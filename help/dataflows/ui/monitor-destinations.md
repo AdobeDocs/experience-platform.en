@@ -41,6 +41,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 - **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
 - **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
+- **[!UICONTROL Profile records failed]**: something.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs.png)
 
@@ -50,4 +51,7 @@ The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to
 
 To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed and a list of any errors that occurred with details for error diagnostics.
 
-![](../assets/ui/monitor-destinations/dataflow.png)
+![](../assets/ui/monitor-destinations/dataflow-failed.png)
+
+![](../assets/ui/monitor-destinations/dataflow-skipped.png)
+
