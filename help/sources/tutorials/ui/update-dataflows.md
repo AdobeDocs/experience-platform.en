@@ -81,11 +81,11 @@ Next, enter the appropriate source field attribute and target XDM field values t
 
 ![new-mapping-added](../../images/tutorials/update-dataflows/new-mapping-added.png)
 
-The [!UICONTROL Scheduling] step appears, allowing you to update your dataflow's ingestion schedule and automatically ingest the selected source data with the update mappings.
+The [!UICONTROL Scheduling] step appears, allowing you to update your dataflow's ingestion schedule and automatically ingest the selected source data with the updated mappings.
 
 >[!NOTE]
 >
->You can't update mapping sets for dataflows that were schedule for one-time ingestion.
+>You can't update mapping sets for dataflows that were scheduled for one-time ingestion.
 
 ![scheduling](../../images/tutorials/update-dataflows/scheduling.png)
 
@@ -95,7 +95,7 @@ Once you have provided your updated values, select **[!UICONTROL Next]**.
 
 ![dataflow-detail](../../images/tutorials/update-dataflows/dataflow-detail.png)
 
-The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is updated.
+The **[!UICONTROL Review]** step appears, allowing you to review your dataflow before it is updated.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow with the new mapping sets to be created.
 
