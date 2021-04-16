@@ -2,14 +2,14 @@
 keywords: Experience Platform;home;popular topics;update dataflows;edit schedule
 description: This tutorial covers the steps for updating a dataflow schedule, including its ingestion frequency and interval rate, using the Sources workspace.
 solution: Experience Platform
-title: Update Source Connection Dataflow Schedule in the UI
+title: Update a Source Connection Dataflow in the UI
 topic: overview
 type: Tutorial
 exl-id: 0499a2a3-5a22-47b1-ac0e-76a432bd26c0
 ---
 # Update dataflows in the UI
 
-This tutorial covers the steps for updating a dataflow schedule, including its ingestion frequency and interval rate, using the [!UICONTROL Sources] workspace.
+This tutorial provides you with steps on how to update an existing sources dataflow, including information on editing a dataflow schedule and mapping, using the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
@@ -57,8 +57,48 @@ After a few moments, a confirmation box appears on the bottom of the screen to c
 
 ![schedule-confirm](../../images/tutorials/update-dataflows/schedule-confirm.png)
 
+## Edit mapping
+
+To edit the mapping sets associated with an existing dataflow, select the ellipses (`...`) beside a dataflow name and then select **[!UICONTROL Edit source]** from the dropdown menu.
+
+![edit-source](../../images/tutorials/update-dataflows/edit-source.png)
+
+The [!UICONTROL Add data] step appears, where you can review the contents of your selected data. Select **[!UICONTROL Next]** to proceed.
+
+![add-data](../../images/tutorials/update-dataflows/add-data.png)
+
+The [!UICONTROL Mapping] page provides you with an interface where you can add and remove mapping sets associated with your dataset.
+
+Select **[!UICONTROL Add new mapping]** to add a new mapping set.
+
+![add-new-mapping](../../images/tutorials/update-dataflows/add-new-mapping.png)
+
+Next, enter the appropriate source field attribute and target XDM field values to complete your additional mapping set. Select **[!UICONTROL Next]** to proceed.
+
+![new-mapping-added](../../images/tutorials/update-dataflows/new-mapping-added.png)
+
+The [!UICONTROL Scheduling] step appears, allowing you to update your dataflow's ingestion schedule and automatically ingest the selected source data with the update mappings.
+
+>[!NOTE]
+>
+>You can't update mapping sets for dataflows that were schedule for one-time ingestion.
+
+![scheduling](../../images/tutorials/update-dataflows/scheduling.png)
+
+In the [!UICONTROL Dataflow detail] page, you can provide an updated name and description for your dataflow as well as reconfigure your dataflow's error threshold.
+
+Once you have provided your updated values, select **[!UICONTROL Next]**.
+
+![dataflow-detail](../../images/tutorials/update-dataflows/dataflow-detail.png)
+
+The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is updated.
+
+Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow with the new mapping sets to be created.
+
+![review](../../images/tutorials/update-dataflows/review.png)
+
 ## Next steps
 
-By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to update the ingestion schedule of a dataflow.
+By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to update the ingestion schedule and mapping sets of your dataflow.
 
 For steps on how to perform these operations programmatically using the [!DNL Flow Service] API, please refer to the tutorial on [updating dataflows using the Flow Service API](../../tutorials/api/update-dataflows.md).
