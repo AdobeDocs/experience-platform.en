@@ -60,7 +60,7 @@ After filling out the basic information, click the dropdown labeled **Select Dat
 
 >[!TIP]
 >
->Adobe Analytics data is supported via the Analytics Source Connector.
+>Adobe Analytics datasets are supported via the Analytics Source Connector.
 
 ![setup page](./images/user-guide/dataset_selector.png)
 
