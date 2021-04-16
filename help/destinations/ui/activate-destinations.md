@@ -127,31 +127,27 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 
 ### Export full files {#export-full-files}
 
-Exporting a full file publishes a complete snapshot of all the profiles that qualify for that segment.
-
-Select **[!UICONTROL Export full files]** in the [!UICONTROL Scheduling] window.
+Select **[!UICONTROL Export full files]** to have your exported files contain a complete snapshot of all the profiles that qualify for that segment.
 
 ![Export full files](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports.
-2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file [!UICONTROL Daily] exports the file every day from the start date to the end date at the time you select.
+2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
     
       >[!IMPORTANT]
       >
-      >This option is currently in beta, and is only available to a select number of customers.
+      >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
   
 ### Export incremental files {#export-incremental-files}
 
-Exporting an incremental file publishes the delta of profiles that qualify for that segment since the last export.
+Select **[!UICONTROL Export incremental files]** to have your exported files contain only the profiles which qualified for that segment since the last export.
 
 >[!IMPORTANT]
 >
 >The first exported incremental file includes all profiles that qualify for a segment, functioning as a backfill.
-
-Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] window.
 
 ![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
 
@@ -160,13 +156,13 @@ Select **[!UICONTROL Export incremental files]** in the [!UICONTROL Scheduling] 
      
        >[!IMPORTANT]
        >
-       >This option is currently in beta, and is only available to a select number of customers.
+       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day.
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >This option is currently in beta, and is only available to a select number of customers.
+     >The option to select the time of day for the export is only available to a select number of customers. Non-beta customers can export incremental files once a day, at 12:00 PM UTC (7:00 AM EST).
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
@@ -235,20 +231,25 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 ![recommended attributes](../assets/ui/activate-destinations/mandatory-deduplication.png) 
 
-Additionally, you can mark different attributes as mandatory. Marking an attribute as mandatory makes it so the exported segment must contain that attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
+### Mandatory attributes {#mandatory-attributes}
+
+You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
+
+Not selecting a mandatory attribute exports all qualified profiles regardless of their attributes.
 
 It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
 
-
-You can also use attributes as **[!UICONTROL Deduplication keys]**. This option reduces the possibility of having multiple records of the same profile in one export file.
+### Deduplication keys {#deduplication-keys}
 
 >[!IMPORTANT]
 >
->Deduplication keys are currently in beta, and are only available to a select number of customers.
+>The option to use deduplication keys is currently in beta, and is only available to a select number of customers.
+
+You can mark attributes or namespaces as **[!UICONTROL Deduplication keys]**. This option reduces the possibility of having multiple records of the same profile in one export file.
 
 You can select one deduplication key from a single identity namespace, or a combination of up to two profile attributes from an [!DNL XDM] profile. You cannot use a combination of namespaces and profile attributes as deduplication keys. 
 
-Adobe recommends selecting an identity such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
+Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
    
 >[!NOTE] 
 > 
