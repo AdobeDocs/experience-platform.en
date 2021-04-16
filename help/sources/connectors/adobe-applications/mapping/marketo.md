@@ -251,6 +251,10 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Persons {#persons}
 
+>[!TIP]
+>
+>In the [!DNL Profiles] dashboard of the Platform UI, If the value of ID stitching in the merge policy you used to browse is set to `none`, then the linked identities window will only display the primary identity attribute, thereby preventing you from seeing all associated identities for a particular Profile. As a workaround, you can update the ID stitching field from `none` to `Private Graph` in order to see all linked identities to a Profile. Alternatively, you can either create a new merge policy, or use a different merge policy that contains an ID stitching value set to `Private Graph`. For more information, see the [merge policies UI guide](../../../../profile/ui/merge-policies.md).
+
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
