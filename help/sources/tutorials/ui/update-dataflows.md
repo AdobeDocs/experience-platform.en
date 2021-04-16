@@ -59,6 +59,10 @@ After a few moments, a confirmation box appears on the bottom of the screen to c
 
 ## Edit mapping
 
+>[!NOTE]
+>
+>The edit mapping feature is currently not supported for the following sources: Adobe Analytics, Adobe Audience Manager, HTTP API, and [!DNL Marketo Engage].
+
 To edit the mapping sets associated with an existing dataflow, select the ellipses (`...`) beside a dataflow name and then select **[!UICONTROL Edit source]** from the dropdown menu.
 
 ![edit-source](../../images/tutorials/update-dataflows/edit-source.png)
