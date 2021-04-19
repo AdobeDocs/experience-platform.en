@@ -24,9 +24,9 @@ While not required for this guide, it is recommended that you also follow the tu
 
 To create a new field group, you must first select a schema that the field group will be added to. You can choose to [create a new schema](./schemas.md#create) or [select an existing schema to edit](./schemas.md#edit).
 
-Once you have the schema open in the [!DNL Schema Editor], select **[!UICONTROL Add]** next to the [!UICONTROL Mixins] section in the left rail.
+Once you have the schema open in the [!DNL Schema Editor], select **[!UICONTROL Add]** next to the [!UICONTROL Field groups] section in the left rail.
 
-![](../../images/ui/resources/field-groups/add-field-group-button.png)
+![](../../images/ui/resources/field-groups/add-field-group.png)
 
 A dialog appears, showing a list of existing field groups for your organization. Near the top of the dialog, select **[!UICONTROL Create new field group]**. Here you can provide a **[!UICONTROL Display name]** and **[!UICONTROL Description]** for the field group. When finished, select **[!UICONTROL Add field group]**.
 
@@ -50,7 +50,7 @@ Once you have the schema open in the editor, you can start [adding fields to the
 
 To add fields to a field group in the [!DNL Schema Editor], start by selecting the field group's name in the left rail, then select the **plus (+)** icon next to the schema's name in the canvas.
 
-![](../../images/ui/resources/field-groups/add-field-button.png)
+![](../../images/ui/resources/field-groups/add-field.png)
 
 A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the field group.
 
