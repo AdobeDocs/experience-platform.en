@@ -50,6 +50,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | ------- | ----------- |
 | Support for editing mapping for existing dataflows | You can now update the mapping sets of an existing dataflow. You cannot update mapping sets for dataflows that were scheduled for a one-time ingestion. This feature is not supported for HTTP API, Adobe Analytics, Adobe Audience Manager, and [!DNL Marketo Engage]. For more information, see the tutorial on [updating sources dataflows in the UI](../../sources/tutorials/ui/update-dataflows.md). |
-| Data prep support for streaming ingestion  | You can now use mapper functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
+| Mapping support for streaming ingestion  | You can now use mapper functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
