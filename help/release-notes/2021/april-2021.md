@@ -13,6 +13,7 @@ author: ens72741
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Intelligent Services]](#intelligent-services)
+- [[!DNL Sources](#sources)]
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
@@ -40,3 +41,15 @@ Attribution AI is used to attribute credits to touchpoints leading to conversion
 
 For more information on supported datasets, please see the [[!DNL Intelligent Services] data preparation documentation](../../intelligent-services/data-preparation.md).
 
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+| Feature | Description |
+| ------- | ----------- |
+| Support for editing mapping for existing dataflows | You can now update the mapping sets of an existing dataflow. You cannot update mapping sets for dataflows that were scheduled for a one-time ingestion. This feature is not supported for HTTP API, Adobe Analytics, Adobe Audience Manager, and [!DNL Marketo Engage]. For more information, see the tutorial on [updating sources dataflows in the UI](../../sources/tutorials/ui/update-dataflows.md). |
+| Data prep support for streaming ingestion  | You can now use mapper functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
