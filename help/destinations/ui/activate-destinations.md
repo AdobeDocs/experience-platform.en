@@ -131,7 +131,7 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
 
 ![Export full files](../assets/ui/activate-destinations/export-full-files.png)
 
-1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports.
+1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports. Exporting a full file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
     
       >[!IMPORTANT]
@@ -151,7 +151,7 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 
 ![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
 
-1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports.
+1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports. Exporting an incremental file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 PM UTC (7:00 AM EST).
    * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
      
        >[!IMPORTANT]
@@ -282,12 +282,10 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
 
-For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` or `.txt` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
-`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv|txt`
+For email marketing destinations and cloud storage destinations, Adobe Experience Platform creates a tab-delimited `.csv` file in the storage location that you provided. Expect a new file to be created in your storage location every day. The default file format is:
+`<destinationName>_segment<segmentID>_<timestamp-yyyymmddhhmmss>.csv`
 
-Note that you can edit the file format. For more information, go to the [Configure](#configure) step for cloud storage destinations and email marketing destinations. 
-
-With the default file format, the files you would receive on three consecutive days could look like this:
+The files you would receive on three consecutive days could look like this:
 
 ```console
 Salesforce_Marketing_Cloud_segment12341e18-abcd-49c2-836d-123c88e76c39_20200408061804.csv
