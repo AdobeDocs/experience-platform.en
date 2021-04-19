@@ -41,6 +41,8 @@ A fully qualified identity includes an ID value and a namespace. A new custom na
 
 The [!DNL Marketo] namespace is used in the primary identity of the entity.
 
+The following table contains information on the underlying set up for [!DNL Marketo] namespaces.
+
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | Munchkin ID example |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -59,6 +61,8 @@ The [!DNL Marketo] namespace is used in the primary identity of the entity.
 
 If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce] namespace is used in the secondary identity of the entity.
 
+The following table contains information on the underlying set up for [!DNL Salesforce] namespaces.
+
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -72,7 +76,9 @@ If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce
 
 ### [!DNL Microsoft Dynamics] namespaces
 
-If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] namespace will be used as secondary identity of the entity.
+If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] namespace is used as secondary identity of the entity.
+
+The following table contains information on the underlying set up for [!DNL Dynamics] namespaces.
 
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
 | --- | --- | --- | --- | --- | --- |
