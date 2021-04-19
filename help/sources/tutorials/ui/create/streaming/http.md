@@ -66,7 +66,7 @@ With your data uploaded, you can use the right-side of the interface to preview 
 
 The [!UICONTROL Mapping] step appears, providing an interface to map the source data to a Platform dataset.
 
-Parquet files must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, does not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
+Parquet files must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, do not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new one.
 
@@ -94,7 +94,7 @@ A new source field and target field pairing appears. To add a new source field, 
 
 ![select-source-field](../../../../images/tutorials/create/http/select-source-field.png)
 
-The [!UICONTROL Select attributes] panel allows you to explore your file hierarchy and select a specific source field to map to a target XDM field. Once you have selected the source field you want to map, click **[!UICONTROL Select]** to proceed.
+The [!UICONTROL Select attributes] panel allows you to explore your file hierarchy and select a specific source field to map to a target XDM field. Once you have selected the source field you want to map, select **[!UICONTROL Select]** to proceed.
 
 ![select-attributes](../../../../images/tutorials/create/http/select-attributes.png)
 
@@ -102,7 +102,7 @@ With a source field selected, you can now identify the appropriate target XDM fi
 
 ![select-target-field](../../../../images/tutorials/create/http/select-target-field.png)
 
-The [!UICONTROL Map source field to target field] window appears, providing you with an interface to explore the schema of your target dataset. Select the target field that matches your source field, and then click **[!UICONTROL Select]** to proceed.
+The [!UICONTROL Map source field to target field] window appears, providing you with an interface to explore the schema of your target dataset. Select the target field that matches your source field, and then select **[!UICONTROL Select]** to proceed.
 
 ![map-to-target-field](../../../../images/tutorials/create/http/map-to-target-field.png)
 
