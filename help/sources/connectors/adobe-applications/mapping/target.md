@@ -81,3 +81,5 @@ The following table outlines the fields of an Experience Event schema (*XDM Expe
 | **`identityMap`** |
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
+
+{style="table-layout:auto"}
