@@ -58,6 +58,6 @@ For more information about selecting marketing actions in the create destination
 * [Advertising destinations - Google Display & Video 360 ](./catalog/advertising/google-dv360.md)
 * [Cloud storage destinations](./catalog/cloud-storage/workflow.md)
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
-* [Social network destinations](./catalog/social/workflow.md)
+* [Social destinations](./catalog/social/workflow.md)
 
 For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](./ui/activate-destinations.md#review).

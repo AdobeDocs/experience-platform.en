@@ -24,6 +24,6 @@ You can activate your data to different destination categories in Adobe Experien
 - [Email marketing destinations overview](./email-marketing/overview.md)
 - [Mobile engagement destinations overview](./mobile-engagement/overview.md)
 - [Personalization destinations overview](./personalization/overview.md)
-- [Social network destinations overview](./social/overview.md)
+- [Social destinations overview](./social/overview.md)
 - [Survey destinations overview](./survey/overview.md)
 - [Voice of the Customer destinations overview](./voice/overview.md)
