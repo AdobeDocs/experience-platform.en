@@ -54,7 +54,7 @@ The following table outlines the accepted values for specifying an Adobe product
 
 | Product | Value for use in the `include` attribute |
 | --- | --- |
-| Adobe Advertizing Cloud | `AdCloud` |
+| Adobe Advertising Cloud | `AdCloud` |
 | Adobe Analytics | `Analytics` |
 | Adobe Audience Manager | `AudienceManager` |
 | Adobe Campaign | `Campaign` |
