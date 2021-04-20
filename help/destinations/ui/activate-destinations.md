@@ -245,9 +245,131 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >
 >The option to use deduplication keys is currently in beta, and is only available to a select number of customers.
 
-You can mark attributes or namespaces as **[!UICONTROL Deduplication keys]**. This option reduces the possibility of having multiple records of the same profile in one export file.
+Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
-You can select one deduplication key from a single identity namespace, or a combination of up to two profile attributes from an [!DNL XDM] profile. You cannot use a combination of namespaces and profile attributes as deduplication keys. 
+There are three ways you can use deduplication keys in [!DNL Platform]:
+
+* Using a single identity namespace as a [!UICONTROL deduplication key]
+* Using a single profile attribute from an [!DNL XDM] profile as a [!UICONTROL deduplication key]
+* Using a combination of two profile attributes from an [!DNL XDM] profile as a composite key
+
+>[!IMPORTANT]
+>
+> When exporting an identity namespace, you must always set the namespace as a deduplication key, and avoid adding additional namespaces to the export. Sending multiple namespaces to a destination may lead to incomplete file exports.
+> 
+> You cannot use a combination of identity namespaces and profile attributes as deduplication keys.
+
+### Deduplication example {#deduplication-example}
+
+This example illustrates how deduplication works, depending on the selected deduplication keys.
+
+Let's consider the following two profiles.
+
+**Profile A**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-03-10 10:03:08"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "Doe",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+**Profile B**
+
+```json
+{
+  "identityMap": {
+    "Email": [
+      {
+        "id": "johndoe_1@example.com"
+      },
+      {
+        "id": "johndoe_2@example.com"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "fa5c4622-6847-4199-8dd4-8b7c7c7ed1d6": {
+        "status": "existing",
+        "lastQualificationTime": "2021-04-10 11:33:28"
+      }
+    }
+  },
+  "person": {
+    "name": {
+      "lastName": "D",
+      "firstName": "John"
+    }
+  },
+  "personalEmail": {
+    "address": "johndoe@example.com"
+  }
+}
+```
+
+### Deduplication use case 1: no deduplication
+
+Using no deduplication, the export file would contain the following entries.
+
+|personalEmail|firstName|lastName|
+|---|---|---|
+|johndoe@example.com|John|Doe|
+|johndoe@example.com|John|D|
+
+
+### Deduplication use case 2: deduplication based on identity namespace
+
+Assuming deduplication by the [!DNL Email] namespace, the export file would contain the following entries. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
+
+|Email*|personalEmail|firstName|lastName|
+|---|---|---|---|
+|johndoe_1@example.com|johndoe@example.com|John|D|
+|johndoe_2@example.com|johndoe@example.com|John|D|
+
+### Deduplication use case 3: deduplication based on a single profile attribute
+
+Assuming deduplication by the `personal Email` attribute, the export file would contain the following entry. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
+
+|personalEmail*|firstName|lastName|
+|---|---|---|
+|johndoe@example.com|John|D|
+
+
+### Deduplication use case 4: deduplication based on two profile attributes (composite deduplication key)
+
+Assuming deduplication by the composite key `personalEmail + lastName`, the export file would contain the following entries.
+
+|personalEmail*|lastName*|firstName|
+|---|---|---|
+|johndoe@example.com|D|John|
+|johndoe@example.com|Doe|John|
+
 
 Adobe recommends selecting an identity namespace such as a [!DNL CRM ID] or email address as a deduplication key, to ensure all profile records are uniquely identified.
    
