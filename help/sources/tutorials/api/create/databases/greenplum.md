@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
 title: Create a GreenPlum Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect GreenPlum to Adobe Experience Platform using the Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0

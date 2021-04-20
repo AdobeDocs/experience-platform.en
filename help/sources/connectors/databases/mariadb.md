@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;MariaDB;mariadb;Maria DB;maria db
 solution: Experience Platform
 title: MariaDB Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect MariaDB to Adobe Experience Platform using APIs or the user interface.
 ---
 

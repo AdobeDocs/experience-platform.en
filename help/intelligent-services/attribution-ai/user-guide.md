@@ -2,7 +2,7 @@
 keywords: Experience Platform;user guide;attribution ai;popular topics;region
 solution: Experience Platform, Intelligent Services
 title: Attribution AI UI Guide
-topic: User guide 
+topic-legacy: User guide 
 description: This document serves as a guide for interacting with Attribution AI in the Intelligent Services user interface.
 exl-id: 32e1dd07-31a8-41c4-88df-8893ff773f79
 ---

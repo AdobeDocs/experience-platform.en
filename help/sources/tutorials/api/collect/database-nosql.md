@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;database database;third party database
 solution: Experience Platform
 title: Collect Data From a Database Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a database and ingesting it into Platform using source connectors and APIs.
 exl-id: 1e1f9bbe-eb5e-40fb-a03c-52df957cb683

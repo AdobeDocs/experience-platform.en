@@ -2,7 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile details;details
 title: Profile Detail Customization in the UI
 description: This guide provides step-by-step instructions for customizing the way in which Real-time Customer Profile data is displayed within the Adobe Experience Platform UI. 
-topic: guide
+topic-legacy: guide
 exl-id: 76cf8420-cc50-4a56-9f6d-5bfc01efcdb3
 ---
 # [!DNL Real-time Customer Profile] detail customization {#profile-detail-customization}

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations FAQ
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
 exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 ---

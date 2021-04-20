@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;MySQL;mysql
 solution: Experience Platform
 title: Create a MySQL Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to MySQL using the Flow Service API.
 exl-id: 273da568-84ed-4a3d-bfea-0f5b33f1551a

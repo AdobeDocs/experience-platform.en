@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Mapping Fields for the Adobe Analytics Source Connector
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
 exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 ---
