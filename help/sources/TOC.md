@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide

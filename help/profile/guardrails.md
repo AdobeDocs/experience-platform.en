@@ -3,7 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guardrails for Real-time Customer Profile Data
 solution: Experience Platform
 product: experience platform
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines best practices and constraints to keep in mind when modeling Profile data.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c

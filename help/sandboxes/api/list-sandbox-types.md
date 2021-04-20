@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: List Supported Sandbox Types in the API
-topic: developer guide
+topic-legacy: developer guide
 description: You can retrieve a list of supported sandbox types for your organization by making a GET request to the /sandboxTypes endpoint.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 ---

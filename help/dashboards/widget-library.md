@@ -2,7 +2,7 @@
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
 title: Using the Widget Library to Add and Create Dashboard Widgets
 description: This guide provides step-by-step instructions for adding standard widgets and creating custom widgets for visualizing dashboard data in Adobe Experience Platform. 
-topic: guide
+topic-legacy: guide
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 ---
 # (Beta) Widget library {#widget-library}

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;payment
 solution: Experience Platform
 title: Explore a Payment System Using the Flow Service API
-topic: overview
+topic-legacy: overview
 description: This tutorial uses the Flow Service API to explore payment applications.
 exl-id: 7d0231de-46c0-49df-8a10-aeb42a2c8822
 ---
