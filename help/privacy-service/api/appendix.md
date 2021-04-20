@@ -52,14 +52,14 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 
 The following table outlines the accepted values for specifying an Adobe product in the `include` attribute of a job creation request.
 
-Product | Value for use in the `include` attribute
---- | ---
-Adobe Advertizing Cloud | "AdCloud"
-Adobe Analytics | "Analytics"
-Adobe Audience Manager | "AudienceManager"
-Adobe Campaign | "Campaign"
-Adobe Experience Platform | "aepDataLake"
-Adobe Primetime Authentication | "primetimeAuthentication"
-Adobe Target | "Target"
-Customer Record Service | "CRS"
-Real-time Customer Profile | "ProfileService"
+| Product | Value for use in the `include` attribute |
+| --- | --- |
+| Adobe Advertizing Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| Customer Record Service | `CRS` |
+| Real-time Customer Profile | `ProfileService` |
