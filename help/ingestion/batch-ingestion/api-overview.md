@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Batch Ingestion API Guide
-topic: developer guide
+topic-legacy: developer guide
 description: This document provides a comprehensive overview of using batch ingestion APIs.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;dataset connection flow service;flow service;Flow service connection
 solution: Experience Platform
 title: Create an Adobe Experience Platform Dataset Base Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to use the Flow Service API to create a dataset base connection to Adobe Experience Platform.
 exl-id: 5e829f4a-954b-4011-a003-c42c7a0d5617

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Create a Phoenix Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect a Phoenix database to Adobe Experience Platform using the Flow Service API.
 exl-id: b69d9593-06fe-4fff-88a9-7860e4e45eb7

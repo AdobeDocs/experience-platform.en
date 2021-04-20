@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql
 solution: Experience Platform
 title: PostgreSQL Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect PostgreSQL to Adobe Experience Platform using APIs or the user interface.
 exl-id: 27b891c5-5fc5-4539-8f98-e3a53e2eefe3
 ---

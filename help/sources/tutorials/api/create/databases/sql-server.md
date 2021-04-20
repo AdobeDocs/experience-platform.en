@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;sql server;SQL server
 solution: Experience Platform
 title: Create a SQL Server Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Microsoft SQL Server using the Flow Service API.
 exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd

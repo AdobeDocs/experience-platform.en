@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Privacy/Personalization/Marketing Preferences (Consents) Mixin
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Privacy/Personalization/Marketing Preferences (Consents) mixin.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 ---
