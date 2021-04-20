@@ -34,11 +34,11 @@ The third party ID section is the only section that is always on. It has two ava
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
-### [!UICONTROL ID Sync Enabled]
+### [!UICONTROL Third Party ID Sync Enabled]
 
 Controls whether or not the SDK performs identity syncs with 3rd-party partners.
 
-### [!UICONTROL ID Sync Container ID]
+### [!UICONTROL Third Party ID Sync Container ID]
 
 ID syncs can be grouped into containers to allow different ID syncs to be run at different times. This controls which container of ID syncs is run for a given configuration ID.
 
