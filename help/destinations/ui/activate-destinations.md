@@ -255,7 +255,7 @@ The presence of these files in your storage location is confirmation of successf
 
 Check your account in the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.
 
-## Social network destinations
+## Social destinations
 
 For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 
