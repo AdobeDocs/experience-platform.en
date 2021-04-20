@@ -1,15 +1,15 @@
 ---
-keywords: Facebook;facebook;Social network;Social Network;social network authentication;Social network authentication
-title: Create a social network destination
+keywords: Facebook;facebook;Social network;Social Network;social authentication;Social network authentication
+title: Create a social destination
 type: Tutorial
-description: Learn how to connect to your social network ad accounts in Adobe Experience Platform.
+description: Learn how to connect to your social ad accounts in Adobe Experience Platform.
 exl-id: a0cdf2b7-b1e8-4a8e-9d5b-58a118e7b689
 ---
-# Create a social network destination {#social-network-destinations-workflow}
+# Create a social destination {#social-network-destinations-workflow}
 
 ## Overview {#overview}
 
-This tutorial uses [!DNL Facebook] as an example, but the Adobe Experience Platform workflow is the same for all social network destinations. 
+This tutorial uses [!DNL Facebook] as an example, but the Adobe Experience Platform workflow is the same for all social destinations. 
 
 ## Configure social destination - video walkthrough {#video}
 
@@ -19,9 +19,9 @@ The video below demonstrates how to configure a social destination and activate 
 
 ## Select social destination {#select-destination}
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social network destination, then select **[!UICONTROL Configure]**.
+In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Social]** category. Select your preferred social destination, then select **[!UICONTROL Configure]**.
 
-![Connect to social network destination](../../assets/catalog/social/workflow/catalog.png)
+![Connect to social destination](../../assets/catalog/social/workflow/catalog.png)
 
 >[!NOTE]
 >
@@ -29,13 +29,13 @@ In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!U
 
 ## Account step {#account}
 
-In the **Account** step, if you had previously set up a connection to your social network destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your social network destination. Select **[!UICONTROL Connect to destination]** and this will take you to the selected social network destination to log in and connect Adobe Experience Cloud to your social network Ad account.
+In the **Account** step, if you had previously set up a connection to your social destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to your social destination. Select **[!UICONTROL Connect to destination]** and this will take you to the selected social destination to log in and connect Adobe Experience Cloud to your social Ad account.
 
 >[!NOTE]
 >
->Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social network account ID. This ensures that you don't complete the workflow with incorrect credentials.
+>Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your social account ID. This ensures that you don't complete the workflow with incorrect credentials.
 
-![Connect to social network destination - authentication step](../../assets/catalog/social/workflow/pre-connect.png)
+![Connect to social destination - authentication step](../../assets/catalog/social/workflow/pre-connect.png)
 
 Once your credentials are confirmed and Adobe Experience Cloud is connected to your social network, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Authentication]** step.
 
@@ -50,7 +50,7 @@ In the **[!UICONTROL Authentication]** step, enter a [!UICONTROL Name] and a [!U
 > * For [!DNL Facebook] destinations, **[!UICONTROL Account ID]** is your [!DNL Facebook Ad Account ID]. You can find this ID in the [!DNL Facebook Ads Manager]. Prefix the ID with `act_` as shown in the image below. 
 > * For [!DNL LinkedIn] destinations, **[!UICONTROL Account ID]** is your [!DNL LinkedIn Campaign Manager Account ID]. You can find this ID in the [!DNL LinkedIn Campaign Manager].
 
-![Connect to social network destination - authentication step](../../assets/catalog/social/workflow/authentication.png)
+![Connect to social destination - authentication step](../../assets/catalog/social/workflow/authentication.png)
 
 In this step, you can also select any **[!UICONTROL Marketing action]** that should apply to this destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
  
