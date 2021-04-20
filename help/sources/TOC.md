@@ -20,6 +20,11 @@ feature: Data Ingestion, Sources
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
+      - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+    - Marketo Engage {#marketo}
+      - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
+      - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
+      - [Marketo Engage namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
@@ -152,6 +157,7 @@ feature: Data Ingestion, Sources
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
+      - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#create}
       - [Google AdWords](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
