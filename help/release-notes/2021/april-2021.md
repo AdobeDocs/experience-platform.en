@@ -32,6 +32,8 @@ For more information on supported datasets, please see the [[!DNL Intelligent Se
 
 ### Attribution AI
 
+Attribution AI is used to attribute credits to touchpoints leading to conversion events. This can be used by marketers to help quantify the marketing impact of each individual marketing touchpoint across customer journeys.
+
 | Feature | Description |
 | ------- | ----------- |
 | Support for Adobe Analytics data | Updated functionality to support Adobe Analytics datasets via the Analytics source connector without the need to ETL your data to conform to the Consumer Experience Event (CEE) schema. |
