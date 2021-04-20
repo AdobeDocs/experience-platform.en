@@ -10,7 +10,7 @@ description: The tables below contains the mappings between the fields in the Ma
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo] source is currently in beta. Its features and the documentation are subject to change.
+>The [!DNL Marketo Engage] source is currently in beta. Its features and the documentation are subject to change.
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 
@@ -106,7 +106,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Program Memberships {#program-memberships}
+## Program memberships {#program-memberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -154,7 +154,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Static Lists {#static-lists}
+## Static lists {#static-lists}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -166,7 +166,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Static List Memberships {#static-list-memnberships}
+## Static list memberships {#static-list-memnberships}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -177,7 +177,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Named Accounts {#named-accounts}
+## Named accounts {#named-accounts}
 
 >[!IMPORTANT]
 >
@@ -234,7 +234,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 {style="table-layout:auto"}
 
-## Opportunity Contact Roles {#opportunity-contact-roles}
+## Opportunity contact roles {#opportunity-contact-roles}
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
@@ -253,7 +253,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 In the [!DNL Profiles] dashboard of the Platform UI, if the value of ID stitching in the merge policy you used to browse is set to `None`, then the linked identities window will only display the primary identity attribute.
 
-As a workaround, you can update the ID stitching field from `None` to `Private graph` in order to see all linked identities to a [!DNL Profile]. Alternatively, you can either create a new merge policy, or use a different merge policy that contains an ID stitching value set to `Private graph`. If you choose to create a new merge policy or use a different merge policy, you must ensure that the police contains the same schema type that is used for the [!DNL Marketo] Persons mapping set. For more information, see the [merge policies UI guide](../../../../profile/ui/merge-policies.md).
+As a workaround, you can update the ID stitching field from `None` to `Private graph` in order to see all linked identities to a [!DNL Profile]. Alternatively, you can either create a new merge policy, or use a different merge policy that contains an ID stitching value set to `Private graph`. If you choose to create a new merge policy or use a different merge policy, you must ensure that the policy contains the same schema type that is used for the [!DNL Marketo] Persons mapping set. For more information, see the [merge policies UI guide](../../../../profile/ui/merge-policies.md).
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |

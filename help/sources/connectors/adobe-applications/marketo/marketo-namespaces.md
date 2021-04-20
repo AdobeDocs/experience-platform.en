@@ -12,7 +12,7 @@ description: This document provides an overview of custom namespaces required wh
 >
 >The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change.
 
-This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo]. This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
+This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ With a Platform developer console and a [!DNL Postman] set up, apply the followi
 | `SANDBOX_NAME` | `prod` |
 | `TENANT_ID` | `b2bcdpproductiontest` |
 | `munchkinId` | `123-ABC-456 `| See the tutorial on [authenticating your [!DNL Marketo] instance](./marketo-auth.md) for more information. |
-| `sfdc_org_id` | 00D4W000000FgYJUA0 | See the following [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) for more information on acquiring your organization ID. |
+| `sfdc_org_id` | `00D4W000000FgYJUA0` | See the following [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) for more information on acquiring your organization ID. |
 | `msd_org_id` | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` | See the following [[!DNL Microsoft Dynamics] guide](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) for more information on acquiring your organization ID. |
 | `has_abm` | `false` | This value is set to `true` if you are subscribed to Account-Based Marketing. |
 | `has_msi` | `false` | This value is set to `true` if you are subscribed to [!DNL Marketo Sales Insight]. |
