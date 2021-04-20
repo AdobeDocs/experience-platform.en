@@ -73,7 +73,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ## Connect to destination {#connect-destination}
 
-To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social network destinations authentication workflow](./workflow.md). 
+To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social destinations authentication workflow](./workflow.md). 
 
 The video below also demonstrates the steps to configure a [!DNL LinkedIn Matched Audiences] destination and activate segments.
 
