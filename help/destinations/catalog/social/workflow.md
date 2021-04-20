@@ -56,8 +56,8 @@ In this step, you can also select any **[!UICONTROL Marketing action]** that sho
  
 Select **[!UICONTROL Create Destination]** after you filled in the fields above.
 
-Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social networks](#activate-segments), for the rest of the workflow.
+Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to social destinations](#activate-segments), for the rest of the workflow.
 
-## Activate segments to social networks {#activate-segments}
+## Activate segments to social destinations {#activate-segments}
 
-For instructions on how to activate segments to social networks, see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to social destinations, see [Activate Data to Destinations](../../ui/activate-destinations.md).
