@@ -102,7 +102,7 @@ The following tables list all supported mapping functions, including sample expr
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the [date function guide](./dates.md).
+>Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the dates section of the [data format handling guide](./data-handling.md#dates).
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |
