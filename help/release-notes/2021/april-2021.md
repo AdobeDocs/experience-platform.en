@@ -14,7 +14,7 @@ Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
 - [[!DNL Intelligent Services]](#intelligent-services)
-- [[!DNL Sources](#sources)
+- [[!DNL Sources]](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
 
@@ -25,7 +25,7 @@ Updates to existing features in Adobe Experience Platform:
 | Feature | Description |
 | ------- | ----------- |
 | Support for editing mapping for existing dataflows | You can now update the mapping sets of an existing dataflow. You cannot update mapping sets for dataflows that were scheduled for a one-time ingestion. This feature is not supported for HTTP API, Adobe Analytics, Adobe Audience Manager, and [!DNL Marketo Engage]. For more information, see the tutorial on [updating sources dataflows in the UI](../../sources/tutorials/ui/update-dataflows.md). |
-| Support for streaming ingestion  | You can now use data prep functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
+| Support for streaming ingestion | You can now use data prep functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
 
 For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
@@ -63,6 +63,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | You can now create a [!DNL Marketo Engage] source connection using the UI to bring B2B data to Platform and keep this data up-to-date using Platform-connected applications. For more information, see the Marketo documentation. |
+| [!DNL Marketo Engage] (Beta) | You can now create a [!DNL Marketo Engage] source connection using the UI to bring B2B data to Platform and keep this data up-to-date using Platform-connected applications. For more information, see the the documentation on the [!DNL Marketo Engage] source connector. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
