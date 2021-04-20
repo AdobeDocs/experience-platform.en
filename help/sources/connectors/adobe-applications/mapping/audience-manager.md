@@ -31,6 +31,8 @@ Type: Realtime data
 | `request_user_agent` | `ExperienceEvent.environment.browserDetails` <ul><li>h_user-agent → userAgent</li><li>h_accept-language → acceptLanguage</li></ul> |
 | `client_ip` | `ExperienceEvent.environment` <ul><li>d_os_name → os name </li><li>d_os_version → os_version</li></ul> |
 
+{style="table-layout:auto"}
+
 ## Profile data
 
 Type: Profile XDM
@@ -40,3 +42,5 @@ Type: Profile XDM
 | `ids` | `identityMap` |
 | `smem` | `ExperienceEvent.segmentMemberships["AAMSegments"]` |
 | `tmem` | `ExperienceEvent.segmentMemberships["AAMTraits"]` |
+
+{style="table-layout:auto"}
