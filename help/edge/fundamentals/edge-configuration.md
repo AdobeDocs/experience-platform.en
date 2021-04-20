@@ -28,9 +28,9 @@ The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies th
 
 Below you will find the available settings for each configuration environment. Most sections can be enabled or disabled. When disabled, your settings are saved but are not active.
 
-## [!UICONTROL Identity] Settings
+## [!UICONTROL Third Party ID] Settings
 
-The identity section is the only section that is always on. It has two available settings: "[!UICONTROL ID Syncs Enabled]" and "[!UICONTROL ID Sync Container ID]".
+The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
 
 ![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
 
