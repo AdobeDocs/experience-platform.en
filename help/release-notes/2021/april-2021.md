@@ -63,6 +63,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL Marketo Engage] (Beta) | You can now create a [!DNL Marketo Engage] source connection using the UI to bring B2B data to Platform and keep this data up-to-date using Platform-connected applications. For more information, see the the documentation on the [!DNL Marketo Engage] source connector. |
+| [!DNL Marketo Engage] (Beta) | You can now create a [!DNL Marketo Engage] source connection using the UI to bring B2B data to Platform and keep this data up-to-date using Platform-connected applications. For more information, see the [[!DNL Marketo Engage] source connector documentation](../../sources/connectors/adobe-applications/marketo/marketo.md). |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
