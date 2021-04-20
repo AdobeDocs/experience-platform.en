@@ -143,7 +143,7 @@ Enable the **[!UICONTROL Error diagnostics]** toggle to allow for detailed error
 
 The [!DNL Marketo] connector uses batch ingestion to ingest all historical records and uses streaming ingestion for real-time updates. This allows the connector to continue streaming while ingesting any erroneous records. Enable the **[!UICONTROL Partial ingestion]** toggle and then set the [!UICONTROL Error threshold %] to maximum to prevent the dataflow from failing.
 
-**[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. For more information, see the [partial batch ingestion overview](../../../../ingestion/batch-ingestion/partial.md).
+**[!UICONTROL Partial ingestion]** provides the ability to ingest data containing errors up to a certain threshold. For more information, see the [partial batch ingestion overview](../../../../../ingestion/batch-ingestion/partial.md).
 
 Once you have provided your dataflow details and set your error threshold to max, select **[!UICONTROL Next]**.
 
