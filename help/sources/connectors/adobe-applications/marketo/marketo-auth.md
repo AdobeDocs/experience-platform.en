@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Marketo Engage;marketo engage;marketo
 solution: Experience Platform
 title: Authenticate your Marketo source connector
-topic: overview
+topic-legacy: overview
 description: This document provides information on how to generate your Marketo authentication credentials.
 ---
 

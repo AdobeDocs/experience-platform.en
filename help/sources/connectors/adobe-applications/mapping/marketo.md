@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Marketo Engage;marketo engage;Marketo;mapping
 solution: Experience Platform
 title: Mapping Fields for the Marketo Engage Source
-topic: overview
+topic-legacy: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 ---
 
