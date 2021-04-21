@@ -2,8 +2,8 @@
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes for April 21, 2021.
 doc-type: release notes
-last-update: March 31, 2021
-author: ens70167
+last-update: April 21, 2021
+author: ens72741
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 
@@ -14,6 +14,7 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 Updates to existing features in Adobe Experience Platform:
 
 - [[!DNL Data Prep]](#data-prep)
+- [[!DNL Experience Data Model (XDM)]](#xdm)
 - [[!DNL Intelligent Services]](#intelligent-services)
 - [[!DNL Segmentation Service]](#segmentation)
 - [[!DNL Sources]](#sources)
@@ -30,6 +31,14 @@ Updates to existing features in Adobe Experience Platform:
 | Support for streaming ingestion | You can now use data prep functions when creating a streaming source connection. For more information, see the tutorial on [creating a streaming source connection in the UI](../../sources/tutorials/ui/create/streaming/http.md). |
 
 For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+
+## [!DNL Experience Data Model (XDM)] {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for any application to communicate with services on Adobe Experience Platform. By adhering to XDM standards, all customer experience data can be incorporated into a common representation to deliver insights in a faster, more integrated way. You can gain valuable insights from customer actions, define customer audiences through segments, and use customer attributes for personalization purposes.
+
+| Feature | Description |
+| --- | --- |
+| Schema recommendations by industry | When selecting classes and mixins in the Schema Editor UI, you can use a new filter to view recommended standard components based on your specific industry. See the documentation on [industry data models](https://www.adobe.com/go/xdm-industry-erds-en) for more information on how these components relate to each other for different industry use cases. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
