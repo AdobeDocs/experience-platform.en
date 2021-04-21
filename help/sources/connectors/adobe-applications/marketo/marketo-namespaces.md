@@ -43,6 +43,10 @@ The [!DNL Marketo] namespace is used in the primary identity of the entity.
 
 The following table contains information on the underlying set up for [!DNL Marketo] namespaces.
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | Munchkin ID example |
 | --- | --- | --- | --- | --- | --- |
 | `marketo_person_{MUNCHKIN_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
@@ -63,6 +67,10 @@ If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce
 
 The following table contains information on the underlying set up for [!DNL Salesforce] namespaces.
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
 | --- | --- | --- | --- | --- | --- |
 | `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Salesforce] | `person` | `00DA0000000Hz79` |
@@ -80,6 +88,10 @@ If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] na
 
 The following table contains information on the underlying set up for [!DNL Dynamics] namespaces.
 
+>[!NOTE]
+>
+>Please scroll left/right to view the full contents of the table.
+
 | Display name | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
 | --- | --- | --- | --- | --- | --- |
 | `microsoft_person_{DYNAMICS_ID}` | auto-generated | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
@@ -88,6 +100,8 @@ The following table contains information on the underlying set up for [!DNL Dyna
 | `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
 | `microsoft_campaign_member_{DYNAMICS_ID}` | auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
+
+{style="table-layout:auto"}
 
 ## [!DNL Marketo] schemas
 
