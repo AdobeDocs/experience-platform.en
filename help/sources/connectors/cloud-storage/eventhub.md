@@ -6,11 +6,8 @@ topic-legacy: overview
 description: Learn how to connect Azure Event Hubs to Adobe Experience Platform using APIs or the user interface.
 exl-id: b4d4bc7f-2241-482d-a5c2-4422c31705bf
 ---
-# (Beta) Azure Event Hubs connector
 
->[!NOTE]
->
->The Azure Event Hubs connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Azure Event Hubs] connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
