@@ -9,10 +9,6 @@ exl-id: aba4e317-1c59-4999-a525-dba15f8d4df9
 ---
 # Create a [!DNL Microsoft SQL Server] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Microsoft SQL Server] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Microsoft SQL Server] (hereinafter referred to as "[!DNL SQL Server]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
