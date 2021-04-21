@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
 solution: Experience Platform
 title: Manage Data Usage Labels Using APIs 
-topic: developer guide
+topic-legacy: developer guide
 description: The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 ---
 

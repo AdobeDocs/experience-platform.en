@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;cloud storage;Cloud storage
 solution: Experience Platform
 title: Explore a cLoud Storage System Using the Flow Service API
-topic: overview
+topic-legacy: overview
 description: This tutorial uses the Flow Service API to explore a third-party cloud storage system.
 exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 ---

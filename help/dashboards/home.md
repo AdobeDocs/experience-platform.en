@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Introduction to Experience Platform Dashboards
-topic: overview
+topic-legacy: overview
 type: Documentation
 description: Explore multiple dashboards in Adobe Experience Platform to view important information about your organization's data, as captured during daily snapshots.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
