@@ -6,11 +6,7 @@ topic-legacy: overview
 description: Learn how to connect Oracle to Adobe Experience Platform using APIs or the user interface.
 exl-id: be422cf8-fb24-48c7-8369-34f0f2ec95fc
 ---
-# (Beta) [!DNL Oracle] connector
-
->[!NOTE]
->
->The [!DNL Oracle] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL Oracle] connector
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 

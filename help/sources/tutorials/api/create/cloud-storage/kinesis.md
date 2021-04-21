@@ -9,10 +9,6 @@ exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
->[!NOTE]
->
->The [!DNL Amazon Kineses] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to an [!DNL Amazon Kinesis] account.
