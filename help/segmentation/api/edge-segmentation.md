@@ -2,15 +2,15 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;edge segmentation;Edge segmentation;streaming edge;
 solution: Experience Platform
 title: Edge Segmentation using the API 
-topic: developer guide
+topic-legacy: developer guide
 description: This document contains examples on how to use edge segmentation with the Adobe Experience Platform Segmentation Service API.
 exl-id: effce253-3d9b-43ab-b330-943fb196180f
 ---
-# Edge segmentation 
+# Edge segmentation (beta)
 
 >[!NOTE]
 >
->The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md).
+>The following document states how to perform edge segmentation using the API. For information performing edge segmentation using the UI, please read the [edge segmentation UI guide](../ui/edge-segmentation.md). Additionally, edge segmentation is currently in beta. The documentation and the functionality are subject to change.
 
 Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
 

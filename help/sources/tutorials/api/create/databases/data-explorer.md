@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Azure Data Explorer;data explorer;Data Explorer
 solution: Experience Platform
 title: Create an Azure Data Explorer Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure Data Explorer to Adobe Experience Platform using the Flow Service API.
 exl-id: 1b17bbb0-1f7b-4d89-a158-ad269e6edf30

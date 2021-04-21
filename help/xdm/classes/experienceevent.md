@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: XDM ExperienceEvent Class
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the XDM ExperienceEvent class.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---

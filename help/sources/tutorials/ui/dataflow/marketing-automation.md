@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configure a Dataflow for a Marketing Automation Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your marketing automation account.
 exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed

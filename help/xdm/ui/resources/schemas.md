@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
 exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
 # Create and edit schemas in the UI
@@ -62,7 +62,15 @@ A dialog appears, showing a list of mixins that you can select for the schema. S
 
 ![](../../images/ui/resources/schemas/mixin-popularity.png)
 
-You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
+If you know the general activity or business area of the mixin fields you want to add, select one or more of the industry vertical categories in the left rail to filter the displayed list of mixins.
+
+![](../../images/ui/resources/schemas/industry-filter.png)
+
+>[!NOTE]
+>
+>For more information on best practices for industry-specific data modeling in XDM, see the documentation on [industry data models](../../schema/industries/overview.md).
+
+You can also use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
 
 ![](../../images/ui/resources/schemas/mixin-search.png)
 

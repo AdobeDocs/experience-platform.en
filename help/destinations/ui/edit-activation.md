@@ -1,5 +1,5 @@
 ---
-keywords: edit activation; edit destination;
+keywords: edit activation, edit destination, edit destination
 title: Edit activation flows
 type: Tutorial
 seo-title: Edit activation flows
