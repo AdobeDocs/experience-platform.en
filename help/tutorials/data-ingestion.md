@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Ingestion tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Data Ingestion includes batch ingestion, streaming ingestion, and ingestion using source connectors.
 exl-id: 51627acf-e90b-4911-aa54-4a59f3b6a8f9

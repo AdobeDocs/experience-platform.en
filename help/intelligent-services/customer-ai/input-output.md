@@ -2,7 +2,7 @@
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Input and Output in Customer AI
-topic: Getting started
+topic-legacy: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 ---

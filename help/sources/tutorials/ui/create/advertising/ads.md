@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Google AdWords;Google AdWords source connector;google adwords connector
 solution: Experience Platform
 title: Create a Google AdWords  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google AdWords source connection using the Adobe Experience Platform UI.
 exl-id: 33dd2857-aed3-4e35-bc48-1c756a8b3638

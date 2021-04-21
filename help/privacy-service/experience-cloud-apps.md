@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service and Experience Cloud Applications
-topic: overview
+topic-legacy: overview
 description: This document provides a reference for how to configure different Experience Cloud applications for privacy-related operations.
 exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 ---
