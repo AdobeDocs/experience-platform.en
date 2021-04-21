@@ -110,7 +110,7 @@ The aggregation is now added. You can now select the aggregation function, choos
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
-### Count functions
+### Count functions {#count-functions}
 
 Count functions in Segment Builder are used to look for specified events and count the number of times they're done. The supported count functions in Segment Builder are "At least", "At most", "Exactly", "Between", and "All".
 
