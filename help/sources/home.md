@@ -109,6 +109,13 @@ Experience Platform provides support for ingesting data from a third-party payme
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
 
+### Streaming
+
+Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
+
 ### Protocols
 
 Experience Platform provides support for ingesting data from a third-party protocols system. See the following related documents for more information on specific source connectors:
