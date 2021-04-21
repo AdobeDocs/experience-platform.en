@@ -72,6 +72,8 @@ feature: Data Ingestion, Sources
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+  - Streaming {#streaming}
+    - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
   - Create a source connection {#create}
     - Advertising {#advertising}
