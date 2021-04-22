@@ -33,19 +33,19 @@ This tutorial will go over creating the Retail Sales recipe in a Jupyter Noteboo
 
 This recipe uses [XDM schemas](../../xdm/schema/field-dictionary.md) to model the data. The schema used for this recipe is shown below:
 
-Field Name | Type
---- | ---
-date | String
-store | Integer
-storeType | String
-weeklySales | Number
-storeSize | Integer
-temperature | Number
-regionalFuelPrice | Number
-markdown | Number
-cpi | Number
-unemployment | Number
-isHoliday | Boolean
+| Field Name | Type |
+| --- | --- |
+| date | String | 
+| store | Integer |
+| storeType | String |
+| weeklySales | Number |
+| storeSize | Integer |
+| temperature | Number |
+| regionalFuelPrice | Number |
+| markdown | Number |
+| cpi | Number |
+| unemployment | Number |
+| isHoliday | Boolean |
 
 
 ## Algorithm
