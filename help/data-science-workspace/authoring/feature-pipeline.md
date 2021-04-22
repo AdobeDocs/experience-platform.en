@@ -157,7 +157,6 @@ A DatasetTransformer provides the logic for transforming an input DataFrame and 
 
 The following example extends the DatasetTransformer class:
 
-
 **PySpark example**
 
 ```python
@@ -210,7 +209,6 @@ class MyDatasetTransformer(DatasetTransformer):
 
         # return transformed dataframe
         return pd
-
 ```
 
 ### Engineer data features with FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}
