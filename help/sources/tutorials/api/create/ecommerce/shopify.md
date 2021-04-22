@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Shopify;shopify;ecommerce
 solution: Experience Platform
 title: Create a Shopify connector Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Shopify to Adobe Experience Platform using the Flow Service API.
 exl-id: 36086c7f-813e-4fc5-9778-f9d55aba03b2

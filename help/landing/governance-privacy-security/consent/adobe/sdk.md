@@ -1,6 +1,6 @@
 ---
 title: Process Customer Consent Data Using the Adobe Experience Platform Web SDK
-topic: getting started
+topic-legacy: getting started
 description: Learn how to integrate the Adobe Experience Platform Web SDK to process customer consent data in Adobe Experience Platform using the Adobe 2.0 standard.
 exl-id: 3a53d908-fc61-452b-bec3-af519dfefa41
 ---

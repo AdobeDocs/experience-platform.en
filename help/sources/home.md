@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
 title: Source Connectors Overview
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
@@ -29,6 +29,8 @@ Experience Platform allows data to be ingested from other Adobe applications, in
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] connector overview](connectors/adobe-applications/marketo/marketo.md)
+- [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising
 
@@ -82,6 +84,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connector](connectors/databases/mysql.md)
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
@@ -105,6 +108,13 @@ Experience Platform provides support for ingesting data from a third-party marke
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
+
+### Streaming
+
+Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocols
 
