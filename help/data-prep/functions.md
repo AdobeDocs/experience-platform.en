@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;mapping fields;mapping functions;
 solution: Experience Platform
 title: Data Prep Mapping Functions
-topic: overview
+topic-legacy: overview
 description: This document introduces the mapping functions used with Data Prep.
 exl-id: e95d9329-9dac-4b54-b804-ab5744ea6289
 ---
@@ -102,7 +102,7 @@ The following tables list all supported mapping functions, including sample expr
 
 >[!NOTE]
 >
->Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the [date function guide](./dates.md).
+>Please scroll left/right to view the full contents of the table. More information about the `date` function can be found in the dates section of the [data format handling guide](./data-handling.md#dates).
 
 | Function | Description | Parameters | Syntax | Expression | Sample output |
 | -------- | ----------- | ---------- | -------| ---------- | ------------- |

@@ -2,10 +2,11 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 solution: Experience Platform
 title: Data Prep Overview
-topic: overview
+topic-legacy: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
 exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
+
 # Data Prep overview
 
 Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM). Data Prep appears as a "Map" step in the Data Ingestion processes, including CSV Ingestion workflow. Data engineers can use Data Prep to perform the following data manipulation during ingestion:
@@ -28,6 +29,10 @@ To learn more about the different mapping functions, please read the [mapping fu
 
 A set of mappings that transform one schema to another are collectively known as a mapping set. A single mapping set is created as part of each data flow. A mapping set is an integral part of the data flows and is created, edited, and monitored as part of the data flows.
 
+## Data format handling
+
+Data Prep can robustly handle different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data format handling overview](./data-handling.md).
+
 ## Next steps
 
-This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./dates.md). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).
+This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about how Data Prep handles different data types, please read the [data format handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).

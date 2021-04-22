@@ -1,10 +1,10 @@
 ---
 solution: Experience Platform
 title: Industry Data Models Overview
-topic: overview
+topic-legacy: overview
 description: Learn about the standardized data models for various industry verticals that can be constructed using standard Experience Data Model (XDM) components.
+exl-id: 8fa9a610-36b5-470f-ad63-f2a4a060e0f1
 ---
-
 # Industry data models overview
 
 Experience Data Model (XDM) allows you to create highly customizable schemas to capture key customer experience data related to your business. To help streamline the process of modeling your data to conform to XDM, Adobe Experience Platform provides a versatile suite of standard XDM components, which capture concepts that are commonly used across several industries.
@@ -45,7 +45,6 @@ ERDs are provided for the following industry verticals:
 * [[!UICONTROL Retail]](./retail.md)
 * [[!UICONTROL Financial services]](./financial.md)
 * [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
-* [[!UICONTROL Telecommunications]](./telecom.md)
 
 ## Next steps
 

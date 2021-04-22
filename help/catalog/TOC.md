@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Catalog and Datasets Guide
 user-guide-description: Explore data lineage, metadata, file descriptions, directories, and datasets within the Data Lake.

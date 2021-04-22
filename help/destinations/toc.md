@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
@@ -111,9 +110,9 @@ feature: Destinations
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
-    * Social network destinations{#social}
-        * [Social network destinations overview](./catalog/social/overview.md)
-        * [Create a social network destination](./catalog/social/workflow.md)
+    * Social destinations{#social}
+        * [Social destinations overview](./catalog/social/overview.md)
+        * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [Linkedin Matched Audiences connection](./catalog/social/linkedin.md)
