@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Authenticate;access
 solution: Experience Platform
 title: Authenticate and Access Experience Platform APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs. 
+description: This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to Experience Platform APIs.
+exl-id: dfe8a7be-1b86-4d78-a27e-87e4ed8b3d42
 ---
-
 # Authenticate and access [!DNL Experience Platform] APIs
 
 This document provides a step-by-step tutorial for gaining access to an Adobe Experience Platform developer account in order to make calls to [!DNL Experience Platform] APIs. 
@@ -154,6 +154,6 @@ If your response is similar to the one shown below, then your credentials are va
 
 ## Next steps
 
-By reading this document, you have gathered and successfully tested your access credentials for [!DNL Platform] APIs. You can now follow along with the example API calls provided throughout the [documentation](../landing/documentation/overview.md).
+By reading this document, you have gathered and successfully tested your access credentials for [!DNL Platform] APIs. You can now follow along with the examples provided in the [getting started guide for Platform APIs](api-guide.md). This guide contains links to the API guides for each Platform service, and provides additional information. on errors, Postman, and JSON.
 
 In addition to the authentication values you have gathered in this tutorial, many [!DNL Platform] APIs also require a valid `{SANDBOX_NAME}` to be provided as a header. See the [sandboxes overview](../sandboxes/home.md) for more information.

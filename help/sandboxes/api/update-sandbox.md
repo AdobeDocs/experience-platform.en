@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;update sandbox
 solution: Experience Platform
 title: Update a Sandbox in the API
-topic: developer guide
+topic-legacy: developer guide
 description: You can update one or more fields in a sandbox by making a PATCH request that includes the sandbox's name in the request path and the property to update in the request payload.
+exl-id: a8ef4305-5e0c-4d8f-8663-1933c957f122
 ---
-
 # Update a sandbox in the API
 
 You can update one or more fields in a sandbox by making a PATCH request that includes the sandbox's `name` in the request path and the property to update in the request payload.

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
 solution: Experience Platform
 title: Experience Platform UI Overview
-topic: ui guide
-description: Adobe Experience Platform 
+topic-legacy: ui guide
+description: Adobe Experience Platform
+exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 ---
-
 # Adobe Experience Platform UI guide
 
 This guide serves as an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.

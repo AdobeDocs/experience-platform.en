@@ -2,10 +2,10 @@
 keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
 title: Segments Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about segments your organization has created. 
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 ---
-
 # (Beta) Segments dashboard {#segment-dashboard}
 
 >[!IMPORTANT]

@@ -2,10 +2,10 @@
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
 solution: Experience Platform
 title: Getting Started with Real-time Machine Learning
-topic: Getting started
+topic-legacy: Getting started
 description: The following document outlines the steps that are required to create a Real-time Machine Learning model in Adobe Experience Platform.
+exl-id: 90a1c580-f6e7-4517-aa1e-da5092fbc4a2
 ---
-
 # Getting started with Real-time Machine Learning (Alpha)
 
 >[!IMPORTANT]
@@ -45,4 +45,3 @@ To create a new dataset for use in Real-time Machine Learning, you need a data-s
 ## Next steps {#next-steps}
 
 Once you have prepared your data for Real-time Machine Learning, start by following the [Real-time Machine Learning notebook user guide](./rtml-authoring-notebook.md) to learn how to create and upload an ONNX model to the Real-time Machine Learning model store.
-

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;identity;Identity;XDM graphs;identity service;Identity service
 solution: Experience Platform
 title: Identity Service Overview
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
+exl-id: a22dc3f0-3b7d-4060-af3f-fe4963b45f18
 ---
-
 # [!DNL Identity Service] overview
 
 Delivering relevant digital experiences requires having a complete understanding of your customer. This is made more difficult when your customer data is fragmented across disparate systems, causing each individual customer to appear to have multiple "identities". Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
@@ -56,10 +56,6 @@ You customers may interact with your brand through a combination of online and o
 [!DNL Experience Platform] addresses this challenge through two concepts: [identity namespaces](#identity-namespaces) and [identity graphs](#identity-graphs).
 
 The following video is intended to support your understanding of identities and identity graphs. The following video covers the three capabilities of Identity Collection, Identity Graphs, and the APIs. It also describes how deterministic and probabilistic algorithms are used to construct private identity graphs, and discusses the role of private identity graphs, Adobe Experience Platform Identity Service Co-Op Graph, and third-party graphs.
-
->[!IMPORTANT]
->
-> Probabilistic private graphs is still in development and set to release at a later date.
 
 >[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
 

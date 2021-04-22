@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service and Experience Cloud Applications
-topic: overview
+topic-legacy: overview
 description: This document provides a reference for how to configure different Experience Cloud applications for privacy-related operations.
+exl-id: da21c15f-0b99-4eb7-ac9a-f0fe5e3ba842
 ---
-
 # [!DNL Privacy Service] and [!DNL Experience Cloud] applications
 
 Adobe Experience Platform [!DNL Privacy Service] is built to support privacy requests for several Adobe Experience Cloud applications. Each application supports different product values and IDs for identifying data subjects.

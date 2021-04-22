@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;mixin;mixin;environment;environment details;
 solution: Experience Platform
 title: Environment Details Mixin
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the ExperienceEvent Environment Details mixin.
+exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 ---
-
 # [!UICONTROL Environment Details] mixin
 
 >[!NOTE]

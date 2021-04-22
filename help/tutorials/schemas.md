@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: XDM schemas and descriptors
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Standardization and interoperability are key concepts behind Adobe Experience Platform. Experience Data Model (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. Schemas are the standard way of describing data in Experience Platform, allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations.
+exl-id: 1cdc45d7-57ca-4a2d-99a4-9a8cd885a511
 ---
-
 # Work with [!DNL Experience Data Model] (XDM) schemas and relationship descriptors
 
 Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. Schemas are the standard way of describing data in [!DNL Experience Platform], allowing all data that conforms to schemas to be reusable without conflicts across an organization and even to be sharable between multiple organizations. To learn more about XDM schemas, start by reading the [XDM System overview](../xdm/home.md).

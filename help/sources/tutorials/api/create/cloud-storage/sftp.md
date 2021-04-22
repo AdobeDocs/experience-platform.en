@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;SFTP;sftp;Secure File Transfer Protocol;secure file transfer protocol
 solution: Experience Platform
 title: Create an SFTP Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an SFTP (Secure File Transfer Protocol) server using the Flow Service API.
+exl-id: b965b4bf-0b55-43df-bb79-c89609a9a488
 ---
-
 # Create an SFTP source connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The SFTP connector is in beta. The features and documentation are subject to change. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect Experience Platform to an SFTP (Secure File Transfer Protocol) server.
 
@@ -37,7 +33,7 @@ In order for [!DNL Flow Service] to connect to SFTP, you must provide values for
 | `host` | The name or IP address associated with your SFTP server. |
 | `username` | The username with access to your SFTP server. |
 | `password` | The password for your SFTP server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Reading sample API calls
@@ -126,6 +122,10 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 To create an SFTP connection using SSH public key authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, `privateKeyContent`, and `passPhrase`.
 
+>[!IMPORTANT]
+>
+>The SFTP connector supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
+
 **API format**
 
 ```http
@@ -165,7 +165,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.host` | The host name of your SFTP server. |
 | `auth.params.username` | The username associated with your SFTP server. |
-| `auth.params.privateKeyContent` | The base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
+| `auth.params.privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA.  |
 | `auth.params.passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 | `connectionSpec.id` | The SFTP server connection specification ID: `b7bf2577-4520-42c9-bae9-cad01560f7bc` |
 

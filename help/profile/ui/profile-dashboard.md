@@ -2,10 +2,10 @@
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Profile Dashboard
 description: The Adobe Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data.
-topic: guide
+topic-legacy: guide
 type: Documentation
+exl-id: 2c99cbb3-515f-4982-9f2a-84e1ab14542e
 ---
-
 # (Beta) [!UICONTROL Profiles] dashboard {#profile-dashboard}
 
 >[!IMPORTANT]

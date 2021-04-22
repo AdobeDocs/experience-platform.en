@@ -2,11 +2,11 @@
 keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: Optimize a Model Using the Model Insights Framework
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments.
+exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
 ---
-
 # Optimize a model using the Model Insights framework
 
 The Model Insights Framework provides the data scientist with tools in [!DNL Data Science Workspace] to make quick and informed choices for optimal machine learning models based on experiments. The framework will improve the speed and effectiveness of the machine learning workflow as well as improving ease of use for data scientists. This is done by providing a default template for each machine learning algorithm type to assist with model tuning. The end result allows data scientists and citizen data scientists to make better model optimization decisions for their end customers.

@@ -2,9 +2,11 @@
 keywords: foresee;foresee extension;foresee destination
 title: Gainsight extension
 description: The Gainsight extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: f73042e0-e540-4373-86c2-60be3749c049
 ---
-
 # [!DNL Gainsight] extension {#gainsight-extension}
+
+## Overview {#overview}
 
 [!DNL Gainsight] empowers product owners with the tools to deeply understand user behavior, drive product adoption, and collect user feedback.
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;identity;datatype;data-type;data type;
 solution: Experience Platform
 title: Identity Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Identity XDM data type.
+exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 ---
-
 # [!UICONTROL Identity] data type
 
 [!UICONTROL Identity] is a standard XDM data type that is used to clearly distinguish people that are interacting with digital experiences. Identity is established by an identity provider, which itself is referenced in a `namespace` attribute. Within each `namespace`, the identity is unique.

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;emailAddress;xdm:emailAddress;email;email address;datatype;data-type;data type;
 solution: Experience Platform
 title: Email Address Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Email Address XDM data type.
+exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 ---
-
 # [!UICONTROL Email address] data type
 
 [!UICONTROL Email address] is a standard XDM data type that describes the details of an email address.

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;enable dataset;Dataset;dataset
 solution: Experience Platform
 title: Datasets UI Guide
-topic: datasets
+topic-legacy: datasets
 description: Learn how to perform common actions when working with datasets in the Adobe Experience Platform user interface.
+exl-id: f0d59d4f-4ebd-42cb-bbc3-84f38c1bf973
 ---
-
 # Datasets UI guide
 
 This user guide provides instructions on performing common actions when working with datasets within Adobe Experience Platform user interface.

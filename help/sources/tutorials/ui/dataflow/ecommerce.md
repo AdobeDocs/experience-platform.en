@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;eCommerce connector;eCommerce
 solution: Experience Platform
 title: Configure a Dataflow for an eCommerce Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your eCommerce account.
+exl-id: ee1382c5-78ac-4765-8883-0a922772bb20
 ---
-
 # Configure a dataflow for an eCommerce connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your **[!UICONTROL eCommerce]** account.

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Object Fields in the UI
 description: Learn how to define an object-type field in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 5b7b3cf0-7f11-4e15-af87-09127f4423a5
 ---
-
 # Define object fields in the UI
 
 Adobe Experience Platform allows you to fully customize the structure of your custom Experience Data Model (XDM) classes, mixins, and data types. In order to organize and nest related fields in custom XDM resources, you can define object-type fields which can contain additional sub-fields.

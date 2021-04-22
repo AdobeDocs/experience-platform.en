@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;streaming segmentation;Streaming segmentation;Continuous evaluation;
 solution: Experience Platform
 title: Evaluate Events in Near Real-Time with Streaming Segmentation 
-topic: developer guide
+topic-legacy: developer guide
 description: This document contains examples on how to use streaming segmentation with the Adobe Experience Platform Segmentation Service API.
+exl-id: 119508bd-5b2e-44ce-8ebf-7aef196abd7a
 ---
-
 # Evaluate events in near real-time with streaming segmentation 
 
 >[!NOTE]
@@ -68,9 +68,11 @@ In order for a segment to be evaluated using streaming segmentation, the query m
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit within a relative time window | Any segment definition that refers to a single incoming event. |
+| Incoming hit with a time window | Any segment definition that refers to a single incoming event with a time window. |
 | Profile only | Any segment definition that refers to only a profile attribute. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
 | Incoming hit that refers to a profile within a relative time window | Any segment definition that refers to a single incoming event and one or more profile attributes. |
+| Segment of segments | Any segment definition that contains one or more batch or streaming segments. |
 | Multiple events that refer to a profile | Any segment definition that refers to multiple events **within the last 24 hours** and (optionally) has one or more profile attributes. |
 
 A segment definition will **not** be enabled for streaming segmentation in the following scenarios:
@@ -396,6 +398,6 @@ The same operation can be used to disable a schedule by replacing the "value" in
 
 ## Next steps
 
-Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create segments for your organization. 
+Now that you have enabled both new and existing segments for streaming segmentation, and enabled scheduled segmentation to develop a baseline and perform recurring evaluations, you can begin to create streaming-enabled segments for your organization. 
 
 To learn how to perform similar actions and work with segments using the Adobe Experience Platform user interface, please visit the [Segment Builder user guide](../ui/segment-builder.md).

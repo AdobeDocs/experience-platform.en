@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
 solution: Experience Platform
 title: Create and Edit Data Types Using the UI
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
+exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
-
 # Create and edit data types using the UI
 
 In Experience Data Model (XDM), data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level.
