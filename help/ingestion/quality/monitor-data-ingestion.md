@@ -68,6 +68,6 @@ The details of a failed batch displays the same information as a successful batc
 
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
-In addition, failed batches provide details on the errors that occurred while processing the batch. In the example below, there was an error with the ingested batch because it used an unknown field of `_experience`.
+In addition, failed batches provide details on the errors that occurred while processing the batch. In the example below, there was an error with the ingested batch because it has the maximum number of identities for the person.
 
-![](../images/quality/monitor-data-flows/failed-streaming-record-details.png)
+![](../images/quality/monitor-data-flows/failed-streaming-error.png)
