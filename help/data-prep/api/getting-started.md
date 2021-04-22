@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;data prep;data prep api;troubleshooting;API
 title: Getting started with Data Prep API
-topic: guide
+topic-legacy: guide
 description: Learn the key concepts and basic functionality that you need to know in order to use the Data Prep API endpoints to perform basic CRUD operations for use with Mapper.
 exl-id: 027e6fbe-9a0d-420b-8d67-659ca7f5ec22
 ---

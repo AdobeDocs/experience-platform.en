@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Privacy Service Help
 breadcrumb-title: Privacy Service Guide

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;catalog;data protection;encryption data lake
 solution: Experience Platform
 title: Data Protection in Adobe Experience Platform
-topic: data protection
+topic-legacy: data protection
 description: All data persisted in the Data Lake is encrypted, stored, and managed in an isolated Microsoft Azure Data Lake Storage account that is unique to your organization. The following process flow diagram illustrates how data is ingested, processed, encrypted, and persisted by Experience Platform.
 exl-id: 184b2b2d-8cd7-4299-83f8-f992f585c336
 ---

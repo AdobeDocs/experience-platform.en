@@ -2,7 +2,7 @@
 keywords: Experience Platform;machine learning model;Data Science Workspace;Real-time Customer Profile;popular topics;machine learning insights
 solution: Experience Platform
 title: Enrich Real-time Customer Profile with Machine Learning Insights
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This document provides a guide on how to enrich Real-time Customer Profile with machine learning insights.
 exl-id: 397023c9-383d-4a21-b58a-0f920631ac56

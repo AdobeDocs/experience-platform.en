@@ -2,7 +2,7 @@
 keywords: Experience Platform;overview;customer ai;popular topics;customer ai overview
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Customer AI overview
-topic: Customer AI Overview
+topic-legacy: Customer AI Overview
 description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, pick an algorithm, train, or deploy.
 landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd

@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Generic Marketing Preference Field With Subscriptions Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Generic Marketing Preference Field with Subscriptions XDM data type.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 ---

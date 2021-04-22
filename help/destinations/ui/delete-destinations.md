@@ -1,5 +1,5 @@
 ---
-keywords: delete destinations; how to delete destinations
+keywords: delete destinations, how to delete destinations, delete destination
 title: Delete destinations
 type: Tutorial
 description: This tutorial lists the steps to delete an existing destination in the Adobe Experience Platform UI

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
 title: List Sandboxes in the API
-topic: developer guide
+topic-legacy: developer guide
 description: To list all sandboxes belonging to your IMS Organization (active or otherwise), make a GET request to the /sandboxes endpoint.
 exl-id: 5e7dc6e7-cb9c-41e0-a3ad-025b625f14ec
 ---
