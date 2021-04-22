@@ -60,6 +60,8 @@ curl -X POST \
 | `nameSpace` | Each object in the `entities` array must contain one of the [standard identity namespaces](./appendix.md#standard-namespaces) recognized by the Privacy Service API. |
 | `values` | An array of values for each user, corresponding with the provided `nameSpace`. |
 
+{style="table-layout:auto"}
+
 >[!NOTE]
 >
 >For more information on how to determine which customer identity values to send to [!DNL Privacy Service], see the guide on [providing identity data](../identity-data.md).

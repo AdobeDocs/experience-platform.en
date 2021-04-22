@@ -34,7 +34,7 @@ The following query types are **not** currently supported for edge segmentation:
 | Query type | Details |
 | ---------- | ------- |
 | Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
-| Negation | If a query contains a negation, it cannot be evaluated using edge segmentation. | 
+| Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
 
 ## Next steps

@@ -31,19 +31,19 @@ This recipe uses custom [XDM schemas](../../xdm/schema/field-dictionary.md) to m
 
 ### Input data schema
 
-Field Name | Type
---- | ---
-itemId | String
-interactionType | String
-timestamp | String
-userId | String
+| Field Name | Type |
+| --- | --- |
+| itemId | String |
+| interactionType | String |
+| timestamp | String |
+| userId | String |
 
 ### Output data schema
 
-Field Name | Type
---- | ---
-recommendations | String
-userId | Integer
+| Field Name | Type |
+| --- | --- |
+| recommendations | String |
+| userId | Integer |
 
 ## Algorithm
 
