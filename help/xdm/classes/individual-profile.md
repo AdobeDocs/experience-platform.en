@@ -40,4 +40,4 @@ Adobe provides several standard mixins for use with the [!DNL XDM Individual Pro
 * [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
 * [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
 
-For a complete list of all compatible mixins for XDM Individual Profile, refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+For a complete list of all compatible mixins for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
