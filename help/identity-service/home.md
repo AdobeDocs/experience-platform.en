@@ -37,7 +37,7 @@ Each day, customers interact with your business and establish a continuously gro
 
 Consider an everyday example of a consumer's relationship with your brand:
 
-- Mary has an account on your eCommerce site where she has completed a few orders in the past. She typically uses her personal laptop to shop, where she logs in each time. However, during one of her visits she uses her table to shop for sandals, but does not place an order and does not log in.
+- Mary has an account on your eCommerce site where she has completed a few orders in the past. She typically uses her personal laptop to shop, where she logs in each time. However, during one of her visits she uses her tablet to shop for sandals, but does not place an order and does not log in.
 - At this point, Mary’s activity appears as two separate profiles:
   - her eCommerce log in
   - her tablet device, perhaps identified by device ID
