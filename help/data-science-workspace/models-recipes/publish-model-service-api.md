@@ -78,7 +78,7 @@ curl -X POST
 | Property | Description |
 | --- | --- |
 | `mlInstanceId` | Existing ML Instance identification, the training Experiment Run used to create the ML Service should correspond to this particular ML Instance. |
-| `trainingExperimentId` | Experiment identification corresponding to the ML Instance identification.
+| `trainingExperimentId` | Experiment identification corresponding to the ML Instance identification. |
 | `trainingExperimentRunId` | A particular training Experiment Run to be used for publishing the ML Service. |
 | `scoringDataSetId` | Identification referring to the specific data set to be used for scheduled scoring Experiment Runs. |
 | `scoringTimeframe` | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `10080` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `0` will not filter data, all data within the dataset is used for scoring. |
