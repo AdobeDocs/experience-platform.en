@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Mixins in the UI
 description: Learn how to create and edit mixins in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
 exl-id: 240b857d-75ad-42fd-9249-050cbc5306a9
 ---
 # Create and edit mixins in the UI

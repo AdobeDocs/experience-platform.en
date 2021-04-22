@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
 title: Collect Streaming Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
@@ -330,9 +330,6 @@ curl -X POST \
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        },
-        "fileDescription": {
-            "format": "parquet"
         },
         "tags": {
             "identity": [

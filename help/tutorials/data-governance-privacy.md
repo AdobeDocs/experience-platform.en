@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Data Governance and Privacy tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This document provides an overview of the different available tutorials related to Adobe Experience Platform Data Governance and Adobe Experience Platform Privacy Service.
 exl-id: c3cef447-b343-445b-a3ed-54f873f6dfb9

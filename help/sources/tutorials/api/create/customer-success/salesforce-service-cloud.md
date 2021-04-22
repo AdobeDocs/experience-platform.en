@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Salesforce Service Cloud using the Flow Service API.
 exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9

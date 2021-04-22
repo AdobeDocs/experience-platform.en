@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
 title: Adobe Experience Platform Query Service Quickstart Guide
-topic: quickstart
+topic-legacy: quickstart
 description: Quickstart guide for Adobe Experience Platform Query Service.
 exl-id: 77941755-8292-43ee-8ae3-09065f39ace7
 ---

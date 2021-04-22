@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;personal details;Schema design;mixin;Mixin;
 solution: Experience Platform
 title: Personal Contact Details Mixin
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Personal Contact Details mixin.
 exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 ---
