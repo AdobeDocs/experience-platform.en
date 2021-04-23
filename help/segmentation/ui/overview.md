@@ -25,7 +25,7 @@ It is also important to know two key terms that are used through this document a
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](http://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
+In the [[!DNL Experience Platform] UI](https://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
 
 ![](../images/ui/overview/segment-overview.png)
 
