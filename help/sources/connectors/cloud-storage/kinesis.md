@@ -74,7 +74,7 @@ For more information on controlling access for [!DNL Kinesis] data streams, see 
 | `TRIM_HORIZON` | The data is read starting from the oldest data record. |
 | `LATEST` | The data is read starting from the most recent data record. |
 
-Currently, the default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`.
+A [!DNL Kinesis] UI source currently only supports `TRIM_HORIZON`, while the API supports both `TRIM_HORIZON` and `LATEST` as modes to get data. The default iterator value that Platform uses for the [!DNL Kinesis] source is `TRIM_HORIZON`.
 
 For more information on iterator types, see the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/kinesis/latest/APIReference/API_GetShardIterator.html#API_GetShardIterator_RequestSyntax).
 
