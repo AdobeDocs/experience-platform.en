@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
 solution: Experience Platform
 title: XDM Field Type Constraints
-topic: overview
+topic-legacy: overview
 description: A reference for field type constraints in Experience Data Model (XDM), including the other serialization formats they can be mapped to and how to define your own field types in the API.
 exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 ---

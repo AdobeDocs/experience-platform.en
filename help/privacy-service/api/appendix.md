@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service API Guide Appendix
-topic: developer guide
+topic-legacy: developer guide
 description: This document contains additional information for working with the Privacy Service API.
 exl-id: 7099e002-b802-486e-8863-0630d66e330f
 ---
@@ -18,15 +18,17 @@ The following table outlines several commonly used, pre-defined identity types m
 
 | Identity type | `namespace` | `namespaceId` |
 | --- | --- | --- |
-| Email | Email | 6 |
-| Phone | Phone  | 7 |
-| Adobe Advertising Cloud ID | AdCloud | 411 |
-| Adobe Audience Manager UUID | CORE | 0 |
-| Adobe Experience Cloud ID | ECID | 4 |
-| Adobe Target ID | TNTID | 9 |
-| [!DNL Apple] ID for Advertisers  | IDFA | 20915 |
-| [!DNL Google] Ad ID  | GAID | 20914 |
-| [!DNL Windows] AID  | WAID  | 8 |
+| Email | `Email` | `6` |
+| Phone | `Phone`  | `7` |
+| Adobe Advertising Cloud ID | `AdCloud` | `411` |
+| Adobe Audience Manager UUID | `CORE` | `0` |
+| Adobe Experience Cloud ID | `ECID` | `4` |
+| Adobe Target ID | `TNTID` | `9` |
+| [!DNL Apple] ID for Advertisers  | `IDFA` | `20915` |
+| [!DNL Google] Ad ID  | `GAID` | `20914` |
+| [!DNL Windows] AID  | `WAID`  | `8` |
+
+{style="table-layout:auto"}
 
 >[!NOTE]
 >
@@ -40,26 +42,30 @@ When specifying a `namespace` value in the [!DNL Privacy Service] API, a **names
 
 | Qualifier | Definition |
 | --------- | ---------- |
-| standard | One of the standard namespaces defined globally, not tied to an individual organization data set (for example, email, phone number, etc.). Namespace ID is provided. |
-| custom | A unique namespace created in the context of an organization, not shared across the [!DNL Experience Cloud]. The value represents the friendly name ("name" field) to be searched for. Namespace ID is provided. |
-| integrationCode | Integration code - similar to "custom", but specifically defined as the integration code of a datasource to be searched for. Namespace ID is provided. |
-| namespaceId | Indicates the value is the actual ID of the namespace that was created or mapped through the namespace service. |
-| unregistered | A freeform string that is not defined in the namespace service and is taken "as is". Any application that handles these kinds of namespaces checks against them and handle if appropriate for the company context and data set. No namespace ID is provided. |
-| analytics | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. This is passed in directly as specified by the original request, without a namespace ID |
-| target | A custom namespace understood internally by [!DNL Target], not in the namespace service. This is passed in directly as specified by the original request, without a namespace ID |
+| `standard` | One of the standard namespaces defined globally, not tied to an individual organization data set (for example, email, phone number, etc.). Namespace ID is provided. |
+| `custom` | A unique namespace created in the context of an organization, not shared across the [!DNL Experience Cloud]. The value represents the friendly name ("name" field) to be searched for. Namespace ID is provided. |
+| `integrationCode` | Integration code - similar to "custom", but specifically defined as the integration code of a datasource to be searched for. Namespace ID is provided. |
+| `namespaceId` | Indicates the value is the actual ID of the namespace that was created or mapped through the namespace service. |
+| `unregistered` | A freeform string that is not defined in the namespace service and is taken "as is". Any application that handles these kinds of namespaces checks against them and handle if appropriate for the company context and data set. No namespace ID is provided. |
+| `analytics` | A custom namespace that is mapped internally in [!DNL Analytics], not in the namespace service. This is passed in directly as specified by the original request, without a namespace ID |
+| `target` | A custom namespace understood internally by [!DNL Target], not in the namespace service. This is passed in directly as specified by the original request, without a namespace ID |
+
+{style="table-layout:auto"}
 
 ## Accepted product values
 
 The following table outlines the accepted values for specifying an Adobe product in the `include` attribute of a job creation request.
 
-Product | Value for use in the `include` attribute
---- | ---
-Adobe Advertizing Cloud | "AdCloud"
-Adobe Analytics | "Analytics"
-Adobe Audience Manager | "AudienceManager"
-Adobe Campaign | "Campaign"
-Adobe Experience Platform | "aepDataLake"
-Adobe Primetime Authentication | "primetimeAuthentication"
-Adobe Target | "Target"
-Customer Record Service | "CRS"
-Real-time Customer Profile | "ProfileService"
+| Product | Value for use in the `include` attribute |
+| --- | --- |
+| Adobe Advertising Cloud | `AdCloud` |
+| Adobe Analytics | `Analytics` |
+| Adobe Audience Manager | `AudienceManager` |
+| Adobe Campaign | `Campaign` |
+| Adobe Experience Platform | `aepDataLake` |
+| Adobe Primetime Authentication | `primetimeAuthentication` |
+| Adobe Target | `Target` |
+| Customer Record Service | `CRS` |
+| Real-time Customer Profile | `ProfileService` |
+
+{style="table-layout:auto"}

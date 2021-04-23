@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;identityMap;identity map;Identity map;Schema design;map;Map;union schema;union
 solution: Experience Platform
 title: XDM ExperienceEvent Class
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the XDM ExperienceEvent class.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
@@ -22,7 +22,7 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 | `eventMergeId` | The ID of the ingested batch that caused the record to be created. This field is automatically populated by the system upon data ingestion. |
 | `eventType` | A string that indicates the primary event type for the record. Accepted values and their definitions are provided in the [appendix section](#eventType). |
 | `identityMap` | A map field that contains a set of namespaced identities for the individual the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
-| `timestamp` | The time when the event or observation occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6)). |
+| `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6).<br><br>This timestamp can **only** represent the observation of the event itself, and must occur in the past. If your segmentation use cases require the use of timestamps that may occur in the future (such as a departure date), these values must be constrained elsewhere in your Experience Event schema. |
 
 ## Compatible mixins {#mixins}
 
