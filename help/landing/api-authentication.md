@@ -33,7 +33,7 @@ You must also have an Adobe ID to complete this tutorial. If you do not have an 
 
 1. Go to [Adobe Developer Console](https://console.adobe.io)
 2. Select **[!UICONTROL Create a new account]**
-3. Complete the sign up process
+3. Complete the sign-up process
 
 ## Gain developer and user access for Experience Platform
 
@@ -43,7 +43,7 @@ Before creating integrations on Adobe I/O, your account must have developer and 
 
 Contact an [!DNL Admin Console] administrator in your organization to add you as a developer to an Experience Platform product profile using the [[!DNL Admin Console]](https://adminconsole.adobe.com/). See the [!DNL Admin Console] documentation for specific instructions on how to [manage developer access for product profiles](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Once you are assigned as a developer, you will have access privileges to create integrations on [Adobe I/O](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to Adobe APIs.
+Once you are assigned as a developer, you will have access privileges to create integrations in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to Adobe APIs.
 
 ### Gain user access
 
@@ -73,7 +73,7 @@ Once you have selected Experience Platform as the API to be added to the project
 
 >[!IMPORTANT]
 >
->At a certain step during the process linked above, your browser will automatically download a private key and an associated public certificate. Note where this private key is stored on your machine, since it is required in a later step in this tutorial.
+>At a certain step during the process linked above, your browser automatically downloads a private key and an associated public certificate. Note where this private key is stored on your machine, since it is required in a later step in this tutorial.
 
 ### Gather credentials
 
@@ -96,7 +96,7 @@ Select **[!UICONTROL Service Account (JWT)]** in the left navigation, then selec
 
 ![](././images/api-authentication/generate-jwt.png)
 
-In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contenta of the private key that you previously generated when adding the Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
+In the textbox provided under **[!UICONTROL Generate custom JWT]**, paste the contents of the private key that you previously generated when adding the Platform API to your service account. Then, select **[!UICONTROL Generate Token]**.
 
 ![](././images/api-authentication/paste-key.png)
 
@@ -142,13 +142,13 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 | Property | Description |
 | --- | --- |
-| `token_type` | The type of token being returned. This value will always be `bearer`. |
+| `token_type` | The type of token being returned. For access tokens, this value is always `bearer`. |
 | `access_token` | The generated `{ACCESS_TOKEN}`. This value, prefixed with the word `Bearer`, is required as the `Authentication` header for all Platform API calls. |
 | `expires_in` | The number of milliseconds remaining until the access token expires. Once this value reaches 0, a new access token must be generated to continue using Platform APIs. |
 
 ## Test access credentials
 
-Once you have gathered all three required credentials, you can try to make the following API call. This call will list all [!DNL Experience Data Model] (XDM) classes within the Schema Registry's `global` container:
+Once you have gathered all three required credentials, you can try to make the following API call. This call lists all [!DNL Experience Data Model] (XDM) classes within the Schema Registry's `global` container:
 
 **API format**
 
