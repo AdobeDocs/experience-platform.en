@@ -68,19 +68,19 @@ To create a dataflow with an existing account, select **[!UICONTROL Existing acc
 
 After creating your [!DNL Marketo] account, the next step provides an interface for you to explore [!DNL Marketo] datasets.
 
-The left half of the interface is a directory browser, displaying the 10 [!DNL Marketo] datasets. A fully-functioning [!DNL Marketo] source connection requires the ingestion of the nine different datasets. If you are also using [!DNL Marketo's] account-based marketing (ABM) feature, then you must also create a 10th dataflow to ingest the [!UICONTROL Named Accounts] dataset.
+The left half of the interface is a directory browser, displaying the 10 [!DNL Marketo] datasets. A fully-functioning [!DNL Marketo] source connection requires the ingestion of the nine different datasets. If you are also using the [!DNL Marketo] account-based marketing (ABM) feature, then you must also create a 10th dataflow to ingest the [!UICONTROL Named Accounts] dataset.
 
 >[!NOTE]
 >
->For the purposes of brevity, the following tutorial uses [!UICONTROL Named Acccounts] as an example, but the steps outlined below apply to any of the 10 [!DNL Marketo] datasets.
+>For the purposes of brevity, the following tutorial uses [!UICONTROL Named Accounts] as an example, but the steps outlined below apply to any of the 10 [!DNL Marketo] datasets.
 
 Select the dataset you wish to ingest first, then select **[!UICONTROL Next]**.
 
 ![select-data](../../../../images/tutorials/create/marketo/select-data.png)
 
-## Map data fields to an XDM schema
+## Map [!DNL Marketo] schemas to Platform
 
-The [!UICONTROL Mapping] step appears, providing an interface to map the [!DNL Marketo] dataset to a Platform dataset.
+The [!UICONTROL Mapping] step appears, providing an interface to map [!DNL Marketo] schemas to Platform.
 
 Choose a dataset for inbound data to be ingested into. You can either use an existing dataset or create a new dataset.
 
@@ -153,7 +153,7 @@ Once you have provided your dataflow details and set your error threshold to max
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new dataflow before it is created. Details are grouped within the following categories:
 
-* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source file, and the amount of columns within that source file.
+* **[!UICONTROL Connection]**: Shows the source type, the relevant path of the chosen source entity, and the amount of columns within that source entity.
 * **[!UICONTROL Assign dataset & map fields]**: Shows which dataset the source data is being ingested into, including the schema that the dataset adheres to.
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
