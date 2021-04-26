@@ -16,6 +16,12 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the **[!UICONTROL Select attributes]** step of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
+## IP address allow list {#allow-list}
+
+When setting up email marketing destinations with [!DNL SFTP] storage, Adobe recommends that you add certain IP ranges to your allow list.
+
+Refer to [IP address allow list for cloud storage destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
+
 ## Connect destination {#connect-destination}
 
 In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Configure]**.
