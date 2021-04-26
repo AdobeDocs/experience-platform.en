@@ -118,7 +118,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
   -F 'client_id={API_KEY}' \
   -F 'client_secret={SECRET}' \
   -F 'jwt_token={JWT}'
-  ```
+```
 
 | Property | Description |
 | --- | --- |
