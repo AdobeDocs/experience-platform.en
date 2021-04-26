@@ -171,8 +171,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `marketingListMemberID` | Primary Identity |
-| `marketingListID` | `marketingListID` | Relationship |
+| `staticListMemberID` | `marketingListMemberID` | Primary Identity |
+| `staticListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
