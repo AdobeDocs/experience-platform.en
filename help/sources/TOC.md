@@ -58,6 +58,7 @@ feature: Data Ingestion, Sources
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
+    - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
@@ -71,6 +72,8 @@ feature: Data Ingestion, Sources
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+  - Streaming {#streaming}
+    - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
   - Create a source connection {#create}
     - Advertising {#advertising}
@@ -106,6 +109,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/api/create/databases/mariadb.md)
       - [MySQL](tutorials/api/create/databases/mysql.md)
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
@@ -191,6 +195,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
       - [MySQL](tutorials/ui/create/databases/mysql.md)
       - [Oracle](tutorials/ui/create/databases/oracle.md)

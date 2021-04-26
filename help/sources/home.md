@@ -84,6 +84,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connector](connectors/databases/mysql.md)
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
@@ -107,6 +108,13 @@ Experience Platform provides support for ingesting data from a third-party marke
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
+
+### Streaming
+
+Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocols
 

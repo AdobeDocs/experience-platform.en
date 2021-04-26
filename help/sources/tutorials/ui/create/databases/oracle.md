@@ -9,10 +9,6 @@ exl-id: 4ca6ecc6-0382-4cee-acc5-1dec7eeb9443
 ---
 # Create an [!DNL Oracle DB] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL Oracle DB] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL Oracle DB] source connector using the [!DNL Platform] user interface.
 
 ## Getting started
