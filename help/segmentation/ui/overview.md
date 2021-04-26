@@ -25,7 +25,7 @@ It is also important to know two key terms that are used through this document a
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](http://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
+In the [[!DNL Experience Platform] UI](https://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
 
 ![](../images/ui/overview/segment-overview.png)
 
@@ -37,14 +37,14 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Entered], [!UICONTROL Realized], and [!UICONTROL Exiting]. 
+The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. 
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Status | Description |
 | ------ | ----------- |
-| Entered | A new profile within the segment. |
-| Realized | An existing profile which has remained within the segment. |
+| Realized | A new profile within the segment. |
+| Existing | An existing profile which has remained within the segment. |
 | Exiting | An existing profile which is leaving the segment. |
 
 The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.
