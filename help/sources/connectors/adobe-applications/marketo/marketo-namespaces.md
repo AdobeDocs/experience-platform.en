@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas
 solution: Experience Platform
-title: Marketo namespaces 
+title: Marketo namespaces
 topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
+exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
-
 # (Beta) [!DNL Marketo Engage] namespaces and schemas
 
 >[!IMPORTANT]

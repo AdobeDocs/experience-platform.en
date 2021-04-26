@@ -5,8 +5,8 @@ title: Create a Marketo Engage source connector in the UI
 topic-legacy: overview
 type: Tutorial
 description: This tutorial provides steps for creating a Marketo Engage source connector in the UI to bring B2B data into Adobe Experience Platform.
+exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 ---
-
 # (Beta) Create a [!DNL Marketo Engage] source connector in the UI
 
 >[!IMPORTANT]
