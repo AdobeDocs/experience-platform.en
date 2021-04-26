@@ -58,14 +58,15 @@ The following table outlines the accepted values for specifying an Adobe product
 
 | Product | Value for use in the `include` attribute |
 | --- | --- |
-| Adobe Advertising Cloud | `AdCloud` |
-| Adobe Analytics | `Analytics` |
+| Adobe Advertising Cloud | `adCloud` |
+| Adobe Analytics | `analytics` |
 | Adobe Audience Manager | `AudienceManager` |
-| Adobe Campaign | `Campaign` |
-| Adobe Experience Platform | `aepDataLake` |
+| Adobe Campaign | `campaign` |
+| Adobe Experience Platform | `AdobeCloudPlatform` |
 | Adobe Primetime Authentication | `primetimeAuthentication` |
-| Adobe Target | `Target` |
-| Customer Record Service | `CRS` |
-| Real-time Customer Profile | `ProfileService` |
+| Adobe Target | `target` |
+| Automation Product | `automationProduct` |
+| Customer Attributes (CRS) | `CRS` |
+| Real-time Customer Profile | `profileService` |
 
 {style="table-layout:auto"}

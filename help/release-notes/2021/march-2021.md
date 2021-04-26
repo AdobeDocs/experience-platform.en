@@ -4,8 +4,8 @@ description: Experience Platform release notes for March 31, 2021.
 doc-type: release notes
 last-update: March 31, 2021
 author: ens72741
+exl-id: 027cd7b1-1651-4939-bc97-968a41824117
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: March 31, 2021**
