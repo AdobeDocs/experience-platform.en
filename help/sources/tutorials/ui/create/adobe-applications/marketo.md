@@ -137,7 +137,7 @@ The [!UICONTROL Dataflow detail] step appears, allowing you to provide a name an
 
 ![dataflow-detail](../../../../images/tutorials/create/marketo/dataflow-detail.png)
 
-Enable the **[!UICONTROL Error diagnostics]** toggle to allow for detailed error message generation for newly ingested batches, which you can download using the API.
+Enable the **[!UICONTROL Error diagnostics]** toggle to allow for detailed error message generation for newly ingested batches, which you can download using the API. For more information, see the tutorial on [retrieving data ingestion error diagnostics](../../../../../ingestion/quality/error-diagnostics.md).
 
 ![errors](../../../../images/tutorials/create/marketo/errors.png)
 
