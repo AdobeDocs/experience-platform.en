@@ -302,6 +302,11 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+
+>[!TIP]
+>
+>The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
 
 {style="table-layout:auto"}
 
