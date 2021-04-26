@@ -13,7 +13,7 @@ Destinations allow you to activate your data from Adobe Experience Platform to c
 
 ## Getting started
 
-This tutorial requires a working understanding of the following components of Adobe Experience Platform:
+This guide requires a working understanding of the following components of Adobe Experience Platform:
 
 - [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 - [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -49,10 +49,10 @@ Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
-- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
-- **[!UICONTROL Profile records activated]**: The total number of profile records that were created or updated for activation.
-- **[!UICONTROL Profile records skipped]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes.
-- **[!UICONTROL Profile records failed]** The total number of profile records that are not activated to the destination due to errors.
+- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
+- **[!UICONTROL Profile records activated]**: The total number of profile records that were created or updated for activation. This value is updated every 60 minutes.
+- **[!UICONTROL Profile records skipped]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes. This value is updated every 60 minutes.
+- **[!UICONTROL Profile records failed]** The total number of profile records that are not activated to the destination due to errors. This value is updated every 60 minutes.
 - **[!UICONTROL Activation rate]**: The total number of activated and skipped divided by the profiles received.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in. Can be one of two states - [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
@@ -60,10 +60,16 @@ Each individual dataflow run shows the following details:
 >
 >Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each merge policy applied to a segment.
 
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the size of data processed.
+To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the number of profiles received, the number of profile records activated, the number of profile records failed, and the number of profile records skipped.
 
-This details page also displays a record of the dataflow runs that failed and dataflow runs that were skipped. By default, it displays the 
+The details page also displays a record of the profile records that failed and profile records that were skipped. By default, it displays the failed profile records.
 
 ![](../assets/ui/monitor-destinations/dataflow-failed.png)
 
+Information about these profile records, including the error code, record count, and description, is displayed for both the failed and skipped profile records.
+
 ![](../assets/ui/monitor-destinations/dataflow-skipped.png)
+
+## Next steps
+
+By following this guide, you now know how to monitor dataflows for destinations, including all the relevant information such as processing time, activation rate, and status. To learn more about dataflows in Platform, please read the [dataflows overview](../home.md). To learn more about destinations, please read the [destinations overview](../../destinations/home.md).
