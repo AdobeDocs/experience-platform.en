@@ -65,7 +65,7 @@ If you asked a person "What is your ID?" without any further context, it would b
 
 Your customers may interact with your brand through a combination of online and offline channels, resulting in the challenge of how to reconcile those fragmented interactions into a single customer identity.
 
-Understanding your customer across multiple devices and channels starts by recognizing them in each channel. Platform achieves this by using identity namespaces. An identity namespace is an identifier such as Email or Phone, used to provide additional context to customer identities. Identity namespaces are used to look up or link individual identities and provide context for identity values. See the [identity namespace overview](./namespaces) for more information.
+Understanding your customer across multiple devices and channels starts by recognizing them in each channel. Platform achieves this by using identity namespaces. An identity namespace is an identifier such as Email or Phone, used to provide additional context to customer identities. Identity namespaces are used to look up or link individual identities and provide context for identity values. See the [identity namespace overview](./namespaces.md) for more information.
 
 ## Identity graphs
 
