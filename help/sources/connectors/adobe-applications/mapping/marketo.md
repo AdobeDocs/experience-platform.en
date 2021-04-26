@@ -151,6 +151,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style="table-layout:auto"}
 
@@ -170,8 +171,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Primary Identity |
-| `marketingListID` | `staticListID` | Relationship |
+| `marketingListMemberID` | `marketingListMemberID` | Primary Identity |
+| `marketingListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -227,7 +228,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Recommended only if you use the Salesforce integration. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the Salesforce integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -272,7 +273,7 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
