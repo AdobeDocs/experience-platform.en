@@ -16,9 +16,9 @@ This document provides a step-by-step tutorial for gaining access to an Adobe Ex
 * `{API_KEY}`
 * `{IMS_ORG}`
 
-To maintain the security of your applications and users, all requests to Adobe I/O APIs must be authenticated and authorized using standards such as OAuth and JSON Web Tokens (JWT). The JWT is then used along with client-specific information to generate your personal access token.
+To maintain the security of your applications and users, all requests to Adobe I/O APIs must be authenticated and authorized using standards such as OAuth and JSON Web Tokens (JWT). A JWT is used along with client-specific information to generate your personal access token.
 
-This tutorial covers the steps of authentication through the creation of an access token outlined in the following flowchart:
+This tutorial covers how to gather the required credentials to authenticate Platform API calls, as outlined in the following flowchart:
 
 ![](./images/api-authentication/authentication-flowchart.png)
 
@@ -27,23 +27,23 @@ This tutorial covers the steps of authentication through the creation of an acce
 In order to successfully make calls to Experience Platform APIs, you must have the following:
 
 * An IMS Organization with access to Adobe Experience Platform.
-* An Admin Console administrator that is able to add you as a **developer** and a **user** for a product profile.
+* An Admin Console administrator that is able to add you as a developer and a user for a product profile.
 
 You must also have an Adobe ID to complete this tutorial. If you do not have an Adobe ID, you can create one using the following steps:
 
-1. Go to [Adobe Developer Console](https://console.adobe.io)
-2. Select **[!UICONTROL Create a new account]**
-3. Complete the sign-up process
+1. Go to [Adobe Developer Console](https://console.adobe.io).
+2. Select **[!UICONTROL Create a new account]**.
+3. Complete the sign-up process.
 
 ## Gain developer and user access for Experience Platform
 
-Before creating integrations on Adobe I/O, your account must have developer and user permissions for an Experience Platform product profile in [!DNL Admin Console].
+Before creating integrations on Adobe Developer Console, your account must have developer and user permissions for an Experience Platform product profile in Adobe Admin Console.
 
 ### Gain developer access
 
 Contact an [!DNL Admin Console] administrator in your organization to add you as a developer to an Experience Platform product profile using the [[!DNL Admin Console]](https://adminconsole.adobe.com/). See the [!DNL Admin Console] documentation for specific instructions on how to [manage developer access for product profiles](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/manage-developers.ug.html).
 
-Once you are assigned as a developer, you will have access privileges to create integrations in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to Adobe APIs.
+Once you are assigned as a developer, you can start creating integrations in [Adobe Developer Console](https://www.adobe.com/go/devs_console_ui). These integrations are a pipeline from external apps and services to Adobe APIs.
 
 ### Gain user access
 
@@ -69,7 +69,7 @@ The **[!UICONTROL Add an API]** screen appears. Select the product icon for Adob
 
 ![](./images/api-authentication/platform-api.png)
 
-Once you have selected Experience Platform as the API to be added to the project, follow the steps outlined in the tutorial on [adding an API to a project using a service account (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (starting from the "Configure API" step) to finish the process.
+From here, follow the steps outlined in the tutorial on [adding an API to a project using a service account (JWT)](https://www.adobe.io/apis/experienceplatform/console/docs.html#!AdobeDocs/adobeio-console/master/services-add-api-jwt.md) (starting from the "Configure API" step) to finish the process.
 
 >[!IMPORTANT]
 >
@@ -114,7 +114,7 @@ The following request generates a new `{ACCESS_TOKEN}` based on the credentials 
 
 ```shell
 curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
-  -H 'Content-Type: multipart/form-data'
+  -H 'Content-Type: multipart/form-data' \
   -F 'client_id={API_KEY}' \
   -F 'client_secret={SECRET}' \
   -F 'jwt_token={JWT}'
@@ -128,7 +128,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 >[!NOTE]
 >
->You can use the same JWT, API key, and client secret to generate a new access token for each session. This allows you to automate access token generation in your applications.
+>You can use the same API key, client secret, and JWT to generate a new access token for each session. This allows you to automate access token generation in your applications.
 
 **Response**
 
@@ -148,13 +148,7 @@ curl -X POST https://ims-na1.adobelogin.com/ims/exchange/jwt \
 
 ## Test access credentials
 
-Once you have gathered all three required credentials, you can try to make the following API call. This call lists all [!DNL Experience Data Model] (XDM) classes within the Schema Registry's `global` container:
-
-**API format**
-
-```http
-GET /global/classes
-```
+Once you have gathered all three required credentials, you can try to make the following API call. This call lists all standard [!DNL Experience Data Model] (XDM) classes available to your organization.
 
 **Request**
 
@@ -189,7 +183,7 @@ If your response is similar to the one shown below, then your credentials are va
 }
 ```
 
-## Use Postman for JWT authentication and API calls
+## Use Postman to authenticate and test API calls
 
 [Postman](https://www.postman.com/) is a popular tool that allows developers to explore and test RESTful APIs. This [Medium post](https://medium.com/adobetech/using-postman-for-jwt-authentication-on-adobe-i-o-7573428ffe7f) describes how you can set up Postman to automatically perform JWT authentication and use it to consume Platform APIs.
 
