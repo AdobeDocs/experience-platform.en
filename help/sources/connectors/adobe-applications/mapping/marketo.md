@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Mapping Fields for the Marketo Engage Source
 topic-legacy: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
+exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 ---
-
 # (Beta) [!DNL Marketo Engage] field mappings
 
 >[!IMPORTANT]
@@ -151,6 +151,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style="table-layout:auto"}
 
@@ -170,8 +171,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Primary Identity |
-| `marketingListID` | `staticListID` | Relationship |
+| `staticListMemberID` | `marketingListMemberID` | Primary Identity |
+| `staticListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -227,7 +228,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Recommended only if you use the Salesforce integration. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the Salesforce integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -272,7 +273,7 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -301,8 +302,13 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style="table-layout:auto"}
+
+>[!TIP]
+>
+>The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
 
 ## Next steps
 
