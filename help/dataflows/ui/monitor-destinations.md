@@ -53,8 +53,8 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Profile records activated]**: The total number of profile records that were created or updated for activation. This value is updated every 60 minutes.
 - **[!UICONTROL Profile records skipped]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes. This value is updated every 60 minutes.
 - **[!UICONTROL Profile records failed]** The total number of profile records that are not activated to the destination due to errors. This value is updated every 60 minutes.
-- **[!UICONTROL Activation rate]**: The total number of activated and skipped divided by the profiles received.
-- **[!UICONTROL Status]**: Represents the state the dataflow is in. Can be one of two states - [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
+- **[!UICONTROL Activation rate]**: The percentage of received profiles that have either been successfully activated or skipped.
+- **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
 >[!NOTE]
 >
@@ -62,13 +62,11 @@ Each individual dataflow run shows the following details:
 
 To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the number of profiles received, the number of profile records activated, the number of profile records failed, and the number of profile records skipped.
 
-The details page also displays a record of the profile records that failed and profile records that were skipped. By default, it displays the failed profile records.
+![](../assets/ui/monitor-destinations/dataflow-details.png)
 
-![](../assets/ui/monitor-destinations/dataflow-failed.png)
+The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information about these profile records, including the error code, record count, and description, is displayed for both the failed and skipped profile records. By default, it displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
-Information about these profile records, including the error code, record count, and description, is displayed for both the failed and skipped profile records.
-
-![](../assets/ui/monitor-destinations/dataflow-skipped.png)
+![](../assets/ui/monitor-destinations/dataflow-records.png)
 
 ## Next steps
 
