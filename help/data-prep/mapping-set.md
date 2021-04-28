@@ -69,9 +69,9 @@ The following JSON is an example of a typical mapping set:
 
 Sources can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
 
-### Field in a columnar data
+### Field in columnar data
 
-When mapping a field in columnnar data, such as a CSV file, use the `ATTRIBUTE` source type. If the field contains `.` within its name, use `\` to escape the value. An example of this mapping set can be found below:
+When mapping a field in columnar data, such as a CSV file, use the `ATTRIBUTE` source type. If the field contains `.` within its name, use `\` to escape the value. An example of this mapping can be found below:
 
 **Sample CSV file:**
 
@@ -80,7 +80,7 @@ Name, Email
 John Smith, js@example.com
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -90,7 +90,7 @@ John Smith, js@example.com
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -102,9 +102,9 @@ John Smith, js@example.com
 
 ### Field in nested data
 
-When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` source type. If the field contains `.` within its name, use `\` to escape the value. An example of this mapping set can be found below:
+When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` source type. If the field contains `.` within its name, use `\` to escape the value. An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -115,7 +115,7 @@ When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` so
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -125,7 +125,7 @@ When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` so
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -137,9 +137,9 @@ When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` so
 
 ### Field within an array
 
-When mapping a field within an array, you can use retrieve a specific value by using an index. To do this, use the `ATTRIBUTE` source type and the index of the value you want to map. An example of this mapping set can be found below:
+When mapping a field within an array, you can use retrieve a specific value by using an index. To do this, use the `ATTRIBUTE` source type and the index of the value you want to map. An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -158,7 +158,7 @@ When mapping a field within an array, you can use retrieve a specific value by u
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -180,9 +180,9 @@ When mapping a field within an array, you can use retrieve a specific value by u
 
 ### Array to array or object to object
 
-When you are directly mapping an array to an array, you can use the `ATTRIBUTE` source type. Similarly, when you are directly mapping an object to an object, you can use the `ATTRIBUTE` source type. An example of this mapping set can be found below:
+If you are directly mapping an array to an array, or an object to an object, you can use the `ATTRIBUTE` source type. An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -201,7 +201,7 @@ When you are directly mapping an array to an array, you can use the `ATTRIBUTE` 
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -211,7 +211,7 @@ When you are directly mapping an array to an array, you can use the `ATTRIBUTE` 
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -232,9 +232,9 @@ When you are directly mapping an array to an array, you can use the `ATTRIBUTE` 
 
 ### Iterative operations on arrays
 
-You can iteratively loop through arrays and map them to a target by using the `ATTRIBUTE` source type. An example of this mapping set can be found below:
+You can iteratively loop through arrays and map them to a target schema by using the `ATTRIBUTE` source type. An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -253,7 +253,7 @@ You can iteratively loop through arrays and map them to a target by using the `A
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -263,7 +263,7 @@ You can iteratively loop through arrays and map them to a target by using the `A
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -284,9 +284,9 @@ You can iteratively loop through arrays and map them to a target by using the `A
 
 ### Constant value
 
-When mapping in a constant (static) value, use the `STATIC` source type. An example of this mapping set can be found below:
+When mapping in a constant (static) value, use the `STATIC` source type. An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -295,7 +295,7 @@ When mapping in a constant (static) value, use the `STATIC` source type. An exam
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -305,7 +305,7 @@ When mapping in a constant (static) value, use the `STATIC` source type. An exam
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -315,9 +315,9 @@ When mapping in a constant (static) value, use the `STATIC` source type. An exam
 
 ### Expressions
 
-When mapping an expression that you want to resolve, use the `EXPRESSION` source type. A list of accepted functions can be found in the [mapping functions guide](./functions.md). An example of this mapping set can be found below:
+When mapping an expression that you want to resolve, use the `EXPRESSION` source type. A list of accepted functions can be found in the [mapping functions guide](./functions.md). An example of this mapping can be found below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -327,7 +327,7 @@ When mapping an expression that you want to resolve, use the `EXPRESSION` source
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -337,7 +337,7 @@ When mapping an expression that you want to resolve, use the `EXPRESSION` source
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -355,7 +355,7 @@ The destination is the location where the value extracted from the source will b
 
 When you want to map the value from the source at the root level, follow the example below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -364,7 +364,7 @@ When you want to map the value from the source at the root level, follow the exa
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -374,7 +374,7 @@ When you want to map the value from the source at the root level, follow the exa
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -386,7 +386,7 @@ When you want to map the value from the source at the root level, follow the exa
 
 When you want to map the value from the source within a nested field, follow the example below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -397,7 +397,7 @@ When you want to map the value from the source within a nested field, follow the
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -407,7 +407,7 @@ When you want to map the value from the source within a nested field, follow the
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -417,11 +417,11 @@ When you want to map the value from the source within a nested field, follow the
 }
 ```
 
-### Field within an index in an array
+### Field at a specific array index
 
-When you want to map the value of the source in a specific index in an array, follow the example below:
+When you want to map the value of the source to a specific index in an array, follow the example below:
 
-**Sample JSON file:**
+**Sample JSON file**
 
 ```json
 {
@@ -432,7 +432,7 @@ When you want to map the value of the source in a specific index in an array, fo
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -442,7 +442,7 @@ When you want to map the value of the source in a specific index in an array, fo
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -471,7 +471,7 @@ When you want to iteratively loop through arrays and map the values to the targe
 }
 ```
 
-**Sample mapping set:**
+**Sample mapping**
 
 ```json
 {
@@ -481,7 +481,7 @@ When you want to iteratively loop through arrays and map the values to the targe
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
@@ -502,4 +502,4 @@ When you want to iteratively loop through arrays and map the values to the targe
 
 ## Next steps
 
-This document provides detailed information about mapping sets. For more information on other Data Prep features, please read the [Data Prep overview](./home.md).
+This document provided detailed information about mapping sets. For more information on other Data Prep features, please read the [Data Prep overview](./home.md).
