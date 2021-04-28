@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
 title: Honoring Opt-Out Requests in Segments
-topic: overview
-description: Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within Real-time Customer Profile]. These opt-out requests are part of the California Consumer Privacy Act (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 
+topic-legacy: overview
+description: Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within Real-time Customer Profile]. These opt-out requests are part of the California Consumer Privacy Act (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
-
 # Honoring opt-out requests in segments
 
 Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within [!DNL Real-time Customer Profile]. These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 

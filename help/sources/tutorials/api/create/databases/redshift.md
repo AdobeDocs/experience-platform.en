@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;redshift;Redshift;Amazon Redshift;amazon redshift
 solution: Experience Platform
 title: Create an Amazon Redshift Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Amazon Redshift using the Flow Service API.
+exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 ---
-
 # Create an [!DNL Amazon Redshift] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

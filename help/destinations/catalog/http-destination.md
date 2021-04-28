@@ -2,13 +2,15 @@
 keywords: streaming;
 title: HTTP connection
 description: The HTTP destination in Adobe Experience Platform allows you to send profile data to third-party HTTP endpoints.
+exl-id: 165a8085-c8e6-4c9f-8033-f203522bb288
 ---
-
 # (Alpha) [!DNL HTTP] connection
 
 >[!IMPORTANT]
 >
 >The [!DNL HTTP] destination in Platform is currently in alpha. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 The [!DNL HTTP] destination is an [!DNL Adobe Experience Platform] streaming destination that helps you send profile data to third-party [!DNL HTTP] endpoints.
 
@@ -26,11 +28,9 @@ In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL HT
 
 ![Activate HTTP Destination](../assets/catalog/http/activate.png)
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
->
->![Activate HTTP Destination](../assets/catalog/http/connect.png)
+If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
+
+![Activate HTTP Destination](../assets/catalog/http/connect.png)
 
 In the [!UICONTROL Account] step, you need to define the HTTP endpoint connection details. Select **[!UICONTROL New account]** and enter the connection details for the HTTP endpoint that you want to connect to.
 - **[!UICONTROL httpEndpoint]**: the complete [!DNL URL] of the HTTP endpoint that you want to send the profile data to.

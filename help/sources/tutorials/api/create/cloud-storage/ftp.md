@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics; File Transfer Protocol; file transfer protocol
 solution: Experience Platform
 title: Create an FTP Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to an FTP (File Transfer Protocol) server using the Flow Service API.
+exl-id: a7bef346-b357-49bc-ac54-ac8b42adac50
 ---
-
 # Create an FTP source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

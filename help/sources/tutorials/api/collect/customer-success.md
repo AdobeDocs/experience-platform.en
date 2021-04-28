@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
 title: Collect Data From A Customer Success System Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
+exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
-
 # Collect data from a customer success system using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
@@ -284,6 +284,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -322,7 +323,7 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -338,6 +339,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

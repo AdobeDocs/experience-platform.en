@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Audit Log API Endpoint
 description: The /auditlog endpoint in the Schema Registry API allows you to retrieve a chronological list of changes that have been made to an existing XDM resource.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 ---
-
 # Audit log endpoint
 
 For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, mixin, data type, or schema specified by ID.

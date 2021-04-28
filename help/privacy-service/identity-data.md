@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Identity Data for Privacy Requests
-topic: overview
+topic-legacy: overview
 description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 ---
-
 # Identity data for privacy requests
 
 In order for Adobe Experience Platform [!DNL Privacy Service] to process customer requests for their private data (including access, delete, or opt-out-of-sale requests), it must be provided with unique identifiers that link a specific customer to their stored private data in your Adobe Experience Cloud enabled applications. [!DNL Privacy Service] then uses these identifiers to gather all data stored under the customer's identity within [!DNL Experience Cloud], and process it according to the customer's request.

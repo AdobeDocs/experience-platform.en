@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamics Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Microsoft Dynamics to Adobe Experience Platform using APIs or the user interface.
+exl-id: 6ca162ce-2016-4270-b741-301cf4230233
 ---
-
 # Microsoft Dynamics connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.

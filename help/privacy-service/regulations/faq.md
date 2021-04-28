@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;faq;FAQ;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations FAQ
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
+exl-id: ec553e53-664b-4e18-abb1-4e4063fdd2c9
 ---
-
 # Privacy regulations FAQ
 
 This document provides answers to frequently asked questions about supported legal privacy regulations and their implementation in Adobe Experience Cloud.
@@ -147,4 +147,4 @@ The following questions relate specifically to the PDPA.
 
 ### What constitutes sensitive personal data?
 
-The PDPA provides stringent requirements for the collection and storage of sensitive personal data which includes personal data pertaining to: racial or ethnic origin, political opinions, religious or philosophical beliefs, criminal records, trade union memberships, genetic data, biometric data, health records, and sexual orientation or preferences. 
+The PDPA provides stringent requirements for the collection and storage of sensitive personal data which includes personal data pertaining to: racial or ethnic origin, political opinions, religious or philosophical beliefs, criminal records, trade union memberships, genetic data, biometric data, health records, and sexual orientation or preferences.

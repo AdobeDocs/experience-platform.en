@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
@@ -14,6 +13,7 @@ feature: Segments
 - Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Edge segmentation](api/edge-segmentation.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
     - [Schedules](api/schedules.md)
@@ -25,6 +25,7 @@ feature: Segments
     - [Overview](ui/overview.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)

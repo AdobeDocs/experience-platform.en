@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;segment;segmentMembership;segment membership;Schema design;map;Map;
 solution: Experience Platform
 title: Segment Membership Details Mixin
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Segment Membership Details mixin.
+exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 ---
-
 # [!UICONTROL Segment Membership Details] mixin
 
 >[!NOTE]

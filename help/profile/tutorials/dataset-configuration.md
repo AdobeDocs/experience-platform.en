@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: Configure a Dataset for Profile and Identity Service using APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial shows you how to enable a dataset for use with Real-time Customer Profile and Identity Service using Adobe Experience Platform APIs.
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 ---
-
 # Configure a dataset for [!DNL Profile] and [!DNL Identity Service] using APIs
 
 This tutorial covers the process of enabling a dataset for use in [!DNL Real-time Customer Profile] and [!DNL Identity Service], broken down into the following steps:
@@ -72,9 +72,7 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
     "fileDescription" : {
-    "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "persisted": true
     },
     "fields":[],
     "schemaRef" : {
@@ -168,9 +166,7 @@ curl -X GET \
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
         "fileDescription": {
-            "persisted": true,
-            "containerFormat": "parquet",
-            "format": "parquet"
+            "persisted": true
         },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",

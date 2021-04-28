@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;ingested data;troubleshooting;faq;Ingestion;Batch ingestion;batch ingestion;
 solution: Experience Platform
 title: Batch Ingestion Troubleshooting Guide
-topic: troubleshooting
-description: This documentation will help answer frequently asked questions regarding Adobe Experience Platform Batch Data Ingestion APIs. 
+topic-legacy: troubleshooting
+description: This documentation will help answer frequently asked questions regarding Adobe Experience Platform Batch Data Ingestion APIs.
+exl-id: 0a750d7e-a4ee-4a79-a697-b4b732478b2b
 ---
-
 # Batch ingestion troubleshooting guide
 
 This documentation will help answer frequently asked questions regarding Adobe Experience Platform [!DNL Batch Data Ingestion] APIs. 

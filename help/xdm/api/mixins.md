@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Mixins API Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 ---
-
 # Mixins endpoint
 
 Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/mixins` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage mixins within your experience application.
@@ -133,11 +133,11 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 

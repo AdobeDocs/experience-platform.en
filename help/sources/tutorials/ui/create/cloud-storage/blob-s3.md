@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Amazon S3;Azure Blob
 solution: Experience Platform
 title: Create an Azure Blob or Amazon S3  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Azure Blob or Amazon S3 source connection using the Adobe Experience Platform UI.
+exl-id: de2db0cb-3ce4-46d1-96c4-00f779f81670
 ---
-
 # Create an [!DNL Azure Blob] or [!DNL Amazon] S3 source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. 

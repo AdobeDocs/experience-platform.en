@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;query service;query templates;api guide;templates;Query service;
 solution: Experience Platform
 title: Query Templates API Endpoint
-topic: query templates
+topic-legacy: query templates
 description: The following documentation walks through the various API calls you can make using query templates for the Query Service API.
+exl-id: 14cd7907-73d2-478f-8992-da3bdf08eacc
 ---
-
 # Query templates endpoint
 
 ## Sample API calls

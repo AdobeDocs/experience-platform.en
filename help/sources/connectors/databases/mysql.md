@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;MySQL;mysql;My sql;My SQL
 solution: Experience Platform
 title: MySQL Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect MySQL to Adobe Experience Platform using APIs or the user interface.
+exl-id: a18e8e69-880f-4bee-b339-726091d6f858
 ---
-
-# (Beta) MySQL connector
-
->[!NOTE]
->
->The MySQL connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# MySQL connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

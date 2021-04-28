@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;place context;placeContext;datatype;data-type;data type;
 solution: Experience Platform
 title: Place Context Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Place Context XDM data type.
+exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 ---
-
 # [!UICONTROL Place context] data type
 
 [!UICONTROL Place context] is a standard XDM data type that describes the location of an observed event, including point-of-interest information and geographical coordinates.

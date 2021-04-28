@@ -2,11 +2,11 @@
 keywords: Experience Platform;import packaged recipe;Data Science Workspace;popular topics;recipes;api;sensei machine learning;create engine
 solution: Experience Platform
 title: Import a Packaged Recipe Using the Sensei Machine Learning API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
-description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface. 
+description: This tutorial uses the Sensei Machine Learning API to create an Engine, also known as a Recipe in the user interface.
+exl-id: c8dde30b-5234-448d-a597-f1c8d32f23d4
 ---
-
 # Import a packaged recipe using the Sensei Machine Learning API
 
 This tutorial uses the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml) to create an [Engine](../api/engines.md), also known as a Recipe in the user interface. 

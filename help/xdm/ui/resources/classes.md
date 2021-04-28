@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Classes in the UI
 description: Learn how to create and edit classes in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 ---
-
 # Create and edit classes in the UI
 
 In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.

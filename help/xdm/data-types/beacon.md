@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
 solution: Experience Platform
 title: Beacon Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the XDM Individual Profile class.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 ---
-
 # [!UICONTROL Beacon] data type
 
 [!UICONTROL Beacon] is a standard XDM data type that describes the wireless device that communicates identity information to mobile applications as mobile devices come within range.

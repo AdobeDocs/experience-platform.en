@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics; API tutorials; streaming dest
 solution: Experience Platform
 title: Connect to streaming destinations and activate data using the Flow Service API in Adobe Experience Platform
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
-
 # Connect to streaming destinations and activate data using the Flow Service API
 
 >[!NOTE]

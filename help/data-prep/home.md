@@ -2,8 +2,9 @@
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;mapper;mapping;data prep;data preparation;preparing data;
 solution: Experience Platform
 title: Data Prep Overview
-topic: overview
+topic-legacy: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
+exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
 
 # Data Prep overview
@@ -30,6 +31,10 @@ A set of mappings that transform one schema to another are collectively known as
 
 To learn more about mapping sets, please read the [mapping set guide](./mapping-set.md).
 
+## Data format handling
+
+Data Prep can robustly handle different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data format handling overview](./data-handling.md).
+
 ## Next steps
 
-This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about the different datetime strings, please read the [date strings guide](./dates.md).
+This document covered the basics on Data Prep in Adobe Experience Platform. To learn more about different mapping functions, please read the [mapping functions guide](./functions.md). To learn more about how Data Prep handles different data types, please read the [data format handling guide](./data-handling.md#dates). To learn how to use the Data Prep API, please read the [Data Prep developer guide](api/overview.md).

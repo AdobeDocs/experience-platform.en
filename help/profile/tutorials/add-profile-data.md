@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable profile;Enable profile
 title: Add Data to Real-time Customer Profile
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
+exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 ---
-
 # Add data to [!DNL Real-time Customer Profile]
 
 This tutorial outlines the steps necessary to add data to [!DNL Real-time Customer Profile].

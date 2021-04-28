@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema editor;Schema Editor;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
 title: Create a Schema Using the Schema Editor
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
+exl-id: 3edeb879-3ce4-4adb-a0bd-8d7ad2ec6102
 ---
-
 # Create a schema using the [!DNL Schema Editor]
 
 The Adobe Experience Platform user interface allows you to create and manage [!DNL Experience Data Model] (XDM) schemas in an interactive visual canvas called the [!DNL Schema Editor]. This tutorial covers how to create a schema using the [!DNL Schema Editor].
@@ -41,7 +41,11 @@ For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]*
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. Since you chose a standard XDM class to base the schema on, an untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
+Since you chose a standard XDM class to base the schema on, the **[!UICONTROL Add mixin]** dialog appears, allowing you to immediately start adding fields to the schema. For now, select **[!UICONTROL Cancel]** to exit the dialog.
+
+![](../images/tutorials/create-schema/cancel-mixin.png)
+
+The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. An untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
 
 ![](../images/tutorials/create-schema/schema_editor.png)
 
@@ -113,11 +117,13 @@ Similar to the `name` field, the fields you just added represent multi-field con
 
 ![](../images/tutorials/create-schema/personal_details_structure.png)
 
-## Define a new mixin {#define-mixin}
+## Define a custom mixin {#define-mixin}
 
-The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields. There are no standard mixins available that contain the necessary fields, therefore you will need to define a new mixin.
+The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields.
 
-This time, when you open the **[!UICONTROL Add Mixin]** dialog, select **[!UICONTROL Create New Mixin]**. You will then be asked to provide a display name and description for your mixin. 
+There is a standard [!UICONTROL Loyalty Details] mixin that you can add to the schema to capture common fields related to a loyalty program. While you are strongly encouraged to use standard mixins to represent concepts captured by your schemas, the structure of the standard loyalty mixin might not be able to capture all relevant data for your particular loyalty program. In this scenario, you can choose to define a new custom mixin to capture these fields instead.
+
+Open the **[!UICONTROL Add Mixin]** dialog again, but this time select **[!UICONTROL Create New Mixin]** near the top. You are then asked to provide a display name and description for your mixin. 
 
 ![](../images/tutorials/create-schema/mixin_create_new.png)
 

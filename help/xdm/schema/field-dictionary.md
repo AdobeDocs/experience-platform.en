@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;fields;Fields;standard fields;Standard fields;dictionary;Dictionary;map;Map
 solution: Experience Platform
 title: Experience Data Model (XDM) Field Dictionary
-topic: overviews
+topic-legacy: overviews
 description: Experience Data Model (XDM) defines a set of standard fields that can be used when composing Adobe Experience Platform schemas. Use of these fields results in consistent behavior across Platform services, as all services that consume XDM will explicitly understand the specific definitions provided by these fields.
+exl-id: 9e183305-cd6c-444d-bd0b-f0cba3bcbe4d
 ---
-
 # XDM field dictionary
 
 
@@ -523,3 +523,5 @@ You can use the search functionality in the [!DNL Schema Editor] to view details
 |xdm:workPhone|Work Phone|Work phone number.|object||object|https://ns.adobe.com/experience/campaign/experienceevent-profile-work-details, https://ns.adobe.com/xdm/context/profile-work-details|
 |xdm:xid|Experience Identifier|When present, this value represents a cross-namespace identifier that is unique across all namespace-scoped identifiers in all namespaces.|string||string|https://ns.adobe.com/experience/aam-experienceevent, https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/adcloud-profile, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/campaign/experienceevent-profile-segmentation, https://ns.adobe.com/experience/profile/profile-all, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/experience/target/activity/activityevent/segmentevent, https://ns.adobe.com/experience/target/experienceevent-all, https://ns.adobe.com/xdm/context/experienceevent-enduserids, https://ns.adobe.com/xdm/context/experienceevent-enduserids-deprecated, https://ns.adobe.com/xdm/context/experienceevent-profile-stitch, https://ns.adobe.com/xdm/context/experienceevent-segmentmembership, https://ns.adobe.com/xdm/context/profile-identities-deprecated, https://ns.adobe.com/xdm/context/profile-segmentation|
 |xmpDM:duration|Chapter Length/Duration|The length of the chapter, in seconds.|integer||int|https://ns.adobe.com/experience/adcloud-experienceevent, https://ns.adobe.com/experience/analytics-experienceevent, https://ns.adobe.com/experience/campaign-experienceevent, https://ns.adobe.com/experience/target-experienceevent, https://ns.adobe.com/xdm/context/advertising-timed-asset-reference, https://ns.adobe.com/xdm/context/experienceevent-advertising, https://ns.adobe.com/xdm/context/experienceevent-media|
+
+{style="table-layout:auto"}

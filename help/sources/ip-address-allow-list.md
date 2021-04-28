@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip add
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
 title: IP Address Allow List for Source Connections
-topic: overview
+topic-legacy: overview
+exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
-
 # IP address allow list
 
 You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can allow traffic for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.

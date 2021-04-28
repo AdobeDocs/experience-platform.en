@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sample queries;sample query;adobe target;
 solution: Experience Platform
 title: Sample Queries for Adobe Target Data
-topic: queries
+topic-legacy: queries
 description: Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Experience Platform as datasets for you. This document contains sample queries for using Query Service with your Adobe Target datasets.
+exl-id: 0ab3cd6e-25ed-43dc-b8f0-a2b71621ae50
 ---
-
 # Sample queries for Adobe Target data
 
 Data from Adobe Target is transformed into Experience Event XDM schema and ingested into Adobe Experience Platform as datasets for you. There are many use cases for Adobe Experience Platform Query Service with this data, and the following sample queries should work with your Adobe Target datasets.

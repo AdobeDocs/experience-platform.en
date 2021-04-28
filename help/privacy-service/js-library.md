@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Privacy JavaScript Library Overview
-topic: overview
+topic-legacy: overview
 description: The Adobe Privacy JavaScript Library allows you to retrieve data subject identities for use in Privacy Service.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 ---
-
 # Adobe Privacy JavaScript Library overview
 
 As a data processor, Adobe processes personal data in accordance with your company's permission and instructions. As the data controller, you determine the personal data that Adobe processes and stores on your behalf. Depending on the information you choose to send through Adobe Experience Cloud solutions, Adobe can store private information applicable to privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and [!DNL California Consumer Privacy Act] (CCPA). See the document on [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) for more information on how Experience Cloud solutions collect private data.
