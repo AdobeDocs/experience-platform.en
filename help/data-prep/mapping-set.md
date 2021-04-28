@@ -137,7 +137,7 @@ When mapping a field in nested data, such as a JSON file, use the `ATTRIBUTE` so
 
 ### Field within an array
 
-When mapping a field within an array, you can use retrieve a specific value by using an index. To do this, use the `ATTRIBUTE` source type and the index of the value you want to map. An example of this mapping can be found below:
+When mapping a field within an array, you can retrieve a specific value by using an index. To do this, use the `ATTRIBUTE` source type and the index of the value you want to map. An example of this mapping can be found below:
 
 **Sample JSON file**
 
@@ -502,4 +502,4 @@ When you want to iteratively loop through arrays and map the values to the targe
 
 ## Next steps
 
-This document provided detailed information about mapping sets. For more information on other Data Prep features, please read the [Data Prep overview](./home.md).
+This document provided detailed information about mapping sets. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
