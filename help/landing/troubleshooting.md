@@ -172,6 +172,16 @@ This error message displays when the user or Adobe I/O integration (identified b
 
 This error message displays when a POST, PUT or PATCH request has an invalid or missing `Content-Type` header. Ensure that the header is included in the request and that its value is `application/json`.
 
+### User region is missing
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+This error message displays when your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
 
