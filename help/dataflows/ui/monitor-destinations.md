@@ -64,7 +64,7 @@ To view the details of a particular dataflow run, select the run's start time fr
 
 ![](../assets/ui/monitor-destinations/dataflow-details.png)
 
-The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information about these profile records, including the error code, record count, and description, is displayed for both the failed and skipped profile records. By default, it displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
+The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information for both the failed and skipped profile records is displayed, including the error code, record count, and description. By default, the list displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
 
 ![](../assets/ui/monitor-destinations/dataflow-records.png)
 
