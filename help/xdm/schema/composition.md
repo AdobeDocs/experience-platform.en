@@ -53,9 +53,13 @@ Fields that are commonly marked as "[!UICONTROL Identity]" include: email addres
 
 It is important to think about customer identities during the schema planning phase in order to help ensure that data is being brought together to build the most robust profile possible. See the overview on [Adobe Experience Platform Identity Service](../../identity-service/home.md) to learn more about how identity information can help you deliver digital experiences to your customers.
 
-#### `xdm:identityMap` {#identityMap}
+#### `identityMap` {#identityMap}
 
-`xdm:identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
+`identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
+
+The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should be defining individual identity fields within the actual schema structure instead. 
+
+However, identity maps can be particularly useful if you are bringing in data from sources that store identities together such as [!DNL Airship] or Adobe Audience Manager. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
 An example of a simple identity map would look like the following:
 
