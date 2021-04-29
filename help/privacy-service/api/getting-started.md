@@ -28,9 +28,9 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to the [!DNL Privacy Service] API, you must first gather your access credentials to be used in required headers:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 This involves obtaining developer permissions for [!DNL Experience Platform] in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 

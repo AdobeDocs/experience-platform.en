@@ -28,25 +28,25 @@ The Product Purchase Prediction recipe utilizes machine learning to predict cust
 
 This recipe uses [XDM schemas](../../xdm/home.md) to model the data. The schema used for this recipe is shown below:
 
-Field Name | Type
---- | ---
-userId | String
-genderRatio | Number
-ageY | Number
-ageM | Number
-optinEmail | Boolean
-optinMobile | Boolean
-optinAddress | Boolean
-created | Integer
-totalOrders | Number
-totalItems | Number
-orderDate1 | Number
-shippingDate1 | Number
-totalPrice1 | Number
-tax1 | Number
-orderDate2 | Number
-shippingDate2 | Number
-totalPrice2 | Number
+| Field Name | Type |
+| --- | --- |
+| userId | String |
+| genderRatio | Number |
+| ageY | Number |
+| ageM | Number |
+| optinEmail | Boolean |
+| optinMobile | Boolean |
+| optinAddress | Boolean |
+| created | Integer |
+| totalOrders | Number |
+| totalItems | Number |
+| orderDate1 | Number |
+| shippingDate1 | Number |
+| totalPrice1 | Number |
+| tax1 | Number |
+| orderDate2 | Number |
+| shippingDate2 | Number |
+| totalPrice2 | Number |
 
 
 ## Algorithm
