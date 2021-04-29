@@ -32,7 +32,7 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 >
 >The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
 
-Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list some commonly used mixins for the class:
+Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used mixins for the class:
 
 * [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
 * [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
