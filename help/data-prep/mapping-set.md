@@ -1,18 +1,27 @@
 ---
 keywords: Experience Platform;home;mapper;mapping set;mapping;
 solution: Experience Platform
-title: Data Prep functions
+title: Mapping sets overview
 topic: overview
-description: This document introduces mapping sets used with Data Prep.
+description: Learn how to use mapping sets with Adobe Experience Platform Data Prep.
 ---
 
-# Mapping set
+# Mapping sets overview
 
-A mapping set is a set of mappings that transform one schema to another. A single mapping set is created as part of each data flow. 
+A mapping set is a set of mappings that transforms data from one schema to another. This document provides information on how mapping sets are comprised, including input schema, output schema, and mappings.
+
+## Getting started
+
+This overview requires a working understanding of the following components of Adobe Experience Platform:
+
+- [Data Prep](../home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+- [Dataflows](../dataflows/home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
+- [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## Mapping set syntax
 
-A mapping set is comprised of an ID, name, input schema, output schema, as well as a list of all of its associated mappings.
+A mapping set is comprised of an ID, name, input schema, output schema, and a list of all of its associated mappings.
 
 The following JSON is an example of a typical mapping set:
 
@@ -54,16 +63,16 @@ The following JSON is an example of a typical mapping set:
 
 | Property | Description | 
 | -------- | ----------- |
-| `id` | The unique identifier that represents the mapping set. |
+| `id` | A unique identifier for the mapping set. |
 | `name` | The name of the mapping set. |
 | `inputSchema` | The schema for the incoming data. |
 | `outputSchema` | The schema that the input data has will be transformed to conform to. |
-| `mappings` | An array of field-to-field mapping from source to destination. |
-| `sourceType` | For each listed mapping, the `sourceType` attributes indicates the type of source that is to be mapped. Can be one of `ATTRIBUTE`, `STATIC`, or `EXPRESSION`: <ul><li> `ATTRIBUTE` is used for any value found in the source path. When passing </li><li>`STATIC` is used for values injected into the destination path.</li><li> `EXPRESSION` is used for an expression, which will be resolved during runtime.</li> </ul> |
+| `mappings` | An array of field-to-field mappings from the source schema to the destination schema. |
+| `sourceType` | For each listed mapping, its `sourceType` attribute indicates the type of source that is to be mapped. Can be one of `ATTRIBUTE`, `STATIC`, or `EXPRESSION`: <ul><li> `ATTRIBUTE` is used for any value found in the source path. </li><li>`STATIC` is used for values injected into the destination path. This value remains constant and is not affected by the source schema.</li><li> `EXPRESSION` is used for an expression, which will be resolved during runtime. A list of available expressions can be found in the [mapping functions guide](./functions.md).</li> </ul> |
 | `source` | For each listed mapping, the `source` attribute indicates the field that you want to map. More information about how to configure your source can be found in the [sources section](#sources). |
-| `destination` | For each listed mapping, the `destination` attribute indicates he field, or the path to the field, where the extracted value will be placed. More information on how to configure your destinations can be found in the [destination section](#destination). |
-| mappings.&#8203;name | *Optional*. A name of the mapping. |
-| mappings.description | *Optional*. A description of the mapping. |
+| `destination` | For each listed mapping, the `destination` attribute indicates the field, or the path to the field, where the value extracted from the `source` field will be placed. More information on how to configure your destinations can be found in the [destination section](#destination). |
+| `mappings.name` | (*Optional*) A name for the mapping. |
+| `mappings.description` | (*Optional*) A description of the mapping. |
 
 ## Sources
 
@@ -168,7 +177,7 @@ When mapping a field within an array, you can retrieve a specific value by using
 }
 ```
 
-**Transformed data:**
+**Transformed data**
 
 ```json
 {
