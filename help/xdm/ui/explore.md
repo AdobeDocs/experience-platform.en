@@ -33,6 +33,10 @@ You can also use the search bar to narrow down results further. When you search 
 
 The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
 
+>[!NOTE]
+>
+>For standard XDM resources, the search feature only returns individual fields that contain an `xdm` namespace. Fields that are under a different namespace (such as your tenant ID) are only returned if they are contained in a custom resource.
+
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
 ## Explore an XDM resource in the canvas {#explore}
