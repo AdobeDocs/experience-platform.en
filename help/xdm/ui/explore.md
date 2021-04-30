@@ -31,6 +31,8 @@ You can also use the search bar to narrow down results further. When you search 
 
 ![](../images/ui/explore/search.png)
 
+The resources displayed in search results are ordered first by title matches, then by description matches. In turn, the more word matches in either of these categories, the higher the resource appears in the list.
+
 When you have found the resource you want to explore, select its name from the list to view its structure in the canvas.
 
 ## Explore an XDM resource in the canvas {#explore}
