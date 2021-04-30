@@ -78,7 +78,7 @@ The **[!UICONTROL Map source to target field]** popover appears. From here, you 
 
 If you want to remove one of the mappings, hover over that mapping, then select the minus icon.
 
-### Add calculated field
+### Add calculated field {#add-calculated-field}
 
 Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
 
