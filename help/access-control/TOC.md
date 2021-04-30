@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Access Control in Adobe Experience Platform Help
 breadcrumb-title: Access Control Guide

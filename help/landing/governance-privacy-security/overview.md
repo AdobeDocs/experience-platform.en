@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Governance, Privacy, and Security Overview
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform provides several services and tools that allow you to confidently control your collected experience data in order to comply with your business practices, legal obligations, and development process.
 exl-id: 1ab5a436-c5dd-4e7a-aba1-549f0613f224
 ---
@@ -48,13 +48,13 @@ Adobe Experience Platform Privacy Service provides a RESTful API and user interf
 
 See the [Privacy Service overview](../../privacy-service/home.md) for more information.
 
-### Consent collection {#consent}
+### Consent processing {#consent}
 
 Many legal privacy regulations have introduced requirements for active and specific consent when it comes to data collection, personalization, and other marketing use cases. In order to meet these requirements, Experience Platform allows you to capture consent information in individual customer profiles and use those preferences as a determining factor in how each customer's data is used in downstream Platform workflows.
 
-To learn how to collect and process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
+To learn how to process customer consent and preference data using the Adobe standard, see the overview on [consent processing in Experience Platform](./consent/adobe/overview.md).
 
-<!-- For more information on the consent collection process using the Adobe standard, see the [consent collection overview]. -->
+For information on how process customer consent data in accordance with the IAB Transparency and Consent Framework (TCF) 2.0, see the overview on [IAB TCF 2.0 support in Platform](./consent/iab/overview.md).
 
 ## Security {#security}
 

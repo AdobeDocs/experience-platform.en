@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Collect Advertising Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
@@ -293,6 +293,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -332,7 +333,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/b9bf50e91f28528e5213c7ed8583018f48970d69040c37dc",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -348,6 +349,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+| `data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 ---
 # Unions endpoint
@@ -119,8 +119,8 @@ The following Accept headers are available for union schema lookups:
 
 | Accept | Description |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
 
 **Response**
 

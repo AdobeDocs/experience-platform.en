@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
 solution: Experience Platform
 title: Stream Time-Series Data Using Streaming Ingestion APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
@@ -105,7 +105,7 @@ A successful response returns HTTP status 201 with details of your newly created
     "$id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
     "meta:altId": "_{TENANT_ID}.schemas.{SCHEMA_ID}",
     "meta:resourceType": "schemas",
-    "version": "{SCHEMA_VERSION}",
+    "version": "1",
     "type": "object",
     "title": "{SCHEMA_NAME}",
     "description": "{SCHEMA_DESCRIPTION}",
@@ -264,12 +264,7 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
     "description": "{DATASET_DESCRIPTION}",
     "schemaRef": {
         "id": "{SCHEMA_REF_ID}",
-        "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
+        "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
@@ -322,7 +317,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
     "header": {
         "schemaRef": {
             "id": "{SCHEMA_REF_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}"
@@ -331,7 +326,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
         "xdmMeta": {
             "schemaRef": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-                "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+                "contentType": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "xdmEntity":{
@@ -384,7 +379,7 @@ If you want to include a source name, the following example shows how you would 
     "header": {
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/{SCHEMA_ID}",
-            "contentType": "application/vnd.adobe.xed-full+json;version={SCHEMA_VERSION}"
+            "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
         "imsOrgId": "{IMS_ORG}",
         "datasetId": "{DATASET_ID}",

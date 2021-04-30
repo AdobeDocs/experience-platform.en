@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
 title: Data Collection Overview
-topic: overview
+topic-legacy: overview
 description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---

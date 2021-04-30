@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
 title: Collect Protocols Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
@@ -293,6 +293,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 

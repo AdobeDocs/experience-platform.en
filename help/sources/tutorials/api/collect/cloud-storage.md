@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Collect Cloud Storage Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
 exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
@@ -325,6 +325,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `schemaRef.id` | The ID of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -364,7 +365,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -380,6 +381,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The fixed connection spec ID to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

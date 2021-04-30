@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset;enable dataset
 solution: Experience Platform
 title: Create a Dataset in the API
-topic: developer guide
+topic-legacy: developer guide
 description: This document covers how to create a dataset object in the Catalog Service API.
 exl-id: f3e5de7f-1781-4898-ac42-063eb51e661a
 ---
@@ -37,11 +37,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
@@ -50,6 +45,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of the dataset to be created. |
 | `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
+| `schemaRef.contentType` | Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
 
 >[!NOTE]
 >

@@ -232,13 +232,6 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ![confirm-selection](../assets/ui/activate-destinations/confirm-selection.png)
 
-## Edit activation {#edit-activation}
-
-Follow the steps below to edit existing activation flows in Adobe Experience Platform: 
-
-1. Select **[!UICONTROL Destinations]** in the left navigation bar, then click the **[!UICONTROL Browse]** tab, and click the destination name.
-2. Select **[!UICONTROL Edit activation]** in the right rail to change which segments to send to the destination.
-
 ## Verify that segment activation was successful {#verify-activation}
 
 ### Email marketing destinations and cloud storage destinations {#esp-and-cloud-storage}
@@ -262,7 +255,7 @@ The presence of these files in your storage location is confirmation of successf
 
 Check your account in the respective advertising destination that you are activating your data to. If activation was successful, audiences are populated in your advertising platform.
 
-## Social network destinations
+## Social destinations
 
 For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
 

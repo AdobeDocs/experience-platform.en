@@ -2,7 +2,7 @@
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
 title: Retail Sales Recipe
-topic: overview
+topic-legacy: overview
 description: The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
 exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 ---
@@ -33,19 +33,19 @@ This tutorial will go over creating the Retail Sales recipe in a Jupyter Noteboo
 
 This recipe uses [XDM schemas](../../xdm/schema/field-dictionary.md) to model the data. The schema used for this recipe is shown below:
 
-Field Name | Type
---- | ---
-date | String
-store | Integer
-storeType | String
-weeklySales | Number
-storeSize | Integer
-temperature | Number
-regionalFuelPrice | Number
-markdown | Number
-cpi | Number
-unemployment | Number
-isHoliday | Boolean
+| Field Name | Type |
+| --- | --- |
+| date | String | 
+| store | Integer |
+| storeType | String |
+| weeklySales | Number |
+| storeSize | Integer |
+| temperature | Number |
+| regionalFuelPrice | Number |
+| markdown | Number |
+| cpi | Number |
+| unemployment | Number |
+| isHoliday | Boolean |
 
 
 ## Algorithm

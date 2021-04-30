@@ -2,11 +2,12 @@
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create a Streaming Connection Using the API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 ---
+
 # Creating a streaming connection using the API
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

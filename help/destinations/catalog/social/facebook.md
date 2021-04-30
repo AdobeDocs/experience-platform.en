@@ -14,15 +14,15 @@ You can use this destination for audience targeting across [!DNL Facebook’s] f
 
 ![Facebook destination in the Adobe Experience Platform UI](../../assets/catalog/social/facebook/catalog.png)
 
-## Use Cases
+## Use cases
 
 To help you better understand how and when to use the [!DNL Facebook] destination, here are two sample use cases that Adobe Experience Platform customers can solve by using this feature.
 
-### Use Case #1
+### Use case #1
 
 An online retailer wants to reach existing customers through social platforms and show them personalized offers based on their previous orders. The online retailer can ingest email addresses from their own CRM to Adobe Experience Platform, build segments from their own offline data, and send these segments to the [!DNL Facebook] social platform, optimizing their advertising spending.
 
-### Use Case #2
+### Use case #2
 
 An airline has different customer tiers (Bronze, Silver, and Gold), and wants to provide each of the tiers with personalized offers via social platforms. However, not all customers use the airline's mobile app, and some of them have not logged on to the company's website. The only identifiers the company has about these customers are membership IDs and email addresses. 
 
@@ -30,13 +30,7 @@ To target them across social media, they can onboard the customer data from thei
 
 Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
 
-## Data governance for [!DNL Facebook] destinations {#data-governance}
-
->[!IMPORTANT]
->
->Data sent to [!DNL Facebook] cannot include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
-
-## Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 [!DNL Facebook Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
@@ -48,7 +42,7 @@ Next, they can use their offline data including associated membership IDs and cu
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed email addresses, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 |extern_id|Custom user IDs|Select this target identity when your source identity is a custom namespace.|
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Facebook destination.
 
@@ -106,11 +100,15 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ## Using custom namespaces {#custom-namespaces}
 
-Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], make sure you synchronize your own identifiers using [!DNL Facebook Pixel]. See the [official documentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) for detailed information.
+Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], make sure you synchronize your own identifiers using [!DNL Facebook Pixel]. See the [Facebook official documentation](https://developers.facebook.com/docs/marketing-api/audiences/guides/custom-audiences/#external_identifiers) for detailed information.
 
 ## Connect to destination {#connect-destination}
 
-To connect to the [!DNL Facebook] destination, see [Social network destinations authentication workflow](./workflow.md). 
+To connect to the [!DNL Facebook] destination, see [Social destinations authentication workflow](./workflow.md). 
+
+The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 

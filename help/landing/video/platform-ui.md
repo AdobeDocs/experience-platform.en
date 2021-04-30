@@ -1,8 +1,6 @@
 ---
 title: Experience Platform UI Tour
 description: This video gives a quick tour of Adobe Experience Platform's user interface to show you how to navigate to Experience Platform from Experience Cloud, the homepage dashboard, the interface's enablement features, the sandbox switcher and navigation elements.
-feature: interface
-topics:
 kt: 4821
 audience: all
 doc-type: video
