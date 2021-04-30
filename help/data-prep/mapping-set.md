@@ -74,9 +74,9 @@ The following JSON is an example of a typical mapping set:
 | `mappings.name` | (*Optional*) A name for the mapping. |
 | `mappings.description` | (*Optional*) A description of the mapping. |
 
-## Sources
+## Configuring mapping sources
 
-Sources can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
+In a mapping, sources can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
 
 ### Field in columnar data
 
@@ -356,44 +356,13 @@ When mapping an expression that you want to resolve, use the `EXPRESSION` source
 }
 ```
 
-## Destination
+## Configuring mapping destinations
 
-The destination is the location where the value extracted from the source will be inserted.
+In a mapping, the destination is the location where the value extracted from the source will be inserted.
 
 ### Field at the root level
 
-When you want to map the value from the source at the root level, follow the example below:
-
-**Sample JSON file**
-
-```json
-{
-    "name": "John Smith",
-    "email": "js@example.com"
-}
-```
-
-**Sample mapping**
-
-```json
-{
-    "source": "name",
-    "destination": "name",
-    "sourceType": "ATTRIBUTE"
-}
-```
-
-**Transformed data**
-
-```json
-{
-    "name": "John Smith"
-}
-```
-
-### Nested field
-
-When you want to map the value from the source within a nested field, follow the example below:
+When you want to map the source value to the root level of your transformed data, follow the example below:
 
 **Sample JSON file**
 
@@ -411,6 +380,37 @@ When you want to map the value from the source within a nested field, follow the
 ```json
 {
     "source": "customerInfo.name",
+    "destination": "name",
+    "sourceType": "ATTRIBUTE"
+}
+```
+
+**Transformed data**
+
+```json
+{
+    "name": "John Smith"
+}
+```
+
+### Nested field
+
+When you want to map the source value to a nested field in your transformed data, follow the example below:
+
+**Sample JSON file**
+
+```json
+{
+    "name": "John Smith",
+    "email": "js@example.com"
+}
+```
+
+**Sample mapping**
+
+```json
+{
+    "source": "name",
     "destination": "pi.name",
     "sourceType": "ATTRIBUTE"
 }
@@ -428,7 +428,7 @@ When you want to map the value from the source within a nested field, follow the
 
 ### Field at a specific array index
 
-When you want to map the value of the source to a specific index in an array, follow the example below:
+When you want to map the source value to a specific index in an array in your transformed data, follow the example below:
 
 **Sample JSON file**
 
@@ -461,7 +461,7 @@ When you want to map the value of the source to a specific index in an array, fo
 
 ### Iterative array operation
 
-When you want to iteratively loop through arrays and map the values to the target, follow the the example below: 
+When you want to iteratively loop through arrays and map the values to the target, you can use a wildcard index (`[*]`). An example of this can be seen below: 
 
 ```json
 {
@@ -511,4 +511,4 @@ When you want to iteratively loop through arrays and map the values to the targe
 
 ## Next steps
 
-This document provided detailed information about mapping sets. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
+This document provided detailed information about mapping sets. By reading this document, you should now understand how mapping sets are constructed, including how to configure individual mappings within the mapping set. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
