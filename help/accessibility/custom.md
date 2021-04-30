@@ -14,7 +14,7 @@ Adobe Experience Platform is continuously enhanced to meet the needs of all type
 
 The Experience Platform user interface meets required contrast ratios for normal text, graphics, and UI components. The colors of the user interface have also been chosen to support accessibility for all users, including those with visual disabilities. 
 
-In Platform, UI elements that are clickable or actionable with a pointed can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
+In Platform, UI elements that are clickable or actionable with a pointer can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
 
 Experience Platform strives to meet the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) web standards, including the addition of ARIA labels to UI elements.
 
@@ -24,17 +24,21 @@ Experience Platform strives to meet the Web Accessibility Initiative - Accessibl
 
 The left navigation within the Experience Platform UI is keyboard accessible and provides color contrast in normal, hover, and selection states that meet accessibility standards.
 
-When using the left navigation, the following functionality improves accessibility: 
-* From the Home screen, users can tab into the left navigation. Selecting `Shift + tab` returns the user to the Home screen.
-* With the left navigation in focus, selecting tab takes users to the expand and collapse affordance at the bottom of the navigation panel. The ability to expand or collapse the left navigation is activated with the Enter (Return) key.
-* With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and continuously cycles (in other words, the focus does not shift away until the user tabs away from the left navigation).
-* Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text.
-* Sections within the left navigation can be expanded and collapsed using the left and right arrow keys. 
-* When selecting a left navigation item, the Enter (Return) key will open the selected UI item in the right panel, however focus remains in left navigation until the user tabs away.
-* Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items will be skipped during arrow navigation and the user will not be able to select the item using the Enter (Return) key.
-* All items in the left navigation have [ARIA-labels]((https://www.w3.org/WAI/standards-guidelines/aria/)).
+From the Home screen, users can tab into the left navigation. Selecting `Shift + tab` returns the user to the Home screen. 
 
-![An image showing multiple versions of the Experience Platform left navigation with accessibility features highlighted.](images/left-navigation.png)
+![An image showing the Experience Platform left navigation.](images/left-navigation-select.png)
+
+With the left navigation in focus, Tab takes users to the expand and collapse interaction. The ability to expand or collapse the left navigation is activated with the Enter (Return) key.
+
+![An image showing the Experience Platform left navigation collapsed.](images/left-navigation-collapse.png)
+
+With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and cycle continuously (in other words, the focus does not shift away until the user tabs away from the left navigation). Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text. When selecting a left navigation item, the Enter (Return) key will open the selected UI item in the right panel, however focus remains in left navigation until the user tabs away.
+
+![An image showing the Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
+
+Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items will be skipped during arrow navigation and the user will not be able to select the item using the Enter (Return) key.
+
+![An image showing sections of the Experience Platform left navigation that are not enabled for the user.](images/left-navigation-sections-disabled.png)
 
 ## Embedded video dialog
 
@@ -65,7 +69,7 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 
 ## File drag and drop
 
-In Experience Platform, all file selection drag and drop zones are keyboard accessible. Using the tab button to highlight [!UICONTROL Choose files] and using enter or spacebar to select the button, invokes the file selection UI for the users operating system.
+In Experience Platform, all file selection drag and drop zones are keyboard accessible. Using the tab button to highlight [!UICONTROL Choose files] and using enter or spacebar to select the button, invokes the operating system's file selection UI.
 
 After a file has been uploaded, a delete icon becomes keyboard navigable to remove the selected file and upload a new one. Users can use the tab key to focus on the delete icon and enter or spacebar to select it. Once the file is removed, the [!UICONTROL Choose files] button is automatically in focus and able to be selected.
 

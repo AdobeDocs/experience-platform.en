@@ -18,11 +18,6 @@ To learn more about the general accessibility features supported by Experience P
 
 For information regarding accessibility features in specific sections of the Platform user interface, please select a document from the custom accessibility dropdown in the left rail.
 
-To help meet the goal of accessibility conformance, Experience Platform provides varying levels of support for the following standards:
-
-* [Web Content Accessibility Guidelines (WCAG) 2.1 Level AA](https://www.w3.org/TR/WCAG/)
-* [Revised Section 508 of the Rehabilitation Act](https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-ict-refresh/final-rule/text-of-the-standards-and-guidelines)
-* [Accessibility Initiative – Accessible Rich Internet Applications (WAI-ARIA) by W3C](https://www.w3.org/WAI/standards-guidelines/aria/)
-* [EN 301 549](https://en.wikipedia.org/wiki/EN_301_549)
+To help meet the goal of accessibility conformance, Experience Platform follows the internationally recognized best practices in the Web Content Accessibility Guidelines (WCAG) 2.1 Level A and Level AA. For more detailed information about recent accessibility improvements to Experience Platform, review the latest [Platform release notes](../release-notes/latest/latest.md).
 
 To read detailed reports of how Adobe applications meet each level of compliance, refer to the [Accessibility conformance report](https://www.adobe.com/accessibility/compliance.html) (ACR) documentation.

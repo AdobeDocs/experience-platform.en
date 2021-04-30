@@ -12,49 +12,15 @@ Adobe Experience Platform is committed to providing accessible and inclusive fea
 
 ## Assistive Technologies
 
-Users with disabilities frequently rely on hardware and software known as "assistive technologies" to access web content and use software products. Adobe Experience Platform supports several types of assistive technologies (AT), including:
-
-* Screen readers and screen magnifiers.
-* Speech recognition software.
-* Keyboard usage – navigation and shortcuts.
-* Assistive hardware, including switch controls, refreshable Braille displays, and other computer input devices.
-* UI magnifying tools.
-
-The terms used in the conformance level information are defined as follows:
-
-* Supports: The functionality of the product has at least one method that meets the criterion without known defects or meets with equivalent facilitation.
-* Partially supports: Some functionality of the product does not meet the criterion.
-* Does not support: The majority of product functionality does not meet the criterion.
-* Not applicable: The criterion is not relevant to the product.
-* Not evaluated: The product has not been evaluated against the criterion. This can only be used in WCAG 2.0 Level AAA.
-
-## Screen readers
-
-A screen reader reads text that appears on the computer screen. It also reads non-textual information, such as button labels or image descriptions within an application that are provided in accessibility tags or attributes. 
-
-Through the use of semantic code and [ARIA labels]((https://www.w3.org/WAI/standards-guidelines/aria/)), interactive elements within the Experience Platform user interface include corresponding labels, accessible names, and roles that identify both their purpose and their current state. 
-
-All interactive elements within Experience Platform include these labels. This helps to ensure that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls. 
-
-### Recommended screen readers & browsers
-
-The following screen readers and browsers are recommended for Experience Platform to support accessibility features:
-
-* Windows latest version, using NVDA or JAWS screen readers (latest version) with the latest version of Google Chrome.
-* Experience Platform supports built-in MS Windows and macOS accessibility features like high-contrast mode, sticky keys, and slow keys/filter keys. It also provides information about the user interface to the operating system to enable interaction with assistive technologies, including screen readers such as VoiceOver for macOS and NVDA on Windows.
+Users with disabilities frequently rely on hardware and software, known as assistive technologies, to access digital content and to use software products. Adobe Experience Platform supports several types of assistive technologies (AT) such as screen readers, zoom, and voice recognition software by following accessibility best practices such as using semantic code, text equivalents, labels, and ARIA where needed. Interactive elements within the Experience Platform interface use corresponding labels, accessible names, and roles that identify both their purpose and their current state. This ensures that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls.
 
 ## Keyboard accessibility
 
-Experience Platform supports full keyboard accessibility, ensuring that any user interface elements that are clickable or actionable with a pointer can also be engaged with a keyboard. Using a keyboard, users can navigate around the Platform user interface, as well as focus upon UI elements and take appropriate actions. Users can also use keyboard navigation for drag and drop interactions within Platform.
+Experience Platform supports full keyboard accessibility.
 
-The following navigational elements help to facilitate accessibility: 
+The following navigational elements facilitate accessibility: The Tab key moves between UI elements, sections, and menu groups, and arrow keys move within menu groups to set focus to individual active elements. Shift + Tab moves backwards through the tab order. The Return (Enter) and Spacebar keys activate the selected item. The escape key (ESC) acts as a cancel button to close a dialog when present.
 
-* **Tab:** The tab key moves between UI elements, shifting focus.
-* **Shift + Tab:** Selecting shift and the tab key together moves backwards through the tab order. 
-* **Return (Enter):** The return or enter key activates a selected item.
-* **Spacebar:** The spacebar can also be used to activate a selected item.
-
-To indicate which UI element currently has focus, a blue border appears around selected elements to indicate that focus is applied. 
+Experience Platform displays a blue border around a selected element to display a clear indication of which UI element currently has focus. 
 
 ![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
@@ -66,6 +32,6 @@ Experience Platform strives for [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) confo
 
 ## Required field validation
 
-Required fields are validated during multiple workflows such as adding data, creating schemas, and generating segments. If invalid data is entered into a required field or it does not pass validation during saving, the field is highlighted in red and an error icon appears.
+When adding data, or creating schemas and segments, required fields are indicated both visually, using an asterisk next to the text label of a field, and programmatically. These fields trigger validation when you enter invalid data in fields and/or upon saving. If a required field does not pass validation, it is outlined in red with an error icon. A written description also appears of the issue that needs to be fixed.
 
 ![A close up of a required field that has not passed validation. The field appears in red and an error icon is present.](images/field-validation.png)
