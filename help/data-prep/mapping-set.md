@@ -14,10 +14,10 @@ A mapping set is a set of mappings that transforms data from one schema to anoth
 
 This overview requires a working understanding of the following components of Adobe Experience Platform:
 
-- [Data Prep](../home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
+- [Data Prep](./home.md): Data Prep allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 - [Dataflows](../dataflows/home.md): Dataflows are a representation of data jobs that move data across Platform. Dataflows are configured across different services, helping move data from source connectors to target datasets, to [!DNL Identity] and [!DNL Profile], and to [!DNL Destinations].
-- [[!DNL Adobe Experience Platform Data Ingestion]](../../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
-- [[!DNL Experience Data Model (XDM) System]](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
+- [[!DNL Adobe Experience Platform Data Ingestion]](../ingestion/home.md): The methods by which data can be sent to [!DNL Experience Platform].
+- [[!DNL Experience Data Model (XDM) System]](../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
 
 ## Mapping set syntax
 
