@@ -86,7 +86,7 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 ### Use an existing dataset
 
-To ingest data into an existing dataset, select **[!UICONTROL Use existing dataset]**, then select the dataset icon.
+To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**, then select the dataset icon.
 
 ![existing-dataset](../../../../images/tutorials/create/marketo/existing-dataset.png)
 
@@ -96,7 +96,7 @@ The **[!UICONTROL Select dataset]** dialog appears. Find the dataset with the ap
 
 ### Use a new dataset
 
-To ingest data into a new dataset, select **[!UICONTROL Create new dataset]** and enter a name and description for the dataset in the fields provided.
+To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided.
 
 You can search for a schema by entering its name in the **[!UICONTROL Select schema]** search bar. You can also select the dropdown icon to see a list of existing schemas. Alternatively, you can select **[!UICONTROL Advanced search]** to access page of existing schemas including their respective details.
 
