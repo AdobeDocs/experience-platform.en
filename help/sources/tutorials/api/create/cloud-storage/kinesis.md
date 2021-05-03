@@ -144,8 +144,8 @@ curl -X POST \
 | `connectionSpec.id` | The fixed connection specification ID for [!DNL Kinesis]. This ID is : `86043421-563b-46ec-8e6c-e23184711bf6` |
 | `data.format` | The format of the [!DNL Kinesis] data that you want to ingest. Supported data formats include: `json`, `parquet`, and `delimited`. |
 | `params.stream` |
-| `params.dataType` |
-| `params.latest` |
+| `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw`. |
+| `params.reset` |
 
 **Response**
 
