@@ -33,29 +33,15 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 
 For more information about these values, refer to [this Kinesis document](https://docs.aws.amazon.com/streams/latest/dev/getting-started.html).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in Experience Platform, including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
+For nformation on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Amazon Kinesis] account as it can be used to create multiple source connectors to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL Kinesis] source and generate a connection ID. A connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+
+To create a connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Kinesis] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -95,7 +81,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID for your [!DNL Kinesis] account. |
 | `auth.params.secretKey` | The secret access key for your [!DNL Kinesis] account. |
-| `auth.params.region` | The region for your [!DNL Kinesis] account. For more information on regions, see the document on [IP address allow list](../../../../ip-address-allow-list.md) |
+| `auth.params.region` | The region for your [!DNL Kinesis] account. For more information on regions, see the document on [IP address allow list](../../../../ip-address-allow-list.md). |
 | `connectionSpec.id` | The [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Response**
