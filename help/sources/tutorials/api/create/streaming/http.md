@@ -282,8 +282,8 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 ```json
 {
-    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
-    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
 }
 ```
 
@@ -329,8 +329,8 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ```json
 {
-    "id": "d9300194-6a82-4163-b001-946a821163b8",
-    "etag": "\"4006d3e4-0000-0200-0000-5f7189220000\""
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
 }
 ```
 
@@ -372,12 +372,12 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status ??? with details of your newly created dataflow, including its unique identifier (`id`).
+A successful response returns HTTP status 201 with details of your newly created dataflow, including its unique identifier (`id`).
 
 ```json
 {
-    "id": "1f086c23-2ea8-4d06-886c-232ea8bd061d",
-    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 

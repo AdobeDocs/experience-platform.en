@@ -274,7 +274,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of the streaming connection previously created. |
+| `{CONNECTION_ID}` | The `inletId` value of the streaming connection previously created. |
 | `synchronousValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. |
 
 **Request**
