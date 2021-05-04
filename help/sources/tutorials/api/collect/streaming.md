@@ -345,7 +345,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `name` | The name of the dataset to be created. |
-| `schemaRef.id` | The ID of the target XDM schema. |
+| `schemaRef.id` | The URI `$id` for the XDM schema the dataset will be based on. |
 | `schemaRef.contentType` | The version of the schema. This value must be set to `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. See the section on [schema versioning](../../../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
 
 **Response**
