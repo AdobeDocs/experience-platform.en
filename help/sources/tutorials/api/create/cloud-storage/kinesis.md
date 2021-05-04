@@ -143,9 +143,9 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of your [!DNL Kinesis] source that was generated in the previous step. |
 | `connectionSpec.id` | The fixed connection specification ID for [!DNL Kinesis]. This ID is : `86043421-563b-46ec-8e6c-e23184711bf6` |
 | `data.format` | The format of the [!DNL Kinesis] data that you want to ingest. Supported data formats include: `json`, `parquet`, and `delimited`. |
-| `params.stream` |
-| `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw`. |
-| `params.reset` |
+| `params.stream` | The name of the data stream to pull records from. |
+| `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
+| `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. |
 
 **Response**
 

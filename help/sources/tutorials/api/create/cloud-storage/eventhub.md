@@ -130,7 +130,7 @@ curl -X POST \
             "format": "json"
         },
         "params": {
-            "eventHubName": "{EVENTHUBS_NAME}",
+            "eventHubName": "{EVENTHUB_NAME}",
             "dataType": "raw",
             "reset": "latest",
             "consumerGroup": "{CONSUMER_GROUP}"
@@ -145,10 +145,10 @@ curl -X POST \
 | `baseConnectionId` | The connection ID of your [!DNL Event Hubs] source that was generated in the previous step. |
 | `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. This ID is : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 | `data.format` | The format of the [!DNL Event Hubs] data that you want to ingest. Supported data formats include: `json`, `parquet`, and `delimited`. |
-| `params.eventHubName` |
-| `params.dataType` |
-| `params.reset` |
-| `params.consumerGroup` |
+| `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
+| `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
+| `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. |
+| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. |
 
 ## Next steps
 
