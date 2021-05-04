@@ -21,6 +21,8 @@ This guide requires a working understanding of the following components of Adobe
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
 
+Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
+
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 
 ### Reading sample API calls
@@ -47,9 +49,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 - Content-Type: application/json
 
-## Create a connection
+## Create a base connection
 
-A connection specifies the source and contains the information required to make the flow compatible with streaming ingestion APIs. When creating a connection, you have the option of creating a non-authenticated and an authenticated connection.
+A base connection specifies the source and contains the information required to make the flow compatible with streaming ingestion APIs. When creating a base connection, you have the option of creating a non-authenticated and an authenticated connection.
 
 ### Non-authenticated connection
 
@@ -88,7 +90,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Property | Description |
@@ -182,7 +184,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ## Get streaming endpoint URL
 
-With the connection created, you can now retrieve your streaming endpoint URL.
+With the base connection created, you can now retrieve your streaming endpoint URL.
 
 **API format**
 
@@ -240,6 +242,142 @@ A successful response returns HTTP status 200 with detailed information about th
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Create a source connection
+
+After creating your base connection, you will need to create a source connection to SOMETHING. When creating a source connection, you'll need the `id` value from your created base connection.
+
+**API format**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with detailed of the newly created source connection, including its unique identifier (`id`). 
+
+```json
+{
+    "id": "e96d6135-4b50-446e-922c-6dd66672b6b2",
+    "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
+}
+```
+
+## Create a target connection
+
+After creating your source connection, you can create a target connection. When creating your target connection, you'll need the `id` value of your previously created dataset.
+
+**API format**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with details of the newly created target connection, including its unique identifier (`id`).
+
+```json
+{
+    "id": "d9300194-6a82-4163-b001-946a821163b8",
+    "etag": "\"4006d3e4-0000-0200-0000-5f7189220000\""
+}
+```
+
+## Create a dataflow
+
+With your source and target connections created, you can now create a dataflow. The dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request to the `/flows` endpoint. 
+
+**API format**
+
+```http
+POST /flows
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status ??? with details of your newly created dataflow, including its unique identifier (`id`).
+
+```json
+{
+    "id": "1f086c23-2ea8-4d06-886c-232ea8bd061d",
+    "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
 
