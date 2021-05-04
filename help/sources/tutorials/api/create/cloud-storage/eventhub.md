@@ -38,7 +38,7 @@ For more information about these values, refer to [this Event Hubs document](htt
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-## Create a connection
+## Create a base connection
 
 The first step in creating a source connection is to authenticate your [!DNL Event Hubs] source and generate a connection ID. A connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
