@@ -53,7 +53,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 - `Content-Type: application/json`
 
-## Create a source connection {#source}
+<!-- ## Create a source connection {#source}
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
@@ -116,6 +116,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
     "etag": "\"66013508-0000-0200-0000-5f6e2ae70000\""
 }
 ```
+-->
 
 ## Get streaming endpoint URL {#get-endpoint}
 
