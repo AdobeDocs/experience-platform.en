@@ -283,6 +283,13 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 ]
 ```
 
+
+## Create a streaming connection
+
+After creating your schema and dataset, you can create a streaming connection
+
+For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
+
 ## Ingest time series data to the streaming connection
 
 With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Platform].
@@ -438,7 +445,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \
