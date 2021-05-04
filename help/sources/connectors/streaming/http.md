@@ -3,8 +3,8 @@ keywords: Experience Platform;home;popular topics;http api
 solution: Experience Platform
 title: HTTP API Source Connector Overview
 description: Learn how to create streaming connectors to connect with Adobe Experience Platform using APIs or the user interface.
+exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 ---
-
 # HTTP API connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.

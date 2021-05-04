@@ -5,8 +5,8 @@ title: Create a MariaDB Source Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to MariaDB using the Flow Service API.
+exl-id: 9b7ff394-ca55-4ab4-99ef-85c80b04a6df
 ---
-
 # Create a [!DNL MariaDB] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

@@ -30,12 +30,6 @@ To target them across social media, they can onboard the customer data from thei
 
 Next, they can use their offline data including associated membership IDs and customer tiers to build new audience segments that they can target through the [!DNL Facebook] destination.
 
-## Data governance for [!DNL Facebook] destinations {#data-governance}
-
->[!IMPORTANT]
->
->Data sent to [!DNL Facebook] cannot include stitched identities. You are responsible for honoring this obligation and can do so by ensuring that segments selected for activation do not use a stitching option in their merge policy. Learn more about [merge policies](/help/profile/ui/merge-policies.md).
-
 ## Supported identities {#supported-identities}
 
 [!DNL Facebook Custom Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
