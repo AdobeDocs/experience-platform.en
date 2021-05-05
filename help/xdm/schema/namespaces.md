@@ -8,23 +8,24 @@ description: Learn how namespacing in Experience Data Model (XDM) allows you to 
 
 # Namespacing in Experience Data Model (XDM)
 
-All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces om XDM and how they are represented in the [Schema Registry API](../api/overview.md).
+All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces in
+ XDM and how they are represented in the [Schema Registry API](../api/overview.md).
 
-Namespacing allows you define a field `A` in namespace `X` as meaning something different than the same field `A` in namespace `Y`. In practice, the namespace of a field indicates its source (such as standard XDM, a vendor, or your organization).
+Namespacing allows you define a field in one namespace as meaning something different than the same field in a different namespace. In practice, the namespace of a field indicates its source (such as standard XDM, a vendor, or your organization).
 
-For example, consider an XDM schema that uses the [[!UICONTROL Personal Contact Details] mixin](../mixins/profile/personal-details.md), which has a standard `mobilePhone` field that exists in the `xdm` namespace. In the same schema, you are also free to create your own `mobilePhone` field under a different namespace (your [tenant ID](../api/getting-started.md#know-your-tenant_id)) and both can coexist together but have a different underlying meaning or constraints.
+For example, consider an XDM schema that uses the [[!UICONTROL Personal Contact Details] mixin](../mixins/profile/personal-details.md), which has a standard `mobilePhone` field that exists in the `xdm` namespace. In the same schema, you are also free to create a separate `mobilePhone` field under a different namespace (your [tenant ID](../api/getting-started.md#know-your-tenant_id)). Both of these fields can coexist together while having different underlying meanings or constraints.
 
 ## Namespacing syntax
 
-The following sections demonstrate how namespaces are assigned in XDM syntaxes.
+The following sections demonstrate how namespaces are assigned in XDM syntax.
 
 ### Standard XDM {#standard}
 
-The standard XDM syntax provides insight into how namespaces are represented in schemas (including how they are translated in [Compatibility Mode](#compatibility)).
+The standard XDM syntax provides insight into how namespaces are represented in schemas (including [how they are translated in Adobe Experience Platform](#compatibility)).
 
 Standard XDM uses [JSON-LD](https://json-ld.org/) syntax to assign namespaces to fields. This namespace comes in the form of a URI (such as `https://ns.adobe.com/xdm` for the `xdm` namespace), or as a shorthand prefix which is configured in the `@context` attribute of a schema.
 
-The following is an example schema for a product in standard XDM syntax. Information about the use of namespaces is provided on commented lines
+The following is an example schema for a product in standard XDM syntax. With the exception of `@id` (the unique identifier as defined by the JSON-LD spec), each field under `properties` starts with a namespace and ends with the field name. If using a shorthand prefix defined under `@context`, the namespace and the field name are separated by a colon (`:`). If not using a prefix, the namespace and field name are separated by a slash (`/`). 
 
 ```json
 {
@@ -32,49 +33,49 @@ The following is an example schema for a product in standard XDM syntax. Informa
     "title": "Product",
     "description": "Represents the definition of a Project",
     "@context": {
-        // Shorthand prefixes that can be used instead of the full URI
         "xdm": "https://ns.adobe.com/xdm",
         "repo": "http://ns.adobe.com/adobecloud/core/1.0/",
         "schema": "http://schema.org",
-        "customerA": "https://ns.adobe.com/customera"
+        "tenantId": "https://ns.adobe.com/tenantId"
     },
     "properties": {
-        // Unique identifier as defined by the JSON-LD spec
         "@id": {
             "type": "string"
         },
-        // "xdm" is the configured shorthand namespace, "sku" is the field name 
         "xdm:sku": {
             "type": "string"
         },
-        // "xdm" is the namespace, "name" is the field name
         "xdm:name": {
             "type": "string"
         },
-        // "repo" is the configured shorthand namespace, "createdDate" is the field name
         "repo:createdDate": {
             "type": "string",
             "format": "datetime"
         },
-        // https://ns.adobe.com/xdm/channels is the namespace, "application" is the field name
         "https://ns.adobe.com/xdm/channels/application": {
             "type": "string"
         },
-        // "schema" is the configured shorthand namespace, "latitude" is the field name
         "schema:latitude": {
             "type": "number"
         },
-        // https://ns.adobe.com/vendorA/product is the namespace, "stockNumber" is the field name
         "https://ns.adobe.com/vendorA/product/stockNumber": {
             "type": "string"
         },
-        // "customerA" is the namespace (tenantId), "internalSku" is the field name
-        "customerA:internalSku": {
+        "tenantId:internalSku": {
             "type": "number"
         }
     }
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `@context` | An object that defines the shorthand prefixes that can be used instead of a full namespace URI under `properties`.  |
+| `@id` | A unique identifier for the record as defined by the [JSON-LD spec](https://json-ld.org/spec/latest/json-ld/#node-identifiers). |
+| `xdm:sku` | An example of a field that uses a shorthand prefix to denote a namespace. In this case, `xdm` is the namespace (`https://ns.adobe.com/xdm`), and `sku` is the field name. |
+| `https://ns.adobe.com/xdm/channels/application` | An example of a field that uses the full namespace URI. In this case, `https://ns.adobe.com/xdm/channels` is the namespace, and `application` is the field name.  |
+| `https://ns.adobe.com/vendorA/product/stockNumber` | Fields provided by vendor resources use their own unique namespaces. In this example, `https://ns.adobe.com/vendorA/product` is the vendor namespace, and `stockNumber` is the field name.  |
+| `tenantId:internalSku` | Fields defined by your organization use your unique tenant ID as their namespace. In this example, `tenantId` is the tenant namespace (`https://ns.adobe.com/tenantId`), and `internalSku` is the field name. |
 
 ### Compatibility Mode {#compatibility}
 
@@ -92,44 +93,35 @@ The following JSON represents how the standard XDM syntax example shown above is
    "title": "Product",
    "description": "Represents the definition of a Project",
    "properties": {
-    // The @ symbol for "@id" is replaced with an underscore
     "_id": { 
         "type": "string"
     },
-    // "xdm:" prefix is removed
     "sku": { 
         "type": "string"
     },
-    // "xdm:" prefix is removed
     "name": { 
         "type": "string"
         },
-    // The "repo" namespace is exposed as a parent field named "_repo"
     "_repo": { 
         "type": "object",
         "properties": {
-            // Member of the "repo" namespace
             "createdDate": { 
                 "type": "string",
                 "format": "datetime"
             }
         }
     },
-    // https://ns.adobe.com/xdm/channels namespace is exposed as a parent field named "_channels"
     "_channels": { 
         "type": "object",
         "properties": {
-            // member of the "channels" namespace
             "application": { 
                 "type": "string"
             }
         }
     },
-    // http://schema.org namespace is exposed as a parent field named "_schema"
     "_schema": { 
          "type": "object",
          "properties": {
-             // member of the "schema" namespace
              "application": { 
                  "type": "string"
              }
@@ -148,7 +140,7 @@ The following JSON represents how the standard XDM syntax example shown above is
             }
         }
     },
-    "_customerA": {
+    "_tenantId": {
         "type": "object",
         "properties": {
             "internalSku": {
