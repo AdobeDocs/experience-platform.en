@@ -151,6 +151,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
+| `mktoCdpParentOrgId` | `accountParentID` |
 
 {style="table-layout:auto"}
 
@@ -170,8 +171,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `marketingListMemberID` | `staticListMemberID` | Primary Identity |
-| `marketingListID` | `staticListID` | Relationship |
+| `staticListMemberID` | `marketingListMemberID` | Primary Identity |
+| `staticListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 
@@ -227,7 +228,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `Campaign-ID` | `campaignID` | Recommended only if you use the Salesforce integration. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the Salesforce integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -251,10 +252,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Persons {#persons}
 
-In the [!DNL Profiles] dashboard of the Platform UI, if the value of ID stitching in the merge policy you used to browse is set to `None`, then the linked identities window will only display the primary identity attribute.
-
-As a workaround, you can update the ID stitching field from `None` to `Private graph` in order to see all linked identities to a [!DNL Profile]. Alternatively, you can either create a new merge policy, or use a different merge policy that contains an ID stitching value set to `Private graph`. If you choose to create a new merge policy or use a different merge policy, you must ensure that the policy contains the same schema type that is used for the [!DNL Marketo] Persons mapping set. For more information, see the [merge policies UI guide](../../../../profile/ui/merge-policies.md).
-
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
@@ -272,7 +269,7 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
+| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -301,8 +298,13 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
 
 ## Next steps
 
