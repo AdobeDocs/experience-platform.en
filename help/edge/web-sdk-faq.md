@@ -157,6 +157,10 @@ Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your i
 
 **kndctr_orgid_consentcheck:** This session-based cookie signals the server to look up the consent preferences server side.
 
+## Which browsers does the Adobe Experience Platform Web SDK support?
+
+The Adobe Experience Platform Web SDK is designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, Internet Explorer 11, and Microsoft Edge Chromium. You may have trouble using certain features on older versions of browsers. 
+
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 
 * [Documentation](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
