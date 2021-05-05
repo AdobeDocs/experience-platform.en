@@ -77,6 +77,8 @@ The following is an example schema for a product in standard XDM syntax. With th
 | `https://ns.adobe.com/vendorA/product/stockNumber` | Fields provided by vendor resources use their own unique namespaces. In this example, `https://ns.adobe.com/vendorA/product` is the vendor namespace, and `stockNumber` is the field name.  |
 | `tenantId:internalSku` | Fields defined by your organization use your unique tenant ID as their namespace. In this example, `tenantId` is the tenant namespace (`https://ns.adobe.com/tenantId`), and `internalSku` is the field name. |
 
+{style="table-layout:auto"}
+
 ### Compatibility Mode {#compatibility}
 
 In Adobe Experience Platform, XDM schemas are represented in [Compatibility Mode](../api/appendix.md#compatibility) syntax, which does not use a `@context` property to set shorthand namespaces. Instead, a particular field's namespace is implied by the field's location in the structure of the schema's `properties` object.
