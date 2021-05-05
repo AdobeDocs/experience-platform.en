@@ -65,8 +65,8 @@ The following JSON is an example of a typical mapping set:
 | -------- | ----------- |
 | `id` | A unique identifier for the mapping set. |
 | `name` | The name of the mapping set. |
-| `inputSchema` | The schema for the incoming data. |
-| `outputSchema` | The schema that the input data has will be transformed to conform to. |
+| `inputSchema` | The XDM schema for the incoming data. |
+| `outputSchema` | The XDM schema that the input data has will be transformed to conform to. |
 | `mappings` | An array of field-to-field mappings from the source schema to the destination schema. |
 | `sourceType` | For each listed mapping, its `sourceType` attribute indicates the type of source that is to be mapped. Can be one of `ATTRIBUTE`, `STATIC`, or `EXPRESSION`: <ul><li> `ATTRIBUTE` is used for any value found in the source path. </li><li>`STATIC` is used for values injected into the destination path. This value remains constant and is not affected by the source schema.</li><li> `EXPRESSION` is used for an expression, which will be resolved during runtime. A list of available expressions can be found in the [mapping functions guide](./functions.md).</li> </ul> |
 | `source` | For each listed mapping, the `source` attribute indicates the field that you want to map. More information about how to configure your source can be found in the [sources section](#sources). |
@@ -85,7 +85,7 @@ When mapping a field in columnar data, such as a CSV file, use the `ATTRIBUTE` s
 **Sample CSV file:**
 
 ```csv
-Name, Email
+Full.Name, Email
 John Smith, js@example.com
 ```
 
@@ -93,7 +93,7 @@ John Smith, js@example.com
 
 ```json
 {
-    "source": "Name",
+    "source": "Full.Name",
     "destination": "pi.name",
     "sourceType": "ATTRIBUTE"
 }
@@ -189,7 +189,7 @@ When mapping a field within an array, you can retrieve a specific value by using
 
 ### Array to array or object to object
 
-If you are directly mapping an array to an array, or an object to an object, you can use the `ATTRIBUTE` source type. An example of this mapping can be found below:
+Using the `ATTRIBUTE` source type, you can also directly map an array to an array or an object to an object. An example of this mapping can be found below:
 
 **Sample JSON file**
 
@@ -241,7 +241,7 @@ If you are directly mapping an array to an array, or an object to an object, you
 
 ### Iterative operations on arrays
 
-You can iteratively loop through arrays and map them to a target schema by using the `ATTRIBUTE` source type. An example of this mapping can be found below:
+Using the `ATTRIBUTE` source type, you can iteratively loop through arrays and map them to a target schema by using a wildcard index (`[*]`). An example of this mapping can be found below:
 
 **Sample JSON file**
 
@@ -293,7 +293,7 @@ You can iteratively loop through arrays and map them to a target schema by using
 
 ### Constant value
 
-When mapping in a constant (static) value, use the `STATIC` source type. An example of this mapping can be found below:
+If you want to map a constant, or a static value, use the `STATIC` source type.  When using the `STATIC` source type, the `source` represents the hard-coded value that you want to assign to the `destination`. An example of this mapping can be found below:
 
 **Sample JSON file**
 
@@ -324,7 +324,7 @@ When mapping in a constant (static) value, use the `STATIC` source type. An exam
 
 ### Expressions
 
-When mapping an expression that you want to resolve, use the `EXPRESSION` source type. A list of accepted functions can be found in the [mapping functions guide](./functions.md). An example of this mapping can be found below:
+If you want to map an expression, use the `EXPRESSION` source type. A list of accepted functions can be found in the [mapping functions guide](./functions.md). When using the `EXPRESSION` source type, the `source` represents the function you want to resolve. An example of this mapping can be found below:
 
 **Sample JSON file**
 
@@ -358,11 +358,11 @@ When mapping an expression that you want to resolve, use the `EXPRESSION` source
 
 ## Configuring mapping destinations
 
-In a mapping, the destination is the location where the value extracted from the source will be inserted.
+In a mapping, the `destination` is the location where the value extracted from the `source` will be inserted.
 
 ### Field at the root level
 
-When you want to map the source value to the root level of your transformed data, follow the example below:
+When you want to map the `source` value to the root level of your transformed data, follow the example below:
 
 **Sample JSON file**
 
@@ -395,7 +395,7 @@ When you want to map the source value to the root level of your transformed data
 
 ### Nested field
 
-When you want to map the source value to a nested field in your transformed data, follow the example below:
+When you want to map the `source` value to a nested field in your transformed data, follow the example below:
 
 **Sample JSON file**
 
@@ -428,7 +428,7 @@ When you want to map the source value to a nested field in your transformed data
 
 ### Field at a specific array index
 
-When you want to map the source value to a specific index in an array in your transformed data, follow the example below:
+When you want to map the `source` value to a specific index in an array in your transformed data, follow the example below:
 
 **Sample JSON file**
 
@@ -511,4 +511,4 @@ When you want to iteratively loop through arrays and map the values to the targe
 
 ## Next steps
 
-This document provided detailed information about mapping sets. By reading this document, you should now understand how mapping sets are constructed, including how to configure individual mappings within the mapping set. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
+By reading this document, you should now understand how mapping sets are constructed, including how to configure individual mappings within a mapping set. For more information on other Data Prep features, please read the [Data Prep overview](./home.md). To learn how to use mapping sets within the Data Prep API, please read the [Data Prep developer guide](./api/overview.md).
