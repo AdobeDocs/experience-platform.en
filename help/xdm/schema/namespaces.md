@@ -29,42 +29,42 @@ The following is an example schema for a product in standard XDM syntax. With th
 
 ```json
 {
-    "$id": "https://ns.adobe.com/xdm/schemas/mySchema",
-    "title": "Product",
-    "description": "Represents the definition of a Project",
-    "@context": {
-        "xdm": "https://ns.adobe.com/xdm",
-        "repo": "http://ns.adobe.com/adobecloud/core/1.0/",
-        "schema": "http://schema.org",
-        "tenantId": "https://ns.adobe.com/tenantId"
+  "$id": "https://ns.adobe.com/xdm/schemas/mySchema",
+  "title": "Product",
+  "description": "Represents the definition of a Project",
+  "@context": {
+    "xdm": "https://ns.adobe.com/xdm",
+    "repo": "http://ns.adobe.com/adobecloud/core/1.0/",
+    "schema": "http://schema.org",
+    "tenantId": "https://ns.adobe.com/tenantId"
+  },
+  "properties": {
+    "@id": {
+      "type": "string"
     },
-    "properties": {
-        "@id": {
-            "type": "string"
-        },
-        "xdm:sku": {
-            "type": "string"
-        },
-        "xdm:name": {
-            "type": "string"
-        },
-        "repo:createdDate": {
-            "type": "string",
-            "format": "datetime"
-        },
-        "https://ns.adobe.com/xdm/channels/application": {
-            "type": "string"
-        },
-        "schema:latitude": {
-            "type": "number"
-        },
-        "https://ns.adobe.com/vendorA/product/stockNumber": {
-            "type": "string"
-        },
-        "tenantId:internalSku": {
-            "type": "number"
-        }
+    "xdm:sku": {
+      "type": "string"
+    },
+    "xdm:name": {
+      "type": "string"
+    },
+    "repo:createdDate": {
+      "type": "string",
+      "format": "datetime"
+    },
+    "https://ns.adobe.com/xdm/channels/application": {
+      "type": "string"
+    },
+    "schema:latitude": {
+      "type": "number"
+    },
+    "https://ns.adobe.com/vendorA/product/stockNumber": {
+      "type": "string"
+    },
+    "tenantId:internalSku": {
+      "type": "number"
     }
+  }
 }
 ```
 
@@ -89,65 +89,66 @@ The following JSON represents how the standard XDM syntax example shown above is
 
 ```json
 {
-   "$id": "https://ns.adobe.com/xdm/schemas/mySchema",
-   "title": "Product",
-   "description": "Represents the definition of a Project",
-   "properties": {
-    "_id": { 
-        "type": "string"
+  "$id": "https://ns.adobe.com/xdm/schemas/mySchema",
+  "title": "Product",
+  "description": "Represents the definition of a Project",
+  "properties": {
+    "_id": {
+      "type": "string"
     },
-    "sku": { 
-        "type": "string"
+    "sku": {
+      "type": "string"
     },
-    "name": { 
-        "type": "string"
-        },
-    "_repo": { 
-        "type": "object",
-        "properties": {
-            "createdDate": { 
-                "type": "string",
-                "format": "datetime"
+    "name": {
+      "type": "string"
+    },
+    "_repo": {
+      "type": "object",
+      "properties": {
+        "createdDate": {
+          "type": "string",
+          "format": "datetime"
+        }
+      }
+    },
+    "_channels": {
+      "type": "object",
+      "properties": {
+        "application": {
+          "type": "string"
+        }
+      }
+    },
+    "_schema": {
+      "type": "object",
+      "properties": {
+        "application": {
+          "type": "string"
+        }
+      }
+    },
+    "_vendorA": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "object",
+          "properties": {
+            "stockNumber": {
+              "type": "string"
             }
+          }
         }
-    },
-    "_channels": { 
-        "type": "object",
-        "properties": {
-            "application": { 
-                "type": "string"
-            }
-        }
-    },
-    "_schema": { 
-         "type": "object",
-         "properties": {
-             "application": { 
-                 "type": "string"
-             }
-        }
-    },
-    "_vendorA": { 
-        "type": "object",
-        "properties": {
-            "product": { 
-                "type": "object",
-                "properties": {
-                    "stockNumber": {
-                        "type": "string"
-                    }
-                }
-            }
-        }
+      }
     },
     "_tenantId": {
-        "type": "object",
-        "properties": {
-            "internalSku": {
-                "type": "number"
-            }
+      "type": "object",
+      "properties": {
+        "internalSku": {
+          "type": "number"
         }
+      }
     }
+  }
 }
 ```
 
