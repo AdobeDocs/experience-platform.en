@@ -21,7 +21,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `_id` | `_id` |
 | `personID` | `personID` | Primary identity |
 | `eventType` | `eventType`|
-| `timeStamp` | `timestamp` |
+| `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4`|
@@ -48,7 +48,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
-| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
 | `directMarketing.email` | `directMarketing.email` |
