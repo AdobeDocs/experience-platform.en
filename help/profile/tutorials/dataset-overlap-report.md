@@ -13,7 +13,7 @@ This tutorial outlines the steps necessary to generate the dataset overlap repor
 
 ## Getting started
 
-In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to gather the values that you will need for the required headers. 
+In order to use Adobe Experience Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en) to gather the values that you need for the required headers. 
 
 The required headers in all [!DNL Experience Platform] API calls are:
 
@@ -27,7 +27,7 @@ To learn more about Experience Platform APIs, please refer to the [getting start
 
 ## Generate dataset overlap report using the command line
 
-If you are familiar with using the command line, you can use the following curl request to generate the dataset overlap report. This requires performing a GET request to the `/previewsamplestatus/report/dataset/overlap`.
+If you are familiar with using the command line, you can use the following curl request to generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap`.
 
 **Request**
 
@@ -43,7 +43,7 @@ curl -X GET \
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 (Not Found) error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
 
 **Response**
 
@@ -62,26 +62,26 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
 
 ### Generate dataset overlap report using Postman
 
-Postman is a collaborative platform for API development and is very useful for visualizing API calls. It can be downloaded for free from the [Postman website](https://www.postman.com) and provides an easy to use UI for performing API calls. The following screenshots use the Postman interface.
+Postman is a collaborative platform for API development and is useful for visualizing API calls. It can be downloaded for free from the [Postman website](https://www.postman.com) and provides an easy to use UI for performing API calls. The following screenshots use the Postman interface.
 
 **Request**
 
 To request the dataset overlap report using Postman, complete the following steps:
 
-1. Using the dropdown, select GET as the request type.
-2. Enter the request path with or without the optional `date` parameter:
+* Using the dropdown, select GET as the request type.
+* Enter the request path with or without the optional `date` parameter:
    `https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap`
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 (Not Found) error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
 
-3. Enter the required headers in the `KEY` column: 
+* Enter the required headers in the `KEY` column: 
     * `Authorization`
     * `x-api-key`
     * `x-gw-ims-org-id`
-4. Enter the values you generated during authentication into the `VALUE` column, replacing the values between the braces (`{{ }}`) as shown in the image below.
-5. Once all of the headers and values have been entered, select **Send** to send the API request and generate the report.
+* Enter the values you generated during authentication into the `VALUE` column, replacing the values between the braces (`{{ }}`) as shown in the image below.
+* After the headers and values have been entered, select **Send** to send the API request and generate the report.
 
 ![](../images/dataset-overlap-report/postman-request.png)
 
@@ -95,7 +95,7 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
 
 The generated dataset overlap report shows unique combinations of dataset IDs as comma-separated lists with the respective profile count for that selection of datasets. 
 
-The report also includes the `reportTimestamp`. This timestamp should match the date provided in the request, or if no date was provided, the timestamp of the most recent report.
+The report also includes the `reportTimestamp`. This timestamp matches the date provided in the request, or if no date was provided, the timestamp of the most recent report.
 
 To interpret the results of the report, consider the following example, extracted from the sample response:
 
@@ -112,6 +112,6 @@ This report provides the following information:
 
 ## Next steps
 
-After completing this tutorial, you should now be able to generate the dataset overlap report using the Real-time Customer Profile API. To learn more about working with Profile data in both the API and the Experience Platform UI, please begin by reading the [Profile overview documentation](../home.md).
+After completing this tutorial, you are now able to generate the dataset overlap report using the Real-time Customer Profile API. To learn more about working with Profile data in both the API and the Experience Platform UI, please begin by reading the [Profile overview documentation](../home.md).
 
 
