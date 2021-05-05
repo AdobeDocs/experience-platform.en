@@ -1,16 +1,11 @@
 ---
 solution: Experience Platform
 title: Introduction to Experience Platform Dashboards
-topic-legacy: overview
 type: Documentation
 description: Explore multiple dashboards in Adobe Experience Platform to view important information about your organization's data, as captured during daily snapshots.
 exl-id: d56cb139-392d-4bbc-97ec-202a0c8a2863
 ---
-# (Beta) Dashboards overview {#dashboards}
-
->[!IMPORTANT]
->
->Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Dashboards overview {#dashboards}
 
 Adobe Experience Platform provides multiple dashboards through which you can view important information about your organization's data, as captured during daily snapshots.
 

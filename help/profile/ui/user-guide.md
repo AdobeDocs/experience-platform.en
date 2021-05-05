@@ -23,11 +23,7 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alpha) Profile dashboard
-
->[!IMPORTANT]
->
->The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+### Profile dashboard
 
 For some users, selecting **[!UICONTROL Profiles]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your Profile data. 
 

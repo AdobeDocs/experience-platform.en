@@ -2,15 +2,10 @@
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Profiles Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's Real-time Customer Profile data.
-topic-legacy: guide
 type: Documentation
 exl-id: 7b9752b2-460e-440b-a6f7-a1f1b9d22eeb
 ---
-# (Beta) [!UICONTROL Profiles] dashboard
-
->[!IMPORTANT]
->
->The dashboard functionality outlined in this document is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# [!UICONTROL Profiles] dashboard
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your [!DNL Real-time Customer Profile] data, as captured during a daily snapshot. This guide outlines how to access and work with the [!UICONTROL Profiles] dashboard in the UI and provides information regarding the metrics displayed in the dashboard.  
 
@@ -56,23 +51,19 @@ The dashboard is composed of widgets, which are read-only metrics providing impo
 
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your Profile data. Select the name of a widget below to learn more:
 
-* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Profile count]](#profile-count)
 * [[!UICONTROL Profiles added]](#profiles-added)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
-* [[!UICONTROL Namespace overlap]](#namespace-overlap)
+* [[!UICONTROL Profiles count trend]](#profiles-count-trend)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
 
-### [!UICONTROL Audience size] {#audience-size}
+### [!UICONTROL Profile count] {#profile-count}
 
-The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the Profile data store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
+The **[!UICONTROL Profile count]** widget displays the total number of merged profiles within the Profile data store at the time the snapshot was taken. This number is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
 For more information on fragments and merged profiles, please begin by reading the *Profile fragments vs merged profiles* section of the [Real-time Customer Profile overview](../../profile/home.md).
 
->[!NOTE]
->
->The merge policy used to calculate this metric is not the same as the system-generated merge policy used to calculate [!UICONTROL Addressable audiences] in the [!UICONTROL License usage] dashboard, therefore the audience count in the [!UICONTROL Profiles] and [!UICONTROL License usage] dashboards are unlikely to be exactly the same.
-
-![](../images/profiles/audience-size.png)
+![](../images/profiles/profile-count.png)
 
 ### [!UICONTROL Profiles added] {#profiles-added}
 
@@ -80,33 +71,33 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 ![](../images/profiles/profiles-added.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Profiles count trend] {#profiles-count-trend}
 
-The **[!UICONTROL Profiles added over time]** widget displays the total number of merged profiles that have been added to the Profile data store daily over the last 30 days. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken.
+The **[!UICONTROL Profiles count trend]** widget displays the total number of merged profiles that have been added to the Profile data store daily over the last 30 days. This number is updated each day when the snapshot is taken, therefore if you were to ingest profiles into Platform, the number of profiles would not be reflected until the next snapshot is taken.
 
 The count of profiles added is the result of the selected merge policy being applied to your Profile data in order to merge profile fragments together to form a single profile for each individual. 
 
-![](../images/profiles/profiles-added-over-time.png)
+![](../images/profiles/profiles-count-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Profiles by identity] {#profiles-by-identity}
 
-The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of identity namespaces across all of the merged profiles in your Profile store. The total number of profiles by [!UICONTROL ID namespace] (in other words, adding together the values shown for each namespace) may be higher than the total number of merge profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your Profile store. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merge profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
-To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/profiles/profiles-by-namespace.png)
+![](../images/profiles/profiles-by-identity.png)
 
-### [!UICONTROL Namespace overlap] {#namespace-overlap}
+### [!UICONTROL Identity overlap] {#identity-overlap}
 
-The **[!UICONTROL Namespace overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your Profile store containing multiple identity namespaces. 
+The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your Profile store containing multiple identities. 
 
-After using the dropdown menus on the widget to select the identity namespaces that you wish to compare, circles appear displaying the relative size of each namespace, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles.
+After using the dropdown menus on the widget to select the identities that you wish to compare, circles appear displaying the relative size of each identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles.
 
-If a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity namespace.
+If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
-To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-![](../images/profiles/namespace-overlap.png)
+![](../images/profiles/identity-overlap.png)
 
 ## Next steps
 

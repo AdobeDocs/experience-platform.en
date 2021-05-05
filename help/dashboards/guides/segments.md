@@ -2,15 +2,10 @@
 keywords: Experience Platform;profile;segment;segments;segmentation;user interface;UI;customization;segment dashboard;dashboard
 title: Segments Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about segments your organization has created. 
-topic-legacy: guide
 type: Documentation
 exl-id: de5e07bc-2c44-416e-99db-7607059117cb
 ---
-# (Beta) Segments dashboard {#segment-dashboard}
-
->[!IMPORTANT]
->
->The dashboard functionality outlined in this document is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Segments dashboard {#segment-dashboard}
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your segments, as captured during a daily snapshot. This guide outlines how to access and work with the segments dashboard in the UI and provides more information regarding the visualizations displayed in the dashboard.  
 
@@ -52,33 +47,40 @@ The segments dashboard is composed of widgets, which are read-only metrics provi
 
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your segment. Select the name of a widget below to learn more:
 
-* [[!UICONTROL Segment size]](#segment-size)
-* [[!UICONTROL Profiles added over time]](#profiles-added-over-time)
-* [[!UICONTROL Profiles by namespace]](#profiles-by-namespace)
+* [[!UICONTROL Audience size]](#audience-size)
+* [[!UICONTROL Audience size trend]](#audience-size-trend)
+* [[!UICONTROL Identity overlap]](#identity-overlap)
+* [[!UICONTROL Profiles by identity]](#profiles-by-identity)
 
-### [!UICONTROL Segment size] {#segment-size}
+### [!UICONTROL Audience size] {#audience-size}
 
-The **[!UICONTROL Segment size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
+The **[!UICONTROL Audience size]** widget displays the total number of merged profiles within the selected segment at the time the snapshot was taken. This number is the result of applying the segment merge policy to your Profile data in order to merge profile fragments together to form a single profile for each individual in the segment. 
 
 For more information on fragments and merged profiles, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
-![](../images/segments/segment-size.png)
+![](../images/segments/audience-size.png)
 
-### [!UICONTROL Profiles added over time] {#profiles-added-over-time}
+### [!UICONTROL Audience size trend] {#audience-size-trend}
 
-The **[!UICONTROL Profiles added over time]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days. This widget displays how the segment size may have shifted over a 30 day period as new profiles qualify for or exit from the segment. 
+The **[!UICONTROL Audience size trend]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days. This widget displays how the segment size may have shifted over time as new profiles qualify for or exit from the segment. 
 
 To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
 
-![](../images/segments/profiles-added-over-time.png)
+![](../images/segments/audience-size-trend.png)
 
-### [!UICONTROL Profiles by namespace] {#profiles-by-namespace}
+### [!UICONTROL Identity overlap] {#identity-overlap}
 
-The **[!UICONTROL Profiles by namespace]** widget displays the breakdown of namespaces across all of the merged profiles in your selected segment. The total number of profiles by identity namespace ([!UICONTROL ID namespace] in the widget) may be higher than the total number of profiles in the segment because one profile could have multiple namespaces associated with it. In other words, adding together the values shown for each namespace may total more than the total profiles in the segment because if a customer interacts with your brand on more than one channel, multiple namespaces may be associated with that individual customer.
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 
-To learn more about identity namespaces, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+![](../images/segments/identity-overlap.png)
 
-![](../images/segments/profiles-by-namespace.png)
+### [!UICONTROL Profiles by identity] {#profiles-by-identity}
+
+The **[!UICONTROL Profiles by identity]** widget displays the breakdown of identities across all of the merged profiles in your selected segment. The total number of profiles by identity may be higher than the total number of profiles in the segment because one profile could have multiple identities associated with it. In other words, adding together the values shown for each identity may total more than the total audience size in the segment because if a customer interacts with your brand on more than one channel, multiple identities may be associated with that individual customer.
+
+To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
+
+![](../images/segments/profiles-by-identity.png)
 
 ## Next steps
 

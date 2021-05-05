@@ -2,14 +2,9 @@
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
 title: Modify Platform Dashboards in the UI
 description: This guide provides step-by-step instructions for customizing how your organization's Adobe Experience Platform data is displayed within dashboards. 
-topic-legacy: guide
 exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 ---
-# (Beta) Modify dashboards {#modify-dashboards}
-
->[!IMPORTANT]
->
->Dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# Modify dashboards {#modify-dashboards}
 
 Within the Adobe Experience Platform user interface (UI), you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data and widgets can be created and shared between users in the same organization. 
 

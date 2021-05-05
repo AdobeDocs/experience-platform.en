@@ -29,6 +29,12 @@ In the [[!DNL Experience Platform] UI](https://platform.adobe.com/), select **[!
 
 ![](../images/ui/overview/segment-overview.png)
 
+### Segments dashboard
+
+For some users, selecting **[!UICONTROL Segments]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your segment data. 
+
+To learn more, visit the [segment dashboard guide](segment-dashboard.md).
+
 ## Browse
 
 Select the **[!UICONTROL Browse]** tab to see a list of all the segment definitions for your IMS Organization. 
