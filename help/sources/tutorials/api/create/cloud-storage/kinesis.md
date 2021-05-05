@@ -62,6 +62,7 @@ curl -X POST \
     -d '{
         "name": "Amazon Kinesis connection",
         "description": "Connector for Amazon Kinesis",
+        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Aws Kinesis authentication credentials",
             "params": {
