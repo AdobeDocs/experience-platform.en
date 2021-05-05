@@ -2,7 +2,6 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
 description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, as well as list profile distribution by dataset and by identity namespace within Adobe Experience Platform.
-topic-legacy: guide
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
@@ -284,6 +283,66 @@ The response includes a `data` array, with individual objects containing the det
 |`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
 
+## Generate dataset overlap report
+
+You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD
+```
+
+|Parameter|Description|
+|---|---|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
+
+**Request**
+
+The following request uses the `date` parameter to return the most recent report for the date specified.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-04-19 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful request returns HTTP Status 200 (OK) and the dataset overlap report. 
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-04-19T19:55:31.147"
+}
+```
+
+|Property|Description|
+|---|---|
+|`data`|The `data` object contains comma-separated lists of datasets and their respective profile counts.|
+|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+
+The results of the report can be interpreted from the datasets and profile counts in the response, for example:
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+This report provides the following information:
+* There are 123 profiles in, and only in, these datasets: 5d92921872831c163452edc8, 5da7292579975918a851db57, 5eb2cdc6fa3f9a18a7592a98.
+* There are 454,412 profiles in, and only in, these two datasets: 5d92921872831c163452edc8 and 5eb2cdc6fa3f9a18a7592a98.
+* There are 107 profiles that are only in dataset 5eeda0032af7bb19162172a7.
+
 ## Next steps
 
-Now that you know how to preview sample data in the Profile store, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile store and run the dataset overlap report, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
