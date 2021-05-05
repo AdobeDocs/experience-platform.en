@@ -10,7 +10,7 @@ exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 
 # Create an [!DNL Azure Event Hubs] source connection using the [!DNL Flow Service] API
 
-This tutorial walks you through the steps to connect an [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") source to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -23,14 +23,14 @@ The following sections provide additional information that you will need to know
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with your [!DNL Azure Event Hubs] account, you must provide values for the following connection properties:
+In order for [!DNL Flow Service] to connect with your [!DNL Event Hubs] account, you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `sasKey` | The generated shared access signature. |
-| `namespace` | The namespace of the Event Hubs you are accessing. |
-| `connectionSpec.id` | The [!DNL Azure Event Hubs] connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `namespace` | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace contains DNS integrated network endpoints as well as a host of access control and network integration management features. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base, source, and target connections. The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 
@@ -40,9 +40,9 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
-The first step in creating a source connection is to authenticate your [!DNL Event Hubs] source and generate a connection ID. A connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+The first step in creating a source connection is to authenticate your [!DNL Event Hubs] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Event Hubs] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Event Hubs] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -83,11 +83,11 @@ curl -X POST \
 | `auth.params.sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `auth.params.sasKey` | The generated shared access signature. |
 | `params.namespace` | The namespace of the [!DNL Event Hubs] you are accessing. |
-| `connectionSpec.id` | The [!DNL Azure Event Hubs] connection specification ID: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
+| `connectionSpec.id` | The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This connection ID is required in the next step to create a source connection.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This connection ID is required in the next step to create a source connection.
 
 ```json
 {
@@ -148,7 +148,7 @@ curl -X POST \
 | `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
 | `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. |
-| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. |
+| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. |
 
 ## Next steps
 

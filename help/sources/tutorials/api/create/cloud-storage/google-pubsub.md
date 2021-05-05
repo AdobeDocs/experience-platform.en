@@ -32,8 +32,9 @@ In order for [!DNL Flow Service] to connect to [!DNL PubSub], you must provide v
 | ---------- | ----------- |
 | `projectId` | The project ID required to authenticate [!DNL PubSub]. |
 | `credentials` | The credential or key required to authenticate [!DNL PubSub]. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base, source, and target connections. The [!DNL PubSub] connection specification ID is: `70116022-a743-464a-bbfe-e226a7f8210c`. |
 
-For more information about these values, see the following [PubSub authentication](https://cloud.google.com/pubsub/docs/authentication) document. If you are using service account-based authentication, see the following [PubSub guide](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
+For more information about these values, see this [[!DNL PubSub] authentication](https://cloud.google.com/pubsub/docs/authentication) document. To use service account-based authentication, see this [[!DNL PubSub] guide on creating service accounts](https://cloud.google.com/docs/authentication/production#create_service_account) for steps on how to generate your credentials.
 
 >[!TIP]
 >
@@ -45,9 +46,9 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
-The first step in creating a source connection is to authenticate your [!DNL PubSub] source and generate a connection ID. A connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+The first step in creating a source connection is to authenticate your [!DNL PubSub] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL PubSub] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -99,7 +100,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This connection ID is required in the next step to create a source connection.
+A successful response returns details of the newly created connection, including its unique identifier (`id`). This base connection ID is required in the next step to create a source connection.
 
 ```json
 {

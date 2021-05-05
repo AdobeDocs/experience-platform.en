@@ -29,7 +29,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 | `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
 | `secretKey` | The secret access key is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
 | `region` | The region for your [!DNL Kinesis] account. See the guide on [adding IP addresses to your allow list](../../../../ip-address-allow-list.md) for more information on regions. |
-| `connectionSpec.id` | The connection specification return a source’s connector properties, including authentication specifications related to creating the source and target connections. The [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
+| `connectionSpec.id` | The connection specification returnw a source’s connector properties, including authentication specifications related to creating the base, source, and target connections. The [!DNL Kinesis] connection specification ID is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 For more information on [!DNL Kinesis] access keys and how to generate them, refer to this [[!DNL AWS] guide on managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
@@ -39,9 +39,9 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
-The first step in creating a source connection is to authenticate your [!DNL Kinesis] source and generate a connection ID. A connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+The first step in creating a source connection is to authenticate your [!DNL Kinesis] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Kinesis] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Kinesis] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -86,7 +86,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This connection ID is required in the next step to create a source connection.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {
