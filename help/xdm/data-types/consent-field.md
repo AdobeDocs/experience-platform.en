@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Generic Consent Field Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Generic Consent Field XDM data type.
 exl-id: f1f14eb7-21dd-45ca-8fb4-68f397cfa697
 ---

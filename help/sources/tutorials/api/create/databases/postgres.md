@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
 title: Create a PostgreSQL Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to PostgreSQL using the Flow Service API.
 exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454

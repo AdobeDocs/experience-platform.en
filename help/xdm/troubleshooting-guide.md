@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual 
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Experience Data Model (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors.
-topic: troubleshooting
+topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide

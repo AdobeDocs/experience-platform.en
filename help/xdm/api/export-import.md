@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Export/Import API Endpoints
 description: The /export and /import endpoints in the Schema Registry API allow you to share XDM resources between IMS Organizations and sandboxes.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 ---
 # Export/Import endpoints
