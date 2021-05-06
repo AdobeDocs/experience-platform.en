@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;crm;CRM
 solution: Experience Platform
 title: Collect CRM Data Through Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party CRM system and bringing them in to Platform using source connectors and APIs.
 exl-id: b07dd640-bce6-4699-9d2b-b7096746934a

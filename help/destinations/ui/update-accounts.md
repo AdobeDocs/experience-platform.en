@@ -1,5 +1,5 @@
 ---
-keywords: update destination account;destination accounts;how to update accounts
+keywords: update destination account, destination accounts, how to update accounts, update destination
 title: Update destination accounts
 type: Tutorial
 description: This tutorial lists the steps to update destination accounts in the Adobe Experience Platform UI

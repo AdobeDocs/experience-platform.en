@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
@@ -15,6 +14,11 @@ feature: Schemas
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+  * Industry data models {#industries}
+    * [Overview](./schema/industries/overview.md)
+    * [Retail data model ERD](./schema/industries/retail.md)
+    * [Financial services data model ERD](./schema/industries/financial.md)
+    * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
@@ -24,6 +28,7 @@ feature: Schemas
     * [IdentityMap](./mixins/profile/identitymap.md)
     * [Demographic Details](./mixins/profile/person-details.md)
     * [Personal Contact Details](./mixins/profile/personal-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./mixins/profile/consents.md)
     * [Segment Membership Details](./mixins/profile/segmentation.md)
     * [Work Contact Details](./mixins/profile/work-details.md)
   * Event mixins {#event}
@@ -39,6 +44,10 @@ feature: Schemas
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
+    * [Generic Marketing Preference Field](./data-types/marketing-field.md)
+    * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
+    * [Generic Personalization Preference Field](./data-types/personalization-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)

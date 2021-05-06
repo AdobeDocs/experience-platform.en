@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Analytics Data Connector;analytics;Analytics
 solution: Experience Platform
 title: Adobe Analytics Source Connector for Report-Suite Data
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of Analytics and describes the use-cases for Analytics data.
 exl-id: c4887784-be12-40d4-83bf-94b31eccdc2e
 ---

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;individual profile;fields;schemas;Schemas;Schema design;mixin;mixin;person;person details;profile person details;person;
 solution: Experience Platform
 title: Demographic Details Mixin
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Demographic Details mixin.
 exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 ---
@@ -31,4 +31,3 @@ For more details on the mixin, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.schema.json)
-å

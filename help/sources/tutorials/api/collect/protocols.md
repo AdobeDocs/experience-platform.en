@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Collect protocol data;protocol data
 solution: Experience Platform
 title: Collect Protocols Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a protocols application and ingesting it into Platform using source connectors and APIs.
 exl-id: e14e75c2-2a93-45d8-8056-f06075bd4b8d
