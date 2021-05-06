@@ -103,7 +103,7 @@ The [!DNL Schema Editor] appears, showing the structure of the schema in the can
 
 The **[!UICONTROL Add field group]** dialog appears. From here, select **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field group-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
 The canvas reappears, showing that the `consents` object has been added to the schema structure. If you require additional consent and preference fields not captured by the standard field group, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
 
