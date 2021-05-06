@@ -63,7 +63,6 @@ curl -X POST \
     -d '{
         "name": "Azure Event Hubs connection",
         "description": "Connector for Azure Event Hubs",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Azure EventHub authentication credentials",
             "params": {

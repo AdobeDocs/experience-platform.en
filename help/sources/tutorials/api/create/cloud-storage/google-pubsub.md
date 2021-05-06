@@ -58,14 +58,6 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL PubSub] connection, the provider ID and connection specification ID must be provided as part of the POST request. The provider ID is `521eee4d-8cbe-4906-bb48-fb6bd4450033` and the connection specification ID is `70116022-a743-464a-bbfe-e226a7f8210c`.
-
-**API format**
-
-```http
-POST /connections
-```
-
 ```shell
 curl -X POST \
     'https://platform.adobe.io/data/foundation/flowservice/connections' \
@@ -77,7 +69,6 @@ curl -X POST \
     -d '{
         "name": "Google PubSub connection",
         "description": "Google PubSub connection",
-        "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
         "auth": {
             "specName": "Google PubSub authentication credentials",
             "params": {
