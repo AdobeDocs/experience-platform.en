@@ -247,7 +247,7 @@ A successful response returns HTTP status 200 with detailed information about th
 
 ## Create a source connection
 
-After creating your base connection, you will need to create a source connection to SOMETHING. When creating a source connection, you'll need the `id` value from your created base connection.
+After creating your base connection, you will need to create a source connection. When creating a source connection, you'll need the `id` value from your created base connection.
 
 **API format**
 
