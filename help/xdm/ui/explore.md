@@ -15,7 +15,7 @@ This tutorial covers the steps for exploring existing schemas, classes, field gr
 
 ## Look up an XDM resource {#lookup}
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all existing XDM resources in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Mixins]**, and **[!UICONTROL Data types]** specifically.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation. The [!UICONTROL Schemas] workspace provides a **[!UICONTROL Browse]** tab to explore all existing XDM resources in your organization, along with additional dedicated tabs for exploring **[!UICONTROL Classes]**, **[!UICONTROL Field groups]**, and **[!UICONTROL Data types]** specifically.
 
 ![](../images/ui/explore/tabs.png)
 

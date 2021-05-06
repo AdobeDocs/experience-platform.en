@@ -33,7 +33,7 @@ The [!UICONTROL Privacy Details] schema field group provides customer consent fi
 
 The sections below explain the structure of each of these field groups, including the data they expect during ingestion.
 
-### Profile field group {#profile-mixin}
+### Profile field group {#profile-field-group}
 
 For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL Privacy Details] field group provides a single map-type field, `xdm:identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. The following JSON is an example of the kind of data `xdm:identityPrivacyInfo` expects upon data ingestion:
 
@@ -71,7 +71,7 @@ Within the identity value object is a single field, `xdm:identityIABConsent`. Th
 | `xdm:consentTimestamp` | An [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) timestamp of when the TCF consent values changed. |
 | `xdm:consentString` | An object containing the customer's updated consent data and other contextual information. See the section on [consent string properties](#consent-string) to learn about this object's required sub-properties. |
 
-### Event field group {#event-mixin}
+### Event field group {#event-field-group}
 
 For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] field group provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for a TCF consent string, similar to the `xdm:consentString` field in the profile field group. For more information on these sub-properties, see the [next section](#consent-string).
 
@@ -119,11 +119,11 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section on the left side of the canvas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add field groups]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -138,7 +138,7 @@ From here, repeat the above steps to add the following additional field groups t
 * [!UICONTROL Demographic Details]
 * [!UICONTROL Personal Contact Details]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], select **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
@@ -170,11 +170,11 @@ In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section on the left side of the canvas.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once you have chosen a field group, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add field groups]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once you have chosen a field group, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
@@ -191,7 +191,7 @@ From here, repeat the above steps to add the following additional field groups t
 
 Once the field groups have been added, finish by selecting **[!UICONTROL Save]**.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Create datasets based on your consent schemas {#datasets}
 

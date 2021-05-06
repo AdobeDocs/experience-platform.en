@@ -28,13 +28,13 @@ In order to honor CCPA opt-out requests, one of the schemas that is a part of th
 - [Profile Privacy](#profile-privacy): Used to capture different opt-out types (general or sales/sharing).
 - [Profile Preferences Details](#profile-preferences-details): Used to capture opt-out requests for specific XDM channels.
 
-For step-by-step instructions on how to add a field group to a schema, please refer to the "Add a mixin" section in the following XDM documentation:
+For step-by-step instructions on how to add a field group to a schema, please refer to the "Add a field group" section in the following XDM documentation:
 - [Schema Registry API tutorial](../xdm/api/getting-started.md).: Building a schema using the Schema Registry API.
 - [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md): Building a schema using the Platform user interface.
 
 Here is an example image showing the opt-out field groups added to a schema in the user interface:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
 The structure of each field group, as well as a description of the fields they contribute to the schema, are outlined in more detail in the following sections.
 

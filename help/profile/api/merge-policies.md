@@ -745,7 +745,7 @@ As records are ingested into Experience Platform, a system timestamp is obtained
 
 Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
 
-In order to use a custom timestamp, the [[!DNL External Source System Audit Details] schema field group](#mixin-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the [[!DNL External Source System Audit Details] schema field group](#field-group-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >
@@ -755,7 +755,7 @@ For step-by-step instructions on working with schemas using the Schema Registry 
 
 To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details] field group details {#mixin-details}
+#### [!DNL External Source System Audit Details] field group details {#field-group-details}
 
 The following example shows correctly populated fields in the [!DNL External Source System Audit Details] field group. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
 

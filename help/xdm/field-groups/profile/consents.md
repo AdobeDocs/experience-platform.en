@@ -1,25 +1,25 @@
 ---
 solution: Experience Platform
-title: Privacy/Personalization/Marketing Preferences (Consents) Mixin
+title: Privacy/Personalization/Marketing Preferences (Consents) Schema Field Group
 topic-legacy: overview
-description: This document provides an overview of the Privacy/Personalization/Marketing Preferences (Consents) mixin.
+description: This document provides an overview of the Privacy/Personalization/Marketing Preferences (Consents) schema field group.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 ---
-# [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin
+# [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] mixin) is a standard mixin for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
+[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] field group) is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
 
 >[!NOTE]
 >
->Since this mixin is only compatible with [!DNL XDM Individual Profile], it cannot be used for [!DNL XDM ExperienceEvent] schemas. If you want to include consent and preference data in your Experience Event schema, add the [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] data type](../../data-types/consents.md) to the schema through the use of a [custom mixin](../../ui/resources/field-groups.md#create) instead.
+>Since this field group is only compatible with [!DNL XDM Individual Profile], it cannot be used for [!DNL XDM ExperienceEvent] schemas. If you want to include consent and preference data in your Experience Event schema, add the [[!UICONTROL Consent for Privacy, Personalization and Marketing Preferences] data type](../../data-types/consents.md) to the schema through the use of a [custom field group](../../ui/resources/field-groups.md#create) instead.
 
-## Mixin structure {#structure} 
+## Field group structure {#structure} 
 
 >[!IMPORTANT]
 >
->The [!DNL Consents & Preferences] mixin is designed to cover a range of consent and preference management use cases. As a result, this document describes the use of the mixin's fields in general terms, and only makes suggestions as to how you should interpret the use of these fields. Please consult with your privacy legal team to align the mixin's structure with how your organization interprets and presents these consent and preference choices to your customers.
+>The [!DNL Consents & Preferences] field group is designed to cover a range of consent and preference management use cases. As a result, this document describes the use of the field group's fields in general terms, and only makes suggestions as to how you should interpret the use of these fields. Please consult with your privacy legal team to align the field group's structure with how your organization interprets and presents these consent and preference choices to your customers.
 
-The [!DNL Consents & Preferences] mixin provides several fields used to capture **consent** and **preference** information.
+The [!DNL Consents & Preferences] field group provides several fields used to capture **consent** and **preference** information.
 
 A consent is an option that allows a customer to specify how their data may be used. Most consents have a legal aspect, in that some jurisdictions require obtaining permission before data can be used in a particular way, or require that the customer has an option to stop that use (opt out) if affirmative consent is not required.
 
@@ -28,7 +28,7 @@ A preference is an option that allows the customer to specify how different aspe
 * **Personalization preferences**: Preferences regarding how the brand should personalize experiences delivered to a customer.
 * **Marketing preferences**: Preferences regarding whether a brand is allowed to contact a customer through various channels.
 
-The following screenshot shows how the structure of the mixin is represented in the Platform UI:
+The following screenshot shows how the structure of the field group is represented in the Platform UI:
 
 ![](../../images/field-groups/consent.png)
 
@@ -36,7 +36,7 @@ The following screenshot shows how the structure of the mixin is represented in 
 >
 >See the guide on [exploring XDM resources](../../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
 
-The following JSON shows an example of the type of data that the [!DNL Consents & Preferences] mixin can process. Information on the specific use of each of these fields is provided in the sections that follow.
+The following JSON shows an example of the type of data that the [!DNL Consents & Preferences] field group can process. Information on the specific use of each of these fields is provided in the sections that follow.
 
 ```json
 {
@@ -300,7 +300,7 @@ There is also a consent that can only be provided in the `idSpecific` section: `
 
 #### `adID`
 
-The `adID` consent represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value can only be configured under the `ECID` identity namespace in the `idSpecific` section, and cannot be set for other namespaces or at the user level for this mixin.
+The `adID` consent represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device. This value can only be configured under the `ECID` identity namespace in the `idSpecific` section, and cannot be set for other namespaces or at the user level for this field group.
 
 ```json
 "idSpecific": {
@@ -326,15 +326,15 @@ The `adID` consent represents the customer's consent for whether an advertiser I
 >
 >You are not expected to set this value directly, since the Adobe Experience Platform Mobile SDK automatically sets it when appropriate.
 
-## Ingesting data using the mixin {#ingest}
+## Ingesting data using the field group {#ingest}
 
-In order to use the [!DNL Consents & Preferences] mixin to ingest consent data from your customers, you must create a dataset based on a schema that contains that mixin.
+In order to use the [!DNL Consents & Preferences] field group to ingest consent data from your customers, you must create a dataset based on a schema that contains that field group.
 
-See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign mixins to fields. Once you have created a schema containing a field with the [!DNL Consents & Preferences] mixin, refer to the the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign field groups to fields. Once you have created a schema containing a field with the [!DNL Consents & Preferences] field group, refer to the the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
->If you want to send consent data to [!DNL Real-time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!DNL Consents & Preferences] mixin. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-time Customer Profile] requirements for schemas and datasets.
+>If you want to send consent data to [!DNL Real-time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!DNL Consents & Preferences] field group. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-time Customer Profile] requirements for schemas and datasets.
 >
 >In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](../../../rtcdp/profile/merge-policies.md) for more information.
 
@@ -344,7 +344,7 @@ When a customer changes their consents or preferences on your website, these cha
 
 ## Appendix {#appendix}
 
-The sections below provide additional reference information regarding the [!DNL Consents & Preferences] mixin.
+The sections below provide additional reference information regarding the [!DNL Consents & Preferences] field group.
 
 ### Accepted values for `val` {#choice-values}
 
@@ -384,4 +384,4 @@ The following table outlines the accepted values for `preferred`:
 
 ### Full [!DNL Consents & Preferences] schema {#full-schema}
 
-To view the full schema for the [!DNL Consents & Preferences] mixin, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+To view the full schema for the [!DNL Consents & Preferences] field group, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).

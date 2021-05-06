@@ -47,7 +47,7 @@ The SDK supports versions 1.0 and 2.0 of the Adobe Experience Platform consent s
 
 ### Using the Adobe standard version 2.0
 
-If you are using Adobe Experience Platform, you will need include a privacy mixin to your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe standard version 2.0. You can add data inside the value object below corresponding to the schema of the `consents` field of the Consents & Preferences profile mixin.
+If you are using Adobe Experience Platform, you will need include a privacy schema field group to your profile schema. See [Governance, privacy, and security in Adobe Experience Platform](../../landing/governance-privacy-security/overview.md) for more information on the Adobe standard version 2.0. You can add data inside the value object below corresponding to the schema of the `consents` field of the Consents & Preferences profile field group.
 
 If the user opts in, execute the `setConsent` command with the collect preference set to `y` as follows:
 

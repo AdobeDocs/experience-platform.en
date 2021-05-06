@@ -170,7 +170,7 @@ The response format depends on the Accept header sent with the request. Try expe
 }
 ```
 
-### Add a field group {#add-a-mixin}
+### Add a field group {#add-a-field-group}
 
 Now that the Loyalty Members schema has been created and confirmed, field groups can be added to it. 
 
@@ -491,7 +491,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 
 ### Add custom field group to schema
 
-You can now follow the same steps for [adding a standard field group](#add-a-mixin) to add this newly created field group to your schema.
+You can now follow the same steps for [adding a standard field group](#add-a-field-group) to add this newly created field group to your schema.
 
 **API format**
 

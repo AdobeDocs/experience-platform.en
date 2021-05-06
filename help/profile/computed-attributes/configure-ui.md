@@ -36,15 +36,15 @@ Once you have located the schema, click its name to open the [!DNL Schema Editor
 
 ## Create a field group
 
-To create a new field group, click **[!UICONTROL Add]** next to **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add mixin]** dialog where you can see existing field groups. Click the radio button for **[!UICONTROL Create new mixin]** in order to define your new field group.
+To create a new field group, click **[!UICONTROL Add]** next to **[!UICONTROL Field  goups]** in the **[!UICONTROL Composition]** section on the left-side of the editor. This opens the **[!UICONTROL Add field-group]** dialog where you can see existing field groups. Click the radio button for **[!UICONTROL Create new field-group]** in order to define your new field group.
 
-Give the field group a name and description, and click **[!UICONTROL Add mixin]** when complete.
+Give the field group a name and description, and click **[!UICONTROL Add field-group]** when complete.
 
-![](../images/computed-attributes/Add-mixin.png)
+![](../images/computed-attributes/Add-field-group.png)
 
 ## Add a computed attribute field to the schema
 
-Your new field group should now appear in the "[!UICONTROL Mixins]" section under "[!UICONTROL Composition]". Click on the name of the field group and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
+Your new field group should now appear in the "[!UICONTROL Field  goups]" section under "[!UICONTROL Composition]". Click on the name of the field group and multiple **[!UICONTROL Add field]** buttons will appear in the **[!UICONTROL Structure]** section of the editor.
 
 Select **[!UICONTROL Add field]** next to the name of the schema in order to add a top-level field, or you can select to add the field anywhere within the schema you prefer.
 

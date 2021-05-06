@@ -148,7 +148,7 @@ Remember that schemas are composed of "zero or more" field groups, so this means
 
 The following screenshot demonstrates how field groups are represented in the Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
 
-![](../images/schema-composition/mixin.png)
+![](../images/schema-composition/field-group.png)
 
 For the most up-to-date list of available standard XDM field groups, refer to the [official XDM repository](https://github.com/adobe/xdm/tree/master/components/mixins). Alternatively, you can refer to the guide on [exploring XDM components](../ui/explore.md) if you prefer to view resources in the UI.
 

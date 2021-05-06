@@ -34,7 +34,7 @@ feature: Schemas
   * Event field groups {#event}
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
-  * [Mixin name updates](./field-groups/name-updates.md)
+  * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)

@@ -97,7 +97,7 @@ Customer consent data must be sent to datasets whose schemas contain TCF consent
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include TCF consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-mixin), as outlined in the guide on dataset preparation.
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
 
 ## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
 

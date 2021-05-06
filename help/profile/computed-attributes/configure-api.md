@@ -147,7 +147,7 @@ For more information regarding updating a field group using the Schema Registry 
 **API Format**
 
 ```http
-PUT /tenant/fieldgroups/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 **Request**
@@ -428,4 +428,4 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 
 ## Next steps
 
-Now that you have created a schema and mixin into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).
+Now that you have created a schema and field group into which your computed attributes will be stored, you can create the computed attribute using the `/computedattributes` API endpoint. For detailed steps to creating a computed attribute in the API, follow the steps provided in the [computed attributes API endpoint guide](ca-api.md).

@@ -41,9 +41,9 @@ For the purposes of this tutorial, select **[!UICONTROL XDM Individual Profile]*
 
 ![](../images/tutorials/create-schema/create_schema_button.png)
 
-Since you chose a standard XDM class to base the schema on, the **[!UICONTROL Add mixin]** dialog appears, allowing you to immediately start adding fields to the schema. For now, select **[!UICONTROL Cancel]** to exit the dialog.
+Since you chose a standard XDM class to base the schema on, the **[!UICONTROL Add field group]** dialog appears, allowing you to immediately start adding fields to the schema. For now, select **[!UICONTROL Cancel]** to exit the dialog.
 
-![](../images/tutorials/create-schema/cancel-mixin.png)
+![](../images/tutorials/create-schema/cancel-field-group.png)
 
 The [!DNL Schema Editor] appears. This is the canvas upon which you will compose your schema. An untitled schema is automatically created in the **[!UICONTROL Structure]** section of the canvas when you arrive in the editor, along with the standard fields included in all schemas based on that class. The assigned class for the schema is also listed under **[!UICONTROL Class]** in **[!UICONTROL Composition]** section. 
 
@@ -65,33 +65,33 @@ There are several important considerations to make when deciding on a name for y
 
 This tutorial composes a schema to ingest data related to the members of a loyalty program, and therefore the schema is named "Loyalty Members".
 
-## Add a field group {#mixin}
+## Add a field group {#field-group}
 
 You can now begin to add fields to your schema by adding field groups. A field group is a group of one or more fields that are often used together to describe a particular concept. This tutorial uses field groups to describe the members of the loyalty program and capture key information such as name, birthday, phone number, address, and more.
 
-To add a field group, select **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** sub-section.
+To add a field group, select **[!UICONTROL Add]** in the **[!UICONTROL Field groups]** sub-section.
 
-![](../images/tutorials/create-schema/add_mixin_button.png)
+![](../images/tutorials/create-schema/add-field-group-button.png)
 
 A new dialog appears, displaying a list of available field groups. Each field group is only intended for use with a specific class, therefore the dialog only lists field groups that are compatible with the class you selected (in this case, the [!DNL XDM Individual Profile] class). If you are using a standard XDM class, the list of field groups will be intelligently sorted based on usage popularity.
 
-![](../images/tutorials/create-schema/mixin-popularity.png)
+![](../images/tutorials/create-schema/field-group-popularity.png)
 
 Selecting a field group from the list causes it to appear in the right-hand rail. You can select multiple field groups if desired, adding each one to the list in the right rail before confirming. In addition, an icon appears on the right-hand side of the currently selected field group which allows you to preview the structure of the fields it provides.
 
-![](../images/tutorials/create-schema/preview-mixin-button.png)
+![](../images/tutorials/create-schema/preview-field-group-button.png)
 
 When previewing a field group, a detailed description of the field group's schema is provided in the right-hand rail. You can also navigate through the field group's fields in the provided canvas. As you select different fields, the right rail updates to show details about the field in question. Select **[!UICONTROL Back]** when you are finished previewing to return to the field group selection dialog. 
 
-![](../images/tutorials/create-schema/preview-mixin.png)
+![](../images/tutorials/create-schema/preview-field-group.png)
 
-For this tutorial, select the **[!UICONTROL Demographic Details]** field group, then select **[!UICONTROL Add mixin]**.
+For this tutorial, select the **[!UICONTROL Demographic Details]** field group, then select **[!UICONTROL Add field group]**.
 
-![](../images/tutorials/create-schema/add_mixin_person_details.png)
+![](../images/tutorials/create-schema/demographic-details.png)
 
-The schema canvas reappears. The **[!UICONTROL Mixins]** section now lists "[!UICONTROL Demographic Details]" and the **[!UICONTROL Structure]** section includes the fields contributed by the field group. You can select the field group's name under the **[!UICONTROL Mixins]** section to highlight the specific fields it provides within the canvas.
+The schema canvas reappears. The **[!UICONTROL Field groups]** section now lists "[!UICONTROL Demographic Details]" and the **[!UICONTROL Structure]** section includes the fields contributed by the field group. You can select the field group's name under the **[!UICONTROL Field groups]** section to highlight the specific fields it provides within the canvas.
 
-![](../images/tutorials/create-schema/person_details_structure.png)
+![](../images/tutorials/create-schema/demographic-details-structure.png)
 
 This field group contributes several fields under the top-level name `person` with the data type "[!UICONTROL Person]". This group of fields describes information about an individual, including name, birth date, and gender. 
 
@@ -103,41 +103,41 @@ Notice that the `name` field has a data type of "[!UICONTROL Person name]", mean
 
 Select the different fields within the canvas to reveal any additional fields they contribute to the schema structure.
 
-## Add another field group {#mixin-2}
+## Add another field group {#field-group-2}
 
-You can now repeat the same steps to add another field group. When you view the **[!UICONTROL Add mixin]** dialog this time, notice that the "[!UICONTROL Demographic Details]" field group has been greyed out and the checkbox next to it cannot be selected. This prevents you from accidentally duplicating field groups that you have already included in the current schema.
+You can now repeat the same steps to add another field group. When you view the **[!UICONTROL Add field group]** dialog this time, notice that the "[!UICONTROL Demographic Details]" field group has been greyed out and the checkbox next to it cannot be selected. This prevents you from accidentally duplicating field groups that you have already included in the current schema.
 
-For this tutorial, select the "[!DNL Personal Contact Details]" field group from the dialog, then select **[!UICONTROL Add mixin]** to add it to the schema.
+For this tutorial, select the "[!DNL Personal Contact Details]" field group from the dialog, then select **[!UICONTROL Add field group]** to add it to the schema.
 
-![](../images/tutorials/create-schema/add_mixin_personal_details.png)
+![](../images/tutorials/create-schema/personal-contact-details.png)
 
-Once added, the canvas reappears. "[!UICONTROL Personal Contact Details]" is now listed under **[!UICONTROL Mixins]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
+Once added, the canvas reappears. "[!UICONTROL Personal Contact Details]" is now listed under **[!UICONTROL Field groups]** in the **[!UICONTROL Composition]** section, and fields for home address, mobile phone, and more have been added under **[!UICONTROL Structure]**.
 
 Similar to the `name` field, the fields you just added represent multi-field concepts. For example, `homeAddress` has a data type of "[!UICONTROL Postal address]" and `mobilePhone` has a data type of "[!UICONTROL Phone number]". You can select each of these fields to expand them and see the additional fields included in the data type.
 
-![](../images/tutorials/create-schema/personal_details_structure.png)
+![](../images/tutorials/create-schema/personal-contact-details-structure.png)
 
-## Define a custom mixin {#define-mixin}
+## Define a custom field group {#define-field-group}
 
 The "[!UICONTROL Loyalty Members]" schema is meant to capture data related to the members of a loyalty program, so it will require some specific loyalty-related fields.
 
-There is a standard [!UICONTROL Loyalty Details] mixin that you can add to the schema to capture common fields related to a loyalty program. While you are strongly encouraged to use standard mixins to represent concepts captured by your schemas, the structure of the standard loyalty mixin might not be able to capture all relevant data for your particular loyalty program. In this scenario, you can choose to define a new custom mixin to capture these fields instead.
+There is a standard [!UICONTROL Loyalty Details] field group that you can add to the schema to capture common fields related to a loyalty program. While you are strongly encouraged to use standard field groups to represent concepts captured by your schemas, the structure of the standard loyalty field group might not be able to capture all relevant data for your particular loyalty program. In this scenario, you can choose to define a new custom field group to capture these fields instead.
 
-Open the **[!UICONTROL Add Mixin]** dialog again, but this time select **[!UICONTROL Create New Mixin]** near the top. You are then asked to provide a display name and description for your mixin. 
+Open the **[!UICONTROL Add Field group]** dialog again, but this time select **[!UICONTROL Create New Field group]** near the top. You are then asked to provide a display name and description for your field group. 
 
-![](../images/tutorials/create-schema/mixin_create_new.png)
+![](../images/tutorials/create-schema/create-new-field-group.png)
 
 As with class names, the field group name should be short and simple, describing what the field group will contribute to the schema. These too are unique, so you will not be able to reuse the name and must therefore ensure it is specific enough. 
 
 For this tutorial, name the new field group "Loyalty Details".
 
-Select **[!UICONTROL Add mixin]** to return to the [!DNL Schema Editor]. "[!UICONTROL Loyalty Details]" should now appear under **[!UICONTROL Mixins]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
+Select **[!UICONTROL Add field group]** to return to the [!DNL Schema Editor]. "[!UICONTROL Loyalty Details]" should now appear under **[!UICONTROL Field groups]** on the left-side of the canvas, but there are no fields associated with it yet and therefore no new fields appear under **[!UICONTROL Structure]**.
 
-## Add fields to the field group {#mixin-fields}
+## Add fields to the field group {#field-group-fields}
 
 Now that you have created the "Loyalty Details" field group, it is time to define the fields that the field group will contribute to the schema.
 
-To begin, select the field group name in the **[!UICONTROL Mixins]** section. Once you do this, the field group's properties appear on the right-hand side of the editor and a **plus (+)** icon appears next to the name of the schema under **[!UICONTROL Structure]**.
+To begin, select the field group name in the **[!UICONTROL Field groups]** section. Once you do this, the field group's properties appear on the right-hand side of the editor and a **plus (+)** icon appears next to the name of the schema under **[!UICONTROL Structure]**.
 
 ![](../images/tutorials/create-schema/loyalty_details_structure.png)
 
@@ -172,7 +172,7 @@ Different constraint options are available depending on the data type selected. 
 
 ![](../images/tutorials/create-schema/loyaltyId_field.png)
 
-## Add more fields to the field group {#mixin-fields-2}
+## Add more fields to the field group {#field-group-fields-2}
 
 Now that you have added the `loyaltyId` field, you can add additional fields to capture loyalty-related information such as:
 
@@ -239,7 +239,7 @@ In a future schema, you could now assign a field as a "[!DNL Loyalty]" type and 
 
 Your schema now contains several field groups in addition to the fields provided by its base class. When working with larger schemas, you can select the checkboxes next to field group names in the left rail to filter the displayed fields to only those provided by the field groups you are interested in.
 
-![](../images/tutorials/create-schema/filter-by-mixin.png)
+![](../images/tutorials/create-schema/filter-by-field-group.png)
 
 If you are looking for a specific field in your schema, you can also use the search bar to filter displayed fields by name, regardless of which field group they are provided under.
 

@@ -50,7 +50,7 @@ In order to use a custom timestamp, the **[!UICONTROL External Source System Aud
 
 The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details] field group. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 To work with custom timestamps using the API, refer to the [merge policies endpoint guide section on using custom timestamps](../api/merge-policies.md#custom-timestamps).
 

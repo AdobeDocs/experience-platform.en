@@ -16,11 +16,11 @@ This document provides steps for configuring a dataset to process consent data i
 >
 >The examples in this guide use a standardized set of fields to represent customer consent values, as defined by the [Consents & Preferences XDM data type](../../../../xdm/data-types/consents.md). The structure of these fields is intended to provide an efficient data model to cover many common consent-collection use cases.
 >
->However, you can also define your own mixins to represent consent according to your own data models. Please consult with your legal team to get approval for a consent data model that fits your business needs, based on the following options:
+>However, you can also define your own field groups to represent consent according to your own data models. Please consult with your legal team to get approval for a consent data model that fits your business needs, based on the following options:
 >
->* The standardized consent mixin
->* A custom consent mixin created by your organization
->* A combination of the standardized consent mixin and additional fields provided by a custom consent mixin
+>* The standardized consent field group
+>* A custom consent field group created by your organization
+>* A combination of the standardized consent field group and additional fields provided by a custom consent field group
 
 ## Prerequisites
 
@@ -34,11 +34,11 @@ This tutorial requires a working understanding of the following components of Ad
 >
 >This tutorial assumes that you know the [!DNL Profile] schema in Platform that you want to use to capture customer attribute information. Regardless of the method you use to collect consent data, this schema must be [enabled for Real-time Customer Profile](../../../../xdm/ui/resources/schemas.md#profile). In addition, the schema's primary identity cannot be a directly identifiable field that is prohibited from use in interest-based advertising, such as an email address. Consult your legal counsel if you are unsure which fields are restricted.
 
-## Consents & Preferences mixin structure {#structure}
+## Consents & Preferences field group structure {#structure}
 
-The [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin (hereinafter referred to as the "Consents & Preferences mixin") provides standardized consent fields to a schema. Currently, this mixin is only compatible with schemas based on the [!DNL XDM Individual Profile] class.
+The [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group (hereinafter referred to as the "Consents & Preferences field group") provides standardized consent fields to a schema. Currently, this field group is only compatible with schemas based on the [!DNL XDM Individual Profile] class.
 
-The mixin provides a single object-type field, `consents`, whose sub-properties capture a set of standardized consent fields. The following JSON is an example of the kind of data `consents` expects upon data ingestion:
+The field group provides a single object-type field, `consents`, whose sub-properties capture a set of standardized consent fields. The following JSON is an example of the kind of data `consents` expects upon data ingestion:
 
 ```json
 {
@@ -87,7 +87,7 @@ The mixin provides a single object-type field, `consents`, whose sub-properties 
 >
 >For more information on the structure and meaning of the sub-properties in `consents`, see the overview on the [Consents & Preferences data type](../../../../xdm/data-types/consents.md).
 
-## Add the Consents & Preferences mixin to your [!DNL Profile] schema {#add-mixin}
+## Add the Consents & Preferences field group to your [!DNL Profile] schema {#add-field-group}
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then select the **[!UICONTROL Browse]** tab to display a list of existing schemas. From here, select the name of the [!DNL Profile]-enabled schema that you want to add consent fields to. The screenshots in this section use the "Loyalty Members" schema built in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md) as an example.
 
@@ -97,15 +97,15 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation, then
 >
 >You can use the workspace's search and filtering capabilities to help find your schema easier. See the guide on [exploring XDM resources](../../../../xdm/ui/explore.md) for more information.
 
-The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. On the left side of the canvas, select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section.
+The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. On the left side of the canvas, select **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add field group]** dialog appears. From here, select **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/mixin-dialog.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field group-dialog.png)
 
-The canvas reappears, showing that the `consents` object has been added to the schema structure. If you require additional consent and preference fields not captured by the standard mixin, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
+The canvas reappears, showing that the `consents` object has been added to the schema structure. If you require additional consent and preference fields not captured by the standard field group, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
@@ -157,17 +157,17 @@ The following section contains additional information about creating a dataset t
 
 ### Add custom consent and preference fields to the schema {#custom-consent}
 
-If you need to capture additional consent signals outside of those represented by the standard [!DNL Consents & Preferences] mixin, you can use custom XDM components to enhance your consent schema to suit your particular business needs. This section outlines the basic principles of how to customize your consent schema in a way that is compatible with consent-change commands made by Adobe Experience Platform Mobile and Web SDKs.
+If you need to capture additional consent signals outside of those represented by the standard [!DNL Consents & Preferences] field group, you can use custom XDM components to enhance your consent schema to suit your particular business needs. This section outlines the basic principles of how to customize your consent schema in a way that is compatible with consent-change commands made by Adobe Experience Platform Mobile and Web SDKs.
 
 >[!IMPORTANT]
 >
->You must use the [!DNL Consents & Preferences] mixin as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
+>You must use the [!DNL Consents & Preferences] field group as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
 
-To add custom fields to the structure of a standard mixin, you must first create a custom mixin. After adding the [!DNL Consents & Preferences] mixin to the schema, select the **plus (+)** icon in the **[!UICONTROL Mixins]** section, and then select **[!UICONTROL Create new mixin]**. Provide a name and optional description for the mixin, and then select **[!UICONTROL Add mixin]**.
+To add custom fields to the structure of a standard field group, you must first create a custom field group. After adding the [!DNL Consents & Preferences] field group to the schema, select the **plus (+)** icon in the **[!UICONTROL Field groups]** section, and then select **[!UICONTROL Create new field group]**. Provide a name and optional description for the field group, and then select **[!UICONTROL Add field group]**.
 
-![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-mixin.png)
+![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field-group.png)
 
-The [!DNL Schema Editor] reappears with the new custom mixin selected in the left rail. In the canvas, controls appear that allow you to add custom fields to the schema structure. To add a new consent or preference field, select the **plus (+)** icon next to the `consents` object.
+The [!DNL Schema Editor] reappears with the new custom field group selected in the left rail. In the canvas, controls appear that allow you to add custom fields to the schema structure. To add a new consent or preference field, select the **plus (+)** icon next to the `consents` object.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-custom-field.png)
 
