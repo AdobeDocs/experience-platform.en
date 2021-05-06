@@ -21,7 +21,7 @@ This overview requires a working understanding of the following components of Ad
 
 ## Mapping set syntax
 
-A mapping set is comprised of an ID, name, input schema, output schema, and a list of all of its associated mappings.
+A mapping set is comprised of an ID, name, input schema, output schema, and a list of associated mappings.
 
 The following JSON is an example of a typical mapping set:
 
@@ -76,7 +76,7 @@ The following JSON is an example of a typical mapping set:
 
 ## Configuring mapping sources
 
-In a mapping, sources can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
+In a mapping, the `source` can be a field, expression, or a static value. Based on the source type given, the value can be extracted in various ways.
 
 ### Field in columnar data
 
