@@ -26,10 +26,10 @@ feature: Schemas
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
     * [IdentityMap](./field-groups/profile/identitymap.md)
-    * [Demographic Details](./field-groups/profile/person-details.md)
-    * [Personal Contact Details](./field-groups/profile/personal-details.md)
+    * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
-    * [Work Contact Details](./field-groups/profile/work-details.md)
+    * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
   * Event field groups {#event}
     * [End User ID Details](./field-groups/event/enduserids.md)

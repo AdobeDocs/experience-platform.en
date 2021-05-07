@@ -35,9 +35,9 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used field groups for the class:
 
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../field-groups/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-details.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
 For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
