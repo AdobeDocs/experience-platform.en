@@ -13,39 +13,33 @@ This tutorial covers the steps for retrieving data from a streaming source conne
 
 ## Getting started
 
-This tutorial requires you to have a valid connection ID for a streaming connector. If you do not have this information, see the following tutorials on create a streaming source connection before attempting this tutorial:
+This tutorial requires you to have a working understanding of the following components of Adobe Experience Platform:
+
+- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
+- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
+- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for Platform provides users a method to send data from client and server-side devices to Experience Platform in real time..
+- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+### Using Platform APIs
+
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+
+### Create a source connection {#source}
+
+This tutorial also requires you to have a valid source connection ID for a streaming connector. If you do not have this information, see the following tutorials on create a streaming source connection before attempting this tutorial:
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
 - [[!DNL HTTP API]](../create/streaming/http.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
-This tutorial also requires you to have a working understanding of the following components of Adobe Experience Platform:
-
-- [[!DNL Experience Data Model (XDM) System]](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-  - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-  - [Schema Registry developer guide](../../../../xdm/api/getting-started.md): Includes important information that you need to know in order to successfully perform calls to the Schema Registry API. This includes your `{TENANT_ID}`, the concept of "containers", and the required headers for making requests (with special attention to the Accept header and its possible values).
-- [[!DNL Catalog Service]](../../../../catalog/home.md): Catalog is the system of record for data location and lineage within Experience Platform.
-- [[!DNL Streaming ingestion]](../../../../ingestion/streaming-ingestion/overview.md): Streaming ingestion for [!DNL Platform] provides users a method to send data from client and server-side devices to Experience Platform in real time..
-- [Sandboxes](../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
-### Using Platform APIs
-
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
-
-## Create a source connection
-
-To create a streaming dataflow, you need to first create a source connection and generate the unique source connection ID for your connector. If you don't already have this ID, see the following tutorials before attempting to create a dataflow:
-
-- [Create an [!DNL Amazon Kinesis] source connection](../create/cloud-storage/kinesis.md)
-- [Create an [!DNL Azure Event Hubs] source connection](../create/cloud-storage/eventhub.md)
-- [Create a [!DNL Google PubSub] source connection](../create/cloud-storage/google-pubsub.md)
-
 ## Create a target XDM schema {#target-schema}
 
-In order for the source data to be used in [!DNL Platform], a target schema must be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
+In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
 
 **API format**
 
@@ -153,7 +147,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Create a target dataset
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), while providing the ID of the target schema within the payload.
 
 **API format**
 
@@ -206,9 +200,9 @@ A successful response returns an array containing the ID of the newly created da
 
 ## Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated with data lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+Target connections create and manage a destination connection to Platform or any location where the transferred data will land. Target connections contain information regarding data destination, data format, and the target connection ID required to create a dataflow. Target connection instances are specific to a tenant and IMS Organization.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to data lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+To create a target connection, make a POST request to the `/targetConnections` endpoint of the [!DNL Flow Service] API. As part of the request, you must provide the data format, the `dataSetId` retrieved in the previous step, and the fixed connection specification ID tied to [!DNL Data Lake]. This ID is `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
 **API format**
 
@@ -237,15 +231,16 @@ curl -X POST \
             "format": "parquet_xdm"
         },
         "params": {
-        "dataSetId": "5f7187bac6d00f194fb937c0"
+            "dataSetId": "5f7187bac6d00f194fb937c0"
         }
     }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `params.dataSetId` | The ID of the target dataset. |
-| `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `connectionSpec.id` | The connection specification ID used to connect to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | The specified format of the data you are bringing to [!DNL Data Lake]. |
+| `params.dataSetId` | The ID of the target dataset retrieved in the previous step. |
 
 **Response**
 
@@ -260,7 +255,9 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
+
+To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
 
 **API format**
 
@@ -318,21 +315,21 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-## Look up dataflow specifications {#specs}
+## Retrieve a list of dataflow specifications {#specs}
 
-A dataflow is responsible for collecting data from sources and bringing them into [!DNL Platform]. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API. Dataflow specifications are responsible for collecting data from a streaming connector.
+A dataflow is responsible for collecting data from sources and bringing them into Platform. In order to create a dataflow, you must first obtain the dataflow specifications by performing a GET request to the [!DNL Flow Service] API.
 
 **API format**
 
 ```http
-GET /flowSpecs?property=name=="Steam data with transformation"
+GET /flowSpecs
 ```
 
 **Request**
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs?property=name=="Steam data with transformation"' \
+    'https://platform.adobe.io/data/foundation/flowservice/flowSpecs' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}'
@@ -340,7 +337,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns the details of the dataflow specification that is responsible for bringing data from your streaming connector into [!DNL Platform]. This ID is required in the next step to create a new dataflow.
+A successful response returns a list of dataflow specifications. The dataflow specification ID that you need to retrieve can vary depending on the source that you are using. If you are using HTTP API, then you must retrieve the ID `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. If you are using any of [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or  [!DNL Google PubSub], then you must retrieve the ID `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
@@ -379,7 +376,6 @@ A successful response returns the details of the dataflow specification that is 
             "attributes": {
                 "uiAttributes": {
                     "apiFeatures": {
-                        "deleteSupported": false,
                         "updateSupported": false,
                         "flowRunsSupported": false
                     }
@@ -405,7 +401,66 @@ A successful response returns the details of the dataflow specification that is 
                     }
                 ]
             }
-        }
+        },
+        {
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
+            "name": "Stream data with optional transformation",
+            "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
+            "version": "1.0",
+            "sourceConnectionSpecIds": [
+                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "86043421-563b-46ec-8e6c-e23184711bf6",
+                "70116022-a743-464a-bbfe-e226a7f8210c"
+            ],
+            "targetConnectionSpecIds": [
+                "bf9f5905-92b7-48bf-bf20-455bc6b60a4e",
+                "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                "db4fe783-ef79-4a12-bda9-32b2b1bc3b2c"
+            ],
+            "transformationSpecs": [
+                {
+                    "name": "Mapping",
+                    "spec": {
+                        "$schema": "http://json-schema.org/draft-07/schema#",
+                        "type": "object",
+                        "description": "defines various params required for different mapping from source to target",
+                        "properties": {
+                            "mappingId": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            ],
+            "attributes": {
+                "uiAttributes": {
+                    "apiFeatures": {
+                        "flowRunsSupported": false
+                    }
+                }
+            },
+            "permissionsInfo": {
+                "view": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "StreamingSource",
+                        "permissions": [
+                            "read"
+                        ]
+                    }
+                ],
+                "manage": [
+                    {
+                        "@type": "lowLevel",
+                        "name": "StreamingSource",
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ]
+            }
+        },
     ]
 }
 ```
@@ -421,11 +476,17 @@ The last step towards collecting streaming data is to create a dataflow. By now,
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
+### Create a dataflow for HTTP API
+
 **API format**
 
 ```http
 POST /flows
 ```
+
+>[!IMPORTANT]
+>
+>The following request example applies to [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or  [!DNL Google PubSub]. If you are using the HTTP API source to create a dataflow, then you must replace the value of `flowSpec.id` with `c1a19761-d2c7-4702-b9fa-fe91f0613e81`.
 
 **Request**
 
@@ -440,7 +501,7 @@ curl -X POST \
         "name": "Streaming dataflow",
         "description": "Streaming dataflow",
         "flowSpec": {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
+            "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
             "version": "1.0"
         },
         "sourceConnectionIds": [
@@ -479,7 +540,9 @@ A successful response returns the ID (`id`) of the newly created dataflow.
 }
 ```
 
-## Posting raw data to be ingested {#ingest-data}
+## Appendix
+
+### Post raw data to be ingested to Platform {#ingest-data}
 
 Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
 
@@ -537,7 +600,7 @@ A successful response returns HTTP status 200 with details of the newly ingested
 
 ## Next steps
 
-By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector. Incoming data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
+By following this tutorial, you have created a dataflow to collect streaming data from your streaming connector. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
 - [Real-time Customer Profile overview](../../../../profile/home.md)
 - [Data Science Workspace overview](../../../../data-science-workspace/home.md)
