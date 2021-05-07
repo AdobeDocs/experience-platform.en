@@ -15,7 +15,7 @@ exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 
 [!UICONTROL Work Contact Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides several fields that capture occupational information regarding an individual person, such as work address, work email, work phone number, and organizations to which the person belongs.
 
-<img src='../../images/field-groups/profile-work-details.png' width=550 /><br />
+![](../../images/field-groups/work-contact-details.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |

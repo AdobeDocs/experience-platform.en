@@ -15,7 +15,7 @@ exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 
 [!UICONTROL Demographic Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a root-level `person` object, whose sub-fields describe information about an individual person.
 
-<img src='../../images/field-groups/profile-person-details.png' width=600 /><br />
+![](../../images/field-groups/demographic-details.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |

@@ -15,7 +15,7 @@ exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 
 [!UICONTROL Personal Contact Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) which describes the contact information for an individual person.
 
-<img src='../../images/field-groups/profile-personal-details.png' width=700 /><br />
+![](../../images/field-groups/personal-contact-details.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
