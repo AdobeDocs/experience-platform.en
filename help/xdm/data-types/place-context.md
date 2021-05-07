@@ -20,7 +20,7 @@ exl-id: d7cf7366-0136-49ee-84d2-ec663db66eb4
 | `localTime` | DateTime | A timestamp in [RFC 3339](https://tools.ietf.org/html/rfc3339) format, indicating the local time using with a stated time zone offset. The formatting pattern is `yyyy-MM-dd'T'HH:mm:ssXXX` (for example, `2001-07-04T12:08:56-07:00`). |
 | `localTimezoneOffset` | Integer | The current local timezone offset in minutes from UTC for the `localTime` value. This should include the current DST offset if applicable. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/placecontext.schema.json)
