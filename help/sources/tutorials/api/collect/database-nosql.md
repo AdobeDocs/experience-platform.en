@@ -325,7 +325,7 @@ curl -X POST \
         "params": {
             "dataSetId": "6019e0e7c5dcf718db5ebc71"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
