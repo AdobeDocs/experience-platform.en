@@ -41,11 +41,11 @@ The [!UICONTROL IMS Organization ID] is the organization that you would like the
 
 The [!UICONTROL Edge Domain] is the domain that the Adobe Experience Platform extension sends and receives data from. The extension requires that you use a 1st-party CNAME for production traffic. The default 3rd-party domain works for development environments but is not suitable for production environments. Instructions on how to set up a first-party CNAME are listed [here](https://docs.adobe.com/content/help/en/core-services/interface/ec-cookies/cookies-first-party.html).
 
-## [!UICONTROL Edge Configurations]
+## [!UICONTROL Datastreams]
 
-When a request is sent to the Adobe Experience Platform Edge Network, an edge configuration ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
+When a request is sent to the Adobe Experience Platform Edge Network, a datastream ID is used to reference the server-side configuration. You can update the configuration without having to make code changes on your website.
 
-See the guide on [edge configurations](../fundamentals/edge-configuration.md) for more information.
+See the guide on [datastreams](../fundamentals/datastreams.md) for more information.
 
 ## [!UICONTROL Privacy]
 
