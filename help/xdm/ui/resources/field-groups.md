@@ -64,4 +64,4 @@ If the same field group is already employed in other schemas, the newly added fi
 
 This guide covered how to create and edit field groups using the Platform UI. For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 
-To learn how to manage field groups using the [!DNL Schema Registry] API, see the [field groups endpoint guide](../../api/mixins.md).
+To learn how to manage field groups using the [!DNL Schema Registry] API, see the [field groups endpoint guide](../../api/field-groups.md).

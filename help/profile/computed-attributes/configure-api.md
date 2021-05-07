@@ -18,7 +18,7 @@ The workflow in this document outlines how to use the Schema Registry API to cre
 
 ## Create a computed attributes field group
 
-To create a field group using the Schema Registry API, begin by making a POST request to the `/tenant/fieldgroups` endpoint and providing the details of the field group in the request body. For details regarding working with field groups using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
+To create a field group using the Schema Registry API, begin by making a POST request to the `/tenant/fieldgroups` endpoint and providing the details of the field group in the request body. For details regarding working with field groups using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/field-groups.md).
 
 **API format**
 
@@ -142,7 +142,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 
 As more computed attributes are needed, you can update the computed attributes field group with additional attributes by making a PUT request to the `/tenant/fieldgroups` endpoint. This request requires you to include the unique ID of the field group that you created in the path and the all new fields that you would like to add in the body.
 
-For more information regarding updating a field group using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/mixins.md).
+For more information regarding updating a field group using the Schema Registry API, please refer to the [field groups API endpoint guide](../../xdm/api/field-groups.md).
 
 **API Format**
 

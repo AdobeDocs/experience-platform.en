@@ -1,29 +1,22 @@
 ---
-keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;mixin registry;Schema Registry;mixin;Mixin;mixins;Mixins;create
+keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;Schema Registry;field group;Field group;Field groups;create
 solution: Experience Platform
-title: Mixins API Endpoint
-description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
-topic-legacy: developer guide
-exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
+title: Field groups API Endpoint
+description: The /fieldgroups endpoint in the Schema Registry API allows you to programmatically manage XDM schema field groups within your experience application.
+topic: developer guide
 ---
 
-# Mixins endpoint (deprecated)
+# Schema field groups endpoint
 
->[!IMPORTANT]
->
->Mixins have been renamed to schema field groups, and therefore the `/mixins` endpoint has been deprecated in favor of the `/fieldgroups` endpoint.
->
->While `/mixins` will continue to be maintained as a legacy endpoint, it is strongly recommended that you use `/fieldgroups` for new implementations of the Schema Registry API in your experience applications. See the [field groups endpoint guide](./field-groups.md) for more information.
-
-Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/mixins` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage mixins within your experience application.
+Schema field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/fieldgroups` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage field groups within your experience application.
 
 ## Getting started
 
 The endpoint used in this guide is part of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Retrieve a list of mixins {#list}
+## Retrieve a list of field groups {#list}
 
-You can list all mixins under the `global` or `tenant` container by making a GET request to `/global/mixins` or `/tenant/mixins`, respectively.
+You can list all field groups under the `global` or `tenant` container by making a GET request to `/global/fieldgroups` or `/tenant/fieldgroups`, respectively.
 
 >[!NOTE]
 >
@@ -32,21 +25,21 @@ You can list all mixins under the `global` or `tenant` container by making a GET
 **API format**
 
 ```http
-GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
+GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | The container you want to retrieve mixins from: `global` for Adobe-created mixins or `tenant` for mixins owned by your organization. |
+| `{CONTAINER_ID}` | The container you want to retrieve field groups from: `global` for Adobe-created field groups or `tenant` for field groups owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
 **Request**
 
-The following request retrieves a list of mixins from the `tenant` container, using an `orderby` query parameter to sort the mixins by their `title` attribute.
+The following request retrieves a list of field groups from the `tenant` container, using an `orderby` query parameter to sort the field groups by their `title` attribute.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins?orderby=title \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups?orderby=title \
   -H 'Accept: application/vnd.adobe.xed-id+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -54,41 +47,41 @@ curl -X GET \
   -H 'x-sandbox-name: {SANDBOX_NAME}'
 ```
 
-The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing mixins:
+The response format depends on the `Accept` header sent in the request. The following `Accept` headers are available for listing field groups:
 
 | `Accept` header | Description |
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
-| `application/vnd.adobe.xed+json` | Returns full JSON mixin for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+| `application/vnd.adobe.xed+json` | Returns full JSON field group for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
 **Response**
 
-The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each mixin. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each mixin. Select the appropriate `Accept` header depending on the information you require in your response.
+The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, therefore the response includes only the `title`, `$id`, `meta:altId`, and `version` attributes for each field group. Using the other `Accept` header (`application/vnd.adobe.xed+json`) returns all attributes of each field group. Select the appropriate `Accept` header depending on the information you require in your response.
 
 ```json
 {
   "results": [
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6ece98e9842907c78c651f5b249d9f09",
-      "meta:altId": "_{TENANT_ID}.mixins.6ece98e9842907c78c651f5b249d9f09",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6ece98e9842907c78c651f5b249d9f09",
+      "meta:altId": "_{TENANT_ID}.fieldgroups.6ece98e9842907c78c651f5b249d9f09",
       "version": "1.0",
       "title": "CRM Data"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/6386ee478a30914964c6e676ad55603c",
-      "meta:altId": "_{TENANT_ID}.mixins.6386ee478a30914964c6e676ad55603c",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/6386ee478a30914964c6e676ad55603c",
+      "meta:altId": "_{TENANT_ID}.fieldgroups.6386ee478a30914964c6e676ad55603c",
       "version": "1.9",
       "title": "Loyalty Member Details"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/67626b2830db3d3ea6c8f9d007aa5797",
-      "meta:altId": "_{TENANT_ID}.mixins.67626b2830db3d3ea6c8f9d007aa5797",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/67626b2830db3d3ea6c8f9d007aa5797",
+      "meta:altId": "_{TENANT_ID}.fieldgroups.67626b2830db3d3ea6c8f9d007aa5797",
       "version": "1.0",
       "title": "Restaurant"
     },
     {
-      "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/2583b25b613fec704da6ef70cf527688",
-      "meta:altId": "_{TENANT_ID}.mixins.2583b25b613fec704da6ef70cf527688",
+      "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/2583b25b613fec704da6ef70cf527688",
+      "meta:altId": "_{TENANT_ID}.fieldgroups.2583b25b613fec704da6ef70cf527688",
       "version": "1.1",
       "title": "Retail Customer Preferences"
     },
@@ -101,34 +94,34 @@ The request above used the `application/vnd.adobe.xed-id+json` `Accept` header, 
   "_links": {
     "next": null,
     "global_schemas": {
-      "href": "https://platform.adobe.io/data/foundation/schemaregistry/global/mixins"
+      "href": "https://platform.adobe.io/data/foundation/schemaregistry/global/fieldgroups"
     }
   }
 }
 ```
 
-## Look up a mixin {#lookup}
+## Look up a field group {#lookup}
 
-You can look up a specific mixin by including the mixin's ID in the path of a GET request.
+You can look up a specific field group by including the field group's ID in the path of a GET request.
 
 **API format**
 
 ```http
-GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
+GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{CONTAINER_ID}` | The container that houses the mixin you want to retrieve: `global` for an Adobe-created mixin or `tenant` for a mixin owned by your organization. |
-| `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to look up. |
+| `{CONTAINER_ID}` | The container that houses the field group you want to retrieve: `global` for an Adobe-created field group or `tenant` for a field group owned by your organization. |
+| `{FIELD_GROUP_ID}` | The `meta:altId` or URL-encoded `$id` of the field group you want to look up. |
 
 **Request**
 
-The following request retrieves a mixin by its `meta:altId` value provided in the path. 
+The following request retrieves a field group by its `meta:altId` value provided in the path. 
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Accept: application/vnd.adobe.xed+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -140,20 +133,20 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 
-A successful response returns the details of the mixin. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
+A successful response returns the details of the field group. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
 
 ```json
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
@@ -209,27 +202,27 @@ A successful response returns the details of the mixin. The fields that are retu
 }
 ```
 
-## Create a mixin {#create}
+## Create a field group {#create}
 
-You can define a custom mixin under the `tenant` container by making a POST request.
+You can define a custom field group under the `tenant` container by making a POST request.
 
 **API format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Request**
 
-When defining a new mixin, it must include a `meta:intendedToExtend` attribute, listing the `$id` of the classes with which the mixin is compatible. In this example, the mixin is compatible with a `Property` class that was defined previously. Custom fields must be nested under `_{TENANT_ID}` (as shown in the example) to avoid any collisions with similar fields provided by classes and other mixins.
+When defining a new field group, it must include a `meta:intendedToExtend` attribute, listing the `$id` of the classes with which the field group is compatible. In this example, the field group is compatible with a `Property` class that was defined previously. Custom fields must be nested under `_{TENANT_ID}` (as shown in the example) to avoid any collisions with similar fields provided by classes and other field groups.
 
 >[!NOTE]
 >
->For details on how to define different field types to include in your mixin, see the [field constraints guide](../schema/field-constraints.md#define-fields).
+>For details on how to define different field types to include in your field group, see the [field constraints guide](../schema/field-constraints.md#define-fields).
 
 ```SHELL
 curl -X POST \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -294,12 +287,12 @@ curl -X POST \
 
 **Response**
 
-A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created mixin, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created field group, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
@@ -378,33 +371,33 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 }
 ```
 
-Performing a GET request to [list all mixins](#list) in the tenant container would now include the Property Details mixin, or you can [perform a lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new mixin directly.
+Performing a GET request to [list all field groups](#list) in the tenant container would now include the Property Details field group, or you can [perform a lookup (GET) request](#lookup) using the URL-encoded `$id` URI to view the new field group directly.
 
-## Update a mixin {#put}
+## Update a field group {#put}
 
-You can replace an entire mixin through a PUT operation, essentially re-writing the resource. When updating a mixin through a PUT request, the body must include all of the fields that would be required when [creating a new mixin](#create) in a POST request.
+You can replace an entire field group through a PUT operation, essentially re-writing the resource. When updating a field group through a PUT request, the body must include all of the fields that would be required when [creating a new field group](#create) in a POST request.
 
 >[!NOTE]
 >
->If you only want to update part of a mixin instead of replacing it entirely, see the section on [updating a portion of a mixin](#patch).
+>If you only want to update part of a field group instead of replacing it entirely, see the section on [updating a portion of a field group](#patch).
 
 **API format**
 
 ```http
-PUT /tenant/mixins/{MIXIN_ID}
+PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to re-write. |
+| `{FIELD_GROUP_ID}` | The `meta:altId` or URL-encoded `$id` of the field group you want to re-write. |
 
 **Request**
 
-The following request re-writes an existing mixin, adding a new `propertyCountry` field.
+The following request re-writes an existing field group, adding a new `propertyCountry` field.
 
 ```SHELL
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -474,12 +467,12 @@ curl -X PUT \
 
 **Response**
 
-A successful response returns the details of the updated mixin.
+A successful response returns the details of the updated field group.
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
@@ -563,33 +556,33 @@ A successful response returns the details of the updated mixin.
 }
 ```
 
-## Update a portion of a mixin {#patch}
+## Update a portion of a field group {#patch}
 
-You can update a portion of a mixin by using a PATCH request. The [!DNL Schema Registry] supports all standard JSON Patch operations, including `add`, `remove`, and `replace`. For more information on JSON Patch, see the [API fundamentals guide](../../landing/api-fundamentals.md#json-patch).
+You can update a portion of a field group by using a PATCH request. The [!DNL Schema Registry] supports all standard JSON Patch operations, including `add`, `remove`, and `replace`. For more information on JSON Patch, see the [API fundamentals guide](../../landing/api-fundamentals.md#json-patch).
 
 >[!NOTE]
 >
->If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a mixin using a PUT operation](#put).
+>If you want to replace an entire resource with new values instead of updating individual fields, see the section on [replacing a field group using a PUT operation](#put).
 
 **API format**
 
 ```http
-PATCH /tenant/mixin/{MIXIN_ID} 
+PATCH /tenant/fieldgroups/{FIELD_GROUP_ID} 
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to update. |
+| `{FIELD_GROUP_ID}` | The URL-encoded `$id` URI or `meta:altId` of the field group you want to update. |
 
 **Request**
 
-The example request below updates the `description` of an existing mixin, and adds a new `propertyCity` field.
+The example request below updates the `description` of an existing field group, and adds a new `propertyCity` field.
 
 The request body takes the form of an array, with each listed object representing a specific change to an individual field. Each object includes the operation to be performed (`op`), which field the operation should be performed on (`path`), and what information should be included in that operation (`value`).
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -619,8 +612,8 @@ The response shows that both operations were performed successfully. The `descri
 
 ```JSON
 {
-  "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
+  "meta:altId": "_{TENANT_ID}.fieldgroups.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
@@ -704,25 +697,25 @@ The response shows that both operations were performed successfully. The `descri
 }
 ```
 
-## Delete a mixin {#delete}
+## Delete a field group {#delete}
 
-It may occasionally be necessary to remove a mixin from the Schema Registry. This is done by performing a DELETE request with the mixin ID provided in the path.
+It may occasionally be necessary to remove a field group from the Schema Registry. This is done by performing a DELETE request with the field group ID provided in the path.
 
 **API format**
 
 ```http
-DELETE /tenant/mixins/{MIXIN_ID}
+DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 ```
 
 | Parameter | Description |
 | --- | --- |
-| `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to delete. |
+| `{FIELD_GROUP_ID}` | The URL-encoded `$id` URI or `meta:altId` of the field group you want to delete. |
 
 **Request**
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.d5cc04eb8d50190001287e4c869ebe67 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.d5cc04eb8d50190001287e4c869ebe67 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -733,4 +726,4 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content) and a blank body.
 
-You can confirm the deletion by attempting a [lookup (GET) request](#lookup) to the mixin. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the mixin has been removed from the Schema Registry.
+You can confirm the deletion by attempting a [lookup (GET) request](#lookup) to the field group. You will need to include an `Accept` header in the request, but should receive an HTTP status 404 (Not Found) because the field group has been removed from the Schema Registry.

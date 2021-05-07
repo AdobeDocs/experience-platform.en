@@ -36,7 +36,7 @@ A class defines the base structure of common properties that all schemas based o
 
 ## Field groups
 
-Field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [field groups endpoint guide](./mixins.md) to learn how to work with field groups in the API.
+Field groups are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Field groups are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). See the [field groups endpoint guide](./field-groups.md) to learn how to work with field groups in the API.
 
 ## Data types
 
