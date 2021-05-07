@@ -20,7 +20,7 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating new field groups using the API or the user interface.
 
-For details on creating new field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/mixins.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
+For details on creating new field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/field-groups.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
 
 ### What are the best uses for field groups vs data types?
 
@@ -142,7 +142,7 @@ This error message displays when you attempt to create a resource with a title t
 }
 ```
 
-This error message displays when you attempt to create a new field group with improperly namespaced fields. Field groups that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for field groups can be found in the [field groups endpoint guide](./api/mixins.md#create).
+This error message displays when you attempt to create a new field group with improperly namespaced fields. Field groups that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for field groups can be found in the [field groups endpoint guide](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errors
