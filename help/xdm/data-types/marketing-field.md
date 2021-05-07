@@ -11,7 +11,7 @@ exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 
 >[!NOTE]
 >
->This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) as a baseline.
+>This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group](../field-groups/profile/consents.md) as a baseline.
 >
 >If you require a `subscriptions` map for a particular marketing preference field, you must use the [marketing field with subscriptions data type](./marketing-field-subscriptions.md) instead.
 

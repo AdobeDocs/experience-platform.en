@@ -70,7 +70,7 @@ Once you have created a [!DNL Profile]-enabled dataset for processing consent da
 >
 >If you do not have any conflicting datasets, you should set timestamp precedence for your merge policy instead. This helps ensure that the latest consent specified by a customer is the consent setting that is used.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences mixin, as outlined in the guide on [dataset preparation](./dataset.md).
+For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences schema field group, as outlined in the guide on [dataset preparation](./dataset.md).
 
 ## Bring consent data into Platform
 

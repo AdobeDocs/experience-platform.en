@@ -96,7 +96,7 @@ The format of the response object depends on the Accept header sent in the reque
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
