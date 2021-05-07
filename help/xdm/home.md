@@ -10,7 +10,7 @@ exl-id: 294d5f02-850f-47ea-9333-8b94a0bb291e
 
 >[!NOTE]
 >
->The term “mixin” has been updated to “schema field group” to promote understanding. Field groups are a reusable sets of fields to support business use cases. This change is now reflected in the Schema Registry API, the Adobe Experience Platform UI, and across all Platform documentation.
+>The term "mixin" has been updated to schema "field group" to promote understanding. Field groups are a reusable sets of fields to support business use cases. This change is now reflected in the Schema Registry API, the Adobe Experience Platform UI, and across all Platform documentation.
 
 Standardization and interoperability are key concepts behind Adobe Experience Platform. [!DNL Experience Data Model] (XDM), driven by Adobe, is an effort to standardize customer experience data and define schemas for customer experience management. 
 
