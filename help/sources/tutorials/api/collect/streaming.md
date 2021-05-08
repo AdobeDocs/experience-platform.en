@@ -270,14 +270,14 @@ To create a mapping set, make a POST request to the `mappingSets` endpoint of th
 **API format**
 
 ```http
-POST /conversion/mappingSets
+POST /mappingSets
 ```
 
 **Request**
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+    'https://platform.adobe.io/data/foundation/mappingSets' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
