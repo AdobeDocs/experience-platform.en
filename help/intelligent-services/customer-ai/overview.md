@@ -7,6 +7,7 @@ description: Customer AI is used to generate custom propensity scores such as ch
 landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 ---
+
 # Customer AI overview
 
 Customer AI , as part of Intelligent Services provides marketers with the power to generate customer predictions at the individual level with explanations.
@@ -41,26 +42,6 @@ The following video is designed to support your understanding of Customer AI.
 ## How does it work?
 
 Customer AI works by analyzing existing Consumer Experience Event data to predict churn or conversion propensity scores. Adobe realizes that the definition of churn and conversion is not uniform across all the use cases and for this reason, you have the ability to define custom target goals as a set of conditions. You can configure the predicted goal as long as the event of interest is present within the input Consumer Experience Event data.
-
-## Error messages
-
-In the event that you receive one of the following errors, follow the recommended steps to troubleshoot.
-
-**Error:**
-
-Model quality is poor. We recommend creating a new app with modified configuration.
-
-**Recommended fix:**
-
-"Model quality is poor" means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC < 0.7 after training. To fix the error it is recommended that you change one of the configuration parameters and rerun the training.
-
-1. Start by checking the accuracy of your data. 
-- Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
-- Check for missing data within the past 3-9 months. Customer AI requires a minimum amount of data within your defined prediction window. Make sure your dataset meets the [Customer AI historical data requirements](./input-output.md#data-requirements).
-- Check for missing data in commerce, application, web, and search within your schema field properties.
-1. Change your prediction window.
-- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
-1. Change the eligibility population condition to restrict the model to certain profiles (for example, `_experience.analytics.customDimensions.eVars.eVar142` exists in last 56 Days). This restricts the population and size of the data used in the training window.
 
 ## Next steps
 
