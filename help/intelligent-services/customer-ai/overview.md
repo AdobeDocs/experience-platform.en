@@ -44,7 +44,7 @@ Customer AI works by analyzing existing Consumer Experience Event data to predic
 
 ## Error messages
 
-In the event that you receive one of the following errors, follow the recommended steps to fix the error.
+In the event that you receive one of the following errors, follow the recommended steps to troubleshoot.
 
 **Error:**
 
