@@ -45,7 +45,7 @@ Typically, attribution is run on conversion columns such as order, purchases, an
 
 >[!TIP]
 >
->If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource`.
+>If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource`. For example, `channel.typeAtSource = 'email'`.
 
 The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
 
