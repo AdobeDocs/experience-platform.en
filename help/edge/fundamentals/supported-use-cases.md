@@ -68,7 +68,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Use Case | More Information |
 | --- | --- |
 | All activity types |  |
-| Native and SPA VEC support |  |
+| Native and SPA Visual Experience Composer support |  |
 | Form-based Composer |  |
 | Support for global mbox |  |
 | Custom mboxes |  |
@@ -86,14 +86,14 @@ This page lists the supported use cases for Web SDK, with links to additional in
 
 | Use Case | More Information |
 | --- | --- |
-| Audience analytics |  |
+| Audience Analytics |  |
 | Segment sharing to Adobe Analytics |  |
 | Visitor attributes support |  |
 | Partner syncs |  |
 | URL destinations |  |
 | Cookie destinations |  |
 | Environment support |  |
-| Namespaces in Adobe Experience Platform sync data sources |  |
+| Sync Adobe Experience Platform namespaces to Audience Manager data sources |  |
 | Authenticated or known IDs |  |
 
 {style="table-layout:auto"}
