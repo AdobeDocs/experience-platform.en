@@ -65,14 +65,22 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-There are currently four metrics available in the license usage dashboard:
+The license usage dashboard currently reports on four key metrics, with more metrics to be added in subsequent releases. The currently support metrics are:
 
 * [!UICONTROL Addressable Audience] (measured by number of profiles)
 * [!UICONTROL Average profile richness]
 * [!UICONTROL Total consumed storage] 
 * [!UICONTROL Data scanned per segmentation ratio]
 
+>[!WARNING]
+>
+>Known limitation of the total consumed storage metric: When deleting batch data, that batch is placed into a soft delete state for a period of 7 days to support data recovery use cases. After 7 days, the batch is moved to a hard delete state. Reporting on total consumed storage will not reflect any change to the trend chart until the batch is in the hard delete state. This issue will be resolved in a future release.
+
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. 
+
+>[!NOTE]
+>
+>The license usage dashboard only reports on the latest license that has been provisioned for your organization. Support for multiple licenses in a single organization is planned for a future release. 
 
 For detailed definitions of each metric, please reference the appropriate Product Description documentation:
 
@@ -83,10 +91,6 @@ For detailed definitions of each metric, please reference the appropriate Produc
 |<ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 50M</li></ul>|[Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)|
 |<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
 |<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
-
->[!NOTE]
->
->The license usage dashboard only reports on the latest license that has been provisioned for your organization. Support for multiple licenses in a single organization is planned for a future release. 
 
 ## Next steps
 
