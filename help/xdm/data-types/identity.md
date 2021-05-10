@@ -20,7 +20,7 @@ exl-id: fb02b6b4-255b-442f-895c-600022231a1c
 | `primary` | Boolean | Indicates whether this is the primary identity for the individual. Each individual can only have one primary identity. |
 | `xid` | String | When present, this value represents a cross-namespace identifier that is unique across all namespace-scoped identifiers in all namespaces. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/identity.schema.json)

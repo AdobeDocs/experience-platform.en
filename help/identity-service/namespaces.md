@@ -28,7 +28,7 @@ For example, two profile fragments may contain different primary IDs but they sh
 
 ### Identity types
 
-Data can be identified by several different identity types. The identity type is specified at the time the identity namespace is created and controls whether or not the data is persisted to the identity graph and any special instructions for how that data should be handled.
+Data can be identified by several different identity types. The identity type is specified at the time the identity namespace is created and controls whether or not the data is persisted to the identity graph and any special instructions for how that data should be handled. All identity types except **Non-people identifier** follow the same behavior of stitching a namespace and its corresponding ID value to an identity graph cluster. Data is not stitched together when using **Non-people identifier**.
 
 The following identity types are available within [!DNL Platform]:
 
@@ -85,7 +85,9 @@ To create a custom namespace using the UI, navigate to the **[!UICONTROL Identit
 
 ![](./images/create.png)
 
-The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to further information about the namespace. When finished, select **[!UICONTROL Create]**.
+The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to further information about the namespace. All the identity types except **Non-people identifier** follows the same behavior of stitching. If you select **Non-people identifier** as identity type when creating a namespace, stitching does not occur. For specific information regarding each identity type, refer to the table on [identity types](#identity-types).
+
+When finished, select **[!UICONTROL Create]**.
 
 >[!IMPORTANT]
 >

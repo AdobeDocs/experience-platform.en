@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;Adobe Analytics Classifications Data Connector
+keywords: Experience Platform;home;popular topics;Adobe Analytics Classifications Source Connector
 solution: Experience Platform
 title: Adobe Analytics Source Connector for Classifications Data
 topic-legacy: overview
