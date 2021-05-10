@@ -33,8 +33,8 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | --- | --- |
 | Send Experience events |  |
 | Offer Decisioning |  |
-| Send data to RTCDP in real-time |  |
-| Send data to CJA in real-time |  |
+| Send data to Real-time Customer Data Profile in real-time |  |
+| Send data to Customer Journey Analytics in real-time |  |
 | Write consent to profile |  |
 | Forward data server-side in real-time |  |
 
@@ -44,12 +44,12 @@ This page lists the supported use cases for Web SDK, with links to additional in
 
 | Use Case | More Information |
 | --- | --- |
-| Send data to CJA in real-time |  |
-| Support for A4T |  |
-| No A4T latency |  |
+| Send data to Customer Journey Analytics in real-time |  |
+| Support for Analytics for Target (A4T) |  |
+| No Analytics for Target (A4T) latency |  |
 | Multi-suite tagging |  |
 | Bot filtering |  |
-| Props, evars, and events |  |
+| Props, eVars, and events |  |
 | ListVar support for Adobe Analytics |  |
 | OS and browser version |  |
 | Out-of-the-box variables |  |
@@ -72,7 +72,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Form-based Composer |  |
 | Support for global mbox |  |
 | Custom mboxes |  |
-| A4T |  |
+| Analytics for Target (A4T) |  |
 | Environment support |  |
 | Workspace support |  |
 | QA links in Adobe Target |  |
