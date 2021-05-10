@@ -58,8 +58,8 @@ Model quality is poor. We recommend creating a new app with modified configurati
 - Check whether your dataset has the latest dates. Customer AI always assumes that the data is up-to-date when the model is triggered.
 - Check for missing data within the past 3-9 months. Customer AI requires a minimum amount of data within your defined prediction window. Make sure your dataset meets the [Customer AI historical data requirements](./input-output.md#data-requirements).
 - Check for missing data in commerce, application, web, and search within your schema field properties.
-2. Change your prediction window
-- Try changing your prediction window to 7 days and see if the error continues to occur. If not this indicates that you may not have enough data for your prediction window.
+2. Change your prediction window.
+- Try changing your prediction window to 7 days and see if the error continues to occur. If the error no longer occurs, this indicates that you may not have enough data for your defined prediction window.
 3. Change the eligibility population condition to restrict the model to certain profiles (for example, `_experience.analytics.customDimensions.eVars.eVar142` exists in last 56 Days). This restricts the population and size of the data used in the training window.
 
 ## Next steps
