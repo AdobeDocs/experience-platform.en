@@ -20,13 +20,13 @@ Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the 
 >
 >The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
 
-Create a datastreams by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
+Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
 When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Experience Platform Launch]. When you build a [!DNL Experience Platform Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment (for example, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). If no environment is present in the composite ID (for example, `stage` in the previous example), then the production environment is used.
 
-Below you will find the available settings for each configuration environment. Most sections can be enabled or disabled. When disabled, your settings are saved but are not active.
+Below are the available settings for each configuration environment. Most sections can be enabled or disabled. When disabled, your settings are saved but are not active.
 
 ## [!UICONTROL Third Party ID] Settings
 
