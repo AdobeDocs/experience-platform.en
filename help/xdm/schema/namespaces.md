@@ -13,7 +13,7 @@ All fields in Experience Data Model (XDM) schemas have an associated namespace. 
 
 Namespacing allows you to define a field in one namespace as meaning something different than the same field in a different namespace. In practice, the namespace of a field indicates who created the field (such as standard XDM (Adobe), a vendor, or your organization).
 
-For example, consider an XDM schema that uses the [[!UICONTROL Personal Contact Details] mixin](../mixins/profile/personal-details.md), which has a standard `mobilePhone` field that exists in the `xdm` namespace. In the same schema, you are also free to create a separate `mobilePhone` field under a different namespace (your [tenant ID](../api/getting-started.md#know-your-tenant_id)). Both of these fields can coexist together while having different underlying meanings or constraints.
+For example, consider an XDM schema that uses the [[!UICONTROL Personal Contact Details] field group](../field-groups/profile/demographic-details.md), which has a standard `mobilePhone` field that exists in the `xdm` namespace. In the same schema, you are also free to create a separate `mobilePhone` field under a different namespace (your [tenant ID](../api/getting-started.md#know-your-tenant_id)). Both of these fields can coexist together while having different underlying meanings or constraints.
 
 ## Namespacing syntax
 
