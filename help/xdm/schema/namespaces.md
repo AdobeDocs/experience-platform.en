@@ -11,7 +11,7 @@ description: Learn how namespacing in Experience Data Model (XDM) allows you to 
 All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces in
  XDM and how they are represented in the [Schema Registry API](../api/overview.md).
 
-Namespacing allows you to define a field in one namespace as meaning something different than the same field in a different namespace. In practice, the namespace of a field indicates its source (such as standard XDM, a vendor, or your organization).
+Namespacing allows you to define a field in one namespace as meaning something different than the same field in a different namespace. In practice, the namespace of a field indicates who created the field (such as standard XDM (Adobe), a vendor, or your organization).
 
 For example, consider an XDM schema that uses the [[!UICONTROL Personal Contact Details] mixin](../mixins/profile/personal-details.md), which has a standard `mobilePhone` field that exists in the `xdm` namespace. In the same schema, you are also free to create a separate `mobilePhone` field under a different namespace (your [tenant ID](../api/getting-started.md#know-your-tenant_id)). Both of these fields can coexist together while having different underlying meanings or constraints.
 
@@ -81,11 +81,23 @@ The following is an example schema for a product in standard XDM syntax. With th
 
 ### Compatibility Mode {#compatibility}
 
-In Adobe Experience Platform, XDM schemas are represented in [Compatibility Mode](../api/appendix.md#compatibility) syntax, which does not use a `@context` property to set shorthand namespaces. Instead, a particular field's namespace is implied by the field's location in the structure of the schema's `properties` object.
+In Adobe Experience Platform, XDM schemas are represented in [Compatibility Mode](../api/appendix.md#compatibility) syntax, which does not use the JSON-LD syntax to represent namespaces. Instead, Platform converts the namespace to a parent field (starting with an underscore) and nests the fields under it.
 
-Fields that use the `xdm` namespace appear as root fields under `properties` and drop the `xdm:` prefix that would appear in [standard XDM syntax](#standard). For example, `properties.xdm:sku` is listed as `properties.sku` instead.
+For example, the standard XDM `repo:createdDate` is converted to `_repo.createdDate` and would appear under the following structure in Compatibility Mode:
 
-For fields that do not use the `xdm` namespace, their namespaces are exposed via a parent property (prepended by an underscore) under the root of `properties`. For example, a `createdDate` field that uses the `repo` namespace would be located under `properties._repo.properties.createdDate`.
+```json
+"_repo": {
+  "type": "object",
+  "properties": {
+    "createdDate": {
+      "type": "string",
+      "format": "datetime"
+    }
+  }
+}
+```
+
+Fields that use the `xdm` namespace appear as root fields under `properties` and drop the `xdm:` prefix that would appear in [standard XDM syntax](#standard). For example, `xdm:sku` is simply listed as `sku` instead.
 
 The following JSON represents how the standard XDM syntax example shown above is translated to Compatibility Mode.
 
