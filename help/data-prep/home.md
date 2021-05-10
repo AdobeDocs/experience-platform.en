@@ -29,6 +29,8 @@ To learn more about the different mapping functions, please read the [mapping fu
 
 A set of mappings that transform one schema to another are collectively known as a mapping set. A single mapping set is created as part of each data flow. A mapping set is an integral part of the data flows and is created, edited, and monitored as part of the data flows.
 
+To learn more about mapping sets, including how to use the fields within a mapping set, please read the [mapping set guide](./mapping-set.md). To learn how to create a mapping set and use other API calls related to mapping sets, please read the mapping set section in the [developer guide](./api/mapping-set.md).
+
 ## Data format handling
 
 Data Prep can robustly handle different formats of data ingested into Platform. To learn more about how Data Prep handles different data types, please read the [data format handling overview](./data-handling.md).

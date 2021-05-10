@@ -388,7 +388,11 @@ curl -X POST \
             "version": "1.0"
         },
         "data": {
-            "format": "parquet_xdm"
+            "format": "parquet_xdm",
+            "schema": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+                "version": "application/vnd.adobe.xed-full+json;version=1"
+            }
         },
         "params": {
         "dataSetId": "5f7187bac6d00f194fb937c0"

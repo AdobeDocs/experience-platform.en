@@ -45,7 +45,7 @@ You can filter results by using the `property` parameter, which is used to apply
 
 >[!TIP]
 >
->You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+>You can use the `property` parameter to filter schema field groups by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only field groups that are compatible with the [!DNL XDM Individual Profile] class.
 
 ## Compatibility Mode {#compatibility}
 

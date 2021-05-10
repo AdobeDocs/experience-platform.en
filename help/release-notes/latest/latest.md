@@ -38,7 +38,7 @@ Experience Data Model (XDM) is an open-source specification that is designed to 
 
 | Feature | Description |
 | --- | --- |
-| Schema recommendations by industry | When selecting classes and mixins in the Schema Editor UI, you can use a new filter to view recommended standard components based on your specific industry. See the documentation on [industry data models](https://www.adobe.com/go/xdm-industry-erds-en) for more information on how these components relate to each other for different industry use cases. |
+| Schema recommendations by industry | When selecting classes and schema field groups in the Schema Editor UI, you can use a new filter to view recommended standard components based on your specific industry. See the documentation on [industry data models](https://www.adobe.com/go/xdm-industry-erds-en) for more information on how these components relate to each other for different industry use cases. |
 
 ## [!DNL Intelligent Services] {#intelligent-services}
 
