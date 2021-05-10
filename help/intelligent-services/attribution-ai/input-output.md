@@ -41,11 +41,11 @@ Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are man
 | Marketing.campaigngroup | Touchpoint |
 | Commerce | Conversion |
 
-Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI. For example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`. For optimal results and insights, it is highly recommended you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
+Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
 
 >[!TIP]
 >
->If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource`. For example, `channel.typeAtSource = 'email'`.
+>If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource` (for example, `channel.typeAtSource = 'email'`).
 
 The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
 
