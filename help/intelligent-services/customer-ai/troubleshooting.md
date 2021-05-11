@@ -19,9 +19,11 @@ In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is 
 
 ## Model quality is poor
 
-If you receive the error "Model Quality is poor. We recommend creating a new app with the modified configuration". Follow the recommended steps below to help troubleshoot.
+If you receive the error "[!UICONTROL Model Quality is poor. We recommend creating a new app with the modified configuration]". Follow the recommended steps below to help troubleshoot.
 
-**Recommended fix**
+<img src='./images/errors/model-quality.png' width=300 /><br />
+
+### Recommended fix
 
 "Model quality is poor" means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) < 0.7 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
 
