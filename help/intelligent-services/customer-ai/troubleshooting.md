@@ -9,11 +9,17 @@ type: Documentation
 
 # Customer AI error troubleshooting
 
-In the event that you receive one of the following errors, follow the recommended steps to troubleshoot.
+Customer AI displays errors when model training, scoring, and configuration fails. In the **[!UICONTROL Service instances]** section, a column for **[!UICONTROL LAST RUN STATUS]** displays one of the following messages: **[!UICONTROL Success]**, **[!UICONTROL Training issue]**, and **[!UICONTROL Failed]**.
+
+![last run status](./images/errors/last-run-status.png)
+
+In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is displayed, you can select the run status to open a side panel. In the side panel is your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** can contain information on why the run failed, however, sometimes it is unclear to Customer AI and you may need to contact support with the error code provided.
+
+<img src='./images/errors/last-run-details.png' width=300 /><br />
 
 ## Model quality is poor
 
-If you receive the error "Model quality is poor". It is recommend that you create a new instance with a modified configuration.
+If you receive the error "Model Quality is poor. We recommend creating a new app with the modified configuration". Follow the recommended steps below to help troubleshoot.
 
 **Recommended fix**
 
