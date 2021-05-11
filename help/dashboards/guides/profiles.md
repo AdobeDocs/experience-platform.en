@@ -27,9 +27,17 @@ To navigate to the [!UICONTROL Profiles] dashboard within the Platform UI, selec
 
 ![](../images/profiles/dashboard-overview.png)
 
-### Selecting merge policies
+### Modifying the [!UICONTROL Profiles] dashboard
 
-The metrics displayed in the [!UICONTROL Profiles] dashboard are based on merge policies being applied to your Real-time Customer Profile data. When data is being brought together from multiple sources, it is possible for the data to contain conflicting values (for example, one dataset may list a customer as "single" while another dataset may list the customer as "married") and it is the job of the merge policy to determine which data to prioritize and display as part of the profile.
+You can modify the appearance of the [!UICONTROL Profiles] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the [!UICONTROL Widget library] to explore available widgets and create custom widgets for your organization. 
+
+Please refer to the [modifying dashboards](../modify.md) and [widget library](../widget-library.md) documentation to learn more.
+
+## Merge policies
+
+The metrics displayed in the [!UICONTROL Profiles] dashboard are based on merge policies being applied to your Real-time Customer Profile data. When data is brought together from multiple sources to create the customer profile, it is possible for the data to contain conflicting values (for example, one dataset may list a customer as "single" while another dataset may list the customer as "married"). It is the job of the merge policy to determine which data to prioritize and display as part of the profile.
+
+For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please visit the [merge policies UI guide](../../profile/ui/merge-policies.md).
 
 The dashboard will automatically select a merge policy to display, but you can change the merge policy that is selected using the drop down menu. To choose a different merge policy, select the drop down next to the merge policy name and then select the merge policy that you wish to view.
 
@@ -37,13 +45,13 @@ The dashboard will automatically select a merge policy to display, but you can c
 >
 >The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
 
-For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please visit the [merge policies UI guide](../../profile/ui/merge-policies.md).
-
 ![](../images/profiles/select-merge-policy.png)
 
-### Widgets and metrics
+## Widgets and metrics
 
-The dashboard is composed of widgets, which are read-only metrics providing important information regarding your Profile data. The "last updated" date and time on a widget shows when the last snapshot of the data was taken.
+The dashboard is composed of widgets, which are read-only metrics providing important information regarding your Profile data. 
+
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot is provided in UTC; it is not in the timezone of the individual user or IMS Organization.
 
 ![](../images/profiles/dashboard-timestamp.png)
 

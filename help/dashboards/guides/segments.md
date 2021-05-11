@@ -27,19 +27,27 @@ To navigate to the segment dashboard within the Platform UI, select **[!UICONTRO
 
 ![](../images/segments/dashboard-overview.png)
 
-### Select a segment
+### Modifying the [!UICONTROL Segments] dashboard
 
-The dashboard will automatically select a segment to display, but you can change the segment that is displayed using the drop down menu. To choose a different segment, select the drop down next to the segment name and then select the segment that you wish to view.
+You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the [!UICONTROL Widget library] to explore available widgets and create custom widgets for your organization. 
 
->[!NOTE]
->
->The dropdown menu shows all segments that your organization has created so far. This may mean that you will need to scroll in order to view the complete list of available segments.
+Please refer to the [modifying dashboards](../modify.md) and [widget library](../widget-library.md) documentation to learn more.
+
+## Select a segment
+
+The dashboard automatically selects a segment to display, however you can change the segment by using the drop down menu or segment selector. 
+
+To choose a different segment, select the drop down next to the segment name or use the segment selector to open the segment selection dialog.
 
 ![](../images/segments/change-segment.png)
 
-### Widgets and metrics
+![](../images/segments/select-segment-dialog.png)
 
-The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. The "last updated" date and time on the widget show when the last snapshot of the data was taken.
+## Widgets and metrics
+
+The segments dashboard is composed of widgets, which are read-only metrics providing important information regarding your selected segment. 
+
+The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot is provided in UTC; it is not in the timezone of the individual user or IMS Organization.
 
 ![](../images/segments/widget-timestamp.png)
 
