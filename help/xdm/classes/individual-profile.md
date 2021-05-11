@@ -12,7 +12,7 @@ exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 
 Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
-The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible mixins](#mixins):
+The [!DNL XDM Individual Profile] class itself provides several system-generated values that are automatically populated when data is ingested, whereas all other fields must be added through the use of [compatible schema field groups](#field-groups):
 
 ![](../images/classes/individual-profile.png)
 
@@ -26,18 +26,18 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | The ID of the user who last modified the record. |
 
-## Compatible mixins {#mixins}
+## Compatible field groups {#field-groups}
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../field-groups/name-updates.md) for more information.
 
-Adobe provides several standard mixins for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used mixins for the class:
+Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used field groups for the class:
 
-* [[!UICONTROL IdentityMap]](../mixins/profile/identitymap.md)
-* [[!UICONTROL Demographic Details]](../mixins/profile/person-details.md)
-* [[!UICONTROL Personal Contact Details]](../mixins/profile/personal-details.md)
-* [[!UICONTROL Work Contact Details]](../mixins/profile/work-details.md)
-* [[!UICONTROL Segment Membership Details]](../mixins/profile/segmentation.md)
+* [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
+* [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
+* [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
+* [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 
-For a complete list of all compatible mixins for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).

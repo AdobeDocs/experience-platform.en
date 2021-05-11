@@ -61,6 +61,7 @@ To enable Offer Decisioning, you need to perform the following steps:
 3. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
     * Standalone installed SDK
         1. Configure the "sendEvent" action with your `decisionScopes`
+
         ```javascript
         alloy("sendEvent", {
             ...
@@ -70,6 +71,7 @@ To enable Offer Decisioning, you need to perform the following steps:
             ]
         })
         ```
+
     * Platform Launch installed SDK
         1. [Create a Platform Launch property](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
         2. [Add the Platform Launch Embed Code](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)

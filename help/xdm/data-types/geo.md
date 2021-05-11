@@ -23,7 +23,7 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 | `postalCode` | String | The postal code of the location. Postal codes are not available for all countries. In some countries, this will only contain part of the postal code. |
 | `stateProvince` | String | The state, or province portion of the observation. The format follows the [ISO 3166-2 (country and subdivision)](http://www.unece.org/cefact/locode/subdivisions.html) standard. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
