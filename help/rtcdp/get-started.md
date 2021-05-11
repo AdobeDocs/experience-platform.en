@@ -1,9 +1,9 @@
 ---
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
-title: Getting started with Real-time Customer Data Platform
+title: Getting Started with Real-time Customer Data Platform
 description: Use this sample scenario as an example when setting up your implementation of Real-time Customer Data Platform.
+exl-id: 9f775d33-27a1-4a49-a4c5-6300726a531b
 ---
-
 # Getting started with Real-time Customer Data Platform
 
 This getting started guide leads you through a sample implementation of Real-time Customer Data Platform (Real-time CDP). You can use it as an example when setting up your own implementation. Although this guide shows specific examples, it links to additional information you can use while creating your setup.
@@ -59,7 +59,7 @@ When customers first visit your site, you don't know anything about them.
 
 ![image](assets/luma-site.png)
 
-As they navigate, data is captured in real-time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
+As they navigate, data is captured in real time and sent not only to a report suite in Adobe Analytics, but also sent directly to Adobe Experience Platform. As data is collected, you begin to form a single view of the consumer, based on behavioral data in [!DNL Experience Platform's real-time customer profile].  
 
 Many visitors to the website are probably repeat customers who have previously purchased from Luma.  It's important for Luma to personalize messaging and offerings to address both new and repeat visitors, as well as known customers.
 
@@ -253,7 +253,7 @@ You can also schedule the segment to start or end at a particular time. The segm
 
 Select **[!UICONTROL Save]** to go to the next page. 
 
-When a customer in this audience makes a purchase, their membership to this audience is suppressed in real-time. They don’t qualify anymore because their status has changed. 
+When a customer in this audience makes a purchase, their membership to this audience is suppressed in real time. They don’t qualify anymore because their status has changed. 
 
 This saves the director of the Luma media team  hundreds of thousands of dollars by not using up inventory for an audience that is not qualified.
 

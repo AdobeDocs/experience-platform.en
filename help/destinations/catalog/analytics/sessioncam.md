@@ -1,12 +1,10 @@
 ---
 keywords: SessionCam;session cam;sessioncam
 title: SessionCam extension
-seo-title: SessionCam extension
 description: The SessionCam extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The SessionCam extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 67d7b206-d6ed-47f5-9c04-67562ccd1644
 ---
-
-# [!DNL SessionCam] Extension {#sessioncam-extension}
+# [!DNL SessionCam] extension {#sessioncam-extension}
 
 ## Overview {#overview}
 

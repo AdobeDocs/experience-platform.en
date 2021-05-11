@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;find sandbox;look up a sandbox
 solution: Experience Platform
-title: Look up a sandbox
-topic: developer guide
+title: Look Up a Sandbox in the API
+topic-legacy: developer guide
 description: You can look up an individual sandbox by making a GET request that includes the sandbox's name property in the request path.
+exl-id: de8d965c-ca58-436e-b5b1-05a492de70f5
 ---
-
-# Look up a sandbox
+# Look up a sandbox in the API
 
 You can look up an individual sandbox by making a GET request that includes the sandbox's `name` property in the request path.
 

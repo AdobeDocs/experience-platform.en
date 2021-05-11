@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;Segmentation;create a dataset;export audience segment;export segment;
 solution: Experience Platform
-title: Create a dataset for exporting an audience segment
-topic: tutorial
+title: Create a Dataset for Exporting an Audience Segment
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial walks through the steps required to create a dataset that can be used for exporting an audience segment using the Experience Platform UI.
+exl-id: 1cd16e43-b050-42ba-a894-d7ea477b65f3
 ---
-
 # Create a dataset for exporting an audience segment
 
 [!DNL Adobe Experience Platform] allows you to easily segment customer profiles into audiences based on specific attributes. Once segments have been created, you can export that audience to a dataset where it can be accessed and acted upon. In order for the export to be successful, the dataset must be configured properly.
@@ -81,4 +81,4 @@ Please make note of the **[!UICONTROL Dataset ID]**, as this value is required t
 
 Now that you have created a dataset based on the [!DNL XDM Individual Profile Union Schema], you can use the dataset ID to continue the [evaluating and accessing segment results](./evaluate-a-segment.md) tutorial.
 
-At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow. 
+At this time, please return to the evaluating segment results tutorial and pick up from the [generating profiles for audience members](./evaluate-a-segment.md#generate-profiles) step of the exporting a segment workflow.

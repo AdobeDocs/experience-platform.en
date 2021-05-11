@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;dsw;DSW
 solution: Experience Platform
 title: Data Science Workspace tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+exl-id: 7cfd71b1-584f-4588-bbcd-bc42a08a0bc0
 ---
-
 # [!DNL Data Science Workspace] tutorials
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions. Data scientists of all skill levels have sophisticated, easy-to-use tools that support rapid development, training, and tuning of machine learning recipes - all the benefits of AI technology, without the complexity. 
@@ -29,7 +29,7 @@ To learn more and get the required values for performing CRUD operations with th
 
 ## How to use [!DNL JupyterLab] Notebooks
 
-[!DNL JupyterLab] is a web-based user interface for [!DNL Project Jupyter] and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
+[!DNL JupyterLab] is a web-based user interface for [!DNL Project Jupyter] and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with [!DNL Jupyter Notebooks], code, and data. This document provides an overview of [!DNL JupyterLab] and its features as well as instructions to perform common actions.
 
 **This guide will help you:**
 - Access and understand the [!DNL JupyterLab] interface.

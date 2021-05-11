@@ -1,28 +1,28 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Governance Help
 breadcrumb-title: Data Governance Guide
 user-guide-description: Enforce data usage restrictions through the use of labels, marketing actions, and policies.
+feature: Data Governance
 ---
 
 # Adobe Experience Platform Data Governance {#data-governance}
 
 * [Data Governance overview](home.md)
 * Data usage labels {#labels}
-  * [Data usage labels overview](labels/overview.md)
-  * [Core data usage labels](labels/reference.md)
-  * [Manage data usage labels in the UI](labels/user-guide.md)
-  * [Manage labels for datasets and fields using APIs](labels/dataset-api.md)
+  * [Overview](labels/overview.md)
+  * [Labels glossary](labels/reference.md)
+  * [Manage labels in the UI](labels/user-guide.md)
+  * [Manage labels for datasets using APIs](labels/dataset-api.md)
 * Data usage policies {#policies}
-  * [Data usage policies overview](policies/overview.md)
-  * [Data usage policies user guide](policies/user-guide.md)
-  * [Create a data usage policy using the Policy Service API](policies/create.md)
+  * [Overview](policies/overview.md)
+  * [Manage policies in the UI](policies/user-guide.md)
+  * [Create a policy in the API](policies/create.md)
 * Policy enforcement {#enforcement}
-  * [Policy enforcement overview](enforcement/overview.md)
+  * [Overview](enforcement/overview.md)
   * [Automatic enforcement](enforcement/auto-enforcement.md)
   * [API-based enforcement](enforcement/api-enforcement.md)
-* Policy Service API developer guide {#api}
+* Policy Service API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
   * [Labels](api/labels.md)

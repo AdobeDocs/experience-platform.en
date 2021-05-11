@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;target mapping;Target mapping
 solution: Experience Platform
-title: Target mapping field
-topic: overview
-description: The following table outlines the fields of an Experience Event schema (*XDM ExperienceEvent field*) and the corresponding Target fields they should be mapped to (Target Request field). Additional notes for some mappings are also provided.
+title: Mapping Adobe Target Event Data to XDM
+topic-legacy: overview
+description: Learn how to map Adobe Target event fields to an Experience Data Model (XDM) schema for use in Adobe Experience Platform.
+exl-id: dab08ab6-6c1c-460a-bb52-8dcdb5709a34
 ---
-
-# Target mapping fields
+# Target mapping field mappings
 
 Adobe Experience Platform allows you to ingest Adobe Target data through the Target source connector. When using the connector, all data from Target fields must be mapped to the [Experience Data Model (XDM)](../../../../xdm/home.md) fields associated with the XDM ExperienceEvent class.
 
@@ -81,3 +81,5 @@ The following table outlines the fields of an Experience Event schema (*XDM Expe
 | **`identityMap`** |
 | `identityMap.TNTID` | `tntId.mboxPC` |
 | `identityMap.ECID` | `marketingCloudVisitorId` |
+
+{style="table-layout:auto"}

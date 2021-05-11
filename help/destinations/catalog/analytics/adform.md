@@ -1,12 +1,10 @@
 ---
 keywords: adform extension;adform
-title: Adform extension
-seo-title: Adform extension
+title: Adform Website Tracking extension
 description: The Adform extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adform extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: f616ecbf-6833-40cd-86be-7c13afe31180
 ---
-
-# Adform extension {#adform-extension}
+# Adform Website Tracking extension {#adform-extension}
 
 ## Overview {#overview}
 
@@ -57,6 +55,3 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
-
-
-

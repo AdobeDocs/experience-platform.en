@@ -1,17 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle;oracle
 solution: Experience Platform
-title: Create an Oracle connector using the Flow Service API
-topic: overview
+title: Create an Oracle Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Oracle to Experience Platform.
+description: Learn how to connect Oracle to Experience Platform using the Flow Service API.
+exl-id: b1cea714-93ff-425f-8e12-6061da97d094
 ---
-
-# Create an [!DNL Oracle] connector using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Oracle] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create an [!DNL Oracle] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -39,7 +35,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

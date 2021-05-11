@@ -4,8 +4,8 @@ description: Experience Platform release notes October, 2020
 doc-type: release notes
 last-update: October, 2020
 author: crhoades, ens28527
+exl-id: 89f5e2bd-8892-4d3f-a3fe-5433bb5ece7a
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: October 14, 2020**
@@ -82,8 +82,8 @@ Adobe Experience Platform fully enables Marketing Operations teams to build a 36
 Upgrades usability and workflow, and provides out-of-box insights, standardization, and transparency of key fields within schema compositions. Exposes data lineage for the combination of individual data models represented as the “union schema," providing insight into the structure and ingredients to Real-time Customer Profile.
 
 - Schema workflow upgrade
-    - Use shortcuts for the most common type of XDM schemas, with automated settings in the schema editor and mixin recommendations based on your objectives  
-    - Increase workflow efficiency with multiple mixin selection and preview capability 
+    - Use shortcuts for the most common type of XDM schemas, with automated settings in the schema editor and schema field group recommendations based on your objectives  
+    - Increase workflow efficiency with multiple field group selection and preview capability 
     - Provide transparency on key attributes of schema composition, including identity, relationship, and required and deprecated fields 
 - Union Schema Data Lineage and Key Attributes Transparency 
 

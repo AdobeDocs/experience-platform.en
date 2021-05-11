@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
-title: Sensei Machine Learning API developer guide
-topic: Developer guide
-description: This developer guide provides steps to help you start using the Sensei Machine Learning API, and demonstrates API calls for performing CRUD operations on various Data Science Workspace resources.
+title: Sensei Machine Learning API Guide
+topic-legacy: Developer guide
+description: The Sensei Machine Learning API allows developers to perform CRUD operations on various Data Science Workspace resources. Follow this guide to learn how to perform key operations using the API.
+exl-id: d51d0eb2-b1e9-4cc1-889a-9487395703b0
 ---
-
-# [!DNL Sensei Machine Learning] API developer guide
+# [!DNL Sensei Machine Learning] API guide
 
 The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning services, from algorithm onboarding through experimentation and to service deployment.
 
@@ -14,7 +14,7 @@ This developer guide provides steps to help you start using the [Sensei Machine 
 
 ## Getting started
 
-You are required to have completed the [authentication](../../tutorials/authentication.md) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
+You are required to have completed the [authentication](https://www.adobe.com/go/platform-api-authentication-en) tutorial in order to have access to the following request headers to make calls to [!DNL Adobe Experience Platform] APIs:
 
 * Authorization: Bearer `{ACCESS_TOKEN}`
 * x-api-key: `{API_KEY}`

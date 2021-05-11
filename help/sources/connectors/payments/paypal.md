@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;Paypal;paypal;PayPal
 solution: Experience Platform
-title: PayPal connector
-topic: overview
-description: The documentation below provides information on how to connect PayPal to Platform using APIs or the user interface.
+title: PayPal Source Connector Overview
+description: Learn how to connect PayPal to Adobe Experience Platform using APIs or the user interface.
+exl-id: c70a9b91-b883-4e58-9ec5-6fc9b2163efd
 ---
-
 # (Beta) [!DNL PayPal] connector
 
 >[!NOTE]
@@ -24,11 +23,11 @@ The documentation below provides information on how to connect [!DNL PayPal] to 
 
 ## Connect [!DNL PayPal] to [!DNL Platform] using APIs
 
-- [Create a PayPal connector using the Flow Service API](../../tutorials/api/create/payments/paypal.md)
+- [Create a PayPal source connection using the Flow Service API](../../tutorials/api/create/payments/paypal.md)
 - [Explore a payments application using the Flow Service API](../../tutorials/api/explore/payments.md)
 - [Collect data from a payments application using the Flow Service API](../../tutorials/api/collect/payments.md)
 
 ## Connect [!DNL PayPal] to [!DNL Platform] using the UI
 
-- [Create a PayPal source connector in the UI](../../tutorials/ui/create/payments/paypal.md)
-- [Configure a dataflow for a payments connector in the UI](../../tutorials/ui/dataflow/payments.md)
+- [Create a PayPal source connection in the UI](../../tutorials/ui/create/payments/paypal.md)
+- [Configure a dataflow for a payments connection in the UI](../../tutorials/ui/dataflow/payments.md)

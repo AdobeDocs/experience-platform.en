@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;getting started;attribution ai;popular topics
 solution: Experience Platform, Intelligent Services
-title: Getting started in Attribution AI
-topic: Getting started
+title: Getting Started in Attribution AI
+topic-legacy: Getting started
 description: The following guides require an understanding of the various Adobe Experience Platform services involved with using Attribution AI. Before beginning the tutorials, please review the following documents.
+exl-id: ab269c24-97ac-4da9-9b6c-7d2dde61f0dc
 ---
-
 # Getting started in Attribution AI
 
  The following guides require an understanding of the various [!DNL Adobe Experience Platform] services involved with using Attribution AI. Before beginning the tutorials, please review the following documents:
@@ -14,7 +14,7 @@ description: The following guides require an understanding of the various Adobe 
 - [Basics of schema composition](../../xdm/schema/composition.md): This document provides an introduction to Experience Data Model (XDM) schemas and the building blocks, principles, and best practices for composing schemas to be used in [!DNL Adobe Experience Platform].
 - [Building schemas](../../xdm/tutorials/create-schema-ui.md): This tutorial covers the steps for creating a schema using the Schema Editor within Experience Platform.
 
-Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is a mixin in the [Experience Data Model](../../xdm/home.md) (XDM). Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
+Attribution AI requires datasets to conform to the Consumer Experience Events (CEE) schema, which is an [Experience Data Model (XDM)](../../xdm/home.md) schema field group. Please contact Adobe support at attributionai-support@adobe.com in order to implement or make changes to this data. If media spend data is present, you can do further analysis such as incremental revenue and ROI. If customer profile data is available, you can further attribute credits to the customer profile level.
 
 ## Terminology
 
@@ -28,7 +28,7 @@ Attribution AI requires datasets to conform to the Consumer Experience Events (C
 >
 >If you do not need to download raw scores, you can skip this step and proceed to the [next steps](#next-steps).
 
-Downloading Attribution AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+Downloading Attribution AI scores is done through a combination of API calls. In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

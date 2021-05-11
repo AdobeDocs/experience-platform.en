@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Privacy Service troubleshooting guide
-topic: troubleshooting
+title: Privacy Service Troubleshooting Guide
+topic-legacy: troubleshooting
 description: This document provides answers to frequently asked questions about Privacy Service, as well as information on commonly encountered errors in the API.
+exl-id: 8afbb065-0f41-4048-9003-a22c0c839717
 ---
-
 # [!DNL Privacy Service] troubleshooting guide
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface to help companies manage customer data privacy requests. With [!DNL Privacy Service], you can submit requests to access and delete private or personal customer data, facilitating automated compliance with organizational and legal privacy regulations.

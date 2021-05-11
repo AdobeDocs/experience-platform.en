@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform API fundamentals
-topic: getting started
+title: Experience Platform API fundamentals
+topic-legacy: getting started
 description: This document provides a brief overview of some the underlying technologies and syntaxes involved with Experience Platform APIs.
+exl-id: cd69ba48-f78c-4da5-80d1-efab5f508756
 ---
-
-# Adobe Experience Platform API fundamentals
+# Experience Platform API fundamentals
 
 Adobe Experience Platform APIs employ several underlying technologies and syntaxes that are important to understand in order to effectively manage JSON-based [!DNL Platform] resources. This document provides a brief overview of these technologies, as well as links to external documentation for more information.
 
@@ -16,7 +16,7 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
-The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core mixins (such as `fullName`) are not.
+The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom schema field groups (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core field groups (such as `fullName`) are not.
 
 ```json
 {
@@ -80,8 +80,8 @@ The following JSON represents a simplified XDM schema whose fields can be refere
 | JSON Pointer | Resolves to |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core mixin.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom mixin.) |
+|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core field group.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom field group.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
@@ -113,10 +113,10 @@ There are many PATCH operations for [!DNL Platform] APIs that accept JSON Patch 
 
 Depending on the operation type indicated in `op`, the JSON Patch object may require additional properties. For more information on the different JSON Patch operations and their required syntax, please refer to the [JSON Patch documentation](http://jsonpatch.com/).
 
-## JSON Schema
+## JSON Schema {#json-schema}
 
 JSON Schema is a format used to describe and validate the structure of JSON data. [Experience Data Model (XDM)](../xdm/home.md) leverages JSON Schema capabilities to enforce constraints on the structure and format of ingested customer experience data. For more information on JSON Schema, please refer to the [official documentation](https://json-schema.org/).
 
 ## Next steps
 
-This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. For more information on working with [!DNL Platform] APIs, including best practices and answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
+This document introduced some of the technologies and syntaxes involved with managing JSON-based resources for [!DNL Experience Platform]. Refer to the [getting started guide](api-guide.md) for more information on working with Platform APIs, including best practices. For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).

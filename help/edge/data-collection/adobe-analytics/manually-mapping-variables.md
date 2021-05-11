@@ -1,11 +1,10 @@
 ---
-title: Manually mapping variables in Adobe Analytics
-seo-title: Manually mapping variables in Adobe Analytics with Web SDK
-description: How to manually map variables into Adobe Analytics using processing rules
+title: Manually Mapping Adobe Analytics Variables in the Adobe Experience Platform Web SDK
+description: Learn how to manually map variables into Adobe Analytics using processing rules in the Experience Platform Web SDK.
 seo-description: Manually map variables into Adobe Analytics using processing rules with Web SDK
 keywords: adobe analytics;analytics;variables;mapping variables;map variables;contextData;context Data;Processing rules;rules;xdm;schema;
+exl-id: 395050c1-8d39-4da8-acea-6e618ed662dd
 ---
-
 # Manually mapping variables in Adobe Analytics
 
 Adobe Experience Platform [!DNL Web SDK] can map certain variables automatically but custom variables must be manually mapped.

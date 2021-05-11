@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;download scores;customer ai;popular topics;Export;export;customer ai download;customer ai scores
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Downloading scores in Customer AI
-topic: Downloading scores
-description: Customer AI allows you to download scores in the parquet file format.
+title: Download Scores in Customer AI
+topic-legacy: Downloading scores
+description: Customer AI allows you to download scores in the Parquet file format.
+exl-id: 08f05565-3fd4-4089-9c41-32467f0be751
 ---
-
-# Downloading scores in Customer AI
+# Download scores in Customer AI
 
 This document serves as a guide for downloading scores for Customer AI. 
 
 ## Getting started
 
-Customer AI allows you to download scores in the parquet file format. This tutorial requires that you have read and finished the downloading Customer AI scores section in the [getting started](../getting-started.md) guide.
+Customer AI allows you to download scores in the Parquet file format. This tutorial requires that you have read and finished the downloading Customer AI scores section in the [getting started](../getting-started.md) guide.
 
 Additionally, in order to access scores for Customer AI, you need to have a service instance with a successful run status available. To create a new service instance, visit [Configuring a Customer AI instance](./configure.md). If you recently created a service instance and it is still training and scoring, please allow 24 hours for it to finish running.
 

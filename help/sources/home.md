@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;source connectors;source connector;sources;data sources;data source;data source connection
 solution: Experience Platform
-title: Adobe Experience Platform Source Connectors overview
-topic: overview
+title: Source Connectors Overview
+topic-legacy: overview
 description: Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
+exl-id: efdbed4d-5697-43ef-a47a-a8bcf0f13237
 ---
-
 # Source connectors overview
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storages, databases, and many others.
@@ -23,12 +23,14 @@ Sources in Experience Platform are grouped into the following categories:
 Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. See the following related documents for more information:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
-- [Create an Adobe Audience Manager source connector in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
+- [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
 - [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
-- [Create an Adobe Analytics Classifications Data source connector in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
+- [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
 - [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
-- [Create an Adobe Analytics source connector in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
-- [Create a Customer Attributes source connector in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
+- [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
+- [[!DNL Marketo Engage] connector overview](connectors/adobe-applications/marketo/marketo.md)
+- [Create a [!DNL Marketo Engage] source connection in the UI](./tutorials/ui/create/adobe-applications/marketo.md)
 
 ### Advertising
 
@@ -38,7 +40,7 @@ Experience Platform provides support for ingesting data from a third-party adver
 
 ### Cloud Storage
 
-Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
+Cloud storage sources can bring your own data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow using the user interface. See the following related documents for more information:
 
 - [[!DNL Azure Data Lake Storage Gen2] connector](connectors/cloud-storage/adls-gen2.md)
 - [[!DNL Azure Blob] connector](connectors/cloud-storage/blob.md)
@@ -49,6 +51,8 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
+- [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
+- [[!DNL Oracle Object Storage] connector](connectors/cloud-storage/oracle-object-storage.md)
 - [[!DNL SFTP] connector](connectors/cloud-storage/sftp.md)
 
 ### Customer Relationship Management (CRM)
@@ -80,6 +84,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL GreenPlum] connector](connectors/databases/greenplum.md)
 - [[!DNL HP Vertica] connector](connectors/databases/hp-vertica.md)
 - [[!DNL IBM DB2] connector](connectors/databases/ibm-db2.md)
+- [[!DNL MariaDB] connector](connectors/databases/mariadb.md)
 - [[!DNL Microsoft SQL Server] connector](connectors/databases/sql-server.md)
 - [[!DNL MySQL] connector](connectors/databases/mysql.md)
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
@@ -103,6 +108,13 @@ Experience Platform provides support for ingesting data from a third-party marke
 Experience Platform provides support for ingesting data from a third-party payments system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL PayPal] connector](connectors/payments/paypal.md)
+
+### Streaming
+
+Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
+
+- [[!DNL HTTP API]](connectors/streaming/http.md)
+
 
 ### Protocols
 

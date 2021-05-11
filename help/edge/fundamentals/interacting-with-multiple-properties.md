@@ -1,20 +1,18 @@
 ---
-title: Interacting with multiple properties
-seo-title: Adobe Experience Platform Web SDK Interacting with multiple properties
-description: Learn how to interact with multiple Experience Platform Web SDK properties
-seo-description: Learn how to interact with multiple Experience Platform Web SDK properties
+title: Interact with Multiple Properties in the Adobe Experience Platform Web SDK
+description: Learn how to interact with multiple Experience Platform Web SDK properties.
 keywords: multiple properties;configure;sendEvent;edgeConfigId;orgId;
+exl-id: e07afb0d-3490-414f-bc9c-f71bc04fe664
 ---
+# Interact with multiple properties
 
-# Interacting with multiple properties
-
-There are certain cases where you might want to interact with two different properties on the same page. These include:
+There are certain cases where you might want to interact with two different properties on the same page. These cases include:
 
 * Companies that have been acquired and are working on integrating their websites together
 * Data-sharing relationships between multiple companies
 * Customers who are testing new Adobe Solutions and don't want to disrupt their existing implementation
 
-The SDK allows you to create a separate instance for each property by adding another name to the array in the base code. In the following example, we've provided two names, `mycustomname1` and `mycustomname2`.
+The SDK allows you to create a separate instance for each property by adding another name to the array in the base code. The following example provides two names, `mycustomname1` and `mycustomname2`.
 
 ```markup
 <script>
@@ -28,7 +26,7 @@ The SDK allows you to create a separate instance for each property by adding ano
 
 As a result, the script creates two instances of the SDK. The global function for interacting with the first instance is named `mycustomname1` and the global function for interacting with the second instance is named `mycustomname2`.
 
-By creating two separate instances, each can be configured for a different property. Any communication or data persistence that occurs due to interacting with `mycustomname1` is kept isolated from `mycustomname2` and vice-versa.
+By creating two separate instances, each can be configured for a different property. Any communication or data persistence that occurs due to interacting with `mycustomname1` is kept isolated from `mycustomname2`.
 
 Following the above example, you can execute commands using each of the instances, as follows:
 
@@ -60,4 +58,4 @@ Be sure to execute the `configure` command for each instance before executing ot
 
 ## Limitations
 
-To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`.  Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.  
+To avoid conflicts with cookies, only one instance of Adobe Experience Platform [!DNL Web SDK] within a page can have a particular `edgeConfigId`. Similarly, only one instance of Adobe Experience Platform [!DNL Web SDK] can have a particular `orgId`.

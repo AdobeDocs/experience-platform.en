@@ -1,12 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics; API tutorials; streaming destinations API; Platform
 solution: Experience Platform
-title: Connect to streaming destinations and activate data
-topic: tutorial
+title: Connect to streaming destinations and activate data using the Flow Service API in Adobe Experience Platform
+description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
-
-# Connect to streaming destinations and activate data using API calls in Adobe Experience Platform
+# Connect to streaming destinations and activate data using the Flow Service API
 
 >[!NOTE]
 >
@@ -43,7 +44,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required and optional headers {#gather-values}
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
 
 *   Authorization: Bearer `{ACCESS_TOKEN}`
 *   x-api-key: `{API_KEY}`
@@ -63,7 +64,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation {#swagger-docs}
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe.io](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available streaming destinations {#get-the-list-of-available-streaming-destinations}
 

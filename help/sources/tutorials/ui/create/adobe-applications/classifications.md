@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics; analytics;classifications
-description: This tutorial provides steps for creating an Adobe Analytics Classifications Data connector in the UI to bring classifications data into Adobe Experience Platform.
+description: Learn how to create an Adobe Analytics source connector the UI to bring classifications data into Adobe Experience Platform.
 solution: Experience Platform
-title: Create an Adobe Analytics Classifications Data connector in the UI
-topic: overview
+title: Create an Adobe Analytics Source Connection for Classifications Data in the UI
+topic-legacy: overview
 type: Tutorial
+exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
 ---
+# Create an Adobe Analytics source connection for classifications data in the UI
 
-# Create an Adobe Analytics Classifications Data connector in the UI
-
-This tutorial provides steps for creating an Adobe Analytics Classifications Data connector in the UI to bring classifications data into Adobe Experience Platform.
+This tutorial provides steps for creating an Adobe Analytics Classifications Data source connection in the UI to bring classifications data into Adobe Experience Platform.
 
 ## Getting started
 
@@ -79,5 +79,5 @@ The **[!UICONTROL Dataset activity]** page displays information about the target
 By following this tutorial, you have created an Analytics Classifications Data connector that brings [!DNL Classifications] data into [!DNL Platform]. See the following documents for more information on [!DNL Analytics] and [!DNL Classifications] data:
 
 * [Analytics Data connector overview](../../../../connectors/adobe-applications/analytics.md)
-* [Create an Analytics Data connector in the UI](./analytics.md)
+* [Create an Analytics Data connection in the UI](./analytics.md)
 * [About classifications](https://experienceleague.adobe.com/docs/analytics/components/classifications/c-classifications.html)

@@ -3,9 +3,9 @@ keywords: data governance rtcdp;rtcdp data governance;real time customer data pr
 title: Data Governance overview
 seo-title: Data Governance in Real-time Customer Data Platform
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
-seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use.
+exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 ---
-
 # [!DNL Data Governance] in Real-time CDP
 
 [!DNL Real-time Customer Data Platform] (Real-time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. Therefore, it is important to ensure that Real-time CDP is compliant with usage policies when handling your data.
@@ -24,17 +24,17 @@ Real-time CDP is built on top of Adobe Experience Platform, and therefore the ma
 
 For detailed information on working with data usage labels, see the [data usage labels user guide](../../data-governance/labels/overview.md) for Adobe Experience Platform.
 
-## Configure marketing use cases for destinations {#destinations}
+## Configure marketing actions for destinations {#destinations}
 
-You can set data usage restrictions on a destination by defining marketing use cases (also called marketing actions) for that destination. A marketing use case for a destination indicates the intent of the data that will be exported to that destination.
+You can set data usage restrictions on a destination by defining marketing actions (also called marketing use cases) for that destination. A marketing action for a destination indicates the intent of the data that will be exported to that destination.
 
 >[!NOTE]
 >
 >For more information on marketing actions and their use in data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md) in the [!DNL Experience Platform] documentation.
 
-Defining marketing use cases on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing use cases to your destinations based on your organization's needs to enforce policy restrictions on activation.
+Defining marketing actions on destinations allows you to ensure that any profiles or segments sent to those destinations are compliant with data usage policies. You should therefore add appropriate marketing actions to your destinations based on your organization's needs to enforce policy restrictions on activation.
 
-Marketing use cases can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing use cases will appear at different points in the setup workflow. See the [destinations documentation](../destinations/overview.md) for steps on how to configure your particular destination.
+Marketing actions can only be selected when setting up a destination for the first time. Depending on the type of destination you are working with, the opportunity to configure marketing actions will appear at different points in the setup workflow. See the [destinations documentation](../destinations/overview.md) for steps on how to configure your particular destination.
 
 ## Manage data usage policies {#policies}
 

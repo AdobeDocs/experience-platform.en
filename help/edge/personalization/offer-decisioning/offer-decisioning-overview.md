@@ -1,12 +1,10 @@
 ---
-title: Offer Decisioning Overview
-seo-title: Offer Decisioning and Adobe Experience Platform Web SDK
-description: Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
-seo-description: Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
+title: Using Offer Decisioning with the Platform Web SDK
+description: The Adobe Experience Platform Web SDK can deliver and render personalized offers managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning UI or API.
 keywords: offer decisioning;decisioning;Web SDK;Platform Web SDK;personalized offers;deliver offers;offer delivery;offer personalization;
+exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 ---
-
-# [!DNL Offer Decisioning] Overview
+# Using Offer Decisioning with the Platform Web SDK
 
 >[!NOTE]
 >
@@ -63,6 +61,7 @@ To enable Offer Decisioning, you need to perform the following steps:
 3. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
     * Standalone installed SDK
         1. Configure the "sendEvent" action with your `decisionScopes`
+
         ```javascript
         alloy("sendEvent", {
             ...
@@ -72,10 +71,11 @@ To enable Offer Decisioning, you need to perform the following steps:
             ]
         })
         ```
+
     * Platform Launch installed SDK
         1. [Create a Platform Launch property](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
         2. [Add the Platform Launch Embed Code](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-        3. Install and configure the AEP Web SDK extension with the Edge Configuration you just created by selecting the configuration from the "Edge Configuration" drop down. Useful documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+        3. Install and configure the Platform Web SDK extension with the Edge Configuration you just created by selecting the configuration from the "Edge Configuration" drop down. Useful documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
         4. Create the necessary [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you will need to create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
@@ -134,10 +134,19 @@ To enable Offer Decisioning, you need to perform the following steps:
         {
           "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
           "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
           "items": [
             {
               "id": "xcore:personalized-offer:124cc332095cfa74",
               "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "etag": "1",
               "data": {
                 "id": "xcore:personalized-offer:124cc332095cfa74",
                 "format": "text/html",
@@ -164,6 +173,8 @@ To enable Offer Decisioning, you need to perform the following steps:
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
+| `activity.id` | The unique ID of the offer activity. | `"id": "xcore:offer-activity:11cfb1fa93381aca"` |
+| `placement.id` | The unique ID of the offer placement. | `"id": "xcore:offer-placement:1175009612b0100c"` |
 | `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
 | `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
 | `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
@@ -218,67 +229,62 @@ To enable Offer Decisioning, you need to perform the following steps:
     {
       "payload": [
         {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MTEyMyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDExMjMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381123",
+            "etag": "1"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b01123",
+            "etag": "3"
+          },
           "items": [
             {
-              "id": "xcore:personalized-offer:124cc332095cfa74",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-html",
+              "id": "xcore:personalized-offer:11e36d4a22954123",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
+              "etag": "2",
               "data": {
-                "id": "xcore:personalized-offer:124cc332095cfa74",
-                "format": "text/html",
+                "id": "xcore:personalized-offer:11e36d4a22954123",
+                "format": "text/text",
                 "language": [
-                  "en-US"
+                  "en"
                 ],
-                "content": "<p style=\"color:red;\">20% Off on shipping</p>",
+                "content": "20% Off on shipping",
+                "characteristics": {
+                  "foo2": "bar2"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "a2804dfb-a0ec-4df9-8311-59d3ecdeb642",
+          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ==",
+          "activity": {
+            "id": "xcore:offer-activity:11cfb1fa93381aca",
+            "etag": "2"
+          },
+          "placement": {
+            "id": "xcore:offer-placement:1175009612b0100c",
+            "etag": "1"
+          },
+          "items": [
+            {
+              "id": "xcore:personalized-offer:11e36d4a2295415d",
+              "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
+              "etag": "1",
+              "data": {
+                "id": "xcore:personalized-offer:11e36d4a2295415d",
+                "format": "image/png",
+                "language": [
+                  "en"
+                ],
+                "deliveryURL": "https://image.jpeg",
                 "characteristics": {
                   "foo": "bar",
                   "foo1": "bar1"
                 }
-              }
-            }
-          ]
-        }
-      ],
-      "payload": [
-        {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyMjA4YjNhODc0MDU1OCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMjIwNDUyOTUxNGEyYzAifQ==",
-          "items": [
-            {
-              "id": "xcore:personalized-offer:235fe313094cdb75",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-text",
-              "data": {
-                "id": "xcore:personalized-offer:235fe313094cdb75",
-                "format": "text/text",
-                "language": [
-                  "en-US"
-                ],
-                "content": "20% Off on shipping",
-                "characteristics": {
-                  "foo2": "bar2",
-                  "foo3": "bar3"
-                }
-              }
-            }
-          ]
-        }
-      ],
-      "payload": [
-        {
-          "id": "2862bb89-5df2-4bc6-85c2-d8f7e1a091de",
-          "scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIyYzkxMzg1Mjc2MDE4YyIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMzMxZjU2MTYyYWEyZjcifQ==",
-          "items": [
-            {
-              "id": "xcore:personalized-offer:312de312095cda65",
-              "schema": "https://ns.adobe.com/experience/offer-management/content-component-imagelink",
-              "data": {
-                "id": "xcore:personalized-offer:312de312095cda65",
-                "format": "image/png",
-                "language": [
-                  "en-US"
-                ],
-                "deliveryURL": "https://image.jpeg"
               }
             }
           ]
@@ -294,10 +300,12 @@ To enable Offer Decisioning, you need to perform the following steps:
 |Property | Description | Example |
 |---|---|---|
 | `scope`| The decision scope that resulted in the proposed offers. | `"scope": "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="` |
-| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:124cc332095cfa74"`|
-| `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-html"`|
-| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:124cc332095cfa74"`|
-| `format`| The format of the content associated with the proposed offer. | `"format": "text/html"`|
+| `activity.id` | The unique ID of the offer activity. | `"id": "xcore:offer-activity:11cfb1fa93381123"` |
+| `placement.id` | The unique ID of the offer placement. | `"xcore:offer-placement:1175009612b01123"` |
+| `items.id`| The ID of the proposed offer.| `"id": "xcore:personalized-offer:11e36d4a22954123"`|
+| `schema`| The schema of the content associated with the proposed offer.| `"schema": "https://ns.adobe.com/experience/offer-management/content-component-text"`|
+| `data.id`| The ID of the proposed offer.|`"id": "xcore:personalized-offer:11e36d4a22954123"`|
+| `format`| The format of the content associated with the proposed offer. | `"format": "text/text"`|
 | `language`| An array of languages associated with the content from the proposed offer. | `"language": [ "en-US" ]`|
 | `content` | Content associated with the proposed offer in the format of a string. | `"content": "<p style="color:red;">20% Off on shipping</p>"`|
 | `deliveryUrl`| Image content associated with the proposed offer in the format of a URL. | `"deliveryURL": "https://image.jpeg"`|

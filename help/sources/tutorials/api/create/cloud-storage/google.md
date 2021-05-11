@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
-title: Create a Google Cloud Storage connector using the Flow Service API
-topic: overview
+title: Create a Google Cloud Storage Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to a Google Cloud Storage account.
+description: Learn how to connect Adobe Experience Platform to a Google Cloud Storage account using the Flow Service API.
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 ---
-
-# Create a [!DNL Google Cloud Storage] connector using the [!DNL Flow Service] API
+# Create a [!DNL Google Cloud Storage] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -28,10 +28,10 @@ In order for [!DNL Flow Service] to connect with your [!DNL Google Cloud Storage
 
 | Credential | Description |
 | ---------- | ----------- |
-| `accessKeyId` | The access key ID for your [!DNL Google Cloud Storage] account. |
-| `secretAccessKey` | The secret access key for your [!DNL Google Cloud Storage] account. |
+| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
 
-For information on getting started, visit [this Google Cloud document](https://cloud.google.com/docs/authentication).
+For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ### Reading sample API calls
 
@@ -39,7 +39,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -111,4 +111,4 @@ A successful response returns details of the newly created connection, including
 
 ## Next steps
 
-By following this tutorial, you have created a [!DNL Google Cloud Storage] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest parquet data using the Flow Service API](../../cloud-storage-parquet.md).
+By following this tutorial, you have created a [!DNL Google Cloud Storage] connection using APIs and a unique ID was obtained as part of the response body. You can use this connection ID to [explore cloud storages using the Flow Service API](../../explore/cloud-storage.md) or [ingest Parquet data using the Flow Service API](../../cloud-storage-parquet.md).

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;array functions;array;
 solution: Experience Platform
-title: Array, list, and set functions
-topic: developer guide
+title: Array, List, and Set PQL Functions
+topic-legacy: developer guide
 description: Profile Query Language (PQL) offers functions to make interaction with arrays, lists, and strings easier.
+exl-id: 5ff2b066-8857-4cde-9932-c8bf09e273d3
 ---
-
 # Array, list, and set functions
 
 [!DNL Profile Query Language] (PQL) offers functions to make interaction with arrays, lists, and strings easier. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -290,4 +290,4 @@ orders.topN(price, 5).head()
 
 ## Next steps
 
-Now that you have learned about array, list, and set functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about array, list, and set functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

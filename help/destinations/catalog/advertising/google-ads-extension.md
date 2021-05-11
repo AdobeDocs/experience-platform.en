@@ -1,11 +1,9 @@
 ---
 keywords: Google ads;google ads;google ads extension;Google Ads extension
 title: Google Ads extension
-seo-title: Google Ads extension
 description: The Google Ads extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Google Ads extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: b563ce68-7b04-4cfb-b0c3-151f34ec7c1a
 ---
-
 # [!DNL Google Ads] extension
 
 ## Overview {#overview}
@@ -57,9 +55,3 @@ You can configure, upgrade, and delete extensions in the Platform Launch interfa
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to Platform Launch and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the Platform Launch documentation.
-
-
-
-
-
-

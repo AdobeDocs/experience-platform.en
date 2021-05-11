@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;BigQuery;bigquery;Google BigQuery;google bigquery
 solution: Experience Platform
-title: Google BigQuery connector
-topic: overview
-description: The documentation below provides information on how to connect Google BigQuery to Platform using APIs or the user interface.
+title: Google BigQuery Source Connector Overview
+topic-legacy: overview
+description: Learn how to connect Google BigQuery to Adobe Experience Platform using APIs or the user interface.
+exl-id: 35c61382-a909-47f4-a937-15cb725ecbe3
 ---
-
 # (Beta) [!DNL Google BigQuery] connector
 
 >[!NOTE]
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Google BigQ
 
 ## Connect [!DNL Google BigQuery] to [!DNL Platform] using APIs
 
-- [Create a Google BigQuery connector using the Flow Service API](../../tutorials/api/create/databases/bigquery.md)
+- [Create a Google BigQuery source connection using the Flow Service API](../../tutorials/api/create/databases/bigquery.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Google BigQuery] to [!DNL Platform] using the UI
 
-- [Create a Google BigQuery source connector in the UI](../../tutorials/ui/create/databases/bigquery.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Google BigQuery source connection in the UI](../../tutorials/ui/create/databases/bigquery.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

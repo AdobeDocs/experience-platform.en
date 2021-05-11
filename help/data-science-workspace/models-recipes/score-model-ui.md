@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;score a model;Data Science Workspace;popular topics;ui;scoring run;scoring results
 solution: Experience Platform
-title: Score a model (UI)
-topic: tutorial
+title: Score a Model in the Data Science Workspace UI
+topic-legacy: tutorial
 type: Tutorial
-description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
+description: Scoring in Adobe Experience Platform Data Science Workspace can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch.
+exl-id: 00d6a872-d71a-47f4-8625-92621d4eed56
 ---
-
-# Score a model (UI)
+# Score a model in the Data Science Workspace UI
 
 Scoring in Adobe Experience Platform [!DNL Data Science Workspace] can be achieved by feeding input data into an existing trained Model. Scoring results are then stored and viewable in a specified output dataset as a new batch. 
 
@@ -23,38 +23,70 @@ This tutorial requires a trained Model. If you do not have a trained Model, foll
 
 A scoring run is created using optimized configurations from a previously completed and evaluated training run. The set of optimal configurations for a Model are typically determined by reviewing training run evaluation metrics.
 
-1. Find the most optimal training run to use its configurations for scoring. Open the desired Training run by clicking on its name.
+Find the most optimal training run to use its configurations for scoring. Then, open the desired training run by selecting the hyperlink attached to its name.
 
-2. From the Training Run **[!UICONTROL Evaluation]** tab, click on the **[!UICONTROL Score]** button on the top right of the screen. This will initiate a new **Run Scoring** workflow.
+![Select training run](../images/models-recipes/score/select-run.png)
+
+From the training run **[!UICONTROL Evaluation]** tab, select **[!UICONTROL Score]** located on the top right of the screen. A new scoring workflow begins.
+
 ![](../images/models-recipes/score/training_run_overview.png)
 
-3. Select the input scoring dataset and click **[!UICONTROL Next]**.
+Select the input scoring dataset and select **[!UICONTROL Next]**.
+
 ![](../images/models-recipes/score/scoring_input.png)
 
-4. Select the output scoring dataset, this is the dedicated output dataset where the scoring results are stored. Confirm your selection and click **[!UICONTROL Next]**.
+Select the output scoring dataset, this is the dedicated output dataset where the scoring results are stored. Confirm your selection and select **[!UICONTROL Next]**.
+
 ![](../images/models-recipes/score/scoring_results.png)
 
-5. The final step in the workflow prompts you to configure your scoring run. These configurations are used by the Model for the scoring run.
-Note that you will not be able to remove inherited parameters that were set during the Model creation. You can edit or revert non-inherited parameters by double clicking the value or clicking on the revert icon while hovering over the entry. 
-![](../images/models-recipes/score/configuration.png) 
-Review and confirm the scoring configurations and click **[!UICONTROL Finish]**  to create and execute the scoring run. You will be directed to the **[!UICONTROL Scoring Runs]** tab and the new scoring run will show a status.
-![](../images/models-recipes/score/scoring_runs_tab.png)
-A scoring run will display either of the four following statuses: Pending, Complete, Failed, or Running, and are updated automatically. Proceed to the next step if the status is either "Completed" or "Failed".
+The final step in the workflow prompts you to configure your scoring run. These configurations are used by the model for the scoring run.
+Note that you cannot remove inherited parameters that were set during the models creation. You can edit or revert non-inherited parameters by double clicking the value or selecting the revert icon while hovering over the entry.
+
+![configuration](../images/models-recipes/score/configuration.png) 
+
+Review and confirm the scoring configurations and select **[!UICONTROL Finish]**  to create and execute the scoring run. You are directed to the **[!UICONTROL Scoring Runs]** tab and the new scoring run with the **[!UICONTROL Pending]** status is shown.
+
+![scoring runs tab](../images/models-recipes/score/scoring_runs_tab.png)
+
+A scoring run can be displayed with one of the following statuses: 
+- Pending
+- Complete
+- Failed
+- Running
+
+ Statuses are updated automatically. Proceed to the next step if the status is **[!UICONTROL Complete]** or **[!UICONTROL Failed]**.
 
 ## View scoring results
 
-1. Find the training run that was used for the scoring run, and click on the name to view its **[!UICONTROL Evaluation]** page.
+To view scoring results, start by selecting a training run.
 
-2. Near the top of the training run evaluation page, click the **[!UICONTROL Scoring Runs]** tab to view a listing of existing scoring runs. Click on the scoring listing to view its details in the right column.
-![](../images/models-recipes/score/view_details.png)
+![Select training run](../images/models-recipes/score/select-run.png)
 
-3. If the selected scoring run has a status of either "Complete" or "Failed", the **[!UICONTROL View Activity Logs]** link found in the right column will be active. Click on the link to view or download the execution logs. If a scoring run had failed, the execution logs can provide useful information in determining the reason for failure.
+You are redirected to the training runs **[!UICONTROL Evaluation]** page. Near the top of the training run evaluation page, select the **[!UICONTROL Scoring Runs]** tab to view a list of existing scoring runs.
+
+![evaluation page](../images/models-recipes/score/view_scoring_runs.png)
+
+Next, select a scoring run to view the run details.
+
+![run details](../images/models-recipes/score/view_details.png)
+
+If the selected scoring run has a status of either "Complete" or "Failed", the **[!UICONTROL View Activity Logs]** link is made available. If a scoring run fails, the execution logs can provide useful information for determining the reason of the failure. To download the execution logs, select **[!UICONTROL View Activity Logs]**.
+
+![Select view logs](../images/models-recipes/score/view_logs.png)
+
+The **[!UICONTROL View activity logs]** popover appears. Select a URL to automatically download the associated logs.
+
 ![](../images/models-recipes/score/activity_logs.png)
 
-4. Click on **[!UICONTROL Preview Scoring Results Dataset]** link found in the right column. You will be able to see a preview of the output dataset from the scoring run.
-![](../images/models-recipes/score/preview_results.png)
+You also have the option to view your scoring results by selecting  **[!UICONTROL Preview scoring results dataset]**. 
 
-5. For the complete set of scoring results, click on the **[!UICONTROL Scoring Results Dataset]** link found in the right column.
+![Select preview results](../images/models-recipes/score/view_results.png)
+
+A preview of the output dataset is provided.
+
+![preview results](../images/models-recipes/score/preview_results.png)
+
+For the complete set of scoring results, select the **[!UICONTROL Scoring Results Dataset]** link found in the right column.
 
 ## Next steps
 

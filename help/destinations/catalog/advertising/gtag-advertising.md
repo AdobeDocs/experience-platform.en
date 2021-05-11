@@ -1,11 +1,9 @@
 ---
 keywords: gtag;google gtag;google extension;google gtag extension;GTAG
 title: Google gtag extension
-seo-title: Google gtag extension
 description: The Google gtag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Google gtag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 14a466f2-78a0-4493-93cd-3dcdae048042
 ---
-
 # Google gtag extension {#gtag-advertising-extension}
 
 ## Overview {#overview}

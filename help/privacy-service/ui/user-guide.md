@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;export;Export
 solution: Experience Platform
-title: Privacy Service user guide
-topic: UI guide
+title: Manage Privacy Jobs in the Privacy Service UI
+topic-legacy: UI guide
 description: Learn how to use the Privacy Service user interface to coordinate and monitor privacy requests across various Experience Cloud applications.
+exl-id: aa8b9f19-3e47-4679-9679-51add1ca2ad9
 ---
-
-# [!DNL Privacy Service] user guide
+# Manage privacy jobs in the Privacy Service UI
 
 This document provides steps for creating and managing privacy requests using the [!DNL Privacy Service] user interface.
 
@@ -18,12 +18,13 @@ The dashboard for the [!DNL Privacy Service] UI provides two widgets that allow 
 
 ### Regulation Type
 
-[!DNL Privacy Service] supports job requests for four regulation types: 
+[!DNL Privacy Service] supports job requests for several privacy regulations: 
 
-* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
 * The [!DNL California Consumer Privacy Act] ([!UICONTROL CCPA])
-* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* The European Union's [!DNL General Data Protection Regulation] ([!UICONTROL GDPR])
 * Thailand's [!DNL Personal Data Protection Act] ([!UICONTROL PDPA_THA])
+* Brazil's [!DNL Lei Geral de Proteção de Dados] ([!UICONTROL LGPD_BRA])
+* The New Zealand [!DNL Privacy Act] ([!UICONTROL NZPA_NZL])
 
 Jobs for each regulation type are tracked separately. To switch between regulation types, select the **[!UICONTROL Regulation Type]** dropdown menu and select the desired regulation from the list.
 

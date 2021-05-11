@@ -1,11 +1,9 @@
 ---
 keywords: kickfire;Kickfire;kickfire extension;Kickfire Extension
 title: KickFire extension
-seo-title: KickFire extension
 description: The KickFire extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The KickFire extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: c2313474-05d5-4c06-8aa5-ed10e9e9226e
 ---
-
 # [!DNL KickFire] extension {#kickfire-extension}
 
 ## Overview {#overview}

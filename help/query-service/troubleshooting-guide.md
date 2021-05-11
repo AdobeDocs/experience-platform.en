@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;troubleshooting guide;faq;troubleshooting;
 solution: Experience Platform
-title: Adobe Experience Platform Query Service troubleshooting guide
-topic: troubleshooting
+title: Query Service Troubleshooting Guide
+topic-legacy: troubleshooting
 description: This document contains information on common error codes you encounter and the possible causes.
+exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-
-# Errors and troubleshooting
+# [!DNL Query Service] Troubleshooting Guide
 
 ## REST API errors
 

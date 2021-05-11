@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;behavior;behaviour;behaviors;behaviours;
 solution: Experience Platform
-title: Behaviors endpoint guide
+title: Behaviors API Endpoint
 description: The /behaviors endpoint in the Schema Registry API allows you to retrieve all available behaviors in the global container.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 3b45431f-1d55-4279-8b62-9b27863885ec
 ---
-
 # Behaviors endpoint
 
 In Experience Data Model (XDM), behaviors define the nature of data that a schema describes. Each XDM class must reference a specific behavior, which all schemas that employ that class will inherit. For nearly all use cases in Platform, there are two available behaviors:

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create
 solution: Experience Platform
-title: Create a schema using the Schema Registry API
-topic: tutorial
+title: Create a Schema Using the Schema Registry API
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial uses the Schema Registry API to walk you through the steps to compose a schema using a standard class.
+exl-id: fa487a5f-d914-48f6-8d1b-001a60303f3d
 ---
-
 # Create a schema using the [!DNL Schema Registry] API
 
 The [!DNL Schema Registry] is used to access the [!DNL Schema Library] within Adobe Experience Platform. The [!DNL Schema Library] contains resources made available to you by Adobe, [!DNL Experience Platform] partners, and vendors whose applications you use. The registry provides a user interface and RESTful API from which all available library resources are accessible.
@@ -28,7 +28,7 @@ This tutorial walks through the steps of composing a Loyalty Members schema that
 
 ## Compose a schema with a standard class
 
-A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more mixins. In other words, you do not have to add a mixin in order to define a schema, but in most cases at least one mixin is used. 
+A schema can be thought of as the blueprint for the data you wish to ingest into [!DNL Experience Platform]. Each schema is composed of a class and zero or more schema field groups. In other words, you do not have to add a field group in order to define a schema, but in most cases at least one field group is used. 
 
 ### Assign a class
 
@@ -170,13 +170,13 @@ The response format depends on the Accept header sent with the request. Try expe
 }
 ```
 
-### Add a mixin {#add-a-mixin}
+### Add a field group {#add-a-field-group}
 
-Now that the Loyalty Members schema has been created and confirmed, mixins can be added to it. 
+Now that the Loyalty Members schema has been created and confirmed, field groups can be added to it. 
 
-There are different standard mixins available for use, depending on the class of schema selected. Each mixin contains an `intendedToExtend` field that defines the class(es) with which that mixin is compatible. 
+There are different standard field groups available for use, depending on the class of schema selected. Each field group contains an `intendedToExtend` field that defines the class(es) with which that field group is compatible. 
 
-Mixins define concepts, such as "name" or "address", that can be reused in any schema that needs to capture that same information. 
+Field groups define concepts, such as "name" or "address", that can be reused in any schema that needs to capture that same information. 
 
 **API format**
 
@@ -186,9 +186,9 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Request**
 
-This request updates (PATCH) the Loyalty Members schema to include the fields within the "profile-person-details" mixin. 
+This request updates (PATCH) the Loyalty Members schema to include the fields within the "profile-person-details" field group. 
 
-By adding the "profile-person-details" mixin, the Loyalty Members schema now captures information about loyalty program members such as their first name, last name, and birthday.
+By adding the "profile-person-details" field group, the Loyalty Members schema now captures information about loyalty program members such as their first name, last name, and birthday.
 
 ```SHELL
 curl -X PATCH \
@@ -205,7 +205,7 @@ curl -X PATCH \
 
 **Response**
 
-The response shows the newly added mixin in the `meta:extends` array and contains a `$ref` to the mixin in the `allOf` attribute.
+The response shows the newly added field group in the `meta:extends` array and contains a `$ref` to the field group in the `allOf` attribute.
 
 ```JSON
 {
@@ -247,17 +247,17 @@ The response shows the newly added mixin in the `meta:extends` array and contain
 }
 ```
 
-### Add another mixin
+### Add another field group
 
-You can now add another standard mixin by repeating the steps using another mixin. 
+You can now add another standard field group by repeating the steps using another field group. 
 
 >[!TIP]
 >
->It is worthwhile to review all available mixins to familiarize yourself with the fields included in each. You can list (GET) all mixins available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those mixins where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the [!DNL XDM Individual Profile] class, so the [!DNL XDM Individual Profile] `$id` is used: 
+>It is worthwhile to review all available field groups to familiarize yourself with the fields included in each. You can list (GET) all field groups available for use with a particular class by performing a request against each of the "global" and "tenant" containers, returning only those field groups where the "meta:intendedToExtend" field matches the class you're using. In this case, it is the [!DNL XDM Individual Profile] class, so the [!DNL XDM Individual Profile] `$id` is used: 
 
 ```http
-GET /global/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
-GET /tenant/mixins?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /global/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
+GET /tenant/fieldgroups?property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile
 ```
 
 **API format**
@@ -268,7 +268,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Request**
 
-This request updates (PATCH) the Loyalty Members schema to include the fields within the "profile-personal-details" mixin, adding "home address", "email address", and "home phone" fields to the schema.
+This request updates (PATCH) the Loyalty Members schema to include the fields within the "profile-personal-details" field group, adding "home address", "email address", and "home phone" fields to the schema.
 
 ```SHELL
 curl -X PATCH \
@@ -285,7 +285,7 @@ curl -X PATCH \
 
 **Response**
 
-The response shows the newly added mixin in the `meta:extends` array and contains a `$ref` to the mixin in the `allOf` attribute.
+The response shows the newly added field group in the `meta:extends` array and contains a `$ref` to the field group in the `allOf` attribute.
 
 The Loyalty Members schema should now contain three `$ref` values in the `allOf` array: "profile", "profile-person-details", and "profile-personal-details", as shown below.
 
@@ -333,29 +333,29 @@ The Loyalty Members schema should now contain three `$ref` values in the `allOf`
 }
 ```
 
-### Define a new mixin
+### Define a new field group
 
-The Loyalty Members schema needs to capture information that is unique to the loyalty program. This information is not included in any of the standard mixins.  
+The Loyalty Members schema needs to capture information that is unique to the loyalty program. This information is not included in any of the standard field groups.  
 
-The [!DNL Schema Registry] accounts for this by allowing you to define your own mixins within the tenant container. These mixins are unique to your organization and are not visible or editable by anyone outside your IMS Org.
+The [!DNL Schema Registry] accounts for this by allowing you to define your own field groups within the tenant container. These field groups are unique to your organization and are not visible or editable by anyone outside your IMS Org.
 
-In order to create (POST) a new mixin, your request must include a `meta:intendedToExtend` field containing the `$id` for the base class(es) with which the mixin is compatible, along with the properties that the mixin will include.
+In order to create (POST) a new field group, your request must include a `meta:intendedToExtend` field containing the `$id` for the base class(es) with which the field group is compatible, along with the properties that the field group will include.
 
-Any custom properties must be nested under your `TENANT_ID` to avoid collisions with other mixins or fields.
+Any custom properties must be nested under your `TENANT_ID` to avoid collisions with other field groups or fields.
 
 **API format**
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
 **Request**
 
-This request creates a new mixin that has a "loyalty" object containing four loyalty program-specific fields: "loyaltyId", "loyaltyLevel", "loyaltyPoints", and "memberSince".
+This request creates a new field group that has a "loyalty" object containing four loyalty program-specific fields: "loyaltyId", "loyaltyLevel", "loyaltyPoints", and "memberSince".
 
 ```SHELL
 curl -X POST\
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins\
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups\
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -365,7 +365,7 @@ curl -X POST\
         "type": "object",
         "title": "Loyalty Member Details",
         "meta:intendedToExtend": ["https://ns.adobe.com/xdm/context/profile"],
-        "description": "Loyalty Program Mixin.",
+        "description": "Loyalty Program Field Group.",
         "definitions": {
             "loyalty": {
               "properties": {
@@ -412,7 +412,7 @@ curl -X POST\
 
 **Response**
 
-A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created mixin, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
+A successful request returns HTTP Response Status 201 (Created) with a response body containing the details of the newly created field group, including the `$id`, `meta:altIt`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
 
 ```JSON
 {
@@ -421,7 +421,7 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -475,11 +475,11 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -489,9 +489,9 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
 }
 ```
 
-### Add custom mixin to schema
+### Add custom field group to schema
 
-You can now follow the same steps for [adding a standard mixin](#add-a-mixin) to add this newly created mixin to your schema.
+You can now follow the same steps for [adding a standard field group](#add-a-field-group) to add this newly created field group to your schema.
 
 **API format**
 
@@ -501,7 +501,7 @@ PATCH /tenant/schemas/{schema meta:altId or url encoded $id URI}
 
 **Request**
 
-This request updates (PATCH) the Loyalty Members schema to include the fields within the new "Loyalty Member Details" mixin. 
+This request updates (PATCH) the Loyalty Members schema to include the fields within the new "Loyalty Member Details" field group. 
 
 ```SHELL
 curl -X PATCH \
@@ -512,13 +512,13 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
 **Response**
 
-You can see that the mixin has been successfully added because the response now shows the newly added mixin in the `meta:extends` array and contain a `$ref` to the mixin in the `allOf` attribute.
+You can see that the field group has been successfully added because the response now shows the newly added field group in the `meta:extends` array and contain a `$ref` to the field group in the `allOf` attribute.
 
 ```JSON
 {
@@ -536,7 +536,7 @@ You can see that the mixin has been successfully added because the response now 
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -550,7 +550,7 @@ You can see that the mixin has been successfully added because the response now 
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -570,7 +570,7 @@ You can see that the mixin has been successfully added because the response now 
 
 ### View the current schema
 
-You can now perform a GET request to view the current schema and see how the added mixins have contributed to the overall structure of the schema.
+You can now perform a GET request to view the current schema and see how the added field groups have contributed to the overall structure of the schema.
 
 **API format**
 
@@ -592,9 +592,9 @@ curl -X GET \
 
 **Response**
 
-By using the `application/vnd.adobe.xed-full+json; version=1` Accept header, you can see the full schema showing all of the properties. These properties are the fields contributed by the class and mixins that have been used to compose the schema. In this example response, individual property attributes have been minimized for space. You can view the full schema, including all properties and their attributes, in the [appendix](#appendix) at the end of this document.
+By using the `application/vnd.adobe.xed-full+json; version=1` Accept header, you can see the full schema showing all of the properties. These properties are the fields contributed by the class and field groups that have been used to compose the schema. In this example response, individual property attributes have been minimized for space. You can view the full schema, including all properties and their attributes, in the [appendix](#appendix) at the end of this document.
 
-Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created when you added the custom mixin. Within that namespace is the "loyalty" object and the fields that were defined when the mixin was created.
+Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created when you added the custom field group. Within that namespace is the "loyalty" object and the fields that were defined when the field group was created.
 
 ```JSON
 {
@@ -612,7 +612,7 @@ Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created 
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -684,11 +684,11 @@ Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created 
 
 ### Create a data type
 
-The Loyalty mixin that you created contains specific loyalty properties that might be useful in other schemas. For example, the data might be ingested as part of an experience event or used by a schema that implements a different class. In this case it makes sense to save the object hierarchy as a data type in order to make it easier to reuse the definition elsewhere. 
+The Loyalty field group that you created contains specific loyalty properties that might be useful in other schemas. For example, the data might be ingested as part of an experience event or used by a schema that implements a different class. In this case it makes sense to save the object hierarchy as a data type in order to make it easier to reuse the definition elsewhere. 
 
 Data types allow you to define an object hierarchy once, and refer to it in a field much like you would for any other scalar type. 
 
-In other words, data types allow for the consistent use of multi-field structures, with more flexibility than mixins because they can be included anywhere in a schema by adding them as the "type" of a field. 
+In other words, data types allow for the consistent use of multi-field structures, with more flexibility than field groups because they can be included anywhere in a schema by adding them as the "type" of a field. 
 
 **API format**
 
@@ -815,19 +815,19 @@ You can perform a lookup (GET) request using the URL encoded `$id` URI to view t
 
 ### Use data type in schema
 
-Now that the Loyalty Details data type has been created, you can update (PATCH) the "loyalty" field in the mixin you created to reference the data type in place of the fields that were previously there.
+Now that the Loyalty Details data type has been created, you can update (PATCH) the "loyalty" field in the field group you created to reference the data type in place of the fields that were previously there.
 
 **API format**
 
 ```http
-PATCH /tenant/mixins/{mixin meta:altId or URL encoded $id URI}
+PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 ```
 
 **Request**
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/mixins/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -860,7 +860,7 @@ The response now includes a reference (`$ref`) to the data type in the "loyalty"
     "meta:intendedToExtend": [
         "https://ns.adobe.com/xdm/context/profile"
     ],
-    "description": "Loyalty Program Mixin.",
+    "description": "Loyalty Program Field Group.",
     "definitions": {
         "loyalty": {
             "properties": {
@@ -889,11 +889,11 @@ The response now includes a reference (`$ref`) to the data type in the "loyalty"
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "mixins",
+    "meta:resourceType": "fieldgroups",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1061,7 +1061,7 @@ The response shows that the operation was performed successfully, and the schema
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1075,7 +1075,7 @@ The response shows that the operation was performed successfully, and the schema
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1164,9 +1164,9 @@ The response is a filtered list of schemas, containing only those that satisfy b
 
 ## Next steps
 
-By following this tutorial, you have successfully composed a schema using both standard mixins and a mixin that you defined. You can now use this schema to create a dataset and ingest record data into Adobe Experience Platform.
+By following this tutorial, you have successfully composed a schema using both standard field groups and a field group that you defined. You can now use this schema to create a dataset and ingest record data into Adobe Experience Platform.
 
-The full Loyalty Members schema, as created throughout this tutorial, is available in the appendix that follows. As you look at the schema, you can see how the mixins contribute to the overall structure and what fields are available for data ingestion.
+The full Loyalty Members schema, as created throughout this tutorial, is available in the appendix that follows. As you look at the schema, you can see how the field groups contribute to the overall structure and what fields are available for data ingestion.
 
 Once you have created more than one schema, you can define relationships between them through the use of relationship descriptors. See the tutorial for [defining a relationship between two schemas](relationship-api.md) for more information. For detailed examples of how to perform all operations (GET, POST, PUT, PATCH, and DELETE) in the registry, please refer to the [Schema Registry developer guide](../api/getting-started.md) while working with the API.
 
@@ -1178,7 +1178,7 @@ The following information supplements the API tutorial.
 
 Throughout this tutorial, a schema is composed to describe the members of a retail loyalty program. 
 
-The schema implements the [!DNL XDM Individual Profile] class and combines multiple mixins; bringing in information about the loyalty members using the standard "Person Details" and "Personal Details" mixins, as well as through a "Loyalty Details" mixin that is defined during the tutorial.
+The schema implements the [!DNL XDM Individual Profile] class and combines multiple field groups; bringing in information about the loyalty members using the standard "Person Details" and "Personal Details" field groups, as well as through a "Loyalty Details" field group that is defined during the tutorial.
 
 The following shows the completed Loyalty Members schema in JSON format:
 
@@ -1198,7 +1198,7 @@ The following shows the completed Loyalty Members schema in JSON format:
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",

@@ -1,19 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;FTP;ftp
 solution: Experience Platform
-title: Create an FTP source connector in the UI
-topic: overview
+title: Create an FTP  Source Connection in the UI
+topic-legacy: overview
 type: Tutorial
-description: This tutorial provides steps for creating an FTP source connector using the Platform user interface.
+description: Learn how to create an FTP source connection using the Adobe Experience Platform UI.
+exl-id: 8e505ead-4bae-43fe-830b-75620e8fba28
 ---
-
-# Create an FTP source connector in the UI
+# Create an FTP source connection in the UI
 
 >[!NOTE]
 >
 >The FTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-This tutorial provides steps for creating an FTP source connector using the Platform user interface.
+This tutorial provides steps for creating an FTP source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 

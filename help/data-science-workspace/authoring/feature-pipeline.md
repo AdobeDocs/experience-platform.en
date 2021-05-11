@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;Tutorial;feature pipeline;Data Science Workspace;popular topics
-title: Create a feature pipeline
-topic: tutorial
+title: Create a Feature Pipeline Using the Model Authoring SDK
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform allows you to build and create custom feature pipelines to perform feature engineering at scale through the Sensei Machine Learning Framework Runtime. This document describes the various classes found in a feature pipeline, and provides a step-by-step tutorial for creating a custom feature pipeline using the Model Authoring SDK in PySpark.
+exl-id: c2c821d5-7bfb-4667-ace9-9566e6754f98
 ---
-
-# Create a feature pipeline
+# Create a feature pipeline using the Model Authoring SDK
 
 >[!IMPORTANT]
 >
@@ -157,7 +157,6 @@ A DatasetTransformer provides the logic for transforming an input DataFrame and 
 
 The following example extends the DatasetTransformer class:
 
-
 **PySpark example**
 
 ```python
@@ -210,7 +209,6 @@ class MyDatasetTransformer(DatasetTransformer):
 
         # return transformed dataframe
         return pd
-
 ```
 
 ### Engineer data features with FeaturePipelineFactory {#engineer-data-features-with-featurepipelinefactory}

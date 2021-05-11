@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;IBM DB2;ibm db2;DB2;db2
 solution: Experience Platform
-title: IBM DB2 connector
-topic: overview
-description: The documentation below provides information on how to connect IBM DB2 to Platform using APIs or the user interface.
+title: IBM DB2 Source Connector Overview
+topic-legacy: overview
+description: Learn how to connect IBM DB2 to Adobe Experience Platform using APIs or the user interface.
+exl-id: 939e0151-fc07-4963-8ea2-0432dee713eb
 ---
-
 # (Beta) IBM DB2 connector
 
 >[!NOTE]
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect IBM DB2 to [!DNL 
 
 ## Connect IBM DB2 to [!DNL Platform] using APIs
 
-- [Create an IBM DB2 connector using the Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
+- [Create an IBM DB2 source connection using the Flow Service API](../../tutorials/api/create/databases/ibm-db2.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect IBM DB2 to [!DNL Platform] using the UI
 
-- [Create an IBM DB2 source connector in the UI](../../tutorials/ui/create/databases/ibm-db2.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create an IBM DB2 source connection in the UI](../../tutorials/ui/create/databases/ibm-db2.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

@@ -1,12 +1,10 @@
 ---
 keywords: mobile; braze; messaging;
-title: Braze destination
-seo-title: Braze destination
+title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
-seo-description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
-
-# (Beta) [!DNL Braze] destination
+# (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
 >
@@ -20,11 +18,10 @@ The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
 To send profile data to [!DNL Braze], you must first connect to the destination.
 
-## Destination specs {#destination-specs}
+## Destination specifics {#specifics}
 
 Note the following details that are specific to the [!DNL Braze] destination:
 
-* You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).
 * [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
 >[!NOTE]
@@ -35,11 +32,18 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
+## Supported Identities {#supported-identities}
+
+[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+
+|Target Identity|Description|Considerations|
+|---|---|---|
+|external_id|Custom [!DNL Braze] identifier that supports mapping of any identity. |You can send any [identity](../../../identity-service/namespaces.md) to the [!DNL Braze] destination, as long as you map it to the [!DNL Braze] [`external_id`](https://www.braze.com/docs/api/basics/#external-user-id-explanation).|
+
 ## Export type {#export-type}
 
 **[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
 [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
-
 
 ## Connect to destination {#connect-destination}
 
@@ -61,7 +65,7 @@ Click **[!UICONTROL Next]**. In the [!UICONTROL Authentication] step, you need t
  * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
  * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
  * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
- * **[!UICONTROL Marketing use case]**: marketing use cases indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own marketing use case. For more information about marketing use cases, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+ * **[!UICONTROL Marketing action]**: marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 ![Braze Authentication Step](../../assets/catalog/mobile-engagement/braze/authentication.png)
 
@@ -118,7 +122,7 @@ You should now see your field mapping in the list.
    
 To add more mappings, repeat the previous steps.
 
-### Example {#mapping-example}
+## Mapping Example {#mapping-example}
 
 Let's say your XDM profile schema and your [!DNL Braze] instance contain the following attributes and identities:
 
@@ -138,4 +142,3 @@ To verify if data has been exported successfully to the [!DNL Braze] destination
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
-

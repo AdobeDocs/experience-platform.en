@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;Policy enforcement;Automatic enforcement;API-based enforcement;data governance
 solution: Experience Platform
-title: Policy enforcement overview
-topic: guide
+title: Policy Enforcement Overview
+topic-legacy: guide
 description: Once data usage labels have been applied to Adobe Experience Platform datasets, and data usage policies have been defined for marketing actions against those labels, Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations. There are two methods of policy enforcement provided by Data Governance features on Platform, API-based enforcement and automatic enforcement.
+exl-id: d19d8060-85a1-405c-856d-f59041947a33
 ---
-
 # Policy enforcement overview
 
-Once data usage labels have been applied to [!DNL Platform] datasets, and data usage policies have been defined for marketing actions against those labels, [!DNL Data Governance] capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
+Once data usage labels have been applied to datasets, and data usage policies have been defined for marketing actions against those labels, Adobe Experience Platform Data Governance capabilities allow you to enforce those policies and prevent data operations that constitute policy violations.
 
 There are two methods of policy enforcement provided by [!DNL Data Governance] features on [!DNL Platform]: API-based enforcement and automatic enforcement.
 

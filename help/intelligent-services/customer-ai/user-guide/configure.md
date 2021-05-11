@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;user guide;customer ai;popular topics;configure instance;create instance;
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
-title: Configuring a Customer AI instance
-topic: Instance creation
+title: Configure a Customer AI Instance
+topic-legacy: Instance creation
 description: Intelligent Services provide Customer AI as a simple-to-use Adobe Sensei service that can be configured for different use cases. The following sections provide steps for configuring an instance of Customer AI.
+exl-id: 78353dab-ccb5-4692-81f6-3fb3f6eca886
 ---
-
-# Configuring a Customer AI instance
+# Configure a Customer AI instance
 
 Customer AI, as part of Intelligent Services enables you to generate custom propensity scores without having to worry about machine learning.
 
@@ -47,7 +47,7 @@ Below is important information on values that you must provide the instance with
 
 -   The propensity type determines the intent of the score and metric polarity. You can either choose **[!UICONTROL Churn]** or **[!UICONTROL Conversion]**. Please see the note under [scoring summary](./discover-insights.md#scoring-summary) in the discovering insights document for more information on how the propensity type affects your instance.
 
--   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
+-   Data source is where the data is located. Dataset is the input dataset which is used to predict scores. By design, Customer AI uses Consumer Experience Event, Adobe Analytics, and Adobe Audience Manager data to calculate propensity scores. When selecting a dataset from the dropdown selector, only ones that are compatible with Customer AI are listed.
 
 -   By default, propensity scores are generated for all profiles unless an eligible population is specified. You can specify an eligible population by defining conditions to include or exclude profiles based on events.
 
@@ -126,4 +126,3 @@ By following this tutorial, you have successfully configured an instance of Cust
 The following video is designed to support your understanding of the configuration workflow for Customer AI. Additionally, best practices and use case examples are provided.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&quality=12)
-

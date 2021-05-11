@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;compatibility;Compatibility;compatibility mode;Compatibility mode;field type;field types;
 solution: Experience Platform
-title: Schema Registry developer appendix
+title: Schema Registry API Guide Appendix
 description: This document provides supplemental information related to working with the Schema Registry API.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 ---
-
-# Appendix
+# Schema Registry API guide appendix
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.
 
@@ -45,7 +45,7 @@ You can filter results by using the `property` parameter, which is used to apply
 
 >[!TIP]
 >
->You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+>You can use the `property` parameter to filter schema field groups by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only field groups that are compatible with the [!DNL XDM Individual Profile] class.
 
 ## Compatibility Mode
 

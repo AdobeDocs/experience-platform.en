@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;developer guide;endpoint;Data Science Workspace;popular topics;experiments;sensei machine learning api
 solution: Experience Platform
-title: Experiments
-topic: Developer guide
+title: Experiments API Endpoint
+topic-legacy: Developer guide
 description: Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
+exl-id: 6ca5106e-896d-4c03-aecc-344632d5307d
 ---
-
-# Experiments
+# Experiments endpoint
 
 Model development and training occurs at the Experiment level, where an Experiment consists of an MLInstance, training runs, and scoring runs.
 

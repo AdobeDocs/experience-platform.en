@@ -1,17 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
-title: Create a Salesforce Service Cloud connector using the Flow Service API
-topic: overview
+title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to Salesforce Service Cloud (hereinafter referred to as "SSC").
+description: Learn how to connect Adobe Experience Platform to Salesforce Service Cloud using the Flow Service API.
+exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 ---
-
-# Create a [!DNL Salesforce Service Cloud] connector using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Salesforce Service Cloud] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create a [!DNL Salesforce Service Cloud] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -44,7 +40,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

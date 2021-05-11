@@ -1,17 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;PostgreSQL;postgresql;PSQL;psql
 solution: Experience Platform
-title: Create a PostgreSQL connector using the Flow Service API
-topic: overview
+title: Create a PostgreSQL Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to PostgreSQL (hereinafter referred to as "PSQL").
+description: Learn how to connect Adobe Experience Platform to PostgreSQL using the Flow Service API.
+exl-id: 5225368a-08c1-421d-aec2-d50ad09ae454
 ---
-
-# Create a [!DNL PostgreSQL] connector using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL PostgreSQL] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Create a [!DNL PostgreSQL] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
@@ -43,7 +39,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Metrics endpoint
-topic: developer guide
+title: Metrics API Endpoint
+topic-legacy: developer guide
 description: Learn how to retrieve observability metrics in Experience Platform using the Observability Insights API.
+exl-id: 08d416f0-305a-44e2-a2b7-d563b2bdd2d2
 ---
-
 # Metrics endpoint
 
 Observability metrics provide insights into usage statistics, historical trends, and performance indicators for various features in Adobe Experience Platform. The `/metrics` endpoint in the [!DNL Observability Insights API] allows you to programmatically retrieve metric data for your organization's activity in [!DNL Platform].
@@ -171,6 +171,8 @@ curl -X POST \
 | `aggregator` | Specifies the aggregation function that should be used to group multiple times-series records into single results. For detailed information on available aggregators, refer to the [OpenTSDB documentation](http://opentsdb.net/docs/build/html/user_guide/query/aggregators.html). |
 | `downsample` | An optional field that allows you to specify an aggregation function to reduce the sampling rate of metric data by sorting fields into intervals (or "buckets"). The interval for the downsampling is determined by the `granularity` property. For detailed information on downsampling, refer to the [OpenTSDB documentation](http://opentsdb.net/docs/build/html/user_guide/query/downsampling.html). |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the resulting datapoints for the metrics and filters specified in the request.
@@ -263,6 +265,8 @@ A successful response returns the resulting datapoints for the metrics and filte
 | `groupBy` | If multiple datasets were specified in the `filter` property for a metric, and the `groupBy` option was set to true in the request, this object will contain the ID of the dataset that the corresponding `dps` property applies to.<br><br>If this object appears empty in the response, the corresponding `dps` property applies to all datasets provided in the `filters` array (or all datasets in [!DNL Platform] if no filters were provided). |
 | `dps` | The returned data for the given metric, filter, and time range. Each key in this object represents a timestamp with a corresponding value for the specified metric. The time period between each datapoint depends on the `granularity` value specified in the request. |
 
+{style="table-layout:auto"}
+
 ## Appendix
 
 The following section contains additional information about working with the `/metrics` endpoint.
@@ -303,6 +307,8 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Data In
 | **timeseries.data.collection.inlet.success** | Total number of successful HTTP calls to one data inlet or to all data inlets. | Inlet ID |
 | **timeseries.data.collection.inlet.failure** | Total number of failed HTTP calls to one data inlet or to all data inlets. | Inlet ID |
 
+{style="table-layout:auto"}
+
 #### [!DNL Identity Service] {#identity}
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Identity Service].
@@ -319,6 +325,8 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Identit
 | timeseries.identity.graph.imsorg.numidgraphs.count | Number of unique graph identities stored in the identity graph for your IMS Organization. | N/A |
 | timeseries.identity.graph.imsorg.graphstrength.uniqueidentities.count | Number of unique identities stored in the identity graph for your IMS Organization for a particular graph strength ("unknown", "weak", or "strong"). | Graph strength (**Required**) |
 
+{style="table-layout:auto"}
+
 #### [!DNL Privacy Service] {#privacy}
 
 The following table outlines metrics for Adobe Experience Platform [!DNL Privacy Service].
@@ -328,6 +336,8 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Privacy
 | timeseries.gdpr.jobs.totaljobs.count | Total number of jobs created from GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.completedjobs.count | Total number of completed jobs from GDPR. | ENV (**Required**) |
 | timeseries.gdpr.jobs.errorjobs.count | Total number of error jobs from GDPR. | ENV (**Required**) |
+
+{style="table-layout:auto"}
 
 #### [!DNL Query Service] {#query}
 
@@ -341,6 +351,8 @@ The following table outlines metrics for Adobe Experience Platform [!DNL Query S
 | timeseries.queryservice.query.scheduledquery.count | Total number of executed scheduled queries. | N/A |
 | timeseries.queryservice.query.interactivequery.count | Total number of executed interactive queries. | N/A |
 | timeseries.queryservice.query.batchfrompsqlquery.count | Total number of executed batch queries from PSQL. | N/A |
+
+{style="table-layout:auto"}
 
 #### [!DNL Real-time Customer Profile] {#profile}
 
@@ -362,6 +374,8 @@ The following table outlines metrics for [!DNL Real-time Customer Profile].
 | platform.ups.profile-commons.ingest.streaming.dataSet.record.updated.timestamp | Timestamp for last update record request for a dataset. | Dataset ID (**Required**) |
 | platform.ups.ingest.streaming.record.size.m1_rate | Average record size. | IMS Org (**Required**) |
 | platform.ups.ingest.streaming.records.updated.m15_rate | Rate of update requests for records ingested for a dataset. | Dataset ID (**Required**) |
+
+{style="table-layout:auto"}
 
 ### Error messages
 
@@ -396,6 +410,8 @@ Responses from the `/metrics` endpoint may return error messages under certain c
 | `title` | A string containing the error message and the potential reason why it may have occurred. |
 | `report` | Contains contextual information about the error, including the sandbox and IMS Org being used in the operation that triggered it. |
 
+{style="table-layout:auto"}
+
 The following table lists the different error codes that can be returned by the API:
 
 | Error code | Title | Description |
@@ -405,3 +421,5 @@ The following table lists the different error codes that can be returned by the 
 | `INSGHT-1001-500` | Metrics query failed | There was an error when attempting to query the metrics database, due to a server error. Try the request again, and if the problem persists, contact Adobe support. |
 | `INSGHT-1002-500` | Service error | The request could not be processed due to an internal error. Try the request again, and if the problem persists, contact Adobe support. |
 | `INSGHT-1003-401` | Sandbox validation error | The request could not be processed due to a sandbox validation error. Ensure that the sandbox name you provided in the `x-sandbox-name` header represents a valid, enabled sandbox for your IMS Organization before trying the request again. |
+
+{style="table-layout:auto"}

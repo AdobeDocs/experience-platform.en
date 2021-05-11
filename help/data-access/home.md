@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;data access;python sdk;spark sdk;data access api
 solution: Experience Platform
-title: Data access overview
-topic: overview
-description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within Experience Platform.
+title: Data Access Overview
+topic-legacy: overview
+description: Data Access supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested Platform datasets.
+exl-id: 76e3585b-44df-412e-9ac3-aeca5f85d403
 ---
-
 # [!DNL Data Access] overview
 
 [!DNL Data Access] supports Adobe Experience Platform by providing users tools focused on the discoverability and accessibility of ingested datasets within [!DNL Experience Platform].

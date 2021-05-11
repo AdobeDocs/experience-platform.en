@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;ccpa:CCPA;pdpa;PDPA;pdpa_that;PDPA_THA;lgpd;LGPD;lgpd_bra;LGPD_BRA;
 solution: Experience Platform
-title: Adobe Experience Platform Privacy Service overview
-topic: overview
+title: Privacy Service Overview
+topic-legacy: overview
 description: Privacy Service allows you to facilitate automated compliance with legal privacy regulations in your Experience Cloud data operations.
+exl-id: 585f7619-5072-413b-9a62-be0ea0cd4d1b
 ---
-
-# Adobe Experience Platform [!DNL Privacy Service] overview
+# [!DNL Privacy Service] overview
 
 In order to deliver better customer experiences, you need to collect and store your customers' personal data. When using this data, it is important to understand and respect your customers' privacy. New legal and organizational regulations are giving users the right to access or delete their personal data from your data stores upon request.
 

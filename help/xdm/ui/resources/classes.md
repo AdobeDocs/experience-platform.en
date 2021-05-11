@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experience data model;data model;ui;workspace;class;classes;
 solution: Experience Platform
-title: Create and edit classes in the UI
+title: Create and Edit Classes in the UI
 description: Learn how to create and edit classes in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 1b4c3996-2319-45dd-9edd-a5bcad46578b
 ---
-
 # Create and edit classes in the UI
 
 In Experience Data Model (XDM), classes define the behavioral aspects of the data that a schema will contain (record or time-series). In addition to this, classes describe the smallest number of common properties that all schemas based on that class would need to include and provide a way for multiple compatible datasets to be merged.
@@ -38,7 +38,7 @@ The [!DNL Schema Editor] appears, showing a new schema in the canvas that is bas
 
 >[!IMPORTANT]
 >
->When building a schema that implements a class defined by your organization, remember that mixins are available for use only with compatible classes. Since the class you defined is new, there are no compatible mixins listed in the **[!UICONTROL Add mixin]** dialog. Instead, you will need to [create new mixins](./mixins.md#create) for use with that class. The next time you compose a schema that implements the new class, the mixins that you defined will be listed and available for use.
+>When building a schema that implements a class defined by your organization, remember that schema field groups are available for use only with compatible classes. Since the class you defined is new, there are no compatible field groups listed in the **[!UICONTROL Add field group]** dialog. Instead, you will need to [create new field groups](./field-groups.md#create) for use with that class. The next time you compose a schema that implements the new class, the field groups that you defined will be listed and available for use.
 
 You can now start [adding fields to the class](#add-fields), which will be shared by all schemas that employ the class.
 
@@ -46,9 +46,9 @@ You can now start [adding fields to the class](#add-fields), which will be share
 
 >[!NOTE]
 >
->Only custom classes defined by your organization can be edited.
+>Only custom classes defined by your organization can be fully edited and customized. For core classes defined by Adobe, only the display names for their fields can be edited within the context of individual schemas. See the section on [editing display names for schema fields](./schemas.md#display-names) for details.
 >
->In addition, once a class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+>Once a custom class has been saved and used in data ingestion, only additive changes can be made to it thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
 To edit an existing class, select the **[!UICONTROL Browse]** tab, and then select the name of a schema that employs the class you want to edit.
 
@@ -70,7 +70,7 @@ Once you have a schema that employs a custom class open in the [!UICONTROL Schem
 
 >[!IMPORTANT]
 >
->Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a mixin](./mixins.md#create) instead.
+>Keep in mind that any fields you add to a class will be used in all schemas that employ that class. You should therefore carefully consider which fields will be useful in all schema use cases. If you are thinking of adding a field that may only see use in some schemas under this class, you may want to consider adding it to those schemas by [creating a field group](./field-groups.md#create) instead.
 
 A **[!UICONTROL New field]** appears in in the canvas, and the right rail updates to show controls to configure the field's properties. See the guide on [defining fields in the UI](../fields/overview.md#define) for specific steps on how to configure and add the field to the class.
 

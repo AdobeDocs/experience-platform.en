@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;catalog;api;update an object
 solution: Experience Platform
-title: Update an object
-topic: developer guide
-description: You can update part of a Catalog object by including its ID in the path of a PATCH request. This document covers using fields and using JSON Patch notation for performing PATCH operations on Catalog objects. 
+title: Update a Catalog Object
+topic-legacy: developer guide
+description: You can update part of a Catalog object by including its ID in the path of a PATCH request. This document covers using fields and using JSON Patch notation for performing PATCH operations on Catalog objects.
+exl-id: 315de212-bf4d-40d5-a54f-9602a26d6852
 ---
-
-# Update an object
+# Update a Catalog object
 
 You can update part of a [!DNL Catalog] object by including its ID in the path of a PATCH request. This document covers the two methods for performing PATCH operations on Catalog objects:
 

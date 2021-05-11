@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;ingestion;ingest batch data;tutorial;batch ingestion;tutorial;ui guide;
 solution: Experience Platform
-title: Ingest data into Adobe Experience Platform
-topic: tutorial
+title: Ingest Data Into Experience Platform
+topic-legacy: tutorial
 type: Tutorial
-description: Adobe Experience Platform allows you to easily import data as batch files in the form of parquet files or data that conforms to a known Experience Data Model (XDM) schema.
+description: Adobe Experience Platform allows you to easily import data as batch files in the form of Parquet files or data that conforms to a known Experience Data Model (XDM) schema.
+exl-id: a4a7358d-b117-4d81-8cb0-3dbbfeccdcbd
 ---
-
 # Ingest data into Adobe Experience Platform
 
-Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
+Adobe Experience Platform allows you to easily import data into [!DNL Platform] as batch files. Examples of data to be ingested may include profile data from a flat file in a CRM system (such as a Parquet file) or data that conforms to a known [!DNL Experience Data Model] (XDM) schema in the Schema Registry.
 
 ## Getting started
 
@@ -101,13 +101,13 @@ To begin adding data to the dataset, click on the **[!UICONTROL Add Data]** tab.
 
 >[!NOTE]
 >
->Platform supports two files types for data ingestion, parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
+>Platform supports two files types for data ingestion, Parquet or JSON. You may add up to five files at a time, with the maximum file size of each file being 10 GB.
 
 ![Add Data tab](../images/tutorials/ingest-batch-data/drag-and-drop.png)
 
 ## Upload a file
 
-Once you drag and drop (or browse and select) a parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
+Once you drag and drop (or browse and select) a Parquet or JSON file that you wish to upload, [!DNL Platform] will immediately begin to process the file and an **[!UICONTROL Uploading]** dialog will appear on the **[!UICONTROL Add Data]** tab showing the progress of your file upload.
 
 ![Uploading dialog](../images/tutorials/ingest-batch-data/uploading-file.png)
 

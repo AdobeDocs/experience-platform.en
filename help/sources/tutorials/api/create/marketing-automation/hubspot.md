@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
-title: Create a HubSpot connector using the Flow Service API
-topic: overview
+title: Create a HubSpot Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Experience Platform to HubSpot.
+description: Learn how to connect Adobe Experience Platform to HubSpot using the Flow Service API.
+exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 ---
-
-# Create a [!DNL HubSpot] connector using the [!DNL Flow Service] API
+# Create a [!DNL HubSpot] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

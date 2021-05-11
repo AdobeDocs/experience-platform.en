@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;segment;Segment;create segment;segmentation;create a segment;Segmentation Service;
 solution: Experience Platform
-title: Create a segment
-topic: tutorial
+title: Create a Segment Using the Segmentation Service API
+topic-legacy: tutorial
 type: Tutorial
-description: This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the Adobe Experience Platform Segmentation Service API.
+description: Follow this tutorial to learn how to develop, test, preview, and save a segment definition using the Adobe Experience Platform Segmentation Service API.
+exl-id: 78684ae0-3721-4736-99f1-a7d1660dc849
 ---
-
-# Create a segment 
+# Create a segment using the Segmentation Service API 
 
 This document provides a tutorial for developing, testing, previewing, and saving a segment definition using the [[!DNL Adobe Experience Platform Segmentation Service API]](../api/getting-started.md). 
 
@@ -29,7 +29,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 - Authorization: Bearer `{ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

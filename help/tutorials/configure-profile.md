@@ -2,12 +2,12 @@
 keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Real-time Customer Profile tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
+exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
 ---
-
-# Configure [!DNL Real-time Customer Profile] and [!DNL Identity Service]
+# Configure [!DNL Real-time Customer Profile]
 
 In order to configure [!DNL Real-time Customer Profile] for your organization, you are required to complete multiple separate workflows. This document outlines the steps involved and provides links to tutorials for completing each individual workflow. 
 
@@ -25,16 +25,7 @@ To learn more, visit the [Real-time Customer Profile user guide](../profile/ui/u
 
 ## Real-time Customer Profile API
 
-The Real-time Customer Profile API includes multiple endpoints. Profile allows you to consolidate disparate customer data from multiple channels, such as online, offline, CRM, and third party data, into a unified view offering an actionable, timestamped account of every customer interaction. Please read the [Real-time Customer Profile API overview](../profile/api/overview.md) for more information on each of the available endpoints and their use cases.
-
-**The following API developer guides are available:**
-- [Computed attributes (alpha) ](../profile/api/computed-attributes.md) - Learn about the use cases for computed attributes as well as, how to configure, access, update, and delete a computed attribute.
-- [Edge projections](../profile/api/edge-projections.md) - Learn how to create, view, update, delete, and list projection destinations. Additionally this document contains information on listing and creating projection configurations and provides examples for using Selectors.
-- [Entities (Profile access)](../profile/api/entities.md) - Learn how to access profile data by identity or a list of identities. Additionally, learn how to access time series events for multiple profiles using identities, a single profile by identity, and access multiple schema entities.
-- [Export jobs (Profile export)](../profile/api/export-jobs.md) - Learn how to create, view, monitor, and cancel export jobs.
-- [Merge policies](../profile/api/merge-policies.md) - Learn about the components of merge policies as well as how to access, create, update, and delete a merge policy.
-- [Preview sample status (Profile preview)](../profile/api/preview-sample-status.md) - Learn how to view your last sample status, list profile distribution by dataset, and list profile distribution by namespace.
-- [Profile system jobs (Delete requests)](../profile/api/profile-system-jobs.md) - Learn how to view, create, and remove a delete request for a dataset or batch in the Profile Store.
+The Real-time Customer Profile API includes multiple endpoints. Please read the [Real-time Customer Profile API overview](../profile/api/overview.md) for more information on each of the available endpoints and their use cases.
 
 To learn more and get the required values for performing CRUD operations with the Real-time Customer Profile API, visit the [getting started guide](../profile/api/getting-started.md).
 
@@ -45,7 +36,7 @@ Before data can be ingested into Adobe Experience Platform and used in the creat
 **This guide will help you:**
 - Browse existing schemas.
 - Create and name a schema.
-- Add and define XDM mixins.
+- Add and define XDM schema field groups.
 - Set your schema fields as identity fields.
 - Enable Profile for your schema.
 
@@ -77,7 +68,7 @@ To work with merge policies in the [!DNL Platform] UI, visit the [merge policies
 
 ## Configure edge projections
 
-In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real-time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
+In order to drive coordinated, consistent, and personalized experiences for your customers across multiple channels in real time, the right data needs to be readily available and continuously updated as changes happen. Adobe [!DNL Experience Platform] enables this real-time access to data through the use of what are known as edges. An edge is a geographically placed server that stores data and makes it readily accessible to applications. Data is routed to an edge by a projection, with a projection destination defining the edge to which data will be sent, and a projection configuration defining the specific information that will be made available on the edge. 
 
 **This guide will help you:**
 - List, create, view, update, and delete an edge projection destination.

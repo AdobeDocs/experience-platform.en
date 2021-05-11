@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 solution: Experience Platform
-title: Getting started with the Observability Insights API
-topic: developer guide
+title: Getting Started with the Observability Insights API
+topic-legacy: developer guide
 description: The Observability Insights API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the Observability Insights API.
+exl-id: 3b120bd6-155d-467e-b98e-05478f8a4cc5
 ---
-
 # Getting started with the [!DNL Observability Insights] API
 
 The [!DNL Observability Insights] API allows you to retrieve metric data for various Adobe Experience Platform features. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [!DNL Observability Insights] API.
@@ -16,7 +16,7 @@ The [!DNL Observability Insights] API documentation provides example API calls t
 
 ## Required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

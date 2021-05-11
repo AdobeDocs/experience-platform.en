@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
-title: Adobe Experience Platform Source Connectors
-topic: overview
+title: Source Connectors
+topic-legacy: overview
 description: Source connections enable you to authenticate your storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+exl-id: 6e4f1688-6fe8-4ee7-996e-bcdf942cea17
 ---
-
 # Source connectors
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third party software, and your CRM.

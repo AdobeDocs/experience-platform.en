@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox user guide;sandbox guide
 solution: Experience Platform
-title: Sandbox user guide
-topic: user guide
+title: Sandbox UI guide
+topic-legacy: user guide
 description: This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
+exl-id: b258c822-5182-4217-9d1b-8196d889740f
 ---
-
-# Sandbox user guide
+# Sandbox UI guide
 
 This document provides steps on how to perform various operations related to sandboxes in the Adobe Experience Platform user interface.
 

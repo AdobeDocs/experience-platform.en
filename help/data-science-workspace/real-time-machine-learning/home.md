@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;developer guide;Data Science Workspace;popular topics;Real time machine learning;
 solution: Experience Platform
-title: Real-time Machine Learning overview
-topic: Overview
+title: Real-time Machine Learning Overview
+topic-legacy: Overview
 description: Real-time Machine Learning can dramatically enhance the relevance of your digital experience content for your end-users. This is made possible by leveraging real-time inferencing and continuous learning on the Experience Edge.
+exl-id: 23eb1877-1bdf-4982-b58c-cfb58467035a
 ---
-
 # Real-time Machine Learning overview (Alpha)
 
 >[!IMPORTANT]
@@ -42,7 +42,7 @@ Deploy your model to [!DNL Experience Edge] to create a Real-time Machine Learni
 
 ### Inference
 
-Use the Prediction REST API endpoint to generate machine learning insights in real-time.
+Use the Prediction REST API endpoint to generate machine learning insights in real time.
 
 ### Delivery
 
@@ -73,4 +73,3 @@ Real-time Machine Learning is currently in alpha. The functionality outlined bel
 ## Next steps
 
 You can begin by following the [getting started](./getting-started.md) guide. This guide walks you through setting up all the required prerequisites for creating a Real-time Machine Learning model.
-

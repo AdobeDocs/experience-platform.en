@@ -1,10 +1,10 @@
 ---
 keywords: identities rtcdp;rtcdp identities;real-time cdp identities
-title: Identities in Real-time CDP
+title: Identities in Real-time Customer Data Platform
 description: Adobe Experience Platform Identity Service helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems.
+exl-id: 2b0d84de-9710-412e-ace7-56e3977245aa
 ---
-
-# Identities in Real-time CDP
+# Identities in Real-time Customer Data Platform
 
 Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customers and their behavior by bridging together identities across devices and systems. Typically, your customers interact with your brand across multiple channels, this could include browsing your website online, making a purchase in-store, joining your loyalty program, or calling a help desk for support, to name a few. Across these multiple systems, there is an identity created for that customer, and [!DNL Identity Service] makes it possible to bring those identities together to see the complete picture.
 

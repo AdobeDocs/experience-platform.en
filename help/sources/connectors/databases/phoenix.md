@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
-title: Phoenix connector
-topic: overview
-description: The documentation below provides information on how to connect Phoenix to Platform using APIs or the user interface.
+title: Phoenix Source Connector Overview
+topic-legacy: overview
+description: Learn how to connect Phoenix to Adobe Experience Platform using APIs or the user interface.
+exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 ---
-
 # (Beta) [!DNL Phoenix] connector
 
 >[!NOTE]
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Phoenix] to
 
 ## Connect [!DNL Phoenix] to [!DNL Platform] using APIs
 
-- [Create a Phoenix connector using the Flow Service API](../../tutorials/api/create/databases/phoenix.md)
+- [Create a Phoenix source connection using the Flow Service API](../../tutorials/api/create/databases/phoenix.md)
 - [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
 - [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Phoenix] to [!DNL Platform] using the UI
 
-- [Create a Phoenix source connector in the UI](../../tutorials/ui/create/databases/phoenix.md)
-- [Configure a dataflow for a database connector in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a Phoenix source connection in the UI](../../tutorials/ui/create/databases/phoenix.md)
+- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)

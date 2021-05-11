@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;product recommendation recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
-title: Product recommendation recipe
-topic: overview
+title: Product Recommendation Recipe
+topic-legacy: overview
 description: The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
+exl-id: 508d55af-c33b-4f1d-b1b6-f00ed5d12bf9
 ---
-
 # Product recommendation recipe
 
 The Product Recommendations recipe enables you to provide personalized product recommendations that are tailored to your customer's needs and interests. With an accurate prediction model, a customer's purchase history can provide you with insight on what products they may be interested in.
@@ -31,19 +31,19 @@ This recipe uses custom [XDM schemas](../../xdm/schema/field-dictionary.md) to m
 
 ### Input data schema
 
-Field Name | Type
---- | ---
-itemId | String
-interactionType | String
-timestamp | String
-userId | String
+| Field Name | Type |
+| --- | --- |
+| itemId | String |
+| interactionType | String |
+| timestamp | String |
+| userId | String |
 
 ### Output data schema
 
-Field Name | Type
---- | ---
-recommendations | String
-userId | Integer
+| Field Name | Type |
+| --- | --- |
+| recommendations | String |
+| userId | Integer |
 
 ## Algorithm
 

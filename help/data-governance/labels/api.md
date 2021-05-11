@@ -1,8 +1,8 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage label api;policy service api
 solution: Experience Platform
-title: Manage data usage labels using APIs 
-topic: developer guide
+title: Manage Data Usage Labels Using APIs 
+topic-legacy: developer guide
 description: The Dataset Service API allows you to apply and edit usage labels for datasets. It is part of Adobe Experience Platform's data catalog capabilities, but is separate from the Catalog Service API which manages dataset metadata.
 ---
 
@@ -273,7 +273,11 @@ A successful response returns the data usage labels that have been applied to th
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that have been applied to the dataset. |
-| `optionalLabels` | A list of individual fields within the dataset that have data usage labels applied to them. |
+| `optionalLabels` | A list of individual fields within the dataset that have data usage labels applied to them. The following sub-properties are required:<br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li>`id`: The URI `$id` value of the schema associated with the field.</li><li>`contentType`: Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.</li><li>`schemaPath`: The path to the schema property in question, written in [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) syntax.</li></ul>`labels`: A list of data usage labels that you want to add to the field.|
+
+- id: The URI $id value for the XDM schema that the dataset is based on.
+- contentType: Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.
+- schemaPath: The path to the schema property in question, written in [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) syntax.
 
 ## Apply labels to a dataset {#apply-dataset-labels}
 
@@ -320,7 +324,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `labels` | A list of data usage labels that you want to add to the dataset. |
-| `optionalLabels` | A list of any individual fields within the dataset that you want to add labels to. Each item in this array must have the following properties: <br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li><code>id</code>: The URI <code>$id</code> value of the schema associated with the field.</li><li><code>contentType</code>: The content type and version number of the schema. This should take the form of one of the valid <a href="../../xdm/api/getting-started.md#accept">Accept headers</a> for an XDM lookup request.</li><li><code>schemaPath</code>: The path to the field within the dataset's schema.</li></ul>`labels`: A list of data usage labels that you want to add to the field. |
+| `optionalLabels` | A list of any individual fields within the dataset that you want to add labels to. Each item in this array must have the following properties:<br/><br/>`option`: An object that contains the [!DNL Experience Data Model] (XDM) attributes of the field. The following three properties are required:<ul><li>`id`: The URI `$id` value of the schema associated with the field.</li><li>`contentType`: Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.</li><li>`schemaPath`: The path to the schema property in question, written in [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) syntax.</li></ul>`labels`: A list of data usage labels that you want to add to the field. |
 
 **Response**
 

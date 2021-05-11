@@ -1,12 +1,10 @@
 ---
 keywords: airship attributes;airship destination
-title: Airship Attributes destination
-seo-title: Airship Attributes destination
+title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
-seo-description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
+exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 ---
-
-# (Beta) [!DNL Airship Attributes] destination {#airship-attributes-destination}
+# (Beta) [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 >[!IMPORTANT]
 >
@@ -36,13 +34,13 @@ Before you can send your audience segments to [!DNL Airship], you must:
 >
 >Create an [!DNL Airship] account via [this signup link](https://go.airship.eu/accounts/register/plan/starter/) if you have not already.
 
-### Enable attributes {#enable-attributes}
+## Enable attributes {#enable-attributes}
 
 Adobe Experience Platform profile attributes are similar to [!DNL Airship] attributes and can be easily mapped to one another in Platform using the mapping tool demonstrated further below on this page.
 
 [!DNL Airship] projects have several predefined and default attributes. If you have a custom attribute, you must define it in [!DNL Airship] first. See [Set Up and Manage Attributes](https://docs.airship.com/tutorials/audience/attributes/) for details.
 
-### Bearer token {#bearer-token}
+## Generate bearer token {#bearer-token}
 
 Go to **[!UICONTROL Settings]** » **[!UICONTROL APIs & Integrations]** in the [Airship dashboard](https://go.airship.com) and select **[!UICONTROL Tokens]** in the left-hand menu.
 
@@ -86,7 +84,7 @@ Once your credentials are confirmed and Adobe Experience Platform is connected t
 
 In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
 
-Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more marketing use cases for which data will be exported to the destination. You can select from Adobe-defined marketing use cases or you can create your own. For more information about marketing use cases, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
+Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more **[!UICONTROL Marketing Actions]** for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
 Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
 

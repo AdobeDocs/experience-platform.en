@@ -1,13 +1,11 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes December 11, 2019
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
-
+exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: December 11, 2019**
@@ -62,7 +60,7 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 
 | Feature    | Description  |
 | ---------- | ------------ |
-| Streaming connection | Streaming ingestion enables you to send data from client- and server-side devices to [!DNL Experience Platform] in real-time. Release includes a new streaming connection user interface. |
+| Streaming connection | Streaming ingestion enables you to send data from client- and server-side devices to [!DNL Experience Platform] in real time. Release includes a new streaming connection user interface. |
 | Connector support for [!DNL Google Cloud Store] | Support for collecting data from [!DNL Google Cloud Store]. |
 
 **Known issues**

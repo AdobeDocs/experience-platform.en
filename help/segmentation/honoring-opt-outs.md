@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
 solution: Experience Platform
-title: Honoring opt-outs
-topic: overview
-description: Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within Real-time Customer Profile]. These opt-out requests are part of the California Consumer Privacy Act (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 
+title: Honoring Opt-Out Requests in Segments
+topic-legacy: overview
+description: Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within Real-time Customer Profile]. These opt-out requests are part of the California Consumer Privacy Act (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
+exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
-
 # Honoring opt-out requests in segments
 
-[!DNL Experience Platform] allows your customers to send opt-out requests regarding the usage and storage of their data within [!DNL Real-time Customer Profile]. These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 
+Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within [!DNL Real-time Customer Profile]. These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 
 
 Once a customer has opted-out, it is important that your organization honor those opt-outs when generating audiences for marketing activities. This document describes important details regarding honoring opt-out requests.
 
@@ -16,38 +16,38 @@ Once a customer has opted-out, it is important that your organization honor thos
 
 Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before working with opt-out requests, please review the documentation for the following services:
 
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real-time based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
 
-## Opt-out mixins
+## Opt-out schema field groups
 
-In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. There are two mixins that can be used to add opt-out fields to a schema, each is covered in more detail in the sections that follow:
+In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. There are two schema field groups that can be used to add opt-out fields to a schema, each is covered in more detail in the sections that follow:
 
 - [Profile Privacy](#profile-privacy): Used to capture different opt-out types (general or sales/sharing).
 - [Profile Preferences Details](#profile-preferences-details): Used to capture opt-out requests for specific XDM channels.
 
-For step-by-step instructions on how to add a mixin to a schema, please refer to the "Add a mixin" section in the following XDM documentation:
+For step-by-step instructions on how to add a field group to a schema, please refer to the "Add a field group" section in the following XDM documentation:
 - [Schema Registry API tutorial](../xdm/api/getting-started.md).: Building a schema using the Schema Registry API.
 - [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md): Building a schema using the Platform user interface.
 
-Here is an example image showing the opt-out mixins added to a schema in the user interface:
+Here is an example image showing the opt-out field groups added to a schema in the user interface:
 
-![](images/opt-outs/opt-out-mixins-user-interface.png)
+![](images/opt-outs/opt-out-field-groups-user-interface.png)
 
-The structure of each mixin, as well as a description of the fields they contribute to the schema, are outlined in more detail in the following sections.
+The structure of each field group, as well as a description of the fields they contribute to the schema, are outlined in more detail in the following sections.
 
 ### [!DNL Profile Privacy] {#profile-privacy}
 
-The [!DNL Profile Privacy] mixin allows you to capture two kinds of CCPA opt-out requests from customers:
+The [!DNL Profile Privacy] field group allows you to capture two kinds of CCPA opt-out requests from customers:
 
 1. General opt-out
 2. Sales/Sharing opt-out
 
 ![](images/opt-outs/profile-privacy.png)
 
-The [!DNL Profile Privacy] mixin contains the following fields:
+The [!DNL Profile Privacy] field group contains the following fields:
 
 - Privacy Opt-Outs (`privacyOptOuts`): An array containing a list of opt-out objects.
 - Opt-Out Type (`optOutType`): The type of opt-out. This field is an enum with two possible values:
@@ -60,15 +60,15 @@ The [!DNL Profile Privacy] mixin contains the following fields:
     - Opt-In (`in`): The customer has opted-in.
 - Opt-Out Timestamp (`timestamp`): Timestamp of the received opt-out signal.
 
-To view the full structure of the [!DNL Profile Privacy] mixin, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the mixin using the Platform UI.
+To view the full structure of the [!DNL Profile Privacy] field group, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the field group using the Platform UI.
 
 ### [!DNL Profile Preferences Details] {#profile-preferences-details}
 
-The [!DNL Profile Preferences Details] mixin provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this mixin, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
+The [!DNL Profile Preferences Details] field group provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this field group, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
 
 ![](images/opt-outs/profile-preferences-details.png)
 
-The [!DNL Profile Preferences Details] mixin contains the following fields related to opt-outs:
+The [!DNL Profile Preferences Details] field group contains the following fields related to opt-outs:
 
 - OptInOut (`optInOut`): An object where each key represents a valid and known URI for a communication channel and the active state of the opt-out for each channel. Each channel may have one of four possible values:
     - Not Provided (`not_provided`): An opt-out request has not been provided for this channel.
@@ -93,7 +93,7 @@ The example JSON below highlights how the OptInOut object can capture multiple o
 }
 ```
 
-To view the full structure of the Profile Preferences Details mixin, please visit the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) or preview the mixin using the [!DNL Platform] UI.
+To view the full structure of the Profile Preferences Details field group, please visit the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) or preview the field group using the [!DNL Platform] UI.
 
 ## Handling opt-outs in segmentation 
 

@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;ui;XDM;XDM system;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema registry;Schema Registry;schema;Schema;schemas;Schemas;create;data type;data types;
 solution: Experience Platform
-title: Create and edit data types using the UI
-topic: tutorial
+title: Create and Edit Data Types Using the UI
+topic-legacy: tutorial
 type: Tutorial
 description: Learn how to create and edit data types in the Experience Platform user interface.
+exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
-
 # Create and edit data types using the UI
 
-In Experience Data Model (XDM), data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level.
+In Experience Data Model (XDM), data types are used as reference-type fields in classes or schema field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
@@ -78,21 +78,21 @@ This demonstrates how flexible data types can be in terms of describing your dat
 
 Once you have finished adding fields to the data type, select **[!UICONTROL Save]** to save your changes and add the data type to the [!DNL Schema Library].
 
-## Add the data type to a class or mixin
+## Add the data type to a class or field group
 
-Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more mixins, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a mixin.
+Once you have created a data type, you can start using it in your schemas. Since XDM schemas are composed of a class and zero or more field groups, fields provided by a data type cannot be added to a schema directly. Instead, they must be included in a class or a field group.
 
-Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a mixin](./mixins.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
+Start by following the steps involved with [adding a field to a class](./classes.md#add-fields) or [adding a field to a field group](./field-groups.md#add-fields). When you choose the **[!UICONTROL Type]** for the new field, select the name of your data type from the dropdown menu.
 
 ## Convert a multi-field object into a data type {#convert}
 
-When you create an object-type field with multiple sub-fields in the [!DNL Schema Editor], you can convert that field into a data type so you can use that same field structure in a different class or mixin.
+When you create an object-type field with multiple sub-fields in the [!DNL Schema Editor], you can convert that field into a data type so you can use that same field structure in a different class or field group.
 
 To convert an object-type field to a data type, select the field in the canvas. Before you convert the field, ensure that the **[!UICONTROL Display name]** is descriptive of the data that the object will contain, as this will become the name of the data type. When you are ready to convert the field, select **[!UICONTROL Convert to new data type]** in the right rail.
 
 ![](../../images/ui/resources/data-types/convert-object.png)
 
-The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be reused in other classes and mixins by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
+The canvas updates the data type of the field from "[!UICONTROL Object]" to the new data type. The sub-fields also have small lock icons beside them, indicating they are no longer individual fields but rather part of a multi-field data type. This structure can now be reused in other classes and field groups by selecting this data type from the **[!UICONTROL Type]** dropdown when defining a new field.
 
 ![](../../images/ui/resources/data-types/converted.png)
 

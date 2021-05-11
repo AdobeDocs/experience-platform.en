@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
-title: Retail sales recipe
-topic: overview
+title: Retail Sales Recipe
+topic-legacy: overview
 description: The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
+exl-id: ff01fcd1-fca6-4957-8470-a974fd1520aa
 ---
-
 # Retail sales recipe
 
 The Retail Sales recipe enables you to predict sales forecast for all stores seeded for a certain time period. With an accurate prediction model, the retailer would be able to find the relationship between demand and pricing policies and make optimized pricing decisions to maximize sales and revenue.
@@ -27,25 +27,25 @@ The Retail Sales Forecasting recipe uses machine learning to predict sale trends
 
 You can get started by following this [tutorial](../jupyterlab/create-a-recipe.md).
 
-This tutorial will go over creating the Retail Sales recipe in a Jupyter notebook and using the notebook to recipe workflow to create the recipe in Adobe Experience Platform.
+This tutorial will go over creating the Retail Sales recipe in a Jupyter Notebook and using the notebook to recipe workflow to create the recipe in Adobe Experience Platform.
 
 ## Data schema
 
 This recipe uses [XDM schemas](../../xdm/schema/field-dictionary.md) to model the data. The schema used for this recipe is shown below:
 
-Field Name | Type
---- | ---
-date | String
-store | Integer
-storeType | String
-weeklySales | Number
-storeSize | Integer
-temperature | Number
-regionalFuelPrice | Number
-markdown | Number
-cpi | Number
-unemployment | Number
-isHoliday | Boolean
+| Field Name | Type |
+| --- | --- |
+| date | String | 
+| store | Integer |
+| storeType | String |
+| weeklySales | Number |
+| storeSize | Integer |
+| temperature | Number |
+| regionalFuelPrice | Number |
+| markdown | Number |
+| cpi | Number |
+| unemployment | Number |
+| isHoliday | Boolean |
 
 
 ## Algorithm

@@ -1,12 +1,12 @@
 ---
 keywords: Visual similarity;visual similarity;ccai api
 solution: Experience Platform, Intelligent Services
-title: Visual similarity
-topic: Developer guide
+title: Visual Similarity in the Content and Commerce AI API
+topic-legacy: Developer guide
 description: The visual similarity service, when given an image, automatically finds visually similar images from a catalog.
+exl-id: fe31d9be-ee42-44fa-b83f-3b8a718cb4e3
 ---
-
-# Visual similarity
+# Visual similarity 
 
 >[!NOTE]
 >
@@ -153,4 +153,3 @@ The following visually similar images were returned in the example response show
   "error": []
 }
 ```
-

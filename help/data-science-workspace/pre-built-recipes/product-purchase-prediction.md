@@ -1,14 +1,12 @@
 ---
 keywords: Experience Platform;product purchase recipe;Data Science Workspace;popular topics;recipes;pre build recipe
 solution: Experience Platform
-title: Product purchase recipe
-topic: overview
+title: Product Purchase Prediction Recipe
+topic-legacy: overview
 description: The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
+exl-id: 66a45629-33a3-4081-8dbd-b864983b8f57
 ---
-
-# Product purchase recipe
-
-## Overview
+# Product purchase prediction recipe
 
 The Product Purchase Prediction recipe enables you to predict the likelihood of a certain type of customer purchase event - a product purchase, for instance.
 
@@ -30,25 +28,25 @@ The Product Purchase Prediction recipe utilizes machine learning to predict cust
 
 This recipe uses [XDM schemas](../../xdm/home.md) to model the data. The schema used for this recipe is shown below:
 
-Field Name | Type
---- | ---
-userId | String
-genderRatio | Number
-ageY | Number
-ageM | Number
-optinEmail | Boolean
-optinMobile | Boolean
-optinAddress | Boolean
-created | Integer
-totalOrders | Number
-totalItems | Number
-orderDate1 | Number
-shippingDate1 | Number
-totalPrice1 | Number
-tax1 | Number
-orderDate2 | Number
-shippingDate2 | Number
-totalPrice2 | Number
+| Field Name | Type |
+| --- | --- |
+| userId | String |
+| genderRatio | Number |
+| ageY | Number |
+| ageM | Number |
+| optinEmail | Boolean |
+| optinMobile | Boolean |
+| optinAddress | Boolean |
+| created | Integer |
+| totalOrders | Number |
+| totalItems | Number |
+| orderDate1 | Number |
+| shippingDate1 | Number |
+| totalPrice1 | Number |
+| tax1 | Number |
+| orderDate2 | Number |
+| shippingDate2 | Number |
+| totalPrice2 | Number |
 
 
 ## Algorithm

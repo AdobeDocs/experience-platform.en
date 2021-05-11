@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
 solution: Experience Platform
-title: Map a CSV file to an XDM schema
-topic: tutorial
+title: Map a CSV File to an XDM Schema
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers how to map a CSV file to an XDM schema using the Adobe Experience Platform user interface.
+exl-id: 15f55562-269d-421d-ad3a-5c10fb8f109c
 ---
-
 # Map a CSV file to an XDM schema
 
 In order to ingest CSV data into [!DNL Adobe Experience Platform], the data must be mapped to an [!DNL Experience Data Model] (XDM) schema. This tutorial covers how to map a CSV file to an XDM schema using the [!DNL Platform] user interface.
@@ -78,7 +78,7 @@ The **[!UICONTROL Map source to target field]** popover appears. From here, you 
 
 If you want to remove one of the mappings, hover over that mapping, then select the minus icon.
 
-### Add calculated field
+### Add calculated field {#add-calculated-field}
 
 Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
 

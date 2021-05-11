@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;query service
 solution: Experience Platform
-title: Query service in Jupyter notebook
-topic: tutorial
+title: Query Service in Jupyter Notebook
+topic-legacy: tutorial
 type: Tutorial
 description: Adobe Experience Platform allows you to use Structured Query Language (SQL) in Data Science Workspace by integrating Query Service into JupyterLab as a standard feature. This tutorial demonstrates sample SQL queries for common use cases to explore, transform, and analyze Adobe Analytics data.
+exl-id: c5ac7d11-a3bd-4ef8-a650-9f496a8bbaa7
 ---
-
-# Query service in Jupyter notebook
+# Query Service in Jupyter Notebook
 
 [!DNL Adobe Experience Platform] allows you to use Structured Query Language (SQL) in [!DNL Data Science Workspace] by integrating [!DNL Query Service] into [!DNL JupyterLab] as a standard feature. 
 
@@ -91,13 +91,11 @@ Before starting this tutorial, you must have the following prerequisites:
 
 ## Query your data {#query-your-data}
 
-Enter the following SQL queries in individual notebook cells. Execute a query by clicking on its cell followed by clicking the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
+Enter the following SQL queries in individual notebook cells. Execute a query by selecting on its cell followed by selecting the **[!UICONTROL play]** button. Successful query results or error logs are displayed below the executed cell.
 
-When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by clicking the **[!UICONTROL Power]** button located at the top right corner. 
+When a notebook is inactive for an extended period of time, the connection between the notebook and [!DNL Query Service] may break. In such cases, restart [!DNL JupyterLab] by selecting the **Restart** button ![restart button](../images/jupyterlab/user-guide/restart_button.png) located in the top-right corner next to the power button. 
 
-![](../images/jupyterlab/query/restart_button.png)
-
-The notebook kernel will reset but the cells will remain, re-run **all** the cells to continue where you had left off.
+The notebook kernel resets but the cells will remain, re-run all the cells to continue where you had left off.
 
 ### Hourly visitor count {#hourly-visitor-count}
 
@@ -181,7 +179,7 @@ GROUP  BY Day, Hour
 ORDER  BY Hour;
 ```
 
-Executing the modified query will store the results in `hourly_actions_date_range` as a dataframe. Execute the following function in a new cell to preview the results:
+Executing the modified query stores the results in `hourly_actions_date_range` as a dataframe. Execute the following function in a new cell to preview the results:
 
 ```python
 hourly_actions_date_rage.head()
@@ -273,4 +271,4 @@ LIMIT  10;
 
 ## Next steps
 
-This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK. 
+This tutorial demonstrated some sample uses cases for utilizing [!DNL Query Service] in [!DNL Jupyter] notebooks. Follow the [Analyze your data using Jupyter Notebooks](./analyze-your-data.md) tutorial to see how similar operations are performed using the Data Access SDK.

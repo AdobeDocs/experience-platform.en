@@ -1,11 +1,9 @@
 ---
 keywords: Analytics extension;analytics extension;destination analytics
 title: Adobe Analytics extension
-seo-title: Adobe Analytics extension
 description: The Adobe Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Adobe Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
 ---
-
 # Adobe Analytics extension {#adobe-analytics-extension}
 
 ## Overview {#overview}
@@ -57,6 +55,3 @@ You can configure, upgrade, and delete extensions in the [!DNL Platform Launch] 
 >If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to get to [!DNL Platform Launch] and configure or delete your extension.
 
 To upgrade your extension, see [Extension upgrade](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/extension-upgrade.html) in the [!DNL Platform Launch] documentation.
-
-
-

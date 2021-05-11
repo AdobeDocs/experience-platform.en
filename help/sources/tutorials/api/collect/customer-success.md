@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
-title: Collect data from a customer success system through source connectors and APIs
-topic: overview
+title: Collect Data From A Customer Success System Using Source Connectors and APIs
+topic-legacy: overview
 type: Tutorial
-description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform through source connectors and APIs.
+description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
+exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
-
-# Collect data from a customer success system through source connectors and APIs
+# Collect data from a customer success system using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
 
@@ -32,7 +32,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -80,24 +80,56 @@ curl -X POST \
     -H 'Content-Type: application/json' \
     -d '{
         "name": "Source connection for Customer Success",
-        "connectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
+        "baseConnectionId": "f1da3694-38a9-403d-9a36-9438a9203d42",
         "description": "Source connection for a Customer Success connector",
         "data": {
             "format": "tabular",
         },
         "params": {
-            "path": "Account"
+            "tableName": "Account",
+            "columns": [
+                {
+                    "name": "Id",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Name",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "Phone",
+                    "type": "string",
+                    "xdm": {
+                        "type": "string"
+                    }
+                },
+                {
+                    "name": "CreatedDate",
+                    "type": "string",
+                    "meta:xdmType": "date-time",
+                    "xdm": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                }
+            ]
         },
         "connectionSpec": {
             "id": "cb66ab34-8619-49cb-96d1-39b37ede86ea",
             "version": "1.0"
         }
-    }}'
+    }'
 ```
 
 | Property | Description |
 | -------- | ----------- |
-| `connectionId`| The unique connection ID of the third-party customer success system you are accessing. |
+| `baseConnectionId`| The unique connection ID of the third-party customer success system you are accessing. |
 | `params.path`| The path of the source file. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party customer success system. See the [appendix](#appendix) for a list of connection spec IDs. |
 
@@ -252,6 +284,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `schemaRef.id` | The `$id` of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -290,13 +323,13 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/deb3e1096c35d8311b5d80868c4bd5b3cdfd4b3150e7345f",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
             "dataSetId": "5e543e8a60b15218ad44b95f"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }
@@ -306,6 +339,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The connection spec ID used to connect to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

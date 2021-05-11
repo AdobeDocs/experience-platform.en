@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion notifications;notifications;subscribe events;data ingestion status events;status events;subscribe;status notifications;
 solution: Experience Platform
-title: Subscribe to data ingestion events
-topic: overview
+title: Data Ingestion Notifications
+topic-legacy: overview
 description: To assist in monitoring the ingestion process, Adobe Experience Platform makes it possible to subscribe to a set of events that are published by each step of the process, notifying you to the status of the ingested data and any possible failures.
+exl-id: fd34e1ab-f6f6-44f0-88ee-7020e9322c39
 ---
-
 # Data ingestion notifications
 
 The process of ingesting data into Adobe Experience Platform is comprised of multiple steps. Once you identify data files that need to be ingested into [!DNL Platform], the ingestion process begins and each step occurs consecutively until the data is either successfully ingested or fails. The ingestion process can be initiated using the [Adobe Experience Platform Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml) or using the [!DNL Experience Platform] user interface.

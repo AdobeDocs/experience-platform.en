@@ -1,12 +1,10 @@
 ---
 keywords: personalization;Personalization
-title: Personalization Destinations
-seo-title: Personalization Destinations
+title: Personalization destinations overview
 description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
-seo-description: Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
+exl-id: 18a2b170-43d0-4d41-8afc-d2f0f9bfd7bb
 ---
-
-# Personalization destinations {#personalization-destinations}
+# Personalization destinations overview {#personalization-destinations}
 
 Personalization platforms collect data and insights from individual behaviors. These platforms can assist marketers in navigating anonymous data, serving up offers or ads to prospects based on previous activity or as part of audience segments with similar habits.
 

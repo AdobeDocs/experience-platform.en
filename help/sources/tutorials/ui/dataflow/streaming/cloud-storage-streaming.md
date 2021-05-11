@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage connector;cloud storage
 solution: Experience Platform
-title: Configure a dataflow for a cloud storage streaming connector in the UI
-topic: overview
+title: Configure a Dataflow for a Cloud Storage Streaming Connector in the UI
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
+exl-id: 75deead6-ef3c-48be-aed2-c43d1f432178
 ---
-
-# Configure a dataflow for a cloud storage streaming connector in the UI
+# Configure a dataflow for a cloud storage streaming connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage base connector.
 

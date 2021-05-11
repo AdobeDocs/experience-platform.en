@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;OData;odata;oData;Generic OData;generic odata
 solution: Experience Platform
-title: Generic OData connector
-topic: overview
-description: The documentation below provides information on how to connect Generic OData to Platform using APIs or the user interface.
+title: Generic OData Source Connector Overview
+topic-legacy: overview
+description: Learn how to connect Generic OData to Adobe Experience Platform using APIs or the user interface.
+exl-id: ff50f883-d4fd-4f32-a9d6-fe4624a32e24
 ---
-
 # (Beta) [!DNL Generic OData] connector
 
 >[!NOTE]
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Generic ODa
 
 ## Connect [!DNL Generic OData] to [!DNL Platform] using APIs
 
-- [Create a Generic OData connector using the Flow Service API](../../tutorials/api/create/protocols/odata.md)
+- [Create a Generic OData source connection using the Flow Service API](../../tutorials/api/create/protocols/odata.md)
 - [Explore a protocols application using the Flow Service API](../../tutorials/api/explore/protocols.md)
 - [Collect data from a protocols application using the Flow Service API](../../tutorials/api/collect/protocols.md)
 
 ## Connect [!DNL Generic OData] to [!DNL Platform] using the UI
 
-- [Create a Generic OData source connector in the UI](../../tutorials/ui/create/protocols/odata.md)
-- [Configure a dataflow for a protocols connector in the UI](../../tutorials/ui/dataflow/protocols.md)
+- [Create a Generic OData source connection in the UI](../../tutorials/ui/create/protocols/odata.md)
+- [Configure a dataflow for a protocols connection in the UI](../../tutorials/ui/dataflow/protocols.md)

@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;queries;query;Query service;
 solution: Experience Platform
-title: Query Service developer guide
-topic: queries
+title: Queries API Endpoint
+topic-legacy: queries
 description: The following sections walk through calls you can make using the /queries endpoint in the Query Service API.
+exl-id: d6273e82-ce9d-4132-8f2b-f376c6712882
 ---
-
-# Queries
+# Queries endpoint
 
 ## Sample API Calls
 

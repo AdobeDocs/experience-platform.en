@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Couchbase;couchbase
 solution: Experience Platform
-title: Create a Couchbase source connector in the UI
-topic: overview
+title: Create a Couchbase  Source Connection in the UI
+topic-legacy: overview
 type: Tutorial
-description: This tutorial provides steps for creating an Couchbase source connector using the Platform user interface.
+description: Learn how to create an Couchbase source connection using the Adobe Experience Platform UI.
+exl-id: 4270a48a-843c-4f1e-b280-35b620581d68
 ---
-
-# Create a [!DNL Couchbase] source connector in the UI
+# Create a [!DNL Couchbase] source connection in the UI
 
 >[!NOTE]
 >

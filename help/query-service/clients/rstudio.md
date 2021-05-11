@@ -1,51 +1,58 @@
 ---
 keywords: Experience Platform;home;popular topics;Query service;query service;RStudio;rstudio;connect to query service;
 solution: Experience Platform
-title: Connect with RStudio
-topic: connect
+title: Connect RStudio to Query Service
+topic-legacy: connect
 description: This document walks through the steps for connecting R Studio with Adobe Experience Platform Query Service.
+exl-id: 8dd82bad-6ffb-4536-9c27-223f471a49c6
 ---
+# Connect [!DNL RStudio] to Query Service
 
-# Connect with [!DNL RStudio]
-
-This document walks through the steps for connecting R Studio with Adobe Experience Platform [!DNL Query Service].
-
-After installing [!DNL RStudio], on the *Console* screen that appears, you will first need to prepare your R script to use [!DNL PostgreSQL].
-
-```r
-install.packages("RPostgreSQL")
-install.packages("rstudioapi")
-require("RPostgreSQL")
-require("rstudioapi")
-```
-
-Once you have prepared your R script to use [!DNL PostgreSQL], you can now connect [!DNL RStudio] to [!DNL Query Service] by loading the [!DNL PostgreSQL] driver.
-
-```r
-drv <- dbDriver("PostgreSQL")
-con <- dbConnect(drv, 
- dbname = "{DATABASE_NAME}",
- host="{HOST_NUMBER}",
- port={PORT_NUMBER},
- user="{USERNAME}",
- password="{PASSWORD}")
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `{DATABASE_NAME}` | The name of the database that will be used. |
-| `{HOST_NUMBER` and `{PORT_NUMBER}` | The host endpoint and its port for Query Service. | 
-| `{USERNAME}` and `{PASSWORD}` | The login credentials that will be used. The username takes the form of `ORG_ID@AdobeOrg`. |
+This document walks through the steps for connecting [!DNL RStudio] with Adobe Experience Platform [!DNL Query Service].
 
 >[!NOTE]
 >
->For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], click **[!UICONTROL Queries]**, then click **[!UICONTROL Credentials]**.
+> This guide assumes you already have access to [!DNL RStudio] and are familiar with how to use it. More information about [!DNL RStudio] can be found in the [official [!DNL RStudio] documentation](https://rstudio.com/products/rstudio/).
+> 
+> Additionally, to use RStudio with Query Service, you need to install the PostgreSQL JDBC 4.2 Driver. You can download the JDBC Driver from the [PostgreSQL official site](https://jdbc.postgresql.org/download.html).
 
-## Next steps
+## Create a [!DNL Query Service] connection in the [!DNL RStudio] interface
+
+After installing [!DNL RStudio], you need to install the RJDBC package. Go to the **[!DNL Packages]** pane, and select **[!DNL Install]**. 
+
+![](../images/clients/rstudio/install-package.png)
+
+A pop up appears, showing the **[!DNL Install Packages]** screen. Ensure that **[!DNL Repository (CRAN)]** is selected for the **[!DNL Install from]** section. The value for **[!DNL Packages]** should be `RJDBC`. Ensure **[!DNL Install dependencies]** is selected. After confirming all the values are correct, select **[!DNL Install]** to install the packages.
+
+![](../images/clients/rstudio/install-jrdbc.png)
+
+Now that the RJDBC package has been installed, restart RStudio to complete the installation process.
+
+After RStudio has restarted, you can now connect to Query Service. Select the **[!DNL RJDBC]** package in the **[!DNL Packages]** pane, and enter the following command in the console:
+
+```console
+pgsql <- JDBC("org.postgresql.Driver", "{PATH TO THE POSTGRESQL JDBC JAR}", "`")
+```
+
+Where {PATH TO THE POSTGRESQL JDBC JAR} represents the path to the PostgreSQL JDBC JAR that was installed on your computer.
+
+Now, you can create your connection to Query Service by entering the following command in the console:
+
+```console
+qsconnection <- dbConnect(pgsql, "jdbc:postgresql://{HOSTNAME}:{PORT}/{DATABASE_NAME}?user={USERNAME}&password={PASSWORD}&sslmode=require")
+```
+
+>[!NOTE]
+>
+>For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+
+![](../images/clients/rstudio/connection-rjdbc.png)
+
+## Writing queries
 
 Now that you have connected to [!DNL Query Service], you can write queries to execute and edit SQL statements. For example, you can use `dbGetQuery(con, sql)` to execute queries, where `sql` is the SQL query you want to run.
 
-The following query uses a dataset containing [ExperienceEvents](../creating-queries/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
+The following query uses a dataset containing [Experience Events](../best-practices/experience-event-queries.md) and creates a histogram of page views of a website, given the device's screen height.
 
 ```sql
 df_pageviews <- dbGetQuery(con,
@@ -80,4 +87,6 @@ df_pageviews
 7 600-699 3097040
 ```
 
-For more information on how to write and run queries, please read the [running queries guide](../creating-queries/creating-queries.md).
+## Next steps
+
+For more information on how to write and run queries, please read the guide on [running queries](../best-practices/writing-queries.md).

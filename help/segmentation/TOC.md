@@ -1,18 +1,19 @@
 ---
-product: experience-platform
 audience: user
-user-guide-title: Adobe Experience Platform Segmentation Service Help
+user-guide-title: Adobe Experience Platform Segmentation Service
 breadcrumb-title: Segmentation Service Guide
 user-guide-description: Build segments and generate audiences from your Real-time Customer Profile data.
+feature: Segments
 ---
 
-# Adobe Experience Platform Segmentation Service Help {#segmentation}
+# Adobe Experience Platform Segmentation Service {#segmentation}
 
-- [Overview](home.md)
+- [Segmentation Service overview](home.md)
 - [Segmentation data types](data-types.md)
-- Segmentation API developer guide {#api}
+- Segmentation API {#api}
     - [Overview](api/overview.md)
     - [Getting started](api/getting-started.md)
+    - [Edge segmentation](api/edge-segmentation.md)
     - [Export jobs](api/export-jobs.md)
     - [Previews and estimates](api/previews-and-estimates.md)
     - [Schedules](api/schedules.md)
@@ -21,10 +22,12 @@ user-guide-description: Build segments and generate audiences from your Real-tim
     - [Segment search](api/segment-search.md)
     - [Streaming segmentation](api/streaming-segmentation.md)
 - Segmentation UI {#ui}
-    - [Segmentation UI guide](ui/overview.md)
+    - [Overview](ui/overview.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
+    - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
 - [Honoring opt-outs](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
@@ -44,7 +47,11 @@ user-guide-description: Build segments and generate audiences from your Real-tim
   - [Miscellaneous functions](pql/misc-functions.md)
 - Tutorials {#tutorials}
   - [Create a segment](tutorials/create-a-segment.md)
+  - [Create a segment (Video)](video/create-segment.md)
+  - [Create a dynamic segment (Video)](video/create-a-dynamic-segment.md)
+  - [Create a multi-entity segment (video)](video/create-multi-entity-segments.md)
   - [Evaluate a segment](tutorials/evaluate-a-segment.md)
+  - [Importing and using external audiences](tutorials/using-external-audiences.md)
   - [Create a dataset to export data](tutorials/create-dataset-export-segment.md)
   - [Enforce data usage compliance for segments](tutorials/governance.md)
 - [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml)

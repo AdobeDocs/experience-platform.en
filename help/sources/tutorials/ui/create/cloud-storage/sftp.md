@@ -1,19 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
-title: Create an SFTP source connector in the UI
-topic: overview
+title: Create an SFTP  Source Connection in the UI
+topic-legacy: overview
 type: Tutorial
-description: This tutorial provides steps for creating a SFTP source connector using the Platform user interface.
+description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
+exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 ---
+# Create an SFTP source connection in the UI
 
-# Create an SFTP source connector in the UI
-
->[!NOTE]
->
->The SFTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
-This tutorial provides steps for creating an SFTP source connector using the Platform user interface.
+This tutorial provides steps for creating an SFTP source connection using the Adobe Experience Platform UI.
 
 ## Getting started
 
@@ -39,7 +35,7 @@ In order to connect to SFTP, you must provide values for the following connectio
 | `host` | The name or IP address associated with your SFTP server. |
 | `username` | The username with access to your SFTP server. |
 | `password` | The password for your SFTP server. |
-| `privateKeyContent` | The Base64 encoded SSH private key content. The SSH private key OpenSSH (RSA/DSA) format. |
+| `privateKeyContent` | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | `passPhrase` | The pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 Once you have gathered your required credentials, you can follow the steps below to create a new SFTP account to connect to Platform.
@@ -68,13 +64,13 @@ Alternatively, you can select **[SSH public key]** and connect your SFTP account
 
 >[!IMPORTANT]
 >
->The SFTP connector supports an RSA/DSA OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
+>The SFTP connector supports an RSA or DSA type OpenSSH key. Ensure that your key file content starts with `"-----BEGIN [RSA/DSA] PRIVATE KEY-----"` and ends with `"-----END [RSA/DSA] PRIVATE KEY-----"`. If the private key file is a PPK-format file, use the PuTTY tool to convert from PPK to OpenSSH format.
 
 ![connect-ssh](../../../../images/tutorials/create/sftp/ssh.png)
 
 | Credential | Description |
 | ---------- | ----------- |
-| Private key content | A Base64 encoded SSH private key content. The SSH private key should should be OpenSSH format. |
+| Private key content | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
 | Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
 
 ### Existing account

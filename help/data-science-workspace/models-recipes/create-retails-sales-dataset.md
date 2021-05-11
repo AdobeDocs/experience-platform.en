@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;retail sales recipe;Data Science Workspace;popular topics;recipes
 solution: Experience Platform
-title: Create the retail sales schema and dataset
-topic: tutorial
+title: Create the Retail Sales Schema and Dataset
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial provides you with the prerequisites and assets required for all other Adobe Experience Platform Data Science Workspace tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on Experience Platform.
+exl-id: 1b868c8c-7c92-4f99-8486-54fd7aa1af48
 ---
-
 # Create the retail sales schema and dataset
 
 This tutorial provides you with the prerequisites and assets required for all other [!DNL Adobe Experience Platform] [!DNL Data Science Workspace] tutorials. Upon completion, the Retail Sales schema and datasets will be available for you and members of your IMS Organization on [!DNL Experience Platform].
@@ -15,7 +15,7 @@ This tutorial provides you with the prerequisites and assets required for all ot
 
 Before starting this tutorial, you must have the following prerequisites:
 -   Access to [!DNL Adobe Experience Platform]. If you do not have access to an IMS Organization in [!DNL Experience Platform], please speak to your system administrator before proceeding.
--   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](../../tutorials/authentication.md) tutorial to obtain the following values in order to successful complete this tutorial:
+-   Authorization to make [!DNL Experience Platform] API calls. Complete the [Authenticate and access Adobe Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en) tutorial to obtain the following values in order to successful complete this tutorial:
     -   Authorization: `{ACCESS_TOKEN}`
     -   x-api-key: `{API_KEY}`
     -   x-gw-ims-org-id: `{IMS_ORG}`
@@ -105,7 +105,7 @@ for more information.
 You have also successfully ingested Retail Sales sample data into [!DNL Experience Platform] using the provided bootstrap script.
 
 To continue working with the ingested data:
-- [Analyze your data using Jupyter notebooks](../jupyterlab/analyze-your-data.md)
-    - Use Jupyter notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
+- [Analyze your data using Jupyter Notebooks](../jupyterlab/analyze-your-data.md)
+    - Use Jupyter Notebooks in Data Science Workspace to access, explore, visualize, and understand your data.
 - [Package source files into a Recipe](./package-source-files-recipe.md)
     - Follow this tutorial to learn how to bring your own Model into [!DNL Data Science Workspace] by packaging source files in an importable Recipe file.

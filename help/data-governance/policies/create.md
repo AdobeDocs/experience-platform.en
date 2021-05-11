@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;data governance;data usage policy
 solution: Experience Platform
-title: Create a data usage policy
-topic: policies
+title: Create a Data Usage Policy in the API
+topic-legacy: policies
 type: Tutorial
 description: The Policy Service API allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels. This document provides a step-by-step tutorial for creating a policy using the Policy Service API.
+exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 ---
-
 # Create a data usage policy in the API
 
 The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
@@ -17,8 +17,8 @@ This document provides a step-by-step tutorial for creating a policy using the [
 
 This tutorial requires a working understanding of the following key concepts involved in creating and evaluating policies:
 
-* [[!DNL Data Governance]](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
-* [Data usage labels](../labels/overview.md): Data usage labels are applied to XDM data fields, specifying restrictions for how that data can be accessed.
+* [Adobe Experience Platform Data Governance](../home.md): The framework by which [!DNL Platform] enforces data usage compliance.
+    * [Data usage labels](../labels/overview.md): Data usage labels are applied to XDM data fields, specifying restrictions for how that data can be accessed.
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Sandboxes](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 

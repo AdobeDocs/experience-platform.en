@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;Synapse;synapse;Azure Synapse Analytics
 solution: Experience Platform
-title: Create an Azure Synapse Analytics connector using the Flow Service API
-topic: overview
+title: Create an Azure Synapse Analytics Source Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
-description: This tutorial uses the Flow Service API to walk you through the steps to connect Azure Synapse Analytics (hereinafter referred to as "Synapse") to Experience Platform.
+description: Learn how to connect Azure Synapse Analytics to Adobe Experience Platform using the Flow Service API.
+exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 ---
-
-# Create an [!DNL Azure Synapse Analytics] connector using the [!DNL Flow Service] API
+# Create an [!DNL Azure Synapse Analytics] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
@@ -15,7 +15,7 @@ description: This tutorial uses the Flow Service API to walk you through the ste
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the Flow Service API to walk you through the steps to connect [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") to [!DNL Experience Platform].
+Learn how to connect [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") to [!DNL Experience Platform].
 
 ## Getting started
 
@@ -43,7 +43,7 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](../../../../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

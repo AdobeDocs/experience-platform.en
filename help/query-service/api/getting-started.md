@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;Query service;query
 solution: Experience Platform
-title: Query Service developer guide
-topic: query templates
-description: This developer guide provides steps for performing various operations in the Adobe Experience Platform Query Service API.
+title: Query Service API Guide
+topic-legacy: query templates
+description: The Query Service API allows developers to query their Adobe Experience Platform data using standard SQL. Follow this guide to learn how to perform key operations using the API.
+exl-id: 2f4a156b-5623-419a-a9b2-72310f755708
 ---
-
-# [!DNL Query Service] developer guide
+# [!DNL Query Service] API guide
 
 This developer guide provides steps for performing various operations in the Adobe Experience Platform [!DNL Query Service] API.
 
@@ -26,7 +26,7 @@ This guide provides example API calls to demonstrate how to format your requests
 
 ### Gather values for required headers
 
-In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](../../tutorials/authentication.md). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Platform] API calls, as shown below:
+In order to make calls to [!DNL Experience Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Platform] API calls, as shown below:
 
 - Authorization: `Bearer {ACCESS_TOKEN}`
 - x-api-key: `{API_KEY}`

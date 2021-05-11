@@ -1,12 +1,10 @@
 ---
 keywords: Marketo Web Personalization;marketo web personalization;Marketo Web Personalization extension;marketo web personalization extension;marketo;Marketo
 title: Marketo Web Personalization extension
-seo-title: Marketo Web Personalization extension
 description: The Marketo Web Personalization extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-seo-description: The Marketo Web Personalization extension is a personalization destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 2f194a5e-13b7-460a-a968-29131771efca
 ---
-
-# [!DNL Marketo Web Personalization] Extension {#marketo-web-personalization-extension}
+# [!DNL Marketo Web Personalization] extension {#marketo-web-personalization-extension}
 
 ## Overview {#overview}
 

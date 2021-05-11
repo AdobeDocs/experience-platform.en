@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;activate inbound data;populate profile;populate rtcp;populated unified profile
 solution: Experience Platform
-title: Activate inbound source data to populate customer profiles
-topic: overview
+title: Activate Inbound Source Data to Populate Customer Profiles in the UI
+topic-legacy: overview
 type: Tutorial
 description: Inbound data from your source connector can be used towards enriching and populating your Real-time Customer Profile data.
+exl-id: ddd3766a-3f55-4bbc-8358-c578eae2c629
 ---
-
 # Activate inbound source data to populate customer profiles
 
 Inbound data from your source connector can be used towards enriching and populating your [!DNL Real-time Customer Profile] data.

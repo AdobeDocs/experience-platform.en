@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;effective policies;access control api
 solution: Experience Platform
-title: View effective policies
-topic: developer guide
+title: Effective Policies API Endpoint
+topic-legacy: developer guide
 description: Access control in Adobe Experience Platform allows you to manage roles and permissions for various Platform capabilities by using the Adobe Admin Console. This document serves as a guide for how to view effective policies using the access control API for Adobe Experience Platform.
+exl-id: 555d73db-115d-4f4c-8bd2-b91477799591
 ---
-
-# View effective policies
+# Effective policies endpoint
 
 To view effective policies for the current user, make a POST request to the `/acl/effective-policies` endpoint in the [!DNL Access Control] API. The permissions and resource types you want to retrieve must be provided in the request payload in the form of an array. This is demonstrated in the example API call below.
 

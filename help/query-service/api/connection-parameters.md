@@ -1,20 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;query service;api guide;connection parameters;Query service;
 solution: Experience Platform
-title: Query Service developer guide
-topic: connection parameters
+title: Connection Parameters API Endpoint
+topic-legacy: connection parameters
 description: You can retrieve your connection parameters for using the interactive service by making a GET request to the /connection_parameters endpoint.
+exl-id: 1667f4a5-e6e5-41e9-8f9d-6d2c63c7d7d6
 ---
-
-# Connection parameters
+# Connection parameters endpoint
 
 ## Sample API calls
 
 Now that you understand what headers to use, you are ready to begin making calls to the [!DNL Query Service] API. The following sections walk through the various API calls you can make using the [!DNL Query Service] API. Each call includes the general API format, a sample request showing required headers, and a sample response.
 
-### Request connection parameters for the interactive service
+### Request connection parameters
 
-You can retrieve your connection parameters for using the [interactive service](../creating-queries/writing-queries.md) by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
+You can retrieve your connection parameters by making a GET request to the `/connection_parameters` endpoint. For more information about clients that use connection parameters to connect via the interactive service, please read the documentation on [Query Service clients](../clients/overview.md).
 
 **API format**
 
