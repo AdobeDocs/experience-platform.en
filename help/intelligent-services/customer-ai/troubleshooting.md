@@ -13,7 +13,7 @@ Customer AI displays errors when model training, scoring, and configuration fail
 
 ![last run status](./images/errors/last-run-status.png)
 
-In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is displayed, you can select the run status to open a side panel. In the side panel is your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** can contain information on why the run failed, however, sometimes it is unclear to Customer AI and you may need to contact support with the error code provided.
+In the event that **[!UICONTROL Failed]** or **[!UICONTROL Training issue]** is displayed, you can select the run status to open a side panel. The side panel  contains your **[!UICONTROL Last run status]** and **[!UICONTROL Last run details]**. **[!UICONTROL Last run details]** contains information on why the run failed. In the event that Customer AI is not able to provide details on your error, contact support with the error code thats provided.
 
 <img src='./images/errors/last-run-details.png' width=300 /><br />
 
