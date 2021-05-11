@@ -14,15 +14,30 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 
 This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
-## Prerequisites
+## Set up the [!DNL Marketo] namespace and schema auto-generation utility
 
-Before you can generate your B2B namespaces and schemas, you must first set up your Platform developer console and [!DNL Postman] environment. For more information, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
+The first step in using the [!DNL Marketo] namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
 
-With a Platform developer console and a [!DNL Postman] set up, apply the following variables to your [!DNL Marketo] environment:
+- You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility).
+- For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
+- For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
+
+With a Platform developer console and [!DNL Postman] set up, you can now start applying the appropriate environment values to your [!DNL Postman] environment.
+
+The following table contains example values as well as additional information on populating your [!DNL Postman] environment: 
 
 | Environment variable | Example value | Notes |
 | --- | --- | --- |
+| `CLIENT_SECRET` | `{CLIENT_SECRET}` |
+| `API_KEY` | `{API_KEY}` |
+| `META_SCOPE` | `ent_dataservices_sdk` | This is a fixed variable and the value is always set to `ent_dataservices_sdk`. |
+| `CONTAINER_ID` | `global` | This is a fixed variable and the value is always set to  `global`. |
+| `ACCESS_TOKEN` | `Bearer {ACCESS_TOKEN}`
 | `PRIVATE_KEY` | `{PRIVATE_KEY}` |
+| `JWT_TOKEN` | `{JWT_TOKEN}`
+| `TECHNICAL_ACCOUNT_ID` | `{TECHNICAL_ACCOUNT}@techacct.adobe.com` |
+| `IMS` | `ims-na1.adobelogin.com` | This is a fixed variable and the value is always set to `ims-na1.adobelogin.com`. |
+| `IMS_ORG` | `{IMS_ORG}@adobeOrg` |
 | `SANDBOX_NAME` | `prod` |
 | `TENANT_ID` | `b2bcdpproductiontest` |
 | `munchkinId` | `123-ABC-456 `| See the tutorial on [authenticating your [!DNL Marketo] instance](./marketo-auth.md) for more information. |
