@@ -73,10 +73,10 @@ To enable Offer Decisioning, you need to perform the following steps:
     * Platform Launch installed SDK
         1. [Create a Platform Launch property](https://docs.adobe.com/content/help/en/launch/using/reference/admin/companies-and-properties.html)
         2. [Add the Platform Launch Embed Code](https://docs.adobe.com/content/help/en/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-        3. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. Useful documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
+        3. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/extensions/overview.html).
         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-        4. Create the necessary [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you will need to create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+        4. Create the necessary [Data Elements](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
         ![identity-map-data-element](./assets/identity-map-data-element.png)
         ![xdm-object-data-element](./assets/xdm-object-data-element.png)
         5. Create your [Rules](https://docs.adobe.com/content/help/en/launch/using/reference/manage-resources/rules.html).
