@@ -12,7 +12,7 @@ feature: Data Management
 * [Platform Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
   * [Prerequisites](fundamentals/prerequisite.md)
-  * [Create an edge configuration](fundamentals/edge-configuration.md)
+  * [Configuring a datastream](fundamentals/datastreams.md)
   * [Install the SDK](fundamentals/installing-the-sdk.md)
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
@@ -50,6 +50,7 @@ feature: Data Management
   * [Web SDK extension](extension/web-sdk-extension.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
+  * [Accessing the ECID](extension/accessing-the-ecid.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)
