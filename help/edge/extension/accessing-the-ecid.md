@@ -5,7 +5,7 @@ description: Adobe Experience Platform Web SDK Extension Leveraging ECID in Adob
 
 # Accessing the ECID
 
-The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a visitor to your website. In certain circumstances, you might prefer to access the ECID (to send it to a third-party, for example).
+The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a visitor to your website. In certain circumstances, you might prefer to access the ECID (to send it to a third party, for example).
 
 To access the ECID within Adobe Experience Platform Launch, Adobe recommends the following:
 
