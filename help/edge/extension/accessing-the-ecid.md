@@ -22,6 +22,7 @@ To access the ECID within Adobe Experience Platform Launch, Adobe recommends the
         _satellite.setVar("ECID", result.identity.ECID);
       });
    ```
+   
 1. Save the rule.
 
 You should then be able to access the ECID in subsequent rules using `%ECID%` or `_satellite.getVar("ECID")` like you would any other data element. 
