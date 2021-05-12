@@ -11,7 +11,7 @@ The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a vis
 
 To access the ECID within Adobe Experience Platform Launch, Adobe recommends the following:
 
-1. Ensure your property is configured with [rule component sequencing](/docs/launch/using/reference/manage-resources/rules.html?lang=en#rule-component-sequencing) enabled. 
+1. Ensure your property is configured with [rule component sequencing](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing) enabled. 
 1. Create a new rule.
 1. Add a [!UICONTROL Library Loaded] event to the rule.
 1. Add a [!UICONTROL Custom Condition] action to the rule with the following code (assuming the name you've configured for the SDK instance is `alloy`):
