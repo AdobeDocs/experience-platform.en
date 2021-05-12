@@ -55,7 +55,7 @@ It is important to understand the following terminology when working with Offer 
 
 To enable Offer Decisioning, you need to perform the following steps:
 
-1. Enabled Adobe Experience Platform in your [edge configuration](../../fundamentals/edge-configuration.md) and check the "Offer Decisioning" box
+1. Enabled Adobe Experience Platform in your [datastream](../../fundamentals/datadtreams.md) and check the "Offer Decisioning" box
 ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 2. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through [Adobe Experience Platform Launch](http://launch.adobe.com/). Here is a [quick start guide to Platform Launch](https://docs.adobe.com/content/help/en/launch/using/intro/get-started/quick-start.html)).
 3. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
