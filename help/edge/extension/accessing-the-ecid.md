@@ -1,8 +1,6 @@
 ---
 title: Accessing the ECID 
-seo-title: Adobe Experience Platform Web SDK Extension Leveraging ECID in Adobe Experience Platform Launch
 description: Adobe Experience Platform Web SDK Extension Leveraging ECID in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK Extension Leveraging ECID in Adobe Experience Platform Launch
 ---
 
 # Accessing the ECID
@@ -16,12 +14,12 @@ To access the ECID within Adobe Experience Platform Launch, Adobe recommends the
 1. Add a [!UICONTROL Library Loaded] event to the rule.
 1. Add a [!UICONTROL Custom Condition] action to the rule with the following code (assuming the name you've configured for the SDK instance is `alloy`):
 
-  ``` javascript
+   ```javascript
     return alloy("getIdentity")
       .then(function(result) {
         _satellite.setVar("ECID", result.identity.ECID);
       });
-  ```
+   ```
 
 1. Save the rule.
 
