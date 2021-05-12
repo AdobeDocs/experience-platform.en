@@ -26,7 +26,7 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 >[!TIP]
 >
->In the connect destination workflow, you can create a custom folder per segment file in your Amazon S3 storage. Read [Use macros to create a folder in your storage location](./workflow.md#use-macros) for instructions.
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](./workflow.md#use-macros) for instructions.
 
 ## Required [!DNL Amazon S3] permissions {#required-s3-permission}
 
