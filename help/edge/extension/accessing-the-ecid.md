@@ -16,7 +16,7 @@ To access the ECID within Adobe Experience Platform Launch, Adobe recommends the
 1. Add a [!UICONTROL Library Loaded] event to the rule.
 1. Add a [!UICONTROL Custom Condition] action to the rule with the following code (assuming the name you've configured for the SDK instance is `alloy`):
 
-   ```js
+   ```javascript
     return alloy("getIdentity")
       .then(function(result) {
         _satellite.setVar("ECID", result.identity.ECID);
