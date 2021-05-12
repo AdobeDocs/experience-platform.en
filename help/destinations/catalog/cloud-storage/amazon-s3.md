@@ -30,7 +30,7 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 ## Required [!DNL Amazon S3] permissions {#required-s3-permission}
 
-To successfully connect and export data to your [!DNL Amazon S3] storage location, create an IAM user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
+To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
