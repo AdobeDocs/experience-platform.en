@@ -24,9 +24,13 @@ For [!DNL Amazon S3] destinations, enter the following information in the create
 
 * **[!DNL Amazon S3] access key and [!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
+>[!TIP]
+>
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](./workflow.md#use-macros) for instructions.
+
 ## Required [!DNL Amazon S3] permissions {#required-s3-permission}
 
-To successfully connect and export data to your [!DNL Amazon S3] storage location, create an IAM user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
+To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
 
 * `s3:DeleteObject`
 * `s3:GetBucketLocation`
