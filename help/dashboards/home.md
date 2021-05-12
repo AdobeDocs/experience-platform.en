@@ -27,4 +27,4 @@ The data in the snapshot shows the data exactly as it appears at the specific po
 
 There are multiple dashboards currently available within Experience Platform, each providing transparency into your organization's customer data.
 
-To learn more about these dashboards and their available metrics, please select from the list of available dashboards in the documentation navigation.
+To learn more about these dashboards and their metrics, please select from the list of available dashboards in the documentation navigation.

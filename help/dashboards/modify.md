@@ -6,7 +6,7 @@ exl-id: 75e4aea7-b521-434d-9cd5-32a00d00550d
 ---
 # Modify dashboards {#modify-dashboards}
 
-Within the Adobe Experience Platform user interface (UI), you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data and widgets can be created and shared between users in the same organization. 
+Within the Adobe Experience Platform user interface (UI), you can view and interact with your organization's data using multiple dashboards. The default widgets and metrics shown in the dashboards can be adjusted at an individual user level to display preferred data, and widgets can be created and shared between users in the same organization. 
 
 This guide provides step-by-step instructions for customizing how dashboard data is displayed within the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards in the Platform UI.
 
@@ -22,13 +22,13 @@ From any dashboard (for example, the [!UICONTROL Profiles] dashboard), you can s
 
 ## Reorder widgets
 
-After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles by identity namespace]** widget is moved to the top row and the [!UICONTROL Profile Count] widget now appears in the second row.
+After choosing to modify the dashboard, you can reorder the widgets by selecting the widget title and dragging and dropping the widgets into the desired order. In this example, the **[!UICONTROL Profiles count trend]** widget is moved to the top row and the [!UICONTROL Profile Count] widget now appears in the second row.
 
 ![](images/customization/move-widget.png)
 
 ## Resize widgets
 
-You can also resize a widget by selecting the angle symbol in the bottom-right corner of the widget (`⌟`) and dragging the widget to the desired size. In this example, the **[!UICONTROL Profiles by identity namespace]** widget is resized to fill the entire top row, automatically moving the other widgets to the second row. Note how the horizontal axis adjusts to provide more detailed increments as the widget gets larger.
+You can also resize a widget by selecting the angle symbol in the bottom-right corner of the widget (`⌟`) and dragging the widget to the desired size. In this example, the **[!UICONTROL Profiles by identity]** widget is resized to fill the entire top row, automatically moving the other widgets to the second row. Note how the horizontal axis adjusts to provide more detailed increments as the widget gets larger.
 
 >[!NOTE]
 >
@@ -44,9 +44,11 @@ After you have finished moving and resizing widgets, select **[!UICONTROL Save]*
 
 ## Widget library
 
-In addition to resizing and reordering widgets, in the [!UICONTROL Profiles] and [!UICONTROL Segments] dashboards you can select more widgets to display or create widgets using the **[!UICONTROL Widget library]**. 
+In addition to resizing and reordering widgets, selecting **[!UICONTROL Modify dashboard]** in the [!UICONTROL Profiles], [!UICONTROL Segments], and [!UICONTROL Destinations] dashboards enables you to access the **[!UICONTROL Widget library]** where you can find more widgets to display or create custom widgets for your organization. 
 
 For step-by-step instructions on how to access and work with the [!UICONTROL Widget library], refer to the [widget library guide](widget-library.md).
+
+![](images/customization/widget-library.png)
 
 ## Next steps
 
