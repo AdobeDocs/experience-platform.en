@@ -48,6 +48,8 @@ After marking the `_id` field as the primary identity, select the title of the s
 
 Now, this schema is enabled for Profile, with the primary identification assigned to the non-person identity namespace you created. As a result, this means that segment metadata imported into Platform using this schema will be ingested into Profile without being merged with other people-related Profile data.
 
+The segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
+
 ## Create a dataset for the schema
 
 After configuring the schema, you will need to create a dataset for the segment metadata. 
