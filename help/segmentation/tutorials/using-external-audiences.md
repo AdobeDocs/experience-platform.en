@@ -18,6 +18,18 @@ Adobe Experience Platform supports the ability to import external audience, whic
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
 
+The following section provides additional details on the differences between segment data and segment metadata.
+
+### Segment data vs segment metadata
+
+To import and use external audiences, you will need to set up and ingest both segment data and segment metadata.
+
+Segment data are the profiles meet the segment qualification criteria, and as a result, are part of the audience.
+
+Segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
+
+![](../images/tutorials/external-audiences/segment-data-metadata.png)
+
 ## Create an identity namespace for the external audience
 
 The first step for using external audiences is creating an identity namespace. Identity namespaces allow Platform to associate where a segment originates from.
@@ -47,8 +59,6 @@ After marking the `_id` field as the primary identity, select the title of the s
 ![](../images/tutorials/external-audiences/schema-profile.png)
 
 Now, this schema is enabled for Profile, with the primary identification assigned to the non-person identity namespace you created. As a result, this means that segment metadata imported into Platform using this schema will be ingested into Profile without being merged with other people-related Profile data.
-
-The segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
 
 ## Create a dataset for the schema
 
