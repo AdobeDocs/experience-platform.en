@@ -1,12 +1,12 @@
 ---
 keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
-title: List Active Sandboxes for the Current User in the API
+title: Root (/) API Endpoint
 topic-legacy: developer guide
 description: You can list the sandboxes that are active for the current user by making a GET request to the root endpoint.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 ---
-# List active sandboxes for the current user in the API
+# Root (/) endpoint
 
 >[!NOTE]
 >
@@ -22,7 +22,7 @@ GET /{QUERY_PARAMS}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
 **Request**
 
@@ -102,16 +102,3 @@ A successful response returns a list of sandboxes that are active for the curren
 | `type` | The sandbox type, either "development" or "production". |
 | `isDefault` | A boolean property indicating whether this sandbox is the default sandbox for the organization. Typically this is the production sandbox. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |
-
-## Using query parameters {#query}
-
-The [[!DNL Sandbox]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml) API supports the use of query parameters to page and filter results when listing sandboxes.
-
->[!NOTE]
->
->The `limit` and `offset` query parameters have to be specified together. If you specify only one, the API will return an error. If you specify none, default limit is 50 and offset is 0.
-
-| Parameter | Description |
-| --------- | ----------- |
-| `limit` | The maximum number of records to be returned in the response. |
-| `offset` | The number of entities from the first record to start (offset) the response list from. |

@@ -1,12 +1,20 @@
 ---
 keywords: Experience Platform;home;popular topics;list sandboxes
 solution: Experience Platform
-title: List Supported Sandbox Types in the API
+title: Sandbox Types API Endpoint
 topic-legacy: developer guide
 description: You can retrieve a list of supported sandbox types for your organization by making a GET request to the /sandboxTypes endpoint.
 exl-id: eb5e1b44-37f5-4ed5-98f5-ac8db8792c7d
 ---
-# List supported sandbox types in the API
+# Sandbox Types endpoint
+
+You can retrieve a list of supported sandbox types for your organization by making a GET request to the `/sandboxTypes` endpoint.
+
+## Getting started
+
+The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+
+## Retrieve a list of supported sandbox types
 
 You can retrieve a list of supported sandbox types for your organization by making a GET request to the `/sandboxTypes` endpoint.
 

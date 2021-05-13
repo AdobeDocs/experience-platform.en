@@ -16,13 +16,14 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 ## Understanding sandboxes
 
-Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. The multiple production sandboxes feature provides you with the right functionality for data while still maintaining operational isolation. This feature then allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions.
+Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. There are two kinds of sandboxes supported on Experience Platform:
 
-An Experience Platform instance supports multiple production and non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
+* **Production sandbox**: A production sandbox is a sandbox intended for use in your production environment. The multiple production sandboxes feature provides you with the right functionality for data while still maintaining operational isolation. This feature then allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions.
+* **Non-production sandbox**: A non-production sandbox (also known as a "development" sandbox) allow you to test features, run experiments, and make custom configurations without impacting your production sandbox.
 
-Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, both production and non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes.
+An Experience Platform instance supports multiple production and non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. In addition, both production and non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes.
 
-Finally, the default production sandbox is the first production sandbox that is created when an IMS Org is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID. Currently, the default production sandbox can neither be deleted nor reset.
+Finally, the default production sandbox is the first production sandbox that is created when an IMS Org is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
 
 ### Sandbox licensing
 
@@ -71,7 +72,7 @@ If `x-sandbox-name` is not included in an API call, the system will use a defaul
 
 ### Sandbox API
 
-The Sandbox API allows you to manage sandboxes by using RESTful API operations. See the [sandbox developer guide](api/getting-started.md) for detailed information on how to use the API, including properly formatted requests and example responses.
+The Sandbox API allows you to manage sandboxes by using RESTful API operations. See the [sandbox developer guide](api/overview.md) for detailed information on how to use the API, including properly formatted requests and example responses.
 
 ## Next steps
 
