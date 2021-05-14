@@ -71,7 +71,7 @@ For a list of data usage labels and their definitions, see the [data usage label
 
 Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with [!DNL Segment Match] and its features.
 
-### Connect partner
+### Manage partner
 
 The first step with using [!DNL Segment Match] is to establish a connection between you and your partner. This "two-way handshake" acts as a self-service method for users to connect their Platform organizations together at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
 
