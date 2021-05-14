@@ -41,9 +41,9 @@ By keeping the class-level timestamp separate from other related datetime values
 
 ### Using calculated fields
 
-Certain interactions in your experience applications can result in multiple related events that technically share the same event timestamp. For example, if a customer views a product on your website, this can result in both a "product view" event and a generic "page view" event. In these cases, you can use calculated fields to capture the most important event whenever multiple events are observed.
+Certain interactions in your experience applications can result in multiple related events that technically share the same event timestamp, and can therefore be represented as a single event record. For example, if a customer views a product on your website, this can result in an event record that contains both "product view" attributes as well as some overlapping generic "page view" attributes. In these cases, you can use calculated fields to capture the most important attributes when multiple events are captured in a record.
 
-[Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multiple events when being ingested into Experience Platform.
+[Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform.
 
 If you are manually ingesting data into Platform via the UI, see the guide on [mapping a CSV file to XDM](../../ingestion/tutorials/map-a-csv-file.md) for specific steps on how to create calculated fields.
 
