@@ -49,16 +49,16 @@ If you are manually ingesting data into Platform via the UI, see the guide on [m
 
 If you are streaming data to Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
 
-## Compatible mixins {#mixins}
+## Compatible schema field groups {#field-groups}
 
 >[!NOTE]
 >
->The names of several mixins have changed. See the document on [mixin name updates](../mixins/name-updates.md) for more information.
+>The names of several field groups have changed. See the document on [field group name updates](../field-groups/name-updates.md) for more information.
 
-Adobe provides several standard mixins for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used mixins for the class:
+Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
-* [[!UICONTROL End User ID Details]](../mixins/event/enduserids.md)
-* [[!UICONTROL Environment Details]](../mixins/event/environment-details.md)
+* [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
+* [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
 
 ## Appendix
 
