@@ -20,7 +20,7 @@ Information about the device. This does not include data that can be looked up s
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900`        |
 
-The height in pixel of the screen.
+The height of the screen (in pixels).
 
 ### Screen orientation
 
@@ -78,7 +78,7 @@ Information about the SDK used to collect the event.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-The software development kit (SDK) identifier.  This field uses a URI to improve uniqueness among identifiers provided by different software libraries. When the standalone library is used, the value is "https://ns.adobe.com/experience/alloy". When the library is used as part of the Platform Launch extension, the value is "https://ns.adobe.com/experience/alloy+reactor".
+The software development kit (SDK) identifier.  This field uses a URI to improve uniqueness among identifiers provided by different software libraries. When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the Platform Launch extension, the value is `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -86,7 +86,7 @@ The software development kit (SDK) identifier.  This field uses a URI to improve
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0`     |
 
-When the standalone library is used, the value is simply the library version. When the library is used as part of the Platform Launch extension, this is the library version and the Platform Launch extension version joined with a "+". For example, if the library version were 2.1.0, and the Platform Launch extension version were 2.1.3, the value would be "2.1.0+2.1.3".
+When the standalone library is used, the value is simply the library version. When the library is used as part of the Platform Launch extension, this is the library version and the Platform Launch extension version joined with a "+". For example, if the library version were 2.1.0, and the Platform Launch extension version were 2.1.3, the value would be `2.1.0+2.1.3`.
 
 ### Environment
 
@@ -94,7 +94,7 @@ When the standalone library is used, the value is simply the library version. Wh
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser`    |
 
-The environment where the data was collected. This is always set to "browser".
+The environment where the data was collected. This is always set to `browser`.
 
 ## Place context (`placeContext`)
 
