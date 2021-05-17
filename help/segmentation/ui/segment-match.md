@@ -73,22 +73,46 @@ Once you have set up your identity data and namespaces, consent configuration, a
 
 ### Manage partner
 
-The first step with using [!DNL Segment Match] is to establish a connection between you and your partner. This "two-way handshake" acts as a self-service method for users to connect their Platform organizations together at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
+In the Platform UI, select **[!UICONTROL Segments]** from the left-navigation and then select **[!UICONTROL Feeds]** from the top header.
+
+![segments-feed.png](../images/ui/segment-match/segments-feed.png)
+
+The [!UICONTROL Feeds] page contains a list of feeds received from partners as well as feeds you have shared. To view a list of existing partners or establish a connection with a new partner, select **[!UICONTROL Manage partners]**.
+
+![manage-partners.png](../images/ui/segment-match/manage-partners.png)
+
+A connection between two partners is a "two-way handshake" that acts as a self-service method for users to connect their Platform organizations together at a sandbox level. The connection is required to inform Platform that an agreement has been established and that Platform can facilitate share services between you and your partner(s).
 
 >[!NOTE]
 >
 >The "two-way handshake" between you and your partner is strictly a connection. No data is exchanged during this process.
 
+You can view a list of connections with existing partners in the main interface of the [!UICONTROL Manage partners] screen. On the right-rail is the [!UICONTROL Share setting] panel, which provides you with the option to generate a new [!UICONTROL connect ID] as well as an input box where you can enter a partner's [!UICONTROL connect ID].
+
+![establish-connection.png](../images/ui/segment-match/establish-connection.png)
+
+To create a new [!UICONTROL connect ID], select **[!UICONTROL Regenerate]** under [!UICONTROL Share setting] and then select the copy icon beside the newly generated ID.
+
+![share-setting.png](../images/ui/segment-match/share-setting.png)
+
+To connect a partner using their [!UICONTROL connect ID], enter their unique ID value in the input box under [!UICONTROL Connect partner] and then select **[!UICONTROL Request]**.
+
+![connect-partner.png](../images/ui/segment-match/connect-partner.png)
+
 The connection process can be summarized as follows:
 
-1. You generate a Share ID through the [!UICONTROL Share Setting] function in the UI.
-2. You provide this Share ID to your partner.
-3. Your partner enters this Share ID in their sandbox and then makes a request.
+1. You generate a connect ID through the [!UICONTROL Share Setting] function in the UI.
+2. You provide this connect ID to your partner.
+3. Your partner enters this connect ID in their sandbox and then makes a request.
 4. You accept the request, linking your organization with your partner's organization.
 
 ### Create feed
 
 A **feed** is a grouping of data (segments), the rules for how that data can be exposed or used, and the configurations that determine how your data is matched against your partners' data. A feed can be managed independently and exchanged with other Platform users through [!DNL Segment Match].
+
+To create a new feed, select **[!UICONTROL Create feed]** from the [!UICONTROL Feeds] dashboard.
+
+![create-feed.png](../images/ui/segment-match/create-feed.png)
 
 The basic set up of a feed includes a name, a description, and configurations regarding data usage labels and identity namespaces.
 
