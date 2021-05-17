@@ -21,7 +21,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `_id` | `_id` |
 | `personID` | `personID` | Primary identity |
 | `eventType` | `eventType`|
-| `timeStamp` | `timestamp` |
+| `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4`|
@@ -48,7 +48,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
-| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
 | `directMarketing.email` | `directMarketing.email` |
@@ -252,10 +251,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 ## Persons {#persons}
 
-In the [!DNL Profiles] dashboard of the Platform UI, if the value of ID stitching in the merge policy you used to browse is set to `None`, then the linked identities window will only display the primary identity attribute.
-
-As a workaround, you can update the ID stitching field from `None` to `Private graph` in order to see all linked identities to a [!DNL Profile]. Alternatively, you can either create a new merge policy, or use a different merge policy that contains an ID stitching value set to `Private graph`. If you choose to create a new merge policy or use a different merge policy, you must ensure that the policy contains the same schema type that is used for the [!DNL Marketo] Persons mapping set. For more information, see the [merge policies UI guide](../../../../profile/ui/merge-policies.md).
-
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
@@ -306,7 +301,7 @@ As a workaround, you can update the ID stitching field from `None` to `Private g
 
 {style="table-layout:auto"}
 
->[!TIP]
+>[!NOTE]
 >
 >The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
 

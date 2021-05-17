@@ -36,7 +36,7 @@ Before data can be ingested into Adobe Experience Platform and used in the creat
 **This guide will help you:**
 - Browse existing schemas.
 - Create and name a schema.
-- Add and define XDM mixins.
+- Add and define XDM schema field groups.
 - Set your schema fields as identity fields.
 - Enable Profile for your schema.
 

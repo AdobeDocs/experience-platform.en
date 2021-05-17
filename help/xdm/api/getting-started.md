@@ -78,16 +78,16 @@ A successful response returns information regarding your organization's use of t
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "mixins": 3,
+    "fieldgroups": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
   },
   "recentlyCreatedResources": [ 
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -102,9 +102,9 @@ A successful response returns information regarding your organization's use of t
   ],
   "recentlyUpdatedResources": [
     {
-      "title": "Sample Mixin",
-      "description": "New Sample Mixin.",
-      "meta:resourceType": "mixins",
+      "title": "Sample Field Group",
+      "description": "New Sample Field Group.",
+      "meta:resourceType": "fieldgroups",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -153,7 +153,7 @@ Calls to the [!DNL Schema Registry] API require the use of a `CONTAINER_ID`. The
 
 ### Global container
 
-The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, mixins, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
+The `global` container holds all standard Adobe and [!DNL Experience Platform] partner provided classes, schema field groups, data types, and schemas. You may only perform list and lookup (GET) requests against the `global` container.
 
 An example of a call that uses the `global` container would look like the following:
 
@@ -163,15 +163,15 @@ GET /global/classes
 
 ### Tenant container
 
-Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, mixins, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
+Not to be confused with your unique `TENANT_ID`, the `tenant` container holds all classes, field groups, data types, schemas, and descriptors defined by an IMS Organization. These are unique to each organization, meaning they are not visible or manageable by other IMS Orgs. You may perform all CRUD operations (GET, POST, PUT, PATCH, DELETE) against resources that you create in the `tenant` container.
 
 An example of a call that uses the `tenant` container would look like the following:
 
 ```http
-POST /tenant/mixins
+POST /tenant/fieldgroups
 ```
 
-When you create a class, mixin, schema or data type in the `tenant` container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
+When you create a class, field group, schema or data type in the `tenant` container, it is saved to the [!DNL Schema Registry] and assigned an `$id` URI that includes your `TENANT_ID`. This `$id` is used throughout the API to reference specific resources. Examples of `$id` values are provided in the next section.
 
 ## Resource identification {#resource-identification}
 

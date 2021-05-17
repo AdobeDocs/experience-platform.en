@@ -1,7 +1,7 @@
 ---
 keywords: Azure event hub destination;azure event hub;azure eventhub
-title: (Beta) Azure Event Hubs connection
-description: Create a real-time outbound connection to your Azure Event Hubs storage to stream data from Experience Platform.
+title: (Beta) !DNL Azure Event Hubs] connection
+description: Create a real-time outbound connection to your !DNL Azure Event Hubs] storage to stream data from Experience Platform.
 exl-id: f98a389a-bce3-4a80-9452-6c7293d01de3
 ---
 # (Beta) [!DNL Azure Event Hubs] connection

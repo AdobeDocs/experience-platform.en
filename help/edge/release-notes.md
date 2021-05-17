@@ -11,7 +11,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 * The SDK can now be [installed as an npm package](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).
 * Added support for an `out` option when [configuring default consent](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#default-consent), which drops all events until consent is received (the existing `pending` option queues events and sends them once consent is received). 
 * The [onBeforeEventSend callback](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#onbeforeeventsend) can now be used to prevent an event from being sent.
-* Now uses an XDM mixin instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
+* Now uses an XDM schema field group instead of `meta.personalization` when sending events about personalized content being rendered or clicked.
 * The [getIdentity command](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html#retrieving-the-visitor-id) now returns the edge region ID alongside the identity.
 * Warnings and errors received from the server have been improved and are handled in a more appropriate fashion. 
 * Added support for [Adobe's Consent 2.0 standard](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?communicating-consent-preferences-via-the-adobe-standard).

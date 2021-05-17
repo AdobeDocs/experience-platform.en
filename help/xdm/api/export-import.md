@@ -8,7 +8,7 @@ exl-id: 33b62f75-2670-42f4-9aac-fa1540cd7d4a
 ---
 # Export/Import endpoints
 
-All resources within the [!DNL Schema Library] are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs. The [!DNL Schema Registry] API provides two endpoints that allow you generate an export payload for any schema, mixin, or data type in the[!DNL  Schema Library], and then use that payload to import that resource (and all dependent resources) into a target sandbox and IMS Org.
+All resources within the [!DNL Schema Library] are contained in a specific sandbox within an IMS Organization. In some cases, you may want to share Experience Data Model (XDM) resources between sandboxes and IMS Orgs. The [!DNL Schema Registry] API provides two endpoints that allow you generate an export payload for any schema, schema field group, or data type in the[!DNL  Schema Library], and then use that payload to import that resource (and all dependent resources) into a target sandbox and IMS Org.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ The export/import endpoints are part of the remote procedure calls (RPCs) that a
 
 ## Retrieve an export payload for a resource {#export}
 
-For any existing schema, mixin, or data type in the [!DNL Schema Library], you can generate an export payload by making a GET request to the `/export` endpoint, providing the ID of the resource in the path.
+For any existing schema, field group, or data type in the [!DNL Schema Library], you can generate an export payload by making a GET request to the `/export` endpoint, providing the ID of the resource in the path.
 
 **API format**
 
@@ -32,11 +32,11 @@ GET /rpc/export/{RESOURCE_ID}
 
 **Request**
 
-The following request retrieves an export payload for a `Restaurant` mixin.
+The following request retrieves an export payload for a `Restaurant` field group.
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -46,7 +46,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` mixin employs, while the second object is the `Restaurant` mixin itself. This payload can then be used to [import the resource](#import) into a different sandbox or IMS Organization.
+A successful response returns an array of objects, which represent the target XDM resource and all of its dependent resources. In this example, the first object in the array is a tenant-created `Property` data type that the `Restaurant` field group employs, while the second object is the `Restaurant` field group itself. This payload can then be used to [import the resource](#import) into a different sandbox or IMS Organization.
 
 Note that all instances of the resource's tenant ID are replaced with `<XDM_TENANTID_PLACEHOLDER>`. This allows the Schema Registry to automatically apply the correct tenant ID to the resources depending on where they are sent in the subsequent import call.
 
@@ -122,9 +122,9 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -200,7 +200,7 @@ POST /rpc/import
 
 **Request**
 
-The following request takes the payload returned in the previous [export example](#export) to import the `Restaurant` mixin into a new IMS Org and sandbox, as determined by the `x-gw-ims-org-id` and `x-sandbox-name` headers, respectively.
+The following request takes the payload returned in the previous [export example](#export) to import the `Restaurant` field group into a new IMS Org and sandbox, as determined by the `x-gw-ims-org-id` and `x-sandbox-name` headers, respectively.
 
 ```shell
 curl -X POST \
@@ -281,9 +281,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "mixins",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "fieldgroups",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -439,9 +439,9 @@ A successful response returns a list of the imported resources, with the appropr
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "mixins",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "fieldgroups",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
