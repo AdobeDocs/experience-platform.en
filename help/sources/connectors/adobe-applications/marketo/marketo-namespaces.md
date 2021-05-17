@@ -62,6 +62,8 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 
 ![run-generator](../images/marketo/run-generator.png)
 
+A successful request creates the B2B namespaces and schemas according to beta specifications.
+
 ## [!DNL Marketo] namespaces
 
 Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve as indicators of the context to which an identity relates.
