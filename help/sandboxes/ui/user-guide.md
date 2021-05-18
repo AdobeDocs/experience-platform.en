@@ -42,17 +42,19 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-To create a new sandbox, select the **[!UICONTROL Create Sandbox]** button on the top right side of the screen.
+To create a new sandbox, select the **[!UICONTROL Create sandbox]** button on the top right side of the screen.
 
-![](../images/ui/create-sandbox.png)
+![create](../images/ui/create.png)
 
-The **[!UICONTROL Create Sandbox]** dialog appears, prompting you to provide a type, a title, and a name for the sandbox. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel that appears. If you are creating a production sandbox, select **[!UICONTROL Production]**.
+The **[!UICONTROL Create sandbox]** dialog appears, prompting you to provide a type, a title, and a name for the sandbox. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel that appears. To create a new production sandbox, select **[!UICONTROL Production]**.
+
+![type](../images/ui/type.png)
 
 The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens (`-`), it must begin with a letter, and has a maximum of 256 characters.
 
 When finished, select **[!UICONTROL Create]**.
 
-![](../images/ui/create-dialog.png)
+![info](../images/ui/info.png)
 
 Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
 
@@ -60,21 +62,21 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 >[!NOTE]
 >
->You can reset any production or development sandboxes in your organization, except the default production sandbox.
+>You can reset any production or development sandboxes in your organization, except the default production sandbox that contains Adobe Audience Manager and Adobe Analytics data.
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
 Select the sandbox you want to reset from the list of sandboxes. In the right-navigation panel that appears, select **[!UICONTROL Sandbox reset]**.
 
-![](../images/ui/reset-sandbox.png)
+![reset](../images/ui/reset.png)
 
 A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
-![](../images/ui/reset-confirm.png)
+![reset-warning](../images/ui/reset-warning.png)
 
 In the final confirmation window, enter the name of the sandbox in the dialog box and select **[!UICONTROL Reset]**
 
-![](../images/ui/reset-final-confirm.png)
+![reset-confirm](../images/ui/reset-confirm.png)
 
 ## Delete a sandbox
 
@@ -86,16 +88,15 @@ Deleting a production or development sandbox permanently removes all resources a
 
 Select the sandbox you want to delete from the list of sandboxes. In the right-navigation panel that appears, select **[!UICONTROL Delete]**.
 
-![](../images/ui/delete-sandbox.png)
+![delete](../images/ui/delete.png)
 
 A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
-![](../images/ui/delete-confirm.png)
+![delete-warning](../images/ui/delete-warning.png)
 
 In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Delete]**
 
-![](../images/ui/delete-final-confirm.png)
-
+![delete-confirm](../images/ui/delete-confirm.png)
 
 ## Next steps
 
