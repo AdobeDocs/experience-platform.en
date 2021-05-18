@@ -41,9 +41,9 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 ## Merge policies {#merge-policies}
 
-When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To learn more about working with merge policies using the API, please visit the [merge policies endpoint guide](merge-policies.md). 
+When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies using the API, visit the [merge policies endpoint guide](merge-policies.md). 
 
-For a guide to working with merge policies using the [!DNL Platform] UI, please see the [merge policies user guide](../ui/merge-policies.md).
+To learn more about merge policies, and their role within Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 

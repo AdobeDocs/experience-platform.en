@@ -105,7 +105,7 @@ You can view additional information related to the individual profile by selecti
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema class that it applies to. 
 
-For more information on merge policies, see the [merge policies UI guide](../merge-policies/merge-policies.md).
+For more information on merge policies, see the [merge policies UI guide](../merge-policies/ui-guide.md).
 
 To learn more about working with merge policies using the Real-time Customer Profile API, please refer to the [merge policies endpoint guide](../api/merge-policies.md).
 

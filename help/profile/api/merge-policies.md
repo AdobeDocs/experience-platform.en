@@ -14,7 +14,7 @@ For example, if a customer interacts with your brand across several channels, yo
 
 Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. This guide provides steps for working with merge policies using the API. 
 
-To work with merge policies using the UI, please refer to the [merge policies UI guide](../ui/merge-policies.md).
+To work with merge policies using the UI, please refer to the [merge policies UI guide](../merge-policies/ui-guide.md).
 
 ## Getting started
 
