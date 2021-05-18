@@ -42,21 +42,21 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-To create a new sandbox, select the **[!UICONTROL Create sandbox]** button on the top right side of the screen.
+To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top right corner of the screen.
 
 ![create](../images/ui/create.png)
 
-The **[!UICONTROL Create sandbox]** dialog appears, prompting you to provide a type, a title, and a name for the sandbox. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel that appears. To create a new production sandbox, select **[!UICONTROL Production]**.
+The **[!UICONTROL Create sandbox]** dialog box appears. If you are creating a development sandbox, select **[!UICONTROL Development]** in the dropdown panel. To create a new production sandbox, select **[!UICONTROL Production]**.
 
 ![type](../images/ui/type.png)
 
-The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens (`-`), it must begin with a letter, and has a maximum of 256 characters.
+After you select the type of sandbox you are creating, provide your sandbox with a name and a title. The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens (`-`), it must begin with a letter, and has a maximum of 256 characters.
 
 When finished, select **[!UICONTROL Create]**.
 
 ![info](../images/ui/info.png)
 
-Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 15 minutes to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
+Once you have finished creating the sandbox, refresh the page and the new sandbox appears in the **[!UICONTROL Sandboxes]** dashboard with a status of "[!UICONTROL Creating]". New sandboxes take approximately 30 seconds to be provisioned by the system, after which their status changes to "[!UICONTROL Active]".
 
 ## Reset a sandbox
 
@@ -70,7 +70,7 @@ Select the sandbox you want to reset from the list of sandboxes. In the right-na
 
 ![reset](../images/ui/reset.png)
 
-A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
+A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
 ![reset-warning](../images/ui/reset-warning.png)
 
@@ -90,11 +90,11 @@ Select the sandbox you want to delete from the list of sandboxes. In the right-n
 
 ![delete](../images/ui/delete.png)
 
-A dialog appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
+A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL Continue]** to proceed.
 
 ![delete-warning](../images/ui/delete-warning.png)
 
-In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Delete]**
+In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
