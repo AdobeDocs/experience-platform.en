@@ -1,15 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
-title: Collect Streaming Data Using Source Connectors and APIs
+title: Create a Streaming Dataflow for Raw Data Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 ---
-# Collect streaming data using source connectors and APIs
+# Create a streaming dataflow for raw data using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -32,7 +32,6 @@ This tutorial also requires you to have a valid source connection ID for a strea
 
 - [[!DNL Amazon Kinesis]](../create/cloud-storage/kinesis.md)
 - [[!DNL Azure Event Hubs]](../create/cloud-storage/eventhub.md)
-- [[!DNL HTTP API]](../create/streaming/http.md)
 - [[!DNL Google PubSub]](../create/cloud-storage/google-pubsub.md)
 
 ## Create a target XDM schema {#target-schema}
@@ -259,10 +258,6 @@ A successful response returns the new target connection's unique identifier (`id
 
 ## Create a mapping {#mapping}
 
->[!TIP]
->
->You do not need to create new mapping sets if you are ingesting XDM-compliant data. Mapping is only required when ingesting raw data.
-
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to.
 
 To create a mapping set, make a POST request to the `mappingSets` endpoint of the [[!DNL Data Prep] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-prep.yaml) while providing your target XDM schema `$id` and the details of the mapping sets you want to create.
@@ -345,71 +340,11 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of dataflow specifications. The dataflow specification ID that you need to retrieve can vary depending on the source that you are using. If you are using HTTP API, then you must retrieve the ID `c1a19761-d2c7-4702-b9fa-fe91f0613e81`. If you are using any of [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or  [!DNL Google PubSub], then you must retrieve the ID `d69717ba-71b4-4313-b654-49f9cf126d7a`.
+A successful response returns a list of dataflow specifications. The dataflow specification ID that you need to retrieve to create a dataflow using  any of [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or  [!DNL Google PubSub], is `d69717ba-71b4-4313-b654-49f9cf126d7a`.
 
 ```json
 {
     "items": [
-        {
-            "id": "c1a19761-d2c7-4702-b9fa-fe91f0613e81",
-            "name": "Steam data with transformation",
-            "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
-            "version": "1.0",
-            "sourceConnectionSpecIds": [
-                "d27d4907-7351-47dd-bbc2-05a04365703d",
-                "51ae16c2-bdad-42fd-9fce-8d5dfddaf140",
-                "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb"
-            ],
-            "targetConnectionSpecIds": [
-                "c604ff05-7f1a-43c0-8e18-33bf874cb11c"
-            ],
-            "transformationSpecs": [
-                {
-                    "name": "Mapping",
-                    "spec": {
-                        "$schema": "http://json-schema.org/draft-07/schema#",
-                        "type": "object",
-                        "description": "defines various params required for different mapping from Raw to XDM",
-                        "properties": {
-                            "mappingId": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "mappingId"
-                        ]
-                    }
-                }
-            ],
-            "attributes": {
-                "uiAttributes": {
-                    "apiFeatures": {
-                        "updateSupported": false,
-                        "flowRunsSupported": false
-                    }
-                }
-            },
-            "permissionsInfo": {
-                "view": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "StreamingSource",
-                        "permissions": [
-                            "read"
-                        ]
-                    }
-                ],
-                "manage": [
-                    {
-                        "@type": "lowLevel",
-                        "name": "StreamingSource",
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ]
-            }
-        },
         {
             "id": "d69717ba-71b4-4313-b654-49f9cf126d7a",
             "name": "Stream data with optional transformation",
@@ -484,17 +419,11 @@ The last step towards collecting streaming data is to create a dataflow. By now,
 
 A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
 
-### Create a dataflow for HTTP API
-
 **API format**
 
 ```http
 POST /flows
 ```
-
->[!IMPORTANT]
->
->The following request example applies to [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], or  [!DNL Google PubSub]. If you are using the HTTP API source to create a dataflow, then you must replace the value of `flowSpec.id` with `c1a19761-d2c7-4702-b9fa-fe91f0613e81`.
 
 **Request**
 
@@ -547,64 +476,6 @@ A successful response returns the ID (`id`) of the newly created dataflow.
     "etag": "\"8e000533-0000-0200-0000-5f3c40fd0000\""
 }
 ```
-
-## Appendix
-
-### Post raw data to be ingested to Platform {#ingest-data}
-
-Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
-
-**API format**
-
-```http
-POST /collection/{CONNECTION_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
-
-**Request**
-
-The example request ingests raw data to the streaming endpoint that was previously created.
-
-```shell
-curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
-  -H 'Content-Type: application/json' \
-  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
-  -d '{
-      "name": "Johnson Smith",
-      "location": {
-          "city": "Seattle",
-          "country": "United State of America",
-          "address": "3692 Main Street"
-      },
-      "gender": "Male"
-      "birthday": {
-          "year": 1984
-          "month": 6
-          "day": 9
-      }
-  }'
-```
-
-**Response**
-
-A successful response returns HTTP status 200 with details of the newly ingested information.
-
-```json
-{
-    "inletId": "{CONNECTION_ID}",
-    "xactionId": "1584479347507:2153:240",
-    "receivedTimeMs": 1584479347507
-}
-```
-
-| Property | Description |
-| -------- | ----------- |
-| `{CONNECTION_ID}` | The ID of the previously created streaming connection. |
-| `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |    
-| `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. |
 
 ## Next steps
 
