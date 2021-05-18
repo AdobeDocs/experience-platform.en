@@ -753,7 +753,7 @@ In order to use a custom timestamp, the [[!DNL External Source System Audit Deta
 
 For step-by-step instructions on working with schemas using the Schema Registry API, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
-To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
+To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../merge-policies/overview.md#custom-timestamps) in the [merge policies overview](../merge-policies/overview.md).
 
 #### [!DNL External Source System Audit Details] field group details {#field-group-details}
 

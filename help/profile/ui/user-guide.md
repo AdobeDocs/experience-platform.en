@@ -43,7 +43,7 @@ Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity.
 
 On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
-These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [merge policies overview](../merge-policies/overview.md).
 
 In addition to these metrics, the profile metrics section also provides a last updated date and time, showing when the metrics were last evaluated.
 
