@@ -28,6 +28,8 @@ A list of existing dataflows appears. On this page is a list of viewable dataflo
 
 See the following table for more information on statuses:
 
+(Statuses have updated)
+
 | Status | Description |
 | ------ | ----------- |
 | Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
@@ -35,15 +37,15 @@ See the following table for more information on statuses:
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
-## [!UICONTROL Dataflow runs]
+## Dataflow runs for streaming destinations
 
-The [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs to batch destinations. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
+For streaming destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
 
 - **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
 - **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
 - **[!UICONTROL Profile records failed]**: The total number of profile records that are not activated to the destination due to errors.
 
-![](../assets/ui/monitor-destinations/dataflow-runs.png)
+![](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
 Each individual dataflow run shows the following details:
 
@@ -56,18 +58,53 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Activation rate]**: The percentage of received profiles that have either been successfully activated or skipped.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
+To view the details of a particular dataflow run, select the run's start time from the list. 
+
+The details page for a dataflow run contains additional information such as the number of profiles received, the number of profile records activated, the number of profile records failed, and the number of profile records skipped.
+
+![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
+
+The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information for both the failed and skipped profile records is displayed, including the error code, record count, and description. By default, the list displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
+
+![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
+
+## Dataflow runs for batch destinations
+
+For batch destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
+
+- **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination.
+- **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded for activation for the selected destination, based on missing attributes and consent violation.
+
+![](../assets/ui/monitor-destinations/dataflow-runs-batch.png)
+
+Each individual dataflow run shows the following details:
+
+- **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+- **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
+- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
+- **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination for the specific dataflow.
+- **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded for activation for the selected destination, based on missing attributes and consent violation for the specific dataflow.
+- **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is ingesting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
+
+To view details of a specific dataflow run, select the run's start time from the list. 
+
 >[!NOTE]
 >
 >Dataflow runs are generated based on the destination dataflow's schedule frequency. A separate dataflow run is made for each merge policy applied to a segment.
 
-To view the details of a particular dataflow run, select the run's start time from the list. The details page for a dataflow run contains additional information such as the number of profiles received, the number of profile records activated, the number of profile records failed, and the number of profile records skipped.
+The details page for a dataflow, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
 
-![](../assets/ui/monitor-destinations/dataflow-details.png)
+- **[!UICONTROL Size of data]**: The size of the dataflow that is being ingested.
+- **[!UICONTROL Total files]**: The total number of files ingested in the dataflow.
+- **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
 
-The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information for both the failed and skipped profile records is displayed, including the error code, record count, and description. By default, the list displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
+![](../assets/ui/monitor-destinations/dataflow-batch.png)
 
-![](../assets/ui/monitor-destinations/dataflow-records.png)
+The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code and description. By default, the list displays the failed identities. To show excluded identities, select the **[!UICONTROL Identities excluded]** toggle.
+
+![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
+
 
 ## Next steps
 
-By following this guide, you now know how to monitor dataflows for destinations, including all the relevant information such as processing time, activation rate, and status. To learn more about dataflows in Platform, please read the [dataflows overview](../home.md). To learn more about destinations, please read the [destinations overview](../../destinations/home.md).
+By following this guide, you now know how to monitor dataflows for both batch and streaming destinations, including all the relevant information such as processing time, activation rate, and status. To learn more about dataflows in Platform, please read the [dataflows overview](../home.md). To learn more about destinations, please read the [destinations overview](../../destinations/home.md).
