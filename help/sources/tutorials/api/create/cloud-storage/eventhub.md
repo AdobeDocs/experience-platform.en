@@ -29,7 +29,7 @@ In order for [!DNL Flow Service] to connect with your [!DNL Event Hubs] account,
 | ---------- | ----------- |
 | `sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `sasKey` | The generated shared access signature. |
-| `namespace` | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace contains DNS integrated network endpoints as well as a host of access control and network integration management features. |
+| `namespace` | The namespace of the [!DNL Event Hubs] you are accessing. An [!DNL Event Hubs] namespace provides a unique scoping container, in which you can create one or more [!DNL Event Hubs]. |
 | `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base, source, and target connections. The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
 
 For more information about these values, refer to [this Event Hubs document](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
@@ -143,12 +143,12 @@ curl -X POST \
 | `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
 | `description` | An optional value that you can provide to include more information on your source connection. |
 | `baseConnectionId` | The connection ID of your [!DNL Event Hubs] source that was generated in the previous step. |
-| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. This ID is : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
-| `data.format` | The format of the [!DNL Event Hubs] data that you want to ingest. Supported data formats include: `json`, `parquet`, and `delimited`. |
+| `connectionSpec.id` | The fixed connection specification ID for [!DNL Event Hubs]. This ID is : `bf9f5905-92b7-48bf-bf20-455bc6b60a4e`. |
+| `data.format` | The format of the [!DNL Event Hubs] data that you want to ingest. Currently, the only supported data format is `json`. |
 | `params.eventHubName` | The name for your [!DNL Event Hubs] source. |
 | `params.dataType` | This parameter defines the type of the data that is being ingested. Supported data types include: `raw` and `xdm`. |
-| `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. |
-| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. |
+| `params.reset` | This parameter defines how the data will be read. Use `latest` to start reading from the most recent data, and use `earliest` to start reading from the first available data in the stream. This parameter is optional and defaults to `earliest` if unprovided. |
+| `params.consumerGroup` | The publish or subscription mechanism to be used for [!DNL Event Hubs]. This parameter is optional and defaults to `$Default` if unprovided. Refer to this [[!DNL Event Hubs] guide on event consumers](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-features#event-consumers) for more information. |
 
 ## Next steps
 
