@@ -50,6 +50,20 @@ The following table contains example values as well as additional information on
 
 {style="table-layout:auto"}
 
+### Running the scripts
+
+With your [!DNL Postman] collection and environment set up, you can now run the script through the [!DNL Postman] interface.
+
+In the [!DNL Postman] interface, select the root folder of the auto-generator utility and then select **[!DNL Run]** from the top header.
+
+![root-folder](../images/marketo/root-folder.png)
+
+The [!DNL Runner] interface appears. From here, ensure that all the checkboxes are selected and then select **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![run-generator](../images/marketo/run-generator.png)
+
+A successful request creates the B2B namespaces and schemas according to beta specifications.
+
 ## [!DNL Marketo] namespaces
 
 Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve as indicators of the context to which an identity relates.
