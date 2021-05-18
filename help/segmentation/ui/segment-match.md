@@ -12,7 +12,7 @@ description: Segment Match is a segment-sharing service in Adobe Experience Plat
 >
 >[!DNL Segment Match] is currently in alpha. The documentation and the functionality are subject to change.
 
-[!DNL Segment Match] is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and global identities such as hashed emails, hashed phone numbers, and global device identifiers like IDFAs and GAIDs.
+[!DNL Segment Match] is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
 
 With [!DNL Segment Match] you can:
 
@@ -64,6 +64,8 @@ For more information on the specific field group used to capture consumer consen
 The last prerequisite you must establish is to configure a new data usage label to prevent data sharing. Through data usage labels, you can manage what data is allowed to be shared through [!DNL Segment Match].
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Platform.
+
+[!DNL Segment Match] uses the C11 label, a label specific to [!DNL Segment Match] that you can manually add to ensure that certain datasets are excluded from data-sharing processes.
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md).
 
