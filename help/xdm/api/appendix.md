@@ -47,7 +47,7 @@ You can filter results by using the `property` parameter, which is used to apply
 >
 >You can use the `property` parameter to filter schema field groups by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only field groups that are compatible with the [!DNL XDM Individual Profile] class.
 
-## Compatibility Mode
+## Compatibility Mode {#compatibility}
 
 [!DNL Experience Data Model] (XDM) is a publicly documented specification, driven by Adobe to improve the interoperability, expressiveness, and power of digital experiences. Adobe maintains the source code and formal XDM definitions in an [open source project on GitHub](https://github.com/adobe/xdm/). These definitions are written in XDM Standard Notation, using JSON-LD (JavaScript Object Notation for Linked Data) and JSON Schema as the grammar for defining XDM schemas.
 
