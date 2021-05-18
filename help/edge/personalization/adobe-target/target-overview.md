@@ -22,7 +22,7 @@ The following features have been tested and are currently supported in Target:
 
 To enable [!DNL Target], do the following:
 
-1. Enable target in your [edge configuration](../../fundamentals/edge-configuration.md) with the appropriate client code.
+1. Enable Target in your [datastream](../../fundamentals/datastreams.md) with the appropriate client code.
 1. Add the `renderDecisions` option to your events.
 
 Then, optionally, you can also add the following options:
