@@ -13,4 +13,4 @@ For detailed instructions on how to access and interact with the license usage d
 
 For an overview of all of the dashboard features within Experience Platform, please begin by reading the [dashboards overview](../dashboards/home.md).
 
-![](images/license-usage-dashboard/dashboard-overview.png)
+![](../dashboards/images/license-usage/dashboard-overview.png)
