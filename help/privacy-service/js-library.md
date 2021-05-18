@@ -40,7 +40,7 @@ Since all three functions represent asynchronous processes, any retrieved identi
 To start using the [!DNL Privacy JS Library], you must install it onto your machine using one of the following methods:
 
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
-* Use the Adobe Launch Extension under the name `AdobePrivacy`
+* Install the Adobe Privacy extension using [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en) under the name `AdobePrivacy`
 * Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiate the [!DNL Privacy JS Library]
@@ -60,7 +60,7 @@ For a full list of supported parameters for different Adobe solutions, see the a
 
 ## Code samples
 
-The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using [!DNL Launch] or DTM.
+The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using [!DNL Platform Launch].
 
 ### Retrieve identities
 

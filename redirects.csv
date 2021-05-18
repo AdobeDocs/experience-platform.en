@@ -1,4 +1,9 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/work-details.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/work-contact-details.html
+https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/mixins.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/field-groups.html
+https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/(*),https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/
+https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/personal-details.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/personal-contact-details.html
+https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/person-details.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/demographic-details.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/iab/overview.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/rtcdp/privacy/iab/dataset-preparation.html,https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/dataset.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/use-cases/privacy-consent.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html
@@ -108,3 +113,4 @@ https://experienceleague.adobe.com/docs/experience-platform/tutorials/configure-
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/schemas.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/segmentation.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/destinations/api-tutorial.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/edge-configuration.html,https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html
