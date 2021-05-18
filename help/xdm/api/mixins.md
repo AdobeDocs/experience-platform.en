@@ -3,10 +3,17 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Mixins API Endpoint
 description: The /mixins endpoint in the Schema Registry API allows you to programmatically manage XDM mixins within your experience application.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 ---
-# Mixins endpoint
+
+# Mixins endpoint (deprecated)
+
+>[!IMPORTANT]
+>
+>Mixins have been renamed to schema field groups, and therefore the `/mixins` endpoint has been deprecated in favor of the `/fieldgroups` endpoint.
+>
+>While `/mixins` will continue to be maintained as a legacy endpoint, it is strongly recommended that you use `/fieldgroups` for new implementations of the Schema Registry API in your experience applications. See the [field groups endpoint guide](./field-groups.md) for more information.
 
 Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/mixins` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage mixins within your experience application.
 
@@ -147,7 +154,7 @@ A successful response returns the details of the mixin. The fields that are retu
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -293,7 +300,7 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -473,7 +480,7 @@ A successful response returns the details of the updated mixin.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -614,7 +621,7 @@ The response shows that both operations were performed successfully. The `descri
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",

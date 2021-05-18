@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;data collection;launch;web sdk
 solution: Experience Platform
 title: Data Collection Overview
-topic: overview
+topic-legacy: overview
 description: Learn about the various technologies involved with collect data on customer experiences in Adobe Experience Platform.
 exl-id: 03ce5339-e68d-4adf-8c3c-82846a626dad
 ---
@@ -31,7 +31,7 @@ Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe pr
 
 ## Flip-the-switch process to deploy Adobe technology
 
-Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [edge configurations](../edge/fundamentals/edge-configuration.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [edge configurations](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![](./images/deploy.png)
 

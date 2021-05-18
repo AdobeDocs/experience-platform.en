@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Real-time Customer Profile;Identity Service;
 solution: Experience Platform
 title: Real-time Customer Profile tutorials
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This document outlines the steps involved and provides links to tutorials for completing each individual workflow.
 exl-id: cda6e7a7-9498-454c-94df-c6271a5a4fd4
@@ -36,7 +36,7 @@ Before data can be ingested into Adobe Experience Platform and used in the creat
 **This guide will help you:**
 - Browse existing schemas.
 - Create and name a schema.
-- Add and define XDM mixins.
+- Add and define XDM schema field groups.
 - Set your schema fields as identity fields.
 - Enable Profile for your schema.
 

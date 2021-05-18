@@ -2,7 +2,7 @@
 keywords: Experience Platform;getting started;customer ai;popular topics;customer ai input;customer ai output
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Input and Output in Customer AI
-topic: Getting started
+topic-legacy: Getting started
 description: Learn more about the required events, inputs, and outputs utilized by Customer AI.
 exl-id: 9b21a89c-bf48-4c45-9eb3-ace38368481d
 ---
@@ -29,10 +29,10 @@ The following table outlines some common terminology used in this document:
 | Term | Definition |
 | --- | --- |
 | [Experience Data Model (XDM)](../../xdm/home.md) | XDM is the foundational framework that allows Adobe Experience Cloud, powered by Adobe Experience Platform, to deliver the right message to the right person, on the right channel, at exactly the right moment. The methodology on which Experience Platform is built, XDM System, operationalizes Experience Data Model schemas for use by Platform services. |
-| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more mixins. |
+| XDM Schema | Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data. Before data can be ingested into Platform, a schema must be composed to describe the data’s structure and provide constraints to the type of data that can be contained within each field. Schemas consist of a base XDM class and zero or more schema field groups. |
 | XDM class | All XDM schemas describe data that can be categorized as record or time series. The data behavior of a schema is defined by the schema’s class, which is assigned to a schema when it is first created. XDM classes describe the smallest number of properties a schema must contain in order to represent a particular data behavior. |
-| [Mixins](../../xdm/schema/composition.md) | A component that define one or more fields in a schema. Mixins enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Mixins are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
-| [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
+| [Field groups](../../xdm/schema/composition.md) | A component that define one or more fields in a schema. Field groups enforce how their fields appear in the schema’s hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. |
+| [Data type](../../xdm/schema/composition.md) | A component that can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes. The data types outlined in this document are supported by both the CEE and Adobe Analytics schemas. |
 | Churn | A measurement of the percentage of accounts that cancel or choose not to renew their subscriptions. A high churn rate can negatively impact Monthly Recurring Revenue (MRR) and can also indicate dissatisfaction with a product or service. |
 | [Real-time Customer Profile](../../profile/home.md) | Real-time Customer Profile provides a centralized consumer profile for targeted and personalized experience management. Each profile contains data that is aggregated across all systems, as well as actionable timestamped accounts of events involving the individual that have taken place in any of the systems you use with Experience Platform. |
 
@@ -42,7 +42,7 @@ The following table outlines some common terminology used in this document:
 >
 > Customer AI automatically determines which events are useful for predictions and raises a warning if the available data is not sufficient to generate quality predictions.
 
-Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add mixins during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. 
+Customer AI supports CEE, Adobe Analytics, and Adobe Audience Manager datasets. The CEE schema requires you to add field groups during the schema creation process. If you are using Adobe Analytics or Adobe Audience Manager datasets, the source connector directly maps the standard events (Commerce, Web page details, Application, and Search) listed below during the connection process. 
 
 For more information on mapping Adobe Analytics data or Audience Manager data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) or [Audience Manager field mappings](../../sources/connectors/adobe-applications/mapping/audience-manager.md) guide.
 
@@ -50,18 +50,17 @@ For more information on mapping Adobe Analytics data or Audience Manager data, v
 
 XDM Experience Events are used for determining various customer behaviors. Depending on how your data is structured, the event types listed below may not encompass all of your customer's behaviors. It is up to you to determine what fields have the necessary data that is needed to clearly and unambiguously identify web user activity. Depending on your prediction goal, the required fields that are needed can change.
 
-Customer AI relies on different event types for building model features. These event types are automatically added to your schema using multiple XDM mixins.
+Customer AI relies on different event types for building model features. These event types are automatically added to your schema using multiple XDM field groups.
 
 >[!NOTE]
 >
->If you are using Adobe Analytics or Adobe Audience Manager data, the schema is created automatically with the required standard events that are needed to capture your data. If you are creating your own custom CEE schema to capture data, you need to consider what mixins are needed to capture your data.
+>If you are using Adobe Analytics or Adobe Audience Manager data, the schema is created automatically with the required standard events that are needed to capture your data. If you are creating your own custom CEE schema to capture data, you need to consider what field groups are needed to capture your data.
 
 It is not necessary to have data for each of the standard events listed below but certain events are required for certain scenarios. If you have any of the standard events data available, it is recommended that you include it in your schema. For example, if you wanted to create a Customer AI application for predicting purchase events, it would be useful to have data from the `Commerce` and `Web page details` data types.
 
-To view a mixin in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Mixins]** tab.
+To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** tab on the left-rail followed by selecting the **[!UICONTROL Field groups]** tab.
 
-
-| Mixin | Event type | XDM field path |
+| Field group | Event type | XDM field path |
 | --- | --- | --- |
 | [!UICONTROL Commerce Details] | order | <li> commerce.order.purchaseID </li> <li> productListItems.SKU </li> |
 |  | productListViews | <li> commerce.productListViews.value </li> <li> productListItems.SKU </li>  |
@@ -111,7 +110,7 @@ Apart from the minimum data required, Customer AI also works best with recent da
 
 ### Example scenarios
 
-In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the mixin and its field path.
+In this section, different scenarios for Customer AI instances are described as well as the required and recommended event types. Refer to the [standard events table](#standard-events) above for more information on the field group and its field path.
 
 >[!NOTE]
 >
@@ -242,7 +241,7 @@ Any of the remaining [event types](#standard-events) may be required based on th
 
 **Required standard event types:**
 
-In order to use traits from Adobe Audience Manager, you need to create a source connection using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). The source connector automatically creates the schema with the proper mixin(s). You do not need to manually add additional event types for the schema to work with Customer AI.
+In order to use traits from Adobe Audience Manager, you need to create a source connection using the [Audience Manager source connector](../../sources/tutorials/ui/create/adobe-applications/audience-manager.md). The source connector automatically creates the schema with the proper field group(s). You do not need to manually add additional event types for the schema to work with Customer AI.
 
 When you are configuring a new customer AI instance, `audienceName` and `audienceID` can be used to select a particular trait for scoring while defining your goal.
 

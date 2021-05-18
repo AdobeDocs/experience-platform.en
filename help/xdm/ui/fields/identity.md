@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Identity Fields in the UI
 description: Learn how to define an identity field in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
 exl-id: 11a53345-4c3f-4537-b3eb-ee7a5952df2a
 ---
 # Define identity fields in the UI
@@ -36,7 +36,7 @@ When finished, select **[!UICONTROL Apply]** to apply the change to the schema.
 
 ![](../../images/ui/fields/special/identity-config.png)
 
-The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](../../images/ui/fields/special/identity-symbol.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or mixin that provides the field to the schema.
+The canvas updates to reflect the changes, with the selected field gaining a fingerprint symbol (![](../../images/ui/fields/special/identity-symbol.png)) to designate it as an identity. In the left rail, the identity field is now listed under the name of the class or schema field group that provides the field to the schema.
 
 Since all identity fields are required by default, the field is now listed under **[!UICONTROL Required fields]** in the left rail. If the identity field is nested within the schema structure, all parent fields will also be listed as required.
 

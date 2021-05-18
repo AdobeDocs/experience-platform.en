@@ -1,7 +1,7 @@
 ---
 solution: Experience Platform
 title: Generic Marketing Preference Field With Subscriptions Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Generic Marketing Preference Field with Subscriptions XDM data type.
 exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 ---
@@ -11,7 +11,7 @@ exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 
 >[!NOTE]
 >
->This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) as a baseline.
+>This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group](../field-groups/profile/consents.md) as a baseline.
 >
 >If you do not require a `subscriptions` map for a particular marketing preference field, you can use the [basic marketing field data type](./marketing-field.md) instead.
 

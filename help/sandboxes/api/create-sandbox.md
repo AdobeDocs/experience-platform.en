@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Sandbox;sandbox
 solution: Experience Platform
 title: Create a Sandbox in the API
-topic: developer guide
+topic-legacy: developer guide
 description: You can create a new sandbox by making a POST request to the `/sandboxes` endpoint.
 exl-id: 676c5de8-2c3a-4612-9dd8-93e01cafe90e
 ---

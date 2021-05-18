@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
-topic: developer guide
+topic-legacy: developer guide
 exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 ---
 # Unions endpoint
@@ -140,7 +140,7 @@ The response format depends on the Accept header sent in the request. Experiment
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -153,7 +153,7 @@ The response format depends on the Accept header sent in the request. Experiment
         "https://ns.adobe.com/xdm/common/extensible",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599",
         "https://ns.adobe.com/xdm/context/profile-personal-details"
     ],
     "title": "Union object for https://ns.adobe.com/xdm/context/profile",

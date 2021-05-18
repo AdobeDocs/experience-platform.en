@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;streaming connection;create streaming connection;api guide;tutorial;create a streaming connection;streaming ingestion;ingestion;
 solution: Experience Platform
 title: Create a Streaming Connection Using the API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
@@ -20,6 +20,8 @@ This guide requires a working understanding of the following components of Adobe
 
 - [[!DNL Experience Data Model (XDM)]](../../../../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes experience data.
 - [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, consumer profile in real time based on aggregated data from multiple sources.
+
+Additionally, creating a streaming connection requires you to have a target XDM schema and a dataset. To learn how to create these, please read the tutorial on [streaming record data](../../../../../ingestion/tutorials/streaming-record-data.md) or the tutorial on [streaming time-series data](../../../../../ingestion/tutorials/streaming-time-series-data.md).
 
 The following sections provide additional information that you will need to know in order to successfully make calls to streaming ingestion APIs.
 
@@ -47,9 +49,9 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 - Content-Type: application/json
 
-## Create a connection
+## Create a base connection
 
-A connection specifies the source and contains the information required to make the flow compatible with streaming ingestion APIs. When creating a connection, you have the option of creating a non-authenticated and an authenticated connection.
+A base connection specifies the source and contains the information required to make the flow compatible with streaming ingestion APIs. When creating a base connection, you have the option of creating a non-authenticated and an authenticated connection.
 
 ### Non-authenticated connection
 
@@ -88,7 +90,7 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
              "name": "Sample connection"
          }
      }
- }
+ }'
 ```
 
 | Property | Description |
@@ -182,7 +184,7 @@ A successful response returns HTTP status 201 with details of the newly created 
 
 ## Get streaming endpoint URL
 
-With the connection created, you can now retrieve your streaming endpoint URL.
+With the base connection created, you can now retrieve your streaming endpoint URL.
 
 **API format**
 
@@ -240,6 +242,142 @@ A successful response returns HTTP status 200 with detailed information about th
             "etag": "\"56008aee-0000-0200-0000-5e697e150000\""
         }
     ]
+}
+```
+
+## Create a source connection
+
+After creating your base connection, you will need to create a source connection. When creating a source connection, you'll need the `id` value from your created base connection.
+
+**API format**
+
+```http
+POST /flowservice/sourceConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample source connection",
+    "description": "Sample source connection description",
+    "baseConnectionId": "{BASE_CONNECTION_ID}",
+    "connectionSpec": {
+        "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
+        "version": "1.0"
+    }
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with detailed of the newly created source connection, including its unique identifier (`id`). 
+
+```json
+{
+    "id": "63070871-ec3f-4cb5-af47-cf7abb25e8bb",
+    "etag": "\"28000b90-0000-0200-0000-6091b0150000\""
+}
+```
+
+## Create a target connection
+
+After creating your source connection, you can create a target connection. When creating your target connection, you'll need the `id` value of your previously created dataset.
+
+**API format**
+
+```http
+POST /flowservice/targetConnections
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/targetConnections' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample target connection",
+    "description": "Sample target connection description",
+    "connectionSpec": {
+        "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+        "version": "1.0"
+    },
+    "data": {
+        "format": "parquet_xdm"
+    },
+    "params": {
+        "dataSetId": "{DATASET_ID}"
+    }
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with details of the newly created target connection, including its unique identifier (`id`).
+
+```json
+{
+    "id": "98a2a72e-a80f-49ae-aaa3-4783cc9404c2",
+    "etag": "\"0500b73f-0000-0200-0000-6091b0b90000\""
+}
+```
+
+## Create a dataflow
+
+With your source and target connections created, you can now create a dataflow. The dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request to the `/flows` endpoint. 
+
+**API format**
+
+```http
+POST /flows
+```
+
+**Request**
+
+```shell
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/flows' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -d '{
+    "name": "Sample flow",
+    "description": "Sample flow description",
+    "flowSpec": {
+        "id": "d8a6f005-7eaf-4153-983e-e8574508b877",
+        "version": "1.0"
+    },
+    "sourceConnectionIds": [
+        "{SOURCE_CONNECTION_ID}"
+    ],
+    "targetConnectionIds": [
+        "{TARGET_CONNECTION_ID}"
+    ]
+}'
+```
+
+**Response**
+
+A successful response returns HTTP status 201 with details of your newly created dataflow, including its unique identifier (`id`).
+
+```json
+{
+    "id": "ab03bde0-86f2-45c7-b6a5-ad8374f7db1f",
+    "etag": "\"1200c123-0000-0200-0000-6091b1730000\""
 }
 ```
 
