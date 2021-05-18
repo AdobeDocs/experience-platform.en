@@ -18,7 +18,7 @@ This document provides information on the underlying set up for the B2B namespac
 
 The first step in using the [!DNL Marketo] namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
 
-- You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://git.corp.adobe.com/marketo-engineering/namespace_schema_utility).
+- You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
 - For information on how to generate your credentials for Platform APIs, see the tutorial on [authenticating and accessing Experience Platform APIs](../../../../landing/api-authentication.md).
 - For information on how to set up [!DNL Postman] for Platform APIs, see the tutorial on [setting up developer console and [!DNL Postman]](../../../../landing/postman.md).
@@ -49,6 +49,20 @@ The following table contains example values as well as additional information on
 | `has_msi` | A boolean value that indicates if you are subcscribed to [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
+
+### Running the scripts
+
+With your [!DNL Postman] collection and environment set up, you can now run the script through the [!DNL Postman] interface.
+
+In the [!DNL Postman] interface, select the root folder of the auto-generator utility and then select **[!DNL Run]** from the top header.
+
+![root-folder](../images/marketo/root-folder.png)
+
+The [!DNL Runner] interface appears. From here, ensure that all the checkboxes are selected and then select **[!DNL Run Adobe I/O Access Token Generation + Automate Namespace creation]**.
+
+![run-generator](../images/marketo/run-generator.png)
+
+A successful request creates the B2B namespaces and schemas according to beta specifications.
 
 ## [!DNL Marketo] namespaces
 
