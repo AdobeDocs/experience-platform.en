@@ -12,7 +12,7 @@ description: Segment Match is a segment-sharing service in Adobe Experience Plat
 >
 >[!DNL Segment Match] is currently in alpha. The documentation and the functionality are subject to change.
 
-[!DNL Segment Match] is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
+Adobe Experience Platform Segment Match is a segment-sharing service that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner. [!DNL Segment Match] uses Platform privacy standards and personal identifiers such as hashed emails, hashed phone numbers, and device identifiers like IDFAs and GAIDs.
 
 With [!DNL Segment Match] you can:
 
@@ -33,9 +33,9 @@ The following prerequisites must be set up before you start working with [!DNL S
 
 The first step to getting started with [!DNL Segment Match] is to make sure you're ingesting data against the supported identity namespaces.
 
-Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md). Each customer identity contains an associated namespace that indicates the identity's context. For example, a namespace can distinguish a value. For example, they distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
+Identity namespaces are a component of [Adobe Experience Platform Identity Service](../../identity-service/home.md). Each customer identity contains an associated namespace that indicates the identity's context. For example, a namespace can distinguish a value of "name<span>@email.com" as an email address or "443522" as a numeric CRM ID.
 
-A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-time Customer Profile] merges profile data), both the identity value and the namespace must match.
+A fully qualified identity includes an ID value and a namespace. When matching record data across profile fragments (such as when [!DNL Real-time Customer Profile] merges Profile data), both the identity value and the namespace must match.
 
 In the context of [!DNL Segment Match], namespaces are used in the overlap process when sharing data.
 
@@ -51,13 +51,13 @@ The list of supported namespaces are as follows:
 
 ### Set up consent configuration
 
-You must provide a consent configuration and set its default value to either opt-in or opt-out for a consent check.
+You must provide a consent configuration and set its default value to either `opt-in` or `opt-out` for a consent check.
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts in.
 
 The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager
 
-For more information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
+For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
 
 ### Configure data usage labels
 
@@ -65,7 +65,7 @@ The last prerequisite you must establish is to configure a new data usage label 
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Platform.
 
-[!DNL Segment Match] uses the C11 label, a label specific to [!DNL Segment Match] that you can manually add to ensure that certain datasets are excluded from data-sharing processes.
+[!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process.
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md).
 
@@ -116,7 +116,7 @@ To create a new feed, select **[!UICONTROL Create feed]** from the [!UICONTROL F
 
 ![create-feed.png](../images/ui/segment-match/create-feed.png)
 
-The basic set up of a feed includes a name, a description, and configurations regarding marketing use cases and identity settings. Provide a name and a description and then apply the appropriate marketing use cases for your feed. You can select more than one use case from a list that includes:
+The basic set up of a feed includes a name, a description, and configurations regarding marketing use cases and identity settings. Provide a name and a description for your feed and then apply the marketing use cases that you want your data to be excluded from. You can select more than one use case from a list that includes:
 
 * [!UICONTROL Analytics]
 * [!UICONTROL Combine with PII]
