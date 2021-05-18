@@ -285,6 +285,8 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate dataset overlap report
 
+The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
 **API format**
@@ -296,7 +298,7 @@ GET /previewsamplestatus/report/dataset/overlap?date=YYYY-MM-DD
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the same date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `?date=2024-12-31`|
 
 **Request**
 
@@ -304,7 +306,7 @@ The following request uses the `date` parameter to return the most recent report
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-04-19 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -321,7 +323,7 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
         "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
         "5eeda0032af7bb19162172a7": 107
     },
-    "reportTimestamp": "2021-04-19T19:55:31.147"
+    "reportTimestamp": "2021-12-29T19:55:31.147"
 }
 ```
 
@@ -330,7 +332,7 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
 |`data`|The `data` object contains comma-separated lists of datasets and their respective profile counts.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
-The results of the report can be interpreted from the datasets and profile counts in the response, for example:
+The results of the report can be interpreted from the datasets and profile counts in the response. Consider the following example report `data` object:
 
 ```json
   "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
@@ -339,9 +341,10 @@ The results of the report can be interpreted from the datasets and profile count
 ```
 
 This report provides the following information:
-* There are 123 profiles in, and only in, these datasets: 5d92921872831c163452edc8, 5da7292579975918a851db57, 5eb2cdc6fa3f9a18a7592a98.
-* There are 454,412 profiles in, and only in, these two datasets: 5d92921872831c163452edc8 and 5eb2cdc6fa3f9a18a7592a98.
-* There are 107 profiles that are only in dataset 5eeda0032af7bb19162172a7.
+* There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
+* There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
+* There is a total of 454,642 profiles in the organization.
 
 ## Next steps
 
