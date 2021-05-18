@@ -30,7 +30,7 @@ Once a sandbox is selected, the screen refreshes with the selected sandbox now f
 
 ![](../images/ui/switched.png)
 
-## Sesrch for a sandbox
+## Search for a sandbox
 
 You can navigate through the list of sandboxes available to you by using the search function from the sandbox switcher menu. Type in the name of the sandbox you would like to access to filter through all sandboxes available to your organization.
 
