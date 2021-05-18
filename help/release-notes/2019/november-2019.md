@@ -121,8 +121,8 @@ XDM is a publicly documented specification designed to improve the power of digi
 | ---------- | ------------ |
 | Notification schema | New schema that represents notification data sent during the data ingestion process. |
 | Adobe AdCloud DSP schemas | Five new schemas have been added to represent Adobe Advertising Cloud demand-side platform (DSP) metadata: Placement, Campaign, Package, Advertiser, Account.|
-| ExperienceEvent Implementation Details mixin | New ExperienceEvent mixin that adds a standard field to store information about the software used to collect the event. |
-| [!DNL Profile Privacy] mixin | New profile mixin that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-time Customer Profile]. |
+| ExperienceEvent Implementation Details schema field groups | New ExperienceEvent field groups that adds a standard field to store information about the software used to collect the event. |
+| [!DNL Profile Privacy] field groups | New profile field groups that adds fields to accept general out-out and sales/sharing opt-out signals for [!DNL Real-time Customer Profile]. |
 | Format constraints for `xdm:alternateDisplayInfo` | The "Title" and "Description" fields for `xdm:alternateDisplayInfo` must both be strings to pass validation. |
 | Name change: XDM [!DNL Individual Profile]  | The "title" of the "XDM [!DNL Profile]" class has been updated to "XDM [!DNL Individual Profile]". The formal `$id` of the class has not changed. |
 
