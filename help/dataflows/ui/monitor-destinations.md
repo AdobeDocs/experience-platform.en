@@ -39,11 +39,11 @@ See the following table for more information on statuses:
 
 ## Dataflow runs for streaming destinations
 
-For streaming destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for profile records:
+For streaming destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
 
-- **[!UICONTROL Profile records activated]**: The total count of profile records that were created or updated for activation.
-- **[!UICONTROL Profile records skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
-- **[!UICONTROL Profile records failed]**: The total number of profile records that are not activated to the destination due to errors.
+- **[!UICONTROL Identities activated]**: The total count of profile records that were created or updated for activation.
+- **[!UICONTROL Identities skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
+- **[!UICONTROL Identities failed]**: The total number of profile records that are not activated to the destination due to errors.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
@@ -52,9 +52,9 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
-- **[!UICONTROL Profile records activated]**: The total number of profile records that were created or updated for activation. This value is updated every 60 minutes.
-- **[!UICONTROL Profile records skipped]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes. This value is updated every 60 minutes.
-- **[!UICONTROL Profile records failed]** The total number of profile records that are not activated to the destination due to errors. This value is updated every 60 minutes.
+- **[!UICONTROL Identities activated]**: The total number of profile records that were created or updated for activation. This value is updated every 60 minutes.
+- **[!UICONTROL Identities excluded]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes. This value is updated every 60 minutes.
+- **[!UICONTROL Identities failed]** The total number of profile records that are not activated to the destination due to errors. This value is updated every 60 minutes.
 - **[!UICONTROL Activation rate]**: The percentage of received profiles that have either been successfully activated or skipped.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
