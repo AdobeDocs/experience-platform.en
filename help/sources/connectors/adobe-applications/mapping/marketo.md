@@ -254,9 +254,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
