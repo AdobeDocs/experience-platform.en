@@ -29,7 +29,7 @@ The following sections provide more information about [!DNL Segment Match], incl
 
 The following prerequisites must be set up before you start working with [!DNL Segment Match]:
 
-### Set up identity data and namespaces
+### Set up identity data and namespaces {#namespaces}
 
 The first step to getting started with [!DNL Segment Match] is to make sure you're ingesting data against the supported identity namespaces.
 
@@ -99,12 +99,12 @@ To connect a partner using their [!UICONTROL connect ID], enter their unique ID 
 
 ![connect-partner.png](../images/ui/segment-match/connect-partner.png)
 
-The connection process can be summarized as follows:
+<!--- The connection process can be summarized as follows:
 
 1. You generate a connect ID through the [!UICONTROL Share Setting] function in the UI.
 2. You provide this connect ID to your partner.
 3. Your partner enters this connect ID in their sandbox and then makes a request.
-4. You accept the request, linking your organization with your partner's organization.
+4. You accept the request, linking your organization with your partner's organization. -->
 
 ### Create feed
 
@@ -114,35 +114,84 @@ To create a new feed, select **[!UICONTROL Create feed]** from the [!UICONTROL F
 
 ![create-feed.png](../images/ui/segment-match/create-feed.png)
 
-The basic set up of a feed includes a name, a description, and configurations regarding data usage labels and identity namespaces.
+The basic set up of a feed includes a name, a description, and configurations regarding marketing use cases and identity settings. Provide a name and a description and then apply the appropriate marketing use cases for your feed. You can select more than one use case from a list that includes:
 
-Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments, and then select the partner(s) to share with from your list of linked partners. During this process, you can **Analyze by Segment** and view the pre-share estimates prior to finalizing your feed, view the number of overlapping identities by namespace between you and your partner, as well as view how many of the overlapped identities are given consent to share data.
+* [!UICONTROL Analytics]
+* [!UICONTROL Combine with PII]
+* [!UICONTROL Cross-site targeting]
+* [!UICONTROL Data Science]
+* [!UICONTROL Email targeting]
+* [!UICONTROL Export to third party]
+* [!UICONTROL Onsite advertising]
+* [!UICONTROL Onsite personalization]
+* [!UICONTROL Segment Match]
+* [!UICONTROL Single identity personalization]
 
-**Overlap estimates report**
+Finally, select the appropriate identity namespaces for your feed. For information on the specific namespaces supported by [!DNL Segment Match], see the [identity data and namespaces table](#namespaces). When you are finished, select **[!UICONTROL Next]**.
+
+![audience-sharing.png](../images/ui/segment-match/audience-sharing.png)
+
+Once you have established the settings of your feed, select the segments you want to share from your list of first-party segments. You can select more the one segment from the list and you can use the right-rail to manage your list of selected segments. Once you are finished, select **[!UICONTROL Next]**.
+
+![select-segments.png](../images/ui/segment-match/select-segments.png)
+
+The [!UICONTROL Share] page appears, providing you with an interface to select the partners you want to share your feed with. During this step, you can also view the pre-share overlap estimates report and see the number of overlapping identities by namespace between you and your partner, the number of overlapped identities that have consent to share data.
+
+Select **[!UICONTROL Analyze by segment]** to see the estimates report.
+
+![analyze.png](../images/ui/segment-match/analyze.png)
 
 The overlap estimates report allows you to manage overlap and consent checks per partner and per segment prior to sharing your feed.
 
 | Metrics | Description |
 | ------- | ----------- |
-| Estimated overlapped identities | The number of identities that qualify for the selected segment and also have a match with the selected partner. These identities are displayed by namespace and do not represent individual Profile identities. The overlap estimates are based on Profile sketches. |
 | Estimated identities with consent | The total number of overlapped identities that meet the consent requirements configured for your organization. |
+| Estimated overlapped identities | The number of identities that qualify for the selected segment and also have a match with the selected partner. These identities are displayed by namespace and do not represent individual Profile identities. The overlap estimates are based on Profile sketches. |
 
-### Publish feed
+When you are finished, select **[!UICONTROL Close]**.
 
-When a feed is created, a partner user can view the feed under the **Receiving** section of the Segments UI. During this process, a receiving partner can review details and terms prior to accepting the shared feed. 
+![overlap-report.png](../images/ui/segment-match/overlap-report.png)
 
-Once a partner accepts the shared feed, they can start using the shared data to build new segments.
+Once you have selected your partners and viewed your overlap estimates report, select **[!UICONTROL Next]** to proceed.
 
-You can edit an "active" feed to add or remove segments or identity namespaces:
+![share.png](../images/ui/segment-match/share.png)
 
-**Add a new segment** 
+The [!UICONTROL Review] step appears, allowing you to review your new feed before it is shared and published. This step includes details on the identity setting that you applied, as well as information on the marketing use cases, segments, and partners that you selected.
 
-To add a new segment, select the segment you intend to add and then save and publish the feed. Your partner must then confirm that the shared feed contains the new metadata, associated with the segment you added.
+Select **[!UICONTROL Finish]** to proceed.
 
-**Add a new identity namespace**
+![review.png](../images/ui/segment-match/review.png)
 
-To add a new namespace, select the namespace you intend to add and then share the new estimate of overlapped namespaces with your partner for confirmation.
+### Accept an incoming feed
 
-**Remove a segment**
+To view an incoming feed, select **[!UICONTROL Received]** from the header of the [!UICONTROL Feeds] page and then select the feed you want to view from list. To accept the feed, select **[!UICONTROL Enable for profile]** and allow for a few moments for the status to update from [!UICONTROL Pending] to [!UICONTROL Enabled].
 
-You can unshare a segment from an active feed by selecting a segment for removal, and then confirming that the segment is no longer "active".
+![received.png](../images/ui/segment-match/received.png)
+
+Once you accept a shared feed, you can start using the shared data to build new segments.
+
+## Next steps
+
+By reading this document, you have gained an understanding of [!DNL Segment Match], its capabilities, and its end-to-end workflow. See the following documents, to learn more about other Platform services:
+
+* [[!DNL Segmentation Service]](../home.md)
+* [[!DNL Identity Service]](../../identity-service/home.md)
+* [[!DNL Real-time Customer Profile] overview](../../profile/home.md)
+
+## Appendix
+
+The following sections provide additional information for using [!DNL Segment Match]:
+
+### Update feed
+
+To add or remove segments, select **[!UICONTROL Create feed]** from the [!UICONTROL Feeds] page and then select **[!UICONTROL Existing feed]**. In the list of existing feed that appears, select the feed that you want to update, and then select **[!UICONTROL Next]**.
+
+![feed-list](../images/ui/segment-match/feed-list.png)
+
+The list of segments appears. From here, you can add new segments to your feed and you can use the right-rail to remove any segments that you no longer need. Once you have finished managing the segments in your feed, select **[!UICONTROL Next]** and then follow the steps outlined above to complete the updated feed.
+
+![update](../images/ui/segment-match/update.png)
+
+>[!NOTE]
+>
+>When you add or remove a segment from a shared feed, the receiving partner must confirm the change by re-enabling the [!DNL Profile] toggle in their list of received feeds.
