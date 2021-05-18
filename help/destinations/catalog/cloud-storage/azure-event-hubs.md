@@ -38,21 +38,21 @@ See [Cloud storage destinations workflow ](./workflow.md)for instructions on how
 
 For [!DNL Azure Event Hubs] destinations, enter the following information in the create destination workflow:
 
-## Authentication step {#authentication-step}
+## Account step {#account-step}
 
 * **[!UICONTROL SAS Key Name]** and **[!UICONTROL SAS Key]**: Fill in your SAS key name and key. Learn about authenticating to [!DNL Azure Event Hubs] with SAS keys in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/authenticate-shared-access-signature).
 * **[!UICONTROL Namespace]**: Fill in your [!DNL Azure Event Hubs] namespace. Learn about [!DNL Azure Event Hubs] namespaces in the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-create#create-an-event-hubs-namespace).
 
-![Input required in the authentication step](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
+![Input required in the account step](../../assets/catalog/cloud-storage/event-hubs/account.png)
 
-## Setup step {#setup-step}
+## Authentication step {#authentication-step}
 
 * **[!UICONTROL Name]**: Fill in a name for the connection to [!DNL Azure Event Hubs].
 * **[!UICONTROL Description]**: Provide a description of the connection.  Examples: "Premium tier customers", "Males interested in kitesurfing".
 * **[!UICONTROL eventHubName]**: Provide a name for the stream to your [!DNL Azure Event Hubs] destination.
 * **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
-![Data required in the setup step](../../assets/catalog/cloud-storage/event-hubs/setup.png)
+![Data required in the authentication step](../../assets/catalog/cloud-storage/event-hubs/authentication.png)
 
 ## Activate segments {#activate-segments}
 
