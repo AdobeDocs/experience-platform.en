@@ -12,23 +12,25 @@ Adobe Experience Platform supports the ability to import external audience, whic
 
 ## Getting started
 
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+
 - [Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
 - [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
 
-The following section provides additional details on the differences between segment data and segment metadata.
-
 ### Segment data vs segment metadata
 
-To import and use external audiences, you will need to set up and ingest both segment data and segment metadata.
+Before you start importing and using external audiences, it is important to understand the difference between segment data and segment metadata.
 
-Segment data are the profiles meet the segment qualification criteria, and as a result, are part of the audience.
+Segment data refers to the profiles that meet the segment qualification criteria, and are therefore part of the audience.
 
 Segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
 
-![](../images/tutorials/external-audiences/segment-data-metadata.png)
+| Segment data | Segment metadata |
+| ------------ | ---------------- |
+| Profiles that meet segment qualification | Information about the segment itself |
 
 ## Create an identity namespace for the external audience
 
