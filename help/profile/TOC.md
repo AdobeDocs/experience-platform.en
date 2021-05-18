@@ -30,7 +30,7 @@ feature: Profiles
 * Merge policies {#merge-policies}
   * [Overview](merge-policies/overview.md)
   * [Merge policies API](api/merge-policies.md)
-  * [Merge policies UI guide](merge-policies/merge-policies.md)
+  * [Merge policies UI guide](merge-policies/ui-guide.md)
   * [Create merge policies (Video)](video/create-merge-policies.md)
 * Union schemas {#union-schemas}
   * [Union schema UI guide](ui/union-schema.md)
