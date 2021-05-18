@@ -255,7 +255,7 @@ There are three ways you can use deduplication keys in [!DNL Platform]:
 
 >[!IMPORTANT]
 >
-> When exporting an identity namespace, you must always set the namespace as a deduplication key, and avoid adding additional namespaces to the export. Sending multiple namespaces to a destination may lead to incomplete file exports.
+> You can export a single identity namespace to a destination, and the namespace is automatically set as deduplication key. Sending multiple namespaces to a destination is not supported.
 > 
 > You cannot use a combination of identity namespaces and profile attributes as deduplication keys.
 
