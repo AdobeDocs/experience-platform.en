@@ -69,12 +69,12 @@ The license usage dashboard currently reports on four key metrics, with more met
 
 * [!UICONTROL Addressable Audience] (measured by number of profiles)
 * [!UICONTROL Average profile richness]
-* [!UICONTROL Total consumed storage] 
 * [!UICONTROL Data scanned per segmentation ratio]
+* [!UICONTROL Total consumed storage] 
 
 >[!WARNING]
 >
->Known limitation of the total consumed storage metric: When deleting batch data, that batch is placed into a soft delete state for a period of 7 days to support data recovery use cases. After 7 days, the batch is moved to a hard delete state. Reporting on total consumed storage will not reflect any change to the trend chart until the batch is in the hard delete state. This issue will be resolved in a future release.
+>Known limitation of the [!UICONTROL Total consumed storage] metric: When deleting batch data, that batch is placed into a soft delete state for a period of 7 days to support data recovery use cases. After 7 days, the batch is moved to a hard delete state. Reporting on total consumed storage will not reflect any change to the trend chart until the batch is in the hard delete state. This issue will be resolved in a future release.
 
 The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. 
 
