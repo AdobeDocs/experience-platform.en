@@ -1,20 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
-description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, as well as list profile distribution by dataset and by identity namespace within Adobe Experience Platform.
-topic-legacy: guide
+description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate a dataset overlap report.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build robust unified profiles for individual customers. As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other profile-related metrics. 
 
-When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
-
-* For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
-* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
-
-These metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] user guide](../ui/user-guide.md).
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate a dataset overlap report to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -28,11 +22,26 @@ The API endpoint used in this guide is part of the [[!DNL Real-time Customer Pro
 
 This guide references both "profile fragments" and "merged profiles". It is important to understand the difference between these terms before proceeding. 
 
-Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together (based on the merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
+Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization likely has multiple profile fragments related to that single customer appearing in multiple datasets. 
+
+When profile fragments are ingested into Platform, they are merged together (based on a merge policy) in order to create a single profile for that customer. Therefore, the total number of profile fragments is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
+
+To learn more about profiles and their role within Experience Platform, please begin by reading the [Real-time Customer Profile overview](../home.md).
+
+## How the sample job is triggered
+
+As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+
+* For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+
+The profile count and profiles by namespace metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] UI guide](../ui/user-guide.md).
 
 ## View last sample status {#view-last-sample-status}
 
-You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your IMS Organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, your organization may have multiple profile fragments related to a single customer who interacts with your brand across different channels, but these fragments would be merged together (according to the default merge policy) and would return a count of "1" profile because they are all related to the same individual.
+You can perform a GET request to the `/previewsamplestatus` endpoint to view the details for the last successful sample job that was run for your IMS Organization. This includes the total number of profiles in the sample, as well as the profile count metric, or total number of profiles your organization has within Experience Platform. 
+
+The profile count is generated after merging together profile fragments to form a single profile for each individual customer. In other words, when profile fragments are merged together they return a count of "1" profile because they are all related to the same individual.
 
 The profile count also includes both profiles with attributes (record data) as well as profiles containing only time series (event) data, such as Adobe Analytics profiles. The sample job is refreshed regularly as Profile data is ingested in order to provide an up-to-date total number of profiles within Platform.
 
@@ -55,7 +64,7 @@ curl -X GET \
 
 **Response**
 
-The response includes the details for the last successful sample job that was run for the IMS organization. 
+The response includes the details for the last successful sample job that was run for the organization. 
 
 >[!NOTE]
 >
@@ -130,7 +139,7 @@ The response includes a `data` array, containing a list of dataset objects. The 
 
 >[!NOTE]
 >
->If multiple reports existed for the date, only the latest would be returned. If a dataset report did not exist for the date provided, HTTP Status 404 (Not Found) would be returned.
+>If multiple reports exist for the date, only the latest report is returned. If a dataset report does not exist for the date provided, HTTP Status 404 (Not Found) is returned.
 
 ```json
 {
@@ -191,7 +200,9 @@ The response includes a `data` array, containing a list of dataset objects. The 
 
 ## List profile distribution by namespace
 
-You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).
+You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. 
+
+Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
@@ -284,6 +295,72 @@ The response includes a `data` array, with individual objects containing the det
 |`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
 
+## Generate dataset overlap report
+
+The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+
+You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
+
+For step-by-step instructions outlining how to generate the dataset overlap report using the command line or the Postman UI, please refer to the [generating the dataset overlap report tutorial](../tutorials/dataset-overlap-report.md).
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/dataset/overlap
+GET /previewsamplestatus/report/dataset/overlap?{QUERY_PARAMETERS}
+```
+
+|Parameter|Description|
+|---|---|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the same date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+
+**Request**
+
+The following request uses the `date` parameter to return the most recent report for the date specified.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/dataset/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful request returns HTTP Status 200 (OK) and the dataset overlap report. 
+
+```json
+{
+    "data": {
+        "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+        "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+        "5eeda0032af7bb19162172a7": 107
+    },
+    "reportTimestamp": "2021-12-29T19:55:31.147"
+}
+```
+
+|Property|Description|
+|---|---|
+|`data`|The `data` object contains comma-separated lists of datasets and their respective profile counts.|
+|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+
+The results of the report can be interpreted from the datasets and profile counts in the response. Consider the following example report `data` object:
+
+```json
+  "5d92921872831c163452edc8,5da7292579975918a851db57,5eb2cdc6fa3f9a18a7592a98": 123,
+  "5d92921872831c163452edc8,5eb2cdc6fa3f9a18a7592a98": 454412,
+  "5eeda0032af7bb19162172a7": 107
+```
+
+This report provides the following information:
+* There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
+* There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
+* There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
+* There is a total of 454,642 profiles in the organization.
+
 ## Next steps
 
-Now that you know how to preview sample data in the Profile store, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile store and run the dataset overlap report, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+
