@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schem
 solution: Experience Platform
 title: XDM ExperienceEvent Class
 topic-legacy: overview
-description: This document provides an overview of the XDM ExperienceEvent class.
+description: This document provides an overview of the XDM ExperienceEvent class, and best practices for event data modeling.
 exl-id: a8e59413-b52f-4ea5-867b-8d81088a3321
 ---
 # [!DNL XDM ExperienceEvent] class
