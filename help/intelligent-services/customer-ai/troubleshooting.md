@@ -25,7 +25,7 @@ If you receive the error "[!UICONTROL Model Quality is poor. We recommend creati
 
 ### Recommended fix
 
-"Model quality is poor" means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) < 0.7 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
+"Model quality is poor" means that the model accuracy is not within an acceptable range. Customer AI was unable to build a reliable model and AUC (Area under the ROC curve) < 0.65 after training. To fix the error, it is recommended that you change one of the configuration parameters and rerun the training.
 
 Start by checking the accuracy of your data. It is important that your data contains the necessary fields needed for your predictive outcome.
 
