@@ -14,3 +14,13 @@ The following entity relationship diagram (ERD) represents a standardized data m
 >For more information on industry data models and how to interpret this ERD, please refer to the [industry data model overview](./overview.md).
 
 ![](../../images/industries/retail.png)
+
+## [!UICONTROL Retail] use cases
+
+The following table outlines the recommended classes and schema field groups for several common retail use cases.
+
+| Use case | Recommended classes and field groups |
+| --- | --- |
+| Combine online and offline data sources and resolve cross-device and online/offline identity to provide holistic cross-channel and cross device attribution reporting. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>Commerce Details</li><li>Web Details</li></ul></li><li>Product:<ul><li>Product</li></ul></li></ul> |
+
+{style="table-layout:auto"}

@@ -33,6 +33,7 @@ feature: Schemas
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
   * Event field groups {#event}
+    * [Commerce Details](./field-groups/event/enduserids.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
@@ -65,6 +66,7 @@ feature: Schemas
     * [POI details](./data-types/poi-details.md)
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
+    * [Product list item](./data-types/product-list-item.md)
     * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
     * [Web interaction](./data-types/web-interactions.md)
