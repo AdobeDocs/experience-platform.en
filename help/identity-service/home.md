@@ -29,6 +29,7 @@ Before diving into the details of [!DNL Identity Service], here is a brief summa
 | Identity namespace | An identity namespace indicates the context of an identity. Identity namespaces are used to look up individual identities and provide context for identity values. For example, two [!DNL Profile] fragments may contain different primary IDs, but share the same value for the Email identity namespace, allowing Platform to see that these fragments are in fact, the same individual. See the [identity namespace overview](./namespaces.md) for more information. |
 | Identity graph | An identity graph is a map of relationships between different identities, allowing you to visualize and better understand how and what customers identities are stitched together.mSee the tutorial on [using the identity graph viewer](./ui/identity-graph-viewer.md) for more information. |
 | Personally Identifiable Information (PII) | PII such as email addresses and phone numbers serve to directly identify a customer and are used to match a customer's multiple identities across different systems. |
+| Unique identity | This entry needs to be defined. |
 | Unknown or anonymous identities | Unknown or anonymous identities are indicators that isolate devices without identifying the actual person using the device. Unknown and anonymous identities include information such as a visitor's IP address and cookie ID. Although unknown and anonymous identities can provide behavioral data, they are limited until a customer supplies their PII. |
 
 ## What is [!DNL Identity Service]?
