@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual 
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
 description: This document provides answers to frequently asked questions about Experience Data Model (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors.
-topic: troubleshooting
+topic-legacy: troubleshooting
+exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
-
 # XDM System troubleshooting guide
 
 This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
@@ -18,19 +18,19 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 ### How do I add fields to a schema?
 
-You can add fields to a schema by using a mixin. Each mixin is compatible with one or more classes, allowing the mixin to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry mixins with their own pre-defined fields, you can add your own fields to a schema by creating new mixins using the API or the user interface.
+You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating new field groups using the API or the user interface.
 
-For details on creating new mixins in the [!DNL Schema Registry] API, see the [mixin endpoint guide](api/mixins.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
+For details on creating new field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/field-groups.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
 
-### What are the best uses for mixins vs data types?
+### What are the best uses for field groups vs data types?
 
-[Mixins](./schema/composition.md#mixin) are components that define one or more fields in a schema. Mixins enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Mixins are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. 
+[Field groups](./schema/composition.md#field-group) are components that define one or more fields in a schema. Field groups enforce how their fields appear in the schema's hierarchy, and therefore exhibit the same structure in every schema that they are included in. Field groups are only compatible with specific classes, as identified by their `meta:intendedToExtend` attribute. 
 
-[Data types](./schema/composition.md#data-type) can also provide one or more fields for a schema. However, unlike mixins, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
+[Data types](./schema/composition.md#data-type) can also provide one or more fields for a schema. However, unlike field groups, data types are not constrained to a particular class. This makes data types a more flexible option to describe common data structures that are reusable across multiple schemas with potentially different classes.
 
 ### What is the unique ID for a schema?
 
-All [!DNL Schema Registry] resources (schemas, mixins, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. When viewing a schema in the API, it can be found in the top-level `$id` and `meta:altId` attributes.
+All [!DNL Schema Registry] resources (schemas, field groups, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. When viewing a schema in the API, it can be found in the top-level `$id` and `meta:altId` attributes.
 
 For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API developer guide.
 
@@ -128,7 +128,7 @@ For more information on constructing lookup paths in the API, see the [container
 }
 ```
 
-This error message displays when you attempt to create a resource with a title that is already being used by another resource. Titles must be unique across all resource types. For example, if you try to create a mixin with a title that is already being used by a schema, you will receive this error.
+This error message displays when you attempt to create a resource with a title that is already being used by another resource. Titles must be unique across all resource types. For example, if you try to create a field group with a title that is already being used by a schema, you will receive this error.
 
 ### Custom fields must use a top level field
 
@@ -142,7 +142,7 @@ This error message displays when you attempt to create a resource with a title t
 }
 ```
 
-This error message displays when you attempt to create a new mixin with improperly namespaced fields. Mixins that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for mixins can be found in the [mixins endpoint guide](./api/mixins.md#create).
+This error message displays when you attempt to create a new field group with improperly namespaced fields. Field groups that are defined by your IMS organization must namespace their fields with a `TENANT_ID` in order to avoid conflicts with other industry and vendor resources. Detailed examples of proper data structures for field groups can be found in the [field groups endpoint guide](./api/field-groups.md#create).
 
 
 ### [!DNL Real-time Customer Profile] errors

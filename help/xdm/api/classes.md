@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Classes API Endpoint
 description: The /classes endpoint in the Schema Registry API allows you to programmatically manage XDM classes within your experience application.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 7beddb37-0bf2-4893-baaf-5b292830f368
 ---
-
 # Classes endpoint
 
-All Experience Data Model (XDM) schemas must be based on a class. A class determines the base structure of common properties that all schemas based on that class must contain, as well as which mixins are eligible for use in those schemas. In addition, a schema's class determines the behavioral aspects of the data that a schema will contain, of which there are two types:
+All Experience Data Model (XDM) schemas must be based on a class. A class determines the base structure of common properties that all schemas based on that class must contain, as well as which schema field groups are eligible for use in those schemas. In addition, a schema's class determines the behavioral aspects of the data that a schema will contain, of which there are two types:
 
 * **[!UICONTROL Record]**: Provides information about the attributes of a subject. A subject could be an organization or an individual.
 * **[!UICONTROL Time-series]**: Provides a snapshot of the system at the time an action was taken either directly or indirectly by a record subject.
@@ -136,11 +136,11 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
 **Response**
 
@@ -239,7 +239,7 @@ You can define a custom class under the `tenant` container by making a POST requ
 
 >[!IMPORTANT]
 >
->When composing a schema based on a custom class that you define, you will not be able to use standard mixins. Each mixin defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining mixins that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the mixin), you will be able to reuse those mixins every time you define a schema that implements the class you defined. See the sections on [creating mixins](./mixins.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
+>When composing a schema based on a custom class that you define, you will not be able to use standard field groups. Each field group defines the classes they are compatible with in their `meta:intendedToExtend` attribute. Once you begin defining field groups that are compatible with your new class (by using the `$id` of your new class in the `meta:intendedToExtend` field of the field group), you will be able to reuse those field groups every time you define a schema that implements the class you defined. See the sections on [creating field groups](./field-groups.md#create) and [creating schemas](./schemas.md#create) in their respective endpoint guides for more information.
 >
 >If you are planning to use schemas based on custom classes in Real-time Customer Profile, it is also important to keep in mind that union schemas are only constructed based on schemas that share the same class. If you want to include a custom-class schema in the union for another class like [!UICONTROL XDM Individual Profile] or [!UICONTROL XDM ExperienceEvent], you must establish a relationship with another schema that employs that class. See the tutorial on [establishing a relationship between two schemas in the API](../tutorials/relationship-api.md) for more information.
 
@@ -253,7 +253,7 @@ POST /tenant/classes
 
 The request to create (POST) a class must include an `allOf` attribute containing a `$ref` to one of two values: `https://ns.adobe.com/xdm/data/record` or `https://ns.adobe.com/xdm/data/time-series`. These values represent the behavior upon which the class is based (record or time-series, respectively). For more information on the differences between record data and time series data, see the section on behavior types within the [basics of schema composition](../schema/composition.md).
 
-When you define a class, you may also include mixins or custom fields within the class definition. This would cause the added mixins and fields to be included in all schemas that implement the class. The following example request defines a class called "Property", which captures information regarding different properties owned and operated by a company. It includes a `propertyId` field to be included each time the class is used.
+When you define a class, you may also include field groups or custom fields within the class definition. This would cause the added field groups and fields to be included in all schemas that implement the class. The following example request defines a class called "Property", which captures information regarding different properties owned and operated by a company. It includes a `propertyId` field to be included each time the class is used.
 
 ```SHELL
 curl -X POST \

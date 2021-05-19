@@ -1,12 +1,18 @@
 ---
 keywords: SFTP;sftp
 title: SFTP connection
-description: Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
+description: Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+exl-id: 27abfc38-ec19-4321-b743-169370d585a0
 ---
-
 # SFTP connection
 
-Create a live outbound connection to your SFTP Server to periodically export delimited data files from Experience Platform.
+## Overview {#overview}
+
+Create a live outbound connection to your SFTP server to periodically export delimited data files from Adobe Experience Platform.
+
+>[!IMPORTANT]
+>
+> While Adobe supports data exports to SFTP servers, the recommended cloud storage locations to export data are [!DNL Amazon S3] and [!DNL Azure Blob].
 
 ## Export Type {#export-type}
 
@@ -16,7 +22,7 @@ Create a live outbound connection to your SFTP Server to periodically export del
 
 ## Connect destination {#connect-destination}
 
-See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including SFTP.
+Refer to the [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including SFTP.
 
 For SFTP destinations, enter the following information in the create destination workflow, in the **Authentication** step:
 
@@ -26,4 +32,8 @@ For SFTP destinations, enter the following information in the create destination
 
 ## Exported data {#exported-data}
 
-For SFTP destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+
+## IP address allow list
+
+Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.

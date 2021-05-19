@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Adobe Privacy JavaScript Library Overview
-topic: overview
+topic-legacy: overview
 description: The Adobe Privacy JavaScript Library allows you to retrieve data subject identities for use in Privacy Service.
+exl-id: 757bf69e-25bf-4ef9-9787-3e74b213908a
 ---
-
 # Adobe Privacy JavaScript Library overview
 
 As a data processor, Adobe processes personal data in accordance with your company's permission and instructions. As the data controller, you determine the personal data that Adobe processes and stores on your behalf. Depending on the information you choose to send through Adobe Experience Cloud solutions, Adobe can store private information applicable to privacy regulations such as the [!DNL General Data Protection Regulation] (GDPR) and [!DNL California Consumer Privacy Act] (CCPA). See the document on [privacy in Adobe Experience Cloud](https://www.adobe.com/privacy/marketing-cloud.html) for more information on how Experience Cloud solutions collect private data.
@@ -40,7 +40,7 @@ Since all three functions represent asynchronous processes, any retrieved identi
 To start using the [!DNL Privacy JS Library], you must install it onto your machine using one of the following methods:
 
 * Install using npm by running the following command: `npm install @adobe/adobe-privacy`
-* Use the Adobe Launch Extension under the name `AdobePrivacy`
+* Install the Adobe Privacy extension using [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en) under the name `AdobePrivacy`
 * Download from the [Experience Cloud GitHub repository](https://github.com/Adobe-Marketing-Cloud/adobe-privacy)
 
 ## Instantiate the [!DNL Privacy JS Library]
@@ -60,7 +60,7 @@ For a full list of supported parameters for different Adobe solutions, see the a
 
 ## Code samples
 
-The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using [!DNL Launch] or DTM.
+The following code samples demonstrate how to use the [!DNL Privacy JS Library] for several common scenarios, provided that you are not using [!DNL Platform Launch].
 
 ### Retrieve identities
 

@@ -4,8 +4,8 @@ title: Privacy in Real-time Customer Data Platform
 seo-title: Privacy in Real-time Customer Data Platform
 description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 ---
-
 # Privacy in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) helps marketers bring data from multiple enterprise systems together, allowing them to better identify, understand, and engage their customers. Adobe holds consumer data privacy as a fundamental design principle and provides various controls to help marketers manage the data privacy of their customers.

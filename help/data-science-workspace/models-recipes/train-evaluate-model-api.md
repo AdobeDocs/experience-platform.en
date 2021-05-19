@@ -2,11 +2,11 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;Sensei Machine Learning API
 solution: Experience Platform
 title: Train and Evaluate a Model using the Sensei Machine Learning API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will show you how to create, train, and evaluate a Model using Sensei Machine Learning API calls.
+exl-id: 8107221f-184c-426c-a33e-0ef55ed7796e
 ---
-
 # Train and evaluate a model using the [!DNL Sensei Machine Learning] API
 
 
@@ -34,15 +34,14 @@ We will be consuming the APIs to create an Experiment Run for training. For this
 
 >[!NOTE]
 >
->The terms "Engine", "MLInstance", "MLService", "Experiment", and "Model" are referred to as different terms in the UI. If you're coming from the UI, the following table will map the differences.
-> 
-> UI Term | API Term
-> --- | ---
-> Recipe | Engine
-> Model | MLInstance
-> Training runs | Experiment
-> Service | MLService |
+>The terms "Engine", "MLInstance", "MLService", "Experiment", and "Model" are referred to as different terms in the UI. If you're coming from the UI, the following table maps the differences.
 
+| UI Term | API Term |
+| --- | --- |
+| Recipe | Engine |
+| Model | MLInstance |
+| Training runs | Experiment |
+| Service | MLService |
 
 ### Create an MLInstance
 
@@ -121,7 +120,7 @@ curl -X POST \
 >
 >In the `{JSON_PAYLOAD}`, we define parameters used for training and scoring in the `tasks` array. The `{ENGINE_ID}` is the ID of the Engine you want to use and the `tag` field is an optional parameter used to identify the Instance.
 
-The response will contain the `{INSTANCE_ID}` which represents the MLInstance that is created. Multiple model MLInstances with different configurations can be created.
+The response contains the `{INSTANCE_ID}` which represents the MLInstance that is created. Multiple model MLInstances with different configurations can be created.
 
 **Response**
 

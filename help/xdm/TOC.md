@@ -1,9 +1,9 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
-user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
+user-guide-description: Use Experience Data Model (XDM) classes and schema field groups to standardize experience data.
+feature: Schemas
 ---
 
 # Experience Data Model (XDM) System {#xdm}
@@ -13,21 +13,29 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
+  * [Namespacing in XDM](./schema/namespaces.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+  * Industry data models {#industries}
+    * [Overview](./schema/industries/overview.md)
+    * [Retail data model ERD](./schema/industries/retail.md)
+    * [Financial services data model ERD](./schema/industries/financial.md)
+    * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Mixins {#mixins}
-  * Profile mixins {#profile}
-    * [IdentityMap](./mixins/profile/identitymap.md)
-    * [Demographic Details](./mixins/profile/person-details.md)
-    * [Personal Contact Details](./mixins/profile/personal-details.md)
-    * [Segment Membership Details](./mixins/profile/segmentation.md)
-    * [Work Contact Details](./mixins/profile/work-details.md)
-  * Event mixins {#event}
-    * [End User ID Details](./mixins/event/enduserids.md)
-    * [Environment Details](./mixins/event/environment-details.md)
-  * [Mixin name updates](./mixins/name-updates.md)
+  * [Segment definition](./classes/segment-definition.md)
+* Schema field groups {#field-groups}
+  * Profile field groups {#profile}
+    * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
+    * [Segment Membership Details](./field-groups/profile/segmentation.md)
+    * [Work Contact Details](./field-groups/profile/work-contact-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
+  * Event field groups {#event}
+    * [End User ID Details](./field-groups/event/enduserids.md)
+    * [Environment Details](./field-groups/event/environment-details.md)
+  * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)
@@ -37,6 +45,10 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
+    * [Generic Marketing Preference Field](./data-types/marketing-field.md)
+    * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
+    * [Generic Personalization Preference Field](./data-types/personalization-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)
@@ -63,7 +75,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * Create and edit resources {#resources}
     * [Schemas](./ui/resources/schemas.md)
     * [Classes](./ui/resources/classes.md)
-    * [Mixins](./ui/resources/mixins.md)
+    * [Field groups](./ui/resources/field-groups.md)
     * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
     * [Overview](./ui/fields/overview.md)
@@ -81,7 +93,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Schemas](api/schemas.md)
   * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
-  * [Mixins](api/mixins.md)
+  * [Schema field groups](api/field-groups.md)
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
@@ -89,6 +101,7 @@ user-guide-description: Use Experience Data Model (XDM) classes and mixins to st
   * [Sample data](api/sample-data.md)
   * [Audit log](api/audit-log.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
+  * [Mixins (Deprecated)](api/mixins.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
   * [Create a schema (UI)](tutorials/create-schema-ui.md)

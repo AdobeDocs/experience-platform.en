@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;experienceevent queries;experienceevent query;Experience Event query;
 solution: Experience Platform
 title: Sample Queries for Experience Events
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: The following document provides examples of queries involving Experience Events in Adobe Experience Platform Query Service.
+exl-id: e6793a03-e474-4ae4-acb2-a052ff1c6d68
 ---
-
 # Sample queries for [!DNL Experience Events]
 
 In addition to standard SQL queries, Adobe Experience Platform [!DNL Query Service] supports writing queries using [!DNL Experience Events]. Experience Events are represented by the Experience Data Model (XDM) ExperienceEvent class, which captures an immutable and non-aggregated snapshot of the system when a user interacts with a website or service, and can therefore be used for time-domain analysis. 
@@ -183,4 +183,3 @@ ORDER BY pageViews DESC;
 ## Next steps
 
 For more information on sample queries using Adobe Defined Functions (ADFs), please read the Adobe Defined Functions guide. For general guidance on query execution, please read the [guide on query execution in Query Service](./writing-queries.md).
-

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;catalog service;catalog;Catalog service;Catalog
 solution: Experience Platform
 title: Catalog Service API Guide
-topic: developer guide
+topic-legacy: developer guide
 description: The Catalog Service API allows developers to manage dataset metadata in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+exl-id: 812fcdae-ed0e-4f2b-84d7-26f2f79e71b9
 ---
-
 # [!DNL Catalog Service] API guide
 
 [!DNL Catalog Service] is the system of record for data location and lineage within Adobe Experience Platform. [!DNL Catalog] acts as a metadata store or "catalog" where you can find information about your data within [!DNL Experience Platform], without needing to access the data itself. See the [[!DNL Catalog] overview](../home.md) for more information.
@@ -18,7 +18,7 @@ This developer guide provides steps to help you start using the [!DNL Catalog] A
 
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 * [Batch ingestion](../../ingestion/batch-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from data files, such as CSV and Parquet.
-* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from client- and server-side devices in real-time.
+* [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How [!DNL Experience Platform] ingests and stores data from client- and server-side devices in real time.
 
 The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the [!DNL Catalog Service] API.
 

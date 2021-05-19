@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: b3f84ed8-09e8-470e-b5e2-944a4eaf147b
 ---
-
 # Union schemas overview
 
 This video provides a basic understanding of union schemas within Adobe Experience Platform and outlines how to explore a union schema using the Platform user interface. To learn more about union schemas, please visit the [union schemas UI guide](../ui/union-schema.md). 

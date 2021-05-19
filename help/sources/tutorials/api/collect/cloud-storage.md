@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;cloud storage data
 solution: Experience Platform
 title: Collect Cloud Storage Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform using source connectors and APIs.
+exl-id: 95373c25-24f6-4905-ae6c-5000bf493e6f
 ---
-
 # Collect cloud storage data using source connectors and APIs
 
 This tutorial covers the steps for retrieving data from a third-party cloud storage and bringing them in to Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
@@ -51,7 +51,7 @@ You can create a source connection by making a POST request to the [!DNL Flow Se
 
 To create a source connection, you must also define an enum value for the data format attribute.
 
-Use the following the enum values for file-based connectors:
+Use the following the enum values for file-based sources:
 
 | Data format | Enum value |
 | ----------- | ---------- |
@@ -59,11 +59,10 @@ Use the following the enum values for file-based connectors:
 | JSON | `json` |
 | Parquet | `parquet` |
 
-For all table-based connectors, set the value to `tabular`.
+For all table-based sources, set the value to `tabular`.
 
->[!NOTE]
->
->You can ingest CSV and TSV files with a cloud storage source connector by specifying a column delimiter as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+- [Create a source connection using custom delimited files](#using-custom-delimited-files)
+- [Create a source connection using compressed files](#using-compressed-files)
 
 **API format**
 
@@ -71,7 +70,13 @@ For all table-based connectors, set the value to `tabular`.
 POST /sourceConnections
 ```
 
+### Create a source connection using custom delimited files {#using-custom-delimited-files}
+
 **Request**
+
+You can ingest a delimited file with a custom delimiter by specifying a `columnDelimiter` as a property. Any single character value is a permissible column delimiter. If unprovided, a comma `(,)` is used as the default value.
+
+The following example request creates a source connection for a delimited file type using tab-separated values.
 
 ```shell
 curl -X POST \
@@ -82,9 +87,9 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Cloud storage source connector",
-        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "name": "Cloud storage source connection for delimited files",
         "description": "Cloud storage source connector",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
         "data": {
             "format": "delimited",
             "columnDelimiter": "\t"
@@ -93,7 +98,7 @@ curl -X POST \
             "path": "/ingestion-demos/leads/tsv_data/*.tsv",
             "recursive": "true"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
             "version": "1.0"
         }
@@ -107,6 +112,64 @@ curl -X POST \
 | `data.columnDelimiter` | You can use any single character column delimiter to collect flat files. This property is only required when ingesting CSV or TSV files. |
 | `params.path` | The path of the source file you are accessing. |
 | `connectionSpec.id` | The connection spec ID associated with your specific third-party cloud storage system. See the [appendix](#appendix) for a list of connection spec IDs. |
+
+**Response**
+
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
+
+```json
+{
+    "id": "26b53912-1005-49f0-b539-12100559f0e2",
+    "etag": "\"11004d97-0000-0200-0000-5f3c3b140000\""
+}
+```
+
+### Create a source connection using compressed files {#using-compressed-files}
+
+**Request**
+
+You can also ingest compressed JSON or delimited files by specifying its `compressionType` as a property. The list of supported compressed file types are:
+
+- `bzip2`
+- `gzip`
+- `deflate`
+- `zipDeflate`
+- `tarGzip`
+- `tar`
+
+The following example request creates a source connection for a compressed delimited file using a `gzip` file type.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "name": "Cloud storage source connection for compressed files",
+        "description": "Cloud storage source connection for compressed files",
+        "baseConnectionId": "9e2541a0-b143-4d23-a541-a0b143dd2301",
+        "data": {
+            "format": "delimited",
+            "properties": {
+                "compressionType" : "gzip"
+            }
+        },
+        "params": {
+            "path": "/compressed/files.gzip"
+        },
+        "connectionSpec": {
+            "id": "4c10e202-c428-4796-9208-5f1f5732b1cf",
+            "version": "1.0"
+        }
+     }'
+```
+
+| Property | Description |
+| --- | --- |
+| `data.properties.compressionType` | Determines the compressed file type for ingestion. This property is only required when ingesting compressed JSON or delimited files. |
 
 **Response**
 
@@ -262,6 +325,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `schemaRef.id` | The ID of the target XDM schema. |
+| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
 
 **Response**
 
@@ -301,7 +365,7 @@ curl -X POST \
         "data": {
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-                "version": "application/vnd.adobe.xed-full+json;version=1.0"
+                "version": "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
@@ -317,6 +381,7 @@ curl -X POST \
 | Property | Description |
 | -------- | ----------- |
 | `data.schema.id` | The `$id` of the target XDM schema. |
+|`data.schema.version` | The version of the schema. This value must be set `application/vnd.adobe.xed-full+json;version=1`, which returns the latest minor version of the schema. |
 | `params.dataSetId` | The ID of the target dataset. |
 | `connectionSpec.id` | The fixed connection spec ID to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
 

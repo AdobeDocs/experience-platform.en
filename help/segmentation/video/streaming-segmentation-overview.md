@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: 8092a614-4888-43e3-a02c-b1cf0eb45256
 ---
-
 # Streaming segmentation in the Experience Platform UI
 
 The following video is intended to support your understanding of streaming segmentation. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about streaming segmentation and how to do streaming segmentation in the UI, please read the [streaming segmentation UI guide](../ui/streaming-segmentation.md).

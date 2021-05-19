@@ -2,10 +2,10 @@
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace Troubleshooting Guide
-topic: Troubleshooting
+topic-legacy: Troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace.
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 ---
-
 # [!DNL Data Science Workspace] troubleshooting guide
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).

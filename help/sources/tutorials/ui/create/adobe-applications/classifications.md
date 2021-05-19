@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics; analytics;classifications
 description: Learn how to create an Adobe Analytics source connector the UI to bring classifications data into Adobe Experience Platform.
 solution: Experience Platform
 title: Create an Adobe Analytics Source Connection for Classifications Data in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: d606720d-f1ca-47cc-919b-643a8fc61e07
 ---
-
 # Create an Adobe Analytics source connection for classifications data in the UI
 
 This tutorial provides steps for creating an Adobe Analytics Classifications Data source connection in the UI to bring classifications data into Adobe Experience Platform.

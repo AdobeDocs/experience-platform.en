@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Analytics mapping fields;analytics mapping
 solution: Experience Platform
 title: Mapping Fields for the Adobe Analytics Source Connector
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
+exl-id: 15dc1368-5cf1-42e1-9683-d5158f8aa2db
 ---
-
 # Analytics field mappings
 
 Adobe Experience Platform allows you to ingest Adobe Analytics data through the Analytics Data Connector (ADC). Some of the data ingested through ADC can be mapped directly from Analytics fields to Experience Data Model (XDM) fields, while other data requires transformations and specific functions in order to be successfully mapped.
@@ -117,6 +117,8 @@ The following table includes columns that show the name of the Analytics field (
 | videopausetime | media.mediaTimed.pauseTime | Object | <!-- MISSING -->| {id (string), value (number)} |
 | videosecondssincelastcall | media.mediaTimed.primaryAssetViewDetails.sessionTimeout | integer  |
 
+{style="table-layout:auto"}
+
 ## Split mapping fields
 
 These fields have a single source, but map to **multiple** XDM locations.
@@ -126,6 +128,8 @@ These fields have a single source, but map to **multiple** XDM locations.
 | s_resolution | device.screenWidth, device.screenHeight | integer  | Numeric ID representing the resolution of the monitor. |
 | mobileosversion | environment.operatingSystem, environment.operatingSystemVersion | string  | Mobile operating system version. |
 | videoadlength | advertising.adAssetReference._xmpDM.duration | integer  | Video Ad length. |
+
+{style="table-layout:auto"}
 
 ## Generated mapping fields
 
@@ -184,6 +188,8 @@ The following table includes columns that show the name of the Analytics field (
 | mobilebeaconproximity | placeContext.POIinteraction.POIDetail.beaconInteractionDetails.proximity | string | Mobile Services beacon proximity. |
 | videochapter | media.mediaTimed.mediaChapter.chapterAssetReference._xmpDM.duration | integer | The name of the video chapter. |
 | videolength | media.mediaTimed.primaryAssetReference._xmpDM.duration | integer | The length of the video. |
+
+{style="table-layout:auto"}
 
 ## Advanced mapping fields
 
@@ -262,3 +268,5 @@ The following table includes columns that show the name of the Analytics field (
 | visit_ref_type | _experience.analytics.session.web.webReferrer.type | string | Numeric ID representing the referrer type of the first referrer of the visit. |
 | visit_search_engine | _experience.analytics.session.search.searchEngine | string | Numeric ID of the first search engine of the visit. |
 | visit_start_time_gmt | _experience.analytics.session.timestamp | integer | Timestamp of the first hit of the visit in Unix time. |
+
+{style="table-layout:auto"}

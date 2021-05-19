@@ -1,9 +1,9 @@
 ---
 title: IAB TCF 2.0 Support in the Adobe Experience Platform Web SDK
 description: Learn how to support IAB TCF 2.0 consent preferences using the Adobe Experience Platform Web SDK
-keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
-
 # IAB TCF 2.0 support in the Adobe Experience Platform Web SDK
 
 The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
@@ -42,7 +42,7 @@ Whereas the Real-time CDP and Audience Manager's audiences keep track of a custo
 
 To collect consent information on events, the following is required:
 
-- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
+- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy schema field group.
 - An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
 
 For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.

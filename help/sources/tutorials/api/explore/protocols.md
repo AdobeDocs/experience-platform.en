@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;protocol
 solution: Experience Platform
 title: Explore a Protocol System Using the Flow Service API
-topic: overview
+topic-legacy: overview
 description: This tutorial uses the Flow Service API to explore protocols applications.
+exl-id: e4b24312-543e-4014-aa53-e8ca9c620950
 ---
-
 # Explore a protocol system using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

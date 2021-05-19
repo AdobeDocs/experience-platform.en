@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;catalog;multiple object lookup;api
 solution: Experience Platform
 title: Look Up Multiple Catalog Objects
-topic: developer guide
+topic-legacy: developer guide
 description: If you wish to view several specific objects, rather than making one request per object, Catalog provides a simple shortcut for requesting multiple objects of the same type. You can use a single GET request to return multiple specific objects by including a comma-separated list of IDs.
+exl-id: b2329b32-6139-4557-aff3-a584e03b09f3
 ---
-
 # Look up multiple Catalog objects
 
 If you wish to view several specific objects, rather than making one request per object, [!DNL Catalog] provides a simple shortcut for requesting multiple objects of the same type. You can use a single GET request to return multiple specific objects by including a comma-separated list of IDs. 

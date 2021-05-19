@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Create a Salesforce  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Salesforce source connection using the Adobe Experience Platform UI.
+exl-id: b67fa4c4-d8ff-4d2d-aa76-5d9d32aa22d6
 ---
-
 # Create a [!DNL Salesforce] source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced CRM data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce] source connector using the [!DNL Platform] user interface.

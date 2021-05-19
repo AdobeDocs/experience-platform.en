@@ -1,20 +1,20 @@
 ---
-keywords: Experience Platform;home;popular topics;schema;Schema;mixin;Mixin;Mixins;mixins;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
+keywords: Experience Platform;home;popular topics;schema;Schema;field group;Field group;Field groups;field groups;data type;data types;Data types;Data type;schema design;datatype;Datatype;data type;Data type;schemas;Schemas;Schema design;map;Map;
 solution: Experience Platform
 title: XDM Field Type Constraints
-topic: overview
+topic-legacy: overview
 description: A reference for field type constraints in Experience Data Model (XDM), including the other serialization formats they can be mapped to and how to define your own field types in the API.
+exl-id: 63839a28-6d26-46f1-8bbf-b524e82ac4df
 ---
-
 # XDM field type constraints
 
 In Experience Data Model (XDM) schemas, a field's type constrains what kind of data the field can contain. This document provides an overview of each core field type, including the other serialization formats they can be mapped to and how to define your own field types in the API in order to enforce different constraints.
 
 ## Getting started
 
-Before using this guide, please review the [basics of schema composition](./composition.md) for an introduction to XDM schemas, classes, and mixins.
+Before using this guide, please review the [basics of schema composition](./composition.md) for an introduction to XDM schemas, classes, and schema field groups.
 
-If you plan on defining your own field types in the API, it is strongly recommended that you start with the [Schema Registry developer guide](../api/getting-started.md) to learn how to create mixins and data types to include your custom fields in. If you are using the Experience Platform UI to create your schemas, see the guide on [defining fields in the UI](../ui/fields/overview.md) to learn how implement constraints on fields that you define within custom mixins and data types.
+If you plan on defining your own field types in the API, it is strongly recommended that you start with the [Schema Registry developer guide](../api/getting-started.md) to learn how to create field groups and data types to include your custom fields in. If you are using the Experience Platform UI to create your schemas, see the guide on [defining fields in the UI](../ui/fields/overview.md) to learn how implement constraints on fields that you define within custom field groups and data types.
 
 ## Base structure and examples
 
@@ -26,7 +26,7 @@ XDM is built on top of JSON Schema, and therefore XDM fields inherit a similar s
 
 The following table outlines how each XDM type is represented in JSON Schema, along with an example value that conforms to the type:
 
-<table>
+<table style="table-layout:auto">
   <thead>
     <tr>
       <th>XDM type</th>
@@ -178,6 +178,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | `Boolean` | `System.Boolean` | `Boolean` |
 | [!UICONTROL Map] | `Map` | (N/A) | `object` |
 
+{style="table-layout:auto"}
+
 ### MongoDB, Aerospike, and Protobuf 2 {#mongo}
 
 | XDM type | MongoDB | Aerospike | Protobuf 2 | 
@@ -193,6 +195,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | `bool` | `Integer`<br>(0/1 binary) | `bool` |
 | [!UICONTROL Map] | `object` | `map` | `map<key_type, value_type>` |
 
+{style="table-layout:auto"}
+
 ## Defining XDM field types in the API {#define-fields}
 
 All XDM fields are defined using the standard [JSON Schema](https://json-schema.org/) constraints that apply to their field type, with additional constraints for field names that are enforced by [!DNL Experience Platform]. The Schema Registry API allows you to define additional field types through the use of formats and optional constraints. XDM field types are exposed by the field-level attribute, `meta:xdmType`.
@@ -203,9 +207,9 @@ All XDM fields are defined using the standard [JSON Schema](https://json-schema.
 
 The following table outlines the appropriate formatting to define different field types, including those with optional properties. More information regarding optional properties and type-specific keywords is available through the [JSON Schema documentation](https://json-schema.org/understanding-json-schema/reference/type.html).
 
-To begin, find the desired field type and use the sample code provided to build your API request for [creating a mixin](../api/mixins.md#create) or [creating a data type](../api/data-types.md#create).
+To begin, find the desired field type and use the sample code provided to build your API request for [creating a field group](../api/field-groups.md#create) or [creating a data type](../api/data-types.md#create).
 
-<table>
+<table style="table-layout:auto">
   <tr>
     <th>XDM type</th>
     <th>Optional properties</th>

@@ -1,9 +1,9 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Destinations Guide
 user-guide-description: Activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 description: This document lists the table of contents for Adobe Experience Platform destinations
+feature: Destinations
 ---
 
 # Destinations {#destinations}
@@ -12,13 +12,17 @@ description: This document lists the table of contents for Adobe Experience Plat
 * [Destination types and categories](./destination-types.md)
 * [Destinations FAQ](./destinations-faq.md)
 * API tutorials {#api}
-    * [Connect to streaming destinations and activate data using API calls](./api/streaming-destinations.md)
-    * [Connect to email marketing destinations and activate data using API calls](./api/email-marketing.md)
+    * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
+    * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
-    * [Destinations workspace overview](./ui/destinations-workspace.md)
-    * [View destination details](./ui/destination-details-page.md)
+    * [Destinations workspace](./ui/destinations-workspace.md)
     * [Connect to a destination](./ui/connect-destination.md)
+    * [View destination details](./ui/destination-details-page.md)
     * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
+    * [Update destination accounts](./ui/update-accounts.md)
+    * [Edit activation flows](./ui/edit-activation.md)
+    * [Delete destinations](./ui/delete-destinations.md)
+    * [Monitor dataflows](./ui/monitor-dataflows.md)
 * Destinations catalog {#catalog}
     * [Destinations catalog overview](./catalog/overview.md)
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)
@@ -70,11 +74,12 @@ description: This document lists the table of contents for Adobe Experience Plat
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
         * [Create a cloud storage destination](./catalog/cloud-storage/workflow.md)
-        * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
+        * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
         * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
         * [SFTP connection](./catalog/cloud-storage/sftp.md)
+        * [IP address allow list](./catalog/cloud-storage/ip-address-allow-list.md)
     * Data Management Platform destinations {#data-management}
         * [Data Management Platform (DMP) destinations overview](./catalog/data-management/overview.md)
         * [Audience Manager DIL extension](./catalog/data-management/aam-dil-extension.md)
@@ -93,9 +98,9 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Adobe Experience Platform Launch extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
-        * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
-        * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
-        * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
+        * [(Beta) Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+        * [(Beta) Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
@@ -106,12 +111,12 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Gainsight extension](./catalog/personalization/gainsight.md)
         * [KickFire extension](./catalog/personalization/kickfire.md)
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
-    * Social network destinations{#social}
-        * [Social network destinations overview](./catalog/social/overview.md)
-        * [Create a social network destination](./catalog/social/workflow.md)
+    * Social destinations{#social}
+        * [Social destinations overview](./catalog/social/overview.md)
+        * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
-        * [Facebook Custom Audiences connection](./catalog/social/facebook.md)
-        * [Linkedin Matched Audiences connection](./catalog/social/linkedin.md)
+        * [Facebook connection](./catalog/social/facebook.md)
+        * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
@@ -122,6 +127,6 @@ description: This document lists the table of contents for Adobe Experience Plat
         * [Voice of the Customer destinations overview](./catalog/voice/overview.md)
         * [Confirmit Digital Feedback extension](./catalog/voice/confirmit-digital-feedback.md)
         * [Invoca Tags extension](./catalog/voice/invoca.md)
-        * [Medallia etension](./catalog/voice/medallia.md)
+        * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -2,8 +2,8 @@
 title: Automatically Collected Information in the Adobe Experience Platform Web SDK
 description: An overview of each piece of information that the Adobe Experience Platform SDK collects automatically.
 keywords: collect information;context;configure;device;screenHeight;screen Height;screenOrientation;screen Orientation;screenWidth;screen Width;environment;viewportHeight;viewport Height;viewportWidth;viewport Width;crowserDetails;browser details;implementationDetails;implementation Details;name;version;placeContext;localTime;local Time;localTimezoneOffset;local Timezone Offset;timestamp;web;url;webPageDetails;web Page Details;webReferrer;web Referrer;landscape;portrait;
+exl-id: 901df786-df36-4986-9c74-a32d29c11b71
 ---
-
 # Automatically collected information
 
 The Adobe Experience Platform Web SDK collects a number of pieces of information automatically without any special configuration. However, this information can be disabled if needed using the `context` option in the `configure` command. [See Configuring the SDK](../fundamentals/configuring-the-sdk.md). Below is a list of those pieces of information. The name in parentheses indicates the string to use when configuring the context.
@@ -18,7 +18,7 @@ Information about the device. This does not include data that can be looked up s
 | ---------------------------------- | ------------ |
 | `events[].xdm.device.screenHeight` | `900`        |
 
-The height in pixel of the screen.  
+The height of the screen (in pixels).
 
 ### Screen orientation
 
@@ -34,7 +34,7 @@ The orientation of the screen.
 | --------------------------------- | ------------ |
 | `events[].xdm.device.screenWidth` | `1440`       |
 
-The width of the screen (in pixels).  
+The width of the screen (in pixels).
 
 ## Environment (`environment`)
 
@@ -76,7 +76,7 @@ Information about the SDK used to collect the event.
 | ----------------------------------------- | --------------------------------------- |
 | `events[].xdm.implementationDetails.name` | `https://ns.adobe.com/experience/alloy` |
 
-The software development kit (SDK) identifier.  This field uses a URI to improve uniqueness among identifiers provided by different software libraries.
+The software development kit (SDK) identifier.  This field uses a URI to improve uniqueness among identifiers provided by different software libraries. When the standalone library is used, the value is `https://ns.adobe.com/experience/alloy`. When the library is used as part of the Platform Launch extension, the value is `https://ns.adobe.com/experience/alloy+reactor`.
 
 ### Version
 
@@ -84,12 +84,15 @@ The software development kit (SDK) identifier.  This field uses a URI to improve
 | -------------------------------------------- | ------------ |
 | `events[].xdm.implementationDetails.version` | `0.11.0`     |
 
+When the standalone library is used, the value is simply the library version. When the library is used as part of the Platform Launch extension, this is the library version and the Platform Launch extension version joined with a "+". For example, if the library version were 2.1.0, and the Platform Launch extension version were 2.1.3, the value would be `2.1.0+2.1.3`.
+
 ### Environment
 
 | **Path in Payload:**                             | **Example:** |
 | ------------------------------------------------ | ------------ |
 | `events[].xdm.implementationDetails.environment` | `browser`    |
 
+The environment where the data was collected. This is always set to `browser`.
 
 ## Place context (`placeContext`)
 
@@ -109,7 +112,7 @@ Local timestamp for the end user in simplified extended ISO format [ISO 8601](ht
 | ----------------------------------------------- | ------------ |
 | `events[].xdm.placeContext.localTimezoneOffset` | `360`        |
 
-Number of minutes the user is offset from GMT.  
+Number of minutes the user is offset from GMT.
 
 ## Timestamp
 
@@ -131,7 +134,7 @@ Details about the page the user is on.
 | ------------------------------------- | ------------------------------------ |
 | `events[].xdm.web.webPageDetails.URL` | `https://somesite.com/somepage.html` |
 
-The URL of the current page.  
+The URL of the current page.
 
 ### Referrer URL
 
