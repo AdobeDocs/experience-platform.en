@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Merge Policies API Endpoint
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
 exl-id: fb49977d-d5ca-4de9-b185-a5ac1d504970
@@ -745,19 +745,19 @@ As records are ingested into Experience Platform, a system timestamp is obtained
 
 Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
 
-In order to use a custom timestamp, the [[!DNL External Source System Audit Details Mixin]](#mixin-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the [[!DNL External Source System Audit Details] schema field group](#field-group-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >
 >You must ensure that the `xdm:lastUpdatedDate` timestamp is populated when sending a PATCH on the same record.
 
-For step-by-step instructions on working with schemas using the Schema Registry API, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
+For step-by-step instructions on working with schemas using the Schema Registry API, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
 
 To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../ui/merge-policies.md#custom-timestamps) in the [merge policies user guide](../ui/merge-policies.md).
 
-#### [!DNL External Source System Audit Details Mixin] details {#mixin-details}
+#### [!DNL External Source System Audit Details] field group details {#field-group-details}
 
-The following example shows correctly populated fields in the [!DNL External Source System Audit Details Mixin]. The complete mixin JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
+The following example shows correctly populated fields in the [!DNL External Source System Audit Details] field group. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
 
 ```json
 {

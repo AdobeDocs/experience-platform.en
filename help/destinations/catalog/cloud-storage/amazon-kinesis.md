@@ -38,21 +38,21 @@ See [Cloud storage destinations workflow ](./workflow.md)for instructions on how
 
 For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
 
-## Authentication step {#authentication-step}
+## Account step {#account-step}
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
 
 ![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
 
-## Setup step {#setup-step}
+## Authentication step {#authentication-step}
 
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
 * **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
 * **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
 
-![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/setup.png)
+![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 

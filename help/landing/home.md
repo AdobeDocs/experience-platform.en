@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;region
 solution: Experience Platform
 title: Adobe Experience Platform Overview
-topic: getting started
+topic-legacy: getting started
 description: Adobe Experience Platform enables organizations to centralize and standardize customer data before applying data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 exl-id: edcce353-338a-440e-99eb-a64e2abca579
 ---
 # Adobe Experience Platform overview
-
->[!NOTE]
->
->Adobe Experience Platform documentation has recently moved. Please take a moment to review the new navigation and to update any existing bookmarks.
  
 Adobe Experience Platform is the most powerful, flexible, and open system on the market for building and managing complete solutions that drive customer experience. [!DNL Experience Platform] enables organizations to centralize and standardize customer data and content from any system and apply data science and machine learning to dramatically improve the design and delivery of rich, personalized experiences.
 

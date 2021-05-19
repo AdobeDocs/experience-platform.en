@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;poi;poi details;point of interest;point of interest details;datatype;data-type;data type;
 solution: Experience Platform
 title: Point of Interest Details Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Point Of Interest Details XDM data type.
 exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 ---
@@ -23,7 +23,7 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 | `poiID` | String | A unique identifier of the POI. |
 | `type` | String | The general type of the POI using a typing schema selected by the administrator of the POI definitions. |
 
-For more details on the mixin, refer to the public XDM repository:
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

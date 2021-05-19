@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Adobe Experience Platform FAQ and Troubleshooting Guide
 description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
 landing-page-description: Find answers to frequently asked questions and a guide for troubleshooting common errors in Experience Platform.
-topic: getting started
+topic-legacy: getting started
 type: Documentation
 exl-id: 3e6d29aa-2138-421b-8bee-82b632962c01
 ---
@@ -80,13 +80,13 @@ The following is a list of errors that you may encounter when using any [!DNL Ex
 
 The following status codes may be encountered on any [!DNL Experience Platform] API. Each has a variety of causes, therefore the explanations given in this section are general in nature. For more details regarding specific errors in individual [!DNL Platform] services, please see the [service troubleshooting directory](#service-troubleshooting-directory) below.
 
-Status Code | Description | Possible Causes
---- | --- | ---
-400 | Bad request | The request was improperly constructed, missing key information, and/or contained incorrect syntax.
-401 | Authentication failed | The request did not pass an authentication check. Your access token may be missing or invalid. See the [OAuth token errors](#oauth-token-is-missing) section below for more details.
-403 | Forbidden | The resource was found, but you do not have the right credentials to view it.
-404 | Not found | The requested resource could not be found on the server. The resource may have been deleted, or the requested path was entered incorrectly.
-500 | Internal server error | This is a server-side error. If you are making many simultaneous calls, you may be reaching the API limit and need to filter your results. (See the [!DNL Catalog Service] API developer guide sub-guide on [filtering data](../catalog/api/filter-data.md) to learn more.) Wait for a moment before trying your request again, and contact your administrator if the problem persists.
+|Status Code | Description | Possible Causes|
+|--- | --- | ---|
+|400 | Bad request | The request was improperly constructed, missing key information, and/or contained incorrect syntax.|
+|401 | Authentication failed | The request did not pass an authentication check. Your access token may be missing or invalid. See the [OAuth token errors](#oauth-token-is-missing) section below for more details.|
+|403 | Forbidden | The resource was found, but you do not have the right credentials to view it.|
+|404 | Not found | The requested resource could not be found on the server. The resource may have been deleted, or the requested path was entered incorrectly.|
+|500 | Internal server error | This is a server-side error. If you are making many simultaneous calls, you may be reaching the API limit and need to filter your results. (See the [!DNL Catalog Service] API developer guide sub-guide on [filtering data](../catalog/api/filter-data.md) to learn more.) Wait for a moment before trying your request again, and contact your administrator if the problem persists.|
 
 ## Request header errors {#request-header-errors}
 
@@ -172,6 +172,16 @@ This error message displays when the user or Adobe I/O integration (identified b
 
 This error message displays when a POST, PUT or PATCH request has an invalid or missing `Content-Type` header. Ensure that the header is included in the request and that its value is `application/json`.
 
+### User region is missing
+
+```json
+{
+    "error_code": "403027",
+    "message": "User region is missing"
+}
+```
+
+This error message displays when your account (as represented by the provided authentication credentials) is not associated with a product profile for Experience Platform. Follow the steps on [generating access credentials](./api-authentication.md#authentication-for-each-session) in the Platform API authentication tutorial to add Platform to your account and update your authentication credentials accordingly.
 
 ## Service troubleshooting directory {#service-troubleshooting-directory}
 

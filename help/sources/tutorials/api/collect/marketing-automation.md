@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;marketing automation system;Collect marketing automation data
 solution: Experience Platform
 title: Collect Marketing Automation Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a marketing automation system and bringing them into Adobe Experience Platform using source connectors and APIs.
 exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
@@ -298,7 +298,7 @@ curl -X POST \
         "params": {
             "dataSetId": "5ed5639d798a22191b6987b2"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }

@@ -2,7 +2,7 @@
 keywords: Experience Platform;train and evaluate;Data Science Workspace;popular topics;create a model;create a training run
 solution: Experience Platform
 title: Train and Evaluate a Model in the Data Science Workspace UI
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: In Adobe Experience Platform Data Science Workspace, a machine learning Model is created by incorporating an existing Recipe that is appropriate for the Model's intent. The Model is then trained and evaluated to optimize its operating efficiency and efficacy by fine-tuning its associated Hyperparameters. Recipes are reusable, meaning that multiple Models can be created and tailored to specific purposes with a single Recipe.
 exl-id: 6f674cfa-c123-46a3-80e2-9342fe687976
@@ -102,11 +102,11 @@ This tutorial walked you through creating, training, and evaluating a Model in [
 
 Hyperparameters determine the Model's training behavior, modifying Hyperparameters will affect the Model's accuracy and precision:
 
-Hyperparameter | Description | Recommended Range
---- | --- | ---
-learning_rate | Learning rate shrinks the contribution of each tree by learning_rate. There is a trade-off between learning_rate and n_estimators. | 0.1 | [2 - 10] / number of estimators
-n_estimators | The number of boosting stages to perform. Gradient boosting is fairly robust to over-fitting so a large number usually results in better performance. | 100 | 100 - 1000
-max_depth | Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. | 3 | 4 - 10 |
+| Hyperparameter | Description | Recommended Range |
+| --- | --- | --- |
+|learning_rate | Learning rate shrinks the contribution of each tree by learning_rate. There is a trade-off between learning_rate and n_estimators. | 0.1 |
+| n_estimators | The number of boosting stages to perform. Gradient boosting is fairly robust to over-fitting so a large number usually results in better performance. | 100 |
+| max_depth | Maximum depth of the individual regression estimators. The maximum depth limits the number of nodes in the tree. Tune this parameter for best performance; the best value depends on the interaction of the input variables. | 3 |
 
 Additional parameters determine the Model's technical properties:
 

@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;cloud storage data;streaming data;streaming
 solution: Experience Platform
 title: Collect Streaming Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving streaming data and bringing them in to Platform using source connectors and APIs.
 exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
@@ -195,7 +195,6 @@ A successful response returns HTTP status 200 with detailed information about th
 }
 ```
 
-
 ## Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in [!DNL Platform], a target schema must be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
@@ -327,12 +326,10 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
+        "name": "Test streaming dataset",
         "schemaRef": {
             "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
             "contentType": "application/vnd.adobe.xed-full-notext+json; version=1"
-        },
-        "fileDescription": {
-            "format": "parquet"
         },
         "tags": {
             "identity": [
@@ -341,15 +338,15 @@ curl -X POST \
             "profile": [
             "enabled:true"
             ]
-        },
-        "name": "Test streaming dataset"
+        }
     }'
 ```
 
 | Property | Description |
 | --- | --- |
-| `schemaRef.id` | The ID of the target XDM schema. |
-| `schemaRef.contentType` | The version of the schema. This value must be set `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. |
+| `name` | The name of the dataset to be created. |
+| `schemaRef.id` | The URI `$id` for the XDM schema the dataset will be based on. |
+| `schemaRef.contentType` | The version of the schema. This value must be set to `application/vnd.adobe.xed-full-notext+json;version=1`, which returns the latest minor version of the schema. See the section on [schema versioning](../../../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
 
 **Response**
 
@@ -391,7 +388,11 @@ curl -X POST \
             "version": "1.0"
         },
         "data": {
-            "format": "parquet_xdm"
+            "format": "parquet_xdm",
+            "schema": {
+                "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e45dd983026ce0daec5185cfddd48cbc0509015d880d6186",
+                "version": "application/vnd.adobe.xed-full+json;version=1"
+            }
         },
         "params": {
         "dataSetId": "5f7187bac6d00f194fb937c0"

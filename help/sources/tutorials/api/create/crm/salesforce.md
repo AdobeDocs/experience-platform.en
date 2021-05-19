@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce
 solution: Experience Platform
 title: Create a Salesforce Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Salesforce account using the Flow Service API.
 exl-id: 43dd9ee5-4b87-4c8a-ac76-01b83c1226f6

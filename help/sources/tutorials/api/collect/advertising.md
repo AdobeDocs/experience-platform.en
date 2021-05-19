@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;flow service;advertising;google adwords;advertising
 solution: Experience Platform
 title: Collect Advertising Data Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a third-party advertising application and ingesting it into Platform using source connectors and the Flow Service API.
 exl-id: 2a0eb13b-d09e-4bc1-aae3-84c8741eead1
@@ -339,7 +339,7 @@ curl -X POST \
         "params": {
             "dataSetId": "5e9681e389b80418ad4b3df0"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }

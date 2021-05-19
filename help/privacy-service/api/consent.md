@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Consent API Endpoint
-topic: developer guide
+topic-legacy: developer guide
 description: Learn how to manage customer consent requests for Experience Cloud applications using the Privacy Service API.
 exl-id: ec505749-c0a9-4050-be56-4c0657807ec7
 ---
@@ -59,6 +59,8 @@ curl -X POST \
 | `entities` | An array of objects indicating the users who the consent request applies to. Each object contains a `namespace` and an array of `values` to match individual users with that namespace. |
 | `nameSpace` | Each object in the `entities` array must contain one of the [standard identity namespaces](./appendix.md#standard-namespaces) recognized by the Privacy Service API. |
 | `values` | An array of values for each user, corresponding with the provided `nameSpace`. |
+
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

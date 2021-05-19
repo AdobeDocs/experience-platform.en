@@ -68,7 +68,7 @@ Adobe Experience Platform Web SDK can also send data directly to Adobe Experienc
 
 **Modern and ready for the future:** The Web SDK and its connection to the Experience Edge Network has enabled Adobe to significantly modernize how Adobe deals with data collection, personalization, consent and the future of 3rd party cookies. (It enables a first party domain, managed by Adobe.)
 
-**Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via Experience Platform Launch and map client-side data to XDM.  After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Experience Edge configuration and light up those use cases. 
+**Time-to-value:** Adobe has worked hard (and will continue) to make it as easy as possible to deploy the Web SDK via Experience Platform Launch and map client-side data to XDM.  After that work is done, all other Adobe solutions and Adobe Experience Platform services can be turned on or off server-side. For example, if you are using this for Adobe Analytics and you want to turn on Target or Experience Platform, you can simply flip a toggle on the Datastream configuration and light up those use cases. 
 
 ## What is Alloy?
 
@@ -97,7 +97,7 @@ Adobe Experience Platform Web SDK has been developed for the following people:
 
 ## How do I get access to start using Adobe Experience Platform Web SDK?
 
-The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. The SDK is free, is hosted by Adobe for free, and can be downloaded so you can host it on your own servers, if desired, for free. Platform Web SDK requires access to Platform Edge Network configurations and the Adobe Experience Platform XDM schema builder, in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Customer Success Manager (CSM) to start the request process.
+The Web SDK is currently available to the general public and can be used to send data to Adobe Experience Cloud products. The ability to send data to third-party solutions is coming in the near future. The SDK is free, is hosted by Adobe for free, and can be downloaded so you can host it on your own servers, if desired, for free. Platform Web SDK requires access to Datastream configurations and the Adobe Experience Platform XDM schema builder, in order for Adobe's servers to properly handle inbound data coming from the SDK. If you would like to get access, contact your Customer Success Manager (CSM) to start the request process.
 
 ## What use cases are currently supported by the Web SDK?
 
@@ -131,7 +131,7 @@ No. You can download the `alloy.js` file yourself.
 
 However:
 
-* Adobe Experience Platform Web SDK requires something called an Experience Edge configuration ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform Launch. This doesn't mean you have to use Experience Platform Launch to create properties or deploy the JavaScript code, but you do need to use Experience Platform Launch to create a configuration ID.
+* Adobe Experience Platform Web SDK requires something called a Datastream ID so the edge network can identify the stream and determine what to do with the data. This ID is created within Experience Platform Launch. This doesn't mean you have to use Experience Platform Launch to create properties or deploy the JavaScript code, but you do need to use Experience Platform Launch to create a configuration ID.
 
 * Adobe Experience Platform Launch is not only the best available tag and SDK manager, it makes it very easy to deploy `alloy.js` and map data to XDM schemas. If you decide not to use Experience Platform Launch, you will have to manage deploying `alloy.js`, eventing, and mapping your data into XDM before sending it. This is a _much_ more difficult process than using Experience Platform Launch. 
 
@@ -156,6 +156,10 @@ Yes, currently the Web SDK uses anywhere between 1-4 cookies depending on your i
 **kndctr_orgid_personalization:** This cookie includes session information that Adobe Target uses to personalize webpages. 
 
 **kndctr_orgid_consentcheck:** This session-based cookie signals the server to look up the consent preferences server side.
+
+## Which browsers does the Adobe Experience Platform Web SDK support?
+
+The Adobe Experience Platform Web SDK is designed to work optimally in the latest versions of Google Chrome, Safari, Firefox, Internet Explorer 11, and Microsoft Edge Chromium. You may have trouble using certain features on older versions of browsers. 
 
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 

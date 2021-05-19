@@ -2,7 +2,7 @@
 keywords: Experience Platform;optimize;model;Data Science Workspace;popular topics;model insights
 solution: Experience Platform
 title: Optimize a Model Using the Model Insights Framework
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: The Model Insights Framework provides the data scientist with tools in Data Science Workspace to make quick and informed choices for optimal machine learning models based on experiments.
 exl-id: f989a3f1-6322-47c6-b7d6-6a828766053f
@@ -69,11 +69,11 @@ evaluation.metrics=com.adobe.platform.ml.impl.Constants.FSCORE
 
 The following table state the default metrics for each class. A user can also use the values in the `evaluation.metric` column to enable a specific metric.
 
-`evaluator.class` | Default Metrics | `evaluation.metric`
---- | --- | ---
-`DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics| -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC`
-`DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics| -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC`
-`RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K| -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
+| `evaluator.class` | Default Metrics | `evaluation.metric` |
+| --- | --- | --- |
+| `DefaultBinaryClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics| -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `DefaultMultiClassificationEvaluator` | -Precision <br>-Recall <br>-Confusion Matrix <br>-F-Score <br>-Accuracy <br>-Receiver Operating Characteristics <br>-Area Under the Receiver Operating Characteristics| -`PRECISION` <br>-`RECALL` <br>-`CONFUSION_MATRIX` <br>-`FSCORE` <br>-`ACCURACY` <br>-`ROC` <br>-`AUROC` |
+| `RecommendationsEvaluator` | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K| -`MEAN_AVERAGE_PRECISION` <br>-`NDCG` <br>-`MRR` <br>-`METRIC_K` |
  
 
 #### Custom evaluation metrics for Scala
@@ -153,13 +153,13 @@ Data is first loaded to a dataset from a source as defined in [retail.config.jso
 
 The [!DNL Sensei Model Insights Framework] will support one default template for each type of machine learning algorithm. The table below shows common high-level machine learning algorithm classes and corresponding evaluation metrics and visualizations. 
 
-ML Algorithm Type | Evaluation Metrics | Visualizations
---- | --- | ---
-Regression | - RMSE<br>- MAPE<br>- MASE<br>- MAE| Predicted vs actual values overlay curve
-Binary classification | - Confusion matrix<br>- Precision-recall<br>- Accuracy<br>- F-score (specifically F1 ,F2)<br>- AUC<br>- ROC | ROC curve and confusion matrix
-Multi-class classification | -Confusion matrix <br>- For each class: <br>- precision-recall accuracy <br>- F-score (specifically F1, F2) | ROC curve and confusion matrix
-Clustering (w/ ground truth) | - NMI (normalized mutual information score), AMI (adjusted mutual information score)<br>- RI (Rand index), ARI (adjusted Rand index)<br>- homogeneity score, completeness score, and V-measure<br>- FMI (Fowlkes-Mallows index)<br>- Purity<br>- Jaccard index | Clusters plot showing clusters and centroids with relative cluster sizes reflective of data points falling within cluster
-Clustering (w/o ground truth) | - Inertia<br>- Silhouette coefficient<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davies–Bouldin index)<br>- Dunn index| Clusters plot showing clusters and centroids with relative cluster sizes reflective of data points falling within cluster
-Recommendation | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | TBD
-TensorFlow use cases | TensorFlow Model Analysis (TFMA)| Deepcompare neural network model comparison/visualization
-Other/error capture mechanism | Custom metric logic (and corresponding evaluation charts) defined by model author. Graceful error handling in case of template mismatch | Table with key-value pairs for evaluation metrics |
+| ML Algorithm Type | Evaluation Metrics | Visualizations |
+| --- | --- | --- |
+| Regression | - RMSE<br>- MAPE<br>- MASE<br>- MAE| Predicted vs actual values overlay curve |
+| Binary classification | - Confusion matrix<br>- Precision-recall<br>- Accuracy<br>- F-score (specifically F1 ,F2)<br>- AUC<br>- ROC | ROC curve and confusion matrix |
+| Multi-class classification | -Confusion matrix <br>- For each class: <br>- precision-recall accuracy <br>- F-score (specifically F1, F2) | ROC curve and confusion matrix |
+| Clustering (w/ ground truth) | - NMI (normalized mutual information score), AMI (adjusted mutual information score)<br>- RI (Rand index), ARI (adjusted Rand index)<br>- homogeneity score, completeness score, and V-measure<br>- FMI (Fowlkes-Mallows index)<br>- Purity<br>- Jaccard index | Clusters plot showing clusters and centroids with relative cluster sizes reflective of data points falling within cluster |
+| Clustering (w/o ground truth) | - Inertia<br>- Silhouette coefficient<br>- CHI (Calinski-Harabaz index)<br>- DBI (Davies–Bouldin index)<br>- Dunn index| Clusters plot showing clusters and centroids with relative cluster sizes reflective of data points falling within cluster |
+| Recommendation | -Mean Average Precision (MAP) <br>-Normalized Discounted Cumulative Gain <br>-Mean Reciprocal Rank <br>-Metric K | TBD |
+| TensorFlow use cases | TensorFlow Model Analysis (TFMA)| Deepcompare neural network model comparison/visualization |
+| Other/error capture mechanism | Custom metric logic (and corresponding evaluation charts) defined by model author. Graceful error handling in case of template mismatch | Table with key-value pairs for evaluation metrics |

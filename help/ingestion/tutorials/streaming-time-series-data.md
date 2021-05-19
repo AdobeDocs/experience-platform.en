@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;streaming ingestion;ingestion;time series data;stream time series data;
 solution: Experience Platform
 title: Stream Time-Series Data Using Streaming Ingestion APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial will help you begin using streaming ingestion APIs, part of the Adobe Experience Platform Data Ingestion Service APIs.
 exl-id: 720b15ea-217c-4c13-b68f-41d17b54d500
@@ -266,11 +266,6 @@ curl -X POST https://platform.adobe.io/data/foundation/catalog/dataSets \
         "id": "{SCHEMA_REF_ID}",
         "contentType": "application/vnd.adobe.xed-full+json;version=1"
     },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
-    },
     "tags": {
         "unifiedIdentity": ["enabled:true"],
         "unifiedProfile": ["enabled:true"]
@@ -288,9 +283,16 @@ A successful response returns HTTP status 201 and an array containing the ID of 
 ]
 ```
 
+
+## Create a streaming connection
+
+After creating your schema and dataset, you will need to create a streaming connection to ingest your data.
+
+For more information on creating a streaming connection, please read the [create a streaming connection tutorial](./create-streaming-connection.md).
+
 ## Ingest time series data to the streaming connection
 
-With the dataset and streaming connection in place, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Platform].
+With the dataset, streaming connection, and dataflow created, you can ingest XDM-formatted JSON records to ingest time series data within [!DNL Platform].
 
 **API format**
 
@@ -324,7 +326,7 @@ curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValid
             "id": "{SCHEMA_REF_ID}",
             "contentType": "application/vnd.adobe.xed-full+json;version=1"
         },
-        "imsOrgId": "{IMS_ORG}",
+        "flowId": "{FLOW_ID}",
         "datasetId": "{DATASET_ID}"
     },
     "body": {
@@ -411,7 +413,7 @@ An successful response returns HTTP status 200 with details of the newly streame
 
 | Property | Description |
 | -------- | ----------- |
-| `{CONNECTION_ID}` | The ID of the previously created streaming connection. |
+| `{CONNECTION_ID}` | The `inletId` of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |    
 | `receivedTimeMs`: A timestamp (epoch in milliseconds) that shows what time the request was received. |
 | `synchronousValidation.status` | Since the query parameter `synchronousValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
@@ -443,7 +445,7 @@ GET /access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name
 
 ```shell
 curl -X GET \
-  https://platform-stage.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
+  https://platform.adobe.io/data/core/ups/access/entities?schema.name=_xdm.context.experienceevent&relatedSchema.name=_xdm.context.profile&relatedEntityId=janedoe@example.com&relatedEntityIdNS=email \
   -H "Authorization: Bearer {ACCESS_TOKEN}" \
   -H "x-api-key: {API_KEY}" \
   -H "x-gw-ims-org-id: {IMS_ORG}" \

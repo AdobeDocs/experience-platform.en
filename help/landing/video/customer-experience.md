@@ -1,8 +1,6 @@
 ---
 title: A Customer Experience Powered by Experience Platform
 description: This video follows a hypothetical experience built with Adobe Experience Platform, as seen from the perspective of a customer. See how Experience Platform creates a rich, relevant and real-time experience.
-feature:
-topics:
 kt: 4339
 audience: all
 doc-type: video

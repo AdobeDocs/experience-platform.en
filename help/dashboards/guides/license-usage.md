@@ -2,7 +2,7 @@
 keywords: Experience Platform;user interface;UI;customization;license usage dashboard;dashboard;license usage;entitlement;consumption
 title: License Usage Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's license usage.
-topic: guide
+topic-legacy: guide
 type: Documentation
 exl-id: 143d16bb-7dc3-47ab-9b93-9c16683b9f3f
 ---

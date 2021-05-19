@@ -16,6 +16,12 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the **[!UICONTROL Select attributes]** step of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
+## IP address allow list {#allow-list}
+
+When setting up email marketing destinations with SFTP storage, Adobe recommends that you add certain IP ranges to your allow list.
+
+Refer to [IP address allow list for cloud storage destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
+
 ## Connect destination {#connect-destination}
 
 In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select Adobe Campaign, then select **[!UICONTROL Configure]**.
@@ -63,13 +69,13 @@ When [activating segments](../../ui/activate-destinations.md) to the Adobe Campa
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 
 >[!IMPORTANT]
 >
->- Please keep in mind the SFTP storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
+>- Please keep in mind the [!DNL SFTP] storage limits, database storage limits, and active profile limits as per your Adobe Campaign contract while performing this integration.
 >- You need to schedule, import, and map your exported segment(s) in Adobe Campaign using [!DNL Campaign] workflows. Refer to [Setting up a recurring import](https://experienceleague.adobe.com/docs/campaign-classic/using/automating-with-workflows/use-cases/data-management/recurring-import-workflow.html) in Adobe Campaign Classic documentation and [About data management activities](https://experienceleague.adobe.com/docs/campaign-standard/using/managing-processes-and-data/data-management-activities/about-data-management-activities.html) in Adobe Campaign Standard documentation.
 >- The preferred method to send data to Adobe Campaign is through [!DNL Amazon S3] or [!DNL Azure Blob].
 

@@ -66,7 +66,7 @@ This custom code does two things:
 
 ## Creating an XDM data element for Experience Events
 
-The consent string should be included in the XDM Experience Event. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy mixin to your schema, you should have a `consentStrings` key in the XDM object.
+The consent string should be included in the XDM Experience Event. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy schema field group to your schema, you should have a `consentStrings` key in the XDM object.
 
 1. Select **[!UICONTROL consentStrings]**.
 

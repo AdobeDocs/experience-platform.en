@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;collect customer success;customer success
 solution: Experience Platform
 title: Collect Data From A Customer Success System Using Source Connectors and APIs
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for retrieving data from a customer success system and ingesting it into Platform using source connectors and APIs.
 exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
@@ -329,7 +329,7 @@ curl -X POST \
         "params": {
             "dataSetId": "5e543e8a60b15218ad44b95f"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }

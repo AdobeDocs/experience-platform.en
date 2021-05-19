@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;merge policies;UI;user interface;timestamp ordered;dataset precedence
 title: Merge Policies UI Guide
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform enables you to bring data fragments together from multiple sources and combine them in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create a unified view.
 exl-id: 0489217a-6a53-428c-a531-fd0a0e5bb71f
@@ -42,15 +42,15 @@ As profile records are ingested into Experience Platform, a system timestamp is 
 
 Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
 
-In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details Mixin]** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
+In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details] schema field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
 
 >[!NOTE]
 >
 >You must ensure that the `lastUpdatedDate` timestamp is populated when ingesting an update on the same record.
 
-The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details Mixin]. For step-by-step instructions on working with schemas using the Platform UI, including how to add mixins to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
+The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details] field group. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
 
-![](../images/merge-policies/custom-timestamp-mixin.png)
+![](../images/merge-policies/custom-timestamp-field-group.png)
 
 To work with custom timestamps using the API, refer to the [merge policies endpoint guide section on using custom timestamps](../api/merge-policies.md#custom-timestamps).
 

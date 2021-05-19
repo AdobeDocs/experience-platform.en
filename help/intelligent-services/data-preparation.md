@@ -2,15 +2,15 @@
 keywords: Experience Platform;home;Intelligent Services;popular topics;intelligent service;Intelligent service
 solution: Experience Platform, Intelligent Services
 title: Prepare Data for Use in Intelligent Services
-topic: Intelligent Services
-description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services leverage Experience Data Model (XDM) schemas in order to achieve this. Specifically, all datasets that are used in Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema.
+topic-legacy: Intelligent Services
+description: In order for Intelligent Services to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. Intelligent Services use Experience Data Model (XDM) schemas in order to achieve this.
 exl-id: 17bd7cc0-da86-4600-8290-cd07bdd5d262
 ---
 # Prepare data for use in [!DNL Intelligent Services]
 
-In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema. 
+In order for [!DNL Intelligent Services] to discover insights from your marketing events data, the data must be semantically enriched and maintained in a standard structure. [!DNL Intelligent Services] leverage [!DNL Experience Data Model] (XDM) schemas in order to achieve this. Specifically, all datasets that are used in [!DNL Intelligent Services] must conform to the Consumer ExperienceEvent (CEE) XDM schema or use the Adobe Analytics connector. Additionally, Customer AI supports the Adobe Audience Manager connector.
 
-This document provides general guidance on mapping your marketing events data from multiple channels to this schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure.
+This document provides general guidance on mapping your marketing events data from multiple channels to the CEE schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure. If you plan on using Adobe Analytics data, please view the section for [Adobe Analytics data preparation](#analytics-data). If you plan on using Adobe Audience Manager data (Customer AI only), please view the section for [Adobe Audience Manger data preparation](#AAM-data).
 
 ## Workflow summary
 
@@ -24,12 +24,32 @@ If your data is stored outside of [!DNL Experience Platform], follow the steps b
 1. Using your access credentials, upload your data to the Blob container.
 1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into [!DNL Intelligent Services].
 
+### Adobe Analytics data preparation {#analytics-data}
+
+Customer AI and Attribution AI natively support Adobe Analytics data. To use Adobe Analytics data, follow the steps outlined in the documentation to set up an [Analytics source connector](../sources/tutorials/ui/create/adobe-applications/analytics.md). 
+
+Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Analytics as a data source followed by a dataset during your instance configuration. All of the required schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
+
+>[!IMPORTANT]
+>
+>The Adobe Analytics connector takes up to four weeks to backfill data. If you recently set up a connection you should verify that the dataset has the minimum length of data required for Customer or Attribution AI. Please review the historical data sections in [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements), and verify you have enough data for your prediction goal.
+
+### Adobe Audience Manager data preparation (Customer AI only) {#AAM-data}
+
+Customer AI natively supports Adobe Audience Manager data. To use Audience Manager data, follow the steps outlined in the documentation to set up an [Audience Manager source connector](../sources/tutorials/ui/create/adobe-applications/audience-manager.md).
+
+Once the source connector is streaming your data into Experience Platform, you are able to select Adobe Audience Manager as a data source followed by a dataset during your Customer AI configuration. All of the schema field groups and individual fields are automatically created during the connection set up. You do not need to ETL (Extract, Transform, Load) the datasets into the CEE format.
+
+>[!IMPORTANT]
+>
+>If you recently set up a connector you should verify that the dataset has the minimum length of data required. Please review the historical data section in the [input/output documentation](./customer-ai/input-output.md) for Customer AI, and verify you have enough data for your prediction goal.
+
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform], follow the steps below:
+If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema if you plan to work with Customer AI.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
-1. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
+2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
 
 ## Understanding the CEE schema {#cee-schema}
 
@@ -41,13 +61,13 @@ The CEE schema, like all XDM ExperienceEvent schemas, captures the time-series-b
 
 ![](./images/data-preparation/schema-expansion.gif)
 
-Like all XDM schemas, the CEE mixin is extensible. In other words, additional fields can be added to the CEE mixin, and different variations can be included in multiple schemas if required.
+Like all XDM schemas, the CEE schema field group is extensible. In other words, additional fields can be added to the CEE field group, and different variations can be included in multiple schemas if necessary.
 
-A complete example of the mixin can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
+A complete example of the field group can be found in the [public XDM repository](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md). In addition, you can view and copy the following [JSON file](https://github.com/AdobeDocs/experience-platform.en/blob/master/help/intelligent-services/assets/CEE_XDM_sample_rows.json) for an example of how data can be structured to comply with the CEE schema. Refer to both of these examples as you learn about the key fields outlined in the section below, in order to determine how you can map your own data to the schema.
 
 ## Key fields
 
-There are several key fields within the CEE mixin which should be utilized in order for [!DNL Intelligent Services] to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
+There are several key fields within the CEE field group which should be utilized in order for [!DNL Intelligent Services] to generate useful insights. This section describes the use case and expected data for these fields, and provides links to reference documentation for further examples.
 
 ### Mandatory fields
 
@@ -135,7 +155,7 @@ The following table provides some examples of marketing channels mapped to the `
 
 ### Recommended fields
 
-The remainder of key fields are outlined in this section. While these fields aren't necessarily required for [!DNL Intelligent Services] to work, it is strongly recommended that you use as many of them as possible in order to gain richer insights.
+The remainder of the key fields are outlined in this section. While these fields aren't necessarily required for [!DNL Intelligent Services] to work, it is strongly recommended that you use as many of them as possible in order to gain richer insights.
 
 #### xdm:productListItems
 
@@ -270,16 +290,16 @@ This section outlines the workflow for mapping and ingesting data into Experienc
 
 #### Create a CEE schema and dataset
 
-When you are ready to start preparing your data for ingestion, the first step is to create a new XDM schema that employs the CEE mixin. The following tutorials walk through the process of creating a new schema in the UI or API:
+When you are ready to start preparing your data for ingestion, the first step is to create a new XDM schema that employs the CEE field group. The following tutorials walk through the process of creating a new schema in the UI or API:
 
 * [Create a schema in the UI](../xdm/tutorials/create-schema-ui.md)
 * [Create a schema in the API](../xdm/tutorials/create-schema-api.md)
 
 >[!IMPORTANT]
 >
->The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE mixin to the schema.
+>The tutorials above follow a generic workflow for creating a schema. When choosing a class for the schema, you must use the **XDM ExperienceEvent class**. Once this class has been chosen, you can then add the CEE field group to the schema.
 
-After adding the CEE mixin to the schema, you can add other mixins as required for additional fields within your data.
+After adding the CEE field group to the schema, you can add other field groups as required for additional fields within your data.
 
 Once you have created and saved the schema, you can create a new dataset based on that schema. The following tutorials walk through the process of creating a new dataset in the UI or API:
 
