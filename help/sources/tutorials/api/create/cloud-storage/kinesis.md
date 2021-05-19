@@ -27,9 +27,9 @@ In order for [!DNL Flow Service] to connect with your [!DNL Amazon Kinesis] acco
 | Credential | Description |
 | ---------- | ----------- |
 | `accessKeyId` | The access key ID is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
-| `secretKey` | The secret access key is one half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
+| `secretKey` | The secret access key is the other half of the access key pair used to authenticate your [!DNL Kinesis] account to Platform. |
 | `region` | The region for your [!DNL Kinesis] account. See the guide on [adding IP addresses to your allow list](../../../../ip-address-allow-list.md) for more information on regions. |
-| `connectionSpec.id` | The connection specification returnw a source’s connector properties, including authentication specifications related to creating the base, source, and target connections. The [!DNL Kinesis] connection specification ID is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The [!DNL Kinesis] connection specification ID is: `86043421-563b-46ec-8e6c-e23184711bf6`. |
 
 For more information on [!DNL Kinesis] access keys and how to generate them, refer to this [[!DNL AWS] guide on managing access keys for IAM users](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
@@ -82,7 +82,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.accessKeyId` | The access key ID for your [!DNL Kinesis] account. |
 | `auth.params.secretKey` | The secret access key for your [!DNL Kinesis] account. |
-| `auth.params.region` | The region for your [!DNL Kinesis] account. For more information on regions, see the document on [IP address allow list](../../../../ip-address-allow-list.md). |
+| `auth.params.region` | The region for your [!DNL Kinesis] account. |
 | `connectionSpec.id` | The [!DNL Kinesis] connection specification ID: `86043421-563b-46ec-8e6c-e23184711bf6` |
 
 **Response**
