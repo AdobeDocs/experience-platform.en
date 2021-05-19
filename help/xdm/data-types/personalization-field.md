@@ -11,7 +11,7 @@ exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 
 >[!NOTE]
 >
->This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) as a baseline.
+>This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group](../field-groups/profile/consents.md) as a baseline.
 
 ![](../images/data-types/personalization-field.png)
 

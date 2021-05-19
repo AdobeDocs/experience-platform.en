@@ -10,6 +10,7 @@ feature: Destinations
 
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
+* [Destinations FAQ](./destinations-faq.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
@@ -73,7 +74,7 @@ feature: Destinations
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
         * [Create a cloud storage destination](./catalog/cloud-storage/workflow.md)
-        * [Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
+        * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
         * [(Beta) Azure Event Hubs connection](./catalog/cloud-storage/azure-event-hubs.md)
@@ -97,9 +98,9 @@ feature: Destinations
         * [Adobe Experience Platform Launch extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
-        * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
-        * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
-        * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
+        * [(Beta) Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+        * [(Beta) Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
@@ -115,7 +116,7 @@ feature: Destinations
         * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
-        * [Linkedin Matched Audiences connection](./catalog/social/linkedin.md)
+        * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
