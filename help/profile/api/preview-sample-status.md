@@ -301,6 +301,8 @@ The dataset overlap report provides visibility into the composition of your orga
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
+For step-by-step instructions outlining how to generate the dataset overlap report using the command line or the Postman UI, please refer to the [generating the dataset overlap report tutorial](../tutorials/dataset-overlap-report.md).
+
 **API format**
 
 ```http
