@@ -20,14 +20,14 @@ In order to use Adobe Experience Platform APIs, you must first complete the [aut
 The required headers for all of the API calls in this tutorial are:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`: The `Authorization` header requires an access token prepended by the word `Bearer`. A new access token value must be generated every 24 hours.
-* `x-api-key: {API_KEY}`: The `API key` is also known as a `Client ID` and is a value that only needs to be generated once.
+* `x-api-key: {API_KEY}`: The `API Key` is also known as a `Client ID` and is a value that only needs to be generated once.
 * `x-gw-ims-org-id: {IMS_ORG}`: The `IMS Org` is also known as an `Organization ID` and only needs to be generated once.
 
 After completing the authentication tutorial and gathering the values for the required headers, you are ready to begin making calls to the Real-time Customer API.
 
 ## Generate dataset overlap report using the command line
 
-If you are familiar with using the command line, you can use the following curl request to generate the dataset overlap report by performing a GET request to `/previewsamplestatus/report/dataset/overlap`.
+If you are familiar with using the command line, you can use the following cURL request to generate the dataset overlap report by performing a GET request to `/previewsamplestatus/report/dataset/overlap`.
 
 **Request**
 
@@ -43,11 +43,11 @@ curl -X GET \
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, an HTTP status 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Response**
 
-A successful request returns HTTP Status 200 (OK) and the dataset overlap report. The report includes a `data` object, containing comma-separated lists of datasets and their respective profile count. For details on how to read the report, see the section on [interpreting the dataset overlap report data](#interpret-the-report) later in this tutorial.
+A successful request returns HTTP status 200 (OK) and the dataset overlap report. The report includes a `data` object, containing comma-separated lists of datasets and their respective profile count. For details on how to read the report, see the section on [interpreting the dataset overlap report data](#interpret-the-report) later in this tutorial.
 
 ```json
 {
@@ -81,7 +81,7 @@ To request the dataset overlap report using Postman, complete the following step
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. <br/>Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, an HTTP status 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. <br/>Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 After the request type, headers, values, and path are complete, select **Send** to send the API request and generate the report.
 
@@ -89,7 +89,7 @@ After the request type, headers, values, and path are complete, select **Send** 
 
 **Response**
 
-A successful request returns HTTP Status 200 (OK) and the dataset overlap report. The report includes a `data` object, containing comma-separated lists of datasets and their respective profile count. For details on how to read the report, see the section on [interpreting the dataset overlap report data](#interpret-the-report).
+A successful request returns HTTP status 200 (OK) and the dataset overlap report. The report includes a `data` object, containing comma-separated lists of datasets and their respective profile count. For details on how to read the report, see the section on [interpreting the dataset overlap report data](#interpret-the-report).
 
 ![](../images/dataset-overlap-report/postman-response.png)
 
