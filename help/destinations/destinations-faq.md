@@ -8,7 +8,7 @@ seo-description: Answers to the most frequently asked questions about Adobe Expe
 
 # Destinations FAQ {#faq}
 
-## [!DNL Facebook Custom Audiences] (#facebook-faq)
+## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
 **What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?**
 
