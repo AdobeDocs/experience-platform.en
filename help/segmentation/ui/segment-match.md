@@ -25,9 +25,9 @@ With [!DNL Segment Match] you can:
 
 The following sections provide more information about [!DNL Segment Match], including details on setup and its end-to-end workflow.
 
-## Prerequisites
+## Setup
 
-The following prerequisites must be set up before you start working with [!DNL Segment Match]:
+The following sections outline how to to set up and configure [!DNL Segment Match]:
 
 ### Set up identity data and namespaces {#namespaces}
 
@@ -55,7 +55,7 @@ You must provide a consent configuration and set its default value to either `op
 
 The opt-in and opt-out consent check determines whether you can operate with the consent to share user data by default. If the consent configuration default is set to `opt-in`, then user data can be shared, unless a user explicitly opts out. If the default is set to `opt-out`, then user data cannot be shared, unless a user explicitly opts in.
 
-The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager
+The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager.
 
 For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
 
@@ -164,6 +164,20 @@ Select **[!UICONTROL Finish]** to proceed.
 
 ![review.png](../images/ui/segment-match/review.png)
 
+### Update feed
+
+To add or remove segments, select **[!UICONTROL Create feed]** from the [!UICONTROL Feeds] page and then select **[!UICONTROL Existing feed]**. In the list of existing feed that appears, select the feed that you want to update, and then select **[!UICONTROL Next]**.
+
+![feed-list](../images/ui/segment-match/feed-list.png)
+
+The list of segments appears. From here, you can add new segments to your feed and you can use the right-rail to remove any segments that you no longer need. Once you have finished managing the segments in your feed, select **[!UICONTROL Next]** and then follow the steps outlined above to complete the updated feed.
+
+![update](../images/ui/segment-match/update.png)
+
+>[!NOTE]
+>
+>When you add or remove a segment from a shared feed, the receiving partner must confirm the change by re-enabling the [!DNL Profile] toggle in their list of received feeds.
+
 ### Accept an incoming feed
 
 To view an incoming feed, select **[!UICONTROL Received]** from the header of the [!UICONTROL Feeds] page and then select the feed you want to view from list. To accept the feed, select **[!UICONTROL Enable for profile]** and allow for a few moments for the status to update from [!UICONTROL Pending] to [!UICONTROL Enabled].
@@ -179,21 +193,3 @@ By reading this document, you have gained an understanding of [!DNL Segment Matc
 * [[!DNL Segmentation Service]](../home.md)
 * [[!DNL Identity Service]](../../identity-service/home.md)
 * [[!DNL Real-time Customer Profile] overview](../../profile/home.md)
-
-## Appendix
-
-The following sections provide additional information for using [!DNL Segment Match]:
-
-### Update feed
-
-To add or remove segments, select **[!UICONTROL Create feed]** from the [!UICONTROL Feeds] page and then select **[!UICONTROL Existing feed]**. In the list of existing feed that appears, select the feed that you want to update, and then select **[!UICONTROL Next]**.
-
-![feed-list](../images/ui/segment-match/feed-list.png)
-
-The list of segments appears. From here, you can add new segments to your feed and you can use the right-rail to remove any segments that you no longer need. Once you have finished managing the segments in your feed, select **[!UICONTROL Next]** and then follow the steps outlined above to complete the updated feed.
-
-![update](../images/ui/segment-match/update.png)
-
->[!NOTE]
->
->When you add or remove a segment from a shared feed, the receiving partner must confirm the change by re-enabling the [!DNL Profile] toggle in their list of received feeds.
