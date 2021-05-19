@@ -7,6 +7,7 @@ description: Customer AI is used to generate custom propensity scores such as ch
 landing-page-description: Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale.
 exl-id: 3e668103-e2a2-4ce6-a40a-8029a6aaa8dd
 ---
+
 # Customer AI overview
 
 Customer AI , as part of Intelligent Services provides marketers with the power to generate customer predictions at the individual level with explanations.
