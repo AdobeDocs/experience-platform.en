@@ -8,24 +8,6 @@ seo-description: Answers to the most frequently asked questions about Adobe Expe
 
 # Destinations FAQ {#faq}
 
-## Destinations latency {#latency}
-
-**How long do Adobe Experience Platform destinations take to process audience data?**
-
-Adobe Experience Platform currently supports sending profile and segment data to the following type of destinations:
-
-* [!DNL REST API] endpoints, such as [!DNL Google DV360] or [!DNL Facebook];
-* Messaging bus locations, such as [!DNL Amazon Kinesis] or [!DNL Azure Event Hubs];
-* Cloud storage locations, such as [!DNL Amazon Web Services], [!DNL SFTP] locations, or email marketing destinations.
-
-Destination latency is subject to the data format supported by the destination endpoint, and the profile export frequency.
-
-Latency in destinations based on [!DNL REST APIs] and event hubs is minimal, and audience activation takes place in near real-time.
-
-Audience activation for cloud storage destinations can take up to 24 hours.
-
-<!-- Profile data exports take place on a daily basis. -->
-
 ## [!DNL Facebook Custom Audiences] (#facebook-faq)
 
 **What do I need to do before I can activate audiences in [!DNL Facebook Custom Audiences]?**
