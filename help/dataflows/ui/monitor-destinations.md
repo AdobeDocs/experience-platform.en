@@ -28,8 +28,6 @@ A list of existing dataflows appears. On this page is a list of viewable dataflo
 
 See the following table for more information on statuses:
 
-(Statuses have updated)
-
 | Status | Description |
 | ------ | ----------- |
 | Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
@@ -52,19 +50,19 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
-- **[!UICONTROL Identities activated]**: The total number of profile records that were created or updated for activation. This value is updated every 60 minutes.
-- **[!UICONTROL Identities excluded]**: The total number of profile records that are skipped for activation based on profile exits or missing attributes. This value is updated every 60 minutes.
-- **[!UICONTROL Identities failed]** The total number of profile records that are not activated to the destination due to errors. This value is updated every 60 minutes.
-- **[!UICONTROL Activation rate]**: The percentage of received profiles that have either been successfully activated or skipped.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination. This value is updated every 60 minutes.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are skipped for activation based on missing attributes and consent violation. This value is updated every 60 minutes.
+- **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors. This value is updated every 60 minutes.
+- **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
 To view the details of a particular dataflow run, select the run's start time from the list. 
 
-The details page for a dataflow run contains additional information such as the number of profiles received, the number of profile records activated, the number of profile records failed, and the number of profile records skipped.
+The details page for a dataflow run contains additional information such as the number of profiles received, the number of identities activated, the number of identities failed, and the number of identities excluded.
 
 ![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-The details page also displays a list of individual profile records that failed and individual profile records that were skipped. Information for both the failed and skipped profile records is displayed, including the error code, record count, and description. By default, the list displays the failed profile records. To show skipped records, select the **[!UICONTROL Records skipped]** toggle.
+The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, record count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Records skipped]** toggle.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
