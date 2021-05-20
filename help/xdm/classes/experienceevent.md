@@ -60,6 +60,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Experien
 * [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## Appendix
 

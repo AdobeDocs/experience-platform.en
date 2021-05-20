@@ -21,6 +21,6 @@ The following table outlines the recommended classes and schema field groups for
 
 | Use case | Recommended classes and field groups |
 | --- | --- |
-| Combine online and offline data sources and resolve cross-device and online/offline identity to provide holistic cross-channel and cross device attribution reporting. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>Commerce Details</li><li>Web Details</li></ul></li><li>Product:<ul><li>Product</li></ul></li></ul> |
+| Combine online and offline data sources and resolve cross-device and online/offline identity to provide holistic cross-channel and cross device attribution reporting. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>Product:<ul><li>Product</li></ul></li></ul> |
 
 {style="table-layout:auto"}

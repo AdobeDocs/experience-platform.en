@@ -36,6 +36,7 @@ feature: Schemas
     * [Commerce Details](./field-groups/event/enduserids.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
+    * [Web Details](./field-groups/event/web-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
@@ -69,7 +70,8 @@ feature: Schemas
     * [Product list item](./data-types/product-list-item.md)
     * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
-    * [Web interaction](./data-types/web-interactions.md)
+    * [Web information](./data-types/web-information.md)
+    * [Web interaction](./data-types/web-interaction.md)
     * [Web page details](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
