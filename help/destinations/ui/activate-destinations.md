@@ -41,7 +41,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Identity mapping] step {#identity-mapping}
+## [!UICONTROL Mapping] step {#mapping}
 
 Applies to: social destinations and Google Customer Match advertising destination
 
