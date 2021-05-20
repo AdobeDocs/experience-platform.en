@@ -10,6 +10,7 @@ feature: Destinations
 
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
+* [Destinations FAQ](./destinations-faq.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
