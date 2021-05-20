@@ -12,7 +12,7 @@ This document covers the steps for connecting Power BI with Adobe Experience Pla
 
 >[!NOTE]
 >
-> This guide assumes you already have access to [!DNL Power BI] and are familiar with how to navigate its interface. More information about [!DNL Power BI] can be found in the [official [!DNL Power BI] documentation](https://docs.looker.com/).
+> This guide assumes you already have access to [!DNL Power BI] and are familiar with how to navigate its interface. More information about [!DNL Power BI] can be found in the [official [!DNL Power BI] documentation](https://docs.microsoft.com/en-us/power-bi/).
 >
 > Additionally, Power BI is **only** available on Windows devices.
 
