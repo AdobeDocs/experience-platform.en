@@ -8,7 +8,7 @@ exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] is a standard XDM class which forms a singular representation (or "profile") of the attributes and interests of both identified and partially identified individuals.
+[!DNL XDM Individual Profile] is a standard Experience Data Model (XDM) class which forms a singular representation (or "profile") of an individual person. Specifically, the class (and its compatible mixins) captures the attributes and interests of both identified and partially identified individuals that interact with your brand.
 
 Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 

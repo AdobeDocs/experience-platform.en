@@ -21,7 +21,7 @@ exl-id: c0f7b04c-2266-4d08-89a1-67ba758a51a7
 | `_id` |  A unique, system-generated string identifier for the record. This field is used to track the uniqueness of an individual record, prevent duplication of data, and to look up that record in downstream services.<br><br>Since this field is system-generated, it does not be supplied an explicit value during data ingestion. However, you can still opt to supply your own unique ID values if you wish.<br><br>It is important to distinguish that this field **does not** represent an identity related to an individual person, but rather the record of data itself. Identity data relating to a person should be relegated to [identity fields](../schema/composition.md#identity) instead. |
 | `createdByBatchID` | The ID of the ingested batch that caused the record to be created. |
 | `description` | A description for the segment definition. |
-| `identityMap` | A map field that contains a set of namespaced identities for the individuals the segment applies to. This field is automatically updated by the system as identity data is ingested.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
+| `identityMap` | A map field that contains a set of namespaced identities for the individuals the segment applies to. See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
 | `modifiedByBatchID` | The ID of the last ingested batch that caused the record to be updated. |
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | The ID of the user who last modified the record. |

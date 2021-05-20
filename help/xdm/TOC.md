@@ -13,6 +13,7 @@ feature: Schemas
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
+  * [Namespacing in XDM](./schema/namespaces.md)
   * [XDM field dictionary](schema/field-dictionary.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
