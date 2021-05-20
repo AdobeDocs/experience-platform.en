@@ -35,6 +35,7 @@ feature: Profiles
 * Tutorials {#tutorials}
   * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
   * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
+  * [Generate the dataset overlap report](tutorials/dataset-overlap-report.md)
   * [More tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)
