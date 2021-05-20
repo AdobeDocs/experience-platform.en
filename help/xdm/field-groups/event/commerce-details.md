@@ -21,6 +21,8 @@ description: This document provides an overview of the Commerce Details schema f
 | `commerce` | [Commerce](../../data-types/commerce.md)  | An object that describes product returns, warranty registration, and shopping cart/order processes. |
 | `productListItems` | Array of [Product list items](../../data-types/product-list-item.md)  | A list of items representing the product(s) selected by a customer, with specific options and pricing at a specific point of time (which may differ from the product record). |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-commerce.example.1.json)

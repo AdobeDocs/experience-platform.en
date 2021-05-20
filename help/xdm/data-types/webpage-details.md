@@ -25,6 +25,8 @@ The data type is intended for full page details and initial page loads of single
 | `siteSection` | String | The normative name of the site section where this web page resides. This can be used to classify or categorize the interaction. |
 | `viewName` | String | The name of the view, within a page. This property is commonly used with single-page applications or pages that have tabs or controls that change a majority of the page layout. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.example.2.json)

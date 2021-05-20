@@ -20,6 +20,8 @@ description: This document provides an overview of the Web Details schema field 
 | --- | --- | --- |
 | `web` | [Web information](../../data-types/web-information.md)  | Describes link clicks, web page details, referrer information, and browser details. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-web.example.1.json)

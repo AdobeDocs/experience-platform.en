@@ -24,6 +24,8 @@ The values captured in this data type may differ from the product record. For ex
 | `productAddMethod` | [!UICONTROL String] | The method that was used to add a product item to the list by the visitor. |
 | `quantity` | [!UICONTROL Integer] | The number of units the customer has indicated they require of the product. |
 
+{style="table-layout:auto"}
+
 For more details on the postal address data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/productlistitem.example.1.json)

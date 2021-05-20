@@ -17,6 +17,7 @@ description: This document provides an overview of the web information Experienc
 | `webPageDetails` | [[!UICONTROL Web page details]](./webpage-details.md) | Describes the details about the web page where the web interaction occurred. |
 | `webReferrer` | [!UICONTROL Object] | Describes the referrer of a web interaction, which is the URL a visitor came from immediately before the current web interaction was recorded. Contains the following subproperties: <ul><li>`URL`: The referrer URL.</li><li>`type`: The referrer type.</li></ul> |
 
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 
