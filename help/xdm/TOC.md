@@ -33,7 +33,7 @@ feature: Schemas
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
     * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
   * Event field groups {#event}
-    * [Commerce Details](./field-groups/event/enduserids.md)
+    * [Commerce Details](./field-groups/event/commerce-details.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
     * [Web Details](./field-groups/event/web-details.md)
