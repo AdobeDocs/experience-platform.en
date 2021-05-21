@@ -9,6 +9,7 @@ feature: Data Management
 # Adobe Experience Platform Dashboards {#dashboards}
 
 * [Dashboards overview](home.md)
+* [Dashboard access permissions](permissions.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Segments](guides/segments.md)
@@ -16,4 +17,5 @@ feature: Data Management
   * [License usage](guides/license-usage.md)
 * [Modify dashboards](modify.md)
 * [Widget library](widget-library.md)
+* [Query dashboard datasets](queries.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
