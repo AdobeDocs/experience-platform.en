@@ -11,13 +11,41 @@ Adobe Experience Platform provides important information about your organization
 
 ## Getting started with Query Service 
 
-Adobe Experience Platform Query Service supports marketers in gaining insights from their data by enabling the use of standard SQL to query data in the Data Lake. Query Service offers a user interface and and an API that can be used to join any dataset in the data lake and capture the query results as new datasets for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
+Adobe Experience Platform Query Service supports marketers in gaining insights from their data by enabling the use of standard SQL to query data in the data lake. Query Service offers a user interface and and an API that can be used to join any dataset in the data lake and capture the query results as new datasets for use in reporting, machine learning, or for ingestion into Real-time Customer Profile. 
 
 To learn more about Query Service and its role within Experience Platform, please begin by reading the [Query Service overview](../query-service/home.md).
 
 ## Available datasets
 
-There are multiple raw datasets available, 
+You can use Query Service to query raw datasets for profile, segment, and destinations dashboards. The following sections describe the raw datasets that you can find in the data lake.
+
+### Profile attribute datasets
+
+For every active merge policy in Real-time Customer Profile, there is a profile attribute dataset available in the data lake. 
+
+The naming convention of this dataset is **Profile Attribute** followed by an alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+
+To understand the full schema of the dataset, you can preview and explore the schema using the dataset viewer in the Experience Platform UI.
+
+### Segment metadata dataset
+
+There is a segment metadata dataset available in the data lake for each of your organization's segments.
+
+The naming convention of this dataset is **Profile Segment Definition** followed by an alpha numeric value. For example: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
+
+The following image shows the schema of the segment metadata dataset.
+
+![](images/query/segment-metadata.png)
+
+### Destination metadata dataset
+
+The metadata for your activated destinations is available as a raw dataset in the data lake.
+
+The naming convention of this dataset is **DIM_Destination**.
+
+The following image shows the schema of the destination metadata dataset.
+
+![](images/query/destinations-metadata.png)
 
 ## Example queries
 
@@ -73,4 +101,6 @@ Select
 
 ## Next steps
 
-By reading this guide, you can now use Query Service to perform several queries to explore and process the raw datasets powering your profile, segment, and destinations dashboards. To learn more about each dashboard and its metrics, please select a dashboard from the list of available dashboards in the documentation navigation.
+By reading this guide, you can now use Query Service to perform several queries to explore and process the raw datasets powering your profile, segment, and destinations dashboards. 
+
+To learn more about each dashboard and its metrics, please select a dashboard from the list of available dashboards in the documentation navigation.
