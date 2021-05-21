@@ -123,6 +123,10 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
+| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `sfdc.lastStatus` | `lastStatus` |
+| `sfdc.hasResponded` | `hasResponded` |
+| `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
