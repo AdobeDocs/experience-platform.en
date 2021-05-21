@@ -37,11 +37,15 @@ See the following table for more information on statuses:
 
 ## Dataflow runs for streaming destinations
 
-For streaming destinations, the [!UICONTROL Dataflow runs] tab provides metric data on your dataflow runs. A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
+For streaming destinations, the [!UICONTROL Dataflow runs] tab provides an hourly update for metric data on your dataflow runs. The most prominent statistics labelled are for identities.
 
-- **[!UICONTROL Identities activated]**: The total count of profile records that were created or updated for activation.
-- **[!UICONTROL Identities skipped]**:  The total count of profile records that are skipped for activation based on profile exits or missing attributes.
-- **[!UICONTROL Identities failed]**: The total number of profile records that are not activated to the destination due to errors.
+Identities represent the different facets of a profile. For example, if a profile contains both a phone number and an email address, that profile will have two identities.
+
+A list of individual runs and their particular metrics is displayed, along with the following totals for identities:
+
+- **[!UICONTROL Identities activated]**: The total count of profile identities that were created or updated for activation.
+- **[!UICONTROL Identities excluded]**:  The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
+- **[!UICONTROL Identities failed]**: The total number of profile identities that are not activated to the destination due to errors.
 
 ![](../assets/ui/monitor-destinations/dataflow-runs-stream.png)
 
@@ -49,12 +53,12 @@ Each individual dataflow run shows the following details:
 
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
-- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
-- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination. This value is updated every 60 minutes.
-- **[!UICONTROL Identities excluded]**: The total number of profile identities that are skipped for activation based on missing attributes and consent violation. This value is updated every 60 minutes.
-- **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors. This value is updated every 60 minutes.
+- **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
+- **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
 - **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped.
-- **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the records for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
+- **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
 To view the details of a particular dataflow run, select the run's start time from the list. 
 
@@ -62,7 +66,7 @@ The details page for a dataflow run contains additional information such as the 
 
 ![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, record count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Records skipped]** toggle.
+The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Records skipped]** toggle.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
