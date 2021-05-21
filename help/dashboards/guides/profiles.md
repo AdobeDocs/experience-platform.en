@@ -53,8 +53,6 @@ The dashboard is composed of widgets, which are read-only metrics providing impo
 
 The "last updated" date and time on a widget shows when the last snapshot of the data was taken. The date and time of the snapshot is provided in UTC; it is not in the timezone of the individual user or IMS Organization.
 
-![](../images/profiles/dashboard-timestamp.png)
-
 ## Available widgets
 
 Experience Platform provides multiple widgets that you can use to visualize different metrics related to your Profile data. Select the name of a widget below to learn more:
