@@ -125,3 +125,15 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 >[!TIP]
 >
 >The integration between Adobe Experience Platform and [!DNL Facebook] supports historical audience backfills. All historical segment qualifications get sent to [!DNL Facebook] when you activate the segments to the destination.
+
+## Troubleshooting {#troubleshooting}
+
+### 400 Bad Request error message {#bad-request}
+
+When activating segments to [!DNL Facebook], you may receive the following error:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
+
+This error occurs when customers are using newly created accounts, and the [!DNL Facebook] permissions are not yet active.
+
+If you receive the `400 Bad Request` error message after following the steps in [Facebook account prerequisites](#facebook-account-prerequisites), please allow a few days for the [!DNL Facebook] permissions to come into effect.
