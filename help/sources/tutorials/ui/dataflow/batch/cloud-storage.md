@@ -29,6 +29,7 @@ Additionally, this tutorial requires that you have an established cloud storage 
 * Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
+* Compressed files: JSON and delimited files can be compressed as: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`.
 
 ## Select data
 
@@ -83,7 +84,13 @@ Once you have selected your data format and set your delimiter, select **[!UICON
 
 ### Ingest compressed files
 
+You can ingest compressed JSON or delimited files by specifying its compression type.
 
+In the [!UICONTROL Select data] step, select a compressed file for ingestion and then select its appropriate file type and whether its XDM-compliant or not. Next, select **[!UICONTROL Compression type]** and then select the appropriate compressed file type for your source data. 
+
+With a compressed file type identified, select **[!UICONTROL Next]** to proceed.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
 
 ## Map data fields to an XDM schema
 
