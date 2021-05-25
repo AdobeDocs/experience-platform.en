@@ -65,7 +65,7 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-The license usage dashboard currently reports on four key metrics, with more metrics to be added in subsequent releases.
+The license usage dashboard reports on four key metrics, with more metrics to be added in subsequent releases. The available metrics are listed below.
 
 >[!NOTE]
 >
