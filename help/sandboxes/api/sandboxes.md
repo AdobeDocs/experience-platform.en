@@ -401,6 +401,15 @@ A successful response returns the details of the updated sandbox, showing that i
 >
 >Once a sandbox is reset, it takes roughly 30 seconds to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".
 
+The following table contains possible exceptions that could prevent a sandbox from being reset:
+
+ | Error code | Description |
+| --- | --- |
+| `2074-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature." |
+| `2075-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature." |
+| `2076-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature." |
+| `2077-400` | "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service." |
+
 ## Delete a sandbox {#delete}
 
 >[!IMPORTANT]
