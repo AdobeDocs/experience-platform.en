@@ -81,6 +81,10 @@ Once you have selected your data format and set your delimiter, select **[!UICON
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
+### Ingest compressed files
+
+
+
 ## Map data fields to an XDM schema
 
 The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in Parquet must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, does not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
