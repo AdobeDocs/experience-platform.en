@@ -130,7 +130,9 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 ### 400 Bad Request Error Message {#bad-request}
 
-When activating segments to [!DNL Facebook], you may receive the `400 Bad Request` error message in the [!DNL Platform] user interface.
+When activating segments to [!DNL Facebook], you may receive the following error:
+
+`{"message":"Facebook Error: Permission error","code":"400 BAD_REQUEST"}`
 
 This error occurs when customers are using newly created accounts, and the [!DNL Facebook] permissions are not yet active.
 
