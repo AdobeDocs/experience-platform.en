@@ -187,7 +187,7 @@ A successful response returns the details of the sandbox, including its `name`, 
 
 ## Create a sandbox {#create}
 
-You can create a new development or production sandbox by making a POST request to the `/sandboxes` endpoint.
+You can create a new sandbox, type production or type development, by making a POST request to the `/sandboxes` endpoint.
 
 ### Create a development sandbox
 
