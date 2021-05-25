@@ -13,7 +13,7 @@ To send segments to email marketing destinations for your campaigns, Platform mu
 
 Connecting to email marketing destinations is a three-step process ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from storage location into the destination](#import-data-into-destination)). Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Platform exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Platform. The process to import data varies for each partner. Read the individual destinations articles for more information. 
+In the connect destination flow, described in the section below, connect to either [!DNL Amazon S3] or [!DNL SFTP]. Platform exports your segments as `.csv` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in [!DNL Platform]. The process to import data varies for each partner. Read the individual destinations articles for more information. 
 
 ## Configure destination {#connect-destination}
 

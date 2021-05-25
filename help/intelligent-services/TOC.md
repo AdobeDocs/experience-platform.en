@@ -37,4 +37,5 @@ feature: Data Science Workspace
     - [Discover insights](customer-ai/user-guide/discover-insights.md)
     - [Create segments using Customer AI scores](customer-ai/user-guide/create-segment.md)
     - [Download scores](customer-ai/user-guide/download-scores.md)
+  - [Error troubleshooting](customer-ai/troubleshooting.md) 
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
