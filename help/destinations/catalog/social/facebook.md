@@ -128,7 +128,7 @@ For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom
 
 ## Troubleshooting {#troubleshooting}
 
-### 400 Bad Request Error Message {#bad-request}
+### 400 Bad Request error message {#bad-request}
 
 When activating segments to [!DNL Facebook], you may receive the following error:
 
