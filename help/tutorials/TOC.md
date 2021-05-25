@@ -15,7 +15,6 @@ type: Tutorial
 * [Data Science Workspace](data-science-workspace.md)
 * [Destinations](destinations-tutorials.md)
 * [Ingest data into Platform](data-ingestion.md)
-* [Profiles and Identities](configure-profile.md)
 * [Schemas and relationship descriptors](schemas.md)
 * [Segments and audiences](segmentation.md)
 
