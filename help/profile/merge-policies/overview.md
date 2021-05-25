@@ -27,6 +27,8 @@ For example, if a customer interacts with your brand across several channels, yo
 
 When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the merge policy determines which information to include in the profile for the individual.
 
+Merge policies are private to your IMS Organization, allowing you to create different policies to merge schemas in the specific ways that you need. You can also specify a default merge policy that will be used if one is not explicitly provided. See the section on [default merge policies](#default-merge-policy) later in this document to learn more.
+
 ## Merge methods {#merge-methods}
 
 Each profile fragment contains information for just one identity out of the total number of identities that could exist for an individual. When merging that data together to form a customer profile, there is the potential for that information to conflict and priority must be specified. 
@@ -86,3 +88,6 @@ If you create a new merge policy and set it as the default, the previous default
 >
 >Profile counts and segments with an existing associated default merge policy may be affected. Any segment that has a default merge policy applied will be updated to the new default merge policy.
 
+## Next steps
+
+After reading this guide you now know what merge policies are and the role they play within Experience Platform. To begin working with merge policies in the Experience Platform UI, please refer to the [merge policies UI guide](ui-guide.md). To work with merge policies using the API, visit the [merge policies API endpoint guide](../api/merge-policies.md).
