@@ -25,7 +25,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Reports" permission in order to be able to view the dashboard.
+>The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission in order to be able to view the dashboard.
 
 ![](../images/license-usage/dashboard-overview.png)
 
@@ -43,7 +43,7 @@ Consumption reporting for sandboxes is cumulative for all sandboxes of the same 
 >
 >1. Create a product profile in the Adobe Admin Console.
 >2. Under Permission in the Sandbox category, add all sandboxes you wish to view in the license usage dashboard.
->3. User Dashboard Permission Category, add "View license usage dashboard" permission.
+>3. Under User Dashboard Permission category, add "View License Usage Dashboard" permission.
 
 ### Select a date range
 
@@ -65,24 +65,22 @@ Each widget displays a line graphs comparing actual numbers for your organizatio
 
 ## Available metrics
 
-The license usage dashboard currently reports on four key metrics, with more metrics to be added in subsequent releases. The currently support metrics are:
+The license usage dashboard currently reports on four key metrics, with more metrics to be added in subsequent releases.
 
-* [!UICONTROL Addressable Audience] (measured by number of profiles)
-* [!UICONTROL Average profile richness]
-* [!UICONTROL Data scanned per segmentation ratio]
-* [!UICONTROL Total consumed storage] 
+>[!NOTE]
+>
+>Three of the available metrics are currently in beta.
+
+* [!UICONTROL Addressable Audience]
+* [!UICONTROL Average profile richness] (Beta)
+* [!UICONTROL Data scanned per segmentation ratio] (Beta)
+* [!UICONTROL Total consumed storage] (Beta)
 
 >[!WARNING]
 >
 >Known limitation of the [!UICONTROL Total consumed storage] metric: When deleting batch data, that batch is placed into a soft delete state for a period of 7 days to support data recovery use cases. After 7 days, the batch is moved to a hard delete state. Reporting on total consumed storage will not reflect any change to the trend chart until the batch is in the hard delete state. This issue will be resolved in a future release.
 
-The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. 
-
->[!NOTE]
->
->The license usage dashboard only reports on the latest license that has been provisioned for your organization. Support for multiple licenses in a single organization is planned for a future release. 
-
-For detailed definitions of each metric, please reference the appropriate Product Description documentation:
+The availability of these metrics and the specific definition of each of these metrics varies depending on the licensing that your organization has purchased. For detailed definitions of each metric, please reference the appropriate Product Description documentation:
 
 |License|Product Description|
 |---|---|
@@ -91,6 +89,10 @@ For detailed definitions of each metric, please reference the appropriate Produc
 |<ul><li>RT CUSTOMER DATA PLATFORM:OD</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 10M</li><li>RT CUSTOMER DATA PLATFORM:OD PRFL TO 50M</li></ul>|[Real-time Customer Data Platform](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html)|
 |<ul><li>AEP:OD ACTIVATION</li><li>AEP:OD ACTIVATION PRFL TO 10M</li><li>AEP:OD ACTIVATION PRFL UP TO 50M</li></ul>|[Adobe Experience Platform Activation](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html)|
 |<ul><li>AEP:OD INTELLIGENCE</li></ul>|[Adobe Experience Platform Intelligence](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform-intelligence---product-description.html)|
+
+>[!WARNING]
+>
+>The license usage dashboard only reports on the latest license that has been provisioned for your organization. If the latest license provisioned for your organization does not appear in the table above, the license usage dashboard may not display properly. Support for additional licenses and multiple licenses in a single organization is planned for a future release. 
 
 ## Next steps
 
