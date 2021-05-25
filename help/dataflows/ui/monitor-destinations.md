@@ -55,9 +55,10 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow.
 - **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
-- **[!UICONTROL Identities excluded]**: The total number of profile identities that are skipped for activation based on missing attributes and consent violation.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded for activation based on missing attributes and consent violation.
 - **[!UICONTROL Identities failed]** The total number of profile identities that are not activated to the destination due to errors.
-- **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped.
+- **[!UICONTROL Activation rate]**: The percentage of received identities that have either been successfully activated or skipped. The following formula demonstrates how this value is calculated:
+![](../assets/ui/monitor-destinations/activation-rate-formula.png)
 - **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
 To view the details of a particular dataflow run, select the run's start time from the list. 
@@ -66,7 +67,7 @@ The details page for a dataflow run contains additional information such as the 
 
 ![](../assets/ui/monitor-destinations/dataflow-details-stream.png)
 
-The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Records skipped]** toggle.
+The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
 
 ![](../assets/ui/monitor-destinations/dataflow-records-stream.png)
 
@@ -84,8 +85,8 @@ Each individual dataflow run shows the following details:
 - **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 - **[!UICONTROL Processing time]**: The amount of time it took for the dataflow run to be processed.
 - **[!UICONTROL Profiles received]**: The total number of profiles received in the dataflow. This value is updated every 60 minutes.
-- **[!UICONTROL Identities activated]**: The count of individual profile identities successfully activated to the selected destination for the specific dataflow.
-- **[!UICONTROL Identities excluded]**: The count of individual profile identities excluded for activation for the selected destination, based on missing attributes and consent violation for the specific dataflow.
+- **[!UICONTROL Identities activated]**: The total number of profile identities that were successfully activated to the selected destination.
+- **[!UICONTROL Identities excluded]**: The total number of profile identities that are excluded for activation based on missing attributes and consent violation.
 - **[!UICONTROL Status]**: Represents the state the dataflow is in. This can be one of three states: [!UICONTROL Success], [!UICONTROL Failed], and [!UICONTROL Processing]. [!UICONTROL Success] means that the dataflow is active and is ingesting data according to its provided schedule. [!UICONTROL Failed] means that the activation of data has been suspended due to errors. [!UICONTROL Processing] means that the dataflow is not yet active and is generally encountered when a new dataflow is created.
 
 To view details of a specific dataflow run, select the run's start time from the list. 
