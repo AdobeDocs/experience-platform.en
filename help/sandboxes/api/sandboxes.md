@@ -403,7 +403,7 @@ A successful response returns the details of the updated sandbox, showing that i
 
 The following table contains possible exceptions that could prevent a sandbox from being reset:
 
- | Error code | Description |
+| Error code | Description |
 | --- | --- |
 | `2074-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature." |
 | `2075-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature." |
