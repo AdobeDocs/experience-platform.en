@@ -82,7 +82,7 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 >[!NOTE]
 >
->You can delete any production or development sandboxes in your organization, except the default production sandbox.
+>You can delete any production or development sandboxes in your organization, except the default production sandbox that contains Adobe Audience Manager and Adobe Analytics data.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 

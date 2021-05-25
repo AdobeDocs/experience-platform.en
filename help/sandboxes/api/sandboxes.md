@@ -403,6 +403,10 @@ A successful response returns the details of the updated sandbox, showing that i
 
 ## Delete a sandbox {#delete}
 
+>[!IMPORTANT]
+>
+>The delete function applies to all development and production sandboxes except the default production sandbox when it also contains Adobe Analytics and Adobe Audience Manager data.
+
 You can delete a sandbox by making a DELETE request that includes the sandbox's `name` in the request path.
 
 >[!NOTE]
