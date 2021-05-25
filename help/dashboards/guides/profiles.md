@@ -42,7 +42,7 @@ The dashboard will automatically select a merge policy to display, but you can c
 >
 >The dropdown menu shows only merge policies related to the XDM Individual Profile Class, however if your organization has created multiple merge policies, it may mean that you will need to scroll in order to view the complete list of available merge policies.
 
-For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please visit the [merge policies UI guide](../../profile/ui/merge-policies.md).
+For more information on merge policies, including how to create, edit, and declare a default merge policy for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md).
 
 ![](../images/profiles/select-merge-policy.png)
 
