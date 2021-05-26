@@ -57,7 +57,7 @@ For more information, please see the [[!DNL Data Prep] overview](../../data-prep
 | ------- | ----------- |
 | Improved monitoring (beta) | Increased the capabilities of monitoring for destinations, including information for both batch and streaming destinations |
 |[Faster incremental file export (beta)](../../destinations/ui/activate-destinations.md#export-incremental-files)| Added the capability to export incremental files to destinations every 3, 6, 8, or 12 hours. <br> <br>This capability is currently in beta and is only available to a select number of customers. Non-beta customers can export incremental files once a day.|
-|[Deduplication key support (beta)](../../destinations/ui/activate-destinations.md#deduplication-keys)| Added the capability to set identity namespaces or profile attrivutes as deduplication keys. Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file. <br> <br>This capability is currently in beta, and is only available to a select number of customers.|
+|[Deduplication key support (beta)](../../destinations/ui/activate-destinations.md#deduplication-keys)| Added the capability to set identity namespaces or profile attributes as deduplication keys. Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file. <br> <br>This capability is currently in beta, and is only available to a select number of customers.|
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
