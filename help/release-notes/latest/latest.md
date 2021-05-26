@@ -92,7 +92,7 @@ Adobe Experience Platform is built to enrich digital experience applications on 
 ### Known limitations
 
 - Every Experience Cloud Organization comes with a pre-created default production sandbox. This sandbox acts as a default destination for every request sent to Platform from another Adobe application or non-Adobe application that is not (yet) Sandbox-compliant. The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
-- Production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service cannot be reset.
+- Production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can neither be reset nor deleted.
 - All user-created production and development sandboxes can be deleted, except the default production sandbox.
 
 For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md).
