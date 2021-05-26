@@ -104,9 +104,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
 | [!DNL Data Governance] | [!UICONTROL View Data Usage Policies] | Read-only access for data usage policies belonging to your organization. |
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
-| [!DNL Dashboards] | [!UICONTROL Manage Custom Dashboards] | Access to read, create, edit, and archive custom dashboard widgets. |
-| [!DNL Dashboards] | [!UICONTROL View Custom Dashboard] | Read-only access to view custom dashboard widgets. |
-| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Access to read, create, edit, and archive standard dashboard widgets. |
+| [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
 
 ## Next steps

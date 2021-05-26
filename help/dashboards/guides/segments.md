@@ -70,13 +70,19 @@ For more information on fragments and merged profiles, please begin by reading t
 
 ### [!UICONTROL Audience size trend] {#audience-size-trend}
 
-The **[!UICONTROL Audience size trend]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days. This widget displays how the segment size may have shifted over time as new profiles qualify for or exit from the segment. 
+The **[!UICONTROL Audience size trend]** widget provides information regarding the total number of profiles in the segment as captured during the daily snapshot, for the last 30 days, 90 days, or 12 months. This widget displays how the segment size may have shifted over time as new profiles qualify for or exit from the segment. 
 
 To learn more about segment evaluation and how profiles qualify and exit from segments, please refer to the [Segmentation Service documentation](../../segmentation/home.md).
 
 ![](../images/segments/audience-size-trend.png)
 
 ### [!UICONTROL Identity overlap] {#identity-overlap}
+
+The **[!UICONTROL Identity overlap]** widget displays a Venn diagram, or set diagram, showing the overlap of profiles in your segment containing multiple identities. 
+
+After using the dropdown menus on the widget to select the identities that you wish to compare, circles appear displaying the relative size of each identity, with the number of profiles containing both namespaces being represented by the size of the overlap between the circles.
+
+If a customer interacts with your brand on more than one channel, multiple identities will be associated with that individual customer, therefore it is likely that your organization will have multiple profiles containing fragments from more than one identity.
 
 To learn more about identities, please visit the [Adobe Experience Platform Identity Service documentation](../../identity-service/home.md).
 

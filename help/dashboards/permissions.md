@@ -20,7 +20,7 @@ This document provides a summary of how to provide access to specific dashboard 
 There are two main permissions that are required to access dashboards within Experience Platform. These permissions are:
 
 * **View License Usage Dashboard**: This permission allows users read-only access to the license usage dashboard within the Experience Platform UI.
-* **Manage Standard Dashboards**: This permission allows users to view the widget library, create new custom widgets, archive custom widgets, and add custom attributes that are not yet in the data warehouse.
+* **Manage Standard Dashboards**: This permission allows users to add custom attributes that are not yet in the data warehouse.
 
 The following steps will show you how to add these permissions using Admin Console.
 
@@ -40,7 +40,7 @@ The selected product profile opens, showing the users associated with that produ
 
 ## Add/edit permissions
 
-The **Permissions** tab displays all of the available permissions for the product profile. Locate the **Dashboards** row and notice that it currently says "0 of 4 included", this means that there are currently no dashboard permissions enabled for the product profile.
+The **Permissions** tab displays all of the available permissions for the product profile. Locate the **Dashboards** row and notice that it currently says "0 of 2 included", this means that there are no dashboard permissions enabled for the product profile.
 
 To edit the dashboard permissions, select **Edit** on the dashboard row.
 
@@ -54,11 +54,11 @@ For descriptions of the permissions, please refer to the [available permissions]
 >
 >You do not have to enable all permissions for all users. Depending on your organization's structure, you may wish to create separate product profiles for certain users and grant limited access (such as read-only).
 
-After all of the permissions have been added, select **Save** to return to the product profile.
+After permissions have been added, select **Save** to return to the product profile.
 
 ![](images/admin-console/dashboard-permissions.png)
 
-When you return to the product profile, you can verify that the permissions have been added by confirming that the **Dashboards** row shows "4 of 4 included".
+When you return to the product profile, you can verify that the permissions have been added by confirming that the **Dashboards** row shows "2 of 2 included".
 
 ![](images/admin-console/product-permissions-included.png)
 
