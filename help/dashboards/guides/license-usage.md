@@ -25,7 +25,7 @@ To navigate to the license usage dashboard within the Platform UI, select **[!UI
 
 >[!NOTE]
 >
->The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission in order to be able to view the dashboard.
+>The license usage dashboard is not enabled by default. Users must be granted "View License Usage Dashboard" permission in order to be able to view the dashboard. For steps on granting access permissions for viewing the license usage dashboard, please refer to the [dashboard permissions guide](../permissions.md).
 
 ![](../images/license-usage/dashboard-overview.png)
 
