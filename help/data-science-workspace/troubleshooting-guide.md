@@ -124,7 +124,7 @@ If you are receiving any of the following errors:
 - Remote RPC client disassociated and other memory errors.
 - Poor performance when reading and writing datasets.
 
-Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action, such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action, such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of multiple times.
 
 ## [!DNL Docker Hub] limit restrictions in Data Science Workspace
 

@@ -381,13 +381,13 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 >[!IMPORTANT]
 >
-> If you are receiving any of the following errors: 
+> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
 > - Poor performance when reading and writing datasets.
 > 
-> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
 
 You can auto generate the above examples in JupyterLab buy using the following method:
 
@@ -481,13 +481,13 @@ In Scala, you can import `clientContext` to get and return Platform values, this
 
 >[!IMPORTANT]
 >
-> If you are receiving any of the following errors: 
+> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
 > - Poor performance when reading and writing datasets.
 > 
-> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -536,13 +536,13 @@ In Scala, you can import `clientContext` to get and return Platform values, this
 
 >[!IMPORTANT]
 >
-> If you are receiving any of the following errors: 
+> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
 > - Poor performance when reading and writing datasets.
 > 
-> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
