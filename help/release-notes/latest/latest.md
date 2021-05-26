@@ -21,6 +21,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Real-time Customer Profile](#profile)
+- [Sources](#sources)
 
 ## Dashboards {#dashboards}
 
@@ -76,3 +77,15 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 |Dataset overlap report| The dataset overlap report provides visibility into the composition of the Profile store by exposing the datasets that contribute most to addressable audience. In addition to providing insights into Profile data, this report helps users take actions to optimize license usage, such as setting a limit to the lifespan of certain data. To learn more, follow the tutorial on [generating the dataset overlap report](../../profile/tutorials/dataset-overlap-report.md).|
 
 For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+
+## [!DNL Sources] {#sources}
+
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
+Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
+
+| Feature | Description |
+| ------- | ----------- |
+| UI support for compressed file ingestion | You can now preview and ingest compressed JSON or delimited files using cloud storage sources in the UI. For more information, see the tutorial on [configuring a dataflow for a cloud storage source connection in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+
+To learn more about sources, see the [sources overview](../../sources/home.md).
