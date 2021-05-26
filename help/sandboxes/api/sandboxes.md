@@ -404,7 +404,7 @@ The following table contains possible exceptions that could prevent a sandbox fr
 | `2074-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
 | `2075-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature. |
 | `2076-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
-| `2077-400` | This sandbox cannot be reset because it is being used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. |
+| `2077-400` | This sandbox is being used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. After this sandbox is reset, it cannot be restored. |
 
 ## Delete a sandbox {#delete}
 
