@@ -23,27 +23,27 @@ You can use Query Service to query raw datasets for profile, segment, and destin
 
 For every active merge policy in Real-time Customer Profile, there is a profile attribute dataset available in the data lake. 
 
-The naming convention of this dataset is **Profile Attribute** followed by an alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
+The naming convention of these datasets is **Profile Attribute** followed by an alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`
 
-To understand the full schema of the dataset, you can preview and explore the schema using the dataset viewer in the Experience Platform UI.
+To understand the full schema of each dataset, you can preview and explore the datasets using the dataset viewer in the Experience Platform UI.
 
 ### Segment metadata dataset
 
-There is a segment metadata dataset available in the data lake for each of your organization's segments.
+There is a segment metadata dataset available in the data lake containing metadata for each of your organization's segments.
 
 The naming convention of this dataset is **Profile Segment Definition** followed by an alpha numeric value. For example: `Profile Segment Definition 6591ba8f-1422-499d-822a-543b2f7613a3`
 
-The following image shows the schema of the segment metadata dataset.
+To understand the full schema of the dataset, you can preview and explore the schema using the dataset viewer in the Experience Platform UI.
 
 ![](images/query/segment-metadata.png)
 
 ### Destination metadata dataset
 
-The metadata for your activated destinations is available as a raw dataset in the data lake.
+The metadata for all of your organization's activated destinations is available as a raw dataset in the data lake.
 
 The naming convention of this dataset is **DIM_Destination**.
 
-The following image shows the schema of the destination metadata dataset.
+To understand the full schema of the dataset, you can preview and explore the schema using the dataset viewer in the Experience Platform UI.
 
 ![](images/query/destinations-metadata.png)
 
@@ -96,8 +96,6 @@ Select
       group by
       segment_id
 ```
-
-### Count of Segments Activated per Destination for all Destinations
 
 ## Next steps
 
