@@ -22,7 +22,7 @@ Sandboxes are virtual partitions within a single instance of Experience Platform
 * **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
   * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
   * One batch segmentation job per day, per non-production sandbox;
-  * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes), for use in conjunction with its development sandboxes (measured cumulatively across all of your authorized development sandboxes).
+  * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
 
 An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). In addition, both production and development sandboxes have a reset feature that removes all customer-created resources from the sandbox. Development sandboxes cannot be converted to production sandboxes.
 
