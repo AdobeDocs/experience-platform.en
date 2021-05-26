@@ -84,9 +84,9 @@ Once you have selected your data format and set your delimiter, select **[!UICON
 
 ### Ingest compressed files
 
-You can ingest compressed JSON or delimited files by specifying its compression type.
+You can ingest compressed JSON or delimited files by specifying their compression type.
 
-In the [!UICONTROL Select data] step, select a compressed file for ingestion and then select its appropriate file type and whether its XDM-compliant or not. Next, select **[!UICONTROL Compression type]** and then select the appropriate compressed file type for your source data. 
+In the [!UICONTROL Select data] step, select a compressed file for ingestion and then select its appropriate file type and whether it's XDM-compliant or not. Next, select **[!UICONTROL Compression type]** and then select the appropriate compressed file type for your source data.
 
 With a compressed file type identified, select **[!UICONTROL Next]** to proceed.
 
