@@ -379,6 +379,16 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 - **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
+>[!IMPORTANT]
+>
+> If you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+
 You can auto generate the above examples in JupyterLab buy using the following method:
 
 Select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
@@ -469,6 +479,16 @@ val spark = SparkSession
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
 
+>[!IMPORTANT]
+>
+> If you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -513,6 +533,16 @@ And
 ### Write to a dataset {#scala-write-dataset}
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
+
+>[!IMPORTANT]
+>
+> If you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> Check to make sure you are caching the data (`df.cache()`) before transforming, reading, or writing the data. When executing code in notebooks with tranformations before an action such as `fit()`, `df.cache()` can greatly improve notebook performance. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of potentially multiple times.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
