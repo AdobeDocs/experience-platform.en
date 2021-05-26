@@ -11,9 +11,9 @@ The [!DNL Sandbox] API provides several endpoints that allow you to programmatic
 
 To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml).
 
-## Active sandboxes
+## Available sandboxes
 
-The active sandboxes endpoint allows you to view a list of all active sandboxes available for the current user, including information on each sandbox's name, title, state, type, and region. The active sandboxes endpoint in the [!DNL Sandbox] API is available for all users, including those without Sandbox Administration access permissions. See the [active sandboxes endpoint guide](./active.md) to learn how to view available sandboxes in the API.
+The available sandboxes endpoint allows you to view a list of all available sandboxes available for the current user, including information on each sandbox's name, title, state, type, and region. The available sandboxes endpoint in the [!DNL Sandbox] API can be accessed by all users, including those without Sandbox Administration access permissions. See the [available sandboxes endpoint guide](./available.md) to learn how to view available sandboxes in the API.
 
 ## Sandbox management
 

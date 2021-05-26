@@ -1,18 +1,18 @@
 ---
-keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
+keywords: Experience Platform;home;popular topics;list available sandboxes;list sandboxes
 solution: Experience Platform
-title: Active Sandboxes API Endpoint
+title: Available Sandboxes API Endpoint
 topic-legacy: developer guide
-description: You can list the sandboxes that are active for the current user by making a GET request to the active sandboxes endpoint.
+description: You can list the sandboxes that are available for the current user by making a GET request to the available sandboxes endpoint.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 ---
-# Active sandboxes endpoint
+# Available sandboxes endpoint
 
 >[!NOTE]
 >
 >Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions.
 
-You can list the sandboxes that are active for the current user by making a GET request to the active sandboxes endpoint.
+You can list the sandboxes that are available for the current user by making a GET request to the available sandboxes endpoint.
 
 **API format**
 
@@ -36,7 +36,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns a list of sandboxes that are active for the current user, including details such as `name`, `title`, `state`, and `type`.
+A successful response returns a list of sandboxes that are available for the current user, including details such as `name`, `title`, `state`, and `type`.
 
 ```json
 {

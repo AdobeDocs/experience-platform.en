@@ -344,7 +344,7 @@ A successful response returns HTTP status 200 (OK) with the details of the newly
 
 >[!IMPORTANT]
 >
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
 Development sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's `name` in the request path.
 

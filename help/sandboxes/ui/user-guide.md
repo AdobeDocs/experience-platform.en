@@ -60,9 +60,9 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 ## Reset a sandbox
 
->[!NOTE]
+>[!IMPORTANT]
 >
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 

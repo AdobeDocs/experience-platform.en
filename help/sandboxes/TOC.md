@@ -15,9 +15,9 @@ feature: Data Management
 * Sandbox API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [Active sandboxes](api/active.md)
+  * [Available sandboxes](api/available.md)
   * [Sandbox management](api/sandboxes.md)
-  * [Types](api/types.md)
+  * [Sandbox types](api/types.md)
   * [Appendix](api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
