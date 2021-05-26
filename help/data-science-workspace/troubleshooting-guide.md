@@ -114,7 +114,7 @@ Additionally, while reading and writing large datasets, caching your data (`df.c
 
 ## Why are my Spark/PySpark notebooks taking so long to read and write data?
 
-If you are performing transformations on data, such as using `fit()`, the transformations may be executing multiple times. To increase performance, cache your data using `df.cache()` before transforming, reading, or writing the data. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time instead of multiple times.
+If you are performing transformations on data, such as using `fit()`, the transformations may be executing multiple times. To increase performance, cache your data using `df.cache()` before transforming, reading, or writing the data. Using `df.cache()` before reading and writing a dataset ensures that the transformations are only executed a single time. This prevents multiple reads across the network.
 
 ## Why are my Spark/PySpark notebooks failing to run?
 
