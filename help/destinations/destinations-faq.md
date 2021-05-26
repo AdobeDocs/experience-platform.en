@@ -1,12 +1,16 @@
 ---
 keywords: destinations; questions; frequently asked questions; faq; destinations faq
-title: Destinations FAQ
-seo-title: Destinations FAQ
-description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
-seo-description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
+title: Frequently asked questions
+seo-title: Frequently asked questions
+description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
+seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 ---
 
-# Destinations FAQ {#faq}
+# Frequently asked questions {#faq}
+
+## Overview {#overview}
+
+This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Platform] services, including those encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 
