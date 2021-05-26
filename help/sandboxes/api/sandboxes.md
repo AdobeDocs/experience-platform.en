@@ -344,7 +344,7 @@ A successful response returns HTTP status 200 (OK) with the details of the newly
 
 >[!IMPORTANT]
 >
->While the reset function applies to all development and production sandboxes, it does not apply to the default production sandbox if it contains Adobe Analytics or Adobe Audience Manager data.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.
 
 Development sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's `name` in the request path.
 
@@ -404,7 +404,7 @@ The following table contains possible exceptions that could prevent a sandbox fr
 | `2074-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
 | `2075-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature. |
 | `2076-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
-| `2077-400` | Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. |
+| `2077-400` | This sandbox cannot be reset because it is being used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. |
 
 ## Delete a sandbox {#delete}
 
