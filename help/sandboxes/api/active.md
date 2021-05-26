@@ -1,18 +1,18 @@
 ---
 keywords: Experience Platform;home;popular topics;list active sandboxes;list sandboxes
 solution: Experience Platform
-title: Root (/) API Endpoint
+title: Active Sandboxes API Endpoint
 topic-legacy: developer guide
-description: You can list the sandboxes that are active for the current user by making a GET request to the root endpoint.
+description: You can list the sandboxes that are active for the current user by making a GET request to the active sandboxes endpoint.
 exl-id: 9b0719af-c1ca-439a-9c8b-86c7fa26a3b8
 ---
-# Root (`/`) endpoint
+# Active sandboxes endpoint
 
 >[!NOTE]
 >
 >Unlike other endpoints provided in the Sandbox API, this endpoint is available for all users, including those without Sandbox Administration access permissions.
 
-You can list the sandboxes that are active for the current user by making a GET request to the root (`/`) endpoint.
+You can list the sandboxes that are active for the current user by making a GET request to the active sandboxes endpoint.
 
 **API format**
 
@@ -31,7 +31,7 @@ curl -X GET \
   https://platform.adobe.io/data/foundation/sandbox-management/?&limit=3&offset=1 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
 **Response**
@@ -98,7 +98,7 @@ A successful response returns a list of sandboxes that are active for the curren
 | --- | --- |
 | `name` | The name of the sandbox. Used for lookup purposes in API calls. |
 | `title` | The display name for the sandbox. |
-| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <ul><li>**creating**: The sandbox has been created, but is still being provisioned by the system.</li><li>**active**: The sandbox is created and active.</li><li>**failed**: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>**deleted**: The sandbox has been manually disabled.</li></ul> |
+| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul> |
 | `type` | The sandbox type, either "development" or "production". |
-| `isDefault` | A boolean property indicating whether this sandbox is the default sandbox for the organization. Typically this is the production sandbox. |
+| `isDefault` | A boolean property indicating whether this sandbox is the default production sandbox for the organization. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |

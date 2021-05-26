@@ -15,8 +15,8 @@ feature: Data Management
 * Sandbox API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [Root](api/root.md)
-  * [Sandboxes](api/sandboxes.md)
+  * [Active sandboxes](api/active.md)
+  * [Sandbox management](api/sandboxes.md)
   * [Types](api/types.md)
   * [Appendix](api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)

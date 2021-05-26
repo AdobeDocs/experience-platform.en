@@ -1,15 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sandbox developer guide
 solution: Experience Platform
-title: Sandbox API Endpoint
+title: Sandbox management API Endpoint
 topic-legacy: developer guide
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
 ---
-# Sandboxes endpoint
+# Sandbox management endpoint
 
 Sandboxes in Adobe Experience Platform provide isolated development environments that allow you to test features, run experiments, and make custom configurations without impacting your production environment. The `/sandboxes` endpoint in the [!DNL Sandbox] API allows you to programmatically manage sandboxes in Platform.
-
-This developer guide provides steps to help you use the [!DNL Sandbox] API to manage sandboxes in Experience Platform, and includes sample API calls for performing various operations.
 
 ## Getting started
 
@@ -27,7 +25,7 @@ GET /sandboxes?{QUERY_PARAMS}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](#query) for more information. |
+| `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the section on [query parameters](./appendix.md#query) for more information. |
 
 **Request**
 
@@ -125,9 +123,9 @@ A successful response returns a list of sandboxes belonging to your organization
 | --- | --- |
 | `name` | The name of the sandbox. This property is used for lookup purposes in API calls. |
 | `title` | The display name for the sandbox. |
-| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>**creating**: The sandbox has been created, but is still being provisioned by the system.</li><li>**active**: The sandbox is created and active.</li><li>**failed**: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>**deleted**: The sandbox has been manually disabled.</li></ul>|  
-| `type` | The sandbox type. The current supported sandbox types include: `development` and `production`. |
-| `isDefault` | A boolean property indicating whether this sandbox is the default sandbox for the organization. Typically this is the production sandbox. |
+| `state` | The current processing state of the sandbox. A sandbox's state can be any of the following: <br/><ul><li>`creating`: The sandbox has been created, but is still being provisioned by the system.</li><li>`active`: The sandbox is created and active.</li><li>`failed`: Due to an error, the sandbox was not able to be provisioned by the system and is disabled.</li><li>`deleted`: The sandbox has been manually disabled.</li></ul>|  
+| `type` | The sandbox type. The current supported sandbox types include `development` and `production`. |
+| `isDefault` | A boolean property indicating whether this sandbox is the default production sandbox for the organization. |
 | `eTag` | An identifier for a specific version of the sandbox. Used for version control and caching efficiency, this value is updated each time a change is made to the sandbox. |
 
 ## Look up a sandbox {#lookup}
@@ -187,11 +185,11 @@ A successful response returns the details of the sandbox, including its `name`, 
 
 ## Create a sandbox {#create}
 
-You can create a new sandbox, type production or type development, by making a POST request to the `/sandboxes` endpoint.
+You can create a new development or production sandbox by making a POST request to the `/sandboxes` endpoint.
 
 ### Create a development sandbox
 
-To create a development sandbox, make a POST request to the `/sandboxes` endpoint and provide the value `development` for the property `type`.
+To create a development sandbox, you must provide a `type` attribute with a value of `development` in the request payload.
 
 **API format**
 
@@ -221,7 +219,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or special characters. |
 | `title` | A human-readable name used for display purposes in the Platform user interface. |
-| `type` | The type of sandbox to be created. The value for the `type` property can be either `development` or `production`. |
+| `type` | The type of sandbox to be created. For a non-production sandbox, this value must be `development`. |
 
 **Response**
 
@@ -243,7 +241,7 @@ A successful response returns the details of the newly created sandbox, showing 
 
 ### Create a production sandbox
 
-To create a production sandbox, make a POST request to the `/sandboxes` endpoint and provide the value `production` for the property `type`.
+To create a production sandbox, you must provide a `type` attribute with a value of `production` in the request payload.
 
 **API format**
 
@@ -266,8 +264,7 @@ curl -X POST \
   -d '{
     "name": "acme",
     "title": "Acme Business Group",
-    "type": "production",
-    "isDefault": "false"
+    "type": "production"
 }'
 ```
 
@@ -275,8 +272,7 @@ curl -X POST \
 | --- | --- |
 | `name` | The identifier that will be used to access the sandbox in future requests. This value must be unique, and best practice is to make it as descriptive as possible. This value cannot contain any spaces or special characters. |
 | `title` | A human-readable name used for display purposes in the Platform user interface. |
-| `type` | The type of sandbox to be created. The value for the `type` property can be either `development` or `production`. |
-| `isDefault` | A boolean value that indicates whether the production sandbox being created is the default production sandbox. This value is always set to `false`. |
+| `type` | The type of sandbox to be created. For a production sandbox, this value must be `production`. |
 
 **Response**
 
@@ -324,7 +320,7 @@ curl -X PATCH \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/json'
   -d '{
     "title": "Acme Business Group prod"
   }'
@@ -348,7 +344,7 @@ A successful response returns HTTP status 200 (OK) with the details of the newly
 
 >[!IMPORTANT]
 >
->The reset function applies to all development and production sandboxes except the default production sandbox when it also contains Adobe Analytics and Adobe Audience Manager data.
+>While the reset function applies to all development and production sandboxes, it does not apply to the default production sandbox if it contains Adobe Analytics or Adobe Audience Manager data.
 
 Development sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's `name` in the request path.
 
@@ -372,7 +368,7 @@ curl -X PUT \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type: application/json'
   -d '{
     "action": "reset"
   }'
@@ -405,16 +401,16 @@ The following table contains possible exceptions that could prevent a sandbox fr
 
 | Error code | Description |
 | --- | --- |
-| `2074-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature." |
-| `2075-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature." |
-| `2076-400` | "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature." |
-| `2077-400` | "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service." |
+| `2074-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
+| `2075-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature. |
+| `2076-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
+| `2077-400` | Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. |
 
 ## Delete a sandbox {#delete}
 
 >[!IMPORTANT]
 >
->The delete function applies to all development and production sandboxes except the default production sandbox when it also contains Adobe Analytics and Adobe Audience Manager data.
+>The default production sandbox cannot be deleted.
 
 You can delete a sandbox by making a DELETE request that includes the sandbox's `name` in the request path.
 
@@ -441,7 +437,7 @@ curl -X DELETE \
   https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
-  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}'
 ```
 
 **Response**

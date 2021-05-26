@@ -11,13 +11,13 @@ The [!DNL Sandbox] API provides several endpoints that allow you to programmatic
 
 To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml).
 
-## Root (`/`)
+## Active sandboxes
 
-The root (`/`) endpoint allows you to view a list of all active sandboxes available for the current user, including information on each sandbox's name, title, state, type, and region. The root (`/`) endpoint in the [!DNL Sandbox] API is available for all users, including those without Sandbox Administration access permissions. See the [root endpoint guide](./root.md) to learn how to view available active sandboxes in the API.
+The active sandboxes endpoint allows you to view a list of all active sandboxes available for the current user, including information on each sandbox's name, title, state, type, and region. The active sandboxes endpoint in the [!DNL Sandbox] API is available for all users, including those without Sandbox Administration access permissions. See the [active sandboxes endpoint guide](./active.md) to learn how to view available sandboxes in the API.
 
-## Sandboxes
+## Sandbox management
 
-A sandbox is a virtual partition within a single instance of Adobe Experience Platform, which allow for seamless integration with the development process of your digital experience applications. You can create, view, edit, reset, and delete production and development sandboxes using the `/sandboxes` endpoint. To learn how to use this endpoint, see the [sandboxes endpoint guide](./sandboxes.md).
+A sandbox is a virtual partition within a single instance of Adobe Experience Platform, which allows for seamless integration with the development process of your digital experience applications. You can create, view, edit, reset, and delete production and development sandboxes using the `/sandboxes` endpoint. To learn how to use this endpoint, see the [sandboxes endpoint guide](./sandboxes.md).
 
 ## Sandbox types
 

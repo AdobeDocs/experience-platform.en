@@ -12,7 +12,7 @@ This document provides steps on how to perform various operations related to san
 
 ## View sandboxes
 
-In the Platform UI, select **[!UICONTROL Sandboxes]** in the left-navigation to open the **[!UICONTROL Sandboxes]** dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
+In the Platform UI, select **[!UICONTROL Sandboxes]** in the left navigation to open the [!UICONTROL Sandboxes] dashboard. The dashboard lists all available sandboxes for your organization, including the sandbox type (production or development) and state (active, creating, deleted, or failed).
 
 ![](../images/ui/view-sandboxes.png)
 
@@ -42,7 +42,7 @@ Use the following video for a quick overview on how to use Sandboxes in Experien
 
 >[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
 
-To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top right corner of the screen.
+To create a new sandbox, select **[!UICONTROL Create sandbox]** on the top-right corner of the screen.
 
 ![create](../images/ui/create.png)
 
@@ -50,7 +50,7 @@ The **[!UICONTROL Create sandbox]** dialog box appears. If you are creating a de
 
 ![type](../images/ui/type.png)
 
-After you select the type of sandbox you are creating, provide your sandbox with a name and a title. The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must consist only of alphanumeric characters and hyphens (`-`), it must begin with a letter, and has a maximum of 256 characters.
+After selecting the type, provide your sandbox with a name and a title. The title is meant to be human-readable and should be descriptive enough to be easily identifiable. The sandbox name is an all-lowercase identifier for use in API calls and should therefore be unique and concise. The sandbox name must begin with a letter, have a maximum of 256 characters, and consist only of alphanumeric characters and hyphens (-).
 
 When finished, select **[!UICONTROL Create]**.
 
@@ -62,7 +62,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 >[!NOTE]
 >
->You can reset any production or development sandboxes in your organization, except the default production sandbox that contains Adobe Audience Manager and Adobe Analytics data.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -82,7 +82,7 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 >[!NOTE]
 >
->You can delete any production or development sandboxes in your organization, except the default production sandbox that contains Adobe Audience Manager and Adobe Analytics data.
+>The default production sandbox cannot be deleted.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
