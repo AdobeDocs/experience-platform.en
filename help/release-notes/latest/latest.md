@@ -35,7 +35,7 @@ Adobe Experience Platform provides multiple dashboards through which you can vie
 |Widget creation & management| All standard and custom widgets are accessible to marketers in a centralized repository for democratizing insights creation and sharing:<br/><ul><li>The standard tab contains Adobe-provided widgets accessible within the dashboard context. </li><li>The custom tab contains custom widgets created by the organization including an option to hide widgets from view.</li><li>Widget creation workflow within Profiles and Audience insights enables editing, selection, preview, and publishing of custom widgets.</li></ul>|
 |Custom insights| Access permissions enable data engineers and marketing specialists to customize profile attributes that are available for widget creation.|
 
-For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](.../../dashboards/home.md).
+For more information on dashboards, including how to grant access permissions and create custom widgets, begin by reading the [dashboards overview](../../dashboards/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 
