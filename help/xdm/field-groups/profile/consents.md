@@ -121,6 +121,8 @@ The intended use cases for each of these fields are provided in the sections bel
 | --- | --- |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
+{style="table-layout:auto"}
+
 ### `share`
 
 `share` represents the customer's consent for whether their data can be shared with (or sold to) second or third parties.
@@ -134,6 +136,8 @@ The intended use cases for each of these fields are provided in the sections bel
 | Property | Description |
 | --- | --- |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -157,6 +161,8 @@ The intended use cases for each of these fields are provided in the sections bel
 | --- | --- |
 | `content` | Represents the customer's preferences for personalized content on your website or application. |
 | `val` | The customer-provided personalization preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which personalization should take place. See the [appendix](#choice-values) for accepted values and definitions. |
+
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -191,6 +197,8 @@ The intended use cases for each of these fields are provided in the sections bel
 | `val` | The customer-provided preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which the marketing use case should take place. See the [appendix](#choice-values) for accepted values and definitions. |
 | `time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
 | `reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
+
+{style="table-layout:auto"}
 
 #### `subscriptions` {#subscriptions}
 
@@ -235,6 +243,8 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
 | `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
 
+{style="table-layout:auto"}
+
 
 ### `metadata`
 
@@ -249,6 +259,8 @@ The `email`, `push`, and `sms` properties of the `marketing` object are capable 
 | Property | Description |
 | --- | --- |
 | `time` | An ISO 8601 timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `time` value under an individual preference overrides the `metadata` timestamp for that particular preference. |
+
+{style="table-layout:auto"}
 
 ### `idSpecific`
 
@@ -362,6 +374,8 @@ The following table outlines the accepted values for `val`:
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
 
+{style="table-layout:auto"}
+
 ### Accepted values for `preferred` {#preferred-values}
 
 The following table outlines the accepted values for `preferred`:
@@ -381,6 +395,8 @@ The following table outlines the accepted values for `preferred`:
 | `other` | A channel that does not fit into a standard category. |
 | `none` | No preferred channel. |
 | `unknown` | The preferred channel is unknown. |
+
+{style="table-layout:auto"}
 
 ### Full [!DNL Consents & Preferences] schema {#full-schema}
 

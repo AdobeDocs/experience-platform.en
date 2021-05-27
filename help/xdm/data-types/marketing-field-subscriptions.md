@@ -24,6 +24,8 @@ exl-id: 170ea6ca-77fc-4b0a-87f9-6d4b6f32d953
 | `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
 | `val` | String | The customer-provided preference choice for this marketing use case. See the [next section](#val) for accepted values and definitions. |
 
+{style="table-layout:auto"}
+
 ## `val` {#val}
 
 The following table outlines the accepted values for `val`:
@@ -39,6 +41,8 @@ The following table outlines the accepted values for `val`:
 | `CP` | Compliance with a Legal Obligation | The collection of data for the specified purpose is required to meet the legal obligations of the business. |
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
+
+{style="table-layout:auto"}
 
 ## `subscriptions` {#subscriptions}
 
@@ -83,6 +87,8 @@ The following JSON represents an example marketing field for a phone call market
 | --- | --- |
 | `type` | The subscription type. This can be any descriptive string, provided it is 15 characters or less. |
 | `subscribers` | An optional map-type field that represents a set of identifiers (such as email addresses or phone numbers) that have subscribed to a particular subscription. Each key in this object represents the identifier in question, and contains two sub-properties: <ul><li>`time`: An ISO 8601 timestamp of when the identity subscribed, if applicable.</li><li>`source`: The source that the subscriber originated from. This can be any descriptive string, provided it is 15 characters or less.</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Additional resources
 

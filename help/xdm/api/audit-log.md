@@ -30,6 +30,8 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | The `meta:altId` or URL-encoded `$id` of the resource whose audit log you want to retrieve. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves the audit log for a `Restaurant` field group.
@@ -89,3 +91,5 @@ A successful response returns a chronological list of changes made to the resour
 | `action` | The type of change that was made. |
 | `path` | A [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) string indicating the path to the specific field that was changed or added. |
 | `value` | The value that was assigned to the new or updated field. |
+
+{style="table-layout:auto"}

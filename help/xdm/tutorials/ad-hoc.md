@@ -80,6 +80,8 @@ curl -X POST \
 | `$ref` | The data behavior for the new class. For ad-hoc classes, this value must be set to `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | An object that contains the custom fields for the class, expressed as key-value pairs of field names and data types. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the details of the new class, replacing the `properties._adhoc` object's name with a GUID that is a system-generated, read-only unique identifier for the class. The `meta:datasetNamespace` attribute is also generated automatically and included in the response.
@@ -140,6 +142,8 @@ A successful response returns the details of the new class, replacing the `prope
 | Property | Description |
 | --- | --- |
 | `$id` | A URI that serves as the read-only, system generated unique identifier for the new ad-hoc class. This value is used in the next step of creating an ad-hoc schema. |
+
+{style="table-layout:auto"}
 
 ## Create an ad-hoc schema
 
@@ -231,6 +235,8 @@ GET /tenant/schemas/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the ad-hoc schema you want to access. |
+
+{style="table-layout:auto"}
 
 **Request**
 

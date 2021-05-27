@@ -224,6 +224,8 @@ A successful response returns the details of the newly created field group.
 | --- | --- |
 | `$id` | The read-only, system generated unique identifier of the new field group. Takes the form of a URI. |
 
+{style="table-layout:auto"}
+
 Record the `$id` URI of the field group, to be used in the next step of adding the field group to the source schema.
 
 ### Add the field group to the source schema
@@ -239,6 +241,8 @@ PATCH /tenant/schemas/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the source schema. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -268,6 +272,8 @@ curl -X PATCH \
 | `op` | The PATCH operation to be performed. This request uses the `add` operation. |
 | `path` | The path to the schema field where the new resource will be added. When adding  field groups to schemas, the value must be "/allOf/-". |
 | `value.$ref` | The `$id` of the field group to be added. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -371,6 +377,8 @@ curl -X POST \
 | `sourceProperty` | The path to the destination schema's primary identity field. |
 | `xdm:identityNamespace` | The identity namespace of the reference field. This must be the same namespace used when defining the field as the schema's primary identity. See the [identity namespace overview](../../identity-service/home.md) for more information. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the details of the newly created reference descriptor for the destination schema.
@@ -429,6 +437,8 @@ curl -X POST \
 | `xdm:destinationSchema` | The `$id` URL of the destination schema. |
 | `xdm:destinationVersion` | The version number of the destination schema. |
 | `xdm:destinationProperty` | The path to the reference field in the destination schema. |
+
+{style="table-layout:auto"}
 
 ### Response
 

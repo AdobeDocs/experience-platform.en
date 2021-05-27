@@ -34,6 +34,8 @@ exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 | `statusReason` | A description of the current `status`. |
 | `street1` - `street4` | These four fields are meant to contain primary street level information, apartment number, street number, and street name. `street2` to `street4` are optional. |
 
+{style="table-layout:auto"}
+
 For more details on the postal address data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
