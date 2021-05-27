@@ -10,7 +10,13 @@ exl-id: fba21a2e-aaf7-4aae-bb3c-5bd024472214
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by privacy regulations such as the General Data Protection Regulation (GDPR) and [!DNL California Consumer Privacy Act] (CCPA).
 
-This document covers essential concepts related to processing privacy requests for [!DNL Real-time Customer Profile].
+This document covers essential concepts related to processing privacy requests for [!DNL Real-time Customer Profile] within Adobe Experience Platform.
+
+>[!NOTE]
+>
+>This guide only covers how to make privacy requests for the Profile data store in Experience Platform. If you also plan to make privacy requests for the Platform Data Lake, refer to the guide on [privacy request processing in the Data Lake](../catalog/privacy.md) in addition to this tutorial.
+>
+>For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
 ## Getting started
 
@@ -88,7 +94,6 @@ curl -X POST \
     "include": ["ProfileService"],
     "expandIds": false,
     "priority": "normal",
-    "analyticsDeleteMethod": "anonymize",
     "regulation": "ccpa"
 }'
 ```

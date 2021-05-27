@@ -2,19 +2,14 @@
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Destinations Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's active destinations.
-topic-legacy: guide
 type: Documentation
 exl-id: 6a34a796-24a1-450a-af39-60113928873e
 ---
-# (Beta) [!UICONTROL Destinations] dashboard
-
->[!IMPORTANT]
->
->The dashboard functionality outlined in this document is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# [!UICONTROL Destinations] dashboard
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's active destinations, as captured during a daily snapshot. This guide outlines how to access and work with the destinations dashboard in the UI and provides more information regarding the metrics displayed in the dashboard.  
 
-For an overview of destinations, as well as a catalog of all available destinations within Experience Platform, please visit the [destinations overview](../../destinations/home.md).
+For an overview of destinations, as well as a catalog of all available destinations within Experience Platform, please visit the [destinations documentation](../../destinations/home.md).
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 

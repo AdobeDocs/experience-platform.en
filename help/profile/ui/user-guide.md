@@ -23,11 +23,7 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 
 ![](../images/user-guide/profiles-overview.png)
 
-### (Alpha) Profile dashboard
-
->[!IMPORTANT]
->
->The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+### Profile dashboard
 
 For some users, selecting **[!UICONTROL Profiles]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your Profile data. 
 
@@ -43,7 +39,7 @@ Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity.
 
 On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
-These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [merge policies overview](../merge-policies/overview.md).
 
 In addition to these metrics, the profile metrics section also provides a last updated date and time, showing when the metrics were last evaluated.
 
@@ -67,7 +63,7 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. 
 
-To learn more about merge policies and their role within Platform, see the [merge policies UI guide](merge-policies.md).
+To learn more about merge policies and their role within Platform, see the [merge policies overview](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -105,9 +101,7 @@ You can view additional information related to the individual profile by selecti
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema class that it applies to. 
 
-For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
-
-To learn more about working with merge policies using the Real-time Customer Profile API, please refer to the [merge policies endpoint guide](../api/merge-policies.md).
+For more information on merge policies, see the [merge policies overview](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 
