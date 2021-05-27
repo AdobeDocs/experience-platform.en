@@ -18,6 +18,8 @@ exl-id: c05b098b-3f12-4283-a6d5-5ebf96b9828d
 | `deviceGeoAccuracy` | Double | The accuracy of the geo measuring device or mechanism, measured in meters. |
 | `distanceToCenter` | Double | The distance to the center of geo in the case of a geo circle, measured in meters. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/geo-interaction-details.example.1.json)

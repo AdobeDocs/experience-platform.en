@@ -206,6 +206,8 @@ The following table lists compatible `Accept` header values, including those wit
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` attributes and `allOf` resolved. No titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` attributes and `allOf` resolved. Descriptors are included. |
 
+{style="table-layout:auto"}
+
 >[!NOTE]
 >
 >Platform currently supports only one major version for each schema (`1`). Therefore, the value for `version` must always be `1` when performing lookup requests in order to return the latest minor version of the schema. See the subsection below for more information on schema versioning.

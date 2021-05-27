@@ -22,6 +22,8 @@ exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 | `searchEngineID` | String | The application-specific identifier used to identify the search engine. |
 | `slot` | String | The named section of the page where the search result appeared. The value of this property must be equal to one of the known enum values you define such as `top`, `side`, or `bottom`. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/search.example.1.json)

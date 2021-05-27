@@ -59,6 +59,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns HTTP status 200 (OK) and a `results` array in the response body. If unions have been defined, the details for each union are provided as objects within the array. If no unions have been defined, HTTP status 200 (OK) is still returned but the `results` array will be empty.
@@ -101,6 +103,8 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to look up. URIs for union schemas are appended with "__union". |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```SHELL
@@ -121,6 +125,8 @@ The following Accept headers are available for union schema lookups:
 | -------|------------ |
 | `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -185,6 +191,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | The `$id` of the class whose union-enabled schemas you want to list. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of all schemas that are part of the union for the [!DNL XDM Individual Profile] class.
@@ -205,6 +213,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 

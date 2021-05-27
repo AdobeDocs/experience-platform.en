@@ -16,9 +16,19 @@ This document provides a high-level overview of sandboxes in Experience Platform
 
 ## Understanding sandboxes
 
-Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. An Experience Platform instance supports one production sandbox and multiple non-production sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on).  All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes.
+Sandboxes are virtual partitions within a single instance of Experience Platform, which allow for seamless integration with the development process of your digital experience applications. All content and actions taken within a sandbox are confined to only that sandbox and do not affect any other sandboxes. There are two kinds of sandboxes supported on Experience Platform:
 
-Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. In addition, non-production sandboxes have a reset feature that removes all customer-created resources from the sandbox. Non-production sandboxes cannot be converted to production sandboxes. A default Experience Platform license grants you five sandboxes (one production and four non-production). You can add packs of ten non-production sandboxes up to a maximum of 75 sandboxes in total. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+* **Production sandbox**: A production sandbox is meant to be used with profiles in your production environment. Platform allows you to create multiple production sandboxes in order to provide the right functionality for data while still maintaining operational isolation. This feature allows you to dedicate specific production sandboxes to distinct lines of business, brands, projects, or regions. Production sandboxes support a volume of production profiles up to your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized production sandboxes). You are entitled to use licensed average profile per authorized [!DNL Profile] (measured cumulatively across all of your authorized production sandboxes).
+* **Development sandbox**: A development sandbox is a sandbox that can be used exclusively for development and testing with non-production profiles. Development sandboxes support a volume of non-production profiles up to 10% of your licensed [!DNL Profile] commitment (measured cumulatively across all of your authorized development sandboxes). You are entitled to up to:
+  * An average non-production profile richness of 75 kilobytes per authorized non-production Profile (measured cumulatively across all of your authorized development sandboxes);
+  * One batch segmentation job per day, per development sandbox;
+  * An average of 120 [!DNL Profile] API calls, per [!DNL Profile], per year (measured cumulatively across all of your authorized development sandboxes.
+
+An Experience Platform instance supports multiple production and development sandboxes, with each sandbox maintaining its own independent library of Platform resources (including schemas, datasets, profiles, and so on). In addition, both production and development sandboxes have a reset feature that removes all customer-created resources from the sandbox. Development sandboxes cannot be converted to production sandboxes.
+
+A default Experience Platform license grants you a total of five sandboxes, which you can classify as production or development. You can license additional packs of 10 sandboxes up to a maximum of 75 sandboxes in total. These additional sandboxes can be used to create both production and development sandboxes. Please contact your IMS Org Administrator or your Adobe sales representative for more details.
+
+Finally, the default production sandbox is the first production sandbox that is created when an IMS Org is first created. The default production sandbox allows you to ingest or consume data from Platform, as well as accept requests that do not include values for a sandbox name or a sandbox ID.
 
 >[!NOTE]
 >
@@ -59,7 +69,7 @@ If `x-sandbox-name` is not included in an API call, the system will use a defaul
 
 ### Sandbox API
 
-The Sandbox API allows you to manage sandboxes by using RESTful API operations. See the [sandbox developer guide](api/getting-started.md) for detailed information on how to use the API, including properly formatted requests and example responses.
+The Sandbox API allows you to manage sandboxes by using RESTful API operations. See the [sandbox developer guide](api/overview.md) for detailed information on how to use the API, including properly formatted requests and example responses.
 
 ## Next steps
 

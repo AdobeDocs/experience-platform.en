@@ -27,6 +27,8 @@ exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 | `purchases` | [[!UICONTROL Measure]](./measure.md) | Used to track when an order has been accepted. The purchase event is the only required action in a commerce conversion. The purchase event must have a product list referenced. |
 | `saveForLaters` | [[!UICONTROL Measure]](./measure.md) | A product list is saved for future use such as a wish list. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/marketing/commerce.example.1.json)

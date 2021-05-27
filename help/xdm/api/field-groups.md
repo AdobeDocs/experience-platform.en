@@ -33,6 +33,8 @@ GET /{CONTAINER_ID}/fieldgroups?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container you want to retrieve field groups from: `global` for Adobe-created field groups or `tenant` for field groups owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of field groups from the `tenant` container, using an `orderby` query parameter to sort the field groups by their `title` attribute.
@@ -53,6 +55,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON field group for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -115,6 +119,8 @@ GET /{CONTAINER_ID}/fieldgroups/{FIELD_GROUP_ID}
 | `{CONTAINER_ID}` | The container that houses the field group you want to retrieve: `global` for an Adobe-created field group or `tenant` for a field group owned by your organization. |
 | `{FIELD_GROUP_ID}` | The `meta:altId` or URL-encoded `$id` of the field group you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a field group by its `meta:altId` value provided in the path. 
@@ -138,6 +144,8 @@ The response format depends on the `Accept` header sent in the request. All look
 | `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -391,6 +399,8 @@ PUT /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | The `meta:altId` or URL-encoded `$id` of the field group you want to re-write. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request re-writes an existing field group, adding a new `propertyCountry` field.
@@ -574,6 +584,8 @@ PATCH /tenant/fieldgroups/{FIELD_GROUP_ID}
 | --- | --- |
 | `{FIELD_GROUP_ID}` | The URL-encoded `$id` URI or `meta:altId` of the field group you want to update. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The example request below updates the `description` of an existing field group, and adds a new `propertyCity` field.
@@ -710,6 +722,8 @@ DELETE /tenant/fieldgroups/{FIELD_GROUP_ID}
 | Parameter | Description |
 | --- | --- |
 | `{FIELD_GROUP_ID}` | The URL-encoded `$id` URI or `meta:altId` of the field group you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 
