@@ -21,6 +21,7 @@ feature: Data Management
   * [Merge event data](fundamentals/merging-event-data.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
+  * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
 * Data collection {#data-collection}
