@@ -78,6 +78,28 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 ![reset-confirm](../images/ui/reset-confirm.png)
 
+After a few moments, a confirmation box appears on the bottom of the screen to confirm a successful reset.
+
+![success](../images/ui/success.png)
+
+### Error messages
+
+A default production sandbox that contains CDA data cannot be reset and returns the following error.
+
+![cda](../images/ui/cda.png)
+
+A default production sandbox that contains PBD data also cannot be reset and returns the following error.
+
+![pbd](../images/ui/pbd.png)
+
+A default production sandbox that contains data for both CDA and PBD also cannot be reset and returns the following error.
+
+![both](../images/ui/both.png)
+
+A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be reset and returns the following error.
+
+![seg](../images/ui/seg.png)
+
 ## Delete a sandbox
 
 >[!IMPORTANT]
@@ -97,6 +119,10 @@ A dialog box appears prompting you to confirm your choice. Select **[!UICONTROL 
 In the final confirmation window, enter the name of the sandbox in the dialog box and select  **[!UICONTROL Continue]**
 
 ![delete-confirm](../images/ui/delete-confirm.png)
+
+A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service cannot be deleted and returns the following error.
+
+![seg](../images/ui/seg.png)
 
 ## Next steps
 
