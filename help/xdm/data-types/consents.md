@@ -133,6 +133,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | --- | --- |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
+{style="table-layout:auto"}
+
 ### `adID`
 
 `adID` represents the customer's consent for whether an advertiser ID (IDFA or GAID) can be used to link the customer across apps on this device.
@@ -147,6 +149,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | --- | --- |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
 
+{style="table-layout:auto"}
+
 ### `share`
 
 `share` represents the customer's consent for whether their data can be shared with (or sold to) second or third parties.
@@ -160,6 +164,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | Property | Description |
 | --- | --- |
 | `val` | The customer-provided consent choice for this use case. See the [appendix](#choice-values) for accepted values and definitions. |
+
+{style="table-layout:auto"}
 
 ### `personalize` {#personalize}
 
@@ -183,6 +189,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | --- | --- |
 | `content` | Represents the customer's preferences for personalized content on your website or application. |
 | `val` | The customer-provided personalization preference for the specified use case. In cases where the customer does not have to be prompted to provide consent, the value of this field should indicate the basis on which personalization should take place. See the [appendix](#choice-values) for accepted values and definitions. |
+
+{style="table-layout:auto"}
 
 ### `marketing` {#marketing}
 
@@ -218,6 +226,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | `time` | An ISO 8601 timestamp of when the marketing preference changed, if applicable. Note that if the timestamp for any individual preference is the same as the one provided under `metadata`, then this field does not to be set for that preference. |
 | `reason` | When a customer opts out of a marketing use case, this string field represents the reason why the customer opted out. |
 
+{style="table-layout:auto"}
+
 ### `metadata`
 
 `metadata` captures general metadata about the customer's consents and preferences whenever they were last updated.
@@ -231,6 +241,8 @@ The following JSON shows an example of the type of data that the [!DNL Consents 
 | Property | Description |
 | --- | --- |
 | `time` | An ISO 8601 timestamp for the last time any of the customer's consents and preferences were updated. This field can be used instead of applying timestamps to individual preferences in order to reduce load and complexity. Providing an `time` value under an individual preference overrides the `metadata` timestamp for that particular preference. |
+
+{style="table-layout:auto"}
 
 ## Ingesting data using the data type {#ingest}
 
@@ -268,6 +280,8 @@ The following table outlines the accepted values for `val`:
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
 
+{style="table-layout:auto"}
+
 ### Accepted values for `preferred` {#preferred-values}
 
 The following table outlines the accepted values for `preferred`:
@@ -287,6 +301,8 @@ The following table outlines the accepted values for `preferred`:
 | `other` | A channel that does not fit into a standard category. |
 | `none` | No preferred channel. |
 | `unknown` | The preferred channel is unknown. |
+
+{style="table-layout:auto"}
 
 ### Full [!DNL Consents & Preferences] schema {#full-schema}
 

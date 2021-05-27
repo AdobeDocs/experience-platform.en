@@ -25,6 +25,8 @@ exl-id: 4d463f3a-2247-4307-8afe-9527e7fd72a7
 | --- | --- | --- |
 | `segmentMembership` | Map | A map object which describes the individual's segment memberships. The structure of this object is described in detail below. |
 
+{style="table-layout:auto"}
+
 The following is an example `segmentMembership` map that the system has populated for a particular profile. Segment memberships are sorted by namespace, as indicated by the root-level keys of the object. In turn, the individual keys under each namespace represent the IDs of the segments the profile is a member of. Each segment object contains several sub-fields that provide further details about the membership:
 
 ```json
@@ -71,6 +73,8 @@ The following is an example `segmentMembership` map that the system has populate
 | `xdm:validUntil` | A timestamp of when the segment membership should no longer be assumed to be valid. |
 | `xdm:status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `xdm:payload` | Some segment memberships include a payload that describes additional values directly related to the membership. Only one payload of a given type can be provided for each membership. `xdm:payloadType` indicates the type of payload (`boolean`, `number`, `propensity`, or `string`), while its sibling property provides the value for the payload type. |
+
+{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 

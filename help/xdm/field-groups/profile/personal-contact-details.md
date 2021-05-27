@@ -25,6 +25,8 @@ exl-id: a78d9aee-ecf6-45a9-b270-cdad5b800a86
 | `mobilePhone` | [Phone number](../../data-types/phone-number.md) | Describes the person's mobile phone number. |
 | `personalEmail` | [Email address](../../data-types/email-address.md) | Describes the person's email address. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-personal-details.example.1.json)
