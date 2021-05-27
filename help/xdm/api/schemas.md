@@ -33,6 +33,8 @@ GET /{CONTAINER_ID}/schemas?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container that houses the schemas you want to retrieve: `global` for Adobe-created schemas or `tenant` for schemas owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of schemas from the `tenant` container, using an `orderby` query parameter to sort the results by their `title` attribute.
@@ -53,6 +55,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -103,6 +107,8 @@ GET /{CONTAINER_ID}/schemas/{SCHEMA_ID}
 | `{CONTAINER_ID}` | The container that houses the schema you want to retrieve: `global` for an Adobe-created schema or `tenant` for a schema owned by your organization. |
 | `{SCHEMA_ID}` | The `meta:altId` or URL-encoded `$id` of the schema you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a schema specified by its `meta:altId` value in the path. 
@@ -126,6 +132,8 @@ The response format depends on the `Accept` header sent in the request. All look
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -222,6 +230,8 @@ curl -X POST \
 | --- | --- |
 | `allOf` | An array of objects, with each object referring to a class or field group whose fields the schema implements. Each object contains a single property (`$ref`) whose value represents the `$id` of the class or field group the new schema will implement. One class must be provided, with zero or more additional field groups. In the above example, the single object in the `allOf` array is the schema's class. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created schema, including the `$id`, `meta:altId`, and `version`. These values are read-only and are assigned by the [!DNL Schema Registry].
@@ -280,6 +290,8 @@ PUT /tenant/schemas/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The `meta:altId` or URL-encoded `$id` of the schema you want to re-write. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -361,6 +373,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to update. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -451,6 +465,8 @@ PATCH /tenant/schema/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to enable. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The example request below adds a `meta:immutableTags` array to an existing schema, giving the array a single string value of `union` to enable it for use in Profile.
@@ -531,6 +547,8 @@ DELETE /tenant/schemas/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the schema you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 

@@ -25,6 +25,8 @@ The [!DNL XDM ExperienceEvent] class itself provides several time-series-related
 | `identityMap` | A map field that contains a set of namespaced identities for the individual the event applies to. This field is automatically updated by the system as identity data is ingested. In order to properly utilize this field for [Real-time Customer Profile](../../profile/home.md), do not attempt to manually update the field's contents in your data operations.<br /><br />See the section on identity maps in the [basics of schema composition](../schema/composition.md#identityMap) for more information on their use case. |
 | `timestamp` | An ISO 8601 timestamp of when the event occurred, formatted as per [RFC 3339 Section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6). This timestamp must occur in the past. See the section below on [timestamps](#timestamps) for best practices on the use of this field. |
 
+{style="table-layout:auto"}
+
 ## Best practices for event modeling
 
 The following sections cover best practices for designing your event-based Experience Data Model (XDM) schemas in Adobe Experience Platform.
@@ -94,6 +96,8 @@ The following table outlines the accepted values for `eventType`, along with the
 |`delivery.feedback` | Feedback events for a delivery, such as an email delivery. |
 |`message.feedback` | Feedback events like sent/bounce/error for messages sent to a customer. |
 |`message.tracking` | Tracking events like open/click/custom actions on messages sent to a customer. |
+
+{style="table-layout:auto"}
 
 ### Suggested values for `producedBy` {#producedBy}
 

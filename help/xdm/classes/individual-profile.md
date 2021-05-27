@@ -26,6 +26,8 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 | `repositoryCreatedBy` | The ID of the user who created the record. |
 | `repositoryLastModifiedBy` | The ID of the user who last modified the record. |
 
+{style="table-layout:auto"}
+
 ## Compatible field groups {#field-groups}
 
 >[!NOTE]

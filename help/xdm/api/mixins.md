@@ -40,6 +40,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container you want to retrieve mixins from: `global` for Adobe-created mixins or `tenant` for mixins owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of mixins from the `tenant` container, using an `orderby` query parameter to sort the mixins by their `title` attribute.
@@ -60,6 +62,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON mixin for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -122,6 +126,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | The container that houses the mixin you want to retrieve: `global` for an Adobe-created mixin or `tenant` for a mixin owned by your organization. |
 | `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a mixin by its `meta:altId` value provided in the path. 
@@ -145,6 +151,8 @@ The response format depends on the `Accept` header sent in the request. All look
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -398,6 +406,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to re-write. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request re-writes an existing mixin, adding a new `propertyCountry` field.
@@ -581,6 +591,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to update. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The example request below updates the `description` of an existing mixin, and adds a new `propertyCity` field.
@@ -717,6 +729,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parameter | Description |
 | --- | --- |
 | `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 
