@@ -62,7 +62,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 >[!IMPORTANT]
 >
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature. Production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be reset.
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -80,9 +80,9 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 ## Delete a sandbox
 
->[!NOTE]
+>[!IMPORTANT]
 >
->The default production sandbox cannot be deleted.
+>The default production sandbox cannot be deleted and production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be deleted.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
