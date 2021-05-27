@@ -15,15 +15,16 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Single streamlined SDK | |
 | Global data collection network |  |
 | Course grained consent |  |
-| IAB 2.0 consent strings |  |
-| Collect fine-grained consent |  |
-| ECID support |  |
+| IAB 2.0 consent strings | [IAB TCF 2.0 Support](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
+| Collect fine-grained consent | [Integrating the Web SDK with Adobe 2.0 Consent](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
+| ECID support | For information on retriving the ECID see our documentation [here](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) and [here](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
 | Collect multiple entities |  |
-| Device Graph support (Public/Private) |  |
-| Send data to multiple orgs on the page |  |
+| Device Graph support (Public/Private) | [Documentation](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
+| Send data to multiple orgs on the page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Detailed error reporting and logs |  |
-| View server-side error reporting and logs |  |
-| Adobe Experience Platform Launch extension available |  |
+| Trace requests client side and server side |  |
+| Adobe Experience Platform Launch extension | [Web SDK extension docs](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| Debugging tools available | [Debugger extension](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) and [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style="table-layout:auto"}
 
@@ -32,11 +33,12 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Use Case | More Information |
 | --- | --- |
 | Send Experience events |  |
-| Offer Decisioning |  |
-| Send data to Real-time Customer Data Profile in real-time |  |
+| Offer Decisioning | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
+| Send data to Real-time Customer Data Profile with low latency |  
 | Send data to Customer Journey Analytics in real-time |  |
-| Write consent to profile |  |
-| Forward data server-side in real-time |  |
+| Write consent to profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
+| Forward data server-side in real-time to third-parties| [Documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Identity namespace support |  |
 
 {style="table-layout:auto"}
 
@@ -44,22 +46,21 @@ This page lists the supported use cases for Web SDK, with links to additional in
 
 | Use Case | More Information |
 | --- | --- |
-| Send data to Customer Journey Analytics in real-time |  |
-| Support for Analytics for Target (A4T) |  |
+| Analytics for Target (A4T) |  |
 | No Analytics for Target (A4T) latency |  |
 | Multi-suite tagging |  |
 | Bot filtering |  |
 | Props, eVars, and events |  |
 | ListVar support for Adobe Analytics |  |
 | OS and browser version |  |
-| Out-of-the-box variables |  |
+| Out-of-the-box variables | [Automatically mapped variables](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en#data-collection) |
 | VISTA rules/processing rules |  |
 | Visitor attributes support |  |
 | Exit link support |  |
 | Custom links/download links |  |
 | State and action tracking |  |
 | Event serialization for standard events |  |
-| Products variable |  |
+| Products variable | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#actions-related-to-products) |
 
 {style="table-layout:auto"}
 
@@ -68,10 +69,10 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Use Case | More Information |
 | --- | --- |
 | All activity types |  |
-| Native and SPA Visual Experience Composer support |  |
+| Native and SPA Visual Experience Composer support | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=en#personalization) |
 | Form-based Composer |  |
-| Support for global mbox |  |
-| Custom mboxes |  |
+| Support for global mbox | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#automatically-rendering-content) |
+| Custom mboxes | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content) |
 | Analytics for Target (A4T) |  |
 | Environment support |  |
 | Workspace support |  |
@@ -79,6 +80,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Target based on geo/device in Adobe Target|  |
 | Visitor attributes support |  |
 | Profile scripts |  |
+| XDM become mbox parameters |  |
 
 {style="table-layout:auto"}
 
