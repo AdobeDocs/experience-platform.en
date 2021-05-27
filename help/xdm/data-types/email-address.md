@@ -21,6 +21,8 @@ exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 | `statusReason` | A description of the current `status`. |
 | `type` | The way the account relates to the person (such as `work` or `personal`). |
 
+{style="table-layout:auto"}
+
 
 For more details on the email address data type, refer to the public XDM repository:
 

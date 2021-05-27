@@ -18,6 +18,8 @@ exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 | `poiEntries` | Object | Describes the number of times a person has entered the POI. Contains two properties: <ul><li>`id`: A unique identifier for the measure.</li><li>`value`: The quantifiable value of the measure.</li></ul> |
 | `poiExits` | Object | Describes the number of times a person has exited the POI. Contains two properties: <ul><li>`id`: A unique identifier for the measure.</li><li>`value`: The quantifiable value of the measure.</li></ul> |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)

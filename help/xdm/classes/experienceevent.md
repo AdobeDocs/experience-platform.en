@@ -97,6 +97,8 @@ The following table outlines the accepted values for `eventType`, along with the
 |`message.feedback` | Feedback events like sent/bounce/error for messages sent to a customer. |
 |`message.tracking` | Tracking events like open/click/custom actions on messages sent to a customer. |
 
+{style="table-layout:auto"}
+
 ### Suggested values for `producedBy` {#producedBy}
 
 The following table outlines some accepted values for `producedBy`:

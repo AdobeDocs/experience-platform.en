@@ -25,6 +25,8 @@ exl-id: 049a2ca1-6bc3-4b9c-832a-77102e8a0ed2
 | `typeID` | String | An identifier for the device. This may be an identifier from DeviceAtlas or another service that identifies the hardware that is being used.|
 | `typeIDService` | String | The namespace of the service that is used to identify the device type. See the [appendix](#typeIDService) for details on accepted values. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/device.example.1.json)
