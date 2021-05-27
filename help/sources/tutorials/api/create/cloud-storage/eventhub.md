@@ -82,7 +82,7 @@ curl -X POST \
 | -------- | ----------- |
 | `auth.params.sasKeyName` | The name of the authorization rule, which is also known as the SAS key name. |
 | `auth.params.sasKey` | The generated shared access signature. |
-| `params.namespace` | The namespace of the [!DNL Event Hubs] you are accessing. |
+| `auth.params.namespace` | The namespace of the [!DNL Event Hubs] you are accessing. |
 | `connectionSpec.id` | The [!DNL Event Hubs] connection specification ID is: `bf9f5905-92b7-48bf-bf20-455bc6b60a4e` |
 
 **Response**
