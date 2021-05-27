@@ -124,6 +124,10 @@ alloy("config", { ... });
 alloy("sendEvent", { ... });
 ```
 
+>[!NOTE]
+>
+>The NPM package relies on CommonJS modules; therefore, when using a bundler, make sure the bundler supports CommonJS modules. Some bundlers, such as [Rollup](https://rollupjs.org), require a [plugin](https://www.npmjs.com/package/@rollup/plugin-commonjs) that provides CommonJS support.
+
 ### Using the package as an ECMAScript 5 module
 
 ```javascript

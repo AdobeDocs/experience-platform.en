@@ -70,8 +70,8 @@ When [activating segments](../../ui/activate-destinations.md) to the [!DNL Sales
 
 ## Exported data {#exported-data}
 
-For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a tab-delimited `.txt` or `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
 
 ## Set up data import into [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 
-After connecting [!DNL Platform] to your SFTP storage, you must set up the data import from your storage location into [!DNL Salesforce Marketing Cloud]. To learn how to accomplish this, see [Importing Subscribers into Marketing Cloud from a File](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) in the [!DNL Salesforce Help Center].
+After connecting [!DNL Platform] to your [!DNL SFTP] storage, you must set up the data import from your storage location into [!DNL Salesforce Marketing Cloud]. To learn how to accomplish this, see [Importing Subscribers into Marketing Cloud from a File](https://help.salesforce.com/articleView?id=mc_es_import_subscribers_from_file.htm&type=5) in the [!DNL Salesforce Help Center].
