@@ -12,6 +12,12 @@ Adobe Experience Platform [!DNL Privacy Service] processes customer requests to 
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
 
+>[!NOTE]
+>
+>This guide only covers how to make privacy requests for the Data Lake in Experience Platform. If you also plan to make privacy requests for the Real-time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
+>
+>For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
+
 ## Getting started
 
 It is recommended that you have a working understanding of the following [!DNL Experience Platform] services before reading this guide:
