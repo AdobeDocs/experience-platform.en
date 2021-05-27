@@ -381,7 +381,7 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 >[!IMPORTANT]
 >
-> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
@@ -481,7 +481,7 @@ In Scala, you can import `clientContext` to get and return Platform values, this
 
 >[!IMPORTANT]
 >
-> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
@@ -536,7 +536,7 @@ In Scala, you can import `clientContext` to get and return Platform values, this
 
 >[!IMPORTANT]
 >
-> Caching data using df.cache() before transforming, reading, or writing the data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
 > 
 > - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
 > - Remote RPC client disassociated and other memory errors.
