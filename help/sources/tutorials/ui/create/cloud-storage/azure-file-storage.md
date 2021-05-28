@@ -9,10 +9,6 @@ exl-id: 25d483b6-3975-4e80-9dbe-28b7b91cb063
 ---
 # Create an [!DNL Azure File Storage] source connection in the UI
 
->[!NOTE]
->
->The [!DNL Azure File Storage] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for authenticating an [!DNL Azure File Storage] source connector using the [!DNL Platform] user interface.
 
 ## Getting started
