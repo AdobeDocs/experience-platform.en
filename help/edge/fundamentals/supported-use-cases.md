@@ -17,7 +17,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Course grained consent |  |
 | IAB 2.0 consent strings | [IAB TCF 2.0 Support](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/overview.html?lang=en#consent) |
 | Collect fine-grained consent | [Integrating the Web SDK with Adobe 2.0 Consent](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html#prerequisites) |
-| ECID support | For information on retriving the ECID see our documentation [here](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) and [here](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
+| ECID support | For information on retrieving the ECID see our documentation [here](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#first-party-identity) and [here](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/accessing-the-ecid.html?lang=en#extension) |
 | Collect multiple entities |  |
 | Device Graph support (Public/Private) | [Documentation](https://experienceleague.adobe.com/docs/analytics/components/cda/device-graph.html?lang=en) |
 | Send data to multiple orgs on the page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
