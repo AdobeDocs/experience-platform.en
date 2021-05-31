@@ -67,6 +67,8 @@ The following standard namespaces are provided for use by all organizations with
 | TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
 | Windows AID | A namespace that represents a Windows Advertising ID. See the following document on [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) for more information. |
 
+### View identity namespaces
+
 To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
 ![browse](./images/browse.png)
@@ -83,7 +85,7 @@ Select an identity namespace from the list to view information on a specific nam
 
 ![select-namespace](./images/select-namespace.png)
 
-## Managing custom namespaces {#manage-namespaces}
+## Manage custom namespaces {#manage-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
