@@ -6,7 +6,7 @@ exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 ---
 # Using Adobe Target with the Platform Web SDK
 
-Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized experiences managed in Adobe Target to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://docs.adobe.com/content/help/en/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
+Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized experiences managed in Adobe Target to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
 
 The following features have been tested and are currently supported in Target:
 
@@ -110,7 +110,7 @@ alloy("sendEvent", {
 
 ## Audiences in XDM
 
-When defining Audiences for your Target activities that are delivered via Adobe Experience Platform Web SDK, [XDM](https://docs.adobe.com/content/help/en/experience-platform/xdm/home.html) must be defined and used. After you define XDM schemas, classes, and schema field groups, you can create a Target audience rule defined by XDM data for targeting. Within Target, XDM data displays in the Audience Builder as a custom parameter. The XDM is serialized using dot notation (for example, `web.webPageDetails.name`).
+When defining Audiences for your Target activities that are delivered via Adobe Experience Platform Web SDK, [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) must be defined and used. After you define XDM schemas, classes, and schema field groups, you can create a Target audience rule defined by XDM data for targeting. Within Target, XDM data displays in the Audience Builder as a custom parameter. The XDM is serialized using dot notation (for example, `web.webPageDetails.name`).
 
 If you have Target activities with predefined audiences that use custom parameters or a user profile, they are not delivered correctly via the SDK. Instead of using custom parameters or the user profile, you must use XDM instead. However, there are out-of-the-box audience targeting fields supported via Adobe Experience Platform Web SDK that do not require XDM. These fields are available in the Target UI that do not require XDM: 
 

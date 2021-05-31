@@ -10,4 +10,4 @@ keywords: in-app browsers;browsers;
 >
 >Adobe Experience Platform [!DNL Web SDK] is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
 
-Within browsers embedded inside mobile applications, the SDK behaves exactly as it would within a regular browser; however, you should make sure the Visitor ID gets passed from the mobile application into the website through the URL. This process is outlined in the documentation for the [Experience SDK for Mobile](https://docs.adobe.com/content/help/en/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
+Within browsers embedded inside mobile applications, the SDK behaves exactly as it would within a regular browser; however, you should make sure the Visitor ID gets passed from the mobile application into the website through the URL. This process is outlined in the documentation for the [Experience SDK for Mobile](https://experienceleague.adobe.com/docs/mobile-services/ios/sdk-reference-ios/hybrid-app.html).
