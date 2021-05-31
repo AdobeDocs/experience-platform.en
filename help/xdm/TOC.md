@@ -26,12 +26,13 @@ feature: Schemas
   * [Segment definition](./classes/segment-definition.md)
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
-    * [IdentityMap](./field-groups/profile/identitymap.md)
     * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
+    * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
-    * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
   * Event field groups {#event}
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Channel Details](./field-groups/event/channel-details.md)
