@@ -17,9 +17,9 @@ feature: Schemas
   * [XDM field dictionary](schema/field-dictionary.md)
   * Industry data models {#industries}
     * [Overview](./schema/industries/overview.md)
-    * [Retail data model ERD](./schema/industries/retail.md)
-    * [Financial services data model ERD](./schema/industries/financial.md)
-    * [Travel and hospitality data model ERD](./schema/industries/travel-hospitality.md)
+    * [Retail](./schema/industries/retail.md)
+    * [Financial services](./schema/industries/financial.md)
+    * [Travel and hospitality](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)

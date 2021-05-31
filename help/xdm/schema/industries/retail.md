@@ -1,11 +1,11 @@
 ---
 solution: Experience Platform
-title: Retail Industry Data Model ERD
+title: Retail Industry Data Model
 topic-legacy: overview
-description: View an entity relationship diagram (ERD) that describes a standardized data model for the retail industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
+description: View a standardized data model for the retail industry, compatible with Experience Data Model (XDM) for use in Adobe Experience Platform.
 exl-id: 40cbb243-668b-4280-815f-1f94a06b6b87
 ---
-# [!UICONTROL Retail] industry data model ERD
+# [!UICONTROL Retail] industry data model
 
 The following entity relationship diagram (ERD) represents a standardized data model for the retail industry.
 
@@ -26,6 +26,7 @@ The following table outlines the recommended classes and schema field groups for
 | Analyze multi-touch attribution to improve marketing efficiency. | <ul><li>Channel ID (online and offline)</li><li>Purchase event</li><li>Timestamp</li></ul> | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Campaign Marketing Details](../../field-groups/event/campaign-marketing-details.md)</li><li>[Channel Details](../../field-groups/event/channel-details.md)</li><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>[Demographic Details](../../field-groups/profile/demographic-details.md)</li></ul></li></ul> |
 | Improve email relevance through improved men & women's segmentation. | <ul><li>Purchase & product views</li><li>Product SKU</li><li>Product category</li><li>Timestamp</li></ul> | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>[Demographic Details](../../field-groups/profile/demographic-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
 | Ingest loyalty (partner) data to increase relevant product information across web, email, and digital marketing channels. | <ul><li>Loyalty attributes</li></ul> | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>[Demographic Details](../../field-groups/profile/demographic-details.md)</li><li>[Loyalty Details](../../field-groups/profile/loyalty-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
+| Retarget cart abandoners through automated and personalized emails. | <ul><li>Commerce line items</li></ul> | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Commerce Details](../../field-groups/event/commerce-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**Product** (custom class)\*:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
 
 {style="table-layout:auto"}
 
