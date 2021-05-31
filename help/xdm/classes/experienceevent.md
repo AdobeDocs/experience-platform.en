@@ -59,6 +59,8 @@ If you are streaming data to Platform using a source connection, you can configu
 
 Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
 * [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
