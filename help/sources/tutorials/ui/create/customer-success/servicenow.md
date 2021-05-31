@@ -9,10 +9,6 @@ exl-id: 66c12f4d-8b0c-4bb2-910d-9e09fa364c94
 ---
 # Create a [!DNL ServiceNow] source connection in the UI
 
->[!NOTE]
->
->The [!DNL ServiceNow] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL ServiceNow] source connector using the [!DNL Platform] user interface.
 
 ## Getting started
