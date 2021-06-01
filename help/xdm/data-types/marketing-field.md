@@ -23,6 +23,8 @@ exl-id: d4c53885-f34f-4721-aa34-1fe02dc7006f
 | `time` | DateTime | An ISO 8601 timestamp of when the marketing preference changed, if applicable. |
 | `val` | String | The customer-provided preference choice for this marketing use case. See the table below for accepted values and definitions. |
 
+{style="table-layout:auto"}
+
 The following table outlines the accepted values for `val`:
 
 | Value | Title|  Description |
@@ -36,6 +38,8 @@ The following table outlines the accepted values for `val`:
 | `CP` | Compliance with a Legal Obligation | The collection of data for the specified purpose is required to meet the legal obligations of the business. |
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

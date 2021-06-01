@@ -46,6 +46,8 @@ In the right rail under **[!UICONTROL Field properties]**, you can configure the
 | [!UICONTROL Display name] | A human-friendly name for the field. |
 | [!UICONTROL Type] | The type of data the field will contain. From this dropdown menu, you can select one of the [standard scalar types](../../schema/field-constraints.md) supported by XDM, or one of the multi-field [data types](../resources/data-types.md) that have been previously defined in the [!DNL Schema Registry].<br><br>You can also select **[!UICONTROL Advanced type search]** to search and filter existing data types and locate the desired type easier. |
 
+{style="table-layout:auto"}
+
 You can also provide an optional human-readable **[!UICONTROL Description]** to the field to provide more context as to the field's intended use case.
 
 >[!NOTE]
@@ -83,6 +85,8 @@ When defining a new field, additional configuration options may appear in the ri
 | [!UICONTROL Maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is accepted. When using this constraint, the "[!UICONTROL Exclusive maximum value]" constraint must be left blank. |
 | [!UICONTROL Exclusive minimum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. When using this constraint, the "[!UICONTROL Minimum value]" (non-exclusive) constraint must be left blank. |
 | [!UICONTROL Exclusive maximum value] | [!UICONTROL Double] | The maximum value for the Double to be accepted during ingestion. If the ingested value exactly matches the one entered here, then the value is rejected. When using this constraint, the "[!UICONTROL Maximum value]" (non-exclusive) constraint must be left blank. |
+
+{style="table-layout:auto"}
 
 ## Special field types {#special}
 

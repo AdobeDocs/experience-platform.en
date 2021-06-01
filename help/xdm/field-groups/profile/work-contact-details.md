@@ -24,6 +24,8 @@ exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 | `workPhone` | [Phone number](../../data-types/phone-number.md) | Describes the person's work phone number. |
 | `organizations` | String (Array) | An array of free-form strings that represent the organizations the person is a member of. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)

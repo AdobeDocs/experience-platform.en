@@ -26,6 +26,8 @@ The additional configuration controls for arrays are as follows:
 | [!UICONTROL Maximum length] | The maximum number of items that the array must contain in order for ingestion to be successful. |
 | [!UICONTROL Unique items only] | If set to "[!UICONTROL True]", each item in the array must be unique in order for ingestion to be successful. |
 
+{style="table-layout:auto"}
+
 Once you are finished configuring the field, select **[!UICONTROL Apply]** to apply the change to the schema.
 
 ![](../../images/ui/fields/special/array-config.png)

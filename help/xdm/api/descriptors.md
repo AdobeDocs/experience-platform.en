@@ -55,6 +55,8 @@ The response format depends on the `Accept` header sent in the request. Notice t
 | `application/vnd.adobe.xdm+json` | Returns an array of expanded descriptor objects |
 | `application/vnd.adobe.xdm-v2+json` | This `Accept` header must be used in order to utilize paging capabilities. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 The response includes an array for each descriptor type that has defined descriptors. In other words, if there are no descriptors of a certain `@type` defined, the registry will not return an empty array for that descriptor type. 
@@ -90,6 +92,8 @@ GET /tenant/descriptors/{DESCRIPTOR_ID}
 | Parameter | Description |
 | --- | --- |
 | `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to look up. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -198,6 +202,8 @@ PUT /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to update. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 This request essentially re-writes the descriptor, so the request body must include all fields required for defining a descriptor of that type. In other words, the request payload to update (PUT) a descriptor is the same as the payload to [create (POST) a descriptor](#create) of the same type.
@@ -253,6 +259,8 @@ DELETE /tenant/descriptors/{DESCRIPTOR_ID}
 | --- | --- |
 | `{DESCRIPTOR_ID}` | The `@id` of the descriptor you want to delete. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```SHELL
@@ -305,6 +313,8 @@ An identity descriptor signals that the "[!UICONTROL sourceProperty]" of the "[!
 | `xdm:property` | Either `xdm:id` or `xdm:code`, depending on the `xdm:namespace` used. |
 | `xdm:isPrimary` | An optional boolean value. When true, indicates the field as the primary identity. Schemas may contain only one primary identity. |
 
+{style="table-layout:auto"}
+
 #### Friendly name descriptor
 
 Friendly name descriptors allow a user to modify the `title`, `description`, and `meta:enum` values of the core library schema fields. Especially useful when working with "eVars" and other "generic" fields that you wish to label as containing information specific to your organization. The UI can use these to show a more friendly name or to only show fields that have a friendly name.
@@ -339,6 +349,8 @@ Friendly name descriptors allow a user to modify the `title`, `description`, and
 | `xdm:description` | An optional description can be added along with the title. |
 | `meta:enum` | If the field indicated by `xdm:sourceProperty` is a string field, `meta:enum` determines the list of suggested values for the field in the [!DNL Experience Platform] UI. It is important to note that `meta:enum` does not declare an enumeration or provide any data validation for the XDM field.<br><br>This should only be used for core XDM fields defined by Adobe. If the source property is a custom field defined by your organization, you should instead edit the field's `meta:enum` property directly through a PATCH request to the field's parent resource.  |
 
+{style="table-layout:auto"}
+
 #### Relationship descriptor
 
 Relationship descriptors describe a relationship between two different schemas, keyed on the properties described in `sourceProperty` and `destinationProperty`. See the tutorial on [defining a relationship between two schemas](../tutorials/relationship-api.md) for more information.
@@ -366,6 +378,8 @@ Relationship descriptors describe a relationship between two different schemas, 
 | `xdm:destinationSchema` | The `$id` URI of the destination schema this descriptor is defining a relationship with. |
 | `xdm:destinationVersion` | The major version of the destination schema. |
 | `xdm:destinationProperty` | Optional path to a target field within the destination schema. If this property is omitted, the target field is inferred by any fields that contain a matching reference identity descriptor (see below). |
+
+{style="table-layout:auto"}
 
 
 #### Reference identity descriptor
