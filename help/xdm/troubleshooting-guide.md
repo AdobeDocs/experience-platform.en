@@ -187,7 +187,7 @@ Detailed examples of proper data structures for XDM resources can be found in th
 
 * [Create a custom class](./api/classes.md#create)
 * [Create a custom field group](./api/field-groups.md#create)
-* [Create a custom data type](./api/data-type.md#create)
+* [Create a custom data type](./api/data-types.md#create)
 
 ### Accept header invalid
 
