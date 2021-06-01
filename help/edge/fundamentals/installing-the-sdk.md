@@ -14,7 +14,7 @@ There are three supported ways to use Adobe Experience Platform Web SDK:
 
 ## Option 1: Installing the Adobe Experience Platform Launch extension
 
-For documentation on the Adobe Experience Platform Launch extension, see the [launch documentation](https://docs.adobe.com/content/help/en/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
+For documentation on the Adobe Experience Platform Launch extension, see the [launch documentation](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html)
 
 ## Option 2: Installing the prebuilt standalone version
 

@@ -6,11 +6,7 @@ topic-legacy: overview
 description: Learn how to connect GreenPlum to Adobe Experience Platform using APIs or the user interface.
 exl-id: 41757062-9ac8-42d3-91f6-a00866195882
 ---
-# (Beta) [!DNL GreenPlum] connector
-
->[!NOTE]
->
->The [!DNL GreenPlum] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL GreenPlum] connector
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
