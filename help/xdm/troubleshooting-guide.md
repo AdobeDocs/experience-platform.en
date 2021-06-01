@@ -2,13 +2,13 @@
 keywords: Experience Platform;home;popular topics;XDM;XDM system;XDM individual profile;XDM ExperienceEvent;XDM Experience Event;experienceEvent;experience eventExperience event;XDM Experience Event;XDM ExperienceEvent;experience data model;Experience data model;Experience Data Model;data model;Data Model;schema;troubleshooting;FAQ;faq;Union schema;UNION PROFILE;union profile;http://ns.adobe.com/aep/errors/XDM-1010-404;http://ns.adobe.com/aep/errors/XDM-1011-404;http://ns.adobe.com/aep/errors/XDM-1012-404;http://ns.adobe.com/aep/errors/XDM-1013-404;http://ns.adobe.com/aep/errors/XDM-1014-404;http://ns.adobe.com/aep/errors/XDM-1015-404;http://ns.adobe.com/aep/errors/XDM-1016-404;http://ns.adobe.com/aep/errors/XDM-1017-404;http://ns.adobe.com/aep/errors/XDM-1521-400;http://ns.adobe.com/aep/errors/XDM-1020-400;http://ns.adobe.com/aep/errors/XDM-1021-400;http://ns.adobe.com/aep/errors/XDM-1022-400;http://ns.adobe.com/aep/errors/XDM-1023-400;http://ns.adobe.com/aep/errors/XDM-1024-400;http://ns.adobe.com/aep/errors/XDM-1006-400;http://ns.adobe.com/aep/errors/XDM-1007-400;http://ns.adobe.com/aep/errors/XDM-1008-400;http://ns.adobe.com/aep/errors/XDM-1009-400;http://ns.adobe.com/aep/errors/XDM-1526-400;http://ns.adobe.com/aep/errors/XDM-1527-400;http://ns.adobe.com/aep/errors/XDM-1528-400;
 solution: Experience Platform
 title: XDM System Troubleshooting Guide
-description: This document provides answers to frequently asked questions about Experience Data Model (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors.
+description: Find answers to frequently asked questions about Experience Data Model (XDM), including steps to resolve common API errors.
 topic-legacy: troubleshooting
 exl-id: a0c7c661-bee8-4f66-ad5c-f669c52c9de3
 ---
 # XDM System troubleshooting guide
 
-This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, as well as a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+This document provides answers to frequently asked questions about [!DNL Experience Data Model] (XDM) and XDM System in Adobe Experience Platform, including a troubleshooting guide for common errors. For questions and troubleshooting related to other Platform services, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 **[!DNL Experience Data Model] (XDM)** is an open-source specification that defines standardized schemas for customer experience management. The methodology on which [!DNL Experience Platform] is built, **XDM System**, operationalizes [!DNL Experience Data Model] schemas for use by [!DNL Platform] services. The **[!DNL Schema Registry]** provides a user interface and a RESTful API to access the **[!DNL Schema Library]** within [!DNL Experience Platform]. See the [XDM documentation](home.md) for more information.
 
@@ -18,9 +18,9 @@ The following is a list of answers to frequently asked questions about XDM Syste
 
 ### How do I add fields to a schema?
 
-You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating new field groups using the API or the user interface.
+You can add fields to a schema by using a schema field group. Each field group is compatible with one or more classes, allowing the field group to be used in any schema that implements one of those compatible classes. While Adobe Experience Platform provides several industry field groups with their own pre-defined fields, you can add your own fields to a schema by creating custom field groups using the API or the user interface.
 
-For details on creating new field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/field-groups.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
+For details on creating field groups in the [!DNL Schema Registry] API, see the [field group endpoint guide](api/field-groups.md#create). If you are using the UI, see the [Schema Editor tutorial](./tutorials/create-schema-ui.md).
 
 ### What are the best uses for field groups vs data types?
 
@@ -30,7 +30,7 @@ For details on creating new field groups in the [!DNL Schema Registry] API, see 
 
 ### What is the unique ID for a schema?
 
-All [!DNL Schema Registry] resources (schemas, field groups, data types, classes) have a URI that acts as an unique ID for reference and lookup purposes. When viewing a schema in the API, it can be found in the top-level `$id` and `meta:altId` attributes.
+All [!DNL Schema Registry] resources (schemas, field groups, data types, classes) have a URI that acts as a unique ID for reference and lookup purposes. When viewing a schema in the API, it can be found in the top-level `$id` and `meta:altId` attributes.
 
 For more information, see the [resource identification](api/getting-started.md#resource-identification) section in the [!DNL Schema Registry] API guide.
 
@@ -66,11 +66,11 @@ For more details on managing identities in the UI, see the section on [defining 
 
 ### Does my schema need a primary identity?
 
-Primary identities are optional, since schemas may have 0 or 1 of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
+Primary identities are optional, since schemas may have either zero or one of them. However, a schema must have a primary identity in order for the schema to be enabled for use in [!DNL Real-time Customer Profile]. See the [identity](./tutorials/create-schema-ui.md#identity-field) section of the Schema Editor tutorial for more information. 
 
 ### How do I enable a schema for use in [!DNL Real-time Customer Profile]?
 
-Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a "union" tag, located in the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
+Schemas are enabled for use in [[!DNL Real-time Customer Profile]](../profile/home.md) through the addition of a "union" tag within the `meta:immutableTags` attribute of the schema. Enabling a schema for use with [!DNL Profile] can be done using the API or the user interface.
 
 #### Enabling an existing schema for [!DNL Profile] using the API
 
@@ -169,7 +169,7 @@ This error message displays when you attempt to create a resource with a title t
 }
 ```
 
-This error message displays when you attempt to create a new resource with improperly namespaced fields, or add improperly namespaced fields to an existing resource.
+This error message displays when you attempt to create a resource with improperly namespaced fields, or add improperly namespaced fields to an existing resource.
 
 Resources that are defined by your IMS organization must namespace their fields under your tenant ID in order to avoid conflicts with other industry and vendor resources. When building a schema using standard field groups, any custom fields that you add within the structure of those field groups must also be namespaced under your tenant ID.
 
@@ -225,7 +225,7 @@ For lists of compatible Accept headers for different API requests, please refer 
 
 The following error messages are associated with operations involved in enabling schemas for [!DNL Real-time Customer Profile]. See the [unions](./api/unions.md) section in the [!DNL Schema Registry] API guide for more information.
 
-#### There must be an reference identity descriptor
+#### There must be a reference identity descriptor
 
 ```json
 {
@@ -282,4 +282,4 @@ For a list of standard identity namespace codes, see the section on [standard na
 }
 ```
 
-In order for a schema to be enabled for Profile, you must first [create a primary identity descriptor](./api/descriptors.md#create) for the schema, or include an identity map field to act at the primary identity instead.
+Before enabling a schema for Profile, you must first [create a primary identity descriptor](./api/descriptors.md#create) for the schema, or include an identity map field to act at the primary identity instead.
