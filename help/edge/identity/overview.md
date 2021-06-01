@@ -27,7 +27,7 @@ When migrating from using Visitor API, you can also migrate existing AMCV cookie
 
 ## Updating traits for migration
 
-When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
+When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
 
 ## Server Side Forwarding
 

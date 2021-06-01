@@ -21,6 +21,7 @@ Updates to existing features in Adobe Experience Platform:
 - [[!DNL Destinations]](#destinations)
 - [[!DNL Experience Data Model (XDM)]](#xdm)
 - [Real-time Customer Profile](#profile)
+- [Sandboxes](#sandboxes)
 - [Sources](#sources)
 
 ## Dashboards {#dashboards}
@@ -80,6 +81,22 @@ Adobe Experience Platform enables you to drive coordinated, consistent, and rele
 
 For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
+## [!DNL Sandboxes] {#sandboxes}
+
+Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+
+| Feature | Description |
+| ------- | ----------- |
+| Multiple production sandboxes | You can now create and manage multiple production sandboxes in your IMS Org and dedicate specific production sandboxes to distinct lines of business, brands, projects or regions. See the tutorials on creating a production sandbox [in the UI](../../sandboxes/ui/user-guide.md) or [using the API](../../sandboxes/api/overview.md) for more information. |
+
+### Known limitations
+
+- Every Experience Cloud Organization comes with a pre-created default production sandbox. This sandbox acts as a default destination for every request sent to Platform from another Adobe application or non-Adobe application that is not (yet) Sandbox-compliant. The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+- Production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can neither be reset nor deleted.
+- All user-created production and development sandboxes can be deleted, except the default production sandbox.
+
+For more information on sandboxes, see the [sandboxes overview](../../sandboxes/home.md).
+
 ## [!DNL Sources] {#sources}
 
 Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
@@ -89,5 +106,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 | Feature | Description |
 | ------- | ----------- |
 | UI support for compressed file ingestion | You can now preview and ingest compressed JSON or delimited files using cloud storage sources in the UI. For more information, see the tutorial on [configuring a dataflow for a cloud storage source connection in the UI](../../sources/tutorials/ui/dataflow/batch/cloud-storage.md). |
+| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Azure File Storage]](../../sources/connectors/cloud-storage/azure-file-storage.md)</li><li>[[!DNL Azure Synapse Analytics]](../../sources/connectors/databases/synapse-analytics.md)</li><li>[[!DNL Greenplum]](../../sources/connectors/databases/greenplum.md)</li><li>[[!DNL HubSpot]](../../sources/connectors/marketing-automation/hubspot.md)</li><li>[[!DNL ServiceNow]](../../sources/connectors/customer-success/servicenow.md)</li></ul> |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

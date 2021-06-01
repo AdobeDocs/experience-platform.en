@@ -28,6 +28,8 @@ exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 | `phonenumberid` | [Identity](../../data-types/identity.md) | Phone number IDs. |
 | `tntid` | [Identity](../../data-types/identity.md) | End user IDs for Adobe Target. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)

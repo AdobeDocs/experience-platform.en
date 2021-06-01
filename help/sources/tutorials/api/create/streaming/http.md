@@ -409,3 +409,59 @@ If the `Authorization` header is not present, or an invalid/expired access token
     }
 }
 ```
+
+### Post raw data to be ingested to Platform {#ingest-data}
+
+Now that you've created your flow, you can send your JSON message to the streaming endpoint you previously created.
+
+**API format**
+
+```http
+POST /collection/{CONNECTION_ID}
+```
+
+| Parameter | Description |
+| --------- | ----------- |
+| `{CONNECTION_ID}` | The `id` value of your newly created streaming connection. |
+
+**Request**
+
+The example request ingests raw data to the streaming endpoint that was previously created.
+
+```shell
+curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076bbc7f14d728e63cdfd37ecbb4344425b \
+  -H 'Content-Type: application/json' \
+  -H 'x-adobe-flow-id: 1f086c23-2ea8-4d06-886c-232ea8bd061d' \
+  -d '{
+      "name": "Johnson Smith",
+      "location": {
+          "city": "Seattle",
+          "country": "United State of America",
+          "address": "3692 Main Street"
+      },
+      "gender": "Male"
+      "birthday": {
+          "year": 1984
+          "month": 6
+          "day": 9
+      }
+  }'
+```
+
+**Response**
+
+A successful response returns HTTP status 200 with details of the newly ingested information.
+
+```json
+{
+    "inletId": "{CONNECTION_ID}",
+    "xactionId": "1584479347507:2153:240",
+    "receivedTimeMs": 1584479347507
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `{CONNECTION_ID}` | The ID of the previously created streaming connection. |
+| `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |
+| `receivedTimeMs` | A timestamp (epoch in milliseconds) that shows what time the request was received. |
