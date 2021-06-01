@@ -136,7 +136,7 @@ To update a [!DNL Target] profile, ensure that the profile data is passed with t
 |Key|Type|Description|
 | --- | --- | --- |
 |`renderDecisions`|Boolean|Instructs the personalization component whether it should interpret DOM actions|
-|`decisionScopes`|Array <String>|A list of scopes to retrieve decisions for|
+|`decisionScopes`|Array `<String>`|A list of scopes to retrieve decisions for|
 |`xdm`|Object|Data formatted in XDM that land in the Platform Web SDK as an experience event|
 |`data`|Object|Arbitrary key/value pairs sent to [!DNL Target] solutions under the target class.|
 
