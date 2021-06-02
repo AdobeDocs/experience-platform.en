@@ -124,4 +124,4 @@ Some data usage policies restrict the use of stitched identity data for personal
 
 #### C11 {#c11}
 
-Adobe Experience Platform Segment Match allows you match first-party segments with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in Segment Match processes. While you can add this label directly to datasets and fields like other labels, C11 can also be applied automatically when working with Segment Match.
+Adobe Experience Platform Segment Match allows you match first-party segments with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. You must apply the C11 label to your datasets prior to using [!DNL Segment Match] as the process is not automated. Once C11 is applied to appropriate datasets and/or fields, [!DNL Segment Match] automatically uses the "[!UICONTROL Restrict data sharing]" standard policy to enforce the label.
