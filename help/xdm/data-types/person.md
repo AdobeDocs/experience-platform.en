@@ -23,6 +23,8 @@ exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 | `nationality` | String | The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code. The format of this property must conform to this regular expression `^[A-Z]{2}$`. |
 | `taxId` | String | The tax or fiscal ID of the person, such as the Taxpayer Identification Number (TIN) in the US or the Certificado de Identificación Fiscal (CIF/NIF) in Spain. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person.example.1.json)

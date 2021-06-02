@@ -19,6 +19,8 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 | `name` | String | The normative name used for this web link. This is used for classification purposes. |
 | `type` | String | The link type. This property must be equal to one of the following enum values: <li> `download` </li> <li> `exit` </li> <li> `other` </li>  |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.example.1.json)

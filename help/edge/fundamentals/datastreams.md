@@ -19,7 +19,7 @@ Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the 
 
 >[!NOTE]
 >
->The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://docs.adobe.com/content/help/en/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
+>The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
 
 Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
@@ -77,13 +77,13 @@ The unique ID for a target account. To find this, you can navigate to [!UICONTRO
 
 ### [!UICONTROL Property Token]
 
-[!DNL Target] allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://docs.adobe.com/content/help/en/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.
+[!DNL Target] allows customers to control permissions through the use of properties. Details can be found in the [Enterprise Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) section of the [!DNL Target] documentation.
 
 The property token can be found in [!UICONTROL Adobe Target] > [!UICONTROL setup] > [!UICONTROL Properties]
 
 ### [!UICONTROL Target Environment ID]
 
-[Environments](https://docs.adobe.com/content/help/en/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
+[Environments](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) in Adobe Target help you manage your implementation through all stages of development. This setting specifies which environment you are going to use with each environment.
 
 Adobe recommends setting this differently for each of your `dev`, `stage`, and `prod` datastream environments to keep things simple. However, if you already have Adobe Target environments defined, you can use those.
 
@@ -95,11 +95,11 @@ All that is needed to send data to Adobe Audience Manager is to enable this sect
 
 ### [!UICONTROL Cookie Destinations Enabled]
 
-Allows the SDK to share segment information via [Cookie Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager].
+Allows the SDK to share segment information via [Cookie Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-cookie-destination.html) from [!DNL Audience Manager].
 
 ### [!UICONTROL URL Destinations Enabled]
 
-Allows the SDK to share segment information via [URL Destinations](https://docs.adobe.com/content/help/en/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in [!DNL Audience Manager].
+Allows the SDK to share segment information via [URL Destinations](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/custom-destinations/create-url-destination.html). These are configured in [!DNL Audience Manager].
 
 ## Adobe Analytics Settings
 

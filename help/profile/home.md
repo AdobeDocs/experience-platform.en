@@ -57,9 +57,11 @@ Every business wants to communicate with their customers in a way that feels per
 
 ### Merge policies
 
-When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. When there is conflicting data from multiple datasets, the merge policy will determine how that data should be treated and which value should be used. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
+When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. 
 
-For more information on working with merge policies using the [!DNL Real-time Customer Profile] API, see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies UI guide](ui/merge-policies.md). 
+When there is conflicting data from multiple datasets, the merge policy determines how that data should be treated and which value should be used. Through RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
+
+To learn more about merge policies and their role within Experience Platform, please begin by reading the [merge policies overview](merge-policies/overview.md). 
 
 ### Union schemas {#profile-fragments-and-union-schemas}
 

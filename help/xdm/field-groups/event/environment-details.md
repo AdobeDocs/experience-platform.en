@@ -23,6 +23,8 @@ exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 | `environment` | [Environment](../../data-types/environment.md) | Describes information about the situational context of the event observation, specifically detailing transitory information such as the network or software versions. |
 | `placeContext` | [Place context](../../data-types/place-context.md) | Describes the transient circumstances related to the event observation. Examples include locale-specific information such as weather, local time, traffic, day of the week, workday vs. holiday, and working hours. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-environment-details.example.1.json)

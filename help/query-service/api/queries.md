@@ -135,7 +135,7 @@ curl -X POST https://platform.adobe.io/data/foundation/query/queries \
  -d '{
         "dbName": "prod:all",
         "sql": "SELECT * FROM accounts;",
-        "name": "Sample Query"
+        "name": "Sample Query",
         "description": "Sample Description"
     }  
 ```

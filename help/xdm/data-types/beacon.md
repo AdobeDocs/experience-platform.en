@@ -19,6 +19,8 @@ exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 | `proximity` | String | Estimated distance from the beacon. See the [appendix](#proximity) for accepted values and definitions. |
 | `proximityUUID` | String | A proximity UUID (Universally Unique Identifier) is a special type of identifier used to distinguish beacons in your network from all other beacons in networks outside your control. The proximity UUID is configured into a beacon, to be transmitted to mobile devices in range to identify an organization's beacons. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)

@@ -23,6 +23,8 @@ In addition, the data type provides a number of optional properties that can be 
 | `middleName` | Middle, alternative, or additional names supplied between the first name and last name. |
 | `suffix` | A group of letters provided after a person's name to provide additional information (such as `Jr.`, `Sr.`, `M.D.`, `PhD`, `I`, `II`, `III`, and so on). |
 
+{style="table-layout:auto"}
+
 For more details on the person name data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
