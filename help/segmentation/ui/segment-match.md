@@ -65,7 +65,7 @@ The last prerequisite you must establish is to configure a new data usage label 
 
 Data usage labels allow you to categorize datasets and fields according to usage policies that apply to that data. Labels can be applied at any time, providing flexibility in how you choose to govern data. Best practices encourage labeling data as soon as it is ingested into Experience Platform, or as soon as data becomes available for use in Platform.
 
-[!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process.
+[!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process. You must apply the C11 label to your datasets prior to using [!DNL Segment Match] as the process is not automated. For specific instructions on how to apply data usage labels to datasets, see the tutorial on [managing data usage labels in the UI](../../data-governance/labels/user-guide.md). By default, [!DNL Segment Match] automatically enables the [!UICONTROL Restrict data sharing] core policy.
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md).
 
@@ -100,13 +100,6 @@ To create a new [!UICONTROL connect ID], select **[!UICONTROL Regenerate]** unde
 To connect a partner using their [!UICONTROL connect ID], enter their unique ID value in the input box under [!UICONTROL Connect partner] and then select **[!UICONTROL Request]**.
 
 ![connect-partner.png](../images/ui/segment-match/connect-partner.png)
-
-<!--- The connection process can be summarized as follows:
-
-1. You generate a connect ID through the [!UICONTROL Share Setting] function in the UI.
-2. You provide this connect ID to your partner.
-3. Your partner enters this connect ID in their sandbox and then makes a request.
-4. You accept the request, linking your organization with your partner's organization. -->
 
 ### Create feed
 
