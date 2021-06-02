@@ -30,6 +30,8 @@ GET /rpc/export/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | The `meta:altId` or URL-encoded `$id` of the XDM resource you want to export. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves an export payload for a `Restaurant` field group.

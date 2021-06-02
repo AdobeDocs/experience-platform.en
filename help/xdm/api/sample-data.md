@@ -32,6 +32,8 @@ GET /rpc/sampledata/{SCHEMA_ID}
 | --- | --- |
 | `{SCHEMA_ID}` | The `meta:altId` or URL-encoded `$id` of the schema you want to generate sample data for. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request generates sample data for a Loyalty Members schema.

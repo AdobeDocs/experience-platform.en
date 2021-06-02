@@ -163,6 +163,8 @@ The sections below describe how each XDM type maps to other common serialization
 | [!UICONTROL Boolean] | Type: `BOOLEAN` | `BooleanType` | `java.lang.Boolean` |
 | [!UICONTROL Map] | `MAP`-annotated group<br><br>(`<key-type>` must be `STRING`) | `MapType`<br><br>(`keyType` must be `StringType`) | `java.util.Map` |
 
+{style="table-layout:auto"}
+
 ### Scala, .NET, and CosmosDB {#scala}
 
 | XDM type | Scala | .NET | CosmosDB |

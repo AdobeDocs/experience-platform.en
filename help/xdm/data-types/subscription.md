@@ -39,6 +39,8 @@ exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 | `topUp` | String | Describes the agreed terms for how consumable aspects of a subscription are repurchased during a billing period. |
 | `type` | String | The scope of entitlement in relation to how many people are covered by the subscription. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/industry-verticals/subscription.example.1.json)

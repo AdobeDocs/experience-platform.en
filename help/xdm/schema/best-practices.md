@@ -48,6 +48,8 @@ Once you have created an ERD to identify the essential entities you would like t
 | Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**. |
 | Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM ExperienceEvent] class**. |
 
+{style="table-layout:auto"}
+
 ### Considerations for entity sorting
 
 The sections below provide further guidance for how to sort your entities into the above categories.
@@ -70,6 +72,8 @@ If you want to analyze how certain attributes within an entity change over time,
 | 1234567 | Remove | 275098 | 1 | Oct 1, 10:33 AM |
 | 1234567 | Add | 486502 | 1 | Oct 1, 10:41 AM |
 | 1234567 | Add | 910482 | 5 | Oct 3, 2:15 PM |
+
+{style="table-layout:auto"}
 
 #### Segmentation use cases
 
@@ -111,6 +115,8 @@ The following table outlines some common entity relationships and the categories
 | Customers and Cart Checkouts | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customers would therefore be a profile entity, while Cart Checkouts would be an event entity. |
 | Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and vice versa. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
 | Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
+
+{style="table-layout:auto"}
 
 ### Pros and cons of different entity classes {#pros-and-cons}
 

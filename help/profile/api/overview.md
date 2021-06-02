@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile
 title: Real-time Customer Profile API Guide
-topic-legacy: guide
 description: The Real-time Customer Profile API allows developers to explore and work with Profile data, including view profiles, create and update merge policies, export or sample Profile data, and delete Profile data that is no longer required or was added in error. Follow this guide to learn how to perform key operations using the API.
 exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 ---
@@ -41,9 +40,9 @@ Through Adobe Experience Platform you can access [!DNL Real-time Customer Profil
 
 ## Merge policies {#merge-policies}
 
-When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To learn more about working with merge policies using the API, please visit the [merge policies endpoint guide](merge-policies.md). 
+When bringing data from multiple sources together in [!DNL Experience Platform], merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create individual customer profiles. Using the [!DNL Real-time Customer Profile] API, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. To work with merge policies using the API, visit the [merge policies endpoint guide](merge-policies.md). 
 
-For a guide to working with merge policies using the [!DNL Platform] UI, please see the [merge policies user guide](../ui/merge-policies.md).
+To learn more about merge policies, and their role within Platform, please begin by reading the [merge policies overview](../merge-policies/overview.md). 
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 

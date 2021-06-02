@@ -28,6 +28,8 @@ The most common query parameters for paging include:
 | `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
 
+{style="table-layout:auto"}
+
 ### Filtering {#filtering}
 
 You can filter results by using the `property` parameter, which is used to apply a specific operator against a given JSON property within the retrieved resources. Supported operators include:
@@ -42,6 +44,8 @@ You can filter results by using the `property` parameter, which is used to apply
 | `>=` | Filters by whether the property is greater than or equal to the provided value. | `property=version>=5` |
 | `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
+
+{style="table-layout:auto"}
 
 >[!TIP]
 >
@@ -61,7 +65,7 @@ The main difference you will notice between standard XDM and Compatibility Mode 
 
 The following is a side-by-side comparison showing birthday-related fields (with "description" attributes removed) in both standard XDM and Compatibility Mode. Notice that the Compatibility Mode fields include a reference to the XDM field and its data type in the "meta:xdmField" and "meta:xdmType" attributes.
 
-<table>
+<table style="table-layout:auto">
   <th>Standard XDM</th>
   <th>Compatibility Mode</th>
   <tr>

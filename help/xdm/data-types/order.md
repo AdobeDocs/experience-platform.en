@@ -20,6 +20,8 @@ exl-id: abfc6d53-ffe6-4692-ad65-03d556831fa0
 | `purchaseID` | String | A unique identifier assigned by the seller for this purchase or contract. Because this is defined by the seller, there is no guarantee that the ID is unique. |
 | `purchaseOrderNumber` | String | The unique identifier assigned by the purchaser for this purchase or contract. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/data/order.example.1.json)
