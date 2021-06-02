@@ -133,6 +133,10 @@ The [!DNL Platform Web SDK] lets you update the profile to the [!DNL Target] pro
 
 To update a [!DNL Target] profile, ensure that the profile data is passed with the following:
 
+* Under `“data {“`
+* Under `“__adobe”`
+* Prefix `“profile.”` e.g. as below
+
 |Key|Type|Description|
 | --- | --- | --- |
 |`renderDecisions`|Boolean|Instructs the personalization component whether it should interpret DOM actions|
