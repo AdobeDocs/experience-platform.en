@@ -106,7 +106,7 @@ Both record and time series schemas provide the means to include identity data. 
 
 ### Marking XDM fields as identity
 
-Any field of type `string` in schemas that implement either record or time series XDM classes can be labeled as an identity field. As a result, all data ingested into that field would be considered identity data.  
+Any field of type `string` in schemas that implement either record or time series XDM classes can be labeled as an identity field. As a result, all data ingested into that field would be considered identity data. Array fields and map type fields are not supported and cannot be marked and labeled as identity fields.
 
 Identity fields also allow for the linking of identities if they share common PII data.
 For example, by labeling phone number fields as identity fields, [!DNL Identity Service] automatically graphs relationships with the other individuals found to be using the same phone number.
