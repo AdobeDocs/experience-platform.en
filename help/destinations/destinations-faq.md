@@ -1,12 +1,28 @@
 ---
 keywords: destinations; questions; frequently asked questions; faq; destinations faq
-title: Destinations FAQ
-seo-title: Destinations FAQ
-description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
-seo-description: Answers to the most frequently asked questions about Adobe Experience Platform Destinations
+title: Frequently asked questions
+seo-title: Frequently asked questions
+description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
+seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 ---
 
-# Destinations FAQ {#faq}
+# Frequently asked questions {#faq}
+
+## Overview {#overview}
+
+This document provides answers to frequently asked questions about Adobe Experience Platform destinations. For questions and troubleshooting related to other [!DNL Platform] services, including those encountered across all [!DNL Platform] APIs, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+
+## General destinations questions {#general}
+
+**Why am I seeing different profile counts in the Experience Platform UI and in the exported CSV files?**
+
+This is a normal behavior due to the way Experience Platform performs segmentation.
+
+Streaming segmentation updates the profile count for streaming segments throughout the day, while batch segmentation updates the profile count for batch segments once every 24 hours.
+
+When the segment export schedule differs from the segmentation schedule, the profile counts between the UI and the exported [!DNL CSV] file will be different, especially when it comes to streaming segments.
+
+See the [Segmentation Service documentation](../segmentation/home.md) for more details.
 
 ## [!DNL Facebook Custom Audiences] {#facebook-faq}
 

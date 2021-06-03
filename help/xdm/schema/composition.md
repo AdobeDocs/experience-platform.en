@@ -288,6 +288,8 @@ There are some key factors to consider when choosing objects over free-form fiel
 | Increases nesting | Less or no nesting |
 | Creates logical field groupings | Fields are placed in ad-hoc locations |
 
+{style="table-layout:auto"}
+
 #### Objects
 
 The pros and cons of using objects over free-form fields are listed below.

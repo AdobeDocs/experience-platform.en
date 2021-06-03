@@ -143,7 +143,7 @@ Later in 2020, Experience Platform Launch will release server-side forwarding fe
 
 ## What is a CNAME or First Party Domain and why does it matter?
 
-More information about a CNAME is available in the [Adobe documentation](https://docs.adobe.com/content/help/en/id-service/using/reference/analytics-reference/cname.html)
+More information about a CNAME is available in the [Adobe documentation](https://experienceleague.adobe.com/docs/id-service/using/reference/analytics-reference/cname.html)
 
 ## Does the Adobe Experience Platform Web SDK use cookies? If so, what cookies does it use?
 
@@ -163,5 +163,5 @@ The Adobe Experience Platform Web SDK is designed to work optimally in the lates
 
 ## Where can I get more info about Adobe Experience Platform Web SDK?
 
-* [Documentation](https://docs.adobe.com/content/help/en/experience-platform/edge/home.html)
+* [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [Source Code](https://github.com/adobe/alloy)

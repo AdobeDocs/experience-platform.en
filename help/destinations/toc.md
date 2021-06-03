@@ -10,7 +10,6 @@ feature: Destinations
 
 * [Destinations overview](./home.md)
 * [Destination types and categories](./destination-types.md)
-* [Destinations FAQ](./destinations-faq.md)
 * API tutorials {#api}
     * [Connect to streaming destinations and activate data using the Flow Service API](./api/streaming-destinations.md)
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
@@ -129,4 +128,5 @@ feature: Destinations
         * [Invoca Tags extension](./catalog/voice/invoca.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+* [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

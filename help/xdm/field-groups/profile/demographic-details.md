@@ -28,6 +28,8 @@ exl-id: 588c044c-b80d-4cb9-9f97-92f040d54bb4
 | `person.nationality` | String | The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code. |
 | `person.taxId` | String | The tax/fiscal ID of the person, such the TIN in the US or the CIF/NIF in Spain. |
 
+{style="table-layout:auto"}
+
 For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-person-details.example.1.json)

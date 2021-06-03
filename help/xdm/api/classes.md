@@ -42,6 +42,8 @@ GET /{CONTAINER_ID}/classes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container you want to retrieve classes from: `global` for Adobe-created classes or `tenant` for classes owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of classes from the `tenant` container, using an `orderby` query parameter to sort the classes by their `title` attribute.
@@ -62,6 +64,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -118,6 +122,8 @@ GET /{CONTAINER_ID}/classes/{CLASS_ID}
 | `{CONTAINER_ID}` | The container that houses the class you want to retrieve: `global` for an Adobe-created class or `tenant` for a class owned by your organization. |
 | `{CLASS_ID}` | The `meta:altId` or URL-encoded `$id` of the class you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a class by its `meta:altId` value provided in the path. 
@@ -141,6 +147,8 @@ The response format depends on the `Accept` header sent in the request. All look
 | `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -307,6 +315,8 @@ curl -X POST \
 | `_{TENANT_ID}` | The `TENANT_ID` namespace for your organization. All resources created by your organization must include this property to avoid collisions with other resources in the [!DNL Schema Registry]. |
 | `allOf` | A list of resources whose properties are to be inherited by the new class. One of the `$ref` objects within the array defines the behavior of the class. In this example, the class inherits "record" behavior. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns HTTP status 201 (Created) and a payload containing the details of the newly created class including the `$id`, `meta:altId`, and `version`. These three values are read-only and are assigned by the [!DNL Schema Registry].
@@ -392,6 +402,8 @@ PUT /tenant/classes/{CLASS_ID}
 | Parameter | Description |
 | --- | --- |
 | `{CLASS_ID}` | The `meta:altId` or URL-encoded `$id` of the class you want to re-write. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -528,6 +540,8 @@ PATCH /tenant/class/{CLASS_ID}
 | --- | --- |
 | `{CLASS_ID}` | The URL-encoded `$id` URI or `meta:altId` of the class you want to update. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The example request below updates the `description` of an existing class, and the `title` of one of its fields.
@@ -627,6 +641,8 @@ DELETE /tenant/classes/{CLASS_ID}
 | Parameter | Description |
 | --- | --- |
 | `{CLASS_ID}` | The URL-encoded `$id` URI or `meta:altId` of the class you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 
