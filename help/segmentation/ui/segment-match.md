@@ -67,7 +67,7 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 [!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from [!DNL Segment Match] and added the C11 label accordingly, the label is automatically enforced by the [!DNL Segment Match] workflow. [!DNL Segment Match] automatically enables the [!UICONTROL Restrict data sharing] core policy. For specific instructions on how to apply data usage labels to datasets, see the tutorial on [managing data usage labels in the UI](../../data-governance/labels/user-guide.md).
 
-For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md).
+For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md). For information on data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md).
 
 ## [!DNL Segment Match] end-to-end workflow
 
