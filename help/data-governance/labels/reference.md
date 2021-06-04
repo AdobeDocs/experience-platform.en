@@ -16,27 +16,28 @@ This document outlines the core data usage labels currently provided by [!DNL Ex
 
 Contract "C" labels are used to categorize data that has contractual obligations or is related to your organization's data governance policies.
 
-|Label|Definition|
-|---|---|
-|**C1**|Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. [More info...](#c1)|
-|**C2**|Data cannot be exported to a third-party. [More info...](#c2)|
-|**C3**|Data cannot be combined or otherwise used with directly identifiable information. [More info...](#c3)|
-|**C4**|Data cannot be used for targeting any ads or content, either on-site or cross-site. [More info...](#c4)|
-|**C5**|Data cannot be used for interest-based, cross-site targeting of content or ads. [More info...](#c5)|
-|**C6**|Data cannot be used for on-site ad targeting. [More info...](#c6)|
-|**C7**|Data cannot be used for on-site targeting of content. [More info...](#c7)|
-|**C8**|Data cannot be used for measurement of your organization’s websites or apps. [More info...](#c8)|
-|**C9**|Data cannot be used in Data Science workflows. [More info...](#c9)|
-|**C10**|Data cannot be used for stitched identity activation. [More info...](#c10)|
+| Label | Definition |
+| --- | --- |
+| **C1** | Data can only be exported from Adobe Experience Cloud in an aggregated form without including individual or device identifiers. [More info...](#c1) |
+| **C2** | Data cannot be exported to a third-party. [More info...](#c2) |
+| **C3** | Data cannot be combined or otherwise used with directly identifiable information. [More info...](#c3) |
+| **C4** | Data cannot be used for targeting any ads or content, either on-site or cross-site. [More info...](#c4) |
+| **C5** | Data cannot be used for interest-based, cross-site targeting of content or ads. [More info...](#c5) |
+| **C6** | Data cannot be used for on-site ad targeting. [More info...](#c6) |
+| **C7** | Data cannot be used for on-site targeting of content. [More info...](#c7) |
+| **C8** | Data cannot be used for measurement of your organization’s websites or apps. [More info...](#c8) |
+| **C9** | Data cannot be used in Data Science workflows. [More info...](#c9) |
+| **C10** | Data cannot be used for stitched identity activation. [More info...](#c10) |
+| **C11** | Data cannot be shared with Segment Match partners. [More info...](#c11) |
 
 ## Identity labels
 
 Identity "I" labels are used to categorize data that can identify or contact a specific person.
 
-|Label|Definition|
-|---|---|
-|**I1**|Directly identifiable data that can identify or contact a specific person, rather than a device.|
-|**I2**|Indirectly identifiable data that can be used in combination with any other data to identify or contact a specific person.|
+| Label | Definition |
+| --- | --- |
+| **I1** | Directly identifiable data that can identify or contact a specific person, rather than a device. |
+| **I2** | Indirectly identifiable data that can be used in combination with any other data to identify or contact a specific person. |
 
 ## Sensitive labels
 
@@ -44,10 +45,10 @@ Sensitive “S” labels are used to categorize data that you, and your organiza
 
 One type of data you may consider to be sensitive may be different types of geographic data; however, this category is not limited to geographic data.
 
-|Label|Definition|
-|---|---|
-|**S1**|Data specifying latitude and longitude that can be used to determine the precise location of a device.|
-|**S2**|Data that can be used to determine a broadly defined geofence area.|
+| Label | Definition |
+| --- | --- |
+| **S1** | Data specifying latitude and longitude that can be used to determine the precise location of a device. |
+| **S2** | Data that can be used to determine a broadly defined geofence area. |
 
 ## Appendix
 
@@ -120,3 +121,7 @@ Some contracts include explicit prohibitions on data use for data science. Somet
 #### C10 {#c10}
 
 Some data usage policies restrict the use of stitched identity data for personalization. The C10 label is automatically applied to segments if their merge policies use the "private graph" option.
+
+#### C11 {#c11}
+
+Adobe Experience Platform Segment Match allows you to match first-party segments with privacy and consent preferences, facilitating enriched profiling and downstream insights. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from Segment Match and added the C11 label accordingly, the label is automatically enforced by the Segment Match workflow.
