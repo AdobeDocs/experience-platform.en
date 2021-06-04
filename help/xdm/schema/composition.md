@@ -102,13 +102,15 @@ As the nature of digital experiences continues to evolve, so must the schemas us
 
 Since maintaining backwards compatibility is crucial for schema evolution, [!DNL Experience Platform] enforces a purely additive versioning principle to ensure that any revisions to the schema only result in non-destructive updates and changes. In other words, **breaking changes are not supported.**
 
-|Supported changes | Breaking changes (Not supported)|
-|------------------------------------|---------------------------------|
-|<ul><li>Adding new fields to an existing schema</li><li>Making a mandatory field optional</li></ul>|<ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving attributes to a different location in the tree</li></ul>|
-
 >[!NOTE]
 >
->If a schema has not yet been used to ingest data into [!DNL Experience Platform], you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+>If a schema has not yet been used to ingest data into [!DNL Experience Platform] and hasn't been enabled for use in Real-time Customer Profile, you may introduce a breaking change to that schema. However, once the schema has been used in [!DNL Platform], it must adhere to the additive versioning policy.
+
+The following table breaks down which changes are supported when editing schemas, field groups, and data types:
+
+| Supported changes | Breaking changes (Not supported) |
+| --- | --- |
+| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Changing the resource's display name and description</li></ul> | <ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving attributes to a different location in the tree</li></ul> |
 
 ### Schemas and data ingestion
 
