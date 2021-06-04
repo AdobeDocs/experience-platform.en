@@ -48,6 +48,10 @@ From here, you can skip ahead to the [next section](#add-fields) to start adding
 
 ### Edit an existing data type
 
+>[!NOTE]
+>
+>Once an existing data type is used in a schema that has been enabled for use in Real-time Customer Profile, only non-destructive changes can be made to that data type thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
+
 Only custom data types defined by your organization can be edited. To narrow down the displayed list, select the filter icon (![Filter Icon](../../images/ui/resources/data-types/filter.png)) to reveal controls for filtering based on [!UICONTROL Owner]. Select **[!UICONTROL Customer]** to show only custom data types owned by your organization.
 
 Select the data type you want to edit from the list to open the right rail, showing the details of the data type. Select the name of the data type in the right rail to open its structure in the [!DNL Schema Editor].
