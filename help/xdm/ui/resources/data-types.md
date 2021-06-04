@@ -9,7 +9,7 @@ exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
 # Create and edit data types using the UI
 
-In Experience Data Model (XDM), data types reusable fields that contain multiple sub-fields. While similar to schema field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
+In Experience Data Model (XDM), data types are reusable fields that contain multiple sub-fields. While similar to schema field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
