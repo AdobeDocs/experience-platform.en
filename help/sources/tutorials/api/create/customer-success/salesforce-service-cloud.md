@@ -54,9 +54,11 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Create a connection
+## Create a base connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per SSC account as it can be used to create multiple source connectors to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL SSC] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SSC] authentication credentials as part of the request parameters.
 
 **API format**
 

@@ -56,11 +56,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Create a connection
+## Create a base connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Dynamics] account as it can be used to create multiple dataflows to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL Dynamics] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-### Create a [!DNL Dynamics] connection using basic authentication
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Dynamics] authentication credentials as part of the request parameters.
+
+### Create a [!DNL Dynamics] base connection using basic authentication
 
 To create a [!DNL Dynamics] connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `username`, and `password`.
 
@@ -118,7 +120,7 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Create a [!DNL Dynamics] connection using service principal key-based authentication
+### Create a [!DNL Dynamics] base connection using service principal key-based authentication
 
 To create a [!DNL Dynamics] connection using service principal key-based authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `serviceUri`, `servicePrincipalId`, and `servicePrincipalKey`.
 
