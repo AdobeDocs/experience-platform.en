@@ -11,7 +11,7 @@ Adobe Experience Platform [!DNL Web SDK] can map certain variables automatically
 
 For XDM data that is not automatically mapped to [!DNL Analytics], you can use [context data](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html) to match your [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Then it can be mapped into [!DNL Analytics] using [processing rules](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) to populate [!DNL Analytics] variables. 
  
-Also, you can use a default set of actions and product lists to send or retrieve data with Adobe Experience Platform Web SDK. To do this, see [Collect commerce and product information](hhttps://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
+Also, you can use a default set of actions and product lists to send or retrieve data with Adobe Experience Platform Web SDK. To do this, see [Collect commerce and product information](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html).
 
 ## Context data
 
