@@ -62,7 +62,7 @@ There are two ways to send identity data to Platform:
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should be defining individual identity fields within the actual schema structure instead. Schemas that utilized `identityMap` also cannot participate in relationships.
+The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should be defining individual identity fields within the actual schema structure instead. Schemas that utilize `identityMap` also cannot participate in relationships.
 
 However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
