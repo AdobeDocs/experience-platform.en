@@ -21,4 +21,4 @@ Use the following legend to interpret this ERD:
 
 >[!NOTE]
 >
->Some entities may include an "_ID" field. This represents the unique identifier (`_id`) that Platform automatically assigns to event or profile entities when they are ingested. However, you can choose to use your own unique ID values for this field if you wish.
+>The Experience Event entity includes an "_ID" field, which represents the unique identifier (`_id`) attribute provided by the XDM ExperienceEvent class. See the reference document on [XDM ExperienceEvent](../../classes/experienceevent.md) for more details on what is expected for this value.
