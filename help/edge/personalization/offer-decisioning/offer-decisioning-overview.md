@@ -26,26 +26,26 @@ It is important to understand the following terminology when working with Offer 
 
 * **Decision Scopes:** For Offer Decisioning, these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
 
-    *Decision scope JSON:*
+  *Decision scope JSON:*
 
-    ```json
-    {
-      "activityId":"xcore:offer-activity:11cfb1fa93381aca",
-      "placementId":"xcore:offer-placement:1175009612b0100c"
-    }
-    ```
+  ```json
+  {
+    "activityId":"xcore:offer-activity:11cfb1fa93381aca",
+    "placementId":"xcore:offer-placement:1175009612b0100c"
+  }
+  ```
 
-    *Decision scope Base64 encoded string:*
+  *Decision scope Base64 encoded string:*
 
-    ```json
-    "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
-    ```
+  ```json
+  "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTFjZmIxZmE5MzM4MWFjYSIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjExNzUwMDk2MTJiMDEwMGMifQ=="
+  ```
 
-    >[!TIP]
-    >
-    >You can copy the decision scope value from the **Activity Overview** page in the UI.
+  >[!TIP]
+  >
+  >You can copy the decision scope value from the **Activity Overview** page in the UI.
 
-    ![](assets/decision-scope-copy.png)
+  ![](assets/decision-scope-copy.png)
 
 * **Datastreams:** For more information, please read the [datastreams](../../fundamentals/datastreams.md) documentation.
 
@@ -56,36 +56,49 @@ It is important to understand the following terminology when working with Offer 
 To enable Offer Decisioning, you need to perform the following steps:
 
 1. Enabled Adobe Experience Platform in your [datastream](../../fundamentals/datastreams.md) and check the "Offer Decisioning" box
-![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
-2. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through [Adobe Experience Platform Launch](http://launch.adobe.com/). Here is a [quick start guide to Platform Launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
-3. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
-    * Standalone installed SDK
-        1. Configure the "sendEvent" action with your `decisionScopes`
+
+   ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
+
+1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through [Adobe Experience Platform Launch](http://launch.adobe.com/). Here is a [quick start guide to Platform Launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
+1. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
+
+   * Standalone installed SDK
+
+     1. Configure the "sendEvent" action with your `decisionScopes`
 
         ```javascript
-        alloy("sendEvent", {
+         alloy("sendEvent", {
             ...
             "decisionScopes": [
                 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIwOWMxM2JkZDIyNCIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMDZhODRkMDViMTEifQ==",
                 "eyJhY3Rpdml0eUlkIjoieGNvcmU6b2ZmZXItYWN0aXZpdHk6MTIxYWIyNWI5NTUwNWIxZiIsInBsYWNlbWVudElkIjoieGNvcmU6b2ZmZXItcGxhY2VtZW50OjEyMWFiMjFmOTQzMDE0MmIifQ=="
             ]
-        })
+         })
         ```
 
     * Platform Launch installed SDK
-        1. [Create a Platform Launch property](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
-        2. [Add the Platform Launch Embed Code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-        3. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
-        ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
-        ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
-        4. Create the necessary [Data Elements](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
-        ![identity-map-data-element](./assets/identity-map-data-element.png)
-        ![xdm-object-data-element](./assets/xdm-object-data-element.png)
-        5. Create your [Rules](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
-            * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
-            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
-        6. [Create and publish a library](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) containing all the relevant Rules, Data Elements, and Extensions you have configured
-   
+
+      1. [Create a Platform Launch property](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
+      1. [Add the Platform Launch Embed Code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
+
+         ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
+      
+         ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
+      
+      1. Create the necessary [Data Elements](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+
+         ![identity-map-data-element](./assets/identity-map-data-element.png)
+      
+         ![xdm-object-data-element](./assets/xdm-object-data-element.png)
+      
+      1. Create your [Rules](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+
+         * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
+
+           ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
+      
+      1. [Create and publish a library](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) containing all the relevant Rules, Data Elements, and Extensions you have configured
 
 ## Sample requests and responses
 

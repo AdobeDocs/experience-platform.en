@@ -8,7 +8,17 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK extension for Adobe Experience Platform Launch. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## March 9, 2020
+## June 1, 2021
+
+### Adobe Experience Platform Web SDK 2.5.0
+
+Contains version 2.5.0 of the Adobe Experience Platform Web SDK library.
+
+* Added a `data` field to the Send Event action. Upcoming documentation will describe how this can be used in certain scenarios.
+* On the XDM Object data element view, an issue was fixed where an error was thrown if the user had access to Adobe Experience Platform sandboxes but not to the sandbox configured as the default for the organization.
+* On the XDM Object data element view, an issue was fixed where a required schema field would be considered invalid even if the parent object contained no values.
+
+## March 9, 2021
 
 ### Adobe Experience Platform Web SDK 2.4.0
 
