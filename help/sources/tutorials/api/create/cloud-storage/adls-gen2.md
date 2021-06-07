@@ -55,9 +55,11 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Create a connection
+## Create a base connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per ADLS Gen2 account as it can be used to create multiple source connectors to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL ADLS Gen2] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL ADLS Gen2] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -106,7 +108,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your cloud storage in the next step.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {

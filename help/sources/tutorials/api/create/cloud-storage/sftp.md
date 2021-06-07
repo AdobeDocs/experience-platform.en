@@ -56,13 +56,15 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Create a connection
+## Create a base connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required as it can be used to create multiple dataflows to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL SFTP] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL SFTP] authentication credentials as part of the request parameters.
 
 ### Create an SFTP connection using basic authentication
 
-To create an SFTP connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, and `password`.
+To create an SFTP base connection using basic authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, and `password`.
 
 **API format**
 
@@ -120,7 +122,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ### Create an SFTP connection using SSH public key authentication
 
-To create an SFTP connection using SSH public key authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, `privateKeyContent`, and `passPhrase`.
+To create an SFTP base connection using SSH public key authentication, make a POST request to the [!DNL Flow Service] API while providing values for your connection's `host`, `userName`, `privateKeyContent`, and `passPhrase`.
 
 >[!IMPORTANT]
 >

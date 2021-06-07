@@ -50,13 +50,13 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 * `Content-Type: application/json`
 
-## Create a connection
+## Create a base connection
 
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Blob] account as it can be used to create multiple dataflows to bring in different data.
+The first step in creating a source connection is to authenticate your [!DNL Blob] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
 
-### Create a [!DNL Blob] connection using connection string-based authentication
+### Create a [!DNL Blob] base connection using connection string-based authentication
 
-To create a [!DNL Blob] connection using connection string-based authentication, make a POST request to the [!DNL Flow Service] API while providing your [!DNL Blob] `connectionString`.
+To create a [!DNL Blob] base connection using connection string-based authentication, make a POST request to the [!DNL Flow Service] API while providing your [!DNL Blob] `connectionString`.
 
 **API format**
 
@@ -99,7 +99,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {
@@ -108,11 +108,11 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-### Create a [!DNL Blob] connection using shared access signature URI
+### Create a [!DNL Blob] base connection using shared access signature URI
 
 A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
 
-To create a [!DNL Blob] connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
+To create a [!DNL Blob] blob connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
 
 **API format**
 
@@ -153,7 +153,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {
