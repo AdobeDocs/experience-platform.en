@@ -3,7 +3,6 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Guardrails for Real-time Customer Profile Data
 solution: Experience Platform
 product: experience platform
-topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which Real-time Customer Profile cannot support. This document outlines best practices and constraints to keep in mind when modeling Profile data.
 exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
@@ -42,6 +41,10 @@ The [!DNL Profile] store data model consists of two core entity types:
 * **Dimension entity:** Your organization may also define XDM classes to describe things other than individuals, such as stores, products, or properties. These non-[!DNL XDM Individual Profile] schemas are known as "dimension entities" and do not contain time-series data. Dimension entities provide lookup data which aids and simplifies multi-entity segment definitions and must be small enough that the segmentation engine can load the entire data set into memory for optimal processing (fast point lookup).
 
   ![](images/guardrails/profile-and-dimension-entities.png)
+
+## Profile fragments
+
+There are multiple guardrails in this document referring to "profile fragments." A profile record is composed of multiple profile fragments. Each fragment represents a primary identity and its source. This means that a fragment may contain a primary ID and event data (time series) in an XDM Experience Event dataset or it may be composed of a primary ID and record data (time-independent attributes) in an XDM Individual Profile dataset.
 
 ## Limit types
 
@@ -85,8 +88,11 @@ The following guardrails refer to data size and are recommended to ensure data c
 
 | Guardrail | Limit| Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum size per profile fragment | 10KB | Soft | **The recommended maximum size of a profile fragment is 10KB.** Ingesting larger profile fragments will affect system performance. For example, loading a heavy CRM dataset where some profile fragments are 50kB in size will result in degraded system performance.|
-| Absolute maximum size per profile fragment | 1MB | Hard | **The absolute maximum size of a profile fragment is 1MB.** Ingestion will fail when attempting to upload a profile fragment that is larger than 1MB.|
+| Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will fail when attempting to upload an event larger than 10KB.|
+| Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will fail when attempting to upload a profile record larger than 100KB.
+| Maximum profile fragment size | 50MB | Hard | **The maximum size of a profile fragment is 50MB.** Ingestion will fail when attempting to upload a [profile fragment](#profile-fragments) that is larger than 50MB.|
+| Maximum profile size storage size | 50MB | Hard | **The maximum size of a stored profile is 50MB.** Ingesting new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will result in the removal of older event data. |
+| Number of batches ingested into Profile store per day | 90 | Soft | **The recommended maximum number of batches ingested into the Profile store per day is 90.** Ingesting additional batches will affect system performance. |
 
 ### Dimension entity guardrails
 
