@@ -60,3 +60,19 @@ The [!UICONTROL Privacy] section allows you to configure how the SDK handles use
 | [!UICONTROL Provided by data element] | The default consent level is determined by a separate data element that you define. When using this option, you must specify the data element using the provided dropdown menu. |
 
 Use Out or Pending if you require explicit user consent for your business operations.
+
+## [!UICONTROL Identity]
+
+### [!UICONTROL Migrate ECID from VisitorAPI]
+
+This field will be turned on by default. When turned on the SDK will be able to read and set old AMCV cookies. This feature is important when migration to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It will allow the Web SDK to continue to use the same ECID.
+
+### [!UICONTROL Use third-party cookies]
+
+This option will enable the use of Adobe third-party cookies. It will allow the Web SDK to keep the visitor ID in a third-party cookie so that it can be used accross sites.
+
+## [!UICONTROL Advanced Settings]
+
+### [!UICONTROL Edge base path]
+
+This field will be used if you need to change the base path that is used to indetract with the Adobe Edge Network. This shouldn't require updating but in the case that you participate on a beta or alpha Adobe might ask you to change this field.
