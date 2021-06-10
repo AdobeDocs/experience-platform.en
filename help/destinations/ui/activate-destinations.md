@@ -43,6 +43,11 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ## [!UICONTROL Mapping] step {#mapping}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applyTransformation"
+>title="Apply transformation"
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+
 Applies to: social destinations and Google Customer Match advertising destination
 
 ![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
@@ -233,6 +238,12 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 ### Mandatory attributes {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatoryKey"
+>title="About mandatory attributes"
+>abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
+
 You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
 Not selecting a mandatory attribute exports all qualified profiles regardless of their attributes.
@@ -240,6 +251,12 @@ Not selecting a mandatory attribute exports all qualified profiles regardless of
 It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
 
 ### Deduplication keys {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationKey"
+>title="About deduplication keys"
+>abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
 >[!IMPORTANT]
 >
