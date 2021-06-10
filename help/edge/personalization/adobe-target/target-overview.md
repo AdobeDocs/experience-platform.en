@@ -206,7 +206,7 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 
 ## Debugging
 
-mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debugging](/fundamentals/debugging.md).
+mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminology
 
