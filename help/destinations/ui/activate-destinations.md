@@ -44,7 +44,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 ## [!UICONTROL Mapping] step {#mapping}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_applyTransformation"
+>id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
 >abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
 
@@ -239,7 +239,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 ### Mandatory attributes {#mandatory-attributes}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_mandatoryKey"
+>id="platform_destinations_activate_mandatorykey"
 >title="About mandatory attributes"
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
@@ -253,7 +253,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 ### Deduplication keys {#deduplication-keys}
 
 >[!CONTEXTUALHELP]
->id="platform_destinations_activate_deduplicationKey"
+>id="platform_destinations_activate_deduplicationkey"
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
