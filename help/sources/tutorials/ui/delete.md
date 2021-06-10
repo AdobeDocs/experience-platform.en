@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics; delete dataflows
 description: The sources workspace provides you with the ability to delete existing batch and streaming dataflows that contain errors or have become obsolete.
 solution: Experience Platform
 title: Delete Dataflows in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
+exl-id: aa224467-7733-40de-aab7-0ff1c557abf2
 ---
-
 # Delete dataflows in the UI
 
 The [!UICONTROL Sources] workspace allows you to delete existing batch and streaming dataflows that contain errors or have become obsolete.

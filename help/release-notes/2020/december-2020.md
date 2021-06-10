@@ -4,8 +4,8 @@ description: Experience Platform release notes December 9, 2020
 doc-type: release notes
 last-update: December 9, 2020
 author: ens60013 & ens72471
+exl-id: 89d631f1-1b11-4a18-98e1-08e1d5bd8b0d
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: December 9, 2020**
@@ -57,5 +57,3 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 | Delete dataflows | Streaming dataflows that contain errors or have become unnecessary can now be deleted using the [!DNL Flow Service] API and the UI. For more information, see the tutorial on [deleting dataflows using the API](../../sources/tutorials/api/delete-dataflows.md) and [deleting dataflows using the UI](../../sources/tutorials/ui/delete.md). |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).
-
-

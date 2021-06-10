@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Array Fields in the UI
 description: Learn how to define an array field in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 9ac55554-c29b-40b2-9987-c8c17cc2c00c
 ---
-
 # Define array fields in the UI
 
 When defining an Experience Data Model (XDM) field in the Adobe Experience Platform user interface, you can designate that field as an array.
@@ -25,6 +25,8 @@ The additional configuration controls for arrays are as follows:
 | [!UICONTROL Minimum length] | The minimum number of items that the array must contain in order for ingestion to be successful. |
 | [!UICONTROL Maximum length] | The maximum number of items that the array must contain in order for ingestion to be successful. |
 | [!UICONTROL Unique items only] | If set to "[!UICONTROL True]", each item in the array must be unique in order for ingestion to be successful. |
+
+{style="table-layout:auto"}
 
 Once you are finished configuring the field, select **[!UICONTROL Apply]** to apply the change to the schema.
 

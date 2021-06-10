@@ -1,10 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Real-time Customer Profile Overview
-topic: guide
+topic-legacy: guide
 description: Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 ---
-
 # [!DNL Real-time Customer Profile] overview
 
 Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With [!DNL Real-time Customer Profile], you can see a holistic view of each individual customer by combining data from multiple channels, including online, offline, CRM, and third party. [!DNL Profile] allows you to consolidate your customer data into a unified view offering an actionable, timestamped account of every customer interaction. This overview will help you understand the role and use of [!DNL Real-time Customer Profile] in [!DNL Experience Platform].
@@ -57,9 +57,11 @@ Every business wants to communicate with their customers in a way that feels per
 
 ### Merge policies
 
-When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. When there is conflicting data from multiple datasets, the merge policy will determine how that data should be treated and which value should be used. Using RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
+When bringing data fragments together from multiple sources and combining them in order to see a complete view of each of your individual customers, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be used to create the customer profile. 
 
-For more information on working with merge policies using the [!DNL Real-time Customer Profile] API, see the [merge policies endpoint guide](api/merge-policies.md). To work with merge policies using the [!DNL Experience Platform] UI, refer to the [merge policies UI guide](ui/merge-policies.md). 
+When there is conflicting data from multiple datasets, the merge policy determines how that data should be treated and which value should be used. Through RESTful APIs or the user interface, you can create new merge policies, manage existing policies, and set a default merge policy for your organization. 
+
+To learn more about merge policies and their role within Experience Platform, please begin by reading the [merge policies overview](merge-policies/overview.md). 
 
 ### Union schemas {#profile-fragments-and-union-schemas}
 

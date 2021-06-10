@@ -3,16 +3,16 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schemas in the UI
 description: Learn the basics of how to create and edit schemas in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: be83ce96-65b5-4a4a-8834-16f7ef9ec7d1
 ---
-
 # Create and edit schemas in the UI
 
 This guide provides an overview of how to create, edit, and manage Experience Data Model (XDM) schemas for your organization in the Adobe Experience Platform UI.
 
 >[!IMPORTANT]
 >
->XDM schemas are extremely customizable, and therefore the steps involved in creating a schema can vary depending on what kind of data you want the schema to capture. As a result, this document only covers the basic interactions you can make with schemas in the UI, and excludes related steps such as customizing classes, mixins, data types, and fields.
+>XDM schemas are extremely customizable, and therefore the steps involved in creating a schema can vary depending on what kind of data you want the schema to capture. As a result, this document only covers the basic interactions you can make with schemas in the UI, and excludes related steps such as customizing classes, schema field groups, data types, and fields.
 >
 >For a full tour of the schema creation process, follow along with the [schema creation tutorial](../../tutorials/create-schema-ui.md) to create a complete example schema and familiarize yourself with the many capabilities of the [!DNL Schema Editor].
 
@@ -30,7 +30,7 @@ Once you select a class, the [!DNL Schema Editor] appears and the schema's base 
 
 ![](../../images/ui/resources/schemas/schema-details.png)
 
-You can now start building the structure of the schema by [adding mixins](#add-mixins).
+You can now start building the structure of the schema by [adding schema field groups](#add-field-groups).
 
 ## Edit an existing schema {#edit}
 
@@ -46,41 +46,49 @@ To edit an existing schema, select the **[!UICONTROL Browse]** tab, and then sel
 >
 >You can use the workspace's search and filtering capabilities to help find the schema easier. See the guide on [exploring XDM resources](../explore.md) for more information.
 
-Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add mixins](#add-mixins) to the schema, [edit field display names](#display-names), or [edit existing custom mixins](./mixins.md#edit) if the schema employs any.
+Once you select a schema, the [!DNL Schema Editor] appears with the schema's structure shown in the canvas. You can now [add field groups](#add-field-groups) to the schema, [edit field display names](#display-names), or [edit existing custom field groups](./field-groups.md#edit) if the schema employs any.
 
-## Add mixins to a schema {#add-mixins}
+## Add field groups to a schema {#add-field-groups}
 
 >[!NOTE]
 >
->This section covers how to add existing mixins to a schema. If you want to create a new custom mixin, see the guide on [creating and editing mixins](./mixins.md#create) instead.
+>This section covers how to add existing field groups to a schema. If you want to create a new custom field group, see the guide on [creating and editing field groups](./field-groups.md#create) instead.
 
-Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of mixins. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Mixins]** in the left rail.
+Once you have opened a schema within the [!DNL Schema Editor], you can add fields to the schema through the use of field groups. To start, select **[!UICONTROL Add]** next to to **[!UICONTROL Field groups]** in the left rail.
 
-![](../../images/ui/resources/schemas/add-mixin-button.png)
+![](../../images/ui/resources/schemas/add-field-group-button.png)
 
-A dialog appears, showing a list of mixins that you can select for the schema. Since mixins are only compatible with one class, only those mixins that are associated with the schema's selected class will be listed. By default, listed mixins are sorted based on their usage popularity within your organization.
+A dialog appears, showing a list of field groups that you can select for the schema. Since field groups are only compatible with one class, only those field groups that are associated with the schema's selected class will be listed. By default, listed field groups are sorted based on their usage popularity within your organization.
 
-![](../../images/ui/resources/schemas/mixin-popularity.png)
+![](../../images/ui/resources/schemas/field-group-popularity.png)
 
-You can use the search bar to help locate your desired mixin. Mixins whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, mixins containing fields that describe desired data attributes are displayed.
+If you know the general activity or business area of the fields you want to add, select one or more of the industry vertical categories in the left rail to filter the displayed list of field groups.
 
-![](../../images/ui/resources/schemas/mixin-search.png)
+![](../../images/ui/resources/schemas/industry-filter.png)
 
-Select the checkbox next to the name of the mixin that you wish to add to the schema. You can select multiple mixins from the list, with each selected mixin appearing in the right rail.
+>[!NOTE]
+>
+>For more information on best practices for industry-specific data modeling in XDM, see the documentation on [industry data models](../../schema/industries/overview.md).
 
-![](../../images/ui/resources/schemas/add-mixin.png)
+You can also use the search bar to help locate your desired field group. Field groups whose name matches the query appear at the top of the list. Under **[!UICONTROL Standard Fields]**, field groups containing fields that describe desired data attributes are displayed.
+
+![](../../images/ui/resources/schemas/field-group-search.png)
+
+Select the checkbox next to the name of the field group that you wish to add to the schema. You can select multiple field groups from the list, with each selected field group appearing in the right rail.
+
+![](../../images/ui/resources/schemas/add-field-group.png)
 
 >[!TIP]
 >
->For any listed mixin, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the mixin captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the mixin provides before you decide to add it to the schema.
+>For any listed field group, you can hover or focus on the information icon (![](../../images/ui/resources/schemas/info-icon.png)) to view a brief description of the kind of data the field group captures. You can also select the preview icon (![](../../images/ui/resources/schemas/preview-icon.png)) to view the structure of the fields that the field group provides before you decide to add it to the schema.
 
-Once you have chosen your mixins, select **[!UICONTROL Add mixin]** to add them to the schema.
+Once you have chosen your field groups, select **[!UICONTROL Add field groups]** to add them to the schema.
 
-![](../../images/ui/resources/schemas/add-mixin-finish.png)
+![](../../images/ui/resources/schemas/add-field-group-finish.png)
 
-The [!DNL Schema Editor] reappears with the mixin-provided fields represented in the canvas.
+The [!DNL Schema Editor] reappears with the field-group-provided fields represented in the canvas.
 
-![](../../images/ui/resources/schemas/mixins-added.png)
+![](../../images/ui/resources/schemas/field-groups-added.png)
 
 ## Enable a schema for Real-time Customer Profile {#profile}
 
@@ -112,11 +120,11 @@ The schema is now enabled for use in Real-time Customer Profile. When Platform i
 
 ## Edit display names for schema fields {#display-names}
 
-Once you have assigned a class and added mixins to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
+Once you have assigned a class and added field groups to a schema, you can edit the display names of any of the schema's fields, regardless of whether those fields have been provided by standard or custom XDM resources.
 
 >[!NOTE]
 >
->Keep in mind that the display names of fields that belong to standard classes or mixins can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or mixin.
+>Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or field group.
 
 To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
@@ -132,7 +140,7 @@ You can change the class of a schema at any point during the initial composition
 
 >[!WARNING]
 >
->Reassigning the class for a schema should be done with extreme caution. Mixins are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
+>Reassigning the class for a schema should be done with extreme caution. Field groups are only compatible with certain classes, and therefore changing the class will reset the canvas and any fields you have added. 
 
 To reassign a class, select **[!UICONTROL Assign]** in the left-hand side of the canvas.
 
@@ -152,7 +160,7 @@ After confirming the class change, the canvas will be reset and all composition 
 
 ## Next steps
 
-This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom mixins and data types for unique use cases.
+This document covered the basics of creating and editing schemas in the Platform UI. It is strongly recommended that you review the [schema creation tutorial](../../tutorials/create-schema-ui.md) for a comprehensive workflow for building a complete schema in the UI, including creating custom field groups and data types for unique use cases.
 
 For more information on the capabilities of the [!UICONTROL Schemas] workspace, see the [[!UICONTROL Schemas] workspace overview](../overview.md).
 

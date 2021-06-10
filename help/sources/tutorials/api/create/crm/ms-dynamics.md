@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Create a Microsoft Dynamics Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Platform to a Microsoft Dynamics account using the Flow Service API.
+exl-id: 423c6047-f183-4d92-8d2f-cc8cc26647ef
 ---
-
 # Create a [!DNL Microsoft Dynamics] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

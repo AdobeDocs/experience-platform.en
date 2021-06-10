@@ -3,9 +3,9 @@ keywords: data governance rtcdp;rtcdp data governance;real time customer data pr
 title: Data Governance overview
 seo-title: Data Governance in Real-time Customer Data Platform
 description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
-seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
+seo-description: Data Governance allows you to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use.
+exl-id: eb501d85-cabd-4667-a1cd-2210ec83fb71
 ---
-
 # [!DNL Data Governance] in Real-time CDP
 
 [!DNL Real-time Customer Data Platform] (Real-time CDP) brings data from multiple enterprise systems together, allowing marketers to better identify, understand, and engage their customers. This data may be subject to usage restrictions defined by your organization or by legal regulations. Therefore, it is important to ensure that Real-time CDP is compliant with usage policies when handling your data.

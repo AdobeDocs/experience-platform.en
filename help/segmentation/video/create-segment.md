@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: cf67c3ae-abe3-45c6-9c6a-4a946b33e762
 ---
-
 # Create a segment in the Experience Platform UI
 
 The following video is intended to support your understanding of creating segments. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about segmentation and how to create segments in the UI, please read the [Segment Builder guide](../ui/segment-builder.md).

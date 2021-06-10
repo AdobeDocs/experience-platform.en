@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;address;xdm:address;datatype;data-type;data type;
 solution: Experience Platform
 title: Postal Address Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Postal Address XDM data type.
+exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 ---
-
 # [!UICONTROL Postal address] data type
 
 [!UICONTROL Postal address] is a standard XDM data type that describes the details of a mailing address.
@@ -33,6 +33,8 @@ description: This document provides an overview of the Postal Address XDM data t
 | `status` | Indicates whether the address can be currently used. |
 | `statusReason` | A description of the current `status`. |
 | `street1` - `street4` | These four fields are meant to contain primary street level information, apartment number, street number, and street name. `street2` to `street4` are optional. |
+
+{style="table-layout:auto"}
 
 For more details on the postal address data type, refer to the public XDM repository:
 

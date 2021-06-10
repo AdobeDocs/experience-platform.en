@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;Aqua Data Studio;Aqua data studio;connect to query service;
 solution: Experience Platform
 title: Connect Aqua Data Studio to Query Service
-topic: connect
+topic-legacy: connect
 description: This document walks through the steps for connecting Aqua Data Studio with Adobe Experience Platform Query Service.
+exl-id: 4770e221-48a7-45d8-80a4-60b5cbc0ec33
 ---
-
 # Connect [!DNL Aqua Data Studio] to Query Service
 
 This document covers the steps for connecting [!DNL Aqua Data Studio] with Adobe Experience Platform [!DNL Query Service].

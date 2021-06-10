@@ -2,8 +2,8 @@
 title: Single-Page Application Implementation for the Adobe Experience Platform Web SDK
 description: Learn how to create a single-page application (SPA) implementation of the Adobe Experience Platform Web SDK using Adobe Target.
 keywords: target;adobe target;xdm views; views;single page applications;SPA;SPA lifecycle;client-side;AB testing;AB;Experience targeting;XT;VEC
+exl-id: cc48c375-36b9-433e-b45f-60e6c6ea4883
 ---
-
 # Single-page application implementation 
 
 Adobe Experience Platform Web SDK provides rich features that equip your business to execute personalization on next-generation, client-side technologies such as single-page applications (SPAs).

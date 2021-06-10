@@ -3,11 +3,11 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Data Types API Endpoint
 description: The /datatypes endpoint in the Schema Registry API allows you to programmatically manage XDM data types within your experience application.
+exl-id: 2a58d641-c681-40cf-acc8-7ad842cd6243
 ---
-
 # Data types endpoint
 
-Data types are used as reference-type fields in classes or mixins in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to mixins in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas mixins can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
+Data types are used as reference-type fields in classes or schema field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level. The `/datatypes` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage data types within your experience application.
 
 ## Getting started
 
@@ -32,6 +32,8 @@ GET /{CONTAINER_ID}/datatypes?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container you want to retrieve data types from: `global` for Adobe-created data types or `tenant` for data types owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of data types from the `tenant` container, using an `orderby` query parameter to sort the data types by their `title` attribute.
@@ -52,6 +54,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON data type for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -102,6 +106,8 @@ GET /{CONTAINER_ID}/datatypes/{DATA_TYPE_ID}
 | `{CONTAINER_ID}` | The container that houses the data type you want to retrieve: `global` for an Adobe-created data type or `tenant` for a data type owned by your organization. |
 | `{DATA_TYPE_ID}` | The `meta:altId` or URL-encoded `$id` of the data type you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a data type by its `meta:altId` value provided in the path. 
@@ -120,11 +126,13 @@ The response format depends on the `Accept` header sent in the request. All look
 
 | `Accept` header | Description |
 | ------- | ------------ |
-| `application/vnd.adobe.xed+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, has titles and descriptions. |
-| `application/vnd.adobe.xed-full+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, has titles and descriptions. |
-| `application/vnd.adobe.xed-notext+json; version={MAJOR_VERSION}` | Raw with `$ref` and `allOf`, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-notext+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, no titles or descriptions. |
-| `application/vnd.adobe.xed-full-desc+json; version={MAJOR_VERSION}` | `$ref` and `allOf` resolved, descriptors included. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`, has titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` and `allOf` resolved, has titles and descriptions. |
+| `application/vnd.adobe.xed-notext+json; version=1` | Raw with `$ref` and `allOf`, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
+| `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -337,6 +345,8 @@ PUT /tenant/datatypes/{DATA_TYPE_ID}
 | --- | --- |
 | `{DATA_TYPE_ID}` | The `meta:altId` or URL-encoded `$id` of the data type you want to re-write. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request re-writes an existing data type, adding a new `floorSize` field.
@@ -465,6 +475,8 @@ PATCH /tenant/data type/{DATA_TYPE_ID}
 | Parameter | Description |
 | --- | --- |
 | `{DATA_TYPE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the data type you want to update. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -602,6 +614,8 @@ DELETE /tenant/datatypes/{DATA_TYPE_ID}
 | Parameter | Description |
 | --- | --- |
 | `{DATA_TYPE_ID}` | The URL-encoded `$id` URI or `meta:altId` of the data type you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 

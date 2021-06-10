@@ -2,12 +2,11 @@
 keywords: Experience Platform;home;popular topics;Vertica;vertica
 solution: Experience Platform
 title: Create an HP Vertica Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect HP Vertica to Adobe Experience Platform using the Flow Service API.
-
+exl-id: 37f831c1-7c82-462a-8338-a0bcaaf08cd1
 ---
-
 # Create an HP [!DNL Vertica] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]
@@ -22,8 +21,8 @@ This tutorial uses the [!DNL Flow Service] API to walk you through the steps to 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](https://docs.adobe.com/content/help/en/experience-platform/source-connectors/home.html): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, map, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](https://docs.adobe.com/content/help/en/experience-platform/sandbox/home.html): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](https://experienceleague.adobe.com/docs/experience-platform/source-connectors/home.html): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, map, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
 The following sections provide additional information that you will need to know in order to successfully connect to HP [!DNL Vertica] using the [!DNL Flow Service] API.
 

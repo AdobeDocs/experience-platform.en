@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot
 solution: Experience Platform
 title: Create a HubSpot Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to HubSpot using the Flow Service API.
+exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 ---
-
 # Create a [!DNL HubSpot] source connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL HubSpot] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 

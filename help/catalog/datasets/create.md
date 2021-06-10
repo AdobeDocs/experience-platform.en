@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
 solution: Experience Platform
 title: Create a Dataset using APIs
-topic: datasets
+topic-legacy: datasets
 description: This document provides general steps for creating a dataset using Adobe Experience Platform APIs and populating the dataset using a file.
+exl-id: 3a5f48cf-ad05-4b9e-be1d-ff213a26a477
 ---
-
 # Create a dataset using APIs
 
 This document provides general steps for creating a dataset using Adobe Experience Platform APIs and populating the dataset using a file.
@@ -96,7 +96,7 @@ The format of the response object depends on the Accept header sent in the reque
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -197,14 +197,14 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/719c4e19184402c27595e65b931a142b",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true,
-        "containerFormat": "parquet",
-        "format": "parquet"
     }
 }'
 ```
+
+| Property | Description |
+| --- | --- |
+| `schemaRef.id` | The URI `$id` value for the XDM schema the dataset will be based on. |
+| `schemaRef.contentType` | Indicates the format and version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information. |
 
 >[!NOTE]
 >

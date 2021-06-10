@@ -2,8 +2,8 @@
 keywords: Awin Advertiser Conversion Tag extension;conversion tag;Awin;awin;AWIN
 title: Awin Advertiser Conversion Tag extension
 description: The Awin Advertiser Conversion Tag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 99feb169-acf3-4e68-8785-3f4cf565e5a9
 ---
-
 # Awin Advertiser Conversion Tag extension {#awin-conversiontag-extension}
 
 ## Overview {#overview}

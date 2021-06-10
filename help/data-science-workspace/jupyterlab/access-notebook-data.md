@@ -2,10 +2,10 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;%dataset;interactive mode;batch mode;Spark sdk;python sdk;access data;notebook data access
 solution: Experience Platform
 title: Data Access in Jupyterlab Notebooks
-topic: Developer Guide
+topic-legacy: Developer Guide
 description: This guide focuses on how to use Jupyter Notebooks, built within Data Science Workspace to access your data.
+exl-id: 2035a627-5afc-4b72-9119-158b95a35d32
 ---
-
 # Data access in [!DNL Jupyterlab] notebooks
 
 Each supported kernel provides built-in functionalities that allow you to read Platform data from a dataset within a notebook. Currently JupyterLab in Adobe Experience Platform Data Science Workspace supports notebooks for [!DNL Python], R, PySpark, and Scala. However, support for paginating data is limited to [!DNL Python] and R notebooks. This guide focuses on how to use JupyterLab notebooks to access your data.
@@ -379,6 +379,16 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 - **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
 - **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
 
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
+
 You can auto generate the above examples in JupyterLab buy using the following method:
 
 Select the Data icon tab (highlighted below) in the left-navigation of JupyterLab. The **[!UICONTROL Datasets]** and **[!UICONTROL Schemas]** directories appear. Select **[!UICONTROL Datasets]** and right-click, then select the **[!UICONTROL Write Data in Notebook]** option from the dropdown menu on the dataset you wish to use. An executable code entry appears at the bottom of your notebook. 
@@ -469,6 +479,16 @@ val spark = SparkSession
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
 
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -513,6 +533,16 @@ And
 ### Write to a dataset {#scala-write-dataset}
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
+
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
 
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
@@ -612,4 +642,3 @@ This table outlines the optional SQL flags that can be used for [!DNL Query Serv
 | `-n`, `--notify` | Toggle option for notifying query results. |
 | `-a`, `--async` | Using this flag executes the query asynchonously and can free up the kernel while the query is executing. Be cautious when assigning query results to variables as it may be undefined if the query is not complete. |
 | `-d`, `--display` | Using this flag prevents results from being displayed. |
-

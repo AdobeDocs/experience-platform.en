@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Jobs API Endpoint
-topic: developer guide
+topic-legacy: developer guide
 description: Learn how to manage privacy jobs for Experience Cloud applications using the Privacy Service API.
+exl-id: 74a45f29-ae08-496c-aa54-b71779eaeeae
 ---
-
 # Privacy jobs endpoint
 
 This document covers how to work with privacy jobs using API calls. Specifically, it covers the use of the `/job` endpoint in the [!DNL Privacy Service] API. Before reading this guide, refer to the [getting started section](./getting-started.md#getting-started) for important information that you need to know in order to successfully make calls to the API, including required headers and how to read example API calls.
@@ -34,6 +34,8 @@ GET /jobs?regulation={REGULATION}&page={PAGE}&size={SIZE}
 | `{REGULATION}` | The regulation type to query for. Accepted values include: <ul><li>`gdpr` (European Union)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brazil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 | `{PAGE}` | The page of data to be displayed, using 0-based numbering. The default is `0`. |
 | `{SIZE}` | The number of results to display on each page. The default is `1` and the maximum is `100`. Exceeding the maximum causes the API to return a 400-code error. |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -153,6 +155,8 @@ curl -X POST \
 | `analyticsDeleteMethod` | An optional property that specifies how Adobe Analytics should handle the personal data. Two possible values are accepted for this attribute: <ul><li>`anonymize`: All data referenced by the given collection of user IDs is made anonymous. If `analyticsDeleteMethod` is omitted, this is the default behavior.</li><li>`purge`: All data is removed completely.</li></ul> |
 | `regulation` **(Required)** | The regulation for the privacy job. The following values are accepted: <ul><li>`gdpr` (European Union)</li><li>`ccpa` (California)</li><li>`lgpd_bra` (Brazil)</li><li>`nzpa_nzl` (New Zealand)</li><li>`pdpa_tha` (Thailand)</li></ul> |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the details of the newly created jobs.
@@ -203,6 +207,8 @@ A successful response returns the details of the newly created jobs.
 | --- | --- |
 | `jobId` | A read-only, unique system-generated ID for a job. This value is used in the next step of looking up a specific job. |
 
+{style="table-layout:auto"}
+
 Once you have successfully submitted the job request, you can proceed to the next step of [checking the job's status](#check-status).
 
 ## Check the status of a job {#check-status}
@@ -222,6 +228,8 @@ GET /jobs/{JOB_ID}
 | Parameter | Description |
 | --- | --- |
 | `{JOB_ID}` | The ID of the job you want to look up. This ID is returned under `jobId` in successful API responses for [creating a job](#create-job) and [listing all jobs](#list). |
+
+{style="table-layout:auto"}
 
 **Request**
 
@@ -319,6 +327,8 @@ A successful response returns the details of the specified job.
 | `productStatusResponse.results` | For certain statuses, some products may return a `results` object that provides additional information not covered by `responseMsgDetail`. |
 | `downloadURL` | If the status of the job is `complete`, this attribute provides a URL to download the job results as a ZIP file. This file is available to download for 60 days after the job completes. |
 
+{style="table-layout:auto"}
+
 ### Job status categories {#status-categories}
 
 The following table lists the different possible job status categories and their corresponding meaning:
@@ -329,6 +339,8 @@ The following table lists the different possible job status categories and their
 | `processing` | Applications have acknowledged the job and are currently processing. |
 | `submitted` | Job is submitted to every applicable application. |
 | `error` | Something failed in the processing of the job - more specific information may be obtained by retrieving individual job details. |
+
+{style="table-layout:auto"}
 
 >[!NOTE]
 >

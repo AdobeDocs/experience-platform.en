@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Schema Registry API Guide Appendix
 description: This document provides supplemental information related to working with the Schema Registry API.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 2ddc7fe8-dd0b-4cf9-8561-e89fcdadbfce
 ---
-
 # Schema Registry API guide appendix
 
 This document provides supplemental information related to working with the [!DNL Schema Registry] API.
@@ -28,6 +28,8 @@ The most common query parameters for paging include:
 | `limit` | Limit the number of resources returned. Example: `limit=5` will return a list of five resources. |
 | `orderby` | Sort results by a specific property. Example: `orderby=title` will sort results by title in ascending order (A-Z). Adding a `-` before the parameter value (`orderby=-title`) will sort items by title in descending order (Z-A). |
 
+{style="table-layout:auto"}
+
 ### Filtering {#filtering}
 
 You can filter results by using the `property` parameter, which is used to apply a specific operator against a given JSON property within the retrieved resources. Supported operators include:
@@ -43,11 +45,13 @@ You can filter results by using the `property` parameter, which is used to apply
 | `~` | Filters by whether the property matches a provided regular expression. | `property=title~test$` |
 | (None) | Stating only the property name returns only entries where the property exists. | `property=title` |
 
+{style="table-layout:auto"}
+
 >[!TIP]
 >
->You can use the `property` parameter to filter mixins by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only mixins that are compatible with the [!DNL XDM Individual Profile] class.
+>You can use the `property` parameter to filter schema field groups by their compatible class. For example, `property=meta:intendedToExtend==https://ns.adobe.com/xdm/context/profile` returns only field groups that are compatible with the [!DNL XDM Individual Profile] class.
 
-## Compatibility Mode
+## Compatibility Mode {#compatibility}
 
 [!DNL Experience Data Model] (XDM) is a publicly documented specification, driven by Adobe to improve the interoperability, expressiveness, and power of digital experiences. Adobe maintains the source code and formal XDM definitions in an [open source project on GitHub](https://github.com/adobe/xdm/). These definitions are written in XDM Standard Notation, using JSON-LD (JavaScript Object Notation for Linked Data) and JSON Schema as the grammar for defining XDM schemas.
 
@@ -61,7 +65,7 @@ The main difference you will notice between standard XDM and Compatibility Mode 
 
 The following is a side-by-side comparison showing birthday-related fields (with "description" attributes removed) in both standard XDM and Compatibility Mode. Notice that the Compatibility Mode fields include a reference to the XDM field and its data type in the "meta:xdmField" and "meta:xdmType" attributes.
 
-<table>
+<table style="table-layout:auto">
   <th>Standard XDM</th>
   <th>Compatibility Mode</th>
   <tr>

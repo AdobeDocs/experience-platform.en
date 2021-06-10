@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;monitor dataflows;flow service api;Flow Service
 solution: Experience Platform
 title: Monitor Dataflows Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: This tutorial covers the steps for monitoring flow run data for completeness, errors, and metrics using the Flow Service API.
+exl-id: 5b7d1aa4-5e6d-48f4-82bd-5348dc0e890d
 ---
-
 # Monitor dataflows using the Flow Service API
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
@@ -250,4 +250,4 @@ A successful response returns details regarding your flow run, including informa
 
 ## Next steps
 
-By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to perform the same tasks using the user interface, see the tutorial on [monitoring dataflows using the user interface](../ui/monitor.md) 
+By following this tutorial, you have retrieved metrics and error information on your dataflow using the [!DNL Flow Service] API. You can now continue to monitor your dataflow, depending on your ingestion schedule, to track its status and ingestion rates. For information on how to perform the same tasks using the user interface, see the tutorial on [monitoring dataflows using the user interface](../ui/monitor.md)

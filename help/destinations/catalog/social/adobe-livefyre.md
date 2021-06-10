@@ -2,8 +2,8 @@
 keywords: livefyre;livefyre extension
 title: Adobe Livefyre extension
 description: The Adobe Livefyre extension is a social destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
 ---
-
 # Adobe Livefyre extension {#adobe-livefyre-extension}
 
 ## Overview {#overview}

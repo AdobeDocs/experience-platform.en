@@ -2,8 +2,8 @@
 keywords: linkedin connection;linkedin connection;linkedin destinations;linkedin;
 title: Linkedin Matched Audiences connection
 description: Activate profiles for your LinkedIn campaigns for audience targeting, personalization, and suppression, based on hashed emails.
+exl-id: 74c233e9-161a-4e4a-98ef-038a031feff0
 ---
-
 # [!DNL LinkedIn Matched Audiences] connection
 
 ## Overview {#overview}
@@ -12,13 +12,13 @@ Activate profiles for your [!DNL LinkedIn] campaigns for audience targeting, per
 
 ![LinkedIn destination in the Adobe Experience Platform UI](../../assets/catalog/social/linkedin/catalog.png)
 
-## Use Cases
+## Use cases
 
 To help you better understand how and when to use the [!DNL LinkedIn Matched Audiences] destination, here is a use case that Adobe Experience Platform customers can solve by using this feature.
 
 A software company organizes a conference and wants to keep in touch with participants, and show them personalized offers based on their conference attendance status. The company can ingest email addresses or mobile device IDs from their own [!DNL CRM] into Adobe Experience Platform. Then, they can build segments from their own offline data, and send these segments to the [!DNL LinkedIn] social platform, optimizing their advertising spending.
 
-## Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 [!DNL LinkedIn Matched Audiences] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
@@ -29,7 +29,7 @@ A software company organizes a conference and wants to keep in touch with partic
 |email_lc_sha256|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. Follow the instructions in the [ID matching requirements](#id-matching-requirements-id-matching-requirements) section and use the appropriate namespaces for plain text and hashed emails, respectively. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.|
 
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, and others) used in the [!DNL LinkedIn Matched Audiences] destination.
 
@@ -65,7 +65,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 >Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 > Attribute source data is not automatically hashed.
 > 
-> During the [Identity Mapping](../../ui/activate-destinations.md#identity-mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> During the [Identity Mapping](../../ui/activate-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
@@ -73,7 +73,11 @@ If you select to hash the email addresses yourself, make sure to comply with the
 
 ## Connect to destination {#connect-destination}
 
-To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social network destinations authentication workflow](./workflow.md). 
+To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social destinations authentication workflow](./workflow.md). 
+
+The video below also demonstrates the steps to configure a [!DNL LinkedIn Matched Audiences] destination and activate segments.
+
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
 ## Activate segments to [!DNL LinkedIn Matched Audiences] {#activate-segments}
 

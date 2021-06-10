@@ -1,8 +1,8 @@
 ---
 title: Integrate IAB TCF 2.0 Support using Platform Launch and the Platform Web SDK Extension
 description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK extension.
+exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 ---
-
 # Integrate IAB TCF 2.0 support using Platform Launch and the Platform Web SDK extension
 
 Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK extension for Experience Platform Launch.
@@ -66,7 +66,7 @@ This custom code does two things:
 
 ## Creating an XDM data element for Experience Events
 
-The consent string should be included in the XDM Experience Event. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy mixin to your schema, you should have a `consentStrings` key in the XDM object.
+The consent string should be included in the XDM Experience Event. To do this, use the XDM Object data element. Start by creating a new XDM Object data element, or alternatively, use one you already created for sending events. If you have added the Experience Event Privacy schema field group to your schema, you should have a `consentStrings` key in the XDM object.
 
 1. Select **[!UICONTROL consentStrings]**.
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Labels API Endpoint
-topic: developer guide
+topic-legacy: developer guide
 description: Learn how to manage data usage labels in Experience Platform using the Policy Service API.
+exl-id: 9a01f65c-01f1-4298-bdcf-b7e00ccfe9f2
 ---
-
 # Labels endpoint
 
 Data usage labels allow you to categorize data according to usage policies that may apply to that data. The `/labels` endpoint in the [!DNL Policy Service API] allows you to programmatically manage data usage labels within your experience application.

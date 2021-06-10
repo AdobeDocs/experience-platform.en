@@ -2,15 +2,21 @@
 keywords: Experience Platform;home;popular topics;data lake privacy;identity namespaces;privacy;data lake
 solution: Experience Platform
 title: Privacy Request Processing in the Data Lake
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform Privacy Service processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations. This document covers essential concepts related to processing privacy requests for customer data stored in the Data Lake.
+exl-id: c06b0a44-be1a-4938-9c3e-f5491a3dfc19
 ---
-
 # Privacy request processing in the [!DNL Data Lake]
 
 Adobe Experience Platform [!DNL Privacy Service] processes customer requests to access, opt out of sale, or delete their personal data as delineated by legal and organizational privacy regulations.
 
 This document covers essential concepts related to processing privacy requests for customer data stored in the [!DNL Data Lake].
+
+>[!NOTE]
+>
+>This guide only covers how to make privacy requests for the Data Lake in Experience Platform. If you also plan to make privacy requests for the Real-time Customer Profile data store, refer to the guide on [privacy request processing for Profile](../profile/privacy.md) in addition to this tutorial.
+>
+>For steps on how to make privacy requests for other Adobe Experience Cloud applications, refer to the [Privacy Service documentation](../privacy-service/experience-cloud-apps.md).
 
 ## Getting started
 

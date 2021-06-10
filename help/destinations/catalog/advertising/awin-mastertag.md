@@ -2,8 +2,8 @@
 keywords: Awin Advertiser mastertag extension;mastertag tag;Awin;awin;AWIN
 title: Awin Advertiser Mastertag extension
 description: The Awin Advertiser Mastertag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: 99a9ea40-b89f-4503-91a7-60cc8e1cd6d3
 ---
-
 # [!DNL Awin Advertiser Mastertag] extension {#awin-mastertag-extension}
 
 ## Overview {#overview}

@@ -1,13 +1,11 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes January 15, 2020
 doc-type: release notes
 last-update: January 15, 2020
 author: crhoades, ens28527
-
+exl-id: e488a50c-2a87-4649-b3a4-f9d45cb12fcb
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: January 15, 2020**
@@ -29,7 +27,7 @@ XDM is a publicly documented specification designed to improve the power of digi
 
 |Feature | Description|
 |--- | ---|
-|Field-type restrictions for fields of equal hierarchy | After an XDM field has been defined as as a certain type, any other fields of the same name and hierarchy must use the same field type, regardless of the classes or mixins they are used in. For example, if a mixin for the XDM [!DNL Profile] class contains a `profile.age` field of type "integer", a similar mixin for XDM [!DNL ExperienceEvent] cannot have a `profile.age` field of type "string". In order to utilize a different field type, the field must be of a different hierarchy than the previously defined field (for example, `profile.person.age`). This feature is meant to prevent conflicts when schemas are brought together in a union. While the constraint does not retroactively affect existing schemas, it is strongly recommended that you review your schemas for field-type conflicts and edit them as necessary.|
+|Field-type restrictions for fields of equal hierarchy | After an XDM field has been defined as as a certain type, any other fields of the same name and hierarchy must use the same field type, regardless of the classes or schema field groups they are used in. For example, if a field group for the XDM [!DNL Profile] class contains a `profile.age` field of type "integer", a similar field group for XDM [!DNL ExperienceEvent] cannot have a `profile.age` field of type "string". In order to utilize a different field type, the field must be of a different hierarchy than the previously defined field (for example, `profile.person.age`). This feature is meant to prevent conflicts when schemas are brought together in a union. While the constraint does not retroactively affect existing schemas, it is strongly recommended that you review your schemas for field-type conflicts and edit them as necessary.|
 |Case-sensitive field validation | Custom fields on the same level must have different names, regardless of capitalization. For example, if you add ad a custom field named "Email", you cannot add another custom field at the same level named "email".|
 
 **Known issues**

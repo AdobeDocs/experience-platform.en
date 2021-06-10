@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Sandboxes in Adobe Experience Platform Help
 breadcrumb-title: Sandoxes Guide
@@ -14,15 +13,12 @@ feature: Data Management
   * [Sandbox UI overview](ui/overview.md)
   * [Sandbox user guide](ui/user-guide.md)
 * Sandbox API {#api}
+  * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)
-  * [List supported sandbox types](api/list-sandbox-types.md)
-  * [List all sandboxes](api/list-all-sandboxes.md)
-  * [List active sandboxes for the current user](api/list-active-sandboxes.md)
-  * [Look up a sandbox](api/look-up-sandbox.md)
-  * [Create a sandbox](api/create-sandbox.md)
-  * [Update a sandbox](api/update-sandbox.md)
-  * [Reset a sandbox](api/reset-sandbox.md)
-  * [Delete a sandbox](api/delete-sandbox.md)
+  * [Available sandboxes](api/available.md)
+  * [Sandbox management](api/sandboxes.md)
+  * [Sandbox types](api/types.md)
+  * [Appendix](api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

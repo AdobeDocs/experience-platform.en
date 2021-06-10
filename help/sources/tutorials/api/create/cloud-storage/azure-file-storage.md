@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
 title: Create an Azure File Storage Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using the Flow Service API.
+exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 ---
-
 # Create an [!DNL Azure File Storage] source connection using the [!DNL Flow Service] API
-
->[!NOTE]
->
->The [!DNL Azure File Storage] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 

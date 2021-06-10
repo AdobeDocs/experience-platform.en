@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Audience Manager connector;Audience manager;audience manager
 solution: Experience Platform
 title: Audience Manager Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: The Adobe Audience Manager source connector streams first-party data collected in Audience Manager to Adobe Experience Platform.
+exl-id: be90db33-69e1-4f42-9d1a-4f8f26405f0f
 ---
-
 # Audience Manager connector
 
 The Adobe Audience Manager data connector streams first-party data collected in Adobe Audience Manager to Adobe Experience Platform. The Audience Manager connector ingests two categories of data to Platform:

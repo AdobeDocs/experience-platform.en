@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;ATS;ats;Azure table storage
 solution: Experience Platform
 title: Create an Azure Table Storage Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure Table Storage to Adobe Experience Platform using the Flow Service API.
+exl-id: 8ebd5d77-ed1f-47e1-8212-efb6c5e84ec1
 ---
-
 # Create an [!DNL Azure Table Storage] source connection using the [!DNL Flow Service] API
 
 >[!NOTE]

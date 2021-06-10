@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;shopify;Shopify
 solution: Experience Platform
 title: Create a Shopify  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Shopify source connection using the Adobe Experience Platform UI.
+exl-id: 527cac95-3d9a-4089-98e4-66d746641b85
 ---
-
 # Create a [!DNL Shopify] source connection in the UI
-
->[!NOTE]
->
-> The [!DNL Shopify] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Shopify] source connector using the [!DNL Platform] user interface.
 
