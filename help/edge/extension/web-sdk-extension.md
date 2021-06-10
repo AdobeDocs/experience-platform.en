@@ -50,6 +50,8 @@ See the guide on [datastreams](../fundamentals/datastreams.md) for more informat
 
 ## [!UICONTROL Privacy]
 
+![](../images/extension/overview/privacy.png)
+
 The [!UICONTROL Privacy] section allows you to configure how the SDK handles user consent signals from your website. Specifically, it allows you to select the default level of consent that is assumed of a user if no other explicit consent preference has been provided. The default consent level is not saved to the user's profile. The following table breaks down what each option entails:
 
 | [!UICONTROL Default Consent Level] | Description |
@@ -63,6 +65,8 @@ Use Out or Pending if you require explicit user consent for your business operat
 
 ## [!UICONTROL Identity]
 
+![](../images/extension/overview/identity.png)
+
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
 This field will be turned on by default. When turned on the SDK will be able to read and set old AMCV cookies. This feature is important when migration to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It will allow the Web SDK to continue to use the same ECID.
@@ -71,7 +75,31 @@ This field will be turned on by default. When turned on the SDK will be able to 
 
 This option will enable the use of Adobe third-party cookies. It will allow the Web SDK to keep the visitor ID in a third-party cookie so that it can be used accross sites.
 
+## [!UICONTROL Personalization]
+
+![](../images/extension/overview/personalization.png)
+
+In the personalization configuration section we provide you two things, a prehiding style editor and a default prehiding snippet. If you would like to hide certain parts if your site while personalized content is loaded you can specify the elements to hide in the prehiding style editor. After you do this you can copy the default prehiding snippet that is provided for you and paste in head portion of your HTML site. 
+
+## [!UICONTROL Data Collection]
+
+![](../images/extension/overview/data-collection.png)
+
+### [!UICONTROL Callback function]
+
+The callback function provided in the extension is also called the ['onBeforeEventSend' function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in the library. This function allows you to modify events globally before they reach the Adobe Edge Network. More detailed information on how to use this function can be found [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally). 
+
+### [!UICONTROL Click data collection]
+
+The AEP Web SDK can automatically collect link click information for you. By default this feature is turned on but can be turned off using this configuration. Links will also be labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. We provide you with some default download link qualifiers but these can be edited at any time.
+
+### [!UICONTROL Automatically collected context data]
+
+By default the AEP Web SDK will collect certain context data for you. The data we collect is around device, web, environment, and place context. If you would like to see a list of the the exact information we collect you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories you can change those settings with this configuration.  
+
 ## [!UICONTROL Advanced Settings]
+
+![](../images/extension/overview/advanced-settings.png)
 
 ### [!UICONTROL Edge base path]
 
