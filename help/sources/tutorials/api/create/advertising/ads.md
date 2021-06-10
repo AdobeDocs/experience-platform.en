@@ -1,17 +1,19 @@
 ---
 keywords: Experience Platform;home;popular topics;google adwords;Google AdWords;adwords
 solution: Experience Platform
-title: Create a Google AdWords Source Connection Using the Flow Service API
+title: Create a Google AdWords Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Google AdWords using the Flow Service API.
 exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 ---
-# Create a [!DNL Google AdWords] source connection using the [!DNL Flow Service] API
+# Create a [!DNL Google AdWords] base connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
 >The [!DNL Google AdWords] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Google Adwords] (hereinafter referred to as "[!DNL AdWords]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
@@ -45,8 +47,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ## Create a base connection
 
-A base connection retains information between your source and Platform, including details on your source's authentication credentials and the connection's state and IMS organization.
-The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL AdWords] authentication credentials as part of the request parameters.
 
@@ -58,7 +59,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL Google AdWords] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Google AdWords]  is `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
+In order to create a [!DNL Google AdWords] connection, its unique connection specification ID must be provided as part of the POST request. The `connectionSpec.id` for [!DNL Google AdWords]  is `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
 
 ```shell
 curl -X POST \
@@ -67,7 +68,7 @@ curl -X POST \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+    -H 'Content-Type: application/json'
     -d '{
         "name": "google-AdWords connection",
         "description": "Connection for google-AdWords",
@@ -111,4 +112,4 @@ A successful response returns details of the newly created base connection, incl
 
 ## Next steps
 
-By following this tutorial, you have created a [!DNL Google AdWords] connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore advertising systems using the Flow Service API](../../explore/advertising.md).
+By following this tutorial, you have created an [!DNL AdWords] base connection using the [!DNL Flow Service] API and have obtained the connection's unique ID value. You can use this ID in the next tutorial as you learn how to [explore advertising systems using the Flow Service API](../../explore/advertising.md).
