@@ -356,7 +356,7 @@ With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied f
 **Usage**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df} --mode batch`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Description**
