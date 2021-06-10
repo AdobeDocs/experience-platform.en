@@ -1,9 +1,9 @@
 ---
-title: Adobe Experience Platform Web SDK Extension Overview
+title: Adobe Experience Platform Web SDK configuration
 description: Learn about the Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 ---
-# Adobe Experience Platform Web SDK extension overview
+# Overview
 
 The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
