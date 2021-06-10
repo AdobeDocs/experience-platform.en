@@ -61,7 +61,7 @@ Each stage in the above timeline represents an entity that may contribute to a p
 
 >[!IMPORTANT]
 >
->Some data usage policies may specify two or more labels with an AND relationship. For example, a policy could restrict a marketing action if labels `C1` AND `C2` are both present, but does not restrict the same action if only one of the those labels are present.
+>Some data usage policies may specify two or more labels with an AND relationship. For example, a policy could restrict a marketing action if labels `C1` AND `C2` are both present, but does not restrict the same action if only one of those labels are present.
 >
 >When it comes to automatic enforcement, the Data Governance framework does not consider the activation of separate segments to a destination as a combination of data. Therefore, the example `C1 AND C2` policy is **NOT** enforced if these labels are included in separate segments. Instead, this policy is only enforced when both labels are present in the same segment upon activation.
 
