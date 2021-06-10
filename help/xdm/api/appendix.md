@@ -70,7 +70,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
   <th>Compatibility Mode</th>
   <tr>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "xdm:birthDate": {
               "title": "Birth Date",
@@ -91,7 +91,7 @@ The following is a side-by-side comparison showing birthday-related fields (with
   </pre>
   </td>
   <td>
-  <pre class="JSON language-JSON hljs">
+  <pre class=" language-json">
         {
           "birthDate": {
               "title": "Birth Date",
