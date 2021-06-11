@@ -6,6 +6,13 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
+## Version 2.5.0, June 2021
+
+* Added support for redirect personalization offers.
+* Automatically collected viewport widths and heights that are negative values will no longer be sent to the server.
+* When an event is canceled by returning `false` from an `onBeforeEventSend` callback, a message is now logged.
+* Fixed an issue where specific pieces of XDM data intended for a single event was included across multiple events.
+
 ## Version 2.4.0, March 2021
 
 * The SDK can now be [installed as an npm package](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html).

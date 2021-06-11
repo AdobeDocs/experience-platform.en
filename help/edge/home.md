@@ -54,7 +54,7 @@ The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Ad
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
+This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, see the [supported use cases page](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). This page lists the use cases we currently support, with links to more information when available.
 
 * **Use Cases Not Yet Supported:** These are use cases that are on our roadmap to be supported in the future.
 * **Use Cases In Progress:** These are the use cases the team is currently working on completing for release.

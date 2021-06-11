@@ -9,7 +9,7 @@ exl-id: 2c917154-c425-463c-b8c8-04ba37d9247b
 ---
 # Create and edit data types using the UI
 
-In Experience Data Model (XDM), data types are used as reference-type fields in classes or schema field groups in the same way as basic literal fields, with the key difference being that data types can define multiple sub-fields. While similar to field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
+In Experience Data Model (XDM), data types are reusable fields that contain multiple sub-fields. While similar to schema field groups in that they allow for the consistent use of a multi-field structure, data types are more flexible because they can be included anywhere in the schema structure whereas field groups can only be added at the root level.
 
 Adobe Experience Platform provides many standard data types that can be used to cover a wide variety of common experience management use cases. However, you can also define your own custom data types in order to serve your unique business needs.
 
@@ -23,7 +23,7 @@ While not required for this guide, it is recommended that you also follow the tu
 
 ## Open the [!DNL Schema Editor] for a data type
 
-In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed, including those defined by Adobe as well as those created by your organization.
+In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace, then select the **[!UICONTROL Data types]** tab. A list of available data types is displayed, including those defined by Adobe and those created by your organization.
 
 ![](../../images/ui/resources/data-types/data-types-tab.png)
 
@@ -47,6 +47,10 @@ This tutorial creates a data type that describes a restaurant property, so the d
 From here, you can skip ahead to the [next section](#add-fields) to start adding fields to the new data type.
 
 ### Edit an existing data type
+
+>[!NOTE]
+>
+>Once an existing data type is used in a schema that has been enabled for use in Real-time Customer Profile, only non-destructive changes can be made to that data type thereafter. See the [rules of schema evolution](../../schema/composition.md#evolution) for more information.
 
 Only custom data types defined by your organization can be edited. To narrow down the displayed list, select the filter icon (![Filter Icon](../../images/ui/resources/data-types/filter.png)) to reveal controls for filtering based on [!UICONTROL Owner]. Select **[!UICONTROL Customer]** to show only custom data types owned by your organization.
 

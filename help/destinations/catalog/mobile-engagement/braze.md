@@ -34,7 +34,7 @@ As a marketer, I want to target users in a mobile engagement destination, with s
 
 ## Supported Identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Braze] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
