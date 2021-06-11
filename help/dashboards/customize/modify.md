@@ -12,7 +12,7 @@ This guide provides step-by-step instructions for customizing how dashboard data
 
 >[!NOTE]
 >
->The widgets shown in the license usage dashboard cannot be customized. Please refer to the [license usage dashboard documentation](guides/license-usage.md) to learn more about this unique dashboard.
+>The widgets shown in the license usage dashboard cannot be customized. Please refer to the [license usage dashboard documentation](../guides/license-usage.md) to learn more about this unique dashboard.
 
 ## Getting started
 
