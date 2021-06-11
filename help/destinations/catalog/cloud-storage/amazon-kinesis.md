@@ -32,6 +32,45 @@ For example, a prospect downloaded a white-paper which qualifies them into a "hi
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
+## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
+
+To successfully connect and export data to your [!DNL Amazon Kinesis] streams, Experience Platform needs permissions for the following actions:
+
+* `kinesis:ListStreams`
+* `kinesis:PutRecord`
+* `kinesis:PutRecords`
+
+These permissions are arranged through the [!DNL Kinesis] console and are checked by Platform once you configure your Kinesis destination in the Platform user interface.
+
+The example below displays the minimum access rights required to successfully export data to a [!DNL Kinesis] destination.
+
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "kinesis:ListStreams",
+                "kinesis:PutRecord",
+                "kinesis:PutRecords"
+            ],
+            "Resource": [
+                "arn:aws:kinesis:us-east-2:901341027596:stream/*"
+            ]
+        }
+    ]
+}
+```
+
+| Property | Description |
+| -------- | ----------- |
+| `kinesis:ListStreams` | An action that lists your Amazon Kinesis data streams. |
+| `kinesis:PutRecord` | An action that writes a single data record into a Kinesis data stream. |
+| `kinesis:PutRecords` | An action that writes multiple data records into a Kinesis data stream in a single call. |
+
+For more information on controlling access for [!DNL Kinesis] data streams, read the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
+
 ## Connect destination {#connect-destination}
 
 See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
