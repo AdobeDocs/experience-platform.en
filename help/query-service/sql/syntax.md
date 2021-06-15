@@ -242,6 +242,7 @@ The `DROP SCHEMA` command drops an existing schema.
 ```sql
 DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 ```
+
 **Parameters**
 
 -  `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
