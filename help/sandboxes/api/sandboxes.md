@@ -342,11 +342,7 @@ A successful response returns HTTP status 200 (OK) with the details of the newly
 
 ## Reset a sandbox {#reset}
 
->[!IMPORTANT]
->
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
-
-Development sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's `name` in the request path.
+Sandboxes have a "factory reset" feature which deletes all non-default resources from a sandbox. You can reset a sandbox by making a PUT request that includes the sandbox's `name` in the request path.
 
 **API format**
 
@@ -357,6 +353,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` property of the sandbox you want to reset. |
+| `validateOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox reset operation without making the actual request. Set this parameter to `validateOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
 
 **Request**
 
@@ -364,7 +361,7 @@ The following request resets a sandbox named "acme-dev".
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validateOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -380,6 +377,10 @@ curl -X PUT \
 
 **Response**
 
+>[!NOTE]
+>
+>Once a sandbox is reset, it takes roughly 30 seconds to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".
+
 A successful response returns the details of the updated sandbox, showing that its `state` is "resetting".
 
 ```json
@@ -393,18 +394,76 @@ A successful response returns the details of the updated sandbox, showing that i
 }
 ```
 
->[!NOTE]
->
->Once a sandbox is reset, it takes roughly 30 seconds to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".
+The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-The following table contains possible exceptions that could prevent a sandbox from being reset:
+Attempting to reset a default production sandbox that contains these data can result in the following warnings:
 
-| Error code | Description |
+```json
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2074-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2075-400"
+},
+{
+    "status": 400,
+    "title": "Sandbox `{SANDBOX_NAME}` cannot be reset. The identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2076-400"
+},
+{
+    "status": 400,
+    "title": "Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service.",
+    "type": "http://ns.adobe.com/aep/errors/SMS-2077-400"
+}
+```
+
+To ignore the warnings and proceed with resetting a production sandbox, you must include the `ignoreWarnings` parameter as part of your request.
+
+**API format**
+
+```http
+PUT /sandboxes/{SANDBOX_NAME}
+```
+
+| Parameter | Description |
 | --- | --- |
-| `2074-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
-| `2075-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature. |
-| `2076-400` | This sandbox cannot be reset because the identity graph hosted in this sandbox is also being used by Adobe Audience Manager for the People Based Destinations (PBD) feature, as well by Adobe Analytics for the Cross Device Analytics (CDA) feature. |
-| `2077-400` | Warning: Sandbox `{SANDBOX_NAME}` is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. |
+| `{SANDBOX_NAME}` | The `name` property of the sandbox you want to reset. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the reset of a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter is not applicable on the default production sandbox. |
+
+**Request**
+
+The following request resets a production sandbox named "acme".
+
+```shell
+curl -X PUT \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'Content-Type: application/json'
+  -d '{
+    "action": "reset"
+  }'
+```
+
+**Response**
+
+A successful response returns the details of the updated sandbox, showing that its `state` is "resetting".
+
+```json
+{
+    "id": "d8184350-dbf5-11e9-875f-6bf1873fec16",
+    "name": "acme",
+    "title": "Acme Business Group prod",
+    "state": "resetting",
+    "type": "production",
+    "region": "VA7"
+}
+```
 
 ## Delete a sandbox {#delete}
 
@@ -427,14 +486,16 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` of the sandbox you want to delete. |
+| `validateOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validateOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force delete a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter is not applicable on the default production sandbox. |
 
 **Request**
 
-The following request deletes a sandbox named "acme-dev".
+The following request deletes a production sandbox named "acme".
 
 ```shell
 curl -X DELETE \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/dev-2 \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}'
@@ -446,8 +507,8 @@ A successful response returns the sandbox's updated details, showing that its `s
 
 ```json
 {
-    "name": "acme-dev",
-    "title": "Acme Business Group dev",
+    "name": "acme",
+    "title": "Acme Business Group prod",
     "state": "deleted",
     "type": "development",
     "region": "VA7"
