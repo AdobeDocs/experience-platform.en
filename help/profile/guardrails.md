@@ -93,8 +93,8 @@ The following guardrails refer to data size and are recommended to ensure data c
 | Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will fail when attempting to upload an event larger than 10KB.|
 | Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will fail when attempting to upload a profile record larger than 100KB.|
 | Maximum profile fragment size | 50MB | Hard | **The maximum size of a profile fragment is 50MB.** Ingestion will fail when attempting to upload a [profile fragment](#profile-fragments) that is larger than 50MB.|
-| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Ingesting new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. |
-| Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance. |
+| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Ingesting new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance.|
+| Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
 
 ### Dimension entity guardrails
 
