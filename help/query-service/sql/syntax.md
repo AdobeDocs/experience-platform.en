@@ -223,6 +223,33 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 -  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
 
+## DROP DATABASE
+
+The `DROP DATABASE` command drops an existing database.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parameters**
+
+-  `IF EXISTS`: If this is specified, no exception is thrown if the database does **not** exist.
+
+## DROP SCHEMA
+
+The `DROP SCHEMA` command drops an existing schema.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+**Parameters**
+
+-  `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
+
+-  `RESTRICT`: Default value for the mode. if this is specified, schema will be dropped only if it doesn't contain any tables.
+
+-  `CASCADE`: if this is specified, schema will be dropped along with all the tables present in the schema.
+
 ## CREATE VIEW
 
 The following syntax defines a `CREATE VIEW` query:
