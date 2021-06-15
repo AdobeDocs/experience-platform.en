@@ -432,7 +432,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` property of the sandbox you want to reset. |
-| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the reset of a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter is not applicable on the default production sandbox. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the reset of a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
 
@@ -487,7 +487,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` of the sandbox you want to delete. |
 | `validateOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validateOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
-| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force delete a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter is not applicable on the default production sandbox. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force delete a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
 
