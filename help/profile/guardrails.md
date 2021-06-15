@@ -9,9 +9,9 @@ exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
 # Guardrails for [!DNL Real-time Customer Profile] data
 
-[!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile] and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it extremely important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
+[!DNL Real-time Customer Profile] provides individual profiles that enable you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes. In order to achieve this targeting, [!DNL Profile], and the segmentation engine within Adobe Experience Platform use a highly denormalized hybrid data model which offers a new approach to developing customer profiles. Use of this hybrid data model makes it important that the data being collected is modeled correctly. While the [!DNL Profile] data store maintaining profile data is not a relational store, [!DNL Profile] permits integration with small dimension entities in order to create segments in a simplified and intuitive manner. This integration is known as multi-entity segmentation. 
 
-Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines these guardrails as well as best practices and constraints when using Profile data for segmentation. 
+Adobe Experience Platform provides a series of guardrails to help you avoid creating data models which [!DNL Real-time Customer Profile] cannot support. This document outlines these guardrails and best practices and constraints when using Profile data for segmentation. 
 
 >[!NOTE]
 >
@@ -66,8 +66,8 @@ Adhering to the following guardrails is recommended when creating a data model f
 | --- | --- | --- | --- |
 | Number of datasets recommended to contribute to the [!DNL Profile] union schema | 20 | Soft | **A maximum of 20 [!DNL Profile]-enabled datasets is recommended.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled.|
 | Number of multi-entity relationships recommended| 5 | Soft | **A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
-| Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly-nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
-|Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time independent data) is <=500.**|
+| Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
+|Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time-independent data) is <=500.**|
 |Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**|
 
 ### Dimension entity guardrails
@@ -76,15 +76,15 @@ Adhering to the following guardrails is recommended when creating a data model f
 | --- | --- | --- | --- |
 | No time-series data permitted for non-[!DNL XDM Individual Profile] entities| 0 | Hard | **Time-series data is not permitted for non-[!DNL XDM Individual Profile] entities in Profile Service.** If a time-series dataset is associated with a non-[!DNL XDM Individual Profile] ID, the dataset should not be enabled for [!DNL Profile]. |
 | No nested relationships | 0 | Soft | **You should not create a relationship between two non-[!DNL XDM Individual Profile] schemas.** The ability to create relationships is not recommended for any schemas which are not part of the [!DNL Profile] union schema.|
-| Maximum JSON depth for primary ID field | 4 | Soft | **The recommended maximum JSON depth for the primary ID field is 4.** This means that in a highly-nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
+| Maximum JSON depth for primary ID field | 4 | Soft | **The recommended maximum JSON depth for the primary ID field is 4.** This means that in a highly nested schema, you should not select a field as a primary ID if it is nested more than 4 levels deep. A field that is on the 4th nested level can be used as a primary ID.|
 
 ## Data size guardrails
 
-The following guardrails refer to data size and are recommended to ensure data can be ingested, stored, and queried as intended. 
+The following guardrails refer to data size and are recommended to ensure that data can be ingested, stored, and queried as intended. 
 
 >[!NOTE]
 >
->Data size will be measured as uncompressed data in JSON at time of ingestion.
+>Data size is measured as uncompressed data in JSON at time of ingestion.
 
 ### Primary entity guardrails
 
@@ -110,6 +110,6 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 | Guardrail | Limit | Limit Type | Description|
 | --- | --- | --- | --- |
-| Maximum number of segments per sandbox | 10K | Soft | **The maximum number of segments an organization can create is 10K per sandbox.** An organization can have more than 10K segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments will results in degraded system performance.|
+| Maximum number of segments per sandbox | 10K | Soft | **The maximum number of segments an organization can create is 10K per sandbox.** An organization can have more than 10K segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments will result in degraded system performance.|
 | Maximum number of streaming segments per sandbox | 500 | Soft | **The maximum number of streaming segments an organization can create is 500 per sandbox.** An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments will result in degraded system performance.|
 | Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 batch segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|
