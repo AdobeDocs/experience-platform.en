@@ -28,7 +28,7 @@ To promote the release, they upload email addresses from their CRM database into
 
 ## Data governance for [!DNL Google Customer Match] destinations {#data-governance}
 
-Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../..//data-governance/labels/overview.md) about data governance tools and policies.
+Some destinations in Experience Platform have certain rules and obligations for data sent to, or received from, the destination platform. You are responsible for understanding the limitations and obligations of your data and how you use that data in Adobe Experience Platform and the destination platform. Adobe Experience Platform provides data governance tools to help you manage some of those data usage obligations. [Learn more](../../../data-governance/labels/overview.md) about data governance tools and policies.
 
 ## Supported identities {#supported-identities}
 
@@ -52,13 +52,9 @@ Before setting up a [!DNL Google Customer Match] destination in Experience Platf
 
 ### Allow list {#allowlist}
 
->[!NOTE]
->
->It is mandatory to be added to Google's allow list before setting up your first [!DNL Google Customer Match] destination in Experience Platform. Please ensure the allow list process described below has been completed by Google before creating a destination.
+Before creating the [!DNL Google Customer Match] destination in Experience Platform, make sure your [!DNL Google Ads] account complies with the [Google Customer Match policy](https://support.google.com/google-ads/answer/6299717/customer-match-policy).
 
-Before creating the [!DNL Google Customer Match] destination in Experience Platform, you must contact Google and follow the allow list instructions in [Use Customer Match partners to upload your data](https://support.google.com/google-ads/answer/7361372?hl=en&ref_topic=6296507) in the Google documentation.
-
-There is also a second Google allow list that you must add your account to if you are planning to upload data using Google's [User_ID](https://developers.google.com/adwords/api/docs/guides/remarketing#customer_match_with_email_address_address_or_user_id). To add your account to the allow list, contact your Google account manager.
+Customers with compliant accounts are automatically allow listed by Google.
 
 ## ID matching requirements {#id-matching-requirements}
 

@@ -10,7 +10,7 @@ exl-id: 31108e57-d416-485b-a6c3-4ebc4f5b1152
 
 [!UICONTROL Web page details] is a standard Experience Data Model (XDM) data type that describes details about a web page that has just been loaded and viewed, as recorded by an ExperienceEvent.
 
-The data type is intended for full page details and initial page loads of single-page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interactions.md) data type.
+The data type is intended for full page details and initial page loads of single-page web applications (SPAs). For interactions that are happening on a loaded page that do not trigger a new page load, see the [web interaction](./web-interaction.md) data type.
 
 <img src='../images/data-types/web-page-details.PNG' width=500 /><br />
 
@@ -24,6 +24,8 @@ The data type is intended for full page details and initial page loads of single
 | `server` | String | The normative or usual server that hosts the web page. This may or may not be the host or server that actually served the page interaction. |
 | `siteSection` | String | The normative name of the site section where this web page resides. This can be used to classify or categorize the interaction. |
 | `viewName` | String | The name of the view, within a page. This property is commonly used with single-page applications or pages that have tabs or controls that change a majority of the page layout. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

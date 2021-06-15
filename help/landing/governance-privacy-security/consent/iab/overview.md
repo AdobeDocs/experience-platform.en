@@ -97,7 +97,7 @@ Customer consent data must be sent to datasets whose schemas contain TCF consent
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include TCF consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
+For more information on how to work with merge policies, refer to the [merge policies overview](../../../../profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
 
 ## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
 
@@ -113,7 +113,7 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 ### Create a new edge configuration
 
-In order for the SDK to send data to Experience Platform, you must first create a new edge configuration for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/edge-configuration.md).
+In order for the SDK to send data to Experience Platform, you must first create a new edge configuration for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/datastreams.md).
 
 After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 

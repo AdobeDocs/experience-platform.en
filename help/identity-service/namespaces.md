@@ -67,25 +67,33 @@ The following standard namespaces are provided for use by all organizations with
 | TNTID | A namespace that represents Adobe Target. See the following document on [Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=en) fore more information. |
 | Windows AID | A namespace that represents a Windows Advertising ID. See the following document on [Windows Advertising ID](https://docs.microsoft.com/en-us/uwp/api/windows.system.userprofile.advertisingmanager.advertisingid?view=winrt-19041) for more information. |
 
-To view standard namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select the **[!UICONTROL Browse]** tab to display a list of standard identity namespaces accessible to your organization. You can sort the namespaces alphabetically by their **[!UICONTROL Display name]**, **[!UICONTROL Identity symbol]**, or **[!UICONTROL Owner]**. Alternatively, you can sort the namespaces chronologically by their most recent update date.
+### View identity namespaces
 
-Select a namespace to see more specific information on the right rail.
+To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the left navigation and then select **[!UICONTROL Browse]**.
 
->[!NOTE]
->
->Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
+![browse](./images/browse.png)
 
-![](./images/browse-namespaces.png)
+A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Unique identities] and [!UICONTROL Identity graph strength]. [!UICONTROL Unique identities] refer to the number of identities that exist in the particular sandbox that you are using, while the [!UICONTROL Identity graph strength] strength displays information on the number of cookie and non-cookie IDs within your sandbox.
 
-## Managing custom namespaces {#manage-namespaces}
+![identities](./images/identities.png)
+
+Platform also provides namespaces for integration purposes. These namespaces are hidden by default as they are used to connect with other systems, and not used to stitch identities. To view integration namespaces, select **[!UICONTROL View integration identities]**.
+
+![view-integration-identities](./images/view-integration-identities.png)
+
+Select an identity namespace from the list to view information on a specific namespace. Selecting an identity namespace updates the display on the right rail to show metadata regarding the identity namespace that you selected, including the number of identities ingested and the number of records failed and skipped.
+
+![select-namespace](./images/select-namespace.png)
+
+## Manage custom namespaces {#manage-namespaces}
 
 Depending on your organizational data and use cases, you may require custom namespaces. Custom namespaces can be created using the [[!DNL Identity Service]](./api/create-custom-namespace.md) API or through the UI.
 
 To create a custom namespace using the UI, navigate to the **[!UICONTROL Identities]** workspace, select **[!UICONTROL Browse]**, and then select **[!UICONTROL Create identity namespace]**.
 
-![](./images/create.png)
+![select-create](./images/select-create.png)
 
-The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to further information about the namespace. All the identity types except **Non-people identifier** follows the same behavior of stitching. If you select **Non-people identifier** as identity type when creating a namespace, stitching does not occur. For specific information regarding each identity type, refer to the table on [identity types](#identity-types).
+The **[!UICONTROL Create identity namespace]** dialog box appears. Provide a unique **[!UICONTROL Display name]** and **[!UICONTROL Identity symbol]** and then select the identity type you would like to create. You can also add an optional description to add further information about the namespace. All the identity types except **Non-people identifier** follows the same behavior of stitching. If you select **Non-people identifier** as identity type when creating a namespace, stitching does not occur. For specific information regarding each identity type, refer to the table on [identity types](#identity-types).
 
 When finished, select **[!UICONTROL Create]**.
 
@@ -93,7 +101,7 @@ When finished, select **[!UICONTROL Create]**.
 >
 >Namespaces that you define are private to your organization and require a unique identity symbol in order to be created successfully.
 
-![](./images/create-namespace.png)
+![create-identity-namespace](./images/create-identity-namespace.png)
 
 Similar to standard namespaces, you can select a custom namespace from the **[!UICONTROL Browse]** tab to view its details. However, with a custom namespace you can also edit its display name and description from the details area.
 

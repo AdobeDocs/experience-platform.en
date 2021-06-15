@@ -13,7 +13,7 @@ exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL Environment Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
+[!UICONTROL Environment Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) used to capture information regarding environment details related to an Experience Event such as device details, browser information, local time, and other geographical information.
 
 <img src='../../images/field-groups/environment-details.png' width=500 /><br />
 
@@ -22,6 +22,8 @@ exl-id: 1d25b98f-66ac-443f-9b1c-dfd20a168c59
 | `device` | [Device](../../data-types/device.md)  | Describes an identified device, application or device browser instance that is trackable across sessions, normally by cookies. |
 | `environment` | [Environment](../../data-types/environment.md) | Describes information about the situational context of the event observation, specifically detailing transitory information such as the network or software versions. |
 | `placeContext` | [Place context](../../data-types/place-context.md) | Describes the transient circumstances related to the event observation. Examples include locale-specific information such as weather, local time, traffic, day of the week, workday vs. holiday, and working hours. |
+
+{style="table-layout:auto"}
 
 For more details on the field group, refer to the public XDM repository:
 

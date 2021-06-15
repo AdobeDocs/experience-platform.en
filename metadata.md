@@ -1,7 +1,7 @@
 ---
 cloud: Experience Cloud
 product: adobe experience platform
-feature-set: Platform
+feature-set: Experience Platform
 solution-title: Platform Overview
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png

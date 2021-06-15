@@ -56,7 +56,7 @@ For [!DNL Azure Event Hubs] destinations, provide the name of your existing data
 
 Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. Read the section [Activate segments](#activate-segments), for the rest of the workflow to export data.
 
-## Use macros to create a folder in your storage location{#use-macros}
+## Use macros to create a folder in your storage location {#use-macros}
 
 >[!NOTE]
 >
