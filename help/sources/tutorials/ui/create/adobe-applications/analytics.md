@@ -9,29 +9,29 @@ exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
 # Create an Adobe Analytics source connection in the UI
 
-This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring consumer data into Adobe Experience Platform.
+This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring [!DNL Analytics] report suite data into Adobe Experience Platform.
 
 ## Getting started
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
-*   [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-*   [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
-*   [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Experience Data Model (XDM) System](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+* [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ## Create a source connection with Adobe Analytics
 
-Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the sources workspace. The **Catalog** screen displays available sources to create inbound connections with, and each source shows the number of existing accounts and dataset flows associated to them.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
-Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Analytics]** to expose an information bar on the right-hand side of your screen. The information bar provides a brief description for the selected source as well as options to connect with the source or view its documentation. To view existing accounts, select **[!UICONTROL Accounts]**.
+Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Analytics]** and then select **[!UICONTROL Add data]**.
 
 ![](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
 
-The **[!UICONTROL Adobe Analytics]** step appears. Previously established dataset flows for Analytics are listed on this screen. You can create a new dataset flow by clicking **[!UICONTROL Select data]**.
+The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL Report suite] to start creating a source connection for Analytics report suite data, and then select the report suite you would like to ingest. Select [!UICONTROL Next] to proceed.
 
 >[!NOTE]
 >
@@ -45,13 +45,15 @@ From the list of available report suites, select the one you want to bring into 
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
-### Name your dataset flow
+### Map standard fields
+
+### Provide dataflow details
 
 The **[!UICONTROL Dataset flow detail]** step appears, where you must provide a name and an optional description for the dataset flow. Select **[!UICONTROL Next]** when finished.
 
 ![](../../../../images/tutorials/create/analytics/dataset-flow-detail.png)
 
-### Review your dataset flow
+### Review
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
 
