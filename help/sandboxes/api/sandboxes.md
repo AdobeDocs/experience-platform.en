@@ -396,7 +396,7 @@ A successful response returns the details of the updated sandbox, showing that i
 
 The default production sandbox and any user-created production sandboxes cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-Attempting to reset the default production sandbox or any user-created production sandboxes that contain [!DNL Analytics] and [!DNL Audience Manager] data can result in the following warnings:
+The following is a list of possible exceptions that could prevent a sandbox from being reset:
 
 ```json
 {
@@ -421,7 +421,7 @@ Attempting to reset the default production sandbox or any user-created productio
 }
 ```
 
-You can ignore the warnings and proceed with resetting a user-created production sandbox by including the `ignoreWarnings` parameter as part of your request.
+You can proceed to reset a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] by adding the `ignoreWarnings` parameter to your request.
 
 **API format**
 
@@ -432,7 +432,7 @@ PUT /sandboxes/{SANDBOX_NAME}/?ignoreWarnings=true
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` property of the sandbox you want to reset. |
-| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the reset of a production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter cannot be applied to a default production sandbox. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the reset of a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
 
@@ -487,7 +487,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` of the sandbox you want to delete. |
 | `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
-| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force delete a user-created production sandbox irrespective of the `PLATFORM_SEGMENT_SHARING_TO_AAM` feature on the sandbox. This parameter cannot be applied to a default production sandbox. |
+| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the deletion a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
 
