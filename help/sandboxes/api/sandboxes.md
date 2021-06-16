@@ -394,9 +394,9 @@ A successful response returns the details of the updated sandbox, showing that i
 }
 ```
 
-The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
+The default production sandbox and user-created production sandboxes cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
-Attempting to reset a default production sandbox that contains these data can result in the following warnings:
+Attempting to reset a production sandbox that contains these data can result in the following warnings:
 
 ```json
 {
