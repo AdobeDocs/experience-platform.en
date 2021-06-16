@@ -5,13 +5,21 @@ seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
 exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
-# Retrieve Adobe Experience Cloud IDs
+# Adobe Experience Cloud IDs
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First-party identity
 
-The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
+The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. We recommend that you set up a CNAME for your [Edge Domain config](../fundamentals/configuring-the-sdk.md#edgeConfigId).
+
+Every hit coming from the AEP Web SDK will have an ECID added to it by the Identity Service on the Edge. For first time visitor, the ECID will be generated and added to the payload; for repeating visitors, the ECID will be retrieved from the `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie and added to the payload.
+
+The ECID will be added under the `identityMap` field in your `xdm`. Using the browser's dev tool, you can view the ECID in the response under the payload with the type: `identity:result`, but you will not be able to see the ECID in the Request.
+
+CNAME implementations allow you to customize the collection domain used by Adobe so that they match your own domain. This allows Adobe to set first-party cookies on the server-side instead of the client-side using JavaScript. In the past, these server-side first-party cookies were not subject to limits imposed under Apple’s Intelligent Tracking Prevention (ITP) policy. However, in November 2020, Apple updated their policies so that these limitations were also applied to cookies set via CNAME. Currently, both cookies set on the server-side via CNAME and cookies set on the client-side via Javascript are limited to a seven-day or 24-hour expiry under ITP. For more information on the ITP policy, see this Apple document on [tracking prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+
+While a CNAME implementation does not provide any benefits in terms of cookie lifetime, there may be some other benefits such as ad blockers and less common browsers preventing data from being sent to domains they classify as trackers. In those cases, using a CNAME may prevent your data collection from being disrupted for users employing these tools.
 
 ## 3rd-party identity
 
