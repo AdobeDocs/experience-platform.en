@@ -100,7 +100,6 @@ You can reset a production sandbox that is used for bi-directional segment shari
 
 ![both](../images/ui/seg.png)
 
-
 ## Delete a sandbox
 
 >[!IMPORTANT]
