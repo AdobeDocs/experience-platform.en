@@ -96,9 +96,10 @@ A default production sandbox that contains data for both CDA and PBD also cannot
 
 ![both](../images/ui/both.png)
 
-A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can be reset, after the following warning message.
+You can reset a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. Select [!UICONTROL Continue] to proceed with the reset.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
+
 
 ## Delete a sandbox
 
