@@ -247,9 +247,9 @@ DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
 
 -  `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
 
--  `RESTRICT`: Default value for the mode. if this is specified, schema will be dropped only if it doesn't contain any tables.
+-  `RESTRICT`: Default value for the mode. If this is specified, the schema will only be dropped if it **doesn't** contain any tables.
 
--  `CASCADE`: if this is specified, schema will be dropped along with all the tables present in the schema.
+-  `CASCADE`: If this is specified, the schema will be dropped along with all the tables present in the schema.
 
 ## CREATE VIEW
 
