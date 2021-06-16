@@ -153,7 +153,7 @@ Typical [!DNL Platform Web SDK] code using this command looks like the following
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
@@ -162,23 +162,17 @@ alloy("sendEvent", {
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+	      "entity.id" : "123",
+	      "entity.genre" : "Drama"
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Request recommendations

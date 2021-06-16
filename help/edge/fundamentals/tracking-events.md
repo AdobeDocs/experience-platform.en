@@ -68,9 +68,32 @@ In this example, the data layer is cloned by serializing it to JSON, then deseri
 >
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
+
 ### Sending non-XDM data
 
-Currently, sending data that does not match an XDM schema is unsupported. Support is planned for a future date.
+Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0+ of the AEP Web SDK.
+
+This is useful if you need to update an Adobe Target profile or send Target Recommendations attributes. [Read more about these Target features](../personalization/adobe-target/target-overview.md#single-profile-update)
+
+In the future, you will be able to send your full JSON data layer under the `data` option, and map it to XDM server side on the Edge.
+
+**Sample code**
+
+```
+alloy("sendEvent", {
+  data: {
+    __adobe: {
+      target: {
+        "profile.gender": "female",
+        "profile.age": 30,
+	      "entity.id" : "123",
+	      "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
+
 
 ### Setting `eventType` {#event-types}
 
