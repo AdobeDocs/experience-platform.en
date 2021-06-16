@@ -41,7 +41,7 @@ The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL 
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-From the list of available report suites, select the one you want to bring into Platform and click **[!UICONTROL Next]**.
+From the list of available report suites, select the one you want to bring into Platform and select **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/create/analytics/select-data.png)
 
