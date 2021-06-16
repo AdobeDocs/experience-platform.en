@@ -353,7 +353,7 @@ PUT /sandboxes/{SANDBOX_NAME}
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` property of the sandbox you want to reset. |
-| `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox reset operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
+| `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox reset operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics, Adobe Audience Manager, or segment sharing data. |
 
 **Request**
 
@@ -361,7 +361,7 @@ The following request resets a sandbox named "acme-dev".
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev/?validationOnly=true \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme-dev?validationOnly=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -379,7 +379,7 @@ curl -X PUT \
 
 >[!NOTE]
 >
->Once a sandbox is reset, it takes roughly 30 seconds to be provisioned by the system. Once provisioned, the sandbox's `state` becomes "active" or "failed".
+>Once a sandbox is reset, it takes roughly 30 seconds to be provisioned by the system.
 
 A successful response returns the details of the updated sandbox, showing that its `state` is "resetting".
 
@@ -440,7 +440,7 @@ The following request resets a production sandbox named "acme".
 
 ```shell
 curl -X PUT \
-  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme/?ignoreWarnings=true \
+  https://platform.adobe.io/data/foundation/sandbox-management/sandboxes/acme?ignoreWarnings=true \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -486,7 +486,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | Parameter | Description |
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` of the sandbox you want to delete. |
-| `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics or Adobe Audience Manager data. |
+| `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics, Adobe Audience Manager, or segment sharing data. |
 | `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the deletion a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
