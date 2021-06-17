@@ -6,7 +6,27 @@ topic-legacy: troubleshooting
 description: This document contains information on common error codes you encounter and the possible causes.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# [!DNL Query Service] Troubleshooting Guide
+# [!DNL Query Service] troubleshooting guide
+
+## Frequently asked questions
+
+The following section lists out commonly asked questions for Query Service, as well as solutions to resolve these issues.
+
+### How can I get only the metadata for a query?
+
+To get only the metadata for a query, you can run a query that returns zero rows, as follows:
+
+```sql
+SELECT * FROM <table> WHERE 1=0
+```
+
+This query will only return the metadata for the specified table.
+
+### CTAS????
+
+### How can I filter my data?
+
+### Columnar????
 
 ## REST API errors
 
