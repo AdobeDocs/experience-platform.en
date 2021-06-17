@@ -15,6 +15,7 @@ The following features have been tested and are currently supported in [!DNL Tar
 * [Automated Personalization activities](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Experience Targeting activities](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
 * [Multivariate Tests (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Recommendations activities](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
 * [Native Target impression and conversion reporting](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
 * [VEC Support](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
@@ -154,7 +155,6 @@ alloy("sendEvent", {
    xdm: { // Experience Event XDM data },
    data: { // Freeform stuff (event & profile) }
 });
-
 ```
 
 **Sample code**
@@ -171,13 +171,42 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30
+        "profile.age": 30,
+	"entity.id" : "123",
+	"entity.genre" : "Drama"
       }
     }
   }
 }) 
 .then(console.log);
 ```
+
+## Request recommendations
+
+The following table lists [!DNL Recommendations] attributes and whether each one is supported via the [!DNL Platform Web SDK]:
+
+|Category|Attribute|Support Status|
+| --- | --- | --- |
+|Recommendations – Default entity attributes |entity.id|Supported|
+||entity.name|Supported|
+||entity.categoryId|Supported|
+||entity.pageUrl|Supported|
+||entity.thumbnailUrl|Supported|
+||entity.message|Supported|
+||entity.value|Supported|
+||entity.inventory|Supported|
+||entity.brand|Supported|
+||entity.margin|Supported|
+||entity.event.detailsOnly|Supported|
+|Recommendations – Custom entity attributes|entity.yourCustomAttributeName|Supported|
+|Recommendations – Reserved mbox/page parameters|excludedIds|Supported|
+||cartIds|Supported|
+||productPurchasedId|Supported|
+|Page or item category for category affinity|user.categoryId|Supported|
+
+## Debugging
+
+mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debugging](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/debugging.html).
 
 ## Terminology
 
