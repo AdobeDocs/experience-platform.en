@@ -426,7 +426,7 @@ You can proceed to reset a production sandbox that is used for bi-directional se
 **API format**
 
 ```http
-PUT /sandboxes/{SANDBOX_NAME}/?ignoreWarnings=true
+PUT /sandboxes/{SANDBOX_NAME}?ignoreWarnings=true
 ```
 
 | Parameter | Description |
@@ -487,7 +487,7 @@ DELETE /sandboxes/{SANDBOX_NAME}
 | --- | --- |
 | `{SANDBOX_NAME}` | The `name` of the sandbox you want to delete. |
 | `validationOnly` | An optional parameter that allows you to do a pre-flight check on the sandbox delete operation without making the actual request. Set this parameter to `validationOnly=true` to check if the sandbox you are about to reset contains any Adobe Analytics, Adobe Audience Manager, or segment sharing data. |
-| `ignoreWarnings` | An optional parameter that allows you to  skip the validation check and force the deletion a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. This parameter cannot be applied to a default production sandbox. |
+| `ignoreWarnings` | An optional parameter that allows you to skip the validation check and force the deletion of a user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. This parameter cannot be applied to a default production sandbox. |
 
 **Request**
 
