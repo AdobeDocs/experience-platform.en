@@ -120,7 +120,7 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service can still be deleted after the following warning.
+A user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can still be deleted after the following warning. 
 
 ![seg](../images/ui/delete-seg.png)
 
