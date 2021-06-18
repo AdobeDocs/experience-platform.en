@@ -22,11 +22,37 @@ SELECT * FROM <table> WHERE 1=0
 
 This query will only return the metadata for the specified table.
 
-### CTAS????
+### How can I quickly experiment on a query? How can I validate a query is functional?
+
+You can create temporary tables to quickly iterate and experiment on a query before materializing it for use.
+
+For example, you can create a temporary table:
+
+```sql
+CREATE temp TABLE temp_dataset AS
+SELECT *
+FROM actual_dataset
+WHERE 1 = 0;
+```
+
+Then you can use the temporary table as follows: 
+
+```sql
+INSERT INTO temp_dataset
+SELECT a._company AS _company,
+a._id AS _id,
+a.timestamp AS timestamp
+FROM temp_dataset a
+WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
+AND timestamp < To_timestamp('2021-01-21 13:00:00')
+LIMIT 100;
+```
 
 ### How can I filter my data?
 
-### Columnar????
+### Can I get all of the data from my rows?
+
+You cannot get all the data from your rows, as Query Service is a **columnar** based system, and not a row-based system.
 
 ## REST API errors
 
