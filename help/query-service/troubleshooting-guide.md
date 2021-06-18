@@ -48,7 +48,20 @@ AND timestamp < To_timestamp('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
-### How can I filter my data?
+### How should I filter my time series data?
+
+When querying with time series data, you should use the timestamp filter whenever possible for more accurate analysis.
+
+An example of using the timestamp filter can be seen below:
+
+```sql
+SELECT a._company  AS _company,
+       a._id       AS _id,
+       a.timestamp AS timestamp
+FROM   dataset a
+WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
+       AND timestamp < To_timestamp('2021-01-21 13:00:00')
+```
 
 ### Can I get all of the data from my rows?
 
