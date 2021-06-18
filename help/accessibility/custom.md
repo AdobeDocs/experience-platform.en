@@ -16,9 +16,9 @@ The Experience Platform user interface meets required contrast ratios for normal
 
 In Platform, UI elements that are clickable or actionable with a pointer can also be engaged using a keyboard. This includes the left navigation, video players, tables, and more.
 
-Experience Platform strives to meet the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) web standards, including the addition of ARIA labels to UI elements.
+Experience Platform strives to meet international accessibility standards, including the Web Content Accessibility Guidelines 2.1 Level A and Level AA and the Web Accessibility Initiative - Accessible Rich Internet Applications (WAI-ARIA) web standards.
 
-![An image showing the homepage of the Adobe Experience Platform UI.](images/homepage.png)
+![The homepage of the Adobe Experience Platform UI.](images/homepage.png)
 
 ## Left navigation
 
@@ -26,25 +26,25 @@ The left navigation within the Experience Platform UI is keyboard accessible and
 
 From the Home screen, users can tab into the left navigation. Selecting `Shift + tab` returns the user to the Home screen. 
 
-![An image showing the Experience Platform left navigation.](images/left-navigation-select.png)
+![The Experience Platform left navigation.](images/left-navigation-select.png)
 
 With the left navigation in focus, Tab takes users to the expand and collapse interaction. The ability to expand or collapse the left navigation is activated with the Enter (Return) key.
 
-![An image showing the Experience Platform left navigation collapsed.](images/left-navigation-collapse.png)
+![The Experience Platform left navigation collapsed.](images/left-navigation-collapse.png)
 
 With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and cycle continuously (in other words, the focus does not shift away until the user tabs away from the left navigation). Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text. When selecting a left navigation item, the Enter (Return) key will open the selected UI item in the right panel, however focus remains in left navigation until the user tabs away.
 
-![An image showing the Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
+![AThe Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
 
 Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items will be skipped during arrow navigation and the user will not be able to select the item using the Enter (Return) key.
 
-![An image showing sections of the Experience Platform left navigation that are not enabled for the user.](images/left-navigation-sections-disabled.png)
+![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)
 
 ## Embedded video dialog
 
 Videos can be viewed within Experience Platform by using keyboard navigation to highlight and select an available video link. This opens an embedded video dialog within the Platform UI.
 
-![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
+![A blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
 ## Video dialog keyboard accessibility
 
@@ -65,7 +65,7 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 >
 >At any time during playback, the escape ("esc") key can be used to close the embedded video dialog.
 
-![An image showing the embedded video dialog with numbers identifying keyboard navigation elements.](images/video-dialog.png)
+![The embedded video dialog with numbers identifying keyboard navigation elements.](images/video-dialog.png)
 
 ## File drag and drop
 
@@ -75,11 +75,11 @@ After a file has been uploaded, a delete icon becomes keyboard navigable to remo
 
 Alternatively, if the file that is uploaded is not in the correct format, an error message appears with an error icon displayed to alert the user and the [!UICONTROL Choose files] button is automatically in focus and selectable.
 
-![An image showing a file drag and drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
+![A file drag and drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
 
 Using a mouse to select the drag and drop zone also invokes the file selection UI, or a mouse user can select a file and drag onto the zone to begin uploading.
 
-![An image showing a file drag and drop zone in focus as a mouse user drags a file into the zone.](images/drag-and-drop-mouse-over.png)
+![A file drag and drop zone in focus as a mouse user drags a file into the zone.](images/drag-and-drop-mouse-over.png)
 
 ## Table browse
 
@@ -114,14 +114,14 @@ The Schema Editor UI is made accessible by the following functionality:
 * The Enter (Return) key activates individual node details in the detail panel on the right.
 * The Home key returns to the top of the tree.
 * The End key navigates to the bottom of the tree.
-* Schema tree includes [ARIA-labels]((https://www.w3.org/WAI/standards-guidelines/aria/)). for screen readers
+* The Schema tree also includes ARIA labels for screen readers.
 
 ## Segment Builder UI
 
 When using the Segment Builder UI to create, edit, and interact with segments within Experience Platform, the following features improve accessibility:
 
 * The Segment Builder UI is accessible via keyboard navigation.
-* Screen readers should recognize markup tags for headings, and can announce the heading along with its level, or provide additional audible cues such as a beep. 
+* Screen readers should recognize markup tags for headings and can announce the heading along with its level.
 * Other assistive technologies can change the visual display of a page, using properly coded headings to display an outline or alternate view.
 
 ## Query Service Editor
@@ -135,13 +135,11 @@ The following accessibility features are available in the Query Service editor:
 
 When browsing the [!UICONTROL System View] tab in Sources and Destinations, the following functionality improves accessibility:
 
-* Tab sets focus on first source connection card
-  * Second tab will focus on button inside of card
-  * Enter will activate the call to action button inside the card
-* Enter on connection card, activates more details in the right panel
-  * If right rail activated, tab will focus on right rail options
-  * If more than 1 sources connection card tab will move down the connections
-  * Up/down arrow keys move up/down from the card lists
-  * Tab tabs to middle Profile card
-  * Tab tabs to destinations card(s)
-  * Tab tabs to right panel UI
+* The tab key sets focus on the first source connection card
+  * The second tab will focus on the button inside of the card
+  * Selecting Enter will activate the call to action button inside the card
+* Selecting Enter on the connection card also activates more details in the right rail
+  * When the right rail is activated, focus is set to that area. The tab key will initially focus on the Close button for the right rail pane, and then using the tab key will move the focus through the right rail menu of options
+  * If more than one sources connection card tab will move down the connections
+  * Using the arrow keys (up, down, left, and right) will move through the list of cards
+  * Selecting the tab key will set focus on the right rail panel

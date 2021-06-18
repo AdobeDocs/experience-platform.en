@@ -22,13 +22,13 @@ The following navigational elements facilitate accessibility: The Tab key moves 
 
 Experience Platform displays a blue border around a selected element to display a clear indication of which UI element currently has focus. 
 
-![An image showing a blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
+![A blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
 ## Color palettes & contrast
 
 Experience Platform strives for [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) conformance, including requirements for color contrast. The Experience Platform UI provides enough contrast in the application to ensure an accessible viewing experience for users with low vision or color deficiencies.
 
-![An image showing the color palette and contrast present on the homepage of the Experience Platform UI.](images/homepage.png)
+![The color palette and contrast present on the homepage of the Experience Platform UI.](images/homepage.png)
 
 ## Required field validation
 
