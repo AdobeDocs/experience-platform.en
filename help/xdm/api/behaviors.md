@@ -96,6 +96,8 @@ GET /global/behaviors/{BEHAVIOR_ID}
 | --- | --- |
 | `{BEHAVIOR_ID}` | The `meta:altId` or URL-encoded `$id` of the behavior you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves the details of the record behavior by providing its `meta:altId` in the request path.

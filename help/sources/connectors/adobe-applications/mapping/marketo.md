@@ -21,7 +21,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `_id` | `_id` |
 | `personID` | `personID` | Primary identity |
 | `eventType` | `eventType`|
-| `timeStamp` | `timestamp` |
+| `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
 | `environment.ipV4` | `environment.ipV4`|
@@ -48,7 +48,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
-| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
 | `directMarketing.email` | `directMarketing.email` |
@@ -124,6 +123,10 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `webinarUrl` | `webinarConfirmationUrl` |
 | `registrationCode` | `webinarRegistrationID` |
 | `reachedSuccessDate` | `reachedSuccessDate` |
+| `sfdc.crmId` | `extSourceSystemAudit.externalID` |
+| `sfdc.lastStatus` | `lastStatus` |
+| `sfdc.hasResponded` | `hasResponded` |
+| `sfdc.firstRespondedDate` | `firstRespondedDate` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 
@@ -255,9 +258,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
-| `emailSuspended` | `b2b.personOptInOut._channels.email` |
-| `emailSuspendedAt` | `b2b.personOptInOut.optOutDetails.email.optOutDate` |
-| `emailSuspendedCause` | `b2b.personOptInOut.optOutDetails.email.optOutReason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |

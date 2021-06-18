@@ -356,7 +356,7 @@ With the introduction of [!DNL Spark] 2.4, `%dataset` custom magic is supplied f
 **Usage**
 
 ```scala
-%dataset {action} --datasetId {id} --dataFrame {df}`
+%dataset {action} --datasetId {id} --dataFrame {df} --mode batch
 ```
 
 **Description**
@@ -367,8 +367,8 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 | --- | --- | --- |
 | `{action}` | The type of action to perform on the dataset. Two actions are available "read" or "write". | Yes |
 | `--datasetId {id}` | Used to supply the ID of the dataset to read or write. | Yes |
-| `--dataFrame {df}` | The pandas dataframe. <ul><li> When the action is "read", {df} is the variable where results of the dataset read operation are available. </li><li> When the action is "write", this dataframe {df} is written to the dataset. </li></ul> | Yes |
-| `--mode` | An additional parameter that changes how data is read. Allowed parameters are "batch", and "interactive". By default the mode is set to "interactive". It is recommended to use "batch" mode when reading large amounts of data. | No |
+| `--dataFrame {df}` | The pandas dataframe. <ul><li> When the action is "read", {df} is the variable where results of the dataset read operation are available (such as a dataframe). </li><li> When the action is "write", this dataframe {df} is written to the dataset. </li></ul> | Yes |
+| `--mode` | An additional parameter that changes how data is read. Allowed parameters are "batch", and "interactive". By default the mode is set to "batch".<br> It is recommended you "interactive" mode for increased query performance on smaller datasets.   | Yes |
 
 >[!TIP]
 >
@@ -376,8 +376,18 @@ A custom [!DNL Data Science Workspace] magic command for reading or writing a da
 
 **Examples**
 
-- **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0`
-- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0`
+- **Read example**: `%dataset read --datasetId 5e68141134492718af974841 --dataFrame pd0 --mode batch`
+- **Write example**: `%dataset write --datasetId 5e68141134492718af974842 --dataFrame pd0 --mode batch`
+
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
 
 You can auto generate the above examples in JupyterLab buy using the following method:
 
@@ -431,7 +441,7 @@ The following cells filter an [!DNL ExperienceEvent] dataset to data existing ex
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
-%dataset read --datasetId {DATASET_ID} --dataFrame df
+%dataset read --datasetId {DATASET_ID} --dataFrame df --mode batch
 
 df.createOrReplaceTempView("event")
 timepd = spark.sql("""
@@ -469,6 +479,16 @@ val spark = SparkSession
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to get and return all the required values needed for reading a dataset.
 
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -481,7 +501,7 @@ val df1 = spark.read.format("com.adobe.platform.query")
   .option("api-key", clientContext.getApiKey())
   .option("service-token", clientContext.getServiceToken())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .load()
 
@@ -514,6 +534,16 @@ And
 
 In Scala, you can import `clientContext` to get and return Platform values, this eliminates the need to define variables such as `var userToken`. In the Scala example below, `clientContext` is used to define and return all the required values needed for writing to a dataset.
 
+>[!IMPORTANT]
+>
+> Caching data using `df.cache()` before writing data can greatly improve notebook performance. This can help if you are receiving any of the following errors: 
+> 
+> - Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+> - Remote RPC client disassociated and other memory errors.
+> - Poor performance when reading and writing datasets.
+> 
+> See the [troubleshooting guide](../troubleshooting-guide.md) for more information.
+
 ```scala
 import org.apache.spark.sql.{Dataset, SparkSession}
 import com.adobe.platform.token.ClientContext
@@ -526,7 +556,7 @@ df1.write.format("com.adobe.platform.query")
   .option("ims-org", clientContext.getOrgId())
   .option("api-key", clientContext.getApiKey())
   .option("sandbox-name", clientContext.getSandboxName())
-  .option("mode", "interactive")
+  .option("mode", "batch")
   .option("dataset-id", "5e68141134492718af974844")
   .save()
 ```

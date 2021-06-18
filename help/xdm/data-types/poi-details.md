@@ -23,7 +23,9 @@ exl-id: cab5463b-97a0-400d-a00c-0cd8bf9301a5
 | `poiID` | String | A unique identifier of the POI. |
 | `type` | String | The general type of the POI using a typing schema selected by the administrator of the POI definitions. |
 
-For more details on the mixin, refer to the public XDM repository:
+{style="table-layout:auto"}
+
+For more details on the data type, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-detail.schema.json)

@@ -6,7 +6,14 @@ description: The /mixins endpoint in the Schema Registry API allows you to progr
 topic-legacy: developer guide
 exl-id: 93ba2fe3-0277-4c06-acf6-f236cd33252e
 ---
-# Mixins endpoint
+
+# Mixins endpoint (deprecated)
+
+>[!IMPORTANT]
+>
+>Mixins have been renamed to schema field groups, and therefore the `/mixins` endpoint has been deprecated in favor of the `/fieldgroups` endpoint.
+>
+>While `/mixins` will continue to be maintained as a legacy endpoint, it is strongly recommended that you use `/fieldgroups` for new implementations of the Schema Registry API in your experience applications. See the [field groups endpoint guide](./field-groups.md) for more information.
 
 Mixins are reuseable components which define one or more fields that represent a particular concept, such as an individual person, a mailing address, or a web browser environment. Mixins are intended to be included as part of a schema that implements a compatible class, depending on the behavior of data they represent (record or time series). The `/mixins` endpoint in the [!DNL Schema Registry] API allows you to programmatically manage mixins within your experience application.
 
@@ -33,6 +40,8 @@ GET /{CONTAINER_ID}/mixins?{QUERY_PARAMS}
 | `{CONTAINER_ID}` | The container you want to retrieve mixins from: `global` for Adobe-created mixins or `tenant` for mixins owned by your organization. |
 | `{QUERY_PARAMS}` | Optional query parameters to filter results by. See the [appendix document](./appendix.md#query) for a list of available parameters. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of mixins from the `tenant` container, using an `orderby` query parameter to sort the mixins by their `title` attribute.
@@ -53,6 +62,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON mixin for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -115,6 +126,8 @@ GET /{CONTAINER_ID}/mixins/{MIXIN_ID}
 | `{CONTAINER_ID}` | The container that houses the mixin you want to retrieve: `global` for an Adobe-created mixin or `tenant` for a mixin owned by your organization. |
 | `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to look up. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a mixin by its `meta:altId` value provided in the path. 
@@ -139,6 +152,8 @@ The response format depends on the `Accept` header sent in the request. All look
 | `application/vnd.adobe.xed-full-notext+json; version=1` | `$ref` and `allOf` resolved, no titles or descriptions. |
 | `application/vnd.adobe.xed-full-desc+json; version=1` | `$ref` and `allOf` resolved, descriptors included. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the details of the mixin. The fields that are returned depend on the `Accept` header sent in the request. Experiment with different `Accept` headers to compare the responses and determine which header is best for your use case.
@@ -147,7 +162,7 @@ A successful response returns the details of the mixin. The fields that are retu
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Favorite Hotel",
   "type": "object",
@@ -293,7 +308,7 @@ A successful response returns HTTP status 201 (Created) and a payload containing
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -391,6 +406,8 @@ PUT /tenant/mixins/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | The `meta:altId` or URL-encoded `$id` of the mixin you want to re-write. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request re-writes an existing mixin, adding a new `propertyCountry` field.
@@ -473,7 +490,7 @@ A successful response returns the details of the updated mixin.
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -574,6 +591,8 @@ PATCH /tenant/mixin/{MIXIN_ID}
 | --- | --- |
 | `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to update. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The example request below updates the `description` of an existing mixin, and adds a new `propertyCity` field.
@@ -614,7 +633,7 @@ The response shows that both operations were performed successfully. The `descri
 {
   "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/8779fd45d6e4eb074300023a439862bbba359b60d451627a",
   "meta:altId": "_{TENANT_ID}.mixins.8779fd45d6e4eb074300023a439862bbba359b60d451627a",
-  "meta:resourceType": "mixins",
+  "meta:resourceType": "fieldgroups",
   "version": "1.2",
   "title": "Property Details",
   "type": "object",
@@ -710,6 +729,8 @@ DELETE /tenant/mixins/{MIXIN_ID}
 | Parameter | Description |
 | --- | --- |
 | `{MIXIN_ID}` | The URL-encoded `$id` URI or `meta:altId` of the mixin you want to delete. |
+
+{style="table-layout:auto"}
 
 **Request**
 

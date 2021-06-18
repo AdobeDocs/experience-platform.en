@@ -22,23 +22,11 @@ In order to help guide your data modeling strategy based on your particular indu
 To read the ERDs referenced in this guide, you must have a working understanding of how XDM components interact to form schemas and how XDM schemas operate in Experience Platform as a whole. Ensure that you have read the following overview documentation before continuing:
 
 * [XDM System overview](../../home.md): Learn how XDM operates in the Platform ecosystem.
-* [Basics of schema composition](../../schema/composition.md): Learn how XDM components (such as mixins, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
+* [Basics of schema composition](../../schema/composition.md): Learn how XDM components (such as schema field groups, classes, and data types) contribute to the structure of a schema, as well as the role of identity fields.
 
 It is also recommended that you review the [data modeling best practices guide](../../schema/best-practices.md) for general guidelines on how to map your data to XDM.
 
 ## Industry data model ERDs {#erds}
-
-The industry vertical models represented by ERDs below are intentionally created in a de-normalized fashion and with consideration for how data is stored in Platform.
-
-For a given ERD, each entity shown in is based on an underlying XDM class. For a given entity, each row marked in **bold** represents a mixin or a data type, with the relevant fields it provides listed below in unbolded text. The most important fields for a given entity are highlighted in red.
-
->[!NOTE]
->
->Some entities may include an "_ID" field. This represents the unique identifier (`_id`) that Platform automatically assigns to event or profile entities when they are ingested. However, you can choose to use your own unique ID values for this field if you wish.
-
-All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
-
-Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
 
 ERDs are provided for the following industry verticals:
 

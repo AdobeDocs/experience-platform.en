@@ -59,6 +59,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns HTTP status 200 (OK) and a `results` array in the response body. If unions have been defined, the details for each union are provided as objects within the array. If no unions have been defined, HTTP status 200 (OK) is still returned but the `results` array will be empty.
@@ -101,6 +103,8 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to look up. URIs for union schemas are appended with "__union". |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```SHELL
@@ -122,6 +126,8 @@ The following Accept headers are available for union schema lookups:
 | `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
 | `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the union view of all schemas that implement the class whose `$id` was provided in the request path.
@@ -140,7 +146,7 @@ The response format depends on the Accept header sent in the request. Experiment
             "$ref": "https://ns.adobe.com/xdm/context/profile-person-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599"
         },
         {
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
@@ -153,7 +159,7 @@ The response format depends on the Accept header sent in the request. Experiment
         "https://ns.adobe.com/xdm/common/extensible",
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
-        "https://ns.adobe.com/{TENANT_ID}/mixins/477bb01d7125b015b4feba7bccc2e599",
+        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/477bb01d7125b015b4feba7bccc2e599",
         "https://ns.adobe.com/xdm/context/profile-personal-details"
     ],
     "title": "Union object for https://ns.adobe.com/xdm/context/profile",
@@ -185,6 +191,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | The `$id` of the class whose union-enabled schemas you want to list. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of all schemas that are part of the union for the [!DNL XDM Individual Profile] class.
@@ -205,6 +213,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 

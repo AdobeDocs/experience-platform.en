@@ -97,9 +97,9 @@ feature: Destinations
         * [Adobe Experience Platform Launch extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
-        * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
-        * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
-        * [Braze connection](./catalog/mobile-engagement/braze.md)
+        * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
+        * [(Beta) Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+        * [(Beta) Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
@@ -128,4 +128,5 @@ feature: Destinations
         * [Invoca Tags extension](./catalog/voice/invoca.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+* [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

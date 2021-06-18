@@ -11,10 +11,10 @@ feature: Data Ingestion, Sources
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
-    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
+    - [Analytics source connector](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
     - Adobe application field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)

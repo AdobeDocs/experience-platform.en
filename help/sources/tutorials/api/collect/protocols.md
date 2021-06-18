@@ -334,12 +334,13 @@ curl -X POST \
             "format": "parquet_xdm",
             "schema": {
                 "id": "https://ns.adobe.com/{TENANT_ID}/schemas/e669d7aba5a02f294fafb7b269af25f7cd4a66ce59193545",
+                "version" "application/vnd.adobe.xed-full+json;version=1"
             }
         },
         "params": {
             "dataSetId": "5e8a55ca53662c18af37a83a"
         },
-            "connectionSpec": {
+        "connectionSpec": {
             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         }

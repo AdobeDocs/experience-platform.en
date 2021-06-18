@@ -11,13 +11,15 @@ exl-id: 3f6a3c31-19f3-4bad-921e-9ad33c6b9ac9
 
 >[!NOTE]
 >
->This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] mixin](../mixins/profile/consents.md) as a baseline.
+>This data type is intended to be used to customize the structure of your organization's consent schemas using the [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group](../field-groups/profile/consents.md) as a baseline.
 
 ![](../images/data-types/personalization-field.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
 | `val` | String | The customer-provided preference choice for this personalization use case. See the table below for accepted values and definitions. |
+
+{style="table-layout:auto"}
 
 The following table outlines the accepted values for `val`:
 
@@ -32,6 +34,8 @@ The following table outlines the accepted values for `val`:
 | `CP` | Compliance with a Legal Obligation | The collection of data for the specified purpose is required to meet the legal obligations of the business. |
 | `VI` | Vital Interest of the Individual | The collection of data for the specified purpose is required to protect the vital interests of the individual. |
 | `PI` | Public Interest | The collection of data for the specified purpose is required to carry out a task in the public interest or in the exercise of official authority. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

@@ -48,6 +48,8 @@ Once you have created an ERD to identify the essential entities you would like t
 | Lookup entities | Lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on **custom classes**. |
 | Event entities | Event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the **[!DNL XDM ExperienceEvent] class**. |
 
+{style="table-layout:auto"}
+
 ### Considerations for entity sorting
 
 The sections below provide further guidance for how to sort your entities into the above categories.
@@ -70,6 +72,8 @@ If you want to analyze how certain attributes within an entity change over time,
 | 1234567 | Remove | 275098 | 1 | Oct 1, 10:33 AM |
 | 1234567 | Add | 486502 | 1 | Oct 1, 10:41 AM |
 | 1234567 | Add | 910482 | 5 | Oct 3, 2:15 PM |
+
+{style="table-layout:auto"}
 
 #### Segmentation use cases
 
@@ -111,6 +115,8 @@ The following table outlines some common entity relationships and the categories
 | Customers and Cart Checkouts | One to many | A single customer may have many cart checkouts, which are events that can be tracked over time. Customers would therefore be a profile entity, while Cart Checkouts would be an event entity. |
 | Customers and Loyalty Accounts | One to one | A single customer can only have one loyalty account, and vice versa. Since the relationship is one-to-one, both Customers and Loyalty Accounts represent profile entities. |
 | Customers and Subscriptions | One to many | A single customer may have many subscriptions. Since the company is only concerned with a customer's current subscriptions, Customers is a profile entity, while Subscriptions is a lookup entity. |
+
+{style="table-layout:auto"}
 
 ### Pros and cons of different entity classes {#pros-and-cons}
 
@@ -186,26 +192,26 @@ In Experience Platform, XDM fields marked as identities are used to stitch toget
 
 When designing your schemas, any primary keys in your relational database tables will be likely candidates for primary identities. Other examples of applicable identity fields are customer email addresses, phone numbers, account IDs, and [ECID](../../identity-service/ecid.md).
 
-### Adobe application mixins
+### Adobe application schema field groups
 
-Experience Platform provides several out-of-the-box XDM mixins for capturing data related to the following Adobe applications:
+Experience Platform provides several out-of-the-box XDM schema field groups for capturing data related to the following Adobe applications:
 
 * Adobe Analytics
 * Adobe Audience Manager
 * Adobe Campaign
 * Adobe Target
 
-For example, the [[!UICONTROL Adobe Analytics ExperienceEvent Template Mixin]](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) allows you to map [!DNL Analytics]-specific fields to your XDM schemas. Depending on the Adobe applications you are working with, you should be using these Adobe-provided mixins in your schemas.
+For example, the [[!UICONTROL Adobe Analytics ExperienceEvent Template] field group](https://github.com/adobe/xdm/blob/master/extensions/adobe/experience/analytics/experienceevent-all.schema.json) allows you to map [!DNL Analytics]-specific fields to your XDM schemas. Depending on the Adobe applications you are working with, you should be using these Adobe-provided field groups in your schemas.
 
-<img src="../images/best-practices/analytics-mixin.png" width=700><br>
+<img src="../images/best-practices/analytics-field-group.png" width=700><br>
 
-Adobe application mixins automatically assign a default primary identity through the use of the `identityMap` field, which is a system-generated, read-only object that maps standard identity values for an individual customer.
+Adobe application field groups automatically assign a default primary identity through the use of the `identityMap` field, which is a system-generated, read-only object that maps standard identity values for an individual customer.
 
 For Adobe Analytics, ECID is the default primary identity. If an ECID value is not provided by a customer, the primary identity will instead default to AAID.
 
 >[!IMPORTANT]
 >
->When using Adobe application mixins, no other fields should be marked as the primary identity. If there are additional properties that need to be marked as identities, these fields need to be assigned as secondary identities instead.
+>When using Adobe application field groups, no other fields should be marked as the primary identity. If there are additional properties that need to be marked as identities, these fields need to be assigned as secondary identities instead.
 
 ## Next steps
 

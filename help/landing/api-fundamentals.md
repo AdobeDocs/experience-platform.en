@@ -16,7 +16,7 @@ JSON Pointer is a standardized string syntax ([RFC 6901](https://tools.ietf.org/
 
 ### Example JSON schema object
 
-The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom mixins (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core mixins (such as `fullName`) are not.
+The following JSON represents a simplified XDM schema whose fields can be referenced using JSON Pointer strings. Note that all fields that have been added using custom schema field groups (such as `loyaltyLevel`) are namespaced under a `_{TENANT_ID}` object, whereas fields that have been added using core field groups (such as `fullName`) are not.
 
 ```json
 {
@@ -80,8 +80,8 @@ The following JSON represents a simplified XDM schema whose fields can be refere
 | JSON Pointer | Resolves to |
 | --- | --- |
 | `"/title"` | `"Example schema"` |
-|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core mixin.) |
-| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom mixin.) |
+|  `"/properties/person/properties/name/properties/fullName"` | (Returns a reference to the `fullName` field, provided by a core field group.) |
+| `"/properties/_{TENANT_ID}/properties/loyaltyLevel"` | (Returns a reference to the `loyaltyLevel` field, provided by a custom field group.) |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum"` | `["platinum", "gold", "silver", "bronze"]` |
 | `"/properties/_{TENANT_ID}/properties/loyaltyLevel/enum/0"` | `"platinum"` |
 
