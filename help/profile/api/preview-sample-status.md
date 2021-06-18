@@ -295,7 +295,7 @@ The response includes a `data` array, with individual objects containing the det
 |`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
 
-## Generate dataset overlap report
+## Generate the dataset overlap report
 
 The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
 
@@ -346,6 +346,8 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
 |`data`|The `data` object contains comma-separated lists of datasets and their respective profile counts.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
+### Interpreting the dataset overlap report
+
 The results of the report can be interpreted from the datasets and profile counts in the response. Consider the following example report `data` object:
 
 ```json
@@ -360,7 +362,7 @@ This report provides the following information:
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
-## Generate identity overlap report
+## Generate the identity overlap report
 
 The identity overlap report provides visibility into the composition of your organization's Profile store by exposing the identities that contribute most to your addressable audience (profiles). This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
@@ -434,11 +436,15 @@ A successful request returns HTTP Status 200 (OK) and the identity overlap repor
 
 |Property|Description|
 |---|---|
-|`data`|The `data` object contains comma-separated lists of identity namespace codes and their respective profile counts.|
+|`data`|The `data` object contains comma-separated lists with unique combinations of identity namespace codes and their respective profile counts.|
 |Namespace codes|The `code` is a short form for each identity namespace name. A mapping of each `code` to its `name` can be found using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). The `code` is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
-The results of the report can be interpreted from the identities and profile counts in the response. Consider the following excerpt from the `data` object:
+### Interpreting the identity overlap report
+
+The results of the report can be interpreted from the identities and profile counts in the response. The numerical value of each row tells you how many profiles are composed of that exact combination of standard and custom identity namespaces.
+
+Consider the following excerpt from the `data` object:
 
 ```json
   "AAID,ECID,Email,crmid": 142,
@@ -447,13 +453,11 @@ The results of the report can be interpreted from the identities and profile cou
 ```
 
 This report provides the following information:
-* There are 142 profiles containing identities from the `AAID`, `ECID`, and `Email` standard namespaces, as well as from a custom `crmid` identity namespace.
-* There are 24 profiles that include identities from the `AAID` and `ECID` namespaces.
+* There are 142 profiles composed of `AAID`, `ECID`, and `Email` standard identities, as well as from a custom `crmid` identity namespace.
+* There are 24 profiles that are composed of `AAID` and `ECID` identity namespaces.
 * There are 6,565 profiles that include only an `ECID` identity.
-
-
 
 ## Next steps
 
-Now that you know how to preview sample data in the Profile store and run the dataset overlap report, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile store and run multiple overlap reports, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 
