@@ -8,9 +8,11 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
 
+This document provides answers to frequently asked questions about Query Service and provides a list of error codes.
+
 ## Frequently asked questions
 
-The following section lists out commonly asked questions for Query Service, as well as solutions to resolve these issues.
+The following is a list of answers to commonly asked questions about Query Service.
 
 ### How can I get only the metadata for a query?
 
@@ -20,9 +22,9 @@ To get only the metadata for a query, you can run a query that returns zero rows
 SELECT * FROM <table> WHERE 1=0
 ```
 
-This query will only return the metadata for the specified table.
+This query returns only the metadata for the specified table.
 
-### How can I quickly experiment on a query? How can I validate a query is functional?
+### How can I quickly experiment on a query?
 
 You can create temporary tables to quickly iterate and experiment on a query before materializing it for use.
 
@@ -48,9 +50,9 @@ AND timestamp < To_timestamp('2021-01-21 13:00:00')
 LIMIT 100;
 ```
 
-### How should I filter my time series data?
+### How should I filter my time-series data?
 
-When querying with time series data, you should use the timestamp filter whenever possible for more accurate analysis.
+When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
 
 An example of using the timestamp filter can be seen below:
 
@@ -65,7 +67,7 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 
 ### Can I get all of the data from my rows?
 
-You cannot get all the data from your rows, as Query Service is a **columnar** based system, and not a row-based system.
+You cannot get all the data from your rows, as Query Service is a **columnar-based** system and not a row-based system.
 
 ## REST API errors
 
