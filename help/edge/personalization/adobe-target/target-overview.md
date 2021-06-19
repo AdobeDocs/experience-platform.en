@@ -157,7 +157,7 @@ alloy("sendEvent", {
 });
 ```
 
-**Sample code**
+**How to send Profile attributes to Adobe Target:**
 
 ```
 alloy("sendEvent", {
@@ -166,9 +166,7 @@ alloy("sendEvent", {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	      "entity.id" : "123",
-	      "entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
@@ -197,6 +195,22 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 ||cartIds|Supported|
 ||productPurchasedId|Supported|
 |Page or item category for category affinity|user.categoryId|Supported|
+
+**How to send Recommendations attributes to Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Debugging
 

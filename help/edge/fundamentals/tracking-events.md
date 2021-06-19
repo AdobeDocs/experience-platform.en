@@ -71,13 +71,13 @@ In this example, the data layer is cloned by serializing it to JSON, then deseri
 
 ### Sending non-XDM data
 
-Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0+ of the AEP Web SDK.
+Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0+ of the Web SDK.
 
-This is useful if you need to update an Adobe Target profile or send Target Recommendations attributes. [Read more about these Target features](../personalization/adobe-target/target-overview.md#single-profile-update)
+This is useful if you need to update an Adobe Target profile or send Target Recommendations attributes. [Read more about these Target features.](../personalization/adobe-target/target-overview.md#single-profile-update)
 
-In the future, you will be able to send your full JSON data layer under the `data` option, and map it to XDM server side on the Edge.
+In the future, you will be able to send your full data layer under the `data` option and map it to XDM server-side.
 
-**Sample code**
+**How to send Profile and Recommendations attributes to Adobe Target:**
 
 ```
 alloy("sendEvent", {
@@ -86,8 +86,8 @@ alloy("sendEvent", {
       target: {
         "profile.gender": "female",
         "profile.age": 30,
-	      "entity.id" : "123",
-	      "entity.genre" : "Drama"
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
       }
     }
   }
