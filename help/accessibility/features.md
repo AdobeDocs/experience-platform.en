@@ -16,11 +16,15 @@ Users with disabilities frequently rely on hardware and software, known as assis
 
 ## Keyboard accessibility
 
-Experience Platform supports full keyboard accessibility.
+Experience Platform strives to support full keyboard accessibility.
 
-The following navigational elements facilitate accessibility: The Tab key moves between UI elements, sections, and menu groups, and arrow keys move within menu groups to set focus to individual active elements. Shift + Tab moves backwards through the tab order. The Return (Enter) and Spacebar keys activate the selected item. The escape key (ESC) acts as a cancel button to close a dialog when present.
-
-Experience Platform displays a blue border around a selected element to display a clear indication of which UI element currently has focus. 
+The following navigational elements facilitate accessibility: 
+* The Tab key moves between UI elements, sections, and menu groups.
+* Arrow keys move within menu groups to set focus to individual active elements. 
+* Shift + Tab moves backwards through the tab order. 
+* The Return (Enter) and Spacebar keys activate selected items. 
+* The escape key (ESC) acts as a cancel button to close a dialog when present.
+* Experience Platform displays a blue border around a selected element to display a clear indication of which UI element currently has focus. 
 
 ![A blue border appearing around a selected element to indicate that focus is applied.](images/profile-overview-tab.png)
 
