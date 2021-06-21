@@ -30,7 +30,7 @@ feature: Segments
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
-- [Honoring opt-outs](honoring-opt-outs.md)
+- [Honoring consent](honoring-opt-outs.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
   - [Overview](pql/overview.md)

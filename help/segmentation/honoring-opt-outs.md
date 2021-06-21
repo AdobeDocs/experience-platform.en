@@ -1,128 +1,73 @@
 ---
-keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;
+keywords: Experience Platform;home;popular topics;opt-out;Segmentation;Segmentation service;segmentation service;honor opt-outs;opt-outs;opt out;opt outs;consent;share;collect;
 solution: Experience Platform
-title: Honoring Opt-Out Requests in Segments
+title: Honoring Consent in Segments
 topic-legacy: overview
-description: Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within Real-time Customer Profile]. These opt-out requests are part of the California Consumer Privacy Act (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom).
+description: Learn how to honor customer consent preferences for personal data collection and sharing in segment operations.
 exl-id: fe851ce3-60db-4984-a73c-f9c5964bfbad
 ---
-# Honoring opt-out requests in segments
+# Honoring consent in segments
 
-Adobe Experience Platform allows your customers to send opt-out requests regarding the usage and storage of their data within [!DNL Real-time Customer Profile]. These opt-out requests are part of the [!DNL California Consumer Privacy Act] (CCPA), which provides California residents with the right to access and delete their personal data and to know whether their personal data is sold or disclosed (and to whom). 
+Legal privacy regulations such as the [!DNL California Consumer Privacy Act] (CCPA) provide consumers the right to opt out of having their personal data collected or shared with third parties. Adobe Experience Platform provides standard Experience Data Model (XDM) components that are intended to capture these customer consent preferences in Real-time Customer Profile data.
 
-Once a customer has opted-out, it is important that your organization honor those opt-outs when generating audiences for marketing activities. This document describes important details regarding honoring opt-out requests.
+If a customer has withdrawn or withheld consent for having their personal data shared, it is important that your organization honors that preference when generating audiences for marketing activities. This document describes how to integrate customer consent values in your segment definitions using the Experience Platform user interface.
 
 ## Getting started
 
-Honoring opt-out requests requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before working with opt-out requests, please review the documentation for the following services:
+Honoring customer consent values requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before starting this tutorial, ensure that you are familiar with the following services:
 
+- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
 - [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [[!DNL Adobe Experience Platform Privacy Service]](../privacy-service/home.md): Helps organizations to automate compliance with data privacy regulations involving customer data within [!DNL Platform].
 
-## Opt-out schema field groups
+## Consent schema fields
 
-In order to honor CCPA opt-out requests, one of the schemas that is a part of the union schema must contain the necessary [!DNL Experience Data Model] (XDM) opt-out fields. There are two schema field groups that can be used to add opt-out fields to a schema, each is covered in more detail in the sections that follow:
+In order to honor customer consents and preferences, one of the schemas that is a part of your [!UICONTROL XDM Individual Profile] union schema must contain the standard field group **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**.
 
-- [Profile Privacy](#profile-privacy): Used to capture different opt-out types (general or sales/sharing).
-- [Profile Preferences Details](#profile-preferences-details): Used to capture opt-out requests for specific XDM channels.
+For details on the structure and intended use case of each of the attributes provided by  field group, see the [consents and preferences reference guide](../xdm/field-groups/profile/consents.md). For step-by-step instructions on how to add a field group to a schema, refer to the [XDM UI guide](../xdm/ui/resources/schemas.md#add-field-groups).
 
-For step-by-step instructions on how to add a field group to a schema, please refer to the "Add a field group" section in the following XDM documentation:
-- [Schema Registry API tutorial](../xdm/api/getting-started.md).: Building a schema using the Schema Registry API.
-- [Schema Editor tutorial](../xdm/tutorials/create-schema-ui.md): Building a schema using the Platform user interface.
+Once the field group has been added to a [Profile-enabled schema](../xdm/ui/resources/schemas.md#profile) and its fields have been used to ingest consent data from your experience application, you can use the collected consent attributes in your segment rules.
 
-Here is an example image showing the opt-out field groups added to a schema in the user interface:
+## Handling consent in segmentation 
 
-![](images/opt-outs/opt-out-field-groups-user-interface.png)
+In order to ensure that opted-out profiles are not included in segments, special fields must be added to existing segments and included when creating any new segments.
 
-The structure of each field group, as well as a description of the fields they contribute to the schema, are outlined in more detail in the following sections.
+The steps below demonstrate how to add the appropriate fields for two types of opt-out flags:
 
-### [!DNL Profile Privacy] {#profile-privacy}
+1. [!UICONTROL Data Collection]
+1. [!UICONTROL Share Data]
 
-The [!DNL Profile Privacy] field group allows you to capture two kinds of CCPA opt-out requests from customers:
+>[!NOTE]
+>
+>While this guide focuses on the two opt-out flags above, you can configure your segments to incorporate additional consent signals as well. The [consents and preferences reference guide](../xdm/field-groups/profile/consents.md) provides more information on each of these options and their intended use cases.
 
-1. General opt-out
-2. Sales/Sharing opt-out
+When building a segment in the UI, under **[!UICONTROL Attributes]**, navigate to **[!UICONTROL XDM Individual Profile]** > **[!UICONTROL Consents and Preferences]**. From here, you can see the options for **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]**.
 
-![](images/opt-outs/profile-privacy.png)
+![](./images/opt-outs/consents.png)
 
-The [!DNL Profile Privacy] field group contains the following fields:
+Start by selecting the **[!UICONTROL Data Collection]** category, then drag **[!UICONTROL Choice Value]** into the segment builder. When adding the attribute to the segment, you can specify the [consent values](../xdm/field-groups/profile/consents.md#choice-values) that must be included or excluded.
 
-- Privacy Opt-Outs (`privacyOptOuts`): An array containing a list of opt-out objects.
-- Opt-Out Type (`optOutType`): The type of opt-out. This field is an enum with two possible values:
-    - General Opt-Out (`general_opt_out`)
-    - Sales Sharing Opt-Out (`sales_sharing_opt_out`)
-- Opt-Out Value (`optOutValue`): The active state of the opt-out, also known as the value of the opt-out signal, based on the opt-out type specified. This field is an enum with four possible values:
-    - Not Provided (`not_provided`): An opt-out request has not been provided.
-    - Pending Verification (`pending`): The opt-out request is pending verification.
-    - Opt-Out (`out`): The customer has opted-out.
-    - Opt-In (`in`): The customer has opted-in.
-- Opt-Out Timestamp (`timestamp`): Timestamp of the received opt-out signal.
+![](./images/opt-outs/consent-values.png)
 
-To view the full structure of the [!DNL Profile Privacy] field group, please refer to the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-privacy.schema.json) or preview the field group using the Platform UI.
+One approach is to exclude any customers who have opted out of having their data collected. To do this, set the operator to **[!UICONTROL does not equal]**, and choose the following values:
 
-### [!DNL Profile Preferences Details] {#profile-preferences-details}
+* **[!UICONTROL No (opt-out)]**
+* **[!UICONTROL Default of No (opt-out)]**
+* **[!UICONTROL Unknown]** (if consent is assumed to be withheld if otherwise unknown)
 
-The [!DNL Profile Preferences Details] field group provides several fields that represent preferences for customer profiles (such as email format, preferred language, and time zone). One of the fields included in this field group, OptInOut (`optInOut`), allows opt-out values to be set for individual channels. 
+![](./images/opt-outs/collect.png)
 
-![](images/opt-outs/profile-preferences-details.png)
+Under **[!UICONTROL Attributes]** in the left rail, navigate back to the **[!UICONTROL Consents and Preferences]** section, then select **[!UICONTROL Share Data]**. Drag its corresponding **[!UICONTROL Choice Value]** into the canvas, and select the same values as those for the [!UICONTROL Data Collection] choice value. Ensure that an **[!UICONTROL And]** relationship is established between the two attributes.
 
-The [!DNL Profile Preferences Details] field group contains the following fields related to opt-outs:
+![](./images/opt-outs/share.png)
 
-- OptInOut (`optInOut`): An object where each key represents a valid and known URI for a communication channel and the active state of the opt-out for each channel. Each channel may have one of four possible values:
-    - Not Provided (`not_provided`): An opt-out request has not been provided for this channel.
-    - Pending Verification (`pending`): The opt-out request for this channel is pending verification.
-    - Opt-Out (`out`): The customer has opted-out of this channel.
-    - Opt-In (`in`): The customer has opted-in to this channel.
-- Global Opt-out (`globalOptout`): A boolean value that, when set to true, sets a global opt-out override for the profile. The default value for this field is false.
-
-The example JSON below highlights how the OptInOut object can capture multiple opt-out signals for different communication channels:
-
-```json
-{
-  "xdm:optInOut": {
-    "https://ns.adobe.com/xdm/channels/email": "pending",
-    "https://ns.adobe.com/xdm/channels/phone": "out",
-    "https://ns.adobe.com/xdm/channels/sms": "in",
-    "https://ns.adobe.com/xdm/channels/fax": "not_provided",
-    "https://ns.adobe.com/xdm/channels/direct-mail": "not_provided",
-    "https://ns.adobe.com/xdm/channels/apns": "not_provided",
-    "xdm:globalOptout": false
-  }
-}
-```
-
-To view the full structure of the Profile Preferences Details field group, please visit the [XDM public GitHub repository](https://github.com/adobe/xdm/blob/master/schemas/context/profile-preferences-details.schema.json) or preview the field group using the [!DNL Platform] UI.
-
-## Handling opt-outs in segmentation 
-
-In order to ensure profiles marked with CCPA opt-out flags are not included in segments, special fields must be added to existing segments or included during segment creation.
-
-The sections below demonstrate how to add the appropriate fields for the two types of opt-out flags:
-1. General opt-out
-2. Sales/Sharing opt-out
-
-### General opt-out
-
-[!DNL Segmentation] automatically honors all profiles containing the "[!UICONTROL General Opt-Out]" flag, meaning those profiles will not be included in audiences or exports by default. However, it is best practice to add the appropriate fields to ensure opted-out profiles are not included in audiences and marketing activities.
-
-This can be done using the user interface by adding **[!UICONTROL Privacy Opt-Outs]** attributes. In this instance, the segment is set to include only those who have opted in (meaning they do not have a general opt-out flag on their profile. This is done by declaring that the "[!UICONTROL Opt-Out Type]" equals "[!UICONTROL General Opt-Out]" and the "[!UICONTROL Opt-Out Value]" equals "[!UICONTROL Opt-in]". 
-
-![](images/opt-outs/segment-general-opt-out.png)
-
-### Sales/Sharing opt-out
-
-If a user has a sales/sharing opt-out flag set on their profile, this profile should no longer be used for any segment creation or marketing activities. To ensure this flag is honored, the "[!UICONTROL Opt-Out Type]" must equal "[!UICONTROL Sales Sharing Opt-Out]" and the "[!UICONTROL Opt-Out Value]" must equal "[!UICONTROL Opt-in]".
-
-![](images/opt-outs/segment-sales-sharing-opt-out.png)
-
-<!-- ### Overriding default exclusions
-
-In some instances, such as building a segment of people who have opted out, it may be necessary to override the default exclusion of opted-out profiles. This override can be done via the API or in the Segment Builder user interface. -->
+With both the **[!UICONTROL Data Collection]** and **[!UICONTROL Share Data]** consent values added to the segment, any customers that have opted out of having their data used will be excluded from the resulting audience. From here, you can continue customizing the segment definition before selecting **[!UICONTROL Save]** to finish the process.
 
 ## Next steps
 
-For more information on segmentation, including working with segment definitions and audiences via the API and user interface, please begin by reading the [segmentation overview](./home.md).
+By following this tutorial, you should now have a better understanding of how to honor customer consents and preferences when building segments in Experience Platform.
 
-To learn more about data privacy within [!DNL Platform], including how [!DNL Privacy Service] helps to facilitate automated compliance with legal and organizational privacy regulations, please refer to the documentation on [[!DNL Privacy Service]](../privacy-service/home.md).
+For more information on managing consent in Platform, refer to the following documentation:
+
+* [Consent processing using the Adobe standard](../landing/governance-privacy-security/consent/adobe/overview.md)
+* [Consent processing using the IAB TCF 2.0 standard](../landing/governance-privacy-security/consent/iab/overview.md)
