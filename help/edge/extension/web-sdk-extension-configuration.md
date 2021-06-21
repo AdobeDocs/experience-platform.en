@@ -69,17 +69,17 @@ Use Out or Pending if you require explicit user consent for your business operat
 
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
-This field will be turned on by default. When turned on the SDK will be able to read and set old AMCV cookies. This feature is important when migration to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It will allow the Web SDK to continue to use the same ECID.
+This option is enabled by default. When this feature is enabled the SDK will be able to read the AMCV and s_ecid cookies and set the AMCV cookie used by Visitor.js. This feature is important when migrating to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It will allow the SDK to continue to use the same ECID so that users are not identified as two separate users.
 
 ### [!UICONTROL Use third-party cookies]
 
-This option will enable the use of Adobe third-party cookies. It will allow the Web SDK to keep the visitor ID in a third-party cookie so that it can be used accross sites.
+This option enables the SDK to attempt to store a user identifier in a third-party cookie. If successful, the user will be identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK may still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK will only store the identifier in the first-party domain.
 
 ## [!UICONTROL Personalization]
 
 ![](../images/extension/overview/personalization.png)
 
-In the personalization configuration section we provide you two things, a prehiding style editor and a default prehiding snippet. If you would like to hide certain parts if your site while personalized content is loaded you can specify the elements to hide in the prehiding style editor. After you do this you can copy the default prehiding snippet that is provided for you and paste in head portion of your HTML site. 
+If you would like to hide certain parts if your site while personalized content is loaded, you can specify the elements to hide in the prehiding style editor. You can then copy the default prehiding snippet provided to you and paste it inside the `<head>`element of your HTML site. 
 
 ## [!UICONTROL Data Collection]
 
@@ -87,15 +87,15 @@ In the personalization configuration section we provide you two things, a prehid
 
 ### [!UICONTROL Callback function]
 
-The callback function provided in the extension is also called the ['onBeforeEventSend' function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in the library. This function allows you to modify events globally before they reach the Adobe Edge Network. More detailed information on how to use this function can be found [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally). 
+The callback function provided in the extension is also called the [`onBeforeEventSend` function](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=en) in the library. This function allows you to modify events globally before they're sent to Adobe Edge Network. More detailed information on how to use this function can be found [here](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html?lang=en#modifying-events-globally). 
 
 ### [!UICONTROL Click data collection]
 
-The AEP Web SDK can automatically collect link click information for you. By default this feature is turned on but can be turned off using this configuration. Links will also be labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. We provide you with some default download link qualifiers but these can be edited at any time.
+The SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links will also be labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. We provide you with some default download link qualifiers, but these can be edited at any time.
 
 ### [!UICONTROL Automatically collected context data]
 
-By default the AEP Web SDK will collect certain context data for you. The data we collect is around device, web, environment, and place context. If you would like to see a list of the the exact information we collect you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories you can change those settings with this configuration.  
+By default, the SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the the exact information we collect you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories of data collected, you can change these options.  
 
 ## [!UICONTROL Advanced Settings]
 
@@ -103,4 +103,4 @@ By default the AEP Web SDK will collect certain context data for you. The data w
 
 ### [!UICONTROL Edge base path]
 
-This field will be used if you need to change the base path that is used to indetract with the Adobe Edge Network. This shouldn't require updating but in the case that you participate on a beta or alpha Adobe might ask you to change this field.
+This field will be used if you need to change the base path that is used to interact with Adobe Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
