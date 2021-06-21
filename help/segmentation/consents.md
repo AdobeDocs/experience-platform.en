@@ -16,9 +16,9 @@ If a customer has withdrawn or withheld consent for having their personal data s
 
 Honoring customer consent values requires an understanding of the various [!DNL Adobe Experience Platform] services involved. Before starting this tutorial, ensure that you are familiar with the following services:
 
-- [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
-- [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
-- [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
+* [[!DNL Experience Data Model (XDM)]](../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
+* [[!DNL Real-time Customer Profile]](../profile/home.md): Provides a unified, customer profile in real time based on aggregated data from multiple sources.
+* [[!DNL Adobe Experience Platform Segmentation Service]](./home.md): Allows you to build audience segments from [!DNL Real-time Customer Profile] data.
 
 ## Consent schema fields
 
