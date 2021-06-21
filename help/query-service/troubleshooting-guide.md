@@ -8,7 +8,7 @@ exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
 # [!DNL Query Service] troubleshooting guide
 
-This document provides answers to frequently asked questions about Query Service and provides a list of error codes.
+This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
 
 ## Frequently asked questions
 
@@ -26,7 +26,7 @@ This query returns only the metadata for the specified table.
 
 ### How can I quickly experiment on a query?
 
-You can create temporary tables to quickly iterate and experiment on a query before materializing it for use.
+You can create temporary tables to quickly iterate and experiment on a query before materializing it for use. You can also use temporary tables to validate if a query is functional.
 
 For example, you can create a temporary table:
 
