@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/segmentation/honoring-opt-outs.html,https://experienceleague.adobe.com/docs/experience-platform/segmentation/consents.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/work-details.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/work-contact-details.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/mixins.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/field-groups.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/(*),https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/
