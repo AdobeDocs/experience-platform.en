@@ -62,7 +62,7 @@ Once you have finished creating the sandbox, refresh the page and the new sandbo
 
 >[!IMPORTANT]
 >
->The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature. Production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be reset.
+>The default production sandbox cannot be reset if the identity graph hosted within it is also being used by Adobe Analytics for the [Cross Device Analytics (CDA)](https://experienceleague.adobe.com/docs/analytics/components/cda/overview.html) feature, or if the identity graph hosted within it is also being used by Adobe Audience Manager for the [People Based Destinations (PBD)](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html) feature.
 
 Resetting a production or development sandbox deletes all resources associated with that sandbox (schemas, datasets, and so on), while maintaining the sandbox's name and associated permissions. This "clean" sandbox continues to be available under the same name for users that have access to it.
 
@@ -82,29 +82,29 @@ After a few moments, a confirmation box appears on the bottom of the screen to c
 
 ![success](../images/ui/success.png)
 
-### Error messages
+### Warnings
 
-A default production sandbox that contains CDA data cannot be reset and returns the following error.
+A default production sandbox that contains CDA data cannot be reset and returns the following warning.
 
 ![cda](../images/ui/cda.png)
 
-A default production sandbox that contains PBD data also cannot be reset and returns the following error.
+A default production sandbox that contains PBD data also cannot be reset and returns the following warning.
 
 ![pbd](../images/ui/pbd.png)
 
-A default production sandbox that contains data for both CDA and PBD also cannot be reset and returns the following error.
+A default production sandbox that contains data for both CDA and PBD also cannot be reset and returns the following warning.
 
 ![both](../images/ui/both.png)
 
-A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be reset and returns the following error.
+You can reset a production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service]. Select [!UICONTROL Continue] to proceed with the reset.
 
-![seg](../images/ui/seg.png)
+![both](../images/ui/seg.png)
 
 ## Delete a sandbox
 
 >[!IMPORTANT]
 >
->The default production sandbox cannot be deleted and production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service also cannot be deleted.
+>The default production sandbox cannot be deleted.
 
 Deleting a production or development sandbox permanently removes all resources associated with that sandbox, including permissions.
 
@@ -120,9 +120,9 @@ In the final confirmation window, enter the name of the sandbox in the dialog bo
 
 ![delete-confirm](../images/ui/delete-confirm.png)
 
-A production sandbox that is used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service cannot be deleted and returns the following error.
+A user-created production sandbox that is used for bi-directional segment sharing with [!DNL Audience Manager] or [!DNL Audience Core Service] can still be deleted after the following warning. 
 
-![seg](../images/ui/seg.png)
+![seg](../images/ui/delete-seg.png)
 
 ## Next steps
 
