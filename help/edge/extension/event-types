@@ -1,5 +1,0 @@
-# Event types
-
-## Decisions Received
-
-When rendering personalized content you will use this event so that the personalized decision are available when the library is loaded. This event should be called along with a custom code action that provides the Web SDK access to the decisions.  
