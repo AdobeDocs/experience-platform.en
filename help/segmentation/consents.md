@@ -57,7 +57,7 @@ One approach is to exclude any customers who have opted out of having their data
 
 ![](./images/opt-outs/collect.png)
 
-Under **[!UICONTROL Attributes]** in the left rail, navigate back to the **[!UICONTROL Consents and Preferences]** section, then select **[!UICONTROL Share Data]**. Drag its corresponding **[!UICONTROL Choice Value]** into the canvas, and select the same values as those for the [!UICONTROL Data Collection] choice value. Ensure that an **[!UICONTROL And]** relationship is established between the two attributes.
+Under **[!UICONTROL Attributes]** in the left rail, navigate back to the **[!UICONTROL Consents and Preferences]** section, then select **[!UICONTROL Share Data]**. Drag its corresponding **[!UICONTROL Choice Value]** into the canvas, and select the same values as those for the [!UICONTROL Data Collection] choice value. Ensure that an **[!UICONTROL Or]** relationship is established between the two attributes.
 
 ![](./images/opt-outs/share.png)
 
