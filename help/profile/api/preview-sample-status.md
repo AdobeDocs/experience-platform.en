@@ -297,7 +297,7 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -364,7 +364,7 @@ This report provides the following information:
 
 ## Generate the identity overlap report
 
-The identity overlap report provides visibility into the composition of your organization's Profile store by exposing the identities that contribute most to your addressable audience (profiles). This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
+The identity overlap report provides visibility into the composition of your organization's Profile store by exposing the identities that contribute most to your addressable audience (merged profiles). This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
 You can generate the identity overlap report by performing a GET request to the `/previewsamplestatus/report/identity/overlap` endpoint.
 
