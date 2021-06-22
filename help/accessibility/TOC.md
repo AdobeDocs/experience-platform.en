@@ -10,7 +10,6 @@ user-guide-description: Adobe Experience Platform is committed to providing acce
 * [Accessibility overview](home.md)
 * [Accessibility features](features.md)
 * [Custom accessibility for Platform](custom.md)
-* [Exceptions and workarounds](exceptions.md)
 * [Platform documentation](https://experienceleague.adobe.com/docs/experience-platform.html)
 * [Platform overview](https://www.adobe.com/go/platform-overview-en)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
