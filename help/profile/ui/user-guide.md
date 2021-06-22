@@ -19,15 +19,19 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 ## Overview
 
-In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
+In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab displaying the [!UICONTROL Profiles] dashboard. 
 
-![](../images/user-guide/profiles-overview.png)
+>[!NOTE]
+>
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
 
-### Profile dashboard
+### [!UICONTROL Profiles] dashboard {#profile-dashboard}
 
-For some users, selecting **[!UICONTROL Profiles]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your Profile data. 
+The **[!UICONTROL Profiles]** dashboard outlines key metrics related to your organization's Profile data. 
 
-To learn more, visit the [Profile dashboard guide](profile-dashboard.md).
+To learn more, visit the [Profile dashboard guide](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Browse
 

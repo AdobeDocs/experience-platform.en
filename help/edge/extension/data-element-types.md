@@ -5,7 +5,7 @@ exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 ---
 # Data element types
 
-After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK extension](web-sdk-extension.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure your data element types.
+After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK extension](web-sdk-extension-configuration.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure your data element types.
 
 This page describes the available data element types.
 
