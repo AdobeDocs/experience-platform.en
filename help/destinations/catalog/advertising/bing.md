@@ -18,7 +18,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 
 ## Supported Identities {#supported-identities}
 
-[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|
 |---|---|
