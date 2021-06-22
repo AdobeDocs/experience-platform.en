@@ -91,7 +91,7 @@ The callback function provided in the extension is also called the [`onBeforeEve
 
 ### [!UICONTROL Click data collection]
 
-The SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers, but these can be edited at any time.
+The SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UICONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers, but these can be edited at any time.
 
 ### [!UICONTROL Automatically collected context data]
 
