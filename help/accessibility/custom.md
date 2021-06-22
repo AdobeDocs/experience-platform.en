@@ -1,6 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
-title: Custom accessibility solutions for Experience Platform
+title: Custom Accessibility Solutions for Experience Platform
 topic: guide
 type: Documentation
 description: Learn more about the custom accessibility solutions within the Adobe Experience Platform user interface.
@@ -22,21 +22,21 @@ Experience Platform strives to meet international accessibility standards, inclu
 
 ## Left navigation
 
-The left navigation within the Experience Platform UI is keyboard accessible and provides color contrast in normal, hover, and selection states that meet accessibility standards.
+The left navigation within the Experience Platform UI is keyboard-accessible and provides color contrast in normal, hover, and selection states that meet accessibility standards.
 
-From the Home screen, users can tab into the left navigation. Selecting `Shift + tab` returns the user to the Home screen. 
+From the Home screen, users can tab into the left navigation. Selecting **Shift + Tab** returns the user to the Home screen. 
 
 ![The Experience Platform left navigation.](images/left-navigation-select.png)
 
-With the left navigation in focus, Tab takes users to the expand and collapse interaction. The ability to expand or collapse the left navigation is activated with the Enter (Return) key.
+With the left navigation in focus, **Tab** takes users to the expand and collapse interaction. The ability to expand or collapse the left navigation is activated with **Enter (Return)**.
 
 ![The Experience Platform left navigation collapsed.](images/left-navigation-collapse.png)
 
-With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and cycle continuously (in other words, the focus does not shift away until the user tabs away from the left navigation). Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text. When selecting a left navigation item, the Enter (Return) key will open the selected UI item in the right panel, however focus remains in left navigation until the user tabs away.
+With the left navigation in focus, up and down arrow keys navigate to each item in the navigation and cycle continuously (in other words, the focus does not shift away until the user tabs away from the left navigation). Focus is shown for navigation items when selected. The current selection is shown with a highlight and bolded text. When selecting a left navigation item, **Enter (Return)** opens the selected UI item in the right panel, however focus remains in left-navigation until the user tabs away.
 
-![AThe Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
+![The Experience Platform left navigation with Sources selected.](images/left-navigation-sources.png)
 
-Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items will be skipped during arrow navigation and the user will not be able to select the item using the Enter (Return) key.
+Some features within Platform are not enabled for all users. These items appear in the navigation but are not able to be selected. When navigating with a keyboard, these items are skipped during arrow navigation and cannot be selected using **Enter (Return)**.
 
 ![Sections of the Experience Platform left navigation that are not enabled for the user are not able to be selected.](images/left-navigation-sections-disabled.png)
 
@@ -52,14 +52,14 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 
 |Dialog Element|Keyboard accessibility|Description|
 |---|---|---|
-|Play & Pause|Tab<br/>Spacebar|Use the tab key to set focus on play button. The spacebar begins video playback and pauses video playback.|
-|Scrubber|Tab<br/>Left arrow<br/>Right arrow|When video is playing, use tab key to focus scrubber. With the scrubber in focus, left and right arrow keys skip video playback ahead and back 5 seconds, respectively.|
-|Mute|Tab<br/>Spacebar|Use the tab key to focus the mute volume element. Use the spacebar to mute or unmute video playback.|
-|Volume|Tab<br/>Left arrow<br/>Right arrow|Use tab key to focus on volume element. Left and right arrow keys move volume up and down, respectively.|
-|[!UICONTROL Closed Captions] ("cc")|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|Tab to [!UICONTROL Closed Captions] ("cc") element. Use the enter key to open the menu, and up and down arrows keys to select a language for captions. The enter key confirms your selection.|
-|[!UICONTROL Quality]|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|Use tab to focus the [!UICONTROL Quality] element. Use enter to open the menu and the up and down arrow keys to select video quality. The enter key confirms your selection.|
-|Full Screen|Tab<br/>Spacebar or Enter<br/>Escape|Use tab to focus the full screen element. Use the spacebar or enter key to activate full screen view. The escape ("esc") key exits full screen mode.|
-|Close|Tab<br/>Spacebar or Enter|Use tab to focus the close button. Use the spacebar or enter key to exit the video dialog.|
+|Play & Pause|Tab<br/>Spacebar|Use **Tab** to set focus on play button. **Spacebar** begins video playback and pauses video playback.|
+|Scrubber|Tab<br/>Left arrow<br/>Right arrow|When video is playing, use **Tab** to focus scrubber. With the scrubber in focus, **left and right arrow keys** skip video playback ahead and back 5 seconds, respectively.|
+|Mute|Tab<br/>Spacebar|Use **Tab** to focus the mute volume element. Use **spacebar** to mute or unmute video playback.|
+|Volume|Tab<br/>Left arrow<br/>Right arrow|Use **Tab** to focus on volume element. **Left and right arrow keys** move volume up and down, respectively.|
+|[!UICONTROL Closed Captions] ("cc")|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|**Tab** to [!UICONTROL Closed Captions] ("cc") element. Use **Enter** to open the menu, and **up and down arrow keys** to select a language for captions. **Enter** confirms your selection.|
+|[!UICONTROL Quality]|Tab<br/>Enter<br/>Up arrow<br/>Down arrow|Use **Tab** to focus the [!UICONTROL Quality] element. Use **Enter** to open the menu and the **up and down arrow keys** to select video quality. **Enter** confirms your selection.|
+|Full-screen|Tab<br/>Spacebar or Enter<br/>Escape|Use **Tab** to focus the full-screen element. Use **spacebar or Enter** to activate full-screen view. **Escape** ("esc") exits full-screen mode.|
+|Close|Tab<br/>Spacebar or Enter|Use **Tab** to focus the close button. Use **spacebar or Enter** key to exit the video dialog.|
 
 >[!NOTE]
 >
@@ -69,27 +69,27 @@ The embedded video dialog can also be navigated using the keyboard. The followin
 
 ## File drag and drop
 
-In Experience Platform, all file selection drag and drop zones are keyboard accessible. Using the tab button to highlight [!UICONTROL Choose files] and using enter or spacebar to select the button, invokes the operating system's file selection UI.
+In Experience Platform, all file selection drag-and-drop zones are keyboard-accessible. Using **Tab** to highlight **[!UICONTROL Choose files]** and using **Enter or spacebar** to select it invokes the operating system's file selection UI.
 
-After a file has been uploaded, a delete icon becomes keyboard navigable to remove the selected file and upload a new one. Users can use the tab key to focus on the delete icon and enter or spacebar to select it. Once the file is removed, the [!UICONTROL Choose files] button is automatically in focus and able to be selected.
+After a file has been uploaded, a delete icon becomes keyboard-navigable to remove the selected file and upload a new one. Users can use **Tab** to focus on the delete icon and **Enter or spacebar** to select it. Once the file is removed, **[!UICONTROL Choose files]** is automatically in focus and able to be selected.
 
-Alternatively, if the file that is uploaded is not in the correct format, an error message appears with an error icon displayed to alert the user and the [!UICONTROL Choose files] button is automatically in focus and selectable.
+Alternatively, if the file that is uploaded is not in the correct format, an error icon is displayed along with an error message and the **[!UICONTROL Choose files]** button is in focus and selectable.
 
-![A file drag and drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
+![A file drag-and-drop zone with an error message and the choose files button in focus.](images/drag-and-drop.png)
 
-Using a mouse to select the drag and drop zone also invokes the file selection UI, or a mouse user can select a file and drag onto the zone to begin uploading.
+Using a mouse to select the drag-and-drop zone also invokes the file selection UI, or a mouse user can select a file and drag onto the zone to begin uploading.
 
-![A file drag and drop zone in focus as a mouse user drags a file into the zone.](images/drag-and-drop-mouse-over.png)
+![A file drag-and-drop zone in focus as a mouse user drags a file into the zone.](images/drag-and-drop-mouse-over.png)
 
 ## Table browse
 
-All tables within the Experience Platform user interface are keyboard accessible. Browsing and interacting with table rows and columns is possible through a series of keyboard shortcuts:
+All tables within the Experience Platform user interface are keyboard-accessible. Browsing and interacting with table rows and columns is possible through a series of keyboard shortcuts:
 
-* Table header, arrow down to enter the browse table. Table headers are selectable when navigating via the Tab key, and you can change the sorting order by pressing Space.
-* Arrow up / down moves down through the rows in the table
-* Row selected/focused, enter key on row provides details in right rail
-* Select enter to select item in the row (screen reader will alert user if new window will open)
-* Row selected/focused use arrow keys to move through each item in the row
+* From the table header, use the **down arrow** to browse the table. Table headers are selectable when navigating via **Tab**, and you can change the sorting order using **spacebar**.
+* **Up and down arrow keys** moves up and down through the rows in the table.
+* When a row is selected or in focus, using **Enter** on the row provides details in the right rail.
+* When a row is selected or in focus, use **arrow keys** to move through each item in the row.
+* Use **Enter** to select an item in the row. Users with screen readers are alerted if a new window must open.
 
 ### Browse table keyboard accessibility
 
@@ -97,24 +97,24 @@ All tables within the Experience Platform user interface are keyboard accessible
 |---|---|
 |HOME (Function + left arrow)|When row focused, takes users to the first item in the row|
 |END (Function + right arrow)|When row focused, takes users to the last item in the row|
-|Page up|Page up key traverses 10 rows up in the table (per page)|
-|Page down|Page down key traverses 10 rows down in the table (per page)|
-|Control + HOME|goes to first time in table|
-|Control + END|goes to first time in table per page|
+|Page up|Traverses 10 rows up in the table (per page)|
+|Page down|Traverses 10 rows down in the table (per page)|
+|Control + HOME|Goes to first row in table|
+|Control + END|Goes to first wor in table per page|
 
 ## Schema Editor UI
 
 The Schema Editor UI is made accessible by the following functionality:
 
-* The Schema Editor supports keyboard navigation, including use of the tab key to navigation through the UI elements.
-* Tab enters the search field, then into the schema tree.
+* The Schema Editor supports keyboard navigation, including use of **Tab** to navigation through UI elements.
+* **Tab** enters the search field, then into the schema tree.
 * Schema tree supports the use of arrow keys to navigate through the schema tree UI
-  * Up and down arrows can be used to traverse the tree.
-  * Left and right arrows can be used to expand and collapse nodes or move between inline actions on the schema tree.
-* The Enter (Return) key activates individual node details in the detail panel on the right.
-* The Home key returns to the top of the tree.
-* The End key navigates to the bottom of the tree.
-* The Schema tree also includes ARIA labels for screen readers.
+  * **Up and down arrows** can be used to traverse the tree.
+  * **Left and right arrows** can be used to expand and collapse nodes or move between inline actions on the schema tree.
+* **Enter (Return)** activates individual node details in the detail panel on the right.
+* The **Home** key returns to the top of the tree.
+* The **End** key navigates to the bottom of the tree.
+* The schema tree also includes ARIA labels for screen readers.
 
 ## Segment Builder UI
 
@@ -133,13 +133,13 @@ The following accessibility features are available in the Query Service editor:
 
 ## System View tab in Sources and Destinations
 
-When browsing the [!UICONTROL System View] tab in Sources and Destinations, the following functionality improves accessibility:
+When browsing the **[!UICONTROL System View]** in Sources and Destinations, the following functionality improves accessibility:
 
-* The tab key sets focus on the first source connection card
-  * The second tab will focus on the button inside of the card
-  * Selecting Enter will activate the call to action button inside the card
-* Selecting Enter on the connection card also activates more details in the right rail
-  * When the right rail is activated, focus is set to that area. The tab key will initially focus on the Close button for the right rail pane, and then using the tab key will move the focus through the right rail menu of options
-  * If more than one sources connection card tab will move down the connections
-  * Using the arrow keys (up, down, left, and right) will move through the list of cards
-  * Selecting the tab key will set focus on the right rail panel
+* **Tab** sets focus on the first source connection card
+  * **Tab** again to focus on the button inside of the card
+  * Select **Enter** to activate the call to action button inside the card
+* Selecting **Enter** on the connection card also activates more details in the right rail
+  * When the right rail is activated, focus is set to that area. **Tab** focuses on **Close** for the right rail pane. Selecting **Tab** again moves the focus through the right-rail panel
+  * If there is more than one source connection card, **Tab** moves through the connections
+  * Use **arrow keys (up, down, left, and right)** to move through the list of sources
+  * Select **Tab** to set focus on the right-rail panel

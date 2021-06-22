@@ -8,11 +8,11 @@ description: Learn more about the general accessibility features supported by Ad
 
 # Accessibility features in Experience Platform
 
-Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices, such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, and support for assistive technologies.
+Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, and support for assistive technologies.
 
-## Assistive Technologies
+## Assistive technologies
 
-Users with disabilities frequently rely on hardware and software, known as assistive technologies, to access digital content and to use software products. Adobe Experience Platform supports several types of assistive technologies (AT) such as screen readers, zoom, and voice recognition software by following accessibility best practices such as using semantic code, text equivalents, labels, and ARIA where needed. Interactive elements within the Experience Platform interface use corresponding labels, accessible names, and roles that identify both their purpose and their current state. This ensures that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls.
+Users with disabilities frequently rely on hardware and software, known as assistive technologies, to access digital content and to use software products. Adobe Experience Platform supports several types of assistive technologies (AT) such as screen readers, zoom, and voice recognition software by following accessibility best practices such as using semantic code, text equivalents, labels, and ARIA where needed. Interactive elements within the Experience Platform user interface (UI) use corresponding labels, accessible names, and roles that identify both their purpose and their current state. This ensures that assistive technologies, such as screen readers, can read out the labels and other information to users so that they can easily interact with the application controls.
 
 ## Keyboard accessibility
 
@@ -36,6 +36,6 @@ Experience Platform strives for [WCAG 2.1 AA](https://www.w3.org/TR/WCAG/) confo
 
 ## Required field validation
 
-When adding data, or creating schemas and segments, required fields are indicated both visually, using an asterisk next to the text label of a field, and programmatically. These fields trigger validation when you enter invalid data in fields and/or upon saving. If a required field does not pass validation, it is outlined in red with an error icon. A written description also appears of the issue that needs to be fixed.
+When adding data, creating schemas, or defining segments, required fields are indicated both visually, using an asterisk next to the text label of a field, and programmatically. These fields trigger validation when you enter invalid data in fields and upon saving. If a required field does not pass validation, it is outlined in red with an error icon and a written description of the issue that needs to be fixed also appears.
 
 ![A close up of a required field that has not passed validation. The field appears in red and an error icon is present.](images/field-validation.png)
