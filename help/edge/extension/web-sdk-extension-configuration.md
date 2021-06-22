@@ -69,11 +69,11 @@ Use Out or Pending if you require explicit user consent for your business operat
 
 ### [!UICONTROL Migrate ECID from VisitorAPI]
 
-This option is enabled by default. When this feature is enabled the SDK will be able to read the AMCV and s_ecid cookies and set the AMCV cookie used by Visitor.js. This feature is important when migrating to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It will allow the SDK to continue to use the same ECID so that users are not identified as two separate users.
+This option is enabled by default. When this feature is enabled, the SDK can read the AMCV and s_ecid cookies and set the AMCV cookie used by Visitor.js. This feature is important when migrating to Adobe Experience Platform Web SDK as some pages might still be using Visitor.js. It allows the SDK to continue to use the same ECID so that users are not identified as two separate users.
 
 ### [!UICONTROL Use third-party cookies]
 
-This option enables the SDK to attempt to store a user identifier in a third-party cookie. If successful, the user will be identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK may still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK will only store the identifier in the first-party domain.
+This option enables the SDK to attempt to store a user identifier in a third-party cookie. If successful, the user is identified as a single user as they navigate across multiple domains, rather than being identified as a separate user on each domain. If this option is enabled, the SDK might still be unable to store the user identifier in a third-party cookie if the browser does not support third-party cookies or has been configured by the user to not allow third-party cookies. In this case, the SDK only stores the identifier in the first-party domain.
 
 ## [!UICONTROL Personalization]
 
@@ -91,11 +91,11 @@ The callback function provided in the extension is also called the [`onBeforeEve
 
 ### [!UICONTROL Click data collection]
 
-The SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links will also be labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. We provide you with some default download link qualifiers, but these can be edited at any time.
+The SDK can automatically collect link click information for you. By default, this feature is enabled but can be disabled using this option. Links are also labeled as download links if they contain one of the download expressions listed in the [!UI CONTROL Download Link Qualifier] textbox. Adobe provides you with some default download link qualifiers, but these can be edited at any time.
 
 ### [!UICONTROL Automatically collected context data]
 
-By default, the SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the the exact information we collect you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories of data collected, you can change these options.  
+By default, the SDK collects certain context data regarding device, web, environment, and place context. If you would like to see a list of the information Adobe collects, you can find it [here](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/automatic-information.html?lang=en). If you don't want this data collected or you only want certain categories of data collected, you can change these options.  
 
 ## [!UICONTROL Advanced Settings]
 
@@ -103,4 +103,4 @@ By default, the SDK collects certain context data regarding device, web, environ
 
 ### [!UICONTROL Edge base path]
 
-This field will be used if you need to change the base path that is used to interact with Adobe Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
+Use this field if you need to change the base path that is used to interact with Adobe Edge Network. This shouldn't require updating, but in the case that you participate on a beta or alpha, Adobe might ask you to change this field.
