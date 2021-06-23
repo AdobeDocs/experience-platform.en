@@ -44,7 +44,7 @@ INSERT INTO temp_dataset
 SELECT a._company AS _company,
 a._id AS _id,
 a.timestamp AS timestamp
-FROM temp_dataset a
+FROM actual_dataset a
 WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
 AND timestamp < To_timestamp('2021-01-21 13:00:00')
 LIMIT 100;
