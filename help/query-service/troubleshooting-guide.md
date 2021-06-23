@@ -24,7 +24,7 @@ SELECT * FROM <table> WHERE 1=0
 
 This query returns only the metadata for the specified table.
 
-### How can I quickly experiment on a query?
+### How can I quickly iterate on a CTAS (Create Table as Select) query without materializing it?
 
 You can create temporary tables to quickly iterate and experiment on a query before materializing it for use. You can also use temporary tables to validate if a query is functional.
 
@@ -65,9 +65,9 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
        AND timestamp < To_timestamp('2021-01-21 13:00:00')
 ```
 
-### Can I get all of the data from my rows?
+### Should I use wildcards, such as * to get all the rows from my datasets?
 
-You cannot get all the data from your rows, as Query Service is a **columnar-based** system and not a row-based system.
+You cannot use wildcards to get all the data from your rows, as Query Service should be treated as a **columnar-store** rather than a traditional row-based store system.
 
 ## REST API errors
 
