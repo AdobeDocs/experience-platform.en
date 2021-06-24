@@ -38,7 +38,7 @@ The following request retrieves an export payload for a `Restaurant` field group
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
+  https://platform.adobe.io/data/foundation/schemaregistry/rpc/export/_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -124,9 +124,9 @@ Note that all instances of the resource's tenant ID are replaced with `<XDM_TENA
         "meta:sandboxType": "production"
     },
     {
-        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "fieldgroups",
+        "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "mixins",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
@@ -283,9 +283,9 @@ curl -X POST \
           "meta:sandboxType": "production"
         },
         {
-          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-          "meta:resourceType": "fieldgroups",
+          "$id": "https://ns.adobe.com/<XDM_TENANTID_PLACEHOLDER>/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:altId": "_<XDM_TENANTID_PLACEHOLDER>.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+          "meta:resourceType": "mixins",
           "version": "1.0",
           "title": "Restaurant",
           "type": "object",
@@ -441,9 +441,9 @@ A successful response returns a list of the imported resources, with the appropr
         "meta:tenantNamespace": "_{TENANT_ID}"
     },
     {
-        "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:altId": "_{TENANT_ID}.fieldgroups.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
-        "meta:resourceType": "fieldgroups",
+        "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:altId": "_{TENANT_ID}.mixins.922a56b58c6b4e4aeb49e577ec82752106ffe8971b23b4d9",
+        "meta:resourceType": "mixins",
         "version": "1.0",
         "title": "Restaurant",
         "type": "object",
