@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;etl;ETL;etl transformations;ETL transformations
 solution: Experience Platform
 title: Sample ETL Transformations
-topic: overview
+topic-legacy: overview
 description: This article demonstrates the following example transformations that an extract, transform, load (ETL) developer can encounter.
+exl-id: 8084f5fd-b621-4515-a329-5a06c137d11c
 ---
-
 # Sample ETL transformations 
 
 This article demonstrates the following example transformations that an extract, transform, load (ETL) developer can encounter.
@@ -300,4 +300,3 @@ Below is the array of identities transformed to XDM:
       }]
    }
 ```
-

@@ -2,8 +2,8 @@
 keywords: advertising; bing; 
 title: Microsoft Bing connection
 description: With the Microsoft Bing connection destination, you can execute retargeting and audience targeted digital campaigns across Microsoft Display Advertising.
+exl-id: e1c0273b-7e3c-4d77-ae14-d1e528ca0294
 ---
-
 # [!DNL Microsoft Bing] connection {#bing-destination}
 
 ## Overview {#overview}
@@ -18,7 +18,7 @@ As a marketer, I want to be able to use segments built off of [!DNL Microsoft Ad
 
 ## Supported Identities {#supported-identities}
 
-[!DNL The Trade Desk] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
+[!DNL Microsoft Bing] supports the activation of identities described in the table below. Learn more about [identities](/help/identity-service/namespaces.md).
 
 |Target Identity|Description|
 |---|---|
@@ -71,4 +71,4 @@ When mapping segments, we recommend you use the [!DNL Platform] segment name or 
 
 ## Exported data {#exported-data}
 
-To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account. 
+To verify if data has been exported successfully to the [!DNL Microsoft Bing] destination, check your [!DNL Microsoft Bing Ads] account. If activation was successful, audiences are populated in your account.

@@ -8,9 +8,9 @@ kt:
 audience: all
 doc-type: video
 activity: understand
-thumbnail: 
+thumbnail:
+exl-id: 62345f9d-11fe-4659-a513-ee15938f0c85
 ---
-
 # Create a dynamic segment in the Experience Platform UI
 
 The following video is intended to support your understanding of creating dynamic segments. It shows an example customer experience followed by a quick tour of key features in the [!DNL Platform] interface. To learn more about segmentation and how to create segments in the UI, please read the [Segment Builder guide](../ui/segment-builder.md).

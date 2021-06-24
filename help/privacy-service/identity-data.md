@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;ECID;ecid
 solution: Experience Platform
 title: Identity Data for Privacy Requests
-topic: overview
+topic-legacy: overview
 description: This document provides general guidance on how to configure your data operations and leverage Adobe technologies to effectively retrieve the appropriate identity information for customer privacy requests.
+exl-id: 43b0292a-ea4d-4858-b584-ba71029724f6
 ---
-
 # Identity data for privacy requests
 
 In order for Adobe Experience Platform [!DNL Privacy Service] to process customer requests for their private data (including access, delete, or opt-out-of-sale requests), it must be provided with unique identifiers that link a specific customer to their stored private data in your Adobe Experience Cloud enabled applications. [!DNL Privacy Service] then uses these identifiers to gather all data stored under the customer's identity within [!DNL Experience Cloud], and process it according to the customer's request.
@@ -24,9 +24,9 @@ Adobe Experience Platform Identity Service maintains a store of globally defined
 
 ## ECID and Opt-in Service
 
-Adobe Experience Cloud [!DNL Identity Service] serves as a common identification framework for [!DNL Experience Cloud], and assigns a unique, persistent ID to each site visitor. The [!DNL Experience Cloud] ID (ECID) tracks a customer's activity through the use of a first-party cookie, can uniquely identify a device across multiple applications, and allows you to identify the same site visitor and their data in different [!DNL Experience Cloud] applications. See the [Experience Cloud Identity Service overview](https://docs.adobe.com/content/help/en/id-service/using/intro/overview.html) for more information.
+Adobe Experience Cloud [!DNL Identity Service] serves as a common identification framework for [!DNL Experience Cloud], and assigns a unique, persistent ID to each site visitor. The [!DNL Experience Cloud] ID (ECID) tracks a customer's activity through the use of a first-party cookie, can uniquely identify a device across multiple applications, and allows you to identify the same site visitor and their data in different [!DNL Experience Cloud] applications. See the [Experience Cloud Identity Service overview](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html) for more information.
 
-Opt-in Service, an extension of [!DNL Experience Cloud Identity Service], allows you set up protocols on your application to let visitors determine whether you can set a cookie on the visitor's device or browser. For more detailed information on the Opt-in Service, including how to set up the service for your application, please refer [Opt-in Service documentation](https://docs.adobe.com/content/help/en/id-service/using/implementation/opt-in-service/optin-overview.html).
+Opt-in Service, an extension of [!DNL Experience Cloud Identity Service], allows you set up protocols on your application to let visitors determine whether you can set a cookie on the visitor's device or browser. For more detailed information on the Opt-in Service, including how to set up the service for your application, please refer [Opt-in Service documentation](https://experienceleague.adobe.com/docs/id-service/using/implementation/opt-in-service/optin-overview.html).
 
 Once your site visitors have been assigned ECIDs, you can utilize the Adobe [!DNL Privacy JavaScript Library] to retrieve those IDs for use in privacy requests, as described in the next section.
 

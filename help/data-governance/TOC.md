@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Data Governance Help
 breadcrumb-title: Data Governance Guide

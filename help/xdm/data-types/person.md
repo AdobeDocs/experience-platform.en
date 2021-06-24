@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;person;datatype;data-type;data type;
 solution: Experience Platform
 title: Person data type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Person Experience Data Model (XDM) data type.
+exl-id: f28a52be-90c7-4ed0-a460-97165bb58046
 ---
-
 # [!UICONTROL Person] data type
 
 [!UICONTROL Person] is a standard Experience Data Model (XDM) data type that describes an individual person. This datatype can represent a person acting in various roles, such as a customer, contact, or owner.
@@ -22,6 +22,8 @@ description: This document provides an overview of the Person Experience Data Mo
 | `maritalStatus` | String | Describes a person's relationship with a significant other. The value of this property must be equal to one of the following enum values. <li> `married` </li> <li> `single` </li> <li> `divorced` </li> <li> `widowed` </li> <li> `not_specified` </li> The default for this value is `not_specified`. |
 | `nationality` | String | The legal relationship between a person and their state represented using the ISO 3166-1 Alpha-2 code. The format of this property must conform to this regular expression `^[A-Z]{2}$`. |
 | `taxId` | String | The tax or fiscal ID of the person, such as the Taxpayer Identification Number (TIN) in the US or the Certificado de Identificación Fiscal (CIF/NIF) in Spain. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

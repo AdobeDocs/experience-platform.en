@@ -3,20 +3,34 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Importing and using external audiences
 description: Follow this tutorial to learn how to use external audiences with Adobe Experience Platform.
-topic: tutorial
+topic-legacy: tutorial
+exl-id: 56fc8bd3-3e62-4a09-bb9c-6caf0523f3fe
 ---
-
 # Importing and using external audiences
 
 Adobe Experience Platform supports the ability to import external audience, which can subsequently be used as components for a new segment definition. This document provides a tutorial for setting up Experience Platform to import and use external audiences.
 
 ## Getting started
 
+This tutorial requires a working understanding of the various [!DNL Adobe Experience Platform] services involved in creating audience segments. Before beginning this tutorial, please review the documentation for the following services:
+
 - [Segmentation Service](../home.md): Allows you to build audience segments from Real-time Customer Profile data.
 - [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [Experience Data Model (XDM)](../../xdm/home.md): The standardized framework by which Platform organizes customer experience data.
 - [Datasets](../../catalog/datasets/overview.md): The storage and management construct for data persistence in Experience Platform.
 - [Streaming ingestion](../../ingestion/streaming-ingestion/overview.md): How Experience Platform ingests and stores data from client- and server-side devices in real time.
+
+### Segment data vs segment metadata
+
+Before you start importing and using external audiences, it is important to understand the difference between segment data and segment metadata.
+
+Segment data refers to the profiles that meet the segment qualification criteria, and are therefore part of the audience.
+
+Segment metadata is information about the segment itself, which includes the name, description, expression (if applicable), the creation date, the last modified date, and an ID. The ID links the segment metadata to the individual profiles that meet the segment qualification and are part of the resulting audience. 
+
+| Segment data | Segment metadata |
+| ------------ | ---------------- |
+| Profiles that meet segment qualification | Information about the segment itself |
 
 ## Create an identity namespace for the external audience
 

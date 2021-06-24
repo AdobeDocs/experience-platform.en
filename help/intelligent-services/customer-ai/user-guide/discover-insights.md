@@ -2,10 +2,10 @@
 keywords: Experience Platform;insights;customer ai;popular topics;customer ai insights
 solution: Experience Platform, Intelligent Services, Real-time Customer Data Platform
 title: Discover Insights with Customer AI
-topic: Discovering insights
+topic-legacy: Discovering insights
 description: This document serves as a guide for interacting with service instance insights in the Intelligent Services Customer AI user interface.
+exl-id: 8aaae963-4029-471e-be9b-814147a5f160
 ---
-
 # Discover insights with Customer AI
 
 Customer AI, as part of Intelligent Services provides marketers with the power to leverage Adobe Sensei to anticipate what your customers next action is going to be. Customer AI is used to generate custom propensity scores such as churn and conversion for individual profiles at-scale. This is accomplished without having to transform the business needs to a machine learning problem, picking an algorithm, training, or deployment.
@@ -30,14 +30,15 @@ The Customer AI service page appears. This page lists service instances of Custo
 
 ![Create instance](../images/insights/dashboard.png)
 
-Click on a service instance name to begin.
+Select a service instance name to begin.
 
 ![Create instance](../images/insights/click-the-name.png)
 
-Next, the insights page for that service instance appears, where you are provided with visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
+Next, the insights page for that service instance appears with the option to select **[!UICONTROL Latest scores]** or **[!UICONTROL Performance summary]**. The default tab **[!UICONTROL Latest scores]** provides visualizations of your data. The visualizations and what you can do with the data are explained in more detail throughout this guide.
 
-![setup page](../images/insights/landing-page.png)
+ The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates for each propensity bucket. To learn more, see the section on [performance summary metrics](#performance-metrics).
 
+![setup page](../images/insights/landing_page_insights.png)
 
 ### Service instance details
 
@@ -148,6 +149,30 @@ The segment builder is used to define a segment. When selecting **[!UICONTROL Cr
  To view your new segment in the Platform UI, click **[!UICONTROL Segments]** in the left navigation. The **[!UICONTROL Browse]** page appears and displays all available segments. 
 
  ![All your Segments](../images/insights/Segments-dashboard.png)
+
+## Performance summary metrics {#performance-metrics}
+
+The **[!UICONTROL Performance summary]** tab shows the actual churn or conversion rates, separated into each of the propensity buckets scored by Customer AI.
+
+![Performance summary tab](../images/insights/summary_tab.png)
+
+Initially only expected rates (dotted lines) are displayed. Expected rates are displayed when a scoring run has not occurred and data is not yet available. However, once an outcome window has passed, the expected rate is replaced with an actual rate (solid line).
+
+Hovering over the lines displays the date and actual/expected rate for that day in that bucket.
+
+![Bucket example](../images/insights/churn_tab.png)
+
+You can filter the timeframe for the expected and actual rates being displayed. Select the **calendar icon** ![icon](../images/insights/calendar_icon.png)then select a new date range. The results in each of the buckets are updated to display within the new date range.
+
+![Date selector](../images/insights/date_selector.png)
+
+### Individual scoring run rates
+
+The bottom half of the **[!UICONTROL Performance summary]** tab displays the results for each individual scoring run. Select the dropdown date in the top-right to display results for a different scoring run.
+
+Depending on if you are predicting churn or conversion, the [!UICONTROL Distribution of Scores] graph displays the distribution of profiles churned/converted and not churned/not converted in each increment.
+
+![individual scoring](../images/insights/scoring_tab.png)
 
 ## Next steps
 

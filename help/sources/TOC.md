@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
@@ -12,14 +11,19 @@ feature: Data Ingestion, Sources
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
-    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
+    - [Analytics source connector](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
     - Adobe application field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
+      - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+    - Marketo Engage {#marketo}
+      - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
+      - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
+      - [Marketo Engage namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
@@ -54,6 +58,7 @@ feature: Data Ingestion, Sources
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
+    - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
@@ -67,6 +72,8 @@ feature: Data Ingestion, Sources
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+  - Streaming {#streaming}
+    - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
   - Create a source connection {#create}
     - Advertising {#advertising}
@@ -102,6 +109,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/api/create/databases/mariadb.md)
       - [MySQL](tutorials/api/create/databases/mysql.md)
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
@@ -152,6 +160,7 @@ feature: Data Ingestion, Sources
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
+      - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#create}
       - [Google AdWords](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
@@ -186,6 +195,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
       - [MySQL](tutorials/ui/create/databases/mysql.md)
       - [Oracle](tutorials/ui/create/databases/oracle.md)

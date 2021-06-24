@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Query Service Help
 breadcrumb-title: Query Service Guide

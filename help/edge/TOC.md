@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
@@ -13,7 +12,7 @@ feature: Data Management
 * [Platform Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
   * [Prerequisites](fundamentals/prerequisite.md)
-  * [Create an edge configuration](fundamentals/edge-configuration.md)
+  * [Configuring a datastream](fundamentals/datastreams.md)
   * [Install the SDK](fundamentals/installing-the-sdk.md)
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
@@ -22,6 +21,7 @@ feature: Data Management
   * [Merge event data](fundamentals/merging-event-data.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
+  * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
 * Data collection {#data-collection}
@@ -48,9 +48,10 @@ feature: Data Management
     * [Integrate with Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
     * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Web SDK extension for Adobe Experience Platform Launch {#extension}
-  * [Web SDK extension](extension/web-sdk-extension.md)
+  * [Web SDK extension](extension/web-sdk-extension-configuration.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
+  * [Accessing the ECID](extension/accessing-the-ecid.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)

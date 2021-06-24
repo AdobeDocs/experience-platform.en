@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;CJA;journey analytics;customer journey analytics;campaign orchestration;orchestration;customer journey;journey;journey orchestration;capability;workflow
 solution: Experience Platform
 title: Experience Platform Documentation Overview
-topic: overview
+topic-legacy: overview
 description: Adobe Experience Platform documentation is provided in multiple formats, including overviews, tutorials, and guides for both the user interface and API. Here is a brief description of the most common documentation types that are available for Experience Platform services.
+exl-id: 1c201d42-4a53-4076-9363-a89dddbd0ba5
 ---
-
 # Experience Platform documentation overview
 
 >[!NOTE]
@@ -29,4 +29,3 @@ Experience Platform documentation is provided in multiple formats, including ove
 * **Tutorial:** A tutorial is a step-by-step guide through the UI, API, or a mix of both, that leads to a specific outcome. Unlike a developer guide, an API tutorial may only focus on one or two endpoints and is not an exhaustive API resource. Similarly, UI tutorials may focus only on specific steps, not the complete user interface available for that service. Tutorials are often part of a larger workflow and feature "next steps" that describe which tutorials you may want to try next.
 
 * **UI guide:** A UI guide outlines actions available in the [!DNL Platform] user interface for a specific service. These documents contain screenshots and steps focused on interacting with Platform through the UI. Similar to a developer guide, the UI guide outlines all available actions and options including "gotchas" to avoid. This is the most detailed resource for working with the UI.
-

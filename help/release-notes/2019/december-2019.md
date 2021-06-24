@@ -1,13 +1,11 @@
 ---
-
 title: Adobe Experience Platform Release Notes
 description: Experience Platform release notes December 11, 2019
 doc-type: release notes
 last-update: December 12, 2019
 author: ens71067
-
+exl-id: 98d50b90-38ed-4cc2-ad48-78b712b453f7
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: December 11, 2019**

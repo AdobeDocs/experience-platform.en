@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;Azure File Storage;azure file storage
 solution: Experience Platform
 title: Azure File Storage Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using APIs or the user interface.
+exl-id: 0a5e9df6-9760-4eeb-86d5-d92d77df3d2b
 ---
-
-# (Beta) Azure File Storage connector
-
->[!NOTE]
->
->The Azure File Storage connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# Azure File Storage connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure], allowing you to bring your data from these systems.
 

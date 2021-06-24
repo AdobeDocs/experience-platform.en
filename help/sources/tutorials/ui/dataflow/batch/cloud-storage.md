@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
 title: Configure a Dataflow for a Cloud Storage Batch Connector in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 ---
-
 # Configure a dataflow for a cloud storage batch connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
@@ -29,6 +29,7 @@ Additionally, this tutorial requires that you have an established cloud storage 
 * Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
+* Compressed files: JSON and delimited files can be compressed as: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`.
 
 ## Select data
 
@@ -80,6 +81,16 @@ You can set a custom delimiter when ingesting delimited files. Select the **[!UI
 Once you have selected your data format and set your delimiter, select **[!UICONTROL Next]**.
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
+
+### Ingest compressed files
+
+You can ingest compressed JSON or delimited files by specifying their compression type.
+
+In the [!UICONTROL Select data] step, select a compressed file for ingestion and then select its appropriate file type and whether it's XDM-compliant or not. Next, select **[!UICONTROL Compression type]** and then select the appropriate compressed file type for your source data.
+
+With a compressed file type identified, select **[!UICONTROL Next]** to proceed.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
 
 ## Map data fields to an XDM schema
 

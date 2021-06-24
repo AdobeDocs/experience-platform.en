@@ -2,8 +2,8 @@
 keywords: DoubleClick Bid Manager;DoubleClick bid manager;DoubleClick;Display & Video 360;display 360;video 360;Video 360;Display 360;display and video
 title: Google Display & Video 360 connection
 description: Display & Video 360, formerly known as DoubleClick Bid Manager is a tool used to execute retargeting and audience targeted digital campaigns across Display, Video and Mobile inventory sources.
+exl-id: bdd3b3fd-891f-44ec-bd47-daf7f3289f92
 ---
-
 # [!DNL Google Display & Video 360] connection
 
 ## Overview {#overview}

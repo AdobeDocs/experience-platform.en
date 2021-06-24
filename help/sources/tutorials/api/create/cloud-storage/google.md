@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;google;Google
 solution: Experience Platform
 title: Create a Google Cloud Storage Source Connection Using the Flow Service API
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a Google Cloud Storage account using the Flow Service API.
+exl-id: 321d15eb-82c0-45a7-b257-1096c6db6b18
 ---
-
 # Create a [!DNL Google Cloud Storage] source connection using the [!DNL Flow Service] API
 
 [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.

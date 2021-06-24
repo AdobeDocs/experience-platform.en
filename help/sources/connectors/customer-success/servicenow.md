@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect ServiceNow to Adobe Experience Platform using APIs or the user interface.
+exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 ---
-
-# (Beta) [!DNL ServiceNow] connector
-
->[!NOTE]
->
->The [!DNL ServiceNow] connector is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL ServiceNow] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

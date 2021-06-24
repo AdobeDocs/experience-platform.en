@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;search;datatype;data-type;data type;
 solution: Experience Platform
 title: Search Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Search Experience Data Model (XDM) data type.
+exl-id: 9893cb67-b0c7-4f91-a0d4-96f7b87d9510
 ---
-
 # [!UICONTROL Search] data type
 
 [!UICONTROL Search] is a standard Experience Data Model (XDM) data type that contains information about web search activity.
@@ -21,6 +21,8 @@ description: This document provides an overview of the Search Experience Data Mo
 | `searchEngine` | String | The search engine used by the search. |
 | `searchEngineID` | String | The application-specific identifier used to identify the search engine. |
 | `slot` | String | The named section of the page where the search result appeared. The value of this property must be equal to one of the known enum values you define such as `top`, `side`, or `bottom`. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

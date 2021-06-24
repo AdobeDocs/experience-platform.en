@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;string functions;string;
 solution: Experience Platform
 title: PQL String Functions
-topic: developer guide
+topic-legacy: developer guide
 description: Profile Query Language (PQL) offers functions to make interaction with strings simpler.
+exl-id: 9fd79d86-0802-4312-abce-f6ef5ba5bb34
 ---
-
 # String functions
 
 [!DNL Profile Query Language] (PQL) offers functions to make interaction with strings simpler. More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -262,4 +262,3 @@ emailAddress.regexGroup("@(\w+)", 1)
 ## Next steps
 
 Now that you have learned about string functions, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).
- 

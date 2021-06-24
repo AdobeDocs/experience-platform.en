@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;pql;PQL;Profile Query Language;logical quantifiers;logical quantifier;
 solution: Experience Platform
 title: PQL Logical Quantifiers
-topic: developer guide
+topic-legacy: developer guide
 description: Logical quantifiers can be used to assert conditions with arrays in Profile Query Language (PQL).
+exl-id: 8b1c9560-02e2-46e0-9646-c64dd4a15df1
 ---
-
 # Logical quantifier functions
 
 Logical quantifiers can be used to assert conditions with arrays in [!DNL Profile Query Language] (PQL). More information about other PQL functions can be found in the [[!DNL Profile Query Language] overview](./overview.md).
@@ -62,4 +62,4 @@ forall E from xEvent where (E.commerce.item.price > 50), I from E.productListIte
 
 ## Next steps
 
-Now that you have learned about logical quantifiers, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md). 
+Now that you have learned about logical quantifiers, you can use them within your PQL queries. For more information about other PQL functions, please read the [Profile Query Language overview](./overview.md).

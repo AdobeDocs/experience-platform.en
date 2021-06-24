@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-topic: api guide
+topic-legacy: api guide
 description: This document contains steps outlining how to set up a Postman environment, import Postman collections, and a list of available collections for each Platform service.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 ---
-
 # Postman in Adobe Experience Platform
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.

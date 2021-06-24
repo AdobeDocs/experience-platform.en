@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Phoenix;phoenix
 solution: Experience Platform
 title: Phoenix Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Phoenix to Adobe Experience Platform using APIs or the user interface.
+exl-id: 45e6ef18-a0b7-4bb2-b099-b2a878e96637
 ---
-
 # (Beta) [!DNL Phoenix] connector
 
 >[!NOTE]

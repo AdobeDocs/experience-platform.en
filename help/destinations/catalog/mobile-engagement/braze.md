@@ -2,8 +2,8 @@
 keywords: mobile; braze; messaging;
 title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
-
 # (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
@@ -34,7 +34,7 @@ As a marketer, I want to target users in a mobile engagement destination, with s
 
 ## Supported Identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Braze] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -142,4 +142,3 @@ To verify if data has been exported successfully to the [!DNL Braze] destination
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
-

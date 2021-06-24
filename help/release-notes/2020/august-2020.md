@@ -4,8 +4,8 @@ description: Experience Platform release notes August 10, 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
+exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: August 12, 2020**

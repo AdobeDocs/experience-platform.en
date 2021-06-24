@@ -2,8 +2,8 @@
 keywords: LinkedIn;linkedin;Linkedin;LinkedIn Insight Tag;insight tag;Insight Tag
 title: LinkedIn Insight Tag extension
 description: The LinkedIn Insight Tag extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: f3475621-79df-4208-a47a-e0cfd8acec7f
 ---
-
 # [!DNL LinkedIn Insight Tag] extension {#linkedin-insights-extension}
 
 ## Overview {#overview}

@@ -1,11 +1,10 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;enable profile;Enable profile;Union schema;UNION PROFILE;union profile
 title: Real-time Customer Profile UI Guide
-topic: guide
+topic-legacy: guide
 description: Real-time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with Real-time Customer Profile in the Adobe Experience Platform user interface.
-
+exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 ---
-
 # [!DNL Real-time Customer Profile] UI guide
 
 [!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. This document serves as a guide for interacting with [!DNL Real-time Customer Profile] data in the Adobe Experience Platform user interface (UI).
@@ -20,19 +19,19 @@ This UI guide requires an understanding of the various [!DNL Experience Platform
 
 ## Overview
 
-In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with profiles.
+In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navigation to open the **[!UICONTROL Overview]** tab displaying the [!UICONTROL Profiles] dashboard. 
 
-![](../images/user-guide/profiles-overview.png)
-
-### (Alpha) Profile dashboard
-
->[!IMPORTANT]
+>[!NOTE]
 >
->The dashboard functionality is currently in alpha and is not available to all users. The documentation and the functionality are subject to change.
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
 
-For some users, selecting **[!UICONTROL Profiles]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your Profile data. 
+### [!UICONTROL Profiles] dashboard {#profile-dashboard}
 
-To learn more, visit the [Profile dashboard guide](profile-dashboard.md).
+The **[!UICONTROL Profiles]** dashboard outlines key metrics related to your organization's Profile data. 
+
+To learn more, visit the [Profile dashboard guide](../../dashboards/guides/profiles.md).
+
+![](../../dashboards/images/profiles/dashboard-overview.png)
 
 ## Browse
 
@@ -44,7 +43,7 @@ Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity.
 
 On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
-These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [Merge Policies user guide](merge-policies.md).
+These profile metrics are evaluated using the default merge policy of your organization. For more information on working with merge policies, including how to define a default merge policy, see the [merge policies overview](../merge-policies/overview.md).
 
 In addition to these metrics, the profile metrics section also provides a last updated date and time, showing when the metrics were last evaluated.
 
@@ -68,7 +67,7 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. 
 
-To learn more about merge policies and their role within Platform, see the [merge policies UI guide](merge-policies.md).
+To learn more about merge policies and their role within Platform, see the [merge policies overview](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-search-merge-policy.png)
 
@@ -106,9 +105,7 @@ You can view additional information related to the individual profile by selecti
 
 From the main **[!UICONTROL Profiles]** menu, select the **[!UICONTROL Merge Policies]** tab to view a list of merge policies belonging to your organization. Each listed policy displays its name, whether or not it is the default merge policy, and the schema class that it applies to. 
 
-For more information on merge policies, see the [merge policies UI guide](merge-policies.md).
-
-To learn more about working with merge policies using the Real-time Customer Profile API, please refer to the [merge policies endpoint guide](../api/merge-policies.md).
+For more information on merge policies, see the [merge policies overview](../merge-policies/overview.md).
 
 ![](../images/user-guide/profiles-merge-policies.png)
 

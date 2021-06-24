@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;Greenplum;greenplum
 solution: Experience Platform
 title: Create a GreenPlum  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a GreenPlum source connection using the Adobe Experience Platform UI.
+exl-id: e6c6a495-25ce-4497-b20e-91374c7bb548
 ---
-
 # Create a [!DNL GreenPlum] source connection in the UI
-
->[!NOTE]
->
-> The [!DNL GreenPlum] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating an [!DNL GreenPlum] source connector using the [!DNL Platform] user interface.
 

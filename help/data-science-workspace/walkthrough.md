@@ -2,10 +2,10 @@
 keywords: Experience Platform;walkthrough;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace Walkthrough
-topic: Walkthrough
+topic-legacy: Walkthrough
 description: This document provides a walkthrough for Adobe Experience Platform Data Science Workspace. Specifically the general workflow a data scientist would go through to solve a problem using machine learning.
+exl-id: d814846e-52a9-46c6-831a-3399241959f2
 ---
-
 # [!DNL Data Science Workspace] walkthrough
 
 This document provides a walkthrough for Adobe Experience Platform [!DNL Data Science Workspace]. This tutorial outlines a general data scientist workflow and how they might approach and solve a problem using machine learning.
@@ -213,4 +213,4 @@ This document covered a general data scientist workflow to solve a retail sales 
 - Next, feature engineering is used to make modifications to your retail dataset.
 - Lastly, create models of the data and select which model is the best performer for predicting future sales.
 
-Once you are ready, start by reading the [JupyterLab user guide](./jupyterlab/overview.md) for a quick overview of notebooks in Adobe Experience Platform Data Science Workspace. Additionally, if you are interested in learning about Models and Recipes, start by reading the [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) tutorial. This tutorial prepares you for subsequent Data Science Workspace tutorials which can be viewed in the Data Science Workspace [tutorials page](../tutorials/data-science-workspace.md).
+Once you are ready, start by reading the [JupyterLab user guide](./jupyterlab/overview.md) for a quick overview of notebooks in Adobe Experience Platform Data Science Workspace. Additionally, if you are interested in learning about Models and Recipes, start by reading the [retail sales schema and dataset](./models-recipes/create-retails-sales-dataset.md) tutorial.

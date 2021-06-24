@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;data usage compliance;enforce;enforce data usage compliance;Segmentation Service;segmentation;Segmentation;
 solution: Experience Platform
 title: Enforce Data Usage Compliance for an Audience Segment Using APIs
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers the steps for enforcing data usage compliance for Real-time Customer Profile audience segments using APIs.
+exl-id: 2299328c-d41a-4fdc-b7ed-72891569eaf2
 ---
-
 # Enforce data usage compliance for an audience segment using APIs
 
 This tutorial covers the steps for enforcing data usage compliance for [!DNL Real-time Customer Profile] audience segments using APIs.

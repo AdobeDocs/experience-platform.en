@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;sql syntax;sql;ctas;CTAS;Create table as select
 solution: Experience Platform
 title: SQL Syntax in Query Service
-topic: syntax
+topic-legacy: syntax
 description: This document shows SQL syntax supported by Adobe Experience Platform Query Service.
+exl-id: 2bd4cc20-e663-4aaa-8862-a51fde1596cc
 ---
-
 # SQL syntax in Query Service
 
 Adobe Experience Platform Query Service provides the ability to use standard ANSI SQL for `SELECT` statements and other limited commands. This document covers the SQL syntax supported by [!DNL Query Service].
@@ -222,6 +222,34 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 **Parameters**
 
 -  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
+
+## DROP DATABASE
+
+The `DROP DATABASE` command drops an existing database.
+
+```sql
+DROP DATABASE [IF EXISTS] db_name
+```
+
+**Parameters**
+
+-  `IF EXISTS`: If this is specified, no exception is thrown if the database does **not** exist.
+
+## DROP SCHEMA
+
+The `DROP SCHEMA` command drops an existing schema.
+
+```sql
+DROP SCHEMA [IF EXISTS] db_name.schema_name [ RESTRICT | CASCADE]
+```
+
+**Parameters**
+
+-  `IF EXISTS`: If this is specified, no exception is thrown if the schema does **not** exist.
+
+-  `RESTRICT`: Default value for the mode. If this is specified, the schema will only be dropped if it **doesn't** contain any tables.
+
+-  `CASCADE`: If this is specified, the schema will be dropped along with all the tables present in the schema.
 
 ## CREATE VIEW
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;commerce;datatype;data-type;data type;
 solution: Experience Platform
 title: Commerce Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Commerce Experience Data Model (XDM) data type.
+exl-id: c9cc569b-1a91-4a6e-8bfd-7f8ec07d01d4
 ---
-
 # [!UICONTROL Commerce] data type
 
 [!UICONTROL Commerce] is a standard Experience Data Model (XDM) data type that describes the records related to buying and selling activity.
@@ -26,6 +26,8 @@ description: This document provides an overview of the Commerce Experience Data 
 | `productViews` | [[!UICONTROL Measure]](./measure.md) | Describes when a view or views of an individual product has occurred. |
 | `purchases` | [[!UICONTROL Measure]](./measure.md) | Used to track when an order has been accepted. The purchase event is the only required action in a commerce conversion. The purchase event must have a product list referenced. |
 | `saveForLaters` | [[!UICONTROL Measure]](./measure.md) | A product list is saved for future use such as a wish list. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

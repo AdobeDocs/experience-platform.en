@@ -4,8 +4,8 @@ title: Privacy in Real-time Customer Data Platform
 seo-title: Privacy in Real-time Customer Data Platform
 description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
 seo-description: Real-time Customer Data Platform allows you to streamline the process of keeping your data operations compliant with privacy regulations.
+exl-id: bcb0e42e-4549-4952-bb69-5534aee353f8
 ---
-
 # Privacy in Real-time Customer Data Platform
 
 [!DNL Real-time Customer Data Platform] ([!DNL Real-time CDP]) helps marketers bring data from multiple enterprise systems together, allowing them to better identify, understand, and engage their customers. Adobe holds consumer data privacy as a fundamental design principle and provides various controls to help marketers manage the data privacy of their customers.
@@ -20,7 +20,7 @@ Legal privacy regulations such as the [!DNL General Data Protection Regulation] 
 
 [!DNL Real-time CDP] allows customers to opt out of having their personal data included in segmentation use cases. Customers' opt-out preferences are captured and stored by [!DNL Real-time Customer Profile], and can be enforced by excluding users who have opted out from a segment using boolean logic ("AND NOT") in the segment predicate.
 
-See the document on [honoring opt-out requests](../../segmentation/honoring-opt-outs.md) in the Adobe Experience Platform Segmentation Service documentation for more information.
+See the document on [honoring opt-out requests](../../segmentation/consents.md) in the Adobe Experience Platform Segmentation Service documentation for more information.
 
 ## IAB TCF 2.0 support
 

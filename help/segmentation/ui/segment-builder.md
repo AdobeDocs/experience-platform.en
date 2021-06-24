@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;
 solution: Experience Platform
 title: Segment Builder UI Guide
-topic: ui guide
-description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
+topic-legacy: ui guide
+description: The Segment Builder in the Adobe Experience Platform UI provides a rich workspace that allows you to interact with Profile data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties.
+exl-id: b27516ea-8749-4b44-99d0-98d3dc2f4c65
 ---
-
 # [!DNL Segment Builder] UI guide
 
 [!DNL Segment Builder] provides a rich workspace that allows you to interact with [!DNL Profile] data elements. The workspace provides intuitive controls for building and editing rules, such as drag-and-drop tiles used to represent data properties. 
@@ -110,6 +110,22 @@ The aggregation is now added. You can now select the aggregation function, choos
 
 ![](../images/ui/segment-builder/filled-aggregation.png)
 
+### Count functions {#count-functions}
+
+Count functions in Segment Builder are used to look for specified events and count the number of times they're done. The supported count functions in Segment Builder are "At least", "At most", "Exactly", "Between", and "All".
+
+To create a count function, select an event from the left rail and insert it into the [!UICONTROL Events] container.
+
+![](../images/ui/segment-builder/add-event.png)
+
+After placing the event within the Events container, select the [!UICONTROL At least 1] button. 
+
+![](../images/ui/segment-builder/add-count.png)
+
+The count function is now added. You can now select the count function and the value of the function. The example below would be to include any event that has at least one click.
+
+![](../images/ui/segment-builder/select-count.png)
+
 ## Containers
 
 Segment rules are evaluated in the order they are listed. Containers allow control over the order of execution through the use of nested queries.
@@ -136,7 +152,7 @@ Once you select **[!UICONTROL Unwrap container]** the child container is removed
 
 [!DNL Experience Platform] enables you to bring data together from multiple sources and combine it in order to see a complete view of each of your individual customers. When bringing this data together, merge policies are the rules that [!DNL Platform] uses to determine how data will be prioritized and what data will be combined to create a profile. 
 
-You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please see the tutorial on [working with merge policies using the UI](../../profile/ui/merge-policies.md). 
+You can select a merge policy that matches your marketing purpose for this audience or use the default merge policy provided by [!DNL Platform]. You can create multiple merge policies unique to your organization, including creating your own default merge policy. For step-by-step instructions on creating merge policies for your organization, please begin by reading the [merge policies overview](../../profile/merge-policies/overview.md). 
 
 To select a merge policy for your segment definition, select the gear icon on the **[!UICONTROL Fields]** tab, then use the **[!UICONTROL Merge Policy]** dropdown menu to select the merge policy that you wish to use.
 

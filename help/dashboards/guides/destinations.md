@@ -2,19 +2,14 @@
 keywords: Experience Platform;profile;real-time customer profile;user interface;UI;customization;profile dashboard;dashboard
 title: Destinations Dashboard
 description: Adobe Experience Platform provides a dashboard through which you can view important information about your organization's active destinations.
-topic: guide
 type: Documentation
+exl-id: 6a34a796-24a1-450a-af39-60113928873e
 ---
-
-# (Beta) [!UICONTROL Destinations] dashboard
-
->[!IMPORTANT]
->
->The dashboard functionality outlined in this document is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+# [!UICONTROL Destinations] dashboard
 
 The Adobe Experience Platform user interface (UI) provides a dashboard through which you can view important information about your organization's active destinations, as captured during a daily snapshot. This guide outlines how to access and work with the destinations dashboard in the UI and provides more information regarding the metrics displayed in the dashboard.  
 
-For an overview of destinations, as well as a catalog of all available destinations within Experience Platform, please visit the [destinations overview](../../destinations/home.md).
+For an overview of destinations, as well as a catalog of all available destinations within Experience Platform, please visit the [destinations documentation](../../destinations/home.md).
 
 ## [!UICONTROL Destinations] dashboard data {#destinations-dashboard-data}
 
@@ -27,6 +22,10 @@ The [!UICONTROL Destinations] dashboard displays a snapshot of the destinations 
 ## Exploring the destinations dashboard
 
 To navigate to the destinations dashboard within the Platform UI, select **[!UICONTROL Destinations]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+
+>[!NOTE]
+>
+>If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [!UICONTROL Catalog] tab. To learn more about the [!UICONTROL Catalog] tab, refer to the [[!UICONTROL Destinations] workspace guide](../../destinations/ui/destinations-workspace.md).
 
 ![](../images/destinations/dashboard-overview.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics
 solution: Experience Platform
 title: Privacy Service API Guide
 description: The Privacy Service API allows developers to create and manage customer requests to access or delete their personal data across Experience Cloud applications, in compliance with legal privacy regulations. Follow this guide to learn how to perform key operations using the API.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: c1d05e30-ef8f-4adf-87e0-1d6e3e9e9f9e
 ---
-
 # [!DNL Privacy Service] API guide
 
 Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user interface that allow you to manage (access and delete) the personal data of your data subjects (customers) across Adobe Experience Cloud applications. [!DNL Privacy Service] also provides a central audit and logging mechanism that allows you to access the status and results of jobs involving [!DNL Experience Cloud] applications.
@@ -28,9 +28,9 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to the [!DNL Privacy Service] API, you must first gather your access credentials to be used in required headers:
 
-* Authorization: Bearer `{ACCESS_TOKEN}`
-* x-api-key: `{API_KEY}`
-* x-gw-ims-org-id: `{IMS_ORG}`
+* `Authorization: Bearer {ACCESS_TOKEN}`
+* `x-api-key: {API_KEY}`
+* `x-gw-ims-org-id: {IMS_ORG}`
 
 This involves obtaining developer permissions for [!DNL Experience Platform] in the Adobe Admin Console, and then generating the credentials in Adobe Developer Console.
 

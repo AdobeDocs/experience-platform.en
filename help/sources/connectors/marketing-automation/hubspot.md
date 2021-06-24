@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;hubspot;Hubspot;HubSpot
 solution: Experience Platform
 title: HubSpot Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect HubSpot to Adobe Experience Platform using APIs or the user interface.
+exl-id: 4bc279ac-9388-4bac-bfae-98878625a554
 ---
-
-# (Beta) [!DNL HubSpot] connector
-
->[!NOTE]
->
->The [!DNL HubSpot] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL HubSpot] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

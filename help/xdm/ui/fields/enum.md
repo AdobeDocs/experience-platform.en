@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Enum Fields in the UI
 description: Learn how to define an enum field in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 67ec5382-31de-4f8d-9618-e8919bb5a472
 ---
-
 # Define enum fields in the UI
 
 In Experience Data Model (XDM), an enum field represents a field that is constrained to a pre-defined list of acceptable values.

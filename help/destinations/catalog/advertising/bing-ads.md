@@ -2,8 +2,8 @@
 keywords: bing;bing ads event tracking;event tracking bing;UET;UET extension
 title: Bing Ads Universal Event Tracking (UET) extension
 description: The Bing Ads Universal Event Tracking (UET) extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+exl-id: f2fc4d1f-01b0-4813-902c-9a3c30a8fa78
 ---
-
 # [!DNL Bing Ads Universal Event Tracking] (UET) extension {#bing-ads-extension}
 
 ## Overview {#overview}

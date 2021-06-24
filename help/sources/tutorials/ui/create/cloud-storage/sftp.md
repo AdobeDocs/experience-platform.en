@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;SFTP;sftp
 solution: Experience Platform
 title: Create an SFTP  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create an SFTP source connection using the Adobe Experience Platform UI.
+exl-id: 1a00ed27-3c95-4e57-9f94-45ff256bf75c
 ---
-
 # Create an SFTP source connection in the UI
-
->[!NOTE]
->
->The SFTP connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 This tutorial provides steps for creating an SFTP source connection using the Adobe Experience Platform UI.
 

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle object storage
 solution: Experience Platform
 title: Oracle Object Storage Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Oracle Object Storage to Adobe Experience Platform using APIs or the user interface.
+exl-id: 5e8b85c8-9f01-49a6-9556-7b9c7518fb4b
 ---
-
 # Oracle Object Storage connector
 
 Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], allowing you to bring data from these systems into Platform for use in downstream services and destinations.

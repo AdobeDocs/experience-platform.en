@@ -3,8 +3,8 @@ keywords: email;Email;e-mail;email destinations
 title: Email marketing destinations overview
 type: Tutorial
 description: Email Service Providers (ESPs) allow you to manage your email marketing activities, such as for sending promotional email campaigns.
+exl-id: e07f8c5a-0424-4de5-810f-3d5711ef4606
 ---
-
 # Email marketing destinations overview {#email-marketing-destinations}
 
 Email Service Providers (ESPs) enable you to manage your email marketing activities, such as sending promotional email campaigns. Adobe Experience Platform integrates with ESPs by allowing you to activate segments to email marketing destinations.
@@ -13,7 +13,7 @@ To send segments to email marketing destinations for your campaigns, Platform mu
 
 Connecting to email marketing destinations is a three-step process ([configure destination](#connect-destination), [activate segments](#select-segments), [import data from storage location into the destination](#import-data-into-destination)). Each of the steps is described further below on this page.
 
-In the connect destination flow, described in the section below, connect to either Amazon S3 or SFTP. Platform exports your segments as `.csv` or `.txt` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in Platform. The process to import data varies for each partner. Read the individual destinations articles for more information. 
+In the connect destination flow, described in the section below, connect to either [!DNL Amazon S3] or [!DNL SFTP]. Platform exports your segments as `.csv` files and delivers them to your preferred location. Schedule your data import in your email marketing platform from the storage location enabled in [!DNL Platform]. The process to import data varies for each partner. Read the individual destinations articles for more information. 
 
 ## Configure destination {#connect-destination}
 
@@ -56,26 +56,26 @@ For information about this step, refer to the [Select attributes](../../ui/activ
 
 Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). This is the field that your user identities are keyed off of. Most commonly, this field is the email address, but it can also be a loyalty program ID or a phone number. Refer to the table below for the most common unique identifiers and their XDM field in the schema.
 
-Unique Identifier | XDM field in Unified Schema
------------------ | ---------------------------
- Email Address | `personalEmail.address` 
- Phone | `mobilePhone.number` 
- Loyalty program ID | `Customer-defined XDM field` 
+|Unique Identifier | XDM field in Unified Schema|
+|----------------- | ---------------------------|
+| Email Address | `personalEmail.address` |
+| Phone | `mobilePhone.number` |
+| Loyalty program ID | `Customer-defined XDM field` |
 
 ## Other destination attributes
 
 In the Schema field selector, choose which other fields you want to export to the email destination. Some recommended options are:
 
-Schema | XDM field 
------- | ---------
- First Name | `person.name.firstName`
- Last Name | `person.name.lastName`
- Phone | `mobilePhone.number` 
- Address City| `homeAddress.city` 
- Address State | `homeAddress.stateProvince` 
- Address Postal Code | `homeAddress.postalCode` 
- Birthday | `person.birthDayAndMonth`
- Segment membership | `segmentMembership.status`
+|Schema | XDM field |
+|------ | ---------|
+| First Name | `person.name.firstName`|
+| Last Name | `person.name.lastName`|
+| Phone | `mobilePhone.number` |
+| Address City| `homeAddress.city` |
+| Address State | `homeAddress.stateProvince` |
+| Address Postal Code | `homeAddress.postalCode` |
+| Birthday | `person.birthDayAndMonth`|
+| Segment membership | `segmentMembership.status`|
 
 ## Import data from your storage location into the destination {#import-data-into-destination}
 

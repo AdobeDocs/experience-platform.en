@@ -3,15 +3,23 @@ title: Retrieve Experience Cloud IDs using the Adobe Experience Platform Web SDK
 description: Learn how to retrieve Adobe Experience Cloud IDs (ECIDs) using the Adobe Experience Platform Web SDK.
 seo-description: Learn how to get Adobe Experience Cloud Id.
 keywords: Identity;First Party Identity;Identity Service;3rd Party Identity;ID Migration;Visitor ID;third party identity;thirdPartyCookiesEnabled;idMigrationEnabled;getIdentity;Syncing Identities;syncIdentity;sendEvent;identityMap;primary;ecid;Identity Namespace;namespace id;authenticationState;hashEnabled;
+exl-id: 03060cdb-becc-430a-b527-60c055c2a906
 ---
-
-# Retrieve Adobe Experience Cloud IDs
+# Adobe Experience Cloud IDs
 
 Adobe Experience Platform Web SDK leverages [Adobe Identity Service](../../identity-service/ecid.md). This ensures that each device has a unique identifier that is persisted on the device so activity between pages can be tied together.
 
 ## First-party identity
 
-The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] will fall back to setting cookies via Javascript. Adobe recommends that you set up a CNAME to ensure that your cookies will not be capped by client side ITP restrictions.
+The [!DNL Identity Service] stores the identity in a cookie in a first-party domain. The [!DNL Identity Service] attempts to set the cookie using an HTTP header on the domain. If that fails, the [!DNL Identity Service] falls back to setting cookies with JavaScript. It is recommended that you set up a CNAME for your [Edge Domain config](../fundamentals/configuring-the-sdk.md#edgeConfigId).
+
+Every hit coming from the Platform Web SDK has an ECID added to it by the Identity Service on the Edge Network. For first-time visitors, the ECID is generated and added to the payload. For repeating visitors, the ECID is retrieved from the `kndctr_{YOUR-ORG-ID}_AdobeOrg_identity` cookie and added to the payload.
+
+The ECID is added under the `identityMap` field in your `xdm`. Using the browser's dev tool, you can view the ECID in the response under the payload with the type: `identity:result`, but you cannot see the ECID in the request.
+
+CNAME implementations allow you to customize the collection domain used by Adobe so that they match your own domain. This allows Adobe to set first-party cookies on the server-side instead of the client-side using JavaScript. In the past, these server-side first-party cookies were not subject to limits imposed under Apple’s Intelligent Tracking Prevention (ITP) policy on Safari browsers. However, in November 2020, Apple updated their policies so that these limitations were also applied to cookies set via CNAME. Currently, both cookies set on the server-side by CNAME and cookies set on the client-side by JavaScript are limited to a seven-day or 24-hour expiry under ITP. For more information on the ITP policy, see this Apple document on [tracking prevention](https://webkit.org/tracking-prevention/#intelligent-tracking-prevention-itp).
+
+While a CNAME implementation does not provide any benefits in terms of cookie lifetime, there can be some other benefits such as ad blockers and less common browsers preventing data from being sent to domains they classify as trackers. In those cases, using a CNAME might prevent your data collection from being disrupted for users employing these tools.
 
 ## 3rd-party identity
 
@@ -27,7 +35,7 @@ When migrating from using Visitor API, you can also migrate existing AMCV cookie
 
 ## Updating traits for migration
 
-When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://docs.adobe.com/content/help/en/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
+When XDM formatted data is sent into Audience Manager this data will need to be converted into signals when migrating. Your traits will need to be updated to reflect the new keys that XDM provides. This process is made easier by using the [BAAAM tool](https://experienceleague.adobe.com/docs/audience-manager/user-guide/reference/bulk-management-tools/bulk-management-intro.html#getting-started-with-bulk-management) that Audience Manager has created.
 
 ## Server Side Forwarding
 

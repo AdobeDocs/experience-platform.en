@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;subscription;datatype;data-type;data type;
 solution: Experience Platform
 title: Subscription Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Subscription Experience Data Model (XDM) data type.
+exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 ---
-
 # [!UICONTROL Subscription] data type
 
 [!UICONTROL Subscription] is a standard Experience Data Model (XDM) data type that describes licensed entitlements to software, services, or goods that are utilized based on time or usage.
@@ -38,6 +38,8 @@ description: This document provides an overview of the Subscription Experience D
 | `termUnitOfTime` | String | The unit of time for the term period. |
 | `topUp` | String | Describes the agreed terms for how consumable aspects of a subscription are repurchased during a billing period. |
 | `type` | String | The scope of entitlement in relation to how many people are covered by the subscription. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 
