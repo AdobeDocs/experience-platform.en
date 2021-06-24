@@ -23,11 +23,15 @@ This tutorial requires a working understanding of the following components of Ad
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
-To view existing dataflows for streaming sources, select **[!UICONTROL Dataflows]**.
+To view existing dataflows for streaming sources, select **[!UICONTROL Dataflows]** from the top header.
 
 ![catalog](../../images/tutorials/monitor-streaming/catalog.png)
 
 The [!UICONTROL Dataflows] page contains a list of all existing dataflows in your organization, including information about their source data, account name, and status.
+
+Select the name of the dataflow you want to view.
+
+![dataflows](../../images/tutorials/monitor-streaming/dataflows.png)
 
 See the following table for more information on statuses:
 
@@ -37,24 +41,6 @@ See the following table for more information on statuses:
 | Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
-
-Select the filter icon ![filter](../../images/tutorials/monitor-streaming/filter.png) on the top left to launch the sort panel.
-
-![filter-dataflows](../../images/tutorials/monitor-streaming/filter-dataflows.png)
-
-The sort panel provides a list of all available sources. You can select more than one source from the list to access a filtered selection of dataflows belonging to different sources.
-
-![filtered-list](../../images/tutorials/monitor-streaming/filtered-list.png)
-
-Select the streaming source you wish to work with to see a list of its existing dataflows.
-
->[!TIP]
->
->You can select more than one source when filtering through a list of dataflows,
-
-Next, select the dataflow that you want to monitor from the list.
-
-![select-dataflow](../../images/tutorials/monitor-streaming/select-dataflow.png)
 
 The [!UICONTROL Dataflow Activity] page displays specific information on your streaming dataflow. The top banner contains the cumulative number of records ingested and records failed for all of your streaming flow runs.
 
@@ -80,18 +66,12 @@ A calendar pop-up window appears, providing you options for alternative ingestio
 
 ![calendar](../../images/tutorials/monitor-streaming/calendar.png)
 
-![select-success](../../images/tutorials/monitor-streaming/select-success.png)
-
-![success](../../images/tutorials/monitor-streaming/success.png)
+To view the details of a specific dataflow run, including its errors, select the run's start time from the list.
 
 ![select-fail](../../images/tutorials/monitor-streaming/select-fail.png)
 
+The [!UICONTROL Dataflow run overview] page contains additional information on your dataflow, such as its corresponding dataflow run ID, target dataset, and IMS organization ID.
+
+A flow run with errors also contains the [!UICONTROL Dataflow run errors] panel, which displays the particular error that led to the failure of the run, as well as the total count of records that failed.
+
 ![failure](../../images/tutorials/monitor-streaming/failure.png)
-
-
-* The list of flow run expands*
-* Select the flow run you want to inspect
-* The table will display any errors
-
-The dataflow run overview page contains...
-
