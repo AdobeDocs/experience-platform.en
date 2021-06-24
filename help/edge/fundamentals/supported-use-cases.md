@@ -34,7 +34,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | --- | --- |
 | Send Experience events |  |
 | Offer Decisioning | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en#personalization) |
-| Send data to Real-time Customer Data Profile with low latency |  
+| If dataset is enabled for profile, ability to send data to Real-time Customer Data Profile in real-time |  |  
 | Send data to Customer Journey Analytics in real-time |  |
 | Write consent to profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
 | Forward data server-side in real-time to third-parties| [Documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
@@ -81,6 +81,10 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Visitor attributes support |  |
 | Profile scripts |  |
 | XDM become mbox parameters |  |
+| Redirect offers supported with A4T reporting | [Documentation](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=en) |
+| Updating the Target profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
+| Recommendations |  |
+| mBox 3rd party ID |  | 
 
 {style="table-layout:auto"}
 

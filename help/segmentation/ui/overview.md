@@ -25,15 +25,19 @@ It is also important to know two key terms that are used through this document a
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](https://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
+In the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab displaying the [!UICONTROL Segments] dashboard. 
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Segments] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segments.
 
-### Segments dashboard
+### [!UICONTROL Segments] dashboard {#segments-dashboard}
 
-For some users, selecting **[!UICONTROL Segments]** in the left navigation and opening the **[!UICONTROL Overview]** tab provides a dashboard outlining key metrics related to your segment data. 
+The **[!UICONTROL Segments]** dashboard outlines key metrics related to your organization's segment data. 
 
-To learn more, visit the [segment dashboard guide](segment-dashboard.md).
+To learn more, visit the [segment dashboard guide](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Browse
 

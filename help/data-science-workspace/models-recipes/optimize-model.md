@@ -36,11 +36,11 @@ There are two ways to bring in metrics to the recipes. One is to use the default
 
 Default evaluations are calculated as part of the classification algorithms. Here are some default values for evaluators that are currently implemented:
 
-Evaluator Class | `evaluation.class`
---- | ---
-DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator`
-DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator`
-RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator`
+|Evaluator Class | `evaluation.class`|
+|--- | ---|
+|DefaultBinaryClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultBinaryClassificationEvaluator`|
+|DefaultMultiClassificationEvaluator | `com.adobe.platform.ml.impl.DefaultMultiClassificationEvaluator`|
+|RecommendationsEvaluator | `com.adobe.platform.ml.impl.RecommendationsEvaluator`|
 
 The evaluator can be defined in the recipe in the [application.properties](https://github.com/adobe/experience-platform-dsw-reference/blob/master/recipes/scala/src/main/resources/application.properties) file in the `recipe` folder. Sample code enabling the `DefaultBinaryClassificationEvaluator` is shown below:
 
