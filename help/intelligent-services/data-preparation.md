@@ -12,6 +12,14 @@ In order for [!DNL Intelligent Services] to discover insights from your marketin
 
 This document provides general guidance on mapping your marketing events data from multiple channels to the CEE schema, outlining information on important fields within the schema to help you determine how to effectively map your data to its structure. If you plan on using Adobe Analytics data, please view the section for [Adobe Analytics data preparation](#analytics-data). If you plan on using Adobe Audience Manager data (Customer AI only), please view the section for [Adobe Audience Manger data preparation](#AAM-data).
 
+## Data Requirements
+
+Intelligent Services require different amounts of historical data depending on the goal you create. Regardless, the data you prepare for **all** Intelligent Services must include both positive and negative customer journeys / events. Having both negative and positive events improves model precision and accuracy. 
+
+For example, if you are using Customer AI to predict the propensity to buy a product, the model for Customer AI needs both examples of successful purchase paths and examples of unsuccessful paths. This is because during model training, Customer AI looks to understand what events and journeys lead to a purchase. This also includes the actions taken by customers who did not purchase, such as an individual who stopped their journey at adding an item to the cart. These customers may exhibit similar behaviors however, Customer AI can provide insights and drilldown the major differences and factors that lead to a higher propensity score. Similarly, Attribution AI requires both types of events and journeys in order to display metrics such as touchpoint effectiveness, top conversion paths, and breakdowns by touchpoint position.
+
+For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements) historical data requirements section in the input / output documentation.
+
 ## Workflow summary
 
 The preparation process varies depending on whether your data is stored in Adobe Experience Platform or externally. This section summarizes the necessary steps you need to take, given either scenario.
