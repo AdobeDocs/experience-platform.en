@@ -75,7 +75,7 @@ feature: Data Ingestion, Sources
   - Streaming {#streaming}
     - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
-  - Create a source connection {#create}
+  - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google AdWords](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}

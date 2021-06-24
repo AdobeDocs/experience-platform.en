@@ -30,14 +30,14 @@ The following sections provide additional information that you will need to know
 
 In order for [!DNL Flow Service] to connect with [!DNL AdWords], you must provide values for the following connection properties:
 
-| **Credential** | **Description** |
-| -------------- | --------------- |
+| Credential | Description |
+| ---------- | ----------- |
 | `clientCustomerId` | The client customer ID of the [!DNL AdWords] account. |
 | `developerToken` | The developer token associated with the manager account. |
 | `refreshToken` | The refresh token obtained from [!DNL Google] for authorizing access to [!DNL AdWords]. |
 | `clientId` | The client ID of the [!DNL Google] application used to acquire the refresh token. |
 | `clientSecret` | The client secret of the [!DNL Google] application used to acquire the refresh token. |
-| `connectionSpec` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Google [!DNL AdWords]] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702` |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL AdWords] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
 For more information about these values, refer to this [Google AdWords document](https://developers.google.com/adwords/api/docs/guides/authentication).
 
@@ -59,7 +59,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL Google AdWords] connection, its unique connection specification ID must be provided as part of the POST request. The `connectionSpec.id` for [!DNL Google AdWords]  is `d771e9c1-4f26-40dc-8617-ce58c4b53702`.
+The following request creates a base connection for [!DNL AdWords]:
 
 ```shell
 curl -X POST \
