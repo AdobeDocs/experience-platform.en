@@ -30,20 +30,12 @@ To connect [!DNL Google BigQuery] to Platform, you need to generate values for t
 
 | Credential | Description |
 | ---------- | ----------- |
-| `project` | 
+| `project` |  The project is the base-level organizing entity for your [!DNL Google Cloud] resources, including [!DNL Google BigQuery]. |
 | `clientID` | The client ID is one half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
 | `clientSecret` | The client secret is the other half of your [!DNL Google BigQuery] OAuth 2.0 credentials. |
 | `refreshToken` | The refresh token allows you to obtain new access tokens for your API. Access tokens have limited lifetimes and can expire during the course of your project. You can use the refresh token to authenticate and request subsequent access tokens for your project when needed. |
 
-See the following steps, for instructions on retrieving your [!DNL Google BigQuery] OAuth 2.0 credentials and refresh token:
-
-1. Log in to your [[!DNL Google API Console]](https://console.developers.google.com) account and create a new [!DNL Project].
-2. Create an OAuth client ID for a web application, while providing a display name for your client ID as well as an authorized redirect URI.
-3. Retrieve your OAuth 2.0 credentials, which consist of your unique client ID and client secret.
-4. Send an authorization request to [!DNL Google] to get the authorization code.
-5. Use the Authorization code to acquire the access token and the refresh token. 
-
-For specific instructions on how to generate OAuth 2.0 credentials to use [!DNL Google] APIs, see the following [[!DNL Google] OAuth 2.0 authentication guide](https://developers.google.com/identity/protocols/oauth2).
+For detailed instructions on how to generate OAuth 2.0 credentials for [!DNL Google] APIs, see the following [[!DNL Google] OAuth 2.0 authentication guide](https://developers.google.com/identity/protocols/oauth2).
 
 ## Connect [!DNL Google BigQuery] to Platform
 
