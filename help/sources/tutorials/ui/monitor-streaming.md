@@ -75,3 +75,10 @@ The [!UICONTROL Dataflow run overview] page contains additional information on y
 A flow run with errors also contains the [!UICONTROL Dataflow run errors] panel, which displays the particular error that led to the failure of the run, as well as the total count of records that failed.
 
 ![failure](../../images/tutorials/monitor-streaming/failure.png)
+
+## Next steps
+
+By following this tutorial, you have successfully used the [!UICONTROL Sources] workspace to monitor your streaming dataflows and identify the errors that led to any failed dataflows. See the following documents for more information:
+
+* [Sources overview](../../home.md)
+* [Dataflows overview](../../../dataflows/home.md)
