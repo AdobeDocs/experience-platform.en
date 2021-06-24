@@ -9,7 +9,7 @@ type: Tutorial
 
 # Monitor Dataflows for Streaming Sources in the UI
 
-This tutorial covers the steps for monitoring dataflows for streaming sources using the PLatform UI.
+This tutorial covers the steps for monitoring dataflows for streaming sources using the [!UICONTROL Sources] workspace.
 
 ## Getting started
 
@@ -27,7 +27,16 @@ To view existing dataflows for streaming sources, select **[!UICONTROL Dataflows
 
 ![catalog](../../images/tutorials/monitor-streaming/catalog.png)
 
-The [!UICONTROL Dataflows] page contains a list of all existing dataflows in your organization, including information about their last run status and date, source data, and account name.
+The [!UICONTROL Dataflows] page contains a list of all existing dataflows in your organization, including information about their source data, account name, and status.
+
+See the following table for more information on statuses:
+
+| Status | Description |
+| ------ | ----------- |
+| Enabled | The `Enabled` status indicates that a dataflow is active and is ingesting data according to the schedule it was provided. |
+| Disabled | The `Disabled` status indicates that a dataflow is inactive and is not ingesting any data. |
+| Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
+| Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
 Select the filter icon ![filter](../../images/tutorials/monitor-streaming/filter.png) on the top left to launch the sort panel.
 
@@ -35,15 +44,50 @@ Select the filter icon ![filter](../../images/tutorials/monitor-streaming/filter
 
 The sort panel provides a list of all available sources. You can select more than one source from the list to access a filtered selection of dataflows belonging to different sources.
 
-Select the streaming source you wish to work with to see a list of its existing dataflows, and then select the dataflow that you want to monitor from the list.
+![filtered-list](../../images/tutorials/monitor-streaming/filtered-list.png)
+
+Select the streaming source you wish to work with to see a list of its existing dataflows.
+
+>[!TIP]
+>
+>You can select more than one source when filtering through a list of dataflows,
+
+Next, select the dataflow that you want to monitor from the list.
 
 ![select-dataflow](../../images/tutorials/monitor-streaming/select-dataflow.png)
 
-The [!UICONTROL Dataflow Activity] screens displays specific run information on your dataflow, including details on the number of records received, ingested, and failed. Select the calendar icon to expand the monitoring time frame.
+The [!UICONTROL Dataflow Activity] page displays specific information on your streaming dataflow. The top banner contains the cumulative number of records ingested and records failed for all of your streaming flow runs.
 
-The calendar appears, providing you with the option to expand the date range to the last 30 days. Alternatively, you can use the calendar to manually apply a custom date range for your dataflow.
+The lower half of the page displays information on the number of records received, ingested, and failed, per flow run. Each flow run is recorded within an hourly window.
 
-Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**.
+![dataflow-activity](../../images/tutorials/monitor-streaming/dataflow-activity.png)
+
+Each individual dataflow run shows the following details:
+
+* **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
+* **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
+* **[!UICONTROL Records Received]**: The total number of records received in the dataflow.
+* **[!UICONTROL Records Ingested]**: The total count of records ingested into [!DNL Data Lake].
+* **[!UICONTROL Records Failed]**: The number of records that were not ingested into [!DNL Data Lake] due to errors in the data.
+* **[!UICONTROL Ingestion Rate]**: The success rate of records ingested into [!DNL Data Lake]. This metric is applicable when [!UICONTROL Partial Ingestion] is enabled.
+* **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
+
+By default, the data displayed contains ingestion rates from the last seven days. Select **[Last 7 days]** to adjust the time frame of records displayed.
+
+![change-time](../../images/tutorials/monitor-streaming/change-time.png)
+
+A calendar pop-up window appears, providing you options for alternative ingestion time frames. Select **[!UICONTROL Last 30 days]** and then select **[!UICONTROL Apply]**.
+
+![calendar](../../images/tutorials/monitor-streaming/calendar.png)
+
+![select-success](../../images/tutorials/monitor-streaming/select-success.png)
+
+![success](../../images/tutorials/monitor-streaming/success.png)
+
+![select-fail](../../images/tutorials/monitor-streaming/select-fail.png)
+
+![failure](../../images/tutorials/monitor-streaming/failure.png)
+
 
 * The list of flow run expands*
 * Select the flow run you want to inspect
