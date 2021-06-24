@@ -34,12 +34,12 @@ Select the name of the dataflow you want to view.
 
 ![dataflows](../../images/tutorials/monitor-streaming/dataflows.png)
 
-See the following table for more information on statuses:
+The following table contains more information on dataflow run statuses:
 
 | Status | Description |
 | ------ | ----------- |
 | Success | The `Success` status indicates a successful batch dataflow run. |
-| Completed | The `Completed` status indicates a successful streaming dataflow run. |
+| Completed | The `Completed` status indicates a successful streaming dataflow run. A `Completed` status can still contain errors in dataflow runs. |
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
