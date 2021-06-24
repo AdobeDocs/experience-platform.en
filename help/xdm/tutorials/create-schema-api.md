@@ -475,11 +475,11 @@ A successful request returns HTTP Response Status 201 (Created) with a response 
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.1",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552078296885,
@@ -512,7 +512,7 @@ curl -X PATCH \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
-        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"}}
+        { "op": "add", "path": "/allOf/-", "value":  {"$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"}}
       ]'
 ```
 
@@ -536,7 +536,7 @@ You can see that the field group has been successfully added because the respons
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -550,7 +550,7 @@ You can see that the field group has been successfully added because the respons
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -612,7 +612,7 @@ Under `"properties"`, you can see the `_{TENANT_ID}` namespace that was created 
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -827,7 +827,7 @@ PATCH /tenant/fieldgroups/{field group meta:altId or URL encoded $id URI}
 
 ```SHELL
 curl -X PATCH \
-  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62 \
+  https://platform.adobe.io/data/foundation/schemaregistry/tenant/fieldgroups/_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {API_KEY}' \
@@ -889,11 +889,11 @@ The response now includes a reference (`$ref`) to the data type in the "loyalty"
     "meta:extensible": true,
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
-    "meta:altId": "_{TENANT_ID}.fieldgroups.bb118e507bb848fd85df68fedea70c62",
+    "meta:altId": "_{TENANT_ID}.mixins.bb118e507bb848fd85df68fedea70c62",
     "meta:xdmType": "object",
-    "$id": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62",
+    "$id": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62",
     "version": "1.2",
-    "meta:resourceType": "fieldgroups",
+    "meta:resourceType": "mixins",
     "meta:registryMetadata": {
         "repo:createDate": 1551838135803,
         "repo:lastModifiedDate": 1552080570051,
@@ -1061,7 +1061,7 @@ The response shows that the operation was performed successfully, and the schema
             "$ref": "https://ns.adobe.com/xdm/context/profile-personal-details"
         },
         {
-            "$ref": "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+            "$ref": "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
         }
     ],
     "meta:class": "https://ns.adobe.com/xdm/context/profile",
@@ -1075,7 +1075,7 @@ The response shows that the operation was performed successfully, and the schema
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
@@ -1198,7 +1198,7 @@ The following shows the completed Loyalty Members schema in JSON format:
         "https://ns.adobe.com/xdm/common/auditable",
         "https://ns.adobe.com/xdm/context/profile-person-details",
         "https://ns.adobe.com/xdm/context/profile-personal-details",
-        "https://ns.adobe.com/{TENANT_ID}/fieldgroups/bb118e507bb848fd85df68fedea70c62"
+        "https://ns.adobe.com/{TENANT_ID}/mixins/bb118e507bb848fd85df68fedea70c62"
     ],
     "meta:containerId": "tenant",
     "imsOrg": "{IMS_ORG}",
