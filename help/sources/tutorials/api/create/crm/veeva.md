@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;google Veeva CRM;Google Veeva CRM;Veeva CRM
+keywords: Experience Platform;home;popular topics;veeva crm;Veeva CRM;Veeva;
 solution: Experience Platform
 title: Create a Veeva CRM Base Connection Using the Flow Service API
 topic-legacy: overview
