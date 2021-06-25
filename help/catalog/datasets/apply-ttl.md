@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;dataset;Dataset;create a dataset;create dataset
+keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;ttl;time-to-live;
 solution: Experience Platform
 title: Time-to-live on Datasets
 topic-legacy: datasets
