@@ -2,11 +2,10 @@
 keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;ttl;time-to-live;
 solution: Experience Platform
 title: Time-to-live on Datasets
-topic-legacy: datasets
-description: This document provides general guidance on time-to-live (TTL) on datasets in Adobe Experience Platform.
+description: This document provides general guidance on time-to-live (TTL) for datasets in Adobe Experience Platform.
 ---
 
-# Time-to-live (TTL) on datasets
+# Time-to-live (TTL) for datasets
 
 Time-to-live (TTL) for datasets on Adobe Experience Platform is a mechanism that limits the amount of time that data lives within a dataset. This lets you automatically remove data from the Profile Store that is no longer useful for your use cases. TTL can only be applied on Real-time Customer Profile-enabled datasets.
 
