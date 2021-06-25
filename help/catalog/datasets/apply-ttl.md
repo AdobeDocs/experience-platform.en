@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;dataset;Dataset;create a datas
 solution: Experience Platform
 title: Time-to-live on Datasets
 topic-legacy: datasets
-description: This document provides general steps for creating a dataset using Adobe Experience Platform APIs and populating the dataset using a file.
+description: This document provides general guidance on time-to-live (TTL) on datasets in Adobe Experience Platform.
 ---
 
 # Time-to-live (TTL) on datasets
