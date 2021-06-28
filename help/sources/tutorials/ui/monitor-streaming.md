@@ -38,12 +38,11 @@ The following table contains more information on dataflow run statuses:
 
 | Status | Description |
 | ------ | ----------- |
-| Success | The `Success` status indicates a successful batch dataflow run. |
-| Completed | The `Completed` status indicates a successful streaming dataflow run. A `Completed` status can still contain errors in dataflow runs. |
+| Completed | The `Completed` status indicates that all records for the corresponding dataflow run were process within the one-hour period. A `Completed` status can still contain errors in dataflow runs. |
 | Processing | The `Processing` status indicates that a dataflow is not yet active. This status is often encountered immediately after a new dataflow is created. |
 | Error | The `Error` status indicates that the activation process of a dataflow has been disrupted. |
 
-The [!UICONTROL Dataflow Activity] page displays specific information on your streaming dataflow. The top banner contains the cumulative number of records ingested and records failed for all of your streaming flow runs.
+The [!UICONTROL Dataflow Activity] page displays specific information on your streaming dataflow. The top banner contains the cumulative number of records ingested and records failed for all of your streaming dataflow runs in your selected date range.
 
 The lower half of the page displays information on the number of records received, ingested, and failed, per flow run. Each flow run is recorded within an hourly window.
 
@@ -53,13 +52,13 @@ Each individual dataflow run shows the following details:
 
 * **[!UICONTROL Dataflow run start]**: The time that the dataflow run started at.
 * **[!UICONTROL Processing time]**: The amount of time that it took for the dataflow to process.
-* **[!UICONTROL Records Received]**: The total number of records received in the dataflow.
+* **[!UICONTROL Records Received]**: The total number of records received in the dataflow from a source connector.
 * **[!UICONTROL Records Ingested]**: The total count of records ingested into [!DNL Data Lake].
 * **[!UICONTROL Records Failed]**: The number of records that were not ingested into [!DNL Data Lake] due to errors in the data.
 * **[!UICONTROL Ingestion Rate]**: The success rate of records ingested into [!DNL Data Lake]. This metric is applicable when [!UICONTROL Partial Ingestion] is enabled.
-* **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all the identities for the corresponding dataflow run were ingested within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
+* **[!UICONTROL Status]**: Represents the state the dataflow is in: either [!UICONTROL Completed] or [!UICONTROL Processing]. [!UICONTROL Completed] means that all records for the corresponding dataflow run were processed within the one-hour period. [!UICONTROL Processing] means that the dataflow run has not yet finished.
 
-By default, the data displayed contains ingestion rates from the last seven days. Select **[Last 7 days]** to adjust the time frame of records displayed.
+By default, the data displayed contains ingestion rates from the last seven days. Select **[!UICONTROL Last 7 days]** to adjust the time frame of records displayed.
 
 ![change-time](../../images/tutorials/monitor-streaming/change-time.png)
 
