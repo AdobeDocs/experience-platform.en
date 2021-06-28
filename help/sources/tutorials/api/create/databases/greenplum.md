@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;greenplum;Greenplum
 solution: Experience Platform
-title: Create a GreenPlum Source Connection Using the Flow Service API
+title: Create a GreenPlum Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect GreenPlum to Adobe Experience Platform using the Flow Service API.
 exl-id: c4ce452a-b4c5-46ab-83ab-61b296c271d0
 ---
-# Create a [!DNL GreenPlum] source connection using the [!DNL Flow Service] API
+# Create a [!DNL GreenPlum] base connection using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL GreenPlum] to [!DNL Experience Platform].
+This tutorial walks you through the steps to create a base connection for [!DNL GreenPlum] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -25,45 +25,29 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your [!DNL GreenPlum] instance. The connection string pattern for [!DNL GreenPlum] is `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}` |
-| `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 For more information on acquiring a connection string, refer to [this GreenPlum document](https://gpdb.docs.pivotal.io/580/security-guide/topics/Authenticate.html#topic_fzv_wb2_jr__config_ssl_client_conn).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
 ## Create a base connection
 
-The first step in creating a source connection is to authenticate your [!DNL GreenPlum] source and generate a base connection ID. A base connection ID allows you to explore and navigate files from within your source and identify specific items that you want to ingest, including information regarding their data types and formats.
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL GreenPlum] authentication credentials as part of the request parameters.
 
 **API format**
 
-```http
+```https
 POST /connections
 ```
 
 **Request**
 
-In order to create a [!DNL GreenPlum] connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for [!DNL GreenPlum] is `37b6bf40-d318-4655-90be-5cd6f65d334b`.
+The following request creates a base connection for [!DNL GreenPlum]:
 
 ```shell
 curl -X POST \
@@ -92,7 +76,7 @@ curl -X POST \
 | Parameter | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | The connection string used to connect to a [!DNL GreenPlum] account. The connection string pattern is: `HOST={SERVER};PORT={PORT};DB={DATABASE};UID={USERNAME};PWD={PASSWORD}`. |
-| `connectionSpec.id` | The [!DNL GreenPlum] connection spec ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
+| `connectionSpec.id` | The [!DNL GreenPlum] connection specification ID: `37b6bf40-d318-4655-90be-5cd6f65d334b`. |
 
 **Response**
 
