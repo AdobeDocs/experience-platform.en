@@ -14,7 +14,7 @@ This document provides general guidance on mapping your marketing events data fr
 
 ## Data Requirements
 
-Intelligent Services require different amounts of historical data depending on the goal you create. Regardless, the data you prepare for **all** Intelligent Services must include both positive and negative customer journeys / events. Having both negative and positive events improves model precision and accuracy. 
+[!DNL Intelligent Services] require different amounts of historical data depending on the goal you create. Regardless, the data you prepare for **all** [!DNL Intelligent Services] must include both positive and negative customer journeys / events. Having both negative and positive events improves model precision and accuracy. 
 
 For example, if you are using Customer AI to predict the propensity to buy a product, the model for Customer AI needs both examples of successful purchase paths and examples of unsuccessful paths. This is because during model training, Customer AI looks to understand what events and journeys lead to a purchase. This also includes the actions taken by customers who did not purchase, such as an individual who stopped their journey at adding an item to the cart. These customers may exhibit similar behaviors however, Customer AI can provide insights and drilldown the major differences and factors that lead to a higher propensity score. Similarly, Attribution AI requires both types of events and journeys in order to display metrics such as touchpoint effectiveness, top conversion paths, and breakdowns by touchpoint position.
 
@@ -32,9 +32,9 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 ### External data preparation
 
-If your data is stored outside of Experience Platform, you need to create the [Consumer ExperienceEvent schema](#cee-schema) and map your data to the required fields. Once complete, you can create a dataset with your schema and ingest your data to Platform. The dataset can then be selected when configuring an Intelligent Service. 
+If your data is stored outside of Experience Platform, you need to create the [Consumer ExperienceEvent schema](#cee-schema) and map your data to the required fields. Once complete, you can create a dataset with your schema and ingest your data to Platform. The dataset can then be selected when configuring an [!DNL Intelligent Service]. 
 
-Depending on the Intelligent Service you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/input-output.md) input / output guide.
+Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/input-output.md) input / output guide.
 
 ### Adobe Analytics data preparation {#analytics-data}
 
