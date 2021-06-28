@@ -36,17 +36,13 @@ This tutorial provides example API calls to demonstrate how to format your reque
 
 In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
 
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
+- `Authorization: Bearer {ACCESS_TOKEN}`
+- `x-api-key: {API_KEY}`
+- `x-gw-ims-org-id: {IMS_ORG}`
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
+All requests that contain a payload (POST, PUT, PATCH) require an additional `Content-Type` header. The correct value for this header is shown in the sample requests where necessary.
 
-- Content-Type: application/json
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-- x-sandbox-name: `{SANDBOX_NAME}`
+All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require an `x-sandbox-name` header that specifies the name of the sandbox the operation will take place in. For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
 
 ## Create a dataset enabled for [!DNL Profile] and [!DNL Identity] {#create-a-dataset-enabled-for-profile-and-identity}
 
@@ -206,23 +202,21 @@ PATCH /dataSets/{DATASET_ID}
 ```shell
 curl -X PATCH \
   https://platform.adobe.io/data/foundation/catalog/dataSets/5b020a27e7040801dedbf46e \
-  -H 'Content-Type: application/json' \
+  -H 'Content-Type:application/json-patch+json' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  -d '{
-    "tags" : {
-        "unifiedProfile": ["enabled:true"],
-        "unifiedIdentity": ["enabled:true"]
-    }
-  }'
+  -d '[
+        { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },
+        { "op": "add", "path": "/tags/unifiedIdentity", "value": ["enabled:true"] }	
+      ]'
 ```
 
-The request body includes a `tags` property, which contains two sub-properties: `"unifiedProfile"` and `"unifiedIdentity"`. The values of these sub-properties are arrays containing the string `"enabled:true"`.
+The request body includes a `path` to two types of tags, `unifiedProfile` and `unifiedIdentity`. The `value` of each are arrays containing the string `enabled:true`.
 
 **Response**
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `"unifiedProfile"` and `"unifiedIdentity"` tags have now been added and the dataset is enabled for use by Profile and Identity services.
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` and `unifiedIdentity` tags have now been added and the dataset is enabled for use by Profile and Identity services.
 
 ```json
 [
