@@ -20,17 +20,21 @@ For example, if you are using Customer AI to predict the propensity to buy a pro
 
 For more examples and information on historical data requirements, visit the [Customer AI](./customer-ai/input-output.md#data-requirements) or [Attribution AI](./attribution-ai/input-output.md#data-requirements) historical data requirements section in the input / output documentation.
 
+### Guidelines for stitching data
+
+It is recommend that you stitch the events of a user across a common id when possible. For example, you may have user data with "id1" across 10 events. Later, the same user deleted the cookie id and is recorded as "id2" across next 20 events. If you know that id1 and id2 correspond to same user, the best practice is to stitch all 30 events with a common id. 
+
+If this is not possible, you should treat each set of events as a different user when creating your model input data. This ensures the best results during model training and scoring.
+
 ## Workflow summary
 
 The preparation process varies depending on whether your data is stored in Adobe Experience Platform or externally. This section summarizes the necessary steps you need to take, given either scenario.
 
 ### External data preparation
 
-If your data is stored outside of [!DNL Experience Platform], follow the steps below:
+If your data is stored outside of Experience Platform, you need to create the [Consumer ExperienceEvent schema](#cee-schema) and map your data to the required fields. Once complete, you can create a dataset with your schema and ingest your data to Platform. The dataset can then be selected when configuring an Intelligent Service. 
 
-1. Contact Adobe Consulting Services to request access credentials for a dedicated Azure Blob Storage container.
-1. Using your access credentials, upload your data to the Blob container.
-1. Work with Adobe Consulting Services get your data mapped to the [Consumer ExperienceEvent schema](#cee-schema) and ingested into [!DNL Intelligent Services].
+Depending on the Intelligent Service you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/input-output.md) input / output guide.
 
 ### Adobe Analytics data preparation {#analytics-data}
 
@@ -54,7 +58,7 @@ Once the source connector is streaming your data into Experience Platform, you a
 
 ### [!DNL Experience Platform] data preparation
 
-If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema if you plan to work with Customer AI.
+If your data is already stored in [!DNL Platform] and not streaming through the Adobe Analytics or Adobe Audience Manager (Customer AI only) source connectors, follow the steps below. It is still recommended you understand the CEE schema.
 
 1. Review the structure of the [Consumer ExperienceEvent schema](#cee-schema) and determine whether your data can be mapped to its fields.
 2. Contact Adobe Consulting Services to help map your data to the schema and ingest it into [!DNL Intelligent Services], or [follow the steps in this guide](#mapping) if you want to map the data yourself.
