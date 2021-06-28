@@ -61,6 +61,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
+- [!DNL Veeva CRM](connectors/crm/veeva.md)
 
 ### Customer Success
 
