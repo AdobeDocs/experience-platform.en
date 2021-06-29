@@ -84,25 +84,25 @@ This panel also shows useful metadata such as the last time the query was modifi
 >
 > You can only add a schedule to a query that has already been created, saved, and run.
 
-To add a schedule to a query, select **Add schedule**. 
+To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
 
 ![Image](../images/ui/query-editor/add-schedule.png)
 
-The **Schedule details** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
+The **[!UICONTROL Schedule details]** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
 
 ![Image](../images/ui/query-editor/schedule-details.png)
 
-You can choose the following options for **Frequency**:
+You can choose the following options for **[!UICONTROL Frequency]**:
 
-- **Hourly**: The scheduled query will run every hour for the date period you selected.
-- **Daily**: The scheduled query will run every X days at the time and the date period you selected.
-- **Weekly**: The selected query will run on the days of the week, time, and the date period you selected.
-- **Monthly**: The selected query will run every month at the day, time, and the date period you selected.
-- **Yearly**: The selected query will run every year at the day, month, time, and the date period you selected.
+- **[!UICONTROL Hourly]**: The scheduled query will run every hour for the date period you selected.
+- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected.
+- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected.
+- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected.
+- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected.
 
 For the dataset, you have the option to use either an existing dataset or create a new dataset.
 
-After confirming all these details, select **Save** to create a schedule.
+After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
 
 The query details page re-appears, and now showing the details of the newly created schedule. Please note that you can also disable or delete the schedule 
 on the query details page now.
