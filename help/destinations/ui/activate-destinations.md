@@ -143,9 +143,9 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
       >
       >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.
 
-      >[!IMPORTANT]
+      <!-- >[!IMPORTANT]
       >
-      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
@@ -174,9 +174,9 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
      >
      >The option to select the time of day for the export is only available to a select number of customers.
 
-     >[!IMPORTANT]
+     <!-- >[!IMPORTANT]
      >
-     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
