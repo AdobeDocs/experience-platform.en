@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL PostgreSQL]
 
 ## Connect [!DNL PostgreSQL] to [!DNL Platform] using APIs
 
-- [Create a PostgreSQL source connection using the Flow Service API](../../tutorials/api/create/databases/postgres.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create a PostgreSQL base connection using the Flow Service API](../../tutorials/api/create/databases/postgres.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL PostgreSQL] to [!DNL Platform] using the UI
 
 - [Create a PostgreSQL source connection in the UI](../../tutorials/ui/create/databases/postgres.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
