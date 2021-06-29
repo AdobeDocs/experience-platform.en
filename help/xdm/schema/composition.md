@@ -55,7 +55,7 @@ It is important to think about customer identities during the schema planning ph
 
 There are two ways to send identity data to Platform:
 
-1. Marking individual fields as identities through the [UI](../ui/fields/identity.md) or [API](../api/descriptors.md#create)
+1. Adding identity descriptors to individual fields, either through the [Schema Editor UI](../ui/fields/identity.md) or using the [Schema Registry API](../api/descriptors.md#create)
 1. Using an [`identityMap` field](#identityMap)
 
 #### `identityMap` {#identityMap}
