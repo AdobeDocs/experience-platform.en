@@ -74,7 +74,45 @@ While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query De
 
 ![Image](../images/ui/query-editor/query-details.png)
 
-This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the **[!UICONTROL SQL Query]** tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
+This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and add a schedule to the query. 
+
+This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
+
+### Scheduled queries
+
+>[!NOTE]
+>
+> You can only add a schedule to a query that has already been created, saved, and run.
+
+To add a schedule to a query, select **Add schedule**. 
+
+![Image](../images/ui/query-editor/add-schedule.png)
+
+The **Schedule details** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
+
+![Image](../images/ui/query-editor/schedule-details.png)
+
+You can choose the following options for **Frequency**:
+
+- **Hourly**: The scheduled query will run every hour for the date period you selected.
+- **Daily**: The scheduled query will run every X days at the time and the date period you selected.
+- **Weekly**: The selected query will run on the days of the week, time, and the date period you selected.
+- **Monthly**: The selected query will run every month at the day, time, and the date period you selected.
+- **Yearly**: The selected query will run every year at the day, month, time, and the date period you selected.
+
+For the dataset, you have the option to use either an existing dataset or create a new dataset.
+
+After confirming all these details, select **Save** to create a schedule.
+
+The query details page re-appears, and now showing the details of the newly created schedule. Please note that you can also disable or delete the schedule 
+on the query details page now.
+
+![Image](../images/ui/query-editor/delete-schedule.png)
+
+
+>[!NOTE]
+>
+> If you want to delete a schedule for a query, you must disable the schedule first.
 
 ### Saving queries
 
