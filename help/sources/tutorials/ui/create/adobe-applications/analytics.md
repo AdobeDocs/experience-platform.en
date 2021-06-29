@@ -27,7 +27,7 @@ You can select the appropriate category from the catalog on the left-hand side o
 
 Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Adobe Analytics]** and then select **[!UICONTROL Add data]**.
 
-![](../../../../images/tutorials/create/analytics/catalog.png)
+![catalog](../../../../images/tutorials/create/analytics/catalog.png)
 
 ### Select data
 
@@ -37,15 +37,17 @@ The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL 
 >
 >Multiple in-bound connections to a source can be made for bringing in different data.
 
-![](../../../../images/tutorials/create/analytics/dataset-flows.png)
+![](../../../../images/tutorials/create/analytics/add-data.png)
 
 <!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
-From the list of available report suites, select the one you want to bring into Platform and select **[!UICONTROL Next]**.
+### Mapping
 
-![](../../../../images/tutorials/create/analytics/select-data.png)
+The [!UICONTROL Mapping] step appears, providing an interface to map source fields to their appropriate target schema fields. Select a target schema to start the mapping process.
 
-### Map standard fields
+![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
+
+With a schema selected, the 
 
 ### Provide dataflow details
 
@@ -57,8 +59,8 @@ The **[!UICONTROL Dataset flow detail]** step appears, where you must provide a 
 
 The **[!UICONTROL Review]** step appears, allowing you to review your new Analytics in-bound dataset flow before it is created. Details of the connection are grouped by categories, including:
 
-*   **[!UICONTROL Connection]**: Shows the type of the source connection and the selected report suite.
-*   **[!UICONTROL Assign dataset & map fields]**: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Analytics dataset flows.
+* **[!UICONTROL Connection]**: Shows the type of the source connection and the selected report suite.
+* **[!UICONTROL Assign dataset & map fields]**: When creating other source connectors, this container shows which dataset the source data is ingesting into, including the schema the dataset adheres to. The output schema and dataset is automatically configured for Analytics dataset flows.
 
 ![](../../../../images/tutorials/create/analytics/review.png)
 
