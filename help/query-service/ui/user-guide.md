@@ -78,7 +78,7 @@ This panel allows you to generate an output dataset directly from the UI, delete
 
 This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
 
-### Scheduled queries
+### Scheduled queries {#scheduled-queries}
 
 >[!NOTE]
 >
@@ -95,22 +95,24 @@ The **[!UICONTROL Schedule details]** page appears. On this page, you can choose
 You can choose the following options for **[!UICONTROL Frequency]**:
 
 - **[!UICONTROL Hourly]**: The scheduled query will run every hour for the date period you selected.
-- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected.
-- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected.
-- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected.
-- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected.
+- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
 
 For the dataset, you have the option to use either an existing dataset or create a new dataset.
 
 After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
 
-The query details page re-appears, and now showing the details of the newly created schedule. Please note that you can also disable or delete the schedule 
-on the query details page now.
+The query details page re-appears, and now showing the details of the newly created schedule. 
+
+#### Delete a schedule
+
+You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
 
 ![Image](../images/ui/query-editor/delete-schedule.png)
 
-
->[!NOTE]
+>[!IMPORTANT]
 >
 > If you want to delete a schedule for a query, you must disable the schedule first.
 
