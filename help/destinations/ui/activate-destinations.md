@@ -43,6 +43,11 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ## [!UICONTROL Mapping] step {#mapping}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Apply transformation"
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+
 Applies to: social destinations and Google Customer Match advertising destination
 
 ![Identity mapping step](../assets/ui/activate-destinations/identity-mapping-icon.png)
@@ -138,9 +143,14 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
       >
       >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.
 
+      <!-- >[!IMPORTANT]
+      >
+      >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
+
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
-  
+
+ 
 ### Export incremental files {#export-incremental-files}
 
 Select **[!UICONTROL Export incremental files]** to have your exported files contain only the profiles which qualified for that segment since the last export.
@@ -156,13 +166,17 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
      
        >[!IMPORTANT]
        >
-       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day.
+       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day. 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >The option to select the time of day for the export is only available to a select number of customers. Non-beta customers can export incremental files once a day, at 12:00 PM UTC (7:00 AM EST).
+     >The option to select the time of day for the export is only available to a select number of customers.
+
+     <!-- >[!IMPORTANT]
+     >
+     >Depending on when the profile export job finishes running and when the destination service starts the segment activation job, the first incremental or full file export may not contain all the necessary backfill data. To ensure a complete and most up-to-date backfill data export for both full and incremental files, we recommend setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases. -->
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
@@ -233,6 +247,12 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 ### Mandatory attributes {#mandatory-attributes}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_mandatorykey"
+>title="About mandatory attributes"
+>abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
+>additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
+
 You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
 Not selecting a mandatory attribute exports all qualified profiles regardless of their attributes.
@@ -240,6 +260,12 @@ Not selecting a mandatory attribute exports all qualified profiles regardless of
 It is recommended that one of the attributes is a [unique identifier](../../destinations/catalog/email-marketing/overview.md#identity) from your schema. For more information about mandatory attributes, see the identity section in the [Email marketing destinations](../../destinations/catalog/email-marketing/overview.md#identity) documentation. 
 
 ### Deduplication keys {#deduplication-keys}
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_deduplicationkey"
+>title="About deduplication keys"
+>abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
+>additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
 >[!IMPORTANT]
 >

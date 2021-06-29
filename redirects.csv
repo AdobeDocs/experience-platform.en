@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/segmentation/honoring-opt-outs.html,https://experienceleague.adobe.com/docs/experience-platform/segmentation/consents.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/profile/work-details.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/profile/work-contact-details.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/mixins.html,https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/resources/field-groups.html
 https://experienceleague.adobe.com/docs/experience-platform/xdm/mixins/(*),https://experienceleague.adobe.com/docs/experience-platform/xdm/field-groups/
@@ -114,3 +115,6 @@ https://experienceleague.adobe.com/docs/experience-platform/tutorials/schemas.ht
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/segmentation.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/tutorials/destinations/api-tutorial.html,https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html
 https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/edge-configuration.html,https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html
+https://experienceleague.adobe.com/docs/experience-platform/profile/ui/merge-policies.html,https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html
+https://experienceleague.adobe.com/docs/experience-platform/profile/api/merge-policies.html,https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/merge-policies.html
+https://experienceleague.adobe.com/docs/experience-platform/profile/ui/union-schema.html,https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html
