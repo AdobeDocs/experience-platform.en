@@ -24,11 +24,11 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to BigQuery using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL BigQuery] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect BigQuery to Platform, you must provide the following OAuth 2.0 authentication values:
+In order for [!DNL Flow Service] to connect [!DNL BigQuery] to Platform, you must provide the following OAuth 2.0 authentication values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -36,7 +36,7 @@ In order for [!DNL Flow Service] to connect BigQuery to Platform, you must provi
 | `clientID` | The ID value used to generate the refresh token. |
 | `clientSecret` | The secret value used to generate the refresh token. |
 | `refreshToken` | The refresh token obtained from [!DNL Google] used to authorize access to [!DNL BigQuery]. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL BigQuery] is: 3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL BigQuery] is: `3c9b37f8-13a6-43d8-bad3-b863b941fedd`. |
 
 For more information about these values, refer to this [[!DNL BigQuery] document](https://cloud.google.com/storage/docs/json_api/v1/how-tos/authorizing).
 
