@@ -6,9 +6,9 @@ exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
-Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other profile-related metrics. 
+Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate a dataset overlap report to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate a dataset overlap report and an identity overlap report to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -118,7 +118,7 @@ GET /previewsamplestatus/report/dataset?{QUERY_PARAMETERS}
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
 
@@ -198,15 +198,15 @@ The response includes a `data` array, containing a list of dataset objects. The 
 |`createdUser`|The user ID of the user who created the dataset.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
-## List profile distribution by namespace
+## List profile distribution by identity namespace
 
-You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. 
+You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
 Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/namespaces.md).
 
 >[!NOTE]
 >
->The total number of profiles by namespace (adding together the values shown for each namespace) will always be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+>The total number of profiles by namespace (adding together the values shown for each namespace) may be higher than the profile count metric because one profile could be associated with multiple namespaces. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 **API format**
 
@@ -217,7 +217,7 @@ GET /previewsamplestatus/report/namespace?{QUERY_PARAMETERS}
 
 |Parameter|Description|
 |---|---|
-|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date will be returned. If a report does not exist for the specified date, a 404 error will be returned. If no date is specified, the most recent report will be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is be returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
 
 **Request**
 
@@ -295,9 +295,9 @@ The response includes a `data` array, with individual objects containing the det
 |`code`|The `code` for the namespace. This can be found when working with namespaces using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md) and is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`value`|The `id` value for the namespace. This can be found when working with namespaces using the [Identity Service API](../../identity-service/api/list-namespaces.md).|
 
-## Generate dataset overlap report
+## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -346,6 +346,8 @@ A successful request returns HTTP Status 200 (OK) and the dataset overlap report
 |`data`|The `data` object contains comma-separated lists of datasets and their respective profile counts.|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
+### Interpreting the dataset overlap report
+
 The results of the report can be interpreted from the datasets and profile counts in the response. Consider the following example report `data` object:
 
 ```json
@@ -360,7 +362,102 @@ This report provides the following information:
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
+## Generate the identity overlap report
+
+The identity overlap report provides visibility into the composition of your organization's Profile store by exposing the identities that contribute most to your addressable audience (merged profiles). This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
+
+You can generate the identity overlap report by performing a GET request to the `/previewsamplestatus/report/identity/overlap` endpoint.
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/identity/overlap
+GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+```
+
+|Parameter|Description|
+|---|---|
+|`date`| Specify the date of the report to be returned. If multiple reports were run on the same date, the most recent report for that date is returned. If a report does not exist for the specified date, a 404 (Not Found) error is returned. If no date is specified, the most recent report is returned. Format: YYYY-MM-DD. Example: `date=2024-12-31`|
+
+**Request**
+
+The following request uses the `date` parameter to return the most recent report for the date specified.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful request returns HTTP Status 200 (OK) and the identity overlap report. 
+
+```json
+{
+    "data": {
+        "Email,crmid,loyal": 2,
+        "ECID,Email,crmid": 7,
+        "ECID,Email,mobilenr": 12,
+        "AAID,ECID,loyal": 1,
+        "mobilenr": 25,
+        "AAID,ECID": 1508,
+        "ECID,crmid": 1,
+        "AAID,ECID,crmid": 2,
+        "Email,crmid": 328,
+        "CORE": 49,
+        "AAID": 446,
+        "crmid,loyal": 20988,
+        "Email": 10904,
+        "crmid": 249,
+        "ECID,Email": 74,
+        "Phone": 40,
+        "Email,Phone,loyal": 48,
+        "AAID,AVID,ECID": 85,
+        "Email,loyal": 1002,
+        "AAID,ECID,Email,Phone,crmid": 5,
+        "AAID,ECID,Email,crmid,loyal": 23,
+        "AAID,AVID,ECID,Email,crmid": 2,
+        "AVID": 3,
+        "AAID,ECID,Phone": 1,
+        "loyal": 43,
+        "ECID,Email,crmid,loyal": 6,
+        "AAID,ECID,Email,Phone,crmid,loyal": 1,
+        "AAID,ECID,Email": 2,
+        "AAID,ECID,Email,crmid": 142,
+        "AVID,ECID": 24,
+        "ECID": 6565
+    },
+    "reportTimestamp": "2021-12-29T16:55:03.624"
+}
+```
+
+|Property|Description|
+|---|---|
+|`data`|The `data` object contains comma-separated lists with unique combinations of identity namespace codes and their respective profile counts.|
+|Namespace codes|The `code` is a short form for each identity namespace name. A mapping of each `code` to its `name` can be found using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). The `code` is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
+|`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
+
+### Interpreting the identity overlap report
+
+The results of the report can be interpreted from the identities and profile counts in the response. The numerical value of each row tells you how many profiles are composed of that exact combination of standard and custom identity namespaces.
+
+Consider the following excerpt from the `data` object:
+
+```json
+  "AAID,ECID,Email,crmid": 142,
+  "AVID,ECID": 24,
+  "ECID": 6565
+```
+
+This report provides the following information:
+* There are 142 profiles composed of `AAID`, `ECID`, and `Email` standard identities, as well as from a custom `crmid` identity namespace.
+* There are 24 profiles that are composed of `AAID` and `ECID` identity namespaces.
+* There are 6,565 profiles that include only an `ECID` identity.
+
 ## Next steps
 
-Now that you know how to preview sample data in the Profile store and run the dataset overlap report, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile store and run multiple overlap reports, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 
