@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Apache Hive
 
 ## Connect [!DNL Apache Hive] on [!DNL Azure HDInsights] to [!DNL Platform] using APIs
 
-- [Create a Apache Hive on Azure HDInsights source connection using the Flow Service API](../../tutorials/api/create/databases/hive.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create an Apache Hive on Azure HDInsights base connection using the Flow Service API](../../tutorials/api/create/databases/hive.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Apache Hive] on [!DNL Azure HDInsights] to [!DNL Platform] using the UI
 
-- [Create a Apache Hive on Azure HDInsights source connection in the UI](../../tutorials/ui/create/databases/hive.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create an Apache Hive on Azure HDInsights source connection in the UI](../../tutorials/ui/create/databases/hive.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

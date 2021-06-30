@@ -20,17 +20,17 @@ Adobe Experience Platform allows data to be ingested from external sources while
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
-## Connect [!DNL Google AdWords] to [!DNL Platform]
+## Connect [!DNL Google AdWords] to Platform
 
-The documentation below provides information on how to connect [!DNL Google AdWords] to [!DNL Platform] using APIs or the user interface:
+The documentation below provides information on how to connect [!DNL Google AdWords] to Platform using APIs or the user interface:
 
 ### Using APIs
 
-- [Create a Google AdWords source connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
-- [Explore a advertising system using the Flow Service API](../../tutorials/api/explore/advertising.md)
-- [Collect advertising data using the Flow Service API](../../tutorials/api/collect/advertising.md)
+- [Create a Google AdWords base connection using the Flow Service API](../../tutorials/api/create/advertising/ads.md)
+- [Explore the data structure and contents of an advertising source using the Flow Service API](../../tutorials/api/explore/advertising.md)
+- [Create a dataflow for an advertising source using Flow Service API](../../tutorials/api/collect/advertising.md)
 
 ### Using the UI
 
 - [Create a Google AdWords source connection in the UI](../../tutorials/ui/create/advertising/ads.md)
-- [Configure a dataflow for a advertising connection in the UI](../../tutorials/ui/dataflow/advertising.md)
+- [Create a dataflow for an advertising source connection in the UI](../../tutorials/ui/dataflow/advertising.md)

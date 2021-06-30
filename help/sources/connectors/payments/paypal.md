@@ -23,11 +23,11 @@ The documentation below provides information on how to connect [!DNL PayPal] to 
 
 ## Connect [!DNL PayPal] to [!DNL Platform] using APIs
 
-- [Create a PayPal source connection using the Flow Service API](../../tutorials/api/create/payments/paypal.md)
-- [Explore a payments application using the Flow Service API](../../tutorials/api/explore/payments.md)
-- [Collect data from a payments application using the Flow Service API](../../tutorials/api/collect/payments.md)
+- [Create a PayPal base connection using the Flow Service API](../../tutorials/api/create/payments/paypal.md)
+- [Explore the data structure and contents of a payments source using the Flow Service API](../../tutorials/api/explore/payments.md)
+- [Create a dataflow for a payments source using the Flow Service API](../../tutorials/api/collect/payments.md)
 
 ## Connect [!DNL PayPal] to [!DNL Platform] using the UI
 
 - [Create a PayPal source connection in the UI](../../tutorials/ui/create/payments/paypal.md)
-- [Configure a dataflow for a payments connection in the UI](../../tutorials/ui/dataflow/payments.md)
+- [Create a dataflow for a payments source connection in the UI](../../tutorials/ui/dataflow/payments.md)

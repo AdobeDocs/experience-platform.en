@@ -1,5 +1,5 @@
 ---
-keywords: Experience Platform;home;popular topics;ssc;SSC;Salesforce Service Cloud;salesforce service cloud
+keywords: Experience Platform;home;popular topics;Salesforce Service Cloud;salesforce service cloud
 solution: Experience Platform
 title: Create a Salesforce Service Cloud Source Connection Using the Flow Service API
 topic-legacy: overview
@@ -9,9 +9,9 @@ exl-id: ed133bca-8e88-4c85-ae52-c3269b6bf3c9
 ---
 # Create a [!DNL Salesforce Service Cloud] source connection using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to [!DNL Salesforce Service Cloud] (hereinafter referred to as "SSC").
+This tutorial walks you through the steps to create a base connection for [!DNL Salesforce Service Cloud] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -20,43 +20,30 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to SSC using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Salesforce Service Cloud] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with SSC, you must provide values for the following connection properties:
+In order for [!DNL Flow Service] to connect with [!DNL Salesforce Service Cloud], you must provide values for the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `username` | The user name for the user account. |
-| `password` | The password for the user account. |
-| `securityToken` | The security token for the user account. |
+| `username` | The username for your [!DNL Salesforce Service Cloud] user account. |
+| `password` | The password for your [!DNL Salesforce Service Cloud] account. |
+| `securityToken` | The security token for your [!DNL Salesforce Service Cloud] account. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Service Cloud] is: `b66ab34-8619-49cb-96d1-39b37ede86ea`. |
 
 For more information about getting started refer to [this Salesforce Service Cloud document](https://developer.salesforce.com/docs/atlas.en-us.api_iot.meta/api_iot/qs_auth_access_token.htm).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per SSC account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Service Cloud] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -66,7 +53,7 @@ POST /connections
 
 **Request**
 
-In order to create an SSC connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for SSC is `b66ab34-8619-49cb-96d1-39b37ede86ea`.
+The following request creates a base connection for [!DNL Salesforce Service Cloud]:
 
 ```shell
 curl -X POST \
@@ -96,10 +83,10 @@ curl -X POST \
 
 | Parameter | Description |
 | --------- | ----------- |
-| `auth.params.username` | The username associated with your SSC account. |
-| `auth.params.password` | The password associated with your SSC account. |
-| `auth.params.securityToken` | The security token associated with your SSC account. |
-| `connectionSpec.id` | The connection specification `id` of your SSC account retrieved in the previous step. |
+| `auth.params.username` | The username associated with your [!DNL Salesforce Service Cloud] account. |
+| `auth.params.password` | The password associated with your [!DNL Salesforce Service Cloud] account. |
+| `auth.params.securityToken` | The security token associated with your [!DNL Salesforce Service Cloud] account. |
+| `connectionSpec.id` | The [!DNL Salesforce Service Cloud] connection specification ID: `b66ab34-8619-49cb-96d1-39b37ede86ea` |
 
 **Response**
 
@@ -114,4 +101,4 @@ A successful response returns the newly created connection, including its unique
 
 ## Next steps
 
-By following this tutorial, you have created an SSC connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore customer success systems using the Flow Service API](../../explore/customer-success.md).
+By following this tutorial, you have created an [!DNL Salesforce Service Cloud] connection using the [!DNL Flow Service] API, and have obtained the connection's unique ID value. You can use this connection ID in the next tutorial as you learn how to [explore customer success systems using the Flow Service API](../../explore/customer-success.md).
