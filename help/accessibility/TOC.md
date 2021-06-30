@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Accessibility
 user-guide-description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.

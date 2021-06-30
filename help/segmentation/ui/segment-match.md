@@ -2,7 +2,7 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segment Match;segment match
 solution: Experience Platform
 title: Segment Match Overview
-topic: overview
+topic-legacy: overview
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
 ---
 
