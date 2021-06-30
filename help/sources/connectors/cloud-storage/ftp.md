@@ -41,11 +41,11 @@ The documentation below provides information on how to connect an FTP server to 
 
 ### Using the APIs
 
-- [Create an FTP source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
-- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Create an FTP base connection using the Flow Service API](../../tutorials/api/create/cloud-storage/ftp.md)
+- [Explore the data structure and contents of a cloud storage source using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Create a dataflow for a cloud storage source using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
 - [Create an FTP source connection in the UI](../../tutorials/ui/create/cloud-storage/ftp.md)
-- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

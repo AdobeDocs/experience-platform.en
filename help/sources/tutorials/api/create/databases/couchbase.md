@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;couchbase;Couchbase
 solution: Experience Platform
-title: Create a Couchbase Source Connection Using the Flow Service API
+title: Create a Couchbase Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Couchbase to Adobe Experience Platform using the Flow Service API.
 exl-id: 625e3acf-fc27-44cf-b4e6-becf1d107ff2
 ---
-# Create a [!DNL Couchbase] source connection using the [!DNL Flow Service] API
+# Create a [!DNL Couchbase] base connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
 >The [!DNL Couchbase] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources to bring into Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-Learn how to connect [!DNL Couchbase] to [!DNL Experience Platform].
+This tutorial walks you through the steps to create a base connection for [!DNL Couchbase] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -31,41 +31,27 @@ The following sections provide additional information that you will need to know
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to your [!DNL Couchbase] instance. The connection string pattern for [!DNL Couchbase] is `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. For more information on acquiring a connection string, refer to [this Couchbase document](https://docs.Couchbase.com/c-sdk/2.10/client-settings.html#configuring-overview). |
-| `connectionSpec.id` | The identifier needed to create a connection. The fixed connection spec ID for [!DNL Couchbase] is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Couchbase] is `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connector is required per [!DNL Couchbase] account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Couchbase] authentication credentials as part of the request parameters.
 
 **API format**
 
-```http
+```https
 POST /connections
 ```
 
 **Request**
 
-The following request creates a new [!DNL Couchbase] connection, configured by the properties provided in the payload:.
+The following request creates a base connection for [!DNL Couchbase]:
 
 ```shell
 curl -X POST \
@@ -94,7 +80,7 @@ curl -X POST \
 | Property | Description |
 | --------- | ----------- |
 | `auth.params.connectionString` | The connection string used to connect to a [!DNL Couchbase] account. The connection string pattern is: `Server={SERVER}; Port={PORT};AuthMech=1;CredString=[{\"user\": \"{USER}\", \"pass\":\"{PASS}\"}];`. |
-| `connectionSpec.id` | The [!DNL Couchbase] connection spec ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
+| `connectionSpec.id` | The [!DNL Couchbase] connection specification ID: `1fe283f6-9bec-11ea-bb37-0242ac130002`. |
 
 **Response**
 

@@ -43,11 +43,11 @@ The documentation below provides information on how to connect [!DNL Google BigQ
 
 ### Using APIs
 
-- [Create a Google BigQuery source connection using the Flow Service API](../../tutorials/api/create/databases/bigquery.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create a Google BigQuery base connection using the Flow Service API](../../tutorials/api/create/databases/bigquery.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ### Using the UI
 
 - [Create a Google BigQuery source connection in the UI](../../tutorials/ui/create/databases/bigquery.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
