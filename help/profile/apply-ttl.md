@@ -2,23 +2,27 @@
 keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;ttl;time-to-live;
 solution: Experience Platform
 title: Time-to-live on Datasets
-description: This document provides general guidance on time-to-live (TTL) for datasets in Adobe Experience Platform.
+description: This document provides general guidance on time-to-live (TTL) for datasets in the Profile store for Adobe Experience Platform.
 ---
 
-# Time-to-live (TTL) for datasets
+# Profile Service time-to-live (TTL)
 
-Time-to-live (TTL) for datasets on Adobe Experience Platform is a mechanism that limits the amount of time that data lives within a dataset. This lets you automatically remove data from the Profile Store that is no longer useful for your use cases. TTL can only be applied on Real-time Customer Profile-enabled datasets.
+Profile Service lets users apply time-to-live (TTL) on data in the Profile Store. TTL is a mechanism that limits the amount of time that data lives within a dataset. This lets you automatically remove data from the Profile Store that is no longer useful for your use cases.
+
+Currently, Profile only supports Experience Event TTL.
+
+## Experience Event TTL
+
+Experience Event TTL lets you apply TTL on Real-time Customer Profile-enabled datasets to remove data from the Profile Store that is no longer valid.
 
 >[!NOTE]
 >
-> You will need to contact support in order to enable TTL on your datasets.
+> You will need to contact support in order to enable Experience Event TTL on your datasets.
 
-After enabling TTL on a Profile-enabled dataset, Platform will automatically apply the TTL expiration value on the data in a two step process:
+After enabling Experience Event TTL on a Profile-enabled dataset, Platform will automatically apply the TTL expiration value on the Experience Event data in a two step process:
 
 1. All new data that is ingested into the dataset will have the TTL expiration value applied at ingestion time.
-2. All existing data in the dataset will have the TTL expiration value retroactively applied as a one-time backfill system job.
-
-Once the TTL expiration value has been placed on the data, events that are older than the TTL expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their TTL expiration values from the event timestamp.
+2. All existing data in the dataset will have the TTL expiration value retroactively applied as a one-time backfill system job. Once the TTL expiration value has been placed on the dataset, events that are older than the TTL expiration value will be immediately dropped as soon as the system job runs. All other events will be dropped off as soon as they reach their TTL expiration values from the event timestamp.
 
 >[!NOTE]
 >
