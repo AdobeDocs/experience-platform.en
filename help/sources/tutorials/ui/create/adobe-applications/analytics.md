@@ -43,11 +43,28 @@ The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL 
 
 ### Mapping
 
-The [!UICONTROL Mapping] step appears, providing an interface to map source fields to their appropriate target schema fields. Select a target schema to start the mapping process.
+The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. Select a target schema to start the mapping process.
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
-With a schema selected, the 
+With a target schema selected, the [!UICONTROL Map standard fields] section updates to display panels for [!UICONTROL Standard mappings applied], [!UICONTROL Non matching standard mappings] and [!UICONTROL Custom mappings].
+
+| Map standard fields | Description |
+| --- | --- |
+| [!UICONTROL Standard mappings applied] |
+| [!UICONTROL Non matching standard mappings] |
+| [!UICONTROL Custom mappings] |
+
+![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
+
+To preview the [!DNL Analytics] ExperienceEvent template schema field group, select **[!UICONTROL View]** in the [!UICONTROL Standard mappings applied] panel.
+
+![view](../../../../images/tutorials/create/analytics/view.png)
+
+The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] page provides you with an interface to use for inspecting the structure of your schema. When finished, select **[!UICONTROL Close]**
+
+![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
+
 
 ### Provide dataflow details
 
