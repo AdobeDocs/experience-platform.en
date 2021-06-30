@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;home;popular topics;Veeva CRM;veeva crm;veeva;crm
 solution: Experience Platform
-title: Source Connector Overview
+title: Veeva CRM Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect Veeva CRM to Adobe Experience Platform using APIs or the user interface.
 ---
@@ -23,11 +23,11 @@ The documentation below provides information on how to connect [!DNL Veeva CRM] 
 
 ## Connect [!DNL Veeva CRM] to [!DNL Platform] using APIs
 
-- [Create a Veeva CRM source connection using the Flow Service API](../../tutorials/api/create/crm/veeva.md)
-- [Explore a CRM system using the Flow Service API](../../tutorials/api/explore/crm.md)
-- [Collect CRM data using the Flow Service API](../../tutorials/api/collect/crm.md)
+- [Create a Veeva CRM base connection using the Flow Service API](../../tutorials/api/create/crm/veeva.md)
+- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Veeva CRM] to [!DNL Platform] using the UI
 
 - [Create a Microsoft Dynamics source connection in the UI](../../tutorials/ui/create/crm/veeva.md)
-- [Configure a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)
+- [Create a dataflow for a CRM source connection in the UI](../../tutorials/ui/dataflow/crm.md)
