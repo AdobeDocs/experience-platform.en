@@ -17,7 +17,7 @@ Experience Event TTL lets you apply TTL on Real-time Customer Profile-enabled da
 
 >[!NOTE]
 >
-> You will need to contact support in order to enable Experience Event TTL on your datasets.
+>You will need to contact support in order to enable Experience Event TTL on your datasets.
 
 After enabling Experience Event TTL on a Profile-enabled dataset, Platform will automatically apply the TTL expiration value on the Experience Event data in a two step process:
 
@@ -26,11 +26,11 @@ After enabling Experience Event TTL on a Profile-enabled dataset, Platform will 
 
 >[!NOTE]
 >
-> Once a TTL is applied, any data that is older than the TTL's number of days will be **permanently deleted** and cannot be restored. 
+>Once TTL is applied, any data that is older than the TTL's number of days will be **permanently deleted** and cannot be restored. 
 > 
-> Additionally, ensure that the lookback window for the segment is within the TTL boundary. Otherwise, segment results may become incorrect after applying TTL. So, for example, if you applied a TTL of 30 days and had a segment that tried to view data from up to 45 days ago, the segment would produce incorrect Profiles.
+>Additionally, ensure that the lookback window for the segment is within the TTL boundary. Otherwise, segment results may become incorrect after applying TTL. So, for example, if you applied a TTL of 30 days and had a segment that tried to view data from up to 45 days ago, the segment would produce incorrect Profiles.
 > 
-> As a result, you should keep the same TTL for all datasets, if possible, to avoid the impact of different TTL values across different datasets in the segmentation logic.
+>As a result, you should keep the same TTL for all datasets, if possible, to avoid the impact of different TTL values across different datasets in the segmentation logic.
 
 So, for example, if you applied a TTL value of 30 days on May 15th, the following steps would occur:
 
