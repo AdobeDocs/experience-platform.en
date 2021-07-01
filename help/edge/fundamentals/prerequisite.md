@@ -9,7 +9,7 @@ exl-id: 98ae69db-bc87-4ea3-b101-664ac53e7ae0
 To use the Platform Web SDK, you must first:
 
 - Have your organization provisioned for this feature. (Access to the Platform Web SDK is free, if you would like to get access please reach out to your Customer Success Manager (CSM)).
-- Having 1st-party domain (CNAME) enabled is recommended. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development works without a CNAME, but you need one before you go to production. While a CNAME implementation does not provide any benefits in terms of cookie lifetime, there can be some other benefits such as ad blockers and less common browsers preventing data from being sent to domains they classify as trackers. In those cases, using a CNAME might prevent your data collection from being disrupted for users employing these tools.
+- Having 1st-party domain (CNAME) enabled is recommended. If you already have a CNAME for Adobe Analytics, you should use that one. Testing in development works without a CNAME, but Adobe recommends having one before you go to production. While a CNAME implementation does not provide any benefits in terms of cookie lifetime, it may prevent certain ad blockers and less common browsers from blocking SDK requests. In those cases, using a CNAME might prevent your data collection from being disrupted for users employing these tools.
 
 >[!IMPORTANT]
 >
