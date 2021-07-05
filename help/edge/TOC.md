@@ -18,7 +18,6 @@ feature: Data Management
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
   * [Debugging](fundamentals/debugging.md)
-  * [Merge event data](fundamentals/merging-event-data.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Supported use cases](fundamentals/supported-use-cases.md)
