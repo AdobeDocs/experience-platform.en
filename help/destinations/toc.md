@@ -17,7 +17,7 @@ feature: Destinations
     * [Destinations workspace](./ui/destinations-workspace.md)
     * Create a new destination{#create}
         * [Create a new streaming destination](./ui/create-streaming-destination.md)
-        * [Create a new batch destination](.ui/create-batch-destination.md)
+        * [Create a new batch destination](./ui/create-batch-destination.md)
     * Activate audiences to streaming destinations{#activate-streaming}
         * [Activate audiences to advertising destinations](./ui/activate-advertising-destinations.md)
         * [Activate audiences to social destinations](./ui/activate-social-destinations.md)
