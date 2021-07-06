@@ -48,7 +48,9 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 ## [!DNL Google Customer Match] account prerequisites {#google-account-prerequisites}
 
-Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717). 
+Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717).
+
+Next, make sure your [!DNL Google] account is configured for a [!DNL Standard] or higher access level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
 
 ### Allow list {#allowlist}
 
