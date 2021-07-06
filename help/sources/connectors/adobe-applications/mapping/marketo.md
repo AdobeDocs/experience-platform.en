@@ -100,6 +100,10 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `cost` | `actualCost.amount` |
 | `parentProgramId` | `parentCampaignID` |
 | `integrationPartner` | `integrationPartnerName` |
+| `webinarSessionName` | `webinarSessionName` |
+| `webinarSessionDescription` | `webinarSessionDescription` |
+| `webinarHistorySyncStatus` | `webinarHistorySyncStatus` |
+| `webinarHistorySyncDate` | `webinarHistorySyncDate` |
 | `startDate` | `campaignStartDate` |
 | `endDate` | `campaignEndDate` |
 
