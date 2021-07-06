@@ -21,6 +21,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `_id` | `_id` |
 | `personID` | `personID` | Primary identity |
 | `eventType` | `eventType`|
+| `producedBy` | `producedBy` |
 | `timestamp` | `timestamp` |
 | `web.webPageDetails._marketo.URL` | `web.webPageDetails._marketo.URL` |
 | `environment.browserDetails.userAgent` | `environment.browserDetails.userAgent` |
@@ -72,7 +73,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `opportunityEvent.dataValueChanges.attributeName` | `opportunityEvent.dataValueChanges.attributeName` |
 | `opportunityEvent.dataValueChanges.newValue` | `opportunityEvent.dataValueChanges.newValue` |
 | `opportunityEvent.dataValueChanges.oldValue` | `opportunityEvent.dataValueChanges.oldValue` |
-| `opportunityEvent.opportunityID` | `opportunityEvent.opportunityID` |
 | `leadOperation.campaignProgression.campaignID` | `leadOperation.campaignProgression.campaignID` |
 | `leadOperation.campaignProgression.isAcquiredBy` | `leadOperation.campaignProgression.isAcquiredBy` |
 | `leadOperation.campaignProgression.isSuccessful` | `leadOperation.campaignProgression.isSuccessful` |
