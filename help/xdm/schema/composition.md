@@ -115,7 +115,7 @@ The following table breaks down which changes are supported when editing schemas
 
 | Supported changes | Breaking changes (Not supported) |
 | --- | --- |
-| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Changing the resource's display name and description</li></ul> | <ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving attributes to a different location in the tree</li></ul> |
+| <ul><li>Adding new fields to the resource</li><li>Making a mandatory field optional</li><li>Changing the resource's display name and description</li><li>Enabling the schema to participate in Profile</li></ul> | <ul><li>Removing previously defined fields</li><li>Introducing new mandatory fields</li><li>Renaming or redefining existing fields</li><li>Removing or restricting previously supported field values</li><li>Moving existing fields to a different location in the tree</li><li>Deleting the schema</li><li>Disabling the schema from participating in Profile</li></ul> |
 
 ### Schemas and data ingestion
 
