@@ -56,6 +56,8 @@ description: The tables below contains the mappings between the fields in CRM so
 | `Salutation` | picklist | `person.name.courtesyTitle` | string |
 | `Title` | string | `extendedWorkDetails.jobTitle` | string |
 
+{style="table-layout:auto"}
+
 ### Lead
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
@@ -100,6 +102,8 @@ description: The tables below contains the mappings between the fields in CRM so
 | `ReportsToId` | reference | `extendedWorkDetails.reportsToID` | string |
 | `Salutation` | picklist | `person.name.courtesyTitle` | string |
 | `Title` | string | `extendedWorkDetails.jobTitle` | string |
+
+{style="table-layout:auto"}
 
 ### Account
 
@@ -147,6 +151,8 @@ description: The tables below contains the mappings between the fields in CRM so
 | `TickerSymbol` | string | `accountOrganization.tickerSymbol` | string |
 | `Tradestyle` | string | `accountTradeStyle` | string | data.com feature |
 | `Type` | picklist | `accountType` | string |
+
+{style="table-layout:auto"}
 
 ### Opportunity
 
