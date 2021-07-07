@@ -6,11 +6,7 @@ topic-legacy: overview
 description: The tables below contains the mappings between the fields in the Marketo datasets and their corresponding XDM fields.
 exl-id: 2b217bba-2748-4d6f-85ac-5f64d5e99d49
 ---
-# (Beta) [!DNL Marketo Engage] field mappings
-
->[!IMPORTANT]
->
->The [!DNL Marketo Engage] source is currently in beta. Its features and the documentation are subject to change.
+# [!DNL Marketo Engage] field mappings
 
 The tables below contain the mappings between the fields in the nine [!DNL Marketo] datasets and their corresponding Experience Data Model (XDM) fields.
 

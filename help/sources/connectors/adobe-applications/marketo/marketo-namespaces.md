@@ -6,11 +6,7 @@ topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
-# (Beta) [!DNL Marketo Engage] namespaces and schemas
-
->[!IMPORTANT]
->
->The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change.
+# [!DNL Marketo Engage] namespaces and schemas
 
 This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
