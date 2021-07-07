@@ -103,6 +103,51 @@ description: The tables below contains the mappings between the fields in CRM so
 
 ### Account
 
+| Source field | Data type | Target XDM field path | Data type | Notes |
+| --- | --- | --- | --- | --- |
+| `AccountNumber` | string | `accountNumber` | string |
+| `AccountSource` | picklist | `accountSourceType` | string |
+| `AnnualRevenue` | currency | `accountOrganization.annualRevenue.amount` | double |
+| `BillingCity` | address | `accountBillingAddress.city` | string |
+| `BillingCountry` | string | `accountBillingAddress.country` | string |
+| `BillingLatitude` | double | `accountBillingAddress._schema.latitude` | double |
+| `BillingLongitude` | double | `accountBillingAddress._schema.longitude` | double |
+| `BillingPostalCode` | string | `accountBillingAddress.postalCode` | string |
+| `BillingState` | string | `accountBillingAddress.state` | string |
+| `BillingStreet` | textarea | `accountBillingAddress.street1` | string |
+| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
+| `Description` | textarea | `accountDescription` | string |
+| `DunsNumber` | string | `accountOrganization.DUNSNumber` | string | data.com feature |
+| `Fax` | phone | `accountFax.number` | string |
+| `Id` | id | `accountID` | string | Primary identity |
+| `Industry` | picklist | `accountOrganization.industry` | string |
+| `Jigsaw` | string | `accountOrganization.jigsaw` | string |
+| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
+| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
+| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
+| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
+| `NaicsCode` | string | `accountOrganization.NAICSCode` | string | data.com feature |
+| `NaicsDesc` | string | `accountOrganization.NAICSDescription` | string | data.com feature |
+| `Name` | string | `accountName` | string |
+| `NumberOfEmployees` | integer | `accountOrganization.numberOfEmployees` | integer |
+| `Ownership` | picklist | `accountOwnership` | string |
+| `ParentId` | reference | `accountParentID` | string |
+| `Phone` | phone | `accountPhone.number` | string |
+| `Rating` | picklist | `accountOrganization.rating` | string |
+| `ShippingCity` | string | `accountShippingAddress.city` | string |
+| `ShippingCountry` | string | `accountShippingAddress.country` | string |
+| `ShippingLatitude` | double | `accountShippingAddress._schema.latitude` | double |
+| `ShippingLongitude` | double | `accountShippingAddress._schema.longitude` | double |
+| `ShippingPostalCode` | string | `accountShippingAddress.postalCode` | string |
+| `ShippingState` | string | `accountShippingAddress.state` | string |
+| `ShippingStreet` | textarea | `accountShippingAddress.street1` | string |
+| `Sic` | string | `accountOrganization.SICCode` | string |
+| `SicDesc` | string | `accountOrganization.SICDescription` | string |
+| `Site` | string | `accountSite` | string |
+| `TickerSymbol` | string | `accountOrganization.tickerSymbol` | string |
+| `Tradestyle` | string | `accountTradeStyle` | string | data.com feature |
+| `Type` | picklist | `accountType` | string |
+
 ### Opportunity
 
 ### Opportunity contact role
