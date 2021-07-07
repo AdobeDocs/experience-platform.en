@@ -155,6 +155,12 @@ Field groups define which class(es) they are compatible with based on the behavi
 
 For example, to capture details such as "[!UICONTROL First Name]" and "[!UICONTROL Home Address]" for your "[!UICONTROL Loyalty Members]" schema, you would be able to use standard field groups that define those common concepts. However, concepts that are specific to less-common use cases (such as "[!UICONTROL Loyalty Program Level]") often do not have a pre-defined field group. In this case, you must define your own field group to capture this information.
 
+>[!NOTE]
+>
+>It is strongly recommended that you use standard field groups whenever possible in your schemas, since these fields are implicitly understood by [!DNL Experience Platform] services and provide greater consistency when used across [!DNL Platform] components.
+>
+>Fields provided by standard components (such as "First Name" and "Email Address") contain added connotations beyond basic scalar field types, telling [!DNL Platform] that any fields sharing the same data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Platform] service the data is being used.
+
 Remember that schemas are composed of "zero or more" field groups, so this means that you could compose a valid schema without using any field groups at all.
 
 The following screenshot demonstrates how field groups are represented in the Platform UI. A single field group ([!UICONTROL Demographic Details]) is added to a schema in this example, which provides a grouping of fields to the schema's structure.
@@ -203,24 +209,6 @@ The valid ranges of these scalar types can be further constrained to certain pat
 >[!NOTE]
 >
 >The "map" field type allows for key-value pair data, including multiple values for a single key. Maps can only be defined at the system level, meaning you may encounter a map in an industry or vendor-defined schema, but it is not available for use in fields you define. The [Schema Registry API developer guide](../api/getting-started.md) contains more information on defining field types.
-
-Some data operations used by downstream services and applications enforce constraints on specific field types. Affected services include, but are not limited to:
-
-* [[!DNL Real-time Customer Profile]](../../profile/home.md)
-* [[!DNL Identity Service]](../../identity-service/home.md)
-* [[!DNL Segmentation]](../../segmentation/home.md)
-* [[!DNL Query Service]](../../query-service/home.md)
-* [[!DNL Data Science Workspace]](../../data-science-workspace/home.md)
-
-Before creating a schema for use in downstream services, please review the appropriate documentation for those services in order to better understand the field requirements and constraints for the data operations the schema is intended for.
-
-### XDM fields
-
-In addition to basic fields and the ability to define your own data types, XDM provides a standard set of fields and data types that are implicitly understood by [!DNL Experience Platform] services and provide greater consistency when used across [!DNL Platform] components.
-
-These fields, such as "First Name" and "Email Address" contain added connotations beyond basic scalar field types, telling [!DNL Platform] that any fields sharing the same XDM data type will behave in the same way. This behavior can be trusted to be consistent regardless of where the data is coming from, or in which [!DNL Platform] service the data is being used.
-
-See the [XDM field dictionary](field-dictionary.md) for a complete list of available XDM fields. It is recommended to use XDM fields and data types wherever possible to support consistency and standardization across [!DNL Experience Platform].
 
 ## Composition example
 
