@@ -26,7 +26,7 @@ Standardization is a key concept behind [!DNL Experience Platform]. XDM, driven 
 
 The infrastructure on which [!DNL Experience Platform] is built, known as [!DNL XDM System], facilitates schema-based workflows and includes the [!DNL Schema Registry], [!DNL Schema Editor], schema metadata, and service consumption patterns. See the [XDM System overview](../home.md) for more information.
 
-There are several key benefits to building and utilizing schemas in [!DNL Experience Platform]. First, schemas allow for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
+There are several key benefits to leveraging schemas in [!DNL Experience Platform]. First, schemas allow for better data governance and data minimization, which is especially important with privacy regulations. Second, building schemas with Adobe's standard components allows for out-of-the-box insights and use of AI/ML services with minimal customizations. Last, schemas provide infrastructure for data sharing insights and efficient orchestration.
 
 ## Planning your schema
 
@@ -62,7 +62,7 @@ There are two ways to send identity data to Platform:
 
 `identityMap` is a map-type field that describes the various identity values for an individual, along with their associated namespaces. This field can be used to provide identity information for your schemas, instead of defining identity values within the structure of the schema itself.
 
-The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should be defining individual identity fields within the actual schema structure instead. Schemas that utilize `identityMap` also cannot participate in relationships.
+The main drawback of using `identityMap` is that identities become embedded in the data and become less visible as a result. If you are ingesting raw data, you should be defining individual identity fields within the actual schema structure instead. Schemas that use `identityMap` also cannot participate in relationships.
 
 However, identity maps can be particularly useful if you are bringing in data from sources that store identities together (such as [!DNL Airship] or Adobe Audience Manager), or when there are a variable number of identities for a schema. In addition, identity maps are required if you are using the [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/).
 
@@ -105,7 +105,7 @@ As the example above shows, each key in the `identityMap` object represents an i
 
 As the nature of digital experiences continues to evolve, so must the schemas used to represent them. A well-designed schema is therefore able to adapt and evolve as needed, without causing destructive changes to previous versions of the schema.
 
-Since maintaining backwards compatibility is crucial for schema evolution, [!DNL Experience Platform] enforces a purely additive versioning principle to ensure that any revisions to the schema only result in non-destructive updates and changes. In other words, **breaking changes are not supported.**
+Since maintaining backwards compatibility is crucial for schema evolution, [!DNL Experience Platform] enforces a purely additive versioning principle. This principle ensures that any revisions to the schema only result in non-destructive updates and changes. In other words, **breaking changes are not supported.**
 
 >[!NOTE]
 >
@@ -293,7 +293,7 @@ There are some key factors to consider when choosing objects over free-form fiel
 | Objects | Free-form fields |
 | --- | --- |
 | Increases nesting | Less or no nesting |
-| Creates logical field groupings | Fields are placed in ad-hoc locations |
+| Creates logical field groupings | Fields are placed in ad hoc locations |
 
 {style="table-layout:auto"}
 
