@@ -162,8 +162,39 @@ description: The tables below contains the mappings between the fields in CRM so
 | `Amount` | currency | `opportunityAmount.amount` | double |
 | `CampaignId` | reference | `campaignID` | string |
 | `CloseDate` | date | `actualCloseDate` / `expectedCloseDate` | dateTime |
+| `CreatedDate`| dateTime | `extSourceSystemAudit.createdDate` | dateTime |
+| `Description` | textarea | `opportunityDescription` | string |
+| `ExpectedRevenue` | currency | `expectedRevenue.amount` | double |
+| `FiscalQuarter` | integer | `fiscalQuarter` | string |
+| `FiscalYear` | integer | `fiscalYear` | integer |
+| `ForecastCategory` | picklist | `forecastCategory` | string |
+| `ForecastCategoryName` | picklist | `forecastCategoryName` | string |
+| `Id` | id | `opportunityID` | string | Primary identity |
+| `IsClosed` | boolean | `isClosed` | boolean |
+| `IsWon` | boolean | `isWon` | boolean |
+| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
+| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
+| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
+| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
+| `LeadSource` | picklist | `leadSource` | string |
+| `Name` | string | `opportunityName` | string |
+| `NextStep` | string | `nextStep` | string |
+| `Probability` | percent | `probabilityPercentage` | double |
+| `StageName` | picklist | `opportunityStage` | string |
+| `TotalOpportunityQuantity` | double | `opportunityQuantity` | integer |
+| `Type` | picklist | `opportunityType` | string |
 
 ### Opportunity contact role
+
+| Source field | Data type | Target XDM field path | Data type | Notes |
+| --- | --- | --- | --- | --- |
+| `ContactId` | reference | `personID` | string | Relationship |
+| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
+| `Id` | id | `opportunityPersonID` | string | Primary identity |
+| `IsPrimary` | boolean | `isPrimary` | boolean |
+| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
+| `OpportunityId` | reference | `opportunityID` | string | Relationship |
+| `Role` | picklist | personRole | string |
 
 ### Campaign
 
