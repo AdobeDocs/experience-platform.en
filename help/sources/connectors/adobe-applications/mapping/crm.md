@@ -194,12 +194,40 @@ description: The tables below contains the mappings between the fields in CRM so
 | `IsPrimary` | boolean | `isPrimary` | boolean |
 | `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
 | `OpportunityId` | reference | `opportunityID` | string | Relationship |
-| `Role` | picklist | personRole | string |
+| `Role` | picklist | `personRole` | string |
 
 ### Campaign
 
+| Source field | Data type | Target XDM field path | Data type | Notes |
+| --- | --- | --- | --- | --- |
+| `Id` | id | `xdm: campaignID` | string | Primary identity |
+| `Name` | String | `xdm: campaignName` | string |
+| `ParentId` | reference | `xdm: parentCampaignID` | string |
+| `Type` | picklist | `xdm: campaignType` | string |
+| `Status` | picklist | `xdm: campaignStatus` | string |
+| `StartDate` | date | `xdm: campaignStartDate` | dateTime |
+| `EndDate` | date | `xdm: campaignEndDate` | dateTime |
+| `ExpectedRevenue` | currency | `xdm: expectedRevenue.amount` | double |
+| `BudgetedCost` | currency | `xdm: budgetedCost.amount` | double |
+| `ActualCost` | currency | `xdm: actualCost.amount` | double |
+| `ExpectedResponse` | percent | `xdm: expectedResponse` | string |
+| `IsActive` | boolean | `xdm: isActive` | boolean |
+| `Description` | textarea | `xdm: campaignDescription` | string |
+| `CreatedDate` | dateTime | `xdm: extSourceSystemAudit.createdDate` | dateTime |
+| `LastModifiedDate` | dateTime | `xdm: extSourceSystemAudit.lastUpdatedDate` | dateTime |
+| `LastActivityDate` | date | `xdm: extSourceSystemAudit.lastActivityDate` | dateTime |
+| `LastViewedDate` | dateTime | `xdm: extSourceSystemAudit.lastViewedDate` | dateTime |
+| `LastReferencedDate` | dateTime | `xdm: extSourceSystemAudit.lastReferencedDate` | dateTime |
+
 ### Campaign member
 
-### Task
-
-### Event
+| Source field | Data type | Target XDM field path | Data type | Notes |
+| --- | --- | --- | --- | --- |
+| `Id` | id | `campaignMemberID` | string | Primary identity |
+| `CampaignId` | reference | `campaignID` | string | Relationship |
+| `LeadOrContactId` | reference | `personID` | string | Relationship |
+| `Status` | picklist | `memberStatus` | string |
+| `HasResponded` | boolean | `hasResponded` | boolean |
+| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
+| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
+| `FirstRespondedDate` | dateTime | `firstRespondedDate` | dateTime |
