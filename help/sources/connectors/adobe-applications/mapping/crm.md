@@ -156,6 +156,13 @@ description: The tables below contains the mappings between the fields in CRM so
 
 ### Opportunity
 
+| Source field | Data type | Target XDM field path | Data type | Notes |
+| --- | --- | --- | --- | --- |
+| `AccountId` reference | `accountID` | string | Relationship |
+| `Amount` | currency | `opportunityAmount.amount` | double |
+| `CampaignId` | reference | `campaignID` | string |
+| `CloseDate` | date | `actualCloseDate` / `expectedCloseDate` | dateTime |
+
 ### Opportunity contact role
 
 ### Campaign
