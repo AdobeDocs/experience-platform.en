@@ -44,4 +44,4 @@ Adobe provides several standard field groups for use with the [!DNL XDM Individu
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 
-For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
