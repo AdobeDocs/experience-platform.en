@@ -104,7 +104,7 @@ Selecting target fields:
     >The **[!UICONTROL Origin of audience]** is required for social destinations.
 
 
-1. Select **[!UICONTROL Next]**.
+1. Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
 ## Review {#review}
 
