@@ -1,13 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 solution: Experience Platform
-title: Mapping Fields for the CRM Sources
+title: Salesforce Mapping Fields
 topic-legacy: overview
 description: The tables below contain the mappings between Salesforce source fields and their corresponding XDM fields.
 ---
 # [!DNL Salesforce] field mappings
 
-### Contact {#contact}
+The tables below contain the mappings between [!DNL Salesforce] source fields and their corresponding Experience Data Model (XDM) fields.
+
+## Contact {#contact}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -233,3 +235,7 @@ description: The tables below contain the mappings between Salesforce source fie
 | `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
 | `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
 | `FirstRespondedDate` | dateTime | `firstRespondedDate` | dateTime |
+
+## Next steps
+
+By reading this document, you have gained insight on the mapping relationship between [!DNL Salesforce] source fields and their corresponding XDM fields. See the tutorial on [creating a [!DNL Salesforce] source connection](../../../tutorials/ui/create/crm/salesforce.md) to start your [!DNL Salesforce] dataflow.
