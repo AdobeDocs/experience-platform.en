@@ -43,10 +43,10 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ## [!UICONTROL Mapping] step {#mapping}
 
->[!CONTEXTUALHELP]
+<!-- >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
 >title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation." -->
 
 Applies to: social destinations and Google Customer Match advertising destination
 
