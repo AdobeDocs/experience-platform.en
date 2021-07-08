@@ -1,18 +1,18 @@
 ---
-keywords: activate advertising destination;activate destinations;activate data
-title: Activate audience data in advertising destinations
+keywords: activate advertising destinations;activate destinations;activate data
+title: Activate audience data to advertising destinations
 type: Tutorial
-seo-title: Activate audience data in advertising destinations
+seo-title: Activate audience data to advertising destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to advertising destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to advertising destinations.
 ---
-# Activate audience data in advertising destinations
+# Activate audience data to advertising destinations
 
-## Overview
+## Overview {#overview}
 
 This article explains the workflow required to activate audience data in Adobe Experience Platform advertising destinations.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 To activate data to advertising destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
@@ -30,7 +30,7 @@ To activate data to advertising destinations, you must have successfully [connec
 
 ## Select your segments {#select-segments}
 
-Use the check boxes to the left of the segment names to select the segments that you want to send to the destination, then select **[!UICONTROL Next]**.
+Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
 ![Select segments](../assets/ui/activate-advertising-destinations/select-segments.png)
 
