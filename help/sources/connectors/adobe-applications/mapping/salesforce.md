@@ -1,15 +1,13 @@
 ---
-keywords: Experience Platform;home;popular topics;CRM;crm;mapping;marketo;B2B;b2b
+keywords: Experience Platform;home;popular topics;Salesforce;salesforce;field mapping;Field mapping;mapping;marketo;B2B;b2b
 solution: Experience Platform
 title: Mapping Fields for the CRM Sources
 topic-legacy: overview
-description: The tables below contains the mappings between the fields in CRM sources and their corresponding XDM fields.
+description: The tables below contain the mappings between Salesforce source fields and their corresponding XDM fields.
 ---
-# CRM field mappings
+# [!DNL Salesforce] field mappings
 
-## [!DNL Salesforce] field mappings
-
-### Contact
+### Contact {#contact}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -58,7 +56,7 @@ description: The tables below contains the mappings between the fields in CRM so
 
 {style="table-layout:auto"}
 
-### Lead
+## Lead {#lead}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -105,7 +103,7 @@ description: The tables below contains the mappings between the fields in CRM so
 
 {style="table-layout:auto"}
 
-### Account
+## Account {#account}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -154,7 +152,7 @@ description: The tables below contains the mappings between the fields in CRM so
 
 {style="table-layout:auto"}
 
-### Opportunity
+## Opportunity {#opportunity}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -184,7 +182,9 @@ description: The tables below contains the mappings between the fields in CRM so
 | `TotalOpportunityQuantity` | double | `opportunityQuantity` | integer |
 | `Type` | picklist | `opportunityType` | string |
 
-### Opportunity contact role
+{style="table-layout:auto"}
+
+## Opportunity contact role {#opportunity-contact-role}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -196,7 +196,9 @@ description: The tables below contains the mappings between the fields in CRM so
 | `OpportunityId` | reference | `opportunityID` | string | Relationship |
 | `Role` | picklist | `personRole` | string |
 
-### Campaign
+{style="table-layout:auto"}
+
+## Campaign {#campaign}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
@@ -219,7 +221,7 @@ description: The tables below contains the mappings between the fields in CRM so
 | `LastViewedDate` | dateTime | `xdm: extSourceSystemAudit.lastViewedDate` | dateTime |
 | `LastReferencedDate` | dateTime | `xdm: extSourceSystemAudit.lastReferencedDate` | dateTime |
 
-### Campaign member
+## Campaign member {#campaign-member}
 
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
