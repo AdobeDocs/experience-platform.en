@@ -757,7 +757,7 @@ To work with custom timestamps using the UI, refer to the section on [using cust
 
 #### [!DNL External Source System Audit Details] field group details {#field-group-details}
 
-The following example shows correctly populated fields in the [!DNL External Source System Audit Details] field group. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/mixins/shared/external-source-system-audit-details.schema.json) on GitHub.
+The following example shows correctly populated fields in the [!DNL External Source System Audit Details] field group. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) on GitHub.
 
 ```json
 {
