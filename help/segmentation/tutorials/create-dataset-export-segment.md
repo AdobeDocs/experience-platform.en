@@ -60,7 +60,7 @@ Select the radio button next to **[!UICONTROL XDM Individual Profile]**, then se
 
 ## Configure dataset
 
-On the next screen, you must give your dataset a name and an optional description. 
+On the next screen, you must give your dataset a name. You can also add an optional description. 
 
 **Notes on dataset names:**
 * Dataset names should be short and descriptive so that the dataset can be easily found in the library later. 
