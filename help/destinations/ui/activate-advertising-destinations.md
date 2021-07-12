@@ -42,9 +42,34 @@ Use the check boxes to the left of the segment names to select the segments that
 >title="Apply transformation"
 >abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
 
+
 >[!IMPORTANT]
 >
 >This step only applies to the Google Customer Match advertising destination. For other advertising destinations, skip to [Schedule segment export](#scheduling)
+
+For [!DNL Google Customer Match], you must select source attributes or identity namespaces to map as target identities in the destination.
+
+1. In the **[!UICONTROL Mapping]** page, select **[!UICONTROL Add new mapping]**.
+    
+    ![Add new mapping](../assets/ui/activate-social-destinations/add-new-mapping.png)
+
+1. Select the arrow to the right of the **[!UICONTROL Source field]** entry.
+
+    ![Select source field](../assets/ui/activate-social-destinations/select-source-field.png)
+
+1. In the **[!UICONTROL Select source field]** page, use the **[!UICONTROL Select attributes]** or the **[!UICONTROL Select identity namespace]** options to switch between the two categories of available source fields. From the available [!DNL XDM] profile attributes and identity namespaces, select the ones that you want to map to the destination, then choose **[!UICONTROL Select]**.
+
+    ![Select source field page](../assets/ui/activate-social-destinations/source-field-page.png)
+
+1. Select the button to the right of the **[!UICONTROL Target field]** entry.
+
+    ![Select target field](../assets/ui/activate-social-destinations/select-target-field.png)
+
+1. In the **[!UICONTROL Select target field]** page, select the target identity namespace that you want to map the source field to, and choose **[!UICONTROL Select]**.
+
+    ![Select target field page](../assets/ui/activate-social-destinations/target-field-page.png)
+
+1. To add more mappings, repeat steps 1 to 5.
 
 ### Mapping identities in [!DNL Google Customer Match] {#example-gcm}
 
