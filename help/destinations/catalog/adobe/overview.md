@@ -26,6 +26,7 @@ To understand the difference between connections and extensions, see [Extensions
 - [Adobe Target v2 extension](../personalization/adobe-target-v2.md)
 - [Audience Manager DIL extension](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID Service extension](../personalization/adobe-ecid.md)
+- [Marketo Engage Destination Connector](/help/destinations/catalog/adobe/marketo-engage-destination-connector.md)
 - [Marketo extension](../email/marketo.md)
 - [Marketo Munchkin extension](../email/marketo-munchkin.md)
 - [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
