@@ -40,9 +40,12 @@ The following is a list of [!DNL Experience Cloud] applications that are not int
 
 | Application | Documentation description |
 | ------- | ----------- |
-| [Adobe Campaign Classic](https://docs.campaign.adobe.com/doc/AC/getting_started/EN/ACC_GDPR.html) | An overview of GDPR functionalities for Adobe Campaign Classic. |
-| [Adobe Experience Manager](https://helpx.adobe.com/experience-manager/6-4/managing/using/gdpr-compliance.html) | An overview of how a customer privacy administrator or AEM administrator can handle GDPR requests. |
+| [Adobe Campaign Classic](https://experienceleague.adobe.com/docs/campaign-classic/using/getting-started/privacy/privacy-management.html) | An overview of GDPR functionalities for Adobe Campaign Classic. |
+| [Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-64/managing/data-protection/data-protection-and-privacy.html) | An overview of how a customer privacy administrator or AEM administrator can handle GDPR requests. |
 | [Adobe Experience Manager Livefyre](https://experienceleague.adobe.com/docs/livefyre/using/settings-other/privacy-requests/c-gdpr-compliance.html) | Steps for making GDPR access and delete requests using Livefyre. |
-| [Adobe Experience Platform Launch](https://docs.adobelaunch.com/client-side-information/deploy-javascript-tags-to-opt-in-to-launch) | How developers can use extensions and the rule builder to define opt-in and opt-out solutions. |
+| [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html) | How developers can use extensions and the rule builder to define opt-in and opt-out solutions. |
+| [Magento](https://devdocs.magento.com/compliance/industry-compliance.html) | Ensure that your Magento Commerce installations comply with the requirements of specific privacy legislations. |
+| [Marketo](https://www.marketo.com/company/trust/gdpr/) | Learn how privacy regulations apply to Marketo. |
+| [Workfront](https://www.workfront.com/privacy-notice) | Learn how Workfront collects personal data, and how a data subject can submit a privacy request via a form. |
 
 {style="table-layout:auto"}
