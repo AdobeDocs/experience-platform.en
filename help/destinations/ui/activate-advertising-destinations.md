@@ -37,15 +37,15 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Map attributes and identities {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
-
 
 >[!IMPORTANT]
 >
 >This step only applies to the Google Customer Match advertising destination. For other advertising destinations, skip to [Schedule segment export](#scheduling)
+
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Apply transformation"
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
 
 For [!DNL Google Customer Match], you must select source attributes or identity namespaces to map as target identities in the destination.
 
