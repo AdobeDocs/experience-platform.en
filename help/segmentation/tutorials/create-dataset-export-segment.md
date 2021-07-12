@@ -50,6 +50,10 @@ On the next screen, select **[!UICONTROL Create Dataset from Schema]**.
 
 To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset, find the "[!UICONTROL XDM Individual Profile]" schema on the **[!UICONTROL Select Schema]** screen. Once you select the schema, you can confirm whether it's the union schema under **[!UICONTROL API Usage]** in the right rail. If the [!UICONTROL Schema] path ends with `_union`, it's a union schema.
 
+>[!NOTE]
+>
+>Despite the fact that union schemas participate in Real-time Customer Profile by definition, they are not listed as "Not enabled" due to the fact that they are not enabled Profile in same way as traditional schemas.
+
 Select the radio button next to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Next]**.
 
 ![Select schema](../images/tutorials/segment-export-dataset/select-schema.png)
