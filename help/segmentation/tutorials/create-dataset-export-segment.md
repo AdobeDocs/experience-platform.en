@@ -52,7 +52,7 @@ To select the [!DNL XDM Individual Profile Union Schema] for use in your dataset
 
 >[!NOTE]
 >
->Despite the fact that union schemas participate in Real-time Customer Profile by definition, they are not listed as "Not enabled" due to the fact that they are not enabled Profile in same way as traditional schemas.
+>Despite the fact that union schemas participate in Real-time Customer Profile by definition, they are listed as "Not enabled" due to the fact that they are not enabled Profile in same way as traditional schemas.
 
 Select the radio button next to **[!UICONTROL XDM Individual Profile]**, then select **[!UICONTROL Next]**.
 
