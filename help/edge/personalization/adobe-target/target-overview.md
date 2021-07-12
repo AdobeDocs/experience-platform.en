@@ -153,32 +153,24 @@ Typical [!DNL Platform Web SDK] code using this command looks like the following
 alloy("sendEvent", {
    renderDecisions: true|false,
    xdm: { // Experience Event XDM data },
-   data: { // Freeform stuff (event & profile) }
+   data: { // Freeform data }
 });
 ```
 
-**Sample code**
+**How to send Profile attributes to Adobe Target:**
 
 ```
 alloy("sendEvent", {
   renderDecisions: true,
-  xdm: {
-    device: {
-      screenWidth: 9999
-    }
-  },
   data: {
     __adobe: {
       target: {
         "profile.gender": "female",
-        "profile.age": 30,
-	"entity.id" : "123",
-	"entity.genre" : "Drama"
+        "profile.age": 30
       }
     }
   }
-}) 
-.then(console.log);
+});
 ```
 
 ## Request recommendations
@@ -203,6 +195,22 @@ The following table lists [!DNL Recommendations] attributes and whether each one
 ||cartIds|Supported|
 ||productPurchasedId|Supported|
 |Page or item category for category affinity|user.categoryId|Supported|
+
+**How to send Recommendations attributes to Adobe Target:**
+
+```
+alloy("sendEvent", {
+  renderDecisions: true,
+  data: {
+    __adobe: {
+      target: {
+        "entity.id" : "123",
+        "entity.genre" : "Drama"
+      }
+    }
+  }
+});
+```
 
 ## Debugging
 

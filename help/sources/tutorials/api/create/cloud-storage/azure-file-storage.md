@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure;Azure File Storage;Azure file storage
 solution: Experience Platform
-title: Create an Azure File Storage Source Connection Using the Flow Service API
+title: Create an Azure File Storage Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Azure File Storage to Adobe Experience Platform using the Flow Service API.
 exl-id: 0c585ae2-be2d-4167-b04b-836f7e2c04a9
 ---
-# Create an [!DNL Azure File Storage] source connection using the [!DNL Flow Service] API
+# Create an [!DNL Azure File Storage] base connection using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Azure File Storage] to [!DNL Experience Platform].
+This tutorial walks you through the steps to create a base connection for [!DNL Azure File Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -31,33 +31,19 @@ In order for [!DNL Flow Service] to connect with [!DNL Azure File Storage], you 
 | `host` | The endpoint of the [!DNL Azure File Storag]e instance you are accessing. |
 | `userId` | The user with sufficient access to the [!DNL Azure File Storage] endpoint. |
 | `password` | The password for your [!DNL Azure File Storage] instance |
-| Connection specification ID | The unique identifier needed to create a connection. The connection spec ID for [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8` |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure File Storage] is: `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`. |
 
 For more information about getting started refer to [this Azure File Storage document](https://docs.microsoft.com/en-us/azure/storage/files/storage-how-to-use-files-windows).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Azure File Storage] account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Azure File Storage] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -67,7 +53,7 @@ POST /connections
 
 **Request**
 
-In order to create an [!DNL Azure File Storage] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Azure File Storage] is `be5ec48c-5b78-49d5-b8fa-7c89ec4569b8`.
+The following request creates a base connection for [!DNL Azure File Storage]:
 
 ```shell
 curl -X POST \
@@ -104,7 +90,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {
