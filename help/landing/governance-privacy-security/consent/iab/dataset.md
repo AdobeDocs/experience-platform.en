@@ -15,7 +15,11 @@ Specifically, two datasets are required for capturing TCF 2.0 consent data:
 * A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile].
 * A dataset based on the [!DNL XDM ExperienceEvent] class.
 
-This document provides steps for setting up these two datasets to collect IAB TCF 2.0 consent data. For an overview of the full workflow to configure your Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
+>[!IMPORTANT]
+>
+>Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on segment activation.
+
+This document provides steps for setting up these two datasets. For an overview of the full workflow to configure your Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 
 ## Prerequisites
 
@@ -113,7 +117,7 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to op
 >
 >Additionally, when editing existing schemas, only additive (non-breaking) changes can be made. See the section on the [principles of schema evolution](../../../../xdm/schema/composition.md#evolution) for more information.
 
-### Create a record-based consent schema {#profile-schema}
+### Create a profile consent schema {#profile-schema}
 
 In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then choose **[!UICONTROL XDM Individual Profile]** from the dropdown.
 
@@ -164,7 +168,11 @@ Finally, select **[!UICONTROL Save]** to confirm your changes.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
-### Create a time-series-based consent schema {#event-schema}
+### Create an event consent schema {#event-schema}
+
+>[!NOTE]
+>
+>Including the fields described below in your event schema is only required if you are planning on tracking consent change events over time. If you do not wish to track these events, you can use an event schema without these fields instead when setting up the Web SDK.
 
 In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then choose **[!UICONTROL XDM ExperienceEvent]** from the dropdown.
 

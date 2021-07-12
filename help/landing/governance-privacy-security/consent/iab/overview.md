@@ -91,7 +91,7 @@ Consent strings may only be created by a CMP that is registered with the IAB TCF
 
 ## Create datasets with TCF consent fields {#datasets}
 
-Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset.md) for how to create the required profile dataset (and an optional Experience Event dataset) before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
@@ -121,8 +121,8 @@ After providing a unique name for the configuration, select the toggle button ne
 | --- | --- |
 | [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
-| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). When tracking consent-change events over time using the [`sendEvent`](#sendEvent) command, collected data will be stored in this dataset. Keep in mind that the consent values stored in this dataset are **not** used in automatic enforcement workflows. |
+| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). When responding to CMP consent-change hooks using the [`setConsent`](#setConsent) command, collected data will be stored in this dataset. Since this dataset is Profile-enabled, the consent values stored in this dataset are honored during automatic enforcement workflows. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -136,7 +136,7 @@ Once you have created the edge configuration described in the previous section, 
 >
 >For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
 
-#### Using CMP consent-change hooks
+#### Using CMP consent-change hooks {#setConsent}
 
 Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the `setConsent` command to update that customer's consent data.
 
@@ -183,7 +183,7 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Using events
+#### Using events {#sendEvent}
 
 You can also collect TCF 2.0 consent data on every event triggered in Platform by using the `sendEvent` command.
 
