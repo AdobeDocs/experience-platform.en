@@ -27,6 +27,7 @@ feature: Schemas
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
     * [IdentityMap](./field-groups/profile/identitymap.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
@@ -39,6 +40,7 @@ feature: Schemas
     * [Commerce Details](./field-groups/event/commerce-details.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
+    * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
     * [Web Details](./field-groups/event/web-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
@@ -46,6 +48,7 @@ feature: Schemas
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
     * [Commerce](./data-types/commerce.md)
+    * [Consent String](./data-types/consent-string.md)
     * [Consents & Preferences](./data-types/consents.md)
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)

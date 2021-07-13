@@ -44,21 +44,21 @@ For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL Privacy Deta
 ```json
 {
   "xdm:identityPrivacyInfo": {
-      "ECID": {
-        "13782522493631189": {
-          "xdm:identityIABConsent": {
-            "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
-            "xdm:consentString": {
-              "xdm:consentStandard": "IAB TCF",
-              "xdm:consentStandardVersion": "2.0",
-              "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-              "xdm:gdprApplies": true,
-              "xdm:containsPersonalData": false
-            }
+    "ECID": {
+      "13782522493631189": {
+        "xdm:identityIABConsent": {
+          "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
+          "xdm:consentString": {
+            "xdm:consentStandard": "IAB TCF",
+            "xdm:consentStandardVersion": "2.0",
+            "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
+            "xdm:gdprApplies": true,
+            "xdm:containsPersonalData": false
           }
         }
       }
     }
+  }
 }
 ```
 
