@@ -146,7 +146,10 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
 
- 
+>[!IMPORTANT]
+>
+>Changing the file export schedule, from any schedule configuration to full file export, with the **[!UICONTROL Frequency]** set to **[!UICONTROL Once]**, for segments that have already been exported, does not export a new backfill file. To export a new backfill file with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+
 ### Export incremental files {#export-incremental-files}
 
 Select **[!UICONTROL Export incremental files]** to have your exported files contain only the profiles which qualified for that segment since the last export.
@@ -172,6 +175,10 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
+
+>[!IMPORTANT]
+>
+>Changing the file export schedule, from any schedule configuration to full file export, with the **[!UICONTROL Frequency]** set to **[!UICONTROL Once]**, for segments that have already been exported, does not export a new backfill file. To export a new backfill file with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Configure file names {#file-names}
 
