@@ -19,6 +19,12 @@ This tutorial requires a working understanding of the following components of Ad
 * [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
+It is important to understand the following key terms used throughout this document:
+
+* **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
+* **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, Props, and lists.
+* **Any attribute in Custom field groups**: Attributes that originate from schema field groups created by customers are all user-defined and are considered to be neither standard nor custom attribute.
+
 ## Create a source connection with Adobe Analytics
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources that you can create an account with.
@@ -45,6 +51,10 @@ The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL 
 
 The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. Select a target schema to start the mapping process.
 
+>[!TIP]
+>
+>You must create a new schema if there are no appropriate schemas available for your report suite data. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
 The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Standard mappings applied], [!UICONTROL Non matching standard mappings] and [!UICONTROL Custom mappings]. See the following table for specific information regarding each category:
@@ -65,7 +75,7 @@ The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] pag
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-#### View custom mappings
+#### Custom mappings
 
 To use Data Prep functions and add new mapping or calculated fields, select **[!UICONTROL View custom mappings]**.
 
