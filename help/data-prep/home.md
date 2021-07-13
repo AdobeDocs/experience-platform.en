@@ -18,6 +18,10 @@ Data Prep allows data engineers to map, transform, and validate data to and from
 - Preview the data as it is manipulated within the Data Prep
 
 Data Prep also applies several intrinsic data validations to ensure that the data integrity is maintained as it is ingested. Where possible, Data Prep automatically maps the incoming data schemas to XDM. Data engineers can change, correct, and delete the suggested mappings and replace them with the mappings as appropriate.
+
+>[!NOTE]
+>
+>Unless the resulting message will be invalid XDM, errors in rows ingested to Data Prep will **not** cause the rows to be dropped. Instead, the errors will be surfaced as warnings.
  
 ## Mapping
 
