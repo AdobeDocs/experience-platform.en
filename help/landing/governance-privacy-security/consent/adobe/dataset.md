@@ -157,11 +157,13 @@ The following section contains additional information about creating a dataset t
 
 ### Add custom consent and preference fields to the schema {#custom-consent}
 
-If you need to capture additional consent signals outside of those represented by the standard [!DNL Consents & Preferences] field group, you can use custom XDM components to enhance your consent schema to suit your particular business needs. This section outlines the basic principles of how to customize your consent schema in a way that is compatible with consent-change commands made by Adobe Experience Platform Mobile and Web SDKs.
+If you need to capture additional consent signals outside of those represented by the standard [!DNL Consents & Preferences] field group, you can use custom XDM components to enhance your consent schema to suit your particular business needs. This section outlines the basic principles of how to customize your consent schema in order to ingest these signals into Profile.
 
 >[!IMPORTANT]
 >
->You must use the [!DNL Consents & Preferences] field group as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
+>The Platform Web and Mobile SDKs do not support custom fields in their consent-change commands. Currently the only way to ingest custom consent fields into Profile is through [batch ingestion](../../../../ingestion/batch-ingestion/overview.md) or a [source connection](../../../../sources/home.md).
+
+It is highly recommended that you use the [!DNL Consents & Preferences] field group as a baseline for the structure of your consent data and add additional fields as needed, rather than attempting to create the entire structure from scratch.
 
 To add custom fields to the structure of a standard field group, you must first create a custom field group. After adding the [!DNL Consents & Preferences] field group to the schema, select the **plus (+)** icon in the **[!UICONTROL Field groups]** section, and then select **[!UICONTROL Create new field group]**. Provide a name and optional description for the field group, and then select **[!UICONTROL Add field group]**.
 
@@ -191,7 +193,5 @@ The consent or preference field is added to the schema structure. Note that the 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-added.png)
 
 Follow the steps above to continue adding the consent and preference fields that you require. When finished, select **[!UICONTROL Save]** to confirm your changes.
-
-If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
 
 If you have not created a dataset for this schema, continue to the section on [creating a dataset](#dataset).

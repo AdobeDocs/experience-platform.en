@@ -1,5 +1,6 @@
 ---
-
+title: Data Lake Migration to Gen2
+description: Learn about the new features provided by the migration of the Data Lake to Gen2 in Adobe Experience Platform.
 exl-id: 56d9c77a-d7eb-498d-994f-b15d150dedb7
 ---
 # Adobe Experience Platform Data Lake migration to Gen2

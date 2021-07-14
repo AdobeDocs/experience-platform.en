@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create and Edit Schema Field groups in the UI
 description: Learn how to create and edit schema field groups in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
 ---
 
 # Create and edit schema field groups in the UI
