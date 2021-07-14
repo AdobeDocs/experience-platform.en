@@ -48,6 +48,10 @@ The details of a failed streaming record displays the same information as a succ
 
 In addition, failed records provide details on the errors that occurred while processing the batch. In the example below, there was a parsing error that occurred when converting or validating the data.
 
+>[!NOTE]
+>
+> 
+
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitor batch end-to-end data ingestion
