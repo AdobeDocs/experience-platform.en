@@ -75,16 +75,6 @@ The [!UICONTROL Adobe Analytics ExperienceEvent Template Schema Field Group] pag
 
 ![field-group-preview](../../../../images/tutorials/create/analytics/field-group-preview.png)
 
-#### Custom mappings
-
-To use Data Prep functions and add new mapping or calculated fields, select **[!UICONTROL View custom mappings]**.
-
-![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
-
-Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. For specific instructions on using calculated fields, see the following tutorial on [adding calculated fields](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field). For more information on Data Prep and mapping functions, see the following guide on [Data Prep mapping functions](../../../../../data-prep/functions.md).
-
-![data-prep](../../../../images/tutorials/create/analytics/data-prep.png)
-
 Platform automatically detects your mapping sets for any friendly name conflicts. If there are no conflicts with your mapping sets, select **[!UICONTROL Next]** to proceed.
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
@@ -92,6 +82,40 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 You can still proceed and create an [!DNL Analytics] dataflow even if your mapping sets contain name conflicts. Select **[!UICONTROL Next]** to proceed.
 
 ![caution](../../../../images/tutorials/create/analytics/caution.png)
+
+#### Custom mappings
+
+To use Data Prep functions and add new mapping or calculated fields for custom attributes, select **[!UICONTROL View custom mappings]**.
+
+![view-custom-mapping](../../../../images/tutorials/create/analytics/view-custom-mapping.png)
+
+Next, select **[!UICONTROL Add new mapping]**.
+
+Depending on your needs, you can select either **[!UICONTROL Add new mapping]** or **[!UICONTROL Add calculated field]** from the options that appear. 
+
+![add-new-mapping](../../../../images/tutorials/create/analytics/add-new-mapping.png)
+
+An empty mapping set appears. Select the mapping icon to add a source field.
+
+![select-source-field](../../../../images/tutorials/create/analytics/select-source-field.png)
+
+You can use the interface to navigate through the source schema structure and identify the new source field that you want to use. Once you have selected the source field that you want to map, select **[!UICONTROL Select]**.
+
+![select-mapping](../../../../images/tutorials/create/analytics/select-mapping.png)
+
+Next, select the mapping icon under [!UICONTROL Target Field] to map your selected source field to its appropriate target field.
+
+![select-target-field](../../../../images/tutorials/create/analytics/select-target-field.png)
+
+Similar to the source schema, you can use the interface to navigate through the target schema structure and select the target field you want to map to. Once you have selected the appropriate target field, select **[!UICONTROL Select]**.
+
+![select-target-mapping](../../../../images/tutorials/create/analytics/select-target-mapping.png)
+
+With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
+
+![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
+
+For specific instructions on using calculated fields, see the following tutorial on [adding calculated fields](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field). For more information, see the following guide on [Data Prep mapping functions](../../../../../data-prep/functions.md).
 
 ### Provide dataflow details
 
