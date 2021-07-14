@@ -47,6 +47,10 @@ The following JSON demonstrates the structure of the `identityPrivacyInfo` map.
 
 As the example shows, each root-level key of `xdm:identityPrivacyInfo` corresponds with an identity namespace recognized by Identity Service. In turn, each namespace property must have at least one sub-property whose key matches the customer's corresponding identity value for that namespace. In this example, the customer is identified with an Experience Cloud ID (`ECID`) value of `13782522493631189`.
 
+>[!NOTE]
+>
+>While the above example uses a single namespace/value pair to represent the customer's identity, you can add additional keys for other namespaces, and each namespace can have multiple identity values, each with their own set of TCF consent preferences.
+
 For each identity value, an `identityIABConsent` property must provided, which provides the TCF consent value for the identity. The value for this property must conform to the [[!UICONTROL Consent String] data type](../../data-types/consent-string.md).
 
 See the guide on [IAB TCF 2.0 support in Platform](../../../landing/governance-privacy-security/consent/iab/overview.md) for more information on the use case of this field group. For more details on the field group itself, refer to the public XDM repository:
