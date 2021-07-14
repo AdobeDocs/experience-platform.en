@@ -8,11 +8,16 @@ exl-id: 3016ce1e-12e6-47ce-a4c5-52f8d440f515
 ---
 # Explore an advertising system using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+With a base connection created, you can now use the unique base connection ID to navigate and explore your source's data structure and contents. This allows you to identify the specific items, and their respective data types and formats, before creating a dataflow and bringing them over to Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to explore advertising systems.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). to explore advertising systems.
 
 ## Getting started
+
+>[!IMPORTANT]
+>
+>
+This tutorial requires you to have the unique base connection ID for your advertising source. If you do not have this ID, see the tutorial on [connecting an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
@@ -21,29 +26,9 @@ This guide requires a working understanding of the following components of Adobe
 
 The following sections provide additional information that you will need to know in order to successfully connect to an advertising system using the [!DNL Flow Service] API.
 
-### Gather required credentials
+### Using Platform APIs
 
-This tutorial requires you to have a valid connection with the third-party advertising application you wish to ingest data from. A valid connection involves your application's connection specification ID and connection ID. More information about creating an advertising connection and retrieving these values can be found in the [connect an advertising source to Platform](../../api/create/advertising/ads.md) tutorial.
-
-### Reading sample API calls
-
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
 
 ## Explore your data tables
 

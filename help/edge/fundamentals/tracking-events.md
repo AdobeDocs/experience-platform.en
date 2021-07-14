@@ -11,7 +11,7 @@ To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `
 Data sent to Adobe Experience Cloud falls into two categories:
 
 * XDM data
-* Non-XDM data (currently unsupported)
+* Non-XDM data
 
 ## Sending XDM data
 
@@ -69,7 +69,7 @@ In this example, the data layer is cloned by serializing it to JSON, then deseri
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
 
-### Sending non-XDM data
+## Sending non-XDM data
 
 Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0 and higher of the Web SDK.
 
@@ -79,7 +79,7 @@ In the future, you will be able to send your full data layer under the `data` op
 
 **How to send Profile and Recommendations attributes to Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
