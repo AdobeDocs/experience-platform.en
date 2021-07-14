@@ -32,7 +32,7 @@ The preparation process varies depending on whether your data is stored in Adobe
 
 ### External data preparation
 
-If your data is stored outside of Experience Platform, you need to create the [Consumer ExperienceEvent schema](#cee-schema) and map your data to the required fields. Once complete, you can create a dataset with your schema and ingest your data to Platform. The dataset can then be selected when configuring an [!DNL Intelligent Service]. 
+If your data is stored outside of Experience Platform, you need to map your data to the required and relevant fields in a [Consumer ExperienceEvent schema](#cee-schema). This schema can be augmented with custom field groups to better capture your customer data. Once mapped, you can create a dataset using your Consumer ExperienceEvent schema and [ingest your data to Platform](../ingestion/home.md). The CEE dataset can then be selected when configuring an [!DNL Intelligent Service].
 
 Depending on the [!DNL Intelligent Service] you wish to use, different fields may be required. Note that it is a best practice to add data to a field if you have the data available. To learn more about the required fields, visit the [Attribution AI](./attribution-ai/input-output.md) or [Customer AI](./customer-ai/input-output.md) input / output guide.
 
