@@ -19,6 +19,8 @@ This tutorial requires a working understanding of the following components of Ad
 * [Real-time Customer Profile](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
+### Key terminology
+
 It is important to understand the following key terms used throughout this document:
 
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
@@ -115,13 +117,17 @@ With your custom mapping set completed, select **[!UICONTROL Next]** to proceed.
 
 ![complete-custom-mapping](../../../../images/tutorials/create/analytics/complete-custom-mapping.png)
 
-For specific instructions on using calculated fields, see the following tutorial on [adding calculated fields](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field). For more information, see the following guide on [Data Prep mapping functions](../../../../../data-prep/functions.md).
+The following documentation provides further resources on understanding Data Prep, calculated fields, and mapping functions:
+
+* [Data Prep overview](../../../../../data-prep/home.md)
+* [Data Prep mapping functions](../../../../../data-prep/functions.md)
+* [Map a CSV file to an XDM schema and add calculated fields](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
 
 ### Provide dataflow details
 
 The **[!UICONTROL Dataflow detail]** step appears, where you must provide a name and an optional description for the dataflow. Select **[!UICONTROL Next]** when finished.
 
-![](../../../../images/tutorials/create/analytics/dataflow-detail.png)
+![dataflow-detail](../../../../images/tutorials/create/analytics/dataflow-detail.png)
 
 ### Review
 
@@ -130,7 +136,7 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 * [!UICONTROL Connection]: Displays the source platform of the connection.
 * [!UICONTROL Data type]: Displays the selected report suite and its corresponding report suite ID.
 
-![](../../../../images/tutorials/create/analytics/review.png)
+![review](../../../../images/tutorials/create/analytics/review.png)
 
 ### Monitor your dataflow
 
