@@ -31,7 +31,7 @@ feature: Schemas
     * [IdentityMap](./field-groups/profile/identitymap.md)
     * [Loyalty Details](./field-groups/profile/loyalty-details.md)
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
-    * [Privacy/Personalization/Marketing Preferences (Consents)](./field-groups/profile/consents.md)
+    * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
   * Event field groups {#event}
