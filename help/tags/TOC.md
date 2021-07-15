@@ -1,15 +1,12 @@
 ---
-audience: end-user
-product: adobe launch
-user-guide-title: Tags in Experience Platform
+audience: user
+user-guide-title: Tags Help
 breadcrumb-title: Tags
 user-guide-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
-landing-page-description: Learn to deploy and manage analytics, marketing, and advertising tags to power customer experiences.
-index: yes
-git-repo: https://github.com/AdobeDocs/launch.en
+feature: Data Collection
 ---
 
-# Tags {#using}
+# Tags {#tags}
 
 * [Tags overview](./home.md)
 * Getting started {#get-started}
