@@ -44,7 +44,7 @@ First, because the tag library can finish loading before or after the bottom of 
 
 Second, the tag library can finish loading before or after the [`DOMContentLoaded`](https://developer.mozilla.org/en-US/docs/Web/Events/DOMContentLoaded) browser event (DOM Ready) has occurred.
 
-Because of these two points, it's worth demonstrating how the [Library Loaded](../../extension-reference/web/core-extension/overview.md#library-loaded-page-top), [Page Bottom](../../extension-reference/web/core-extension/overview.md#page-bottom), [DOM Ready](../../extension-reference/web/core-extension/overview.md#page-bottom), and [Window Loaded](../../extension-reference/web/core-extension/overview.md#window-loaded) event types from the Core extension function when loading a tag library asynchronously.
+Because of these two points, it's worth demonstrating how the [Library Loaded](../../extensions/web/core-extension/overview.md#library-loaded-page-top), [Page Bottom](../../extensions/web/core-extension/overview.md#page-bottom), [DOM Ready](../../extensions/web/core-extension/overview.md#page-bottom), and [Window Loaded](../../extensions/web/core-extension/overview.md#window-loaded) event types from the Core extension function when loading a tag library asynchronously.
 
 If your tag property contains the following four rules:
 
