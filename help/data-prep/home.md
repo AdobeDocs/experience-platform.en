@@ -21,7 +21,7 @@ Data Prep also applies several intrinsic data validations to ensure that the dat
 
 >[!NOTE]
 >
->Unless the resulting message will be invalid XDM, errors in rows ingested to Data Prep will **not** cause the rows to be dropped. Instead, the errors will be surfaced as warnings.
+>Unless the resulting message will be invalid XDM, errors in rows ingested to Data Prep will **not** cause the rows to be dropped.
  
 ## Mapping
 
