@@ -2,30 +2,30 @@
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
 title: Activate audience data to profile-based destinations
 type: Tutorial
-seo-title: Activate audience data to profile-based destinations
-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile-based destinations.
-seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile-based destinations.
+seo-title: Activate audience data to batch profile-based destinations
+description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 ---
 
-# Activate audience data to profile-based destinations
+# Activate audience data to batch profile-based destinations
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform profile-based destinations, such as cloud storage and email marketing destinations.
+This article explains the workflow required to activate audience data in Adobe Experience Platform batch profile-based destinations, such as cloud storage and email marketing destinations.
 
 ## Prerequisites {#prerequisites}
 
-To activate data to advertising destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## Select your destination {#select-destination}
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-profile-destinations/browse-tab.png)
+    ![Destination Browse tab](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
 
 1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-profile-destinations/activate-buttons-browse.png)
+    ![Activate buttons](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -33,7 +33,7 @@ To activate data to advertising destinations, you must have successfully [connec
 
 Use the check boxes to the left of the segment names to select the segments that you want to activate to the destination, then select **[!UICONTROL Next]**.
 
-![Select segments](../assets/ui/activate-profile-destinations/select-segments.png)
+![Select segments](../assets/ui/activate-batch-profile-destinations/select-segments.png)
 
 
 ## Schedule segment export {#scheduling}
@@ -48,13 +48,13 @@ Use the check boxes to the left of the segment names to select the segments that
 
 Select the **[!UICONTROL Create schedule]** button corresponding to the segment that you want to send to your destination.
 
-![Create schedule button](../assets/ui/activate-destinations/create-schedule-button.png)
+![Create schedule button](../assets/ui/activate-batch-profile-destinations/create-schedule-button.png)
 
 ### Export full files {#export-full-files}
 
 Select **[!UICONTROL Export full files]** to have your exported files contain a complete snapshot of all the profiles that qualify for that segment.
 
-![Export full files](../assets/ui/activate-destinations/export-full-files.png)
+![Export full files](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports. Exporting a full file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
@@ -75,7 +75,7 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 >
 >The first exported incremental file includes all profiles that qualify for a segment, functioning as a backfill.
 
-![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
+![Export incremental files](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports. Exporting an incremental file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 PM UTC (7:00 AM EST).
    * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
@@ -99,7 +99,7 @@ The default file names consist of destination name, segment ID, and a date and t
 
 Select the pencil icon to open a modal window and edit the file names. File names are limited to 255 characters.
 
-![configure file name](../assets/ui/activate-destinations/configure-name.png)
+![configure file name](../assets/ui/activate-batch-profile-destinations/configure-name.png)
 
 In the file name editor, you can select different components to add to the file name. 
 

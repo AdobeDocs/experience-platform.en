@@ -14,7 +14,7 @@ This article explains the workflow required to activate audience data in Adobe E
 
 ## Prerequisites {#prerequisites}
 
-To activate data to social destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
+To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
 ## Select your destination {#select-destination}
 
