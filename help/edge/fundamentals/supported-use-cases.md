@@ -37,7 +37,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | If dataset is enabled for profile, ability to send data to Real-time Customer Data Profile in real-time |  |  
 | Send data to Customer Journey Analytics in real-time |  |
 | Write consent to profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Forward data server-side in real-time to third-parties| [Documentation](../../tags/ui/event-fowarding/overview.md) |
+| Forward data server-side in real-time to third-parties| [Documentation](../../tags/ui/event-forwarding/overview.md) |
 | Identity namespace support |  |
 
 {style="table-layout:auto"}

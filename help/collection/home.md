@@ -37,6 +37,6 @@ Platform Edge Network is a globally distributed, fast, and reliable network of s
 
 ## Transform, enrich, and send data fast and securely
 
-[Event forwarding in Adobe Experience Platform](../tags/ui/event-fowarding/overview.md) can tap into any Platform data stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
+[Event forwarding in Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) can tap into any Platform data stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
 
 ![](./images/launch.png)

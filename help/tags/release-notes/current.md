@@ -41,4 +41,4 @@ Look forward to more updates as Experience Platform and Data Collection continue
 
 **General Availability: Event Forwarding** Send event-level data to the Adobe Experience Platform Edge Network then use event forwarding to transform, enrich, and send that data to a non-Adobe endpoint using Adobe's servers, not the client, with low latency.
 
-See the [event forwarding overview](../ui/event-fowarding/overview.md) and [getting started guide](../ui/event-fowarding/getting-started.md) for more information.
+See the [event forwarding overview](../ui/event-forwarding/overview.md) and [getting started guide](../ui/event-forwarding/getting-started.md) for more information.
