@@ -21,11 +21,11 @@ To activate data to destinations, you must have successfully [connected to a des
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-profile-destinations/browse-tab.png)
+    ![Destination Browse tab](../assets/ui/activate-streaming-profile-destinations/browse-tab.png)
 
 1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-profile-destinations/activate-buttons-browse.png)
+    ![Activate buttons](../assets/ui/activate-streaming-profile-destinations/activate-buttons-browse.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
