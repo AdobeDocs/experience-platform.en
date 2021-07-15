@@ -1,13 +1,13 @@
 ---
-title: Marketo Engage Destination Connector
+title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 ---
 
-# (Beta) Marketo Engage Destination Connector {#beta-marketo-engage-destination-connector}
+# (Beta) Marketo Engage Destination {#beta-marketo-engage-destination}
 
 >[!IMPORTANT]
 >
->The Marketo Engage Destination Connector in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+>The Marketo Engage Destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 ## Overview {#overview}
 
@@ -17,30 +17,14 @@ The segment connector enables marketers to push segments created in Adobe Experi
 
 ## Supported Identities {#supported-identities}
 
-<table> 
- <colgroup> 
-  <col> 
-  <col> 
- </colgroup> 
- <tbody> 
-  <tr> 
-   <th>Target Identity</th> 
-   <th>Description</th> 
-  </tr> 
-  <tr> 
-   <td>Email Address</td> 
-   <td>A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.</td> 
-  </tr> 
-  <tr> 
-   <td>ECID Cookie Identifier</td> 
-   <td>A namespace that represents ECID. This namespace can also be referred to by the following aliases: "Adobe Marketing Cloud ID", "Adobe Experience Cloud ID", "Adobe Experience Platform ID".</td> 
-  </tr> 
- </tbody> 
-</table>
+|Target Identity|Description|
+|---|---|
+|ECID|A namespace that represents ECID. This namespace can also be referred to by the following aliases: “Adobe Marketing Cloud ID”, “Adobe Experience Cloud ID”, “Adobe Experience Platform ID”. See the following document on [ECID](/help/identity-service/ecid.md) for more information.|
+|Email|A namespace that represents an email address. This type of namespace is often associated to a single person and therefore can be used to identify that person across different channels.|
 
 ## Export Type {#export-type}
 
-Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the YOURDESTINATION destination.
+Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Marketo Engage destination.
 
 ## Set Up {#set-up}
 
