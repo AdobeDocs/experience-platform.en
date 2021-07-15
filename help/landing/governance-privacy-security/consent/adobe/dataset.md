@@ -14,7 +14,7 @@ This document provides steps for configuring a dataset to process consent data i
 
 >[!IMPORTANT]
 >
->The examples in this guide use a standardized set of fields to represent customer consent values, as defined by the [[!UICONTROL Consents and Preferences] XDM data type](../../../../xdm/data-types/consents.md). The structure of these fields is intended to provide an efficient data model to cover many common consent-collection use cases.
+>The examples in this guide use a standardized set of fields to represent customer consent values, as defined by the [[!UICONTROL Consents and Preferences] schema field group](../../../../xdm/field-groups/profile/consents.md). The structure of these fields is intended to provide an efficient data model to cover many common consent-collection use cases.
 >
 >However, you can also define your own field groups to represent consent according to your own data models. Please consult with your legal team to get approval for a consent data model that fits your business needs, based on the following options:
 >
@@ -85,7 +85,7 @@ The field group provides a single object-type field, `consents`, whose sub-prope
 
 >[!NOTE]
 >
->For more information on the structure and meaning of the sub-properties in `consents`, see the overview on the [[!UICONTROL Consents and Preferences] data type](../../../../xdm/data-types/consents.md).
+>For more information on the structure and meaning of the sub-properties in `consents`, see the overview on the [[!UICONTROL Consents and Preferences] field group](../../../../xdm/field-groups/profile/consents.md).
 
 ## Add the [!UICONTROL Consents and Preferences] field group to your [!DNL Profile] schema {#add-field-group}
 
@@ -101,7 +101,7 @@ The [!DNL Schema Editor] appears, showing the structure of the schema in the can
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/add-field-group.png)
 
-The **[!UICONTROL Add field group]** dialog appears. From here, select **[!UICONTROL Consents and Preferences]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field group]**.
+The **[!UICONTROL Add field group]** dialog appears. From here, select **[!UICONTROL Consents and Preferences]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
