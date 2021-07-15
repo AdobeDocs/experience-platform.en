@@ -67,9 +67,6 @@ curl -X POST \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '{
-    "fileDescription" : {
-        "persisted": true
-    },
     "fields":[],
     "schemaRef" : {
         "id": "https://ns.adobe.com/{TENANT_ID}/schemas/31670881463308a46f7d2cb09762715",
@@ -161,9 +158,6 @@ curl -X GET \
         "updatedUser": "{CREATED_BY}",
         "viewId": "5b020a27e7040801dedbf46f",
         "status": "enabled",
-        "fileDescription": {
-            "persisted": true
-        },
         "transforms": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/transforms",
         "files": "@/dataSets/5b020a27e7040801dedbf46e/views/5b020a27e7040801dedbf46f/files",
         "schema": "@/xdms/context/experienceevent",
