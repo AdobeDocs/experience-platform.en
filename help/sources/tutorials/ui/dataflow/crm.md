@@ -69,6 +69,10 @@ Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset
 
 Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
 
+>[!TIP]
+>
+>If you are using the [!DNL Salesforce] source as part of B2B CDP, refer to the [[!DNL Salesforce] field mapping tables](../../../connectors/adobe-applications/mapping/salesforce.md) for a guide on the appropriate mapping sets between [!DNL Salesforce] source fields and XDM target fields.
+
 Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
@@ -84,7 +88,6 @@ Once your source data is mapped, select **[!UICONTROL Close]**.
 Next, from the [!UICONTROL Mapping] screen, select **[!UICONTROL Next]** to proceed.
 
 ![](../../../images/tutorials/dataflow/crm/mapping.png)
-
 
 ## Schedule ingestion runs
 
