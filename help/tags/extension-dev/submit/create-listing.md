@@ -6,7 +6,7 @@ description: Learn how to add your extension to the public catalog in Adobe Expe
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Adobe Experience Platform has a single unified catalog where users can view tag extensions that are available for installation. This catalog is available within the product and contains extensions of three types:
 

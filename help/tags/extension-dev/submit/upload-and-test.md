@@ -6,7 +6,7 @@ description: Learn how to validate, upload, and test your extension in Adobe Exp
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 To test tag extensions in Adobe Experience Platform, use the tags API and/or command-line tools to upload your extension packages. Next, use the Data Collection UI to install your extension package to a property and exercise its capabilities inside a tag library and build.
 

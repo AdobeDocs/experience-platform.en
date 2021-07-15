@@ -6,7 +6,7 @@ description: Get started with developing your own tag extensions in Adobe Experi
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 To get you up and running and building extensions, we will be using the open-source scaffolding tool, provided by Adobe engineers to create the necessary files and file structure for your extension package, so all you have left to do is the valuable part: actually write the code.
 

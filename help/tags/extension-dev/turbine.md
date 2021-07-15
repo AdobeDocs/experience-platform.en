@@ -6,7 +6,7 @@ description: Learn about the turbine object, a free variable which provides info
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 The `turbine` object is a "free variable" within the scope of your extension's library modules. It provides information and utilities specific to the Adobe Experience Platform tag runtime and is always available to library modules without using `require()`.
 

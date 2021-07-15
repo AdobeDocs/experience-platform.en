@@ -6,7 +6,7 @@ description: Learn how to define an data-element-type library module for a tag e
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 A data-element-type library module retrieves a piece of data. The module author determines how this piece of data is retrieved. For example, you can use a data element type to allow Adobe Experience Platform users to retrieve a piece of data from the XDM layer or their custom data layer.
 

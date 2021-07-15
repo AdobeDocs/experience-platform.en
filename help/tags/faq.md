@@ -6,7 +6,7 @@ description: Get answers to frequently asked questions about tags in Adobe Exper
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](./launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](./term-updates.md) for a consolidated reference of the terminology changes.
 
 This document provides answers to frequently asked questions about tags in Adobe Experience Platform.
 

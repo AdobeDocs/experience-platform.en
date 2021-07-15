@@ -6,7 +6,7 @@ description: Learn how to define an condition-type library module for an edge ex
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+> Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 A condition-type library module evaluates whether something is true or false and returns a boolean value.
 

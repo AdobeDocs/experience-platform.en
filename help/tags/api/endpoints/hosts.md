@@ -6,7 +6,7 @@ description: Learn how to make calls to the /hosts endpoint in the Reactor API.
 
 >[!NOTE]
 >
->This document covers how to manage hosts in the Reactor API. For more general information on hosts for tags, see the guide on [hosts overview](../../launch-reference/publishing/hosts/hosts-overview.md) in the publishing documentation.
+>This document covers how to manage hosts in the Reactor API. For more general information on hosts for tags, see the guide on [hosts overview](../../ui/publishing/hosts/hosts-overview.md) in the publishing documentation.
 
 In the Reactor API, a host defines a destination where a [build](./builds.md) can be delivered.
 
@@ -213,7 +213,7 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `attributes.name` | **(Required)** A human-readable name for the host. |
-| `attributes.type_of` | **(Required)** The type of host. Can be one of two options: <ul><li>`akamai` for [Adobe-managed hosts](../../launch-reference/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP hosts](../../launch-reference/publishing/hosts/sftp-host.md)</li></ul> |
+| `attributes.type_of` | **(Required)** The type of host. Can be one of two options: <ul><li>`akamai` for [Adobe-managed hosts](../../ui/publishing/hosts/managed-by-adobe-host.md)</li><li>`sftp` for [SFTP hosts](../../ui/publishing/hosts/sftp-host.md)</li></ul> |
 | `attributes.encrypted_private_key` | An optional private key to be used for host authentication. |
 | `attributes.path` | The path to append to the `server` URL. |
 | `attributes.port` | An integer indicating the specific server port to be used. |

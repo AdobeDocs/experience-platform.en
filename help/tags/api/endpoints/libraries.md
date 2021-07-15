@@ -12,7 +12,7 @@ A library belongs to exactly one property. A property can have many libraries.
 
 The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
-Before working with libraries in the Reactor API, it is important to understand the roles that library state and environments play in determining what actions you can make on a particular library. See the guide on the [library publishing flow](../../launch-reference/publishing/publishing-flow.md) for more information.
+Before working with libraries in the Reactor API, it is important to understand the roles that library state and environments play in determining what actions you can make on a particular library. See the guide on the [library publishing flow](../../ui/publishing/publishing-flow.md) for more information.
 
 ## Retrieve a list of libraries {#list}
 
@@ -675,7 +675,7 @@ PATCH /libraries/{LIBRARY_ID}
 
 **Request**
 
-The following request transitions the state of an existing library, based on the value of `meta.action` provided in the payload. The available actions for a library depend on its current publishing state, as outlined in the [publishing flow](../../launch-reference/publishing/publishing-flow.md#state).
+The following request transitions the state of an existing library, based on the value of `meta.action` provided in the payload. The available actions for a library depend on its current publishing state, as outlined in the [publishing flow](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
 curl -X PUT \

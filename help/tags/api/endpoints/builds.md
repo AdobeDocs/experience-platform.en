@@ -14,7 +14,7 @@ A build is the actual file (or files) that are loaded within your web and mobile
 
 A build belongs to exactly one library. A library can have many builds.
 
-For more general information about builds and how they fit into the publishing workflow for tags, please refer to the [publishing overview](../../launch-reference/publishing/overview.md).
+For more general information about builds and how they fit into the publishing workflow for tags, please refer to the [publishing overview](../../ui/publishing/overview.md).
 
 ## Getting started
 

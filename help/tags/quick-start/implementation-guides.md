@@ -6,7 +6,7 @@ description: Learn how to implement Adobe Experience Cloud solutions with tags.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 We have two implementation guides. These are designed for front-end developers and technical marketers who want to learn how to implement the [!DNL Adobe Experience Cloud] solutions in their sites and mobile applications.
 

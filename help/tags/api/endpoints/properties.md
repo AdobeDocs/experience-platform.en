@@ -20,7 +20,7 @@ In the resource hierarchy, a property is the owner of the following:
 
 A property belongs to exactly one [company](./companies.md). A company can have many properties.
 
-For more general information about properties and their role in tag management, see the overview on [companies and properties](../../launch-reference/administration/companies-and-properties.md).
+For more general information about properties and their role in tag management, see the overview on [companies and properties](../../ui/administration/companies-and-properties.md).
 
 ## Getting started
 

@@ -10,60 +10,60 @@ feature: Data Collection
 
 * [Tags overview](./home.md)
 * Getting started {#get-started}
-  * [Quickstart guide](quick-start/quick-start.md)
-  * [Implementation guides](quick-start/implementation-guides.md)
-  * [Videos](quick-start/videos.md)
+  * [Quickstart guide](./quick-start/quick-start.md)
+  * [Implementation guides](./quick-start/implementation-guides.md)
+  * [Videos](./quick-start/videos.md)
 * Data Collection UI {#ui}
-  * [Overview](launch-reference/managing-resources/overview.md)
+  * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
-    * [Overview](launch-reference/managing-resources/extensions/overview.md)
-    * [Extension upgrades](launch-reference/managing-resources/extensions/extension-upgrade.md)
-  * [Data elements](launch-reference/managing-resources/data-elements.md)
-  * [Rules](launch-reference/managing-resources/rules.md)
-  * [Notes](launch-reference/managing-resources/notes.md)
-  * [Copy resources](launch-reference/managing-resources/copying-resources.md)
-  * [Compare resource revisions](launch-reference/managing-resources/compare-resource-revisions.md)
-  * [Delete resources](launch-reference/managing-resources/delete-resources.md)
-  * [Remove resources from a library](launch-reference/managing-resources/remove-resources-from-library.md)
+    * [Overview](./ui/managing-resources/extensions/overview.md)
+    * [Extension upgrades](./ui/managing-resources/extensions/extension-upgrade.md)
+  * [Data elements](./ui/managing-resources/data-elements.md)
+  * [Rules](./ui/managing-resources/rules.md)
+  * [Notes](./ui/managing-resources/notes.md)
+  * [Copy resources](./ui/managing-resources/copying-resources.md)
+  * [Compare resource revisions](./ui/managing-resources/compare-resource-revisions.md)
+  * [Delete resources](./ui/managing-resources/delete-resources.md)
+  * [Remove resources from a library](./ui/managing-resources/remove-resources-from-library.md)
 * Publishing {#publish}
-  * [Overview](launch-reference/publishing/overview.md)
-  * [Publishing flow](launch-reference/publishing/publishing-flow.md)
+  * [Overview](./ui/publishing/overview.md)
+  * [Publishing flow](./ui/publishing/publishing-flow.md)
   * Hosts {#hosts}
-    * [Overview](launch-reference/publishing/hosts/hosts-overview.md)
-    * [Adobe-managed hosts](launch-reference/publishing/hosts/managed-by-adobe-host.md)
-    * [SFTP hosts](launch-reference/publishing/hosts/sftp-host.md)
+    * [Overview](./ui/publishing/hosts/hosts-overview.md)
+    * [Adobe-managed hosts](./ui/publishing/hosts/managed-by-adobe-host.md)
+    * [SFTP hosts](./ui/publishing/hosts/sftp-host.md)
   * Environments {#environments}
-    * [Overview](launch-reference/publishing/environments.md)
-    * [Test embed codes using Adobe Experience Platform Debugger](launch-reference/publishing/embed-code-testing.md)
-  * [Builds](launch-reference/publishing/builds.md)
-  * [Libraries](launch-reference/publishing/libraries.md)
-  * [Self-hosting libraries](launch-reference/publishing/hosts/self-hosting-libraries.md)
-  * [Republish a library](launch-reference/publishing/republish.md)
-* Client-side information {#client-side-info}
-  * [Overview](launch-reference/client-side-information/overview.md)
-  * [Asynchronous deployment](launch-reference/client-side-information/asynchronous-deployment.md)
-  * [Satellite object reference](launch-reference/client-side-information/launch-object-reference.md)
-  * [Deploy JavaScript tags to manage customer consent](launch-reference/client-side-information/deploy-javascript-tags-to-opt-in-to-launch.md)
-  * [Content Security Policy (CSP) support](launch-reference/client-side-information/content-security-policy-csp.md)
-  * [Subresource Integrity (SRI) support](./launch-reference/client-side-information/sri.md)
-* Event forwarding information {#server-side-info}
-    * [Overview](launch-reference/server-side-information/server-side-overview.md)
-    * [Getting started](launch-reference/server-side-information/server-side-getting-started.md)
+    * [Overview](./ui/publishing/environments.md)
+    * [Test embed codes using Adobe Experience Platform Debugger](./ui/publishing/embed-code-testing.md)
+  * [Builds](./ui/publishing/builds.md)
+  * [Libraries](./ui/publishing/libraries.md)
+  * [Self-hosting libraries](./ui/publishing/hosts/self-hosting-libraries.md)
+  * [Republish a library](./ui/publishing/republish.md)
+* Client-side information {#client-side}
+  * [Overview](./ui/client-side/overview.md)
+  * [Asynchronous deployment](./ui/client-side/asynchronous-deployment.md)
+  * [Satellite object reference](./ui/client-side/satellite-object.md)
+  * [Deploy JavaScript tags to manage customer consent](./ui/client-side/consent.md)
+  * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
+  * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
+* Event forwarding {#event-forwarding}
+    * [Overview](./ui/event-forwarding/overview.md)
+    * [Getting started](./ui/event-forwarding/getting-started.md)
 * Administration {#admin}
-  * [Overview](launch-reference/administration/overview.md)
-  * [Companies and properties](launch-reference/administration/companies-and-properties.md)
-  * [User permissions](launch-reference/administration/user-permissions.md)
+  * [Overview](./ui/administration/overview.md)
+  * [Companies and properties](./ui/administration/companies-and-properties.md)
+  * [User permissions](./ui/administration/user-permissions.md)
 * Extensions reference {#extensions-ref}
-  * [Overview](extension-reference/adobe-extensions/overview.md)
+  * [Overview](./extension-reference/adobe-extensions/overview.md)
   * Adobe extensions {#adobe-extension}
-    * [Overview](extension-reference/web/overview.md)
+    * [Overview](./extension-reference/web/overview.md)
     * Adobe Analytics extension {#analytics-extension}
-      * [Overview](extension-reference/web/adobe-analytics-extension/overview.md)
+      * [Overview](./extension-reference/web/adobe-analytics-extension/overview.md)
       * [Shared modules](./extension-reference/web/adobe-analytics-extension/shared-modules.md)
-      * [Release notes](extension-reference/web/adobe-analytics-extension/adobe-analytics-release-notes.md)
+      * [Release notes](./extension-reference/web/adobe-analytics-extension/adobe-analytics-release-notes.md)
     * Adobe Analytics Product String extension {#product-string-extension}
-      * [Overview](extension-reference/web/adobe-analytics-product-string-extension/overview.md)
-      * [Release notes](extension-reference/web/adobe-analytics-product-string-extension/adobe-analytics-product-string-release-notes.md)    
+      * [Overview](./extension-reference/web/adobe-analytics-product-string-extension/overview.md)
+      * [Release notes](./extension-reference/web/adobe-analytics-product-string-extension/adobe-analytics-product-string-release-notes.md)    
     * Adobe Audience Manager extension {#audience-manager}
       * [Overview](./extension-reference/web/audience-manager/overview.md)
     * Adobe Client Data Layer extension {#acdl}
@@ -72,48 +72,48 @@ feature: Data Collection
     * Adobe ContextHub extension {#contexthub}
       * [Overview](./extension-reference/web/contexthub/overview.md)
     * Adobe Experience Cloud ID Service extension {#id-service-extension}
-      * [Overview](extension-reference/web/experience-cloud-id-service-extension/overview.md)
-      * [Release notes](extension-reference/web/experience-cloud-id-service-extension/experience-cloud-id-release-notes.md)
+      * [Overview](./extension-reference/web/experience-cloud-id-service-extension/overview.md)
+      * [Release notes](./extension-reference/web/experience-cloud-id-service-extension/experience-cloud-id-release-notes.md)
     * Adobe Experience Platform Demo extension {#platform-demo}
       * [Overview](./extension-reference/web/platform-demo/overview.md)
     * Adobe Experience Platform Web SDK extension {#aep-extension}
-      * [Overview](extension-reference/web/aep-web-sdk/overview.md)
+      * [Overview](./extension-reference/web/aep-web-sdk/overview.md)
     * Adobe Experience Platform Cloud Connector extension {#aep-cloud-extension}
-      * [Overview](extension-reference/web/cloud-connector-extension/cloud-connector-extension.md)
+      * [Overview](./extension-reference/web/cloud-connector-extension/cloud-connector-extension.md)
     * AEM Asset Insights extension {#aem-asset-insights-extension}
-      * [Overview](extension-reference/web/aem-asset-insights/aem-asset-insights.md)
-      * [Release notes](extension-reference/web/aem-asset-insights/aem-asset-insights-release-notes.md)
+      * [Overview](./extension-reference/web/aem-asset-insights/aem-asset-insights.md)
+      * [Release notes](./extension-reference/web/aem-asset-insights/aem-asset-insights-release-notes.md)
     * Adobe Media Analytics (3.x SDK) extension {#media-analytics-3x-extension}
-      * [Overview](extension-reference/web/adobe-media-analytics-3x-for-audio-and-video-extension/overview.md)
-      * [Release notes](extension-reference/web/adobe-media-analytics-3x-for-audio-and-video-extension/adobe-media-analytics-3x-for-audio-and-video-extension-release-notes.md)
+      * [Overview](./extension-reference/web/adobe-media-analytics-3x-for-audio-and-video-extension/overview.md)
+      * [Release notes](./extension-reference/web/adobe-media-analytics-3x-for-audio-and-video-extension/adobe-media-analytics-3x-for-audio-and-video-extension-release-notes.md)
     * Adobe Media Analytics for Audio and Video extension {#media-analytics-extension}
-      * [Overview](extension-reference/web/adobe-media-analytics-for-audio-and-video-extension/overview.md)
-      * [Release notes](extension-reference/web/adobe-media-analytics-for-audio-and-video-extension/adobe-media-analytics-for-audio-and-video-extension-release-notes.md)
+      * [Overview](./extension-reference/web/adobe-media-analytics-for-audio-and-video-extension/overview.md)
+      * [Release notes](./extension-reference/web/adobe-media-analytics-for-audio-and-video-extension/adobe-media-analytics-for-audio-and-video-extension-release-notes.md)
     * Adobe Privacy extension {#privacy}
       * [Overview](./extension-reference/web/privacy/overview.md)
     * Adobe Target extension {#target-extension}
-      * [Overview](extension-reference/web/adobe-target-extension/overview.md)
-      * [Release notes](extension-reference/web/adobe-target-extension/adobe-target-release-notes.md)
+      * [Overview](./extension-reference/web/adobe-target-extension/overview.md)
+      * [Release notes](./extension-reference/web/adobe-target-extension/adobe-target-release-notes.md)
     * Adobe Target v2 extension {#targetv2-extension}
-      * [Overview](extension-reference/web/adobe-target-extension-v2.md)
-      * [Release notes](extension-reference/web/adobe-target-extension/adobe-target-v2-release-notes.md)
+      * [Overview](./extension-reference/web/adobe-target-extension-v2.md)
+      * [Release notes](./extension-reference/web/adobe-target-extension/adobe-target-v2-release-notes.md)
     * Common Analytics Plugins extension {#plugins-extension}
-      * [Overview](extension-reference/web/common-analytics-plugins-extension/common-analytics-plugins.md)
-      * [Release notes](extension-reference/web/common-analytics-plugins-extension/common-analytics-plugins-release-notes.md)
+      * [Overview](./extension-reference/web/common-analytics-plugins-extension/common-analytics-plugins.md)
+      * [Release notes](./extension-reference/web/common-analytics-plugins-extension/common-analytics-plugins-release-notes.md)
     * Core extension {#core-extension}
-      * [Overview](extension-reference/web/core-extension/overview.md)
-      * [Core event forwarding extension](extension-reference/web/core-extension/overview-launch-server-side.md)
-      * [Release notes](extension-reference/web/core-extension/core-release-notes.md)
+      * [Overview](./extension-reference/web/core-extension/overview.md)
+      * [Core event forwarding extension](./extension-reference/web/core-extension/event-forwarding.md)
+      * [Release notes](./extension-reference/web/core-extension/core-release-notes.md)
     * [!DNL Marketo Munchkin] extension {#marketo-extension}
-      * [Overview](extension-reference/web/marketo-munchkin-extension/overview.md)
-      * [Release notes](extension-reference/web/marketo-munchkin-extension/marketo-munchkin-release-notes.md)
+      * [Overview](./extension-reference/web/marketo-munchkin-extension/overview.md)
+      * [Release notes](./extension-reference/web/marketo-munchkin-extension/marketo-munchkin-release-notes.md)
     * [!DNL BrightCove] video tracking extension {#brightcove-extension}
-      * [Overview](extension-reference/web/video-tracking-brightcove-extension/overview.md)
-      * [Release notes](extension-reference/web/video-tracking-brightcove-extension/video-tracking-brightcove-extension-release-notes.md)
+      * [Overview](./extension-reference/web/video-tracking-brightcove-extension/overview.md)
+      * [Release notes](./extension-reference/web/video-tracking-brightcove-extension/video-tracking-brightcove-extension-release-notes.md)
     * [!DNL YouTube] video tracking extension {#youtubee-extension}
-      * [Overview](extension-reference/web/video-tracking-youtube-extension/overview.md)
-      * [Release notes](extension-reference/web/video-tracking-youtube-extension/video-tracking-youtube-extension-release-notes.md)
-  * [Third-party extensions](extension-reference/3rd-party-extensions.md)
+      * [Overview](./extension-reference/web/video-tracking-youtube-extension/overview.md)
+      * [Release notes](./extension-reference/web/video-tracking-youtube-extension/video-tracking-youtube-extension-release-notes.md)
+  * [Third-party extensions](./extension-reference/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
   * [Getting started](./extension-dev/getting-started.md)
@@ -179,10 +179,9 @@ feature: Data Collection
     * [Relationships](./api/guides/relationships.md)
     * [Searching resources](./api/guides/search.md)
 * [FAQ](./faq.md)
-* [Terminology updates](./launch-term-updates.md)
+* [Terminology updates](./term-updates.md)
 * Release notes {#release-notes}
-  * [Latest](release-notes/current.md)
-  * [2020 release notes](release-notes/2020-release-notes.md)
-  * [2019 release notes](release-notes/2019-release-notes.md)
-  * [2018 release notes](release-notes/2018-release-notes.md)
-* [Additional resources](quick-start/additional-resources.md)
+  * [Latest](./release-notes/current.md)
+  * [2020 release notes](./release-notes/2020.md)
+  * [2019 release notes](./release-notes/2019.md)
+  * [2018 release notes](./release-notes/2018.md)

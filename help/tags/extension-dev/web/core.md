@@ -6,7 +6,7 @@ description: Learn about the core library modules you can use within your web ex
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 This document provides a list of core library modules that you may use within your web extensions. You may access these modules using `require('@adobe/{MODULE}')`, where `{MODULE}` is the name of the core module want to use.
 

@@ -6,7 +6,7 @@ description: Learn how to register an Adobe Experience Cloud organization in ord
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 To develop tag extensions in Adobe Experience Platform it is necessary to register an Adobe Experience Cloud organization.
 
@@ -34,7 +34,7 @@ This program is for consulting firms that help Adobe customers make the most of 
 >
 >Currently your corporate email can only be used in one partner program at a time, so you will need to use a different corporate email as the registered contact for each of the programs.
 
-Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below. If you already have an Experience Cloud Account and access to solutions, but you do not have access to the Data Collection UI in Adobe Experience Platform, please see the [instructions for setting up groups and users](../../launch-reference/administration/user-permissions.md).
+Once your company is in the Exchange Partner program, you can request access to Adobe Solutions by signing in to the [Exchange Partner Site](https://partners.adobe.com/exchangeprogram/experiencecloud) and following the steps below. If you already have an Experience Cloud Account and access to solutions, but you do not have access to the Data Collection UI in Adobe Experience Platform, please see the [instructions for setting up groups and users](../../ui/administration/user-permissions.md).
 
 ## For independent developers
 

@@ -6,7 +6,7 @@ description: Learn how to define an action-type library module for a tag extensi
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 An action type library module is intended to take a predefined action. What this action does is entirely up to you. Do you want to send a beacon, show an offer, thank the user for visiting, save a cookie, or open a support chat?
 

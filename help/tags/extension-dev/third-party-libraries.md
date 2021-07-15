@@ -6,7 +6,7 @@ description: Learn about the different methods of hosting third-party libraries 
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 One of the main purposes of tag extensions in Adobe Experience Platform is to enable you to easily implement existing marketing technologies (libraries) into your website. By using extensions, you can implement libraries provided by third-party content delivery networks (CDNs) without having to manually edit your website's HTML.
 

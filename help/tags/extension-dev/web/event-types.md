@@ -6,7 +6,7 @@ description: Learn how to define an event-type library module for a web extensio
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 An event type library module is designed to detect when an activity happens and then call a function to fire an associated rule. The event being detected is customizable. It could detect when a user makes a certain gesture, scrolls rapidly, or interacts with something?
 

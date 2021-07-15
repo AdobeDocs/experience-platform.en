@@ -9,7 +9,7 @@ When a [library](./libraries.md) is compiled into a [build](./builds.md) in the 
 1. **Destination**: The location where you want the build to be deployed. This is controlled by selecting a [host](./hosts.md) for the environment to use.
 1. **Archive**: You can choose to retrieve the build as a deployable set of files or have it zipped up in an archive format. This is controlled by the `archive` setting on the environment.
 
-The destination and archive format configured by the environment changes how you reference the build in your application (that reference being an [embed code](../../launch-reference/publishing/environments.md#embed-code)). If you make any changes to destination or file format, you must make a matching update to your application to use the new reference.
+The destination and archive format configured by the environment changes how you reference the build in your application (that reference being an [embed code](../../ui/publishing/environments.md#embed-code)). If you make any changes to destination or file format, you must make a matching update to your application to use the new reference.
 
 Environments come in three types (or stages), with each type having a different limit to the total number you can have:
 
@@ -21,11 +21,11 @@ Environments come in three types (or stages), with each type having a different 
 
 {style="table-layout:auto"}
 
-These environment types have similar behavior, but are used at different stages of the [tag publishing workflow](../../launch-reference/publishing/publishing-flow.md).
+These environment types have similar behavior, but are used at different stages of the [tag publishing workflow](../../ui/publishing/publishing-flow.md).
 
 An environment belongs to exactly one [property](./properties.md).
 
-For more general information on environments, see the section on [environments](../../launch-reference/publishing/environments.md) in the publishing docs.
+For more general information on environments, see the section on [environments](../../ui/publishing/environments.md) in the publishing docs.
 
 ## Getting started
 

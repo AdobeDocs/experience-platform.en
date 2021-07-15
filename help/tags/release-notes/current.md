@@ -6,7 +6,7 @@ description: The latest release notes for tags in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 ## May 17, 2021
 
@@ -41,4 +41,4 @@ Look forward to more updates as Experience Platform and Data Collection continue
 
 **General Availability: Event Forwarding** Send event-level data to the Adobe Experience Platform Edge Network then use event forwarding to transform, enrich, and send that data to a non-Adobe endpoint using Adobe's servers, not the client, with low latency.
 
-See the [event forwarding overview](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en#server-side-info) and [Getting started with event forwarding](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-getting-started.html?lang=en#server-side-info) documentation for more information.
+See the [event forwarding overview](../ui/event-fowarding/overview.md) and [getting started guide](../ui/event-fowarding/getting-started.md) for more information.

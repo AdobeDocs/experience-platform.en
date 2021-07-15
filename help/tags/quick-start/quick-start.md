@@ -6,7 +6,7 @@ description: Learn how to quickly get up and running with tags in Adobe Experien
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../launch-term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 Tags are Adobe Experience Platform's next generation of tag management technology. It is built from the ground up to support an open and sustainable ecosystem where anyone can build their own integrations that Adobe customers can deploy to their sites. It is an API first application so anything you can do through the UI you can also do programmatically through an API.
 
@@ -28,7 +28,7 @@ Tags are fully integrated with your Adobe ID. User permissions are managed throu
 
 Tags have a rights-based user management system. This means that individual rights must be granted explicitly. These rights are assigned to groups, then users are added to the appropriate groups in order to gain access. Even if your organization has access to the Data Collection UI, individual users cannot do anything until an Org Administrator explicitly grants them some rights.
 
-For detailed instructions on how to create groups and add users for tags, see the [user permissions](../launch-reference/administration/user-permissions.md) document.
+For detailed instructions on how to create groups and add users for tags, see the [user permissions](../ui/administration/user-permissions.md) document.
 
 ## 2. Log in
 
@@ -42,7 +42,7 @@ After tag rights have been added to your Adobe ID, you need to log in to the Dat
 
 Once you have logged into the Data Collection UI, the first thing to do is create a property. A property is basically a container that you fill with extensions, rules, data elements, and libraries as you deploy tags to your site. Many people create a property for each website (or group of closely related sites) where they want to deploy the same set of tags.
 
-For more about creating properties, see [Create a property](../launch-reference/administration/companies-and-properties.md).
+For more about creating properties, see [Create a property](../ui/administration/companies-and-properties.md).
 
 ## 4. Install extensions
 
@@ -50,7 +50,7 @@ An extension is an integration built by Adobe or an Adobe partner that adds new 
 
 All new properties come with the [Core extension](../extension-reference/web/core-extension/overview.md) installed. Mobile properties come with additional extensions. The Core extension is built by Adobe to provide a robust default set of data element types for your data layer and event types for your rules. Most actions you will want to perform (get an ECID, send [!DNL Adobe Analytics] beacons, load the [!DNL Target] global mbox, etc) will come from extensions that you install from the catalog.
 
-What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, see [Add a new extension](../launch-reference/managing-resources/extensions/overview.md#add-a-new-extension).
+What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, see [Add a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Create data elements and rules
 
@@ -62,15 +62,15 @@ What makes tags in Platform truly unique is that these extensions can be built b
 * Session and local storage
 * Just about everything else
 
-After the data element is defined, you can use the element anywhere throughout the Data Collection UI for any extension. See the documentation on [Data Elements](../launch-reference/managing-resources/data-elements.md) for more detailed information.
+After the data element is defined, you can use the element anywhere throughout the Data Collection UI for any extension. See the documentation on [Data Elements](../ui/managing-resources/data-elements.md) for more detailed information.
 
-**Rules** are at the logical core of your implementation and control the what, when, where, and how of all the tags on your site. Define an event, set conditions and exceptions, then define the actions and order. Finally, publish your changes to see the results. For more information, see [Rules](../launch-reference/managing-resources/rules.md).
+**Rules** are at the logical core of your implementation and control the what, when, where, and how of all the tags on your site. Define an event, set conditions and exceptions, then define the actions and order. Finally, publish your changes to see the results. For more information, see [Rules](../ui/managing-resources/rules.md).
 
 ## 6. Test in your Dev environment 
 
 ### Libraries and builds
 
-Tag builds are never published automatically. Each set of changes you make is encapsulated into a [library](../launch-reference/publishing/libraries.md). Each library you create automatically inherits anything upstream (published, approved, or submitted) as a baseline, so all you need to do is define the changes you'd like to make. This library serves as the blueprint for a [build](../launch-reference/publishing/builds.md). A build is the actual set of JavaScript files that are deployed and used.
+Tag builds are never published automatically. Each set of changes you make is encapsulated into a [library](../ui/publishing/libraries.md). Each library you create automatically inherits anything upstream (published, approved, or submitted) as a baseline, so all you need to do is define the changes you'd like to make. This library serves as the blueprint for a [build](../ui/publishing/builds.md). A build is the actual set of JavaScript files that are deployed and used.
 
 It is important to understand the relationship between your web page, your hosting location, and tags.
 
@@ -90,7 +90,7 @@ A host is a connection between a tag property and your hosting location. Tags cu
 
 If you are self-hosting, a tag build can push directly to your servers through SFTP or you can push it to [!DNL Akamai] and download it using your environment's Archive option.
 
-For more information, see [Hosts](../launch-reference/publishing/hosts/hosts-overview.md).
+For more information, see [Hosts](../ui/publishing/hosts/hosts-overview.md).
 
 ### Environments
 
@@ -99,7 +99,7 @@ Each library is created inside an environment. An environment defines how you wa
 * **Host:** Each environment needs a host which determines the endpoint where any builds created in this environment will be pushed.
 * **Archive:** The default setting is to deploy your build as a minified .js file. If you are using custom code, you may have multiple files which reference each other. These can be combined into a single zip file and encrypted.
 
-After you have saved your environment, it generates the embed code which you can copy and paste into your website. Note that the embed code will not work until you have created a library and produced a build. For more information, see [Environments](../launch-reference/publishing/environments.md).
+After you have saved your environment, it generates the embed code which you can copy and paste into your website. Note that the embed code will not work until you have created a library and produced a build. For more information, see [Environments](../ui/publishing/environments.md).
 
 ### Publish a build to Dev
 
@@ -123,7 +123,7 @@ Promoting a library all the way through to production typically requires coordin
 
 You can assign all these rights to a single person.
 
-For more information about the different states and options available during the publishing process, see [Approval Workflow](../launch-reference/publishing/publishing-flow.md).
+For more information about the different states and options available during the publishing process, see [Approval Workflow](../ui/publishing/publishing-flow.md).
 
 ## Additional resources
 

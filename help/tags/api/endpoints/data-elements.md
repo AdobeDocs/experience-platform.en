@@ -10,7 +10,7 @@ Using several data elements together results in a data dictionary or data map. T
 
 A data element belongs to exactly one [property](./properties.md). A property can have many data elements.
 
-For more general information on data elements and their use in tags, see the [data elements guide](../../launch-reference/managing-resources/data-elements.md) in the UI documentation.
+For more general information on data elements and their use in tags, see the [data elements guide](../../ui/managing-resources/data-elements.md) in the UI documentation.
 
 ## Getting started
 
