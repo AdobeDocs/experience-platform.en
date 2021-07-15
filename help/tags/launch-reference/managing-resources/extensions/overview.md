@@ -24,7 +24,7 @@ Select an extension, then select [!UICONTROL Configure] to view and change the e
 
 >[!IMPORTANT]
 >
->Changes do not take effect until they are [published](/help/launch-reference/publishing/overview.md).
+>Changes do not take effect until they are [published](../../publishing/overview.md).
 
 By default, Adobe provides extensions that support common integrations. Extensions can be modified with custom configurations. Configurations are provided through the extensions. To create a configuration, select the extension card, then select **[!UICONTROL Add New Configuration]**.
 

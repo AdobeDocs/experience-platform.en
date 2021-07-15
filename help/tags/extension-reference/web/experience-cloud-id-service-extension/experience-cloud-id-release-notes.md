@@ -147,7 +147,7 @@ Details of these attribute values are on [web.dev](https://web.dev/samesite-cook
 * Updated visitor.js to 4.0
 * Added a configuration options for the new built-in Opt-In Object. Opti-In settings can be used to suppress cookie and beacon calls of Adobe Solutions to better support regulations such as GDPR
 
-  ![](/help/images/ext-mcid-opt-in.png)
+  ![](../../../images/ext-mcid-opt-in.png)
 
 ## March 20, 2018
 

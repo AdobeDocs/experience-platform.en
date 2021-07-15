@@ -18,7 +18,7 @@ If the Adobe ContextHub extension is not yet installed, open your property, then
 
 To configure the extension, open the [!UICONTROL Extensions] tab, hover over the extension, and then select **[!UICONTROL Configure]**.
 
-![](/help/images/ext-contexthub-config.png)
+![](../../../images/ext-contexthub-config.png)
 
 Select the ContextHub type. The following configuration options are available:
 

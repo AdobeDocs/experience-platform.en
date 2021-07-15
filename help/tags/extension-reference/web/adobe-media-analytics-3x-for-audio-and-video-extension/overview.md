@@ -12,12 +12,12 @@ Use this documentation for information on installing, configuring, and implement
 
 The Media Analytics (MA) extension adds the core JavaScript Media SDK (Media 3.x SDK). This extension provides the functionality for adding the `Media` tracker instance to a tags-enabled site or project. The MA extension requires two additional extensions:
 
-* [Analytics Extension](/help/extension-reference/web/adobe-analytics-extension/overview.md)
-* [Experience Cloud ID Extension](/help/extension-reference/web/experience-cloud-id-service-extension/overview.md)
+* [Analytics Extension](../adobe-analytics-extension/overview.md)
+* [Experience Cloud ID Extension](../experience-cloud-id-service-extension/overview.md)
 
 >[!IMPORTANT]
 >
->This extension deploys with Media 3.x SDK, which is not backward compatible with Media 2.x SDK. If your page already uses Media 2.x SDK, use [Adobe Media Analytics for Audio and Video Extension](/help/extension-reference/web/adobe-media-analytics-for-audio-and-video-extension/overview.md) instead of this extension.
+>This extension deploys with Media 3.x SDK, which is not backward compatible with Media 2.x SDK. If your page already uses Media 2.x SDK, use [Adobe Media Analytics for Audio and Video Extension](../adobe-media-analytics-for-audio-and-video-extension/overview.md) instead of this extension.
 
 After you have included all three of the extensions mentioned above in your tags-enabled project, you can proceed in one of two ways:
 
@@ -30,7 +30,7 @@ After you have included all three of the extensions mentioned above in your tags
 
 * **Configure:** To configure the MA extension, open the [!UICONTROL Extensions] tab, hover over the extension, and then select **[!UICONTROL Configure]**:
 
-![MA Extension Configuration](/help/images/ext-ma-config.png)
+![MA Extension Configuration](../../../images/ext-ma-config.png)
 
 ### Configuration options:
 
@@ -45,7 +45,7 @@ After you have included all three of the extensions mentioned above in your tags
 | Export APIs to Window Object | Enable or Disable exporting Media Analytics APIs to global scope |
 | Variable Name | A variable you use to export Media Analytics APIs under the `window` object |
 
-**Reminder:** The MA extension requires the [Analytics](/help/extension-reference/web/adobe-analytics-extension/overview.md) and [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) extensions. You must also add these extensions to your extension property and configure them.
+**Reminder:** The MA extension requires the [Analytics](../adobe-analytics-extension/overview.md) and [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) extensions. You must also add these extensions to your extension property and configure them.
 
 ## Using the MA extension
 

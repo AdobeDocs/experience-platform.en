@@ -62,7 +62,7 @@ Multiple cache invalidations: If you are using the *Managed by Adobe* Host for y
 * 5 minutes after build
 * 60 minutes after build
 
-You can read more about cache invalidations on the [Managed by Adobe Host](/help/launch-reference/publishing/hosts/managed-by-adobe-host.md) page.
+You can read more about cache invalidations on the [Managed by Adobe Host](../launch-reference/publishing/hosts/managed-by-adobe-host.md) page.
 
 ### Bug Fixes
 

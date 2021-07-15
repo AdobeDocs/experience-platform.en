@@ -18,7 +18,7 @@ If the Adobe Analytics extension is not yet installed, open your property, then 
 
 To configure the extension, open the Extensions tab, hover over the extension, and then select **[!UICONTROL Configure]**.
 
-![](/help/images/ext-analytics-config.png)
+![](../../../images/ext-analytics-config.png)
 
 ## Library Management
 
@@ -260,13 +260,13 @@ Enable **Automatically share Analytics data with Audience Manager**.
 
 The following options appear:
 
-![](/help/images/an-ext-aam.png)
+![](../../../images/an-ext-aam.png)
 
 The Audience Manager subdomain is assigned by Adobe Audience Manager. It is sometimes referred to as your "Partner Name" or "Partner Subdomain." Contact your Adobe consultant or Customer Care if you do not know your Partner Name.
 
 You can configure advanced settings by selecting **Show advanced settings** and entering your preferences.
 
-![](/help/images/an-ext-aam-adv.png)
+![](../../../images/an-ext-aam-adv.png)
 
 For information about each setting, select the info icon, or refer to the [Adobe Audience Manager documentation](https://experienceleague.adobe.com/docs/audience-manager/user-guide/aam-home.html).
 

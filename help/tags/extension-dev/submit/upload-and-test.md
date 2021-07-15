@@ -127,7 +127,7 @@ Extensions provide new capabilities to users of Adobe Experience Platform. These
 
 The purpose of tag data elements is to help users persist values. Each data element is a mapping or pointer to source data. A single data element is a variable that can be mapped to query strings, URLs, cookie values, JavaScript variables, etc. Select **Data Elements** from the left navigation bar, and **Create New Data Element**.
 
-![](/help/extension-dev/images/getting-started/data-element-create-new-link.png)
+![](../images/getting-started/data-element-create-new-link.png)
 
 Extensions can define data element types if needed for your extension to operate, or simply as a convenience to users. When an extension provides data element types, they appear in a dropdown list for users on the **Create Data Element** screen:
 

@@ -14,7 +14,7 @@ Use this reference for information about the options available when using this e
 
 >[!NOTE]
 >
->This extension is not meant to be used for event forwarding of Adobe Analytics data. For event forwarding, use the [Adobe Analytics extension](/help/extension-reference/web/adobe-analytics-extension/overview.md).
+>This extension is not meant to be used for event forwarding of Adobe Analytics data. For event forwarding, use the [Adobe Analytics extension](../adobe-analytics-extension/overview.md).
 
 ## Configure the Adobe Audience Manager extension
 
@@ -26,7 +26,7 @@ To configure the extension, open the [!UICONTROL Extensions] tab, hover over the
 
 Configure your DIL settings. The following configuration options are available:
 
-![](/help/images/ext-aam-config.png)
+![](../../../images/ext-aam-config.png)
 
 #### DIL Version
 
@@ -76,6 +76,6 @@ Run the custom code configured in the code editor.
 
 Enter the desired code in the Code Editor, then provide a name for the code. This code will become available in the Then portion of the rule builder.
 
-![](/help/images/ext-aam-then.png)
+![](../../../images/ext-aam-then.png)
 
 You can also add a note with information about the configuration.

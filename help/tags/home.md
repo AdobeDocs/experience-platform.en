@@ -68,7 +68,7 @@ Automate implementations of individual technologies or a group of technologies.
 
 ### Light, modular container tag
 
-The content of your container is minified, including your custom code. Everything is modular. If you don't need an item, it is not included in your library. The result is an implementation that is fast and compact. See [Minification](/help/launch-reference/publishing/builds.md).
+The content of your container is minified, including your custom code. Everything is modular. If you don't need an item, it is not included in your library. The result is an implementation that is fast and compact. See [Minification](./launch-reference/publishing/builds.md).
 
 ## Other highlights
 

@@ -12,5 +12,5 @@ seo-description: Documentation for the Adobe Experience Platform Launch Extensio
 
 Learn about the available tag extensions in the [!DNL Adobe Experience Platform] extensions library.
 
-* [Adobe Extensions Overview](/help/extension-reference/web/overview.md)
-* [Third-Party Extensions](/help/extension-reference/3rd-party-extensions.md)
+* [Adobe Extensions overview](../web/overview.md)
+* [Third-Party Extensions](../3rd-party-extensions.md)
