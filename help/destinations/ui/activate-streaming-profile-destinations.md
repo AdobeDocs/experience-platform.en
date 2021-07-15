@@ -59,7 +59,7 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 
 1. In the **[!UICONTROL Select field]** page, select the XDM attributes that you want to send to the destination, then choose **[!UICONTROL Select]**.
 
-    ![Select source field page](../assets/ui/activate-profile-destinations/target-field-page.png)
+    ![Select source field page](../assets/ui/activate-streaming-profile-destinations/target-field-page.png)
 
 
 1. To add more mappings, repeat steps 1 to 3, then select **[!UICONTROL Next]**.
