@@ -37,7 +37,6 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Map attributes and identities {#mapping}
 
-
 >[!IMPORTANT]
 >
 >This step only applies to the Google Customer Match advertising destination. For other advertising destinations, skip to [Schedule segment export](#scheduling)
