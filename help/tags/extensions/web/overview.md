@@ -10,8 +10,8 @@ description: Find documentation for tag extensions for Adobe products in Adobe E
 
 The following is a list of documentation for the tag extensions provided by Adobe solutions:
 
-* [Analytics extension](adobe-analytics-extension/overview.md)
-* [Adobe Analytics Product String extension](adobe-analytics-product-string-extension/overview.md)
+* [Analytics extension](analytics/overview.md)
+* [Adobe Analytics Product String extension](product-string/overview.md)
 * [Adobe Media Analytics (3.x SDK) for Audio and Video extension](adobe-media-analytics-3x-for-audio-and-video-extension/overview.md)
 * [Adobe Audience Manager extension](./audience-manager/overview.md)
 * [Adobe ContextHub extension](./contexthub/overview.md)

@@ -54,21 +54,21 @@ feature: Data Collection
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
 * Extensions {#extensions}
-  * [Overview](./extensions/adobe-extensions/overview.md)
-  * Adobe extensions {#adobe-extension}
+  * [Overview](./extensions/overview.md)
+  * Adobe extensions {#adobe}
     * [Overview](./extensions/web/overview.md)
-    * Adobe Analytics extension {#analytics-extension}
-      * [Overview](./extensions/web/adobe-analytics-extension/overview.md)
-      * [Shared modules](./extensions/web/adobe-analytics-extension/shared-modules.md)
-      * [Release notes](./extensions/web/adobe-analytics-extension/adobe-analytics-release-notes.md)
-    * Adobe Analytics Product String extension {#product-string-extension}
-      * [Overview](./extensions/web/adobe-analytics-product-string-extension/overview.md)
-      * [Release notes](./extensions/web/adobe-analytics-product-string-extension/adobe-analytics-product-string-release-notes.md)    
-    * Adobe Audience Manager extension {#audience-manager}
+    * Adobe Analytics {#analytics}
+      * [Overview](./extensions/web/analytics/overview.md)
+      * [Shared modules](./extensions/web/analytics/shared-modules.md)
+      * [Release notes](./extensions/web/analytics/release-notes.md)
+    * Adobe Analytics Product String {#product-string}
+      * [Overview](./extensions/web/product-string/overview.md)
+      * [Release notes](./extensions/web/product-string/release-notes.md)    
+    * Adobe Audience Manager {#audience-manager}
       * [Overview](./extensions/web/audience-manager/overview.md)
-    * Adobe Client Data Layer extension {#acdl}
-      * [Overview](./extensions/web/adobe-client-data-layer/overview.md)
-      * [Release notes](./extensions/web/adobe-client-data-layer/release-notes.md)
+    * Adobe Client Data Layer {#client-data-layer}
+      * [Overview](./extensions/web/client-data-layer/overview.md)
+      * [Release notes](./extensions/web/client-data-layer/release-notes.md)
     * Adobe ContextHub extension {#contexthub}
       * [Overview](./extensions/web/contexthub/overview.md)
     * Adobe Experience Cloud ID Service extension {#id-service-extension}

@@ -12,7 +12,7 @@ Use this documentation for information on installing, configuring, and implement
 
 The Media Analytics (MA) extension adds the core JavaScript Media SDK (Media 2.x SDK). This extension provides the functionality for adding the `MediaHeartbeat` tracker instance to a tag site or project. The MA extension requires two additional extensions:
 
-* [Analytics Extension](../adobe-analytics-extension/overview.md)
+* [Analytics Extension](../analytics/overview.md)
 * [Experience Cloud ID Extension](../experience-cloud-id-service-extension/overview.md)
 
 >[!IMPORTANT]
@@ -46,7 +46,7 @@ After you have included all three of the extensions mentioned above in your tag 
 | Export APIs to Window Object | Enable or Disable exporting Media Analytics APIs to global scope |
 | Variable Name | A variable you use to export Media Analytics APIs under the `window` object |
 
-**Reminder:** The MA extension requires the [Analytics](../adobe-analytics-extension/overview.md) and [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) extensions. You must also add these extensions to your extension property and configure them.
+**Reminder:** The MA extension requires the [Analytics](../analytics/overview.md) and [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) extensions. You must also add these extensions to your extension property and configure them.
 
 ## Using the MA extension
 

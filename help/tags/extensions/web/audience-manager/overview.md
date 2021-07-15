@@ -14,7 +14,7 @@ Use this reference for information about the options available when using this e
 
 >[!NOTE]
 >
->This extension is not meant to be used for event forwarding of Adobe Analytics data. For event forwarding, use the [Adobe Analytics extension](../adobe-analytics-extension/overview.md).
+>This extension is not meant to be used for event forwarding of Adobe Analytics data. For event forwarding, use the [Adobe Analytics extension](../analytics/overview.md).
 
 ## Configure the Adobe Audience Manager extension
 
