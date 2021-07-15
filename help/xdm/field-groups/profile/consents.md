@@ -1,13 +1,13 @@
 ---
 solution: Experience Platform
-title: Privacy/Personalization/Marketing Preferences (Consents) Schema Field Group
+title: Consents and Preferences Schema Field Group
 topic-legacy: overview
-description: This document provides an overview of the Privacy/Personalization/Marketing Preferences (Consents) schema field group.
+description: This document provides an overview of the Consents and Preferences schema field group.
 exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 ---
-# [!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] field group
+# [!UICONTROL Consents and Preferences] field group
 
-[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)] (hereinafter referred to as the [!DNL Privacy & Consents] field group) is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
+[!UICONTROL Consents and Preferences]is a standard field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md), which is used to capture customer consent and preference information.
 
 >[!NOTE]
 >
@@ -17,9 +17,9 @@ exl-id: ec592102-a9d3-4cac-8b94-58296a138573
 
 >[!IMPORTANT]
 >
->The [!DNL Consents & Preferences] field group is designed to cover a range of consent and preference management use cases. As a result, this document describes the use of the field group's fields in general terms, and only makes suggestions as to how you should interpret the use of these fields. Please consult with your privacy legal team to align the field group's structure with how your organization interprets and presents these consent and preference choices to your customers.
+>The [!UICONTROL Consents and Preferences] field group is designed to cover a range of consent and preference management use cases. As a result, this document describes the use of the field group's fields in general terms, and only makes suggestions as to how you should interpret the use of these fields. Please consult with your privacy legal team to align the field group's structure with how your organization interprets and presents these consent and preference choices to your customers.
 
-The [!DNL Consents & Preferences] field group provides several fields used to capture **consent** and **preference** information.
+The [!UICONTROL Consents and Preferences] field group provides several fields used to capture **consent** and **preference** information.
 
 A consent is an option that allows a customer to specify how their data may be used. Most consents have a legal aspect, in that some jurisdictions require obtaining permission before data can be used in a particular way, or require that the customer has an option to stop that use (opt out) if affirmative consent is not required.
 
@@ -36,7 +36,7 @@ The following screenshot shows how the structure of the field group is represent
 >
 >See the guide on [exploring XDM resources](../../ui/explore.md) to for steps on how to look up any XDM resource and inspect its structure in the Platform UI.
 
-The following JSON shows an example of the type of data that the [!DNL Consents & Preferences] field group can process. Information on the specific use of each of these fields is provided in the sections that follow.
+The following JSON shows an example of the type of data that the [!UICONTROL Consents and Preferences] field group can process. Information on the specific use of each of these fields is provided in the sections that follow.
 
 ```json
 {
@@ -340,13 +340,13 @@ The `adID` consent represents the customer's consent for whether an advertiser I
 
 ## Ingesting data using the field group {#ingest}
 
-In order to use the [!DNL Consents & Preferences] field group to ingest consent data from your customers, you must create a dataset based on a schema that contains that field group.
+In order to use the [!UICONTROL Consents and Preferences] field group to ingest consent data from your customers, you must create a dataset based on a schema that contains that field group.
 
-See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign field groups to fields. Once you have created a schema containing a field with the [!DNL Consents & Preferences] field group, refer to the the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
+See the tutorial on [creating a schema in the UI](http://www.adobe.com/go/xdm-schema-editor-tutorial-en) for steps on how to assign field groups to fields. Once you have created a schema containing a field with the [!UICONTROL Consents and Preferences] field group, refer to the the section on [creating a dataset](../../../catalog/datasets/user-guide.md#create) in the dataset user guide, following the steps to create a dataset with an existing schema.
 
 >[!IMPORTANT]
 >
->If you want to send consent data to [!DNL Real-time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!DNL Consents & Preferences] field group. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-time Customer Profile] requirements for schemas and datasets.
+>If you want to send consent data to [!DNL Real-time Customer Profile], it is required that you create a [!DNL Profile]-enabled schema based on the [!DNL XDM Individual Profile] class that contains the [!UICONTROL Consents and Preferences] field group. The dataset that you create based on that schema must also be enabled for [!DNL Profile]. Refer to the tutorials linked above for specific steps related to [!DNL Real-time Customer Profile] requirements for schemas and datasets.
 >
 >In addition, you must also ensure that your merge policies are configured to prioritize the dataset(s) that contain the latest consent and preference data, in order for customer profiles to be updated correctly. See the overview on [merge policies](../../../rtcdp/profile/merge-policies.md) for more information.
 
@@ -356,7 +356,7 @@ When a customer changes their consents or preferences on your website, these cha
 
 ## Appendix {#appendix}
 
-The sections below provide additional reference information regarding the [!DNL Consents & Preferences] field group.
+The sections below provide additional reference information regarding the [!UICONTROL Consents and Preferences] field group.
 
 ### Accepted values for `val` {#choice-values}
 
@@ -398,6 +398,6 @@ The following table outlines the accepted values for `preferred`:
 
 {style="table-layout:auto"}
 
-### Full [!DNL Consents & Preferences] schema {#full-schema}
+### Full [!UICONTROL Consents and Preferences] schema {#full-schema}
 
-To view the full schema for the [!DNL Consents & Preferences] field group, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+To view the full schema for the [!UICONTROL Consents and Preferences] field group, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
