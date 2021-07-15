@@ -13,6 +13,7 @@ Manage your customer experience by connecting your data in Adobe Experience Plat
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
 - [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
+- [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## Extensions
 
@@ -26,7 +27,6 @@ To understand the difference between connections and extensions, see [Extensions
 - [Adobe Target v2 extension](../personalization/adobe-target-v2.md)
 - [Audience Manager DIL extension](../data-management/aam-dil-extension.md)
 - [Experience Cloud ID Service extension](../personalization/adobe-ecid.md)
-- [Marketo Engage Destination Connector](/help/destinations/catalog/adobe/marketo-engage-destination-connector.md)
 - [Marketo extension](../email/marketo.md)
 - [Marketo Munchkin extension](../email/marketo-munchkin.md)
 - [Marketo Web Personalization extension](../personalization/marketo-web-personalization.md)
