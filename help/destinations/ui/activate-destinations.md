@@ -41,7 +41,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Mapping] step {#mapping}
+## Mapping step {#mapping}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
