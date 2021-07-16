@@ -6,7 +6,7 @@ description: Learn about the Adobe Target v2 tag extension in Adobe Experience P
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Use this reference for information about the options available when using this extension to build a rule.
 
@@ -20,7 +20,7 @@ If the Adobe Target extension is not yet installed, open your property, then sel
 
 To configure the extension, open the Extensions tab, hover over the extension, and then select **[!UICONTROL Configure]**.
 
-![](../../images/targetv2config.png)
+![](../../../images/targetv2config.png)
 
 ### at.js settings
 
@@ -108,7 +108,7 @@ Once the Target Extension is installed, create at least one rule to properly dep
 
 A Target rule with this basic implementation looks like this:
 
-![](../../images/targetv2deploy.png)
+![](../../../images/targetv2deploy.png)
 
 After you have saved this rule, you'll need to add it to a Library and build/deploy it so that you can test the behavior.
 

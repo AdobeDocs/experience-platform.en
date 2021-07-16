@@ -91,7 +91,7 @@ feature: Data Collection
       * [Release notes](./extensions/web/media-analytics-3x/release-notes.md)
     * Adobe Privacy {#privacy}
       * [Overview](./extensions/web/privacy/overview.md)
-    * Adobe Target {#target-extension}
+    * Adobe Target {#target}
       * [Overview](./extensions/web/target/overview.md)
       * [Release notes](./extensions/web/target/release-notes.md)
     * Adobe Target v2 {#target-v2}
