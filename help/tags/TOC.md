@@ -76,9 +76,9 @@ feature: Data Collection
       * [Release notes](./extensions/web/id-service/release-notes.md)
     * Adobe Experience Platform Demo {#platform-demo}
       * [Overview](./extensions/web/platform-demo/overview.md)
-    * Adobe Experience Platform Web SDK extension {#sdk}
+    * Adobe Experience Platform Web SDK {#sdk}
       * [Overview](./extensions/web/sdk/overview.md)
-    * Adobe Experience Platform Cloud Connector extension {#cloud-connector}
+    * Adobe Experience Platform Cloud Connector {#cloud-connector}
       * [Overview](./extensions/web/cloud-connector/overview.md)
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/web/asset-insights/overview.md)
@@ -97,16 +97,16 @@ feature: Data Collection
     * Adobe Target v2 {#target-v2}
       * [Overview](./extensions/web/target-v2/overview.md)
       * [Release notes](./extensions/web/target-v2/release-notes.md)
-    * Common Analytics Plugins extension {#plugins-extension}
-      * [Overview](./extensions/web/common-analytics-plugins-extension/common-analytics-plugins.md)
-      * [Release notes](./extensions/web/common-analytics-plugins-extension/common-analytics-plugins-release-notes.md)
-    * Core extension {#core-extension}
-      * [Overview](./extensions/web/core-extension/overview.md)
-      * [Core event forwarding extension](./extensions/web/core-extension/event-forwarding.md)
-      * [Release notes](./extensions/web/core-extension/core-release-notes.md)
-    * [!DNL Marketo Munchkin] extension {#marketo-extension}
-      * [Overview](./extensions/web/marketo-munchkin-extension/overview.md)
-      * [Release notes](./extensions/web/marketo-munchkin-extension/marketo-munchkin-release-notes.md)
+    * Common Analytics Plugins {#plugins}
+      * [Overview](./extensions/web/plugins/overview.md)
+      * [Release notes](./extensions/web/plugins/release-notes.md)
+    * Core {#core}
+      * [Overview](./extensions/web/core/overview.md)
+      * [Event forwarding extension](./extensions/web/core/event-forwarding.md)
+      * [Release notes](./extensions/web/core/release-notes.md)
+    * [!DNL Marketo Munchkin] {#marketo}
+      * [Overview](./extensions/web/marketo/overview.md)
+      * [Release notes](./extensions/web/marketo/release-notes.md)
     * [!DNL BrightCove] video tracking extension {#brightcove-extension}
       * [Overview](./extensions/web/video-tracking-brightcove-extension/overview.md)
       * [Release notes](./extensions/web/video-tracking-brightcove-extension/video-tracking-brightcove-extension-release-notes.md)
