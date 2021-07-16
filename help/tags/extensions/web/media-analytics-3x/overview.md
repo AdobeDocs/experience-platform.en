@@ -17,7 +17,7 @@ The Media Analytics (MA) extension adds the core JavaScript Media SDK (Media 3.x
 
 >[!IMPORTANT]
 >
->This extension deploys with Media 3.x SDK, which is not backward compatible with Media 2.x SDK. If your page already uses Media 2.x SDK, use [Adobe Media Analytics for Audio and Video Extension](../adobe-media-analytics-for-audio-and-video-extension/overview.md) instead of this extension.
+>This extension deploys with Media 3.x SDK, which is not backward compatible with Media 2.x SDK. If your page already uses Media 2.x SDK, use [Adobe Media Analytics for Audio and Video Extension](../media-analytics/overview.md) instead of this extension.
 
 After you have included all three of the extensions mentioned above in your tags-enabled project, you can proceed in one of two ways:
 

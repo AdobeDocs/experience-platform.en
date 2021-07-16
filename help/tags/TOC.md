@@ -83,20 +83,20 @@ feature: Data Collection
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/web/asset-insights/overview.md)
       * [Release notes](./extensions/web/asset-insights/release-notes.md)
-    * Adobe Media Analytics (3.x SDK) extension {#media-analytics-3x-extension}
-      * [Overview](./extensions/web/adobe-media-analytics-3x-for-audio-and-video-extension/overview.md)
-      * [Release notes](./extensions/web/adobe-media-analytics-3x-for-audio-and-video-extension/adobe-media-analytics-3x-for-audio-and-video-extension-release-notes.md)
-    * Adobe Media Analytics for Audio and Video extension {#media-analytics-extension}
-      * [Overview](./extensions/web/adobe-media-analytics-for-audio-and-video-extension/overview.md)
-      * [Release notes](./extensions/web/adobe-media-analytics-for-audio-and-video-extension/adobe-media-analytics-for-audio-and-video-extension-release-notes.md)
-    * Adobe Privacy extension {#privacy}
+    * Adobe Media Analytics for Audio and Video {#media-analytics}
+      * [Overview](./extensions/web/media-analytics/overview.md)
+      * [Release notes](./extensions/web/media-analytics/release-notes.md)
+    * Adobe Media Analytics (3.x SDK) {#media-analytics-3x}
+      * [Overview](./extensions/web/media-analytics-3x/overview.md)
+      * [Release notes](./extensions/web/media-analytics-3x/release-notes.md)
+    * Adobe Privacy {#privacy}
       * [Overview](./extensions/web/privacy/overview.md)
-    * Adobe Target extension {#target-extension}
-      * [Overview](./extensions/web/adobe-target-extension/overview.md)
-      * [Release notes](./extensions/web/adobe-target-extension/adobe-target-release-notes.md)
-    * Adobe Target v2 extension {#targetv2-extension}
-      * [Overview](./extensions/web/adobe-target-extension-v2.md)
-      * [Release notes](./extensions/web/adobe-target-extension/adobe-target-v2-release-notes.md)
+    * Adobe Target {#target-extension}
+      * [Overview](./extensions/web/target/overview.md)
+      * [Release notes](./extensions/web/target/release-notes.md)
+    * Adobe Target v2 {#target-v2}
+      * [Overview](./extensions/web/target-v2/overview.md)
+      * [Release notes](./extensions/web/target-v2/release-notes.md)
     * Common Analytics Plugins extension {#plugins-extension}
       * [Overview](./extensions/web/common-analytics-plugins-extension/common-analytics-plugins.md)
       * [Release notes](./extensions/web/common-analytics-plugins-extension/common-analytics-plugins-release-notes.md)
