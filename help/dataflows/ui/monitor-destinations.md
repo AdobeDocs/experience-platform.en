@@ -111,7 +111,6 @@ The details page also displays a list of identities that failed and identities t
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-
 ## Monitoring Destinations dashboard
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
@@ -128,7 +127,39 @@ The graph is displayed by default and you can disable it to expand the list of d
 
 IMAGE
 
-The **Activation** panel displays a list of destinations. 
+The **Activation** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, profile records activated, profile records failed, profile records skipped, total failed dataflows, and the last updated date for these destinations.
+
+IMAGE
+
+You can also filter your list of destinations to only display the selected category of destinations. Select the **My destinations** dropdown, and select the destination type you want to filter to. 
+
+IMAGE
+
+Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter icon ICON beside it to see a list of its active dataflows.
+
+IMAGE
+
+If you want to view all existing dataflows across all destinations, select **Dataflows**.
+
+IMAGE
+
+A list of dataflows appears, grouped on a per-destination basis. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter icon ICON beside it, and then subsequently selecting the filter icon ICON beside the dataflow you want more information about.
+
+IMAGE
+
+The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter icon ICON beside the dataflow run start time.
+
+IMAGE
+
+The dataflows details page, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
+
+- **[!UICONTROL Dataflow run ID]**: The ID of the dataflow.
+- **[!UICONTROL IMS org ID]**: The IMS organization the dataflow belongs to.
+- **[!UICONTROL Last updated]**: The time the dataflow run was last updated.
+
+The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
+
+IMAGE
 
 ## Next steps
 
