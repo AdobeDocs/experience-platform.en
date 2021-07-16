@@ -25,6 +25,6 @@ The following is a list of documentation for the tag extensions provided by Adob
 * [Adobe Experience Platform extension](sdk/overview.md)
 * [AEM Asset Insights extension](asset-insights/overview.md)
 * [Marketo Munchkin extension](marketo/overview.md)
-* [Video Tracking BrightCove extension](video-tracking-brightcove-extension/overview.md)
+* [Video Tracking BrightCove extension](brightcove/overview.md)
 
 <!--  previously empty parent topic. -->

@@ -102,17 +102,17 @@ feature: Data Collection
       * [Release notes](./extensions/web/plugins/release-notes.md)
     * Core {#core}
       * [Overview](./extensions/web/core/overview.md)
-      * [Event forwarding extension](./extensions/web/core/event-forwarding.md)
+      * [Event forwarding](./extensions/web/core/event-forwarding.md)
       * [Release notes](./extensions/web/core/release-notes.md)
     * [!DNL Marketo Munchkin] {#marketo}
       * [Overview](./extensions/web/marketo/overview.md)
       * [Release notes](./extensions/web/marketo/release-notes.md)
-    * [!DNL BrightCove] video tracking extension {#brightcove-extension}
-      * [Overview](./extensions/web/video-tracking-brightcove-extension/overview.md)
-      * [Release notes](./extensions/web/video-tracking-brightcove-extension/video-tracking-brightcove-extension-release-notes.md)
-    * [!DNL YouTube] video tracking extension {#youtubee-extension}
-      * [Overview](./extensions/web/video-tracking-youtube-extension/overview.md)
-      * [Release notes](./extensions/web/video-tracking-youtube-extension/video-tracking-youtube-extension-release-notes.md)
+    * [!DNL BrightCove] video tracking {#brightcove}
+      * [Overview](./extensions/web/brightcove/overview.md)
+      * [Release notes](./extensions/web/brightcove/release-notes.md)
+    * [!DNL YouTube] video tracking extension {#youtube}
+      * [Overview](./extensions/web/youtube/overview.md)
+      * [Release notes](./extensions/web/youtube/release-notes.md)
   * [Third-party extensions](./extensions/3rd-party-extensions.md)
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
