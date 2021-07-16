@@ -84,8 +84,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignID` | Primary Identity |
-| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `id` | `campaignID` | Primary identity |
+| `sfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `name` | `campaignName` |
 | `description` | `campaignDescription` |
 | `type` | `campaignType` |
@@ -109,7 +109,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `campaignMemberID` | Primary Identity |
+| `id` | `campaignMemberID` | Primary identity |
 | `programId` | `campaignID` | Relationship |
 | `leadId` | `personID` | Relationship |
 | `acquiredByCampaignID` | `acquiredByCampaignID` |
@@ -137,7 +137,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `accountID` | Primary Identity |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | Secondary identity for users with the [!DNL Salesforce] integration. |
+| `msftCdpExternalId` | `extSourceSystemAudit.externalID` | Secondary identity for users with the [!DNL Microsoft Dynamics] integration. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -174,7 +175,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `staticListMemberID` | `marketingListMemberID` | Primary Identity |
+| `staticListMemberID` | `marketingListMemberID` | Primary identity |
 | `staticListID` | `marketingListID` | Relationship |
 | `personID`| `personID` | Relationship |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
@@ -189,8 +190,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | Primary Identity |
-| `crmGuid` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `id` | `accountID` | Primary identity |
+| `crmGuid` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `city` | `accountBillingAddress.city` |
@@ -211,8 +212,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | Primary Identity |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `id` | `opportunityID` | Primary identity |
+| `externalOpportunityId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `mktoCdpAccountOrgId` | `accountID` | Relationship |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
@@ -231,7 +232,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the Salesforce integration. |
+| `mktoCdpSourceCampaignId` | `campaignID` | Recommended only if you use the [!DNL Salesforce] integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -242,8 +243,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | Primary Identity |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Secondary Identity |
+| `id` | `opportunityPersonID` | Primary identity |
+| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | Secondary identity |
 | `mktoCdpOpptyId` | `opportunityID` | Relationship |
 | `leadId` | `personID` | Relationship |
 | `role` | `personRole` |
@@ -258,6 +259,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | Primary identity |
+| `unsubscribed` | `consents.marketing.email.val` |
+| `unsubscribedReason` | `consents.marketing.email.reason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
@@ -269,7 +272,8 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `sfdcLeadId` | `extSourceSystemAudit.externalID` | Secondary identity |
+| `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `extSourceSystemAudit.externalID` | Secondary identity, Lead namespace; For SFDC integration. This is a calculated field. |
+| `decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , "")` | `extSourceSystemAudit.externalID` | Secondary identity, Lead namespace; For MSD integration. This is a calculated field. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -294,11 +298,13 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadPartitionId` | `personComponents.personGroupID` |
 | `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
 | `contactCompany` | `personComponents.sourceAccountID` |
+| `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `personComponents.sourceExternalID` | For [!DNL Salesforce] integration. This is a calculated field. |
+| `decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , "")` | `personComponents.sourceExternalID` | For [!DNL Microsoft Dynamics] integration. This is a calculated field. |
 | `sfdcContactId` | `personComponents.sourceExternalID` | Recommended only if you use the Salesforce integration. |
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` |
+| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` | This is a calculated field. |
 
 {style="table-layout:auto"}
 
