@@ -21,7 +21,7 @@ Data Prep also applies several intrinsic data validations to ensure that the dat
 
 >[!NOTE]
 >
->Unless the resulting message will be invalid XDM, errors in rows ingested to Data Prep will **not** cause the rows to be dropped.
+>Unless the resulting message will be invalid XDM, any transformation errors in Data Prep will result in those attributes being set to `null`, while the rest of the row will be ingested. If the row does resolve to invalid XDM, the row will **not** be ingested. In both of these cases, the error will be documented.
  
 ## Mapping
 
