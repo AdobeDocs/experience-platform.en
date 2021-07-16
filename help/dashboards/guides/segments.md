@@ -23,7 +23,11 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 ## Exploring the segment dashboard
 
-To navigate to the segment dashboard within the Platform UI, select **[!UICONTROL Segments]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, select **[!UICONTROL Segments]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
+
+>[!NOTE]
+>
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Segments] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segmentation.
 
 ![](../images/segments/dashboard-overview.png)
 

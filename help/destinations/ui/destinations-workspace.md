@@ -7,13 +7,21 @@ exl-id: 0f46f08d-0fe3-441d-933a-86bc146c0f19
 ---
 # Destinations workspace {#destinations-workspace}
 
-## Overview {#overview}
-
 In Adobe Experience Platform, select **[!UICONTROL Destinations]** from the left navigation bar to access the [!UICONTROL Destinations] workspace.
 
-The [!UICONTROL Destinations] workspace consists of four sections, [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
+The [!UICONTROL Destinations] workspace consists of five sections, [!UICONTROL Overview], [!UICONTROL Catalog], [!UICONTROL Browse], [!UICONTROL Accounts], and [!UICONTROL System View], described in the sections below.
 
-![Destinations-overview](../assets/ui/workspace/destinations-workspace.png)
+![Destinations-overview](../assets/ui/workspace/destinations-overview.png)
+
+## [!UICONTROL Overview] {#overview}
+
+The **[!UICONTROL Overview]** tab displays the [!UICONTROL Destinations] dashboard, providing key metrics related your organization's destination data. To learn more, visit the [[!UICONTROL Destinations] dashboard guide](../../dashboards/guides/destinations.md).
+
+>[!NOTE]
+>
+>If your organization is new to Experience Platform and does not yet have active destinations, the [!UICONTROL Destinations] dashboard and [!UICONTROL Overview] tab are not visible. Instead, selecting [!UICONTROL Destinations] from the left navigation displays the [[!UICONTROL Catalog] tab](#catalog).
+
+![](../../dashboards/images/destinations/dashboard-overview.png)
 
 ## [!UICONTROL Catalog] {#catalog}
 

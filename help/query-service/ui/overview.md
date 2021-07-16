@@ -8,7 +8,7 @@ exl-id: 99ad25e4-0ca4-4bd1-b701-ab463197930b
 ---
 # [!DNL Query Service] guide
 
-The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. To access the UI within [Adobe Experience Platform][platform-ui], select **[!UICONTROL Queries]** in the left navigation.
+The Adobe Experience Platform [!DNL Query Service] provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization. To access the UI within [Adobe Experience Platform](https://platform.adobe.com), select **[!UICONTROL Queries]** in the left navigation.
 
 ## [!DNL Query Editor]
 
@@ -16,7 +16,7 @@ The [!DNL Query Editor] enables you to write and execute queries without using a
 
 ![Image](../images/ui/overview/overview.png)
 
-[!DNL Query Editor] provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide][query-editor] for more information on using the [!DNL Query Editor].
+[!DNL Query Editor] provides editing space where you can begin typing a query. As you type, the editor automatically completes SQL reserved words, tables, and field names within tables. When finished writing your query, select the **Play** button to run the query. The **[!UICONTROL Console]** tab below the editor shows what [!DNL Query Service] is currently doing, indicating when a query has been returned. The **[!UICONTROL Result]** tab, next to the Console, displays query results. See the [Query Editor guide](./user-guide.md) for more information on using the [!DNL Query Editor].
 
 ![Image](../images/ui/overview/query-editor.png)
 
@@ -51,14 +51,10 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 
 ## Credentials
 
-The **[!UICONTROL Credentials]** tab displays your [!DNL Postgres] credentials. Select the **[!UICONTROL Copy]** icon next to any field to store its contents in your keyboard buffer. For more information on how to use these credentials to connect with external clients, please read the [connect with clients guide][connect-clients].
+The **[!UICONTROL Credentials]** tab displays your [!DNL Postgres] credentials. Select the **[!UICONTROL Copy]** icon next to any field to store its contents in your keyboard buffer. For more information on how to use these credentials to connect with external clients, please read the [connect with clients guide](../clients/overview.md).
 
 ![Image](../images/ui/overview/credentials.png)
 
 ## Next steps
 
-Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!DNL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!DNL Query Editor], see the [Query Editor user guide][query-editor].
-
-[platform-ui]: https://platform.adobe.com
-[query-editor]: user-guide.md
-[connect-clients]: ../clients/overview.md
+Now that you are familiar with [!DNL Query Service] user interface on [!DNL Platform], you can access [!DNL Query Editor] to start creating your own query projects to share with other users in your organization. For more information on authoring and running queries in [!DNL Query Editor], see the [Query Editor user guide](./user-guide.md).
