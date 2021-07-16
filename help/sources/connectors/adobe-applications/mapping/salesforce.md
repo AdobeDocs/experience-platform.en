@@ -14,7 +14,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | Source field | Data type | Target XDM field path | Data type | Notes |
 | --- | --- | --- | --- | --- |
 | `AccountId` | reference | `b2b.accountID` | string |
-| `AccountId` | reference | `personComponents.sourceAccountID` | string
+| `AccountId` | reference | `personComponents.sourceAccountID` | string |
 | `AssistantName` | string | `extendedWorkDetails.assistantDetails.name.fullName` | string |
 | `AssistantPhone` | phone | `extendedWorkDetails.assistantDetails.phone.number` | string |
 | `Birthdate` | date | `person.birthDate` | date |
