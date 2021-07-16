@@ -10,7 +10,7 @@ description: Follow this step-by-step tutorial to get started using event forwar
 
 To use event forwarding in Adobe Experience Platform, data must be sent to Adobe Experience Platform Edge Network using one or more of the following three options:
 
-* [Adobe Experience Platform Web SDK](../../extensions/web/aep-web-sdk/overview.md)
+* [Adobe Experience Platform Web SDK](../../extensions/web/sdk/overview.md)
 * [Adobe Experience Platform Mobile SDK](https://sdkdocs.com)
 * [Server-to-Server API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)
 

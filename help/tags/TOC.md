@@ -69,20 +69,20 @@ feature: Data Collection
     * Adobe Client Data Layer {#client-data-layer}
       * [Overview](./extensions/web/client-data-layer/overview.md)
       * [Release notes](./extensions/web/client-data-layer/release-notes.md)
-    * Adobe ContextHub extension {#contexthub}
+    * Adobe ContextHub {#contexthub}
       * [Overview](./extensions/web/contexthub/overview.md)
-    * Adobe Experience Cloud ID Service extension {#id-service-extension}
-      * [Overview](./extensions/web/experience-cloud-id-service-extension/overview.md)
-      * [Release notes](./extensions/web/experience-cloud-id-service-extension/experience-cloud-id-release-notes.md)
-    * Adobe Experience Platform Demo extension {#platform-demo}
+    * Adobe Experience Cloud ID Service {#id-service}
+      * [Overview](./extensions/web/id-service/overview.md)
+      * [Release notes](./extensions/web/id-service/release-notes.md)
+    * Adobe Experience Platform Demo {#platform-demo}
       * [Overview](./extensions/web/platform-demo/overview.md)
-    * Adobe Experience Platform Web SDK extension {#aep-extension}
-      * [Overview](./extensions/web/aep-web-sdk/overview.md)
-    * Adobe Experience Platform Cloud Connector extension {#aep-cloud-extension}
-      * [Overview](./extensions/web/cloud-connector-extension/cloud-connector-extension.md)
-    * AEM Asset Insights extension {#aem-asset-insights-extension}
-      * [Overview](./extensions/web/aem-asset-insights/aem-asset-insights.md)
-      * [Release notes](./extensions/web/aem-asset-insights/aem-asset-insights-release-notes.md)
+    * Adobe Experience Platform Web SDK extension {#sdk}
+      * [Overview](./extensions/web/sdk/overview.md)
+    * Adobe Experience Platform Cloud Connector extension {#cloud-connector}
+      * [Overview](./extensions/web/cloud-connector/overview.md)
+    * Adobe Experience Manager Asset Insights {#asset-insights}
+      * [Overview](./extensions/web/asset-insights/overview.md)
+      * [Release notes](./extensions/web/asset-insights/release-notes.md)
     * Adobe Media Analytics (3.x SDK) extension {#media-analytics-3x-extension}
       * [Overview](./extensions/web/adobe-media-analytics-3x-for-audio-and-video-extension/overview.md)
       * [Release notes](./extensions/web/adobe-media-analytics-3x-for-audio-and-video-extension/adobe-media-analytics-3x-for-audio-and-video-extension-release-notes.md)

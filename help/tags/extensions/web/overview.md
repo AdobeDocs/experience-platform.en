@@ -20,10 +20,10 @@ The following is a list of documentation for the tag extensions provided by Adob
 * [Adobe Target v2 extension](adobe-target-extension-v2.md)
 * [Common Analytics Plugins extension](common-analytics-plugins-extension/common-analytics-plugins.md)
 * [Core extension](core-extension/overview.md)
-* [Experience Cloud ID Service extension](experience-cloud-id-service-extension/overview.md)
+* [Experience Cloud ID Service extension](id-service/overview.md)
 * [Adobe Experience Platform Demo extension](./platform-demo/overview.md)
-* [Adobe Experience Platform extension](aep-web-sdk/overview.md)
-* [AEM Asset Insights extension](aem-asset-insights/aem-asset-insights.md)
+* [Adobe Experience Platform extension](sdk/overview.md)
+* [AEM Asset Insights extension](asset-insights/overview.md)
 * [Marketo Munchkin extension](marketo-munchkin-extension/overview.md)
 * [Video Tracking BrightCove extension](video-tracking-brightcove-extension/overview.md)
 
