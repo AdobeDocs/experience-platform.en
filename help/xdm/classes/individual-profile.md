@@ -40,7 +40,7 @@ Adobe provides several standard field groups for use with the [!DNL XDM Individu
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md)
+* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 

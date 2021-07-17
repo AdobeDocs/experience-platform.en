@@ -44,7 +44,7 @@ In the current release of consent processing support in Platform, only the data 
 
 >[!NOTE]
 >
->For more information on the structure of the XDM consent fields mentioned above, refer to the guide on the [Consents & Preferences data type](../../../../xdm/data-types/consents.md).
+>For more information on the structure of the XDM consent fields mentioned above, refer to the guide on the [[!UICONTROL Consents and Preferences] data type](../../../../xdm/data-types/consents.md).
 
 Once the system has been configured, the Platform Web SDK interprets the data collection consent value for the current user to determine if the data should be sent to the Adobe Experience Platform Edge Network, dropped from the client, or persisted until the data collection permission is set to either yes or no.
 
@@ -70,7 +70,7 @@ Once you have created a [!DNL Profile]-enabled dataset for processing consent da
 >
 >If you do not have any conflicting datasets, you should set timestamp precedence for your merge policy instead. This helps ensure that the latest consent specified by a customer is the consent setting that is used.
 
-For more information on how to work with merge policies, begin by reading the [merge policies overview](../../../../profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the Consents & Preferences schema field group, as outlined in the guide on [dataset preparation](./dataset.md).
+For more information on how to work with merge policies, begin by reading the [merge policies overview](../../../../profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your profiles include all the required consent attributes provided by the [!UICONTROL Consents and Preferences] schema field group, as outlined in the guide on [dataset preparation](./dataset.md).
 
 ## Bring consent data into Platform
 
