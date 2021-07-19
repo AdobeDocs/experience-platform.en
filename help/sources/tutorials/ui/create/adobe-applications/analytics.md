@@ -51,7 +51,7 @@ The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL 
 
 ### Mapping
 
-The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. Select a target schema to start the mapping process.
+The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
 >
@@ -63,9 +63,9 @@ The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Sta
 
 | Map standard fields | Description |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | Displays the number of mapped standard attributes. |
-| [!UICONTROL Non matching standard mappings] | Displays the number of conflicted mapping sets among all mapped standard attributes. |
-| [!UICONTROL Custom mappings] | Displays the number of mapped custom attributes. This includes eVars and props. |
+| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped standard attributes. Standard mappings refer to mapping sets between standard attributes in the source [!DNL Analytics] data and standard attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
+| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped standard attributes that contain friendly name conflicts. |
+| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and custom attributes in [!DNL Analytics] field group. Custom attributes can be mapped to other custom attributes, as well as standard attributes. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
