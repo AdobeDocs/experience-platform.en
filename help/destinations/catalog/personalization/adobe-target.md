@@ -36,7 +36,7 @@ In the **[!UICONTROL Select available Platform Launch property]** window, select
 
 The workflow takes you to [!DNL Platform Launch] to complete the installation. 
 
-For information about the extension configuration options, see the [Adobe Target extension page](../../../tags/extensions/web/target/overview.md`) in Experience [!DNL Launch] documentation.
+For information about the extension configuration options, see the [Adobe Target extension page](../../../tags/extensions/web/target/overview.md) in Experience [!DNL Launch] documentation.
 
 You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the [!DNL Platform Launch] documentation.
 
