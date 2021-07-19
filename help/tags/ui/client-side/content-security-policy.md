@@ -58,7 +58,7 @@ Content-Security-Policy: script-src 'self' assets.adobedtm.com
 **HTML `<meta>` tag**
 
 
-There is a very important prerequisite: You must load the tag library [asynchronously](https://experienceleague.adobe.com/docs/launch/using/reference/client-side-info/asynchronous-deployment.html). This does not work with a synchronous load of the tag library (which results in console errors and rules not executing properly).
+There is a very important prerequisite: You must load the tag library [asynchronously](./asynchronous-deployment.md). This does not work with a synchronous load of the tag library (which results in console errors and rules not executing properly).
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="script-src 'self' assets.adobedtm.com">

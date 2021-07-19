@@ -18,7 +18,7 @@ description: The latest release notes for the Adobe Target v2 tag extension in A
 
 ### Adobe Target v2 Extension 0.14
 
-- Added a new action Load Target with [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=en#load-target-with-on-device-decisioning), which loads at.js 2.5 with On-Device Decisioning capabilities
+- Added a new action Load Target with [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning), which loads at.js 2.5 with On-Device Decisioning capabilities
 - Updated at.js to 2.5
 
 

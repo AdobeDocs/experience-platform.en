@@ -80,7 +80,7 @@ _satellite.getVisitorId() => Object
 var visitorIdInstance = _satellite.getVisitorId();
 ```
 
-If the [!DNL Adobe Experience Cloud ID] extension is installed on the property, this method returns the Visitor ID instance. See the [Experience Cloud ID Service documentation](https://forums.adobe.com/external-link.jspa?url=https%3A%2F%2Fmarketing.adobe.com%2Fresources%2Fhelp%2Fen_US%2Fmcvid%2F) for more information.
+If the [!DNL Adobe Experience Cloud ID] extension is installed on the property, this method returns the Visitor ID instance. See the [Experience Cloud ID Service documentation](https://experienceleague.adobe.com/docs/id-service/using/home.html) for more information.
 
 ## `logger`
 

@@ -23,5 +23,5 @@ exl-id: 772d96c5-9fa3-4fed-8b38-16b8e7101743
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinteraction.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webinteraction.schema.json)
