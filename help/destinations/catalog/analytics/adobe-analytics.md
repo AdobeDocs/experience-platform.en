@@ -4,7 +4,7 @@ title: Adobe Analytics extension
 description: The Adobe Analytics extension is an analytics destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
 exl-id: 95b6e079-09a6-4262-bd01-11f155286aa9
 ---
-# Adobe Analytics extension {#adobe-analytics-extension}
+# Adobe Analytics extension
 
 ## Overview {#overview}
 
