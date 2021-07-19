@@ -61,7 +61,7 @@ Click **[!UICONTROL Create destination]**. Your destination is now created. You 
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md#select-attributes) for information about the segment activation workflow.
+See [Activate audience data to segment streaming destinations](../../ui/activate-destinations.md#select-attributes) for information about the segment activation workflow.
 
 In the [Segment schedule](../../ui/activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
 
