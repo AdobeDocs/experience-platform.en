@@ -8,6 +8,10 @@ description: The latest release notes for tags in Adobe Experience Platform.
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
+## July 19, 2021
+
+**Adjustments to "Manage Properties" right** - a few months back, we explained that we were making some changes to the Manage Properties right to fix an odd scenario where a user had the permission to create a new property, but could not see it after it was created.  You can read all the details [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176).  This change is now live with permissions being enforced as described in the article.  If you assign the new "Edit Property" right to a user group, you'll notice that the UI has not been updated to enable the fields in the property configuration screen.  We'll be making that fix in an upcoming release.
+
 ## May 17, 2021
 
 **Better handling of unsaved changes** - It used to be that whenever you navigated away from a settings view (extensions, data elements, and rule components), you'd get a prompt on whether you wanted to discard your changes. But the logic for determining that wasn't great, so most of the time you got prompted to save changes even though there weren't any.  That's been fixed.  From now on, you should only see that prompt when you have actually made changes.
