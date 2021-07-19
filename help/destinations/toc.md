@@ -18,13 +18,13 @@ feature: Destinations
     * Create a new destination{#create}
         * [Create a new streaming destination](./ui/create-streaming-destination.md)
         * [Create a new batch destination](./ui/create-batch-destination.md)
+    * [Connect to a destination](./ui/connect-destination.md)
     * Activate audience data to profile-based destinations{#profile}
         * [Activate audience data to streaming profile-based destinations](./ui/activate-streaming-profile-destinations.md)
         * [Activate audience data to batch profile-based destinations](./ui/activate-batch-profile-destinations.md)
     * [Activate audience data to segment streaming destinations](./ui/activate-segment-streaming-destinations.md)
-    * [Connect to a destination](./ui/connect-destination.md)
+
     * [View destination details](./ui/destination-details-page.md)
-    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
