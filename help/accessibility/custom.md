@@ -1,7 +1,7 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Custom Accessibility Solutions for Experience Platform
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Learn more about the custom accessibility solutions within the Adobe Experience Platform user interface.
 ---

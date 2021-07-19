@@ -1,15 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;Azure;azure blob;blob;Blob
 solution: Experience Platform
-title: Create an Azure Blob Source Connection Using the Flow Service API
+title: Create an Azure Blob Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Azure Blob using the Flow Service API.
 exl-id: 4ab8033f-697a-49b6-8d9c-1aadfef04a04
 ---
-# Create an [!DNL Azure Blob] source connection using the [!DNL Flow Service] API
+# Create an [!DNL Azure Blob] base connection using the [!DNL Flow Service] API
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)  to walk you through the steps to connect [!DNL Azure Blob] (hereinafter referred to as "Blob") to Adobe Experience Platform.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
+
+This tutorial walks you through the steps to create a base connection for [!DNL Azure Blob] (hereinafter referred to as "[!DNL Blob]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -28,35 +30,21 @@ In order for [!DNL Flow Service] to connect with your [!DNL Blob] storage, you m
 | ---------- | ----------- |
 | `connectionString` | A string that contains the authorization information necessary to authenticate [!DNL Blob] to Experience Platform. The [!DNL Blob] connection string pattern is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. For more information about connection strings, see this [!DNL Blob] document on [configuring connection strings](https://docs.microsoft.com/en-us/azure/storage/common/storage-configure-connection-string). |
 | `sasUri` | The shared access signature URI that you can use as an alternative authentication type to connect your [!DNL Blob] account. The [!DNL Blob] SAS URI pattern is: `https://{ACCOUNT_NAME}.blob.core.windows.net/?sv=<storage version>&st={START_TIME}&se={EXPIRE_TIME}&sr={RESOURCE}&sp={PERMISSIONS}>&sip=<{IP_RANGE}>&spr={PROTOCOL}&sig={SIGNATURE}>` For more information, see this [!DNL Blob] document on [shared access signature URIs](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-blob-storage#shared-access-signature-authentication).  |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Blob] is: `4c10e202-c428-4796-9208-5f1f5732b1cf` |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Blob] is: `d771e9c1-4f26-40dc-8617-ce58c4b53702`. |
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Blob] authentication credentials as part of the request parameters.
 
-All resources in Experience Platform, including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to Platform APIs require a header that specifies the name of the sandbox the operation will take place in:
+### Create a [!DNL Blob] base connection using connection string-based authentication
 
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Blob] account as it can be used to create multiple dataflows to bring in different data.
-
-### Create a [!DNL Blob] connection using connection string-based authentication
-
-To create a [!DNL Blob] connection using connection string-based authentication, make a POST request to the [!DNL Flow Service] API while providing your [!DNL Blob] `connectionString`.
+To create a [!DNL Blob] base connection using connection string-based authentication, make a POST request to the [!DNL Flow Service] API while providing your [!DNL Blob] `connectionString`.
 
 **API format**
 
@@ -66,7 +54,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL Blob] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Blob] is `4c10e202-c428-4796-9208-5f1f5732b1cf`.
+The following request creates a base connection for [!DNL Blob] using connection string-based authentication:
 
 ```shell
 curl -X POST \
@@ -99,7 +87,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {
@@ -108,11 +96,11 @@ A successful response returns details of the newly created connection, including
 }
 ```
 
-### Create a [!DNL Blob] connection using shared access signature URI
+### Create a [!DNL Blob] base connection using shared access signature URI
 
 A shared access signature (SAS) URI allows for secure delegated authorization to your [!DNL Blob] account. You can use SAS to create authentication credentials with varying degrees of access, as a SAS-based authentication allows you to set permissions, start and expiry dates, as well as provisions to specific resources.
 
-To create a [!DNL Blob] connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
+To create a [!DNL Blob] blob connection using shared access signature URI, make a POST request to the [!DNL Flow Service] API while providing values for your [!DNL Blob] `sasUri`.
 
 **API format**
 
@@ -121,6 +109,8 @@ POST /connections
 ```
 
 **Request**
+
+The following request creates a base connection for [!DNL Blob] using shared access signature URI:
 
 ```shell
 curl -X POST \
@@ -153,7 +143,7 @@ curl -X POST \
 
 **Response**
 
-A successful response returns details of the newly created connection, including its unique identifier (`id`). This ID is required to explore your storage in the next tutorial.
+A successful response returns details of the newly created base connection, including its unique identifier (`id`). This ID is required in the next step to create a source connection.
 
 ```json
 {

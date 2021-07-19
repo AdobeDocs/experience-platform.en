@@ -439,10 +439,10 @@ curl -X POST https://dcs.adobedc.net/collection/2301a1f761f6d7bf62c5312c535e1076
           "country": "United State of America",
           "address": "3692 Main Street"
       },
-      "gender": "Male"
+      "gender": "Male",
       "birthday": {
-          "year": 1984
-          "month": 6
+          "year": 1984,
+          "month": 6,
           "day": 9
       }
   }'
