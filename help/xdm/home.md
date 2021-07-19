@@ -28,6 +28,14 @@ Before data can be ingested into [!DNL Platform], a schema must be composed to d
 
 For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](schema/composition.md).
 
+### Standard XDM components
+
+XDM provides a robust collection of standard field groups and data types, which are intended to capture common concepts and use cases across multiple industries. Experience Platform allows you to filter these components by industry, enabling you to quickly and confidently construct schemas that best support your particular business needs.
+
+When constructing schemas in the Experience Platform UI, listed field groups are shown with a popularity metric. This metric is determined by how often other Platform users employ the field group in their schemas. By default, results are displayed from most popular to least popular, keeping you informed of data modeling trends in your industry.
+
+![Field group popularity](./images/overview/popularity.png)
+
 ### [!DNL Schema Registry] and [!DNL Schema Library]
 
 The **[!DNL Schema Registry]** provides a user interface and RESTful API from which you can view and manage all schema-related resources in the Adobe Experience Platform **[!DNL Schema Library]**. The [!DNL Schema Library] contains industry-standard resources made available to you by Adobe, as well as resources from [!DNL Experience Platform] partners and vendors whose applications you use. The Schema Registry UI and API can also be used to create and manage new schemas and resources that are unique to your organization.
