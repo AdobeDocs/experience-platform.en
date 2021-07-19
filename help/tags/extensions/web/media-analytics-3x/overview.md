@@ -45,7 +45,7 @@ After you have included all three of the extensions mentioned above in your tags
 | Export APIs to Window Object | Enable or Disable exporting Media Analytics APIs to global scope |
 | Variable Name | A variable you use to export Media Analytics APIs under the `window` object |
 
-**Reminder:** The MA extension requires the [Analytics](../analytics/overview.md) and [Experience Cloud ID](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/id-service-extension/overview.html) extensions. You must also add these extensions to your extension property and configure them.
+**Reminder:** The MA extension requires the [Analytics](../analytics/overview.md) and [Experience Cloud ID](../id-service/overview.md) extensions. You must also add these extensions to your extension property and configure them.
 
 ## Using the MA extension
 
@@ -103,4 +103,4 @@ The MA extension exposes `media` as a shared module to other extensions. (For ad
 
 >[!NOTE]
 >
->**Testing:** For this release, to test your extension you must upload it to [Platform](https://github.com/Adobe-Marketing-Cloud/reactor-user-docs/tree/73a73bd5ff53162339ce5ded3f4bba4712146d20/extension-reference/launch.adobe.com), where you have access to all dependent extensions.
+>**Testing:** For this release, to test your extension you must upload it to [Platform](../../../extension-dev/submit/upload-and-test.md), where you have access to all dependent extensions.

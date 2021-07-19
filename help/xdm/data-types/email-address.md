@@ -26,5 +26,5 @@ exl-id: 1364df42-f89f-4f48-bcda-5332f3828326
 
 For more details on the email address data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/emailaddress.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/emailaddress.schema.json)

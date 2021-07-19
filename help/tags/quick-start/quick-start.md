@@ -129,8 +129,6 @@ For more information about the different states and options available during the
 
 To learn more about tags, refer to these resources:
 
-[https://forums.adobe.com/community/experience-cloud/platform/launchAsk](https://forums.adobe.com/community/experience-cloud/platform/launchAsk) and answer questions, submit ideas, vote on the ideas of others. Log in with your Adobe ID.
-
 * **[Data Collection Community](https://forums.adobe.com/community/experience-cloud/platform/launch)**: Ask and answer questions, submit ideas, vote on the ideas of others. Log in with your Adobe ID.
 * **[Developer Docs](https://developer.adobelaunch.com/)**: Get involved with the tags developer community to build extensions or use the tags APIs
 * **[Tutorials Overview](https://experienceleague.adobe.com/docs/core-services-learn/tutorials/overview.html)**: These documents introduce you to tags concepts including event forwarding and Mobile SDK in Android Apps.
