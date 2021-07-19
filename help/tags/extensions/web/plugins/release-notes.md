@@ -4,6 +4,14 @@ description: The latest release notes for the Common Analytics Plugins tag exten
 ---
 # Common Analytics Plugins release notes
 
+## June 23, 2021
+
+### Common Analytics Plugins Extension 3.0.6
+
+#### Bug Fixes
+
+* Fixed issue where getPercentPageViewed would break when using special characters
+
 ## May 20, 2021
 
 ### Common Analytics Plugins Extension 3.0.5
