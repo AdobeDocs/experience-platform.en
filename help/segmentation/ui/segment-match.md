@@ -57,7 +57,7 @@ The opt-in and opt-out consent check determines whether you can operate with the
 
 The default consent configuration for [!DNL Segment Match] is set to `opt-out`. To enforce an opt-in model for your data, please send an email request to your Adobe Account Manager.
 
-For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent-preferences.schema.md).
+For more information on the `share` attribute used to set data-sharing consent value, see the the following documentation on [privacy and consents field group](../../xdm/field-groups/profile/consents.md). For information on the specific field group used to capture consumer consent for collection and use of data related to privacy, personalization and marketing preferences, see the following [Consent for Privacy, Personalization and Marketing Preferences GitHub example](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/consent/consent-preferences.schema.md).
 
 ### Configure data usage labels
 
