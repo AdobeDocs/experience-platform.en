@@ -10,7 +10,11 @@ description: The latest release notes for tags in Adobe Experience Platform.
 
 ## July 19, 2021
 
-**Adjustments to "Manage Properties" right** - a few months back, we explained that we were making some changes to the Manage Properties right to fix an odd scenario where a user had the permission to create a new property, but could not see it after it was created.  You can read all the details [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176).  This change is now live with permissions being enforced as described in the article.  If you assign the new "Edit Property" right to a user group, you'll notice that the UI has not been updated to enable the fields in the property configuration screen.  We'll be making that fix in an upcoming release.
+**Adjustments to "Manage Properties" right** - The Manage Properties right encountered an issue where a user had the permission to create a new property but could not see it after it was created (as outlined in the community thread [here](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/technical-advisory-adjustments-to-the-manage-properties/ba-p/399176)). A fix is now live with permissions being enforced as described in the article.
+
+>[!NOTE]
+>
+>If you assign the new "Edit Property" right to a user group, the UI will not update to enable the fields in the property configuration screen. A fix for this issue will be implemented in an upcoming release.
 
 ## May 17, 2021
 
