@@ -44,6 +44,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadOperation.convertLead.isSentNotificationEmail` | `leadOperation.convertLead.isSentNotificationEmail` |
 | `directMarketing.mailingID` | `directMarketing.mailingID` |
 | `directMarketing.mailingName` | `directMarketing.mailingName` |
+| `directMarketing.testVariantName` | `directMarketing.testVariantName` |
 | `directMarketing.testVariantID` | `directMarketing.testVariantID` |
 | `directMarketing.emailBouncedCode` | `directMarketing.emailBouncedCode` |
 | `directMarketing.emailBouncedDetails` | `directMarketing.emailBouncedDetails` |
@@ -77,6 +78,10 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadOperation.campaignProgression.oldStatusID` | `leadOperation.campaignProgression.oldStatusID` |
 | `leadOperation.campaignProgression.oldStatusName` | `leadOperation.campaignProgression.oldStatusName` |
 | `leadOperation.campaignProgression.reason` | `leadOperation.campaignProgression.reason` |
+| `leadOperation.interestingMoment.date` | `leadOperation.interestingMoment.date` |
+| `leadOperation.interestingMoment.description` | `leadOperation.interestingMoment.description` |
+| `leadOperation.interestingMoment.source` | `leadOperation.interestingMoment.source` |
+| `leadOperation.interestingMoment.type` | `leadOperation.interestingMoment.type` |
 
 {style="table-layout:auto"}
 
