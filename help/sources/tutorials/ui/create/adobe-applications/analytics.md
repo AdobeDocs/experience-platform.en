@@ -26,6 +26,7 @@ It is important to understand the following key terms used throughout this docum
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
 * **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, Props, and lists.
 * **Any attribute in Custom field groups**: Attributes that originate from schema field groups created by customers are all user-defined and are considered to be neither standard nor custom attribute.
+* **Friendly names**: DEFINITION TO BE ADDED
 
 ## Create a source connection with Adobe Analytics
 
