@@ -104,7 +104,7 @@ Create your property in the Data Collection UI, then use the Adobe Experience Pl
 
 1. Select the Edge Domain.
 
-See the [Web SDK extension documentation](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) for more configuration options.
+See the [Web SDK extension documentation](../../extensions/web/sdk/overview.md) for more configuration options.
 
 ## Create a tag rule to send data to Platform Web SDK
 

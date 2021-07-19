@@ -400,4 +400,4 @@ The following table outlines the accepted values for `preferred`:
 
 ### Full [!UICONTROL Consents and Preferences] schema {#full-schema}
 
-To view the full schema for the [!UICONTROL Consents and Preferences] field group, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent-preferences.schema.json).
+To view the full schema for the [!UICONTROL Consents and Preferences] field group, refer to the [official XDM repository](https://github.com/adobe/xdm/blob/master/components/datatypes/consent/consent-preferences.schema.json).
