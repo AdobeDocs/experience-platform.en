@@ -117,39 +117,41 @@ To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring
 
 At the center of the dashboard is the Activation panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
 
-IMAGE
+![](../assets/ui/monitor-destinations/dashboard-graph.png)
+
 
 By default, the data displayed contains the activation rates from the last 24 hours. Select **[!UICONTROL Last 24 hours]** to adjust the time frame of records displayed. Available options include **[!UICONTROL Last 24 hours]**, **[!UICONTROL Last 7 days]**, and **[!UICONTROL Last 30 days]**. Alternatively, you can select the dates on the calendar pop-up window that appears. Once you have selected dates, select **[!UICONTROL Apply]** to adjust the time frame of the information shown.
 
-IMAGE
+>[!NOTE]
+>
+>The following screenshot shows the activation rate for the last 30 days instead of the last 24 hours. You can adjust the time frame by selecting **[!UICONTROL Last 30 days]**.
+
+![](../assets/ui/monitor-destinations/dashboard-graph-change-date-range.png)
 
 The graph is displayed by default and you can disable it to expand the list of destinations below. Select the **[!UICONTROL Metrics and graphs]** toggle to disable the graphs.
 
-IMAGE
+The **[!UICONTROL Activation]** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, profile records activated, profile records failed, profile records skipped, total failed dataflows, and the last updated date for these destinations.
 
-The **Activation** panel displays a list of destinations that contain at least one existing account. This list also includes information on the profiles received, profile records activated, profile records failed, profile records skipped, total failed dataflows, and the last updated date for these destinations.
+![](../assets/ui/monitor-destinations/dashboard-destinations.png)
 
-IMAGE
+You can also filter your list of destinations to only display the selected category of destinations. Select the **[!UICONTROL My destinations]** dropdown, and select the destination type you want to filter to. 
 
-You can also filter your list of destinations to only display the selected category of destinations. Select the **My destinations** dropdown, and select the destination type you want to filter to. 
+![](../assets/ui/monitor-destinations/dashboard-destinations-filter-dropdown.png)
 
-IMAGE
+Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside it to see a list of its active dataflows.
 
-Additionally, you can enter a destination into the search bar to isolate to a single destination. If you want to see the destination's dataflows you can select the filter icon ICON beside it to see a list of its active dataflows.
+![](../assets/ui/monitor-destinations/filtered-destinations.png)
 
-IMAGE
+If you want to view all existing dataflows across all destinations, select **[!UICONTROL Dataflows]**.
 
-If you want to view all existing dataflows across all destinations, select **Dataflows**.
+A list of dataflows appears, grouped on a per-destination basis. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside it, and then subsequently selecting the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside the dataflow you want more information about.
 
-IMAGE
+![](../assets/ui/monitor-destinations/dashboard-dataflows.png)
 
-A list of dataflows appears, grouped on a per-destination basis. You can see additional details for a specific dataflow by locating the destination you want to monitor, selecting the filter icon ICON beside it, and then subsequently selecting the filter icon ICON beside the dataflow you want more information about.
 
-IMAGE
+The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter ![filter](../assets/ui/monitor-destinations/filter.png) beside the dataflow run start time.
 
-The dataflow runs page displays information on your dataflow runs, including the dataflow run start time, processing time, profiles received, identities activated, identities excluded, identities failed, activation rate, and status. To see more details about a specific dataflow run, select the filter icon ICON beside the dataflow run start time.
-
-IMAGE
+![](../assets/ui/monitor-destinations/dashboard-dataflows-filter.png)
 
 The dataflows details page, in addition to the details shown on the dataflows list, displays more specific information about the dataflow:
 
@@ -159,7 +161,7 @@ The dataflows details page, in addition to the details shown on the dataflows li
 
 The details page also displays a list of identities that failed and identities that were excluded. Information for both the failed and excluded identities is displayed, including the error code, identity count, and description. By default, the list displays the failed identities. To show skipped identities, select the **[!UICONTROL Identities excluded]** toggle.
 
-IMAGE
+![](../assets/ui/monitor-destinations/identities-excluded.png)
 
 ## Next steps
 
