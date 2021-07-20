@@ -109,7 +109,7 @@ The canvas reappears, showing that the `consents` object has been added to the s
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 
-If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK edge configuration, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
+If the schema you edited is used by the [!UICONTROL Profile Dataset] specified in your Platform Web SDK datastream, that dataset will now include the new consent fields. You can now return to the [consent processing guide](./overview.md#merge-policies) to continue the process of configuring Experience Platform to process consent data.
 
 If you have not created a dataset for this schema, follow the steps in the next section.
 
@@ -143,7 +143,7 @@ Finally, select **[!UICONTROL Enable]** in the confirmation popover to enable th
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/enable-dataset.png)
 
-The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [edge configuration](../../../../edge/fundamentals/datastreams.md).
+The dataset is now saved and enabled for use in [!DNL Profile]. If you are planning using the Platform Web SDK to send consent data to Profile, you must select this dataset as the [!UICONTROL Profile Dataset] when setting up your [datastream](../../../../edge/fundamentals/datastreams.md).
 
 ## Next steps
 

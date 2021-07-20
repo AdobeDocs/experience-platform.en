@@ -57,7 +57,7 @@ In the Data Collection UI create a property of type "Edge."
 1. Select **[!UICONTROL Save]**.
 
 After you create the property, go to the **[!UICONTROL Environments]** tab for the new property and make
-note of the environment IDs. If the Adobe Org used in the datastream differs from the Adobe Org used in event forwarding, you can copy the Environment ID from the **[!UICONTROL Environments]** tab and paste it when creating an datastream. Otherwise, you can select the environment from a drop-down menu.
+note of the environment IDs. If the Adobe Org used in the datastream differs from the Adobe Org used in event forwarding, you can copy the Environment ID from the **[!UICONTROL Environments]** tab and paste it when creating a datastream. Otherwise, you can select the environment from a drop-down menu.
 
 ## Create a datastream
 
