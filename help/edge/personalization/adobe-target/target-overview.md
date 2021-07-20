@@ -128,6 +128,49 @@ If you have [!DNL Target] activities with predefined audiences that use custom p
 
 For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in the *Adobe Target guide*.
 
+### Response Tokens
+
+Response Tokens are used mainly by our customers when they want to send metadata to third parties like Google, Facebook etc.
+We are returning the metadata at the item level:
+```          
+"id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+"scope": "__view__",
+"scopeDetails": { ... },
+"renderAttempted": true,
+"items": [{
+        "id": "0",
+        "schema": "https://ns.adobe.com/personalization/dom-action",
+        "meta": {
+            "experience.id": "0",
+            "activity.id": "126736",
+            "offer.name": "Default Content",
+            "offer.id": "0"
+            }
+        }]
+  ```
+
+In order to use the response tokens you'll need to wait till the `sendEvent` command promise resolves and use the `propositions` object.
+`Propositions` object is an array of decisions. Every decision will have a `renderAttempted` boolean flag (true or false).
+When you  have automatic rendering enabled, propositions  array will contain:
+
+#### On Page-Load:
+- formed based composed decisions with `renderAttempted: false`
+- page-load decisions with `renderAttempted: true`
+- current view decisions from cache with `renderAttempted: true`
+
+#### On View - change (when only cache is used):
+- current view decisions with `renderAttempted: true`
+
+When you  have automatic rendering disabled, propositions  array will contain:
+
+#### On Page-Load:
+- formed based composed decisions with `renderAttempted: false`
+- page-load decisions with `renderAttempted: false`
+- current view decisions from cache with `renderAttempted: false`
+
+#### On View - change (when only cache is used):
+- current view decisions with `renderAttempted: false`
+
 ### Single profile update
 
 The [!DNL Platform Web SDK] lets you update the profile to the [!DNL Target] profile and to the [!DNL Platform Web SDK] as an experience event.
