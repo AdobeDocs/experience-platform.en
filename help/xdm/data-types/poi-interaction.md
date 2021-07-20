@@ -22,5 +22,5 @@ exl-id: 398f56d9-1802-458d-b565-4096beb5b014
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/poi-interaction.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/poi-interaction.schema.json)

@@ -22,7 +22,7 @@ Honoring customer consent values requires an understanding of the various [!DNL 
 
 ## Consent schema fields
 
-In order to honor customer consents and preferences, one of the schemas that is a part of your [!UICONTROL XDM Individual Profile] union schema must contain the standard field group **[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]**.
+In order to honor customer consents and preferences, one of the schemas that is a part of your [!UICONTROL XDM Individual Profile] union schema must contain the standard field group **[!UICONTROL Consents and Preferences]**.
 
 For details on the structure and intended use case of each of the attributes provided by the field group, see the [consents and preferences reference guide](../xdm/field-groups/profile/consents.md). For step-by-step instructions on how to add a field group to a schema, refer to the [XDM UI guide](../xdm/ui/resources/schemas.md#add-field-groups).
 
