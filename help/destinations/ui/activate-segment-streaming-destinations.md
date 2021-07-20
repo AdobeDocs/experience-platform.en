@@ -133,16 +133,13 @@ Attribute source data is not automatically hashed. When your source field contai
 
         ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
-
     * Some destinations require you to manually map [!DNL Platform] segments to their counterpart in the target destination. To do this, select each segment, then enter the corresponding segment ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
 
         ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
 
-
     * Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] segments. If your destination does not include this field, skip this step.
 
         ![App ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
-
 
 1. Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.
 
