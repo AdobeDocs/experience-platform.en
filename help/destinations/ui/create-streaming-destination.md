@@ -48,8 +48,8 @@ Follow the steps below to create a new destination instance from scratch.
 
 ## Next steps: activate audience data to your destination {#activate}
 
-Now that you have created your destination instance, you can start sending audience data to it. See the following guides for detailed instructions on how to send audience data to your streaming destinations:
+<!-- Now that you have created your destination instance, you can start sending audience data to it. See the following guides for detailed instructions on how to send audience data to your streaming destinations:
 
 * [Activate audiences to advertising destinations](activate-advertising-destinations.md)
-* [Activate audiences to social destinations](activate-social-destinations.md)
+* [Activate audiences to social destinations](activate-social-destinations.md) -->
 
