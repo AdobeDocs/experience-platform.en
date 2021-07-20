@@ -14,7 +14,7 @@ To send segment data to Adobe Campaign, you must first [connect the destination]
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the **[!UICONTROL Select attributes]** step of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen in the **[!UICONTROL Select attributes]** step of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#mapping).
 
 ## IP address allow list {#allow-list}
 
@@ -57,19 +57,19 @@ In **[!UICONTROL Account authentication]**, fill in the relevant information for
 
 ![Campaign basic information](../../assets/catalog/email-marketing/adobe-campaign/basic-information.png)
 
-Select **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now connected and you can [activate segments](../../ui/activate-destinations.md) to the destination.
+Select **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now connected and you can [activate segments](../../ui/activate-batch-profile-destinations.md) to the destination.
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the Adobe Campaign destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes). 
+When [activating segments](../../ui/activate-batch-profile-destinations.md) to the Adobe Campaign destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes). 
 
 ## Exported data {#exported-data}
 
-For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Adobe Campaign] destinations, [!DNL Platform] creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial. 
 
 ## Set up data import into Adobe Campaign {#import-data-into-campaign}
 

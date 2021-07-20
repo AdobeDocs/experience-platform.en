@@ -6,6 +6,7 @@ seo-title: Activate audience data to segment streaming destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to segment streaming destinations.
 ---
+
 # Activate audience data to segment streaming destinations
 
 ## Overview {#overview}
@@ -128,19 +129,19 @@ Attribute source data is not automatically hashed. When your source field contai
 
     ![Segment schedule](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
 
-1. Some destinations require you to select the **[!UICONTROL Origin of audience]** for each segment, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
+    * Some destinations require you to select the **[!UICONTROL Origin of audience]** for each segment, using the drop-down menu underneath the calendar selectors. If your destination does not include this selector, skip this step.
 
-    ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
-
-
-1. Some destinations require you to manually map [!DNL Platform] segments to their counterpart in the target destination. To do this, select each segment, then enter the corresponding segment ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
-
-    ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+        ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/origin-of-audience.png)
 
 
-1. Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] segments. If your destination does not include this field, skip this step.
+    * Some destinations require you to manually map [!DNL Platform] segments to their counterpart in the target destination. To do this, select each segment, then enter the corresponding segment ID from the destination platform in the **[!UICONTROL Mapping ID]** field. If your destination does not include this field, skip this step.
 
-    ![App ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
+        ![Mapping ID](../assets/ui/activate-segment-streaming-destinations/mapping-id.png)
+
+
+    * Some destinations require you to enter an **[!UICONTROL App ID]** when activating [!DNL IDFA] or [!DNL GAID] segments. If your destination does not include this field, skip this step.
+
+        ![App ID](../assets/ui/activate-segment-streaming-destinations/destination-appid.png)
 
 
 1. Select **[!UICONTROL Next]** to go to the [!UICONTROL Review] page.

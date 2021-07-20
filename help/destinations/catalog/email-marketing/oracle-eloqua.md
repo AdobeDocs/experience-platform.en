@@ -12,7 +12,7 @@ To send segment data to [!DNL Oracle Eloqua], you must first [connect the destin
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md#mapping).
 
 ## IP address allow list {#allow-list}
 
@@ -60,19 +60,19 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ![Eloqua basic information](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
 
-Click **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now created and you can [activate segments](../../ui/activate-destinations.md) to the destination.
+Click **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now created and you can [activate segments](../../ui/activate-batch-profile-destinations.md) to the destination.
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the [!DNL Oracle Eloqua] destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes).
+When [activating segments](../../ui/activate-batch-profile-destinations.md) to the [!DNL Oracle Eloqua] destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes).
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Eloqua] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Oracle Eloqua] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial. 
 
 ## Set up data import into [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

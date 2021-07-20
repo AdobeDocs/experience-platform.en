@@ -70,9 +70,9 @@ Click **[!UICONTROL Create destination]**. Your destination is now created. You 
 
 ## Activate segments {#activate-segments}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md#select-attributes) for information about the segment activation workflow.
+See [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md). for information about the segment activation workflow.
 
-In the [Segment schedule](../../ui/activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments to their corresponding ID or friendly name in the destination.
 
 When mapping segments, we recommend you use the [!DNL Platform] segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your [!DNL Platform] account. Any value you insert in the mapping field will be reflected by the destination.
 

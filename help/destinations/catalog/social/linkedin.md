@@ -65,7 +65,7 @@ If you select to hash the email addresses yourself, make sure to comply with the
 >Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 > Attribute source data is not automatically hashed.
 > 
-> During the [Identity Mapping](../../ui/activate-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> During the [Mapping](../../ui/activate-segment-streaming-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
@@ -81,7 +81,7 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 ## Activate segments to [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
 
 ## Exported data {#exported-data}
 

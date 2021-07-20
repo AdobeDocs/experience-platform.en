@@ -81,7 +81,7 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
 
 ## Activate segments to [!DNL Google Display & Video 360]
 
-For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
 
 ## Exported data 
 

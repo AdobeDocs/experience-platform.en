@@ -60,4 +60,4 @@ Your destination is now created. You can select **[!UICONTROL Save & Exit]** if 
 
 ## Activate segments to social destinations {#activate-segments}
 
-For instructions on how to activate segments to social destinations, see [Activate Data to Destinations](../../ui/activate-destinations.md).
+For instructions on how to activate segments to social destinations, see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
