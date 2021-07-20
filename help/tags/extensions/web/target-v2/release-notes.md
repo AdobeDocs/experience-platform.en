@@ -8,6 +8,30 @@ description: The latest release notes for the Adobe Target v2 tag extension in A
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## July 20, 2021
+
+### Adobe Target v2 Extension 0.15.1
+
+- Fixed an issue with a `stringify` function name clash, which led to incorrect UUID values being generated for `sessionId`, `requestId`, and so on.
+
+## July 16, 2021
+
+### Adobe Target v2 Extension 0.15.0
+
+- Add secure attribute to cookies whenever at.js settings secureOnly is set to true
+- Response tokens are now available when using `triggerView()`
+- Fixed a bug related to `CONTENT_RENDERING_NO_OFFERS` event. Now it is triggered correctly whenever there is not content returned from Target
+- A4T click metrics details are correctly returned when using prefetch requests
+- UUID generation no longer uses `Math.random()`, but relies on `window.crypto`
+- `sessionId` cookie expiry is correctly extended on every network call
+- SPA view cache initialization is now correctly handled and it honors `viewsEnable` settings
+
+## June 2, 2021
+
+### Adobe Target v2 Extension 0.14.2
+
+- Fix a bug where the final Launch bundle contains two at.js versions, one with On-Device Decisioning and one without.
+
 ## May 19, 2021
 
 ### Adobe Target v2 Extension 0.14.1
@@ -18,7 +42,7 @@ description: The latest release notes for the Adobe Target v2 tag extension in A
 
 ### Adobe Target v2 Extension 0.14
 
-- Added a new action Load Target with [On-Device Decisioning](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/targetv2-extension/adobe-target-extension-v2.html?lang=en#load-target-with-on-device-decisioning), which loads at.js 2.5 with On-Device Decisioning capabilities
+- Added a new action Load Target with [On-Device Decisioning](./overview.md#load-target-with-on-device-decisioning), which loads at.js 2.5 with On-Device Decisioning capabilities
 - Updated at.js to 2.5
 
 

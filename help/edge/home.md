@@ -6,7 +6,7 @@ exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
 # Adobe Experience Platform Web SDK overview
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is an [Experience Platform Launch extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) to help with your Web SDK configurations.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is an [Experience Platform Launch extension](../tags/extensions/web/sdk/overview.md) to help with your Web SDK configurations.
 
 ## Experience Edge
 

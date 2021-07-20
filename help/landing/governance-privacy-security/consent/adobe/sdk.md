@@ -20,19 +20,19 @@ In addition, this guide requires a working understanding of Adobe Experience Pla
 * [Quickstart guide](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
 * [Publishing overview](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
 
-## Set up an edge configuration
+## Set up a datastream
 
-In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. 
+In order for the SDK to send data to Experience Platform, you must have an existing datastream for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. 
 
 After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the values listed below to complete the form.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Edge configuration field | Value |
+| Datastream field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
+| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
+| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform datastream, please note that sending consent data directly via events is not currently supported. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
 
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
@@ -40,11 +40,11 @@ When finished, select **[!UICONTROL Save]** at the bottom of the screen and cont
 
 ## Install and configure the Platform Web SDK extension
 
-Once you have created an edge configuration as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your Platform Launch property, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Then, select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
+Once you have created a datastream as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your Platform Launch property, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Then, select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-When configuring the SDK, under **[!UICONTROL Edge Configurations]**, select the configuration you created in the previous step.
+When configuring the SDK, under **[!UICONTROL Edge Configurations]**, select the datastream you created in the previous step.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 

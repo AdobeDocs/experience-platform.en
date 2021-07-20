@@ -38,5 +38,5 @@ exl-id: 94457fe5-80bc-4822-9f6c-48f77d56c89b
 
 For more details on the postal address data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/address.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/address.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/address.schema.json)

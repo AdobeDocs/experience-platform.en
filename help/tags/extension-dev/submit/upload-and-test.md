@@ -222,9 +222,3 @@ When you discover changes that need to be made to your extension package, the it
 1. Modify resources - if the configuration for any of your extension components has been changed, you will need to update those resources in the Data Collection UI.
 1. Add your latest changes to your Library and build again.
 1. Complete another round of tests.
-
-<!--
-## Document {#document}
-
-Your [exchange listing](./create-listing.md) is a great place for marketing and support information for your extension, but our tags [Help Docs](https://experienceleague.adobe.com/docs/launch/using/overview.html) are used every day by our customers. We encourage you to submit a pull request to [add your extension documentation](https://github.com/AdobeDocs/launch.en/blob/master/help/extension-reference/3rd-party-extensions.md) into the tags user docs. Open source docs for the win! 🚀
--->
