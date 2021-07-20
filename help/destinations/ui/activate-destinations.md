@@ -138,17 +138,17 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports. Exporting a full file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
 
-  >[!IMPORTANT]
-  >
-  >When setting the start and end date, the **[!UICONTROL Start Date]** indicates when the file exports are scheduled to start and the **[!UICONTROL End Date]** indicates when the file exports are scheduled to stop. The file exports start on the **[!UICONTROL Start Date]**, but do not include the **[!UICONTROL End Date]**.
-  >
-  >For example, if you set the following schedule:
-  >
-  >* Export: Incremental every 3 hours
-  >* Start Date: 7/19
-  >* End Date: 7/21
-  >
-  >Files will start exporting on 7/19 and will stop exporting on 7/20 at 23:59:59 UTC. There will not be any files delivered on 7/21.
+    >[!IMPORTANT]
+    >
+    >When setting the start and end date, the **[!UICONTROL Start Date]** indicates when the file exports are scheduled to start and the **[!UICONTROL End Date]** indicates when the file exports are scheduled to stop. The file exports start on the **[!UICONTROL Start Date]**, but do not include the **[!UICONTROL End Date]**.
+    >
+    >For example, if you set the following schedule:
+    >
+    >* Export: Incremental every 3 hours
+    >* Start Date: 7/19
+    >* End Date: 7/21
+    >
+    >Files will start exporting on 7/19 and will stop exporting on 7/20 at 23:59:59 UTC. There will not be any files delivered on 7/21.
 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
