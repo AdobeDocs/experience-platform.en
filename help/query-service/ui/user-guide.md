@@ -108,7 +108,9 @@ The query details page re-appears, and now showing the details of the newly crea
 
 >[!NOTE]
 >
-> You can only schedule **one** query template at a time. Additionally, you should refresh the page if you want to ensure you have the latest state for the schedule you are viewing.
+> You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will **not** be add additional schedules using the UI. If multiple schedules are already attached to a query template, only the oldest schedule will be displayed. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
+>
+> Additionally, you should refresh the page if you want to ensure you have the latest state for the schedule you are viewing.
 
 #### Delete a schedule
 
