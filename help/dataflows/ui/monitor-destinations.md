@@ -113,7 +113,8 @@ The details page also displays a list of identities that failed and identities t
 
 ## Monitoring Destinations dashboard
 
-To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
+To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)
+) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.
 
 At the center of the dashboard is the Activation panel, which contains metrics and graphs that display data on the activation rate of the data which is exported to destinations.
 
