@@ -8,6 +8,10 @@ description: Learn how to create a Salesforce Marketing Cloud source connection 
 ---
 # Create a [!DNL Salesforce Marketing Cloud] source connection in the UI
 
+>[!NOTE]
+>
+> The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce Marketing Cloud] source connector using the Platform user interface.
 
 ## Getting started

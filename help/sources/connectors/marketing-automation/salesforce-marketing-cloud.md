@@ -1,12 +1,15 @@
 ---
 keywords: Experience Platform;home;popular topics;salesforce marketing cloud;Salesforce Marketing Cloud;marketing automation
 solution: Experience Platform
-title: Salesforce Marketing Cloud Source Connector Overview
+title: Salesforce Marketing Cloud Source Overview
 topic-legacy: overview
 description: Learn how to connect Salesforce Marketing Cloud to Adobe Experience Platform using APIs or the user interface.
-
 ---
-# [!DNL Salesforce Marketing Cloud] connector
+# (Beta) [!DNL Salesforce Marketing Cloud]
+
+>[!NOTE]
+>
+>The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 

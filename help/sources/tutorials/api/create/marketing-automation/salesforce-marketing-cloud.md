@@ -9,6 +9,10 @@ exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 ---
 # Create a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API
 
+>[!NOTE]
+>
+>The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Salesforce Marketing Cloud] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
