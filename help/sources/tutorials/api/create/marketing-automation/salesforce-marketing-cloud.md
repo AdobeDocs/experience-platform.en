@@ -11,7 +11,7 @@ exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 
 >[!NOTE]
 >
->The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Salesforce Marketing Cloud] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
@@ -21,10 +21,14 @@ This tutorial walks you through the steps to create a base connection for [!DNL 
 
 This guide requires a working understanding of the following components of Adobe Experience Platform:
 
-* [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
-* [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
+* [Sources](../../../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
+* [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Salesforce Marketing Cloud] using the [!DNL Flow Service] API.
+### Using Platform APIs
+
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+
+The following section provides additional information that you will need to know in order to successfully connect to [!DNL Salesforce Marketing Cloud] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
@@ -39,15 +43,11 @@ In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Clou
 
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
-### Using Platform APIs
-
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
-
 ## Create a base connection
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Marketing Cloud] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Marketing Cloud] authentication credentials as part of the request body.
 
 **API format**
 
@@ -82,7 +82,7 @@ curl -X POST \
             "id": "cea1c2a08-b722-11eb-8529-0242ac130003",
             "version": "1.0"
         }
-    }
+    }'
 ```
 
 | Property | Description |

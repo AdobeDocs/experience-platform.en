@@ -10,7 +10,7 @@ description: Learn how to create a Salesforce Marketing Cloud source connection 
 
 >[!NOTE]
 >
-> The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+> The [!DNL Salesforce Marketing Cloud] source is in beta. See the [sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Salesforce Marketing Cloud] source connector using the Platform user interface.
 
@@ -43,7 +43,7 @@ Once you have gathered your required credentials, you can follow the steps below
 
 In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
 
-You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
+You can select the appropriate category from the catalog on the left-hand side of your screen. You can also use the search bar to narrow down the displayed connectors.
 
 Under the [!UICONTROL Marketing automation] category, select **[!UICONTROL Salesforce Marketing Cloud]** and then select **[!UICONTROL Set up]**.
 

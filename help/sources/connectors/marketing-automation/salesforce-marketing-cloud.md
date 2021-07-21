@@ -9,11 +9,11 @@ description: Learn how to connect Salesforce Marketing Cloud to Adobe Experience
 
 >[!NOTE]
 >
->The [!DNL Salesforce Marketing Cloud] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
+>The [!DNL Salesforce Marketing Cloud] source is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled sources.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[!DNL Experience Platform ]provides support for ingesting data from a third-party marketing automation system. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
+[!DNL Experience Platform] provides support for ingesting data from third-party marketing automation systems. Support for marketing automation providers include [!DNL Salesforce Marketing Cloud].
 
 ## IP address allow list
 
