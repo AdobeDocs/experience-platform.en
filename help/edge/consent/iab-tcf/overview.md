@@ -24,9 +24,9 @@ In order to implement the Web SDK with IAB TCF 2.0, you are required to have a w
 To send consent data to Adobe Experience Platform using the SDK, the following is required:
 
 - A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
-- An edge configuration set up with Platform and the Profile-enabled dataset mentioned above.
+- A datastream set up with Platform and the Profile-enabled dataset mentioned above.
 
-Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and edge configuration.
+Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and datastream.
 
 ## Audience Manager integration
 
@@ -34,7 +34,7 @@ Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you
 
 >[!TIP]
 >
->To integrate with Audience Manager through Adobe Experience Platform Web SDK, make sure you have an edge configuration set up to forward to Adobe Audience Manager.
+>To integrate with Audience Manager through Adobe Experience Platform Web SDK, make sure you have a datastream set up to forward to Adobe Audience Manager.
 
 ## Experience Events and Adobe Analytics integration
 
@@ -43,7 +43,7 @@ Whereas the Real-time CDP and Audience Manager's audiences keep track of a custo
 To collect consent information on events, the following is required:
 
 - A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy schema field group.
-- An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
+- A datastream set up with the [!DNL XDM Experience Event] dataset above.
 
 For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.
 
