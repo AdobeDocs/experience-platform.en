@@ -128,6 +128,50 @@ If you have [!DNL Target] activities with predefined audiences that use custom p
 
 For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in the *Adobe Target guide*.
 
+### Response Tokens
+
+Response Tokens are mainly used to send metadata to third parties like Google, Facebook, etc. Response Tokens are returned
+in the `meta` field within `propositions` -> `items`. Here is a sample:
+```          
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+To be able to collect the response tokens, we will have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
+and extract the details from `items` -> `meta`. Every `proposition` will have a `renderAttempted` boolean field
+indicating whether the `proposition` was rendered or not.
+
+When automatic rendering is enabled, propositions array will contain:
+#### On Page-Load:
+- Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
+- Visual Experience Composer based propositions with `renderAttempted` flag set to `true`
+- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+#### On View - change (for cached views):
+- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+
+When automatic rendering is disabled, propositions array will contain:
+#### On Page-Load:
+- Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
+- Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
+- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+#### On View - change (for cached views):
+- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+
 ### Single profile update
 
 The [!DNL Platform Web SDK] lets you update the profile to the [!DNL Target] profile and to the [!DNL Platform Web SDK] as an experience event.
