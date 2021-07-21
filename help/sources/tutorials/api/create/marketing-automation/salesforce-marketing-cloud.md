@@ -11,7 +11,7 @@ exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL HubSpot] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Salesforce Marketing Cloud] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -20,18 +20,18 @@ This guide requires a working understanding of the following components of Adobe
 * [Sources](../../../../home.md): [!DNL Experience Platform] allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services.
 * [Sandboxes](../../../../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
 
-The following sections provide additional information that you will need to know in order to successfully connect to [!DNL HubSpot] using the [!DNL Flow Service] API.
+The following sections provide additional information that you will need to know in order to successfully connect to [!DNL Salesforce Marketing Cloud] using the [!DNL Flow Service] API.
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with [!DNL HubSpot], you must provide the following connection properties:
+In order for [!DNL Flow Service] to connect with [!DNL Salesforce Marketing Cloud], you must provide the following connection properties:
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` |
-| `clientId` |
-| `clientSecret` |
-| `connectionSpec.id` |
+| `host` | The host server of your application. This is often your subdomain. |
+| `clientId` | The client ID associated with your [!DNL Salesforce Marketing Cloud] application. |
+| `clientSecret` | The client secret associated with your [!DNL Salesforce Marketing Cloud] application. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Salesforce Marketing Cloud] is: `cea1c2a08-b722-11eb-8529-0242ac130003`.  |
 
 For more information about getting started, refer to this [[!DNL Salesforce Marketing Cloud] document](https://developer.salesforce.com/docs/atlas.en-us.mc-apis.meta/mc-apis/authentication.htm).
 
@@ -43,7 +43,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL HubSpot] authentication credentials as part of the request parameters.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Salesforce Marketing Cloud] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -53,7 +53,7 @@ POST /connections
 
 **Request**
 
-The following request creates a base connection for [!DNL HubSpot]:
+The following request creates a base connection for [!DNL Salesforce Marketing Cloud]:
 
 ```shell
 curl -X POST \
