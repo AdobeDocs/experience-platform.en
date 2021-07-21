@@ -5,7 +5,6 @@ title: Create a Salesforce Marketing Cloud Base Connection Using the Flow Servic
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Salesforce Marketing Cloud using the Flow Service API.
-exl-id: a3e64215-a82d-4aa7-8e6a-48c84c056201
 ---
 # Create a [!DNL Salesforce Marketing Cloud] base connection using the [!DNL Flow Service] API
 
