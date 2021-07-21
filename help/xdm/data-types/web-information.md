@@ -21,5 +21,5 @@ description: This document provides an overview of the web information Experienc
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webinfo.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/webinfo.schema.json)

@@ -31,12 +31,12 @@ Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe pr
 
 ## Flip-the-switch process to deploy Adobe technology
 
-Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [edge configurations](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [datastreams](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![](./images/deploy.png)
 
 ## Transform, enrich, and send data fast and securely
 
-[Adobe Experience Platform Launch Server Side](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html) can tap into any Platform data stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
+[Event forwarding in Adobe Experience Platform](../tags/ui/event-forwarding/overview.md) can tap into any Platform data stream. You can transform, enrich, and send data to any non-Adobe destination with extreme low latency without adding any third-party code to the client device providing faster and more secure data collection and distribution.   
 
 ![](./images/launch.png)
