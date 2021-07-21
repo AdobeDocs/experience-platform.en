@@ -11,7 +11,7 @@ Adobe Experience Platform Launch is the next-generation of tag management capabi
 For an introduction to Experience Platform Launch capabilities, see the resources below:
 
 -  Adobe Experience Platform Launch [documentation](https://experienceleague.adobe.com/docs/launch/using/home.html)
--  Adobe Experience Platform Launch [quick start videos](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/videos.html?). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
+-  Adobe Experience Platform Launch [quick start videos](../../../tags/quick-start/videos.md). Start with [Introduction to Adobe Experience Platform Launch](https://www.youtube.com/embed/rwqqkG1SERU) and [Publishing process overview](https://helpx.adobe.com/analytics/how-to/adobe-launch-publishing-process.html), then move on to the next concepts. 
 
 ## How to find the Platform Launch extensions in the Platform interface {#how-to-find-extensions-in-interface}
 
@@ -35,7 +35,7 @@ Adobe Experience Platform Launch is free for existing Experience Cloud customers
 >
 >While you cannot activate segments to Platform Launch extensions, you can set up rules to only forward event data in certain situations. Read more below.
 
-You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Experience Platform Launch documentation](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+You can create *rules* that determine when to forward event data to extensions. This powerful functionality enables you to forward event data only in certain situations as opposed to sending event data on every interaction. For more information, read about rules in the [Adobe Experience Platform Launch documentation](../../../tags/ui/managing-resources/rules.md).
 
 ## Example use cases for Platform Launch extensions {#extensions-use-cases}
 
