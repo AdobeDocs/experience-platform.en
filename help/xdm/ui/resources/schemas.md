@@ -125,6 +125,8 @@ Once you have assigned a class and added field groups to a schema, you can edit 
 >[!NOTE]
 >
 >Keep in mind that the display names of fields that belong to standard classes or field groups can only be edited in the context of a specific schema. In other words, changing the display name of a standard field in one schema does not effect other schemas that employ the same associated class or field group.
+>
+>Once you make changes the display names for a schema's fields, those changes are immediately reflected in any existing datasets based on that schema.
 
 To edit the display name of a schema field, select the field in the canvas. In the right rail, provide the new name under **[!UICONTROL Display name]**.
 
