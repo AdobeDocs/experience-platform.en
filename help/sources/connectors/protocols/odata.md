@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Generic ODa
 
 ## Connect [!DNL Generic OData] to [!DNL Platform] using APIs
 
-- [Create a Generic OData source connection using the Flow Service API](../../tutorials/api/create/protocols/odata.md)
-- [Explore a protocols application using the Flow Service API](../../tutorials/api/explore/protocols.md)
-- [Collect data from a protocols application using the Flow Service API](../../tutorials/api/collect/protocols.md)
+- [Create a Generic OData base connection using the Flow Service API](../../tutorials/api/create/protocols/odata.md)
+- [Explore the data structure and contents of a protocols source using the Flow Service API](../../tutorials/api/explore/protocols.md)
+- [Create a dataflow for a protocols source using the Flow Service API](../../tutorials/api/collect/protocols.md)
 
 ## Connect [!DNL Generic OData] to [!DNL Platform] using the UI
 
 - [Create a Generic OData source connection in the UI](../../tutorials/ui/create/protocols/odata.md)
-- [Configure a dataflow for a protocols connection in the UI](../../tutorials/ui/dataflow/protocols.md)
+- [Create a dataflow for a protocols source connection in the UI](../../tutorials/ui/dataflow/protocols.md)

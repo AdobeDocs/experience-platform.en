@@ -41,7 +41,7 @@ In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Sele
 
 ![segments-to-destination](../assets/ui/activate-destinations/email-select-segments.png)
 
-## [!UICONTROL Mapping] step {#mapping}
+## Mapping step {#mapping}
 
 >[!CONTEXTUALHELP]
 >id="platform_destinations_activate_applytransformation"
@@ -137,15 +137,33 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
 ![Export full files](../assets/ui/activate-destinations/export-full-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports. Exporting a full file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
+
+    >[!IMPORTANT]
+    >
+    >When setting the start and end date, the **[!UICONTROL Start Date]** indicates when the file exports are scheduled to start and the **[!UICONTROL End Date]** indicates when the file exports are scheduled to stop. The file exports start on the **[!UICONTROL Start Date]**, but do not include the **[!UICONTROL End Date]**.
+    >
+    >For example, if you set the following schedule:
+    >
+    >* Export: Incremental every 3 hours
+    >* Start Date: 7/19
+    >* End Date: 7/21
+    >
+    >Files will start exporting on 7/19 and will stop exporting on 7/20 at 23:59:59 UTC. There will not be any files delivered on 7/21.
+
+
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
     
       >[!IMPORTANT]
       >
-      >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.
+      >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.<br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
-  
+
+>[!IMPORTANT]
+>
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+
 ### Export incremental files {#export-incremental-files}
 
 Select **[!UICONTROL Export incremental files]** to have your exported files contain only the profiles which qualified for that segment since the last export.
@@ -157,20 +175,38 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 ![Export incremental files](../assets/ui/activate-destinations/export-incremental-files.png)
 
 1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports. Exporting an incremental file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 PM UTC (7:00 AM EST).
+
+
+    >[!IMPORTANT]
+    >
+    >When setting the start and end date, the **[!UICONTROL Start Date]** indicates when the file exports are scheduled to start and the **[!UICONTROL End Date]** indicates when the file exports are scheduled to stop. The file exports start on the **[!UICONTROL Start Date]**, but do not include the **[!UICONTROL End Date]**.
+    >
+    >For example, if you set the following schedule:
+    >
+    >* Export: Incremental every 3 hours
+    >* Start Date: 7/19
+    >* End Date: 7/21
+    >
+    >Files will start exporting on 7/19 and will stop exporting on 7/20 at 23:59:59 UTC. There will not be any files delivered on 7/21.
+
    * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
      
        >[!IMPORTANT]
        >
-       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day.
+       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day. 
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >The option to select the time of day for the export is only available to a select number of customers. Non-beta customers can export incremental files once a day, at 12:00 PM UTC (7:00 AM EST).
+     >The option to select the time of day for the export is only available to a select number of customers. <br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
+
+>[!IMPORTANT]
+>
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Configure file names {#file-names}
 

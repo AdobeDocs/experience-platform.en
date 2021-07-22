@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL MariaDB] to
 
 ## Connect [!DNL MariaDB] to [!DNL Platform] using APIs
 
-- [Create a MariaDB source connection using the Flow Service API](../../tutorials/api/create/databases/mariadb.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create a MariaDB base connection using the Flow Service API](../../tutorials/api/create/databases/mariadb.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL MariaDB] to [!DNL Platform] using the UI
 
 - [Create a MariaDB source connection in the UI](../../tutorials/ui/create/databases/mariadb.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

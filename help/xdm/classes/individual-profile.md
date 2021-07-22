@@ -8,7 +8,7 @@ exl-id: 83b22462-79ce-4024-aa50-a9bd800c0f81
 ---
 # [!DNL XDM Individual Profile] class
 
-[!DNL XDM Individual Profile] is a standard Experience Data Model (XDM) class which forms a singular representation (or "profile") of an individual person. Specifically, the class (and its compatible mixins) captures the attributes and interests of both identified and partially identified individuals that interact with your brand.
+[!DNL XDM Individual Profile] is a standard Experience Data Model (XDM) class which forms a singular representation (or "profile") of an individual person. Specifically, the class (and its compatible field groups) captures the attributes and interests of both identified and partially identified individuals that interact with your brand.
 
 Profiles can range from anonymous behavioral signals (such as browser cookies), to highly identified profiles containing detailed information such as name, date of birth, location, and email address. As a profile grows, it becomes a robust repository of personal information, identities, contact details, and communication preferences for an individual. For more high-level information on the use of this class in the Platform ecosystem, refer to the [XDM overview](../home.md#data-behaviors).
 
@@ -40,8 +40,8 @@ Adobe provides several standard field groups for use with the [!DNL XDM Individu
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Privacy/Personalization/Marketing Preferences (Consents)]](../field-groups/profile/consents.md)
+* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
 
-For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/mixins/profile).
+For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).

@@ -25,6 +25,10 @@ The attribute data in the snapshot shows the data exactly as it appears at the s
 
 To navigate to the [!UICONTROL Profiles] dashboard within the Platform UI, select **[!UICONTROL Profiles]** in the left rail, then select the **[!UICONTROL Overview]** tab to display the dashboard.
 
+>[!NOTE]
+>
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
+
 ![](../images/profiles/dashboard-overview.png)
 
 ### Modifying the [!UICONTROL Profiles] dashboard

@@ -25,9 +25,7 @@ A query can be evaluated with edge segmentation if it meets any of the following
 | Frequency query | Any segment definition that refers to an event happening at least a certain number of times. | |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. | |
 
-If the query matches any of the above query types, you can enable it for edge segmentation by turning the **[!UICONTROL Evaluate as streaming segment on the edge]** toggle on.
-
-![](../images/ui/edge-segmentation/mark-on-edge.png)
+If the query matches any of the above query types, it will automatically be evaluated using edge segmentation.
 
 The following query types are **not** currently supported for edge segmentation:
 

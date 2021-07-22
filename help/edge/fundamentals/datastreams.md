@@ -1,7 +1,7 @@
 ---
 title: Configure your Datastream for the Experience Platform Web SDK
 description: Learn how to configure the Datatstreams. 
-keywords: configuration;datastreams;datastreamId;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
 
@@ -19,7 +19,7 @@ Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the 
 
 >[!NOTE]
 >
->The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
+>The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](../../tags/ui/administration/user-permissions.md) article in the [!DNL Experience Platform Launch] documentation for more details.
 
 Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 

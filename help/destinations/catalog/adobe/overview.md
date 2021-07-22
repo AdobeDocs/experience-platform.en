@@ -13,6 +13,7 @@ Manage your customer experience by connecting your data in Adobe Experience Plat
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
 - [Adobe Campaign connection](../email-marketing/adobe-campaign.md)
+- [Marketo Engage connection](/help/destinations/catalog/adobe/marketo-engage.md)
 
 ## Extensions
 

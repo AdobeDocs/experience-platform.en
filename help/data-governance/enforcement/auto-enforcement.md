@@ -17,7 +17,7 @@ This guide requires a working understanding of the Platform services involved in
 * [Adobe Experience Platform Data Governance](../home.md): The framework by which Platform enforces data usage compliance through the use of labels and policies.
 * [Real-time Customer Profile](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Adobe Experience Platform Segmentation Service](../../segmentation/home.md): The segmentation engine within [!DNL Platform] used to create audience segments from your customer profiles based on customer behaviors and attributes.
-* [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and moreY.
+* [Destinations](../../destinations/home.md): Destinations are pre-built integrations with commonly used applications that allow for the seamless activation of data from Platform for cross-channel marketing campaigns, email campaigns, targeted advertising, and more.
 
 ## Enforcement flow {#flow}
 
@@ -58,6 +58,12 @@ Each stage in the above timeline represents an entity that may contribute to a p
 | Merge policy | Merge policies are the rules that Platform uses to determine how data will be prioritized when merging together fragments from multiple datasets. Policy violations will occur if your merge policies are configured so that datasets with restricted labels are activated to a destination. See the [merge policies overview](../../profile/merge-policies/overview.md) for more information. |
 | Segment | Segment rules define which attributes should be included from customer profiles. Depending on which fields a segment definition includes, the segment will inherit any applied usage labels for those fields. Policy violations will occur if you activate a segment whose inherited labels are restricted by the target destination's applicable policies, based on its marketing use case. |
 | Destination | When setting up a destination, a marketing action (sometimes called a marketing use case) can be defined. This use case correlates to a marketing action as defined in a data usage policy. In other words, the marketing use case you define for a destination determines which data usage policies are applicable to that destination. Policy violations will occur if you activate a segment whose usage labels are restricted by the target destination's applicable policies. |
+
+>[!IMPORTANT]
+>
+>Some data usage policies may specify two or more labels with an AND relationship. For example, a policy could restrict a marketing action if labels `C1` AND `C2` are both present, but does not restrict the same action if only one of those labels are present.
+>
+>When it comes to automatic enforcement, the Data Governance framework does not consider the activation of separate segments to a destination as a combination of data. Therefore, the example `C1 AND C2` policy is **NOT** enforced if these labels are included in separate segments. Instead, this policy is only enforced when both labels are present in the same segment upon activation.
 
 When policy violations occur, the resulting messages that appear in the UI provide useful tools for exploring the violation's contributing data lineage to help resolve the issue. More details are provided in the next section.
 

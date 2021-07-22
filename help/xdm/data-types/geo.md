@@ -27,5 +27,5 @@ exl-id: d0eef943-ef86-4abd-8a51-dc45f2ed782d
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/geo.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/geo.schema.json)

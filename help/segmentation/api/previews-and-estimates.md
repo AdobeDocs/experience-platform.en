@@ -68,7 +68,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -77,6 +78,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is `pql/text`. |
 | `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema class the profile data is based on. |
+| `graphType` | The graph type that you want to get the cluster from. The supported values are `none` (performs no identity stitching) and `pdg` (performs identity stitching based on your private identity graph). |
 
 **Response**
 

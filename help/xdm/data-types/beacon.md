@@ -23,8 +23,8 @@ exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)
 
 ## Appendix
 

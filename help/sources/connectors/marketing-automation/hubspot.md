@@ -20,11 +20,11 @@ The documentation below provides information on how to connect [!DNL HubSpot] to
 
 ## Connect [!DNL HubSpot] to [!DNL Platform] using APIs
 
-- [Create a HubSpot source connection using the Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
-- [Explore a marketing automation system using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
-- [Collect marketing automation data using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
+- [Create a HubSpot base connection using the Flow Service API](../../tutorials/api/create/marketing-automation/hubspot.md)
+- [Explore the data structure and contents of a marketing automation source using the Flow Service API](../../tutorials/api/explore/marketing-automation.md)
+- [Create a dataflow for a marketing automation source using the Flow Service API](../../tutorials/api/collect/marketing-automation.md)
 
 ## Connect [!DNL HubSpot] to [!DNL Platform] using the UI
 
 - [Create a HubSpot source connection in the UI](../../tutorials/ui/create/marketing-automation/hubspot.md)
-- [Configure a dataflow for a marketing automation connection in the UI](../../tutorials/ui/dataflow/marketing-automation.md)
+- [Create a dataflow for a marketing automation source connection in the UI](../../tutorials/ui/dataflow/marketing-automation.md)

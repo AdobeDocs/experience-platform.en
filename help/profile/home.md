@@ -2,7 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;unified profile;Unified Profile;unified;Profile;rtcp;XDM graphs
 title: Real-time Customer Profile Overview
 topic-legacy: guide
-description: Real-time Customer Profile is a generic lookup entity store that merges data from various enterprise data assets, and then provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
+description: Real-time Customer Profile merges data from various sources and provides access to that data in the form of individual customer profiles and related time series events. This feature enables marketers to drive coordinated, consistent and relevant experiences with their audiences across multiple channels.
 exl-id: c93d8d78-b215-4559-a806-f019c602c4d2
 ---
 # [!DNL Real-time Customer Profile] overview
@@ -29,11 +29,7 @@ The Profile store uses a Microsoft Azure Cosmos DB infrastructure and the Platfo
 
 Experience Platform provides a series of guardrails to help you avoid creating [Experience Data Model (XDM) schemas](../xdm/home.md) which Real-time Customer Profile cannot support. This includes soft limits that will result in performance degradation, as well has hard limits that will result in errors and system breakages. For more information, including a list of guidelines and example use cases, please read the [Profile guardrails](guardrails.md) documentation.
 
-### (Beta) Profile dashboard {#profile-dashboard}
-
->[!IMPORTANT]
->
->The dashboard functionality is currently in beta and is not available to all users. The documentation and the functionality are subject to change.
+### Profile dashboard {#profile-dashboard}
 
 The Experience Platform UI provides a dashboard through which you can view important information about your Real-time Customer Profile data, as captured during a daily snapshot. To learn how to access and work with the [!DNL Profile] dashboard in the UI, and detailed information regarding the metrics displayed in the dashboard, refer to the [Profile dashboard UI guide](ui/profile-dashboard.md).  
 
@@ -114,7 +110,7 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ### Handling opt-out and data privacy requests
 
-[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/honoring-opt-outs.md).
+[!DNL Experience Platform] enables your customers to send opt-out requests related to the usage and storage of their data within [!DNL Real-time Customer Profile]. For more information on how opt-out requests are handled, please see the documentation on [honoring opt-out requests](../segmentation/consents.md).
 
 ## Next steps and additional resources
 

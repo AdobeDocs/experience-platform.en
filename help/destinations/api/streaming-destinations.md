@@ -148,7 +148,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
@@ -178,7 +178,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -193,11 +193,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the Id you have obtained in the previous step.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created source connection to Unified Profile Service. This confirms that you have successfully connected to your Experience Platform data. Store this value as it is required in a later step.
+A successful response returns the unique identifier (`id`) for the newly created source connection to Profile Service. This confirms that you have successfully connected to your Experience Platform data. Store this value as it is required in a later step.
 
 ```json
 {
