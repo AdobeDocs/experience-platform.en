@@ -11,230 +11,221 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 
 ## Contact {#contact}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `AccountId` | reference | `b2b.accountID` | string |
-| `AccountId` | reference | `personComponents.sourceAccountID` | string |
-| `AssistantName` | string | `extendedWorkDetails.assistantDetails.name.fullName` | string |
-| `AssistantPhone` | phone | `extendedWorkDetails.assistantDetails.phone.number` | string |
-| `Birthdate` | date | `person.birthDate` | date |
-| `CreatedDate` | date | `extSourceSystemAudit.createdDate` | dateTime |
-| `Department` | string | `extendedWorkDetails.departments` | string |
-| `Email` | email| `workEmail.address` | string |
-| `Email` | email | `personComponents.workEmail.address` | string |
-| `Fax` | phone | `faxPhone.number` | string |
-| `FirstName` | string | `person.name.firstName` | string |
-| `HomePhone` | phone | `homePhone.number` | string |
-| `Id` | id | `personID` | string | Primary identity |
-| `Id` | id | `personComponents.sourcePersonID` | string |
-| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
-| `LastModifiedDate` | date | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `LastName` | string | `person.name.lastName` | string |
-| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
-| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
-| `LeadSource` | picklist | `b2b.personSource` | string |
-| `LeadSource` | picklist | `personComponents.personSource` | string |
-| `MailingCity` | string | `workAddress.city` | string |
-| `MailingCountry` string | `workAddress.country` | string |
-| `MailingLatitude` | double | `workAddress._schema.latitude`| double |
-| `MailingLongitude` | double | `workAddress._schema.longitude` | double |
-| `MailingPostalCode` | string | `workAddress.postalCode` | string |
-| `MailingState` | string | `workAddress.state` | string |
-| `MailingStreet` | string | `workAddress.street1` | string |
-| `MobilePhone` | phone | `mobilePhone.number` | string |
-| `Name` | string | `person.name.fullName` | string |
-| `OtherCity` string `otherAddress.city` | string |
-| `OtherCountry` | string | `otherAddress.country` | string |
-| `OtherLatitude` | double | `otherAddress._schema.latitude` | double |
-| `OtherLongitude` | double | `otherAddress._schema.longitude` | double |
-| `OtherPhone` | phone | `otherPhone.number` | string |
-| `OtherPostalCode` | string | `otherAddress.postalCode` | string |
-| `OtherState` | string | `otherAddress.state` | string |
-| `OtherStreet` | textarea | `otherAddress.street1` | string |
-| `Phone`| phone | `workPhone.number` | string |
-| `ReportsToId` | reference | `extendedWorkDetails.reportsToID` | string |
-| `Salutation` | picklist | `person.name.courtesyTitle` | string |
-| `Title` | string | `extendedWorkDetails.jobTitle` | string |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `AccountId` | `b2b.accountID`|
+| `AccountId` | `personComponents.sourceAccountID`|
+| `AssistantName`| `extendedWorkDetails.assistantDetails.name.fullName`|
+| `AssistantPhone` | `extendedWorkDetails.assistantDetails.phone.number`|
+| `Birthdate` | `person.birthDate` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `Department`| `extendedWorkDetails.departments`|
+| `Email` | `workEmail.address`|
+| `Email` | `personComponents.workEmail.address`|
+| `Fax` | `faxPhone.number`|
+| `FirstName`| `person.name.firstName`|
+| `HomePhone` | `homePhone.number`|
+| `Id` | `personID`| This is the primary identity |
+| `Id` | `personComponents.sourcePersonID`|
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastName`| `person.name.lastName`|
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LeadSource` | `b2b.personSource`|
+| `LeadSource` | `personComponents.personSource`|
+| `MailingCity`| `workAddress.city`|
+| `MailingCountry` | `workAddress.country`|
+| `MailingLatitude` | `workAddress._schema.latitude`|
+| `MailingLongitude` | `workAddress._schema.longitude` |
+| `MailingPostalCode`| `workAddress.postalCode`|
+| `MailingState`| `workAddress.state`|
+| `MailingStreet`| `workAddress.street1`|
+| `MobilePhone` | `mobilePhone.number`|
+| `Name`| `person.name.fullName`|
+| `OtherCity` | `otherAddress.city`|
+| `OtherCountry`| `otherAddress.country`|
+| `OtherLatitude` | `otherAddress._schema.latitude` |
+| `OtherLongitude` | `otherAddress._schema.longitude` |
+| `OtherPhone` | `otherPhone.number`|
+| `OtherPostalCode`| `otherAddress.postalCode`|
+| `OtherState`| `otherAddress.state`|
+| `OtherStreet` | `otherAddress.street1`|
+| `Phone`| `workPhone.number`|
+| `ReportsToId` | `extendedWorkDetails.reportsToID`|
+| `Salutation` | `person.name.courtesyTitle`|
+| `Title`| `extendedWorkDetails.jobTitle`|
 
 {style="table-layout:auto"}
 
 ## Lead {#lead}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `City` | string | `workAddress.city` | string |
-| `ConvertedContactId` | reference | `b2b.convertedContactID` | string |
-| `ConvertedContactId` | reference | `personComponents.sourceConvertedContactID` | string |
-| `ConvertedDate` | date | `b2b.convertedDate` | dateTime |
-| `Country` | string | `workAddress.country` | string |
-| `Email` | email | `workEmail.address` | string | Secondary identity |
-| `Email` | email | `personComponents.workEmail.address` | string |
-| `Fax` | phone | `faxPhone.number` | string |
-| `FirstName` | string | `person.name.firstName` | string |
-| `IsConverted` | boolean | `b2b.isConverted` | boolean |
-| `Id` | id | `personID` | string | Primary identity |
-| `Id` | id | `personComponents.sourcePersonID` | string |
-| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
-| `LastModifiedDate` | date | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `LastName` | string | `person.name.lastName` | string |
-| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
-| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
-| `LeadSource` | picklist | `b2b.personSource` | string |
-| `LeadSource` | picklist | `personComponents.personSource` | string |
-| `MailingCity` | string | `workAddress.city` | string |
-| `MailingCountry` | string | `workAddress.country` | string |
-| `MailingLatitude` | double | `workAddress._schema.latitude` | double |
-| `MailingLongitude` | double | `workAddress._schema.longitude` | double |
-| `MailingPostalCode` | string | `workAddress.postalCode` | string |
-| `MailingState` | string | `workAddress.state` | string |
-| `MailingStreet` | string | `workAddress.street1` | string |
-| `MobilePhone` | phone | `mobilePhone.number` | string |
-| `Name` | string | `person.name.fullName` | string |
-| `OtherCity` | string | `otherAddress.city` | string |
-| `OtherCountry` | string | `otherAddress.country` | string |
-| `OtherLatitude` | double | `otherAddress._schema.latitude` | double |
-| `OtherLongitude` | double | `otherAddress._schema.longitude` | double |
-| `OtherPhone` | phone | `otherPhone.number` | string |
-| `OtherPostalCode` | string | `otherAddress.postalCode` | string |
-| `OtherState` | string | `otherAddress.state` | string |
-| `OtherStreet` | textarea | `otherAddress.street1` | string |
-| `Phone` | phone | `workPhone.number` | string |
-| `ReportsToId` | reference | `extendedWorkDetails.reportsToID` | string |
-| `Salutation` | picklist | `person.name.courtesyTitle` | string |
-| `Title` | string | `extendedWorkDetails.jobTitle` | string |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `City`| `workAddress.city`|
+| `ConvertedContactId` | `b2b.convertedContactID`|
+| `ConvertedContactId` | `personComponents.sourceConvertedContactID`|
+| `ConvertedDate` | `b2b.convertedDate` |
+| `Country`| `workAddress.country`|
+| `Email`  | `workEmail.address`| This is the secondary identity |
+| `Email`  | `personComponents.workEmail.address`|
+| `Fax` | `faxPhone.number`|
+| `FirstName`| `person.name.firstName`|
+| `IsConverted` | `b2b.isConverted` |
+| `Id` | `personID`| This is the primary identity |
+| `Id` | `personComponents.sourcePersonID`|
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastName`| `person.name.lastName`|
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LeadSource` | `b2b.personSource`|
+| `LeadSource` | `personComponents.personSource`|
+| `Latitude` | `workAddress._schema.latitude` |
+| `Longitude` | `workAddress._schema.longitude` |
+| `MiddleName` | `person.name.middleName` |
+| `Name` | `person.name.fullName` |
+| `PostalCode` | `workAddress.postalCode` |
+| `Salutation` | `person.name.courtesyTitle` |
+| `State` | `workAddress.state` |
+| `Status` | `b2b.personStatus` |
+| `Status` | `personComponents.personStatus` |
+| `Street` | `workAddress.street1`
+| `Title` | `extendedWorkDetails.jobTitle` |
+| `Suffix` | `person.name.suffix` |
 
 {style="table-layout:auto"}
 
 ## Account {#account}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `AccountNumber` | string | `accountNumber` | string |
-| `AccountSource` | picklist | `accountSourceType` | string |
-| `AnnualRevenue` | currency | `accountOrganization.annualRevenue.amount` | double |
-| `BillingCity` | address | `accountBillingAddress.city` | string |
-| `BillingCountry` | string | `accountBillingAddress.country` | string |
-| `BillingLatitude` | double | `accountBillingAddress._schema.latitude` | double |
-| `BillingLongitude` | double | `accountBillingAddress._schema.longitude` | double |
-| `BillingPostalCode` | string | `accountBillingAddress.postalCode` | string |
-| `BillingState` | string | `accountBillingAddress.state` | string |
-| `BillingStreet` | textarea | `accountBillingAddress.street1` | string |
-| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
-| `Description` | textarea | `accountDescription` | string |
-| `DunsNumber` | string | `accountOrganization.DUNSNumber` | string | data.com feature |
-| `Fax` | phone | `accountFax.number` | string |
-| `Id` | id | `accountID` | string | Primary identity |
-| `Industry` | picklist | `accountOrganization.industry` | string |
-| `Jigsaw` | string | `accountOrganization.jigsaw` | string |
-| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
-| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
-| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
-| `NaicsCode` | string | `accountOrganization.NAICSCode` | string | data.com feature |
-| `NaicsDesc` | string | `accountOrganization.NAICSDescription` | string | data.com feature |
-| `Name` | string | `accountName` | string |
-| `NumberOfEmployees` | integer | `accountOrganization.numberOfEmployees` | integer |
-| `Ownership` | picklist | `accountOwnership` | string |
-| `ParentId` | reference | `accountParentID` | string |
-| `Phone` | phone | `accountPhone.number` | string |
-| `Rating` | picklist | `accountOrganization.rating` | string |
-| `ShippingCity` | string | `accountShippingAddress.city` | string |
-| `ShippingCountry` | string | `accountShippingAddress.country` | string |
-| `ShippingLatitude` | double | `accountShippingAddress._schema.latitude` | double |
-| `ShippingLongitude` | double | `accountShippingAddress._schema.longitude` | double |
-| `ShippingPostalCode` | string | `accountShippingAddress.postalCode` | string |
-| `ShippingState` | string | `accountShippingAddress.state` | string |
-| `ShippingStreet` | textarea | `accountShippingAddress.street1` | string |
-| `Sic` | string | `accountOrganization.SICCode` | string |
-| `SicDesc` | string | `accountOrganization.SICDescription` | string |
-| `Site` | string | `accountSite` | string |
-| `TickerSymbol` | string | `accountOrganization.tickerSymbol` | string |
-| `Tradestyle` | string | `accountTradeStyle` | string | data.com feature |
-| `Type` | picklist | `accountType` | string |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `AccountNumber`| `accountNumber`|
+| `AccountSource` | `accountSourceType`|
+| `AnnualRevenue` | `accountOrganization.annualRevenue.amount` |
+| `BillingCity` | address | `accountBillingAddress.city`|
+| `BillingCountry`| `accountBillingAddress.country`|
+| `BillingLatitude` | `accountBillingAddress._schema.latitude` |
+| `BillingLongitude` | `accountBillingAddress._schema.longitude` |
+| `BillingPostalCode`| `accountBillingAddress.postalCode`|
+| `BillingState`| `accountBillingAddress.state`|
+| `BillingStreet` | `accountBillingAddress.street1`|
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `Description` | `accountDescription`|
+| `DunsNumber`| `accountOrganization.DUNSNumber`| data.com feature |
+| `Fax` | `accountFax.number`|
+| `Id` | `accountID`| This is the primary identity |
+| `Industry` | `accountOrganization.industry`|
+| `Jigsaw`| `accountOrganization.jigsaw`|
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `NaicsCode`| `accountOrganization.NAICSCode`| data.com feature |
+| `NaicsDesc`| `accountOrganization.NAICSDescription`| data.com feature |
+| `Name`| `accountName`|
+| `NumberOfEmployees` | `accountOrganization.numberOfEmployees` |
+| `Ownership` | `accountOwnership`|
+| `ParentId` | `accountParentID`|
+| `Phone` | `accountPhone.number`|
+| `Rating` | `accountOrganization.rating`|
+| `ShippingCity`| `accountShippingAddress.city`|
+| `ShippingCountry`| `accountShippingAddress.country`|
+| `ShippingLatitude` | `accountShippingAddress._schema.latitude` |
+| `ShippingLongitude` | `accountShippingAddress._schema.longitude` |
+| `ShippingPostalCode`| `accountShippingAddress.postalCode`|
+| `ShippingState`| `accountShippingAddress.state`|
+| `ShippingStreet` | `accountShippingAddress.street1`|
+| `Sic`| `accountOrganization.SICCode`|
+| `SicDesc`| `accountOrganization.SICDescription`|
+| `Site`| `accountSite`|
+| `TickerSymbol`| `accountOrganization.tickerSymbol`|
+| `Tradestyle`| `accountTradeStyle`| data.com feature |
+| `Type` | `accountType`|
 
 {style="table-layout:auto"}
 
 ## Opportunity {#opportunity}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `AccountId` reference | `accountID` | string | Relationship |
-| `Amount` | currency | `opportunityAmount.amount` | double |
-| `CampaignId` | reference | `campaignID` | string |
-| `CloseDate` | date | `actualCloseDate` / `expectedCloseDate` | dateTime |
-| `CreatedDate`| dateTime | `extSourceSystemAudit.createdDate` | dateTime |
-| `Description` | textarea | `opportunityDescription` | string |
-| `ExpectedRevenue` | currency | `expectedRevenue.amount` | double |
-| `FiscalQuarter` | integer | `fiscalQuarter` | string |
-| `FiscalYear` | integer | `fiscalYear` | integer |
-| `ForecastCategory` | picklist | `forecastCategory` | string |
-| `ForecastCategoryName` | picklist | `forecastCategoryName` | string |
-| `Id` | id | `opportunityID` | string | Primary identity |
-| `IsClosed` | boolean | `isClosed` | boolean |
-| `IsWon` | boolean | `isWon` | boolean |
-| `LastActivityDate` | date | `extSourceSystemAudit.lastActivityDate` | dateTime |
-| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `LastReferencedDate` | dateTime | `extSourceSystemAudit.lastReferencedDate` | dateTime |
-| `LastViewedDate` | dateTime | `extSourceSystemAudit.lastViewedDate` | dateTime |
-| `LeadSource` | picklist | `leadSource` | string |
-| `Name` | string | `opportunityName` | string |
-| `NextStep` | string | `nextStep` | string |
-| `Probability` | percent | `probabilityPercentage` | double |
-| `StageName` | picklist | `opportunityStage` | string |
-| `TotalOpportunityQuantity` | double | `opportunityQuantity` | integer |
-| `Type` | picklist | `opportunityType` | string |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `AccountId` | `accountID`| Relationship |
+| `Amount` | `opportunityAmount.amount` |
+| `CampaignId` | `campaignID`|
+| `CloseDate` | `actualCloseDate` / `expectedCloseDate` |
+| `CreatedDate`| `extSourceSystemAudit.createdDate` |
+| `Description` | `opportunityDescription`|
+| `ExpectedRevenue` | `expectedRevenue.amount` |
+| `FiscalQuarter` | `fiscalQuarter`|
+| `FiscalYear` | `fiscalYear` |
+| `ForecastCategory` | `forecastCategory`|
+| `ForecastCategoryName` | `forecastCategoryName`|
+| `Id` | `opportunityID`| This is the primary identity |
+| `IsClosed` | `isClosed` |
+| `IsWon` | `isWon` |
+| `LastActivityDate` | `extSourceSystemAudit.lastActivityDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `LastReferencedDate` | `extSourceSystemAudit.lastReferencedDate` |
+| `LastViewedDate` | `extSourceSystemAudit.lastViewedDate` |
+| `LeadSource` | `leadSource`|
+| `Name`| `opportunityName`|
+| `NextStep`| `nextStep`|
+| `Probability` | percent | `probabilityPercentage` |
+| `StageName` | `opportunityStage`|
+| `TotalOpportunityQuantity` | `opportunityQuantity` |
+| `Type` | `opportunityType`|
 
 {style="table-layout:auto"}
 
 ## Opportunity contact role {#opportunity-contact-role}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `ContactId` | reference | `personID` | string | Relationship |
-| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
-| `Id` | id | `opportunityPersonID` | string | Primary identity |
-| `IsPrimary` | boolean | `isPrimary` | boolean |
-| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `OpportunityId` | reference | `opportunityID` | string | Relationship |
-| `Role` | picklist | `personRole` | string |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `ContactId` | `personID`| Relationship |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `Id` | `opportunityPersonID`| This is the primary identity |
+| `IsPrimary` | `isPrimary` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `OpportunityId` | `opportunityID`| Relationship |
+| `Role` | `personRole`|
 
 {style="table-layout:auto"}
 
 ## Campaign {#campaign}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `Id` | id | `xdm: campaignID` | string | Primary identity |
-| `Name` | String | `xdm: campaignName` | string |
-| `ParentId` | reference | `xdm: parentCampaignID` | string |
-| `Type` | picklist | `xdm: campaignType` | string |
-| `Status` | picklist | `xdm: campaignStatus` | string |
-| `StartDate` | date | `xdm: campaignStartDate` | dateTime |
-| `EndDate` | date | `xdm: campaignEndDate` | dateTime |
-| `ExpectedRevenue` | currency | `xdm: expectedRevenue.amount` | double |
-| `BudgetedCost` | currency | `xdm: budgetedCost.amount` | double |
-| `ActualCost` | currency | `xdm: actualCost.amount` | double |
-| `ExpectedResponse` | percent | `xdm: expectedResponse` | string |
-| `IsActive` | boolean | `xdm: isActive` | boolean |
-| `Description` | textarea | `xdm: campaignDescription` | string |
-| `CreatedDate` | dateTime | `xdm: extSourceSystemAudit.createdDate` | dateTime |
-| `LastModifiedDate` | dateTime | `xdm: extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `LastActivityDate` | date | `xdm: extSourceSystemAudit.lastActivityDate` | dateTime |
-| `LastViewedDate` | dateTime | `xdm: extSourceSystemAudit.lastViewedDate` | dateTime |
-| `LastReferencedDate` | dateTime | `xdm: extSourceSystemAudit.lastReferencedDate` | dateTime |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `Id` | `xdm: campaignID`| This is the primary identity |
+| `Name`| `xdm: campaignName`|
+| `ParentId` | `xdm: parentCampaignID`|
+| `Type` | `xdm: campaignType`|
+| `Status` | `xdm: campaignStatus`|
+| `StartDate` | `xdm: campaignStartDate` |
+| `EndDate` | `xdm: campaignEndDate` |
+| `ExpectedRevenue` | `xdm: expectedRevenue.amount` |
+| `BudgetedCost` | `xdm: budgetedCost.amount` |
+| `ActualCost` | `xdm: actualCost.amount` |
+| `ExpectedResponse` | percent | `xdm: expectedResponse`|
+| `IsActive` | `xdm: isActive` |
+| `Description` | `xdm: campaignDescription`|
+| `CreatedDate` | `xdm: extSourceSystemAudit.createdDate` |
+| `LastModifiedDate` | `xdm: extSourceSystemAudit.lastUpdatedDate` |
+| `LastActivityDate` | `xdm: extSourceSystemAudit.lastActivityDate` |
+| `LastViewedDate` | `xdm: extSourceSystemAudit.lastViewedDate` |
+| `LastReferencedDate` | `xdm: extSourceSystemAudit.lastReferencedDate` |
 
 ## Campaign member {#campaign-member}
 
-| Source field | Data type | Target XDM field path | Data type | Notes |
-| --- | --- | --- | --- | --- |
-| `Id` | id | `campaignMemberID` | string | Primary identity |
-| `CampaignId` | reference | `campaignID` | string | Relationship |
-| `LeadOrContactId` | reference | `personID` | string | Relationship |
-| `Status` | picklist | `memberStatus` | string |
-| `HasResponded` | boolean | `hasResponded` | boolean |
-| `CreatedDate` | dateTime | `extSourceSystemAudit.createdDate` | dateTime |
-| `LastModifiedDate` | dateTime | `extSourceSystemAudit.lastUpdatedDate` | dateTime |
-| `FirstRespondedDate` | dateTime | `firstRespondedDate` | dateTime |
+| Source field | Target XDM field path | Notes |
+| --- | --- | --- |
+| `Id` | `campaignMemberID`| This is the primary identity |
+| `CampaignId` | `campaignID`| Relationship |
+| `LeadOrContactId` | `personID`| Relationship |
+| `Status` | `memberStatus`|
+| `HasResponded` | `hasResponded` |
+| `CreatedDate` | `extSourceSystemAudit.createdDate` |
+| `LastModifiedDate` | `extSourceSystemAudit.lastUpdatedDate` |
+| `FirstRespondedDate` | `firstRespondedDate` |
 
 ## Next steps
 

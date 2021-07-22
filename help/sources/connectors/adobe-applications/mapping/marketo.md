@@ -274,7 +274,6 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadStatus` | `b2b.personStatus` |
 | `personType` | `b2b.personType` |
 | `leadPartitionId` | `b2b.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `b2b.convertedContactID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
 | `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `extSourceSystemAudit.externalID` | This is the secondary identity using the `Lead` namespace. This is a calculated field and is applicable only if you have the [!DNL Salesforce] integration. |
@@ -301,11 +300,9 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `mktoCdpCnvContactPersonId` | `personComponents.sourceConvertedContactID` |
 | `contactCompany` | `personComponents.sourceAccountID` |
 | `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `personComponents.sourceExternalID` | This is a calculated field and is applicable only if you have the [!DNL Salesforce] integration. |
 | `decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , "")` | `personComponents.sourceExternalID` | This is a calculated field and is applicable only if you have the [!DNL Microsoft Dynamics] integration. |
-| `sfdcContactId` | `personComponents.sourceExternalID` | This dataset is recommended only if you are using the [!DNL Salesforce] integration. |
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
