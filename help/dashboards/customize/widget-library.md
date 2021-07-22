@@ -4,7 +4,7 @@ title: Dashboard Widget Library Overview
 description: This guide provides step-by-step instructions for accessing the widget library in Adobe Experience Platform. 
 exl-id: 1d33e3ea-a8a8-4a09-8bd9-2e04ecedebdc
 ---
-# Widget library overview {#widget-library}
+# Widget library overview
 
 Within the Adobe Experience Platform user interface, you can view and interact with your organization's data using multiple dashboards. You can also update certain dashboards by adding widgets to your dashboard view. 
 
