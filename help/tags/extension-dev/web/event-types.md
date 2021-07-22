@@ -2,17 +2,26 @@
 title: Event Types for Web Extensions
 description: Learn how to define an event-type library module for a web extension in Adobe Experience Platform.
 ---
-# Event types
+# Event types for web extensions
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-An event type library module is designed to detect when an activity happens and then call a function to fire an associated rule. The event being detected is customizable. It could detect when a user makes a certain gesture, scrolls rapidly, or interacts with something?
+In a tag rule, an event is an activity that must occur in order for a rule to fire. As an example, a web extension could provide a "gesture" event type that watches for a certain mouse or touch gesture to occur. Once the gesture occurs, the event logic would fire the rule.
+
+An event type library module is designed to detect when an activity happens and then call a function to fire an associated rule. The event being detected is customizable. For example, could detect when a user makes a certain gesture, scrolls rapidly, or interacts with something.
+
+This document covers how to define event types for a web extension in Adobe Experience Platform.
 
 >[!NOTE]
 >
->This document assumes you are familiar with library modules and how they are integrated in tag extensions. See the overview on [library module formatting](./format.md) for an introduction to their implementation before returning to this guide.
+>This document assumes you are familiar with library modules and how they are integrated in web extensions. See the overview on [library module formatting](./format.md) for an introduction to their implementation before returning to this guide.
+
+Event types are defined by extensions and typically consist of the following:
+
+1. A [view](./views.md) shown within the Data Collection UI that allows users to modify settings for the event.
+2. A library module emitted within the tag runtime library to interpret the settings and watch for a certain activity to occur.
 
 `module.exports` accept both the `settings` and `trigger` parameters. This enables customization of the event-type.
 
