@@ -20,7 +20,7 @@ feature: Data Management
   * [Modify dashboards](customize/modify.md)
   * [Widget library](customize/widget-library.md)
   * [Standard widgets](customize/standard-widgets.md)
-  * [Edit schema](customize/edit-schema.md)
   * [Custom widgets](customize/custom-widgets.md)
+  * [Edit schema](customize/edit-schema.md)
 * [Query dashboard datasets](query.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
