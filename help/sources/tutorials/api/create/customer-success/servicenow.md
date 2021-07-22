@@ -1,17 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
-title: Create a ServiceNow Source Connection Using the Flow Service API
+title: Create a ServiceNow Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to a ServiceNow server using the Flow Service API.
 exl-id: 39d0e628-5c07-4371-a5af-ac06385db891
 ---
-# Create a [!DNL ServiceNow] source connection using the [!DNL Flow Service] API
+# Create a [!DNL ServiceNow] base connection using the [!DNL Flow Service] API
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Experience Platform] to a [!DNL ServiceNow] server.
+This tutorial walks you through the steps to create a base connection for [!DNL Google ServiceNow] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -31,32 +31,19 @@ In order for [!DNL Flow Service] to connect to [!DNL ServiceNow], you must provi
 | `endpoint` | The endpoint of the [!DNL ServiceNow] server. |
 | `username` | The username used to connect to the [!DNL ServiceNow] server for authentication. |
 | `password` | The password to connect to the [!DNL ServiceNow] server for authentication. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL ServiceNow] is: `eb13cb25-47ab-407f-ba89-c0125281c563`. |
 
 For more information about getting started, refer to [this ServiceNow document](https://developer.servicenow.com/app.do#!/rest_api_doc?v=newyork&id=r_TableAPI-GET).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL ServiceNow] account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL ServiceNow] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -66,7 +53,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL ServiceNow] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL ServiceNow] is `eb13cb25-47ab-407f-ba89-c0125281c563`.
+The following request creates a base connection for [!DNL ServiceNow]:
 
 ```shell
 curl -X POST \
@@ -94,12 +81,12 @@ curl -X POST \
     }'
 ```
 
-| Property | Description |
-| ------------- | --------------- |
+| Parameter | Description |
+| --------- | ----------- |
 | `auth.params.server`|  The endpoint of your [!DNL ServiceNow] server. |
 | `auth.params.username`| The username used to connect to the [!DNL ServiceNow] server for authentication. |
 | `auth.params.password`| The password to connect to the [!DNL ServiceNow] server for authentication. |
-| `connectionSpec.id`| The connection specification ID associated with [!DNL ServiceNow]. |
+| `connectionSpec.id`| The [!DNL ServiceNow] connection specification ID: `eb13cb25-47ab-407f-ba89-c0125281c563` |
 
 **Response**
 

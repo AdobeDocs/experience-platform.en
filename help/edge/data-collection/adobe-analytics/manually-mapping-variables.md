@@ -15,7 +15,7 @@ Also, you can use a default set of actions and product lists to send or retrieve
 
 ## Context data
 
-To be used by [!DNL Analytics], XDM data is flattened using dot notation and made available as `contextData`. The following list of value pairs shows an example of `context data`:
+To be used by [!DNL Analytics], XDM data is flattened using dot notation and made available as `contextData`. The following list of value pairs shows an example of what the `context data` looks like when it is flattened:
 
 ```json
 {

@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Amazon Reds
 
 ## Connect [!DNL Amazon Redshift] to [!DNL Platform] using APIs
 
-- [Create an Amazon Redshift source connection using the Flow Service API](../../tutorials/api/create/databases/redshift.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collecte data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create an Amazon Redshift base connection using the Flow Service API](../../tutorials/api/create/databases/redshift.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Amazon Redshift] to [!DNL Platform] using the UI
 
 - [Create an Amazon Redshift source connection in the UI](../../tutorials/ui/create/databases/redshift.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)
