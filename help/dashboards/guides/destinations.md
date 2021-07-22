@@ -29,9 +29,17 @@ To navigate to the destinations dashboard within the Platform UI, select **[!UIC
 
 ![](../images/destinations/dashboard-overview.png)
 
-## Available widgets
+### Modifying the destinations dashboard
 
-Experience Platform provides multiple widgets that you can use to visualize different metrics related to your destinations. Select the name of a widget below to learn more:
+You can modify the appearance of the destinations dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
+
+Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
+
+## Standard widgets
+
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your destinations. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+
+To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Most used destinations]](#most-used-destinations)
 * [[!UICONTROL Recently created destinations]](#recently-created-destinations)
