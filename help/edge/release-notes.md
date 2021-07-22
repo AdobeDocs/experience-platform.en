@@ -6,7 +6,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 ---
 # Release notes
 
-## Version 2.6.0 - July 23, 2021
+## Version 2.6.0 - July 27, 2021
 
 * When the `sendEvent` command is executed, a promise is returned which is eventually resolved with a `result` object containing information received from the server. This result object includes a property named `decisions`. This `decisions` property has been deprecated. A new property, `propositions`, has been added. This new property provides customers with access to more personalization content, including response tokens. More documentation will be available soon.
 
