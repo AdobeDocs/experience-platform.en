@@ -35,6 +35,8 @@ The link type can be one of three values:
 * **`download`:** A download link
 * **`exit`:** An exit link
 
+These values are [automatically mapped](adobe-analytics/automatically-mapped-vars.md) into Adobe Analytics if [configured](adobe-analytics/analytics-overview.md) to do so.
+
 ## Automatic link tracking {#automaticLinkTracking}
 
 By default, the Web SDK captures, labels, and records clicks on qualifying link tags. Clicks are captured with a [capture](https://www.w3.org/TR/uievents/#capture-phase) click event listener that is attached to the document.
@@ -60,3 +62,21 @@ downloadLinkQualifier: "\\.(exe|zip|wav|mp3|mov|mpg|avi|wmv|pdf|doc|docx|xls|xls
 Links are labeled as an exit link if the link target domain differs from the current `window.location.hostname`.
 
 Links that do not qualify as a download or exit link are labeled as "other."
+
+### How can link-tracking values be filtered?
+
+The data collected with automatic link tracking can be inspected and filtered by providing an `onBeforeEventSend` callback function.
+
+An example when to filter link tracking data is when preparing data for Analytics reporting. Automatic link tracking will capture both the link-name and link-url. In Analytics reports, the link-name takes priority over link-url. If reporting the link-url the link-name needs to be removed. The following example shows an `onBeforeEventSend` function that removes the link-name for download links:
+
+```javascript
+alloy("configure", {
+  onBeforeEventSend: function(options) {
+    const webInteraction = options.xdm?.web?.webInteraction ?? {};
+    if (webInteraction?.type === "download") {
+      webInteraction.name = undefined;
+    }
+  }
+});
+```
+
