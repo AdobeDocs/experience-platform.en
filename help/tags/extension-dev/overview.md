@@ -8,7 +8,7 @@ description: Learn about the primary components of different tag extension types
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
-One of the primary goals of Adobe Experience Platform is to create an open ecosystem where engineers outside of the core engineering team can expose additional functionality through tags. This is done through Reactor extensions. Once an extension has been installed on a tag property by a user, that extension's functionality then becomes available for use by all users of the property.
+One of the primary goals of Adobe Experience Platform is to create an open ecosystem where engineers outside of the core engineering team can expose additional functionality through tags. This is done through tag extensions. Once an extension has been installed on a tag property by a user, that extension's functionality then becomes available for use by all users of the property.
 
 This document outlines the primary components of different extension types and provides links for further documentation to guide you on the extension development process.
 
