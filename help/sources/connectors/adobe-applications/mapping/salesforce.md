@@ -90,7 +90,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `State` | `workAddress.state` |
 | `Status` | `b2b.personStatus` |
 | `Status` | `personComponents.personStatus` |
-| `Street` | `workAddress.street1`
+| `Street` | `workAddress.street1` |
 | `Title` | `extendedWorkDetails.jobTitle` |
 | `Suffix` | `person.name.suffix` |
 
