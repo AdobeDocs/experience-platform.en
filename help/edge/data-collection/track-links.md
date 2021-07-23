@@ -67,7 +67,7 @@ Links that do not qualify as a download or exit link are labeled as "other."
 
 The data collected with automatic link tracking can be inspected and filtered by providing an [onBeforeEventSend callback function](../fundamentals/tracking-events.md#modifying-events-globally).
 
-Filtering link tracking data can be useful when preparing data for Analytics reporting. Automatic link tracking will capture both the link name and link URL. In Analytics reports, the link name takes priority over link URL. If you wish to report the link URL, the link name will need to be removed. The following example shows an `onBeforeEventSend` function that removes the link name for download links:
+Filtering link tracking data can be useful when preparing data for Analytics reporting. Automatic link tracking captures both the link name and link URL. In Analytics reports, the link name takes priority over link URL. If you wish to report the link URL, the link name needs to be removed. The following example shows an `onBeforeEventSend` function that removes the link name for download links:
 
 ```javascript
 alloy("configure", {
