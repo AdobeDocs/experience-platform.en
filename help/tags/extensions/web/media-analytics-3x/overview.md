@@ -78,7 +78,7 @@ You can obtain the sample player here: [MA Sample Player](https://github.com/Ado
 
 ### Using from other extensions
 
-The MA extension exposes `media` as a shared module to other extensions. (For additional information on Shared Modules, see [Shared Modules documentation](https://developer.adobelaunch.com/extensions/shared_modules/).)
+The MA extension exposes `media` as a shared module to other extensions. (For additional information on Shared Modules, see [Shared Modules documentation](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
