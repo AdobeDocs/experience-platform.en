@@ -34,6 +34,7 @@ feature: Schemas
     * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
     * [Consents and Preferences](./field-groups/profile/consents.md)
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
+    * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
   * Event field groups {#event}
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
@@ -79,6 +80,7 @@ feature: Schemas
     * [Product list item](./data-types/product-list-item.md)
     * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
+    * [Telecom Subscription](./data-types/telecom-subscription.md)
     * [Web information](./data-types/web-information.md)
     * [Web interaction](./data-types/web-interaction.md)
     * [Web page details](./data-types/webpage-details.md)
