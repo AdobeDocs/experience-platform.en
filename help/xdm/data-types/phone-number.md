@@ -25,5 +25,5 @@ exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 
 For more details on the phone number data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)

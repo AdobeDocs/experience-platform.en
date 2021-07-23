@@ -102,7 +102,7 @@ The MA extension exports the MediaHeartbeat APIs in the global window object by 
 
 ### Using from other extensions
 
-The MA extension exposes the `get-instance` and `media-heartbeat` shared modules to other extensions. (For additional information on Shared Modules, see [Shared Modules documentation](https://developer.adobelaunch.com/extensions/shared_modules/).)
+The MA extension exposes the `get-instance` and `media-heartbeat` shared modules to other extensions. (For additional information on Shared Modules, see [Shared Modules documentation](../../../extension-dev/web/shared.md).)
 
 >[!IMPORTANT]
 >
