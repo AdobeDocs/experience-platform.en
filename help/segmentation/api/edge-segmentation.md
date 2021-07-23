@@ -161,7 +161,7 @@ A successful response returns an array of segments in your IMS Organization that
 
 ## Create a segment that is enabled for edge segmentation
 
-You can create a segment that is enabled for edge segmentation by making a POST request to the `/segment/definitions` endpoint. In addition to matching one of the [edge segmentation query types listed above](#query-types), you must set the `evaluationInfo.synchronous.enabled` flag in the payload to true.
+You can create a segment that is enabled for edge segmentation by making a POST request to the `/segment/definitions` endpoint that matches one of the [edge segmentation query types listed above](#query-types).
 
 **API format**
 
@@ -194,18 +194,9 @@ curl -X POST \
         "type": "PQL",
         "format": "pql/text",
         "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
-    },
-    "evaluationInfo": {
-        "synchronous": {
-            "enabled": true
-        }
     }
 }'
 ```
-
-| Property | Description |
-| -------- | ----------- |
-| `evaluationInfo.synchronous.enabled` | The `evaluationInfo` object determines the type of evaluation the segment definition will undergo. To use edge segmentation, set `evaluationInfo.synchronous.enabled` with a value of `true`. |
 
 **Response**
 
