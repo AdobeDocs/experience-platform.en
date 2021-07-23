@@ -20,8 +20,8 @@ alloy("sendEvent", {
         "linkClicks": {
             "value":1
       },
-      "name":"My Custom Link", //Name that shows up in the custom links report
-      "URL":"https://myurl.com", //the URL of the link
+      "name":"My Custom Link", // Name that shows up in the custom links report
+      "URL":"https://myurl.com", // The URL of the link
       "type":"other", // values: other, download, exit
       }
     }
@@ -65,16 +65,20 @@ Links that do not qualify as a download or exit link are labeled as "other."
 
 ### How can link-tracking values be filtered?
 
-The data collected with automatic link tracking can be inspected and filtered by providing an `onBeforeEventSend` callback function.
+The data collected with automatic link tracking can be inspected and filtered by providing an [onBeforeEventSend callback function](../fundamentals/tracking-events.md#modifying-events-globally).
 
-An example when to filter link tracking data is when preparing data for Analytics reporting. Automatic link tracking will capture both the link-name and link-url. In Analytics reports, the link-name takes priority over link-url. If reporting the link-url the link-name needs to be removed. The following example shows an `onBeforeEventSend` function that removes the link-name for download links:
+Filtering link tracking data can be useful when preparing data for Analytics reporting. Automatic link tracking will capture both the link name and link URL. In Analytics reports, the link name takes priority over link URL. If you wish to report the link URL, the link name will need to be removed. The following example shows an `onBeforeEventSend` function that removes the link name for download links:
 
 ```javascript
 alloy("configure", {
   onBeforeEventSend: function(options) {
-    const webInteraction = options.xdm?.web?.webInteraction ?? {};
-    if (webInteraction?.type === "download") {
-      webInteraction.name = undefined;
+    if (options
+      && options.xdm
+      && options.xdm.web
+      && options.xdm.web.webInteraction) {
+        if (options.xdm.web.webInteraction.type === "download") {
+          options.xdm.web.webInteraction.name = undefined;
+        }
     }
   }
 });
