@@ -16,7 +16,7 @@ description: This document provides an overview of the Telecom Subscription sche
 
 The field group provides a single object-type field, `telecomSubscription`, whose properties are described below.
 
-![](../../images/field-groups/telecom-subscription/structure.png)
+![Telecom Subscription structure](../../images/field-groups/telecom-subscription/structure.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -39,7 +39,7 @@ For more details on the field group, refer to the public XDM repository:
 
 `internetSubscription` is provided an array of objects. The structure of each object is described below.
 
-![](../../images/field-groups/telecom-subscription/internetSubscription.png)
+![internetSubscription](../../images/field-groups/telecom-subscription/internetSubscription.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -56,7 +56,7 @@ For more details on the field group, refer to the public XDM repository:
 
 `landlineSubscription` is provided an array of objects. The structure of each object is described below.
 
-![](../../images/field-groups/telecom-subscription/landlineSubscription.png)
+![landlineSubscription](../../images/field-groups/telecom-subscription/landlineSubscription.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -79,7 +79,7 @@ For more details on the field group, refer to the public XDM repository:
 
 `mediaSubscription` is provided an array of objects. The structure of each object is described below.
 
-![](../../images/field-groups/telecom-subscription/mediaSubscription.png)
+![mediaSubscription](../../images/field-groups/telecom-subscription/mediaSubscription.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -87,15 +87,13 @@ For more details on the field group, refer to the public XDM repository:
 | `subscriptionDetails` | [[!UICONTROL Telecom Subscription]](../../data-types/telecom-subscription.md) | Describes general details about the subscription, including subscription length, fees, status, and more. |
 | `channels` | Integer | The number of channels included with the media subscription. |
 
-
-
 {style="table-layout:auto"}
 
 ## `mobileSubscription` {#mobileSubscription}
 
 `mobileSubscription` is provided an array of objects. The structure of each object is described below.
 
-![](../../images/field-groups/telecom-subscription/mobileSubscription.png)
+![mobileSubscription](../../images/field-groups/telecom-subscription/mobileSubscription.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
