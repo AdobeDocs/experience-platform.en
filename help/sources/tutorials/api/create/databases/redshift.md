@@ -9,10 +9,6 @@ exl-id: 2728ce08-05c9-4dca-af1d-d2d1b266c5d9
 ---
 # Create an [!DNL Amazon Redshift] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL Amazon Redshift] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL Amazon Redshift] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
