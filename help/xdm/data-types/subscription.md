@@ -21,7 +21,7 @@ exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 | `billingPeriod` | String | The duration between billings. |
 | `billingStartDate` | Date | The date when the first bill is due. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
 | `category` | String | The main, top-level categorization of this type of subscription. |
-| `chargeMethod` | String | The way the billing is setup to charge the customer. |
+| `chargeMethod` | String | The way the billing is set up to charge the customer. |
 | `contractID` | String | The unique ID for the contract that governs this subscription. |
 | `country` | String | The country that the subscription contractual and agreement terms are rooted in. |
 | `endDate` | Date | The date the current subscription term ends. The date format (without time) should follow the [RFC 3339, section 5.6](https://tools.ietf.org/html/rfc3339#section-5.6) standard. |
