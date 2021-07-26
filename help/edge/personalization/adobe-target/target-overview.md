@@ -154,7 +154,33 @@ in the `meta` field within `propositions` -> `items`. Here is a sample:
 ```
 To be able to collect the response tokens, we will have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
 and extract the details from `items` -> `meta`. Every `proposition` will have a `renderAttempted` boolean field
-indicating whether the `proposition` was rendered or not.
+indicating whether the `proposition` was rendered or not. See the sample below:
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { decisions, propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = result.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
 
 When automatic rendering is enabled, propositions array will contain:
 #### On Page-Load:
