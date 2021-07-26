@@ -9,10 +9,6 @@ exl-id: 4faf3200-673b-4a20-8f94-d049e800444b
 ---
 # Create an [!DNL Amazon Redshift] source connection in the UI
 
->[!NOTE]
->
->The [!DNL Amazon Redshift] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Amazon Redshift] (hereinafter referred to as "[!DNL Redshift]") source connector using the [!DNL Platform] user interface.
 
 ## Getting started
