@@ -9,6 +9,10 @@ exl-id: 4d454160-9066-4702-815b-9509942f709e
 
 The following entity relationship diagram (ERD) represents a standardized data model for the travel and hospitality industry. The ERD is intentionally presented in a de-normalized fashion and with consideration for how data is stored in Adobe Experience Platform.
 
+>[!NOTE]
+>
+>The ERD as described is a recommendation for how you should model your data for this industry use case. To make use of this data model in Platform, you must construct the recommended schemas and their relationships yourself. See the guides on managing [schemas](../../ui/resources/schemas.md) and [relationships](../../tutorials/relationship-ui.md) in the UI for more information.
+
 Use the following legend to interpret this ERD:
 
 * Each entity shown in is based on an underlying [Experience Data Model (XDM) class](../composition.md#class).
