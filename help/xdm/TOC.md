@@ -19,6 +19,7 @@ feature: Schemas
     * [Overview](./schema/industries/overview.md)
     * [Retail](./schema/industries/retail.md)
     * [Financial services](./schema/industries/financial.md)
+    * [Telecommunications](./schema/industries/telecom.md)
     * [Travel and hospitality](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
