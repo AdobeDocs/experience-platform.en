@@ -23,7 +23,7 @@ The following features have been tested and are currently supported in [!DNL Tar
 
 The following diagram helps you understand the workflow of [!DNL Target] and [!DNL Platform Web SDK] edge decisioning.
 
-![Diagram of Adobe Target edge decisioning with the Platform Web SDK](/assets/target-platform-web-sdk.png)
+![Diagram of Adobe Target edge decisioning with the Platform Web SDK](./assets/target-platform-web-sdk.png)
 
 |Call|Details|
 | --- | --- |
