@@ -132,6 +132,7 @@ For more information, see [Categories for audiences](https://experienceleague.ad
 
 Response Tokens are mainly used to send metadata to third parties like Google, Facebook, etc. Response Tokens are returned
 in the `meta` field within `propositions` -> `items`. Here is a sample:
+
 ```          
 {
   "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
@@ -152,6 +153,7 @@ in the `meta` field within `propositions` -> `items`. Here is a sample:
   ]
 }
 ```
+
 To be able to collect the response tokens, we will have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
 and extract the details from `items` -> `meta`. Every `proposition` will have a `renderAttempted` boolean field
 indicating whether the `proposition` was rendered or not. See the sample below:
@@ -167,7 +169,7 @@ alloy("sendEvent",
     const { decisions, propositions } = result;
 
     // filter rendered propositions
-    const renderedPropositions = result.filter(proposition => proposition.renderAttempted === true);
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
 
     // collect the item metadata that represents the response tokens
     const collectMetaData = (items) => {
@@ -183,20 +185,24 @@ alloy("sendEvent",
 ```
 
 When automatic rendering is enabled, propositions array will contain:
+
 #### On Page-Load:
-- Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
-- Visual Experience Composer based propositions with `renderAttempted` flag set to `true`
-- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+* Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions with `renderAttempted` flag set to `true`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+
 #### On View - change (for cached views):
-- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
 
 When automatic rendering is disabled, propositions array will contain:
+
 #### On Page-Load:
-- Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
-- Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
-- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+* Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+
 #### On View - change (for cached views):
-- Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 ### Single profile update
 
