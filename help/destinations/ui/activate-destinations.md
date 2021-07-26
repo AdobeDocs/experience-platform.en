@@ -162,7 +162,7 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
 
 >[!IMPORTANT]
 >
->Changing the file export schedule for segments that have already been exported is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Export incremental files {#export-incremental-files}
 
@@ -206,7 +206,7 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 
 >[!IMPORTANT]
 >
->Changing the file export schedule for segments that have already been exported is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Configure file names {#file-names}
 
