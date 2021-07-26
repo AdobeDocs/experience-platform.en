@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Telecom Subscription Data Type
 topic-legacy: overview
 description: This document provides an overview of the Telecom Subscription Experience Data Model (XDM) data type.
-exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 ---
 # [!UICONTROL Telecom Subscription] data type
 
@@ -14,7 +13,7 @@ exl-id: 6fd1e073-441b-45f0-bb4f-54f51ab18694
 >
 >This document describes the data type. For the field group of the same name, refer to the [[!UICONTROL Telecom Subscription] field group reference guide](../field-groups/profile/telecom-subscription.md).
 >
->For use cases outside of describing telecommunication subscription, use the generic [[!UICONTROL Subscription] data type](./subscription.md) instead.
+>If you are describing a subscription type that is unrelated to the telecommunication industry, please use the generic [[!UICONTROL Subscription] data type](./subscription.md) instead.
 
 ![Telecom Subscription structure](../images/data-types/telecom-subscription/structure.png)
 

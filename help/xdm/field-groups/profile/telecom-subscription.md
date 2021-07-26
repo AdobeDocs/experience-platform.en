@@ -5,7 +5,6 @@ title: Telecom Subscription Schema Field Group
 topic-legacy: overview
 description: This document provides an overview of the Telecom Subscription schema field group.
 ---
-
 # [!UICONTROL Telecom Subscription] schema field group
 
 >[!NOTE]
