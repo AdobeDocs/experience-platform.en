@@ -82,7 +82,7 @@ This panel also shows useful metadata such as the last time the query was modifi
 
 >[!NOTE]
 >
-> You can only add a schedule to a query that has already been created, saved, and run.
+> You can only add a schedule to a query that has already been created, saved, and run. Additionally, you will **not** be able to add a schedule to a parameterized query.
 
 To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
 
