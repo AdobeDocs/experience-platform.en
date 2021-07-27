@@ -42,7 +42,7 @@ It is recommended that you put all view-related files (HTML, CSS, JavaScript) wi
 
 Each extension defines a set of functionalities. These functionalities are implemented by being included in a [library](../ui/publishing/libraries.md) that is deployed to your website or app. Libraries are a collection of individual components, including conditions, actions, data elements, and more. Each library component is a piece of reusable code (provided by an extension) that is emitted inside the tag runtime.
 
-Depending on whether you are developing a web extension or an edge extension, the available types of components and their use cases will differ. Refer to the subsections below for an overview of which components are available for each extension type.
+Depending on whether you are developing a web extension or an edge extension, the available types of components and their use cases differ. Refer to the subsections below for an overview of which components are available for each extension type.
 
 ### Components for web extensions {#web}
 
@@ -82,4 +82,4 @@ For example, consider an extension that allows the user to send a beacon using a
 
 When users install an extension to a property in the UI, they are shown the extension configuration view, which they must complete in order to finish the installation.
 
-See the guide on [extension configurations](./configuration.md) to learn more.
+To learn more, see the guide on [extension configurations](./configuration.md).
