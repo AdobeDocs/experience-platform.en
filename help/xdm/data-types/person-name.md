@@ -27,5 +27,5 @@ In addition, the data type provides a number of optional properties that can be 
 
 For more details on the person name data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/person-name.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/person/person-name.schema.json)

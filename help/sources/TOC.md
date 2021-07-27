@@ -69,6 +69,7 @@ feature: Data Ingestion, Sources
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+    - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
@@ -121,6 +122,7 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -208,6 +210,7 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
