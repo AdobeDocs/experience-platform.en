@@ -1,7 +1,7 @@
 ---
 title: Using Adobe Target with the Platform Web SDK
 description: Learn how to render personalized content with the Experience Platform Web SDK using Adobe Target
-keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;
+keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;prehiding snippet;vec;Form-Based Experience Composer;xdm;audiences;decisions;scope;schema;system diagram;diagram
 exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 ---
 # Using [!DNL Adobe Target] with the [!DNL Platform Web SDK]
