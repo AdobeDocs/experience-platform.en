@@ -2,19 +2,28 @@
 title: Data Element Types for Web Extensions
 description: Learn how to define a data-element-type library module for a tag extension in a web property.
 ---
-# Data element types for edge extensions
+# Data element types for web extensions
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
-The purpose of a data element type library module is to retrieve a piece of data. The method for this retrieval is customizable. Different data element types allow Adobe Experience Platform users to retrieve data from local storage, a cookie, or a DOM element.
+In data collection tags, data elements are essentially aliases to pieces of data on a page. This data can be found in query string parameters, cookies, DOM elements, or other locations. A data element can be referenced by rules and acts as an abstraction for accessing these pieces of data.
+
+Data element types are provided by extensions, and enable users to configure data elements to access pieces of data in a particular way. As an example, an extension could provide a "local storage item" data element type wherein the user could specify a local storage item name. When the data element is referenced by a rule, the extension would be able to look up the local storage item value by using the local storage item name that the user had provided when configuring the data element.
+
+This document covers how to define data element types for a web extension in Adobe Experience Platform.
 
 >[!IMPORTANT]
 >
->This document provides information on data-element types for web extensions. If you are developing an edge extension, see the guide on [data-element types for edge extensions](../edge/data-element-types.md) instead.
+>If you are developing an edge extension, see the guide on [data element types for edge extensions](../edge/data-element-types.md) instead.
 >
->This document also assumes you are familiar with library modules and how they are integrated in tag extensions. If you require an introduction, see the overview on [library module formatting](./format.md) before returning to this guide.
+>This document also assumes you are familiar with library modules and how they are integrated in web extensions. If you require an introduction, see the overview on [library module formatting](./format.md) before returning to this guide.
+
+Data element types typically consist of the following:
+
+1. A [view](./views.md) shown within the Data Collection UI that allows users to modify settings for the data element.
+2. A library module emitted within the tag runtime library to interpret the settings and retrieve pieces of data.
 
 Consider a situation where you want to allow users to retrieve a piece of data from a local storage item named `productName`. Your module may look like this:
 
