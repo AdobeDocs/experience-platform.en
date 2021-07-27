@@ -9,11 +9,7 @@ exl-id: bbd3f634-cb28-45d8-9b7b-ed3873101882
 ---
 # Create a [!DNL PayPal] source connection in the UI
 
->[!NOTE]
->
-> The [!DNL PayPal] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
-Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PayPal] source connector using the [!DNL Platform] user interface.
+Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL PayPal] source connector using the Platform user interface.
 
 ## Getting started
 
@@ -28,7 +24,7 @@ If you already have a valid [!DNL PayPal] connection, you may skip the remainder
 
 ### Gather required credentials
 
-In order to access your [!DNL PayPal] account [!DNL Platform], you must provide the following values:
+In order to access your [!DNL PayPal] account Platform, you must provide the following values:
 
 | Credential | Description |
 | ---------- | ----------- |
@@ -40,7 +36,7 @@ For more information about getting started, refer to this [[!DNL PayPal] documen
 
 ## Connect your [!DNL PayPal] account
 
-Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PayPal] account to [!DNL Platform].
+Once you have gathered your required credentials, you can follow the steps below to link your [!DNL PayPal] account to Platform.
 
 Log in to [Adobe Experience Platform](https://platform.adobe.com) and then select **[!UICONTROL Sources]** from the left navigation bar to access the **[!UICONTROL Sources]** workspace. The **[!UICONTROL Catalog]** screen displays a variety of sources for which you can create an account with.
 
@@ -66,4 +62,4 @@ To connect an existing account, select the [!DNL PayPal] account you want to con
 
 ## Next steps
 
-By following this tutorial, you have established a connection to your [!DNL PayPal] account. You can now continue on to the next tutorial and [configure a dataflow to bring Payment data into [!DNL Platform]](../../dataflow/payments.md).
+By following this tutorial, you have established a connection to your [!DNL PayPal] account. You can now continue on to the next tutorial and [configure a dataflow to bring Payment data into Platform](../../dataflow/payments.md).

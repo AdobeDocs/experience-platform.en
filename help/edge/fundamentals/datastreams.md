@@ -15,7 +15,7 @@ Your organization must be provisioned for this feature. Please contact your Cust
 
 Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the Datastream configuration tool.
 
-![datastreams tool navigation](../../assets/datastreams_config.png)
+![datastreams tool navigation](../images/datastreams/config.png)
 
 >[!NOTE]
 >
@@ -33,7 +33,7 @@ Below are the available settings for each configuration environment. Most sectio
 
 The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
 
-![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
+![Identity section of the configuration UI](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL Third Party ID Sync Enabled]
 
@@ -47,7 +47,7 @@ ID syncs can be grouped into containers to allow different ID syncs to be run at
 
 The settings listed here enable you to send data to Adobe Experience Platform. You should only enable this section if you have purchased the Adobe Experience Platform.
 
-![Adobe Experience Platform settings block](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform settings block](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL Sandbox]
 
@@ -65,7 +65,7 @@ Datastreams support sending data to datasets that have a schema of class [!UICON
 
 To configure Adobe Target, you must provide a client code. The other fields are optional.
 
-![Adobe Target settings block](../../assets/edge_configuration_target.png)
+![Adobe Target settings block](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Adobe recommends setting this differently for each of your `dev`, `stage`, and `
 
 All that is needed to send data to Adobe Audience Manager is to enable this section. The other settings are optional but encouraged.
 
-![Adobe Audience Manage settings block](../../assets/edge_configuration_aam.png)
+![Adobe Audience Manage settings block](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Cookie Destinations Enabled]
 
@@ -105,7 +105,7 @@ Allows the SDK to share segment information via [URL Destinations](https://exper
 
 Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
+![Adobe Analytics Settings Block](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL Report Suite ID]
 

@@ -74,7 +74,57 @@ While you are viewing a query in [!DNL Query Editor], the **[!UICONTROL Query De
 
 ![Image](../images/ui/query-editor/query-details.png)
 
-This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and view the SQL code in an easy to copy format on the **[!UICONTROL SQL Query]** tab. This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
+This panel allows you to generate an output dataset directly from the UI, delete or name the displayed query, and add a schedule to the query. 
+
+This panel also shows useful metadata such as the last time the query was modified and who modified it, if applicable. To generate a dataset, select **[!UICONTROL Output Dataset]**. The **[!UICONTROL Output Dataset]** dialog appears. Enter a name and description, then select **[!UICONTROL Run Query]**. The new dataset is displayed in the **[!UICONTROL Datasets]** tab on the [!DNL Query Service] user interface on [!DNL Platform].
+
+### Scheduled queries {#scheduled-queries}
+
+>[!NOTE]
+>
+> You can only add a schedule to a query that has already been created, saved, and run. Additionally, you will **not** be able to add a schedule to a parameterized query.
+
+To add a schedule to a query, select **[!UICONTROL Add schedule]**. 
+
+![Image](../images/ui/query-editor/add-schedule.png)
+
+The **[!UICONTROL Schedule details]** page appears. On this page, you can choose the frequency of the scheduled query, the dates the scheduled query will run, as well as what dataset to export the query to.
+
+![Image](../images/ui/query-editor/schedule-details.png)
+
+You can choose the following options for **[!UICONTROL Frequency]**:
+
+- **[!UICONTROL Hourly]**: The scheduled query will run every hour for the date period you selected.
+- **[!UICONTROL Daily]**: The scheduled query will run every X days at the time and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Weekly]**: The selected query will run on the days of the week, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Monthly]**: The selected query will run every month at the day, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+- **[!UICONTROL Yearly]**: The selected query will run every year at the day, month, time, and the date period you selected. Please note that the time selected is in **UTC**, and not your local time zone.
+
+For the dataset, you have the option to use either an existing dataset or create a new dataset.
+
+>[!IMPORTANT]
+>
+> Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
+
+After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
+
+The query details page re-appears, and now showing the details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
+
+>[!NOTE]
+>
+> You can only schedule **one** query template using the UI. If you want to add additional schedules to a query template, you will need to use the API. If a schedule has already been added using the API, you will **not** be add additional schedules using the UI. If multiple schedules are already attached to a query template, only the oldest schedule will be displayed. To learn how to add schedules using the API, please read the [scheduled queries endpoint guide](../api/scheduled-queries.md). 
+>
+> Additionally, you should refresh the page if you want to ensure you have the latest state for the schedule you are viewing.
+
+#### Delete a schedule
+
+You can delete a schedule by selecting **[!UICONTROL Delete a schedule]**.
+
+![Image](../images/ui/query-editor/delete-schedule.png)
+
+>[!IMPORTANT]
+>
+> If you want to delete a schedule for a query, you must disable the schedule first.
 
 ### Saving queries
 
