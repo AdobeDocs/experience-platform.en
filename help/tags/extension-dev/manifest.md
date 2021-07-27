@@ -16,7 +16,7 @@ An extension manifest must consist of the following:
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your extension. It must be unique from all other Reactor extensions and must comply with [naming rules](#naming-rules). **This is used by tags as an identifier and should not be changed after you publish your extension.** |
+| `name` | The name of your extension. It must be unique from all other extensions and must comply with [naming rules](#naming-rules). **This is used by tags as an identifier and should not be changed after you publish your extension.** |
 | `platform` | The platform for your extension. The only value accepted at this moment is `web`. |
 | `version` | The version of your extension. It must follow the [semver](http://semver.org/) versioning format. This is consistent with [npm version field](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | The human-readable name of your extension. This will be shown to Platform users. There is no need to mention "tags" or "Extension"; users will already know they are looking at a tag extension. |
