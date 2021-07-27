@@ -40,7 +40,7 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
-The **[!UICONTROL Analytics source add data]** step appears. Select [!UICONTROL Report suite] to start creating a source connection for Analytics report suite data, and then select the report suite you would like to ingest. Select [!UICONTROL Next] to proceed.
+The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Report suite]** to start creating a source connection for Analytics report suite data, and then select the report suite you would like to ingest. Select **[!UICONTROL Next]** to proceed.
 
 >[!NOTE]
 >
