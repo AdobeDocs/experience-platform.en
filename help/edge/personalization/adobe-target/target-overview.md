@@ -166,7 +166,7 @@ alloy("sendEvent",
       "hero-container"
     ]
   }).then(result => {
-    const { decisions, propositions } = result;
+    const { propositions } = result;
 
     // filter rendered propositions
     const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
