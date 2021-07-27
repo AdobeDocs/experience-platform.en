@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ad
 It is important to understand the following key terms used throughout this document:
 
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
-* **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, props, and lists.
+* **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attribute.
 * **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
 
@@ -175,12 +175,12 @@ To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select th
 
 ## Next steps and additional resources
 
-Once the connection is created, a target schema and dataset flow is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, Analytics data and be used by downstream Platform services such as Real-time Customer Profile and Segmentation Service. See the following documents for more details:
+Once the connection is created, a target schema and dataflow is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-time Customer Profile] and Segmentation Service. See the following documents for more details:
 
-* [Real-time Customer Profile overview](../../../../../profile/home.md)
-* [Segmentation Service overview](../../../../../segmentation/home.md)
-* [Data Science Workspace overview](../../../../../data-science-workspace/home.md)
-* [Query Service overview](../../../../../query-service/home.md)
+* [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
+* [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
+* [[!DNL Data Science Workspace] overview](../../../../../data-science-workspace/home.md)
+* [[!DNL Query Service] overview](../../../../../query-service/home.md)
 
 The following video is intended to support your understanding of ingesting data using the Adobe Analytics Source connector:
 
