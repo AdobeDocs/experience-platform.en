@@ -83,3 +83,7 @@ For example, consider an extension that allows the user to send a beacon using a
 When users install an extension to a property in the UI, they are shown the extension configuration view, which they must complete in order to finish the installation.
 
 To learn more, see the guide on [extension configurations](./configuration.md).
+
+## Submitting extensions
+
+Once you have finished building your extension, you can submit it to be listed in the extension catalog in Platform. See the [extension submission process overview](./submit/overview.md) for more information.
