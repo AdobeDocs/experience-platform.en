@@ -102,6 +102,10 @@ You can choose the following options for **[!UICONTROL Frequency]**:
 
 For the dataset, you have the option to use either an existing dataset or create a new dataset.
 
+>[!IMPORTANT]
+>
+> Since you are using either an existing or creating a new dataset, you do **not** need to include either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of the query, since the datasets are already set. Including either `INSERT INTO` or `CREATE TABLE AS SELECT` as part of your scheduled queries will result in an error.
+
 After confirming all these details, select **[!UICONTROL Save]** to create a schedule.
 
 The query details page re-appears, and now showing the details of the newly created schedule, including the schedule ID, the schedule itself, and the schedule's output dataset. You can use the schedule ID to look up more information about the runs of the scheduled query itself. To learn more, please read the [scheduled query run endpoints guide](../api/runs-scheduled-queries.md).
