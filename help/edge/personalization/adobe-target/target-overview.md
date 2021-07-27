@@ -8,6 +8,10 @@ exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Target] to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
 
+>[!IMPORTANT]
+>
+>The [Adobe Target documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) includes topics containing information specific to the Platform Web SDK as it relates to Target features and functionality. 
+
 The following features have been tested and are currently supported in [!DNL Target]:
 
 * [A/B Tests](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
