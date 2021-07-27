@@ -141,9 +141,9 @@ The [!UICONTROL Review] step appears, allowing you to review your new Analytics 
 
 ### Monitor your dataflow
 
-Once your dataflow has been created, you can monitor the data that is being ingested through it. From the **[!UICONTROL Catalog]** screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
+Once your dataflow has been created, you can monitor the data that is being ingested through it. From the [!UICONTROL Catalog] screen, select **[!UICONTROL Dataflows]** to view a list of established flows associated with your Analytics account.
 
-![](../../../../images/tutorials/create/analytics/catalog-dataset-flows.png)
+![select-dataflows](../../../../images/tutorials/create/analytics/select-dataflows.png)
 
 The **Dataflows** screen appears. On this page is a pair of dataset flows, including information about their name, source data, creation time, and status.
 
@@ -153,21 +153,19 @@ For more information on backfill, live data, and their respective latencies, see
 
 Select the dataset flow you wish to view from the list.
 
-![](../../../../images/tutorials/create/analytics/backfill.png)
+![select-target-dataset](../../../../images/tutorials/create/analytics/select-target-dataset.png)
 
-The **Dataset activity** page appears. This page displays the rate of messages being consumed in the form of a graph. Select *Data governance* from the top header to access the labelling fields.
+The **[!UICONTROL Dataset activity]** page appears. This page displays the rate of messages being consumed in the form of a graph. Select **[!UICONTROL Data governance]** from the top header to access the labelling fields.
 
-![](../../../../images/tutorials/create/analytics/batches.png)
+![dataset-activity](../../../../images/tutorials/create/analytics/dataset-activity.png)
 
-You can view a dataset flow's inherited labels from the *Data governance* screen. To access specific labels, select the edit button on the top right.
+You can view a dataset flow's inherited labels from the [!UICONTROL Data governance] screen. For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
 
-![](../../../../images/tutorials/create/analytics/data-gov.png)
+![data-gov](../../../../images/tutorials/create/analytics/data-gov.png)
 
-The **Edit governance labels** panel appears. This screen allows you to access and edit a dataset flow's contract, identity, and sensitive labels.
+To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select the ellipses (`...`) beside the dataflow name and then select [!UICONTROL Delete].
 
-For more information on how to label data coming from Analytics, visit the [data usage labels guide](../../../../../data-governance/labels/user-guide.md).
-
-![](../../../../images/tutorials/create/analytics/labels.png)
+![delete](../../../../images/tutorials/create/analytics/delete.png)
 
 ## Next steps and additional resources
 
