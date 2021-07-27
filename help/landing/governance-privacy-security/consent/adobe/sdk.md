@@ -10,6 +10,14 @@ The Adobe Experience Platform Web SDK allows you to retrieve customer consent si
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. This document provides general guidance on how to integrate your CMP with the Platform Web SDK.
 
+>[!NOTE]
+>
+>This guide walks through the steps of integrating the SDK through a tag extension in the Data Collection UI. If you want to use the standalone version of the SDK instead, please refer to the following docs:
+>
+>* [Configure a datastream](../../../../edge/fundamentals/datastreams.md)
+>* [Install the SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+>* [Configure the SDK for consent commands](../../../../edge/consent/supporting-consent.md)
+
 ## Prerequisites
 
 This tutorial assumes that you have already determined how to generate consent data within your CMP, and have created a dataset containing consent fields that has been enabled for Real-time Customer Profile. To learn more about these steps, see the overview on [consent processing in Experience Platform](./overview.md) before returning to this guide.
@@ -38,7 +46,7 @@ After creating a new configuration or selecting an existing one to edit, select 
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 
-## Install and configure the Platform Web SDK extension
+## Install and configure the Platform Web SDK
 
 Once you have created a datastream as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your Platform Launch property, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Then, select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
 
@@ -80,7 +88,7 @@ Once the data element is created, navigate back to the Web SDK extension config 
 
 Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in the Platform Launch documentation for detailed information on how to deploy your updated library build.
 
-## Making consent-change commands
+## Making consent-change commands {#commands}
 
 Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
 
