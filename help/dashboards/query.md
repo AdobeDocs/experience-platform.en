@@ -23,11 +23,19 @@ You can use Query Service to query raw datasets for profile, segment, and destin
 
 Profile dashboard insights are tied to merge policies that have been defined by your organization. For every active merge policy, there is a profile attribute dataset available in the data lake. 
 
-The naming convention of these datasets is **Profile Attribute** followed by a system-generated, random alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`. 
+The naming convention of these datasets is **Profile Attribute** followed by a system-generated, random alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`.
 
 To understand the full schema of each profile attribute dataset, you can preview and explore the datasets using the dataset viewer in the Experience Platform UI.
 
 ![](images/query/profile-attribute.png)
+
+#### Mapping profile attribute datasets to merge policy IDs
+
+Each profile attribute dataset is entitled **Profile Attribute** followed by a system-generated, random alpha numeric value. For example: `Profile Attribute 14adf268-2a20-4dee-bee6-a6b0e34616a9`. 
+
+This alpha numeric value is a system-generated, random string that maps to a merge policy ID of one of the merge policies created by your organization. The mapping of each merge policy ID to its related profile attribute dataset string is maintained in the `adwh_dim_merge_policies` dataset. 
+
+This dataset can be explored using the Query Editor UI in Experience Platform. To learn more about using the Query Editor, refer to the [Query Editor UI guide](../query-service/ui/user-guide.md).
 
 ### Segment metadata dataset
 
