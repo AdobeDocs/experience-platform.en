@@ -26,7 +26,7 @@ It is important to understand the following key terms used throughout this docum
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
 * **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, props, and lists.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attribute.
-* **Friendly names**: DEFINITION TO BE ADDED
+* **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
 
 ## Create a source connection with Adobe Analytics
 
@@ -52,6 +52,10 @@ The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTRO
 
 ### Mapping
 
+>[!IMPORTANT]
+>
+>The Data Prep support feature for the [!DNL Analytics] source is in beta.
+
 The [!UICONTROL Mapping] page provides an interface to map source fields to their appropriate target schema fields. From here, you can map custom variables to new schema field groups and apply calculations as supported by Data Prep. Select a target schema to start the mapping process.
 
 >[!TIP]
@@ -65,7 +69,7 @@ The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Sta
 | Map standard fields | Description |
 | --- | --- |
 | [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped standard attributes. Standard mappings refer to mapping sets between standard attributes in the source [!DNL Analytics] data and standard attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
-| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped standard attributes that contain friendly name conflicts. |
+| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped standard attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
 | [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and custom attributes in [!DNL Analytics] field group. Custom attributes can be mapped to other custom attributes, as well as standard attributes. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
@@ -82,7 +86,9 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-You can still proceed and create an [!DNL Analytics] dataflow even if your mapping sets contain name conflicts. Select **[!UICONTROL Next]** to proceed.
+If there are friendly name conflicts in your mapping sets, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will be the same. Alternatively, you can opt to create a new schema with a blank set of descriptors.
+
+Select **[!UICONTROL Next]** to proceed.
 
 ![caution](../../../../images/tutorials/create/analytics/caution.png)
 
