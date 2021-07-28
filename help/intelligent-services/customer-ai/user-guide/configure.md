@@ -121,7 +121,7 @@ Setup a scoring schedule by configuring the **[!UICONTROL Scoring Frequency]**. 
 
 ### Prediction exclusions
 
-If your dataset contained any test data, you can add that event to an exclusion list by selecting add exclusion followed by entering the field you wish to exclude. This prevent events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs.
+If your dataset contained any test data, you can add that event to an exclusion list by selecting add exclusion followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs.
 
 To exclude certain events, select **[!UICONTROL Add exclusion]** and define the event. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then select **[!UICONTROL Remove Container]**.
 
