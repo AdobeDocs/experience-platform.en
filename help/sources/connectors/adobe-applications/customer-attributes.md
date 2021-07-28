@@ -20,9 +20,17 @@ The [!DNL Customer Attributes] source auto-creates the dataset for data to land 
 
 ## Identities
 
-The primary identity of a dataset is contained in the first column of the CSV file of the source data. The [!DNL Customer Attributes] source assumes that the identity is always mapped to the UUID namespace. This UUID namespace is a system-generated namespace that is supported by UID. You cannot select an existing namespace for the identity when using the [!DNL Customer Attributes] source. Furthermore, the [!DNL Customer Attributes] source assumes that the primary identity for the schema is always in the identity map and then creates the mapping of the source ID to the identity map UUID in an automated manner.
+The primary identity of a dataset is contained in the first column of the CSV file of the source data. The [!DNL Customer Attributes] source assumes that the identity is always mapped to the [`CORE` namespace](../../../identity-service/namespaces.md). This `CORE` namespace is a system-generated namespace that is supported by [[!DNL Identity Service]](../../../identity-service/home.md).
 
-The documentation below provides information on how to connect [!DNL Customer Attributes] to Adobe Experience Platform using APIs or the user interface:
+You cannot select an existing namespace for the identity when using the [!DNL Customer Attributes] source. Furthermore, the [!DNL Customer Attributes] source assumes that the primary identity for the schema is always in the identity map and then creates the mapping of the source ID to the identity map UUID in an automated manner.
+
+For [!DNL Customer Attributes] data to tie to other [!DNL Profile] datasets, the [!DNL Customer Attributes] data and identities must be able to be matched to an Experience Cloud ID.
+
+You can establish the `CORE` namespace by setting the Experience Cloud ID for the visitor using [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity), or the [Experience Cloud ID Service API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en).
+
+The [!DNL Customer Attributes] file does not further populate any other identity relationships. If a [!DNL Customer Attributes] source dataset contains an *Email* and a *Loyalty ID* field, then those fields must be labelled as identity fields in the schema in order to be processed into the [!DNL Identity Service].
+
+The documentation below provides information on how to connect [!DNL Customer Attributes] to Adobe Experience Platform using the user interface:
 
 ## Connect [!DNL Customer Attributes] to Platform using the UI
 
