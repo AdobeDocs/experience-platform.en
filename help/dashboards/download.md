@@ -15,7 +15,7 @@ This document provides a summary of how to download dashboards using the Platfor
 >
 >The data contained within your dashboards may include personally identifiable information (PII) about your customers or sensitive data related to your organization. Any dashboard data saved to PDF should be handled appropriately according to your organization's data privacy guidelines.
 
-## Download a dashboard
+## Download dashboard
 
 To begin downloading a dashboard, navigate to the dashboard that you want to download (for example, the [!UICONTROL Profiles] dashboard) and select the more options menu (**`...`**) from the top-right corner of the dashboard. 
 
