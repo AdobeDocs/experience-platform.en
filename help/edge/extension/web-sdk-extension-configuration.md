@@ -1,17 +1,17 @@
 ---
 title: Adobe Experience Platform Web SDK configuration
-description: Learn about the Adobe Experience Platform Web SDK Extension for Adobe Experience Platform Launch
+description: Learn about the Adobe Experience Platform Web SDK tag extension.
 exl-id: 96d32db8-0c9a-49f0-91f3-0244522d66df
 ---
 # Overview
 
 The Adobe Experience Platform Web SDK extension sends data to Adobe Experience Cloud from web properties through the Adobe Experience Platform Edge Network. The extension allows you to stream data into Platform, synchronize identities, process customer consent signals, and automatically collect context data.
 
-This document covers how to configure the extension in the Adobe Experience Platform Launch user interface.
+This document covers how to configure the extension in the Data Collection UI.
 
 ## Configure the extension
 
-If the Platform Web SDK extension has already been installed for a property, open the property in the Platform Launch UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
+If the Platform Web SDK extension has already been installed for a property, open the property in the Data Collection UI and select the **[!UICONTROL Extensions]** tab. Under the Platform Web SDK, select **[!UICONTROL Configure]**.
 
 ![](../images/extension/overview/configure.png)
 
@@ -29,7 +29,7 @@ The configuration options at the top of the page tell Adobe Experience Platform 
 
 ### [!UICONTROL Name]
 
-The Adobe Experience Platform Web SDK extension supports multiple instances on the page. The name is used to send data to multiple organizations with a single Platform Launch configuration.
+The Adobe Experience Platform Web SDK extension supports multiple instances on the page. The name is used to send data to multiple organizations with a tag configuration.
 
 The extension's name defaults to "[!DNL alloy]". However, you can change the instance name to any valid JavaScript object name.
 

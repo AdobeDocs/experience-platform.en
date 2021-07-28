@@ -6,7 +6,7 @@ description: Learn how to quickly get up and running with tags in Adobe Experien
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 Tags are Adobe Experience Platform's next generation of tag management technology. It is built from the ground up to support an open and sustainable ecosystem where anyone can build their own integrations that Adobe customers can deploy to their sites. It is an API first application so anything you can do through the UI you can also do programmatically through an API.
 
@@ -32,7 +32,7 @@ For detailed instructions on how to create groups and add users for tags, see th
 
 ## 2. Log in
 
-After tag rights have been added to your Adobe ID, you need to log in to the Data Collection UI. You can do this by navigating directly to the [Experience Cloud login screen](https://experiencecloud.adobe.com), and selecting **[!UICONTROL Launch / Data Collection]** from the Quick Access tab.
+After tag rights have been added to your Adobe ID, you need to log in to the Data Collection UI. You can do this by navigating directly to the [Experience Cloud login screen](https://experiencecloud.adobe.com), and selecting the Data Collection UI from the Quick Access tab.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ An extension is an integration built by Adobe or an Adobe partner that adds new 
 
 All new properties come with the [Core extension](../extensions/web/core/overview.md) installed. Mobile properties come with additional extensions. The Core extension is built by Adobe to provide a robust default set of data element types for your data layer and event types for your rules. Most actions you will want to perform (get an ECID, send [!DNL Adobe Analytics] beacons, load the [!DNL Target] global mbox, etc) will come from extensions that you install from the catalog.
 
-What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, see [Add a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
+What makes tags in Platform truly unique is that these extensions can be built by anyone. Do you need to drop a Facebook remarketing pixel on your site? Check out the extension that Facebook built. Do you want the same for Twitter or Linked In? Use those extensions. Do you need to run a survey? Look at Question Pro or Foresee. Do you need to manage privacy and consent from your end-users to help out with [!DNL GDPR]? Take a good look at Evidon and Trust Arc. Would you like to see granular insight into the behavior of individual users on your site? Maybe take a look at Clicktale. For more information, For more information, see the section on [adding a new extension](../ui/managing-resources/extensions/overview.md#add-a-new-extension).
 
 ## 5. Create data elements and rules
 
