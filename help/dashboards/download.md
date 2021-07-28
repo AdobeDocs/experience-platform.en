@@ -2,7 +2,7 @@
 solution: Experience Platform
 title: Download Experience Platform Dashboards to PDF
 type: Documentation
-description: Save copies of dashboard visualizations using the download to PDF feature available within the Experience Platform UI.
+description: Save copies of dashboard visualizations using the download-to-PDF feature available within the Experience Platform UI.
 ---
 
 # Download dashboards to PDF
@@ -23,7 +23,7 @@ To begin downloading a dashboard, navigate to the dashboard that you want to dow
 
 ## Preview PDF
 
-After selecting to download a dashboard, the default print menu for your browser opens. In this example, the Google Chrome print menu is shown.
+After selecting **[!UICONTROL Download]**, the default print menu for your browser opens. In this example, the Google Chrome print menu is shown.
 
 The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Platform UI and the size of the PDF is automatically adjusted to display all of the currently visible dashboard widgets on a single page. 
 
@@ -39,7 +39,7 @@ After previewing the PDF, select **Save** to choose the location to which you wa
 
 >[!NOTE]
 >
->If necessary, you can use the **Destinations** dropdown to select **Save as PDF** if that option is not automatically selected for you. 
+>If necessary, you can use the **Destination** dropdown to select **Save as PDF** if that option is not automatically selected for you. 
 
 ![](images/download/download-chrome-print-destination.png)
 
