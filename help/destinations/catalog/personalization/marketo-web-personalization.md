@@ -10,7 +10,7 @@ exl-id: 2f194a5e-13b7-460a-a968-29131771efca
 
 This extension deploys the script for [!DNL Marketo’s] Web Personalization and ContentAI applications. [!DNL Marketo] Web Personalization uniquely identifies and personalizes content to web visitor characteristics, such as firmographics for anonymous visitors and a broad array of behavioral attributes within the [!DNL Marketo] Engagement Platform for known visitors. [!DNL Marketo] ContentAI contains capabilities for AI-powered recommendations and personalization for web and email campaigns that are unique for B2B customers.
 
-[!DNL Marketo Web Personalization] is a personalization extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
+[!DNL Marketo Web Personalization] is a personalization extension in Adobe Experience Platform. For more information about web personalization and ContentAI in Marketo, read [Web Personalization Overview](https://experienceleague.adobe.com/docs/marketo/using/product-docs/web-personalization/understanding-web-personalization/web-personalization-overview.html?lang=en).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Platform, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
@@ -35,8 +35,6 @@ Click on the destination to highlight it, then select **[!UICONTROL Configure]**
 In the **[!UICONTROL Select available Platform Launch property]** window, select the Platform Launch property in which you want to install the extension. You also have the option of creating a new property in Platform Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of the Platform Launch documentation.
 
 The workflow takes you to Platform Launch to complete the installation.
-
-For information about the extension configuration options and installation support, see the [Marketo Web Personalization page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101232.marketo-web-personalization.html).
 
 You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the Platform Launch documentation.
 

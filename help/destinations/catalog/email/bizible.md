@@ -8,9 +8,9 @@ exl-id: 9e45416d-b951-411c-a59f-34f84529f721
 
 ## Overview {#overview}
 
-[!DNL Bizible] is the industry-leading B2B attribution solution that gives you unparallelled visibility into your data, so you can make smart decisions that power growth.
+[!DNL Bizible] is the industry-leading B2B attribution solution that gives you unparalleled visibility into your data, so you can make smart decisions that power growth.
 
-[!DNL Bizible] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
+[!DNL Bizible] is an email extension in Adobe Experience Platform. For more information about Bizible, read [Marketing Attribution](https://experienceleague.adobe.com/docs/bizible/using/introduction-to-bizible/overview-resources/marketing-attribution.html?lang=en) in the Bizible overview resources.
 
 This destination is an [!DNL Adobe Experience Platform Launch] extension. For more information about how [!DNL Platform Launch] extensions work in Platform, see [Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
@@ -35,8 +35,6 @@ Click on the destination to highlight it, then select **[!UICONTROL Configure]**
 In the **[!UICONTROL Select available Platform Launch property]** window, select the [!DNL Platform Launch] property in which you want to install the extension. You also have the option of creating a new property in [!DNL Platform Launch]. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of the [!DNL Launch] documentation.
 
 The workflow takes you to [!DNL Platform Launch] to complete the installation. 
-
-For information about the extension configuration options and installation support, see the [Bizible page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101055.bizible-analytics.html).
 
 You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the [!DNL Platform Launch] documentation.
 

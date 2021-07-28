@@ -10,7 +10,7 @@ exl-id: 51ee94f7-e44a-4192-b684-3d7838af4359
 
 [!DNL Twitter Universal Website Tag] provides actions to send beacons to Twitter UWT Tag.
 
-[!DNL Twitter Universal Website Tag] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see [Advanced Conversion Tracking](https://business.twitter.com/en/solutions/twitter-ads/website-clicks/advanced-conversion-tracking.html).
+[!DNL Twitter Universal Website Tag] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see [Conversion Tracking](https://business.twitter.com/en/help/campaign-measurement-and-analytics/conversion-tracking-for-websites.html) in the Twitter documentation.
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Platform, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 

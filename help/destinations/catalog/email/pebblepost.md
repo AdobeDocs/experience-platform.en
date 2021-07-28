@@ -10,7 +10,7 @@ exl-id: 2d0308db-9d75-4cd1-97de-70ce3837369d
 
 [!DNL PebblePost's Programmatic Direct Mail®] solution helps digital marketers connect online interest and intent to offline, tangible media that converts. Marketers can leverage the custom data segments they have created in Adobe to now target consumers with a relevant, longer-lasting, in-home media impression. Analyze performance in real time based on response path activity and on-site conversions.
 
-[!DNL PebblePost] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+[!DNL PebblePost] is an email extension in Adobe Experience Platform. For more information about PebblePost, read the [integration blog post](https://blog.adobe.com/en/publish/2017/11/16/pebblepost-builds-integration-launch-adobe.html#gs.7lejiq).
 
 This destination is an Adobe Experience Platform Launch extension. For more information about how Platform Launch extensions work in Platform, see [Adobe Experience Platform Launch extensions overview](../launch-extensions/overview.md).
 
@@ -34,9 +34,7 @@ Click on the destination to highlight it, then select **[!UICONTROL Configure]**
 
 In the **[!UICONTROL Select available Platform Launch property]** window, select the Platform Launch property in which you want to install the extension. You also have the option of creating a new property in Platform Launch. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of the Platform Launch documentation.
 
-The workflow takes you to Platform Launch to complete the installation. 
-
-For information about the extension configuration options and installation support, see the [PebblePost page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100315.programmatic-direct-mail.html).
+The workflow takes you to Platform Launch to complete the installation.
 
 You can also install the extension directly in the [Adobe Experience Platform Launch interface](https://launch.adobe.com/). See [Add a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the Platform Launch documentation.
 
