@@ -17,9 +17,7 @@ This document provides a summary of how to download dashboards using the Platfor
 
 ## Download dashboard
 
-To begin downloading a dashboard, navigate to the dashboard that you want to download (for example, the [!UICONTROL Profiles] dashboard) and select the more options menu (**`...`**) from the top-right corner of the dashboard. 
-
-Then select **[!UICONTROL Download]**.
+To begin downloading a dashboard, navigate to the dashboard that you want to download (for example, the [!UICONTROL Profiles] dashboard) and then select the more options menu (**`...`**) from the top-right corner of the dashboard. Next, select **[!UICONTROL Download]**.
 
 ![](images/download/download-button.png)
 
@@ -27,17 +25,17 @@ Then select **[!UICONTROL Download]**.
 
 After selecting to download a dashboard, the default print menu for your browser opens. In this example, the Google Chrome print menu is shown.
 
-The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Platform UI and the size of the PDF is automatically adjusted to keep the dashboard on one page and to include all visible widgets. 
+The print menu allows you to preview the PDF that will be saved. The PDF is a true representation of the dashboard widgets as they appear in the Platform UI and the size of the PDF is automatically adjusted to display all of the currently visible dashboard widgets on a single page. 
 
 ![](images/download/download-chrome-print.png)
 
-The PDF includes an automatic header, displaying the Experience Platform logo, the name of the dashboard, your name, and the date and time that the dashboard was downloaded. This information is read-only and cannot be edited in the PDF.
+The PDF includes an automatically generated header containing the Experience Platform logo, the name of the dashboard, your name, and the date and time that the dashboard was downloaded. This information is read-only and cannot be edited in the PDF.
 
 ![](images/download/download-pdf.png)
 
 ## Save as PDF
 
-After previewing the PDF, select **Save** to select the location to which you want to save your PDF.
+After previewing the PDF, select **Save** to choose the location to which you want to save your PDF.
 
 >[!NOTE]
 >
