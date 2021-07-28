@@ -250,9 +250,9 @@ To learn more about each of the supported notebooks and how to use them, visit t
 
 For a list of supported packages in Python, R, and PySpark, copy and paste `!conda list` in a new cell, then run the cell. A list of supported packages populates in alphabetical order.
 
-![example](../images/jupyterlab/user-guide/libraries.png)
+![example](../images/jupyterlab/user-guide/libraries.PNG)
 
 In addition, the following dependencies are used but not listed:
-- CUDA 11.2
-- CUDNN 8.1
+* CUDA 11.2
+* CUDNN 8.1
 
