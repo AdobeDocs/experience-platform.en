@@ -11,7 +11,7 @@ Adobe Experience Platform provides the next generation of tag-management capabil
 For an introduction to tags, see the resources below:
 
 - [Tags overview](https://experienceleague.adobe.com/docs/launch/using/home.html)
-- [Quick start videos](../../../tags/quick-start/videos.md).
+- [Quick start guide](../../../tags/quick-start/quick-start.md)
 
 ## How to find tag extensions in the Platform interface {#how-to-find-extensions-in-interface}
 

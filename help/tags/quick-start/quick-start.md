@@ -20,8 +20,6 @@ The basic tags workflow:
 6. Test in your dev environment.
 7. Promote to production.
 
-For an introductory video, see the [introductory videos](videos.md) documentation.
-
 ## 1. Set up groups and users
 
 Tags are fully integrated with your Adobe ID. User permissions are managed through the Admin Console with other Adobe products and solutions from the [!DNL Creative Cloud], [!DNL Document Cloud], and Experience Cloud.

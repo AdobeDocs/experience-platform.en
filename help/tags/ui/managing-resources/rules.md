@@ -12,8 +12,6 @@ Tags in Adobe Experience Platform follow a rule-based system. They look for user
 
 Build rules to integrate the data and functionality of marketing and ad tech that unifies disparate products into a single solution.
 
-For an introductory video, see [Rule builder](../../quick-start/videos.md).
-
 ## Rule Structure
 
 **Events (If):** The event is what you want the rule to look for. This is defined by choosing an event, any applicable conditions, and any exceptions.

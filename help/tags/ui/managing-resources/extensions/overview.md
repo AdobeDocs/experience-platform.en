@@ -28,8 +28,6 @@ Select an extension, then select [!UICONTROL Configure] to view and change the e
 
 By default, Adobe provides extensions that support common integrations. Extensions can be modified with custom configurations. Configurations are provided through the extensions. To create a configuration, select the extension card, then select **[!UICONTROL Add New Configuration]**.
 
-For a video introduction, see [Extensions](../../../quick-start/videos.md).
-
 ## Extension catalog
 
 Use the extension catalog to browse, configure, and deploy marketing and advertising technology built and maintained by independent software vendors, as well as extensions for Adobe solutions.

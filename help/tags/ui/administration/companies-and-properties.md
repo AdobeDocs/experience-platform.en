@@ -16,8 +16,6 @@ A web property is a collection of rules, data elements, configured extensions, e
 
 A mobile property type can contain multiple applications. For example, in a mobile property you can manage the same set of rules and extensions across multiple iOS and Android applications.
 
-For a video tutorial, see [Creating your first property](../../quick-start/videos.md).
-
 ## Best practices for planning properties {#best-practices-for-planning-properties}
 
 Each tag implementation in Adobe Experience Platform can be very different. They have a wide variety of data-collection needs, variable usage, extensions, third-party tags, other systems and technologies, people, teams, geographic regions, and so on. You should structure your properties in a way that matches your IMS Organization's workflow, and processes.

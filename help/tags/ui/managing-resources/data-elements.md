@@ -33,8 +33,6 @@ Data elements are populated with data when they are used in rules or when manual
 1. [Create a data element](#create-a-data-element), if you haven't done so already.
 1. Use the data element in a [rule](./rules.md) or a custom script.
 
-For an introductory video, see [Data elements](../../quick-start/videos.md).
-
 ## Data element usage
 
 ### In rules
