@@ -14,7 +14,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Access key ID**: An access key ID is a unique identifier that's associated with an [!DNL Amazon] S3 secret access key. The access key ID and secret access key are used together to sign [!DNL Amazon Web Services] (AWS) requests.
 
-**Action**: In [!DNL Platform Launch], an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
+**Action**: In the context of tags, an action is a specific type of rule component that defines what should happen after an event occurs and conditions are evaluated and passed.
 
 **Activate**: Activate is the action taken by a user to map a segment or profiles to a destination such as [!DNL Oracle Eloqua], [!DNL Google], or [!DNL Salesforce Marketing Cloud].
 
@@ -25,8 +25,6 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Adobe Admin Console**: Adobe Admin Console provides a central location for managing Adobe product entitlements and access for your organization. Through the console, administrators can grant groups of users access permissions for various Platform capabilities, such as "Manage Datasets", "View Datasets", or "Manage Profiles".
 
 **Adobe Experience Platform**: Adobe Experience Platform standardizes data and content across the enterprise, powering real-time consumer profiles, enabling data science, and accelerating content velocity to drive experience personalization across the customer journey.
-
-**Adobe Experience Platform Launch**: [!DNL Platform Launch] is a tag and SDK management ecosystem, integrated with Experience Platform and [!DNL Experience Cloud] applications. [!DNL Platform Launch] provides tools to deploy, unify, and manage analytics, marketing, and advertising integrations that are necessary to power relevant customer experiences on all client devices.
 
 **Adobe Experience Platform Query Service**: Enables data analysts to query events and profiles for use in analytics and machine learning. With Query Service, data scientists and analysts can pull all of their datasets stored in Experience Platform (including behavioral data as well as point-of-sale (POS), customer relationship management (CRM), and more) and query those datasets to answer specific questions about the data.
 
@@ -74,7 +72,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Batch segmentation**: Batch segmentation is an alternative to an ongoing data selection process and moves all profile data at once through segment definitions to produce corresponding audiences. Once created, this segment is saved and stored so it can be exported for use.
 
-**Build**: In [!DNL Platform Launch], a build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of a library, allowing you to deploy that library on your website or mobile app.
+**Build**: In the context of tags, a build is a file or set of files that contain all the configurations and code needed to execute the business logic contained inside of a library, allowing you to deploy that library on your website or mobile app.
 
 **Business intelligence tools**: Business intelligence (BI) tools are primarily integrated with [!DNL Experience Platform Query Service]. BI tools are types of application software that collect and process large amounts of unstructured data from internal and external systems.
 
@@ -98,7 +96,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Composition**: A composition is a grouping of components that form together to make up the schema.
 
-**Condition**: In [!DNL Platform Launch], a condition is a rule component that evaluates a logical statement that must return `true` or `false`. All conditions must evaluate to `true` and all exception conditions must evaluate to `false` before any actions on the rule are executed.
+**Condition**: In the context of tags, a condition is a rule component that evaluates a logical statement that must return `true` or `false`. All conditions must evaluate to `true` and all exception conditions must evaluate to `false` before any actions on the rule are executed.
 
 **Console**: In [!DNL Query Service], the console provides information on the status and operation of a query. The console displays the connection status to [!DNL Query Service], query operations being executed, and any error messages that result from those queries.
 
@@ -140,13 +138,13 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## D
 
-**Data dictionary**: In [!DNL Platform Launch], a data dictionary (also known as a data map) is a set of data elements defined within a property.
+**Data dictionary**: In the context of tags, a data dictionary (also known as a data map) is a set of data elements defined within a property.
 
-**Data element**: In [!DNL Platform Launch], a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
+**Data element**: In the context of tags, a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
 
 **Data ingestion**: Data ingestion is the process of adding data from a source to Experience Platform. Data can be ingested into Platform in a number of ways including streaming, batches, or added via source connectors.
 
-**Data layer**: In [!DNL Platform Launch], a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
+**Data layer**: In the context of tags, a data layer is a data structure that exists on the client device that contains metadata about the context in which a page or screen is viewed.
 
 **Data governance**: Data governance encompasses the strategies and technologies used to ensure data is in compliance with regulations and organizational policies with respect to data usage.
 
@@ -188,7 +186,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Destination catalog**: A destination catalog is a list of available destinations in Experience Platform.
 
-**Direct call rules**: In [!DNL Platform Launch], a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
+**Direct call rules**: In the context of tags, a direct-call rule is a rule that executes when it is called directly from the page, bypassing event-detection and lookup systems.
 
 **Display name**: In Experience Data Model (XDM), a display name is a user-friendly name for a field that is shown in the UI.
 
@@ -200,15 +198,15 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Email targeting marketing action**: A marketing action that uses data in email targeting campaigns.
 
-**Embed code**: In [!DNL Platform Launch], the embed code is a script tag placed within the HTML on a site or environment. The embed code instructs the browser where to retrieve the build.
+**Embed code**: In the context of tags, the embed code is a script tag placed within the HTML on a site or environment. The embed code instructs the browser where to retrieve the build.
 
 **Enumeration**: An enumeration (enum) is an XDM field that is constrained to a set of pre-defined values.
 
-**Environment**: In [!DNL Platform Launch], an environment is a set of deployment instructions that specifies the host delivery and file format of a build. A library must be paired with an environment before it can be built.
+**Environment**: In the context of tags, an environment is a set of deployment instructions that specifies the host delivery and file format of a build. A library must be paired with an environment before it can be built.
 
 **Error diagnostics**: Error diagnostics enable the generation of detailed error messages for ingested batches. The error threshold allows you to configure the percentage of acceptable errors before a batch fails.
 
-**Event**: In [!DNL Platform Launch], an event is a specific type of rule component, which is a trigger that occurs on a client device to begin the execution of a rule.
+**Event**: In the context of tags, an event is a specific type of rule component, which is a trigger that occurs on a client device to begin the execution of a rule.
 
 **Event entities**: In the context of data modeling, event entities represent concepts related to actions a customer can take, system events, or any other concept where you may want to track changes over time. Entities that fall under this category should be represented by schemas based on the [!DNL XDM ExperienceEvent] class.
 
@@ -220,9 +218,9 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Experience Event**: An Experience Event represents a snapshot of the system when an interaction or event related to a customer experience takes place. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
 
-**Extension**: In [!DNL Platform Launch], an extension is a package of functionality added to a [!DNL Platform Launch] property. An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
+**Extension**: In the context of tags, an extension is a package of functionality added to a tag property. An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
 
-**Extension package**: In [!DNL Platform Launch], an extension package is a ZIP file created and uploaded by an extension developer that provides everything necessary for [!DNL Platform Launch] users to install the extension inside their property. An extension package contains a manifest specifying information about the extension, the HTML/JavaScript needed for end-users to configure the behavior of the [!DNL Platform Launch] extension, and the executable JavaScript delivered to the client environment (if required).
+**Extension package**: In the context of tags, an extension package is a ZIP file created and uploaded by an extension developer that provides everything necessary for tags users to install the extension inside their property. An extension package contains a manifest specifying information about the extension, the HTML/JavaScript needed for end-users to configure the behavior of the tag extension, and the executable JavaScript delivered to the client environment (if required).
 
 ## F
 
@@ -248,7 +246,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## H
 
-**Host**: In [!DNL Platform Launch], a host specifies the location, domain, and user credentials necessary for [!DNL Platform Launch] to deliver a build.
+**Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
 
 ## I
 
@@ -300,7 +298,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## L
 
-**Library**: In [!DNL Platform Launch], a library is a set of business logic that contains instructions for how the [!DNL Platform Launch] library should behave on the client device.
+**Library**: In the context of tags, a library is a set of business logic that contains instructions for how the tag library should behave on the client device.
 
 **Lookup entities**: In the context of data modeling, lookup entities represent concepts that can relate to an individual person, but cannot be directly used to identify the individual. Entities that fall under this category should be represented by schemas based on custom Experience Data Model (XDM) classes.
 
@@ -320,7 +318,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Mixin**: See "Schema field group".
 
-**Module**: In [!DNL Platform Launch], a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
+**Module**: In the context of tags, a module is a snippet of executable JavaScript provided by an extension, which performs actions in a client environment without needing to create a rule.
 
 ## N
 
@@ -384,7 +382,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Profile ID**: A profile ID is an auto-generated identifier associated with an identity type and represents a profile.
 
-**Property**: In [!DNL Platform Launch], a property is a container for everything needed to deploy a set of tags.
+**Property**: In the context of tags, a property is a container for everything needed to deploy a set of tags.
 
 ## Q
 
@@ -408,13 +406,13 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Representation**: In [!DNL Offer Decisioning], a representation is information used by a channel to display an offer, such as location or language.
 
-**Resource**: In [!DNL Platform Launch], a resource is a generic term that refers to options the [!DNL Platform Launch] user can configure inside the client environment, including extensions, data elements, and rules.
+**Resource**: In the context of tags, a resource is a generic term that refers to options the tagsa user can configure inside the client environment, including extensions, data elements, and rules.
 
 **Role-based access control**: Role-based access control enables admins to assign access and permissions to users of Experience Platform. Permissions include the ability to view and/or use Experience Platform features, such as creating sandboxes, defining schemas, and managing datasets.
 
-**Rule**: In [!DNL Platform Launch], a rule is a collection of components defining a specific set of events, conditions, and actions that should be grouped logically.
+**Rule**: In the context of tags, a rule is a collection of components defining a specific set of events, conditions, and actions that should be grouped logically.
 
-**Rule component**: In [!DNL Platform Launch], rule components are the events, conditions, and actions that make up a rule.
+**Rule component**: In the context of tags, rule components are the events, conditions, and actions that make up a rule.
 
 **Runtime**: Runtime specifies a runtime environment for a machine-learning recipe. [!DNL Python], R, [!DNL Spark], PySpark, and Tensorflow runtimes allow you to input a URL to a Docker image for a recipe source.
 
@@ -493,6 +491,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **System View**: System View is a visual representation of source datasets that flow through [!DNL Real-time Customer Profile] to destinations. 
 
 ## T
+
+**Tags**: In Adobe Experience Platform, tags provide tools to deploy, unify, and manage analytics, marketing, and advertising integrations that are necessary to power relevant customer experiences on all client devices.
 
 **Target features**: In feature mapping, a target feature is the feature that is predicted by a model.
 

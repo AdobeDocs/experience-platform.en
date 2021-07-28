@@ -6,7 +6,7 @@ description: Learn how to define an condition-type library module for an edge ex
 
 >[!NOTE]
 >
-> Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+> Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 In a tag rule, a condition is evaluated after an event has occurred. All conditions must return true in order for the rule to continue processing. Condition types are provided by extensions and evaluate whether something is true or false, returning a boolean value.
 

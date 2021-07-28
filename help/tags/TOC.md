@@ -12,7 +12,6 @@ feature: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-  * [Videos](./quick-start/videos.md)
 * Data Collection UI {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
