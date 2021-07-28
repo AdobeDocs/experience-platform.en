@@ -82,6 +82,10 @@ To view a field group in the Platform UI, select the **[!UICONTROL Schemas]** ta
 
 Additionally, Customer AI can use subscription data to build better churn models. Subscription data is needed for each profile using the [[!UICONTROL Subscription]](../../xdm/data-types/subscription.md) data type format. Most of the fields are optional, however, for an optimal churn model it is highly recommended that you provide data for as many fields as possible such as, `startDate`, `endDate`, and any other relevant details.
 
+### Adding custom field groups
+
+If you have additional information in addition to the [standard event fields](#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided during your [instance configuration](./user-guide/configure.md#custom-events). If the dataset you selected includes custom events (field groups) defined in your schema, you can add them to your instance. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+
 ### Historical data {#data-requirements}
 
 Customer AI requires historical data for model training but the amount of data required is based on two key elements: outcome window and eligible population. 
