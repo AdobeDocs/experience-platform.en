@@ -1,13 +1,13 @@
 ---
 title: Accessing the ECID 
-description: Adobe Experience Platform Web SDK Extension Leveraging ECID in Adobe Experience Platform Launch
+description: Adobe Experience Platform Web SDK Extension Leveraging ECID in tags
 ---
 
 # Accessing the ECID
 
 The [!DNL Experience Cloud Identity (ECID)] is a persistent identifier for a visitor to your website. In certain circumstances, you might prefer to access the ECID (to send it to a third party, for example).
 
-To access the ECID within Adobe Experience Platform Launch, Adobe recommends the following:
+To access the ECID within tags, Adobe recommends the following:
 
 1. Ensure your property is configured with [rule component sequencing](https://experienceleague.adobe.com/docs/launch/using/ui/rules.html?lang=en#rule-component-sequencing) enabled. 
 1. Create a new rule.
