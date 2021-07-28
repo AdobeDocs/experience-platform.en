@@ -111,7 +111,7 @@ The details page also displays a list of identities that failed and identities t
 
 ![](../assets/ui/monitor-destinations/dataflow-records-batch.png)
 
-## Monitoring Destinations dashboard
+## Monitoring Destinations dashboard {#monitoring-destinations-dashboard}
 
 To access the [!UICONTROL Monitoring] dashboard, select **[!UICONTROL Monitoring]** (![monitoring icon](../assets/ui/monitor-destinations/monitoring-icon.png)
 ) in the left navigation. Once on the [!UICONTROL Monitoring] page, select [!UICONTROL Destinations]. The [!UICONTROL Monitoring] dashboard contains metrics and information on the destination run jobs.

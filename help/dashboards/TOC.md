@@ -10,12 +10,13 @@ feature: Data Management
 
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
+* [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Segments](guides/segments.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
-* Customizing dashboards {#customize}  
+* Customize dashboards {#customize}  
   * [Customization overview](customize/overview.md)
   * [Modify dashboards](customize/modify.md)
   * [Widget library](customize/widget-library.md)
