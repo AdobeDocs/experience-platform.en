@@ -6,7 +6,7 @@ description: Learn about event forwarding in Adobe Experience Platform, which al
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Event forwarding in Adobe Experience Platform decreases web page and app weight by using Adobe Experience Platform Edge Network to execute tasks normally done on the client. Event forwarding rules can transform and send data to new destinations without changing client-side implementations.
 

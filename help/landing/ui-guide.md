@@ -72,7 +72,7 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ### Switch applications
 
-The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and Launch.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and others.
 
 ### Help
 

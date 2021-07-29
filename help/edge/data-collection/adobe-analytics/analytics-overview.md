@@ -60,4 +60,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 Here is an example of a processing rule that would use this data.
 
-![Processing Rules Interface](../../../assets/edge_analytics_processing_rules.png)
+![Processing Rules Interface](./assets/edge_analytics_processing_rules.png)
