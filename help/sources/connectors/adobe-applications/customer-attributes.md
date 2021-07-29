@@ -16,7 +16,7 @@ Experience Platform provides support for ingesting [!DNL Customer Attributes] pr
 
 ## Datasets and schemas
 
-The [!DNL Customer Attributes] source auto-creates the dataset for data to land into. This auto-created dataset is fixed and cannot be manually selected. The source also auto-creates the schema for the dataset based on the input data source. This process also involves the auto-creation of the necessary mappings between the schema and the source data.
+The [!DNL Customer Attributes] source automatically creates the dataset for data to land into. This auto-created dataset is fixed and cannot be manually selected. The source also auto-creates the schema for the dataset based on the input data source. This process also involves the auto-creation of the necessary mappings between the schema and the source data.
 
 ## Identities
 
@@ -28,10 +28,6 @@ For [!DNL Customer Attributes] data to tie to other [!DNL Profile] datasets, its
 
 You can establish the `CORE` namespace by setting the Experience Cloud ID for the visitor using [Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en), [Mobile SDK](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/identity), or the [Experience Cloud ID Service API](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=en).
 
-The [!DNL Customer Attributes] file does not further populate any other identity relationships. For example, if a [!DNL Customer Attributes] source dataset contains an *Email* and a *Loyalty ID* field, then those fields must be labelled as identity fields in the schema in order to be processed into [!DNL Identity Service].
+The [!DNL Customer Attributes] file does not further populate any other identity relationships. For example, if a [!DNL Customer Attributes] source dataset contains an **Email** and a **Loyalty ID** field, then those fields must be labelled as identity fields in the schema in order to be processed into [!DNL Identity Service].
 
-The documentation below provides information on how to connect [!DNL Customer Attributes] to Adobe Experience Platform using the user interface:
-
-## Connect [!DNL Customer Attributes] to Platform using the UI
-
-- [Create a [!DNL Customer Attributes] source connection in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md)
+See the tutorial on [creating a [!DNL Customer Attributes] source connection in the UI](../../tutorials/ui/create/adobe-applications/customer-attributes.md) for more information.
