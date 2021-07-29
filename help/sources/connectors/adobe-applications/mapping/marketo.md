@@ -264,7 +264,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
 | `id` | `personID` | This is the primary identity. |
-| `unsubscribed` | `consents.marketing.email.val` |
+| `iif(unsubscribed == 1, 'n', 'y' )` | `consents.marketing.email.val` | If unsubscribed is `true` (for example, value = `1`),  then set `consents.marketing.email.val` as (`n`). If unsubscribed is `false` (for example, value = `0`),  then set `consents.marketing.email.val` as `null`. |
 | `unsubscribedReason` | `consents.marketing.email.reason` |
 | `contactCompany` | `b2b.accountID` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
