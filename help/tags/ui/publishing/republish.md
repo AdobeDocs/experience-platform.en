@@ -6,7 +6,7 @@ description: Learn how to republish a previous tag library in Adobe Experience P
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 The five most recent libraries that have been published to your production environment on a Web property are available for later retrieval. This feature is helpful when you find a bug in your production library and need to rollback to a known good state immediately.
 

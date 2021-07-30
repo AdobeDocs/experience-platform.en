@@ -6,7 +6,7 @@ description: The latest release notes for the Core extension in Adobe Experience
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 ## May 20, 2021
 
@@ -97,7 +97,7 @@ v1.6.2
 
 v1.6.1
 
-* **Support for CSP Nonce** - The Core extension now has an optional configuration parameter. You can add a data element that references a nonce. If configured, all inline scripts that a tag adds to the page use the nonce that you’ve configured. This change supports the use of a Content Security Policy with a nonce so that Platform Launch scripts can still load in a CSP environment.  You can read more about using Platform Launch with a CSP [here](../../../ui/client-side/content-security-policy.md).
+* **Support for CSP Nonce** - The Core extension now has an optional configuration parameter. You can add a data element that references a nonce. If configured, all inline scripts that a tag adds to the page use the nonce that you’ve configured. This change supports the use of a Content Security Policy with a nonce so that tag scripts can still load in a CSP environment. You can read more about using tags with a CSP [here](../../../ui/client-side/content-security-policy.md).
 
 ## June 18, 2019
 

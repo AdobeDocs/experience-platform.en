@@ -6,7 +6,7 @@ description: Learn about the primary components of different tag extension types
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 One of the primary goals of tags in Adobe Experience Platform is to create an open ecosystem where engineers outside of Adobe can expose additional functionalities on their websites and mobile applications. This is accomplished through tag extensions. Once an extension has been installed on a tag property, that extension's functionality then becomes available for use by all users of the property.
 
