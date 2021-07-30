@@ -107,6 +107,25 @@ LEFT OUTER JOIN T2 ON T1.ID = T2.ID
 WHERE T2.ID IS NULL
 ```
 
+### What is the correct usage of the `OR` and `UNION` operators?
+
+### How do I correctly use the `CAST` operator to convert my timestamps in SQL queries?
+
+When using the `CAST` operator to convert a timestamp, you need to include both the date **and** time.
+
+For example, missing the time component, as shown below, will result in an error:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021' AS timestamp)
+```
+
+A correct usage of the `CAST` operator is shown below:
+
+```sql
+SELECT * FROM ABC
+WHERE timestamp = CAST('07-29-2021 00:00:00' AS timestamp)
+```
 
 ## REST API errors
 
