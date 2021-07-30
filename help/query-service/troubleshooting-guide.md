@@ -54,6 +54,10 @@ LIMIT 100;
 
 When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
 
+>[!NOTE]
+>
+> The date string **must** be in the format `yyyy-mm-ddTHH24:MM:SS`. 
+
 An example of using the timestamp filter can be seen below:
 
 ```sql
@@ -68,6 +72,41 @@ WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
 ### Should I use wildcards, such as * to get all the rows from my datasets?
 
 You cannot use wildcards to get all the data from your rows, as Query Service should be treated as a **columnar-store** rather than a traditional row-based store system.
+
+### Should I use `NOT IN` in my SQL query?
+
+While it may be common to use the `NOT IN` operator to retrieve rows that are not in another table or SQL statement, this operator can slow down performance and may return unexpected results if you have large numbers of records or the columns that are being compared accept `NOT NULL`.
+
+Instead of using `NOT IN`, you can use either `NOT EXISTS` or `LEFT OUTER JOIN`.
+
+For example, if you have the following tables created:
+
+```sql
+CREATE TABLE T1 (ID INT)
+CREATE TABLE T2 (ID INT)
+INSERT INTO T1 VALUES (1)
+INSERT INTO T1 VALUES (2)
+INSERT INTO T1 VALUES (3)
+INSERT INTO T2 VALUES (1)
+INSERT INTO T2 VALUES (2)
+```
+
+If you are using the `NOT EXISTS` operator, you can replicate using the `NOT IN` operator by using the following query:
+
+```sql
+SELECT ID FROM T1
+WHERE NOT EXISTS
+(SELECT ID FROM T2 WHERE T1.ID = T2.ID)
+```
+
+Alternatively, if you are using the `LEFT OUTER JOIN` operator, you can replicate using he `NOT IN` operator by using the following query:
+
+```sql
+SELECT T1.ID FROM T1
+LEFT OUTER JOIN T2 ON T1.ID = T2.ID
+WHERE T2.ID IS NULL
+```
+
 
 ## REST API errors
 
