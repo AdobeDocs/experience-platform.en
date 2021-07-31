@@ -38,6 +38,7 @@ feature: Data Management
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
+    * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
