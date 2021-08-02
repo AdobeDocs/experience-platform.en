@@ -37,79 +37,9 @@ To use the VEC with a [!DNL Platform Web SDK] implementation, install and activa
 
 For more information, see [Visual Experience Composer helper extension](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in the *Adobe Target guide*.
 
-## Auto-render VEC Activities
+## Rendering personalized content
 
-The [!DNL Adobe Experience Platform Web SDK] has the power to automatically render your experiences defined via [!DNL Adobe Target]’s VEC on the web for your users. In order to indicate to [!DNL Experience Platform Web SDK] to auto-render VEC activities, send an event with `renderDecisions = true`:
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## Using the Form-Based Composer
-
-The [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) is a non-visual interface that’s useful for configuring [!UICONTROL A/B Tests], [!UICONTROL Experience Targeting], [!UICONTROL Automated Personalization], and [!UICONTROL Recommendations] activities with different response types, such as JSON, HTML, Image, etc. Depending on the response type or decision returned by [!DNL Target], your core business logic can be executed. To retrieve decisions for your Form-Based Composer activities, send an event with all ‘decisionScopes’ you want to retrieve a decision for.
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## Decision Scopes
-
-`decisionScopes` define sections, locations, or parts of your pages where you want to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current [!DNL Target] customers, `decisionScopes` are also known as "mboxes." In the [!DNL Target] UI, `decisionScopes` appear as "locations."
-
-## The `__view__` Scope
-
-The [!DNL Experience Platform Web SDK] provides functionality to retrieve VEC actions without relying on the SDK to render the VEC actions for you. Send an event with `__view__` defined as a `decisionScopes`.
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```   
+See [Rendering personalization content](../rendering-personalization-content.md) for more information.
 
 ## Audiences in XDM
 
@@ -294,7 +224,7 @@ mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debug
 
 ## Terminology
 
-__Decisions:__ In [!DNL Target], decisions correlate to the experience that is selected from an Activity.
+__Propositions:__ In [!DNL Target], propositions correlate to the experience that is selected from an Activity.
 
 __Schema:__ The schema of a decision is the type of offer in [!DNL Target]. 
 

@@ -6,19 +6,17 @@ feature: Web SDK
 ---
 # Event types
 
-After you configure the [Adobe Experience Platform Web SDK extension](web-sdk-extension-configuration.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), build rules using AEP WEB SDK extension event types
-
-This page describes the available event types and how to use them.
+This page describes the Adobe Experience Platform Launch event types provided by the Adobe Experience Platform Web SDK extension. These are used to [build rules in Platform Launch](https://experienceleague.adobe.com/docs/launch-learn/tutorials/fundamentals/building-rules-in-launch.html) and should not be confused with the [`eventType` field in XDM](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/tracking-events.html).
 
 ## [!UICONTROL Send event complete]
 
-Typically, you would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to the server. Each time an event is sent to Adobe Experience Platform Edge Network, a response is returned back to the browser with useful data. Without the [!UICONTROL Send event complete] event type, we wouldn't have access to this returned data.
+Typically, your property in Platform Launch would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, we wouldn't have access to this returned data.
 
 To access the returned data, we will create a separate rule. We will then add a [!UICONTROL Send event complete] event to the rule. This rule will now be triggered each time a successful response is received from the server as a result of a [!UICONTROL Send event] action.
 
-When a [!UICONTROL Send event complete] event triggers a rule, it provides data returned from the server that may be useful to accomplish certain tasks. Typically, you would add a [!UICONTROL Custom code] action (from the [!UICONTROL Core] extension) to the same rule that contains the [!UICONTROL Send event complete] event. In the [!UICONTROL Custom code] action, your custom code will have access to a variable named `event`. This `event` variable will contain the data returned from the server.
+When a [!UICONTROL Send event complete] event triggers a rule, it provides data returned from the server that may be useful to accomplish certain tasks. Typically, you will add a [!UICONTROL Custom code] action (from Platform Launch's [!UICONTROL Core] extension) to the same rule that contains the [!UICONTROL Send event complete] event. In the [!UICONTROL Custom code] action, your custom code will have access to a variable named `event`. This `event` variable will contain the data returned from the server.
 
-Your rule for handling data returned from Edge may look something like this:
+Your rule for handling data returned from Edge Network may look something like this:
 
 ![](./assets/send-event-complete.png)
 
@@ -81,7 +79,7 @@ The `propositions` array, in this case, would look similar to this example:
 ]
 ```
 
-When we sent the event, we did not check the [!UICONTROL Render decisions] checkbox, so the SDK did not attempt to automatically render any content. The content eligible for automatic rendering was still automatically retrieved from the server, however, and provided to us to manually render if we choose. Notice that each proposition object has its `renderAttempted` property set to `false`.
+When we sent the event, we did not check the [!UICONTROL Render decisions] checkbox, so the SDK did not attempt to automatically render any content. The content eligible for automatic rendering was still automatically retrieved from the server, however, and provided to us to manually render if we would like to do so. Notice that each proposition object has its `renderAttempted` property set to `false`.
 
 If we would have instead checked the [!UICONTROL Render decisions] checkbox when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering. As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
@@ -165,11 +163,11 @@ In this example, if propositions are found on the server matching the `salutatio
 ]
 ```
 
-At this point, we would render proposition content as we see fit. For example, let's assume we have an element on our page with the ID of `daily-special` and we wish to render the content from our `discount` proposition inside the discount element. We would do the following in our :
+At this point, we would render proposition content as we see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Let's also assume we have an element on our page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element. We would do the following:
 
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
-2. If the proposition was found, loop through each item in the proposition, looking for the item that is HTML content (it's better to check that to assume).
-3. If an item containing HTML content is found, find the `daily-special` element on the page and replace its HTML with the personalized content.
+1. If the proposition was found, loop through each item in the proposition, looking for the item that is HTML content (it's better to check than to assume).
+1. If an item containing HTML content is found, find the `daily-special` element on the page and replace its HTML with the personalized content.
 
 We could do so in our custom code action as follows:
 
@@ -192,7 +190,8 @@ var discountHtml;
 if (discountProposition) {
   // Find the item from proposition that should be rendered.
   // Rather than assuming there a single item that has HTML
-  // content, we'll find the first item that has HTML content.
+  // content, find the first item whose schema indicates
+  // it contains HTML content.
   for (var j = 0; j < discountProposition.items.length; j++) {
     var discountPropositionItem = discountProposition.items[i]; 
     if (discountPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
@@ -203,7 +202,7 @@ if (discountProposition) {
 }
 
 if (discountHtml) {
-  // We have the discount HTML. Now let's render it.
+  // Discount HTML exists. Time to render it.
   var dailySpecialElement = document.getElementById("daily-special");
   dailySpecialElement.innerHTML = discountHtml;
 }
@@ -211,7 +210,7 @@ if (discountHtml) {
 
 ### Accessing Adobe Target response tokens
 
-Personalization returned from Adobe Target include [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. These details can be shared with third-party tools or used for debugging. Response tokens can be configured in the Adobe Target user interface.
+Personalization content returned from Adobe Target includes [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. These details can be shared with third-party tools or used for debugging. Response tokens can be configured in the Adobe Target user interface.
 
 In the Custom Code action, which is in the rule for handling response data, you can access personalization propositions that were returned from the server. To do so, you would type the following custom code:
 
@@ -221,36 +220,37 @@ var propositions = event.propositions;
 
 If `event.propositions` exists, it will be an array containing personalization proposition objects. See [Manually render personalized content](#manually-render-personalized-content) for more information on the content of `result.propositions`
 
-Let's assume we would like to find all response tokens from all propositions that were automatically rendered by the web SDK and push them into a single array. In this case, the [!UICONTROL Custom code] action would:
+Let's assume we would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. We could then send the single array to a third party. In this case, the [!UICONTROL Custom code] action would:
 
 1. Loop through each proposition.
-1. Determine if the proposition was rendered by the SDK.
+1. Determine if the SDK rendered the proposition.
 1. If so, loop through each item in the proposition.
-1. Retrieve the `meta` property, which is an object containing response tokens, and push it into our array.
-1. Send the response tokens to a third party or use them in some other way.
+1. Retrieve the activity name from the `meta` property, which is an object containing response tokens.
+1. Push the activity name into an array.
+1. Send the activity names to a third party.
 
 ```javascript
-alloy("sendEvent", {
-    renderDecisions: true,
-    xdm: {}
-  }).then(function(result) {
-    if (result.propositions) {
-      var responseTokens = []
-      result.propositions.forEach(function(proposition) {
-        if (proposition.renderAttempted) {
-          proposition.items.forEach(function(item) {
-            if (item.meta) {
-              // item.meta contains the response tokens.
-              responseTokens.push(item.meta);
-            }
-          });
+var propositions = event.propositions;
+if (propositions) {
+  var activityNames = [];
+  propositions.forEach(function(proposition) {
+    if (proposition.renderAttempted) {
+      proposition.items.forEach(function(item) {
+        if (item.meta) {
+          // item.meta contains the response tokens.
+          var activityName = item.meta["activity.name"];
+          // Ignore duplicates
+          if (activityNames.indexOf(activityName) === -1) {
+            activityNames.push(item.meta);  
+          }
         }
       });
-      // Now that we have response tokens collected,
-      // we can send them to a third party or use
-      // them in some other way.
     }
   });
+  // Now that we have activity names in an array,
+  // we can send them to a third party or use
+  // them in some other way.
+}
 ``` 
 
 

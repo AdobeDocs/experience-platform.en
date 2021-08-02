@@ -49,6 +49,7 @@ feature: Data Management
     * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
 * Web SDK extension for Adobe Experience Platform Launch {#extension}
   * [Web SDK extension](extension/web-sdk-extension-configuration.md)
+  * [Event types](extension/event-types.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
   * [Accessing the ECID](extension/accessing-the-ecid.md)

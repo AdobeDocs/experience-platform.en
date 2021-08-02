@@ -28,11 +28,11 @@ alloy("sendEvent", {
 });
 ```
 
-Rendering personalized content is asynchronous, so no assumptions should be made with regard to when a particular piece of content will have completed rendering.
+Rendering personalized content is asynchronous, so you should not make assumptions regarding when a particular piece of content will have completed rendering.
 
 ## Manually rendering content
 
-To access any personalization content, you may provide a callback function which will be called after a response is successfully returned by the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of providing a callback function.
+To access any personalization content, you may provide a callback function which will be called after the SDK receives a successful response from the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of providing a callback function.
 
 ```javascript
 alloy("sendEvent", {
@@ -87,7 +87,7 @@ The `propositions` array, in this case, would look similar to this example:
 ]
 ```
 
-When we sent the event, we did not set the `renderDecisions` option to `true`, so the SDK did not attempt to automatically render any content. The content eligible for automatic rendering was still automatically retrieved from the server, however, and provided to us to manually render if we choose. Notice that each proposition object has its `renderAttempted` property set to `false`.
+When we sent the event, we did not set the `renderDecisions` option to `true`, so the SDK did not attempt to automatically render any content. The content eligible for automatic rendering was still automatically retrieved from the server, however, and provided to us to manually render if we would like to do so. Notice that each proposition object has its `renderAttempted` property set to `false`.
 
 If we would have instead set the `renderDecisions` option to `true` when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering (as described previously). As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
@@ -180,10 +180,10 @@ In this example, if propositions are found on the server matching the `salutatio
 ]
 ```
 
-At this point, we would render proposition content as we see fit. For example, let's assume we have an element on our page with the ID of `daily-special` and we wish to render the content from our `discount` proposition inside the discount element. We would do the following:
+At this point, we would render proposition content as we see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Let's also assume we have an element on our page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element. We would do the following:
 
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
-1. If the proposition was found, loop through each item in the proposition, looking for the item that is HTML content (it's better to check that to assume).
+1. If the proposition was found, loop through each item in the proposition, looking for the item that is HTML content (it's better to check than to assume).
 1. If an item containing HTML content is found, find the `daily-special` element on the page and replace its HTML with the personalized content.
 
 Our code would look as follows:
@@ -211,7 +211,8 @@ alloy("sendEvent", {
   if (discountProposition) {
     // Find the item from proposition that should be rendered.
     // Rather than assuming there a single item that has HTML
-    // content, we'll find the first item that has HTML content.
+    // content, find the first item whose schema indicates
+    // it contains HTML content.
     for (var j = 0; j < discountProposition.items.length; j++) {
       var discountPropositionItem = discountProposition.items[i];
       if (discountPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
@@ -222,7 +223,7 @@ alloy("sendEvent", {
   }
 
   if (discountHtml) {
-    // We have the discount HTML. Now let's render it.
+    // Discount HTML exists. Time to render it.
     var dailySpecialElement = document.getElementById("daily-special");
     dailySpecialElement.innerHTML = discountHtml;
   }
