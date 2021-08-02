@@ -32,7 +32,7 @@ Rendering personalized content is asynchronous, so you should not make assumptio
 
 ## Manually rendering content
 
-To access any personalization content, you may provide a callback function which will be called after the SDK receives a successful response from the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of providing a callback function.
+To access any personalization content, you may provide a callback function which will be called after the SDK receives a successful response from the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of how you would provide a callback function when sending an event.
 
 ```javascript
 alloy("sendEvent", {
@@ -46,7 +46,7 @@ alloy("sendEvent", {
 
 In this example, `result.propositions`, if it exists, will be an array containing personalization propositions related to the event. By default, it will only include propositions that are eligible for automatic rendering.
 
-The `propositions` array, in this case, would look similar to this example:
+The `propositions` array may look similar to this example:
 
 ```json
 [
@@ -87,11 +87,11 @@ The `propositions` array, in this case, would look similar to this example:
 ]
 ```
 
-When we sent the event, we did not set the `renderDecisions` option to `true`, so the SDK did not attempt to automatically render any content. The content eligible for automatic rendering was still automatically retrieved from the server, however, and provided to us to manually render if we would like to do so. Notice that each proposition object has its `renderAttempted` property set to `false`.
+In the example, the `renderDecisions` option was not set to `true` when the `sendEvent` command was executed, so the SDK did not attempt to automatically render any content. The SDK still automatically retrieved the content eligible for automatic rendering, however, and provided this to you to manually render if you would like to do so. Notice that each proposition object has its `renderAttempted` property set to `false`.
 
-If we would have instead set the `renderDecisions` option to `true` when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering (as described previously). As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
+If you would have instead set the `renderDecisions` option to `true` when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering (as described previously). As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
-So far, we've only discussed personalization content that is eligible for automatic rendering (i.e., any content created in Adobe Target's Visual Experience Composer). In order to retrieve any personalization content _not_ eligible for automatic rendering, we will need to request the content by populating the `decisionScopes` option when sending the event. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
+So far, we've only discussed personalization content that is eligible for automatic rendering (i.e., any content created in Adobe Target's Visual Experience Composer). In order to retrieve any personalization content _not_ eligible for automatic rendering, you will need to request the content by populating the `decisionScopes` option when sending the event. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
 
 Here is an example:
 
@@ -180,13 +180,13 @@ In this example, if propositions are found on the server matching the `salutatio
 ]
 ```
 
-At this point, we would render proposition content as we see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Let's also assume we have an element on our page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element. We would do the following:
+At this point, you would render proposition content as you see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Let's also assume you have an element on your page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element. You would do the following:
 
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
-1. If the proposition was found, loop through each item in the proposition, looking for the item that is HTML content (it's better to check than to assume).
-1. If an item containing HTML content is found, find the `daily-special` element on the page and replace its HTML with the personalized content.
+1. If you find a proposition, loop through each item in the proposition, looking for the item that is HTML content (it's better to check than to assume).
+1. If you find an item containing HTML content, find the `daily-special` element on the page and replace its HTML with the personalized content.
 
-Our code would look as follows:
+Your code would look as follows:
 
 ```javascript
 alloy("sendEvent", {

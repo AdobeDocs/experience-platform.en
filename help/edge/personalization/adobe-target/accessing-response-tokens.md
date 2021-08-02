@@ -23,7 +23,7 @@ alloy("sendEvent", {
 
 In this example, `result.propositions`, if it exists, will be an array containing personalization propositions related to the event. Please see [Rendering personalization content](../rendering-personalization-content.md) for more information on the content of `result.propositions`.
 
-Let's assume we would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. We could then send the single array to a third party. In this case, we would:
+Let's assume you would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case, you would:
 
 1. Loop through each proposition.
 1. Determine if the SDK rendered the proposition.
@@ -32,7 +32,7 @@ Let's assume we would like to gather all activity names from all propositions th
 1. Push the activity name into an array.
 1. Send the activity names to a third party.
 
-Our code would look as follows:
+Your code would look as follows:
 
 ```javascript
 alloy("sendEvent", {
@@ -54,8 +54,8 @@ alloy("sendEvent", {
         });
       }
     });
-    // Now that we have activity names in an array,
-    // we can send them to a third party or use
+    // Now that activity names are in an array,
+    // you can send them to a third party or use
     // them in some other way.
   });
 ```
