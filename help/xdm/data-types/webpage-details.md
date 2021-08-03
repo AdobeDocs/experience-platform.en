@@ -29,5 +29,5 @@ The data type is intended for full page details and initial page loads of single
 
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.example.2.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/web/webpagedetails.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.example.2.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/webpagedetails.schema.json)

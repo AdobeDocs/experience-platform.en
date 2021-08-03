@@ -23,7 +23,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Send data to multiple orgs on the page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Detailed error reporting and logs |  |
 | Trace requests client side and server side |  |
-| Adobe Experience Platform Launch extension | [Web SDK extension docs](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| tag extension | [Web SDK extension docs](../../tags/extensions/web/sdk/overview.md) |
 | Debugging tools available | [Debugger extension](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) and [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style="table-layout:auto"}
@@ -37,7 +37,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | If dataset is enabled for profile, ability to send data to Real-time Customer Data Profile in real-time |  |  
 | Send data to Customer Journey Analytics in real-time |  |
 | Write consent to profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/sdk.html?lang=en) |
-| Forward data server-side in real-time to third-parties| [Documentation](https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-side-overview.html?lang=en) |
+| Forward data server-side in real-time to third-parties| [Documentation](../../tags/ui/event-forwarding/overview.md) |
 | Identity namespace support |  |
 
 {style="table-layout:auto"}

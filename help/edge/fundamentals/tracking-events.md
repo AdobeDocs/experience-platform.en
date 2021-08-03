@@ -11,7 +11,7 @@ To send event data to Adobe Experience Cloud, use the `sendEvent` command. The `
 Data sent to Adobe Experience Cloud falls into two categories:
 
 * XDM data
-* Non-XDM data (currently unsupported)
+* Non-XDM data
 
 ## Sending XDM data
 
@@ -62,14 +62,14 @@ alloy("sendEvent", {
 dataLayer.commerce = null;
 ```
 
-In this example, the data layer is cloned by serializing it to JSON, then deserializing it. Next, the cloned result is passed into the `sendEvent` command. Doing so ensures that the `sendEvent` command has a snapshot of the data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes. This is also handled for you automatically if you are using the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
+In this example, the data layer is cloned by serializing it to JSON, then deserializing it. Next, the cloned result is passed into the `sendEvent` command. Doing so ensures that the `sendEvent` command has a snapshot of the data layer as it existed when the `sendEvent` command was executed so that later modifications to the original data layer object will not be reflected in the data sent to the server. If you are using an event-driven data layer, cloning your data is likely already handled automatically. For example, if you are using the [Adobe Client Data Layer](https://github.com/adobe/adobe-client-data-layer/wiki), the `getState()` method provides a computed, cloned snapshot of all prior changes. This is also handled for you automatically if you are using the Adobe Experience Platform Web SDK tag extension.
 
 >[!NOTE]
 >
 >There is a 32 KB limit on the data that can be sent in each event in the XDM field.
 
 
-### Sending non-XDM data
+## Sending non-XDM data
 
 Data that does not match an XDM schema should be sent using the `data` option of the `sendEvent` command. This feature is supported in versions 2.5.0 and higher of the Web SDK.
 
@@ -79,7 +79,7 @@ In the future, you will be able to send your full data layer under the `data` op
 
 **How to send Profile and Recommendations attributes to Adobe Target:**
 
-```
+```javascript
 alloy("sendEvent", {
   data: {
     __adobe: {
@@ -126,7 +126,7 @@ In an XDM experience event, there is an optional `eventType` field. This holds t
 | delivery.feedback | Feedback events for a delivery. Example feedback events for an email delivery |
 
 
-These event types will be shown in a dropdown if using the Adobe Experience Platform Launch extension or you can always pass them in without Experience Platform Launch. They can be passed in as part of the `xdm` option.
+These event types will be shown in a dropdown if using the tag extension or you can always pass them in without tags. They can be passed in as part of the `xdm` option.
 
 
 ```javascript

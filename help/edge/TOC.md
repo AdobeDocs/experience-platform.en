@@ -18,7 +18,6 @@ feature: Data Management
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
   * [Debugging](fundamentals/debugging.md)
-  * [Merge event data](fundamentals/merging-event-data.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
   * [Supported use cases](fundamentals/supported-use-cases.md)
@@ -45,9 +44,9 @@ feature: Data Management
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
-    * [Integrate with Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-    * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Web SDK extension for Adobe Experience Platform Launch {#extension}
+    * [Integrate with tags](consent/iab-tcf/with-launch.md)
+    * [Integrate without tags](consent/iab-tcf/without-launch.md)
+* Web SDK tag extension {#extension}
   * [Web SDK extension](extension/web-sdk-extension-configuration.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)

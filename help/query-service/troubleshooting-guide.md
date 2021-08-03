@@ -6,7 +6,68 @@ topic-legacy: troubleshooting
 description: This document contains information on common error codes you encounter and the possible causes.
 exl-id: 14cdff7a-40dd-4103-9a92-3f29fa4c0809
 ---
-# [!DNL Query Service] Troubleshooting Guide
+# [!DNL Query Service] troubleshooting guide
+
+This document provides answers to frequently asked questions about Query Service and provides a list of commonly seen error codes when using Query Service. For questions and troubleshooting related to other services in Adobe Experience Platform, please refer to the [Experience Platform troubleshooting guide](../landing/troubleshooting.md).
+
+## Frequently asked questions
+
+The following is a list of answers to commonly asked questions about Query Service.
+
+### How can I get only the metadata for a query?
+
+To get only the metadata for a query, you can run a query that returns zero rows, as follows:
+
+```sql
+SELECT * FROM <table> WHERE 1=0
+```
+
+This query returns only the metadata for the specified table.
+
+### How can I quickly iterate on a CTAS (Create Table as Select) query without materializing it?
+
+You can create temporary tables to quickly iterate and experiment on a query before materializing it for use. You can also use temporary tables to validate if a query is functional.
+
+For example, you can create a temporary table:
+
+```sql
+CREATE temp TABLE temp_dataset AS
+SELECT *
+FROM actual_dataset
+WHERE 1 = 0;
+```
+
+Then you can use the temporary table as follows: 
+
+```sql
+INSERT INTO temp_dataset
+SELECT a._company AS _company,
+a._id AS _id,
+a.timestamp AS timestamp
+FROM actual_dataset a
+WHERE timestamp >= To_timestamp('2021-01-21 12:00:00')
+AND timestamp < To_timestamp('2021-01-21 13:00:00')
+LIMIT 100;
+```
+
+### How should I filter my time-series data?
+
+When querying with time-series data, you should use the timestamp filter whenever possible for more accurate analysis.
+
+An example of using the timestamp filter can be seen below:
+
+```sql
+SELECT a._company  AS _company,
+       a._id       AS _id,
+       a.timestamp AS timestamp
+FROM   dataset a
+WHERE  timestamp >= To_timestamp('2021-01-21 12:00:00')
+       AND timestamp < To_timestamp('2021-01-21 13:00:00')
+```
+
+### Should I use wildcards, such as * to get all the rows from my datasets?
+
+You cannot use wildcards to get all the data from your rows, as Query Service should be treated as a **columnar-store** rather than a traditional row-based store system.
 
 ## REST API errors
 

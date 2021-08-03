@@ -10,12 +10,18 @@ feature: Data Management
 
 * [Dashboards overview](home.md)
 * [Dashboard access permissions](permissions.md)
+* [Download dashboards to PDF](download.md)
 * Available dashboards {#guides}
   * [Profiles](guides/profiles.md)
   * [Segments](guides/segments.md)
   * [Destinations](guides/destinations.md)
   * [License usage](guides/license-usage.md)
-* [Modify dashboards](modify.md)
-* [Widget library](widget-library.md)
+* Customize dashboards {#customize}  
+  * [Customization overview](customize/overview.md)
+  * [Modify dashboards](customize/modify.md)
+  * [Widget library](customize/widget-library.md)
+  * [Standard widgets](customize/standard-widgets.md)
+  * [Custom widgets](customize/custom-widgets.md)
+  * [Edit schema](customize/edit-schema.md)
 * [Query dashboard datasets](query.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

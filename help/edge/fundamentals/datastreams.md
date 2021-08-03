@@ -1,7 +1,7 @@
 ---
 title: Configure your Datastream for the Experience Platform Web SDK
 description: Learn how to configure the Datatstreams. 
-keywords: configuration;datastreams;datastreamId;edge;edge configuration id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
+keywords: configuration;datastreams;datastreamId;edge;datastream id;Environment Settings;edgeConfigId;identity;id sync enabled;ID Sync Container ID;Sandbox;Streaming Inlet;Event Dataset;target;client code;Property Token;Target Environment ID;Cookie Destinations;url Destinations;Analytics Settings Blockreport suite id;
 exl-id: 736c75cb-e290-474e-8c47-2a031f215a56
 ---
 
@@ -13,17 +13,17 @@ Your organization must be provisioned for this feature. Please contact your Cust
 
 ## Creating a Datastream Configuration
 
-Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the Datastream configuration tool.
+Datastreams can be created in the Data Collection UI using the Datastream configuration tool.
 
-![datastreams tool navigation](../../assets/datastreams_config.png)
+![datastreams tool navigation](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](https://experienceleague.adobe.com/docs/launch/using/reference/admin/user-permissions.html) article in the [!DNL Experience Platform Launch] documentation for more details.
+>The datastreams configuration tool is available to customers on the allow list regardless whether they use Platform as a tag manager. Additionally, users require Develop permissions. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
 
 Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
-When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Experience Platform Launch]. When you build a [!DNL Experience Platform Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
+When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments for tags. When you build a tag library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment (for example, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). If no environment is present in the composite ID (for example, `stage` in the previous example), then the production environment is used.
 
@@ -33,7 +33,7 @@ Below are the available settings for each configuration environment. Most sectio
 
 The third party ID section is the only section that is always on. It has two available settings: "[!UICONTROL Third Party ID Sync Enabled]" and "[!UICONTROL Third Party ID Sync Container ID]".
 
-![Identity section of the configuration UI](../../assets/edge_configuration_identity.png)
+![Identity section of the configuration UI](../images/datastreams/edge_configuration_identity.png)
 
 ### [!UICONTROL Third Party ID Sync Enabled]
 
@@ -47,7 +47,7 @@ ID syncs can be grouped into containers to allow different ID syncs to be run at
 
 The settings listed here enable you to send data to Adobe Experience Platform. You should only enable this section if you have purchased the Adobe Experience Platform.
 
-![Adobe Experience Platform settings block](../../assets/edge_configuration_aep.png)
+![Adobe Experience Platform settings block](../images/datastreams/edge_configuration_aep.png)
 
 ### [!UICONTROL Sandbox]
 
@@ -65,7 +65,7 @@ Datastreams support sending data to datasets that have a schema of class [!UICON
 
 To configure Adobe Target, you must provide a client code. The other fields are optional.
 
-![Adobe Target settings block](../../assets/edge_configuration_target.png)
+![Adobe Target settings block](../images/datastreams/edge_configuration_target.png)
 
 >[!NOTE]
 >
@@ -91,7 +91,7 @@ Adobe recommends setting this differently for each of your `dev`, `stage`, and `
 
 All that is needed to send data to Adobe Audience Manager is to enable this section. The other settings are optional but encouraged.
 
-![Adobe Audience Manage settings block](../../assets/edge_configuration_aam.png)
+![Adobe Audience Manage settings block](../images/datastreams/edge_configuration_aam.png)
 
 ### [!UICONTROL Cookie Destinations Enabled]
 
@@ -105,7 +105,7 @@ Allows the SDK to share segment information via [URL Destinations](https://exper
 
 Controls whether data is sent to Adobe Analytics. Additional details are in the [Analytics Overview](../data-collection/adobe-analytics/analytics-overview.md).
 
-![Adobe Analytics Settings Block](../../assets/edge_configuration_aa.png)
+![Adobe Analytics Settings Block](../images/datastreams/edge_configuration_aa.png)
 
 ### [!UICONTROL Report Suite ID]
 
