@@ -25,6 +25,7 @@ In this example, `result.propositions`, if it exists, is an array containing per
 
 Assume you want to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case:
 
+1. Extract propositions from the `result` object.
 1. Loop through each proposition.
 1. Determine if the SDK rendered the proposition.
 1. If so, loop through each item in the proposition.

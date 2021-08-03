@@ -83,16 +83,49 @@ When sending the event, the [!UICONTROL Render decisions] checkbox was not check
 
 If you would have instead checked the [!UICONTROL Render decisions] checkbox when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering. As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
-So far, you've only looked at personalization content that is eligible for automatic rendering (for example, any content created in Adobe Target's Visual Experience Composer). To retrieve any personalization content _not_ eligible for automatic rendering, request the content by providing decision scopes in the [!UICONTROL Send event] action. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
+So far, you've only looked at personalization content that is eligible for automatic rendering (for example, any content created in Adobe Target's Visual Experience Composer). To retrieve any personalization content _not_ eligible for automatic rendering, request the content by providing decision scopes using the [!UICONTROL Decision scopes] field in the [!UICONTROL Send event] action. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
 
 The [!UICONTROL Send event] action would look as follows:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they are returned and included in the `propositions` array. The `propositions` array, in this case, would look similar to this example:
+In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they are returned and included in the `propositions` array. Be aware that propositions qualifying for automatic rendering will continue to be included in the `propositions` array, regardless of how you configure the [!UICONTROL Render decisions] or [!UICONTROL Decision scopes] fields in the [!UICONTROL Send event] action. The `propositions` array, in this case, would look similar to this example:
 
 ```json
 [
+  {
+    "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
+    "scope": "salutation",
+    "items": [
+      {
+        "schema": "https://ns.adobe.com/personalization/json-content-item",
+        "data": {
+          "id": "4433221",
+          "content": {
+            "salutation": "Welcome, esteemed visitor!"
+          }
+        },
+        "meta": {}
+      }
+    ],
+    "renderAttempted": false
+  },
+  {
+    "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+    "scope": "discount",
+    "items": [
+      {
+        "schema": "https://ns.adobe.com/personalization/html-content-item",
+        "data": {
+          "id": "4433222",
+          "content": "<div>50% off your order!</div>",
+          "format": "text/html"
+        },
+        "meta": {}
+      }
+    ],
+    "renderAttempted": false
+  },
   {
     "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
     "scope": "__view__",
@@ -126,45 +159,13 @@ In this example, if propositions are found on the server matching the `salutatio
       }
     ],
     "renderAttempted": false
-  },
-  {
-    "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
-    "scope": "salutation",
-    "items": [
-      {
-        "schema": "https://ns.adobe.com/personalization/json-content-item",
-        "data": {
-          "id": "4433221",
-          "content": {
-            "salutation": "Welcome, esteemed visitor!"
-          }
-        },
-        "meta": {}
-      }
-    ],
-    "renderAttempted": false
-  },
-  {
-    "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
-    "scope": "discount",
-    "items": [
-      {
-        "schema": "https://ns.adobe.com/personalization/html-content-item",
-        "data": {
-          "id": "4433222",
-          "content": "<div>50% off your order!</div>",
-          "format": "text/html"
-        },
-        "meta": {}
-      }
-    ],
-    "renderAttempted": false
   }
 ]
 ```
 
 At this point, you can render proposition content as you see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Assume you have an element on your page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element. Do the following:
 
+1. Extract propositions from the `event` object.
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
 1. If you find a proposition, loop through each item in the proposition, looking for the item that is HTML content. (It's better to check than to assume.)
 1. If you find an item containing HTML content, find the `daily-special` element on the page and replace its HTML with the personalized content.
@@ -222,6 +223,7 @@ If `event.propositions` exists, it is an array containing personalization propos
 
 Assume you would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case, write custom code inside the [!UICONTROL Custom code] action to:
 
+1. Extract propositions from the `event` object.
 1. Loop through each proposition.
 1. Determine if the SDK rendered the proposition.
 1. If so, loop through each item in the proposition.

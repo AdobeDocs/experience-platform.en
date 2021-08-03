@@ -106,10 +106,43 @@ alloy("sendEvent", {
   });
 ```
 
-In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they are returned and included in the `result.propositions` array. The `propositions` array, in this case, would look similar to this example:
+In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they are returned and included in the `result.propositions` array. Be aware that propositions qualifying for automatic rendering will continue to be included in the `propositions` array, regardless of how you configure `renderDecisions` or `decisionScopes` options. The `propositions` array, in this case, would look similar to this example:
 
 ```json
 [
+  {
+    "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
+    "scope": "salutation",
+    "items": [
+      {
+        "schema": "https://ns.adobe.com/personalization/json-content-item",
+        "data": {
+          "id": "4433221",
+          "content": {
+            "salutation": "Welcome, esteemed visitor!"
+          }
+        },
+        "meta": {}
+      }
+    ],
+    "renderAttempted": false
+  },
+  {
+    "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+    "scope": "discount",
+    "items": [
+      {
+        "schema": "https://ns.adobe.com/personalization/html-content-item",
+        "data": {
+          "id": "4433222",
+          "content": "<div>50% off your order!</div>",
+          "format": "text/html"
+        },
+        "meta": {}
+      }
+    ],
+    "renderAttempted": false
+  },
   {
     "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
     "scope": "__view__",
@@ -143,45 +176,13 @@ In this example, if propositions are found on the server matching the `salutatio
       }
     ],
     "renderAttempted": false
-  },
-  {
-    "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
-    "scope": "salutation",
-    "items": [
-      {
-        "schema": "https://ns.adobe.com/personalization/json-content-item",
-        "data": {
-          "id": "4433221",
-          "content": {
-            "salutation": "Welcome, esteemed visitor!"
-          }
-        },
-        "meta": {}
-      }
-    ],
-    "renderAttempted": false
-  },
-  {
-    "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
-    "scope": "discount",
-    "items": [
-      {
-        "schema": "https://ns.adobe.com/personalization/html-content-item",
-        "data": {
-          "id": "4433222",
-          "content": "<div>50% off your order!</div>",
-          "format": "text/html"
-        },
-        "meta": {}
-      }
-    ],
-    "renderAttempted": false
   }
 ]
 ```
 
 At this point, you can render proposition content as you see fit. In this example, the proposition matching the `discount` scope is an HTML proposition built using Adobe Target's Form-based Experience Composer. Assuming you have an element on your page with the ID of `daily-special` and wish to render the content from the `discount` proposition into the `daily-special` element, do the following:
 
+1. Extract propositions from the `result` object.
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
 1. If you find a proposition, loop through each item in the proposition, looking for the item that is HTML content. (It's better to check than to assume.)
 1. If you find an item containing HTML content, find the `daily-special` element on the page and replace its HTML with the personalized content.
