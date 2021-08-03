@@ -22,18 +22,20 @@ Why am I only seeing the Services tab?
 
 If you are unable to see any of the **Data Science** tabs and wish to utilize Data Science Workspace features, contact your company administrator to check if you have an Adobe Experience Platform Intelligence license.
 
-## Adobe Experience Platform Intelligence package addon
+## Data Science Workspace packaging
 
-The following table outlines some of the key differences for Data Science Workspace with and without the Adobe Experience Platform Intelligence package addon:
+Data Science Workspace capabilities are available in the Adobe Experience Platform Intelligence package and the Advanced Intelligence Pack Add-on
+
+The following table outlines some of the key differences for Data Science Workspace entitlements with and without the Advanced Intelligence Pack Add-on:
 
 >[!NOTE]
 >
 >You can license more than one Intelligence package addon and the increased capacity is added to your overall entitlement. For example, if you licensed 2 Adobe Experience Platform Intelligence package addons you are entitled to a total of 20 concurrent Notebook users.
 
-| | [!DNL Data Science Workspace] | [!DNL Data Science Workspace] with Intelligence package addon |
+| Data Science Workspace entitlement| Adobe Experience Platform Intelligence Package only | Adobe Experience Platform Intelligence plus Advanced Intelligence Pack Add-on |
 | --- | :---: | :---: |
 | Number of Notebook users supported. | 5 concurrent users | First pack adds 5 concurrent users and additional purchases add 10 concurrent users per package. |
-| Allows integrated Jupyter Notebooks for exploratory data analysis and model authoring (R, Python, Scala, PySpark) | X | X |
+| Allows integrated Jupyter Notebooks for exploratory data analysis and model authoring. | X (Supports R, Python, and Scala libraries) | X (Adds PySpark and Spark ML libraries)  |
 | Native integration with Query Service. Ability to explore and shape datasets using SQL in notebooks. | X | X |
 | Access to pre-built notebook templates for predictive analytics. | X | X |
 | Manually train and score models with Jupyter Notebooks. | X | X |
@@ -55,11 +57,11 @@ In order to use Data Science Workspace, the "Manage Data Science Workspace" perm
 
 ## Sandbox support
 
-Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports one production sandbox and multiple non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandbox. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
+Sandboxes are virtual partitions within a single instance of Experience Platform. Each Platform instance supports multiple production sandbox and non-production sandboxes, each maintaining its own library of Platform resources. Non-production sandboxes allow you to test features, run experiments, and make custom configurations without impacting your production sandboxes. For more information on sandboxes, see the [sandboxes overview](../sandboxes/home.md).
 
 Currently, Data Science Workspace has the following sandbox limitation:
 
-- Compute resources are shared across the production sandbox and non-production sandboxes.
+- Compute resources are shared across the production and non-production sandboxes.
 
 ## Next steps
 
