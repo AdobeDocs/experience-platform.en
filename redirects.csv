@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/launch/using/reference/upgrade/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/home.html
 https://experienceleague.adobe.com/docs/launch/using/release-notes/2018-release-notes.html,https://experienceleague.adobe.com/docs/launch/using/release-notes/2018.html
 https://experienceleague.adobe.com/docs/launch/using/release-notes/2019-release-notes.html,https://experienceleague.adobe.com/docs/launch/using/release-notes/2019.html
 https://experienceleague.adobe.com/docs/launch/using/release-notes/2020-release-notes.html,https://experienceleague.adobe.com/docs/launch/using/release-notes/2020.html
@@ -48,6 +49,7 @@ https://experienceleague.adobe.com/docs/launch/using/server-side-info/server-sid
 https://experienceleague.adobe.com/docs/launch/using/client-side-info/content-security-policy-csp.html,https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/content-security-policy.html
 https://experienceleague.adobe.com/docs/launch/using/client-side-info/deploy-javascript-tags-to-opt-in-to-launch.html,https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/consent.html
 https://experienceleague.adobe.com/docs/launch/using/client-side-info/launch-object-reference.html,https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/satellite-object.html
+https://experienceleague.adobe.com/docs/launch/using/reference/publish/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/publish/
 https://experienceleague.adobe.com/docs/launch/using/publish/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/publish/
 https://experienceleague.adobe.com/docs/launch/using/get-started/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/get-started/
 https://experienceleague.adobe.com/docs/launch/using/client-side-info/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/client-side/

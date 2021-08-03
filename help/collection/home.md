@@ -19,7 +19,8 @@ Data collection is supported for the following client-side sources:
 The data-collection technologies provided by Experience Platform focus on the discoverability and accessibility of ingested datasets. These technologies encompass the following:
 
 * [Adobe Experience Platform Edge Network](https://experienceleague.adobe.com/docs/web-sdk-learn/tutorials/introduction-to-web-sdk-and-edge-network.html)
-* [Adobe Experience Platform Launch](https://adobe.com/go/launch_help_en)
+* [Tags](../tags/home.md)
+* [Event forwarding](../tags/ui/event-forwarding/overview.md)
 * [Adobe Experience Platform Web SDK](../edge/home.md)
 * [Experience Data Model (XDM)](../xdm/home.md) 
 
@@ -31,7 +32,7 @@ Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe pr
 
 ## Flip-the-switch process to deploy Adobe technology
 
-Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using Platform Launch, you can set up [datastreams](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
+Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![](./images/deploy.png)
 

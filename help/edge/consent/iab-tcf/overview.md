@@ -8,10 +8,10 @@ exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 
 The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
 
-Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
+Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without tags.
 
-- [With Adobe Experience Platform Launch](./with-launch.md)
-- [Without Adobe Experience Platform Launch](./without-launch.md)
+- [With tags](./with-launch.md)
+- [Without tags](./without-launch.md)
 
 ## Getting started
 
@@ -84,4 +84,4 @@ For more information on the `sendEvent` command, read the documentation on [trac
 
 ## Next steps
 
-Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with Adobe Experience Platform Launch](./with-launch.md) or [without Adobe Experience Platform Launch](./without-launch.md).
+Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with tags](./with-launch.md) or [without tags](./without-launch.md).

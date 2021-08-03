@@ -6,7 +6,7 @@ description: Learn how to configure tags in Adobe Experience Platform to deliver
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 If you do not want to have Adobe manage your hosted libraries, your other option is to have Adobe Experience Platform deliver builds to a secured SFTP server that you host.
 
