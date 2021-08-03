@@ -37,7 +37,7 @@ Follow the steps below to get started with the extension.
 
 A rule that utilizes the Experience Manager Forms extension would look like the following:
 
-![Action configuration](./images/AEM-forms-rule.png)
+![Action configuration](./images/rule.png)
 
 Follow the steps outlined below to create a similar rule for your implementation.
 
