@@ -12,7 +12,7 @@ This page describes the Adobe Experience Platform Launch event types provided by
 
 Typically, your property in Platform Launch would have one or more rules using the [[!UICONTROL Send event] action](action-types.md#send-event) to send events to Adobe Experience Platform Edge Network. Each time an event is sent to Edge Network, a response is returned to the browser with useful data. Without the [!UICONTROL Send event complete] event type, you wouldn't have access to this returned data.
 
-To access the returned data, you will need to create a separate rule. You will then add a [!UICONTROL Send event complete] event to the rule. This rule will now be triggered each time a successful response is received from the server as a result of a [!UICONTROL Send event] action.
+To access the returned data, create a separate rule, then add a [!UICONTROL Send event complete] event to the rule. This rule is triggered each time a successful response is received from the server as a result of a [!UICONTROL Send event] action.
 
 When a [!UICONTROL Send event complete] event triggers a rule, it provides data returned from the server that may be useful to accomplish certain tasks. Typically, you will add a [!UICONTROL Custom code] action (from Platform Launch's [!UICONTROL Core] extension) to the same rule that contains the [!UICONTROL Send event complete] event. In the [!UICONTROL Custom code] action, your custom code will have access to a variable named `event`. This `event` variable will contain the data returned from the server.
 
@@ -20,7 +20,7 @@ Your rule for handling data returned from Edge Network may look something like t
 
 ![](./assets/send-event-complete.png)
 
-Let's walk through some examples of how to perform certain tasks using the [!UICONTROL Custom code] action in this rule.
+Below are some examples of how to perform certain tasks using the [!UICONTROL Custom code] action in this rule.
 
 ### Manually render personalized content
 
@@ -30,7 +30,7 @@ In the Custom Code action, which is in the rule for handling response data, you 
 var propositions = event.propositions;
 ```
 
-If `event.propositions` exists, it will be an array containing personalization proposition objects. The propositions included in the array are determined, in large part, by how the event was sent to the server.
+If `event.propositions` exists, it is an array containing personalization proposition objects. The propositions included in the array are determined, in large part, by how the event was sent to the server.
 
 For this first scenario, let's assume you have not checked the [!UICONTROL Render decisions] checkbox and have not provided any [!UICONTROL decision scopes] inside the [!UICONTROL Send event] action responsible for sending the event.
 
@@ -83,13 +83,13 @@ When sending the event, the [!UICONTROL Render decisions] checkbox was not check
 
 If you would have instead checked the [!UICONTROL Render decisions] checkbox when sending the event, the SDK would have attempted to render any propositions eligible for automatic rendering. As a consequence, each of the proposition objects would have its `renderAttempted` property set to `true`. There would be no need to manually render these propositions in this case.
 
-So far, we've only discussed personalization content that is eligible for automatic rendering (i.e., any content created in Adobe Target's Visual Experience Composer). In order to retrieve any personalization content _not_ eligible for automatic rendering, you will need to request the content by providing decision scopes in the [!UICONTROL Send event] action. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
+So far, we've only discussed personalization content that is eligible for automatic rendering (i.e., any content created in Adobe Target's Visual Experience Composer). In order to retrieve any personalization content _not_ eligible for automatic rendering, request the content by providing decision scopes in the [!UICONTROL Send event] action. A scope is a string that identifies a particular proposition you would like to retrieve from the server.
 
 The [!UICONTROL Send event] action would look as follows:
 
 ![img.png](assets/send-event-render-unchecked-with-scopes.png)
 
-In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they will be returned and included in the `propositions` array. The `propositions` array, in this case, would look similar to this example:
+In this example, if propositions are found on the server matching the `salutation` or `discount` scope, they are returned and included in the `propositions` array. The `propositions` array, in this case, would look similar to this example:
 
 ```json
 [
@@ -220,7 +220,7 @@ var propositions = event.propositions;
 
 If `event.propositions` exists, it will be an array containing personalization proposition objects. See [Manually render personalized content](#manually-render-personalized-content) for more information on the content of `result.propositions`
 
-Let's assume you would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case, you would write custom code inside the [!UICONTROL Custom code] action that would:
+Assume you would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case, you would write custom code inside the [!UICONTROL Custom code] action that would:
 
 1. Loop through each proposition.
 1. Determine if the SDK rendered the proposition.
