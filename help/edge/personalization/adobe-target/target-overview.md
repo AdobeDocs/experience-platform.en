@@ -84,8 +84,8 @@ in the `meta` field within `propositions` -> `items`. Here is a sample:
 }
 ```
 
-To be able to collect the response tokens, we will have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
-and extract the details from `items` -> `meta`. Every `proposition` will have a `renderAttempted` boolean field
+To collect the response tokens, you have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
+and extract the details from `items` -> `meta`. Every `proposition` has a `renderAttempted` boolean field
 indicating whether the `proposition` was rendered or not. See the sample below:
 
 ```
@@ -114,7 +114,7 @@ alloy("sendEvent",
   
 ```
 
-When automatic rendering is enabled, propositions array will contain:
+When automatic rendering is enabled, propositions array contains:
 
 #### On Page-Load:
 * Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
@@ -124,7 +124,7 @@ When automatic rendering is enabled, propositions array will contain:
 #### On View - change (for cached views):
 * Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
 
-When automatic rendering is disabled, propositions array will contain:
+When automatic rendering is disabled, propositions array contains:
 
 #### On Page-Load:
 * Form Based Composer based `propositions` with `renderAttempted` flag set to `false`
