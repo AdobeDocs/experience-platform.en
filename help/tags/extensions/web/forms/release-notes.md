@@ -14,4 +14,4 @@ description: The latest release notes for the Adobe Experience Manager Forms tag
 * Added support to capture various out-of-the-box events dispatched by Experience Manager Adaptive Forms
 * Added support to capture custom events dispatched by the Adaptive Forms Rule Editor
 
-The [Adobe Experience Manager Forms extension](./overview.md) provides the functionality to capture various events from Adaptive Forms in order to trigger analytics calls using the [Adobe Analytics extension](../adobe-analytics-extension/overview.md).
+The [Adobe Experience Manager Forms extension](./overview.md) provides the functionality to capture various events from Adaptive Forms in order to trigger analytics calls using the [Adobe Analytics extension](../analytics/overview.md).

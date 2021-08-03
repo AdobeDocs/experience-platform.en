@@ -31,7 +31,7 @@ The extension provides several data elements that can be used to send properties
 Follow the steps below to get started with the extension.
 
 1. Install the Adobe Experience Manager Forms extension from the extension catalog. No further configuration is required after installation.
-2. Install and configure the [Adobe Analytics extension](../adobe-analytics-extension/overview.md#Configure-the-Adobe-Analytics-extension). 
+2. Install and configure the [Adobe Analytics extension](../analytics/overview.md#Configure-the-Adobe-Analytics-extension). 
 
 ## Creating a rule
 
