@@ -8,7 +8,7 @@ exl-id: efd4e866-6a27-4bd5-af83-4a97ca8adebd
 
 ## Version 2.6.2 - August 4, 2021
 
-* Fixed an issue where a warning about the deprecation of `result.decisions` (provided by the `sendEvent` command) would be logged to the console even when the `result.decisions` property wasn't being accessed.
+* Fixed an issue where a warning about the deprecation of `result.decisions` (provided by the `sendEvent` command) would be logged to the console even when the `result.decisions` property wasn't being accessed. No warning will be logged when accessing the `result.decisions` property, but the property is still deprecated.
 
 ## Version 2.6.1 - July 29, 2021
 
