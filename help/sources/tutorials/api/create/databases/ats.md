@@ -33,7 +33,7 @@ In order for [!DNL Flow Service] to connect with [!DNL Azure Table Storage], you
 | Credential | Description |
 | ---------- | ----------- |
 | `connectionString` | The connection string used to connect to an [!DNL Azure Table Storage] instance. The connection string pattern for [!DNL Azure Table Storage] is: `DefaultEndpointsProtocol=https;AccountName={ACCOUNT_NAME};AccountKey={ACCOUNT_KEY}`. |
-The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Azure Table Storage] is `ecde33f2-c56f-46cc-bdea-ad151c16cd69`. |
 
 For more information about obtaining a connection string, refer to [this [!DNL Azure Table Storage] document](https://docs.microsoft.com/en-us/azure/storage/common/storage-introduction).
 

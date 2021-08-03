@@ -113,9 +113,9 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 ### Create a new datastream
 
-In order for the SDK to send data to Experience Platform, you must first create a new datastream for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/datastreams.md).
+In order for the SDK to send data to Experience Platform, you must first create a new datastream for Platform in the Data Collection UI. Specific steps for how to create a new datastream are provided in the [SDK documentation](../../../../edge/fundamentals/datastreams.md).
 
-After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
+After providing a unique name for the datastream, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
 | Datastream field | Value |
 | --- | --- |

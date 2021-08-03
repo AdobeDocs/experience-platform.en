@@ -6,7 +6,7 @@ description: Learn about the default hosting option for deploying tag library bu
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Adobe-managed hosts are the default host setting for deploying your tag library builds in Adobe Experience Platform. When you create a new property through the Data Collection user interface, a default Adobe-managed host is created for you. 
 
@@ -83,7 +83,7 @@ Cache-control headers are only applied for the main library build. Any sub-resou
 
 ## Using Adobe-managed hosting in the Data Collection UI
 
-When you first create a property in the [Data Collection UI](http://launch.adobe.com/), an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
+When you first create a property in the [Data Collection UI](https://experience.adobe.com/#/data-collection/), an Adobe-managed host is automatically created for you. All available environments that have immediately usable properties are also assigned to the Adobe-managed host by default.
 
 >[!NOTE]
 >

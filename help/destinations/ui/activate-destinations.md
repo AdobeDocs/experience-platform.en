@@ -155,14 +155,14 @@ Select **[!UICONTROL Export full files]** to have your exported files contain a 
     
       >[!IMPORTANT]
       >
-      >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.<br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
 
 >[!IMPORTANT]
 >
->Changing the file export schedule for segments that have already been exported is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Export incremental files {#export-incremental-files}
 
@@ -190,23 +190,19 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
     >Files will start exporting on 7/19 and will stop exporting on 7/20 at 23:59:59 UTC. There will not be any files delivered on 7/21.
 
    * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
-     
-       >[!IMPORTANT]
-       >
-       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day. 
 
-2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >The option to select the time of day for the export is only available to a select number of customers. <br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
 
-3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-4. Select **[!UICONTROL Create]** to save the schedule.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+1. Select **[!UICONTROL Create]** to save the schedule.
 
 >[!IMPORTANT]
 >
->Changing the file export schedule for segments that have already been exported is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
+>Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases.
 
 ### Configure file names {#file-names}
 
@@ -293,10 +289,6 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >title="About deduplication keys"
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
-
->[!IMPORTANT]
->
->The option to use deduplication keys is currently in beta, and is only available to a select number of customers.
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
