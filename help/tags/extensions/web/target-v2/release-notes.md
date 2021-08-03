@@ -6,7 +6,7 @@ description: The latest release notes for the Adobe Target v2 tag extension in A
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 ## July 20, 2021
 
@@ -30,7 +30,7 @@ description: The latest release notes for the Adobe Target v2 tag extension in A
 
 ### Adobe Target v2 Extension 0.14.2
 
-- Fix a bug where the final Launch bundle contains two at.js versions, one with On-Device Decisioning and one without.
+- Fix a bug where the final bundle contains two at.js versions, one with On-Device Decisioning and one without.
 
 ## May 19, 2021
 

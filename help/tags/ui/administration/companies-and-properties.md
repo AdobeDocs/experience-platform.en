@@ -6,7 +6,7 @@ description: Learn how your extensions, environments, and libraries are organize
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 ## Web properties
 
@@ -15,8 +15,6 @@ A web property is a collection of rules, data elements, configured extensions, e
 ## Mobile properties
 
 A mobile property type can contain multiple applications. For example, in a mobile property you can manage the same set of rules and extensions across multiple iOS and Android applications.
-
-For a video tutorial, see [Creating your first property](../../quick-start/videos.md).
 
 ## Best practices for planning properties {#best-practices-for-planning-properties}
 
