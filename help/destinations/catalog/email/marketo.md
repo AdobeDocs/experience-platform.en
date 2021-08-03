@@ -10,7 +10,7 @@ exl-id: 3841eb19-a17e-4c28-a101-7332d178af34
 
 [!DNL Marketo]'s powerful marketing automation software helps marketers master the art & science of digital marketing to engage customers and prospects.
 
-[!DNL Marketo] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+[!DNL Marketo] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the [extension page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 This destination is a tag extension. For more information about how tag extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -32,7 +32,7 @@ To install the [!DNL Marketo] extension:
 4. Select the property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of in the tags documentation.
 5. The workflow walks you through the steps to complete the installation.
 
-For information about the extension configuration options and installation support, see the [Marketo page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101071.marketo-for-adobe-launch.html).
+For information about the extension configuration options and installation support, see the [Marketo page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.106250.bounteous-extension-for-adobe-launch-and-marketo.html).
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). For more information, see the section on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the tags documentation.
 

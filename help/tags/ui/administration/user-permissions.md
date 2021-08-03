@@ -69,7 +69,6 @@ The permissions available within this group are:
 Company rights apply to permissions that span multiple properties.  There are currently three:
 
 * **Manage Properties:** This allows you to create new properties in the Data Collection UI and to modify the metadata and settings at the property level. You can also delete properties. Read the [properties documentation](companies-and-properties.md) for more information. Administrators usually perform this role.
-* 
 * Grants the ability to create new properties and to modify the metadata and settings at the property level. You can also delete properties.  Read more about properties [here](companies-and-properties.md). Administrators usually perform this role.
 * **Develop Extensions:** Grants the ability to create and modify extension packages that are owned by the company including private releases and requests for public release.
 * **Manage App Configurations:** This is only available to customers who have licensed Adobe Journey Optimizer, or some other solution that gives them access to mobile in-app and push messaging.  This allows you to manage the apps that Experience Cloud knows about along with the necessary push credentials needed to communicate with the Firebase Cloud Messaging service and the Apple Push Notification Service.
