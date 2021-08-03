@@ -137,21 +137,25 @@ alloy("sendEvent",
 When automatic rendering is enabled, propositions array contains:
 
 #### On Page-Load:
+
 * Form-Based Composer based `propositions` with `renderAttempted` flag set to `false`
 * Visual Experience Composer based propositions with `renderAttempted` flag set to `true`
 * Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
 
 #### On View - change (for cached views):
+
 * Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
 
 When automatic rendering is disabled, propositions array contains:
 
 #### On Page-Load:
+
 * Form-based Composer based `propositions` with `renderAttempted` flag set to `false`
 * Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
 * Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 #### On View - change (for cached views):
+
 * Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 ### Single profile update
