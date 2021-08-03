@@ -8,7 +8,7 @@ keywords: personalization;target;adobe target;renderDecisions;sendEvent;decision
 
 Personalization content returned from Adobe Target includes [response tokens](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html), which are details about the activity, offer, experience, user profile, geo information, and more. These details can be shared with third-party tools or used for debugging. Response tokens can be configured in the Adobe Target user interface.
 
-To access any personalization content, you may provide a callback function when sending an event. This callback will be called after the SDK receives a successful response from the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of providing a callback function.
+To access any personalization content, provide a callback function when sending an event. This callback will be called after the SDK receives a successful response from the server. Your callback will be provided a `result` object, which may contain a `propositions` property containing any returned personalization content. Below is an example of providing a callback function.
 
 ```javascript
 alloy("sendEvent", {
@@ -21,9 +21,9 @@ alloy("sendEvent", {
   });
 ```
 
-In this example, `result.propositions`, if it exists, will be an array containing personalization propositions related to the event. Please see [Rendering personalization content](../rendering-personalization-content.md) for more information on the content of `result.propositions`.
+In this example, `result.propositions`, if it exists, is an array containing personalization propositions related to the event. Please see [Rendering personalization content](../rendering-personalization-content.md) for more information on the content of `result.propositions`.
 
-Let's assume you would like to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case, you would:
+Assume you want to gather all activity names from all propositions that were automatically rendered by the web SDK and push them into a single array. You could then send the single array to a third party. In this case:
 
 1. Loop through each proposition.
 1. Determine if the SDK rendered the proposition.
