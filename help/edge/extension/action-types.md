@@ -11,6 +11,7 @@ After you configure the [Adobe Experience Platform Web SDK tag extension](web-sd
 
 This page describes the available action types.
 
+
 ## Send Event
 
 Sends an event to Adobe [!DNL Experience Platform] so that Adobe Experience Platform can collect the data you send and act on that information. Select an instance (if you have more than one). Any data that you want to send can be sent in the **[!UICONTROL XDM Data]** field. Use a JSON object that conforms to the structure of your XDM schema. This object can either be created on your page or through a **[!UICONTROL Custom Code]** **[!UICONTROL Data Element]**.
