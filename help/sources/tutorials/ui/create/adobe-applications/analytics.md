@@ -60,7 +60,7 @@ The [!UICONTROL Mapping] page provides an interface to map source fields to thei
 
 >[!TIP]
 >
->You must create a new schema if there are no appropriate schemas available for your report suite data. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Analytics] template field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your report suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
