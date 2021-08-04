@@ -9,6 +9,7 @@ After you set your [action types](action-types.md) in the [Adobe Experience Plat
 
 This page describes the available data element types.
 
+
 ## Event Merge ID
 
 This data element provides an event merge ID when used. No configuration is needed for this data element. The data element that is provided stays the same until the visitor leaves the page or until the "Reset Event Merge ID" action type is used.
@@ -25,7 +26,7 @@ Use XDM format to send any data to the Adobe Experience Platform Web SDK. Format
 
 ![](./assets/XDM-object.png)
 
-Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, that some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements. 
+Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements. 
 
 >[!NOTE]
 >

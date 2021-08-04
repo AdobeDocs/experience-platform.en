@@ -107,36 +107,36 @@ The following table outlines the schema fields in the raw scores example output:
 | Column Name (DataType) | Nullable | Description |
 | --- | --- | --- |
 | timestamp (DateTime) | False | The time when an conversion event or observation occurred. <br> **Example:** 2020-06-09T00:01:51.000Z |
-identityMap (Map) | True | identityMap of the user similar to the CEE XDM format. |
-eventType (String) | True | The primary event type for this time-series record. <br> **Example:** "Order", "Purchase", "Visit" |
-eventMergeId (String) | True | An ID to correlate or merge multiple [!DNL Experience Events] together that are essentially the same event or should be merged. This is intended to be populated by the data producer prior to ingestion. <br> **Example:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-_id (String) | False | A unique identifier for the time-series event. <br> **Example:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-_tenantId (Object) | False | The top level object container corrisponding to your tentant ID. <br> **Example:** _atsdsnrmmsv2 |
- your_schema_name (Object) | False | Score row with conversion event all the touchpoint events associated with it and their metadatas. <br> **Example:** Attribution AI Scores -  Model Name__2020 |
-segmentation (String) | True | Conversion segment such as geo segmentation which the model is built against. In case of the absence of segments, segment is same as conversionName. <br> **Example:** ORDER_US |
-conversionName (String) | True | Name of the conversion that was configured during setup. <br> **Example:** Order, Lead, Visit |
-conversion (Object) | False | Conversion metadata columns. |
-dataSource (String) | True | Globally unique identification of a data source. <br> **Example:** Adobe Analytics |
-eventSource (String) | True | The source when the actual event happened. <br> **Example:** Adobe.com |
-eventType (String) | True | The primary event type for this time-series record. <br> **Example:** Order |
-geo (String) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Example:** US |
-priceTotal (Double) | True | Revenue obtained through the conversion <br> **Example:** 99.9 |
-product (String) | True | The XDM identifier of the product itself. <br> **Example:** RX 1080 ti |
-productType (String) | True | The display name for the product as presented to the user for this product view. <br> **Example:** Gpus |
-quantity (Integer) | True | Quantity purchased during the conversion. <br> **Example:** 1 1080 ti |
-receivedTimestamp (DateTime) | True | Received timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
-skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
-timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
-passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
-commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
-customerProfile (Object) | False | Identity details of the user used to build the model. |
-identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
-id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
-namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
-touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
-touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
-scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
-touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
+| identityMap (Map) | True | identityMap of the user similar to the CEE XDM format. |
+| eventType (String) | True | The primary event type for this time-series record. <br> **Example:** "Order", "Purchase", "Visit" |
+| eventMergeId (String) | True | An ID to correlate or merge multiple [!DNL Experience Events] together that are essentially the same event or should be merged. This is intended to be populated by the data producer prior to ingestion. <br> **Example:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id (String) | False | A unique identifier for the time-series event. <br> **Example:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _tenantId (Object) | False | The top level object container corrisponding to your tentant ID. <br> **Example:** _atsdsnrmmsv2 |
+| your_schema_name (Object) | False | Score row with conversion event all the touchpoint events associated with it and their metadatas. <br> **Example:** Attribution AI Scores -  Model Name__2020 |
+| segmentation (String) | True | Conversion segment such as geo segmentation which the model is built against. In case of the absence of segments, segment is same as conversionName. <br> **Example:** ORDER_US |
+| conversionName (String) | True | Name of the conversion that was configured during setup. <br> **Example:** Order, Lead, Visit |
+| conversion (Object) | False | Conversion metadata columns. |
+| dataSource (String) | True | Globally unique identification of a data source. <br> **Example:** Adobe Analytics |
+| eventSource (String) | True | The source when the actual event happened. <br> **Example:** Adobe.com |
+| eventType (String) | True | The primary event type for this time-series record. <br> **Example:** Order |
+| geo (String) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Example:** US |
+| priceTotal (Double) | True | Revenue obtained through the conversion <br> **Example:** 99.9 |
+| product (String) | True | The XDM identifier of the product itself. <br> **Example:** RX 1080 ti |
+| productType (String) | True | The display name for the product as presented to the user for this product view. <br> **Example:** Gpus |
+| quantity (Integer) | True | Quantity purchased during the conversion. <br> **Example:** 1 1080 ti |
+| receivedTimestamp (DateTime) | True | Received timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+| skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
+| timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+| passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
+| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
+| customerProfile (Object) | False | Identity details of the user used to build the model. |
+| identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
+| id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
+| namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
+| touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
+| touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
+| scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
+| touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
 
 ### Viewing raw score paths (UI) {#raw-score-path}
 
