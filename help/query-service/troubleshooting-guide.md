@@ -90,9 +90,9 @@ You cannot use wildcards to get all the data from your rows, as Query Service sh
 | **42P07** | Query | Table exists | A table with the same name already exists (CREATE TABLE) |
 | **53400** | Query | LIMIT exceeds max value | User specified a LIMIT clause higher than 100,000 |
 | **53400** | Query | Statement timeout | The live statement submitted took more than the maximum of 10 minutes |
+| **58000** | Query | System error | Internal system failure |
 | **0A000** | Query/Command | Not supported | The feature/functionality in the query/command is not supported |
 | **42501** | DROP TABLE Query | Dropping table not created by Query Service | The table that is being dropped was not created by Query Service using the `CREATE TABLE` statement |
 | **42501** | DROP TABLE Query | Table not created by the authenticated user | The table that is being dropped was not created by the currently logged in user |
 | **42P01** | DROP TABLE Query | Table not found | The table specified in the query was not found |
 | **42P12** | DROP TABLE Query | No table found for `dbName`: please check the `dbName` | No tables were found in the current database |
-| **58000** | DROP TABLE Query | System error | Internal system failure |
