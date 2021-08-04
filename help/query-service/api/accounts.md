@@ -59,4 +59,6 @@ A successful response returns HTTP status 200, with details of your newly create
 
 | Property | Description |
 | -------- | ----------- |
-| `technicalAccountName` | 
+| `technicalAccountName` | The name of your Query Service integration account. |
+| `technicalAccountId` | The ID of your Query Service integration account. |
+| `credential` | The 
