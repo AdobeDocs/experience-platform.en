@@ -106,7 +106,7 @@ Before you can use the `Extern_ID` namespace to send data to [!DNL Facebook], ma
 
 To connect to the [!DNL Facebook] destination, see [Social destinations authentication workflow](./workflow.md). 
 
-The video below also demonstrates the steps to configure a [!DNL Facebook] destination and activate segments. 
+The video below also demonstrates the steps to configure a social destination and activate segments. The video uses LinkedIn as an example, but the steps are similar across social destinations.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
