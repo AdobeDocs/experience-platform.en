@@ -98,6 +98,12 @@ Experience Platform provides support for ingesting data from a third-party eComm
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
 
+### Local system
+
+Experience Platform provides support for ingesting data from your local system. See the following related documents for more information on specific source connectors:
+
+- [Local system](connectors/local-system/local-file-upload.md)
+
 ### Marketing Automation
 
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
@@ -116,7 +122,6 @@ Experience Platform provides support for ingesting data from a third-party payme
 Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### Protocols
 

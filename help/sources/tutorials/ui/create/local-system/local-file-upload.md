@@ -4,7 +4,7 @@ solution: Experience Platform
 title: Create a Source Connection in the UI to ingest local files to Experience Platform
 topic-legacy: overview
 type: Tutorial
-description:
+description: Learn how to create a source connection for your local system to bring local files to Platform
 ---
 # Create a source connection in the UI to ingest local files to Experience Platform
 
