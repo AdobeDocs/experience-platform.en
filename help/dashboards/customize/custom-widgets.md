@@ -99,7 +99,7 @@ You can edit custom widgets in the widget library by selecting the ellipses (`..
 
 ![](../images/customization/custom-widget-edit.png)
 
-On the **[!UICONTROL Edit widget]** dialog, you can edit the title and description of the widget, as well as preview and select different visualizations. After your edits have been made, select **[!UICONTOL Save]** to save your changes and return to the custom widgets tab.
+On the **[!UICONTROL Edit widget]** dialog, you can edit the title and description of the widget, as well as preview and select different visualizations. After your edits have been made, select **[!UICONTROL Save]** to save your changes and return to the custom widgets tab.
 
 >[!WARNING]
 >
