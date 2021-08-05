@@ -85,3 +85,25 @@ When finished, select [!UICONTROL Next].
 ![finish-select-data]()
 
 ### Mapping
+
+The [!UICONTROL Mapping] step appears, providing you with an interface to map the source fields from your source schema to their appropriate target XDM fields in the target schema.
+
+![mapping-interface]()
+
+#### Preview data
+
+Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
+
+![preview-data]()
+
+During the preview, the identity column is prioritized as the first field, as it is the key information necessary when validating mapping results. When finished, select **[!UICONTROL Close]**.
+
+![preview-panel]()
+
+#### Add calculated field
+
+#### Sort source schema mapping tree
+
+#### Intelligent recommendations
+
+#### Accept all target fields
