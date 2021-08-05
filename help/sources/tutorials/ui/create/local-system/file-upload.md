@@ -8,7 +8,7 @@ description:
 ---
 # Create a source connection in the UI to ingest local files to Experience Platform
 
-This tutorial provides steps for creating a source connector for your local system to ingest local files to [!DNL Platform] using the user interface.
+This tutorial provides steps for creating a source connector for your local system to ingest local files to Platform using the user interface.
 
 ## Getting started
 
@@ -102,8 +102,77 @@ During the preview, the identity column is prioritized as the first field, as it
 
 #### Add calculated field
 
-#### Sort source schema mapping tree
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+
+Select the **[!UICONTROL Add calculated field]** button to proceed.
+
+![add-calculated-field]()
+
+The [!UICONTROL Create calculated field] panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
+
+![create-calculated-field]()
+
+| Tab | Description |
+| --------- | ----------- |
+| Function | The functions tab lists the functions available to transform the data. To learn more about the functions you can use within calculated fields, please read the guide on [using Data Prep (Mapper) functions](../../../../../data-prep/functions.md). |
+| Field | The fields tab lists fields and attributes available in the source schema. |
+| Operator | The operators tab lists the operators that are available to transform the data. |
+
+Select the expression editor to manually add fields, functions, and operators. Once you have created a calculated field, select **[!UICONTROL Save]** to proceed.
+
+![expression-editor]()
+
+#### Filter source schema mapping tree
+
+To filter through your source schema, select **[!UICONTROL All source fields]** and then select the specific field that you want to map from the dropdown menu.
+
+The following table displays the sorting options for your source schema tree:
+
+| Source fields | Description |
+| --- | --- |
+| [!UICONTROL All source fields] | This option displays all of the source fields of your source  schema. This option is displayed by default. |
+| [!UICONTROL Required fields] | This option filters the source schema to only display the fields required to complete the mapping. |
+| [!UICONTROL Identity fields] | This option filters the source schema to only display the fields marked for Identity. |
+| [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields have already been mapped. |
+| [!UICONTROL Unmapped fields] | This option filters the source schema to only display the fields that have yet to be mapped. |
+| [!UICONTROL Fields with recommendation] | This option filters the source schema to only display the fields that contain mapping recommendations. |
+
+![all-source-fields]
 
 #### Intelligent recommendations
 
-#### Accept all target fields
+Platform automatically provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+
+![source-schema-tree]()
+
+To accept all the auto-generating mapping values, select **[!UICONTROL Accept all target fields]**.
+
+![accept-all-target-fields]()
+
+Sometimes, more than one recommendation is available for the source schema. When this happens, the mapping card displays the most prominent recommendation, followed by a blue circle that contains the number of additional recommendations available. Selecting the light bulb icon will show a list of the additional recommendations. You can choose one of the alternate recommendations by selecting the checkbox next to the recommendation you want to map to instead.
+
+![select-lightbulb]()
+
+Alternatively, you can choose to manually map your source schema to your target schema. Hover over the source schema you want to map, then select the plus (`+`) icon.
+
+![manual-mapping]()
+
+The **[!UICONTROL Map source to target field]** popover appears. From here, you can select which field you want to be mapped, followed by **[!UICONTROL Save]** to add your new mapping.
+
+![map-source-to-target-field]()
+
+To remove a mapping, hover over the field you want to remove and select the minus (`-`) icon.
+
+![remove-mapping]()
+
+When finished, select **[!UICONTROL Finished]**.
+
+![finish]()
+
+## Monitor data ingestion
+
+Once your CSV file is mapped and created, you can monitor the data that is being ingested through it using the monitoring dashboard. For more information. see the tutorial on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+
+## Next steps
+
+By following this tutorial, you have successfully mapped a flat CSV file to an XDM schema and ingested it into Platform. This data can now be used by downstream [!DNL Platform] services such as [!DNL Real-time Customer Profile]. See the overview for [[!DNL Real-time Customer Profile]](../../../../../profile/home.md) for more information.
