@@ -13,7 +13,7 @@ exl-id: 792a3a73-58a4-4163-9212-4d43d24c2770
 
 This UI guide requires an understanding of the various [!DNL Experience Platform] services involved with managing [!DNL Real-time Customer Profiles]. Before reading this guide, or working in the UI, please review the documentation for the following services:
 
-* [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-time Customer Profile] overview](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources as they are ingested into [!DNL Platform].
 * [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
@@ -25,21 +25,19 @@ In the Experience Platform UI, select **[!UICONTROL Profiles]** in the left navi
 >
 >If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Profiles] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with Real-time Customer Profile.
 
-### [!UICONTROL Profiles] dashboard {#profile-dashboard}
+### Profile dashboard {#profile-dashboard}
 
-The **[!UICONTROL Profiles]** dashboard outlines key metrics related to your organization's Profile data. 
+The profile dashboard outlines key metrics related to your organization's profile data. 
 
-To learn more, visit the [Profile dashboard guide](../../dashboards/guides/profiles.md).
+To learn more, visit the [profile dashboard guide](../../dashboards/guides/profiles.md).
 
 ![](../../dashboards/images/profiles/dashboard-overview.png)
 
-## Browse
+## View profile metrics on the [!UICONTROL Browse] tab
 
-Select the **[!UICONTROL Browse]** tab in order to browse profiles by identity. 
+Selecting the **[!UICONTROL Browse]** tab enables you to view key metrics related to your organization's profile data. It also allows you to browse the profile store using a merge policy or an identity, as outlined in the next section of this guide.
 
 ![](../images/user-guide/profiles-browse.png)
-
-### Profile metrics {#profile-metrics}
 
 On the right-hand side of the **[!UICONTROL Browse]** tab are several important metrics related to your profile data, including your total [profile count](#profile-count) as well as a listing of [profiles by namespace](#profiles-by-namespace). 
 
@@ -63,7 +61,11 @@ The **[!UICONTROL Profiles by namespace]** metric displays the total count and b
 
 Similar to the [profile count](#profile-count) metric, when the ingestion of records into the [!DNL Profile] store increases or decreases the count by more than 5%, a job is triggered to update the namespace metrics. For streaming data workflows, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a job is automatically triggered to update the profile count. For batch ingestion, within 15 minutes of successfully ingesting a batch into the [!DNL Profile] store, if the 5% increase or decrease threshold is met, a job is run to update the metrics.
 
-### Merge policy
+## View profiles on the [!UICONTROL Browse] tab
+
+Select the **[!UICONTROL Browse]** tab in order to browse the profile store using a merge policy or an identity.
+
+![](../images/user-guide/profiles-browse.png)
 
 The **[!UICONTROL Merge policy]** selector automatically selects the default merge policy for your organization. If you do not wish to use that merge policy you can select the `X` beside the default merge policy to open the **[!UICONTROL Select merge policy]** dialog where you can choose another merge policy. 
 
@@ -91,13 +93,15 @@ Once a value has been entered, select **[!UICONTROL Show profile]** and a single
 
 ![](../images/user-guide/profiles-display-profile.png)
 
-### Profile detail {#profile-detail}
+## View profile details {#profile-detail}
 
-Upon selecting the **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
+After selecting a **[!UICONTROL Profile ID]**, the **[!UICONTROL Detail]** tab opens. The profile information displayed on the **[!UICONTROL Detail]** tab has been merged together from multiple profile fragments to form a single view of the individual customer. This includes customer details such as basic attributes, linked identities, and channel preferences. 
+
+The default fields shown can also be changed at an organizational-level to display preferred Profile attributes. To learn more about customizing these fields, including step-by-step instructions for adding and removing attributes and resizing dashboard panels, please read the [profile detail customization guide](profile-customization.md).
 
 ![](../images/user-guide/profiles-profile-detail.png)
 
-You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include attributes, events, and segment membership, which shows the segments for which the profile is currently qualified.
+You can view additional information related to the individual profile by selecting another of the available tabs. These tabs include attributes, events, and the segment membership tab that shows the segments for which the profile is currently qualified.
 
 ![](../images/user-guide/profiles-attributes-events-segments.png)
 
@@ -119,4 +123,4 @@ For more information on union schemas, please visit the [union schema UI guide](
 
 ## Next steps
 
-By reading this guide, you now know how to view and manage your [!DNL Profile] data using the [!DNL Experience Platform] UI. For information on how to work with Profile data using the Real-time Customer Profile API, please refer to the [Profile developer guide](../api/overview.md).
+By reading this guide, you know how to view and manage your organization's profile data using the Experience Platform UI. For information on how to work with profile data using Experience Platform APIs, please refer to the [Real-time Customer Profile API guide](../api/overview.md).
