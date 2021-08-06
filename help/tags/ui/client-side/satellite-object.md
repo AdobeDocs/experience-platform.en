@@ -1,8 +1,8 @@
 ---
-title: Tags Satellite Object Reference
-description: Learn about the client-side _satellite object and the various functions you can perform with it in Adobe Experience Platform.
+title: Satellite Object Reference
+description: Learn about the client-side _satellite object and the various functions you can perform with it in tags.
 ---
-# Adobe Experience Platform tags Satellite object reference
+# Satellite object reference
 
 >[!NOTE]
 >
