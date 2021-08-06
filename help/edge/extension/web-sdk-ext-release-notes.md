@@ -1,14 +1,23 @@
 ---
 title: Adobe Experience Platform Web SDK Extension Release Notes
-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
-seo-description: Adobe Experience Platform Web SDK Extension in Adobe Experience Platform Launch
+description: Adobe Experience Platform Web SDK Tag Extension
 exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 ---
 # Adobe Experience Platform Web SDK extension release notes
 
-This document covers the release notes for the Adobe Experience Platform Web SDK extension for Adobe Experience Platform Launch. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
+
+## Version 2.6.2 - August 4, 2021
+
+Contains version 2.6.2 of the Adobe Experience Platform Web SDK library.
+
+## Version 2.6.1 - July, 29, 2021
+
+Contains version 2.6.1 of the Adobe Experience Platform Web SDK library.
 
 ## Version 2.6.0 - July 27, 2021
+
+Contains version 2.6.0 of the Adobe Experience Platform Web SDK library.
 
 * Labels, descriptions, and error messages using the term "edge configuration" have been changed to use the term "datastream" to align with the latest Adobe Experience Platform terminology.
 * In the extension configuration view, support was added for handling large numbers of datastreams and datastream environments.
@@ -97,14 +106,14 @@ Those decisions return from the `sendEvent` command only if `renderDecisions` is
 * Request made during ID migration is sent to demdex endpoint to improve cross-domain identification when demdex cookie is not set
 * Request made during ID migration always expects a response to ensure identity cookie gets set
 * When executing an invalid command, a list of valid command names will be logged in the console
-* Added checkbox for toggling third-party cookie support to the Adobe Experience Platform Launch extension. This disables calls to demdex.net
+* Added checkbox for toggling third-party cookie support to the tag extension. This disables calls to demdex.net
 
 ## Version 0.0.5 - December 20, 2019
 
-* Add Activity Tracker configs to Platform Launch Extension
+* Add Activity Tracker configs to tag extension
 * Expose EventType and EventMergeId on event command
-* Add onBeforeEventSend config to Platform Launch Extension
-* Add edgeBasePath config to Platform Launch Extension
+* Add onBeforeEventSend config to tag extension
+* Add edgeBasePath config to tag extension
 
 ## Version 0.0.3 - November 25, 2019
 

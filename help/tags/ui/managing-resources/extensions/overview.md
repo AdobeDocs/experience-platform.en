@@ -6,7 +6,7 @@ description: Learn how tag extensions function in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 An extension is a packaged set of code that extends the functionalities provided by tags or event forwarding.
 
@@ -20,15 +20,13 @@ Extensions determine the elements that are available when building properties, r
 
 Use the links at the top of the Extensions list to view installed extensions, the extensions catalog, or updates.
 
-Select an extension, then select [!UICONTROL Configure] to view and change the extension's settings. See [Add a new extension](#add-a-new-extension) for information about extension options.
+Select an extension, then select [!UICONTROL Configure] to view and change the extension's settings. For more information, see the section on [adding a new extension](#add-a-new-extension) for information about extension options.
 
 >[!IMPORTANT]
 >
 >Changes do not take effect until they are [published](../../publishing/overview.md).
 
 By default, Adobe provides extensions that support common integrations. Extensions can be modified with custom configurations. Configurations are provided through the extensions. To create a configuration, select the extension card, then select **[!UICONTROL Add New Configuration]**.
-
-For a video introduction, see [Extensions](../../../quick-start/videos.md).
 
 ## Extension catalog
 

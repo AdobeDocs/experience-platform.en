@@ -12,7 +12,6 @@ feature: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-  * [Videos](./quick-start/videos.md)
 * Data Collection UI {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
@@ -83,6 +82,9 @@ feature: Data Collection
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/web/asset-insights/overview.md)
       * [Release notes](./extensions/web/asset-insights/release-notes.md)
+    * Adobe Experience Manager Forms {#forms}
+      * [Overview](./extensions/web/forms/overview.md)
+      * [Release notes](./extensions/web/forms/release-notes.md)
     * Adobe Media Analytics for Audio and Video {#media-analytics}
       * [Overview](./extensions/web/media-analytics/overview.md)
       * [Release notes](./extensions/web/media-analytics/release-notes.md)

@@ -6,7 +6,7 @@ description: Learn how to deal with Content Security Policy (CSP) restrictions w
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 A Content Security Policy (CSP) is a security feature that helps prevent cross-site scripting attacks (XSS). This happens when the browser is tricked into running malicious content that appears to come from a trusted source but is really coming from somewhere else. CSPs allow the browser (on behalf of the user) to verify that the script is actually coming from a trusted source.
 

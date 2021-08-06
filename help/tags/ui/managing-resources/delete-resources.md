@@ -6,7 +6,7 @@ description: Learn how to delete tag resources in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Deleting a resource is a permanent removal of that resource from Adobe Experience Platform. If you still want the resource to appear in the Data Collection UI, but not be in your tag library, see [Remove Resources from a Library](remove-resources-from-library.md).
 
