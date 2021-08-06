@@ -5,7 +5,7 @@ title: Local System Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect your local system to Adobe Experience Platform using the user interface
 ---
-# [!DNL Shopify] connector
+# Local system connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
