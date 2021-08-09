@@ -67,22 +67,9 @@ Once your file is uploaded, the preview interface updates to display the content
 
 Depending on your file, you can select a column delimiter such as tabs, commas, pipes, or a custom column delimiter for your source data. Select the **[!UICONTROL Delimiter]** dropdown arrow and then select the appropriate delimiter from the menu.
 
+When finished, select **[!UICONTROL Next]**.
+
 ![delimiter](../../../../images/tutorials/create/local/delimiter.png)
-
-If you are ingesting a compressed file, you can specify the compression type of your file during this step. Select [!UICONTROL Compression type] and then select the appropriate compressed file type for your source data.
-
-The following compressed file types are supported:
-
-* `bzip2`
-* `gzip`
-* `deflate`
-* `zipDeflate`
-* `tarGzip`
-* `tar`
-
-When finished, select [!UICONTROL Next].
-
-![compressed-files](../../../../images/tutorials/create/local/compressed-files.png)
 
 ### Mapping
 
