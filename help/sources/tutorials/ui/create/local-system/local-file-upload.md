@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;home;popular topics;local system;file upload;map csv;map csv file;map csv file to xdm;map csv to xdm;ui guide;
 solution: Experience Platform
-title: Create a Source Connection in the UI to ingest local files to Experience Platform
+title: Create a Local File Upload Source Connector in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a source connection for your local system to bring local files to Platform
 ---
-# Create a source connection in the UI to ingest local files to Experience Platform
+# Create a local file upload source connector in the UI
 
-This tutorial provides steps for creating a source connector for your local system to ingest local files to Platform using the user interface.
+This tutorial provides steps for creating a local file upload source connector to ingest local files to Platform using the user interface.
 
 ## Getting started
 

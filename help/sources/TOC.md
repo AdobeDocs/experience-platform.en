@@ -68,7 +68,7 @@ feature: Data Ingestion, Sources
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Local system {#local-system}
-    - [Local system connector](connectors/local-system/local-file-upload.md)  
+    - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -211,7 +211,7 @@ feature: Data Ingestion, Sources
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Local system {#local-system}
-      - [Local system](tutorials/ui/create/local-system/local-file-upload.md)  
+      - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)

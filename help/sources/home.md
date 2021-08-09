@@ -102,7 +102,7 @@ Experience Platform provides support for ingesting data from a third-party eComm
 
 Experience Platform provides support for ingesting data from your local system. See the following related documents for more information on specific source connectors:
 
-- [Local system](connectors/local-system/local-file-upload.md)
+- [Local file upload](connectors/local-system/local-file-upload.md)
 
 ### Marketing Automation
 
