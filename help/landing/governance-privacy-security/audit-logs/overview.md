@@ -20,10 +20,11 @@ The following table outlines which actions on which resources are recorded by au
 
 | Resource | Actions |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
 | [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Destination](../../../destinations/home.md) | <ul><li>Activate</li></ul> |
 
 ## Access to audit logs
 
@@ -37,7 +38,7 @@ You can view audit logs for different Experience Platform features within the **
 
 ![Audit logs dashboard](../../images/audit-logs/audits.png)
 
-The system only displays audit logs from the last 90 days. Any logs that exceed this limit are automatically removed from the system.
+The system only displays audit logs from the last year. Any logs that exceed this limit are automatically removed from the system.
 
 Select an event from the list to view its details in the right rail.
 
