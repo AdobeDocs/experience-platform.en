@@ -20,7 +20,7 @@ There are two ways you can delete destinations from the [!DNL Platform] [!DNL UI
 
 >[!IMPORTANT]
 >
->While you can delete existing connections to destinations, as described in this article, Platform does not currently allow you to delete existing [destination accounts](/help/destinations/ui/destinations-workspace.md#accounts).
+>While you can delete existing *connections to destinations*, as described in this article, Platform does not currently allow you to delete existing *[destination accounts](/help/destinations/ui/destinations-workspace.md#accounts)*.
 
 ## Delete destinations from the Browse tab{#delete-browse-tab}
 
