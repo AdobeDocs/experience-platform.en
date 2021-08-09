@@ -57,7 +57,7 @@ The [!UICONTROL Select data] step appears, providing you an interface to upload 
 
 >[!TIP]
 >
->The maximum file size for each file is 1 GB.
+>Only CSV files are currently supported by local file upload. The maximum file size for each file is 1 GB.
 
 ![choose-files](../../../../images/tutorials/create/local/choose-files.png)
 
