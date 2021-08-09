@@ -21,7 +21,7 @@ This tutorial requires a working understanding of the following components of Pl
 
 ## Upload local files to Platform
 
-In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account with.
+In the Platform UI, select **[!UICONTROL Sources]** from the left navigation bar to access the [!UICONTROL Sources] workspace. The [!UICONTROL Catalog] screen displays a variety of sources for which you can create an account.
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search option.
 
@@ -120,7 +120,7 @@ The following table displays the sorting options for your source schema tree:
 | [!UICONTROL All source fields] | This option displays all of the source fields of your source  schema. This option is displayed by default. |
 | [!UICONTROL Required fields] | This option filters the source schema to only display the fields required to complete the mapping. |
 | [!UICONTROL Identity fields] | This option filters the source schema to only display the fields marked for Identity. |
-| [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields have already been mapped. |
+| [!UICONTROL Mapped fields] | This option filters the source schema to only display the fields that have already been mapped. |
 | [!UICONTROL Unmapped fields] | This option filters the source schema to only display the fields that have yet to be mapped. |
 | [!UICONTROL Fields with recommendation] | This option filters the source schema to only display the fields that contain mapping recommendations. |
 
@@ -140,7 +140,7 @@ Sometimes, more than one recommendation is available for the source schema. When
 
 ![manual-mapping](../../../../images/tutorials/create/local/manual-mapping.png)
 
-Alternatively, you can choose to manually map your source schema to your target schema. Hover over the source schema you want to map, then select the plus (`+`) icon.
+Alternatively, you can choose to manually map your source schema to your target schema. To do this, hover over the source schema you want to map, then select the plus (`+`) icon.
 
 ![select-plus-icon](../../../../images/tutorials/create/local/select-plus-icon.png)
 
@@ -154,7 +154,7 @@ When finished, select **[!UICONTROL Finished]**.
 
 ## Monitor data ingestion
 
-Once your CSV file is mapped and created, you can monitor the data that is being ingested through it using the monitoring dashboard. For more information. see the tutorial on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
+Once your CSV file is mapped and created, you can monitor the data that is being ingested through it using the monitoring dashboard. For more information, see the tutorial on [monitoring sources dataflows in the UI](../../../../../dataflows/ui/monitor-sources.md).
 
 ## Next steps
 
