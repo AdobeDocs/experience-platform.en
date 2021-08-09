@@ -9,10 +9,6 @@ exl-id: 5e6ca7b4-5e2f-4706-a339-ac159e2e0938
 ---
 # Create a [!DNL PayPal] base connection using the [!DNL Flow Service] API
 
->[!NOTE]
->
->The [!DNL PayPal] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
-
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
 This tutorial walks you through the steps to create a base connection for [!DNL PayPal] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).

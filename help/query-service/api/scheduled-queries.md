@@ -118,7 +118,7 @@ A successful response returns HTTP status 200 with a list of scheduled queries f
 
 ### Create a new scheduled query
 
-You can create a new scheduled query by making a POST request to the `/schedules` endpoint.
+You can create a new scheduled query by making a POST request to the `/schedules` endpoint. When you create a scheduled query in the API, you can also see it in the Query Editor. For more information on scheduled queries in the UI, please read the [Query Editor documentation](../ui/user-guide.md#scheduled-queries).
 
 **API format**
 

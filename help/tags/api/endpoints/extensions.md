@@ -1086,7 +1086,7 @@ A successful response returns the details of the extension package that the spec
           "displayName": "Cookie"
         }
       ],
-      "description": "Provides default event, condition, and data element types available to all Launch users.",
+      "description": "Provides default event, condition, and data element types available to all tags users.",
       "discontinued": false,
       "display_name": "Kessel Test",
       "events": [
