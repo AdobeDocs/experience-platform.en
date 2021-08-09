@@ -62,7 +62,7 @@ Depending on the attribute, the AI recommends different visualization options. T
 * Horizontal bar chart: Horizontal lines are used to represent values.
 * Vertical bar chart: Vertical lines are used to represent values.
 * Donut chart: Similar to a pie chart, values are shown as parts or pieces of a whole.
-* Scatterplot: Shows the relationship between values
+* Scatterplot: Uses a horizontal and vertical axis to indicate values.
 * Line chart: Values are displayed using a single line to show changes over a period of time.
 * Number card: Displays a summary number to represent a single key value.
 * Data table: Values are displayed as rows in a table.
