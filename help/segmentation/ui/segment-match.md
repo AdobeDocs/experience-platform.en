@@ -69,6 +69,13 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md). For information on data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md).
 
+### Understanding [!DNL Segment Match] permissions
+
+There are two permissions associated with [!DNL Segment Match]:
+
+* Manage Audience Share Connections
+* Manage Audience Shares
+
 ## [!DNL Segment Match] end-to-end workflow
 
 Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with [!DNL Segment Match] and its features.
