@@ -54,8 +54,10 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) for more information.
 
+## Managing audit logs for Adobe Admin Console
+
+To learn how to manage audit logs for activities in Adobe Admin Console, refer to the following [document](https://helpx.adobe.com/enterprise/using/audit-logs.html).
+
 ## Next steps
 
 This guide covered how to manage audit logs in Experience Platform. For more information on how to monitor Platform activities, see the documentation on [Observability Insights](../../../observability/home.md) and [monitoring data ingestion](../../../ingestion/quality/monitor-data-ingestion.md).
-
-To learn how to manage audit logs for activities in Adobe Admin Console, refer to the following [document](https://helpx.adobe.com/enterprise/using/audit-logs.html).
