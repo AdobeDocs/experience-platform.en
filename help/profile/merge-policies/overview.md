@@ -39,7 +39,7 @@ There are two possible merge methods available for merge policies. Each of these
 
 * **[!UICONTROL Dataset precedence]:** In the event of a conflict, give priority to profile fragments based on the dataset from which they came. When selecting this option, you must choose the related datasets and their order of priority. Learn more about the [dataset precedence](#dataset-precedence) merge method.
 * **[!UICONTROL Timestamp ordered]:** In the event of a conflict, priority is given to the profile fragment which was updated most recently. Learn more about [timestamp ordered](#timestamp-ordered) merge method.
-    * **Custom timestamps:** The timestamp ordered merge method also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the section on [using custom timestamps](#custom-timestamps).
+  * **Custom timestamps:** The timestamp ordered merge method also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the section on [using custom timestamps](#custom-timestamps).
 
 ### Dataset precedence {#dataset-precedence}
 
