@@ -73,8 +73,12 @@ For a list of data usage labels and their definitions, see the [data usage label
 
 There are two permissions associated with [!DNL Segment Match]:
 
-* Manage Audience Share Connections
-* Manage Audience Shares
+| Permission | Description |
+| --- | --- |
+| Manage Audience Share Connections | This permission allows you to complete the partner handshake process, which connects two IMS organizations to enable [!DNL Segment Match] flows. |
+| Manage Audience Shares | This permission allows you to create, edit, and publish feeds (the package of data used for [!DNL Segment Match]) with active partners (partners who have been connected by the admin user with **Audience Share Connections** access).
+
+See the [access control overview](../../access-control/home.md) for more information on access control and permissions.
 
 ## [!DNL Segment Match] end-to-end workflow
 
