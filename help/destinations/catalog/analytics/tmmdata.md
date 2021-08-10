@@ -10,7 +10,7 @@ exl-id: 9f4ad50e-d964-41b0-b58e-71611bff3ead
 
 [!DNL TMMData's] Foundation platform for Adobe Marketing Cloud provides marketing teams with the tools to access and blend all their critical data sources - including internal/external and online/off-line data - for confident, comprehensive cross-channel analysis, with automated campaign setup and direct imports to Adobe and other analytics and BI tools.
 
-[!DNL TMMData] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](hhttps://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
+[!DNL TMMData] is an analytics extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100148.tmmdata-foundation-platform.html).
 
 This destination is a tag extension. For more information about how tag extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 

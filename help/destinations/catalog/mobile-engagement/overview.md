@@ -10,6 +10,6 @@ exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
 
 [!DNL Adobe Experience Platform] currently supports the following mobile engagement destinations:
 
-* [Airship Attributes connection](./airship-attributes.md)
-* [Airship Tags connection](./airship-tags.md)
-* [Braze connection](./braze.md)
+* [Airship Attributes connection](airship-attributes.md)
+* [Airship Tags connection](airship-tags.md)
+* [Braze connection](braze.md)
