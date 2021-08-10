@@ -33,7 +33,7 @@ Before you can send audience data to a destination, you must set up a connection
 
    >[!NOTE]
    >
-   >The image below is used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, see the **Connection parameters** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](..//catalog/advertising/google-customer-match.md#parameters)).
+   >The image below is used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, see the **Connection parameters** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](../catalog/advertising/google-customer-match.md#parameters)).
 
    ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
 
