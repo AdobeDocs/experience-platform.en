@@ -20,11 +20,13 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Connect destination {#connect-destination}
+## Connect to the destination {#connect}
 
-Refer to the [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including SFTP.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-For SFTP destinations, enter the following information in the create destination workflow, in the **Authentication** step:
+### Connection parameters {#parameters}
+
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **Host**: The address of your SFTP storage location
 * **Username**: The username to log into your SFTP storage location
@@ -36,4 +38,4 @@ For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in th
 
 ## IP address allow list
 
-Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
+Refer to [IP address allow list for cloud storage destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.

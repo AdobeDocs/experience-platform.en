@@ -10,25 +10,27 @@ exl-id: 6a2a2756-4bbf-4f82-88e4-62d211cbbb38
 
 Create a live outbound connection to your [!DNL Amazon Web Services] (AWS) S3 storage to periodically export tab-delimited or CSV data files from Adobe Experience Platform into your own S3 buckets.
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
 ![Amazon S3 profile-based export type](../../assets/catalog/cloud-storage/amazon-s3/catalog.png)
 
-## Connect destination {#connect-destination}
+## Connect to the destination {#connect}
 
-See [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including [!DNL Amazon S3]. 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-For [!DNL Amazon S3] destinations, enter the following information in the create destination workflow:
+### Connection parameters {#parameters}
 
-* **[!DNL Amazon S3] access key and [!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+
+* **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 
 >[!TIP]
 >
->In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](./workflow.md#use-macros) for instructions.
+>In the connect destination workflow, you can create a custom folder in your Amazon S3 storage per exported segment file. Read [Use macros to create a folder in your storage location](overview.md#use-macros) for instructions.
 
-## Required [!DNL Amazon S3] permissions {#required-s3-permission}
+### Required [!DNL Amazon S3] permissions {#required-s3-permission}
 
 To successfully connect and export data to your [!DNL Amazon S3] storage location, create an Identity and Access Management (IAM) user for [!DNL Platform] in [!DNL Amazon S3] and assign permissions for the following actions:
 
@@ -38,7 +40,6 @@ To successfully connect and export data to your [!DNL Amazon S3] storage locatio
 * `s3:ListBucket`
 * `s3:PutObject`
 * `s3:ListMultipartUploadParts`
-
 
 <!--
 
@@ -50,6 +51,9 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 -->
 
+## Activate segments to this destination {#activate}
+
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Exported data {#exported-data}
 

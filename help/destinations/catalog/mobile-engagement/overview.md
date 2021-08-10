@@ -6,6 +6,8 @@ exl-id: bb5852c0-a47a-42c7-9fae-ec7d80dc3bcf
 ---
 # Mobile engagement destinations overview {#mobile-destinations}
 
+## Supported mobile engagement destinations {#supported-destinations}
+
 [!DNL Adobe Experience Platform] currently supports the following mobile engagement destinations:
 
 * [Airship Attributes connection](./airship-attributes.md)

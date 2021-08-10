@@ -26,7 +26,7 @@ To use this extension, you need access to tags in Platform. Tags are offered to 
 
 To install the [!DNL Experience Cloud] ID Service extension:
 
-In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 

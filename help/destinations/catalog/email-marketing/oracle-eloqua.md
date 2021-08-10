@@ -10,7 +10,7 @@ exl-id: 6eaa79ff-8874-423b-bdff-aa04f6101a53
 
 To send segment data to [!DNL Oracle Eloqua], you must first [connect the destination](#connect-destination) in Adobe Experience Platform, and then [set up a data import](#import-data-into-eloqua) from your storage location into [!DNL Oracle Eloqua].
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
@@ -20,35 +20,35 @@ When setting up email marketing destinations with SFTP storage, Adobe recommends
 
 Refer to [IP address allow list for cloud storage destinations](../cloud-storage/ip-address-allow-list.md) if you need to add Adobe IPs to your allow list.
 
-## Connect to destination {#connect-destination}
+## Connect to the destination {#connect}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Oracle Eloqua], then select **[!UICONTROL Configure]**.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between [!UICONTROL Activate] and [!UICONTROL Configure], refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+This destination supports the following connection types:
 
-![Connect to Eloqua](../../assets/catalog/email-marketing/oracle-eloqua/catalog.png)
+* **[!UICONTROL SFTP with Password]**
+* **[!UICONTROL SFTP with SSH Key]**
 
-In the **[!UICONTROL Account]** step, if you had previously set up a connection to your cloud storage destination, select **[!UICONTROL Existing Account]** and select one of your existing connections. Or, you can select **[!UICONTROL New Account]** to set up a new connection. Fill in your account authentication credentials and select **[!UICONTROL Connect to destination]**. For [!DNL Oracle Eloqua], you can select between **[!UICONTROL SFTP with Password]** and **[!UICONTROL SFTP with SSH Key]**. 
+### Connection parameters {#parameters}
 
-![Connect Eloqua account](../../assets/catalog/email-marketing/oracle-eloqua/connection-type.png)
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-Fill in the information below, depending on your connection type, and select **[!UICONTROL Connect to destination]**.
+* For **[!UICONTROL SFTP with Password]** connections, you must provide:
+  * [!UICONTROL Domain]
+  * [!UICONTROL Port]
+  * [!UICONTROL Username]
+  * [!UICONTROL Password]
+* For **[!UICONTROL SFTP with SSH Key]** connections, you must provide:
+  * [!UICONTROL Domain]
+  * [!UICONTROL Port]
+  * [!UICONTROL Username]
+  * [!UICONTROL SSH Key]
 
-- For **[!UICONTROL SFTP with Password]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL Password].
-- For **[!UICONTROL SFTP with SSH Key]** connections, you must provide [!UICONTROL Domain], [!UICONTROL Port], [!UICONTROL Username], and [!UICONTROL SSH Key].
-
-Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
-
-![Eloqua connect to destination](../../assets/catalog/email-marketing/oracle-eloqua/account-info.png)
-
-In the **[!UICONTROL Authentication]** step, fill in the relevant information for your destination as shown below: 
-   - **[!UICONTROL Name]**: Pick a relevant name for your destination.
-   - **[!UICONTROL Description]**: Enter a description for your destination.
-   - **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
-   - **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
-   - **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
+* Optionally, you can attach your RSA-formatted public key to add encryption with PGP/GPG to your exported files under the **[!UICONTROL Key]** section. Your public key must be written as a [!DNL Base64] encoded string.
+* **[!UICONTROL Name]**: Pick a relevant name for your destination.
+* **[!UICONTROL Description]**: Enter a description for your destination.
+* **[!UICONTROL Folder Path]**: Provide the path in your storage location where Platform will deposit your export data as CSV or tab-delimited files.
+* **[!UICONTROL File Format]**: **CSV** or **TAB_DELIMITED**. Select which file format to export to your storage location.
 
 <!--
 
@@ -58,17 +58,13 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 -->
 
-![Eloqua basic information](../../assets/catalog/email-marketing/oracle-eloqua/basic-information.png)
+## Activate segments to this destination {#activate}
 
-Click **[!UICONTROL Create destination]** after filling in the fields above. Your destination is now created and you can [activate segments](../../ui/activate-destinations.md) to the destination.
-
-## Activate segments {#activate-segments}
-
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to the [!DNL Oracle Eloqua] destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes).
+When [activating segments](../../ui/activate-destinations.md) to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes).
 
 ## Exported data {#exported-data}
 
