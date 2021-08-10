@@ -47,8 +47,8 @@ If you are looking to create your first destination with [!DNL Google Ad Manager
 
 Before creating the [!DNL Google Ad Manager] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
 * **Network ID** : this is your account with [!DNL Google Ad Manager]
 * **Audience Link ID** : this is your account with [!DNL Google Ad Manager]
 * Your account type. DFP by Google or AdX buyer.

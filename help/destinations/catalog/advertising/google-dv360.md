@@ -49,8 +49,8 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with Google. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
 * **Your account type**: use **[!DNL Invite advertiser]** to allow audiences to be shared only to a specific brand in your Display & Video 360 account or use **[!DNL Invite partner]** to allow audiences to be shared to all brands in your Display & Video 360 account.
 
 ## Connect to the destination {#connect}

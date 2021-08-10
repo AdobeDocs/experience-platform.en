@@ -55,10 +55,10 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
 * Your account type: **AdWords**
-* **Google AdWords ID** : This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
+* **Google AdWords ID**: This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
 
 ## Connect to the destination {#connect}
 
