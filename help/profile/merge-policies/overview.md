@@ -38,8 +38,7 @@ Selecting a merge method allows you to specify which dataset attributes to prior
 There are two possible merge methods available for merge policies. Each of these methods are summarized below with additional details provided in the sections that follow:
 
 * **[!UICONTROL Dataset precedence]:** In the event of a conflict, give priority to profile fragments based on the dataset from which they came. When selecting this option, you must choose the related datasets and their order of priority. Learn more about the [dataset precedence](#dataset-precedence) merge method.
-* **[!UICONTROL Timestamp ordered]:** In the event of a conflict, priority is given to the profile fragment which was updated most recently. Learn more about [timestamp ordered](#timestamp-ordered) merge method.
-  * **Custom timestamps:** The timestamp ordered merge method also supports custom timestamps which take priority over system timestamps when merging data within the same dataset (multiple identities) or across datasets. To learn more, see the section on [using custom timestamps](#custom-timestamps).
+* **[!UICONTROL Timestamp ordered]:** In the event of a conflict, priority is given to the profile fragment which was updated most recently. Learn more about the [timestamp ordered](#timestamp-ordered) merge method.
 
 ### Dataset precedence {#dataset-precedence}
 
@@ -50,22 +49,6 @@ In order to create a merge policy using **[!UICONTROL Dataset precedence]**, you
 ### Timestamp ordered {#timestamp-ordered}
 
 As profile records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When **[!UICONTROL Timestamp ordered]** is selected as the merge method for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
-
-#### Using custom timestamps {#custom-timestamps}
-
-Occasionally there may be use cases where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp. Examples of this include backfilling data or ensuring the correct order of events if records are ingested out of order.
-
-In order to use a custom timestamp, the **[!UICONTROL External Source System Audit Details] schema field group** must be added to your Profile schema. Once added, the custom timestamp can be populated using the `lastUpdatedDate` field. When a record is ingested with the `lastUpdatedDate` field populated, Experience Platform will use that field to merge records across datasets. If `lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
-
->[!NOTE]
->
->You must ensure that the `lastUpdatedDate` timestamp is populated when ingesting an update on the same record.
-
-The following screenshot displays the fields in the [!UICONTROL External Source System Audit Details] field group. For step-by-step instructions on working with schemas using the Platform UI, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the UI](../../xdm/tutorials/create-schema-ui.md).
-
-![](../images/merge-policies/custom-timestamp-field-group.png)
-
-To work with custom timestamps using the API, refer to the [merge policies endpoint guide section on using custom timestamps](../api/merge-policies.md#custom-timestamps).
 
 ## Identity stitching {#id-stitching}
 
