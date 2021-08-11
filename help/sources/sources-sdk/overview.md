@@ -11,6 +11,8 @@ description:
 >
 >Sources SDK is in beta. The feature and documentation are subject to change.
 
+Adobe Experience Platform can ingest data from external sources while allowing you to structure, label, and enhance that data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, third-party software, and your CRM system.
+
 Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source to bring your data to Experience Platform.
 
 With Sources SDK, you can:
