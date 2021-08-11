@@ -20,7 +20,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `Birthdate` | `person.birthDate` |
 | `CreatedDate` | `extSourceSystemAudit.createdDate` |
 | `Department`| `extendedWorkDetails.departments`|
-| `Email` | `workEmail.address`|
+| `Email` | `workEmail.address`| This is the secondary identity. |
 | `Email` | `personComponents.workEmail.address`|
 | `Fax` | `faxPhone.number`|
 | `FirstName`| `person.name.firstName`|
@@ -170,7 +170,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `LeadSource` | `leadSource`|
 | `Name`| `opportunityName`|
 | `NextStep`| `nextStep`|
-| `Probability` | percent | `probabilityPercentage` |
+| `Probability` | `probabilityPercentage` |
 | `StageName` | `opportunityStage`|
 | `TotalOpportunityQuantity` | `opportunityQuantity` |
 | `Type` | `opportunityType`|
@@ -205,7 +205,7 @@ The tables below contain the mappings between [!DNL Salesforce] source fields an
 | `ExpectedRevenue` | `xdm: expectedRevenue.amount` |
 | `BudgetedCost` | `xdm: budgetedCost.amount` |
 | `ActualCost` | `xdm: actualCost.amount` |
-| `ExpectedResponse` | percent | `xdm: expectedResponse`|
+| `ExpectedResponse` | `xdm: expectedResponse`|
 | `IsActive` | `xdm: isActive` |
 | `Description` | `xdm: campaignDescription`|
 | `CreatedDate` | `xdm: extSourceSystemAudit.createdDate` |

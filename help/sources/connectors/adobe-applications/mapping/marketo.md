@@ -306,13 +306,13 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `id` | `personComponents.sourcePersonID` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
-| `to_object('ECID',arrays_to_objects('id',explode(ecids)))` | `identityMap` | This is a calculated field. |
+| `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | This is a calculated field. |
 
 {style="table-layout:auto"}
 
 >[!NOTE]
 >
->The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
+>The `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
 
 ## Next steps
 
