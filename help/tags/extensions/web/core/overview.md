@@ -702,6 +702,61 @@ Local storage gives browsers a way to store information from page to page ([http
 
 Use the provided field to specify the value you created for a local storage item, such as `lastProductViewed.`
 
+### Merged Objects
+
+Select multiple data elements that will each provide an object. These objects will be deeply (recursively) merged together to produce a new object. The source objects will not be modified. If a property is found at the same location on multiple source objects, the value from the latter object will be used. If a source property value is `undefined`, it will not override a value from a prior source object. If arrays are found at the same location on multiple source objects, the arrays will be concatenated.
+
+As an example, assume you select a data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Assume you also select another data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+The result of the Merged Objects data element would be the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
+
 ### Page info
 
 Use these data points to capture page info for use in your rule logic or to send information to Analytics or external tracking systems.
