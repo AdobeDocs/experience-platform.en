@@ -69,6 +69,8 @@ Similar to the [profile count](#profile-count) metric, when the ingestion of rec
 
 On the **[!UICONTROL Browse]** tab you can view sample profiles using a merge policy or look up specific profiles using an identity namespace and value.
 
+![](../images/user-guide/browse-by-dropdown.png)
+
 ### Browse by [!UICONTROL Merge policy]
 
 The **[!UICONTROL Browse by]** selector is set to [!UICONTROL Merge policy] by default and the **[!UICONTROL Merge policy]** selected is the default merge policy for your organization. 
@@ -77,7 +79,9 @@ To learn more about merge policies and their role within Platform, see the [merg
 
 ![](../images/user-guide/browse-by-merge-policy.png)
 
-The profiles that are shown represent a sample of up to 20 profiles from your organization's profile store, after the selected merge policy has been applied. To view the details of one of the sample profiles, select the **[!UICONTROL Profile ID]**. For more information, see the section later in this guide on [viewing profile details](#profile-detail).
+The profiles that are shown represent a sample of up to 20 profiles from your organization's profile store, after the selected merge policy has been applied. The sample profiles for the selected merge policy are refreshed when new data is added to your organization's profile store.
+
+To view the details of one of the sample profiles, select the **[!UICONTROL Profile ID]**. For more information, see the section later in this guide on [viewing profile details](#profile-detail).
 
 ![](../images/user-guide/sample-profiles.png)
 
