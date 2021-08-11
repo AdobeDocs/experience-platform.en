@@ -243,7 +243,7 @@ if (propositions) {
           var activityName = item.meta["activity.name"];
           // Ignore duplicates
           if (activityNames.indexOf(activityName) === -1) {
-            activityNames.push(item.meta);  
+            activityNames.push(activityName);  
           }
         }
       });

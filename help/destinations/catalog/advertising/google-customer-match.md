@@ -102,7 +102,7 @@ Attribute source data is not automatically hashed. When your source field contai
 
 ## Configure destination - video walkthrough {#video}
 
-The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
+The video below demonstrates the steps to configure a social destination and activate segments. The video uses LinkedIn as an example, but the steps are similar across social destinations, including [!DNL Google Customer Match]. The steps in the video are also laid out sequentially in the next sections.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
