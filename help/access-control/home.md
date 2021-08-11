@@ -99,8 +99,8 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Allows partner handshake process to connect two IMS organizations and enable [!DNL Segment Match] flows. |
-| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and delete [!DNL Segment Match] feeds with active partners. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two IMS organizations and enable [!DNL Segment Match] flows. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
