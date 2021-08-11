@@ -14,11 +14,11 @@ The following document outlines Data Science Workspace permissions and access to
 
 - **Notebooks:** Provides an interactive development environment ([JupyterLab](./jupyterlab/overview.md)) to explore, analyze, and model your data on Experience Platform.
 - **Models:** Provides tools used to create, publish, and store advanced machine learning recipes and models. For more information, visit the [create and publish a machine learning model](./models-recipes/create-publish-model.md) tutorial.
-- **Services:** Contains both Adobe-provided services such as [Intelligent Services](../intelligent-services/home.md) and any custom services you created with Data Science Workspace.
+- **Services:** Contains both Adobe-provided services such as [AI/ML services](../intelligent-services/home.md) and any custom services you created with Data Science Workspace.
 
 Why am I only seeing the Services tab?
 
-- Your organization may only be entitled to Real-time Customer Data Platform (RTCDP) which includes the Intelligent Service Customer AI.
+- Your organization may only be entitled to Real-time Customer Data Platform (RTCDP) which includes the Customer AI AI/ML Service.
 
 If you are unable to see any of the **Data Science** tabs and wish to utilize Data Science Workspace features, contact your company administrator to check if you have an Adobe Experience Platform Intelligence license.
 
@@ -30,7 +30,7 @@ The following table outlines some of the key differences for Data Science Worksp
 
 >[!NOTE]
 >
->You can license more than one Intelligence package addon and the increased capacity is added to your overall entitlement. For example, if you licensed 2 Adobe Experience Platform Intelligence package addons you are entitled to a total of 20 concurrent Notebook users.
+>You can license more than one Advanced Intelligence Pack Addon and the increased capacity is added to your overall entitlement. For example, if you licensed 2 Adobe Experience Platform Advanced Intelligence Pack Addons you are entitled to a total of 20 concurrent Notebook users.
 
 | Data Science Workspace entitlement| Adobe Experience Platform Intelligence Package only | Adobe Experience Platform Intelligence plus Advanced Intelligence Pack Add-on |
 | --- | :---: | :---: |
