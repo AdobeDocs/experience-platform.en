@@ -89,7 +89,7 @@ The field group provides a single object-type field, `consents`, whose sub-prope
 
 ## Add required field groups to your [!DNL Profile] schema {#add-field-group}
 
-In order to collect consent data using the Adobe standard, you must have a [!UICONTROL Profile]-enabled schema that contains the following two field groups:
+In order to collect consent data using the Adobe standard, you must have a Profile-enabled schema that contains the following two field groups:
 
 * [!UICONTROL Consent and Preference Details]
 * [!UICONTROL IdentityMap] (required if using the Platform Web or Mobile SDK to send consent signals)
@@ -114,7 +114,7 @@ Next, find the **[!UICONTROL IdentityMap]** field group form the list and select
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
 
-The canvas reappears, showing that the `consents` object has been added to the schema structure. If you require additional consent and preference fields not captured by the standard field group, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
+The canvas reappears, showing that the `consents` and `identityMap` fields have been added to the schema structure. If you require additional consent and preference fields not captured by the standard field group, see the appendix section on [adding custom consent and preference fields to the schema](#custom-consent). Otherwise, select **[!UICONTROL Save]** to finalize the changes to the schema.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/save-schema.png)
 

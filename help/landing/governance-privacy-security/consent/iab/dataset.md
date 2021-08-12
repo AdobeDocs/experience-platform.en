@@ -146,7 +146,7 @@ After you've provided a name and description, you can optionally add more fields
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
 
-Once the fields you require have been added, finish by selecting **[!UICONTROL Save]**.
+Once the field groups that you require have been added, finish by selecting **[!UICONTROL Save]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 

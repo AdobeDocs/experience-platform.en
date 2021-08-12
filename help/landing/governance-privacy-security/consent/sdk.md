@@ -10,32 +10,30 @@ The Adobe Experience Platform Web SDK allows you to retrieve customer consent si
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. This document provides general guidance on how to integrate your CMP with the Platform Web SDK.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 This tutorial assumes that you have already determined how to generate consent data within your CMP, and have created a dataset containing consent fields that conform to the Adobe standard or the IAB Transparency and Consent Framework (TCF) 2.0 standard. If you have not created this dataset yet, refer to the following tutorials before returning to this guide:
 
 * [Create a dataset using the Adobe standard](./adobe/dataset.md)
 * [Create a dataset using the TCF 2.0 standard](./iab/dataset.md)
 
-This guide follows the workflow for setting up the SDK using the tag extension in the Data Collection UI. Following these steps requires a working understanding of tag extensions and how they are installed in web applications. Refer to the following documentation for more information:
-
-* [Tags overview](../../../tags/home.md)
-* [Quickstart guide](../../../tags/quick-start/quick-start.md)
-* [Publishing overview](../../../tags/ui/publishing/overview.md)
-
-If you want to directly embed the standalone version of the SDK instead, please refer to the following docs:
+This guide follows the workflow for setting up the SDK using the tag extension in the Data Collection UI. If you do not want to use the extension and would prefer to directly embed the standalone version of the SDK on your site, please refer to the following docs instead of this guide:
 
 * [Configure a datastream](../../../edge/fundamentals/datastreams.md)
 * [Install the SDK](../../../edge/fundamentals/installing-the-sdk.md)
 * [Configure the SDK for consent commands](../../../edge/consent/supporting-consent.md)
 
+The installation steps in this guide require a working understanding of tag extensions and how they are installed in web applications. Refer to the following documentation for more information:
+
+* [Tags overview](../../../tags/home.md)
+* [Quickstart guide](../../../tags/quick-start/quick-start.md)
+* [Publishing overview](../../../tags/ui/publishing/overview.md)
+
 ## Set up a datastream
 
-In order for the SDK to send data to Experience Platform, you must first configure a datastream.
+In order for the SDK to send data to Experience Platform, you must first configure a datastream. In the Data Collection UI, select **[!UICONTROL Datastreams]** in the left navigation.
 
-In the Data Collection UI, select **[!UICONTROL Datastreams]** in the left navigation.
-
-After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the values listed below to complete the form.
+After creating a new datastream or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the values listed below to complete the form.
 
 ![](../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
@@ -44,7 +42,7 @@ After creating a new configuration or selecting an existing one to edit, select 
 | [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
 | [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform datastream, please note that consent data sent via events is not honored in downstream enforcement workflows. |
-| [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
+| [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created [earlier](#prerequisites). |
 
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
