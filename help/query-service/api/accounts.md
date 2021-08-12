@@ -100,6 +100,7 @@ curl -X PUT https://platform.adobe.io/data/foundation/queryauth/accounts/E09A0DF
      "description": "Updated description"
  }'
 ```
+
 | Property | Description |
 | -------- | ----------- |
 | `accountName` | *(Optional)* The updated name for the Query Service integration account. |
