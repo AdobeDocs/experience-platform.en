@@ -62,6 +62,6 @@ For more information about selecting marketing actions in the create destination
 
 For more information about data policy violations in the segment activation workflow, see the Review step in the following guides:
 
-* [Activate audience data to segment streaming destinations](./ui/activate-segment-streaming-destinations.md#review)
-* [Activate audience data to streaming profile-based destinations](./ui/activate-streaming-profile-destinations.md#review)
-* [Activate audience data to batch profile-based destinations](./ui/activate-batch-profile-destinations.md#review)
+* [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md#review)
+* [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)
+* [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md#review)

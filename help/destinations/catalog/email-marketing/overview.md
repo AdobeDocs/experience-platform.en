@@ -45,7 +45,7 @@ On the **[!UICONTROL Select Segments]** page, select which segments to send to t
 
 ## Configure file names
 
-For information about the segment schedule and file name editing options, refer to the [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) tutorial.
+For information about the segment schedule and file name editing options, refer to the [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) tutorial.
 
 ## Select attributes - Select which schema fields to use as destination attributes in your exported files {#destination-attributes}
 
@@ -88,9 +88,9 @@ Read the individual email marketing destination articles to learn how to import 
 
 ## Activate segments to email marketing destinations
 
-For instructions on how to activate segments to email marketing destinations, refer to [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md).
+For instructions on how to activate segments to email marketing destinations, refer to [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
 
 ## Additional resources
 
-- [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md)
+- [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md)
 - [Create email marketing destinations and activate data using the Flow Service API](../../api/email-marketing.md)

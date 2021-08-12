@@ -57,7 +57,7 @@ For [!DNL Azure Event Hubs] destinations, enter the following information in the
 
 ## Activate segments {#activate-segments}
 
-See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md)for information about the segment activation workflow.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md)for information about the segment activation workflow.
 
 ## Exported data {#exported-data}
 

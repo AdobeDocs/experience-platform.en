@@ -62,7 +62,7 @@ Click **[!UICONTROL Create destination]** after filling in the fields above. You
 
 ## Activate segments {#activate-segments}
 
-See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
 
 ## Destination attributes {#destination-attributes}
 
@@ -70,7 +70,7 @@ When [activating segments](../../ui/activate-segment-streaming-destinations.md) 
 
 ## Exported data {#exported-data}
 
-For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md).
+For [!DNL Salesforce Marketing Cloud] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
 
 ## Set up data import into [!DNL Salesforce Marketing Cloud] {#import-data-into-salesforce}
 

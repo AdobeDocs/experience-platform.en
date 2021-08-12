@@ -65,7 +65,7 @@ Click **[!UICONTROL Create destination]**.
 
 ## Activate Segments
 
-See [Activate audience data to segment streaming destinations](../ui/activate-segment-streaming-destinations.md#select-attributes) for information about the segment activation workflow.
+See [Activate audience data to streaming segment export destinations](../ui/activate-segment-streaming-destinations.md#select-attributes) for information about the segment activation workflow.
 
 ## Destination Attributes
 

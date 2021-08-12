@@ -19,13 +19,13 @@ This tutorial requires a working understanding of the following components of Ad
     -   [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 -   [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid Blob destination, you may skip the remainder of this document and proceed to [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md).
+If you already have a valid Blob destination, you may skip the remainder of this document and proceed to [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
 
 ## Supported file formats {#file-formats}
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
--   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, see [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md).
+-   Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
 
 ## Connect your Blob account {#connect-destination}
 
@@ -71,4 +71,4 @@ When finished, select **[!UICONTROL Create destination]**.
 
 ## Next steps {#activate-segments}
 
-By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md).
+By following this tutorial, you have established a connection to your [!DNL Blob] account. You can now continue on to the next tutorial and [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).

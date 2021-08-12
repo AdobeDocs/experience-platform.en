@@ -64,7 +64,7 @@ Click **[!UICONTROL Create destination]** after filling in the fields above. You
 
 ## Activate segments {#activate-segments}
 
-See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
 
 ## Destination attributes {#destination-attributes}
 
@@ -72,7 +72,7 @@ When [activating segments](../../ui/activate-batch-profile-destinations.md) to t
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Eloqua] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial. 
+For [!DNL Oracle Eloqua] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial. 
 
 ## Set up data import into [!DNL Oracle Eloqua] {#import-data-into-eloqua}
 

@@ -145,7 +145,7 @@ Your destination is now created. You can select **[!UICONTROL Save & Exit]** if 
 
 ## Activate segments to [!DNL Google Customer Match] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Google Customer Match], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md). 
+For instructions on how to activate segments to [!DNL Google Customer Match], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md). 
 
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] segments to [!DNL Google Customer Match].

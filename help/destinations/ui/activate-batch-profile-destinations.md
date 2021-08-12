@@ -1,13 +1,13 @@
 ---
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
-title: Activate audience data to profile-based destinations
+title: Activate audience data to batch profile export destinations
 type: Tutorial
-seo-title: Activate audience data to batch profile-based destinations
+seo-title: Activate audience data to batch profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 ---
 
-# Activate audience data to batch profile-based destinations
+# Activate audience data to batch profile export destinations
 
 ## Overview {#overview}
 

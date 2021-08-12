@@ -81,7 +81,7 @@ The video below also demonstrates the steps to configure a [!DNL LinkedIn Matche
 
 ## Activate segments to [!DNL LinkedIn Matched Audiences] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
+For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md).
 
 ## Exported data {#exported-data}
 

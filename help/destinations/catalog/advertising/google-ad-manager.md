@@ -81,7 +81,7 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
 
 ## Activate segments to [!DNL Google Ad Manager]
 
-For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
+For instructions on how to activate segments to [!DNL Google Ad Manager], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md).
 
 ## Exported data 
 

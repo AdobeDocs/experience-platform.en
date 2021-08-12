@@ -19,7 +19,7 @@ This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but th
 
 ![Overview - the steps to create a streaming destination and activate segments](../assets/api/streaming-destination/overview.png)
 
-If you prefer to use the user interface in Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to segment streaming destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming segment export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
 
 ## Get started
 

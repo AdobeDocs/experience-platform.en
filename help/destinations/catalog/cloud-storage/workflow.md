@@ -87,4 +87,4 @@ Folder path in your storage location: `acme/campaigns/2021/Luxury Audience/25768
 
 ## Activate segments {#activate-segments}
 
-See [Activate audience data to batch profile-based destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for information about the segment activation workflow.

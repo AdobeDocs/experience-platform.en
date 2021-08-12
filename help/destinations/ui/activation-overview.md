@@ -13,6 +13,6 @@ Adobe Experience Platform supports a wide range of destinations. The audience ac
 
 See the following guides for detailed information on how to activate audience data to your specific type of destination:
 
-* [Activate audience data to segment streaming destinations](activate-segment-streaming-destinations.md)
-* [Activate audience data to streaming profile-based destinations](activate-streaming-profile-destinations.md)
-* [Activate audience data to batch profile-based destinations](activate-batch-profile-destinations.md)
+* [Activate audience data to streaming segment export destinations](activate-segment-streaming-destinations.md)
+* [Activate audience data to streaming profile export destinations](activate-streaming-profile-destinations.md)
+* [Activate audience data to batch profile export destinations](activate-batch-profile-destinations.md)

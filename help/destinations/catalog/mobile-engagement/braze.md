@@ -73,7 +73,7 @@ Click **[!UICONTROL Create destination]**. Your destination is now created. You 
 
 ## Activate segments {#activate-segments}
 
-See [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md) for information about the segment activation workflow.
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for information about the segment activation workflow.
 
 ## Field mapping {#field-mapping}
 

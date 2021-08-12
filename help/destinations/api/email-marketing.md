@@ -15,7 +15,7 @@ This tutorial uses the Adobe Campaign destination in all examples, but the steps
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile-based destinations](../ui/activate-batch-profile-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
 ## Get started
 

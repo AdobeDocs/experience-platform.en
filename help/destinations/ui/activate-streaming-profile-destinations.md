@@ -1,13 +1,13 @@
 ---
 keywords: activate profile destinations;activate destinations;activate data; activate email marketing destinations; activate cloud storage destinations
-title: Activate audience data to streaming profile-based destinations
+title: Activate audience data to streaming profile export destinations
 type: Tutorial
-seo-title: Activate audience data to streaming profile-based destinations
+seo-title: Activate audience data to streaming profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to streaming profile-based destinations.
 ---
 
-# Activate audience data to streaming profile-based destinations
+# Activate audience data to streaming profile export destinations
 
 ## Overview {#overview}
 

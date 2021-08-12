@@ -112,7 +112,7 @@ The video below also demonstrates the steps to configure a [!DNL Facebook] desti
 
 ## Activate segments to [!DNL Facebook] {#activate-segments}
 
-For instructions on how to activate segments to [!DNL Facebook], see [Activate audience data to segment streaming destinations](../../ui/activate-segment-streaming-destinations.md).
+For instructions on how to activate segments to [!DNL Facebook], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md).
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending segments to [!DNL Facebook Custom Audiences].
 
