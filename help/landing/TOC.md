@@ -40,10 +40,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * Adobe standard {#adobe}
       * [Overview](./governance-privacy-security/consent/adobe/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/adobe/dataset.md)
-      * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/adobe/sdk.md) 
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
+    * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
