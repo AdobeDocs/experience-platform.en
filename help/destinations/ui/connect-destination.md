@@ -27,6 +27,12 @@ Before you can send audience data to a destination, you must set up a connection
 
    ![Configure new destination](../assets/ui/connect-destinations/configure-new-destination.png) -->
 
+1. Select **[!UICONTROL New account]** to create a new connection to your destination, then select **[!UICONTROL Connect to destination]**. This will take you to the destination login page, so you can connect Adobe Experience Platform to your destination.
+
+   If your destination does not require you to select an account type, skip this step.
+
+   ![Select account type](../assets/ui/connect-destinations/new-account.png)
+
 1. Enter the destination platform connection details, then select **[!UICONTROL Create destination]**.
 
    Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
