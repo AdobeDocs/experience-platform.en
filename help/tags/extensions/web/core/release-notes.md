@@ -14,7 +14,7 @@ v3.0.0
 
 * PDCL-6153: Adds support to reliably pull the fully qualified URL for cached custom code actions.
 
-v3.0.0 of the Core Extension is coupled with changes in [v27.2.0 of the Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), which allows users to load their library amongst many Adobe managed hosting regions if the user's company supports Premium CDN.
+v3.0.0 of the Core extension is coupled with changes in [v27.2.0 of the Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), which allows users to load their library amongst many Adobe-managed hosting regions if the user's company supports Premium CDN.
 
 This upgrade is optional and backwards compatible for users without Premium CDN, and mandatory for customers that have Premium CDN enabled on their company.
 
