@@ -29,6 +29,12 @@ A mapping is an association of an input attribute or calculated field to one XDM
 
 To learn more about the different mapping functions, please read the [mapping functions guide](./functions.md).
 
+### Calculated fields
+
+Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
+
+To learn more about calculated fields, please read the [calculated fields guide guide](./functions.md#calculated-fields).
+
 ## Mapping set
 
 A set of mappings that transform one schema to another are collectively known as a mapping set. A single mapping set is created as part of each data flow. A mapping set is an integral part of the data flows and is created, edited, and monitored as part of the data flows.

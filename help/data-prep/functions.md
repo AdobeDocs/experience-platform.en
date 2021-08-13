@@ -24,6 +24,7 @@ new, mod, or, break, var, lt, for, false, while, eq, gt, div, not, null, continu
 
 Data within sub-fields can be accessed by using the dot notation. For example, if there was a `name` object, to access the `firstName` field, use `name.firstName`.
 
+
 ## List of functions
 
 The following tables list all supported mapping functions, including sample expressions and their resulting outputs.
