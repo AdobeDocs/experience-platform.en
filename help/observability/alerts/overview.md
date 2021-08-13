@@ -14,7 +14,7 @@ description: Learn about alerts in Adobe Experience Platform, including the stru
 
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.
 
-When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to all users in your organization who have subscribed to them. These messages can repeat over a pre-defined time interval until the alert has been resolved.
+When a certain set of conditions in your Platform operations is reached (such as a potential problem when the system breaches a threshold), Platform can deliver alert messages to any users in your organization who have subscribed to them. These messages can repeat over a pre-defined time interval until the alert has been resolved.
 
 This document provides an overview of alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 
@@ -57,7 +57,24 @@ Alerts can be sent to a configured webhook to facilitate efficient automation of
 
 ### Platform UI {#ui}
 
-In the Platform UI, you can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
+To work with alerts in the Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
+
+| Permission | Description |
+| --- | --- |
+| View Alerts | Allows you to view received alert messages. |
+| View Alerts History* | Allows you to view a history of received alerts via the [!UICONTROL Alerts] tab. |
+| Manage Alerts* | Allows you to enable and disable alert rules via the [!UICONTROL Alerts] tab. |
+| Resolve Alerts* | Allows you to resolve triggered alerts via the [!UICONTROL Alerts] tab. |
+
+{style="table-layout:auto"}
+
+**In order to access the [!UICONTROL Alerts] tab, you must also be granted the View Alerts permission in combination with one of the other permissions.*
+
+>[!NOTE]
+>
+>For more information on how to manage permissions in Platform, refer to the [access control documentation](../../access-control/ui/overview.md).
+
+With the View Alerts permission, can view received alerts by selecting the the bell icon (![Bell Icon](../images/alerts/overview/icon.png)) in the top-right corner.
 
 ![](../images/alerts/overview/ui.png)
 
