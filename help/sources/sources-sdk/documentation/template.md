@@ -93,8 +93,112 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Explore 
+### Explore your source spec
 
+**API format**
+
+```http
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+```
+
+**Request**
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/f435a3db-b94e-4a25-9e27-b466e2246a6a/explore?objectType=file&object=json&fileType=json&server=us6&listId=10c097ca71' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}'
+```
+
+**Response**
+
+```json
+{
+  "data": [
+    {
+      "members": [
+        {
+          "id": "cff65fb4c5f5828666ad846443720efd",
+          "email_address": "vivek123@gmail.com",
+          "unique_email_id": "72c758cbf1",
+          "full_name": "Vivek Tiwari",
+          "web_id": 547094062,
+          "email_type": "html",
+          "status": "subscribed",
+          "merge_fields": {
+            "FNAME": "Vivek",
+            "LNAME": "Tiwari",
+            "ADDRESS": {
+              "addr1": "",
+              "addr2": "",
+              "city": "",
+              "state": "",
+              "zip": "",
+              "country": "US"
+            },
+            "PHONE": "",
+            "BIRTHDAY": ""
+          },
+          "stats": {
+            "avg_open_rate": 0,
+            "avg_click_rate": 0
+          },
+          "ip_signup": "",
+          "timestamp_signup": "",
+          "ip_opt": "103.43.112.97",
+          "timestamp_opt": "2021-06-01T15:31:36+00:00",
+          "member_rating": 2,
+          "last_changed": "2021-06-01T15:31:36+00:00",
+          "language": "",
+          "vip": false,
+          "email_client": "",
+          "location": {
+            "latitude": 0,
+            "longitude": 0,
+            "gmtoff": 0,
+            "dstoff": 0,
+            "country_code": "",
+            "timezone": ""
+          },
+          "source": "Admin Add",
+          "tags_count": 0,
+          "tags": [
+             
+          ],
+          "list_id": "10c097ca71"
+        }
+      ],
+      "list_id": "10c097ca71",
+      "total_items": 2,
+      "_links": [
+        {
+          "rel": "self",
+          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+          "method": "GET",
+          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
+          "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
+        },
+        {
+          "rel": "parent",
+          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71",
+          "method": "GET",
+          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+        },
+        {
+          "rel": "create",
+          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+          "method": "POST",
+          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+          "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/POST.json"
+        }
+      ]
+    }
+  ]
+}
+```
 
 ### Create a source connection
 
