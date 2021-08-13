@@ -78,7 +78,7 @@ With the View Alerts permission, can view received alerts by selecting the the b
 
 ![](../images/alerts/overview/ui.png)
 
-In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to subscribe to specific alert types, and allows admins to enable or disable alert rules altogether. See the [UI guide](./ui-guide.md) for more information on managing alerts.
+In addition, the [!UICONTROL Alerts] tab in the UI allows individual users to subscribe to specific alert types, and allows admins to enable or disable alert rules altogether. See the [UI guide](./ui.md) for more information on managing alerts.
 
 ## Next steps
 

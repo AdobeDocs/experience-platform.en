@@ -15,6 +15,6 @@ feature: Data Management
 * Alerts {#alerts}
   * [Overview](./alerts/overview.md)
   * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
-  * [UI guide](./alerts/ui-guide.md)
+  * [UI guide](./alerts/ui.md)
 * [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
