@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
-solution: Experience Platform
-title: Alerts overview
-topic: overview
+title: Alerts Overview
 description: Learn about alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
 ---
 

@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
-solution: Experience Platform
-title: Alerts UI guide
-topic: overview
+title: Alerts UI Guide
 description: Learn how to manage alerts in the Experience Platform user interface.
 ---
 
