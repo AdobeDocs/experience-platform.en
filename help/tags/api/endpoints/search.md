@@ -36,25 +36,15 @@ For more in-depth information on how to use this functionality, refer to the [se
 
 The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
-## Retrieve a list of rules {#list}
+## Perform a search {#perform}
 
-You can retrieve a list of rules belonging to a property by including by making a GET request.
+You can perform a search by making a POST request.
 
 **API format**
 
 ```http
-GET /properties/{PROPERTY_ID}/rules
+POST /search
 ```
-
-| Parameter | Description |
-| --- | --- |
-| `PROPERTY_ID` | The `id` of the property whose components you want to list. |
-
-{style="table-layout:auto"}
-
->[!NOTE]
->
->Using query parameters, listed rules can be filtered based on the following attributes:<ul><li>`created_at`</li><li>`dirty`</li><li>`enabled`</li><li>`name`</li><li>`origin_id`</li><li>`published`</li><li>`published_at`</li><li>`revision_number`</li><li>`updated_at`</li></ul>See the guide on [filtering responses](../guides/filtering.md) for more information.
 
 **Request**
 
@@ -64,6 +54,7 @@ curl -X POST \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1' \
   -d '{
         "data" : {
