@@ -33,4 +33,4 @@ Select **[!UICONTROL Save]** to proceed.
 
 The mapping screen reappears with your newly created source field. Apply the appropriate corresponding target field and select **[!UICONTROL Finish]** to complete the mapping.
 
-![](./images/calculated-fields/new-calculated-field.png)
+![](./images/calculated-fields/new-calculated-field.png) 
