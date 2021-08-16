@@ -13,7 +13,6 @@ Contains version 2.6.3 of the Adobe Experience Platform Web SDK library.
 
 * When using the Identity Map data element type, identifiers whose IDs resolve to values that are not populated strings are now automatically removed from the identity map.
 * Fixed an error that would occur when attempting to save a data element using the XDM Object data element type and no schema was selected.
-* Within the XDM Object data element type, the identity map field contained a notice that was no longer relevant. This notice has been removed.
 * Improved user interface typography.
 
 ## Version 2.6.2 - August 4, 2021
