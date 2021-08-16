@@ -10,13 +10,13 @@ exl-id: 072743a4-fc62-4a61-92ec-8f9640a47ab2
 
 ## Overview {#overview}
 
-Connect Adobe Experience Platform to a 3rd-party advertising platform (e.g. DSP, ad network, SSP) and share pseudonymous audiences to these platforms.
+Connect Adobe Experience Platform to 3rd-party advertising platforms such as demand-side platforms (DSP), supply-side platforms (SSP), ad networks and share pseudonymous audiences to these platforms.
 
 When connecting to an advertising destination, your audiences are sent as IDs to the destination platform, where they are mapped to an ID known by the destination platform.
 
 ## Supported advertising destinations {#supported-destinations}
 
-Currently, Platform supports the advertising destinations listed below.
+Currently, Experience Platform supports the advertising destinations listed below.
 
 To understand the difference between connections and extensions, see [Connections](../../destination-types.md#connections) in the Destination Types and Categories page.
 
@@ -45,6 +45,6 @@ To understand the difference between connections and extensions, see [Connection
 * [Pinterest Conversion Tracking extension](pinterest.md)
 * [Twitter Universal Website Tag extension](twitter-uwt.md)
 
-## Create a new advertising destination {#create-destination}
+## Connect to a new advertising destination {#connect-destination}
 
 To send segments to advertising destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.

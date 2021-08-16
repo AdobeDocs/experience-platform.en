@@ -70,7 +70,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 >[!NOTE]
 >
->When setting up a [!DNL Google Display & Video 360] destination please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
+>When setting up a [!DNL Google Display & Video 360] destination, please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
 ## Activate segments to this destination {#activate}
 

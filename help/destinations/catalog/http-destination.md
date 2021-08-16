@@ -54,7 +54,7 @@ See [Activate profiles and segments to a destination](../ui/activate-destination
 
 ## Destination attributes {#attributes}
 
-During the [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes) step, when [activating segments](../ui/activate-destinations.md) to an [!DNL HTTP] destination, we recommend that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
+In the [[!UICONTROL Select attributes]](../ui/activate-destinations.md#select-attributes) step, when [activating segments](../ui/activate-destinations.md) to an [!DNL HTTP] destination, Adobe recommends that you select a unique identifier from your [union schema](../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination.
 
 ## Exported data {#exported-data}
 

@@ -22,7 +22,7 @@ Adobe Experience Platform supports the following email marketing destinations:
 * [Oracle Responsys](oracle-responsys.md)
 * [Salesforce Marketing Cloud](salesforce-marketing-cloud.md)
 
-## Create a new email marketing destination {#create-destination}
+## Connect to a new email marketing destination {#connect-destination}
 
 To send segments to email marketing destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
 

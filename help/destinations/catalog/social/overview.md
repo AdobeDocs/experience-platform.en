@@ -18,6 +18,6 @@ Adobe Experience Platform currently supports the following social destinations:
 * [[!DNL Facebook] extension](facebook.md)
 * [Linkedin Matched Audiences connection](linkedin.md)
 
-## Create a new social destination {#create-destination}
+## Connect to a new social destination {#connect-destination}
 
 To send segments to social destinations for your campaigns, Platform must first connect to the destination. See the [destination creation tutorial](../../ui/connect-destination.md) for detailed information on setting up a new destination.
