@@ -485,7 +485,7 @@ PATCH /rule_components/{RULE_COMPONENT_ID}
 The following request updates the `order` and `settings` attributes for an existing rule component.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/rule_components/RC9af052ee231346f28d1e44865ab62c04 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

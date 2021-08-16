@@ -427,7 +427,7 @@ PATCH /environments/{ENVIRONMENT_ID}
 The following request updates the `name` for an existing environment.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/environments/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

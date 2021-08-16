@@ -382,7 +382,7 @@ PATCH /rules/{RULE_ID}
 The following request updates the `name` of an existing rule.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/rules/RLd2528a53c21a468f93cfd85244f16fdd \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

@@ -548,7 +548,7 @@ PATCH /properties/{PROPERTY_ID}
 The following request updates the `name` and `domains` for an existing property.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/properties/HT5d90148e72224224aac9bc0b01498b84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

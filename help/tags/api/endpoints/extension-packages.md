@@ -18,7 +18,7 @@ An extension package belongs to the [company](./companies.md) of the developer w
 
 The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
-In addition to understanding how to make calls to the Reactor API, it is also important to understand how an extension package's `status` and `availability` attributes affect what actions you can perform on them. These are explained in the sections below.
+In addition to understanding how to make calls to the Reactor API, it is also important to understand how an extension package's `status` and `availability` attributes affect what actions you can perform on it. These are explained in the sections below.
 
 ### Status
 
@@ -1201,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 A private release is achieved by supplying an `action` with a value of `release_private` in the `meta` of the request data.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

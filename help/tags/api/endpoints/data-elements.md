@@ -482,7 +482,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 The following request updates the `name` for an existing data element.
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -630,7 +630,7 @@ PATCH /data_elements/{DATA_ELEMENT_ID}
 **Request**
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/data_elements/DE3fab176ccf8641838b3da59f716fc42b \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

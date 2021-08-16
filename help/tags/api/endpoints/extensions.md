@@ -438,7 +438,7 @@ PATCH /extensions/{EXTENSION_ID}
 As with [creating an extension](#create), a local version of the revised package must be uploaded via form data.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extensions/EX8ce7ced633f34bd48d33089ff8fad082 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \

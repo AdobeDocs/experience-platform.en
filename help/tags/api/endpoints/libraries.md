@@ -423,7 +423,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 The following request adds two data elements to a library.
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -620,7 +620,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 **Request**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -680,7 +680,7 @@ PATCH /libraries/{LIBRARY_ID}
 The following request transitions the state of an existing library, based on the value of `meta.action` provided in the payload. The available actions for a library depend on its current publishing state, as outlined in the [publishing flow](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
