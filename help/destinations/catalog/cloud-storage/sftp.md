@@ -31,6 +31,11 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 * **Host**: The address of your SFTP storage location
 * **Username**: The username to log into your SFTP storage location
 * **Password**: The password to log into your SFTP storage location
+* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
+* **[!UICONTROL Description]**: enter a description of this destination.
+* **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
 ## Exported data {#exported-data}
 

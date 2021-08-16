@@ -25,6 +25,12 @@ To connect to this destination, follow the steps described in the [destination c
 While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **[!DNL Amazon S3] access key** and **[!DNL Amazon S3] secret key**: In [!DNL Amazon S3], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon S3] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
+* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
+* **[!UICONTROL Description]**: enter a description of this destination.
+* **[!UICONTROL Bucket name]**: enter the name of the [!DNL Amazon S3] bucket to be used by this destination.
+* **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
 >[!TIP]
 >
