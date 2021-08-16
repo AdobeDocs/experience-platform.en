@@ -33,8 +33,8 @@ The following table contains a list of terminology that are essential to underst
 | --- | --- |
 | Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
 | [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to an algorithm that allows for data from different users of the same devices to be separated from one another. |
-| Shared device identity namespace |
-| User identity namespace |
+| Shared device identity namespace | A shared device identity namespace represents a single device that is shared by multiple different users.
+| User identity namespace | A user identity namespace represents an individual user of a shared device. |
 
 ## Shared Devices UI
 
