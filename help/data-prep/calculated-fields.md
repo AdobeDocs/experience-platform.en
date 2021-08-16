@@ -17,7 +17,7 @@ To create a calculated field, select **[!UICONTROL Add calculated field]**.
 
 The **[!UICONTROL Create calculated field]** panel appears. The left dialog box contains the fields, functions, and operators supported in calculated fields. Select one of the tabs to start adding functions, fields, or operators to the expression editor.
 
-![](./images/calculated-fields/create-calculated-fields.png)
+![](./images/calculated-fields/create-calculated-field.png)
 
 | Tab | Description |
 | --- | ----------- |
@@ -27,7 +27,7 @@ The **[!UICONTROL Create calculated field]** panel appears. The left dialog box 
 
 You can manually add fields, functions, and operators using the expression editor at the center. Select the editor to start creating an expression.
 
-![](./images/calculated-fields/create-calculated-field.png)
+![](./images/calculated-fields/write-calculated-field.png)
 
 Select **[!UICONTROL Save]** to proceed.
 
