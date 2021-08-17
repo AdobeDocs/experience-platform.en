@@ -35,28 +35,28 @@ Select **[!UICONTROL New Account]** to set up a new connection to your destinati
 
 The credentials that you are required to enter in the account step vary by destination and authentication type.
 
-For cloud storage destinations, you need to provide credentials for Experience Platform to connect to your storage location.
+* For cloud storage destinations, you need to provide credentials for Experience Platform to connect to your storage location.
 
-![Select account type for cloud storage destinations](/help/destinations/assets/ui/connect-destinations/new-account-cloud-storage.png)
+   ![Select account type for cloud storage destinations](../assets/ui/connect-destinations/new-account-cloud-storage.png)
 
-For Facebook and several other social and advertising destinations, select **[!UICONTROL New account]** , then select **[!UICONTROL Connect to destination]**. This will take you to the destination login page, so you can connect Experience Platform to your destination.
+* For Facebook and several other social and advertising destinations, select **[!UICONTROL New account]** , then select **[!UICONTROL Connect to destination]**. This will take you to the destination login page, so you can connect Experience Platform to your destination.
 
-![Select account type for social destinations](../assets/ui/connect-destinations/new-account.png)
+   ![Select account type for social destinations](../assets/ui/connect-destinations/new-account.png)
 
 >[!IMPORTANT]
 >
->Refer to the **[!UICONTROL Connection parameters]** section in each destination catalog page for detailed information about the parameters required in this step (for example, [Azure Blob](/help/destinations/catalog/cloud-storage/azure-blob.md#parameters) requires a connection string).
+>Refer to the **[!UICONTROL Connection parameters]** section in each destination catalog page for detailed information about the parameters required in this step (for example, [Azure Blob](../catalog/cloud-storage/azure-blob.md#parameters) requires a connection string).
 
 ### Authentication step {#authentication}
 
 Enter the destination platform connection details, then select **[!UICONTROL Create destination]**.
 
-Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
+1. Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
 
->[!IMPORTANT]
->
->The image below is used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, see the **[!UICONTROL Connection parameters]** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](../catalog/advertising/google-customer-match.md#parameters)).
+   >[!IMPORTANT]
+   >
+   >The image below is used for illustration purposes only. The destination connection details vary between destinations. For detailed information about the connection details for your destination, see the **[!UICONTROL Connection parameters]** section in each [destination catalog](../catalog/overview.md) page (for example, [Google Customer Match](../catalog/advertising/google-customer-match.md#parameters)).
 
-![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
+   ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
 
 1. Select **[!UICONTROL Save & Exit]** to save the destination configuration, or select **[!UICONTROL Next]** to proceed to the audience data [activation flow](activate-destinations.md).
