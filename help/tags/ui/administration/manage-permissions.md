@@ -18,7 +18,7 @@ This guide covers how to grant these permissions to users using the Admin Consol
 
 ## Gain admin rights for a tags product profile
 
-In order to manage user permissions for tags, you must be at least a product profile administrator for tags in Adobe Admin Console. System administrators and tags product administrators are also able to manage permissions for a tags product profile.
+In order to manage user permissions for tags, you must be at least a product profile administrator for tags in Adobe Admin Console. System administrators and product administrators are also able to manage permissions for a tags product profile.
 
 See the Admin Console document on [administrative roles](https://helpx.adobe.com/enterprise/admin-guide.html/enterprise/using/admin-roles.ug.html) for more information on the different admin levels and how to manage these roles within your organization.
 
@@ -28,7 +28,7 @@ Once you have admin rights, sign into Admin Console and select **[!UICONTROL Pro
 
 ![Select product](../../images/ui/administration/manage-permissions/select-product.png)
 
-A list of product profiles displays. A product profile links a a group of permissions to a group of users that you assign. From here, you can create a new profile to configure, or you can select an existing product profile from the list to edit (assuming you have admin rights for that profile).
+A list of product profiles displays. A product profile is a construct that links a a group of permissions to a group of users. From here, you can create a new profile to configure, or you can select an existing product profile from the list to edit (assuming you have admin rights for that profile).
 
 ![Product profiles](../../images/ui/administration/manage-permissions/product-profiles.png)
 
@@ -68,7 +68,7 @@ To assign properties to this profile, select **[!UICONTROL Properties]** in the 
 
 ![Properties](../../images/ui/administration/manage-permissions/properties.png)
 
-By default, a new product profile is automatically given access to all properties that are available for your organization. This includes properties that are available currently, and any properties made in the future.
+By default, a new product profile is automatically given access to all properties that are available for your organization. This includes properties that are available currently and any properties made in the future.
 
 If you want to limit the available properties, select the **[!UICONTROL Auto-include]** toggle. This allows you to manually add and remove properties for the property depending on your needs.
 
@@ -84,21 +84,17 @@ If auto-include is disabled, all currently available properties are listed on th
 
 ### Assign rights
 
-By default, all rights are disabled for a product profile and must be manually added to be enabled. A lack of rights means read-only access. If you belong to a product profile that auto-includes properties but has no rights, then you have read-only access to all properties.
-
-A user can belong to multiple product profiles in Admin Console, but the rights from those profiles are not combined into a master permission set. That user still has only the rights explicitly granted by each group.
+By default, all rights are disabled for a product profile and must be manually added to be enabled. If you belong to a product profile that auto-includes properties but has no rights, then you have read-only access to all properties.
 
 >[!NOTE]
+>
+>A user can belong to multiple product profiles in Admin Console, but the rights from those profiles are not combined into a master permission set. That user still has only the rights explicitly granted by each group.
 >
 >For example, if Group 1 gives access to Property A with the Develop right, and Group 2 gives access to Property B with the Publish right, Develop and Publish rights are not combined for Property A and Property B. You can only develop on Property A and publish on Property B.
  
 Select **[!UICONTROL Property Rights]** in the left navigation. As with properties, you can select the plus **(+)** icon next to a property right to add it to the profile. If you want to add all property rights to the profile, you can also select **[!UICONTROL Add all]**.
 
 ![Property rights](../../images/ui/administration/manage-permissions/property-rights.png)
-
->[!NOTE]
->
->For more information on what permissions are associated with each right, see the section on [rights scenarios](#rights-scenarios).
 
 Next, select **[!UICONTROL Company Rights]** in the left navigation. Add or remove the rights your require, and once you are finished select **[!UICONTROL Save]**.
 
