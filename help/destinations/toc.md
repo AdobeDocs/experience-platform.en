@@ -15,10 +15,7 @@ feature: Destinations
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
-    * Create a new destination{#create}
-        * [Create a new streaming destination](./ui/create-streaming-destination.md)
-        * [Create a new batch destination](./ui/create-batch-destination.md)
-    * [Connect to a destination](./ui/connect-destination.md)
+    * [Create a new destination connection](./ui/connect-destination.md)
     * Activate audience data to destinations{#activate}
         * [Activation overview](./ui/activation-overview.md)
         * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
