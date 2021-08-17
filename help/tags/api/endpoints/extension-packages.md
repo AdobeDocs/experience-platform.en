@@ -18,6 +18,32 @@ An extension package belongs to the [company](./companies.md) of the developer w
 
 The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
+In addition to understanding how to make calls to the Reactor API, it is also important to understand how an extension package's `status` and `availability` attributes affect what actions you can perform on it. These are explained in the sections below.
+
+### Status
+
+Extension packages have three potential statuses: `pending`, `succeeded`, and `failed`.
+
+| Status | Description |
+| --- | --- |
+| `pending` | When an extension package is created, its `status` is set to `pending`. This indicates that the system received the information for the extension package and will begin processing. Extension packages with a status of `pending` are not available for use. |
+| `succeeded` | An extension package's status updates to `succeeded` if it successfully completes processing. |
+| `failed` | An extension package's status updates to `failed` if it unsuccessfully completes processing. An extension package with a status of `failed` may be updated until processing succeeds. Extension packages with a status of `failed` are not available for use. |
+
+### Availability
+
+There are levels of availability for an extension package: `development`, `private`, and `public`.
+
+| Availability | Description |
+| --- | --- |
+| `development` | An extension package in `development` is only visible to, and available within, the company that owns it. In addition, it can only be used on properties which are configured for extension development. |
+| `private` | A `private` extension package is only visible to the company that owns it, and can only be installed on properties that the company owns. |
+| `public` | A `public` extension package is visible and available to all companies and properties. |
+
+>[!NOTE]
+>
+>When an extension package is created, `availability` is set to `development`. After testing has been completed, you can transition the extension package to either `private` or `public`.
+
 ## Retrieve a list of extension packages {#list}
 
 You can retrieve a list of extension packages by making a GET request to `/extension_packages`.
@@ -40,6 +66,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -225,6 +252,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -435,11 +463,11 @@ A successful response returns the details of the extension package, including it
 }
 ```
 
-## Create or update an extension package {#create}
+## Create an extension package {#create}
 
 Extension packages are created using a Node.js scaffolding tool and saved on your local machine before being submitted to the Reactor API. For more information on configuring an extension package, refer to the guide on [getting started with extension development](../../extension-dev/getting-started.md).
 
-Once you have created the extension package file, you can submit it to the Reactor API through a POST request. If the extension package already exists in the API, this call updates the package to a new version.
+Once you have created the extension package file, you can submit it to the Reactor API through a POST request.
 
 **API format**
 
@@ -670,12 +698,12 @@ A successful response return the details of the newly created extension package.
 
 ## Update an extension package {#update}
 
-You can update an extension package by including its ID in the path of a POST request.
+You can update an extension package by including its ID in the path of a PATCH request.
 
 **API format**
 
 ```http
-POST /extension_packages/{EXTENSION_PACKAGE_ID}
+PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 ```
 
 | Parameter | Description |
@@ -689,7 +717,7 @@ POST /extension_packages/{EXTENSION_PACKAGE_ID}
 As with [creating an extension package](#create), a local version of the updated package must be uploaded via form data.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -928,7 +956,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 A private release is achieved by supplying an `action` with a value of `release_private` in the `meta` of the request data.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1173,7 +1201,7 @@ PATCH /extension_packages/{EXTENSION_PACKAGE_ID}
 A private release is achieved by supplying an `action` with a value of `release_private` in the `meta` of the request data.
 
 ```shell
-curl -X POST \
+curl -X PATCH \
   https://reactor.adobe.io/extension_packages/EP10bb503178694d73bc0cd84387b82172 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -1269,6 +1297,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 

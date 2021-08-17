@@ -467,6 +467,10 @@ A successful response returns HTTP status 207 with the requested segment definit
 
 You can request to delete a specific segment definition by making a DELETE request to the `/segment/definitions` endpoint and providing the ID of the segment definition you wish to delete in the request path.
 
+>[!NOTE]
+>
+> You will **not** be able to delete a segment that is used in a destination activation.
+
 **API format**
 
 ```http

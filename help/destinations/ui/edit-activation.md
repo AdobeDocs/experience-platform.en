@@ -27,4 +27,4 @@ Follow the steps below to edit existing activation flows in Adobe Experience Pla
 
     ![Destination details](../assets/ui/edit-activation/destination-details.png)
 
-5. Refer to [Activate profiles and segments to a destination](activate-destinations.md) for details on how to activate new segments.
+5. Refer to [Activation overview](activation-overview.md) for details on how to activate new segments.
