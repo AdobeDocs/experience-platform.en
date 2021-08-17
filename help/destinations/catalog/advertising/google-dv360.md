@@ -21,7 +21,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 >
 >If you are looking to create your first destination with Google Display & Video 360 and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Adobe Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
-## Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 [!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
@@ -35,7 +35,7 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
@@ -53,19 +53,13 @@ Before creating the [!DNL Google Display & Video 360] destination in Platform, y
 * **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
 * **Your account type**: use **[!DNL Invite advertiser]** to allow audiences to be shared only to a specific brand in your Display & Video 360 account or use **[!DNL Invite partner]** to allow audiences to be shared to all brands in your Display & Video 360 account.
 
-## Configure destination
+## Connect to the destination {#connect}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Display & Video 360], and select **[!UICONTROL Configure]**.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-![Connect Google Display & Video 360 destination](../../assets/catalog/advertising/google-dv360/catalog.png)
-    
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between [!UICONTROL Activate] and [!UICONTROL Configure], refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+### Connection parameters {#parameters}
 
-In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination, as well as the marketing actions that should apply to this destination.
-
-![Basic information Google Display & Video 360](../../assets/catalog/advertising/google-dv360/setup.png)
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
@@ -73,15 +67,14 @@ In the **Setup** step of the create destination workflow, fill in the [!UICONTRO
    * Use `Invite Advertiser` to allow audiences to be shared only to a specific brand in your Display & Video 360 account.
    * Use `Invite Partner` to allow audiences to be shared to all brands in your Display & Video 360 account.
 *  **[!UICONTROL Account ID]**: Fill in your **[!DNL Invite partner]** or **[!DNL Invite advertiser]** account ID with Google. Typically, this is a six or seven digit ID.
-*  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
 
 >[!NOTE]
 >
->When setting up a [!DNL Google Display & Video 360] destination please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
+>When setting up a [!DNL Google Display & Video 360] destination, please work with your [!DNL Google Account Manager] or Adobe representative to understand which account type you have.
 
-## Activate segments to [!DNL Google Display & Video 360]
+## Activate segments to this destination {#activate}
 
-For instructions on how to activate segments to [!DNL Google Display & Video 360], see [Activate Data to Destinations](../../ui/activate-destinations.md).
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Exported data 
 
