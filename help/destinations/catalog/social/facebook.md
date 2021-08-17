@@ -124,7 +124,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL Origin of audience] when sending segments to [!DNL Facebook Custom Audiences].
 

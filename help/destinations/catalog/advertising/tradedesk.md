@@ -57,9 +57,9 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-In the [Segment schedule](../../ui/activate-destinations.md#segment-schedule) step, you must manually map your segments to their corresponding ID or friendly name in the destination platform.
+In the [Segment schedule](../../ui/activate-segment-streaming-destinations.md#scheduling) step, you must manually map your segments to their corresponding ID or friendly name in the destination platform.
 
 When mapping segments, we recommend you use the Platform segment name or a shorter form of it, for ease of use. However, the segment ID or name in your destination does not need to match the one in your Platform account. Any value you insert in the mapping field will be reflected by the destination.
 

@@ -59,7 +59,7 @@ Commenting out this note, as write permissions are assigned through the s3:PutOb
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data {#exported-data}
 

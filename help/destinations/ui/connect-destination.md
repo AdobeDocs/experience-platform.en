@@ -59,4 +59,4 @@ Enter the destination platform connection details, then select **[!UICONTROL Cre
 
    ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
 
-1. Select **[!UICONTROL Save & Exit]** to save the destination configuration, or select **[!UICONTROL Next]** to proceed to the audience data [activation flow](activate-destinations.md).
+1. Select **[!UICONTROL Save & Exit]** to save the destination configuration, or select **[!UICONTROL Next]** to proceed to the audience data [activation flow](activation-overview.md).

@@ -30,7 +30,7 @@ For example, a prospect downloaded a white-paper which qualifies them into a "hi
 
 ## Export type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-streaming-profile-destinations.md#select-attributes).
 
 ## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
@@ -95,7 +95,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to streaming profile export destinations](../../ui/activate-streaming-profile-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Exported data {#exported-data}
 

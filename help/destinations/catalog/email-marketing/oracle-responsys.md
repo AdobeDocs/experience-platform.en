@@ -14,7 +14,7 @@ To send segment data to [!DNL Oracle Responsys], you must first [connect to the 
 
 ## Export type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [audience activation workflow](../../ui/activate-batch-profile-destinations.md#select-attributes).
 
 ## IP address allow list {#allow-list}
 
@@ -61,15 +61,15 @@ Commenting out Amazon S3 bucket part for now until support is clarified
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.
 
-## Destination attributes {#destination-attributes}
+### Destination attributes {#destination-attributes}
 
-When [activating segments](../../ui/activate-destinations.md) to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [Select which schema fields to use as destination attributes in your exported files](./overview.md#destination-attributes).
+When activating segments to this destination, Adobe recommends that you select a unique identifier from your [union schema](../../../profile/home.md#profile-fragments-and-union-schemas). Select the unique identifier and any other XDM fields that you want to export to the destination. For more information, refer to [best practices when activating audiences to email marketing destinations](overview.md#best-practices).
 
 ## Exported data {#exported-data}
 
-For [!DNL Oracle Responsys] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial. 
+For [!DNL Oracle Responsys] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [verify segment activation](../../ui/activate-batch-profile-destinations.md#verify) in the segment activation tutorial.
 
 ## Set up data import into [!DNL Oracle Responsys] {#import-data-into-responsys}
 

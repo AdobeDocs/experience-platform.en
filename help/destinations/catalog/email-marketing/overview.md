@@ -64,9 +64,9 @@ Read the individual email marketing destination articles to learn how to import 
 
 ## Activate segments to email marketing destinations {#activate}
 
-For instructions on how to activate segments to email marketing destinations, refer to [Activate profiles and segments to a destination](../../ui/activate-destinations.md).
+For instructions on how to activate segments to email marketing destinations, refer to [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md).
 
 ## Additional resources
 
-* [Activate data to destinations](../../ui/activate-destinations.md)
+* [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md)
 * [Create email marketing destinations and activate data using the Flow Service API](../../api/email-marketing.md)
