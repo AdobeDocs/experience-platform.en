@@ -1,8 +1,8 @@
 ---
-title: User Permissions
+title: Manage Permissions for Tags
 description: Learn about how to grant permissions for tags in Adobe Experience Platform.
 ---
-# User permissions
+# Manage permissions for tags
 
 >[!NOTE]
 >
@@ -11,6 +11,10 @@ description: Learn about how to grant permissions for tags in Adobe Experience P
 In order to use tags in Adobe Experience Platform, you must be granted access to at least one Adobe Experience Cloud product through Adobe Admin Console. In addition, you must also be granted permissions for tags at the product-profile level in order to perform certain actions when logged into the Data Collection UI.
 
 This guide covers how to grant these permissions to users using the Admin Console.
+
+>[!NOTE]
+>
+>For detailed information on the different types of available tag permissions mentioned in this guide, please refer to the [user permissions overview](./user-permissions.md).
 
 ## Gain admin rights for a tags product profile
 
@@ -112,7 +116,7 @@ When finished, select **[!UICONTROL Save]** to add the specified users to the pr
 
 ![Assign users](../../images/ui/administration/manage-permissions/assign-users.png)
 
-Once a user has been added, they receive an email informing them that they now have rights for the Data Collection UI.
+Once users have been added to the profile, they receive an email informing them that they now have rights for the Data Collection UI.
 
 ## Next steps
 
