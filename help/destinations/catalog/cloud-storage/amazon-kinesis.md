@@ -12,7 +12,7 @@ exl-id: b40117ef-6ad0-48a9-bbcb-97c6f6d1dce3
 >
 >The [!DNL Amazon Kinesis] destination in Platform is currently in beta. The documentation and the functionality are subject to change.
 
-The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time. 
+The [!DNL Kinesis Data Streams] service by [!DNL Amazon Web Services] allows you to collect and process large streams of data records in real time.
 
 You can create a real-time outbound connection to your [!DNL Amazon Kinesis] storage to stream data from Adobe Experience Platform. 
 
@@ -22,15 +22,15 @@ You can create a real-time outbound connection to your [!DNL Amazon Kinesis] sto
 
 ![Amazon Kinesis in the UI](../../assets/catalog/cloud-storage/amazon-kinesis/catalog.png)
 
-## Use Cases {#use-cases}
+## Use cases {#use-cases}
 
 By using streaming destinations such as [!DNL Amazon Kinesis], you can easily feed high-value segmentation events and associated profile attributes into your systems of choice.
 
 For example, a prospect downloaded a white-paper which qualifies them into a "high-propensity to convert" segment. By mapping the segment that the prospect falls in to the [!DNL Amazon Kinesis] destination, you would receive this event in [!DNL Amazon Kinesis]. There, you can employ a do-it-yourself approach and describe business logic on top of the event, as you think would work best with your enterprise IT systems.
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-streaming-profile-destinations.md#mapping).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
 
 ## Required [!DNL Amazon Kinesis] permissions {#required-kinesis-permission}
 
@@ -71,27 +71,19 @@ The example below displays the minimum access rights required to successfully ex
 
 For more information on controlling access for [!DNL Kinesis] data streams, read the following [[!DNL Kinesis] document](https://docs.aws.amazon.com/streams/latest/dev/controlling-access.html).
 
-## Connect destination {#connect-destination}
+## Connect to the destination {#connect}
 
-See [Cloud storage destinations workflow ](./workflow.md)for instructions on how to connect to your cloud storage destinations, including those supported by [!DNL Amazon]. 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-For [!DNL Amazon Kinesis] destinations, enter the following information in the create destination workflow:
+### Connection parameters {#parameters}
 
-## Account step {#account-step}
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **[!DNL Amazon Web Services] access key and secret key**: In [!DNL Amazon Web Services], generate an `access key - secret access key` pair to grant Platform access to your [!DNL Amazon Kinesis] account. Learn more in the [Amazon Web Services documentation](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_access-keys.html).
 * **region**: Indicate which [!DNL Amazon Web Services] region to stream data to.
-
-![Input fields in the account step](../../assets/catalog/cloud-storage/amazon-kinesis/account.png)
-
-## Authentication step {#authentication-step}
-
 * **Name**: Provide a name for your connection to [!DNL Amazon Kinesis]
 * **Description**: Provide a description for your connection to [!DNL Amazon Kinesis].
 * **stream**: Provide the name of an existing data stream in your [!DNL Amazon Kinesis] account. Platform will export data to this stream.
-* **[!UICONTROL Marketing actions]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
-
-![Input fields in the authentication step](../../assets/catalog/cloud-storage/amazon-kinesis/authentication.png)
 
 <!--
 
@@ -101,9 +93,9 @@ For [!DNL Amazon Kinesis] destinations, enter the following information in the c
 
 -->
 
-## Activate segments {#activate-segments}
+## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-streaming-profile-destinations.md) for information about the segment activation workflow.
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Exported data {#exported-data}
 

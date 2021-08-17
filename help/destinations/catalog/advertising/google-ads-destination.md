@@ -21,7 +21,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 >
 >If you are looking to create your first destination with [!DNL Google Ads] and have not enabled the [ID sync functionality](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/idsync.html) in Experience Cloud ID Service in the past (with Audience Manager or other applications), please reach out to Adobe Consulting or Customer Care to enable ID syncs. If you had previously set up Google integrations in Audience Manager, the ID syncs you had set up carry over to Platform.
 
-## Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
 [!DNL Google Ad Manager] supports the activation of identities described in the table below.
 
@@ -35,7 +35,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 |MAID|Microsoft Advertising ID. This ID uniquely identifies devices running Windows 10.||
 |Amazon Fire TV ID|This ID uniquely identifies Amazon Fire TVs.||
 
-## Export Type {#export-type}
+## Export type {#export-type}
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
@@ -55,34 +55,27 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 Before creating the [!DNL Google Ads] destination in Platform, you must contact [!DNL Google] for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact [!DNL Google] and provide the following information:
 
-* **Account ID** : this is Adobe's account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
-* **Customer ID** : this is Adobe's customer account ID with [!DNL Google]. Contact Adobe Customer Care or your Adobe representative to obtain this ID.
+* **Account ID**: Adobe’s account ID with Google. Account ID: 87933855.
+* **Customer ID**: Adobe’s customer account ID with Google. Customer ID: 89690775.
 * Your account type: **AdWords**
-* **Google AdWords ID** : This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
+* **Google AdWords ID**: This is your ID with [!DNL Google]. The ID format is typically 123-456-7890.
 
-## Configure destination
+## Connect to the destination {#connect}
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Google Ads], and select **[!UICONTROL Configure]**.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-![Connect Google Ads destination](../../assets/catalog/advertising/google-ads-destination/catalog.png)
+### Connection parameters {#parameters}
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
-
-In the **Setup** step of the create destination workflow, fill in the [!UICONTROL Basic Information] for the destination. 
-
-![Basic information Google Ads](../../assets/catalog/advertising/google-ads-destination/setup.png)
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 *  **[!UICONTROL Name]**: Fill in the preferred name for this destination.
 *  **[!UICONTROL Description]**: Optional. For example, you can mention which campaign you are using this destination for.
 *  **[!UICONTROL Account Type]**: AdWords is the only available option.
-*  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google Ads]. The ID format is typically 123-456-7890. 
-*  **[!UICONTROL Marketing action]**: Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).  
+*  **[!UICONTROL Account ID]**: Fill in your account ID with [!DNL Google Ads]. The ID format is typically 123-456-7890.
 
-## Activate segments to [!DNL Google Ads]
+## Activate segments to this destination {#activate}
 
-For instructions on how to activate segments to [!DNL Google Ads], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md).
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Exported data 
 

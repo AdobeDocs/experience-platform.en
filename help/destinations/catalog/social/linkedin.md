@@ -53,35 +53,47 @@ To learn about ingesting email addresses in Experience Platform, see the [batch 
 
 If you select to hash the email addresses yourself, make sure to comply with the following requirements:
 
-- Trim all leading and trailing spaces from the email string. For example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
-- When hashing the email strings, make sure to hash the lowercase string;
-  - Example: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
-- Ensure that the hashed string is all lowercase
-  - Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
-- Do not salt the string.
+* Trim all leading and trailing spaces from the email string. For example: `johndoe@example.com`, not `<space>johndoe@example.com<space>`;
+* When hashing the email strings, make sure to hash the lowercase string;
+  * Example: `example@email.com`, not `EXAMPLE@EMAIL.COM`;
+* Ensure that the hashed string is all lowercase
+  * Example: `55e79200c1635b37ad31a378c39feb12f120f116625093a19bc32fff15041149`, not `55E79200C1635B37AD31A378C39FEB12F120F116625093A19bC32FFF15041149`;
+* Do not salt the string.
 
 >[!NOTE]
 >
 >Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
 > Attribute source data is not automatically hashed.
 > 
-> During the [Mapping](../../ui/activate-segment-streaming-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+> During the [Identity Mapping](../../ui/activate-destinations.md#mapping) step, when your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 > 
 > The **[!UICONTROL Apply transformation]** option is only displayed when you select attributes as source fields. It is not displayed when you choose namespaces.
 
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png)
 
-## Connect to destination {#connect-destination}
+## Connect to the destination {#connect}
 
-To connect to the [!DNL LinkedIn Matched Audiences] destination, see [Social destinations authentication workflow](./workflow.md). 
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
 The video below also demonstrates the steps to configure a [!DNL LinkedIn Matched Audiences] destination and activate segments.
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
 
-## Activate segments to [!DNL LinkedIn Matched Audiences] {#activate-segments}
+>[!NOTE]
+>
+>The Experience Platform user interface is frequently updated and may have changed since the recording of this video. For the most up-to-date information, refer to the [destination configuration tutorial](../../ui/connect-destination.md). 
 
-For instructions on how to activate segments to [!DNL LinkedIn Matched Audiences], see [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md).
+### Connection parameters {#parameters}
+
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+
+* **[!UICONTROL Name]**: a name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: a description that will help you identify this destination in the future.
+* **[!UICONTROL Account ID]**: your [!DNL LinkedIn Campaign Manager Account ID]. You can find this ID in your [!DNL LinkedIn Campaign Manager] account.
+
+## Activate segments to this destination {#activate}
+
+See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
 
 ## Exported data {#exported-data}
 

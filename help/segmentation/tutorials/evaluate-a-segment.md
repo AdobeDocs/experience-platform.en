@@ -184,9 +184,6 @@ curl -X POST \
     "schemaRef": {
         "id": "https://ns.adobe.com/xdm/context/profile__union",
         "contentType": "application/vnd.adobe.xed+json;version=1"
-    },
-    "fileDescription": {
-        "persisted": true
     }
 }'
 ```
@@ -195,7 +192,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | A descriptive name for the dataset. |
 | `schemaRef.id` | The ID of the union view (schema) that the dataset will be associated with. |
-| `fileDescription.persisted` | A Boolean value that when set to `true`, enables the dataset to persist in the union view. |
 
 **Response**
 

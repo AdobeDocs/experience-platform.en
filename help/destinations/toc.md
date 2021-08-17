@@ -34,6 +34,7 @@ feature: Destinations
     * [ (Alpha) HTTP connection](./catalog/http-destination.md)
     * Adobe destinations{#adobe}
         * [Adobe destinations overview](./catalog/adobe/overview.md)
+        * [(Beta) Marketo Engage connection](./catalog/adobe/marketo-engage.md)
         * [Experience Platform segment sharing](https://experienceleague.adobe.com/docs/audience-manager/user-guide/implementation-integration-guides/integration-experience-platform/aam-aep-audience-sharing.html)
     * Advertising destinations{#advertising}
         * [Advertising destinations overview](./catalog/advertising/overview.md)
@@ -79,7 +80,6 @@ feature: Destinations
         * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
-        * [Create a cloud storage destination](./catalog/cloud-storage/workflow.md)
         * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
@@ -100,8 +100,8 @@ feature: Destinations
         * [Oracle Eloqua connection](./catalog/email-marketing/oracle-eloqua.md)
         * [Oracle Responsys connection](./catalog/email-marketing/oracle-responsys.md)
         * [Salesforce Marketing Cloud connection](./catalog/email-marketing/salesforce-marketing-cloud.md)
-    * Experience Platform Launch extensions {#launch-extensions}
-        * [Adobe Experience Platform Launch extension overview](./catalog/launch-extensions/overview.md)  
+    * Tag extensions {#launch-extensions}
+        * [Tag extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
         * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
@@ -119,7 +119,6 @@ feature: Destinations
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)

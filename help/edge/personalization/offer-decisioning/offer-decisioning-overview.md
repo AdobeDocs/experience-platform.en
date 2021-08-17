@@ -59,10 +59,10 @@ To enable Offer Decisioning, you need to perform the following steps:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through [Adobe Experience Platform Launch](http://launch.adobe.com/). Here is a [quick start guide to Platform Launch](https://experienceleague.adobe.com/docs/launch/using/intro/get-started/quick-start.html)).
+1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
 1. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
 
-   * Standalone installed SDK
+   * Install the standalone SDK
 
      1. Configure the "sendEvent" action with your `decisionScopes`
 
@@ -76,29 +76,29 @@ To enable Offer Decisioning, you need to perform the following steps:
          })
         ```
 
-    * Platform Launch installed SDK
+    * Install the SDK through tags
 
-      1. [Create a Platform Launch property](https://experienceleague.adobe.com/docs/launch/using/reference/admin/companies-and-properties.html)
-      1. [Add the Platform Launch Embed Code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/extensions/overview.html).
+      1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
       
          ![configure-aep-web-sdk-extension](./assets/configure-aep-web-sdk-extension.png)
       
-      1. Create the necessary [Data Elements](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/data-elements.html). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
+      1. Create the necessary [Data Elements](../../../tags/ui/managing-resources/data-elements.md). At the bare minimum, you must create a Platform Web SDK Identity Map and a Platform Web SDK XDM Object data element.
 
          ![identity-map-data-element](./assets/identity-map-data-element.png)
       
          ![xdm-object-data-element](./assets/xdm-object-data-element.png)
       
-      1. Create your [Rules](https://experienceleague.adobe.com/docs/launch/using/reference/manage-resources/rules.html).
+      1. Create your [Rules](../../../tags/ui/managing-resources/rules.md).
 
          * Add a Platform Web SDK Send Event action and add the relevant `decisionScopes` to that action's configuration
 
            ![send-event-action-decisionScopes](./assets/send-event-action-decisionScopes.png)
       
-      1. [Create and publish a library](https://experienceleague.adobe.com/docs/launch/using/reference/publish/libraries.html) containing all the relevant Rules, Data Elements, and Extensions you have configured
+      1. [Create and publish a library](../../../tags/ui/publishing/libraries.md) containing all the relevant Rules, Data Elements, and Extensions you have configured
 
 ## Sample requests and responses
 

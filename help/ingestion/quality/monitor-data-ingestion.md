@@ -48,6 +48,10 @@ The details of a failed streaming record displays the same information as a succ
 
 In addition, failed records provide details on the errors that occurred while processing the batch. In the example below, there was a parsing error that occurred when converting or validating the data.
 
+>[!NOTE]
+>
+>If there are errors in rows ingested, these rows will **not** be dropped unless the resulting message results in invalid XDM.
+
 ![](../images/quality/monitor-data-flows/failed-batch-error.png)
 
 ## Monitor batch end-to-end data ingestion
@@ -69,5 +73,9 @@ The details of a failed batch displays the same information as a successful batc
 ![](../images/quality/monitor-data-flows/failed-batch.png)
 
 In addition, failed batches provide details on the errors that occurred while processing the batch. In the example below, there was an error with the ingested batch because it has the maximum number of identities for the person.
+
+>[!NOTE]
+>
+>If there are errors in rows ingested, these rows will **not** be dropped unless the resulting message results in invalid XDM.
 
 ![](../images/quality/monitor-data-flows/failed-streaming-error.png)

@@ -33,9 +33,9 @@ To navigate to the [!UICONTROL Segments] dashboard within the Platform UI, selec
 
 ### Modifying the [!UICONTROL Segments] dashboard
 
-You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the [!UICONTROL Widget library] to explore available widgets and create custom widgets for your organization. 
+You can modify the appearance of the [!UICONTROL Segments] dashboard by selecting **[!UICONTROL Modify dashboard]**. This enables you to move, add, and remove widgets from the dashboard as well as to access the **[!UICONTROL Widget library]** to explore available widgets and create custom widgets for your organization. 
 
-Please refer to the [modifying dashboards](../modify.md) and [widget library](../widget-library.md) documentation to learn more.
+Please refer to the [modifying dashboards](../customize/modify.md) and [widget library overview](../customize/widget-library.md) documentation to learn more.
 
 ## Select a segment
 
@@ -55,9 +55,11 @@ The "last updated" date and time on a widget shows when the last snapshot of the
 
 ![](../images/segments/widget-timestamp.png)
 
-## Available widgets
+## Standard widgets
 
-Experience Platform provides multiple widgets that you can use to visualize different metrics related to your segment. Select the name of a widget below to learn more:
+Adobe provides multiple standard widgets that you can use to visualize different metrics related to your segments. You can also create custom widgets to be shared with your organization using the [!UICONTROL Widget library]. To learn more about creating custom widgets, please begin by reading the [widget library overview](../customize/widget-library.md).
+
+To learn more about each of the available standard widgets, select the name of a widget from the following list:
 
 * [[!UICONTROL Audience size]](#audience-size)
 * [[!UICONTROL Audience size trend]](#audience-size-trend)
