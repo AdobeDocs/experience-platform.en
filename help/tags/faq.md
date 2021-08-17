@@ -96,6 +96,7 @@ If you receive a message saying that there was an error loading your account, it
 If you cannot create any new properties when logged in to the Data Collection UI, it means that your account does not belong to a product profile that has the Manage Properties right.
 
 See the guide on [managing permissions](./ui/administration/manage-permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant the Manage Properties right. For more information on the different rights for tags, see the overview on [user permissions for tags](./ui/administration/user-permissions.md).
+
 ## What if I have other questions?
 
 If you have other questions, please ask in the Adobe Community on the main tags page located at [https://adobe.com/go/launchme](https://adobe.com/go/launchme).
