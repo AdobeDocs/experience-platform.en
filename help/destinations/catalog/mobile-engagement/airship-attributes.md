@@ -63,7 +63,7 @@ Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airsh
 
 ## Connect to the destination {#connect}
 
-To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ### Connection parameters {#parameters}
 
@@ -76,7 +76,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Mapping considerations {#mapping-considerations}
 

@@ -19,7 +19,7 @@ One of the core functionalities of Platform is ingesting your first-party data a
 ## Destinations steps {#steps}
 
 * Choose from a [self-service catalog](./catalog/overview.md) of all the destinations available in Platform.
-* Use destinations to [activate](./ui/activate-destinations.md) and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
+* Use destinations to and send profiles or segments to marketing automation platforms, digital advertising platforms, and more.
 * Schedule data exports to your preferred destinations at regular times.
 
 ## Controls {#controls}
@@ -60,4 +60,8 @@ For more information about selecting marketing actions in the create destination
 * [Email marketing destinations](./catalog/email-marketing/overview.md)
 * [Social destinations](./catalog/social/overview.md)
 
-For more information about data policy violations in the segment activation workflow, see the Review step in [Activate profiles and segments to a destination](./ui/activate-destinations.md#review).
+For more information about data policy violations in the segment activation workflow, see the Review step in the following guides:
+
+* [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md#review)
+* [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md#review)
+* [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md#review)

@@ -45,8 +45,8 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Feature | Description|
 |------- | -----------|
-|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-destinations.md#configure) in the activation workflow.|
-|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-destinations.md#select-attributes) in the activation workflow.|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 

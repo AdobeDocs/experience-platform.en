@@ -19,13 +19,13 @@ This tutorial requires a working understanding of the following components of Ad
   * [Schema Editor tutorial](../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
 * [[!DNL Real-time Customer Profile]](../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
-If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-destinations.md).
+If you already have a valid [!DNL Blob] destination, you may skip the remainder of this document and proceed to the tutorial on [activating segments to your destination](../../ui/activate-batch-profile-destinations.md).
 
 ## Supported file formats {#file-formats}
 
 [!DNL Experience Platform] supports the following file format to be exported to [!DNL Blob]:
 
-* Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future. For more information about supported files, please read the cloud storage section in the tutorial on [activating destinations](../../ui/activate-destinations.md#esp-and-cloud-storage).
+* Delimiter-separated values (DSV): Support for DSV formatted data files is currently limited to comma-separated values. Support for general DSV files will be provided in the future.
 
 ## Connect to the destination {#connect}
 
@@ -48,4 +48,4 @@ Optionally, you can attach your RSA-formatted public key to add encryption to yo
 
 ## Activate segments to this destination {#activate}
 
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md) for instructions on activating audience segments to destinations.
+See [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) for instructions on activating audience segments to this destination.

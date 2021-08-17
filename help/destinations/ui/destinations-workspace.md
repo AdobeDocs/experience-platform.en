@@ -66,7 +66,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 
 >[!TIP]
 >
-> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to [activate](activate-destinations.md) more segments to that destination.
+> * Use the ![Add segments button](../assets/ui/workspace/add-data-symbol.png) button in the **[!UICONTROL Name]** column to send segments to that destination.
 > * Use the ![Delete destinations button](../assets/ui/workspace/delete-destination-symbol.png) button in the **[!UICONTROL Name]** column to [delete](delete-destinations.md) an existing connection to a destination.
 
 ![Browse Tab](../assets/ui/workspace/browse-tab.png)
@@ -81,7 +81,7 @@ The **[!UICONTROL Browse]** tab displays the destinations with which you have es
 |[!UICONTROL Username] | The account credentials you selected for the destination flow.|
 |[!UICONTROL Activation Data] | Indicates the number of segments that are being activated to this destination. Select this control to find out more about the activated segments. Refer to [Activation Data](/help/destinations/ui/destination-details-page.md#activation-data) in the destination details page for more information about the activated segments.|
 |[!UICONTROL Created] | The date and UTC time when the activation flow to the destination was created.|
-| [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is being activated to this destination. To edit the status, see [Disable activation](./activate-destinations.md#disable-activation).|
+| [!UICONTROL Status] | `Active` or `Inactive`. Indicates whether data is being activated to this destination.|
 
 Click on a destination row to bring up more information about the destination in the right rail.
 
