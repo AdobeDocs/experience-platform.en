@@ -8,6 +8,16 @@ description: The latest release notes for the Core extension in Adobe Experience
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## August 11, 2021
+
+v3.0.0
+
+* PDCL-6153: Adds support to reliably pull the fully qualified URL for cached custom code actions.
+
+v3.0.0 of the Core extension is coupled with changes in [v27.2.0 of the Turbine web runtime](https://github.com/adobe/reactor-turbine/releases/tag/v27.2.0), which allows users to load their library amongst many Adobe-managed hosting regions if the user's company supports Premium CDN.
+
+This upgrade is optional and backwards compatible for users without Premium CDN, and mandatory for customers that have Premium CDN enabled on their company.
+
 ## May 20, 2021
 
 v2.0.7
