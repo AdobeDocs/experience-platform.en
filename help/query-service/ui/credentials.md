@@ -68,7 +68,7 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 
 ![](../images/ui/credentials/update-credentials.png)
 
-Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the account update.
+Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
 ## Next steps
 
