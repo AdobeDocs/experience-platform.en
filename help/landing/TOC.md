@@ -44,6 +44,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
+  * Audit logs (Beta) {#audit-logs}
+    * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)

@@ -15,9 +15,13 @@ feature: Destinations
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
-    * [Connect to a destination](./ui/connect-destination.md)
+    * [Create a new destination connection](./ui/connect-destination.md)
+    * Activate audience data to destinations{#activate}
+        * [Activation overview](./ui/activation-overview.md)
+        * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
+        * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
+        * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
-    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
@@ -73,7 +77,6 @@ feature: Destinations
         * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
-        * [Create a cloud storage destination](./catalog/cloud-storage/workflow.md)
         * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
@@ -113,7 +116,6 @@ feature: Destinations
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
