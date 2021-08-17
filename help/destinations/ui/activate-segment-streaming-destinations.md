@@ -37,6 +37,11 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Map attributes and identities {#mapping}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Apply transformation"
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+
 >[!IMPORTANT]
 >
 >This step only applies to some segment streaming destinations. If your destinations does not have a **[!UICONTROL Mapping]** step, skip to [Schedule segment export](#scheduling).
