@@ -18,7 +18,6 @@ This integration passes Adobe profile data into [!DNL Airship] as [Attributes](h
 
 To learn more about [!DNL Airship], see the [Airship Docs](https://docs.airship.com).
 
-
 >[!TIP]
 >
 >This documentation page was created by the [!DNL Airship] team. For any inquiries or update requests, please contact them directly at [support.airship.com](https://support.airship.com/).
@@ -62,57 +61,24 @@ Leverage profile data collected within Adobe Experience Platform for personaliza
 
 Leverage Attributes from Adobe Experience Platform to further enrich [!DNL Airship] profiles and combine it with SDK or [!DNL Airship] predictive data. For example, a retailer can create a segment with loyalty status and location data (attributes from Platform) and [!DNL Airship] predicted to churn data to send highly targeted messages to users in the gold loyalty status who live in Las Vegas, NV, and have a high probability of churning.
 
-## Connect to [!DNL Airship Attributes] {#connect-airship-attributes}
+## Connect to the destination {#connect}
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Mobile Engagement]** category. Select **[!DNL Airship Attributes]**, then select **[!UICONTROL Configure]**.
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
+### Connection parameters {#parameters}
 
-![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/catalog.png)
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-In the **Account** step, if you had previously set up a connection to your [!DNL Airship Attributes] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Airship Attributes]. Select **[!UICONTROL Connect to destination]** to connect Adobe Experience Platform to your [!DNL Airship] project using the bearer token that you generated from the [!DNL Airship] dashboard.
+* **[!UICONTROL Bearer token]**: the bearer token that you generated from the [!DNL Airship] dashboard.
+* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
+* **[!UICONTROL Description]**: enter a description for this destination.
+* **[!UICONTROL Domain]**: select either a US or EU data center, depending on which [!DNL Airship] data center applies to this destination.
 
->[!NOTE]
->
->Adobe Experience Platform supports credentials validation in the authentication process and displays an error message if you input incorrect credentials to your [!DNL Airship] account. This ensures that you don't complete the workflow with incorrect credentials.
+## Activate segments to this destination {#activate}
 
-![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/connect.png)
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-Once your credentials are confirmed and Adobe Experience Platform is connected to your [!DNL Airship] project, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Setup]** step.
-
-In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow.
-
-Also in this step, you can select either US or EU data center, depending on which [!DNL Airship] data center applies to this destination. Finally, select one or more **[!UICONTROL Marketing Actions]** for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
-
-Select **[!UICONTROL Create Destination]** after you have filled in the fields above.
-
-![Connect to Airship Attributes](../../assets/catalog/mobile-engagement/airship/select-domain.png)
-
-Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments](#activate-segments), for the rest of the workflow.
-
-## Activate segments {#activate-segments}
-
-To activate segments to [!DNL Airship Attributes], follow the steps below:
-
-In **[!UICONTROL Destinations > Browse]**, select the [!DNL Airship Attributes] destination where you want to activate your segments.
-
-![activate-flow](../../assets/catalog/mobile-engagement/airship/browse.png)
-
-Click the name of the destination. This takes you to the Activate flow.
-
-Note that if an activation flow already exists for a destination, you can see the segments that are currently being sent to the destination. Select **[!UICONTROL Edit activation]** in the right rail and follow the steps below to modify the activation details. 
-
-![activate-flow](../../assets/catalog/mobile-engagement/airship/activate.png)
-
-Select **[!UICONTROL Activate]**. In the **[!UICONTROL Activate destination]** workflow, on the **[!UICONTROL Select Segments]** page, select which segments to send to [!DNL Airship Attributes].
-
-![segments-to-destination](../../assets/catalog/mobile-engagement/airship/select-segments.png)
-
-In the **[!UICONTROL Mapping]** step, select which attributes and identities from the [XDM](../../../xdm/home.md) schema to map to the destination schema. Select **[!UICONTROL Add new mapping]** to browse your schema and map them to the corresponding target identity.
-
-![identity mapping initial screen](../../assets/catalog/mobile-engagement/airship/identity-mapping.png)
+## Mapping considerations {#mapping-considerations}
 
 [!DNL Airship] attributes can be set either on a channel, which represents device instance, e.g., iPhone, or a named user, which maps all of a user's devices to a common identifier such as a customer ID. If you have plain text (unhashed) email addresses as primary identity in your schema, select the email field in your **[!UICONTROL Source Attributes]** and map to the [!DNL Airship] named user in the right column under **[!UICONTROL Target Identities]**, as shown below.
 
@@ -151,21 +117,6 @@ Verify mapping:
 
 ![Channel mapping](../../assets/catalog/mobile-engagement/airship/mapping.png)
    
-On the **[!UICONTROL Segment schedule]** page, scheduling is currently disabled. Click **[!UICONTROL Next]** to continue to the review step. 
-
-![Scheduling currently disabled](../../assets/catalog/mobile-engagement/airship/scheduling.png)
-
-On the **[!UICONTROL Review]** page, you can see a summary of your selection. Select **[!UICONTROL Cancel]** to break up the flow, **[!UICONTROL Back]** to modify your settings, or **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
->[!IMPORTANT]
->
->In this step, Adobe Experience Platform checks for data usage policy violations. Shown below is an example where a policy is violated. You cannot complete the segment activation workflow until you have resolved the violation. For information on how to resolve policy violations, see [Policy enforcement](../../../data-governance/enforcement/auto-enforcement.md) in the data governance documentation section.
-    
-![confirm-selection](../../assets/common/data-policy-violation.png)
-
-If no policy violations have been detected, select **[!UICONTROL Finish]** to confirm your selection and start sending data to the destination.
-
-![review](../../assets/catalog/mobile-engagement/airship/review.png)
 
 ## Data usage and governance {#data-usage-governance}
 

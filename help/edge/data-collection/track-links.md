@@ -18,12 +18,12 @@ alloy("sendEvent", {
     "web": {
       "webInteraction": {
         "linkClicks": {
-            "value":1
+            "value": 1
+        }
       },
-      "name":"My Custom Link", // Name that shows up in the custom links report
-      "URL":"https://myurl.com", // The URL of the link
-      "type":"other", // values: other, download, exit
-      }
+      "name": "My Custom Link", // Name that shows up in the custom links report
+      "URL": "https://myurl.com", // The URL of the link
+      "type": "other" // values: other, download, exit
     }
   }
 });
