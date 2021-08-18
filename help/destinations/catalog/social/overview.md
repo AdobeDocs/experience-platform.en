@@ -14,9 +14,9 @@ With social destinations, you can activate profiles for your campaigns for audie
 
 Adobe Experience Platform currently supports the following social destinations:
 
-* [Adobe Livefyre extension](adobe-livefyre.md)
-* [[!DNL Facebook] extension](facebook.md)
-* [Linkedin Matched Audiences connection](linkedin.md)
+* [Adobe [!DNL Livefyre] extension](adobe-livefyre.md)
+* [[!DNL Facebook] connection](facebook.md)
+* [[!DNL LinkedIn Matched Audiences] connection](linkedin.md)
 
 ## Connect to a new social destination {#connect-destination}
 
