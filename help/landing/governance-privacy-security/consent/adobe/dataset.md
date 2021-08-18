@@ -110,7 +110,7 @@ The **[!UICONTROL Add field group]** dialog appears. From here, select **[!UICON
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/field-group-dialog.png)
 
-Next, find the **[!UICONTROL IdentityMap]** field group form the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
+Next, find the **[!UICONTROL IdentityMap]** field group from the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/adobe/dataset-prep/identitymap.png)
 

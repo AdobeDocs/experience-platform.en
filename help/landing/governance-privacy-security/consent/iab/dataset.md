@@ -75,7 +75,7 @@ The **[!UICONTROL Add field groups]** dialog appears, allowing you to start addi
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
-Next, find the **[!UICONTROL IdentityMap]** field group form the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
+Next, find the **[!UICONTROL IdentityMap]** field group from the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-identitymap.png)
 
@@ -130,7 +130,7 @@ The **[!UICONTROL Add field groups]** dialog appears. From here, select **[!UICO
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-Next, find the **[!UICONTROL IdentityMap]** field group form the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
+Next, find the **[!UICONTROL IdentityMap]** field group from the list and select it as well. Once both field groups are listed in the right rail, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-identitymap.png)
 
