@@ -26,3 +26,43 @@ Next, select **[!UICONTROL Fork]**.
 Once the fork is complete, select **[!UICONTROL master]** to create a new branch. Ensure that you provide a descriptive name for your branch as this will be used to contain your work.
 
 ![branch]()
+
+In the GitHub folder structure of your forked repository, follow the following steps to navigate your way to the sources API tutorials catalog:
+
+Select **[!UICONTROL help]** -> **[!UICONTROL sources]** -> **[!UICONTROL tutorials]** -> **[!UICONTROL api]** -> **[!UICONTROL create]**. Select the appropriate category for your source from the list. For example, if you are creating a new cloud storage source, select **[!UICONTROL cloud-storage]**.
+
+Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is [!DNL Mailchimp], then your file name should be `mailchimp.md`.
+
+## Author the documentation page for your source
+
+To start documenting your new source, paste the content of the [sources template](./template) into the GitHub web editor. You can also download the template HERE.
+
+![paste-template]()
+
+With the template copied over to the GitHub web editor interface, follow the instructions outlined on the template and edit the values containing relevant information for your source.
+
+![edit-template]()
+
+When complete, commit the file in your branch.
+
+![commit]()
+
+## Submit your documentation for review
+
+Once your file is commited, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **[!UICONTROL Pull request]**.
+
+![pull-request]()
+
+Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select [!UICONTROL Create pull request]. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
+
+>[!TIP]
+>
+>Leave the **Allow edits by maintainers** checkbox selected to ensure that the Adobe documentation team can make edits to the PR.
+
+![create-pr]()
+
+At this point, a notification appears that prompts you to sign the Adobe Contributor License Agreement (CLA). This is a mandatory step. After you sign the CLA, refresh the PR page and submit the pull request.
+
+You can confirm that the pull request has been submitted by inspecting the Pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
+
+![confirm-pr]()
