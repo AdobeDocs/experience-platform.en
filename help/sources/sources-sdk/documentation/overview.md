@@ -40,5 +40,5 @@ You can use a pre-filled [documentation template](./template.md) to assist in cr
 
 You can use the GitHub web interface or your local environment to create documentation for your new source in Platform. Find instructions for both options in the links below:
 
-* Use the GitHub web interface to create a source documentation page
-* Use a text editor in your local environment to create a source documentation page
+* [Use the GitHub web interface to create a source documentation page](./github.md)
+* [Use a text editor in your local environment to create a source documentation page](./text-editor.md)
