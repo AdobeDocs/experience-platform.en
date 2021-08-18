@@ -86,7 +86,7 @@ Once the data element is created, navigate back to the Web SDK extension config 
 
 ### Deploy the extension on your website
 
-Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in the tags documentation for detailed information on how to deploy your updated library build.
+Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](../../../../tags/ui/publishing/overview.md) in the tags documentation for detailed information on how to deploy your updated library build.
 
 ## Making consent-change commands {#commands}
 
