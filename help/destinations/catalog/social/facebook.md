@@ -137,9 +137,9 @@ Below is an example of correct identity mapping when activating audience data in
 Selecting source fields:
 
 * Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
-* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](../catalog/social/facebook.md#email-hashing-requirements).
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](#email-hashing-requirements).
 * Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
-* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/facebook.md#phone-number-hashing-requirements).
+* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
 * Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
 * Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
 * Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
