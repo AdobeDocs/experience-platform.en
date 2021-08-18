@@ -132,6 +132,35 @@ In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL 
 
 For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
 
+### Mapping example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
+
+This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
+
+Selecting source fields:
+
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Google Customer Match] [email hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](../catalog/social/../advertising/google-customer-match.md).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
+
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Select the `User_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+
+![Identity mapping transformation](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
+
 ## Verify that segment activation was successful {#verify-activation}
 
 After completing the activation flow, switch to your **[!UICONTROL Google Ads]** account. The activated segments are shown in your Google account as customer lists. Please note that depending on your segment size, some audiences do not populate unless there are over 100 active users to serve.
