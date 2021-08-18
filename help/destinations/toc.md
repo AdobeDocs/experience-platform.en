@@ -51,7 +51,7 @@ feature: Destinations
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
-        * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest.md)
+        * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
     * Analytics destinations {#analytics}

@@ -130,6 +130,35 @@ In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL 
 
 ![Facebook Origin of Audience](../../assets/catalog/social/facebook/facebook-origin-audience.png)
 
+### Mapping example: activating audience data in [!DNL Facebook Custom Audience] {#example-facebook}
+
+Below is an example of correct identity mapping when activating audience data in [!DNL Facebook Custom Audience].
+
+Selecting source fields:
+
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Facebook] [email hashing requirements](#email-hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Facebook] requirements.
+* Select the `Phone_SHA256` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
+
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Select the `Extern_ID` namespace as target identity when your source namespace is a custom one.
+
+>[!IMPORTANT]
+>
+>Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+> 
+>Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+
+![Identity mapping](../../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
+
 ## Exported data {#exported-data}
 
 For [!DNL Facebook], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!DNL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.

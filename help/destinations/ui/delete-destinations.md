@@ -34,10 +34,10 @@ Follow the steps below to delete a destination from the [!UICONTROL Browse] tab.
 
     ![Filter destinations](../assets/ui/delete-destinations/filter-destinations.png)
 
-3. Select the ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** button in the **[!UICONTROL Platform]** column to remove an existing destination.
+3. Select the ![More button](../assets/ui/delete-destinations/more-icon.png) button in the Name column and then select ![Delete button](../assets/ui/delete-destinations/delete-icon.png) **[!UICONTROL Delete]** to remove an existing destination connection.
     ![Delete destinations](../assets/ui/delete-destinations/delete-destinations.png)
 
-4. Select **[!UICONTROL Delete]** to confirm the removal of the destination.
+4. Select **[!UICONTROL Delete]** to confirm the removal of the destination connection.
 
     ![Confirm delete destination](../assets/ui/delete-destinations/delete-destinations-confirm.png)
 
