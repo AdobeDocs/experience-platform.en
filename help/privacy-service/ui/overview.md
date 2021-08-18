@@ -12,7 +12,9 @@ Adobe Experience Platform [!DNL Privacy Service] provides a RESTful API and user
 
 ## Log in to the [!DNL Privacy Service] UI
 
-You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. In addition, you must have System Administrator privileges within the organization your Adobe ID is associated with.
+>[!IMPORTANT]
+>
+>You must have an Adobe ID in order to authenticate to the [!DNL Privacy Service] UI. In addition, you must have System Administrator privileges within your IMS Organization.
 
 Select **[!UICONTROL Sign In with an Adobe ID]** and enter your Adobe ID credentials when prompted. 
 

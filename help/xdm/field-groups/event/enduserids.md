@@ -13,7 +13,7 @@ exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 >
 >The names of several schema field groups have changed. See the document on [field group name updates](../name-updates.md) for more information.
 
-[!UICONTROL End User ID Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/individual-profile.md), used to describe an individual's identity information across several Adobe applications. The field group provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
+[!UICONTROL End User ID Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md), used to describe an individual's identity information across several Adobe applications. The field group provides a root-level `endUserIDs` object, which itself contains a read-only `_experience` field whose values are automatically updated as data is ingested.
 
 <img src='../../images/field-groups/enduserids.png' width=700 /><br />
 
@@ -32,5 +32,5 @@ exl-id: ff5b74f4-7700-4d10-821e-b50f80ea8c05
 
 For more details on the field group, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/experience-event/experienceevent-enduserids.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/experienceevent-enduserids.schema.json)

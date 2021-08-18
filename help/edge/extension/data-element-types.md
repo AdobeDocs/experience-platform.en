@@ -1,13 +1,14 @@
 ---
 title: Data Element Types in the Adobe Experience Platform Web SDK Extension
-description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
+description: Learn about the different data element types provided by the Adobe Experience Platform Web SDK tag extension.
 exl-id: 3c2c257f-1fbc-4722-8040-61ad19aa533f
 ---
 # Data element types
 
-After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK extension](web-sdk-extension.md) for [Adobe Experience Platform Launch](https://experienceleague.adobe.com/docs/launch.html), configure your data element types.
+After you set your [action types](action-types.md) in the [Adobe Experience Platform Web SDK tag extension](web-sdk-extension-configuration.md), configure your data element types.
 
 This page describes the available data element types.
+
 
 ## Event Merge ID
 
@@ -25,7 +26,7 @@ Use XDM format to send any data to the Adobe Experience Platform Web SDK. Format
 
 ![](./assets/XDM-object.png)
 
-Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, that some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements. 
+Notice that when you open certain fields of your schema, such as `web.webPageDetails.URL`, some items are automatically collected. Even though several items are automatically collected, you can overwrite any, if needed. All the values can be filled in manually or using other data elements. 
 
 >[!NOTE]
 >

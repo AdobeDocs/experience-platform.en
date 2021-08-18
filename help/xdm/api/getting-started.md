@@ -78,7 +78,7 @@ A successful response returns information regarding your organization's use of t
   "tenantId":"{TENANT_ID}",
   "counts": {
     "schemas": 4,
-    "fieldgroups": 3,
+    "mixins": 3,
     "datatypes": 1,
     "classes": 2,
     "unions": 0,
@@ -87,7 +87,7 @@ A successful response returns information regarding your organization's use of t
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:created": "Sat Feb 02 2019 00:24:30 GMT+0000 (UTC)",
       "version": "1.1"
     },
@@ -104,7 +104,7 @@ A successful response returns information regarding your organization's use of t
     {
       "title": "Sample Field Group",
       "description": "New Sample Field Group.",
-      "meta:resourceType": "fieldgroups",
+      "meta:resourceType": "mixins",
       "meta:updated": "Sat Feb 02 2019 00:34:06 GMT+0000 (UTC)",
       "version": "1.1"
     },

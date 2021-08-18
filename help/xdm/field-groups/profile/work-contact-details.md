@@ -28,5 +28,5 @@ exl-id: 0133622c-e95f-4833-b2f8-3694d41751b4
 
 For more details on the field group, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/mixins/profile/profile-work-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/profile/profile-work-details.schema.json)

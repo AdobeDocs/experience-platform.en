@@ -43,6 +43,7 @@ feature: Data Ingestion, Sources
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
+    - [Veeva CRM connector](connectors/crm/veeva.md)
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
@@ -68,6 +69,7 @@ feature: Data Ingestion, Sources
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+    - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
@@ -75,7 +77,7 @@ feature: Data Ingestion, Sources
   - Streaming {#streaming}
     - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
-  - Create a source connection {#create}
+  - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google AdWords](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
@@ -94,6 +96,7 @@ feature: Data Ingestion, Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
+      - [Veeva CRM](tutorials/api/create/crm/veeva.md)
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -119,6 +122,7 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -130,7 +134,7 @@ feature: Data Ingestion, Sources
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
-    - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore database data](tutorials/api/explore/database-nosql.md)
     - [Explore eCommerce data](tutorials/api/explore/ecommerce.md)
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
@@ -140,7 +144,7 @@ feature: Data Ingestion, Sources
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
-    - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect database data](tutorials/api/collect/database-nosql.md)
     - [Collect eCommerce data](tutorials/api/collect/ecommerce.md)
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
@@ -180,6 +184,7 @@ feature: Data Ingestion, Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+      - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
@@ -205,6 +210,7 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -223,7 +229,8 @@ feature: Data Ingestion, Sources
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Monitor batch dataflows](tutorials/ui/monitor.md)
+  - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)
   - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)

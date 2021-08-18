@@ -47,7 +47,7 @@ Certain interactions in your experience applications can result in multiple rela
 
 [Adobe Experience Platform Data Prep](../../data-prep/home.md) allows you to map, transform, and validate data to and from XDM. Using the available [mapping functions](../../data-prep/functions.md) provided by the service you can invoke logical operators to prioritize, transform, and/or consolidate data from multi-event records when being ingested into Experience Platform. In the example above, you could designate `eventType` as a calculated field that would prioritize a "product view" over a "page view" whenever they both occur.
 
-If you are manually ingesting data into Platform via the UI, see the guide on [mapping a CSV file to XDM](../../ingestion/tutorials/map-a-csv-file.md) for specific steps on how to create calculated fields.
+If you are manually ingesting data into Platform via the UI, see the guide on [calculated fields guide](../../data-prep/calculated-fields.md) for specific steps on how to create calculated fields.
 
 If you are streaming data to Platform using a source connection, you can configure the source to utilize calculated fields instead. Refer to the [documentation for your particular source](../../sources/home.md) for instructions on how to implement calculated fields when configuring the connection.
 
@@ -59,8 +59,12 @@ If you are streaming data to Platform using a source connection, you can configu
 
 Adobe provides several standard field groups for use with the [!DNL XDM ExperienceEvent] class. The following is a list of some commonly used field groups for the class:
 
+* [[!UICONTROL Campaign Marketing Details]](../field-groups/event/campaign-marketing-details.md)
+* [[!UICONTROL Channel Details]](../field-groups/event/channel-details.md)
+* [[!UICONTROL Commerce Details]](../field-groups/event/commerce-details.md)
 * [[!UICONTROL End User ID Details]](../field-groups/event/enduserids.md)
 * [[!UICONTROL Environment Details]](../field-groups/event/environment-details.md)
+* [[!UICONTROL Web Details]](../field-groups/event/web-details.md)
 
 ## Appendix
 

@@ -49,11 +49,11 @@ The documentation below provides information on how to connect [!DNL Google Clou
 
 ### Using APIs
 
-- [Create a Google Cloud Storage source connection using the Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
-- [Explore a cloud storage system using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
-- [Collect cloud storage data using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
+- [Create a Google Cloud Storage base connection using the Flow Service API](../../tutorials/api/create/cloud-storage/google.md)
+- [Explore the data structure and contents of a cloud storage source using the Flow Service API](../../tutorials/api/explore/cloud-storage.md)
+- [Create a dataflow for a cloud storage source using the Flow Service API](../../tutorials/api/collect/cloud-storage.md)
 
 ### Using the UI
 
 - [Create a Google Cloud Storage source connection in the UI](../../tutorials/ui/create/cloud-storage/google-cloud-storage.md)
-- [Configure a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
+- [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)

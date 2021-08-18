@@ -35,15 +35,15 @@ The video below runs you through the particularities of the two types of destina
 
 ## Extensions {#extensions}
 
-Platform leverages the power and flexibility of Adobe Experience Platform Launch to include Platform Launch extensions in the Platform interface. 
+Platform leverages the power and flexibility of tag management, allowing you to configure tag extensions in the Data Collection UI. 
 
 >[!TIP]
 >
->For detailed information about Adobe Experience Platform Launch extensions, including use cases and how to find them in the interface, see the [Adobe Experience Platform Launch extensions overview](./catalog/launch-extensions/overview.md).
+>For detailed information about tag extensions, including use cases and how to find them in the interface, see the [tag extensions overview](./catalog/launch-extensions/overview.md).
 
-Platform Launch extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](./catalog/personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](./catalog/voice/confirmit-digital-feedback.md).
+Tag extensions forward raw event data to several types of destinations. Think of extensions as an **Event Forwarding** type of destination. This is a simpler type of integration with destination platforms, which only forwards raw event data. Examples of those are the [Gainsight personalization extension](./catalog/personalization/gainsight.md) or the [Confirmit Voice of the Customer extension](./catalog/voice/confirmit-digital-feedback.md).
 
-![Experience Platform Launch extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
+![Tag extensions compared to other destinations](./assets/common/launch-and-other-destinations.png)
 
 ## When to use connections and extensions
 

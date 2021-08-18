@@ -15,7 +15,7 @@ This tutorial uses the Adobe Campaign destination in all examples, but the steps
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
 ## Get started
 
@@ -176,7 +176,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
@@ -210,7 +210,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d  '{
-  "name": "Connecting to Unified Profile Service",
+  "name": "Connecting to Profile Service",
   "description": "Optional",
   "baseConnectionId": "{BASE_CONNECTION_ID}",
   "connectionSpec": {
@@ -234,7 +234,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -250,11 +250,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the Id you have obtained in the previous step.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for [!DNL Unified Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for [!DNL Profile Service] - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Unified Profile Service]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
+A successful response returns the unique identifier (`id`) for the newly created source connection to [!DNL Profile Service]. This confirms that you have successfully connected to your [!DNL Experience Platform] data. Store this value as it is required in a later step.
 
 ```json
 {

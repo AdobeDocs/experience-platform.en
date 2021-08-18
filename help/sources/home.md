@@ -20,13 +20,13 @@ Sources in Experience Platform are grouped into the following categories:
 
 ### Adobe applications
 
-Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, Adobe Audience Manager, and [!DNL Experience Platform Launch]. See the following related documents for more information:
+Experience Platform allows data to be ingested from other Adobe applications, including Adobe Analytics, and Adobe Audience Manager. See the following related documents for more information:
 
 - [Adobe Audience Manager connector overview](connectors/adobe-applications/audience-manager.md)
 - [Create an Adobe Audience Manager source connection in the UI](./tutorials/ui/create/adobe-applications/audience-manager.md)
-- [Adobe Analytics Classifications Data connector overview](connectors/adobe-applications/classifications.md)
+- [Adobe Analytics Classifications Data source connection overview](connectors/adobe-applications/classifications.md)
 - [Create an Adobe Analytics Classifications Data source connection in the UI](./tutorials/ui/create/adobe-applications/classifications.md)
-- [Adobe Analytics data connector overview](connectors/adobe-applications/analytics.md)
+- [Adobe Analytics Report Suite Data source connection overview](connectors/adobe-applications/analytics.md)
 - [Create an Adobe Analytics source connection in the UI](./tutorials/ui/create/adobe-applications/analytics.md)
 - [Create a Customer Attributes source connection in the UI](./tutorials/ui/create/adobe-applications/customer-attributes.md)
 - [[!DNL Marketo Engage] connector overview](connectors/adobe-applications/marketo/marketo.md)
@@ -61,6 +61,7 @@ CRM systems provide data that can help build customer relationships, which in tu
 
 - [[!DNL Microsoft Dynamics] connector](connectors/crm/ms-dynamics.md)
 - [[!DNL Salesforce] connector](connectors/crm/salesforce.md)
+- [[!DNL Veeva CRM]](connectors/crm/veeva.md)
 
 ### Customer Success
 
@@ -102,6 +103,7 @@ Experience Platform provides support for ingesting data from a third-party eComm
 Experience Platform provides support for ingesting data from a third-party marketing automation system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HubSpot] connector](connectors/marketing-automation/hubspot.md)
+- [[!DNL Salesforce Marketing Cloud]](connectors/marketing-automation/salesforce-marketing-cloud.md)
 
 ### Payments
 

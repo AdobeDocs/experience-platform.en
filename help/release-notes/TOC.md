@@ -9,6 +9,8 @@ user-guide-description: Monthly release notes for Adobe Experience Platform.
 
 * [Current Platform Release Notes](latest/latest.md)
 * 2021 {#2021}
+  * [July 2021](2021/july-2021.md)
+  * [June 2021](2021/june-2021.md)
   * [May 2021](2021/may-2021.md)
   * [April 2021](2021/april-2021.md)
   * [March 2021](2021/march-2021.md)

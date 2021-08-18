@@ -28,22 +28,11 @@ It is also recommended that you review the [data modeling best practices guide](
 
 ## Industry data model ERDs {#erds}
 
-The industry vertical models represented by ERDs below are intentionally created in a de-normalized fashion and with consideration for how data is stored in Platform.
-
-For a given ERD, each entity shown in is based on an underlying XDM class. For a given entity, each row marked in **bold** represents a field group or a data type, with the relevant fields it provides listed below in unbolded text. The most important fields for a given entity are highlighted in red.
-
->[!NOTE]
->
->Some entities may include an "_ID" field. This represents the unique identifier (`_id`) that Platform automatically assigns to event or profile entities when they are ingested. However, you can choose to use your own unique ID values for this field if you wish.
-
-All the properties that could be used to identify individual customers are marked as "identity", with one of these properties marked as a "primary identity".
-
-Entity relationships are marked as non-dependent, since cookie-based events often cannot determine the person or individual who did the transaction.
-
 ERDs are provided for the following industry verticals:
 
 * [[!UICONTROL Retail]](./retail.md)
 * [[!UICONTROL Financial services]](./financial.md)
+* [[!UICONTROL Telecommunications]](./telecom.md)
 * [[!UICONTROL Travel and hospitality]](./travel-hospitality.md)
 
 ## Next steps

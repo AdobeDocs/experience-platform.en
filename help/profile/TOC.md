@@ -11,6 +11,7 @@ feature: Profiles
 * [Profile overview (Video)](video/profile-overview.md)
 * [[!DNL Profile] and Segmentation guardrails](guardrails.md)
 * [[!DNL Profile] dashboard](ui/profile-dashboard.md)
+* [Time-to-live (TTL) for datasets](apply-ttl.md)
 * [!DNL Profile] API {#api}
   * [Overview](api/overview.md)
   * [Getting started](api/getting-started.md)

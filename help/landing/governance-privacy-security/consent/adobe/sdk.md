@@ -10,41 +10,49 @@ The Adobe Experience Platform Web SDK allows you to retrieve customer consent si
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. This document provides general guidance on how to integrate your CMP with the Platform Web SDK.
 
+>[!NOTE]
+>
+>This guide walks through the steps of integrating the SDK through a tag extension in the Data Collection UI. If you want to use the standalone version of the SDK instead, please refer to the following docs:
+>
+>* [Configure a datastream](../../../../edge/fundamentals/datastreams.md)
+>* [Install the SDK](../../../../edge/fundamentals/installing-the-sdk.md)
+>* [Configure the SDK for consent commands](../../../../edge/consent/supporting-consent.md)
+
 ## Prerequisites
 
 This tutorial assumes that you have already determined how to generate consent data within your CMP, and have created a dataset containing consent fields that has been enabled for Real-time Customer Profile. To learn more about these steps, see the overview on [consent processing in Experience Platform](./overview.md) before returning to this guide.
 
-In addition, this guide requires a working understanding of Adobe Experience Platform Launch extensions and how they are installed in web applications. Refer to the following documentation for more information:
+In addition, this guide requires a working understanding of tag extensions and how they are installed in web applications. Refer to the following documentation for more information:
 
-* [Platform Launch overview](https://experienceleague.adobe.com/docs/launch/using/home.html)
-* [Quickstart guide](https://experienceleague.adobe.com/docs/launch/using/get-started/quick-start.html)
-* [Publishing overview](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html)
+* [Tags overview](../../../../tags/home.md)
+* [Quickstart guide](../../../../tags/quick-start/quick-start.md)
+* [Publishing overview](../../../../tags/ui/publishing/overview.md)
 
-## Set up an edge configuration
+## Set up a datastream
 
-In order for the SDK to send data to Experience Platform, you must have an existing edge configuration for Platform set up in Adobe Experience Platform Launch. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. 
+In order for the SDK to send data to Experience Platform, you must have an existing datastream for Platform set up in the Data Collection UI. In addition, the [!UICONTROL Profile Dataset] you select for the configuration must contain standardized consent fields. 
 
 After creating a new configuration or selecting an existing one to edit, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the values listed below to complete the form.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/edge-config.png)
 
-| Edge configuration field | Value |
+| Datastream field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
+| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform edge configuration, please note that sending consent data directly via events is not currently supported. |
+| [!UICONTROL Event Dataset] | An [!DNL XDM ExperienceEvent] dataset that you plan on sending event data to using the SDK. While you are required to provide an event dataset in order to create a Platform datastream, please note that sending consent data directly via events is not currently supported. |
 | [!UICONTROL Profile Dataset] | The [!DNL Profile]-enabled dataset with customer consent fields that you created earlier. |
 
 When finished, select **[!UICONTROL Save]** at the bottom of the screen and continue following any additional prompts to complete the configuration.
 
 
-## Install and configure the Platform Web SDK extension
+## Install and configure the Platform Web SDK
 
-Once you have created an edge configuration as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your Platform Launch property, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Then, select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
+Once you have created a datastream as described in the previous section, you must then configure the Platform Web SDK extension that you will ultimately deploy on your site. If you do not have the SDK extension installed on your tag property, select **[!UICONTROL Extensions]** in the left navigation, followed by the **[!UICONTROL Catalog]** tab. Then, select **[!UICONTROL Install]** under the Platform SDK extension within the list of available extensions.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/install.png)
 
-When configuring the SDK, under **[!UICONTROL Edge Configurations]**, select the configuration you created in the previous step.
+When configuring the SDK, under **[!UICONTROL Edge Configurations]**, select the datastream you created in the previous step.
 
 ![](../../../images/governance-privacy-security/consent/adobe/sdk/config-sdk.png)
 
@@ -57,16 +65,16 @@ With the SDK extension installed, you have the option to create a data element t
 In this use case, you could implement the following to set default consent based on the user's region:
 
 1. Determine the user's region on the web server.
-1. Before the Platform Launch script tag (embed code) on the web page, render a separate script tag that sets an `adobeDefaultConsent` variable based on the user's region.
+1. Before the `script` tag (embed code) on the web page, render a separate `script` tag that sets an `adobeDefaultConsent` variable based on the user's region.
 1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the user.
 
 If the user's region is determined by a CMP, you can use the following steps instead:
 
 1. Handle the "CMP loaded" event on the page.
-1. In the event handler, set an `adobeDefaultConsent` variable based on the user's region, and then load the Platform Launch library script using JavaScript.
+1. In the event handler, set an `adobeDefaultConsent` variable based on the user's region, and then load the tag library script using JavaScript.
 1. Set up a data element that uses the `adobeDefaultConsent` JavaScript variable, and use this data element as the default consent value for the user.
 
-To create a data element in the Platform Launch UI, select **[!UICONTROL Data Elements]** in the left navigation, then select **[!UICONTROL Add Data Element]** to navigate to the data element creation dialog. 
+To create a data element in the Data Collection UI, select **[!UICONTROL Data Elements]** in the left navigation, then select **[!UICONTROL Add Data Element]** to navigate to the data element creation dialog. 
 
 From here, you must create a [!UICONTROL JavaScript Variable] data element based on `adobeDefaultConsent`. Select **[!UICONTROL Save]** when finished.
 
@@ -78,9 +86,9 @@ Once the data element is created, navigate back to the Web SDK extension config 
 
 ### Deploy the extension on your website
 
-Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](https://experienceleague.adobe.com/docs/launch/using/publish/overview.html) in the Platform Launch documentation for detailed information on how to deploy your updated library build.
+Once you have finished configuring the extension, it can be integrated into your website. Refer to the [publishing guide](../../../../tags/ui/publishing/overview.md) in the tags documentation for detailed information on how to deploy your updated library build.
 
-## Making consent-change commands
+## Making consent-change commands {#commands}
 
 Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
 

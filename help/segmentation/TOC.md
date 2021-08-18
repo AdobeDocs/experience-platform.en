@@ -25,11 +25,12 @@ feature: Segments
     - [Overview](ui/overview.md)
     - [Segment dashboard](ui/segment-dashboard.md)
     - [Segment Builder](ui/segment-builder.md)
+    - [Segment Match](ui/segment-match.md) 
     - [Edge segmentation](ui/edge-segmentation.md)
     - [Streaming segmentation](ui/streaming-segmentation.md)
     - [Streaming segmentation (Video)](video/streaming-segmentation-overview.md)
     - [Time constraints refactoring](ui/segment-refactoring.md)
-- [Honoring opt-outs](honoring-opt-outs.md)
+- [Honoring consent](consents.md)
 - [Multi-entity segmentation](multi-entity-segmentation.md)
 - Profile Query Language {#pql}
   - [Overview](pql/overview.md)
