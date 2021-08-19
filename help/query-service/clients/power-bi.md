@@ -36,7 +36,7 @@ Select **[!DNL PostgreSQL database]**, followed by **[!DNL Connect]**.
 
 ![](../images/clients/power-bi/get-data.png)
 
-You can now enter values for the server and database. For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+You can now enter values for the server and database. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 **[!DNL Server]** is the host found under the connection details. For production, add port `:80` to the end of the host string. **[!DNL Database]** can be either "all" or a dataset table name. 
 
