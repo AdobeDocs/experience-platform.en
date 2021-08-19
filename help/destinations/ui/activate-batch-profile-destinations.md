@@ -264,7 +264,7 @@ Let's consider the following two profiles.
 }
 ```
 
-### Deduplication use case 1: no deduplication
+### Deduplication use case 1: no deduplication {#deduplication-use-case-1}
 
 Using no deduplication, the export file would contain the following entries.
 
@@ -274,7 +274,7 @@ Using no deduplication, the export file would contain the following entries.
 |johndoe@example.com|John|D|
 
 
-### Deduplication use case 2: deduplication based on identity namespace
+### Deduplication use case 2: deduplication based on identity namespace {#deduplication-use-case-2}
 
 Assuming deduplication by the [!DNL Email] namespace, the export file would contain the following entries. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
 
@@ -283,7 +283,7 @@ Assuming deduplication by the [!DNL Email] namespace, the export file would cont
 |johndoe_1@example.com|johndoe@example.com|John|D|
 |johndoe_2@example.com|johndoe@example.com|John|D|
 
-### Deduplication use case 3: deduplication based on a single profile attribute
+### Deduplication use case 3: deduplication based on a single profile attribute {#deduplication-use-case-3}
 
 Assuming deduplication by the `personal Email` attribute, the export file would contain the following entry. Profile B is the latest one that qualified for the segment, so it is the only one getting exported.
 
@@ -292,7 +292,7 @@ Assuming deduplication by the `personal Email` attribute, the export file would 
 |johndoe@example.com|John|D|
 
 
-### Deduplication use case 4: deduplication based on two profile attributes (composite deduplication key)
+### Deduplication use case 4: deduplication based on two profile attributes {#deduplication-use-case-4}
 
 Assuming deduplication by the composite key `personalEmail + lastName`, the export file would contain the following entries.
 

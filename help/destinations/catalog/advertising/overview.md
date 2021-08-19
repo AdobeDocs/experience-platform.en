@@ -42,7 +42,7 @@ To understand the difference between connections and extensions, see [Connection
 * [Google Ads extension](google-ads-extension.md)
 * [Google gtag extension](gtag-advertising.md)
 * [LinkedIn Insight Tag extension](linkedin.md)
-* [Pinterest Conversion Tracking extension](pinterest.md)
+* [Pinterest Conversion Tracking extension](pinterest-extension.md)
 * [Twitter Universal Website Tag extension](twitter-uwt.md)
 
 ## Connect to a new advertising destination {#connect-destination}
