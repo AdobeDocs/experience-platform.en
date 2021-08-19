@@ -92,11 +92,11 @@ By default, all rights are disabled for a product profile and must be manually a
 >
 >For example, if Group 1 gives access to Property A with the Develop right, and Group 2 gives access to Property B with the Publish right, Develop and Publish rights are not combined for Property A and Property B. You can only develop on Property A and publish on Property B.
  
-Select **[!UICONTROL Property Rights]** in the left navigation. As with properties, you can select the plus **(+)** icon next to a property right to add it to the profile. If you want to add all property rights to the profile, you can also select **[!UICONTROL Add all]**.
+Select **[!UICONTROL Property Rights]** in the left navigation. As with properties, you can select the plus (**+**) icon next to a property right to add it to the profile. If you want to add all property rights to the profile, you can also select **[!UICONTROL Add all]**.
 
 ![Property rights](../../images/ui/administration/manage-permissions/property-rights.png)
 
-Next, select **[!UICONTROL Company Rights]** in the left navigation. Add or remove the rights your require, and once you are finished select **[!UICONTROL Save]**.
+Next, select **[!UICONTROL Company Rights]** in the left navigation. Add or remove the rights you require, and once you are finished select **[!UICONTROL Save]**.
 
 ![Company rights](../../images/ui/administration/manage-permissions/company-rights.png)
 
