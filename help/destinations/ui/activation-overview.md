@@ -9,7 +9,7 @@ seo-description: Learn how to activate the audience data you have in Adobe Exper
 
 # Activation overview
 
-Adobe Experience Platform supports a wide range of destinations. The audience activation workflow varies betweeen the destinations, based on the type of audience data they support, and the frequency of the data export.
+Adobe Experience Platform supports a wide range of destinations. The audience activation workflow varies between the destinations, based on the type of audience data they support, and the frequency of the data export.
 
 See the following guides for detailed information on how to activate audience data to your specific type of destination:
 

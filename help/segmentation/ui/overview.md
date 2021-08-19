@@ -95,7 +95,13 @@ The segment details page appears. On the top, there is a summary of the segment 
 
 The **[!UICONTROL Segment summary]** section provides information such as the ID, name, description, and details of the attributes. 
 
-Additionally, you are given the option to edit the segment. Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
+Additionally, you are given the option to either activate the segment to a destination or edit the segment. Selecting **[!UICONTROL Activate to destination]** will let you activate the segment to a destination. For more detailed information on activating a segment to a destination, please read the [activation overview](../../destinations/ui/activation-overview.md).
+
+![](../images/ui/overview/segment-details-activate.png)
+
+Selecting **[!UICONTROL Edit segment]** will bring you to the [!DNL Segment Builder]. For more detailed information about using the [!DNL Segment Builder] workspace, please read the [[!DNL Segment Builder] user guide](./segment-builder.md).
+
+![](../images/ui/overview/segment-details-edit-segment.png)
 
 ### Total audience in segment
 
