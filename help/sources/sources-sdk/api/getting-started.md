@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
 title: Getting Started with Sources SDK
-topic-legacy: overview
-description:
+topic-legacy: developer guide
+description: This document provides an introduction to the prerequisite information you need to know before attempting to create a new source using Sources SDK.
 ---
 # Getting started with Sources SDK
 
@@ -15,7 +15,9 @@ Sources SDK allows you to integrate your own REST-based source to bring data to 
 
 ## Prerequisites
 
-This guide requires a working understanding of the following components of Adobe Experience Platform:
+To use Sources SDK, you must ensure that you have access to an IMS Organization Sandbox provisioned with Adobe Experience Platform Sources.
+
+This guide also requires a working understanding of the following components of Adobe Experience Platform:
 
 * [Sources](../../home.md): Experience Platform allows data to be ingested from various sources while providing you with the ability to structure, label, and enhance incoming data using Platform services.
 * [Sandboxes](../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
@@ -44,3 +46,6 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 * `Content-Type: application/json`
 
+## Next steps
+
+To begin creating a new source with Sources SDK, see the tutorial on [creating a new source](./create.md).
