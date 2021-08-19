@@ -58,10 +58,10 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
-    * **[!UICONTROL Once]**: schedule a one time on-demand file export.
-    * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
+    * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
+    * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
 
-1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
+1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
     
       >[!IMPORTANT]
       >
@@ -83,14 +83,14 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
-    * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
+    * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
     * **[!UICONTROL Hourly]**: schedule incremental file exports every 3,6,7, or 12 hours.
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >The option to select the time of day for the export is only available to a select number of customers. <br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
 
 3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
 4. Select **[!UICONTROL Create]** to save the schedule.
