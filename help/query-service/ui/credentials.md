@@ -70,6 +70,18 @@ When editing a non-expiring credential, a modal appears. You can provide the fol
 
 Once you have provided all the required details, select **[!UICONTROL Update account]** to complete the update to your credentials.
 
+## Using credentials to connect to external clients
+
+You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. 
+
+When connecting to these external clients, you will generally need to include the following information:
+
+- **Server/Host**: The name of the server/host that you are connecting to. This value takes the form of `server.adobe.io` and can be found under **[!UICONTROL Host]** within the expiring credentials section.
+- **Port**: The port for the server/host you are connecting to. This value can be found under **[!UICONTROL Port]** within the expiring credentials section. An example value for the port would be `80`.
+- **Username**: The username for the user who is connecting to the external client. This takes the form of `ID@AdobeOrg` and can be found under **[!UICONTROL Username]** within the expiring credentials section.
+- **Password**: The password for the user who is connecting to the external client. If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the expiring credentials section. If you're using non-expiring credentials, this value is comprised of both the technical account ID and the credential in the form: `technicalAccountId:credential`.
+- **Database**: The database that you are connecting to. This value can be found under **[!UICONTROL Database]** within the expiring credentials section. An example value for the database would be `prod:all`.
+
 ## Next steps
 
-Now that you understand how both expiring and non-expiring credentials work, you can use these credentials to connect to external clients. For more information about external clients, please read the [connect clients to Query Service guide](../clients/overview.md).
+Now that you understand how both expiring and non-expiring credentials work, you can use these credentials to connect to external clients. For more information detailed information about external clients, please read the [connect clients to Query Service guide](../clients/overview.md).
