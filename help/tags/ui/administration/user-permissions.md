@@ -55,7 +55,7 @@ The following table outlines the available property rights and the functionaliti
 
 ### Company rights
 
-Company rights apply to permissions that span multiple properties.  There are outlined in the table below:
+Company rights apply to permissions that span multiple properties.  These are outlined in the table below:
 
 | Company right | Description |
 | --- | --- |
