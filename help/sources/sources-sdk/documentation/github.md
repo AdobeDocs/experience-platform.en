@@ -29,6 +29,14 @@ Once the fork is complete, select **[!UICONTROL master]** to create a new branch
 
 In the GitHub folder structure of your forked repository, follow the following steps to navigate your way to the sources API tutorials catalog:
 
+1. Select help
+2. Select sources
+3. Select tutorials
+4. Select api
+5. Select create
+6. Select the category of your source
+7. Select add file > create new file
+
 Select **[!UICONTROL help]** -> **[!UICONTROL sources]** -> **[!UICONTROL tutorials]** -> **[!UICONTROL api]** -> **[!UICONTROL create]**. Select the appropriate category for your source from the list. For example, if you are creating a new cloud storage source, select **[!UICONTROL cloud-storage]**.
 
 Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your source in Platform. For example, if your company is [!DNL Mailchimp], then your file name should be `mailchimp.md`.
