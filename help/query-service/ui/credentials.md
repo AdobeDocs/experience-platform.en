@@ -53,6 +53,8 @@ Once you have provided all the required details, select **[!UICONTROL Generate c
 >[!IMPORTANT]
 >
 >Once the **[!UICONTROL Generate credentials]** button is selected, a configuration file that contains information such as technical account name, technical account ID, and credential. Since Adobe does **not** record the generated credential, you **must** securely store the downloaded file and keep a record of the credential.
+>
+>Additionally, if the credentials are not used for 90 days, the credentials will be pruned.
 
 Now that you have saved your generated credentials, select **[!UICONTROL Close]**. You can now see a list of all your non-expiring credentials.
 
