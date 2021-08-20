@@ -23,7 +23,7 @@ If you do not have these artifacts coordinated, please contact your Adobe repres
 
 Once your artifacts are ready, you can begin the process of creating a new connection specification.
 
-### Retrieve an empty REST connection specification
+### Retrieve a generic REST connection specification
 
 To create a new connection specification, you must first retrieve an empty connection specification payload using the [!DNL Flow Service API]. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service API].
 
