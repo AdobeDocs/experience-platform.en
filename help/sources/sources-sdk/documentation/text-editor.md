@@ -31,13 +31,25 @@ To clone the repository to your local machine, select **[!UICONTROL Code]**. Fro
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Next, allow for a few moments for GitHub desktop to clone the experience-platform.en repository.
+Next, allow for a few moments for GitHub Desktop to clone the experience-platform.en repository.
 
 ![cloning](../assets/cloning.png)
 
+Once the cloning process is complete, head to GitHub Desktop to create a new branch. Select **[!UICONTROL Master]** and then select **[!UICONTROL New branch]**
+
+![new-branch](../assets/new-branch.png)
+
+In the popover panel that appears, enter a descriptive name for your branch, and then select **[!UICONTROL Create branch]**.
+
+![create-branch-vs](../assets/create-branch-vs.png)
+
+Next, select **[!UICONTROL Publish branch]**.
+
+![publish-branch](../assets/publish-branch.png)
+
 ## Author the documentation page for your source
 
-With the repository cloned to your local machine, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
+With the repository cloned to your local machine and a new branch created, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
 
 Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and that you install the Adobe Markdown Authoring extension. To install the extension, launch Visual Studio Code, and select the **Extensions** tab from the left-navigation.
 
@@ -51,4 +63,30 @@ With your local machine ready, download the [sources documentation template](..a
 
 Finally, follow the instructions outlined on the template and edit the template with the relevant information pertaining to your source.
 
-![edit-template]()
+![edit-template](../assets/edit-template.png)
+
+## Submit your documentation for review
+
+To create a pull request (PR) and submit your documentation for review, save your work, and then, on GitHub Desktop, enter a commit message and select **[!UICONTROL Commit to create-source-documentation]**.
+
+![commit-vs]()
+
+Next, select **[!UICONTROL Push origin]** to bring your work to the remote branch.
+
+![push-origin]()
+
+To create a pull request, select **Branch** from the top toolbar and then select **Create Pull Request**.
+
+![create-pr-vs]()
+
+Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select [!UICONTROL Create pull request]. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
+
+>[!TIP]
+>
+>Leave the **Allow edits by maintainers** checkbox selected to ensure that the Adobe documentation team can make edits to the PR.
+
+![create-pr](../assets/create-pr.png)
+
+You can confirm that the pull request has been submitted by inspecting the Pull requests tab in https://github.com/AdobeDocs/experience-platform.en.
+
+![confirm-pr](../assets/confirm-pr.png)
