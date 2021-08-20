@@ -79,7 +79,7 @@ To create a pull request, select **Branch** from the top toolbar and then select
 
 ![create-pr-vs]()
 
-Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select [!UICONTROL Create pull request]. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
+Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select **Create pull request**. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
 
 >[!TIP]
 >
