@@ -5,7 +5,7 @@ title: Local File Upload Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect your local system to Adobe Experience Platform using the user interface
 ---
-# Local File Upload connector
+# Local file upload connector
 
 Adobe Experience Platform allows data to be ingested from external sources and local systems while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -13,6 +13,6 @@ Experience Platform provides support for ingesting data from your local system, 
 
 The documentation below provides information on how to connect your local system to Platform using the user interface:
 
-## Connect Local File Upload [!DNL Platform] using the UI
+## Connect Local file upload [!DNL Platform] using the UI
 
 - [Create a local file upload source connection in the UI](../../tutorials/ui/create/local-system/local-file-upload.md)
