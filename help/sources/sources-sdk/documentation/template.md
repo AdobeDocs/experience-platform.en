@@ -28,11 +28,9 @@ description: Learn how to connect Adobe Experience Platform to YOURSOURCE using 
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
 
-## Create a *YOURSOURCE* base connection using the [!DNL Flow Service] API
+## Connect *YOURSOURCE* to Platform using [!DNL Flow Service] API
 
-A base connection represents the authenticated connection between a source and Adobe Experience Platform.
-
-This tutorial walks you through the steps to create a base connection for *YOURSOURCE* using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ### Create a base connection
 
