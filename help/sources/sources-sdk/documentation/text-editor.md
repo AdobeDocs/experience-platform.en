@@ -27,7 +27,7 @@ Next, select **[!UICONTROL Fork]**.
 
 ![fork](../assets/fork.png)
 
-To clone the repository to your local machine, select **[!UICONTROL Code]**. From the dropdown menu that appears, select **[!UICONTROL HTTPS]** and then, select **[!UICONTROL Open with GitHub Desktop]**.
+To clone the repository to your local machine, select **[!UICONTROL Code]**. From the dropdown menu that appears, select **[!UICONTROL HTTPS]** and then, select **[!UICONTROL Open with GitHub Desktop]**. For more information, see the tutorial on [setting up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
@@ -40,3 +40,15 @@ Next, allow for a few moments for GitHub desktop to clone the experience-platfor
 With the repository cloned to your local machine, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
 
 Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and that you install the Adobe Markdown Authoring extension. To install the extension, launch Visual Studio Code, and select the **Extensions** tab from the left-navigation.
+
+![extension](../assets/extension.png)
+
+Next, enter `Adobe Markdown Authoring` into the search bar and then select **[!UICONTROL Install]** from the page that appears.
+
+![install](../assets/install.png)
+
+With your local machine ready, download the [sources documentation template](..assets/template.zip) and extract the file to `experience-platform.en/help/sources/tutorials/api/create/...` with [`...`] representing the category of your choice. For example, if you are creating a cloud storage source, select the cloud storage folder.
+
+Finally, follow the instructions outlined on the template and edit the template with the relevant information pertaining to your source.
+
+![edit-template]()

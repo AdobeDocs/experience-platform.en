@@ -41,7 +41,7 @@ Name your source file `YOURSOURCE.md` where YOURSOURCE is the name of your sourc
 
 ## Author the documentation page for your source
 
-To start documenting your new source, paste the content of the [sources template](./template) into the GitHub web editor. You can also download the template [here](assets/template.zip).
+To start documenting your new source, paste the content of the [sources template](./template.zip) into the GitHub web editor. You can also download the template [here](assets/template.zip).
 
 With the template copied over to the GitHub web editor interface, follow the instructions outlined on the template and edit the values containing relevant information for your source.
 
@@ -53,7 +53,7 @@ When complete, commit the file in your branch.
 
 ## Submit your documentation for review
 
-Once your file is commited, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **[!UICONTROL Compare & ull request]**.
+Once your file is committed, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **[!UICONTROL Compare & ull request]**.
 
 ![compare-pr](../assets/compare-pr.png)
 
