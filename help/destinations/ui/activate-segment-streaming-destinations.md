@@ -19,13 +19,17 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your destination {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
+1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+    ![Destination Catalog tab](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+
+    ![Select destination](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -75,8 +79,7 @@ Some segment streaming destinations require you to select source attributes or i
 
 When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
-![Identity mapping](/help/destinations/assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
-
+![Identity mapping](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Schedule segment export {#scheduling}
 
