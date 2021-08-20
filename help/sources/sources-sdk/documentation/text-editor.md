@@ -69,15 +69,15 @@ Finally, follow the instructions outlined on the template and edit the template 
 
 To create a pull request (PR) and submit your documentation for review, save your work, and then, on GitHub Desktop, enter a commit message and select **[!UICONTROL Commit to create-source-documentation]**.
 
-![commit-vs]()
+![commit-vs](../assets/commit-vs.png)
 
 Next, select **[!UICONTROL Push origin]** to bring your work to the remote branch.
 
-![push-origin]()
+![push-origin](../assets/push-origin.png)
 
-To create a pull request, select **Branch** from the top toolbar and then select **Create Pull Request**.
+To create a pull request, select **Create Pull Request**.
 
-![create-pr-vs]()
+![create-pr-vs](../assets/create-pr-vs.png)
 
 Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select **Create pull request**. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
 
