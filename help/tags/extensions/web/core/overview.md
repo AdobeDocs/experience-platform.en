@@ -119,7 +119,7 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 #### Data Element Changed
 
-The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialogue that appears.
+The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
 #### Direct Call
 
