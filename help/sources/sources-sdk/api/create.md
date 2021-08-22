@@ -144,3 +144,166 @@ The following response is an example of an empty generic REST connector  connect
 
 Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source.
 
+The following payload is an example of a generic REST connection specification authored with information specific to a [!DNL Mailchimp] source:
+
+```json
+{
+  "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
+  "name": "mailChimpConnector",
+  "type": "generic-rest-connector",
+  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+  "version": "1.0",
+  "attributes": {
+    "category": "Cloud Storage",
+    "isSource": true
+  },
+  "authSpec": [
+    {
+      "name": "oAuth2-refresh-code",
+      "type": "oAuth2-refresh-code",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "description": "Access Token",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "accessToken"
+        ]
+      }
+    },
+    {
+      "name": "API Key Authentication",
+      "type": "apiKey",
+      "attributes": {
+        "authParams": {
+          "addTo": "header"
+        }
+      },
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines auth params required for connecting to rest service.",
+        "properties": {
+          "keyName": {
+            "description": "apiKey name for authentication.",
+            "type": "string",
+            "default": "apiKey"
+          },
+          "value": {
+            "description": "apiKey value for authentication.",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "keyName",
+          "value"
+        ]
+      }
+    }
+  ],
+  "sourceSpec": {
+    "attributes": {
+      "uiAttributes": {
+        "documentationLink": "http://www.adobe.com/go/sources-generic-rest-connector",
+        "isSource": true,
+        "category": {
+          "key": "cloudStorage"
+        },
+        "icon": {
+          "key": "genericRestConnector"
+        },
+        "description": {
+          "key": "genericRestConnectorDescription"
+        },
+        "label": {
+          "key": "genericRestConnectorLabel"
+        }
+      },
+      "urlParams": {
+        "hostname": "https://{{domain}}.api.mailchimp.com",
+        "path": "/3.0/lists/{{listId}}/members",
+        "method": "GET"
+      },
+      "contentPath": "$.members",
+      "queryParams": "excludes=id",
+      "headerParams": "",
+      "bodyParams": "",
+      "paginationParams": {
+        "paginationType": "offset",
+        "limitName": "count",
+        "limitValue": "100",
+        "offSetName": "offset"
+      },
+      "scheduleParams": {
+        "scheduleStartParamName": "since_last_changed",
+        "scheduleEndParamName": "before_last_changed",
+        "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ssZ",
+        "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ssZ"
+      }
+    },
+    "spec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "defines static and user input parameters to fetch resource values.",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "domain name of client server."
+        },
+        "listId": {
+          "type": "string",
+          "description": "listId for which memebers need to fetch."
+        }
+      }
+    }
+  },
+  "exploreSpec": {
+    "name": "Resource",
+    "type": "Resource",
+    "requestSpec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object"
+    },
+    "responseSpec": {
+      "$schema": "http: //json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  }
+}
+```

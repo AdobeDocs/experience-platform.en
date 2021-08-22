@@ -17,99 +17,6 @@ This document provides an overview of the configurations you need to prepare in 
 
 Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections. Connection specifications are tenant and IMS Organization agnostic.
 
-### Empty
-
-```json
-{
-  "name": "generic-rest-connector",
-  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-  "version": "1.0",
-  "authSpec": [], //TO BE SPECIFIED
-  "sourceSpec": {
-    "attributes": {
-      "uiAttributes": {
-        "documentationLink": "", //TO BE SPECIFIED
-        "isSource": true,
-        "isBeta": "", //TO BE SPECIFIED
-        "category": {
-          "key": "" //TO BE SPECIFIED
-        },
-        "icon": {
-          "key": "" //TO BE SPECIFIED
-        },
-        "description": {
-          "key": "" //TO BE SPECIFIED
-        },
-        "label": {
-          "key": "" //TO BE SPECIFIED
-        }
-      },
-      "urlParams": {
-        "hostname": "", //TO BE SPECIFIED
-        "path": "",  //TO BE SPECIFIED
-        "method": ""  //TO BE SPECIFIED
-      },
-      "contentPath": "",  //TO BE SPECIFIED
-      "queryParams": "",  //TO BE SPECIFIED
-      "headerParams": "", //TO BE SPECIFIED
-      "bodyParams": "",  //TO BE SPECIFIED
-      "paginationParams": {},  //TO BE SPECIFIED
-      "scheduleParams": {
-        "scheduleStartParamName": "", //TO BE SPECIFIED
-        "scheduleEndParamName": "", //TO BE SPECIFIED
-        "scheduleStartParamFormat": "", //TO BE SPECIFIED
-        "scheduleEndParamFormat": "" //TO BE SPECIFIED
-      }
-    },
-    "spec": {
-       //TO BE SPECIFIED
-    }
-  },
-  "exploreSpec": {
-    "name": "Resource",
-    "type": "Resource",
-    "requestSpec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object"
-    },
-    "responseSpec": {
-      "$schema": "http: //json-schema.org/draft-07/schema#",
-      "type": "object",
-      "properties": {
-        "format": {
-          "type": "string"
-        },
-        "schema": {
-          "type": "object",
-          "properties": {
-            "columns": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "type": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          }
-        },
-        "data": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        }
-      }
-    }
-  }
-}
-```
-
 ### Generic rest connector connection spec example
 
 ```json
@@ -510,29 +417,27 @@ Source specifications contain information specific to a source, including attrib
 
 | Source specifications | Description | Example |
 | --- | --- | --- |
-| `sourceSpec` |
-| `sourceSpec.attributes` |
-| `sourceSpec.attributes.uiAttributes` |
-| `sourceSpec.attributes.uiAttributes.documentationLink` |
-| `sourceSpec.attributes.uiAttributes.isBeta` |
-| `sourceSpec.attributes.uiAttributes.category` |
-| `sourceSpec.attributes.uiAttributes.icon` |
-| `sourceSpec.attributes.uiAttributes.label` |
-| `sourceSpec.attributes.uiAttributes.description` |
-| `sourceSpec.attributes.urlParams.hostName` |
-| `sourceSpec.attributes.urlParams.path` |
-| `sourceSpec.attributes.urlParams.method` |
-| `sourceSpec.attributes.contentPath` |
-| `sourceSpec.attributes.queryParams` |
-| `sourceSpec.attributes.headerParams` |
+| `sourceSpec.attributes` | This attribute displays information on the source specific to the UI or API. |
+| `sourceSpec.attributes.uiAttributes` | This attribute displays information on the source specific to the UI. |
+| `sourceSpec.attributes.uiAttributes.documentationLink` | This attribute displays the documentation link where the usage of this source is documented. | `wwww.adobe.com/go/sources-mailchimp-en` |
+| `sourceSpec.attributes.uiAttributes.isBeta` | This is a boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | `true` / `false` |
+| `sourceSpec.attributes.uiAttributes.category` | This attribute displays the category of  the source. | `advertising`, `crm`, `cloud storage`, `database`, `ecommerce`, `marketing automation`, `payments`, `protocols`, `streaming`. |
+| `sourceSpec.attributes.uiAttributes.icon` | This attribute displays the icon used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.label` | This attribute displays the label to be used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.description` | This attribute displays a brief description of the source. |
+| `sourceSpec.attributes.urlParams.hostName` | This attribute displays the `hostName` of the endpoint to fetch data from. If there are any params in this attribute that you need to acquire from the end user, you can specify it as a template enclosed in (`{{PARAMS}}`). | `https://{{HOST_NAME}}.api.mailchimp.com` |
+| `sourceSpec.attributes.urlParams.path` | This attribute displays the resource path from where to fetch the data from. | `/3.0/lists/{{LIST_ID}}/members` |
+| `sourceSpec.attributes.urlParams.method` | This attribute displays the HTTP method to be used to make the request to the source to fetch data. | `GET`, `POST` |
+| `sourceSpec.attributes.contentPath` | This attribute displays the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
+| `sourceSpec.attributes.queryParams` | This attribute displays the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
+| `sourceSpec.attributes.headerParams` | This attribute displays comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
 | `sourceSpec.attributes.bodyParams` |
-| `sourceSpec.attributes.paginationParams` |
-| `sourceSpec.attributes.paginationParams` == `offsetType` |
+| `sourceSpec.attributes.paginationParams` | This attribute displays the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
+| `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamName` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamName` |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` |
-| `sourceSpec.spec` |
 
 
 ## AuthSpecs
@@ -549,3 +454,120 @@ Authentication specifications for OAuth 2.0 define how Platform users can connec
 | --- | --- | --- |
 | `exploreSpec` |
 | `exploreSpec.name` |
+
+## Appendix {#appendix}
+
+The following contains further information on the configuration preparation process for using Sources SDK.
+
+### `$.members` response API example
+
+```json
+{
+  "members": [
+    {
+      "id": "string",
+      "email_address": "string",
+      "unique_email_id": "string",
+      "full_name": "string",
+      "web_id": 0,
+      "email_type": "string",
+      "status": "subscribed",
+      "unsubscribe_reason": "string",
+      "merge_fields": {
+        "property1": null,
+        "property2": null
+      },
+      "interests": {
+        "property1": true,
+        "property2": true
+      },
+      "stats": {
+        "avg_open_rate": 0,
+        "avg_click_rate": 0,
+        "ecommerce_data": {
+          "total_revenue": 0,
+          "number_of_orders": 0,
+          "currency_code": "USD"
+        }
+      },
+      "ip_signup": "string",
+      "timestamp_signup": "2019-08-24T14:15:22Z",
+      "ip_opt": "string",
+      "timestamp_opt": "2019-08-24T14:15:22Z",
+      "member_rating": 0,
+      "last_changed": "2019-08-24T14:15:22Z",
+      "language": "string",
+      "vip": true,
+      "email_client": "string",
+      "location": {
+        "latitude": 0,
+        "longitude": 0,
+        "gmtoff": 0,
+        "dstoff": 0,
+        "country_code": "string",
+        "timezone": "string"
+      },
+      "marketing_permissions": [
+        {
+          "marketing_permission_id": "string",
+          "text": "string",
+          "enabled": true
+        }
+      ],
+      "last_note": {
+        "note_id": 0,
+        "created_at": "2019-08-24T14:15:22Z",
+        "created_by": "string",
+        "note": "string"
+      },
+      "source": "string",
+      "tags_count": 0,
+      "tags": [
+        {
+          "id": 0,
+          "name": "string"
+        }
+      ],
+      "list_id": "string",
+      "_links": [
+        {
+          "rel": "string",
+          "href": "string",
+          "method": "GET",
+          "targetSchema": "string",
+          "schema": "string"
+        }
+      ]
+    }
+  ],
+  "list_id": "string",
+  "total_items": 0,
+  "_links": [
+    {
+      "rel": "string",
+      "href": "string",
+      "method": "GET",
+      "targetSchema": "string",
+      "schema": "string"
+    }
+  ]
+}
+```
+
+### Offset type of pagination
+
+```json
+
+{
+  "paginationType": "offset",
+  "limitName": "{LIMIT_NAME}",
+  "limitValue": "{LIMIT_VALUE}",
+  "offSetName": "{OFFSET_NAME}"
+}
+```
+
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `limitName` | The name for limit through which the API can specify the number of records to be fetched in a page. | `count` |
+| `limitValue` | The number of records to be fetched in a page. | `100` |
+| `offsetName` | The name for offset | `offset` |
