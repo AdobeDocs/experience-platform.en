@@ -66,8 +66,8 @@ curl -X POST \
         "auth": {
             "specName": "OAuth generic-rest-connector",
             "params": {
-                "accessToken": "a9489e500c322a433acc8025fa421ba0",
-                "refreshToken": "",
+                "accessToken": "{ACCESS_TOKEN}",
+                "refreshToken": "{REFRESH_TOKEN}",
                 "expirationDate": "-1"
             }
         }
@@ -98,7 +98,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connections/f435a3db-b94e-4a25-9e27-b466e2246a6a/explore?objectType=file&object=json&fileType=json&server=us6&listId=10c097ca71' \
+    'https://platform.adobe.io/data/foundation/flowservice/connections/70383d02-2777-4be7-a309-9dd6eea1b46d/explore?objectType=file&object=json&fileType=json&server=us6&listId=10c097ca71' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -114,15 +114,15 @@ curl -X GET \
       "members": [
         {
           "id": "cff65fb4c5f5828666ad846443720efd",
-          "email_address": "vivek123@gmail.com",
+          "email_address": "jonsnow@gmail.com",
           "unique_email_id": "72c758cbf1",
-          "full_name": "Vivek Tiwari",
+          "full_name": "Jon Snow",
           "web_id": 547094062,
           "email_type": "html",
           "status": "subscribed",
           "merge_fields": {
-            "FNAME": "Vivek",
-            "LNAME": "Tiwari",
+            "FNAME": "Jon",
+            "LNAME": "Snow",
             "ADDRESS": {
               "addr1": "",
               "addr2": "",
@@ -213,8 +213,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "MailChimp Source Connection",
-        "description": "MailChimp Source Connection",
+        "name": "YOURSOURCE Source Connection",
+        "description": "YOURSOURCE Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
@@ -276,8 +276,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "MailChimp Target Connection",
-        "description": "MailChimp Target Connection",
+        "name": "YOURSOURCE Target Connection",
+        "description": "YOURSOURCE Target Connection",
         "connectionSpec": {
             "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
@@ -559,7 +559,7 @@ A successful response returns details regarding your flow run, including informa
                         "outputFileCount": 1,
                         "extensions": {
                             "manifest": {
-                                "fileInfo": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
+                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
                             }
                         }
                     },
@@ -573,8 +573,8 @@ A successful response returns details regarding your flow run, including informa
                         ],
                         "extensions": {
                             "manifest": {
-                                "failedRecords": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform-int.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
+                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
+                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
                             },
                             "errors": [
                                 {

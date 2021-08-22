@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Use the GitHub Web Interface to Create a Sources Documentation Page
 topic-legacy: tutorial
-description:
+description: This document provides steps on how to use the GitHub web interface to author documentation and submit a pull request (PR).
 ---
 # Use the GitHub web interface to create a source documentation page
 
@@ -19,19 +19,19 @@ The first step in setting up your GitHub environment is to navigate to the [Adob
 
 ![platform-repo](../assets/platform-repo.png)
 
-Next, select **[!UICONTROL Fork]**.
+Next, select **Fork**.
 
 ![fork](../assets/fork.png)
 
-Once the fork is complete, select **[!UICONTROL master]** and enter a name for your new branch in the dropdown menu that appears. Ensure that you provide a descriptive name for your branch as this will be used to contain your work, and then select **[!UICONTROL create branch]**.
+Once the fork is complete, select **master** and enter a name for your new branch in the dropdown menu that appears. Ensure that you provide a descriptive name for your branch as this will be used to contain your work, and then select **create branch**.
 
 ![create-branch](../assets/create-branch.png)
 
-In the GitHub folder structure of your forked repository, navigate your way to `experience-platform.en/help/sources/tutorials/api/create/` and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **[!UICONTROL cloud-storage]**.
+In the GitHub folder structure of your forked repository, navigate your way to `experience-platform.en/help/sources/tutorials/api/create/` and then select the appropriate category for your source from the list. For example, if you are creating documentation for a new cloud storage source, select **cloud-storage**.
 
 ![cloud-storage](../assets/cloud-storage.png)
 
-A folder of existing cloud storage sources appears. To add documentation for a new source, select **[!UICONTROL Add file]** and then select **[!UICONTROL Create new file]** from the dropdown menu that appears.
+A folder of existing cloud storage sources appears. To add documentation for a new source, select **Add file** and then select **Create new file** from the dropdown menu that appears.
 
 ![create-new-file](../assets/create-new-file.png)
 
@@ -53,11 +53,11 @@ When complete, commit the file in your branch.
 
 ## Submit your documentation for review
 
-Once your file is committed, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **[!UICONTROL Compare & ull request]**.
+Once your file is committed, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Ensure that the branch you have been working on is selected, and then select **Compare & pull request**.
 
 ![compare-pr](../assets/compare-pr.png)
 
-Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select [!UICONTROL Create pull request]. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
+Ensure that the base and compare branches are correct. Add a note to the PR, describing your update, and then select **Create pull request**. This opens a PR to merge the working branch of your work into the master branch of the Adobe repository.
 
 >[!TIP]
 >

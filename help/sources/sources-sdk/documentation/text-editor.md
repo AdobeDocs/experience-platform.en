@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Use a Text Editor in Your Local Environment to Create a Sources Documentation Page
 topic-legacy: tutorial
-description:
+description: This document provides steps on how to use your local environment to author documentation for your source and submit a pull request (PR).
 ---
 # Use a text editor in your local environment to create a sources documentation page
 
@@ -15,7 +15,7 @@ This document provides steps on how to use your local environment to author docu
 
 ## Prerequisites
 
-The following tutorial requires that you have GitHub Desktop installed on your local machine. If you do not have GitHub Desktop, you can download the application [here](https://desktop.github.com/).
+The following tutorial requires that you have GitHub Desktop installed in your local machine. If you do not have GitHub Desktop, you can download the application [here](https://desktop.github.com/).
 
 ## Connect to GitHub and set up your local authoring environment
 
@@ -23,27 +23,31 @@ The first step in setting up your local authoring environment is to navigate to 
 
 ![platform-repo](../assets/platform-repo.png)
 
-Next, select **[!UICONTROL Fork]**.
+In the main page of the Platform GitHub repository, select **Fork**.
 
 ![fork](../assets/fork.png)
 
-To clone the repository to your local machine, select **[!UICONTROL Code]**. From the dropdown menu that appears, select **[!UICONTROL HTTPS]** and then, select **[!UICONTROL Open with GitHub Desktop]**. For more information, see the tutorial on [setting up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
+To clone the repository to your local machine, select **Code**. From the dropdown menu that appears, select **HTTPS** and then, select **Open with GitHub Desktop**. 
+
+>[!TIP]
+>
+>For more information, see the tutorial on [setting up Git repository locally for documentation](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#create-a-local-clone-of-the-repository).
 
 ![open-git-desktop](../assets/open-git-desktop.png)
 
-Next, allow for a few moments for GitHub Desktop to clone the experience-platform.en repository.
+Next, allow for a few moments for GitHub Desktop to clone the `experience-platform.en` repository.
 
 ![cloning](../assets/cloning.png)
 
-Once the cloning process is complete, head to GitHub Desktop to create a new branch. Select **[!UICONTROL Master]** and then select **[!UICONTROL New branch]**
+Once the cloning process is complete, head to GitHub Desktop to create a new branch. Select **Master** from the top navigation and then select **New branch**
 
 ![new-branch](../assets/new-branch.png)
 
-In the popover panel that appears, enter a descriptive name for your branch, and then select **[!UICONTROL Create branch]**.
+In the popover panel that appears, enter a descriptive name for your branch, and then select **Create branch**.
 
 ![create-branch-vs](../assets/create-branch-vs.png)
 
-Next, select **[!UICONTROL Publish branch]**.
+Next, select **Publish branch**.
 
 ![publish-branch](../assets/publish-branch.png)
 
@@ -51,11 +55,11 @@ Next, select **[!UICONTROL Publish branch]**.
 
 With the repository cloned to your local machine and a new branch created, you can now start authoring the documentation page for your new source through the [text editor of your choice](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/install-tools.html?lang=en#understand-markdown-editors).
 
-Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and that you install the Adobe Markdown Authoring extension. To install the extension, launch Visual Studio Code, and select the **Extensions** tab from the left-navigation.
+Adobe recommends that you use [Visual Studio Code](https://code.visualstudio.com/) and that you install the Adobe Markdown Authoring extension. To install the extension, launch Visual Studio Code, and then select the **Extensions** tab from the left-navigation.
 
 ![extension](../assets/extension.png)
 
-Next, enter `Adobe Markdown Authoring` into the search bar and then select **[!UICONTROL Install]** from the page that appears.
+Next, enter `Adobe Markdown Authoring` into the search bar and then select **Install** from the page that appears.
 
 ![install](../assets/install.png)
 
@@ -67,11 +71,11 @@ Finally, follow the instructions outlined on the template and edit the template 
 
 ## Submit your documentation for review
 
-To create a pull request (PR) and submit your documentation for review, save your work, and then, on GitHub Desktop, enter a commit message and select **[!UICONTROL Commit to create-source-documentation]**.
+To create a pull request (PR) and submit your documentation for review, save your work, and then, on GitHub Desktop, enter a commit message and select **Commit to create-source-documentation**.
 
 ![commit-vs](../assets/commit-vs.png)
 
-Next, select **[!UICONTROL Push origin]** to bring your work to the remote branch.
+Next, select **Push origin** to bring your work to the remote branch.
 
 ![push-origin](../assets/push-origin.png)
 

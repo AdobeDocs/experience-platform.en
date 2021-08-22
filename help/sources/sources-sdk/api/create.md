@@ -25,7 +25,7 @@ Once your artifacts are ready, you can begin the process of creating a new conne
 
 ### Retrieve a generic REST connection specification
 
-To create a new connection specification, you must first retrieve an empty connection specification payload using the [!DNL Flow Service API]. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service API].
+To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service API]. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service API].
 
 **API format**
 
@@ -47,7 +47,7 @@ curl -X GET \
 
 **Response**
 
-The following response is an example of an empty, generic REST connector  connection specification that you must fill out to create a new source.
+The following response is an example of an empty generic REST connector  connection specification that you must fill out to create a new source.
 
 ```json
 {
@@ -141,3 +141,6 @@ The following response is an example of an empty, generic REST connector  connec
 ```
 
 ### Author your generic connection specification
+
+Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source.
+
