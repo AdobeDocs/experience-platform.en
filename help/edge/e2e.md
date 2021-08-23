@@ -63,26 +63,54 @@ Once you have added the fields you need, select **[!UICONTROL Save]** to save th
 
 ![Save the schema](./images/e2e/save-schema.png)
 
-## Create a datastream
+## Create a datastream {#datastream}
 
 A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which Experience Cloud products you want to send the data to, and how you want the data to be handled and stored in each product.
 
 >[!NOTE]
 >
->If you have a license for [event forwarding](../tags/ui/event-forwarding/overview.md) and want to use the functionality, you must enable it for a datastream in the same way that you enable Adobe products. In other words, you must configure a datastream regardless of whether you are using tags or event forwarding.
+>If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. In other words, you must configure a datastream regardless of whether you are using tags or event forwarding.
 
-* A datastream tells the Edge Network where you want your data to be sent
-* Differentiate event forwarding and the Web SDK
-  * When setting up the datastream, you select the Adobe products you want to send data to, but you *also* can choose to enable event forwarding from here
-* You fill in certain fields for each products, here are the details on that...(links)
+In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can can create a new configuration by selecting **[!UICONTROL New Datastream]**.
+
+![Datastreams](./images/e2e/datastreams.png)
+
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](./fundamentals/datastreams.md).
 
 ## Install and configure the Web SDK
 
-* This section uses the Data Collection UI to configure the Web SDK extension, but you can also configure it using raw code, see (link) for more info
-* Fill details about organization, plus the datastream you created earlier. That way the web SDK knows which configuration to use to send your data to the right places
-* Note that depending on where they want to send their data, they'll need to use tags or event forwarding:
-  * If sending to Adobe products, use tags (it's free)
-  * If sending to third parties, use event forwarding (paid service)
+Once you have created a schema and a datastream, the next step is to install and configure the Platform Web SDK to start ending data to the Edge Network.
+
+>[!NOTE]
+>
+>This section uses the Data Collection UI to configure the Web SDK tag extension, but you can also install and configure it using raw code instead. Refer to the following guides for more information:
+>
+>* [Install the SDK](./fundamentals/installing-the-sdk.md)
+>* [Configure the SDK](./fundamentals/configuring-the-sdk.md)
+>
+>Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
+
+Select **[!UICONTROL Tags]** in the left navigation to show a list of tag properties. You can choose an existing property to edit if you wish, or you can select **[!UICONTROL New Property]** instead.
+
+![Properties](./images/e2e/properties.png)
+
+If creating a new property, provide a descriptive name and set the [!UICONTROL Platform] to **[!UICONTROL Web]**. Provide the full domain for the web property, and then select **[!UICONTROL Save]**.
+
+![Create property](./images/e2e/create-property.png)
+
+The overview page for the property appears. From here, select **[!UICONTROL Extensions]** in the left navigation, then select **[!UICONTROL Catalog]**. Using the provided search bar, find the listing for the Platform Web SDK and select **[!UICONTROL Install]**.
+
+![Install the Web SDK](./images/e2e/install-sdk.png)
+
+The configuration page for the SDK appears. Most required values are auto-populated with defaults that you can choose to change if you wish.
+
+![Configure the Web SDK](./images/e2e/configure-sdk.png)
+
+Before you can install the SDK, however, you must select a datastream so it knows where to sent your data to. Under **[!UICONTROL Datastreams]**, use the dropdown menu to select the datastream that you configured at an [earlier step](#datastream). Once you've set the datastream, select **[!UICONTROL Save]** to finish installing the SDK to the property.
+
+![Set datastream and save](./images/e2e/set-datastream.png)
+
+The SDK has now been installed on the property. Before implementing the SDK on your website, the final step is to create a rule that tells the SDK when it should send data to the Edge Network. These steps are summarized in the sections below.
 
 ### Create an XDM data element
 
@@ -99,7 +127,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 * Create a send event action
   * In the **XDM data** field, select the XDM data element you created earlier, and that's what will be sent to the Edge
 
-## Configure event forwarding (optional)
+## Configure event forwarding (optional) {#event-forwarding}
 
 * Set up everything we just talked about up until this point
 * Enable event forwarding in the datastream
