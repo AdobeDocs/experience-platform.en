@@ -6,20 +6,20 @@ description: A high-level overview of how to send event data to Adobe Experience
 
 Adobe Experience Platform Edge Network provides a single gateway to transfer your data to other Adobe products or third-party destinations. In order to use the Edge Network to send event data from your application, it is important to understand the core components that have to be configured in order for that data to be delivered to the destinations you require.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using tags. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK extension within the Data Collection UI.
+This guide provides a high-level tutorial of how to send an event through the Edge Network. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
 
 >[!NOTE]
 >
->You can also opt to install and configure the SDK manually if you don't want to use a tag extension, but the surrounding steps must still be completed as outlined below.
+>You can also opt to install and configure the SDK manually if you don't want to use tags, but the surrounding steps must still be completed as outlined below.
 
 ## Prerequisites
 
-This tutorial uses the Data Collection UI to create a schema, configure a datastream, and install the Web SDK. In order to perform these actions in the UI, you must be granted access to at least one web property along with the following property rights:
+This tutorial uses the Data Collection UI to create a schema, configure a datastream, and install the Web SDK. In order to perform these actions in the UI, you must be granted access to at least one web property along with the following [property rights](../tags/ui/administration/user-permissions.md#property-rights):
 
 * Develop
 * Manage Extensions
 
-
+See the guide on [managing permissions](../tags/ui/administration/manage-permissions.md) in the tags documentation to learn how to grant access to properties and property rights.
 
 ## Create an XDM schema
 
@@ -31,17 +31,52 @@ The first step in setting up your Edge Network operations is to create an XDM sc
 >
 >XDM schemas are very customizable. Rather than being overly prescriptive, the steps outlined below focus specifically on the schema requirements for the Web SDK. Outside of these parameters, you are free to define the remaining structure your data however you wish.
 
-* Add the "AEP Web SDK mixin" to the schema, plus any other custom fields that you want to add depending on what you want to collect
-* You will map your data to this schema at a later step
+In the Data Collection UI, select **[!UICONTROL Schemas]** in the left navigation. From here, you can see a list of previously created schemas belonging to your organization. To continue, select **[!UICONTROL Create schema]**, then select **[!UICONTROL XDM ExperienceEvent]** from the dropdown menu.
+
+![Schemas workspace](./images/e2e/schemas.png)
+
+A dialog appears that prompts you to start adding field groups to the schema. In order to send events using the Web SDK, you must add the field group **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. This field group contains definitions for data that is automatically collected by the Web SDK library.
+
+Use the search bar to narrow down the list to help find this field group easier. Once you have found it, select it from the list before selecting **[!UICONTROL Add field groups]**.
+
+![Schemas workspace](./images/e2e/add-field-group.png)
+
+The schema canvas appears, showing a tree structure of your XDM schema including the fields provided by the Web SDK field group.
+
+![Schema structure](./images/e2e/schema-structure.png)
+
+Select the root field in the tree to open **[!UICONTROL Schema properties]** in the right rail, where you can provide a name and optional description for the schema.
+
+![Name the schema](./images/e2e/name-schema.png)
+
+If you want to add more fields to the schema, you can do so by selecting **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section in the left rail.
+
+![Add field groups](./images/e2e/add-field-groups.png)
+
+>[!NOTE]
+>
+>See the guide on [adding field groups](../xdm/ui/resources/schemas.md#add-field-groups) in the XDM documentation for detailed steps on how to search for different field groups to suit your use cases.
+>
+>Best practice is to only add fields for data you plan on sending through the Edge Network. Once you have added fields to a schema and saved it, only additive changes can be made to the schema thereafter. See the section on the [rules of schema evolution](../xdm/schema/composition.md#evolution) for more information.
+
+Once you have added the fields you need, select **[!UICONTROL Save]** to save the schema.
+
+![Save the schema](./images/e2e/save-schema.png)
 
 ## Create a datastream
+
+A datastream is a configuration that tells the Edge Network where you want your data to be sent. Specifically, a datastream specifies which Experience Cloud products you want to send the data to, and how you want the data to be handled and stored in each product.
+
+>[!NOTE]
+>
+>If you have a license for [event forwarding](../tags/ui/event-forwarding/overview.md) and want to use the functionality, you must enable it for a datastream in the same way that you enable Adobe products. In other words, you must configure a datastream regardless of whether you are using tags or event forwarding.
 
 * A datastream tells the Edge Network where you want your data to be sent
 * Differentiate event forwarding and the Web SDK
   * When setting up the datastream, you select the Adobe products you want to send data to, but you *also* can choose to enable event forwarding from here
 * You fill in certain fields for each products, here are the details on that...(links)
 
-## Configure the Web SDK
+## Install and configure the Web SDK
 
 * This section uses the Data Collection UI to configure the Web SDK extension, but you can also configure it using raw code, see (link) for more info
 * Fill details about organization, plus the datastream you created earlier. That way the web SDK knows which configuration to use to send your data to the right places
