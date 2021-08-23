@@ -27,7 +27,7 @@ Before you can send audience data to a destination, you must set up a connection
 
 1. If you selected **[!UICONTROL Set up]**, skip to the next step. 
    
-   If you selected **[!UICONTROL Activate segments]**, you can now see a list of the existing destination connections. 
+   If you selected **[!UICONTROL Activate segments]**, you can now see a list of existing destination connections. 
 
    Select **[!UICONTROL Configure new destination]**.
 
@@ -42,6 +42,8 @@ Before you can send audience data to a destination, you must set up a connection
    ![Connect to destination](../assets/ui/connect-destinations/connect-destination.png)
 
 1. Select **[!UICONTROL Next]**.
+
+   ![Connect to destination](../assets/ui/connect-destinations/next.png)
 
 1. Select the marketing actions applicable to the data that you want to export to the destination. Marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [data usage policies overview](../../data-governance/policies/overview.md) page.
 

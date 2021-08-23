@@ -83,6 +83,14 @@ When you are mapping unhashed source attributes to target attributes that the de
 
 ## Schedule segment export {#scheduling}
 
+By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
+
+![New segments](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
+
+![All segments](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
+
 1. On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
     ![Segment schedule](../assets/ui/activate-segment-streaming-destinations/segment-schedule.png)
@@ -117,7 +125,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify segment activation {#verify}
 
-Check your destination account. If activation was successful, audiences are populated in your destination platform.
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
