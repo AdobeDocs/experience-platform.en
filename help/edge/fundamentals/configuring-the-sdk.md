@@ -26,9 +26,9 @@ There are many options that can be set during configuration. All options can be 
 
 ### `edgeConfigId`
 
->[!NAME CHANGE]
+>[!NOTE]
 >
->**Please note that Edge Configurations have been rebranded to Datastreams. A datastream ID is the same as a configuration ID.** 
+>**Edge Configurations have been rebranded to Datastreams. A datastream ID is the same as a configuration ID.** 
 
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
