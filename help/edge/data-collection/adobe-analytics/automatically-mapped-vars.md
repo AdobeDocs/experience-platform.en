@@ -7,7 +7,7 @@ exl-id: 856fada7-b62c-4fd2-9372-a19ae1cdec33
 ---
 # Variables automatically mapped in [!DNL Analytics]
 
-Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into Adobe Analytics.
+Below is a list of variables that Adobe Experience Platform Edge Network automatically maps into Adobe Analytics. Detailed information about Adobe Analytics data collection query parameters can be found in the [Analytics Implementation Guide](https://experienceleague.adobe.com/docs/analytics/implementation/validate/query-parameters.html).
 
 | XDM Field Path  | [!DNL Analytics Query String] / HTTP Header | Description |
 | ---------- | ------------------------- | ----------------------------------------- |

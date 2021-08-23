@@ -6,7 +6,7 @@ description: Learn how to configure a JSON manifest file that informs Adobe Expe
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
 
 In your extension's base directory you must create a file called `extension.json`. This contains critical details about your extension that allows Adobe Experience Platform to properly consume it. Some of the contents are formed after the manner of [npm's `package.json`](https://docs.npmjs.com/files/package.json).
 
@@ -16,7 +16,7 @@ An extension manifest must consist of the following:
 
 | Property | Description |
 | --- | --- |
-| `name` | The name of your extension. It must be unique from all other Reactor extensions and must comply with [naming rules](#naming-rules). **This is used by tags as an identifier and should not be changed after you publish your extension.** |
+| `name` | The name of your extension. It must be unique from all other extensions and must comply with [naming rules](#naming-rules). **This is used by tags as an identifier and should not be changed after you publish your extension.** |
 | `platform` | The platform for your extension. The only value accepted at this moment is `web`. |
 | `version` | The version of your extension. It must follow the [semver](http://semver.org/) versioning format. This is consistent with [npm version field](https://docs.npmjs.com/files/package.json#version). |
 | `displayName` | The human-readable name of your extension. This will be shown to Platform users. There is no need to mention "tags" or "Extension"; users will already know they are looking at a tag extension. |

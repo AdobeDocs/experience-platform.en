@@ -12,7 +12,6 @@ feature: Data Collection
 * Getting started {#get-started}
   * [Quickstart guide](./quick-start/quick-start.md)
   * [Implementation guides](./quick-start/implementation-guides.md)
-  * [Videos](./quick-start/videos.md)
 * Data Collection UI {#ui}
   * [Overview](./ui/managing-resources/overview.md)
   * Extensions {#extensions}
@@ -53,6 +52,7 @@ feature: Data Collection
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
+  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}

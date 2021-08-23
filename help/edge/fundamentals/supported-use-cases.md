@@ -23,7 +23,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Send data to multiple orgs on the page | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/interacting-with-multiple-properties.html?lang=en#fundamentals) |
 | Detailed error reporting and logs |  |
 | Trace requests client side and server side |  |
-| Adobe Experience Platform Launch extension | [Web SDK extension docs](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension.html?lang=en#extension) |
+| tag extension | [Web SDK extension docs](../../tags/extensions/web/sdk/overview.md) |
 | Debugging tools available | [Debugger extension](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) and [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
 {style="table-layout:auto"}
@@ -85,6 +85,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Updating the Target profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Recommendations |  |
 | mBox 3rd party ID |  | 
+| Response tokens | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style="table-layout:auto"}
 

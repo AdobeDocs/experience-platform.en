@@ -1,17 +1,17 @@
 ---
-title: Integrate IAB TCF 2.0 Support using Platform Launch and the Platform Web SDK Extension
-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Launch and the Adobe Experience Platform Web SDK extension.
+title: Integrate IAB TCF 2.0 Support using tags and the Platform Web SDK Extension
+description: Learn how to set up IAB TCF 2.0 consent with tags and the Adobe Experience Platform Web SDK extension.
 exl-id: dc0e6b68-8257-4862-9fc4-50b370ef204f
 ---
-# Integrate IAB TCF 2.0 support using Platform Launch and the Platform Web SDK extension
+# Integrate IAB TCF 2.0 support using tags and the Platform Web SDK extension
 
-Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up an Adobe Experience Platform Launch property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK extension for Experience Platform Launch.
+Adobe Experience Platform Web SDK supports the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows you how to set up a tag property for sending IAB TCF 2.0 consent information to Adobe using the Adobe Experience Platform Web SDK tag extension.
 
-If you do not wish to use Experience Platform Launch, please refer to the guide on [using IAB TCF 2.0 without Experience Platform Launch](./without-launch.md).
+If you do not wish to use tags, please refer to the guide on [using IAB TCF 2.0 without tags](./without-launch.md).
 
 ## Getting started
 
-In order to use IAB TCF 2.0 with Experience Platform Launch and the Platform Web SDK extension, you need to have an XDM schema and dataset available.
+In order to use IAB TCF 2.0 with tags and the Platform Web SDK extension, you need to have an XDM schema and dataset available.
 
 Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 
@@ -23,7 +23,7 @@ For more information on how to configure default consent, refer to the [default 
 
 ## Updating Profile with consent information {#consent-code-1}
 
-To call the `setConsent` action when your customers consent preferences have changed, you need to create a new Experience Platform Launch rule. Start by adding a new event and choose the Core extension's "Custom Code" event type.
+To call the `setConsent` action when your customers consent preferences have changed, you need to create a new tag rule. Start by adding a new event and choose the Core extension's "Custom Code" event type.
 
 Use the following code sample for your new event:
 

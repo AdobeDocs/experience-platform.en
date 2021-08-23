@@ -1,40 +1,85 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes for June 30, 2021.
+description: Experience Platform release notes for July 28, 2021.
 doc-type: release notes
-last-update: June 30, 2021
+last-update: July 28, 2021
 author: ens60013
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: June 30, 2021**
+**Release date: July 28, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Real-time Customer Profile](#profile)
-- [Sandboxes](#sandboxes)
+- [Data Science Workspace](#dsw)
+- [Dataflows](#destinations)
+- [Destinations](#destinations)
+- [Experience Data Model (XDM)](#xdm)
+- [Query Service](#query)
 - [Sources](#sources)
 
-## Real-time Customer Profile {#profile}
+## Data Science Workspace {#dsw}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| Library and OS updates | Data Science Workspace has made significant library and OS updates to improve functionality and usability. This includes JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 with CUDA 11 and CUDNN 8 support, and more. To learn how to view the available libraries within JupyterLab, visit the [supported libraries](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) section in the JupyterLab notebooks overview documentation. |
+
+For more general information on Data Science Workspace, refer to the [Data Science Workspace overview](../../data-science-workspace/home.md).
+
+## Dataflows {#dataflows}
+
+In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
+
+Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
+
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
-|Merge policy workflow updates| When creating and updating merge policies in the UI, users can now preview 20 sample profiles based on the union schema. This allows users to preview what customer profiles will look like before saving merge policy configurations. For more information, see the [merge policies UI guide](../../profile/merge-policies/ui-guide.md).|
-|Identity overlap report| The identity overlap report is part of the Real-time Customer Profile API and provides visibility into the composition of the Profile store. Using the `/previewsamplestatus` endpoint, the identity overlap report exposes the identities that contribute most to addressable audience. To learn more, visit the [preview sample status API endpoint guide](../../profile/api/preview-sample-status.md).|
+| Destinations dashboard | You can now use the monitoring dashboard to monitor dataflows for destinations. To learn more, please read the tutorial on [monitoring destinations in the UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
 
-For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
+For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about destinations, refer to the [destinations overview](../../destinations/home.md).
 
-## Sandboxes {#sandboxes}
+## Destinations {#destinations}
 
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
+Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [Faster incremental file exports](../../destinations/ui/activate-batch-profile-destinations.md#export-incremental-files) | You can now schedule incremental file exports for file-based destinations every 3, 6, 8, and 12 hours. Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases. |
+| [Support for deduplication keys](../../destinations/ui/activate-batch-profile-destinations.md#deduplication-keys) | Eliminate multiple records of the same profile in the export files by selecting a deduplication key. You can select a single namespace or up to two XDM schema attributes as a deduplication key. |
+
+## Experience Data Model (XDM) {#xdm}
+
+Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for data in the form of schemas, which allow any application to communicate with Platform services.
+
+| Feature | Description |
+| --- | --- |
+| Telecommunications industry filter | When adding field groups to a schema in the UI, you can now filter by the telecommunications industry. See the [telecommunications industry entity relationship diagram (ERD)](../../xdm/schema/industries/telecom.md) to see a recommended data model for telecom use cases. |
+
+For more general information on XDM in Platform, refer to the [XDM System overview](../../xdm/home.md).
+
+## Query Service {#query}
+
+Query Service provides the ability to use standard SQL to query data in Adobe Experience Platform, supporting a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the Data Lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
+
+You can use Query Service to build data analysis ecosystems, creating a picture of customers across their various interaction channels. These channels might include point-of-sale, web, mobile, or CRM systems.
+
+**New features**
 
 | Feature | Description |
 | ------- | ----------- |
-| Production sandbox reset enhancements | You can now reset production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. This can be done either from the UI, or by using the new `validationOnly` and `ignoreWarnings` parameters in the API. See the tutorials on [resetting a sandbox in the UI](../../sandboxes/ui/user-guide.md) and [resetting a sandbox in the API](../../sandboxes/api/sandboxes.md) for more information. |
+| Scheduled queries | You can now schedule queries in Platform using the Query Editor. To learn more, please read the documentation on the [Query Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
+
+For more information, refer to the [Query Service documentation](../../query-service/home.md).
 
 ## Sources {#sources}
 
@@ -44,7 +89,7 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (Beta) | You can now connect [!DNL Veeva CRM] to Experience Platform using the [!DNL Flow Service] API or the UI. See the [[!DNL Veeva CRM] connector overview](../../sources/connectors/crm/veeva.md) for more information. |
-| Support for monitoring streaming dataflows | You can now use the sources UI workspace to monitor data ingestion activities from streaming sources with corresponding metrics and status. See the tutorial on [monitoring streaming dataflows](../../sources/tutorials/ui/monitor-streaming.md) for more information. |
+| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
+| [!DNL Salesforce Marketing Cloud] (Beta) | You can now connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the [!DNL Flow Service] API or the UI. See the [[!DNL Salesforce Marketing Cloud] connector overview](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

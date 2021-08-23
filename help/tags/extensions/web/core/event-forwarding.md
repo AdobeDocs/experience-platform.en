@@ -6,7 +6,7 @@ description: Learn about the Core event forwarding extension in Adobe Experience
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
 The Core event-forwarding extension provides the default events, conditions, and data types for event forwarding in Adobe Experience Platform.
 
@@ -159,7 +159,7 @@ To access the value of a data element in custom code, use the `getDataElementVal
 getDataElementValue('productName') 
 ```
 
-Platform Launch Server Side actions execute sequentially. It is also possible for custom code in one action to return a value that can be used in a subsequent action. The value returned can come from code within that action, or from the response body of a call made to an external source. To reference data from a previously executed action within a single rule where the Core extension is used, create a data element of type `Path` and use the following path to reference the value of a variable called `productCategory` defined in custom code within the Core extension: 
+Event forwarding actions execute sequentially. It is also possible for custom code in one action to return a value that can be used in a subsequent action. The value returned can come from code within that action, or from the response body of a call made to an external source. To reference data from a previously executed action within a single rule where the Core extension is used, create a data element of type `Path` and use the following path to reference the value of a variable called `productCategory` defined in custom code within the Core extension: 
 
 ```javascript
 arc.ruleStash.[Extension-Name].[key-as-defined-by-action] 

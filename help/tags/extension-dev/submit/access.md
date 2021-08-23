@@ -6,7 +6,7 @@ description: Set up your team members' tag user accounts and permissions in Adob
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Before you get started with your extension_package, you need to set up your team members with user accounts and permissions.  This is accomplished in the [Adobe Admin Console](https://adminconsole.adobe.com/).
 
@@ -33,7 +33,7 @@ Some of you may have access to more than one organization (Org). In order to add
 
 A product profile is a group. Individual rights are assigned to product profiles and any users in the profile will inherit those rights.
 
-Choose the **[!UICONTROL Products]** link at the top, and **[!UICONTROL Experience Cloud]** on the left. If you do not have Adobe Experience Platform Launch listed, customers should contact their account team and partners should email <ExchangeTechEC@adobe.com>.
+Choose the **[!UICONTROL Products]** link at the top, and **[!UICONTROL Experience Cloud]** on the left. If you do not have the Data Collection UI listed, customers should contact their account team and partners should email <ExchangeTechEC@adobe.com>.
 
 ![Admin console Products tab](../images/getting-started/admin-console-products-launch.png)
 
