@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Configuration options in Sources SDK
 topic-legacy: overview
-description:
+description: This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 ---
 # Configuration options in Sources SDK
 
@@ -17,7 +17,9 @@ This document provides an overview of the configurations you need to prepare in 
 
 Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections. Connection specifications are tenant and IMS Organization agnostic.
 
-### Generic rest connector connection spec example
+### Generic REST connector connection specification example
+
+The following payload contains an example of a generic REST connection specification that supports five different authentication options.
 
 ```json
 {
@@ -431,29 +433,74 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.contentPath` | This attribute displays the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
 | `sourceSpec.attributes.queryParams` | This attribute displays the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
 | `sourceSpec.attributes.headerParams` | This attribute displays comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
-| `sourceSpec.attributes.bodyParams` |
 | `sourceSpec.attributes.paginationParams` | This attribute displays the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
 | `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | | `before_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | This attribute displays the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | his attribute displays the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
 
 
 ## AuthSpecs
 
 Authentication specifications define how Platform users can connect to your source.
 
-### AuthSpecs for OAuth 2.0
+The following is an example of refreshCode authentication type:
 
-Authentication specifications for OAuth 2.0 define how Platform users can connect to your source using OAuth 2.0
-
-## ExploreSpecs
-
-| Explore specifications | Description | Example |
-| --- | --- | --- |
-| `exploreSpec` |
-| `exploreSpec.name` |
+```json
+{
+  "name": "oAuth2-refresh-code",
+  "type": "oAuth2-refresh-code",
+  "spec": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "description": "defines auth params required for connecting to rest service using authorization flow.",
+    "links": [
+      {
+        "rel": "specificationLink",
+        "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
+      }
+    ],
+    "properties": {
+      "clientId": {
+        "description": "Client id of user app. Needed to generate accessToken post its expiry.",
+        "type": "string"
+      },
+      "clientSecret": {
+        "description": "Client secret of user app. Needed to generate accessToken post its expiry.",
+        "type": "string",
+        "format": "password"
+      },
+      "accessToken": {
+        "description": "Access Token",
+        "type": "string",
+        "format": "password"
+      },
+      "refreshToken": {
+        "description": "Refresh Token. Needed to generate accessToken once it expires.",
+        "type": "string",
+        "format": "password"
+      },
+      "expirationDate": {
+        "description": "Date when accessToken will expire",
+        "type": "string",
+        "format": "date"
+      },
+      "refreshTokenUrl": {
+        "description": "Refresh token url to fetch refresh token.",
+        "type": "string"
+      },
+      "accessTokenUrl": {
+        "description": "Access token url to fetch access token.",
+        "type": "object"
+      }
+    },
+    "required": [
+      "accessToken"
+    ]
+  }
+}
+```
 
 ## Appendix {#appendix}
 
