@@ -258,7 +258,7 @@ The following payload is an example of a generic REST connection specification a
         },
         "listId": {
           "type": "string",
-          "description": "listId for which memebers need to fetch."
+          "description": "listId for which members need to fetch."
         }
       }
     }
