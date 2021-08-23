@@ -23,8 +23,10 @@ Follow the steps below to edit existing activation flows in Adobe Experience Pla
 
     ![Select destination](../assets/ui/edit-activation/destination-select.png)
 
-4. The details page for the destination appears, showing its available controls. Select **[!UICONTROL Activate]** in the right rail to change which segments to send to the destination.
+4. The **[!UICONTROL Dataflow runs]** page for the destination appears, showing its available controls. Select **[!UICONTROL Activate]** in the right rail to change which segments to send to the destination.
+
+    Additionally, you can edit the destination name and description.
 
     ![Destination details](../assets/ui/edit-activation/destination-details.png)
 
-5. Refer to [Activate profiles and segments to a destination](activate-destinations.md) for details on how to activate new segments.
+5. Refer to [Activation overview](activation-overview.md) for details on how to activate new segments to your destinations.

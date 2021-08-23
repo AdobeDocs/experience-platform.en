@@ -128,7 +128,7 @@ The following documentation provides further resources on understanding Data Pre
 
 * [Data Prep overview](../../../../../data-prep/home.md)
 * [Data Prep mapping functions](../../../../../data-prep/functions.md)
-* [Map a CSV file to an XDM schema and add calculated fields](../../../../../ingestion/tutorials/map-a-csv-file.md#add-calculated-field)
+* [Add calculated fields](../../../../../data-prep/calculated-fields.md)
 
 ### Provide dataflow details
 

@@ -14,6 +14,7 @@ feature: Data Management, Data Ingestion
   - [Getting started](./api/getting-started.md)
   - [Functions](./api/functions.md)
   - [Mapping set](./api/mapping-set.md)
+- [Adding calculated fields](./calculated-fields.md)
 - [Handling data formats](./data-handling.md)
 - [Mapping sets](mapping-set.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

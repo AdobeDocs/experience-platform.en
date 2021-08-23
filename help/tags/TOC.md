@@ -52,6 +52,7 @@ feature: Data Collection
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
+  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
