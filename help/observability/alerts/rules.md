@@ -1,8 +1,6 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
-solution: Experience Platform
 title: Standard alert rules
-topic: overview
 description: This document covers the predefined alert rules provided by Experience Platform. 
 ---
 
