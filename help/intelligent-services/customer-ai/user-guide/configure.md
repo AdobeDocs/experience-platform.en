@@ -93,11 +93,11 @@ For example, you may want to predict whether a customer visits a certain URL or 
 
 ### Custom events (*optional*) {#custom-events}
 
-If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. If the dataset you selected includes custom events (field groups) defined in your schema, you can add them to your instance.
+If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
 
 ![event feature](../images/user-guide/event-feature.png)
 
-To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom field group values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
 
 ![Custom Event field](../images/user-guide/custom-event.png)
 
@@ -105,9 +105,9 @@ Next, select the operator you wish to use from the available operators drop-down
 
 ![Custom Event operator](../images/user-guide/custom-operator.png)
 
-Lastly, enter the field value(s). In this example, multiple field values are used to differentiate Luma branded watches from the other brands Luma offers.
+Lastly, enter the field value(s) if the operator selected requires one. In this example, we only need to see if a hotel or restaurant reservation exists. However, if we wanted to be more exact we could use the equals operator and enter an exact value in the value prompt.
 
-![Custom Event field value](../images/user-guide/custom-field-value.png)
+![Custom Event field value](../images/user-guide/custom-value.png)
 
 Once complete, select **[!UICONTROL Next]** in the top-right to continue.
 
