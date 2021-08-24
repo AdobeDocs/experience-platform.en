@@ -17,17 +17,28 @@ In Adobe Experience Platform, we distinguish between two destination types - con
 
 ## Connections {#connections}
 
-**[!UICONTROL Profile Export]** and **[!UICONTROL Segment Export]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
+**[!UICONTROL Profile Export]** and **[!UICONTROL Streaming Segment Export]** destinations in Adobe Experience Platform capture event data, combine it with other data sources to form the [Real-time Customer Profile](../profile/home.md), apply segmentation, and export segments and qualified profiles to destinations. 
 
 ## Profile export destinations
 
-Profile export destinations generate a file containing profiles and/or attributes. These destinations use raw data, often with email address as the primary key. The [Amazon S3 cloud storage destination](./catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
+Profile export destinations receive raw data, often with email address as the primary key. Experience Platform currently supports two types of profile export destinations:
 
-## Segment export destinations
+* [Streaming profile export destinations](#streaming-profile-export)
+* [File-based destinations](#file-based)
 
-Segment export destinations send the profiles and the segments that they qualified for to destination platforms. These destinations use segment ID or user IDs. Advertising destinations such as [[!DNL Google Display & Video 360]](./catalog/advertising/google-dv360.md) or [[!DNL Google Ads]](./catalog/advertising/google-ads-destination.md) are examples of these types of destinations.
+### Streaming profile export destinations {#streaming-profile-export}
 
-## Profile export and Segment export destinations - video overview
+Streaming profile export destinations receive segment and profile data as Experience Platform data streams. [Amazon Kinesis](catalog/cloud-storage/amazon-kinesis.md) and [Azure Event Hubs](catalog/cloud-storage/azure-event-hubs.md) are examples of such destinations.
+
+### File-based destinations {#file-based}
+
+File-based destinations receive `.csv` files containing profiles and/or attributes. [Amazon S3](catalog/cloud-storage/amazon-s3.md) is an example of destination where you can deposit files containing profile exports.
+
+## Streaming segment export destinations
+
+Segment export destinations receive Experience Platform segment data. These destinations use segment IDs or user IDs. [[!DNL Google Display & Video 360]](catalog/advertising/google-dv360.md) and [[!DNL Google Ads]](catalog/advertising/google-ads-destination.md) are examples of such destinations.
+
+## Profile export and segment export destinations - video overview
 
 The video below runs you through the particularities of the two types of destinations: 
 

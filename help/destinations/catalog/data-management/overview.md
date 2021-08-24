@@ -10,4 +10,4 @@ exl-id: 1c925edc-b31e-440f-bdd9-37aa399565d5
 
 Currently, Adobe Experience Platform supports the Data Management Platform (DMP) destinations listed below. For information on how to connect to these destinations, see the individual links:
 
-- [Audience Manager DIL extension](./aam-dil-extension.md)
+* [Audience Manager DIL extension](aam-dil-extension.md)
