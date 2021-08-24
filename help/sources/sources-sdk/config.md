@@ -508,6 +508,8 @@ The following contains further information on the configuration preparation proc
 
 ### `$.members` response API example
 
+The following is an example of the contents of `contentPath`, which can be defined as `$.members`.
+
 ```json
 {
   "members": [
@@ -602,6 +604,8 @@ The following contains further information on the configuration preparation proc
 ```
 
 ### Offset type of pagination
+
+The following is an example of pagination set to `"paginationType" = "offset"`.
 
 ```json
 
