@@ -9,7 +9,7 @@ description: DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts
 
 DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various components that enable Verizon Media/Yahoo to exchange data with its external partners in a secure, automated and scalable manner.
 
->[!IMPORTANT]. 
+>[!IMPORTANT]
 >
 >This documentation page was created by Verizon Media/Yahoo's DataX team. For any inquiries or update requests, please contact them directly at [dataops@verizonmedia.com](mailto:dataops@verizonmedia.com)
 
