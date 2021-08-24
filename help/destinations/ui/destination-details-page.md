@@ -45,7 +45,7 @@ The following table covers the controls and details provided by the right rail:
 
 | Right rail item | Description |
 | --- | --- |
-| [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guide on [activating segments to a destination](./activate-destinations.md) for more information. |
+| [!UICONTROL Activate] | Select this control to edit which segments are mapped to the destination. See the guides on [activating audience data to segment streaming destinations](./activate-segment-streaming-destinations.md), [activating audience data to batch profile-based destinations](./activate-batch-profile-destinations.md), and [activating audience data to streaming profile-based destinations](./activate-streaming-profile-destinations.md) for more information. |
 | [!UICONTROL Delete] | Allows you to delete this dataflow and unmaps the segments that were previously activated, if any exist. |
 | [!UICONTROL Destination name] | This field can be edited in order to update the destination's name. |
 | [!UICONTROL Description] |  This field can be edited in order to update or add an optional description to the destination. |
