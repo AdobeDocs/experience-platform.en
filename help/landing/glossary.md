@@ -176,7 +176,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Dataset output**: Dataset output provides a mechanism for determining what the "Create Table as Select" option will be used for a particular [!DNL Query Service] run.
 
-**Deduplication key**: A user defined primary key which determines the identity by which users want their profiles to be deduplicated.​
+**Deduplication key**: A user defined primary key that determines the identity by which users want their profiles to be deduplicated.​
 
 **Delta column**: A delta column allows you to select a source data field to represent a timestamp for incremental ingestion.
 
@@ -256,7 +256,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
 
-**Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3,6,7, or 12 hours.
+**Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 7, or 12 hours.
 
 ## I
 
@@ -318,7 +318,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Machine-learning model**: A machine-learning model is an instance of a machine-learning recipe that is trained using historical data and configurations to solve for a business use case. In Adobe Experience Platform Data Science Workspace, machine-learning models are called recipes.
 
-**Mandatory attribute**: A user enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.
+**Mandatory attribute**: A user enabled checkbox that ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.
 
 **Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination. 
 
@@ -350,7 +350,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **On-site targeting marketing action**: A marketing action that uses data for on-site ads, including the selection and delivery of advertisements on your organization's websites or apps, or to measure the delivery and effectiveness of such advertisements.
 
-**Once**: In the context of scheduled file exports, schedules a one time, on-demand, full file export.
+**Once**: In the context of scheduled file exports, schedules a one-time, on-demand, full file export.
 
 **Overwrite save strategy**: The "Overwrite" save strategy is an option for ingesting third-party data via a connection, where you can specify if ingested data will be overwritten on a specified schedule.
 
