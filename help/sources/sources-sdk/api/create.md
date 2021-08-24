@@ -29,7 +29,7 @@ Once your artifacts are ready, you can begin the process of creating a new conne
 
 ### Retrieve a generic REST connection specification
 
-To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service API]. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service API].
+To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service] API. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
 **API format**
 
@@ -146,7 +146,7 @@ The following response is an example of an empty generic REST connector  connect
 
 ### Author your generic connection specification
 
-Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source.
+Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source. For more information on connection specifications, see the documentation on [preparing your configurations](../config.md).
 
 The following payload is an example of a generic REST connection specification authored with information specific to a [!DNL Mailchimp] source:
 
@@ -311,3 +311,7 @@ The following payload is an example of a generic REST connection specification a
   }
 }
 ```
+
+## Next steps
+
+With a fully-authored connection specification ready, you can now submit your connection specification to a specific sandbox of your choice through the [!DNL Flow Service] API for testing. See the tutorial on [testing your new source](./test.md) for more information.
