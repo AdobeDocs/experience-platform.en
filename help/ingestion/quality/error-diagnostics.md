@@ -140,17 +140,19 @@ If batches contain failures, you should retrieve error information about these f
 
 ### Check status {#check-status}
 
-To check the status of the ingested batch, you must supply the batch's ID in the path of a GET request.
+To check the status of the ingested batch, you must supply the batch's ID in the path of a GET request. To learn more about using this API call, please read the [catalog endpoint guide](../../catalog/api/list-objects.md).
 
 **API format**
 
 ```http
 GET /catalog/batches/{BATCH_ID}
+GET /catalog/batches/{BATCH_ID}?{FILTER}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | The `id` value of the batch you want to check the status of. |
+| `{FILTER}` | A query parameter used to filter the results returned in the response. Multiple parameters are separated by ampersands (`&`). For more information, please read the guide on [filtering Catalog data](../../catalog/api/filter-data.md) for more information. |
 
 **Request**
 
