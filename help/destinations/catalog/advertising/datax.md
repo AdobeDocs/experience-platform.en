@@ -82,7 +82,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 *  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
 *  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
-*  **[!MDM ID]**: This is a unique identifier in Yahoo DataX and it is a mandatory field for setting up data exports to this destination. If you don't know this Id, contact your Yahoo Data X account manager.  With MDM IDs, data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
+*  **[!UICONTROL MDM ID]**: This is a unique identifier in Yahoo DataX and it is a mandatory field for setting up data exports to this destination. If you don't know this Id, contact your Yahoo Data X account manager.  With MDM IDs, data can be restricted for use only with a certain set of exclusive users (such as first party data for advertisers).
 
 ## Activate segments to this destination {#activate}
 
