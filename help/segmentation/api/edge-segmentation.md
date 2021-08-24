@@ -45,7 +45,6 @@ The following query types are **not** currently supported by edge segmentation:
 | Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
 | Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
 
-
 {style="table-layout:auto"}
 
 ## Retrieve all segments enabled for edge segmentation
