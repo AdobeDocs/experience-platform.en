@@ -152,7 +152,7 @@ GET /catalog/batches/{BATCH_ID}?{FILTER}
 | Parameter | Description |
 | --------- | ----------- |
 | `{BATCH_ID}` | The `id` value of the batch you want to check the status of. |
-| `{FILTER}` | A query parameter used to filter the results returned in the response. Multiple parameters are separated by ampersands (`&`). For more information, please read the guide on [filtering Catalog data](../../catalog/api/filter-data.md) for more information. |
+| `{FILTER}` | A query parameter used to filter the results returned in the response. Multiple parameters are separated by ampersands (`&`). For more information, please read the guide on [filtering Catalog data](../../catalog/api/filter-data.md).|
 
 **Request**
 
