@@ -75,7 +75,7 @@ The right sidebar contains information about all the segments within the IMS org
 
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
-Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
+Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, activate the segment to a destination, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
 
 >[!NOTE]
 >
