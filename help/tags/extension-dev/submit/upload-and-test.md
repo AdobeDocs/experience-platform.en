@@ -193,7 +193,7 @@ Installation instructions are available from the Environments tab. This page dis
 
 ![](../images/getting-started/launch-installation-instructions.png)
 
-The **Web Install Instructions** dialogue for the Development environment appears. Select the copy icon to copy the entire `<script>` tag.
+The **Web Install Instructions** dialog for the Development environment appears. Select the copy icon to copy the entire `<script>` tag.
 
 ![](../images/getting-started/launch-installation-instructions-dialogue.png)
 
