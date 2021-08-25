@@ -10,7 +10,7 @@ exl-id: a134c144-e7b8-4d48-8c90-5999e5ceb8a0
 
 Adobe Livefyre enables you to discover, organize, and publish a constant flow of user generated content onto your website to create authentic and highly personalized experiences.
 
-Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
+Adobe Livefyre is a social extension in Adobe Experience Platform. For more information about the Adobe Livefyre, read the [Livefyre implementation guide](https://experienceleague.adobe.com/docs/livefyre/implementation/home.html?lang=en).
 
 This destination is a tag extension. For more information about how tags extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -26,7 +26,7 @@ To use this extension, you need access to tags in Adobe Experience Platform. Tag
 
 To install the Adobe Livefyre extension:
 
-In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
@@ -36,10 +36,7 @@ Select the tag property in which you want to install the extension. You also hav
 
 The workflow takes you to the Data Collection UI to complete the installation. 
 
-For information about the extension configuration options and installation support, see the [Adobe Livefyre page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100464.html).
-
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the guide on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) for more information.
-
 
 ## How to use the extension {#how-to-use}
 

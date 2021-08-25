@@ -22,8 +22,8 @@ A query can be evaluated with edge segmentation if it meets any of the following
 | ---------- | ------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. | ![](../images/ui/edge-segmentation/incoming-hit.png) |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. | ![](../images/ui/edge-segmentation/profile-hit.png) |
-| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. | |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. | |
+| Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours | |
+| Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes | |
 
 If the query matches any of the above query types, it will automatically be evaluated using edge segmentation.
 
@@ -31,9 +31,9 @@ The following query types are **not** currently supported for edge segmentation:
 
 | Query type | Details |
 | ---------- | ------- |
-| Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
-| Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
+| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. | |
+| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. | |
 
 ## Next steps
 

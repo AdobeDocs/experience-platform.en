@@ -269,13 +269,13 @@ With the dataset and streaming connection in place, you can ingest XDM-formatted
 **API format**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
 | `{CONNECTION_ID}` | The `inletId` value of the streaming connection previously created. |
-| `synchronousValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. |
+| `syncValidation`| An optional query parameter intended for development purposes. If set to `true`, it can be used for immediate feedback to determine if the request was successfully sent. By default, this value is set to `false`. Please note that if you set this query parameter to `true` that the request will be rate limited to 60 times per minute per `CONNECTION_ID`. |
 
 **Request**
 
@@ -288,7 +288,7 @@ The example request below ingests a record with a missing source name to Platfor
 >The following API call does **not** require any authentication headers.
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Cache-Control: no-cache" \
   -H "Content-Type: application/json" \
   -d '{
@@ -353,7 +353,7 @@ A successful response returns HTTP status 200 with details of the newly streamed
     "inletId": "{CONNECTION_ID}",
     "xactionId": "1584479347507:2153:240",
     "receivedTimeMs": 1584479347507,
-    "synchronousValidation": {
+    "syncValidation": {
         "status": "pass"
     }
 }
@@ -364,7 +364,7 @@ A successful response returns HTTP status 200 with details of the newly streamed
 | `{CONNECTION_ID}` | The ID of the previously created streaming connection. |
 | `xactionId` | A unique identifier generated server-side for the record you just sent. This ID helps Adobe trace this record's lifecycle through various systems and with debugging. |    
 | `receivedTimeMs` | A timestamp (epoch in milliseconds) that shows what time the request was received. |
-| `synchronousValidation.status` | Since the query parameter `synchronousValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
+| `syncValidation.status` | Since the query parameter `syncValidation=true` was added, this value will appear. If the validation has succeeded, the status will be `pass`. |
 
 ## Retrieve the newly ingested record data
 
