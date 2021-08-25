@@ -1,15 +1,17 @@
 ---
 keywords: Experience Platform;home;popular topics;Oracle Object Storage;oracle object storage
 solution: Experience Platform
-title: Create an Oracle Object Storage Source Connection Using the Flow Service API
-topic: overview
+title: Create an Oracle Object Storage Base Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Oracle Object Storage using the Flow Service API.
+exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 ---
+# Create an [!DNL Oracle Object Storage] base connection using the [!DNL Flow Service] API
 
-# Create an [!DNL Oracle Object Storage] source connection using the [!DNL Flow Service] API
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to walk you through the steps to connect Adobe Experience Platform to [!DNL Oracle Object Storage].
+This tutorial walks you through the steps to create a base connection for [!DNL Oracle Object Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -31,32 +33,19 @@ In order for [!DNL Flow Service] to connect to [!DNL Oracle Object Storage], you
 | `secretKey` | The [!DNL Oracle Object Storage] password required for authentication. |
 | `bucketName` | The allowed bucket name required if the user has restricted access. The bucket name must be between three and 63 characters long, it must begin and end with either a letter or a number, and can only contain lowercase letters, numbers, or hyphens (`-`). The bucket name cannot be formatted like an IP address. |
 | `folderPath` | The allowed folder path required if the user has restricted access. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Oracle Object Storage] is: `c85f9425-fb21-426c-ad0b-405e9bd8a46c`. |
 
 For more information on how to obtain these values, refer to the [Oracle Object Storage authentication guide](https://docs.oracle.com/en-us/iaas/Content/Identity/Concepts/usercredentials.htm#User_Credentials).
 
-### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the Experience Platform troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to Platform APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all Experience Platform API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per [!DNL Oracle Object Storage] account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Oracle Object Storage] authentication credentials as part of the request parameters.
 
 **API format**
 
@@ -66,7 +55,7 @@ POST /connections
 
 **Request**
 
-In order to create a [!DNL Oracle Object Storage] connection, its unique connection spec ID must be provided as part of the POST request. The connection spec ID for [!DNL Oracle Object Storage] is `c85f9425-fb21-426c-ad0b-405e9bd8a46c`.
+The following request creates a base connection for [!DNL Oracle Object Storage]:
 
 ```shell
 curl -X POST \

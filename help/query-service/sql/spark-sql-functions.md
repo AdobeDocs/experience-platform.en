@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;spark sql;Spark sql;spark;spark sql functions;functions;
 solution: Experience Platform
 title: Spark SQL Functions in Query Service
-topic: spark sql functions
+topic-legacy: spark sql functions
 description: This documentation contains information on Spark SQL functions that extend SQL functionality.
+exl-id: 59e6d82b-3317-456d-8c56-3efd5978433a
 ---
-
 # [!DNL Spark] SQL functions
 
 Adobe Experience Platform Query Service provides several built-in Spark SQL functions to extend SQL functionality. This document lists the Spark SQL functions that are supported by Query Service.

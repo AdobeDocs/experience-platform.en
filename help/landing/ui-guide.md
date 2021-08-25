@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;user guide;ui guide;platform ui guide;introduction to platform;dashboard;
 solution: Experience Platform
 title: Experience Platform UI Overview
-topic: ui guide
-description: Adobe Experience Platform 
+topic-legacy: ui guide
+description: Adobe Experience Platform
+exl-id: 47f9a3fb-731d-4ade-8069-faaa18f224dc
 ---
-
 # Adobe Experience Platform UI guide
 
 This guide serves as an introduction to using the Adobe Experience Platform user interface (UI), explaining what the various components are used for and providing links to further documentation for more information.
@@ -72,7 +72,7 @@ Selecting the switcher opens a dropdown menu of IMS Organizations you have acces
 
 ### Switch applications
 
-The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and Launch.
+The next item on the right side of the top navigation is the **application switcher**, represented by the ![application switcher](./images/user-guide/app-switcher-icon.png) icon. When you select this icon, you can switch between Adobe applications that your IMS Org has access to, such as Experience Platform, Analytics, Assets, and others.
 
 ### Help
 

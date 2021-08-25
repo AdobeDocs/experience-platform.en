@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;application;datatype;data-type;data type;
 solution: Experience Platform
 title: Application Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Application Experience Data Model (XDM) data type.
+exl-id: ac7d6761-7b58-4e0d-85e7-6f157fb2eea5
 ---
-
 # [!UICONTROL Application] data type
 
 [!UICONTROL Application] is a standard Experience Data Model (XDM) data type that describes details related to the application generated interactions. An application refers to a software experience, such as a mobile or desktop application that can be installed, run, closed, or uninstalled by an end user. The properties for this data type are not intended to describe agents such as chatbots, browser-based plugins, or other experiences that do not apply to applications.
@@ -25,6 +25,8 @@ description: This document provides an overview of the Application Experience Da
 | `name` | String | The name of the application. |
 | `userPerspective` | String | The perspective or physical relationship between the user and the app or brand at the time an event happened. Understanding the perspective of the user in relation to the app helps with accurately generating sessions as the majority of the time you will not want to include `background` and `detached` events as part of an "active" session. The value of this property must be equal to one of the enum values listed below. <li> `foreground`: The user and app are directly interacting with one another. </li> <li> `background`: The app and user are indirectly interacting with one another. For example, the app could measure a value and refresh while the screen is locked or another app is being used in the foreground.  </li> <li> `detached`: Detached means the event was related to the app but didn't come directly from the app, such as the sending of an email or push notification from an external system. |
 | `version` | String | The version of the application. |
+
+{style="table-layout:auto"}
 
 For more details on the data type, refer to the public XDM repository:
 

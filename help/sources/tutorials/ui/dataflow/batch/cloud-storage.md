@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;dataflow;Dataflow
 solution: Experience Platform
 title: Configure a Dataflow for a Cloud Storage Batch Connector in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a Platform dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
+exl-id: b327bbea-039d-4c04-afd3-f1d6a5f902a6
 ---
-
 # Configure a dataflow for a cloud storage batch connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your cloud storage account.
@@ -29,6 +29,7 @@ Additionally, this tutorial requires that you have an established cloud storage 
 * Delimiter-separated values (DSV): Any single-character value can be used as a delimiter for DSV-formatted data files.
 * [!DNL JavaScript Object Notation] (JSON): JSON-formatted data files must be XDM-compliant.
 * [!DNL Apache Parquet]: Parquet-formatted data files must be XDM-compliant.
+* Compressed files: JSON and delimited files can be compressed as: `bzip2`, `gzip`, `deflate`, `zipDeflate`, `tarGzip`, and `tar`.
 
 ## Select data
 
@@ -81,6 +82,16 @@ Once you have selected your data format and set your delimiter, select **[!UICON
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/delimiter.png)
 
+### Ingest compressed files
+
+You can ingest compressed JSON or delimited files by specifying their compression type.
+
+In the [!UICONTROL Select data] step, select a compressed file for ingestion and then select its appropriate file type and whether it's XDM-compliant or not. Next, select **[!UICONTROL Compression type]** and then select the appropriate compressed file type for your source data.
+
+With a compressed file type identified, select **[!UICONTROL Next]** to proceed.
+
+![](../../../../images/tutorials/dataflow/cloud-storage/batch/compressed-files.png)
+
 ## Map data fields to an XDM schema
 
 The **[!UICONTROL Mapping]** step appears, providing an interactive interface to map the source data to a [!DNL Platform] dataset. Source files formatted in Parquet must be XDM compliant and do not require you to manually configure the mapping, while CSV files require you to explicitly configure the mapping, but allow you to pick which source data fields to map. JSON files, if marked as XDM complaint, does not require manual configuration. However, if it is not marked as XDM compliant, it will require you to explicitly configure the mapping.
@@ -111,7 +122,7 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md). 
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../../data-prep/functions.md) or the [calculated fields guide](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 

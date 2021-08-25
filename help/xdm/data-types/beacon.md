@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;beacon;interaction details;datatype;data-type;data type;
 solution: Experience Platform
 title: Beacon Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the XDM Individual Profile class.
+exl-id: a3767c8d-a009-49b4-81a4-b084b6e5101a
 ---
-
 # [!UICONTROL Beacon] data type
 
 [!UICONTROL Beacon] is a standard XDM data type that describes the wireless device that communicates identity information to mobile applications as mobile devices come within range.
@@ -19,10 +19,12 @@ description: This document provides an overview of the XDM Individual Profile cl
 | `proximity` | String | Estimated distance from the beacon. See the [appendix](#proximity) for accepted values and definitions. |
 | `proximityUUID` | String | A proximity UUID (Universally Unique Identifier) is a special type of identifier used to distinguish beacons in your network from all other beacons in networks outside your control. The proximity UUID is configured into a beacon, to be transmitted to mobile devices in range to identify an organization's beacons. |
 
+{style="table-layout:auto"}
+
 For more details on the data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/beacon-interaction-details.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/deprecated/beacon-interaction-details.schema.json)
 
 ## Appendix
 

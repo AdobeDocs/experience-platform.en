@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Microsoft Dynamics;microsoft dynamics;dynamics;Dynamics
 solution: Experience Platform
 title: Microsoft Dynamics Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Microsoft Dynamics to Adobe Experience Platform using APIs or the user interface.
+exl-id: 6ca162ce-2016-4270-b741-301cf4230233
 ---
-
 # Microsoft Dynamics connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Microsoft D
 
 ## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using APIs
 
-- [Create a Microsoft Dynamics source connection using the Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
-- [Explore a CRM system using the Flow Service API](../../tutorials/api/explore/crm.md)
-- [Collect CRM data using the Flow Service API](../../tutorials/api/collect/crm.md)
+- [Create a Microsoft Dynamics base connection using the Flow Service API](../../tutorials/api/create/crm/ms-dynamics.md)
+- [Explore the data structure and contents of a CRM source using the Flow Service API](../../tutorials/api/explore/crm.md)
+- [Create a dataflow for a CRM source using the Flow Service API](../../tutorials/api/collect/crm.md)
 
 ## Connect [!DNL Microsoft Dynamics] to [!DNL Platform] using the UI
 
 - [Create a Microsoft Dynamics source connection in the UI](../../tutorials/ui/create/crm/dynamics.md)
-- [Configure a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)
+- [Create a dataflow for a CRM connection in the UI](../../tutorials/ui/dataflow/crm.md)

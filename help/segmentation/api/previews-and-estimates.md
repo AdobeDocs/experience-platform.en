@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;segmentation;Segmentation;Segmentation Service;previews;estimates;previews and estimates;estimates and previews;api;API;
 solution: Experience Platform
 title: Previews and Estimates API Endpoints
-topic: developer guide
+topic-legacy: developer guide
 description: As segment definition are developed, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure you are isolating the expected audience.
+exl-id: 2c204f29-825f-4a5e-a7f6-40fc69263614
 ---
-
 # Previews and estimates endpoints
 
 As you develop a segment definition, you can use the estimate and preview tools within Adobe Experience Platform to view summary-level information to help ensure that you are isolating the audience you expect. 
@@ -68,7 +68,8 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
     {
         "predicateExpression": "xEvent.metrics.commerce.abandons.value > 0",
         "predicateType": "pql/text",
-        "predicateModel": "_xdm.context.profile"
+        "predicateModel": "_xdm.context.profile",
+        "graphType": "none"
     }'
 ```
 
@@ -77,6 +78,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/preview \
 | `predicateExpression` | The PQL expression to query the data by. |
 | `predicateType` | The predicate type for the query expression under `predicateExpression`. Currently, the only accepted value for this property is `pql/text`. |
 | `predicateModel` | The name of the [!DNL Experience Data Model] (XDM) schema class the profile data is based on. |
+| `graphType` | The graph type that you want to get the cluster from. The supported values are `none` (performs no identity stitching) and `pdg` (performs identity stitching based on your private identity graph). |
 
 **Response**
 
@@ -242,4 +244,4 @@ A successful response returns HTTP status 200 with details of the estimate job.
 
 ## Next steps
 
-After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md). 
+After reading this guide you should have a better understanding of how to work with  previews and estimates using the Segmentation API. To learn how to access metrics related to your Real-time Customer Profile data, such as the total number of profile fragments and merged profiles within specific namespaces or the Profile data store as a whole, please visit the [profile preview (`/previewsamplestatus`) endpoint guide](../../profile/api/preview-sample-status.md).

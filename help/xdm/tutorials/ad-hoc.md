@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Create an Ad-Hoc Schema
 description: In specific circumstances, it may be necessary to create an Experience Data Model (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various data ingestion workflows for Experience Platform, including ingesting CSV files and creating certain kinds of source connections.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: bef01000-909a-4594-8cf4-b9dbe0b358d5
 ---
-
 # Create an ad-hoc schema
 
 In specific circumstances, it may be necessary to create an [!DNL Experience Data Model] (XDM) schema with fields that are namespaced for usage only by a single dataset. This is referred to as an "ad-hoc" schema. Ad-hoc schemas are used in various data ingestion workflows for [!DNL Experience Platform], including ingesting CSV files and creating certain kinds of source connections.
@@ -80,6 +80,8 @@ curl -X POST \
 | `$ref` | The data behavior for the new class. For ad-hoc classes, this value must be set to `https://ns.adobe.com/xdm/data/adhoc`. |
 | `properties._adhoc` | An object that contains the custom fields for the class, expressed as key-value pairs of field names and data types. |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns the details of the new class, replacing the `properties._adhoc` object's name with a GUID that is a system-generated, read-only unique identifier for the class. The `meta:datasetNamespace` attribute is also generated automatically and included in the response.
@@ -140,6 +142,8 @@ A successful response returns the details of the new class, replacing the `prope
 | Property | Description |
 | --- | --- |
 | `$id` | A URI that serves as the read-only, system generated unique identifier for the new ad-hoc class. This value is used in the next step of creating an ad-hoc schema. |
+
+{style="table-layout:auto"}
 
 ## Create an ad-hoc schema
 
@@ -231,6 +235,8 @@ GET /tenant/schemas/{SCHEMA_ID}
 | Parameter | Description |
 | --- | --- |
 | `{SCHEMA_ID}` | The URL-encoded `$id` URI or `meta:altId` of the ad-hoc schema you want to access. |
+
+{style="table-layout:auto"}
 
 **Request**
 

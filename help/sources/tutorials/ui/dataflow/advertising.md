@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;configure dataflow;advertising connector
 solution: Experience Platform
 title: Configure a Dataflow for an Advertising Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.
+exl-id: 8dd1d809-e812-4a13-8831-189726b2430e
 ---
-
 # Configure a dataflow for an advertising connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to an Adobe Experience Platform dataset. This tutorial provides steps to configure a new dataflow using your advertising account.
@@ -72,7 +72,7 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![select-schema](../../../images/tutorials/dataflow/advertising/select-existing-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../data-prep/functions.md) or the [calculated fields guide](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >

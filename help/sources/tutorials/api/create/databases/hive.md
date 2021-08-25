@@ -1,21 +1,21 @@
 ---
 keywords: Experience Platform;home;popular topics;Apache hive;hive;Hive
 solution: Experience Platform
-title: Create an Apache Hive on Azure HDInsights Source Connection Using the Flow Service API
-topic: overview
+title: Create an Apache Hive on Azure HDInsights Base Connection Using the Flow Service API
+topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Apache Hive on Azure HDInsights to Adobe Experience Platform using the Flow Service API.
+exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 ---
-
-# Create an [!DNL Apache Hive] on [!DNL Azure HDInsights] source connection using the [!DNL Flow Service] API
+# Create an [!DNL Apache Hive] on [!DNL Azure HDInsights] base connection using the [!DNL Flow Service] API
 
 >[!NOTE]
 >
 >The [!DNL Apache Hive] on [!DNL Azure HDInsights] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
-[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
+A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to connect [!DNL Apache Hive] on [!DNL Azure HDInsights] to [!DNL Experience Platform].
+This tutorial walks you through the steps to create a base connection for [!DNL Apache Hive] on [!DNL Azure HDInsights] (hereinafter referred to as "[!DNL Hive]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 
 ## Getting started
 
@@ -32,46 +32,32 @@ In order for [!DNL Flow Service] to connect with [!DNL Hive], you must provide v
 
 | Credential | Description |
 | ---------- | ----------- |
-| `host` | IP address or host name of the [!DNL Hive] server. |
+| `host` | The IP address or host name of the [!DNL Hive] server. |
 | `username` | The username that you use to access [!DNL Hive] server.|
 | `password` | The password corresponding to the user. |
-| `connectionSpec.id` | The unique identifier needed to create a connection. The connection specification ID for [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Hive] is: `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f` |
 
 For more information about getting started refer to [this Hive document](https://cwiki.apache.org/confluence/display/Hive/Tutorial#Tutorial-GettingStarted).
 
-#### Reading sample API calls
+### Using Platform APIs
 
-This tutorial provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../../../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
+For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-### Gather values for required headers
+## Create a base connection
 
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
+A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-* `Authorization: Bearer {ACCESS_TOKEN}`
-* `x-api-key: {API_KEY}`
-* `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform], including those belonging to the [!DNL Flow Service], are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-* `x-sandbox-name: {SANDBOX_NAME}`
-
-All requests that contain a payload (POST, PUT, PATCH) require an additional media type header:
-
-* `Content-Type: application/json`
-
-## Create a connection
-
-A connection specifies a source and contains your credentials for that source. Only one connection is required per Hive account as it can be used to create multiple source connectors to bring in different data.
+To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL Hive] authentication credentials as part of the request parameters.
 
 **API format**
 
-```http
+```https
 POST /connections
 ```
 
 **Request**
 
-In order to create a [!DNL Hive] connection, its unique connection specification ID must be provided as part of the POST request. The connection specification ID for [!DNL Hive] is `aac9bbd4-6c01-46ce-b47e-51c6f0f6db3f`.
+The following request creates a base connection for [!DNL Hive]:
 
 ```shell
 curl -X POST \

@@ -2,16 +2,12 @@
 keywords: Experience Platform;home;popular topics;Azure Table Storage;azure table storage;ats;ATS
 solution: Experience Platform
 title: Create an Azure Table Storage  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create an Azure Table Storage source connection using the Adobe Experience Platform UI.
+exl-id: 045cb954-e3e1-439d-a3cd-170d688dfbc8
 ---
-
 # Create an [!DNL Azure Table Storage] source connection in the UI
-
->[!NOTE]
->
->The [!DNL Azure Table Storage] connector is in beta. See the [Sources overview](../../../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Azure Table Storage] (hereinafter referred to as "ATS") source connector using the [!DNL Platform] user interface.
 

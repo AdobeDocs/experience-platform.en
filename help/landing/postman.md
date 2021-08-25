@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Postman in Adobe Experience Platform
-topic: api guide
+topic-legacy: api guide
 description: This document contains steps outlining how to set up a Postman environment, import Postman collections, and a list of available collections for each Platform service.
+exl-id: a09b3875-97f5-47f1-a562-52decbce67b1
 ---
-
 # Postman in Adobe Experience Platform
 
 Postman is a collaboration platform for API development that allows you to set up environments with preset variables, share API collections, streamline CRUD requests, and more. Most Platform API services have Postman collections which can be used to assist with making API calls.
@@ -18,7 +18,7 @@ The following video guide outlines creating and setting up your Postman environm
 
 ## Postman collections {#collections}
 
-A folder containing all the available Postman collections can be found by, visiting the [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternatively, a Postman collection link can be found in each individual swagger file in the [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+A folder containing all the available Postman collections can be found by, visiting the [Experience Platform Postman samples GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform). Alternatively, a Postman collection link can be found in each individual swagger file in the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 To download a Postman collection, select **[!DNL Raw]** from the GitHub page to load the raw JSON file in a new tab. Then, right-click and select **[!DNL Save as]** to save the file to a local destination of your choice.
 

@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API
 title: Export Jobs API Endpoint
-topic: guide
+topic-legacy: guide
 type: Documentation
 description: Real-time Customer Profile enables you to build a single view of individual customers within Adobe Experience Platform by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing.
+exl-id: d51b1d1c-ae17-4945-b045-4001e4942b67
 ---
-
 # Export jobs endpoint
 
 [!DNL Real-time Customer Profile] enables you to build a single view of individual customers by bringing together data from multiple sources, including both attribute data and behavioral data. Profile data can then be exported to a dataset for further processing. For example, audience segments from [!DNL Profile] data can be exported for activation, and profile attributes can be exported for reporting.
@@ -59,11 +59,6 @@ curl -X POST \
         "schemaRef": {
           "id": "https://ns.adobe.com/xdm/context/profile__union",
           "contentType": "application/vnd.adobe.xed+json;version=1"
-        },
-        "fileDescription": {
-          "persisted": true,
-          "containerFormat": "parquet",
-          "format": "parquet"
         }
       }'
 ```
@@ -72,7 +67,6 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | A descriptive name for the dataset. |
 | `schemaRef.id` | The ID of the union view (schema) that the dataset will be associated with. |
-| `fileDescription.persisted` | A Boolean value that when set to `true`, enables the dataset to persist in the union view. |
 
 **Response**
 

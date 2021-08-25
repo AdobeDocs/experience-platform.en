@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Data quality;quality;Quality;Supported validation;Validation;supported validation;
 solution: Experience Platform
 title: Data Quality
-topic: overview
+topic-legacy: overview
 description: The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in Adobe Experience Platform.
+exl-id: 7ef40859-235a-4759-9492-c63e5fd80c8e
 ---
-
 # Data quality in Adobe Experience Platform
 
 Adobe Experience Platform provides well-defined guarantees for completeness, accuracy, and consistency for any data uploaded through either batch or streaming ingestion. The following document provides a summary of the supported checks and validation behaviors for batch and streaming ingestion in [!DNL Experience Platform].

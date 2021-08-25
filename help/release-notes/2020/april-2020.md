@@ -5,8 +5,8 @@ doc-type: release notes
 last-update: April 13, 2020
 author: ens71067
 keywords: release notes;
+exl-id: 0f68c71e-3c9d-453b-a953-1cd1b6ca2e35
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: April 8, 2020**

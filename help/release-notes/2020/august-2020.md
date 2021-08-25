@@ -4,8 +4,8 @@ description: Experience Platform release notes August 10, 2020
 doc-type: release notes
 last-update: August 10, 2020
 author: crhoades, ens28527
+exl-id: 9347147f-e830-4487-aa12-f56723abb3c8
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: August 12, 2020**
@@ -45,8 +45,8 @@ New destinations are available where you can activate your Adobe Experience Plat
 
 |Feature | Description|
 |------- | -----------|
-|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-destinations.md#configure) in the activation workflow.|
-|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-destinations.md#select-attributes) in the activation workflow.|
+|Custom file name editor | Update to the data activation workflow for email marketing destinations and cloud storage destinations that allows you to edit the name of the exported files. For more information, refer to the [ Configure step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
+|Recommended attributes | Update to the data activation workflow for email marketing destinations and cloud storage destinations that displays recommended attributes for you to add to the exported files. For more information, refer to the [Select attributes step](../../destinations/ui/activate-batch-profile-destinations.md) in the activation workflow.|
 
 ## [!DNL Real-time Customer Data Platform] {#rtcdp}
 

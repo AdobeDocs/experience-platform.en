@@ -2,9 +2,9 @@
 solution: Experience Platform
 title: Generate Sample Data for an XDM Schema in the UI
 description: Learn how to generate sample JSON data based on an existing schema in the Adobe Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: e60eedb2-2245-42cd-b574-43caf9e3426c
 ---
-
 # Generate sample data for an XDM schema in the UI
 
 In order to ingest data into Adobe Experience Platform, the format and structure of the data must comply with an existing Experience Data Model (XDM) schema. Depending on the complexity of the schema for a particular dataset, it can be difficult to determine the exact shape of the data that the dataset expects upon ingestion.

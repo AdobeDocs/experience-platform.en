@@ -2,13 +2,15 @@
 keywords: mobile; braze; messaging;
 title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
+exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
-
 # (Beta) [!DNL Braze] connection
 
 >[!IMPORTANT]
 >
 >The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
@@ -16,7 +18,7 @@ The [!DNL Braze] destination helps you send profile data to [!DNL Braze].
 
 To send profile data to [!DNL Braze], you must first connect to the destination.
 
-## Destination specs {#destination-specs}
+## Destination specifics {#specifics}
 
 Note the following details that are specific to the [!DNL Braze] destination:
 
@@ -30,9 +32,9 @@ Note the following details that are specific to the [!DNL Braze] destination:
 
 As a marketer, I want to target users in a mobile engagement destination, with segments built in [!DNL Adobe Experience Platform]. Additionally, I want to deliver personalized experiences to them, based on attributes from their [!DNL Adobe Experience Platform] profiles, as soon as segments and profiles are updated in [!DNL Adobe Experience Platform].
 
-### Supported Identities {#supported-identities}
+## Supported identities {#supported-identities}
 
-[!DNL Google Ad Manager] supports the activation of identities described in the table below.
+[!DNL Braze] supports the activation of identities described in the table below.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
@@ -43,38 +45,24 @@ As a marketer, I want to target users in a mobile engagement destination, with s
 **[!DNL Profile-based]** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name) and/or identities, according to your field mapping.
 [!DNL Adobe Experience Platform] segments are exported to [!DNL Braze] under the `AdobeExperiencePlatformSegments` attribute.
 
+## Connect to the destination {#connect}
 
-## Connect to destination {#connect-destination}
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-In **[!UICONTROL Connections]** > **[!UICONTROL Destinations]**, select [!DNL Braze], and select **[!UICONTROL Configure]**.
+### Connection parameters {#parameters}
 
-![Configure Braze Destination](../../assets/catalog/mobile-engagement/braze/configure.png)
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
->[!NOTE]
->
->If a connection with this destination already exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.
->
->![Activate Braze Destination](../../assets/catalog/mobile-engagement/braze/activate.png)
+* **[!UICONTROL Braze account token]**: This is your [!DNL Braze] [!DNL API] key. You can find detailed instructions on how to obtain your [!DNL API] key here: [REST API Key Overview](https://www.braze.com/docs/api/api_key/).
+* **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
+* **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
+* **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
 
-In the [!UICONTROL Account] step, you need to provide your [!DNL Braze] account token. This is your [!DNL Braze] [!DNL API] key. You can find detailed instructions on how to obtain your [!DNL API] key here: [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter the token and click **[!UICONTROL Connect to destination]**. 
+## Activate segments to this destination {#activate}
 
-![Braze Destination Account Step](../../assets/catalog/mobile-engagement/braze/account.png)
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-Click **[!UICONTROL Next]**. In the [!UICONTROL Authentication] step, you need to enter the [!DNL Braze] connection details:
- * **[!UICONTROL Name]**: enter a name by which you will recognize this destination in the future.
- * **[!UICONTROL Description]**: enter a description that will help you identify this destination in the future.
- * **[!UICONTROL Endpoint Instance]**: ask your [!DNL Braze] representative which endpoint instance you should use.
- * **[!UICONTROL Marketing action]**: marketing actions indicate the intent for which data will be exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data Governance in Adobe Experience Platform](../../../data-governance/policies/overview.md) page. For information about the individual Adobe-defined marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md). 
-
-![Braze Authentication Step](../../assets/catalog/mobile-engagement/braze/authentication.png)
-
-Click **[!UICONTROL Create destination]**. Your destination is now created. You can click **[!UICONTROL Save & Exit]** if you want to activate segments later, or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate Segments](#activate-segments), for the rest of the workflow.
-
-## Activate segments {#activate-segments}
-
-See [Activate profiles and segments to a destination](../../ui/activate-destinations.md#select-attributes) for information about the segment activation workflow.
-
-## Field mapping {#field-mapping}
+## Mapping considerations {#mapping-considerations}
 
 To correctly send your audience data from [!DNL Adobe Experience Platform] to the [!DNL Braze] destination, you need to go through the field mapping step.
 
@@ -121,7 +109,7 @@ You should now see your field mapping in the list.
    
 To add more mappings, repeat the previous steps.
 
-### Example {#mapping-example}
+## Mapping Example {#mapping-example}
 
 Let's say your XDM profile schema and your [!DNL Braze] instance contain the following attributes and identities:
 
@@ -141,4 +129,3 @@ To verify if data has been exported successfully to the [!DNL Braze] destination
 ## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see [Data Governance overview](../../../data-governance/home.md).
-

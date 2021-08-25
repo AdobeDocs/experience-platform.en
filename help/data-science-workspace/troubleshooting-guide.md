@@ -2,10 +2,10 @@
 keywords: Experience Platform;troubleshooting;Data Science Workspace;popular topics
 solution: Experience Platform
 title: Data Science Workspace Troubleshooting Guide
-topic: Troubleshooting
+topic-legacy: Troubleshooting
 description: This document provides answers to frequently asked questions about Adobe Experience Platform Data Science Workspace.
+exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 ---
-
 # [!DNL Data Science Workspace] troubleshooting guide
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
@@ -109,6 +109,28 @@ For more information on [!DNL Spark] cluster resource configuration, including t
 ## Why am I receiving an error when trying execute certain tasks for larger datasets?
 
 If you are receiving an error with a reason such as `Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues.` This typically means the driver or an executor is running out of memory. See the JupyterLab Notebooks [data access](./jupyterlab/access-notebook-data.md) documentation for more information on data limits and how to execute tasks on large datasets. Typically this error can be solved by changing the `mode` from `interactive` to `batch`.
+
+Additionally, while writing large Spark/PySpark datasets, caching your data (`df.cache()`) before executing the write code can greatly improve performance. 
+
+<!-- remove this paragraph at a later date once the sdk is updated -->
+
+If you are experiencing problem while reading data and are applying transformations to the data, try caching your data before the transformations. Caching your data prevents multiple reads across the network. Start by reading the data. Next, cache (`df.cache()`) the data. Lastly, perform a your transformations.
+
+## Why are my Spark/PySpark notebooks taking so long to read and write data?
+
+If you are performing transformations on data, such as using `fit()`, the transformations may be executing multiple times. To increase performance, cache your data using `df.cache()` before performing the `fit()`. This ensures that the transformations are only executed a single time and prevents multiple reads across the network.
+
+**Recommended order:** Start by reading the data. Next, perform transformations followed by caching (`df.cache()`) the data. Lastly, perform a `fit()`.
+
+## Why are my Spark/PySpark notebooks failing to run?
+
+If you are receiving any of the following errors: 
+
+- Job aborted due to stage failure ... Can only zip RDDs with same number of elements in each partition.
+- Remote RPC client disassociated and other memory errors.
+- Poor performance when reading and writing datasets.
+
+Check to make sure you are caching the data (`df.cache()`) before writing the data. When executing code in notebooks, using `df.cache()` before an action such as `fit()` can greatly improve notebook performance. Using `df.cache()` before writing a dataset ensures that the transformations are only executed a single time instead of multiple times.
 
 ## [!DNL Docker Hub] limit restrictions in Data Science Workspace
 

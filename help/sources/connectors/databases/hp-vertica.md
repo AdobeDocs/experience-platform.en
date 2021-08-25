@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;HP Vertica;hp vertica
 solution: Experience Platform
 title: HP Vertica Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect HP Vertica to Adobe Experience Platform using APIs or the user interface.
+exl-id: 5785d8bb-ccda-4d53-a79b-030923e3ae81
 ---
-
 # (Beta) [!DNL HP Vertica] connector
 
 >[!NOTE]
@@ -25,10 +25,10 @@ The documentation below provides information on how to connect [!DNL HP Vertica]
 ## Connect [!DNL HP Vertica] to [!DNL Platform] using APIs
 
 - [Create an HP Vertica source connection using the Flow Service API](../../tutorials/api/create/databases/hp-vertica.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL HP Vertica] to [!DNL Platform] using the UI
 
 - [Create an HP Vertica source connection in the UI](../../tutorials/ui/create/databases/hp-vertica.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

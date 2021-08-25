@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;filter;Filter;filter data;Filter data;date range
 solution: Experience Platform
 title: Filter Catalog Data Using Query Parameters
-topic: developer guide
+topic-legacy: developer guide
 description: The Catalog Service API allows response data to be filtered through the use of request query parameters. Part of best practices for Catalog is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
+exl-id: 0cdb5a7e-527b-46be-9ad8-5337c8dc72b7
 ---
-
 # Filter [!DNL Catalog] data using query parameters
 
 The [!DNL Catalog Service] API allows response data to be filtered through the use of request query parameters. Part of best practices for [!DNL Catalog] is to use filters in all API calls, as they reduce the load on the API and help to improve overall performance.
@@ -148,6 +148,10 @@ Based on the response above, the following can be inferred:
 * If an object does not include any of the requested properties, it will appear as an empty object. (`Dataset2`)
 * A dataset may return a requested property as an empty object if it contains the property but there is no value. (`Dataset3`)
 * Otherwise, the dataset will display the full value of all requested properties. (`Dataset4`)
+
+>[!NOTE]
+>
+>In the `schemaRef` property for each dataset, the version number indicates the latest minor version of the schema. See the section on [schema versioning](../../xdm/api/getting-started.md#versioning) in the XDM API guide for more information.
 
 ## Offset starting index of response list
 

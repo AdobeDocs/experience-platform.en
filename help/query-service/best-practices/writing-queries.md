@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;query service;Query service;writing queries;writing query;
 solution: Experience Platform
 title: General Guidance for Query Execution in Query Service
-topic: queries
+topic-legacy: queries
 type: Tutorial
 description: This document details important details to know when writing queries in Adobe Experience Platform Query Service.
+exl-id: a7076c31-8f7c-455e-9083-cbbb029c93bb
 ---
-
 # General guidance for query execution in [!DNL Query Service]
 
 This document details important details to know when writing queries in Adobe Experience Platform [!DNL Query Service].
@@ -265,7 +265,7 @@ SELECT
 FROM your_analytics_table a 
      JOIN custom_operating_system_lookup b 
       ON a._experience.analytics.environment.operatingsystemID = b.operatingsystemid 
-WHERE TIMESTAMP >= ('2018-01-01') AND TIMESTAMP <= ('2018-12-31')
+WHERE TIMESTAMP >= TO_TIMESTAMP('2018-01-01') AND TIMESTAMP <= TO_TIMESTAMP('2018-12-31')
 GROUP BY OperatingSystem 
 ORDER BY PageViews DESC
 LIMIT 50;

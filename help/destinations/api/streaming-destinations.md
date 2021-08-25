@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics; API tutorials; streaming dest
 solution: Experience Platform
 title: Connect to streaming destinations and activate data using the Flow Service API in Adobe Experience Platform
 description: This document covers the creation of streaming destinations by using the Adobe Experience Platform API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: 3e8d2745-8b83-4332-9179-a84d8c0b4400
 ---
-
 # Connect to streaming destinations and activate data using the Flow Service API
 
 >[!NOTE]
@@ -19,7 +19,7 @@ This tutorial uses the [!DNL Amazon Kinesis] destination in all examples, but th
 
 ![Overview - the steps to create a streaming destination and activate segments](../assets/api/streaming-destination/overview.png)
 
-If you prefer to use the user interface in Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect to a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to streaming segment export destinations](../ui/activate-segment-streaming-destinations.md) tutorials.
 
 ## Get started
 
@@ -148,7 +148,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
@@ -178,7 +178,7 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 --header 'x-sandbox-name: {SANDBOX_NAME}' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-            "name": "Connecting to Unified Profile Service",
+            "name": "Connecting to Profile Service",
             "description": "Optional",
             "connectionSpec": {
                 "id": "{CONNECTION_SPEC_ID}",
@@ -193,11 +193,11 @@ curl --location --request POST 'https://platform.adobe.io/data/foundation/flowse
 ```
 
 *   `{BASE_CONNECTION_ID}`: Use the Id you have obtained in the previous step.
-*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Unified Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
+*   `{CONNECTION_SPEC_ID}`: Use the connection spec ID for Profile Service - `8a9c3494-9708-43d7-ae3f-cda01e5030e1`.
 
 **Response**
 
-A successful response returns the unique identifier (`id`) for the newly created source connection to Unified Profile Service. This confirms that you have successfully connected to your Experience Platform data. Store this value as it is required in a later step.
+A successful response returns the unique identifier (`id`) for the newly created source connection to Profile Service. This confirms that you have successfully connected to your Experience Platform data. Store this value as it is required in a later step.
 
 ```json
 {

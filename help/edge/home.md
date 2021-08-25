@@ -2,17 +2,17 @@
 title: Adobe Experience Platform Web SDK Overview
 description: Learn how to use Adobe Experience Platform Web SDK to integrate Platform capabilities into your website.
 keywords: Adobe Experience Platform Web SDK;Platform Web SDK;Web SDK;edge;Visitor.js;AppMeasurement.js;AT.js;DIL.js;web sdk;SDK;web SDK;Launch;launch
+exl-id: 1348144a-7d25-4c27-bc40-3daee2f043a6
 ---
-
 # Adobe Experience Platform Web SDK overview
 
-Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is an [Experience Platform Launch extension](https://experienceleague.adobe.com/docs/launch/using/extensions-ref/adobe-extension/aep-extension/overview.html) to help with your Web SDK configurations.
+Adobe Experience Platform Web SDK is a client-side JavaScript library that allows customers of Adobe Experience Cloud to interact with the various services in the [!DNL Experience Cloud] through the Adobe Experience Platform Edge Network. In addition to the JavaScript library, there is a [tag extension](../tags/extensions/web/sdk/overview.md) to help with your Web SDK configurations.
 
 ## Experience Edge
 
 [!DNL Adobe Experience Platform Web SDK] is part of the collection that makes up Experience Edge. Experience Edge consists of three technologies:
 
-* **[!DNL Adobe Experience Platform Web SDK]:** A JavaScript SDK and [!DNL Experience Platform Launch] extension to dramatically simplify deploying [!DNL Adobe] technologies
+* **[!DNL Adobe Experience Platform Web SDK]:** A JavaScript SDK and tag extension to dramatically simplify deploying [!DNL Adobe] technologies
 * **Adobe Experience Platform Mobile SDK:** An extension to the v5 mobile SDK to allow customers to use the new deployment methodology
 * **[!DNL Adobe Experience Platform Edge Network]:** A global distributed network of servers that enable a new methodology of deploying [!DNL Adobe] products
 
@@ -54,7 +54,7 @@ The following video demonstrates Adobe Experience Platform [!DNL Web SDK] and Ad
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?quality=12&learn=on)
 
-This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, check out our [supported use-cases board](https://github.com/adobe/alloy/projects/5). We keep this up to date with the use cases we currently support and the ones we are working on to enable you to make the best decisions possible.
+This product is constantly evolving and growing to support more and more use cases. To keep up with the latest, see the [supported use cases page](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/supported-use-cases.html). This page lists the use cases we currently support, with links to more information when available.
 
 * **Use Cases Not Yet Supported:** These are use cases that are on our roadmap to be supported in the future.
 * **Use Cases In Progress:** These are the use cases the team is currently working on completing for release.

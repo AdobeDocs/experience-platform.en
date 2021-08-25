@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 solution: Experience Platform, Data Collection
 audience: user
 user-guide-title: Adobe Experience Platform Web SDK Help
@@ -13,15 +12,15 @@ feature: Data Management
 * [Platform Web SDK overview](home.md)
 * Fundamentals {#fundamentals}
   * [Prerequisites](fundamentals/prerequisite.md)
-  * [Create an edge configuration](fundamentals/edge-configuration.md)
+  * [Configuring a datastream](fundamentals/datastreams.md)
   * [Install the SDK](fundamentals/installing-the-sdk.md)
   * [Configure the SDK](fundamentals/configuring-the-sdk.md)
   * [Execute commands](fundamentals/executing-commands.md)
   * [Track events](fundamentals/tracking-events.md)
   * [Debugging](fundamentals/debugging.md)
-  * [Merge event data](fundamentals/merging-event-data.md)
   * [Configure a CSP](fundamentals/configuring-a-csp.md)
   * [Interact with multiple properties](fundamentals/interacting-with-multiple-properties.md)
+  * [Supported use cases](fundamentals/supported-use-cases.md)
 * Identity {#identity}
   * [Overview](identity/overview.md)
 * Data collection {#data-collection}
@@ -39,18 +38,21 @@ feature: Data Management
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
+    * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
   * [Supporting consent](consent/supporting-consent.md)
   * IAB Transparency and Consent Framework 2.0 {#iab-tcf}
     * [Overview](consent/iab-tcf/overview.md)
-    * [Integrate with Adobe Experience Platform Launch](consent/iab-tcf/with-launch.md)
-    * [Integrate without Adobe Experience Platform Launch](consent/iab-tcf/without-launch.md)
-* Web SDK extension for Adobe Experience Platform Launch {#extension}
-  * [Web SDK extension](extension/web-sdk-extension.md)
+    * [Integrate with tags](consent/iab-tcf/with-launch.md)
+    * [Integrate without tags](consent/iab-tcf/without-launch.md)
+* Web SDK tag extension {#extension}
+  * [Web SDK extension](extension/web-sdk-extension-configuration.md)
+  * [Event types](extension/event-types.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
+  * [Accessing the ECID](extension/accessing-the-ecid.md)
   * [Web SDK extension release notes](extension/web-sdk-ext-release-notes.md)
 * [Release notes](release-notes.md)
 * [Frequently Asked Questions](web-sdk-faq.md)

@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;GDPR;gdpr;CCPA;ccpa;PDPA;pdpa;LGPD;lgpd;overview;Overview;regulation;Regulation;regulations;Regulations;privacy;Privacy;
 solution: Experience Platform
 title: Privacy Regulations Terminology
-topic: troubleshooting
+topic-legacy: troubleshooting
 description: This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
+exl-id: 9c0a7d26-0571-41d4-8cf5-6356025d51ef
 ---
-
 # Privacy regulations terminology
 
 This document provides definitions for key terms related to privacy regulations supported by Adobe Experience Cloud.
@@ -108,7 +108,7 @@ This document provides definitions for key terms related to privacy regulations 
 
 **Processing**: Any operation performed on personal data, whether or not by automated means, including collection, use, recording, etc.
 
-**Profiling**: Any automated processing of personal data intended to evaluate, analyse, or predict data subject behavior.
+**Profiling**: Any automated processing of personal data intended to evaluate, analyze, or predict data subject behavior.
 
 **Pseudonymization**: The processing of personal data such that it can no longer be attributed to a single data subject without the use of additional data, so long as said additional data stays separate to ensure non-attribution.
 

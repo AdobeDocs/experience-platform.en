@@ -1,5 +1,4 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Adobe Experience Platform Source Connectors Help
 breadcrumb-title: Source Connectors Guide
@@ -12,14 +11,19 @@ feature: Data Ingestion, Sources
 - [Source connectors overview](home.md)
 - Available source connectors {#connectors}
   - Adobe applications {#adobe-applications}
-    - [Analytics Classifications Data connector](connectors/adobe-applications/classifications.md)
-    - [Analytics Data connector](connectors/adobe-applications/analytics.md)
-    - [Audience Manager connector](connectors/adobe-applications/audience-manager.md)
-    - [Customer attributes connector](connectors/adobe-applications/customer-attributes.md)
+    - [Analytics Classifications source connector](connectors/adobe-applications/classifications.md)
+    - [Analytics source connector](connectors/adobe-applications/analytics.md)
+    - [Audience Manager source connector](connectors/adobe-applications/audience-manager.md)
+    - [Customer attributes source connector](connectors/adobe-applications/customer-attributes.md)
     - Adobe application field mappings {#mapping}
       - [Analytics field mappings](connectors/adobe-applications/mapping/analytics.md)
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
+      - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
+    - Marketo Engage {#marketo}
+      - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
+      - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
+      - [Marketo Engage namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
@@ -39,6 +43,7 @@ feature: Data Ingestion, Sources
   - CRM {#crm}
     - [Microsoft Dynamics connector](connectors/crm/ms-dynamics.md)
     - [Salesforce connector](connectors/crm/salesforce.md)
+    - [Veeva CRM connector](connectors/crm/veeva.md)
   - Customer success {#customer-success}
     - [Salesforce Service Cloud connector](connectors/customer-success/salesforce-service-cloud.md)
     - [ServiceNow connector](connectors/customer-success/servicenow.md)
@@ -54,6 +59,7 @@ feature: Data Ingestion, Sources
     - [GreenPlum connector](connectors/databases/greenplum.md)
     - [HP Vertica connector](connectors/databases/hp-vertica.md)
     - [IBM DB2 connector](connectors/databases/ibm-db2.md)
+    - [MariaDB connector](connectors/databases/mariadb.md)
     - [Microsoft SQL Server connector](connectors/databases/sql-server.md)
     - [MySQL connector](connectors/databases/mysql.md)
     - [Oracle connector](connectors/databases/oracle.md)
@@ -61,14 +67,19 @@ feature: Data Ingestion, Sources
     - [PostgreSQL connector](connectors/databases/postgres.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
+  - Local system {#local-system}
+    - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
+    - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
   - Payments {#payments}
     - [PayPal connector](connectors/payments/paypal.md)
   - Protocols {#protocols}
     - [Generic OData connector](connectors/protocols/odata.md)
+  - Streaming {#streaming}
+    - [HTTP API connector](connectors/streaming/http.md)
 - API tutorials {#api-tutorials}
-  - Create a source connection {#create}
+  - Create a base connection {#create}
     - Advertising {#advertising}
       - [Google AdWords](tutorials/api/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
@@ -87,6 +98,7 @@ feature: Data Ingestion, Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/api/create/crm/ms-dynamics.md)
       - [Salesforce](tutorials/api/create/crm/salesforce.md)
+      - [Veeva CRM](tutorials/api/create/crm/veeva.md)
     - Customer success {#customer-success}
       - [Salesforce Service Cloud](tutorials/api/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/api/create/customer-success/servicenow.md)
@@ -102,6 +114,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/api/create/databases/greenplum.md)
       - [HP Vertica](tutorials/api/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/api/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/api/create/databases/mariadb.md)
       - [MySQL](tutorials/api/create/databases/mysql.md)
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
@@ -111,6 +124,7 @@ feature: Data Ingestion, Sources
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/api/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/api/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/api/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -122,7 +136,7 @@ feature: Data Ingestion, Sources
     - [Explore cloud storage data](tutorials/api/explore/cloud-storage.md)
     - [Explore CRM data](tutorials/api/explore/crm.md)
     - [Explore customer success data](tutorials/api/explore/customer-success.md)
-    - [Explore database or NoSQL data](tutorials/api/explore/database-nosql.md)
+    - [Explore database data](tutorials/api/explore/database-nosql.md)
     - [Explore eCommerce data](tutorials/api/explore/ecommerce.md)
     - [Explore marketing automation data](tutorials/api/explore/marketing-automation.md)
     - [Explore payment data](tutorials/api/explore/payments.md)
@@ -132,7 +146,7 @@ feature: Data Ingestion, Sources
     - [Collect cloud storage data](tutorials/api/collect/cloud-storage.md)
     - [Collect CRM data](tutorials/api/collect/crm.md)
     - [Collect customer success data](tutorials/api/collect/customer-success.md)
-    - [Collect database or NoSQL data](tutorials/api/collect/database-nosql.md)
+    - [Collect database data](tutorials/api/collect/database-nosql.md)
     - [Collect eCommerce data](tutorials/api/collect/ecommerce.md)
     - [Collect marketing automation data](tutorials/api/collect/marketing-automation.md)
     - [Collect payment data](tutorials/api/collect/payments.md)
@@ -152,6 +166,7 @@ feature: Data Ingestion, Sources
       - [Adobe Analytics (classifications data)](tutorials/ui/create/adobe-applications/classifications.md)
       - [Adobe Audience Manager](tutorials/ui/create/adobe-applications/audience-manager.md)
       - [Customer attributes](tutorials/ui/create/adobe-applications/customer-attributes.md)
+      - [Marketo Engage](tutorials/ui/create/adobe-applications/marketo.md)
     - Advertising {#create}
       - [Google AdWords](tutorials/ui/create/advertising/ads.md)
     - Cloud storage {#cloud-storage}
@@ -171,6 +186,7 @@ feature: Data Ingestion, Sources
     - CRM {#crm}
       - [Microsoft Dynamics](tutorials/ui/create/crm/dynamics.md)
       - [Salesforce](tutorials/ui/create/crm/salesforce.md)
+      - [Veeva CRM](tutorials/ui/create/crm/veeva.md)
     - Customer Success {#customer-success}
       - [Salesforce Service Cloud](tutorials/ui/create/customer-success/salesforce-service-cloud.md)
       - [ServiceNow](tutorials/ui/create/customer-success/servicenow.md)
@@ -186,6 +202,7 @@ feature: Data Ingestion, Sources
       - [GreenPlum](tutorials/ui/create/databases/greenplum.md)
       - [HP Vertica](tutorials/ui/create/databases/hp-vertica.md)
       - [IBM DB2](tutorials/ui/create/databases/ibm-db2.md)
+      - [MariaDB](tutorials/ui/create/databases/mariadb.md)
       - [Microsoft SQL Server](tutorials/ui/create/databases/sql-server.md)
       - [MySQL](tutorials/ui/create/databases/mysql.md)
       - [Oracle](tutorials/ui/create/databases/oracle.md)
@@ -193,8 +210,11 @@ feature: Data Ingestion, Sources
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+    - Local system {#local-system}
+      - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
+      - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
     - Payments {#payments}
       - [PayPal](tutorials/ui/create/payments/paypal.md)
     - Protocols {#protocols}
@@ -213,11 +233,13 @@ feature: Data Ingestion, Sources
     - [Payment connection dataflow](tutorials/ui/dataflow/payments.md)
     - [Protocol connection dataflow](tutorials/ui/dataflow/protocols.md)
   - [Activate inbound data to populate customer profiles](tutorials/ui/profile.md)
-  - [Monitor dataflows](tutorials/ui/monitor.md)
+  - [Monitor batch dataflows](tutorials/ui/monitor.md)
+  - [Monitor streaming dataflows](tutorials/ui/monitor-streaming.md)
   - [Update accounts](tutorials/ui/update.md)
   - [Update dataflows](tutorials/ui/update-dataflows.md)
   - [Delete accounts](tutorials/ui/delete-accounts.md)
   - [Delete dataflows](tutorials/ui/delete.md)
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
+- [Frequently asked questions](./troubleshooting.md)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

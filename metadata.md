@@ -1,7 +1,7 @@
 ---
-cloud: experience-cloud
+cloud: Experience Cloud
 product: adobe experience platform
-feature-set: Platform
+feature-set: Experience Platform
 solution-title: Platform Overview
 solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 solution-image: assets/experience_cloud_appicon_32.png
@@ -13,7 +13,7 @@ git-repo: https://github.com/AdobeDocs/experience-platform.en
 solution: Experience Platform
 type: Documentation
 index: yes
-role: Architect, Developer, Data Architect, Data Engineer, Business Practitioner, Administrator, Leader
+role: Architect, Developer, Data Architect, Data Engineer, User, Admin, Leader
 ---
 
 # Metadata for internal use

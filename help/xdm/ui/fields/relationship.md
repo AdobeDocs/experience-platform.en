@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Define Relationship Fields in the UI
 description: Learn how to define a relationship field in the Experience Platform user interface.
-topic: user guide
+topic-legacy: user guide
+exl-id: 8a6be545-0edb-4b9c-b164-e44a7a5f54f5
 ---
-
 # Define relationship fields in the UI
 
 In Experience Data Model (XDM), a [union schema](../../schema/composition.md#union) is a unified view of all schemas belonging to the same class that have also been enabled for [Real-time Customer Profile](../../../profile/home.md). The union schema is leveraged by Profile in order to construct a complete representation of a customer from disparate experience data.

@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Microsoft SQL;microsoft sql;SQL;sql
 solution: Experience Platform
 title: SQL Server Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect Microsoft SQL Server to Adobe Experience Platform using APIs or the user interface.
+exl-id: 8a77f108-7e82-4e14-a470-a4ea97def89d
 ---
-
-# (Beta) [!DNL Microsoft] SQL Server connector
+# [!DNL Microsoft] SQL Server connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -24,11 +24,11 @@ The documentation below provides information on how to connect [!DNL Microsoft] 
 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using APIs
 
-- [Create a Microsoft SQL Server source connection using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create a Microsoft SQL Server base connection using the Flow Service API](../../tutorials/api/create/databases/sql-server.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL Microsoft] SQL Server to [!DNL Platform] using the UI
 
 - [Create a Microsoft SQL Server source connection in the UI](../../tutorials/ui/create/databases/sql-server.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

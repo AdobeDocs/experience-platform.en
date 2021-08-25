@@ -2,11 +2,11 @@
 keywords: Experience Platform;publish a model;Data Science Workspace;popular topics;sensei machine learning api
 solution: Experience Platform
 title: Publish a Model as a Service Using the Sensei Machine Learning API
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
 description: This tutorial covers the process of publishing a model as a service using the Sensei Machine Learning API.
+exl-id: f78b1220-0595-492d-9f8b-c3a312f17253
 ---
-
 # Publish a model as a service using the [!DNL Sensei Machine Learning API]
 
 This tutorial covers the process of publishing a model as a service using the [[!DNL Sensei Machine Learning API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sensei-ml-api.yaml).
@@ -31,15 +31,15 @@ All POST, PUT, and PATCH requests require an additional header:
 
 The following table outlines some common terminology used in this tutorial:
 
-Term | Definition
---- | ---
-**Machine Learning Instance (ML Instance)** | An instance of a [!DNL Sensei] Engine for a particular tenant, containing specific data, parameters, and [!DNL Sensei] code.
-**Experiment** | An umbrella entity for holding training Experiment Runs, scoring Experiment Runs, or both.
-**Scheduled Experiment** | A term to describe the automation of training or scoring Experiment Runs, governed by a user defined schedule.
-**Experiment Run** | A particular instance of training or scoring Experiments. Multiple Experiment Runs from a particular Experiment may differ in dataset values used for training or scoring.
-**Trained Model** | A machine learning model created by the process of experimenting and feature engineering before arriving at a validated, evaluated, and finalized model.
-**Published Model** | A finalized and versioned model arrived at after training, validation, and evaluation.
-**Machine Learning Service (ML Service)** | A ML Instance deployed as a Service to support on-demand requests for training and scoring using an API endpoint. An ML Service can also be created using existing trained Experiment Runs. |
+| Term | Definition |
+| --- | --- |
+| **Machine Learning Instance (ML Instance)** | An instance of a [!DNL Sensei] Engine for a particular tenant, containing specific data, parameters, and [!DNL Sensei] code. |
+| **Experiment** | An umbrella entity for holding training Experiment Runs, scoring Experiment Runs, or both. |
+| **Scheduled Experiment** | A term to describe the automation of training or scoring Experiment Runs, governed by a user defined schedule. |
+| **Experiment Run** | A particular instance of training or scoring Experiments. Multiple Experiment Runs from a particular Experiment may differ in dataset values used for training or scoring. |
+| **Trained Model** | A machine learning model created by the process of experimenting and feature engineering before arriving at a validated, evaluated, and finalized model. |
+| **Published Model** | A finalized and versioned model arrived at after training, validation, and evaluation. |
+| **Machine Learning Service (ML Service)** | A ML Instance deployed as a Service to support on-demand requests for training and scoring using an API endpoint. An ML Service can also be created using existing trained Experiment Runs. |
 
 ## Create an ML Service with an existing training Experiment Run and scheduled scoring
 
@@ -75,17 +75,17 @@ curl -X POST
       }'
 ```
 
-Property | Description 
---- | ---
-`mlInstanceId` | Existing ML Instance identification, the training Experiment Run used to create the ML Service should correspond to this particular ML Instance.
-`trainingExperimentId` | Experiment identification corresponding to the ML Instance identification.
-`trainingExperimentRunId` | A particular training Experiment Run to be used for publishing the ML Service.
-`scoringDataSetId` | Identification referring to the specific data set to be used for scheduled scoring Experiment Runs.
-`scoringTimeframe` | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `10080` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `0` will not filter data, all data within the dataset is used for scoring.
-`scoringSchedule` | Contains details regarding scheduled scoring Experiment Runs.
-`scoringSchedule.startTime` | Datetime indicating when to start scoring.
-`scoringSchedule.endTime` | Datetime indicating when to start scoring.
-`scoringSchedule.cron` | Cron value indicating the interval by which to score Experiment Runs.
+| Property | Description |
+| --- | --- |
+| `mlInstanceId` | Existing ML Instance identification, the training Experiment Run used to create the ML Service should correspond to this particular ML Instance. |
+| `trainingExperimentId` | Experiment identification corresponding to the ML Instance identification. |
+| `trainingExperimentRunId` | A particular training Experiment Run to be used for publishing the ML Service. |
+| `scoringDataSetId` | Identification referring to the specific data set to be used for scheduled scoring Experiment Runs. |
+| `scoringTimeframe` | An Integer value representing minutes for filtering data to be used for scoring Experiment Runs. For example, a value of `10080` means data from the past 10080 minutes or 168 hours will be used for each scheduled scoring Experiment Run. Note that a value of `0` will not filter data, all data within the dataset is used for scoring. |
+| `scoringSchedule` | Contains details regarding scheduled scoring Experiment Runs. |
+| `scoringSchedule.startTime` | Datetime indicating when to start scoring. |
+| `scoringSchedule.endTime` | Datetime indicating when to start scoring. |
+| `scoringSchedule.cron` | Cron value indicating the interval by which to score Experiment Runs. |
 
 **Response**
 

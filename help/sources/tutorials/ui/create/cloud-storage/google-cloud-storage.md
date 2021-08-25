@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;Google Cloud Storage;google cloud storage;GCS;gcs
 solution: Experience Platform
 title: Create a Google Cloud Storage  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Google Cloud Storage source connection using the Adobe Experience Platform UI.
+exl-id: 3258ccd7-757c-4c4a-b7bb-0e8c9de3b50a
 ---
-
 # Create a [!DNL Google Cloud Storage] source connection in the UI
 
 Source connectors in Adobe Experience Platform provide the ability to ingest externally sourced data on a scheduled basis. This tutorial provides steps for creating a [!DNL Google Cloud Storage] (hereinafter referred to as "GCS") source connector using the [!DNL Platform] user interface.
@@ -36,10 +36,10 @@ In order to access your GCS data on [!DNL Platform], you must provide the follow
 
 | Credential | Description |
 | ---------- | ----------- |
-| Access key ID | The access key ID of the [!DNL Google Cloud Storage] account. |
-| Secret access key | The client secret of the [!DNL Google Cloud Storage] account. |
+| Access key ID | A 61-character, alphanumeric string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
+| Secret access key | A 40-character, base-64-encoded string used to authenticate your [!DNL Google Cloud Storage] account to Platform. |
 
-For more information about getting started, refer to [server-to-server authentication guide](https://cloud.google.com/docs/authentication/production) for [!DNL Google Cloud Storage].
+For more information about these values, see the [Google Cloud Storage HMAC keys](https://cloud.google.com/storage/docs/authentication/hmackeys#overview) guide. For steps on how to generate your own access key ID and secret access key, refer to the [[!DNL Google Cloud Storage] overview](../../../../connectors/cloud-storage/google-cloud-storage.md).
 
 ## Connect your [!DNL Google Cloud Storage] account
 

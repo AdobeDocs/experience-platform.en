@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Segmentation Service;segmentation;segmentation service;user guide;ui guide;segmentation ui guide;segment builder;Segment builder;realized;existing;exiting;
 solution: Experience Platform
 title: Segmentation Service UI Guide
-topic: ui guide
+topic-legacy: ui guide
 description: Adobe Experience Platform Segmentation Service provides a user interface for creating and managing segment definitions.
+exl-id: 0a2e8d82-281a-4c67-b25b-08b7a1466300
 ---
-
 # Segmentation Service UI guide
 
 [!DNL Adobe Experience Platform Segmentation Service] provides a user interface for creating and managing segment definitions. 
@@ -25,9 +25,19 @@ It is also important to know two key terms that are used through this document a
 
 ## Overview
 
-In the [[!DNL Experience Platform] UI](http://platform.adobe.com/), select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab. This tab provides links to documentation and videos to help you understand and begin working with segments.
+In the Experience Platform UI, select **[!UICONTROL Segments]** in the left navigation to open the **[!UICONTROL Overview]** tab displaying the [!UICONTROL Segments] dashboard. 
 
-![](../images/ui/overview/segment-overview.png)
+>[!NOTE]
+>
+>If your organization is new to Platform and does not yet have active Profile datasets or merge policies created, the [!UICONTROL Segments] dashboard is not visible. Instead, the [!UICONTROL Overview] tab displays links and documentation to help you get started with segments.
+
+### [!UICONTROL Segments] dashboard {#segments-dashboard}
+
+The **[!UICONTROL Segments]** dashboard outlines key metrics related to your organization's segment data. 
+
+To learn more, visit the [segment dashboard guide](../../dashboards/guides/segments.md).
+
+![](../../dashboards/images/segments/dashboard-overview.png)
 
 ## Browse
 
@@ -37,14 +47,14 @@ Select the **[!UICONTROL Browse]** tab to see a list of all the segment definiti
 
 This view lists information about the segment definition including the breakdown, churn, profile count, evaluation method, created date, and last modified date.
 
-The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Entered], [!UICONTROL Realized], and [!UICONTROL Exiting]. 
+The breakdown shows a bar graph outlining the percentage of profiles that belong to each of the following statuses: [!UICONTROL Realized], [!UICONTROL Existing], and [!UICONTROL Exiting]. 
 
 ![](../images/ui/overview/segment-browse-breakdown.png)
 
 | Status | Description |
 | ------ | ----------- |
-| Entered | A new profile within the segment. |
-| Realized | An existing profile which has remained within the segment. |
+| Realized | A new profile within the segment. |
+| Existing | An existing profile which has remained within the segment. |
 | Exiting | An existing profile which is leaving the segment. |
 
 The churn represents the percentage of profiles that are changing within a segment definition compared to the last time the segment job ran, while the profile count represents the total number of profiles that qualify for the segment.
@@ -66,6 +76,10 @@ The right sidebar contains information about all the segments within the IMS org
 ![](../images/ui/overview/segment-browse-segment-info.png)
 
 Selecting the segment definition's row provides a summary of the segment definition, including options to either edit or delete the segment, the qualified audience for the segment, the total audience size, in addition to the segment's name, description, evaluation method, created date, and last modified date.
+
+>[!NOTE]
+>
+> You will **not** be able to delete a segment that is used in a destination activation.
 
 ![](../images/ui/overview/segment-browse-details.png)
 
@@ -95,7 +109,7 @@ The **[!UICONTROL Activated destinations]** section shows the destinations that 
 
 >[!NOTE]
 >
-> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, please read the [guide on activating segments to a destination](../../destinations/ui/activate-destinations.md).
+> Destinations are a feature available with [!DNL Real-time Customer Data Platform], and allow you to export data to external platforms. For more information on destinations, please read the [destinations overview](../../destinations/home.md). To learn how to activate a segment to a destination, see [activation overview](../../destinations/ui/activation-overview.md).
 
 ### Profile samples
 
@@ -160,6 +174,12 @@ More information about streaming segmentation can be found in the [streaming seg
 >[!NOTE]
 >
 >In order for streaming segmentation to work, you will need to enable scheduled segmentation for the organization. For details on enabling scheduled segmentation, please refer to [the streaming segmentation section in this user guide](#scheduled-segmentation).
+
+## Edge segmentation {#edge-segmentation}
+
+Edge segmentation is the ability to evaluate segments in Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+
+More information about edge segmentation can be found in the [edge segmentation UI guide](./edge-segmentation.md)
 
 ## Policy violations
 

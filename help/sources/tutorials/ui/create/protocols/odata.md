@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;OData;odata;Generic Open Data Protocol
 solution: Experience Platform
 title: Create a Generic OData  Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Generic Open Data Protocol source connection using the Adobe Experience Platform UI.
+exl-id: aad6b6f7-622c-4ab6-bf6d-1221fe1132d1
 ---
-
 # Create a [!DNL Generic OData] source connection in the UI
 
 >[!NOTE]

@@ -1,12 +1,12 @@
 ---
 title: Integrate IAB TCF 2.0 Support Using the Adobe Experience Platform Web SDK
-description: Learn how to set up IAB TCF 2.0 support for your website without using Adobe Experience Platform Launch.
+description: Learn how to set up IAB TCF 2.0 support for your website without using tags.
 seo-description: Learn how to set up IAB TCF 2.0 consent with Adobe Experience Platform Web SDK
+exl-id: 14f1802a-0f8d-487f-ae17-5daaaab05162
 ---
-
 # Integrate IAB TCF 2.0 support with the Platform Web SDK
 
-This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using Experience Platform Launch. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with Experience Platform Launch, read the [IAB TCF 2.0 guide for Experience Platform Launch](./with-launch.md).
+This guide shows how to integrate the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0) with Adobe Experience Platform Web SDK without using tags. For an overview of integrating with IAB TCF 2.0, read the [overview](./overview.md). For a guide on how to integrate with tags, read the [IAB TCF 2.0 guide for tags](./with-launch.md).
 
 ## Getting started
 
@@ -16,7 +16,7 @@ This guide uses the `__tcfapi` interface for accessing the consent information. 
 >
 >These examples assume that by the time the code is run, `window.__tcfapi` is defined on the page. CMPs can provide a hook where you could run these functions when the `__tcfapi` object is ready.
 
-To use IAB TCF 2.0 with Experience Platform Launch and the Adobe Experience Platform Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
+To use IAB TCF 2.0 with tags and the Adobe Experience Platform Web SDK extension, you need to have an XDM schema available. If you have not set either of these up, start by viewing this page before proceeding.
 
 Additionally, this guide requires you to have a working understanding of Adobe Experience Platform Web SDK. For a quick refresher, please read the [Adobe Experience Platform Web SDK overview](../../home.md) and the [Frequently asked questions](../../web-sdk-faq.md) documentation.
 

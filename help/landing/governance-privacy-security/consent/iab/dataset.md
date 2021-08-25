@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: Create Datasets for Capturing IAB TCF 2.0 Consent Data
-topic: privacy events
+topic-legacy: privacy events
 description: This document provides steps for setting up the two required datasets to collect IAB TCF 2.0 consent data.
+exl-id: 36b2924d-7893-4c55-bc33-2c0234f1120e
 ---
-
 # Create datasets for capturing IAB TCF 2.0 consent data
 
 In order for Adobe Experience Platform to process customer consent data in accordance with the IAB [!DNL Transparency & Consent Framework] (TCF) 2.0, that data must be sent to datasets whose schemas contain TCF 2.0 consent fields.
@@ -15,7 +15,11 @@ Specifically, two datasets are required for capturing TCF 2.0 consent data:
 * A dataset based on the [!DNL XDM Individual Profile] class, enabled for use in [!DNL Real-time Customer Profile].
 * A dataset based on the [!DNL XDM ExperienceEvent] class.
 
-This document provides steps for setting up these two datasets to collect IAB TCF 2.0 consent data. For an overview of the full workflow to configure your Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
+>[!IMPORTANT]
+>
+>Platform only enforces the TCF strings collected in the Individual Profile dataset. While an ExperienceEvent dataset is still required to create a datastream as part of this workflow, you only need to ingest data into the profile dataset. The ExperienceEvent dataset can still be used if you wish to track consent change events over time, but these values are not used in when enforcing on segment activation.
+
+This document provides steps for setting up these two datasets. For an overview of the full workflow to configure your Platform data operations for TCF 2.0, refer to the [IAB TCF 2.0 compliance overview](./overview.md).
 
 ## Prerequisites
 
@@ -27,83 +31,29 @@ This tutorial requires a working understanding of the following components of Ad
     * [Identity namespaces](../../../../identity-service/namespaces.md): Customer identity data must be provided under a specific identity namespace recognized by Identity Service.
 * [Real-time Customer Profile](../../../../profile/home.md): Leverages [!DNL Identity Service] to let you create detailed customer profiles from your datasets in real time. [!DNL Real-time Customer Profile] pulls data from the Data Lake and persists customer profiles in its own separate data store.
 
-## [!UICONTROL Privacy Details] mixin structure {#structure}
+## TCF 2.0 field groups {#field-groups}
 
-The [!UICONTROL Privacy Details] mixin provides customer consent fields that are required for TCF 2.0 support. There are two versions of this mixin: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
+The [!UICONTROL IAB TCF 2.0 Consent] schema field group provides customer consent fields that are required for TCF 2.0 support. There are two versions of this field group: one compatible with the [!DNL XDM Individual Profile] class, and the other with the [!DNL XDM ExperienceEvent] class.
 
-The sections below explain the structure of each of these mixins, including the data they expect during ingestion.
+The sections below explain the structure of each of these field groups, including the data they expect during ingestion.
 
-### Profile mixin {#profile-mixin}
+### Profile field group {#profile-field-group}
 
-For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL Privacy Details] mixin provides a single map-type field, `xdm:identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. The following JSON is an example of the kind of data `xdm:identityPrivacyInfo` expects upon data ingestion:
+For schemas based on [!DNL XDM Individual Profile], the [!UICONTROL IAB TCF 2.0 Consent] field group provides a single map-type field, `identityPrivacyInfo`, which maps customer identities to their TCF consent preferences. This field group must be included in a record-based schema that is enabled for Real-time Customer Profile in order for automatic enforcement to take place.
 
-```json
-{
-  "xdm:identityPrivacyInfo": {
-      "ECID": {
-        "13782522493631189": {
-          "xdm:identityIABConsent": {
-            "xdm:consentTimestamp": "2020-04-11T05:05:05Z",
-            "xdm:consentString": {
-              "xdm:consentStandard": "IAB TCF",
-              "xdm:consentStandardVersion": "2.0",
-              "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-              "xdm:gdprApplies": true,
-              "xdm:containsPersonalData": false
-            }
-          }
-        }
-      }
-    }
-}
-```
+See the [reference guide](../../../../xdm/field-groups/profile/iab.md) for this field group to learn more about its structure and use case.
 
-As the example shows, each root-level key of `xdm:identityPrivacyInfo` corresponds with an identity namespace recognized by Identity Service. In turn, each namespace property must have at least one sub-property whose key matches the customer's corresponding identity value for that namespace. In this example, the customer is identified with an Experience Cloud ID (`ECID`) value of `13782522493631189`.
+### Event field group {#event-field-group}
 
->[!NOTE]
->
->While the above example uses a single namespace/value pair to represent the customer's identity, you can add additional keys for other namespaces, and each namespace can have multiple identity values, each with their own set of TCF consent preferences.
+If you want to track consent-change events over time, you can add the [!UICONTROL IAB TCF 2.0 Consent] field group to your [!UICONTROL XDM ExperienceEvent] schema.
 
-Within the identity value object is a single field, `xdm:identityIABConsent`. This object captures the customer's TCF consent values for the specified identity namespace and value. The sub-properties contained in this field are listed below:
+If you do not plan on tracking consent change events over time, you do not need to include this field group in your event schema. When automatically enforcing TCF consent values, Experience Platform only uses the latest consent information ingested into the [profile field group](#profile-field-group). Consent values captured by events do not participate in automatic enforcement workflows.
 
-| Property | Description |
-| --- | --- |
-| `xdm:consentTimestamp` | An [ISO 8601](https://www.ietf.org/rfc/rfc3339.txt) timestamp of when the TCF consent values changed. |
-| `xdm:consentString` | An object containing the customer's updated consent data and other contextual information. See the section on [consent string properties](#consent-string) to learn about this object's required sub-properties. |
-
-### Event mixin {#event-mixin}
-
-For schemas based on [!DNL XDM ExperienceEvent], the [!UICONTROL Privacy Details] mixin provides a single array-type field: `xdm:consentStrings`. Each item in this array must be an object that contains the necessary properties for a TCF consent string, similar to the `xdm:consentString` field in the profile mixin. For more information on these sub-properties, see the [next section](#consent-string).
-
-```json
-{
-  "xdm:consentStrings": [
-    {
-      "xdm:consentStandard": "IAB TCF",
-      "xdm:consentStandardVersion": "2.0",
-      "xdm:consentStringValue": "BObdrPUOevsguAfDqFENCNAAAAAmeAAA.PVAfDObdrA.DqFENCAmeAENCDA",
-      "xdm:gdprApplies": true,
-      "xdm:containsPersonalData": false
-    }
-  ]
-}
-```
-
-### Consent string properties {#consent-string}
-
-Both versions of the [!UICONTROL Privacy Details] mixin require at least one object that captures the necessary fields that describe the TCF consent string for the customer. These properties are explained below:
-
-| Property | Description |
-| --- | --- |
-| `xdm:consentStandard` | The consent framework that the data applies to. For TCF compliance, the value must be `IAB TCF`. |
-| `xdm:consentStandardVersion` | The version number of the consent framework indicated by `xdm:consentStandard`. For TCF 2.0 compliance, the value must be `2.0`. |
-| `xdm:consentStringValue` | The consent string that was generated by the consent management platform (CMP) based on the customer's selected settings. |
-| `xdm:gdprApplies` | A boolean value indicating whether or not the GDPR applies to this customer. The value must be set to `true` in order for TCF 2.0 enforcement to occur. Defaults to `true` if not included. |
-| `xdm:containsPersonalData` | A boolean value indicating whether or not the consent update contains personal data. Defaults to `false` if not included. |
+See the [reference guide](../../../../xdm/field-groups/event/iab.md) for this field group for more information on its structure and use case.
 
 ## Create customer consent schemas {#create-schemas}
 
-In order to create datasets that captures consent data, you must first create XDM schemas to base those datasets on.
+In order to create datasets that capture consent data, you must first create XDM schemas to base those datasets on.
 
 In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to open the [!UICONTROL Schemas] workspace. From here, follow the steps in the sections below to create each required schema.
 
@@ -113,17 +63,13 @@ In the Platform UI, select **[!UICONTROL Schemas]** in the left navigation to op
 >
 >Additionally, when editing existing schemas, only additive (non-breaking) changes can be made. See the section on the [principles of schema evolution](../../../../xdm/schema/composition.md#evolution) for more information.
 
-### Create a record-based consent schema {#profile-schema}
+### Create a profile consent schema {#profile-schema}
 
-In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then choose **[!UICONTROL XDM Individual Profile]** from the dropdown.
+Select **[!UICONTROL Create schema]**, then choose **[!UICONTROL XDM Individual Profile]** from the dropdown menu.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-profile.png)
 
-The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
-
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-profile.png)
-
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once the mixin is selected, select **[!UICONTROL Add mixin]**.
+The **[!UICONTROL Add field groups]** dialog appears, allowing you to start adding field groups to the schema right away. From here, select **[!UICONTROL IAB TCF 2.0 Consent]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once the field group is selected, select **[!UICONTROL Add field groups]**.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-profile-privacy.png)
 
@@ -131,14 +77,22 @@ The canvas reappears, showing that the `identityPrivacyInfo` field has been adde
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-privacy-structure.png)
 
-From here, repeat the above steps to add the following additional mixins to the schema:
+Before adding more fields to the schema, select the root field to reveal **[!UICONTROL Schema properties]** in the right rail, where you can provide a name and description for the schema.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-profile.png)
+
+Once you've provided a name and description, select **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section on the left side of the canvas.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-profile.png)
+
+From here, use the dialog to add the following additional field groups to the schema:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Data capture region for Profile]
 * [!UICONTROL Demographic Details]
 * [!UICONTROL Personal Contact Details]
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/profile-all-field-groups.png)
 
 If you are editing an existing schema that has already been enabled for use in [!DNL Real-time Customer Profile], select **[!UICONTROL Save]** to confirm your changes before skipping ahead to the section on [creating a dataset based on your consent schema](#dataset). If you are creating a new schema, continue following the steps outlined in the subsection below.
 
@@ -152,7 +106,7 @@ In order for Platform to associate the consent data it receives to specific cust
 >
 >Steps on how to set a primary identity field for a schema can be found in the [schema creation tutorial](../../../../xdm/tutorials/create-schema-ui.md#identity-field).
 
-To enable the schema for [!DNL Profile], select the schema's name in the left-hand rail to open the **[!UICONTROL Schema properties]** dialog in the right-hand rail. From here, select the **[!UICONTROL Profile]** toggle button.
+To enable the schema for [!DNL Profile], select the schema's name in the left rail to open the **[!UICONTROL Schema properties]** section. From here, select the **[!UICONTROL Profile]** toggle button.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-enable-profile.png)
 
@@ -164,34 +118,42 @@ Finally, select **[!UICONTROL Save]** to confirm your changes.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/profile-save.png)
 
-### Create a time-series-based consent schema {#event-schema}
+### Create an event consent schema {#event-schema}
 
 In the **[!UICONTROL Schemas]** workspace, select **[!UICONTROL Create schema]**, then choose **[!UICONTROL XDM ExperienceEvent]** from the dropdown.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/create-schema-event.png)
 
-The [!DNL Schema Editor] appears, showing the structure of the schema in the canvas. Use the right rail to provide a name and description for the schema, then select **[!UICONTROL Add]** under the **[!UICONTROL Mixins]** section on the left side of the canvas.
+The **[!UICONTROL Add field groups]** dialog appears. From here, select **[!UICONTROL IAB TCF 2.0 Consent]** from the list. You can optionally use the search bar to narrow down results to locate the field group easier. Once you have chosen the field group, select **[!UICONTROL Add field groups]**.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/add-mixin-event.png)
-
-The **[!UICONTROL Add mixin]** dialog appears. From here, select **[!UICONTROL Privacy Details]** from the list. You can optionally use the search bar to narrow down results to locate the mixin easier. Once you have chosen a mixin, select **[!UICONTROL Add mixin]**.
+>[!NOTE]
+>
+>Including this field group in your event schema is only required if you are planning on tracking consent change events over time. If you do not wish to track these events, you can use an event schema without these fields instead when setting up the Web SDK.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/add-event-privacy.png)
 
-The canvas reappears, showing that the `consentStrings` array has been added to the schema structure.
+The canvas reappears, showing that the `consentStrings` field has been added to the schema structure.
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/event-privacy-structure.png)
 
-From here, repeat the above steps to add the following additional mixins to the schema:
+Before adding more fields to the schema, select the root field to reveal **[!UICONTROL Schema properties]** in the right rail, where you can provide a name and description for the schema.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/schema-details-event.png)
+
+Once you've provided a name and description, select **[!UICONTROL Add]** under the **[!UICONTROL Field groups]** section on the left side of the canvas.
+
+![](../../../images/governance-privacy-security/consent/iab/dataset/add-field-group-event.png)
+
+From here, repeat the above steps to add the following additional field groups to the schema:
 
 * [!UICONTROL IdentityMap]
 * [!UICONTROL Environment Details]
 * [!UICONTROL Web Details]
 * [!UICONTROL Implementation Details]
 
-Once the mixins have been added, finish by selecting **[!UICONTROL Save]**.
+Once the field groups have been added, finish by selecting **[!UICONTROL Save]**.
 
-![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-mixins.png)
+![](../../../images/governance-privacy-security/consent/iab/dataset/event-all-field-groups.png)
 
 ## Create datasets based on your consent schemas {#datasets}
 
@@ -215,7 +177,7 @@ The **[!UICONTROL Configure dataset]** step appears. Provide a unique, easily id
 
 The details page for the newly created dataset appears. If the dataset is based on your time-series schema, then the process is complete. If the dataset is based on your record schema, the final step in the process is to enable the dataset for use in [!DNL Real-time Customer Profile].
 
-In the right-hand rail, select the **[!UICONTROL Profile]** toggle, then select **[!UICONTROL Enable]** in the confirmation popover to enable the schema for [!DNL Profile].
+In the right rail, select the **[!UICONTROL Profile]** toggle, then select **[!UICONTROL Enable]** in the confirmation popover to enable the schema for [!DNL Profile].
 
 ![](../../../images/governance-privacy-security/consent/iab/dataset/dataset-enable-profile.png)
 

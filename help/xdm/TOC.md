@@ -1,9 +1,8 @@
 ---
-product: experience-platform
 audience: user
 user-guide-title: Experience Data Model (XDM) System Help
 breadcrumb-title: Experience Data Model (XDM) Guide
-user-guide-description: Use Experience Data Model (XDM) classes and mixins to standardize experience data.
+user-guide-description: Use Experience Data Model (XDM) classes and schema field groups to standardize experience data.
 feature: Schemas
 ---
 
@@ -14,36 +13,62 @@ feature: Schemas
   * [Basics of schema composition](schema/composition.md)
   * [Best practices for data modeling](schema/best-practices.md)
   * [XDM field type constraints](schema/field-constraints.md)
+  * [Namespacing in XDM](./schema/namespaces.md)
   * [XDM field dictionary](schema/field-dictionary.md)
+  * Industry data models {#industries}
+    * [Overview](./schema/industries/overview.md)
+    * [Retail](./schema/industries/retail.md)
+    * [Financial services](./schema/industries/financial.md)
+    * [Telecommunications](./schema/industries/telecom.md)
+    * [Travel and hospitality](./schema/industries/travel-hospitality.md)
 * Classes {#classes}
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
-* Mixins {#mixins}
-  * Profile mixins {#profile}
-    * [IdentityMap](./mixins/profile/identitymap.md)
-    * [Demographic Details](./mixins/profile/person-details.md)
-    * [Personal Contact Details](./mixins/profile/personal-details.md)
-    * [Segment Membership Details](./mixins/profile/segmentation.md)
-    * [Work Contact Details](./mixins/profile/work-details.md)
-  * Event mixins {#event}
-    * [End User ID Details](./mixins/event/enduserids.md)
-    * [Environment Details](./mixins/event/environment-details.md)
-  * [Mixin name updates](./mixins/name-updates.md)
+  * [Segment definition](./classes/segment-definition.md)
+* Schema field groups {#field-groups}
+  * Profile field groups {#profile}
+    * [Demographic Details](./field-groups/profile/demographic-details.md)
+    * [IAB TCF 2.0 Consent](./field-groups/profile/iab.md)
+    * [IdentityMap](./field-groups/profile/identitymap.md)
+    * [Loyalty Details](./field-groups/profile/loyalty-details.md)
+    * [Personal Contact Details](./field-groups/profile/personal-contact-details.md)
+    * [Consents and Preferences](./field-groups/profile/consents.md)
+    * [Segment Membership Details](./field-groups/profile/segmentation.md)
+    * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
+    * [Work Contact Details](./field-groups/profile/work-contact-details.md)
+  * Event field groups {#event}
+    * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
+    * [Channel Details](./field-groups/event/channel-details.md)
+    * [Commerce Details](./field-groups/event/commerce-details.md)
+    * [Device Trade-In Details](./field-groups/event/device-trade-in-details.md)
+    * [End User ID Details](./field-groups/event/enduserids.md)
+    * [Environment Details](./field-groups/event/environment-details.md)
+    * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
+    * [Web Details](./field-groups/event/web-details.md)
+  * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
     * [Application](./data-types/application.md)
     * [Beacon](./data-types/beacon.md)
     * [Browser details](./data-types/browser-details.md)
     * [Commerce](./data-types/commerce.md)
+    * [Consent String](./data-types/consent-string.md)
     * [Consents & Preferences](./data-types/consents.md)
+    * [Currency](./data-types/currency.md)
     * [Device](./data-types/device.md)
     * [Email address](./data-types/email-address.md)
     * [Environment](./data-types/environment.md)
+    * [Experience channel](./data-types/experience-channel.md)
+    * [Generic Consent Field](./data-types/consent-field.md)
+    * [Generic Marketing Preference Field](./data-types/marketing-field.md)
+    * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
+    * [Generic Personalization Preference Field](./data-types/personalization-field.md)
     * [Geo](./data-types/geo.md)
     * [Geo Circle](./data-types/geo-circle.md)
     * [Geo Coordinates](./data-types/geo-coordinates.md)
     * [Geo interaction details](./data-types/geo-interaction-details.md)
     * [Geo Shape](./data-types/geo-shape.md)
     * [Identity](./data-types/identity.md)
+    * [Marketing](./data-types/marketing.md)
     * [Measure](./data-types/measure.md)
     * [Order](./data-types/order.md)
     * [Payment Item](./data-types/payment-item.md)
@@ -54,9 +79,12 @@ feature: Schemas
     * [POI details](./data-types/poi-details.md)
     * [POI interaction](./data-types/poi-interaction.md)
     * [Postal address](./data-types/postal-address.md)
+    * [Product list item](./data-types/product-list-item.md)
     * [Search](./data-types/search.md)
     * [Subscription](./data-types/subscription.md)
-    * [Web interaction](./data-types/web-interactions.md)
+    * [Telecom Subscription](./data-types/telecom-subscription.md)
+    * [Web information](./data-types/web-information.md)
+    * [Web interaction](./data-types/web-interaction.md)
     * [Web page details](./data-types/webpage-details.md)
 * [!UICONTROL Schemas] UI {#ui}
   * [Overview](./ui/overview.md)
@@ -64,7 +92,7 @@ feature: Schemas
   * Create and edit resources {#resources}
     * [Schemas](./ui/resources/schemas.md)
     * [Classes](./ui/resources/classes.md)
-    * [Mixins](./ui/resources/mixins.md)
+    * [Field groups](./ui/resources/field-groups.md)
     * [Data types](./ui/resources/data-types.md)
   * Define fields {#fields}
     * [Overview](./ui/fields/overview.md)
@@ -82,7 +110,7 @@ feature: Schemas
   * [Schemas](api/schemas.md)
   * [Behaviors](api/behaviors.md)
   * [Classes](api/classes.md)
-  * [Mixins](api/mixins.md)
+  * [Schema field groups](api/field-groups.md)
   * [Data types](api/data-types.md)
   * [Descriptors](api/descriptors.md)
   * [Unions](api/unions.md)
@@ -90,6 +118,7 @@ feature: Schemas
   * [Sample data](api/sample-data.md)
   * [Audit log](api/audit-log.md)
   * [Ad-hoc schemas](api/ad-hoc.md)
+  * [Mixins (Deprecated)](api/mixins.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
   * [Create a schema (UI)](tutorials/create-schema-ui.md)

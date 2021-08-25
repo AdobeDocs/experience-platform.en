@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;servicenow;ServiceNow
 solution: Experience Platform
 title: ServiceNow Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect ServiceNow to Adobe Experience Platform using APIs or the user interface.
+exl-id: f491b367-ec6d-4fb8-8eeb-3178673c0085
 ---
-
-# (Beta) [!DNL ServiceNow] connector
-
->[!NOTE]
->
->The [!DNL ServiceNow] connector is in beta. See the [sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL ServiceNow] connector
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -24,11 +20,11 @@ The documentation below provides information on how to connect [!DNL ServiceNow]
 
 ## Connect [!DNL ServiceNow] to [!DNL Platform] using APIs
 
-- [Create a ServiceNow source connection using the Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
-- [Explore a customer success system using the Flow Service API](../../tutorials/api/explore/customer-success.md)
-- [Collect data from a customer success system using the Flow Service API](../../tutorials/api/collect/customer-success.md)
+- [Create a ServiceNow base connection using the Flow Service API](../../tutorials/api/create/customer-success/servicenow.md)
+- [Explore the data structure and contents of a customer success source using the Flow Service API](../../tutorials/api/explore/customer-success.md)
+- [Create a dataflow for a customer success source using the Flow Service API](../../tutorials/api/collect/customer-success.md)
 
 ## Connect [!DNL ServiceNow] to [!DNL Platform] using the UI
 
 - [Create a ServiceNow source connection in the UI](../../tutorials/ui/create/customer-success/servicenow.md)
-- [Configure dataflow for a customer success connection in the UI](../../tutorials/ui/dataflow/customer-success.md)
+- [Create dataflow for a customer success source connection in the UI](../../tutorials/ui/dataflow/customer-success.md)

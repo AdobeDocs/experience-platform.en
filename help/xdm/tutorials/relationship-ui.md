@@ -3,10 +3,10 @@ keywords: Experience Platform;home;popular topics;ui;UI;XDM;XDM system;experienc
 solution: Experience Platform
 title: Define a Relationship Between Two Schemas Using the Schema Editor
 description: This document provides a tutorial for defining a relationship between two schemas using the Schema Editor in the Experience Platform user interface.
-topic: tutorial
+topic-legacy: tutorial
 type: Tutorial
+exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
-
 # Define a relationship between two schemas using the [!DNL Schema Editor]
 
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
@@ -43,27 +43,39 @@ The source schema "[!DNL Loyalty Members]" is based on the [!DNL XDM Individual 
 
 ### [!DNL Hotels] schema
 
-The destination schema "[!DNL Hotels]" is based on a custom "[!DNL Hotels]" class, and contains fields that describe a hotel. The `hotelId` field serves as the primary identity for the schema under a custom `hotelId` namespace. Like the [!DNL Loyalty Members] schema, this schema has also been enabled for [!DNL Real-time Customer Profile].
+The destination schema "[!DNL Hotels]" is based on a custom "[!DNL Hotels]" class, and contains fields that describe a hotel.
 
 ![](../images/tutorials/relationship/hotels.png)
 
-## Create a relationship mixin
+In order to participate in a relationship, the destination schema must have a primary identity. In this example, the `hotelId` field is used as the primary identity, using a custom "Hotel ID" identity namespace.
+
+![Hotel primary identity](../images/tutorials/relationship/hotel-identity.png)
+
+>[!NOTE]
+>
+>To learn how to create custom identity namespaces, refer to the [Identity Service documentation](../../identity-service/namespaces.md#manage-namespaces).
+
+Once the primary identity has been set, the destination schema must then be enabled for [!DNL Real-time Customer Profile].
+
+![Enable for Profile](../images/tutorials/relationship/hotel-profile.png)
+
+## Create a relationship schema field group
 
 >[!NOTE]
 >
 >This step is only required if your source schema does not have a dedicated string-type field to be used as a reference to the destination schema. If this field is already defined in your source schema, skip to the next step of [defining a relationship field](#relationship-field).
 
-In order to define a relationship between two schemas, the source schema must have a dedicated field to be used as a reference to the destination schema. You can add this field to the source schema by creating a new mixin.
+In order to define a relationship between two schemas, the source schema must have a dedicated field to be used as a reference to the destination schema. You can add this field to the source schema by creating a new schema field group.
 
-Start by selecting **[!UICONTROL Add]** in the **[!UICONTROL Mixins]** section.
+Start by selecting **[!UICONTROL Add]** in the **[!UICONTROL Field groups]** section.
 
-![](../images/tutorials/relationship/loyalty-add-mixin.png)
+![](../images/tutorials/relationship/loyalty-add-field-group.png)
 
-The [!UICONTROL Add Mixin] dialog appears. From here, select **[!UICONTROL Create new mixin]**. In the text fields that appear, enter a display name and description for the new mixin. Select **[!UICONTROL Add mixin]** when finished.
+The [!UICONTROL Add field group] dialog appears. From here, select **[!UICONTROL Create new field group]**. In the text fields that appear, enter a display name and description for the new field group. Select **[!UICONTROL Add field groups]** when finished.
 
-<img src="../images/tutorials/relationship/loyalty-create-new-mixin.png" width=750><br>
+![](../images/tutorials/relationship/create-field-group.png)
 
-The canvas reappears with "[!DNL Favorite Hotel]" appearing in the **[!UICONTROL Mixins]** section. Select the mixin name, then select **[!UICONTROL Add field]** next to the root-level `Loyalty Members` field.
+The canvas reappears with "[!DNL Favorite Hotel]" appearing in the **[!UICONTROL Field groups]** section. Select the field group name, then select **[!UICONTROL Add field]** next to the root-level `Loyalty Members` field.
 
 ![](../images/tutorials/relationship/loyalty-add-field.png)
 

@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics; notifications
 description: By subscribing to Adobe I/O Events, you can use webhooks to receive notifications regarding the flow-run statuses of your source connections. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
 solution: Experience Platform
 title: Flow Run Notifications
-topic: overview
+topic-legacy: overview
+exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 ---
-
 # Flow run notifications
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
@@ -26,7 +26,7 @@ This document also requires a working understanding of webhooks and how to conne
 
 In order to receive flow run notifications, you must use Adobe Developer Console to register a webhook to your [!DNL Experience Platform] integration.
 
-Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
+Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
 >

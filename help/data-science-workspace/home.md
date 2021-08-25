@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;Data Science Workspace;popular topics;data science workspace;data science
 solution: Experience Platform
 title: Data Science Workspace Overview
-topic: overview
+topic-legacy: overview
 description: This guide provides an overview of the key concepts related to Data Science Workspace in Adobe Experience Platform.
+exl-id: bef25073-0dfb-453d-8c32-7f44d917d62d
 ---
-
 # Data Science Workspace overview
 
 Adobe Experience Platform [!DNL Data Science Workspace] uses machine learning and artificial intelligence to unleash insights from your data. Integrated into Adobe Experience Platform, [!DNL Data Science Workspace] helps you make predictions using your content and data assets across Adobe solutions.  
@@ -189,4 +189,3 @@ For additional information, such as a complete day-to-day workflow, please begin
 The following video is designed to support your understanding of [!DNL Data Science Workspace].
 
 >[!VIDEO](https://video.tv.adobe.com/v/30567?quality=12&amp;enable10seconds=on&amp;speedcontrol=on)
-

@@ -2,15 +2,11 @@
 keywords: Experience Platform;home;popular topics;greenplum;GreenPlum
 solution: Experience Platform
 title: GreenPlum Source Connector Overview
-topic: overview
+topic-legacy: overview
 description: Learn how to connect GreenPlum to Adobe Experience Platform using APIs or the user interface.
+exl-id: 41757062-9ac8-42d3-91f6-a00866195882
 ---
-
-# (Beta) [!DNL GreenPlum] connector
-
->[!NOTE]
->
->The [!DNL GreenPlum] connector is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
+# [!DNL GreenPlum] connector
 
 Adobe Experience Platform provides native connectivity for database providers like [!DNL Microsoft], MySQL, and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
 
@@ -24,11 +20,11 @@ The documentation below provides information on how to connect [!DNL GreenPlum] 
 
 ## Connect [!DNL GreenPlum] to [!DNL Platform] using APIs
 
-- [Create a GreenPlum source connection using the Flow Service API](../../tutorials/api/create/databases/greenplum.md)
-- [Explore a database system using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
-- [Collect data from a database using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
+- [Create a GreenPlum base connection using the Flow Service API](../../tutorials/api/create/databases/greenplum.md)
+- [Explore the data structure and contents of a database source using the Flow Service API](../../tutorials/api/explore/database-nosql.md)
+- [Create a dataflow for a database source using the Flow Service API](../../tutorials/api/collect/database-nosql.md)
 
 ## Connect [!DNL GreenPlum] to [!DNL Platform] using the UI
 
 - [Create a GreenPlum source connection in the UI](../../tutorials/ui/create/databases/greenplum.md)
-- [Configure a dataflow for a database connection in the UI](../../tutorials/ui/dataflow/databases.md)
+- [Create a dataflow for a database source connection in the UI](../../tutorials/ui/dataflow/databases.md)

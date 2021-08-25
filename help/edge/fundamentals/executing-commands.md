@@ -2,8 +2,8 @@
 title: Execute Adobe Experience Platform Web SDK Commands
 description: Learn how to execute Experience Platform Web SDK commands
 keywords: Execute commands;commandName;Promises;getLibraryInfo;response objects;consent;
+exl-id: dda98b3e-3e37-48ac-afd7-d8852b785b83
 ---
-
 # Execute commands
 
 

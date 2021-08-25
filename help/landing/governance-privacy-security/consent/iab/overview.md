@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;IAB;IAB 2.0;consent;Consent
 solution: Experience Platform
 title: IAB TCF 2.0 Support in Experience Platform
-topic: privacy events
+topic-legacy: privacy events
 description: Learn how to configure your data operations and schemas to convey customer consent choices when activating segments to destinations in Adobe Experience Platform.
+exl-id: af787adf-b46e-43cf-84ac-dfb0bc274025
 ---
-
 # IAB TCF 2.0 support in Experience Platform
 
 The [!DNL Transparency & Consent Framework] (TCF), as outlined by the [!DNL Interactive Advertising Bureau] (IAB), is an open-standard technical framework intended to enable organizations to obtain, record, and update consumer consent for the processing of their personal data, in compliance with the European Union's [!DNL General Data Protection Regulation] (GDPR). The second iteration of the framework, TCF 2.0, grants more flexibility for how consumers can provide or withhold consent, including whether and how vendors may use certain features of data processing, such as precise geolocation.
@@ -91,13 +91,13 @@ Consent strings may only be created by a CMP that is registered with the IAB TCF
 
 ## Create datasets with TCF consent fields {#datasets}
 
-Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset.md) for how to create the two required datasets before continuing with this guide.
+Customer consent data must be sent to datasets whose schemas contain TCF consent fields. Refer to the tutorial on [creating datasets for capturing TCF 2.0 consent](./dataset.md) for how to create the required profile dataset (and an optional Experience Event dataset) before continuing with this guide.
 
 ## Update [!DNL Profile] merge policies to include consent data {#merge-policies}
 
 Once you have created a [!DNL Profile]-enabled dataset for collecting consent data, you must ensure that your merge policies have been configured to always include TCF consent fields in your customer profiles. This involves setting dataset precedence so that your consent dataset is prioritized over other potentially conflicting datasets.
 
-For more information on how to work with merge policies, refer to the [merge policies user guide](../../../../profile/ui/merge-policies.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy mixin](./dataset.md#privacy-mixin), as outlined in the guide on dataset preparation.
+For more information on how to work with merge policies, refer to the [merge policies overview](../../../../profile/merge-policies/overview.md). When setting up your merge policies, you must ensure that your segments include all the required consent attributes provided by the [XDM privacy schema field group](./dataset.md#privacy-field-group), as outlined in the guide on dataset preparation.
 
 ## Integrate the Experience Platform Web SDK to collect customer consent data {#sdk}
 
@@ -111,18 +111,18 @@ Once you have configured your CMP to generate consent strings, you must integrat
 
 **The SDK does not interface with any CMPs out of the box**. It is up to you to determine how to integrate the SDK into your website, listen for consent changes in the CMP, and call the appropriate command. 
 
-### Create a new edge configuration
+### Create a new datastream
 
-In order for the SDK to send data to Experience Platform, you must first create a new edge configuration for Platform in [!DNL Adobe Experience Platform Launch]. Specific steps for how to create a new configuration are provided in the [SDK documentation](../../../../edge/fundamentals/edge-configuration.md).
+In order for the SDK to send data to Experience Platform, you must first create a new datastream for Platform in the Data Collection UI. Specific steps for how to create a new datastream are provided in the [SDK documentation](../../../../edge/fundamentals/datastreams.md).
 
-After providing a unique name for the configuration, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
+After providing a unique name for the datastream, select the toggle button next to **[!UICONTROL Adobe Experience Platform]**. Next, use the following values to complete the rest of the form:
 
-| Edge configuration field | Value |
+| Datastream field | Value |
 | --- | --- |
-| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the edge configuration. |
+| [!UICONTROL Sandbox] | The name of the Platform [sandbox](../../../../sandboxes/home.md) that contains the required streaming connection and datasets to set up the datastream. |
 | [!UICONTROL Streaming Inlet] | A valid streaming connection for Experience Platform. See the tutorial on [creating a streaming connection](../../../../ingestion/tutorials/create-streaming-connection-ui.md) if you do not have an existing streaming inlet. |
-| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). |
-| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). |
+| [!UICONTROL Event Dataset] | Select the [!DNL XDM ExperienceEvent] dataset created in the [previous step](#datasets). If you included the [[!UICONTROL IAB TCF 2.0 Consent] field group](../../../../xdm/field-groups/event/iab.md) in this dataset's schema, you can track consent-change events over time using the [`sendEvent`](#sendEvent) command, storing that data in this dataset. Keep in mind that the consent values stored in this dataset are **not** used in automatic enforcement workflows. |
+| [!UICONTROL Profile Dataset] | Select the [!DNL XDM Individual Profile] dataset created in the [previous step](#datasets). When responding to CMP consent-change hooks using the [`setConsent`](#setConsent) command, collected data will be stored in this dataset. Since this dataset is Profile-enabled, the consent values stored in this dataset are honored during automatic enforcement workflows. |
 
 ![](../../../images/governance-privacy-security/consent/iab/overview/edge-config.png)
 
@@ -130,13 +130,13 @@ When finished, select **[!UICONTROL Save]** at the bottom of the screen and cont
 
 ### Making consent-change commands
 
-Once you have created the edge configuration described in the previous section, you can start using SDK commands to send consent data to Platform. The sections below provide examples of how each SDK command can be used in different scenarios.
+Once you have created the datastream described in the previous section, you can start using SDK commands to send consent data to Platform. The sections below provide examples of how each SDK command can be used in different scenarios.
 
 >[!NOTE]
 >
 >For an introduction to the common syntax for all Platform SDK commands, see the document on [executing commands](../../../../edge/fundamentals/executing-commands.md).
 
-#### Using CMP consent-change hooks
+#### Using CMP consent-change hooks {#setConsent}
 
 Many CMPs provide out-of-the-box hooks that listen to consent-change events. When these events occur, you can use the `setConsent` command to update that customer's consent data.
 
@@ -183,13 +183,13 @@ OneTrust.OnConsentChanged(function () {
 });
 ```
 
-#### Using events
+#### Using events {#sendEvent}
 
 You can also collect TCF 2.0 consent data on every event triggered in Platform by using the `sendEvent` command.
 
 >[!NOTE]
 >
->In order to use this method, you must have added the [!DNL Experience Event Privacy mixin] to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](./dataset.md#event-schema) in the dataset preparation guide for steps on how to configure this.
+>In order to use this method, you must have added the Experience Event Privacy field group to your [!DNL Profile]-enabled [!DNL XDM ExperienceEvent] schema. See the section on [updating the ExperienceEvent schema](./dataset.md#event-schema) in the dataset preparation guide for steps on how to configure this.
 
 The `sendEvent` command should be used as a callback in appropriate event listeners on your website. The command expects two arguments: (1) a string that indicates the command type (in this case, `sendEvent`), and (2) a payload containing an `xdm` object that provides the required consent fields as JSON:
 

@@ -2,17 +2,26 @@
 keywords: Experience Platform;getting started;Attribution ai;popular topics;Attribution ai input;Attribution ai output;
 solution: Experience Platform, Intelligent Services
 title: Input and Output in Attribution AI
-topic: Input and Output data for Attribution AI
+topic-legacy: Input and Output data for Attribution AI
 description: The following document outlines the different input and outputs utilized in Attribution AI.
+exl-id: d6dbc9ee-0c1a-4a5f-b922-88c7a36a5380
 ---
-
 # Input and output in [!DNL Attribution AI]
 
 The following document outlines the different input and outputs utilized in [!DNL Attribution AI].
 
 ## [!DNL Attribution AI] input data
 
-[!DNL Attribution AI] uses [!DNL Consumer Experience Event] data to calculate algorithmic scores. For more details on [!DNL Consumer Experience Event], please refer to the [Prepare data for use in Intelligent Services documentation](../data-preparation.md).
+Attribution AI works by analyzing one of the following datasets to calculate algorithmic scores:
+
+- Consumer Experience Event (CEE) dataset
+- Adobe Analytics datasets using the [Analytics source connector](../../sources/tutorials/ui/create/adobe-applications/analytics.md)
+
+>[!IMPORTANT]
+>
+>The Adobe Analytics source connector can take up to four weeks to backfill data. If you recently set up a connector, you should verify that the dataset has the minimum length of data required for Attribution AI. Please review the [historical data](#data-requirements) section to verify you have enough data to calculate accurate algorithmic scores.
+
+For more details on setting up the [!DNL Consumer Experience Event] (CEE) schema, please refer to the [Intelligent Services data preparation](../data-preparation.md) guide. For more information on mapping Adobe Analytics data, visit the [Analytics field mappings](../../sources/connectors/adobe-applications/analytics.md) documentation.
 
 Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are mandatory for Attribution AI. 
 
@@ -32,7 +41,11 @@ Not all the columns in the [!DNL Consumer Experience Event] (CEE) schema are man
 | Marketing.campaigngroup | Touchpoint |
 | Commerce | Conversion |
 
-Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns "channel" and "marketing" are highly recommended to define touchpoints for good insights. However, you can include any other additional column along with the above columns to configure as a conversion or touchpoint definition.
+Typically, attribution is run on conversion columns such as order, purchases, and checkouts under "commerce". The columns for "channel" and "marketing" are used to define touchpoints for Attribution AI (for example, `channel._type = 'https://ns.adobe.com/xdm/channel-types/email'`). For optimal results and insights, it is highly recommended that you include as many conversion and touchpoint columns as possible. Additionally, you are not limited to just the above columns. You can include any other recommended or custom columns as a conversion or touchpoint definition.
+
+>[!TIP]
+>
+>If you are using Adobe Analytics data in your CEE schema, the touchpoint information for Analytics is typically stored in `channel.typeAtSource` (for example, `channel.typeAtSource = 'email'`).
 
 The columns below are not required but it is recommended that you include them in your CEE schema if you have the information available.
 
@@ -42,7 +55,7 @@ The columns below are not required but it is recommended that you include them i
 - web.webPageDetails
 - xdm:productListItems
 
-### Historical data
+## Historical data {#data-requirements}
 
 >[!IMPORTANT]
 >
@@ -94,36 +107,36 @@ The following table outlines the schema fields in the raw scores example output:
 | Column Name (DataType) | Nullable | Description |
 | --- | --- | --- |
 | timestamp (DateTime) | False | The time when an conversion event or observation occurred. <br> **Example:** 2020-06-09T00:01:51.000Z |
-identityMap (Map) | True | identityMap of the user similar to the CEE XDM format. |
-eventType (String) | True | The primary event type for this time-series record. <br> **Example:** "Order", "Purchase", "Visit" |
-eventMergeId (String) | True | An ID to correlate or merge multiple [!DNL Experience Events] together that are essentially the same event or should be merged. This is intended to be populated by the data producer prior to ingestion. <br> **Example:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-_id (String) | False | A unique identifier for the time-series event. <br> **Example:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
-_tenantId (Object) | False | The top level object container corrisponding to your tentant ID. <br> **Example:** _atsdsnrmmsv2 |
- your_schema_name (Object) | False | Score row with conversion event all the touchpoint events associated with it and their metadatas. <br> **Example:** Attribution AI Scores -  Model Name__2020 |
-segmentation (String) | True | Conversion segment such as geo segmentation which the model is built against. In case of the absence of segments, segment is same as conversionName. <br> **Example:** ORDER_US |
-conversionName (String) | True | Name of the conversion that was configured during setup. <br> **Example:** Order, Lead, Visit |
-conversion (Object) | False | Conversion metadata columns. |
-dataSource (String) | True | Globally unique identification of a data source. <br> **Example:** Adobe Analytics |
-eventSource (String) | True | The source when the actual event happened. <br> **Example:** Adobe.com |
-eventType (String) | True | The primary event type for this time-series record. <br> **Example:** Order |
-geo (String) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Example:** US |
-priceTotal (Double) | True | Revenue obtained through the conversion <br> **Example:** 99.9 |
-product (String) | True | The XDM identifier of the product itself. <br> **Example:** RX 1080 ti |
-productType (String) | True | The display name for the product as presented to the user for this product view. <br> **Example:** Gpus |
-quantity (Integer) | True | Quantity purchased during the conversion. <br> **Example:** 1 1080 ti |
-receivedTimestamp (DateTime) | True | Received timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
-skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
-timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
-passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
-commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
-customerProfile (Object) | False | Identity details of the user used to build the model. |
-identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
-id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
-namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
-touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by touchpoint occurrence or timestamp. |
-touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
-scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
-touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
+| identityMap (Map) | True | identityMap of the user similar to the CEE XDM format. |
+| eventType (String) | True | The primary event type for this time-series record. <br> **Example:** "Order", "Purchase", "Visit" |
+| eventMergeId (String) | True | An ID to correlate or merge multiple [!DNL Experience Events] together that are essentially the same event or should be merged. This is intended to be populated by the data producer prior to ingestion. <br> **Example:** 575525617716-0-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _id (String) | False | A unique identifier for the time-series event. <br> **Example:** 4461-edc2ed37-1aab-4750-a820-1c2b3844b8c4 |
+| _tenantId (Object) | False | The top level object container corrisponding to your tentant ID. <br> **Example:** _atsdsnrmmsv2 |
+| your_schema_name (Object) | False | Score row with conversion event all the touchpoint events associated with it and their metadatas. <br> **Example:** Attribution AI Scores -  Model Name__2020 |
+| segmentation (String) | True | Conversion segment such as geo segmentation which the model is built against. In case of the absence of segments, segment is same as conversionName. <br> **Example:** ORDER_US |
+| conversionName (String) | True | Name of the conversion that was configured during setup. <br> **Example:** Order, Lead, Visit |
+| conversion (Object) | False | Conversion metadata columns. |
+| dataSource (String) | True | Globally unique identification of a data source. <br> **Example:** Adobe Analytics |
+| eventSource (String) | True | The source when the actual event happened. <br> **Example:** Adobe.com |
+| eventType (String) | True | The primary event type for this time-series record. <br> **Example:** Order |
+| geo (String) | True | The geographic location where the conversion was delivered `placeContext.geo.countryCode`. <br> **Example:** US |
+| priceTotal (Double) | True | Revenue obtained through the conversion <br> **Example:** 99.9 |
+| product (String) | True | The XDM identifier of the product itself. <br> **Example:** RX 1080 ti |
+| productType (String) | True | The display name for the product as presented to the user for this product view. <br> **Example:** Gpus |
+| quantity (Integer) | True | Quantity purchased during the conversion. <br> **Example:** 1 1080 ti |
+| receivedTimestamp (DateTime) | True | Received timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+| skuId (String) | True | Stock keeping unit (SKU), the unique identifier for a product defined by the vendor. <br> **Example:** MJ-03-XS-Black |
+| timestamp (DateTime) | True | Timestamp of the conversion. <br> **Example:** 2020-06-09T00:01:51.000Z |
+| passThrough (Object) | True | Additional Score dataset Columns specified by user while configuring the model. |
+| commerce_order_purchaseCity (String) | True | Additional Score dataset Column. <br> **Example:** city : San Jose |
+| customerProfile (Object) | False | Identity details of the user used to build the model. |
+| identity (Object) | False | Contains the details of the user used to build the model such as `id` and `namespace`. |
+| id (String) | True | Identity ID of the user such as cookie ID or AAID or MCID etc. <br> **Example:** 17348762725408656344688320891369597404 |
+| namespace (String) | True | Identity namespace used to build the paths and thereby the model. <br> **Example:** aaid |
+| touchpointsDetail (Object Array) | True | The list of touchpoint details leading to the conversion ordered by | touchpoint occurrence or timestamp. |
+| touchpointName (String) | True | Name of the touchpoint that was configured during setup. <br> **Example:** PAID_SEARCH_CLICK |
+| scores (Object) | True | Touchpoint contribution to this conversion as score. For more information on the scores produced within this object, see the [aggregated attribution scores](#aggregated-attribution-scores) section. |
+| touchPoint (Object) | True | Touchpoint Metadata. For more information on the scores produced within this object, see the [aggregated scores](#aggregated-scores) section. |
 
 ### Viewing raw score paths (UI) {#raw-score-path}
 

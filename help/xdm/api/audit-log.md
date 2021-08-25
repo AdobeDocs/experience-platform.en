@@ -3,12 +3,12 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Audit Log API Endpoint
 description: The /auditlog endpoint in the Schema Registry API allows you to retrieve a chronological list of changes that have been made to an existing XDM resource.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: 8d33ae7c-0aa4-4f38-a183-a2ff1801e291
 ---
-
 # Audit log endpoint
 
-For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, mixin, data type, or schema specified by ID.
+For each Experience Data Model (XDM) resource, the [!DNL Schema Registry] maintains a log of all changes that have occurred between different updates. The `/auditlog` endpoint in the [!DNL Schema Registry] API allows you to retrieve an audit log for any class, schema field group, data type, or schema specified by ID.
 
 ## Getting started
 
@@ -18,7 +18,7 @@ The `/auditlog` endpoint is part of the remote procedure calls (RPCs) that are s
 
 ## Retrieve an audit log for a resource
 
-You can retrieve an audit log for any class, mixin, data type, or schema within the Schema Library by specifying the resource's ID in the path of a GET request to the `/auditlog` endpoint.
+You can retrieve an audit log for any class, field group, data type, or schema within the Schema Library by specifying the resource's ID in the path of a GET request to the `/auditlog` endpoint.
 
 **API format**
 
@@ -30,9 +30,11 @@ GET /rpc/auditlog/{RESOURCE_ID}
 | --- | --- |
 | `{RESOURCE_ID}` | The `meta:altId` or URL-encoded `$id` of the resource whose audit log you want to retrieve. |
 
+{style="table-layout:auto"}
+
 **Request**
 
-The following request retrieves the audit log for a `Restaurant` mixin.
+The following request retrieves the audit log for a `Restaurant` field group.
 
 ```shell
 curl -X GET \
@@ -89,3 +91,5 @@ A successful response returns a chronological list of changes made to the resour
 | `action` | The type of change that was made. |
 | `path` | A [JSON Pointer](../../landing/api-fundamentals.md#json-pointer) string indicating the path to the specific field that was changed or added. |
 | `value` | The value that was assigned to the new or updated field. |
+
+{style="table-layout:auto"}

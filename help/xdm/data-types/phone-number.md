@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;fields;schemas;Schemas;phoneNumber;xdm:phoneNumber;datatype;data-type;data type;
 solution: Experience Platform
 title: Phone Number Data Type
-topic: overview
+topic-legacy: overview
 description: This document provides an overview of the Phone Number XDM data type.
+exl-id: b84e48f9-bbb4-4b8b-9476-4bc1c455ecfd
 ---
-
 # [!UICONTROL Phone number] data type
 
 [!UICONTROL Phone number] is a standard XDM data type that describes the details of a phone number.
@@ -21,7 +21,9 @@ description: This document provides an overview of the Phone Number XDM data typ
 | `statusReason` | A description of the current status. |
 | `validity` | A level of technical correctness of the phone number. |
 
+{style="table-layout:auto"}
+
 For more details on the phone number data type, refer to the public XDM repository:
 
-* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.example.1.json)
-* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/phonenumber.schema.json)
+* [Populated example](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.example.1.json)
+* [Full schema](https://github.com/adobe/xdm/blob/master/components/datatypes/demographic/phonenumber.schema.json)

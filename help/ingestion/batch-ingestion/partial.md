@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;partial ingestion;Partial ingestion;Retrieve error;retrieve error;Partial batch ingestion;partial batch ingestion;partial;ingestion;Ingestion;
 solution: Experience Platform
 title: Partial Batch Ingestion Overview
-topic: overview
+topic-legacy: overview
 description: This document provides a tutorial for managing partial batch ingestion.
+exl-id: 25a34da6-5b7c-4747-8ebd-52ba516b9dc3
 ---
-
 # Partial batch ingestion
 
 Partial batch ingestion is the ability to ingest data containing errors, up to a certain threshold. With this capability, users can successfully ingest all their correct data into Adobe Experience Platform while all their incorrect data is batched separately, along with details as to why it is invalid.

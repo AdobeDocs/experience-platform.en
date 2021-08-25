@@ -2,8 +2,8 @@
 title: Sending Data to Adobe Analytics Using the Adobe Experience Platform Web SDK
 description: Learn how to send data to Adobe Analytics with the Adobe Experience Platform Web SDK.
 keywords: adobe analytics;analytics;mapped data;mapped vars;
+exl-id: b18d1163-9edf-4a9c-b247-cd1aa7dfca50
 ---
-
 # Sending data to Adobe Analytics
 
 The Adobe Experience Platform [!DNL Web SDK] can send data to Adobe Analytics. This works by translating `xdm` into a format the Adobe Analytics can use.
@@ -60,4 +60,4 @@ a.x.arrayofobjects.1.obj2key //objval1
 
 Here is an example of a processing rule that would use this data.
 
-![Processing Rules Interface](../../../assets/edge_analytics_processing_rules.png)
+![Processing Rules Interface](./assets/edge_analytics_processing_rules.png)

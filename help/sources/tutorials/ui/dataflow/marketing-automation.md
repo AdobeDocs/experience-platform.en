@@ -2,11 +2,11 @@
 keywords: Experience Platform;home;popular topics;marketing automation connector
 solution: Experience Platform
 title: Configure a Dataflow for a Marketing Automation Source Connection in the UI
-topic: overview
+topic-legacy: overview
 type: Tutorial
 description: A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your marketing automation account.
+exl-id: 8d31fc2d-b952-44f7-98e7-f51b0acc19ed
 ---
-
 # Configure a dataflow for a marketing automation connection in the UI
 
 A dataflow is a scheduled task that retrieves and ingests data from a source to a [!DNL Platform] dataset. This tutorial provides steps to configure a new dataflow using your marketing automation account.
@@ -71,7 +71,7 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![select-schema](../../../images/tutorials/dataflow/marketing-automation/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../data-prep/functions.md) or the [calculated fields guide](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >

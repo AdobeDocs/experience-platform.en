@@ -2,10 +2,10 @@
 keywords: Experience Platform;home;popular topics;Adobe Experience Platform;api guide;platform api guide;introduction to platform;developer guide
 solution: Experience Platform
 title: Getting started with Adobe Experience Platform APIs
-topic: api guide
+topic-legacy: api guide
 description: Adobe Experience Platform provides API services that are closely linked to one another. This guide contains information on the available services, required headers for CRUD operations, error messages, Postman collections, and sample API calls.
+exl-id: a362bcb4-a908-43a8-abd3-0e1d21cb9117
 ---
-
 # Getting started with Adobe Experience Platform APIs
 
 Adobe Experience Platform is developed under an "API first" philosophy. Using Platform APIs, you can programmatically perform basic CRUD (Create, Read, Update, Delete) operations against data, such as configuring computed attributes, accessing data/entities, exporting data, deleting unneeded data or batches, and more. 
@@ -131,7 +131,7 @@ For more information on specific endpoints in Platform APIs, including required 
 | [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
 | [[!DNL Sensei Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
 
-For more information on specific endpoints and operations available for each service, please see the [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+For more information on specific endpoints and operations available for each service, please see the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 ## Next steps
 
@@ -140,4 +140,3 @@ This document introduced the required headers, available guides, and provided an
 For answers to frequently asked questions, refer to the [Platform troubleshooting guide](troubleshooting.md).
 
 To set up a Postman environment and explore the available Postman collections, refer to the [Platform Postman guide](postman.md).
-

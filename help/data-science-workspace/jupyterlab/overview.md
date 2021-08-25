@@ -2,10 +2,10 @@
 keywords: Experience Platform;JupyterLab;notebooks;Data Science Workspace;popular topics;jupyterlab
 solution: Experience Platform
 title: JupyterLab UI Overview
-topic: Overview
+topic-legacy: Overview
 description: JupyterLab is a web-based user interface for Project Jupyter and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data. This document provides an overview of JupyterLab and its features as well as instructions to perform common actions.
+exl-id: 13786fbd-ef16-49cd-8bcf-46320c33e902
 ---
-
 # [!DNL JupyterLab] UI overview
 
 [!DNL JupyterLab] is a web-based user interface for [Project Jupyter](https://jupyter.org/) and is tightly integrated into Adobe Experience Platform. It provides an interactive development environment for data scientists to work with Jupyter Notebooks, code, and data.
@@ -248,6 +248,11 @@ To learn more about each of the supported notebooks and how to use them, visit t
 
 ## Supported libraries {#supported-libraries}
 
-For a list of supported packages in Python, R, and PySpark, copy and paste `!pip list --format=columns` in a new cell, then run the cell. A list of supported packages populates in alphabetical order.
+For a list of supported packages in Python, R, and PySpark, copy and paste `!conda list` in a new cell, then run the cell. A list of supported packages populates in alphabetical order.
 
 ![example](../images/jupyterlab/user-guide/libraries.PNG)
+
+In addition, the following dependencies are used but not listed:
+* CUDA 11.2
+* CUDNN 8.1
+

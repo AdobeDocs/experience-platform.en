@@ -2,10 +2,10 @@
 keywords: Experience Platform;getting started;content ai;commerce ai;content and commerce ai
 solution: Experience Platform, Intelligent Services
 title: Getting Started with Content and Commerce AI
-topic: Getting started 
+topic-legacy: Getting started 
 description: Content and Commerce AI utilizes Adobe I/O APIs. In order to make calls to Adobe I/O APIs and the I/O Console Integration, you must first complete the authentication tutorial.
+exl-id: e7b0e9bb-a1f1-479c-9e9b-46991f2942e2
 ---
-
 # Getting started with Content and Commerce AI
 
 >[!NOTE]
@@ -66,6 +66,6 @@ This guide provides example API calls to demonstrate how to format your requests
 
 Once you have all your credentials, you are ready to set up a custom worker for [!DNL Content and Commerce AI]. The following documents assist with understanding the Extensibility Framework and environment setup.
 
-To learn more about the Extensibility Framework, start by reading the [introduction to extensibility](https://docs.adobe.com/content/help/en/asset-compute/using/extend/understand-extensibility.html) document. This document outlines the prerequisites and provisioning requirements.
+To learn more about the Extensibility Framework, start by reading the [introduction to extensibility](https://experienceleague.adobe.com/docs/asset-compute/using/extend/understand-extensibility.html) document. This document outlines the prerequisites and provisioning requirements.
 
-To learn more about setting up an environment for [!DNL Content and Commerce AI], start by reading the guide for [setting up a developer environment](https://docs.adobe.com/content/help/en/asset-compute/using/extend/setup-environment.html). This document provides setup instructions that allow you to develop for the Asset Compute Service.
+To learn more about setting up an environment for [!DNL Content and Commerce AI], start by reading the guide for [setting up a developer environment](https://experienceleague.adobe.com/docs/asset-compute/using/extend/setup-environment.html). This document provides setup instructions that allow you to develop for the Asset Compute Service.

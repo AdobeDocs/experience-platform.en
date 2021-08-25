@@ -3,14 +3,14 @@ keywords: Experience Platform;home;popular topics;ip address;ip addresses;ip add
 description: IP addresses must be added to an allow list prior to working with source connectors.
 solution: Experience Platform
 title: IP Address Allow List for Source Connections
-topic: overview
+topic-legacy: overview
+exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 ---
-
 # IP address allow list
 
 You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can allow traffic for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
 
-## East US region
+## VA7: North America
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -18,9 +18,6 @@ You can define network access controls through your network firewall. By specify
 - `20.49.111.0/29`
 - `40.71.14.32/28`
 - `40.78.229.96/28`
-
-## East US 2 region
-
 - `20.41.2.0/23`
 - `20.41.4.0/26`
 - `20.44.17.80/28`
@@ -28,7 +25,7 @@ You can define network access controls through your network firewall. By specify
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## West Europe region
+## NLD2: Europe
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -38,7 +35,7 @@ You can define network access controls through your network firewall. By specify
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## Australia East region
+## AUS5: Australia
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`

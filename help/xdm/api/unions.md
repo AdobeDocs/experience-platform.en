@@ -3,9 +3,9 @@ keywords: Experience Platform;home;popular topics;api;API;XDM;XDM system;experie
 solution: Experience Platform
 title: Unions API Endpoint
 description: The /unions endpoint in the Schema Registry API allows you to programmatically manage XDM union schemas in your experience application.
-topic: developer guide
+topic-legacy: developer guide
+exl-id: d0ece235-72e8-49d9-856b-5dba44e16ee7
 ---
-
 # Unions endpoint
 
 Unions (or union views) are system-generated, read-only schemas that aggregate the fields of all schemas which share the same class ([!DNL XDM ExperienceEvent] or [!DNL XDM Individual Profile]) and are enabled for [[!DNL Real-time Customer Profile]](../../profile/home.md).
@@ -59,6 +59,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON class for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
 
+{style="table-layout:auto"}
+
 **Response**
 
 A successful response returns HTTP status 200 (OK) and a `results` array in the response body. If unions have been defined, the details for each union are provided as objects within the array. If no unions have been defined, HTTP status 200 (OK) is still returned but the `results` array will be empty.
@@ -101,6 +103,8 @@ GET /tenant/schemas/{UNION_ID}
 | --- | --- |
 | `{UNION_ID}` | The URL-encoded `$id` URI of the union you want to look up. URIs for union schemas are appended with "__union". |
 
+{style="table-layout:auto"}
+
 **Request**
 
 ```SHELL
@@ -119,8 +123,10 @@ The following Accept headers are available for union schema lookups:
 
 | Accept | Description |
 | -------|------------ |
-| application/vnd.adobe.xed+json; version={MAJOR_VERSION} | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
-| application/vnd.adobe.xed-full+json; version={MAJOR_VERSION} | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
+| `application/vnd.adobe.xed+json; version=1` | Raw with `$ref` and `allOf`. Includes titles and descriptions. |
+| `application/vnd.adobe.xed-full+json; version=1` | `$ref` attributes and `allOf` resolved. Includes titles and descriptions. |
+
+{style="table-layout:auto"}
 
 **Response**
 
@@ -185,6 +191,8 @@ GET /tenant/schemas?property=meta:immutableTags==union&property=meta:class=={CLA
 | --- | --- |
 | `{CLASS_ID}` | The `$id` of the class whose union-enabled schemas you want to list. |
 
+{style="table-layout:auto"}
+
 **Request**
 
 The following request retrieves a list of all schemas that are part of the union for the [!DNL XDM Individual Profile] class.
@@ -205,6 +213,8 @@ The response format depends on the `Accept` header sent in the request. The foll
 | --- | --- |
 | `application/vnd.adobe.xed-id+json` | Returns a short summary of each resource. This is the recommended header for listing resources. (Limit: 300) |
 | `application/vnd.adobe.xed+json` | Returns full JSON schema for each resource, with original `$ref` and `allOf` included. (Limit: 300) |
+
+{style="table-layout:auto"}
 
 **Response**
 

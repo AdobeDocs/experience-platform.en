@@ -1,17 +1,17 @@
 ---
 title: IAB TCF 2.0 Support in the Adobe Experience Platform Web SDK
 description: Learn how to support IAB TCF 2.0 consent preferences using the Adobe Experience Platform Web SDK
-keywords: consent;setConsent;Profile Privacy Mixin;Experience Event Privacy Mixin;Privacy Mixin;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+keywords: consent;setConsent;Profile Privacy Field group;Experience Event Privacy Field group;Privacy Field group;IAB TCF 2.0;Real-time CDP;Real-time Customer Data Profile
+exl-id: 78e728f4-1604-40bf-9e21-a056024bbc98
 ---
-
 # IAB TCF 2.0 support in the Adobe Experience Platform Web SDK
 
 The Adobe Experience Platform Web SDK has support for the Interactive Advertising Bureau Transparency & Consent Framework, version 2.0 (IAB TCF 2.0). This guide shows the requirements for supporting IAB TCF 2.0 through Adobe Experience Platform Web SDK integrating with Real-time Customer Data Platform, Audience Manager, Experience Events, Adobe Analytics, and Experience Edge.
 
-Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without Adobe Experience Platform Launch.
+Additionally, the following guides are available to assist in learning how to integrate IAB TCF 2.0 with and without tags.
 
-- [With Adobe Experience Platform Launch](./with-launch.md)
-- [Without Adobe Experience Platform Launch](./without-launch.md)
+- [With tags](./with-launch.md)
+- [Without tags](./without-launch.md)
 
 ## Getting started
 
@@ -24,9 +24,9 @@ In order to implement the Web SDK with IAB TCF 2.0, you are required to have a w
 To send consent data to Adobe Experience Platform using the SDK, the following is required:
 
 - A dataset whose schema is based on the [!DNL XDM Individual Profile] class and contains TCF 2.0 consent fields, enabled for use in [!DNL Real-time Customer Profile].
-- An edge configuration set up with Platform and the Profile-enabled dataset mentioned above.
+- A datastream set up with Platform and the Profile-enabled dataset mentioned above.
 
-Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and edge configuration.
+Please refer to the guide on [TCF 2.0 compliance](../../../landing/governance-privacy-security/consent/iab/overview.md) for instructions on creating the required datasets and datastream.
 
 ## Audience Manager integration
 
@@ -34,7 +34,7 @@ Adobe Audience Manager (AAM) includes support for IAB TCF 2.0, which enables you
 
 >[!TIP]
 >
->To integrate with Audience Manager through Adobe Experience Platform Web SDK, make sure you have an edge configuration set up to forward to Adobe Audience Manager.
+>To integrate with Audience Manager through Adobe Experience Platform Web SDK, make sure you have a datastream set up to forward to Adobe Audience Manager.
 
 ## Experience Events and Adobe Analytics integration
 
@@ -42,8 +42,8 @@ Whereas the Real-time CDP and Audience Manager's audiences keep track of a custo
 
 To collect consent information on events, the following is required:
 
-- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy mixin.
-- An edge configuration set up with the [!DNL XDM Experience Event] dataset above.
+- A dataset based on the [!DNL XDM Experience Event] class, with the [!DNL Experience Event] privacy schema field group.
+- A datastream set up with the [!DNL XDM Experience Event] dataset above.
 
 For more information on how to convert an XDM Experience Event to an Analytics hit, start by reading the [Analytics overview](../../data-collection/adobe-analytics/analytics-overview.md) documentation.
 
@@ -84,4 +84,4 @@ For more information on the `sendEvent` command, read the documentation on [trac
 
 ## Next steps
 
-Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with Adobe Experience Platform Launch](./with-launch.md) or [without Adobe Experience Platform Launch](./without-launch.md).
+Now that you have a basic understanding of the IAB Transparency & Consent Framework 2.0, please refer to either of the guides on using IAB TCF 2.0 [with tags](./with-launch.md) or [without tags](./without-launch.md).
