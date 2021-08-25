@@ -116,9 +116,9 @@ Additionally, you can use `HEAD` and `TAIL` as special offset values for snapsho
 >
 >If you are querying between two snapshot IDs and the start snapshot is expired, the following two scenarios can occur:
 >
->If the optional fallback behavior flag is set, Query Service will choose the earliest available snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
+>If the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set, Query Service will choose the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
 >
->If the optional fallback behavior flag is not set, an error will be returned.
+>If the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is not set, an error will be returned.
 
 ### WHERE clause
 
