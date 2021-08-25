@@ -18,7 +18,7 @@ The following is a list of answers to frequently asked questions about Adobe Exp
 
 ## What are [!DNL Experience Platform] APIs? {#what-are-experience-platform-apis}
 
-[!DNL Experience Platform] offers multiple RESTful APIs that use HTTP requests to access [!DNL Platform] resources. These Service APIs each expose multiple endpoints, and allow you to perform operations to list (GET), lookup (GET), edit (PUT and/or PATCH), and delete (DELETE) resources. For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+[!DNL Experience Platform] offers multiple RESTful APIs that use HTTP requests to access [!DNL Platform] resources. These Service APIs each expose multiple endpoints, and allow you to perform operations to list (GET), lookup (GET), edit (PUT and/or PATCH), and delete (DELETE) resources. For more information on specific endpoints and operations available for each service, please see the [API Reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 ## How do I format an API request? {#how-do-i-format-an-api-request}
 
@@ -90,7 +90,7 @@ The following status codes may be encountered on any [!DNL Experience Platform] 
 
 ## Request header errors {#request-header-errors}
 
-All API calls in [!DNL Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](http://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). If any of these headers are missing or invalid when making an API call, the following errors may occur.
+All API calls in [!DNL Platform] require specific request headers. To see which headers are required for individual services, please see the [API Reference documentation](https://www.adobe.com/go/platform-api-reference-en). To find the values for the required authentication headers, see the [Authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). If any of these headers are missing or invalid when making an API call, the following errors may occur.
 
 ### OAuth token is missing {#oauth-token-is-missing}
 
