@@ -16,11 +16,7 @@ The [!DNL Observability Insights] API is a RESTful API that allows you to expose
 
 For more information on working with the API, see the [[!DNL Observability Insights] API developer guide](./api/overview.md).
 
-## Alerts (Beta)
-
->[!IMPORTANT]
->
->Alerts in Adobe Experience Platform are not available to all users yet. This feature is in beta and still being tested. This section is subject to change.
+## Alerts
 
 Experience Platform allows you to subscribe to alerts based on specific Observability metrics when a certain set of conditions in your Platform operations is reached. An alert can take the form of one-time notification, or it can repeat over a pre-defined time interval until the conditions that triggered the alert have been resolved.
 
