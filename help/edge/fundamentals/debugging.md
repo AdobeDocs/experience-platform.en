@@ -6,7 +6,7 @@ exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 ---
 # Debugging
 
-When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
+When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving.
 
 Debugging is disabled by default, but can be toggled on in three different ways:
 

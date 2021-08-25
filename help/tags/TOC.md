@@ -52,6 +52,7 @@ feature: Data Collection
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
+  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}
@@ -82,9 +83,6 @@ feature: Data Collection
     * Adobe Experience Manager Asset Insights {#asset-insights}
       * [Overview](./extensions/web/asset-insights/overview.md)
       * [Release notes](./extensions/web/asset-insights/release-notes.md)
-    * Adobe Experience Manager Forms {#forms}
-      * [Overview](./extensions/web/forms/overview.md)
-      * [Release notes](./extensions/web/forms/release-notes.md)
     * Adobe Media Analytics for Audio and Video {#media-analytics}
       * [Overview](./extensions/web/media-analytics/overview.md)
       * [Release notes](./extensions/web/media-analytics/release-notes.md)
