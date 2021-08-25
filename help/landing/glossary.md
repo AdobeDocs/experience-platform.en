@@ -256,7 +256,7 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
 
-**Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 7, or 12 hours.
+**Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 8, or 12 hours.
 
 ## I
 

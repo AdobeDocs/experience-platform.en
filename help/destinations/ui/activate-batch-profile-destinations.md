@@ -88,7 +88,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
-    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3,6,7, or 12 hours.
+    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
 2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
