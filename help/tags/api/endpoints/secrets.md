@@ -476,11 +476,11 @@ A successful response returns the details of the secret, with the the authorizat
       "activated_at": null, 
       "created_at": "2021-07-14T19:33:25.628Z", 
       "credentials": { 
-        "authorization_url": "https://athorization_url.test/token/authorize?required_param=value" 
+        "authorization_url": "https://athorization_url.test/token/authorize?required_param=value",
         "client_id": "test_client_id", 
         "client_secret": "test_client_secret", 
         "refresh_offset": 14400, 
-      } 
+      },
       "expires_at": null, 
       "name": "Example Secret", 
       "refresh_at": null, 
