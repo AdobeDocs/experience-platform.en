@@ -6,7 +6,7 @@ description: Learn about the process of creating libraries, testing builds, and 
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 The tags publishing flow in Adobe Experience Platform refers to the process of creating libraries, testing builds, and approving them for production.
 
@@ -57,7 +57,7 @@ The following table outlines the available actions for a library in the [!UICONT
 | [!UICONTROL Submit & Build to Staging] | This can only be performed by a user with both the Develop and Approve rights. This action unassigns the library from the development environment, moves the library to the [!UICONTROL Submitted] state, and builds the library to the staging environment. The most recent build for the library must be successful in order for this option to be enabled. |
 | [!UICONTROL Approve for Publishing] | This can only be performed by a user with both the Develop and Approve rights. This action unassigns the library from the development environment and moves it to the [!UICONTROL Approved] state - skipping the staging environment and the [!UICONTROL Submitted] state entirely. The most recent build for the library must be successful in order for this option to be enabled. |
 | [!UICONTROL Approve & Publish to Production] | This can only be performed by a user with the Develop, Approve, and Publish rights. This action unassigns the library from the development environment, moves it to the [!UICONTROL Approved] state, and publishes to production. Upon completion of the production build, the library will move to the [!UICONTROL Published] state. The most recent build for the library must be successful in order for this option to be enabled. |
-| [!UICONTROL Delete] | Remove the library from Platform Launch. This does not remove the build from the environment. |
+| [!UICONTROL Delete] | Remove the library from the system. This does not remove the build from the environment. |
 
 ### [!UICONTROL Submitted] {#submitted}
 

@@ -6,13 +6,11 @@ description: Learn how tag extensions function in Adobe Experience Platform.
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Tags in Adobe Experience Platform follow a rule-based system. They look for user interaction  and associated data. When the criteria outlined in your rules are met, the rule triggers the extension, script, or client-side code you identified.
 
 Build rules to integrate the data and functionality of marketing and ad tech that unifies disparate products into a single solution.
-
-For an introductory video, see [Rule builder](../../quick-start/videos.md).
 
 ## Rule Structure
 
@@ -164,7 +162,7 @@ Adobe cannot guarantee that any other rules will actually be triggered and that 
 * **JavaScript:** The JavaScript is loaded from the server as regular text, wrapped in a script tag, and added to the document using Postscribe. If the rule has multiple JavaScript custom scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 * **HTML:** The HTML is loaded from the server and added to the document using Postscribe. If the rule has multiple custom HTML scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 
-## Rule Component Sequencing
+## Rule Component Sequencing {#sequencing}
 
 The tag runtime environment's behavior depends on whether **[!UICONTROL Run rule components in sequence]** is on or off for your property.
 

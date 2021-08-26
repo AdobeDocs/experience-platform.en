@@ -6,7 +6,7 @@ description: Learn about the concept of tag environments and how they function w
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Tag environments define several key aspects of the library builds you deploy on your website or app:
 
@@ -122,7 +122,7 @@ For more information on this setting, see the guide on [asynchronous deployment]
 
 #### Synchronous deployment
 
-When the browser reads an embed code using synchronous deployment, it retrieves the tag library and executes it before continuing to load the page. This is also how [Dynamic Tag Management (DTM)](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) works.
+When the browser reads an embed code using synchronous deployment, it retrieves the tag library and executes it before continuing to load the page.
 
 Synchronous embed codes consist of two `<script>` tags that must be placed within the HTML of your website. One `<script>` tag must be placed in the document `<head>`, while the other must be placed just before the closing `</body>` tag.
 

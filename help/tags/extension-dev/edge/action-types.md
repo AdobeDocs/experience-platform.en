@@ -6,7 +6,7 @@ description: Learn how to define an action-type library module for a tag extensi
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 In a tag rule, an action is something that is performed after the rule conditions have passed evaluation. Action types are provided by extensions, and their effects are entirely defined by the extension author.
 

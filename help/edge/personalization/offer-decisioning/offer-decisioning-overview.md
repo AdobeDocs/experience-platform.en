@@ -59,10 +59,10 @@ To enable Offer Decisioning, you need to perform the following steps:
 
    ![offer-decisioning-edge-config](./assets/offer-decisioning-edge-config.png)
 
-1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through [Adobe Experience Platform Launch](http://launch.adobe.com/). Here is a [quick start guide to Platform Launch](../../../tags/quick-start/quick-start.md)).
+1. Follow the instructions to [install the SDK](../../fundamentals/installing-the-sdk.md) (The SDK can be installed standalone or through the [Data Collection UI](https://experience.adobe.com/#/data-collection/). See the [tags quick start guide](../../../tags/quick-start/quick-start.md)) for more information.
 1. [Configure the SDK](../../fundamentals/configuring-the-sdk.md) for Offer Decisioning. Additional Offer Decisioning specific steps are provided below.
 
-   * Standalone installed SDK
+   * Install the standalone SDK
 
      1. Configure the "sendEvent" action with your `decisionScopes`
 
@@ -76,10 +76,10 @@ To enable Offer Decisioning, you need to perform the following steps:
          })
         ```
 
-    * Platform Launch installed SDK
+    * Install the SDK through tags
 
-      1. [Create a Platform Launch property](../../../tags/ui/administration/companies-and-properties.md)
-      1. [Add the Platform Launch Embed Code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
+      1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
+      1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
       1. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)

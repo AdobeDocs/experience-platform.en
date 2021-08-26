@@ -100,59 +100,66 @@ Before you can use the `User_ID` namespace to send data to Google, make sure you
 Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
 ![Identity mapping transformation](../../assets/ui/activate-destinations/identity-mapping-transformation.png) -->
 
-## Configure destination - video walkthrough {#video}
+<!-- ## Configure destination - video walkthrough {#video}
 
 The video below demonstrates the steps to configure a [!DNL Google Customer Match] destination and activate segments. The steps are also laid out sequentially in the next sections.
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/332599/?quality=12&learn=on&captions=eng) -->
 
-## Connect to destination {#connect-destination}
+## Connect to the destination {#connect}
 
-In **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**, scroll to the **[!UICONTROL Advertising]** category. Select [!DNL Google Customer Match], then select **[!UICONTROL Configure]**.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-![Connect to Google Customer Match destination](../../assets/catalog/advertising/google-customer-match/connect.png)
+### Connection parameters {#parameters}
 
->[!NOTE]
->
->If a connection with this destination exists, you can see an **[!UICONTROL Activate]** button on the destination card. For more information about the difference between **[!UICONTROL Activate]** and **[!UICONTROL Configure]**, refer to the [Catalog](../../ui/destinations-workspace.md#catalog) section of the destination workspace documentation.  
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
-In the **Account** step, if you had previously set up a connection to your [!DNL Google Customer Match] destination, select **[!UICONTROL Existing Account]** and select your existing connection. Or, you can select **[!UICONTROL New Account]** to set up a new connection to [!DNL Google Customer Match]. To log in and connect Adobe Experience Cloud to your [!DNL Google Ad] account, select **[!UICONTROL Connect to destination]**.
-
->[!NOTE]
->
->Experience Platform supports credentials validation in the authentication process. It displays an error message if you input incorrect credentials to your [!DNL Google Ad] account, to ensure that you don't complete the workflow with incorrect credentials.
-
-![Connect to Google Customer Match destination - authentication step](../../assets/catalog/advertising/google-customer-match/connection.png)
-
-Once your credentials are confirmed and Adobe Experience Cloud is connected to your Google account, you can select **[!UICONTROL Next]** to proceed to the **[!UICONTROL Authentication]** step.
-
-![Credentials confirmed](../../assets/catalog/advertising/google-customer-match/connection-success.png)
-
-In the **[!UICONTROL Authentication]** step, enter a **[!UICONTROL Name]** and a **[!UICONTROL Description]** for your activation flow and fill in your Google **[!UICONTROL Account ID]**.
-
-In this step, you can also select any **[!UICONTROL Marketing actions]** that apply to this destination. Marketing actions indicate the intent for which the data is exported to the destination. You can select from Adobe-defined marketing actions or you can create your own marketing action. For more information about marketing actions, see the [Data usage policies overview](../../../data-governance/policies/overview.md).
-
-Select **[!UICONTROL Create Destination]** after you filled in the fields above.
+* **[!UICONTROL Name]**: provide a name for this destination connection
+* **[!UICONTROL Description]**: provide a description for this destination connection
+* **[!UICONTROL Account ID]**: your Google customer client ID. The format of the ID is xxx-xxx-xxxx.
 
 >[!IMPORTANT]
 >
-> * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed. 
-> * For [!DNL Google Customer Match] destinations. **[!UICONTROL Account ID]** is your customer client ID with Google. The format of the ID is xxx-xxx-xxxx.  
+> * The **[!UICONTROL Combine with PII]** marketing action is selected by default for the [!DNL Google Customer Match] destination and cannot be removed.
 
-![Connect Google Customer Match - authentication step](../../assets/catalog/advertising/google-customer-match/authentication.png)
+## Activate segments to this destination {#activate}
 
-Your destination is now created. You can select **[!UICONTROL Save & Exit]** if you want to activate segments later on or you can select **[!UICONTROL Next]** to continue the workflow and select segments to activate. In either case, see the next section, [Activate segments to [!DNL Google Customer Match]](#activate-segments), for the rest of the workflow.
-
-## Activate segments to [!DNL Google Customer Match] {#activate-segments}
-
-For instructions on how to activate segments to [!DNL Google Customer Match], see [Activate Data to Destinations](../../ui/activate-destinations.md). 
-
+See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 In the **[!UICONTROL Segment schedule]** step, you must provide the [!UICONTROL App ID] when sending [!DNL IDFA] or [!DNL GAID] segments to [!DNL Google Customer Match].
 
 ![Google Customer Match App ID](../../assets/catalog/advertising/google-customer-match/gcm-destination-appid.png)
 
 For details on how to find the [!DNL App ID], refer to the [Google official documentation](https://developers.google.com/adwords/api/docs/reference/v201809/AdwordsUserListService.CrmBasedUserList#appid).
+
+### Mapping example: activating audience data in [!DNL Google Customer Match] {#example-gcm}
+
+This is an example of correct identity mapping when activating audience data in [!DNL Google Customer Match].
+
+Selecting source fields:
+
+* Select the `Email` namespace as source identity if the email addresses you are using are not hashed.
+* Select the `Email_LC_SHA256` namespace as source identity if you hashed customer email addresses on data ingestion into [!DNL Platform], according to [!DNL Google Customer Match] [email hashing requirements](#hashing-requirements).
+* Select the `PHONE_E.164` namespace as source identity if your data consists of non-hashed phone numbers. [!DNL Platform] will hash the phone numbers to comply with [!DNL Google Customer Match] requirements.
+* Select the `Phone_SHA256_E.164` namespace as source identity if you hashed phone numbers on data ingestion into [!DNL Platform], according to [!DNL Facebook] [phone number hashing requirements](#phone-number-hashing-requirements).
+* Select the `IDFA` namespace as source identity if your data consists of [!DNL Apple] device IDs. 
+* Select the `GAID` namespace as source identity if your data consists of [!DNL Android] device IDs.
+* Select the `Custom` namespace as source identity if your data consists of other type of identifiers.
+
+Selecting target fields:
+
+* Select the `Email_LC_SHA256` namespace as target identity when your source namespaces are either `Email` or `Email_LC_SHA256`.
+* Select the `Phone_SHA256_E.164` namespace as target identity when your source namespaces are either `PHONE_E.164` or `Phone_SHA256_E.164`.
+* Select the `IDFA` or `GAID` namespaces as target identity when your source namespaces are `IDFA` or `GAID`.
+* Select the `User_ID` namespace as target identity when your source namespace is a custom one.
+
+![Identity mapping](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm.png)
+
+Data from unhashed namespaces is automatically hashed by [!DNL Platform] upon activation.
+
+Attribute source data is not automatically hashed. When your source field contains unhashed attributes, check the **[!UICONTROL Apply transformation]** option, to have [!DNL Platform] automatically hash the data on activation.
+
+![Identity mapping transformation](../../assets/ui/activate-segment-streaming-destinations/identity-mapping-gcm-transformation.png)
 
 ## Verify that segment activation was successful {#verify-activation}
 

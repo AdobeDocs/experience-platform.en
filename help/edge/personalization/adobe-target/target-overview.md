@@ -8,6 +8,10 @@ exl-id: 021171ab-0490-4b27-b350-c37d2a569245
 
 [!DNL Adobe Experience Platform] [!DNL Web SDK] can deliver and render personalized experiences managed in [!DNL Adobe Target] to the web channel. You can use a WYSIWYG editor, called the [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), or a non-visual interface, the [Form-based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), to create, activate, and deliver your activities and personalization experiences.
 
+>[!IMPORTANT]
+>
+>The [Adobe Target documentation](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/aep-implementation/aep-web-sdk.html?lang=en) includes topics containing information specific to the Platform Web SDK as it relates to Target features and functionality. 
+
 The following features have been tested and are currently supported in [!DNL Target]:
 
 * [A/B Tests](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
@@ -32,8 +36,8 @@ The following diagram helps you understand the workflow of [!DNL Target] and [!D
 |3|The edge network sends the enriched personalization request to the [!DNL Target] edge with the Visitor ID and passed-in parameters.|
 |4|Profile scripts execute and then feed into [!DNL Target] profile storage. Profile storage fetches segments from the [!UICONTROL Audience Library] (for example, segments shared from [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], the [!DNL Adobe Experience Platform]).|
 |5|Based on URL request parameters and profile data, [!DNL Target] determines which activities and experiences to display for the visitor for the current page view and for future prefetched views. [!DNL Target] then sends this back to the edge network.|
-|6|a. The edge network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered.​<br>c. The edge network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization, and so forth.|
-|7|The edge network forwards [!UICONTROL Analytics for Target] (A4T) details (activity, experience, and conversion metadata) to the [!DNL Analytics] edge​.|
+|6|a. The edge network sends the personalization response back to the page, optionally including profile values for additional personalization. Personalized content on the current page is revealed as quickly as possible without flicker of default content.<br>b. Personalized content for views that are shown as a result of user actions in a Single Page Application (SPA) is cached so it can be instantly applied without an additional server call when the views are triggered. <br>c. The edge network sends the Visitor ID and other values in cookies, such as consent, Session ID, identity, cookie check, personalization, and so forth.|
+|7|The edge network forwards [!UICONTROL Analytics for Target] (A4T) details (activity, experience, and conversion metadata) to the [!DNL Analytics] edge.|
 
 ## Enabling [!DNL Adobe Target]
 
@@ -53,79 +57,9 @@ To use the VEC with a [!DNL Platform Web SDK] implementation, install and activa
 
 For more information, see [Visual Experience Composer helper extension](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) in the *Adobe Target guide*.
 
-## Auto-render VEC Activities
+## Rendering personalized content
 
-The [!DNL Adobe Experience Platform Web SDK] has the power to automatically render your experiences defined via [!DNL Adobe Target]’s VEC on the web for your users. In order to indicate to [!DNL Experience Platform Web SDK] to auto-render VEC activities, send an event with `renderDecisions = true`:
-
-```javascript
-alloy
-("sendEvent", 
-  { 
-  "renderDecisions": true, 
-  "xdm": {
-    "commerce": { 
-      "order": {
-        "purchaseID": "a8g784hjq1mnp3", 
-         "purchaseOrderNumber": "VAU3123", 
-         "currencyCode": "USD", 
-         "priceTotal": 999.98 
-         } 
-      } 
-    }
-  }
-);
-```
-
-## Using the Form-Based Composer
-
-The [Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html) is a non-visual interface that’s useful for configuring [!UICONTROL A/B Tests], [!UICONTROL Experience Targeting], [!UICONTROL Automated Personalization], and [!UICONTROL Recommendations] activities with different response types, such as JSON, HTML, Image, etc. Depending on the response type or decision returned by [!DNL Target], your core business logic can be executed. To retrieve decisions for your Form-Based Composer activities, send an event with all ‘decisionScopes’ you want to retrieve a decision for.
-
-```javascript
-alloy
-  ("sendEvent", { 
-    decisionScopes: [
-      "foo", "bar"], 
-      "xdm": {
-        "commerce": { 
-          "order": { 
-            "purchaseID": "a8g784hjq1mnp3", 
-            "purchaseOrderNumber": "VAU3123", 
-            "currencyCode": "USD", 
-            "priceTotal": 999.98 
-          } 
-        } 
-      } 
-    }
-  );
-```
-
-## Decision Scopes
-
-`decisionScopes` define sections, locations, or parts of your pages where you want to render a personalized experience. These `decisionScopes` are customizable and user-defined. For current [!DNL Target] customers, `decisionScopes` are also known as "mboxes." In the [!DNL Target] UI, `decisionScopes` appear as "locations."
-
-## The `__view__` Scope
-
-The [!DNL Experience Platform Web SDK] provides functionality to retrieve VEC actions without relying on the SDK to render the VEC actions for you. Send an event with `__view__` defined as a `decisionScopes`.
-
-```javascript
-alloy("sendEvent", {
-      "decisionScopes": ["__view__", "foo", "bar"], 
-      "xdm": { 
-        "web": { 
-          "webPageDetails": { 
-            "name": "Home Page"
-          }
-        } 
-      }
-    }
-  ).then(function(results) {
-    for (decision of results.decisions) {
-      if (decision.decisionScope === "__view__") {
-        console.log(decision.content)
-      }
-    }
-  });
-```   
+See [Rendering personalization content](../rendering-personalization-content.md) for more information.
 
 ## Audiences in XDM
 
@@ -143,6 +77,86 @@ If you have [!DNL Target] activities with predefined audiences that use custom p
 * Time Frame
 
 For more information, see [Categories for audiences](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=en) in the *Adobe Target guide*.
+
+### Response tokens
+
+Response tokens are mainly used to send metadata to third parties like Google, Facebook, etc. Response tokens are returned
+in the `meta` field within `propositions` -> `items`. Here is a sample:
+
+```          
+{
+  "id": "AT:eyJhY3Rpdml0eUlkIjoiMTI2NzM2IiwiZXhwZXJpZW5jZUlkIjoiMCJ9",
+  "scope": "__view__",
+  "scopeDetails": ...,
+  "renderAttempted": true,
+  "items": [
+    {
+      "id": "0",
+      "schema": "https://ns.adobe.com/personalization/dom-action",
+      "meta": {
+        "experience.id": "0",
+        "activity.id": "126736",
+        "offer.name": "Default Content",
+        "offer.id": "0"
+      }
+    }
+  ]
+}
+```
+
+To collect the response tokens, you have to subscribe to `alloy.sendEvent` promise, iterate through `propositions`
+and extract the details from `items` -> `meta`. Every `proposition` has a `renderAttempted` boolean field
+indicating whether the `proposition` was rendered or not. See the sample below:
+
+```
+alloy("sendEvent",
+  {
+    renderDecisions: true,
+    decisionScopes: [
+      "hero-container"
+    ]
+  }).then(result => {
+    const { propositions } = result;
+
+    // filter rendered propositions
+    const renderedPropositions = propositions.filter(proposition => proposition.renderAttempted === true);
+
+    // collect the item metadata that represents the response tokens
+    const collectMetaData = (items) => {
+      return items.filter(item => item.meta !== undefined).map(item => item.meta);
+    }
+
+    const pageLoadResponseTokens = renderedPropositions
+      .map(proposition => collectMetaData(proposition.items))
+      .filter(e => e.length > 0)
+      .flatMap(e => e);
+  });
+  
+```
+
+When automatic rendering is enabled, propositions array contains:
+
+#### On Page-Load:
+
+* Form-Based Composer based `propositions` with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions with `renderAttempted` flag set to `true`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+
+#### On View - change (for cached views):
+
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `true`
+
+When automatic rendering is disabled, propositions array contains:
+
+#### On Page-Load:
+
+* Form-based Composer based `propositions` with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions with `renderAttempted` flag set to `false`
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
+
+#### On View - change (for cached views):
+
+* Visual Experience Composer based propositions for a Single Page Application view with `renderAttempted` flag set to `false`
 
 ### Single profile update
 
@@ -234,7 +248,7 @@ mboxTrace and mboxDebug have been deprecated. Use [[!DNL Platform Web SDK] debug
 
 ## Terminology
 
-__Decisions:__ In [!DNL Target], decisions correlate to the experience that is selected from an Activity.
+__Propositions:__ In [!DNL Target], propositions correlate to the experience that is selected from an Activity.
 
 __Schema:__ The schema of a decision is the type of offer in [!DNL Target]. 
 

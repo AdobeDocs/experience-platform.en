@@ -13,17 +13,17 @@ Your organization must be provisioned for this feature. Please contact your Cust
 
 ## Creating a Datastream Configuration
 
-Datastreams can be created in Adobe [!DNL Experience Platform Launch] using the Datastream configuration tool.
+Datastreams can be created in the Data Collection UI using the Datastream configuration tool.
 
 ![datastreams tool navigation](../images/datastreams/config.png)
 
 >[!NOTE]
 >
->The datastreams configuration tool is available to customers on the allow list regardless whether they use [!DNL Experience Platform Launch] as a tag manager. Additionally, users require Develop permissions in [!DNL Experience Platform Launch]. See the [User Permissions](../../tags/ui/administration/user-permissions.md) article in the [!DNL Experience Platform Launch] documentation for more details.
+>The datastreams configuration tool is available to customers on the allow list regardless whether they use Platform as a tag manager. Additionally, users require Develop permissions. See the [user permissions](../../tags/ui/administration/user-permissions.md) article in the tags documentation for more details.
 
 Create a datastream by clicking on **[!UICONTROL New Datastream]** in the top-right area of the screen. After you provide a name and a description, you are asked for the default settings for each environment. Available settings are detailed below.
 
-When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments in [!DNL Experience Platform Launch]. When you build a [!DNL Experience Platform Launch] library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
+When creating a datastream, three environments are automatically created with identical settings. These three environments are *dev*, *stage*, and *prod*. They match the three default environments for tags. When you build a tag library to a dev environment, the library automatically uses the dev environment from your configuration. You can edit settings in individual environments as much as you'd like.
 
 The ID used in the SDK as the `edgeConfigId` is a composite ID that specifies the configuration and the environment (for example, `1c86778b-cdba-4684-9903-750e52912ad1:stage`). If no environment is present in the composite ID (for example, `stage` in the previous example), then the production environment is used.
 

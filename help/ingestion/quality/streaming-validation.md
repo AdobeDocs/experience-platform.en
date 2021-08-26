@@ -56,7 +56,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional hea
 
 Synchronous validation is a method of validation that provides immediate feedback about why an ingestion failed. However, upon failure, the records that fail validation are dropped and prevented from being sent downstream. As a result, synchronous validation should only be used during the development process. When doing synchronous validation, the callers are informed of both the result of the XDM validation, and, if it failed, the reason for failure. 
 
-By default, synchronous validation is not turned on. To enable it, you must pass in the optional query parameter `synchronousValidation=true` when making API calls. In addition, synchronous validation is currently only available if your stream endpoint is on the VA7 data center.
+By default, synchronous validation is not turned on. To enable it, you must pass in the optional query parameter `syncValidation=true` when making API calls. In addition, synchronous validation is currently only available if your stream endpoint is on the VA7 data center.
 
 If a message fails during synchronous validation, the message will not be written to the output queue, which provides immediate feedback for users.
 
@@ -67,7 +67,7 @@ If a message fails during synchronous validation, the message will not be writte
 **API format**
 
 ```http
-POST /collection/{CONNECTION_ID}?synchronousValidation=true
+POST /collection/{CONNECTION_ID}?syncValidation=true
 ```
 
 | Parameter | Description |
@@ -79,7 +79,7 @@ POST /collection/{CONNECTION_ID}?synchronousValidation=true
 Submit the following request to ingest data to your data inlet with synchronous validation:
 
 ```shell
-curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?synchronousValidation=true \
+curl -X POST https://dcs.adobedc.net/collection/{CONNECTION_ID}?syncValidation=true \
   -H "Content-Type: application/json" \
   -d '{JSON_PAYLOAD}'
 ```
@@ -178,7 +178,7 @@ With asynchronous validation enabled, a successful response returns the followin
     "inletId": "f6ca9706d61de3b78be69e2673ad68ab9fb2cece0c1e1afc071718a0033e6877",
     "xactionId": "1555445493896:8600:8",
     "receivedTimeMs": 1555445493932,
-    "synchronousValidation": {
+    "syncValidation": {
         "skipped": true
     }
 }

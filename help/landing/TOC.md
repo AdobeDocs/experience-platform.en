@@ -26,7 +26,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
   * [Authenticate and access Platform APIs](api-authentication.md)
   * [API fundamentals](api-fundamentals.md)
   * [Using Postman with Platform APIs](postman.md)
-  * [API reference documents](http://www.adobe.com/go/platform-api-reference-en)
+  * [API reference documents](https://www.adobe.com/go/platform-api-reference-en)
 * Platform documentation {#documentation}
   * [Overview](documentation/overview.md)
   * [Language support](documentation/language-support.md)
@@ -44,6 +44,8 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
+  * Audit logs (Beta) {#audit-logs}
+    * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)
 * [Troubleshooting guide](troubleshooting.md)
 * [Gen2 data lake migration](adls2-gen2-migration.md)
