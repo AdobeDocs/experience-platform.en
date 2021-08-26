@@ -12,9 +12,22 @@ author: ens28527
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Destinations](#destinations)
 - [Observability Insights](#observability)
 - [Real-time Customer Profile](#profile)
 - [Sources](#sources)
+
+## Destinations {#destinations}
+
+Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [Usability improvements to Destinations](../../destinations/ui/activation-overview.md) | Usability improvements to destinations enable marketers to seamlessly activate segments to existing destinations. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
 
 ## Observability Insights {#observability}
 
