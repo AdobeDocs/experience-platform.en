@@ -12,7 +12,7 @@ There are currently three supported secret types denoted in the `type_of` attrib
 | --- | --- |
 | `token` | A single string of characters that is known and understood by both systems. |
 | `simple-http` | Contains two string attributes for a username and password, respectively. |
-| `oauth2` | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. Event forwarding will ask you for the required information, then will handle the renewal of these tokens for you on a specified interval |
+| `oauth2` | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. Event forwarding asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
 {style="table-layout:auto"}
 
@@ -74,7 +74,7 @@ A credentials exchange is considered successful under the following conditions:
 * `expires_in` is greater than `28800` (eight hours).
 * `refresh_offset` is less than the value of `expires_in` minus `14400`. For example, if `expires_in` is `36000` (ten hours), and the `refresh_offset` is `28800` (eight hours), the exchange is considered failed because `28800` is less than `36000` - `14400` (`21600`).
 
-If the the exchange is successful, the secret's status attribute is set to `succeeded` and values for `expires_at` and `refresh_at` are set:
+If the exchange is successful, the secret's status attribute is set to `succeeded` and values for `expires_at` and `refresh_at` are set:
 
 * `expires_at` is the current UTC time plus the value of `expires_in`.
 * `refresh_at` is the current UTC time plus the value of `expires_in`, minus the value of `refresh_offset`.
