@@ -85,6 +85,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Updating the Target profile | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=en#single-profile-update) |
 | Recommendations |  |
 | mBox 3rd party ID |  | 
+| Response tokens | [Documentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=en) |
 
 {style="table-layout:auto"}
 

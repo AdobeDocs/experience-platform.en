@@ -43,7 +43,7 @@ For more information, please see the [[!DNL Data Prep] overview](../../data-prep
 
 | Feature | Description |
 | ------- | ----------- |
-| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate profiles and segments to a destination](../../destinations/ui/activate-destinations.md)</li></ul> |
+| Advanced ID matching | Enhancements to the audience match rate capabilities in [!DNL Facebook Custom Audiences] and [!DNL Google Customer Match], by adding support for additional identity matching, such as external IDs, phone numbers, and mobile device IDs. See the following documentation for more details: <ul><li>[Facebook destination](../../destinations/catalog/social/facebook.md)</li><li>[Google Customer Match destination](../../destinations/catalog/advertising/google-customer-match.md)</li><li>[Activate audience data to streaming segment export destinations](../../destinations/ui/activate-segment-streaming-destinations.md)</li></ul> |
 
 To learn more, visit the [destinations overview](../../destinations/home.md).
 

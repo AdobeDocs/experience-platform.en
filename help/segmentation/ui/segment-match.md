@@ -69,6 +69,17 @@ Data usage labels allow you to categorize datasets and fields according to usage
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md). For information on data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md).
 
+### Understanding [!DNL Segment Match] permissions
+
+There are two permissions associated with [!DNL Segment Match]:
+
+| Permission | Description |
+| --- | --- |
+| Manage Audience Share Connections | This permission allows you to complete the partner handshake process, which connects two IMS Organizations to enable [!DNL Segment Match] flows. |
+| Manage Audience Shares | This permission allows you to create, edit, and publish feeds (the package of data used for [!DNL Segment Match]) with active partners (partners who have been connected by the admin user with **[!UICONTROL Audience Share Connections]** access). |
+
+See the [access control overview](../../access-control/home.md) for more information on access control and permissions.
+
 ## [!DNL Segment Match] end-to-end workflow
 
 Once you have set up your identity data and namespaces, consent configuration, and data usage label, you can start working with [!DNL Segment Match] and its features.
