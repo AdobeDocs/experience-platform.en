@@ -69,7 +69,7 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     
       >[!IMPORTANT]
       >
-      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
 1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
       >[!TIP]
@@ -97,7 +97,7 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
    
      >[!IMPORTANT]
      >
-     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
 1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
       >[!TIP]
@@ -184,7 +184,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
-A deduplication key is a user defined primary key which determines the identity by which users want their profiles to be deduplicated.​
+A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
