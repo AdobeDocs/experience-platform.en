@@ -146,7 +146,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Create a target dataset
 
-With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), while providing the ID of the target schema within the payload.
+With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload.
 
 **API format**
 
