@@ -32,8 +32,8 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
+| Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours |
+| Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes |
 
 {style="table-layout:auto"}
 
@@ -41,9 +41,9 @@ The following query types are **not** currently supported by edge segmentation:
 
 | Query type | Details |
 | ---------- | ------- |
-| Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
-| Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
+| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
+| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
 
 {style="table-layout:auto"}
 

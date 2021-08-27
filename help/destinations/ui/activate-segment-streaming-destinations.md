@@ -19,13 +19,17 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your destination {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
+1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-segment-streaming-destinations/browse-tab.png)
+    ![Destination Catalog tab](../assets/ui/activate-segment-streaming-destinations/catalog-tab.png)
 
-1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-buttons-browse.png)
+    ![Activate buttons](../assets/ui/activate-segment-streaming-destinations/activate-segments-button.png)
+
+1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+
+    ![Select destination](../assets/ui/activate-segment-streaming-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -37,14 +41,9 @@ Use the check boxes to the left of the segment names to select the segments that
 
 ## Map attributes and identities {#mapping}
 
->[!CONTEXTUALHELP]
->id="platform_destinations_activate_applytransformation"
->title="Apply transformation"
->abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
-
 >[!IMPORTANT]
 >
->This step only applies to some segment streaming destinations. If your destinations does not have a **[!UICONTROL Mapping]** step, skip to [Schedule segment export](#scheduling).
+>This step only applies to some segment streaming destinations. If your destination does not have a **[!UICONTROL Mapping]** step, skip to [Schedule segment export](#scheduling).
 
 Some segment streaming destinations require you to select source attributes or identity namespaces to map as target identities in the destination.
 
@@ -70,11 +69,27 @@ Some segment streaming destinations require you to select source attributes or i
 
 1. To add more mappings, repeat steps 1 to 5.
 
+### Apply transformation {#apply-transformation}
 
+>[!CONTEXTUALHELP]
+>id="platform_destinations_activate_applytransformation"
+>title="Apply transformation"
+>abstract="Check this option when using unhashed source fields, to have Adobe Experience Platform automatically hash them on activation."
+>additional-url="https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#apply-transformation" text="Learn more in documentation"
 
+When you are mapping unhashed source attributes to target attributes that the destination expects to be hashed (for example: `email_lc_sha256` or `phone_sha256`), check the **Apply transformation** option to have Adobe Experience Platform automatically hash the source attributes on activation.
 
+![Identity mapping](../assets/ui/activate-segment-streaming-destinations/mapping-summary.png)
 
 ## Schedule segment export {#scheduling}
+
+By default, the [!UICONTROL Segment schedule] page shows only the newly selected segments that you chose in the current activation flow.
+
+![New segments](../assets/ui/activate-segment-streaming-destinations/new-segments.png)
+
+To see all the segments being activated to your destination, use the filtering option and disable the **[!UICONTROL Show new segments only]** filter.
+
+![All segments](../assets/ui/activate-segment-streaming-destinations/all-segments.png)
 
 1. On the **[!UICONTROL Segment schedule]** page, select each segment, then use the **[!UICONTROL Start date]** and **[!UICONTROL End date]** selectors to configure the time interval for sending data to your destination.
 
@@ -110,7 +125,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 ## Verify segment activation {#verify}
 
-Check your destination account. If activation was successful, audiences are populated in your destination platform.
+Check the [destination monitoring documentation](../../dataflows/ui/monitor-destinations.md) for detailed information on how to monitor the flow of data to your destinations.
 
 <!-- 
 For [!DNL Facebook Custom Audience], a successful activation means that a [!DNL Facebook] custom audience would be created programmatically in [[!UICONTROL Facebook Ads Manager]](https://www.facebook.com/adsmanager/manage/). Segment membership in the audience would be added and removed as users are qualified or disqualified for the activated segments.
