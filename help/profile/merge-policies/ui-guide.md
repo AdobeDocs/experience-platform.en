@@ -49,8 +49,8 @@ The first step in the workflow allows you to configure your merge policy by prov
 * **[!UICONTROL Name]**: The name of your merge policy should be descriptive yet concise.
 * **[!UICONTROL Schema class]**: The XDM schema class associated with the merge policy. This specifies the schema class for which this merge policy is created. Organizations can create multiple merge policies per schema class. Currently only the [!UICONTROL XDM Individual Profile] class is available in the UI. You can preview the union schema for the schema class by selecting **[!UICONTROL View Union Schema]**. For more information, see the section on [viewing the union schema](#view-union-schema) that follows.
 * **[!UICONTROL ID stitching]**: This field defines how to determine the related identities of a customer. There are two possible values for identity stitching, and it is important to understand how the type of identity stitching that you select will impact your data. To learn more, please refer to the [merge policies overview](overview.md). 
-    * **[!UICONTROL None]**: Perform no identity stitching.
-    * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
+  * **[!UICONTROL None]**: Perform no identity stitching.
+  * **[!UICONTROL Private Graph]**: Perform identity stitching based on your private identity graph.
 * **[!UICONTROL Default merge policy]**: A toggle button that allows you to select whether or not this merge policy will be the default for your organization. If the selector is toggled on, a warning appears asking you to confirm that you wish to change your organization's default merge policy. See the [merge policies overview](overview.md) to learn more about default merge policies.
     ![](../images/merge-policies/create-make-default.png)
 

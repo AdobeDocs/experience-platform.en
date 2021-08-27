@@ -129,9 +129,9 @@ A profile fragment is the profile information for just one identity out of the l
 
 Where `{ATTRIBUTE_MERGE_TYPE}` is one of the following:
 
-* **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required. `timestampOrdered` also supports custom timestamps which will take precedence when merging profile fragments within or across datasets. To learn more, see the Appendix section on [using custom timestamps](#custom-timestamps).
+* **`timestampOrdered`**: (default) Give priority to the profile which was updated last. Using this merge type, the `data` attribute is not required.
 * **`dataSetPrecedence`** : Give priority to profile fragments based on the dataset from which they came. This could be used when information present in one dataset is preferred or trusted over data in another dataset. When using this merge type, the `order` attribute is required, as it lists the datasets in the order of priority.
-    * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
+  * **`order`**: When "dataSetPrecedence" is used, an `order` array must be supplied with a list of datasets. Any datasets not included in the list will not be merged. In other words, datasets must be explicitly listed to be merged into a profile. The `order` array lists the IDs of the datasets in order of priority.
 
 #### Example `attributeMerge` object using `dataSetPrecedence` type
 
@@ -733,40 +733,6 @@ A successful delete request returns HTTP Status 200 (OK) and an empty response b
 
 ## Next steps
 
-Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-time Customer Profile] data. Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
+Now that you know how to create and configure merge policies for your organization, you can use them to adjust the view of customer profiles within Platform and to create audience segments from your [!DNL Real-time Customer Profile] data. 
 
-## Appendix
-
-This section provides supplemental information related to working with merge policies.
-
-### Using custom timestamps {#custom-timestamps}
-
-As records are ingested into Experience Platform, a system timestamp is obtained at the time of ingestion and added to the record. When `timestampOrdered` is selected as the `attributeMerge` type for a merge policy, profiles are merged based on the system timestamp. In other words, merging is done based on the timestamp for when the record was ingested into Platform.
-
-Occasionally there may be use cases, such as backfilling data or ensuring the correct order of events if records are ingested out of order, where it is necessary to supply a custom timestamp and have the merge policy honor the custom timestamp rather than the system timestamp.
-
-In order to use a custom timestamp, the [[!DNL External Source System Audit Details] schema field group](#field-group-details) must be added to your Profile schema. Once added, the custom timestamp can be populated using the `xdm:lastUpdatedDate` field. When a record is ingested with the `xdm:lastUpdatedDate` field populated, Experience Platform will use that field to merge records or profile fragments within and across datasets. If `xdm:lastUpdatedDate` is not present, or not populated, Platform will continue to use the system timestamp.
-
->[!NOTE]
->
->You must ensure that the `xdm:lastUpdatedDate` timestamp is populated when sending a PATCH on the same record.
-
-For step-by-step instructions on working with schemas using the Schema Registry API, including how to add field groups to schemas, please visit the [tutorial for creating a schema using the API](../../xdm/tutorials/create-schema-api.md).
-
-To work with custom timestamps using the UI, refer to the section on [using custom timestamps](../merge-policies/overview.md#custom-timestamps) in the [merge policies overview](../merge-policies/overview.md).
-
-#### [!DNL External Source System Audit Details] field group details {#field-group-details}
-
-The following example shows correctly populated fields in the [!DNL External Source System Audit Details] field group. The complete field group JSON can also be viewed in the [public Experience Data Model (XDM) repo](https://github.com/adobe/xdm/blob/master/components/fieldgroups/shared/external-source-system-audit-details.schema.json) on GitHub.
-
-```json
-{
-  "xdm:createdBy": "{CREATED_BY}",
-  "xdm:createdDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastUpdatedBy": "{LAST_UPDATED_BY}",
-  "xdm:lastUpdatedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastActivityDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastReferencedDate": "2018-01-02T15:52:25+00:00",
-  "xdm:lastViewedDate": "2018-01-02T15:52:25+00:00"
- }
-```
+Please see the [Adobe Experience Platform Segmentation Service documentation](../../segmentation/home.md) to begin defining and working with segments.
