@@ -12,6 +12,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Getting started {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
+* [B2B Edition]{#b2b}
+  * [Real-time CDP B2B overview](b2b/overview.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
@@ -27,6 +29,8 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Identities & identity namespaces](profile/identities-overview.md)
   * [Merge policies](profile/merge-policies.md)
   * [Profile viewer](profile/profile-viewer.md)
+* Accounts {#account}
+  * [Account overview](account/account-overview.md)
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
