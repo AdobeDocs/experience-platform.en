@@ -990,7 +990,7 @@ curl -X POST \
 
 >[!NOTE]
 >
->You can list available "xdm:namespace" values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
+>You can list available "xdm:namespace" values, or create new ones, using the [[!DNL Identity Service API]](https://www.adobe.io/experience-platform-apis/references/identity-service). The value for "xdm:property" can be either "xdm:code" or "xdm:id", depending on the "xdm:namespace" used.
 
 **Response**
 
