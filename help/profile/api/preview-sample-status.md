@@ -8,7 +8,7 @@ exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate a dataset overlap report and an identity overlap report to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
