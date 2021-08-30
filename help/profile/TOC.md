@@ -43,5 +43,5 @@ feature: Profiles
   * [More tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)
-* [Profile API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml)
+* [Profile API reference](https://www.adobe.com/go/profile-apis-en)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

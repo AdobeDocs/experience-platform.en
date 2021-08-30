@@ -131,7 +131,7 @@ For more information on specific endpoints in Platform APIs, including required 
 | [[!DNL Segmentation Service] API guide](.././segmentation/api/overview.md) | The [!DNL Segmentation Service] API allows developers to programmatically manage segmentation operations in Adobe Experience Platform. This includes building segments and generating audiences from your Real-time Customer Profile data. |
 | [[!DNL Sensei Machine Learning] API guide](.././data-science-workspace/api/getting-started.md) <br> (Data Science Workspace) | The [!DNL Sensei Machine Learning] API provides a mechanism for data scientists to organize and manage machine learning (ML) services from algorithm onboarding, experimentation, and to service deployment. |
 
-For more information on specific endpoints and operations available for each service, please see the [API reference documentation](http://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
+For more information on specific endpoints and operations available for each service, please see the [API reference documentation](https://www.adobe.com/go/platform-api-reference-en) on Adobe I/O.
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: FAQ
+title: Tags Troubleshooting Guide
 description: Get answers to frequently asked questions about tags in Adobe Experience Platform.
 ---
 # Tags troubleshooting guide
@@ -86,6 +86,16 @@ Most Adobe clients leverage more modern web platform features in current browser
 ## Do tags work on native mobile apps?
 
 Yes! Tags now support mobile properties and configuration for the new Adobe Experience Platform [Mobile SDKs](https://sdkdocs.com) to implement data collection and delivery in a native mobile app environment. Please visit [documentation](https://sdkdocs.com) to learn more.
+
+## Why is the UI saying there was an error loading my account?
+
+If you receive a message saying that there was an error loading your account, it means that your account does not belong to any product profiles for tags. See the guide on [managing permissions](./ui/administration/manage-permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant access to the Data Collection UI.
+
+## Why can't I add any properties in the UI?
+
+If you cannot create any new properties when logged in to the Data Collection UI, it means that your account does not belong to a product profile that has the Manage Properties right.
+
+See the guide on [managing permissions](./ui/administration/manage-permissions.md) to learn how to configure a product profile in Adobe Admin Console to grant the Manage Properties right. For more information on the different rights for tags, see the overview on [user permissions for tags](./ui/administration/user-permissions.md).
 
 ## What if I have other questions?
 
