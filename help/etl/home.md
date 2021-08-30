@@ -15,7 +15,7 @@ The ETL integration guide outlines general steps for creating high-performance, 
 - [[!DNL Data Access]](https://www.adobe.io/experience-platform-apis/references/data-access/)
 - [[!DNL Data Ingestion]](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Authentication and Authorization for Experience Platform APIs](https://www.adobe.com/go/platform-api-authentication-en)
-- [[!DNL Schema Registry]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+- [[!DNL Schema Registry]](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 This guide also includes sample API calls to use when designing an ETL connector, with links to documentation that outlines each [!DNL Experience Platform] service, and use of its API, in more detail. 
 
@@ -251,7 +251,7 @@ Similar to the steps for [viewing dataset schema](#view-dataset-schema), the res
 
 >[!NOTE]
 >
->When the "schema" field is empty or absent entirely, the connector should read the "schemaRef" field and use the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml) as shown in the previous steps to [view a dataset schema](#view-dataset-schema).
+>When the "schema" field is empty or absent entirely, the connector should read the "schemaRef" field and use the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/) as shown in the previous steps to [view a dataset schema](#view-dataset-schema).
 
 ### The "observableSchema" property
 

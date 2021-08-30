@@ -4,7 +4,7 @@ description: Learn how to get started with the Reactor API, including steps to g
 ---
 # Getting started with the Reactor API
 
-In order to use the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml), each request must include the following authentication headers:
+In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/), each request must include the following authentication headers:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
