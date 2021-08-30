@@ -20,7 +20,7 @@ The **[!UICONTROL Add User]** dialog appears. Using the search field, you can lo
 
 Once you have selected a user, select **[!UICONTROL Save]** to add them to the product profile.
 
-![add-user-to-profile](../images/add-user-to-profile.png)
+![save-user](../images/save-user.png)
 
 ## Next steps
 
