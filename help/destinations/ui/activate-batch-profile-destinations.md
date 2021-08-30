@@ -19,13 +19,17 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your destination {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
+1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+    ![Destination Catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+    ![Activate segments button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+
+    ![Select destination](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -52,24 +56,31 @@ Select the **[!UICONTROL Create schedule]** button corresponding to the segment 
 
 ### Export full files {#export-full-files}
 
-Select **[!UICONTROL Export full files]** to have your exported files contain a complete snapshot of all the profiles that qualify for that segment.
+Select **[!UICONTROL Export full files]** to trigger the export of a file containing a full snapshot of all profile qualifications for the selected segment.
 
 ![Export full files](../assets/ui/activate-batch-profile-destinations/export-full-files.png)
 
-1. Use the **[!UICONTROL Frequency]** selector to choose between one-time (**[!UICONTROL Once]**) or **[!UICONTROL Daily]** exports. Exporting a full file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 AM UTC (7:00 PM EST).
-2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place. Exporting a file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at the time you select.
+1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
+    
+    * **[!UICONTROL Once]**: schedule a one time on-demand full file export.
+    * **[!UICONTROL Daily]**: schedule full file exports once a day, every day, at the time you specify.
+
+1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
     
       >[!IMPORTANT]
       >
-      >The option to export files at a certain time of day is currently in beta, and is only available to a select number of customers.<br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-4. Select **[!UICONTROL Create]** to save the schedule.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+      >[!TIP]
+      >
+      > For daily exports, set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Select **[!UICONTROL Create]** to save the schedule.
 
  
 ### Export incremental files {#export-incremental-files}
 
-Select **[!UICONTROL Export incremental files]** to have your exported files contain only the profiles which qualified for that segment since the last export.
+Select **[!UICONTROL Export incremental files]** to trigger an export where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
 
 >[!IMPORTANT]
 >
@@ -77,21 +88,22 @@ Select **[!UICONTROL Export incremental files]** to have your exported files con
 
 ![Export incremental files](../assets/ui/activate-batch-profile-destinations/export-incremental-files.png)
 
-1. Use the **[!UICONTROL Frequency]** selector to choose between **[!UICONTROL Daily]** or **[!UICONTROL Hourly]** exports. Exporting an incremental file **[!UICONTROL Daily]** exports the file every day from the start date to the end date at 12:00 PM UTC (7:00 AM EST).
-   * When selecting **[!UICONTROL Hourly]**, use the **[!UICONTROL Every]** selector to choose between the **[!UICONTROL 3]**, **[!UICONTROL 6]**, **[!UICONTROL 8]**, and **[!UICONTROL 12]** hour options.
-     
-       >[!IMPORTANT]
-       >
-       >The option to export incremental files every 3, 6, 8, or 12 hours is currently in beta, and is only available to a select number of customers. Non-beta customers can export incremental files once a day. 
+1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
+    
+    * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
+    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
-2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >The option to select the time of day for the export is only available to a select number of customers. <br> <br> Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-4. Select **[!UICONTROL Create]** to save the schedule.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+      >[!TIP]
+      >
+      >Set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Configure file names {#file-names}
 
@@ -136,9 +148,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
     ![Select source field page](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. To add more mappings, repeat steps 1 to3.
-
 
 >[!NOTE] 
 >
@@ -158,6 +168,8 @@ File exports will vary in the following ways, depending on whether `segmentMembe
 >abstract="Select the XDM schema attributes that all exported profiles should include. Profiles without the mandatory key are not exported to the destination. Not selecting a mandatory key exports all qualified profiles regardless of their attributes."
 >additional-url="http://www.adobe.com/go/destinations-mandatory-attributes-en" text="Learn more in documentation"
 
+A mandatory attribute is a user enabled checkbox which ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.​
+
 You can mark attributes as mandatory to ensure that [!DNL Platform] exports only the profiles that include the specific attribute. As a result, it can be used as an additional form of filtering. Marking an attribute as mandatory is **not** required.
 
 Not selecting a mandatory attribute exports all qualified profiles regardless of their attributes.
@@ -172,9 +184,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
->[!IMPORTANT]
->
->The option to use deduplication keys is currently in beta, and is only available to a select number of customers.
+A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 
