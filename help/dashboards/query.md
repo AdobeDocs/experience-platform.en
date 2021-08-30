@@ -35,6 +35,13 @@ Each profile attribute dataset is entitled **Profile Attribute** followed by a s
 
 This alpha numeric value is a system-generated, random string that maps to a merge policy ID of one of the merge policies created by your organization. The mapping of each merge policy ID to its related profile attribute dataset string is maintained in the `adwh_dim_merge_policies` dataset. 
 
+The `adwh_dim_merge_policies` dataset contains the following fields:
+
+* `merge_policy_name`
+* `merge_policy_id`
+* `merge_policy`
+* `dataset_id`
+
 This dataset can be explored using the Query Editor UI in Experience Platform. To learn more about using the Query Editor, refer to the [Query Editor UI guide](../query-service/ui/user-guide.md).
 
 ### Segment metadata dataset
@@ -63,7 +70,11 @@ The following example queries include sample SQL that can be used in Query Servi
 
 ### Count of Profiles by Identity
 
-This profile insight provides a breakdown of identities across all of the merged profiles in the dataset. The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
+This profile insight provides a breakdown of identities across all of the merged profiles in the dataset. 
+
+>[!NOTE]
+>
+>The total number of profiles by identity (in other words, adding together the values shown for each namespace) may be higher than the total number of merged profiles because one profile could have multiple namespaces associated with it. For example, if a customer interacts with your brand on more than one channel, multiple namespaces will be associated with that individual customer.
 
 **Query**
 
