@@ -44,5 +44,5 @@ feature: Queries
   - [RStudio](clients/rstudio.md)
   - [Tableau](clients/tableau.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/query-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -13,4 +13,4 @@ feature: Data Management, Data Ingestion
 - UI guides {#ui}
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
-- [Flow Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)
+- [Flow Service API](https://www.adobe.io/experience-platform-apis/references/flow-service/)

@@ -127,5 +127,5 @@ feature: Schemas
   * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

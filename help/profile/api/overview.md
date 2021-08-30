@@ -10,7 +10,7 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 
 The [!DNL Real-time Customer Profile] API includes multiple endpoints, outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.com/go/profile-apis-en).
 
 For a guide to working with [!DNL Real-time Customer Profile] data in the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
