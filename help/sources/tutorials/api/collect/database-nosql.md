@@ -141,7 +141,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in Platform, a target XDM schema must be created to structure the source data according to your needs. The target XDM schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the [!DNL XDM Individual Profile] class.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API format**
 
