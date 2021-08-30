@@ -11,7 +11,7 @@ exl-id: 8944ac3f-366d-49c8-882f-11cd0ea766e4
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Azure Synapse Analytics] (hereinafter referred to as "[!DNL Synapse]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

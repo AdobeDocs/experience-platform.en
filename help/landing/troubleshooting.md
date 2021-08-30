@@ -198,6 +198,6 @@ The following is a list of troubleshooting guides and API reference documentatio
 | Adobe Experience Platform Segmentation | [[!DNL Segmentation API]](https://www.adobe.io/experience-platform-apis/references/segmentation/) |
 | [!DNL Catalog Service] | [[!DNL Catalog Service API]](https://www.adobe.io/experience-platform-apis/references/catalog/)||
 | [!DNL Experience Data Model] (XDM) | [[!DNL Schema Registry API]](https://www.adobe.io/experience-platform-apis/references/schema-registry/) | [[!DNL XDM System] FAQ and troubleshooting guide](../xdm/troubleshooting-guide.md)|
-| [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml)||
+| [!DNL Flow Service] ([!DNL Sources] and [!DNL Destinations]) | [[!DNL Flow Service API]](https://www.adobe.io/experience-platform-apis/references/flow-service/)||
 | [!DNL Real-time Customer Profile] | [[!DNL Real-time Customer Profile API]](https://www.adobe.com/go/profile-apis-en)| [[!DNL Profile] troubleshooting guide](../profile/troubleshooting.md) |
 | Sandboxes | [Sandbox API](https://www.adobe.io/experience-platform-apis/references/sandbox) | [Sandboxes troubleshooting guide](../sandboxes/troubleshooting-guide.md)|

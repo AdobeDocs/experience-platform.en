@@ -9,7 +9,7 @@ exl-id: f3754bd0-ed31-4bf2-8f97-975bf6a9b076
 ---
 # Collect marketing automation data using source connectors and APIs
 
-This tutorial covers the steps for retrieving data from a third-party marketing automation system and ingesting it into Platform through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+This tutorial covers the steps for retrieving data from a third-party marketing automation system and ingesting it into Platform through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
