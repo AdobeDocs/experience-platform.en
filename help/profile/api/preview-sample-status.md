@@ -544,10 +544,10 @@ A successful request returns HTTP Status 200 (OK) and the unknown profiles repor
 |`data`|The `data` object contains the information returned for the unknown profiles report.|
 |`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count.|
 |`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
-|`unknownProfiles`|An object containing a breakdown of unknown profiles by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, or 120 day time periods.|
-|`countOfProfiles`|The count of unknown profiles for the time range or the count of unknown profiles for the namespace.|
+|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, or 120 day time periods.|
+|`countOfProfiles`|The count of unknown profiles for the time period or the count of unknown profiles for the namespace. |
 |`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
-|`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace.|
+|`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
 |`reportTimestamp`|The timestamp of the report.|
 
 ### Interpreting the unknown profiles report
