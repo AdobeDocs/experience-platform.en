@@ -9,7 +9,7 @@ exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 ---
 # Create a streaming dataflow for raw data using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
