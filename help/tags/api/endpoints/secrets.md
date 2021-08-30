@@ -4,7 +4,7 @@ description: Learn how to make calls to the /secrets endpoint in the Reactor API
 ---
 # Secrets endpoint
 
-A secret is a resource that exists only within event forwarding properties (properties with an attribute of "platform": "edge"). They allow event forwarding to authenticate to another system for secure data exchange.
+A secret is a resource that exists only within event forwarding properties (properties with a `platform` attribute set to `edge`). They allow event forwarding to authenticate to another system for secure data exchange.
 
 This guide shows you how to make calls to the `/secrets` endpoint in the Reactor API. For a detailed explanation of the different secret types and how to use them, please refer to the high-level overview on [secrets](../guides/secrets.md) before returning to this guide.
 
@@ -639,7 +639,7 @@ A successful response returns the details of the secret, with its status reset t
 
 ## Delete a secret {#delete}
 
-You can deleted a secret by including its ID in the path of a DELETE request. This is a hard delete with an immediate effect, and does not require a library republish.
+You can delete a secret by including its ID in the path of a DELETE request. This is a hard delete with an immediate effect and does not require a library republish.
 
 This operation removes the secret from the environment it is related to and the underlying resource is deleted.
 
@@ -676,6 +676,12 @@ curl -X DELETE \
 A successful response returns HTTP status 204 (No Content) and an empty response body, indicating that the secret has been deleted from the system.
 
 ## List the notes for a secret {#notes}
+
+The Reactor API allows you to add notes to certain resources, including secrets. Notes are textual annotations that have no impact on resource behavior, and can be used for a variety of use cases.
+
+>[!NOTE]
+>
+>See the [notes endpoint guide](./notes.md) for details on how to create and edit notes for Reactor API resources.
 
 You can retrieve all notes related to a secret by making a GET request.
 

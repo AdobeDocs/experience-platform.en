@@ -10,7 +10,7 @@ There are currently three supported secret types denoted in the `type_of` attrib
 
 | Secret type | Description |
 | --- | --- |
-| `token` | A single string of characters that is known and understood by both systems. |
+| `token` | A single string of characters representing an authentication token value that is known and understood by both systems. |
 | `simple-http` | Contains two string attributes for a username and password, respectively. |
 | `oauth2` | Contains several attributes to support the [OAuth](https://datatracker.ietf.org/doc/html/rfc6749) authentication spec. Event forwarding asks you for the required information, then handles the renewal of these tokens for you on a specified interval. |
 
@@ -60,7 +60,7 @@ Secrets with a `type_of` value of `oauth2` require the following attributes unde
 | `client_id` | String | The client ID for the OAuth integration. |
 | `client_secret` | String | The client secret for the OAuth integration. This value is not included in the API response. |
 | `authorization_url` | String | The authorization URL for the OAuth integration. |
-| `refresh_offset` | Integer | *(Optional)* The value, in seconds, to offset the refresh operation by. If this attribute is omitted when creating the secret, the value is implicitly set to `14400` (four hours) instead. |
+| `refresh_offset` | Integer | *(Optional)* The value, in seconds, to offset the refresh operation by. If this attribute is omitted when creating the secret, the value set to `14400` (four hours) by default. |
 | `options` | Object | *(Optional)* Specifies additional options for the OAuth integration:<ul><li>`scope`: A string that represents the [OAuth 2.0 scope](https://oauth.net/2/scope/) for the credentials.</li><li>`audience`: A string that represents an [Auth0 access token](https://auth0.com/docs/protocols/protocol-oauth2).</li></ul> |
 
 When an `oauth2` secret is created or updated, the `client_id` and `client_secret` (and possibly `options`) are exchanged in a POST request to the `authorization_url`, according to the Client Credentials flow of the OAuth protocol. If the authorization service responds with `200 OK` and a JSON response body, the body is parsed and `access_token` and `expires_in` are included in the Reactor API response.
@@ -77,7 +77,7 @@ A credentials exchange is considered successful under the following conditions:
 If the exchange is successful, the secret's status attribute is set to `succeeded` and values for `expires_at` and `refresh_at` are set:
 
 * `expires_at` is the current UTC time plus the value of `expires_in`.
-* `refresh_at` is the current UTC time plus the value of `expires_in`, minus the value of `refresh_offset`.
+* `refresh_at` is the current UTC time plus the value of `expires_in`, minus the value of `refresh_offset`. For example, if `expires_in` is `36000` (ten hours) and the `refresh_offset` is `3600` (one hour), the `refresh_at` property would be set to `32400` (nine hours) after the current UTC time.
 
 If the exchange fails for any reason, the `status_details` attribute in the `meta` object updates with relevant information.
 
@@ -99,13 +99,13 @@ A secret can only be associated with one environment. Once the relationship betw
 >
 >The only exception to this rule is if the environment in question is deleted. In this case, the relationship is cleared and the secret can be assigned to a different environment.  
 
-After a secret's credentials have been successfully exchanged, for a secret to be associated with an environment, the exchange artifact (the token string for `token`, the BASE64 encoded string for `simple-http`, or the access token for `oauth2`) is securely saved on the environment.
+After a secret's credentials have been successfully exchanged, for a secret to be associated with an environment, the exchange artifact (the token string for `token`, the Base64 encoded string for `simple-http`, or the access token for `oauth2`) is securely saved on the environment.
 
 After the exchange artifact is successfully saved on the environment, the secret's `activated_at` attribute is set to the current UTC time, and can now be referenced using a data element.
 
 ## Referencing secrets
 
-In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [Core extension](../../extensions/web/core/overview.md)). When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
+In order to reference a secret, you must create a data element of type "[!UICONTROL Secret]" (provided by the [[!UICONTROL Core] extension](../../extensions/web/core/overview.md)). When configuring this data element, you are prompted to indicate which secret to use for each environment. You can then create rules that reference a secret data element, such as within the header for an HTTP call.
 
 Event forwarding makes a best attempt to prevent you from referencing secrets that do not exist in a given environment.
 
