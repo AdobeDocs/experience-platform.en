@@ -6,7 +6,7 @@ description: Learn how to add your extension to the public catalog in Adobe Expe
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch is being rebranded as a suite of data collection technologies in Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 Adobe Experience Platform has a single unified catalog where users can view tag extensions that are available for installation. This catalog is available within the product and contains extensions of three types:
 
@@ -33,10 +33,11 @@ If you already have a company account, or if you do not plan on ever completing 
 1. Sign in to the [Exchange Partner site](https://partners.adobe.com/exchangeprogram/experiencecloud). Once signed in, select the **App Manager** link next to your name.
 1. Select the **Create New Application** tab, and then select **Create New App** for a customized solution, or select an applicable template.
 1. Provide your listing information. For detailed information on App Manager check out the full [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Listing information should be very clear about what the extension does and why it is useful. The listing functions as a marketing space for your app. Promote your extension here using clear descriptions, links to landing pages on your site, links to help docs or support email addresses, and so on. Although space in extension views is limited, the Exchange listing provides an opportunity to promote both your extension and your company. The following are suggestions to improve promotion of the extension:
-   - **App Icon** – Make sure the icon for the Exchange listing has the appropriate dimensions, 512 x 512 for png or 1:1 aspect ratio for jpg. 
-    >[!NOTE]
-    >
-    >This is a different file format than used in your extension code. The extension itself will contain an svg file as the [icon](../manifest.md).
+   - **App Icon** – Make sure the icon for the Exchange listing has the appropriate dimensions, 512 x 512 for png or 1:1 aspect ratio for jpg.
+      >[!NOTE]
+      >
+      >This is a different file format than used in your extension code. The extension itself will contain an svg file as the [icon](../manifest.md).
+
    - **Featured Image** - Get attention by using an image that can stand alone and will show your brand and highlight your application. The Featured Image is the one shown when someone shares a link to your Exchange listing or posts about it on social media. It therefore needs to be a model representation of your brand.
    - **App Publisher's Logo** - This is your corporate logo, make sure the icon has the appropriate dimensions of 1280 x 720, or 2560 x 1440 (16:9) in png or jpg format.
    - **Configuration Instructions** – Inform customers how to configure your Adobe Experience Platform extension. Make sure they understand any required settings and next steps when your [configuration view](../configuration.md) appears immediately after installing your extension in a property. 
@@ -61,4 +62,4 @@ When you update your extension, or just need to update your Exchange listing, lo
 
 ## Link your extension package to your listing
 
-After your listing has been approved and is publicly available, we recommend that you provide a link to the public listing in the `exchange_url` field of the `extension.json` file within your extension package.  This will create a "More Info" link within the Platform Launch extension catalog so users within the product can find your listing and it's extra information.
+After your listing has been approved and is publicly available, we recommend that you provide a link to the public listing in the `exchange_url` field of the `extension.json` file within your extension package.  This will create a "More Info" link within the tag extension catalog so users within the product can find your listing and it's extra information.

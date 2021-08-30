@@ -51,7 +51,7 @@ The **[!UICONTROL Log]** tab provides a list of queries that have previously bee
 
 ## Credentials
 
-The **[!UICONTROL Credentials]** tab displays your [!DNL Postgres] credentials. Select the **[!UICONTROL Copy]** icon next to any field to store its contents in your keyboard buffer. For more information on how to use these credentials to connect with external clients, please read the [connect with clients guide](../clients/overview.md).
+The **[!UICONTROL Credentials]** tab displays both your expiring and non-expiring credentials. For more information on how to use these credentials to connect with external clients, please read the [credentials guide](../clients/overview.md).
 
 ![Image](../images/ui/overview/credentials.png)
 

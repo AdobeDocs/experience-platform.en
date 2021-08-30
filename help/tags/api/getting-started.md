@@ -4,7 +4,7 @@ description: Learn how to get started with the Reactor API, including steps to g
 ---
 # Getting started with the Reactor API
 
-In order to use the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml), each request must include the following authentication headers:
+In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/), each request must include the following authentication headers:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`
@@ -54,7 +54,7 @@ The next screen prompts you to select one or more product profiles to associate 
 
 >[!NOTE]
 >
->Product profiles are managed by your organization through the Adobe Admin Console, and contain specific sets of permissions for granular features in Adobe Experience Platform Launch. Product profiles and their permissions can only be managed by users with administrator privileges within your organization. If you are unsure which product profiles to select for the API, contact your administrator.
+>Product profiles are managed by your organization through the Adobe Admin Console, and contain specific sets of permissions for granular features. Product profiles and their permissions can only be managed by users with administrator privileges within your organization. If you are unsure which product profiles to select for the API, contact your administrator.
 
 Select the desired product profiles from the list, then select **Save configured API** to complete the API registration.
 
@@ -92,7 +92,7 @@ A new access token is generated, and a button to copy the token to your clipboar
 
 #### Generate access tokens programmatically {#program}
 
-If you are using your Launch integration for an application, you can programmatically generate access tokens through API requests. In order to accomplish this, you must obtain the following values:
+If you are using your integration for an application, you can programmatically generate access tokens through API requests. In order to accomplish this, you must obtain the following values:
 
 * Client ID (`{API_KEY}`)
 * Client secret (`{SECRET}`)

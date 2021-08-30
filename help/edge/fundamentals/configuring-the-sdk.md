@@ -26,6 +26,10 @@ There are many options that can be set during configuration. All options can be 
 
 ### `edgeConfigId`
 
+>[!NOTE]
+>
+>**Edge Configurations have been rebranded to Datastreams. A datastream ID is the same as a configuration ID.** 
+
 | **Type** | **Required** | **Default Value** |
 | -------- | ------------ | ----------------- |
 | String   | Yes          | None              |
@@ -56,7 +60,6 @@ Indicates whether debugging is enabled. Setting this config to `true` enables th
 
 | **Feature**            | **Function** |
 | ---------------------- | ------------------ |
-| Synchronous validation | Validates the data being collected against the schema and returns an error in the response under the following label: `collect:error OR success` |
 | Console logging        | Enables debugging messages to be displayed in the browser's JavaScript console  |
 
 {style="table-layout:auto"}

@@ -1,40 +1,53 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes for June 30, 2021.
-doc-type: release notes
-last-update: June 30, 2021
-author: ens60013
+description: The latest release notes for Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
 
 # Adobe Experience Platform release notes 
 
-**Release date: June 30, 2021**
+**Release date: August 25, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Destinations](#destinations)
+- [Observability Insights](#observability)
 - [Real-time Customer Profile](#profile)
-- [Sandboxes](#sandboxes)
 - [Sources](#sources)
+
+## Destinations {#destinations}
+
+Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
+
+**New features**
+
+| Feature | Description |
+| --- | --- |
+| [Usability improvements to Destinations](../../destinations/ui/activation-overview.md) | Usability improvements to destinations enable marketers to seamlessly activate segments to existing destinations. |
+
+For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
+
+## Observability Insights {#observability}
+
+Observability Insights allows you to monitor Platform activities through the use of statistical metrics and event notifications.
+
+**New Features**
+
+| Feature | Description |
+| --- | --- |
+| Alerts | You can now subscribe to important alerts related to workflows running on Platform. After subscribing to specific alert rules, you will receive in-UI notifications and emails when an important lifecycle event happens (such as successful data ingestion) or if there are issues that need your attention (such as an ingestion flow failing or a segment job taking longer than expected). For more information, see the [alerts overview](../../observability/alerts/overview.md). |
+
+See the [Observability Insights overview](../../observability/home.md) for more information on the service.
 
 ## Real-time Customer Profile {#profile}
 
-Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. [!DNL Profile] allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
+Adobe Experience Platform enables you to drive coordinated, consistent, and relevant experiences for your customers no matter where or when they interact with your brand. With Real-time Customer Profile, you can see a holistic view of each individual customer that combines data from multiple channels, including online, offline, CRM, and third party data. Profile allows you to consolidate customer data into a unified view offering an actionable, timestamped account of every customer interaction.
 
 | Feature | Description |
 | ------- | ----------- |
-|Merge policy workflow updates| When creating and updating merge policies in the UI, users can now preview 20 sample profiles based on the union schema. This allows users to preview what customer profiles will look like before saving merge policy configurations. For more information, see the [merge policies UI guide](../../profile/merge-policies/ui-guide.md).|
-|Identity overlap report| The identity overlap report is part of the Real-time Customer Profile API and provides visibility into the composition of the Profile store. Using the `/previewsamplestatus` endpoint, the identity overlap report exposes the identities that contribute most to addressable audience. To learn more, visit the [preview sample status API endpoint guide](../../profile/api/preview-sample-status.md).|
+|Browse profiles by merge policy or identity| When browsing profiles in Experience Platform, you can now browse by merge policy to preview 20 sample profiles based on the selected merge policy. You can also browse by identity in order to search for a specific profile using an identity namespace and related identity value. For more information, see the [Real-time Customer Profile UI guide](../../profile/ui/user-guide.md).|
 
-For more information on Real-time Customer Profile, including tutorials and best practices for working with [!DNL Profile] data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
-
-## Sandboxes {#sandboxes}
-
-Adobe Experience Platform is built to enrich digital experience applications on a global scale. Companies often run multiple digital experience applications in parallel and need to cater for the development, testing, and deployment of these applications while ensuring operational compliance. In order to address this need, Experience Platform provides sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
-
-| Feature | Description |
-| ------- | ----------- |
-| Production sandbox reset enhancements | You can now reset production sandboxes that are used for bi-directional segment sharing with Adobe Audience Manager or Audience Core Service. This can be done either from the UI, or by using the new `validationOnly` and `ignoreWarnings` parameters in the API. See the tutorials on [resetting a sandbox in the UI](../../sandboxes/ui/user-guide.md) and [resetting a sandbox in the API](../../sandboxes/api/sandboxes.md) for more information. |
+To learn more about Real-time Customer Profile, including tutorials and best practices for working with profile data, please begin by reading the [Real-time Customer Profile overview](../../profile/home.md).
 
 ## Sources {#sources}
 
@@ -44,7 +57,6 @@ Experience Platform provides a RESTful API and an interactive UI that lets you s
 
 | Feature | Description |
 | ------- | ----------- |
-| [!DNL Veeva CRM] (Beta) | You can now connect [!DNL Veeva CRM] to Experience Platform using the [!DNL Flow Service] API or the UI. See the [[!DNL Veeva CRM] connector overview](../../sources/connectors/crm/veeva.md) for more information. |
-| Support for monitoring streaming dataflows | You can now use the sources UI workspace to monitor data ingestion activities from streaming sources with corresponding metrics and status. See the tutorial on [monitoring streaming dataflows](../../sources/tutorials/ui/monitor-streaming.md) for more information. |
+| Local file upload source connector | The file ingestion category has been renamed to local system, allowing you to bring local files directly to Platform using the local file upload connector. Data ingested through this connector can be monitored through the Monitoring Dashboard. See the [local file upload source overview](../../sources/connectors/local-system/local-file-upload.md) for more information. |
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

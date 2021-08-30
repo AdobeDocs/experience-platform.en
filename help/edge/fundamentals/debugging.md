@@ -6,7 +6,7 @@ exl-id: 4e893af8-a48e-48dc-9737-4c61b3355f03
 ---
 # Debugging
 
-When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving. Debugging also results in a server-side synchronous validation of the data being collected against the schema you have configured.
+When debugging is enabled, the SDK outputs messages to the browser console that can be helpful in debugging your implementation and understanding how the SDK is behaving.
 
 Debugging is disabled by default, but can be toggled on in three different ways:
 
@@ -72,4 +72,4 @@ alloy("getLibraryInfo").then(function(result) {
 
 Currently, the provided `libraryInfo` object contains the following properties:
 
-* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the Adobe Experience Platform Launch extension (named "AEP Web SDK"), the version is the library version and the Platform Launch extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the Platform Launch extension were 1.2.0, the value would be `1.0.0+1.2.0`.
+* `version` This is the version of the loaded library. For example, if the version of the library being loaded were 1.0.0, the value would be `1.0.0`. When the library is run inside the tag extension (named "AEP Web SDK"), the version is the library version and the tag extension version joined with a "+" sign. For example, if the version of the library were 1.0.0, and the version of the tag extension were 1.2.0, the value would be `1.0.0+1.2.0`.

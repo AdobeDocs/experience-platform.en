@@ -35,11 +35,11 @@ Select the **[!UICONTROL Custom]** tab to begin creating custom widgets or to vi
 
 ## Create a custom widget
 
-To create a custom widget, select **[!UICONTROL Create]** from the center of the widget library, or if custom widgets have already been created, select **[!UICONTROL Create widget]** from the top-right corner of the widget library. 
+To create a custom widget, select **[!UICONTROL Create widget]** from the top-right corner of the widget library or, if this is your organization's first custom widget, select **[!UICONTROL Create]** from the center of the widget library. 
 
 ![](../images/customization/create-widget.png)
 
-In the **[!UICONTROL Create widget]** dialog, you can provide a title and description for your new widget and choose the attribute that you want the widget to display. 
+In the **[!UICONTROL Create widget]** dialog, provide a title and description for your new widget and choose the attribute that you want the widget to display. 
 
 >[!NOTE]
 >
@@ -53,23 +53,59 @@ To choose an attribute, select the radio button beside the attribute you want to
 
 ![](../images/customization/create-widget-dialog.png)
 
-## Preview custom widget
+## Select a visualization
 
-A preview of the new widget appears in the dialog, showing a horizontal bar graph with mock data. 
+After selecting an attribute, a preview of the new widget appears in the dialog. Artificial intelligence is used to automatically select a visualization that best fits the attribute data, and to provide additional visualization options that you can select manually. 
+
+Depending on the attribute, the AI recommends different visualization options. The complete list of visualizations includes:
+
+* Horizontal bar chart: Horizontal lines are used to represent values.
+* Vertical bar chart: Vertical lines are used to represent values.
+* Donut chart: Similar to a pie chart, values are shown as parts or pieces of a whole.
+* Scatterplot: Uses a horizontal and vertical axis to indicate values.
+* Line chart: Values are displayed using a single line to show changes over a period of time.
+* Number card: Displays a summary number to represent a single key value.
+* Data table: Values are displayed as rows in a table.
 
 >[!NOTE]
 >
->The only metric currently supported for all attributes is profile count and the only visualization currently supported for custom widgets is a horizontal bar graph. 
+>The only metric currently supported for all attributes is profile count. 
 >
 >Data shown in the example widget is for illustration purposes only. The preview does not display actual data from your organization.
 
+To save your new widget and return to the [!UICONTROL Custom] tab, select **[!UICONTROL Create]**. 
+
 ![](../images/customization/create-widget-select-attribute.png)
 
-To save your new widget and return to the [!UICONTROL Custom] tab, select **[!UICONTROL Create]**. Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
+Your new widget is now available to be added to a dashboard by choosing the widget from the library and selecting **[!UICONTROL Add widget]**.
 
-## Archive a custom widget
+![](../images/customization/custom-widgets-new.png)
 
-After a widget has been added to the library, it can be archived using the **[!UICONTROL Archive]** button. You can also edit the widget to update the title or description fields.
+## Hide a custom widget
+
+After a widget has been added to the library, it can be hidden by selecting the ellipses (`...`) on the widget card and then selecting **[!UICONTROL Hide widget]**. You can also preview and edit the widget from the same dropdown.
+
+To view widgets that have been hidden, select **[!UICONTROL Show hidden widgets]** from the top right corner of the widget library.
+
+>[!WARNING]
+>
+>Hiding a widget in the library does not remove the widget from the dashboards of individual users. If a widget should no longer be used in your organization, please ensure that you communicate this directly to all Platform users as they will need to remove the widget from their dashboards.
+
+![](../images/customization/hide-widget.png)
+
+## Edit a custom widget
+
+You can edit custom widgets in the widget library by selecting the ellipses (`...`) on the widget card and then selecting **[!UICONTROL Edit]** from the dropdown menu. 
+
+![](../images/customization/custom-widget-edit.png)
+
+On the **[!UICONTROL Edit widget]** dialog, you can edit the title and description of the widget, as well as preview and select different visualizations. After your edits have been made, select **[!UICONTROL Save]** to save your changes and return to the custom widgets tab.
+
+>[!WARNING]
+>
+>Editing a widget in the library does not update the widget for individual users. If a widget has been updated, please ensure that you communicate this directly to all Platform users as they will need to remove the outdated widget from their dashboards and then select and add the updated widget from the widget library.
+
+![](../images/customization/edit-widget.png)
 
 ## Next steps
 
