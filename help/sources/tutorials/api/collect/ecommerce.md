@@ -9,7 +9,7 @@ exl-id: 0952f037-5e20-4d84-a2e6-2c9470f168f5
 ---
 # Collect eCommerce data using source connectors and APIs
 
-This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for retrieving data from a third-party **[!UICONTROL eCommerce]** system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -126,7 +126,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 In order for the source data to be used in [!DNL Platform], a target schema must be created to structure the source data according to your needs. The target schema is then used to create a [!DNL Platform] dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
-A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+A target XDM schema can be created by performing a POST request to the [Schema Registry API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API format**
 
@@ -234,7 +234,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Create a target dataset
 
-A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
+A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/), providing the ID of the target schema within the payload.
 
 **API format**
 

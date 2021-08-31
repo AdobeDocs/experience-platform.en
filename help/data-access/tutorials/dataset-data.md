@@ -55,7 +55,7 @@ Before you can begin to use the [!DNL Data Access] API, you need to identify the
 - `GET /batches`: Returns a list of batches under your organization
 - `GET /dataSetFiles`: Returns a list of files under your organization
 
-For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+For a comprehensive list of endpoints in the [!DNL Catalog] API, please refer to the [API Reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Retrieve a list of batches under your IMS Organization
 
@@ -186,7 +186,7 @@ curl -X GET 'https://platform.adobe.io/data/foundation/catalog/batches?createdAf
 }
 ```
 
-A full list of parameters and filters can be found in the [Catalog API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml).
+A full list of parameters and filters can be found in the [Catalog API reference](https://www.adobe.io/experience-platform-apis/references/catalog/).
 
 ## Retrieve a list of all files belonging to a particular batch
 
