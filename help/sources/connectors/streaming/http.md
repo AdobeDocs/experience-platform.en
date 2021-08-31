@@ -7,6 +7,10 @@ exl-id: 41e079f3-75b2-4033-8138-73162c31461a
 ---
 # HTTP API connector
 
+>[!IMPORTANT]
+>
+>Mapper functions for the HTTP API source are currently only supported in the API and not the user interface.
+
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
 The documentation below provides information on how to create an HTTP API streaming connector to connect with [!DNL Platform] using APIs or the user interface:
