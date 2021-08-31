@@ -73,7 +73,7 @@ When an identity is persisted, [!DNL Identity Service] generates and assigns an 
 
 To limit the payload in responses, APIs adapt their responses to the type of identity construct used. That is, if you pass XID your responses will have XIDs, if you pass composite identities, the response will follow the structure used in the request.
 
-The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml).
+The examples in this document do not cover the complete functionality of the [!DNL Identity Service] API. For the complete API, see the [Swagger API Reference](https://www.adobe.io/experience-platform-apis/references/identity-service).
 
 >[!NOTE]
 >

@@ -27,5 +27,5 @@ feature: Data Management
   * [Create and populate a dataset using APIs](datasets/create.md)
 * [Privacy request processing in the Data Lake](privacy.md)
 * [Data protection in Experience Platform](data-protection.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

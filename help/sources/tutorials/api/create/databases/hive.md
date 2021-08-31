@@ -15,7 +15,7 @@ exl-id: e1469a29-6f61-47ba-995e-39f06ee4a4a4
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Apache Hive] on [!DNL Azure HDInsights] (hereinafter referred to as "[!DNL Hive]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Apache Hive] on [!DNL Azure HDInsights] (hereinafter referred to as "[!DNL Hive]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
