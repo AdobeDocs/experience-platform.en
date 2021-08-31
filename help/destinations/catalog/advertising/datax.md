@@ -15,19 +15,22 @@ DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various comp
 
 ## Prerequisites {#prerequisites}
 
-**MDM ID**:
+**MDM ID**
 
 This is a unique identifier in Yahoo DataX and it is a mandatory field for setting up data exports to this destination. If you don't know this ID, contact your Yahoo Data X account manager.
 
-**[Rate Limit](https://developer.verizonmedia.com/datax/guide/rate-limits/)**:
+**Rate Limit**
 
-DataX is rate-limited per the following quota limits for taxonomy and audience posts:
+DataX is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
-* Error Code: 429 -  Too many requests
-* Error Message - Rate Limit exceeded per hour (Limit: 100)
-** Description - Number of requests allowed in an hour per provider
 
-[Taxonomy Metadata](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/): 
+|Error Code | Error Message | Description
+---------|----------|---------
+| 429 Too many requests | Rate Limit exceeded per hour **(Limit: 100)** | Number of requests allowed in an hour per provider.
+
+{style="table-layout:auto"}
+
+**Taxonomy Metadata**
 
 The Taxonomy resource defines an extension over the Base DataX Metadata structure
 
@@ -49,6 +52,8 @@ The Taxonomy resource defines an extension over the Base DataX Metadata structur
         }
 }
 ```
+
+Read more about [Taxonomy Metadata](https://developer.verizonmedia.com/datax/guide/taxonomy/taxo-metadata/) in the DataX developer documentation.
 
 ## Supported identities {#supported-identities}
 
@@ -94,4 +99,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-For more information, read the Yahoo/Verizon Media [documentation on DataX](https://developer.verizonmedia.com/datax/guide/ ).
+For more information, read the Yahoo/Verizon Media [documentation on DataX](https://developer.verizonmedia.com/datax/guide/).
