@@ -461,7 +461,7 @@ This report provides the following information:
 
 ## Generate the unknown profiles report
 
-You can gain further visibility into the composition of your organization's Profile Store through the unknown profiles report. An "unknown profile" refers to any profile that is both unstitched and inactive for a given time period. An "unstitched" profile is a profile that contains only one profile fragment, while an "inactive" profile is any profile that has not added new events for the specified time period. The unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, or 120 days.
+You can gain further visibility into the composition of your organization's Profile Store through the unknown profiles report. An "unknown profile" refers to any profile that is both unstitched and inactive for a given time period. An "unstitched" profile is a profile that contains only one profile fragment, while an "inactive" profile is any profile that has not added new events for the specified time period. The unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 You can generate the unknown profiles report by performing a GET request to the `/previewsamplestatus/report/unknownProfiles` endpoint.
 
@@ -489,7 +489,7 @@ A successful request returns HTTP Status 200 (OK) and the unknown profiles repor
 
 >[!NOTE]
 >
->For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, or 120 days.
+>For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
 
 ```json
 {
@@ -542,9 +542,9 @@ A successful request returns HTTP Status 200 (OK) and the unknown profiles repor
 |Property|Description|
 |---|---|
 |`data`|The `data` object contains the information returned for the unknown profiles report.|
-|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count.|
+|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unknown profiles.|
 |`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
-|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, or 120 day time periods.|
+|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
 |`countOfProfiles`|The count of unknown profiles for the time period or the count of unknown profiles for the namespace. |
 |`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
 |`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
