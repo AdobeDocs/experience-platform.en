@@ -24,9 +24,9 @@ This is a unique identifier in Yahoo DataX and it is a mandatory field for setti
 DataX is rate-limited per the quota limits for taxonomy and audience posts outlined in the [DataX documentation](https://developer.verizonmedia.com/datax/guide/rate-limits/).
 
 
-|Error Code | Error Message | Description
----------|----------|---------
-| 429 Too many requests | Rate Limit exceeded per hour **(Limit: 100)** | Number of requests allowed in an hour per provider.
+|Error Code | Error Message | Description|
+|---------|----------|---------|
+| 429 Too many requests | Rate Limit exceeded per hour **(Limit: 100)** | Number of requests allowed in an hour per provider.|
 
 {style="table-layout:auto"}
 
