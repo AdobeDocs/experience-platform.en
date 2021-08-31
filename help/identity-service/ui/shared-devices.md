@@ -38,4 +38,8 @@ The following table contains a list of terminology that are essential to underst
 
 ## Shared Devices UI
 
-In the Platform UI, select **[!UICONTROL Identities]** from the left-navigation and then select **[!UICONTROL Identity settings]**. 
+In the Platform UI, select **[!UICONTROL Identities]** from the left-navigation and then select **[!UICONTROL Identity settings]**.
+
+![identity-dashboard]()
+
+The [!UICONTROL Shared device settings] page appears, providing you with the option to enable shared device settings for your data. Select **[!UICONTROL Enable]**
