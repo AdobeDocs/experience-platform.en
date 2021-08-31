@@ -14,7 +14,7 @@ The Data Access API supports Adobe Experience Platform by providing users with a
 
 ## API specification reference
 
-The Swagger API reference documentation can be found [here](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/data-access-api.yaml).
+The Swagger API reference documentation can be found [here](https://www.adobe.io/experience-platform-apis/references/data-access/).
 
 ## Terminology
 

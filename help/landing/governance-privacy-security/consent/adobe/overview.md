@@ -82,7 +82,7 @@ Details for each of these methods are provided in the subsections below.
 
 ### Configure the Experience Platform Web SDK to process consent data {#web-sdk}
 
-Once you have configured your CMP to listen for consent-change events on your website, you can integrate the Experience Platform Web SDK to receive the updated consent settings and send them to Platform on every page load and whenever consent-change events occurs. See the guide on [configuring the Web SDK to process customer consent data](./sdk.md) for more information.
+Once you have configured your CMP to listen for consent-change events on your website, you can integrate the Experience Platform Web SDK to receive the updated consent settings and send them to Platform on every page load and whenever consent-change events occurs. See the guide on [configuring the Web SDK to process customer consent data](../sdk.md) for more information.
 
 ### Configure the Experience Platform Mobile SDK to process consent data {#mobile-sdk}
 

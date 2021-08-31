@@ -10,7 +10,7 @@ exl-id: a4d0662d-06e3-44f3-8cb7-4a829c44f4d9
 
 # Create an [!DNL Azure Event Hubs] source connection using the [!DNL Flow Service] API
 
-This tutorial walks you through the steps to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to connect [!DNL Azure Event Hubs] (hereinafter referred to as "[!DNL Event Hubs]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
