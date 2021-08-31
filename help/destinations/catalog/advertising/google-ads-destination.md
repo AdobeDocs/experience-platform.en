@@ -39,7 +39,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 ### Existing [!DNL Google Ads] account
 
@@ -89,7 +89,7 @@ When configuring this destination, you may receive the following error:
 
 `{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
 
-This error occurs either when customers try to configure the destination without an existing [!DNL Google Ads] account.
+This error occurs either when customer accounts do not comply with the [prerequisites](#prerequisites) or when customers try to configure the destination without an existing [!DNL Google Ads] account.
 
 [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. To perform the [allow-list](#allow-listing) steps, you must have an existing integration with [!DNL Google Ads].
 
