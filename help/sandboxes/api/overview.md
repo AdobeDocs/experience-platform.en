@@ -9,7 +9,7 @@ description: Sandboxes in Adobe Experience Platform provide isolated development
 
 The [!DNL Sandbox] API provides several endpoints that allow you to programmatically manage all sandboxes available to you within your IMS organization. These endpoints are outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml).
+To see all available endpoints and CRUD operations, visit the [[!DNL Sandbox] API reference](https://www.adobe.io/experience-platform-apis/references/sandbox).
 
 ## Available sandboxes
 

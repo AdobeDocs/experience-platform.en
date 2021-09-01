@@ -12,7 +12,7 @@ exl-id: 9f7fbda9-4cd3-4db5-92ff-6598702adc34
 
 Flow Service is used to collect and centralize customer data from various disparate sources within Adobe Experience Platform. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
-This tutorial uses the [!DNL Flow Service] API to walk you through the steps to create a streaming connection using the Flow Service API.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to walk you through the steps to create a streaming connection using the Flow Service API.
 
 ## Getting started
 
@@ -289,7 +289,9 @@ A successful response returns HTTP status 201 with detailed of the newly created
 
 ## Create a target connection
 
-After creating your source connection, you can create a target connection. When creating your target connection, you'll need the `id` value of your previously created dataset.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection spec ID associated to the Data Lake. This connection spec ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 

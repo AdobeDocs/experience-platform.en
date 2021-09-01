@@ -242,4 +242,5 @@ feature: Data Ingestion, Sources
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
