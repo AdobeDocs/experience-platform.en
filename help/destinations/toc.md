@@ -132,5 +132,38 @@ feature: Destinations
         * [Invoca Tags extension](./catalog/voice/invoca.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+* Destination SDK {destination-sdk}
+    + [Overview](./overview.md)
+    + [Integration prerequisites](./integration-prerequisites.md)
+    + [Getting started](./getting-started.md)
+    + Destination SDK functionality {#functionality}
+      + [Configuration options](./configuration-options.md)
+      + [Destination configuration](./destination-configuration.md)
+      + [Server and template specs](./server-and-template-configuration.md)
+      + [Message format](./message-format.md)
+      + [Audience metadata management](./audience-metadata-management.md)
+      + [Authentication configuration](./credentials-configuration.md)
+      + [OAuth 2 authentication](./oauth2-authentication.md)
+    + Developer tools {#developer-tools}
+      + [Create and test a message transformation template](./create-template.md)
+      + [Test your destination configuration](./test-destination.md)
+    + API reference {#api-reference}
+      + [Destinations endpoint API operations](./destination-configuration-api.md)
+      + [Destination server endpoint API operations](./destination-server-api.md)
+      + [Audience metadata endpoint API operations](./audience-metadata-api.md)
+      + [Credentials endpoint API operations](./credentials-configuration-api.md)
+    + Developer tools reference {#developer-tools-reference}
+      + [Get sample template API operations](./sample-template-api.md)
+      + [Render template API operations](./render-template-api.md)
+      + [Destination testing API operations](./destination-testing-api.md)
+      + [Sample profile generation API operations](./sample-profile-generation-api.md)
+    + Guides {#guides}
+      + [Use Destination SDK to configure your destination](./configure-destination-instructions.md)
+    + Document your destination {#document-destination}
+      + [Document your destination in Adobe Experience Platform](./docs-framework/documentation-instructions.md)
+      + [Use the GitHub web interface to create a destination documentation page](./docs-framework/use-github-interface-to-create-documentation.md)
+      + [Use a text editor in your local environment to create a destination documentation page](./docs-framework/work-in-local-environment.md)
+      + [Documentation self-service template](./docs-framework/self-service-template.md)
++ [Release notes](./release-notes.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
