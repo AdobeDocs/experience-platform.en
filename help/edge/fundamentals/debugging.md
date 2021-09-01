@@ -15,6 +15,8 @@ Debugging is disabled by default, but can be toggled on in four different ways:
 * query string parameter
 * Toggling on Enable Debugging in Adobe Experience Platform Debugger. Adobe Experience Platform is a powerful tool that examines your webpages and helps you debug implementation issues with you Experience Cloud products. Adobe Experience Platform Debugger is available as both a [Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/) extension. Debugging can be enabled from the configuration tab of the AEP Web SDK section. 
 
+![](./assets/enable-debugging.png)
+
 ## Toggling debugging with the Configure command
 
 When configuring the SDK using the `configure` command, enable debugging by setting the `debugEnabled` option to `true`.
