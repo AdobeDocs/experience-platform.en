@@ -56,6 +56,9 @@ Before you can send your audience segments to [!DNL Facebook], make sure you mee
     >
     > When configuring the permissions for Adobe Experience Cloud, you must enable the **Manage campaigns** permission. The permission is required for the [!DNL Adobe Experience Platform] integration.
 * Read and sign the [!DNL Facebook Custom Audiences] Terms of Service. To do so, go to `https://business.facebook.com/ads/manage/customaudiences/tos/?act=[accountID]`, where `accountID` is your [!DNL Facebook Ad Account ID].
+  >[!IMPORTANT]
+  >
+  >When signing the [!DNL Facebook Custom Audiences] Terms of Service, make sure to use the same user account that you used to authenticate in the Facebook API.
 
 ## ID matching requirements {#id-matching-requirements}
 
