@@ -471,7 +471,7 @@ curl -X POST \
         "name": "{YOURSOURCE} dataflow",
         "description": "{YOURSOURCE} dataflow",
         "flowSpec": {
-            "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
+            "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
             "version": "1.0"
         },
         "sourceConnectionIds": [

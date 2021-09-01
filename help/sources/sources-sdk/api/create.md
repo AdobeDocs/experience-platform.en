@@ -29,7 +29,7 @@ Once your artifacts are ready, you can begin the process of creating a new conne
 
 ### Retrieve a generic REST connection specification
 
-To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service] API. To get the payload, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
+To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service] API. To get an example, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
 **API format**
 
@@ -51,52 +51,122 @@ curl -X GET \
 
 **Response**
 
-The following response is an example of an empty generic REST connector  connection specification that you must fill out to create a new source.
+The following response is an example of an empty generic REST connector connection specification that you must fill out to create a new source.
 
 ```json
 {
-  "name": "generic-rest-connector",
-  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-  "version": "1.0",
-  "authSpec": [], //TO BE SPECIFIED
+  "name": "{NAME}",
+  "type": "{TYPE}",
+  "providerId": "{PROVIDER_ID}",
+  "version": "{VERSION}",
+  "attributes": {
+    "category": "{Cloud Storage}",
+    "isSource": "{IS_SOURCE}"
+  },
+  "authSpec": [
+    {
+      "name": "{NAME}",
+      "type": "{TYPE}",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "description": "Access Token",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "accessToken"
+        ]
+      }
+    },
+    {
+      "name": "API Key Authentication",
+      "type": "apiKey",
+      "attributes": {
+        "authParams": {
+          "addTo": "header"
+        }
+      },
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "description": "defines auth params required for connecting to rest service.",
+        "properties": {
+          "keyName": {
+            "description": "apiKey name for authentication.",
+            "type": "string",
+            "default": "apiKey"
+          },
+          "value": {
+            "description": "apiKey value for authentication.",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "keyName",
+          "value"
+        ]
+      }
+    }
+  ],
   "sourceSpec": {
     "attributes": {
       "uiAttributes": {
-        "documentationLink": "", //TO BE SPECIFIED
+        "documentationLink": "{DOCUMENTATION_LINK}",
         "isSource": true,
-        "isBeta": "", //TO BE SPECIFIED
         "category": {
-          "key": "" //TO BE SPECIFIED
+          "key": "{CATEGORY_KEY}"
         },
         "icon": {
-          "key": "" //TO BE SPECIFIED
+          "key": "{ICON_KEY}"
         },
         "description": {
-          "key": "" //TO BE SPECIFIED
+          "key": "{DESCRIPTION_KEY}"
         },
         "label": {
-          "key": "" //TO BE SPECIFIED
+          "key": "{LABEL_KEY}"
         }
       },
       "urlParams": {
-        "hostname": "", //TO BE SPECIFIED
-        "path": "",  //TO BE SPECIFIED
-        "method": ""  //TO BE SPECIFIED
+        "hostname": "{HOST_NAME}",
+        "path": "{PATH}",
+        "method": "{METHOD}"
       },
-      "contentPath": "",  //TO BE SPECIFIED
-      "queryParams": "",  //TO BE SPECIFIED
-      "headerParams": "", //TO BE SPECIFIED
-      "bodyParams": "",  //TO BE SPECIFIED
-      "paginationParams": {},  //TO BE SPECIFIED
+      "contentPath": "{CONTENT_PATH}",
+      "queryParams": "{QUERY_PARAMS}",
+      "headerParams": "{HEADER_PARAMS}",
+      "bodyParams": "{BODY_PARAMS}",
+      "paginationParams": {
+        "paginationType": "{PAGINATION_TYPE}",
+        "limitName": "{LIMIT_NAME}",
+        "limitValue": "{LIMIT_VALUE}",
+        "offSetName": "{OFFSET_NAME}"
+      },
       "scheduleParams": {
-        "scheduleStartParamName": "", //TO BE SPECIFIED
-        "scheduleEndParamName": "", //TO BE SPECIFIED
-        "scheduleStartParamFormat": "", //TO BE SPECIFIED
-        "scheduleEndParamFormat": "" //TO BE SPECIFIED
+        "scheduleStartParamName": "{SCHEDULE_START_PARAM_NAME}",
+        "scheduleEndParamName": "{SCHEDULE_END_PARAM_NAME}",
+        "scheduleStartParamFormat": "{SCHEDULE_START_PARAM_FORMAT}",
+        "scheduleEndParamFormat": "{SCHEDULE_END_PARAM_FORMAT}"
       }
     },
     "spec": {
-       //TO BE SPECIFIED
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object",
+      "description": "defines static and user input parameters to fetch resource values.",
+      "properties": {
+        "domain": {
+          "type": "string",
+          "description": "domain name of client server."
+        },
+        "listId": {
+          "type": "string",
+          "description": "listId for which members need to fetch."
+        }
+      }
     }
   },
   "exploreSpec": {
@@ -148,7 +218,7 @@ The following response is an example of an empty generic REST connector  connect
 
 Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source. For more information on connection specifications, see the documentation on [preparing your configurations](../config.md).
 
-The following payload is an example of a generic REST connection specification authored with information specific to a [!DNL Mailchimp] source:
+The following payload is an example of a connection specification authored with information specific to a [!DNL MailChimp] source:
 
 ```json
 {
@@ -262,7 +332,7 @@ The following payload is an example of a generic REST connection specification a
         },
         "listId": {
           "type": "string",
-          "description": "listId for which members need to fetch."
+          "description": "listId for which memebers need to fetch."
         }
       }
     }
