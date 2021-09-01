@@ -18,8 +18,6 @@ The **[!UICONTROL Edit product profile]** menu appears, starting on the **[!UICO
 
 Select **[!UICONTROL Next]** to access the **[!UICONTROL Enable services]** page.
 
-![services-page](../images/services-page.png)
-
 The **[!UICONTROL Enable services]** menu allows you to modify a profile's access to additional [!DNL Platform] services that were initially configured when the profile was created. Depending on your [!DNL Platform] subscription, these services can include:
 
 - [!DNL Data Science Workspace]
