@@ -54,7 +54,7 @@ feature: Destinations
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
-        * [Yahoo/Verizon DataX](./catalog/advertising/datax.md)
+        * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
         * [Analytics destinations overview](./catalog/analytics/overview.md)
         * [Adform Website Tracking extension](./catalog/analytics/adform.md)
