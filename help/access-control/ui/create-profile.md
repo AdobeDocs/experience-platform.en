@@ -22,7 +22,7 @@ The next screen prompts you to choose which Platform services to include in the 
 
 ![enable-services](../images/enable-services.png)
 
-Users with access to B2B UI can be provisioned for the service through the [!UICONTROL Enable services menu]. Select the toggle beside [!UICONTROL B2B UI] to enable the service for a particular product profile, and then select **[!UICONTROL Save]**.
+Users with access to the B2B UI can be provisioned for the service through the [!UICONTROL Enable services menu]. Select the toggle beside [!UICONTROL B2B UI] to enable the service for a particular product profile, and then select **[!UICONTROL Save]**.
 
 ![enable-b2b](../images/enable-b2b.png)
 

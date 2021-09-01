@@ -24,7 +24,7 @@ For example, to update permissions for Profile Management, select **[!UICONTROL 
 
 ![profile-management](../images/profile-management.png)
 
-To add a permission, select the **plus (`+`)** icon next to the permission's name. Alternatively, you can select **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
+To add a permission, select the plus **(+)** icon next to the permission's name. Alternatively, you can select **[!UICONTROL Add all]** to add all permissions under the current category to the profile. Added permissions appear under **[!UICONTROL Included Permission Items]**.
 
 ![add-permission](../images/add-permission.png)
 
