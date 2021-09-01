@@ -136,7 +136,7 @@ feature: Destinations
     * [Overview](./destination-sdk/overview.md)
     * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
     * [Getting started](./destination-sdk/getting-started.md)
-    + Destination SDK functionality {#functionality}
+    * Destination SDK functionality {#functionality}
       * [Configuration options](./destination-sdk/configuration-options.md)
       * [Destination configuration](./destination-sdk/destination-configuration.md)
       * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
@@ -144,26 +144,26 @@ feature: Destinations
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * [Authentication configuration](./destination-sdk/credentials-configuration.md)
       * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
-    + Developer tools {#developer-tools}
+    * Developer tools {#developer-tools}
       * [Create and test a message transformation template](./destination-sdk/create-template.md)
       * [Test your destination configuration](./destination-sdk/test-destination.md)
-    + API reference {#api-reference}
+    * API reference {#api-reference}
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
-    + Developer tools reference {#developer-tools-reference}
+    * Developer tools reference {#developer-tools-reference}
       * [Get sample template API operations](./destination-sdk/sample-template-api.md)
       * [Render template API operations](./destination-sdk/render-template-api.md)
       * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
       * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
-    + Guides {#guides}
+    * Guides {#guides}
       * [Use Destination SDK to configure your destination](./destination-sdk/configure-destination-instructions.md)
-    + Document your destination {#document-destination}
+    * Document your destination {#document-destination}
       * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
-      * [Release notes](./release-notes.md)
+      * [Release notes](./destination-sdk/release-notes.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
