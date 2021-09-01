@@ -21,7 +21,7 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 
 See the guide on [managing permissions](../tags/ui/administration/manage-permissions.md) in the tags documentation to learn how to grant access to properties and property rights.
 
-## Create an XDM schema
+## Create an XDM schema {#schema}
 
 [Experience Data Model (XDM)](../xdm/home.md) is an open-source specification that provides common structures and definitions for data in the form of schemas. In other words, XDM is a way of structuring and formatting your data in a way that is actionable by the Edge Network and other Adobe Experience Cloud applications.
 
@@ -114,18 +114,81 @@ The SDK has now been installed on the property. Before implementing the SDK on y
 
 ### Create an XDM data element
 
-* Go over to Data Elements in the UI and create a new data element
-* Select the Web SDK extension
-* Select the XDM Object data element type
-* Selects your Platform sandbox, and from that you can see all the schemas you've created in that sandbox
-* You can select the sandbox you created earlier, and then you can start mapping your data to the schema
+In order for the SDK to send data to the Edge Network, that data must be mapped to the XDM schema you created in a [previous step](#schema). This mapping is accomplished through the use of a data element.
+
+In the UI, select **[!UICONTROL Data Elements]**, then select **[!UICONTROL Create New Data Element]**.
+
+![Create new data element](./images/e2e/data-elements.png)
+
+On the next screen, select **[!UICONTROL Adobe Experience Platform Web SDK]** under the [!UICONTROL Extension] dropdown, then select **[!UICONTROL XDM object]** for the data element type.
+
+![XDM object type](./images/e2e/xdm-object.png)
+
+The configuration dialog appears for the XDM object type. The dialog automatically selects your Platform sandbox, and from here you can see all the schemas that have been created in that sandbox. Select the XDM schema you created earlier from the list.
+
+![XDM object type](./images/e2e/xdm-object.png)
+
+The structure of the schema appears. All fields with an asterisk (**\***) indicate fields that will automatically populate when events fire. For all other fields, you can explore the structure of the schema and fill out the rest of the data.
+
+![Map data to XDM fields](./images/e2e/map-schema.png)
+
+>[!NOTE]
+>
+>The screenshot above demonstrates how to map a globally accessible variable from the client side (`cartAbandonsTotal`) to an XDM field by referencing its name in the [!UICONTROL Value] field, surrounded by percent signs (`%`).
+>
+>You can also use other previously created data elements to populate these fields. See the reference on [data elements](../tags/ui/managing-resources/data-elements.md) in the tags documentation for more information.
+
+Once you have finished mapping your data to the schema, provide a name for the data element before selecting **[!UICONTROL Save]**.
+
+![Name and save data element](./images/e2e/name-and-save.png)
 
 ### Create a rule
 
-* A rule is a construct that triggers when a certain event is detected, and performs an action if the required conditions (if any) are met.
-* This is what ultimately sends event data to ExC solutions
-* Create a send event action
-  * In the **XDM data** field, select the XDM data element you created earlier, and that's what will be sent to the Edge
+After you've saved the data element, the next step is to create a rule that will send it to the Edge Network whenever a certain event occurs (such as when a customer adds a product to a cart).
+
+As an example, this section shows how to create a rule that will trigger when a customer adds an item to a cart. However, you can set up rules for virtually any event that occurs on your website.
+
+Select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
+
+![Rules](./images/e2e/rules.png)
+
+On the next screen, provide a name for the rule. From here, the next step is to determine the event for the rule (in other words, when the rule will fire). Select **[!UICONTROL Add]** under [!UICONTROL Events].
+
+![Name rule](./images/e2e/name-rule.png)
+
+The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set the event type to a form submit, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
+
+>[!NOTE]
+>
+>For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/web/overview.md) in the tags documentation.
+
+Select **[!UICONTROL Keep Changes]** to add the event to the rule.
+
+![Event configuration](./images/e2e/event-config.png)
+
+The rule configuration page reappears, showing that the event has been added. You can narrow down the "[!UICONTROL If]" by adding further [!UICONTROL Conditions] to the rule.
+
+Otherwise, the next step is to add an action for the rule to perform when it fires. Select **[!UICONTROL Add]** under [!UICONTROL Actions] to continue.
+
+![Add action](./images/e2e/add-action.png)
+
+The action configuration page appears. To get the rule to send data to the Edge Network, select **[!UICONTROL Adobe Experience Platform Web SDK]** for the extension, and **[!UICONTROL Send event]** for the action type.
+
+![Action type](./images/e2e/action-type.png)
+
+The screen updates to show additional options to configure the send event action. Under **[!UICONTROL Type]**, you can provide a custom type value to populate the `eventType` XDM field. Under **[!UICONTROL XDM data]**, provide the name of the XDM data type you created earlier (surrounded by percent signs), or select the database icon (![Database icon](./images/e2e/database-symbol.png)) to select it from a list. This is the data that will ultimately be sent to the Edge Network.
+
+Select **[!UICONTROL Keep Changes]** when finished.
+
+![Action config](./images/e2e/action-config.png)
+
+Once you are done configuring the rule, select **[!UICONTROL Save]** to finish the process.
+
+![Save rule](./images/e2e/save-rule.png)
+
+### Build and install the library
+
+After the rule has been configured, you are ready to build and install the tag library on your website.  
 
 ## Configure event forwarding (optional) {#event-forwarding}
 
@@ -133,3 +196,5 @@ The SDK has now been installed on the property. Before implementing the SDK on y
 * Enable event forwarding in the datastream
 * Create an event forwarding property to configure the destination for the event using a rule (E.F. uses a lot of the same functionality philosophy as tags)
 * Get your event sent to the edge
+
+## Next steps
