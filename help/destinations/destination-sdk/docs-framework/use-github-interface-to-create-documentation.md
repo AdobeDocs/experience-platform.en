@@ -52,7 +52,7 @@ The instructions below show you how to use the GitHub web interface to author do
    
    ![Create pull request](./assets/ssd-create-pull-request-1.png)
 
-2. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository. 
+1. Make sure that the base and compare branches are correct. Add a note to the PR, describing your update, and select **Create pull request**. This opens a PR to merge the working branch of your fork into the master branch of the Adobe repository. 
    
    >[!TIP]
    >
@@ -60,13 +60,13 @@ The instructions below show you how to use the GitHub web interface to author do
    
    ![Create pull request to Adobe documentation repository](./assets/ssd-create-pull-request-2.png)
 
-3. At this point, a notification appears that prompts you to sign the Adobe Contributor License Agreement (CLA). This is a mandatory step. After you sign the CLA, refresh the PR page and submit the pull request.
+1. At this point, a notification appears that prompts you to sign the Adobe Contributor License Agreement (CLA). This is a mandatory step. After you sign the CLA, refresh the PR page and submit the pull request.
 
-4. You can confirm that the pull request has been submitted by inspecting the **Pull requests** tab in `https://github.com/AdobeDocs/experience-platform.en`.
+1. You can confirm that the pull request has been submitted by inspecting the **Pull requests** tab in `https://github.com/AdobeDocs/experience-platform.en`.
 
    ![PR successful](./assets/ssd-pr-successful.png)
 
-5. Thank you! The Adobe documentation team will reach out in the PR in case any edits are required and to let you know when the documentation will be published.
+1. Thank you! The Adobe documentation team will reach out in the PR in case any edits are required and to let you know when the documentation will be published.
 
 >[!TIP]
 >
