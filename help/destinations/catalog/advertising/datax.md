@@ -1,9 +1,9 @@
 ---
-title: Verizon MediaYahoo DataX Integration
+title: Verizon MediaYahoo DataX connection
 description: DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various components that enable Verizon Media/Yahoo to exchange data with its external partners in a secure, automated and scalable manner.
 ---
 
-# Verizon Media/Yahoo DataX
+# Verizon Media/Yahoo DataX connection
 
 ## Overview {#overview}
 
