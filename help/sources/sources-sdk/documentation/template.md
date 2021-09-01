@@ -28,11 +28,11 @@ description: Learn how to connect Adobe Experience Platform to YOURSOURCE using 
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
 
-## Connect *YOURSOURCE* to Platform using [!DNL Flow Service] API
+## Connect *YOURSOURCE* to Platform using the [!DNL Flow Service] API
 
-The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+The following tutorial walks you through the steps to create a *YOURSOURCE* source connection and create a dataflow to bring *YOURSOURCE* data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-### Create a base connection
+### Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
@@ -57,8 +57,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "YOURSOURCE",
-        "description": "Description for YOURSOURCE",
+        "name": "{YOURSOURCE} base connection",
+        "description": "{YOURSOURCE} base connection to authenticate to Platform",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
             "version": "1.0"
@@ -68,15 +68,25 @@ curl -X POST \
             "params": {
                 "accessToken": "{ACCESS_TOKEN}",
                 "refreshToken": "{REFRESH_TOKEN}",
-                "expirationDate": "-1"
+                "expirationDate": "{EXPIRATION_DATE}"
             }
         }
     }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
+| `description` | An optional value that you can include to provide more information on your base connection. |
+| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the Authoring Service API. |
+| `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
+| `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
+| `auth.params.refreshToken` | The corresponding refresh token for your source. This token is used to regenerate your access token when it expires. |
+| `auth.params.expirationDate` | The expiration date of your access token. |
+
 **Response**
 
-A successful response returns the newly created connection, including its unique connection identifier (`id`). This ID is required to explore your data in the next tutorial.
+A successful response returns the newly created base connection, including its unique connection identifier (`id`). This ID is required to explore your source's file structure and contents in the next step.
 
 ```json
 {
@@ -85,7 +95,16 @@ A successful response returns the newly created connection, including its unique
 }
 ```
 
-### Explore your source spec
+### Explore your source {#explore}
+
+Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests. When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
+
+| Parameter | Description |
+| --------- | ----------- |
+| `objectType` | The type of object that you wish to explore. Set this value as either: <ul><li>`folder`: Explore a specific directory</li><li>`root`: Explore the root directory.</li></ul> |
+| `object` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+
+Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
 
 **API format**
 
@@ -106,6 +125,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns the structure of the queried file.
 
 ```json
 {
@@ -192,7 +213,21 @@ curl -X GET \
 }
 ```
 
-### Create a source connection
+### Create a source connection {#source-connection}
+
+You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
+
+To create a source connection, you must also define an enum value for the data format attribute.
+
+Use the following the enum values for file-based sources:
+
+| Data format | Enum value |
+| ----------- | ---------- |
+| Delimited | `delimited` |
+| JSON | `json` |
+| Parquet | `parquet` |
+
+For all table-based sources, set the value to `tabular`.
 
 **API format**
 
@@ -213,8 +248,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "YOURSOURCE Source Connection",
-        "description": "YOURSOURCE Source Connection",
+        "name": "{YOURSOURCE} Source Connection",
+        "description": "{YOURSOURCE} Source Connection",
         "baseConnectionId": "70383d02-2777-4be7-a309-9dd6eea1b46d",
         "connectionSpec": {
             "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
@@ -230,6 +265,16 @@ curl -X POST \
     }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` | The name of your source connection. Ensure that the name of your source connection is descriptive as you can use this to look up information on your source connection. |
+| `description` | An optional value that you can include to provide more information on your source connection. |
+| `baseConnectionId` | The base connection ID of *YOURSOURCE*. This ID was generated in an earlier step. |
+| `connectionSpec.id` | The connection specification ID that corresponds to your source. |
+| `data.format` | The format of the *YOURSOURCE* data that you want to ingest. |
+| `params.server` |
+| `params.listId` |
+
 **Response**
 
 A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in a later step to create a dataflow.
@@ -241,7 +286,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Create a target XDM schema
+### Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
@@ -249,13 +294,17 @@ A target XDM schema can be created by performing a POST request to the [Schema R
 
 For detailed steps on how to create a target XDM schema, see the tutorial on [creating a schema using the API](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/schemas.html?lang=en#create).
 
-### Create a target dataset
+### Create a target dataset {#target-dataset}
 
 A target dataset can be created by performing a POST request to the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), providing the ID of the target schema within the payload.
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
-### Create a target connection
+### Create a target connection {#target-connection}
+
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID that corresponds to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -276,20 +325,29 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "YOURSOURCE Target Connection",
-        "description": "YOURSOURCE Target Connection",
+        "name": "{YOURSOURCE} Target Connection",
+        "description": "{YOURSOURCE} Target Connection",
         "connectionSpec": {
             "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
             "version": "1.0"
         },
         "data": {
-            "format": "parquet_xdm"
+            "format": "json"
         },
         "params": {
             "dataSetId": "5ef4551c52e054191a61a99f"
         }
     }'
 ```
+
+| Property | Description |
+| -------- | ----------- |
+| `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
+| `description` | An optional value that you can include to provide more information on your target connection. |
+| `connectionSpec.id` |
+| `data.format` |
+| `params.dataSetId` |
+
 
 **Response**
 
@@ -302,7 +360,7 @@ A successful response returns the new target connection's unique identifier (`id
 }
 ```
 
-### Create a mapping
+### Create a mapping {#mapping}
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
 
@@ -359,6 +417,12 @@ curl -X POST \
 | Property | Description |
 | --- | --- |
 | `xdmSchema` | The ID of the target XDM schema. |
+| `mappings.destinationXdmPath` |
+| `mappings.sourceAttribute` |
+| `mappings.identity` |
+| `mappings.identityGroup` |
+| `mappings.namespaceCode` |
+| `mappings.version` |
 
 **Response**
 
@@ -375,7 +439,18 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-### Create a flow
+### Create a flow {#flow}
+
+The last step towards bringing data from *YOURSOURCE* to Platform is to create a dataflow. By now, you have the following required values prepared:
+
+* [Source connection ID](#source-connection)
+* [Target connection ID](#target-connection)
+* [Mapping ID](#mapping)
+
+A dataflow is responsible for scheduling and collecting data from a source. You can create a dataflow by performing a POST request while providing the previously mentioned values within the payload.
+
+To schedule an ingestion, you must first set the start time value to epoch time in seconds. Then, you must set the frequency value to one of the five options: `once`, `minute`, `hour`, `day`, or `week`. The interval value designates the period between two consecutive ingestions and creating a one-time ingestion does not require an interval to be set. For all other frequencies, the interval value must be set to equal or greater than `15`.
+
 
 **API format**
 
@@ -393,8 +468,8 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "Mail Chimp Connector",
-        "description": "Mail Chimp Connector Description",
+        "name": "{YOURSOURCE} dataflow",
+        "description": "{YOURSOURCE} dataflow",
         "flowSpec": {
             "id": "9753525b-82c7-4dce-8a9b-5ccfce2b9876",
             "version": "1.0"
@@ -412,6 +487,18 @@ curl -X POST \
         }
     }'
 ```
+
+| Property | Description |
+| --- | --- |
+| `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
+| `description` | An optional value that you can include to provide more information on your dataflow. |
+| `flowSpec.id` |
+| `flowSpec.version` |
+| `sourceConnectionIds` |
+| `targetConnectionIds` |
+| `scheduleParams.startTime` |
+| `scheduleParams.frequency` |
+| `scheduleParams.interval` |
 
 **Response**
 
