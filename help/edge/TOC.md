@@ -10,6 +10,7 @@ feature: Data Management
 # Adobe Experience Platform Web SDK {#edge}
 
 * [Platform Web SDK overview](home.md)
+* [Edge Network end-to-end overview](e2e.md)
 * Fundamentals {#fundamentals}
   * [Prerequisites](fundamentals/prerequisite.md)
   * [Configuring a datastream](fundamentals/datastreams.md)
