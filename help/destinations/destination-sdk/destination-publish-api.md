@@ -6,16 +6,11 @@ title: Publish Destinations API endpoint operations
 
 **API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations/publish` 
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint. 
 
 After you have configured and tested your destination, you can submit it to Adobe for review and publishing.
 
-You should use the publish destinations API endpoint in the following two cases:
+Use the publish destinations API endpoint to submit a publishing request:
 * when, as a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use the productized integration;
 * when you want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
 
@@ -42,7 +37,7 @@ POST /authoring/destinations/publish
 
 **Request**
 
-The following request submits a destination for publishing, across the organizations configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destinations/publish` endpoint. Note that you do not have to add all parameters on the call.
+The following request submits a destination for publishing, across the organizations configured by the parameters provided in the payload. The payload below includes all parameters accepted by the `/authoring/destinations/publish` endpoint.
 
 ```shell
 curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -64,19 +59,19 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration using the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).  |
+|`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration by using the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).  |
 |`destinationAccess` | String | `ALL` or `LIMITED`. Specify if you want your destination to appear in the catalog for all Experience Platform customers or just for certain organizations.  |
-|`allowedOrgs` | String | If you use `"destinationAccess":"LIMITED"`, specify the Experience Platform organiazations for which  |
+|`allowedOrgs` | String | If you use `"destinationAccess":"LIMITED"`, specify the Experience Platform organizations for which the destination will be available. |
 
 {style="table-layout:auto"}
 
 **Response**
 
-A successful response returns HTTP status 200 with details of your newly created destination configuration.
+A successful response returns HTTP status 200 with details of your destination publish request.
 
-## List destination configurations {#retrieve-list}
+## List destination publish requests {#retrieve-list}
 
-You can retrieve a list of all destination configurations for your IMS Organization by making a GET request to the `/authoring/destinations/publish` endpoint.
+You can retrieve a list of all destinations submitted for publishing for your IMS Organization by making a GET request to the `/authoring/destinations/publish` endpoint.
 
 **API format**
 
@@ -87,7 +82,7 @@ GET /authoring/destinations/publish
 
 **Request**
 
-The following request will retrieve the list of destination configurations that you have access to, based on IMS Organization and sandbox configuration.
+The following request will retrieve the list of destinations submitted for publishing that you have access to, based on IMS Organization and sandbox configuration.
 
 ```shell
 curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish \
@@ -99,133 +94,23 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Response**
 
-The following response returns HTTP status 200 with a list of destination configurations that you have access to, based on the IMS Organization ID, sandbox name, and sandbox ID that you used. One `instanceId` corresponds to the template for one destination. The response is truncated for brevity.
+The following response returns HTTP status 200 with a list of destinations submitted for publishing that you have access to, based on the IMS Organization ID and sandbox name that you used. One `configId` corresponds to the publish request for one destination.
 
 ```json
 
 {
-   "items":[
+   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
+   "publishedConnectionSpecId":"cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+   "publishedFlowSpecId":"14518937-270c-4525-bdec-c2ba7cce3860",
+   "publishDetailsList":[
       {
-         "instanceId":"b0780cb5-2bb7-4409-bf2c-c625ca818588",
-         "createdDate":"2020-10-28T06:14:09.784471Z",
-         "lastModifiedDate":"2021-06-28T06:14:09.784471Z",
-         "imsOrg":"AC3428435BF324E90A49402A@AdobeOrg",
-         "sandboxName":"prod",
-         "sandboxId":"r5g6660-c5da-11e9-93d4-6d5fc3a66a8e",
-         "name":"Moviestar",
-         "description":"Moviestar is a fictional destination, used for this example.",
-         "releaseNotes":"Test release",
+         "configId":"string",
+         "allowedOrgs":[
+            "xyz@AdobeOrg",
+            "lmn@AdobeOrg"
+         ],
          "status":"TEST",
-         "customerAuthenticationConfigurations":[
-            {
-               "authType":"BEARER"
-            }
-         ],
-         "customerDataFields":[
-            {
-               "name":"endpointsInstance",
-               "type":"string",
-               "title":"Select Endpoint",
-               "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
-               "isRequired":true,
-               "enum":[
-                  "US",
-                  "EU",
-                  "APAC",
-                  "NZ"
-               ]
-            },
-            {
-               "name":"customerID",
-               "type":"string",
-               "title":"Moviestar Customer ID",
-               "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
-               "isRequired":true,
-               "pattern":"^[A-Za-z]+$"
-            }
-         ],
-         "uiAttributes":{
-            "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
-            "category":"mobile",
-            "iconUrl":"https://address-to-your-logo.png",
-            "connectionType":"Server-to-server",
-            "frequency":"Streaming"
-         },
-         "identityNamespaces":{
-            "external_id":{
-               "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
-            },
-            "another_id":{
-               "acceptsAttributes":true,
-               "acceptsCustomNamespaces":true
-            }
-         },
-         "segmentMappingConfig":{
-            "mapExperiencePlatformSegmentName":false,
-            "mapExperiencePlatformSegmentId":false,
-            "mapUserInput":false,
-            "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-         },
-         "schemaConfig":{
-            "profileFields":[
-               {
-                  "name":"a_custom_attribute",
-                  "title":"a_custom_attribute",
-                  "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
-                  "type":"string",
-                  "isRequired":false,
-                  "readOnly":false,
-                  "hidden":false
-               }
-            ],
-            "profileRequired":true,
-            "segmentRequired":true,
-            "identityRequired":true
-         },
-         "aggregation":{
-            "aggregationType":"BEST_EFFORT",
-            "bestEffortAggregation":{
-               "maxUsersPerRequest":0,
-               "splitUserById":0
-            }
-         },
-         "aggregation":{
-            "aggregationType":"CONFIGURABLE_AGGREGATION",
-            "configurableAggregation":{
-               "splitUserById":true,
-               "maxBatchAgeInSecs":0,
-               "maxNumEventsInBatch":0,
-               "aggregationKey":{
-                  "includeSegmentId":true,
-                  "includeSegmentStatus":true,
-                  "includeIdentity":true,
-                  "oneIdentityPerGroup":false,
-                  "groups":[
-                     {
-                        "namespaces":[
-                           "IDFA",
-                           "GAID"
-                        ]
-                     },
-                     {
-                        "namespaces":[
-                           "EMAIL"
-                        ]
-                     }
-                  ]
-               }
-            }
-         },
-         "destinationDelivery":[
-            {
-               "authenticationRule":"CUSTOMER_AUTHENTICATION",
-               "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
-            }
-         ],
-         "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
-         "destConfigId":"410631b8-f6b3-4b7c-82da-7998aa3f327c",
-         "backfillHistoricalProfileData":true
+         "publishedDate":"1630617746"
       }
    ]
 }
@@ -234,241 +119,71 @@ The following response returns HTTP status 200 with a list of destination config
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`name` | String | Indicates the title of your destination in the Experience Platform catalog |
-|`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
-|`releaseNotes` | String | This field is not necessary in the beta phase of Destination SDK. |
-|`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
-|`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
-|`customerAuthenticationConfigurations.authType` | String | Accepted values are `S3, SFTP_WITH_SSH_KEY, SFTP_WITH_PASSWORD, OAUTH1, OAUTH2, BASIC, BEARER`.  |
-|`customerDataFields.name` | String | Provide a name for the custom field you are introducing. |
-|`customerDataFields.type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer` |
-|`customerDataFields.title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface |
-|`customerDataFields.description` | String | Provide a description for the custom field. |
-|`customerDataFields.isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
-|`customerDataFields.enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
-|`customerDataFields.pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
-|`uiAttributes.documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
-|`uiAttributes.category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
-|`uiAttributes.iconUrl` | String | Provide the logo that Adobe will display in the Adobe Experience Platform destinations catalog for your destination card. |
-|`uiAttributes.connectionType` | String | In the beta release phase of Destination SDK, `Server-to-server` is the only available option. |
-|`uiAttributes.frequency` | String | In the beta release phase of Destination SDK, `Streaming` is the only available option. |
-|`identityNamespaces.externalId.acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
-|`identityNamespaces.externalId.acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`identityNamespaces.externalId.allowedAttributesTransformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
-|`identityNamespaces.externalId.acceptedGlobalNamespaces` | - | _Not shown in example configuration_. Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
-|`destinationDelivery.authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
-|`destinationDelivery.destinationServerId` | String | The `instanceId` of the [destination server template](./destination-server-api.md) used for this destination. |
-|`inputSchemaId` | String | This field is automatically generated and does not require your input. |
-|`destConfigId` | String | This field is automatically generated and does not require your input. |
-|`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-|`segmentMappingConfig.mapUserInput` | Boolean | Controls whether the segment mapping id in the destination activation workflow is input by user. |
-|`segmentMappingConfig.mapExperiencePlatformSegmentId` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment ID. |
-|`segmentMappingConfig.mapExperiencePlatformSegmentName` | Boolean | Controls whether the segment mapping id in the destination activation workflow is the Experience Platform segment name. |
-|`segmentMappingConfig.audienceTemplateId` | Boolean | The `instanceId` of the [audience metadata template](./audience-metadata-management.md) used for this destination. To set up an audience metadata template, read the [audience metadata API reference](./audience-metadata-api.md).|
+|`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
+|`publishedConnectionSpecId` | String | Returns the Adobe-internal Connection Spec ID that was created for your submitted destination. |
+|`publishedFlowSpecId` | String | Returns the Adobe-internal Flow Spec ID that was created for your submitted destination. |
+|`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
+|`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination should be available. |
+|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`|
+|`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time. |
 
+## Update an existing destination publish request {#update}
 
-## Update an existing destination configuration {#update}
-
-You can update an existing destination configuration by making a PUT request to the `/authoring/destinations/publish` endpoint and providing the instance ID of the destination configuration you want to update. In the body of the call, provide the updated destination configuration.
+You can update the allowed organizations in an existing destination publish request by making a PUT request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination for which you want to update the allowed organizations. In the body of the call, provide the updated allowed organizations.
 
 **API format**
 
 
 ```http
-PUT /authoring/destinations/publish/{INSTANCE_ID}
+PUT /authoring/destinations/publish/{DESTINATION_ID}
 ```
 
 | Parameter | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | The ID of the destination configuration that you want to update. |
+| `{DESTINATION_ID}` | The ID of the destination for which you want to update the publish request. |
 
 **Request**
 
-The following request updates an existing destination configuration, configured by the parameters provided in the payload. In the example call below, we are updating the configuration [created earlier](./destination-configuration-api.md#create) to now accept GAID, IDFA, and hashed email identifiers as identity namespaces.  
+The following request updates an existing destination publish request, configured by the parameters provided in the payload. In the example call below, we are updating the allowed organizations.  
 
 ```shell
 
-curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/publish/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
+curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+ -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "instanceId":"b0780cb5-2bb7-4409-bf2c-c625ca818588",
-   "createdDate":"2020-10-28T06:14:09.784471Z",
-   "lastModifiedDate":"2021-04-28T06:14:09.784471Z",
-   "imsOrg":"AC3428435BF324E90A49402A@AdobeOrg",
-   "sandboxName":"prod",
-   "sandboxId":"r5g6660-c5da-11e9-93d4-6d5fc3a66a8e",
-   "name":"Moviestar",
-   "description":"Moviestar is a fictional destination, used for this example.",
-   "releaseNotes":"Test release",
-   "status":"TEST",
-   "customerAuthenticationConfigurations":[
-      {
-         "authType":"BEARER"
-      }
-   ],
-   "customerDataFields":[
-      {
-         "name":"endpointsInstance",
-         "type":"string",
-         "title":"Select Endpoint",
-         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
-         "isRequired":true,
-         "enum":[
-            "US",
-            "EU",
-            "APAC",
-            "NZ"
-         ]
-      },
-      {
-         "name":"customerID",
-         "type":"string",
-         "title":"Moviestar Customer ID",
-         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
-         "isRequired":true,
-         "pattern":"^[A-Za-z]+$"
-      }
-   ],
-   "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
-      "category":"mobile",
-      "iconUrl":"https://address-to-your-logo.png",
-      "connectionType":"Server-to-server",
-      "frequency":"Streaming"
-   },
-   "identityNamespaces":{
-      "external_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      },
-      "another_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      },
-      "gaid":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "acceptedGlobalNamespaces":{
-            "GAID":{
-               
-            }
-         }
-      },
-      "idfa":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "acceptedGlobalNamespaces":{
-            "IDFA":{
-               
-            }
-         }
-      },
-      "email_lc_sha256":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "transformation":"sha256(lower($))",
-         "acceptedGlobalNamespaces":{
-            "Email":{
-               "requiredTransformation":"sha256(lower($))"
-            },
-            "Email_LC_SHA256":{
-               
-            }
-         }
-      }
-   },
-   "segmentMappingConfig":{
-      "mapExperiencePlatformSegmentName":false,
-      "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
-      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },
-   "schemaConfig":{
-      "profileFields":[
-         {
-            "name":"a_custom_attribute",
-            "title":"a_custom_attribute",
-            "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
-            "type":"string",
-            "isRequired":false,
-            "readOnly":false,
-            "hidden":false
-         }
-      ],
-      "profileRequired":true,
-      "segmentRequired":true,
-      "identityRequired":true
-   },
-   "aggregation":{
-      "aggregationType":"BEST_EFFORT",
-      "bestEffortAggregation":{
-         "maxUsersPerRequest":0,
-         "splitUserById":0
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
-   "destinationDelivery":[
-      {
-         "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
-      }
-   ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
-   "backfillHistoricalProfileData":true
+   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
+   "destinationAccess":"LIMITED",
+   "allowedOrgs":[
+      "abc@AdobeOrg",
+      "def@AdobeOrg"
+   ]
 }
-
 ```
 
-## Retrieve a specific destination configuration {#get}
+## Get the status of a specific destination publish request {#get}
 
-You can retrieve detailed information about a specific destination configuration by making a GET request to the `/authoring/destinations/publish` endpoint and providing the instance ID of the destination configuration you want to retrieve.
+You can retrieve detailed information about a specific destination publish request by making a GET request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination for which you want to retrieve the publishing status.
 
 **API format**
 
 
 ```http
-GET /authoring/destinations/publish/{INSTANCE_ID}
+GET /authoring/destinations/publish/{DESTINATION_ID}
 ```
 
 | Parameter | Description |
 | -------- | ----------- |
-| `{INSTANCE_ID}` | The ID of the destination configuration you want to retrieve. |
+| `{DESTINATION_ID}` | The ID of the destination for which you want to retrieve the publishing status. |
 
 **Request**
 
 ```shell
-curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
+curl -X GET https://platform.adobe.io/data/core/activation/authoring/destinations/publish/1230e5e4-4ab8-4655-ae1e-a6296b30f2ec \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
  -H 'x-api-key: {API_KEY}' \
@@ -477,191 +192,26 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Response**
 
-A successful response returns HTTP status 200 with detailed information about the specified destination configuration.
+A successful response returns HTTP status 200 with detailed information about the specified destination publish request.
 
 ```json
 {
-   "instanceId":"b0780cb5-2bb7-4409-bf2c-c625ca818588",
-   "createdDate":"2020-10-28T06:14:09.784471Z",
-   "lastModifiedDate":"2021-06-04T06:14:09.784471Z",
-   "imsOrg":"AC3428435BF324E90A49402A@AdobeOrg",
-   "sandboxName":"prod",
-   "sandboxId":"r5g6660-c5da-11e9-93d4-6d5fc3a66a8e",
-   "name":"Moviestar",
-   "description":"Moviestar is a fictional destination, used for this example.",
-   "releaseNotes":"Test release",
-   "status":"TEST",
-   "customerAuthenticationConfigurations":[
+   "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
+   "publishedConnectionSpecId":"cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
+   "publishedFlowSpecId":"14518937-270c-4525-bdec-c2ba7cce3860",
+   "publishDetailsList":[
       {
-         "authType":"BEARER"
+         "configId":"string",
+         "allowedOrgs":[
+            "xyz@AdobeOrg",
+            "lmn@AdobeOrg"
+         ],
+         "status":"TEST",
+         "publishedDate":"string"
       }
-   ],
-   "customerDataFields":[
-      {
-         "name":"endpointsInstance",
-         "type":"string",
-         "title":"Select Endpoint",
-         "description":"Moviestar manages several instances across the globe for REST endpoints that our customers are provisioned for. Select your endpoint in the dropdown list.",
-         "isRequired":true,
-         "enum":[
-            "US",
-            "EU",
-            "APAC",
-            "NZ"
-         ]
-      },
-      {
-         "name":"customerID",
-         "type":"string",
-         "title":"Moviestar Customer ID",
-         "description":"Your customer ID in the Moviestar destination (e.g. abcdef).",
-         "isRequired":true,
-         "pattern":"^[A-Za-z]+$"
-      }
-   ],
-   "uiAttributes":{
-      "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
-      "category":"mobile",
-      "iconUrl":"https://address-to-your-logo.png",
-      "connectionType":"Server-to-server",
-      "frequency":"Streaming"
-   },
-   "identityNamespaces":{
-      "external_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      },
-      "another_id":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true
-      },
-      "gaid":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "acceptedGlobalNamespaces":{
-            "GAID":{
-               
-            }
-         }
-      },
-      "idfa":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "acceptedGlobalNamespaces":{
-            "IDFA":{
-               
-            }
-         }
-      },
-      "email_lc_sha256":{
-         "acceptsAttributes":true,
-         "acceptsCustomNamespaces":true,
-         "transformation":"sha256(lower($))",
-         "acceptedGlobalNamespaces":{
-            "Email":{
-               "requiredTransformation":"sha256(lower($))"
-            },
-            "Email_LC_SHA256":{
-               
-            }
-         }
-      }
-   },
-   "segmentMappingConfig":{
-      "mapExperiencePlatformSegmentName":false,
-      "mapExperiencePlatformSegmentId":false,
-      "mapUserInput":false,
-      "audienceTemplateId":"cbf90a70-96b4-437b-86be-522fbdaabe9c"
-   },
-   "schemaConfig":{
-      "profileFields":[
-         {
-            "name":"a_custom_attribute",
-            "title":"a_custom_attribute",
-            "description":"This is a fixed attribute on your destination side that customers can map profile attributes to. For example, the phoneNumber value in Experience Platform could be phoneNo on your side.",
-            "type":"string",
-            "isRequired":false,
-            "readOnly":false,
-            "hidden":false
-         }
-      ],
-      "profileRequired":true,
-      "segmentRequired":true,
-      "identityRequired":true
-   },
-   "aggregation":{
-      "aggregationType":"BEST_EFFORT",
-      "bestEffortAggregation":{
-         "maxUsersPerRequest":0,
-         "splitUserById":0
-      }
-   },
-   "aggregation":{
-      "aggregationType":"CONFIGURABLE_AGGREGATION",
-      "configurableAggregation":{
-         "splitUserById":true,
-         "maxBatchAgeInSecs":0,
-         "maxNumEventsInBatch":0,
-         "aggregationKey":{
-            "includeSegmentId":true,
-            "includeSegmentStatus":true,
-            "includeIdentity":true,
-            "oneIdentityPerGroup":false,
-            "groups":[
-               {
-                  "namespaces":[
-                     "IDFA",
-                     "GAID"
-                  ]
-               },
-               {
-                  "namespaces":[
-                     "EMAIL"
-                  ]
-               }
-            ]
-         }
-      }
-   },
-   "destinationDelivery":[
-      {
-         "authenticationRule":"CUSTOMER_AUTHENTICATION",
-         "destinationServerId":"9c77000a-4559-40ae-9119-a04324a3ecd4"
-      }
-   ],
-   "inputSchemaId":"cc8621770a9243b98aba4df79898b1ed",
-   "backfillHistoricalProfileData":true
+   ]
 }
 ```
-
-
-## Delete a specific destination configuration {#delete}
-
-You can delete the specified destination configuration by making a DELETE request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination configuration you wish to delete in the request path.
-
-**API format**
-
-```http
-DELETE /authoring/destinations/publish/{INSTANCE_ID}
-```
-
-| Parameter | Description |
-| --------- | ----------- |
-| `{INSTANCE_ID}` | The `id` of the destination configuration you want to delete. |
-
-**Request**
-
-```shell
-curl -X DELETE https://platform.adobe.io/data/core/activation/authoring/destinations/publish/b0780cb5-2bb7-4409-bf2c-c625ca818588 \
- -H 'Authorization: Bearer {ACCESS_TOKEN}' \
- -H 'x-gw-ims-org-id: {IMS_ORG}' \
- -H 'x-api-key: {API_KEY}' \
- -H 'x-sandbox-name: {SANDBOX_NAME}' \
-```
-
-**Response**
-
-A successful response returns HTTP status 200 along with an empty HTTP response.
 
 ## API error handling
 
@@ -669,4 +219,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to configure your destination using the `/authoring/destinations/publish` API endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know how to submit a publish request for your destination. The Adobe Experience Platform team will review your publish request and get back to you.
