@@ -21,7 +21,17 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 
 See the guide on [managing permissions](../tags/ui/administration/manage-permissions.md) in the tags documentation to learn how to grant access to properties and property rights.
 
-## Create an XDM schema {#schema}
+## Process summary
+
+The process of configuring the Edge Network for your website can be summarized as follows:
+
+1. [Create a schema](#schema) to determine how your data will be structured when being sent to the Edge Network.
+1. [Create a datastream](#datastream) to configure which destinations you want your data to be sent to.
+1. [Install and configure the Web SDK](#sdk) to send data to the datastream when certain events occur on your website.
+
+Once you are able to send data to the Edge Network, you can also optionally [configure event forwarding](#event-forwarding) if your organization has a licence for it.
+
+## Create a schema {#schema}
 
 [Experience Data Model (XDM)](../xdm/home.md) is an open-source specification that provides common structures and definitions for data in the form of schemas. In other words, XDM is a way of structuring and formatting your data in a way that is actionable by the Edge Network and other Adobe Experience Cloud applications.
 
@@ -35,7 +45,7 @@ In the Data Collection UI, select **[!UICONTROL Schemas]** in the left navigatio
 
 ![Schemas workspace](./images/e2e/schemas.png)
 
-A dialog appears that prompts you to start adding field groups to the schema. In order to send events using the Web SDK, you must add the field group **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. This field group contains definitions for data that is automatically collected by the Web SDK library.
+A dialog appears that prompts you to start adding field groups to the schema. In order to send events using the Web SDK, you must add the field group **[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**. This field group contains definitions for data attributes that are automatically collected by the Web SDK library.
 
 Use the search bar to narrow down the list to help find this field group easier. Once you have found it, select it from the list before selecting **[!UICONTROL Add field groups]**.
 
@@ -69,7 +79,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 
 >[!NOTE]
 >
->If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. In other words, you must configure a datastream regardless of whether you are using tags or event forwarding.
+>If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. Details on this process are covered in a [later section](#event-forwarding).
 
 In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can can create a new configuration by selecting **[!UICONTROL New Datastream]**.
 
@@ -79,7 +89,7 @@ The configuration requirements for a datastream depend on which products and cap
 
 ## Install and configure the Web SDK
 
-Once you have created a schema and a datastream, the next step is to install and configure the Platform Web SDK to start ending data to the Edge Network.
+Once you have created a schema and a datastream, the next step is to install and configure the Platform Web SDK to start sending data to the Edge Network.
 
 >[!NOTE]
 >
@@ -90,6 +100,15 @@ Once you have created a schema and a datastream, the next step is to install and
 >
 >Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
 
+The process can be summarized as follows:
+
+1. [Install the SDK on a tag property](#install-sdk) to gain access to its capabilities.
+1. [Create an XDM data element](#data-element) to map variables on your website to the structure of the XDM schema you created previously.
+1. [Create a rule](#rule) to tell the SDK when it should send data to the Edge Network.
+1. [Build and install a library](#library) to implement the rule on your website.
+
+### Install the SDK on a tag property {#install-sdk}
+
 Select **[!UICONTROL Tags]** in the left navigation to show a list of tag properties. You can choose an existing property to edit if you wish, or you can select **[!UICONTROL New Property]** instead.
 
 ![Properties](./images/e2e/properties.png)
@@ -98,7 +117,7 @@ If creating a new property, provide a descriptive name and set the [!UICONTROL P
 
 ![Create property](./images/e2e/create-property.png)
 
-The overview page for the property appears. From here, select **[!UICONTROL Extensions]** in the left navigation, then select **[!UICONTROL Catalog]**. Using the provided search bar, find the listing for the Platform Web SDK and select **[!UICONTROL Install]**.
+The overview page for the property appears. From here, select **[!UICONTROL Extensions]** in the left navigation, then select **[!UICONTROL Catalog]**. Find the listing for the Platform Web SDK (optionally using the search bar to narrow results) and select **[!UICONTROL Install]**.
 
 ![Install the Web SDK](./images/e2e/install-sdk.png)
 
@@ -110,9 +129,7 @@ Before you can install the SDK, however, you must select a datastream so it know
 
 ![Set datastream and save](./images/e2e/set-datastream.png)
 
-The SDK has now been installed on the property. Before implementing the SDK on your website, the final step is to create a rule that tells the SDK when it should send data to the Edge Network. These steps are summarized in the sections below.
-
-### Create an XDM data element
+### Create an XDM data element {#data-element}
 
 In order for the SDK to send data to the Edge Network, that data must be mapped to the XDM schema you created in a [previous step](#schema). This mapping is accomplished through the use of a data element.
 
@@ -126,7 +143,7 @@ On the next screen, select **[!UICONTROL Adobe Experience Platform Web SDK]** un
 
 The configuration dialog appears for the XDM object type. The dialog automatically selects your Platform sandbox, and from here you can see all the schemas that have been created in that sandbox. Select the XDM schema you created earlier from the list.
 
-![XDM object type](./images/e2e/xdm-object.png)
+![XDM object type](./images/e2e/select-schema.png)
 
 The structure of the schema appears. All fields with an asterisk (**\***) indicate fields that will automatically populate when events fire. For all other fields, you can explore the structure of the schema and fill out the rest of the data.
 
@@ -134,7 +151,7 @@ The structure of the schema appears. All fields with an asterisk (**\***) indica
 
 >[!NOTE]
 >
->The screenshot above demonstrates how to map a globally accessible variable from the client side (`cartAbandonsTotal`) to an XDM field by referencing its name in the [!UICONTROL Value] field, surrounded by percent signs (`%`).
+>The screenshot above demonstrates how to map a globally accessible variable from the client side of your website (`cartAbandonsTotal`) to an XDM field by referencing its name in the [!UICONTROL Value] field, surrounded by percent signs (`%`).
 >
 >You can also use other previously created data elements to populate these fields. See the reference on [data elements](../tags/ui/managing-resources/data-elements.md) in the tags documentation for more information.
 
@@ -144,9 +161,9 @@ Once you have finished mapping your data to the schema, provide a name for the d
 
 ### Create a rule
 
-After you've saved the data element, the next step is to create a rule that will send it to the Edge Network whenever a certain event occurs (such as when a customer adds a product to a cart).
+After you've saved the data element, the next step is to create a rule that will send it to the Edge Network whenever a certain event occurs on your website (such as when a customer adds a product to a cart).
 
-As an example, this section shows how to create a rule that will trigger when a customer adds an item to a cart. However, you can set up rules for virtually any event that occurs on your website.
+As an example, this section shows how to create a rule that will trigger when a customer adds an item to a cart. However, you can set up rules for virtually any event that can occur on your website.
 
 Select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
 
@@ -156,7 +173,7 @@ On the next screen, provide a name for the rule. From here, the next step is to 
 
 ![Name rule](./images/e2e/name-rule.png)
 
-The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set the event type to a form submit, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
+The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the [!UICONTROL Form] category. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
 
 >[!NOTE]
 >
@@ -186,15 +203,40 @@ Once you are done configuring the rule, select **[!UICONTROL Save]** to finish t
 
 ![Save rule](./images/e2e/save-rule.png)
 
-### Build and install the library
+### Build and install a library {#library}
 
-After the rule has been configured, you are ready to build and install the tag library on your website.  
+After the rule has been configured, you are ready to add it to a tag library, build that library to an environment, and install that build on your website.
+
+>[!NOTE]
+>
+>If you have not set up an environment in the Data Collection UI yet, you must do so before you can create a build. See the section on [configuring an environment for a web property](../tags/ui/publishing/environments.md#web-configuration) in the tags documentation for more information.
+
+To learn how to create a library, add extensions and rules to the library, and build that library to an environment, see the guide on [managing libraries](../tags/ui/publishing/libraries.md) in the tags documentation. When you create the library, ensure that you include the Platform Web SDK extension and the data collection rules you created previously.
+
+Once you have created the library and its build has been assigned to an environment, you can install that environment on the client side of your website. See the section on [installing environments](../tags/ui/publishing/environments.md#installation) for more information.
+
+After you have installed the environment on your website, you can [test your implementation](../tags/ui/publishing/embed-code-testing.md) using Adobe Experience Platform Debugger.
 
 ## Configure event forwarding (optional) {#event-forwarding}
 
-* Set up everything we just talked about up until this point
-* Enable event forwarding in the datastream
-* Create an event forwarding property to configure the destination for the event using a rule (E.F. uses a lot of the same functionality philosophy as tags)
-* Get your event sent to the edge
+>[!NOTE]
+>
+>Event forwarding is only available for organizations that have been licenced for it.
+
+Once you have configured the SDK to send data to the Edge Network, you can set up event forwarding to tell the Edge Network where you want that data to be delivered.
+
+To use event forwarding, you must first create an event forwarding property. Select **[!UICONTROL Event Forwarding]** in the left nav, then select **[!UICONTROL New Property]**. Provide a name for the property before selecting **[!UICONTROL Save]**.
+
+Once you create an event forwarding property, the next step is to create a rule that determines where the data should be sent. Rules for event forwarding properties are constructed in much the same way as tag properties, with the exception that no events can be specified (since event forwarding only deals with events it receives directly from the datastream). For the rule's action, you can make use of one of the available event forwarding extensions, or use custom code to deliver the event instead.
+
+![Event forwarding rule](./images/e2e/event-forwarding-rule.png)
+
+Similar to before, once you have configured the rule, you must add it to a library and build that library to an environment.
+
+After the build is complete, the final step is to update the datastream you [previously configured](#datastream) and enable event forwarding. To start, navigate to **[!UICONTROL Datastreams]** and select the datastream in question from the list. From here, enable the toggle for event forwarding, and provide the names of the property and environment that you just configured.
+
+![Event forwarding datastream](./images/e2e/event-forwarding-datastream.png)
 
 ## Next steps
+
+This guide provided a high-level end-to-end overview of how to send data to the Edge Network using the Platform Web SDK. Please refer to the documentation linked to throughout this guide for more information on the various components and services involved.
