@@ -113,8 +113,8 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
    "aggregation":{
       "aggregationType":"BEST_EFFORT",
       "bestEffortAggregation":{
-         "maxUsersPerRequest":0,
-         "splitUserById":0
+         "maxUsersPerRequest":10,
+         "splitUserById":false
       }
    },
    "aggregation":{
@@ -231,7 +231,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Response**
 
-The following response returns HTTP status 200 with a list of destination configurations that you have access to, based on the IMS Organization ID, sandbox name, and sandbox ID that you used. One `instanceId` corresponds to the template for one destination. The response is truncated for brevity.
+The following response returns HTTP status 200 with a list of destination configurations that you have access to, based on the IMS Organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one destination. The response is truncated for brevity.
 
 ```json
 
@@ -316,8 +316,8 @@ The following response returns HTTP status 200 with a list of destination config
          "aggregation":{
             "aggregationType":"BEST_EFFORT",
             "bestEffortAggregation":{
-               "maxUsersPerRequest":0,
-               "splitUserById":0
+               "maxUsersPerRequest":10,
+               "splitUserById":false
             }
          },
          "aggregation":{
@@ -533,8 +533,8 @@ curl -X PUT https://platform.adobe.io/data/core/activation/authoring/destination
    "aggregation":{
       "aggregationType":"BEST_EFFORT",
       "bestEffortAggregation":{
-         "maxUsersPerRequest":0,
-         "splitUserById":0
+         "maxUsersPerRequest":10,
+         "splitUserById":false
       }
    },
    "aggregation":{
@@ -716,8 +716,8 @@ A successful response returns HTTP status 200 with detailed information about th
    "aggregation":{
       "aggregationType":"BEST_EFFORT",
       "bestEffortAggregation":{
-         "maxUsersPerRequest":0,
-         "splitUserById":0
+         "maxUsersPerRequest":10,
+         "splitUserById":false
       }
    },
    "aggregation":{

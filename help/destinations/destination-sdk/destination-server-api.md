@@ -104,7 +104,7 @@ curl -X GET https://platform.adobe.io/data/core/activation/authoring/destination
 
 **Response**
 
-The following response returns HTTP status 200 with a list of destination server configurations that you have access to, based on the IMS Organization ID, sandbox name, and sandbox ID that you used. One `instanceId` corresponds to the template for one destination server. The response is truncated for brevity.
+The following response returns HTTP status 200 with a list of destination server configurations that you have access to, based on the IMS Organization ID and sandbox name that you used. One `instanceId` corresponds to the template for one destination server. The response is truncated for brevity.
 
 ```json
 

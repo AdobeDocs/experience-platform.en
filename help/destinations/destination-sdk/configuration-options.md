@@ -39,3 +39,5 @@ The pages below provide more detail about the functionality and configuration op
 |[Audience metadata management](./audience-metadata-management.md) | [Audience metadata endpoint API operations](./audience-metadata-api.md) | 
 |[OAuth 2 configuration](./oauth2-authentication.md) | Configure using the `customerAuthenticationConfigurations` parameter in the [/destinations API endpoint](./destination-configuration-api.md). |
 |[Message format](./message-format.md) | - |
+|[Destination testing](./test-destination.md) | [Destination testing API operations](./destination-testing-api.md) |
+|[Destination publishing](./configure-destination-instructions.md#publish-destination) | [Destination publishing API operations](./destination-publish-api.md) |
