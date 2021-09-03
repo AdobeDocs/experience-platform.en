@@ -183,9 +183,9 @@ Select **[!UICONTROL Keep Changes]** to add the event to the rule.
 
 ![Event configuration](./images/e2e/event-config.png)
 
-The rule configuration page reappears, showing that the event has been added. You can narrow down the "[!UICONTROL If]" by adding further [!UICONTROL Conditions] to the rule.
+The rule configuration page reappears, showing that the event has been added. You can narrow down the "[!UICONTROL If]" by adding further conditions to the rule.
 
-Otherwise, the next step is to add an action for the rule to perform when it fires. Select **[!UICONTROL Add]** under [!UICONTROL Actions] to continue.
+Otherwise, the next step is to add an action for the rule to perform when it fires. Select **[!UICONTROL Add]** under **[!UICONTROL Actions]** to continue.
 
 ![Add action](./images/e2e/add-action.png)
 
