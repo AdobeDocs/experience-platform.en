@@ -18,9 +18,9 @@ This page describes how to use the reference information in [Configuration optio
 
 ## Prerequisites
 
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and being added to an allowed list.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with the Destination SDK APIs.
 
-## Use the Configuration options in Adobe Experience Platform Destination SDK to set up your destination
+## Use the configuration options in Adobe Experience Platform Destination SDK to set up your destination
 
 ![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps.png)
 
@@ -140,7 +140,7 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 
 ```
 
-## Step 3: Create transformation template - Use templating language to specify the message output format {#create-transformation-template}
+## Step 3: Create message transformation template - use templating language to specify the message output format {#create-transformation-template}
 
 Based on the payloads that your destination supports, you must create a template that transforms the format of the exported data from Adobe XDM format into a format supported by your destination. See template examples in the section [Using a templating language for the identity, attributes, and segment membership transformations](./message-format.md#using-templating) and use the [template authoring tool](./create-template.md) provided by Adobe.
 
@@ -164,34 +164,11 @@ As part of the process to test your destination, you must use the Experience Pla
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)
 
-<!--
 
-Commenting out this part, as the configuration shown here is outdated. Will very likely delete this part for beta. 
+## Step 7: Publish your destination {#publish-destination}
 
-Shown below is an example configuration for a destination which supports OAuth2 authentication. For more information, refer to [Credentials configuration](./credentials-configuration.md) in the reference documentation.
+After configuring and testing your destination. use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
-```json
+## Step 8: Document your destination {#document-destination}
 
-POST platform.adobe.io/data/core/activation/authoring/credentials
-
-  "oauth2ClientAuthentication": {
-    "url": "string",
-    "clientId": "string",
-    "clientSecret": "string",
-    "header": "string",
-    "developerToken": "string"
-  }
-
-```
-
-Commenting out this part at the request of Product Management
-
-### Step 5 - Provide your configurations to Adobe
-
-Share the configurations you created in steps 1-4 with Adobe's engineering team over email. The Adobe engineering team will set up your destination in Adobe Experience Platform.
-
--->
-
-## Next steps
-
-Adobe will set your destination live behind a feature flag in Experience Platform. You can now test workflows to export data from Experience Platform to your destination. After confirming that everything works as intended, use our [self-service documentation process](./docs-framework/documentation-instructions.md) to create a documentation page for your destination.
+Finally, use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).

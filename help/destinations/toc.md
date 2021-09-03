@@ -152,6 +152,7 @@ feature: Destinations
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
+      * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
     * Developer tools reference {#developer-tools-reference}
       * [Get sample template API operations](./destination-sdk/sample-template-api.md)
       * [Render template API operations](./destination-sdk/render-template-api.md)
