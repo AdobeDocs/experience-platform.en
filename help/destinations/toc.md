@@ -144,9 +144,9 @@ feature: Destinations
       * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
       * [Authentication configuration](./destination-sdk/credentials-configuration.md)
       * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
-    * Developer tools {#developer-tools}
-      * [Create and test a message transformation template](./destination-sdk/create-template.md)
-      * [Test your destination configuration](./destination-sdk/test-destination.md)
+      * Developer tools {#developer-tools}
+        * [Create and test a message transformation template](./destination-sdk/create-template.md)
+        * [Test your destination configuration](./destination-sdk/test-destination.md)
     * API reference {#api-reference}
       * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
       * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
