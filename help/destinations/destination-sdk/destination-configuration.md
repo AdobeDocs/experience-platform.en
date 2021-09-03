@@ -22,7 +22,6 @@ Below is an example configuration for a fictional destination, Moviestar, which 
 {
    "name":"Moviestar",
    "description":"Moviestar is a fictional destination, used for this example.",
-   "releaseNotes":"Test release",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -55,7 +54,6 @@ Below is an example configuration for a fictional destination, Moviestar, which 
    "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
-      "iconUrl":"https://address-to-your-logo.png",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
    },
@@ -122,7 +120,6 @@ Below is an example configuration for a fictional destination, Moviestar, which 
 |---------|----------|------|
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog |
 |`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
-|`releaseNotes` | String | This field is not necessary in the beta phase of Destination SDK. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 
 ## Customer authentication configurations {#customer-authentication-configurations}
@@ -171,7 +168,6 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
-|`iconUrl` | String | Provide the logo that Adobe will display in the Adobe Experience Platform destinations catalog for your destination card. |
 |`connectionType` | String | In the beta release phase of Destination SDK, `Server-to-server` is the only available option. |
 |`frequency` | String | In the beta release phase of Destination SDK, `Streaming` is the only available option. |
 

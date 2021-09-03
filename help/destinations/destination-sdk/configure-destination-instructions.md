@@ -66,7 +66,6 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
 {
    "name":"Moviestar",
    "description":"Moviestar is a fictional destination, used for this example.",
-   "releaseNotes":"Test release",
    "status":"TEST",
    "customerAuthenticationConfigurations":[
       {
@@ -99,7 +98,6 @@ POST platform.adobe.io/data/core/activation/authoring/destinations
    "uiAttributes":{
       "documentationLink":"http://www.adobe.com/go/destinations-moviestar-en",
       "category":"mobile",
-      "iconUrl":"https://address-to-your-logo.png",
       "connectionType":"Server-to-server",
       "frequency":"Streaming"
    },
