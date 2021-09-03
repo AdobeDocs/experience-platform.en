@@ -44,7 +44,7 @@ This process delivers user data as a series of HTTP messages to your destination
 |Parameter | Type | Description|
 |---|---|---|
 |`name` | String | Represents a friendly name of your server, visible only to Adobe. This name is not visible to partners or customers. Example `Moviestar destination server`.  |
-|`destinationServerType` | String | `URL_BASED` is the only available option in the beta release phase. |
+|`destinationServerType` | String | `URL_BASED` is currently the only available option. |
 |`templatingStrategy` | String | <ul><li>Use `PEBBLE_V1` if Adobe needs to transform the URL in the `value` field below. Use this option if you have an endpoint like: `https://api.moviestar.com/data/{{endpoint.region}}/items` </li><li> Use `NONE` if no transformation is needed on the Adobe side, for example if you have an endpoint like: `https://api.moviestar.com/data/items` </li></ul>  |
 |`value` | String | Fill in the address of the API endpoint that Experience Platform should connect to. |
 

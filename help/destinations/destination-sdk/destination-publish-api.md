@@ -56,7 +56,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 |Parameter | Type | Description|
 |---------|----------|------|
 |`destinationId` | String | The destination ID of the destination configuration that you are submitting for publishing. Get the destination ID of a destination configuration by using the [destination configuration API reference](./destination-configuration-api.md#retrieve-list).  |
-|`destinationAccess` | String | `ALL` or `LIMITED`. Specify if you want your destination to appear in the catalog for all Experience Platform customers or just for certain organizations.  |
+|`destinationAccess` | String | `ALL` or `LIMITED`. Specify if you want your destination to appear in the catalog for all Experience Platform customers or just for certain organizations. <br> **Note**: If you use `LIMITED`, the destination will be published for your Experience Platform organization only. If you'd like to publish the destination to a subset of Experience Platform organizations for customer testing purposes, please reach out to Adobe support. |
 |`allowedOrgs` | String | If you use `"destinationAccess":"LIMITED"`, specify the Experience Platform organizations for which the destination will be available. |
 
 {style="table-layout:auto"}
@@ -209,4 +209,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know how to submit a publish request for your destination. The Adobe Experience Platform team will review your publish request and get back to you.
+After reading this document, you now know how to submit a publish request for your destination. The Adobe Experience Platform team will review your publish request and get back to you with five business days.

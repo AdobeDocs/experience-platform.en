@@ -165,8 +165,8 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
-|`connectionType` | String | In the beta release phase of Destination SDK, `Server-to-server` is the only available option. |
-|`frequency` | String | In the beta release phase of Destination SDK, `Streaming` is the only available option. |
+|`connectionType` | String | `Server-to-server` is currently the only available option. |
+|`frequency` | String | `Streaming` is currently the only available option. |
 
 ## Schema configuration in the mapping step {#schema-configuration}
 
