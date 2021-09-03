@@ -173,7 +173,7 @@ On the next screen, provide a name for the rule. From here, the next step is to 
 
 ![Name rule](./images/e2e/name-rule.png)
 
-The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the [!UICONTROL Form] category. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
+The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the **[!UICONTROL Form]** category. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
 
 >[!NOTE]
 >
