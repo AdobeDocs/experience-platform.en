@@ -169,6 +169,6 @@ As part of the process to test your destination, you must use the Experience Pla
 
 After configuring and testing your destination. use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
-## Step 8: Document your destination {#publish-destination}
+## Step 8: Document your destination {#document-destination}
 
 Finally, use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).
