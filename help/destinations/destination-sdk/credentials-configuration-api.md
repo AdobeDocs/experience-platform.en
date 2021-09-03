@@ -165,12 +165,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/credential
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '
 {
-   "type":"BASIC",
-   "name":"string",
-   "basicAuthentication":{
-      "username":"string",
-      "password":"string"
-   },
    "oauth2UserAuthentication":{
       "url":"string",
       "clientId":"string",
