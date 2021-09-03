@@ -91,7 +91,7 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
-|`commerce.productListRpemovals` | One or more product entries have been removed from a product list or shopping cart. |
+|`commerce.productListRemovals` | One or more product entries have been removed from a product list or shopping cart. |
 |`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been re-activated by a customer, such as via a re-marketing activity. |
 |`commerce.productListViews` | A product list or shopping cart has received one or more views. |
 |`commerce.productViews` | A product has received one or more views. |
