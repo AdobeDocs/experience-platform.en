@@ -10,11 +10,11 @@ This page lists and describes all the API operations that you can perform using 
 
 After you have configured and tested your destination, you can submit it to Adobe for review and publishing.
 
-Use the publish destinations API endpoint to submit a publishing request:
-* when, as a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use the productized integration;
-* when you want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
+Use the publish destinations API endpoint to submit a publishing request when:
+* As a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use;
+* You want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
 
-## Getting started with publish destination API operations
+## Getting started with destination publishing API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 
@@ -118,7 +118,7 @@ The following response returns HTTP status 200 with a list of destinations submi
 |`publishedFlowSpecId` | String | Returns the Adobe-internal Flow Spec ID that was created for your submitted destination. |
 |`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
 |`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination should be available. |
-|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`|
+|`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`.|
 |`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time. |
 
 ## Update an existing destination publish request {#update}
