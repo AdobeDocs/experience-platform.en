@@ -165,6 +165,5 @@ feature: Destinations
       * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
       * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
       * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
-      * [Release notes](./destination-sdk/release-notes.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)
