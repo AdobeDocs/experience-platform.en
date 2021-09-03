@@ -14,12 +14,6 @@ Use the publish destinations API endpoint to submit a publishing request:
 * when, as a Destination SDK partner, you want to make your productized destination available across all Experience Platform organizations for all Experience Platform customers to use the productized integration;
 * when you want to make your custom destination available in your own Experience Platform organization, across all sandboxes.
 
-<!--
-
-For a description of the functionality supported by this endpoint, read [destination configuration](./destination-configuration.md). 
-
--->
-
 ## Getting started with publish destination API operations
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
