@@ -86,19 +86,19 @@ The following table outlines the accepted values for `eventType`, along with the
 |`advertising.starts` | A digital video ad has started playing. |
 |`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
 |`advertising.timePlayed` | Describes the amount of time spent by a user on a specific timed media asset. |
-|`application.close` | ??? |
-|`application.launch` | ??? |
+|`application.close` | An application was closed or sent into the background. |
+|`application.launch` | An application was launched or brought into the foreground. |
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
-|`commerce.productListRemovals` | One or more product entries have been removed from a product list or shopping cart. |
+|`commerce.productListRpemovals` | One or more product entries have been removed from a product list or shopping cart. |
 |`commerce.productListReopens` | A product list (shopping cart) that was no longer accessible (abandoned) has been re-activated by a customer, such as via a re-marketing activity. |
 |`commerce.productListViews` | A product list or shopping cart has received one or more views. |
 |`commerce.productViews` | A product has received one or more views. |
 |`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | A product list has been saved for future use, such a product wishlist. |
-|`decisioning.propositionDisplay` | ??? |
-|`decisioning.propositionInteract` | ??? |
+|`decisioning.propositionDisplay` | A decisioning proposition was displayed to a person. |
+|`decisioning.propositionInteract` | A person interacted with a decisioning proposition. |
 |`delivery.feedback` | Feedback events for a delivery, such as an email delivery. |
 |`directMarketing.emailBounced` | An email to a person bounced. |
 |`directMarketing.emailBouncedSoft` | An email to a person soft-bounced. |
@@ -118,8 +118,8 @@ The following table outlines the accepted values for `eventType`, along with the
 |`opportunityEvent.addToOpportunity` | A person was added to an opportunity. |
 |`opportunityEvent.opportunityUpdated` | An opportunity was updated. |
 |`opportunityEvent.removeFromOpportunity` | A person was removed from an opportunity. |
-|`pushTracking.applicationOpened` | ??? |
-|`pushTracking.customAction` | ??? |
+|`pushTracking.applicationOpened` | A person opened an application from a push notification. |
+|`pushTracking.customAction` | A person clicked a custom action in a push notification. |
 |`web.formFilledOut` | A person filled out a form on a wep page. |
 |`web.webinteraction.linkClicks` | A link has been selected one or more times. |
 |`web.webpagedetails.pageViews` | A webpage has received one or more views. |
