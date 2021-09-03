@@ -4,16 +4,13 @@ title: Render template API operations
 ---
 # Render template API operations {#render-template-api-operations}
 
-**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange.
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/render`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to render exported data for your destination, based on your [message transformation template](./message-format.md#using-templating). For a description of the functionality supported by this endpoint, read [create template](./create-template.md). 
 
-## Getting started with render template API operations {#getting-started-api}
+## Getting started with render template API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

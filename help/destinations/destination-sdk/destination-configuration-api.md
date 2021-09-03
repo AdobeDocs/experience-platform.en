@@ -4,16 +4,13 @@ title: Destinations API endpoint operations
 ---
 # Destinations endpoint API operations {#destination-configuration}
 
-**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations` 
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations` API endpoint. For a description of the functionality supported by this endpoint, read [destination configuration](./destination-configuration.md). 
 
-## Getting started with destination API operations
+## Getting started with destination API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

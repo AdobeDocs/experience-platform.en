@@ -4,11 +4,6 @@ title: Configuration options for credentials in Destination SDK
 ---
 # Authentication configuration {#credentials}
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
 ## Supported authentication types {#supported-authentication-types}
 
 Adobe Experience Platform supports several authentication types:

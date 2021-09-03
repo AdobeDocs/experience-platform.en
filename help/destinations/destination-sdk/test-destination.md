@@ -4,12 +4,7 @@ title: Test your destination configuration
 ---
 # Test your destination configuration {#developer-tools}
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
-## Overview
+## Overview {#overview}
 
 As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. For information on how to create a message transformation template, read [Create and test a message transformation template](./create-template.md).
 

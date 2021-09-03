@@ -4,10 +4,7 @@ title: Audience metadata management
 ---
 # Audience metadata management {#audience-metadata-management}
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
+## Overview {#overview}
 
 Use audience metadata templates to programmatically create, update, or delete audiences in your destination. Adobe provides an extensible audience metadata template, which you can configure based on the specifications of your marketing API. After you define, test, and submit the configuration, it will be used by Adobe to structure the API calls to your destination.
 

@@ -4,12 +4,7 @@ title: Create and test a message transformation template
 ---
 # Create and test a message transformation template {#create-template}
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange.
->* The documentation and the functionality are subject to change.
-
-## Overview
+## Overview {#overview}
 
 As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to create and test a message transformation template. For information on how to test your destination, read [Test your destination configuration](./test-destination.md).
 

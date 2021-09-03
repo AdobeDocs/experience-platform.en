@@ -4,12 +4,6 @@ title: OAuth 2 authentication
 ---
 # OAuth 2 authentication 
 
-
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
 ## Overview {#overview}
 
 Use Destination SDK to allow Adobe Experience Platform to connect to your destination by using the [OAuth 2 authentication framework](https://tools.ietf.org/html/rfc6749).

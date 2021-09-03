@@ -4,11 +4,6 @@ title: Integration prerequisites
 ---
 # Integration prerequisites
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
 To use Destination SDK, make sure that you meet the technical and partnership prerequisites listed in the sections below.
 
 ## Technical / API prerequisites

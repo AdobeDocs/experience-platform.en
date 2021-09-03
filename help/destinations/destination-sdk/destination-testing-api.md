@@ -4,12 +4,9 @@ title: Destination testing API operations
 ---
 # Destination testing API operations {#template-api-operations}
 
-**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange.
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/destinationInstance/`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination. For a description of the functionality supported by this endpoint, read [Test your destination configuration](./test-destination.md).
 
@@ -22,7 +19,7 @@ You can use the [Sample profile generation API](./sample-profile-generation-api.
 >* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) and [activate profiles and segments to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
 >![UI image how to get destination instance ID](./assets/get-destination-instance-id.png)
 
-## Getting started with destination testing API operations {#getting-started-api}
+## Getting started with destination testing API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

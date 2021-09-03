@@ -4,16 +4,13 @@ title: Get sample template API operations
 ---
 # Get sample template API operations {#get=sample-template-api-operations}
 
-**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange.
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/testing/template/sample`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/sample` API endpoint, to generate a [message transformation template](./message-format.md#using-templating) for your destination. For a description of the functionality supported by this endpoint, read [create template](./create-template.md). 
 
-## Getting started with sample template API operations {#getting-started-api}
+## Getting started with sample template API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

@@ -4,12 +4,9 @@ title: Sample profile generation API operations
 ---
 # Sample profile generation API operations {#sample-profile-api-operations}
 
-**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange.
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `https://platform.adobe.io/data/core/activation/authoring/sample-profiles`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint. 
 
@@ -19,7 +16,7 @@ This API endpoint allows you to generate sample profiles to use:
 
 You can generate sample profiles based on either the Adobe XDM source schema, or the target schema supported by your destination. To understand the difference between Adobe XDM source schema and target schema, read the [Message format](./message-format.md) article. 
 
-## Getting started with sample profile generation API operations {#getting-started-api}
+## Getting started with sample profile generation API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

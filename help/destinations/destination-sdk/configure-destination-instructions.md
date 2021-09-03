@@ -6,21 +6,15 @@ title: How to use Destination SDK to configure your destination
 ---
 # How to use Destination SDK to configure your destination
 
+## Overview {#overview}
 
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
+This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination using Destination SDK. The steps are laid out in sequential order below.
 
-## Overview 
+## Prerequisites {#prerequisites}
 
-This page describes how to use the reference information in [Configuration options for the Destinations SDK](./configuration-options.md) to configure your destination using Destination SDK. The steps are laid out in sequential order below.
+Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with Destination SDK APIs.
 
-## Prerequisites
-
-Before advancing to the steps illustrated below, please read the [Destination SDK getting started](./getting-started.md) page for information on obtaining the necessary Adobe I/O authentication credentials and other prerequisites to work with the Destination SDK APIs.
-
-## Use the configuration options in Adobe Experience Platform Destination SDK to set up your destination
+## Steps to use the configuration options in Destination SDK to set up your destination {#steps}
 
 ![Illustrated steps of using Destination SDK endpoints](./assets/destination-sdk-steps.png)
 

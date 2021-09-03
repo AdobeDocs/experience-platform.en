@@ -4,12 +4,9 @@ title: Credentials endpoint API operations
 ---
 # Credentials endpoint API operations {#credentials}
 
-**API endpoint**: `platform.adobe.io/data/core/activation/authoring/credentials`
-
 >[!IMPORTANT]
 >
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/credentials`
 
 This page lists and describes all the API operations that you can perform using the `/authoring/credentials` API endpoint.
 
@@ -140,7 +137,7 @@ The sections below list out the necessary parameters for each authentication typ
 
 -->
 
-## Getting started with credentials configuration API operations
+## Getting started with credentials configuration API operations {#get-started}
 
 Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
 

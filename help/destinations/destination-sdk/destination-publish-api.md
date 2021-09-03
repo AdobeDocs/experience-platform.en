@@ -4,7 +4,9 @@ title: Publish Destinations API endpoint operations
 ---
 # Publish Destinations endpoint API operations {#publish-destination}
 
-**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations/publish` 
+>[!IMPORTANT]
+>
+>**API endpoint**: `platform.adobe.io/data/core/activation/authoring/destinations/publish` 
 
 This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint. 
 

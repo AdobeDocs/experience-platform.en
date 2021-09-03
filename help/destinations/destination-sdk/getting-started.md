@@ -4,21 +4,15 @@ title: Getting started with Destination SDK
 ---
 # Getting started 
 
-
->[!IMPORTANT]
->
->* This feature is in limited beta and is only available to select [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) members. If you are interested in using Destination SDK, please contact Adobe Exchange. 
->* The documentation and the functionality are subject to change.
-
-## Overview 
+## Overview {#overview}
 
 This page describes how to authenticate and start using Adobe Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
 
-## Terminology
+## Terminology {#terminology}
 
 This guide uses Platform-specific concepts, such as IMS Organization and sandboxes. Consult the [Experience Platform glossary](https://experienceleague.adobe.com/docs/experience-platform/landing/glossary.html) for definitions of these and other terms.
 
-## Obtain required authentication credentials
+## Obtain required authentication credentials {#obtain-authentication-credentials}
 
 Destination SDK uses the [Adobe I/O](https://www.adobe.io/) gateway for authentication. To make API calls to Destination SDK endpoints, you must provide certain headers in your API calls. Work with the Adobe Exchange team to set up authentication for you to the [Adobe Developer Console](http://console.adobe.io/).
 
@@ -45,7 +39,7 @@ You now have the required authentication headers `x-api-key: {API_KEY}`, `x-gw-i
 
 -->
 
-## Destination ownership and sandboxes
+## Destination ownership and sandboxes {#destination-ownership}
 
 All resources in Experience Platform are isolated to specific virtual sandboxes. Requests to Destination SDK require headers that specify the name of the sandbox the operation takes place in:
 
@@ -53,15 +47,15 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 The Adobe Exchange team provides you with your sandbox name, which you are required to use in calls to the Destination SDK API endpoints.
 
-## Allowlisting
+## Allowlisting {#allowlisting}
 
 To use the API endpoints described in the [reference documentation](./configuration-options.md), you must be added to a list of allowed partners. Work with the Adobe Exchange team to be added to the allow list.
 
-## Additional considerations
+## Additional considerations {#additional-considerations}
 
 * Any changes that you make to destination configurations, whether you create or edit a destination configuration, need to be reviewed and approved by Adobe. Your changes are reflected in your destinations only after the review is done.
 * Only the users that belong to the same organization and have access to the sandbox can edit the destination configuration.
 
-## Next steps
+## Next steps {#next-steps}
 
 By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name and ID, and were added to an allowlist. Next, you can set up a destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
