@@ -1,5 +1,5 @@
 ---
-description: The destinations configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+description: This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 title: Destination configuration options for Destination SDK
 ---
 # Destination configuration {#destination-configuration}
@@ -8,7 +8,7 @@ title: Destination configuration options for Destination SDK
 
 This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
 
-The functionality described in this document can be configured using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
+You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
 ## Example configuration {#example-configuration}
 
@@ -115,7 +115,7 @@ Below is an example configuration for a fictional destination, Moviestar, which 
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`name` | String | Indicates the title of your destination in the Experience Platform catalog |
+|`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
 |`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 
@@ -150,8 +150,8 @@ This section allows partners to introduce custom fields. In the example configur
 |Parameter | Type | Description|
 |---------|----------|------|
 |`name` | String | Provide a name for the custom field you are introducing. |
-|`type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer` |
-|`title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface |
+|`type` | String | Indicates what type of custom field you are introducing. Accepted values are `string`, `object`, `integer`. |
+|`title` | String | Indicates the name of the field, as it is seen by customers in the Experience Platform user interface. |
 |`description` | String | Provide a description for the custom field. |
 |`isRequired` | Boolean | Indicates if this field is required in the destination setup workflow. |
 |`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
@@ -164,7 +164,7 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |Parameter | Type | Description|
 |---------|----------|------|
 |`documentationLink` | String | Refers to the documentation page in the [Destinations Catalog](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/overview.html?lang=en#catalog) for your destination. Use `http://www.adobe.com/go/destinations-YOURDESTINATION-en`, where `YOURDESTINATION` is the name of your destination. For a destination called Moviestar, you would use `http://www.adobe.com/go/destinations-moviestar-en` |
-|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/destination-types.html?lang=en#destination-categories). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments` |
+|`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 |`connectionType` | String | `Server-to-server` is currently the only available option. |
 |`frequency` | String | `Streaming` is currently the only available option. |
 
@@ -176,7 +176,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`profileFields` | Array | _Not shown in example configuration above._ When you add predefined `profileFields`, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
+|`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
@@ -190,7 +190,7 @@ Adobe needs to know which [!DNL Platform] identities customers will be able to e
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
 
- Read more in the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en).
+Read more in the [Identity Namespace overview](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en).
 
 ![Render target identities in the UI](./assets/target-identities-ui.png) 
 
@@ -198,8 +198,8 @@ For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an 
 |---------|----------|------|
 |`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
 |`acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`allowedAttributesTransformation` | String | _Not shown in example configuration_. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
-|`acceptedGlobalNamespaces` | - | _Not shown in example configuration_. Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
+|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
+|`acceptedGlobalNamespaces` | - | *Not shown in example configuration*. Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
 ## Destination delivery {#destination-delivery}
 

@@ -16,7 +16,7 @@ You can use the [Sample profile generation API](./sample-profile-generation-api.
 
 >[!IMPORTANT]
 >
->* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) and [activate profiles and segments to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
+>* In order to use this API, you must have an existing connection to your destination in the Experience Platform UI. Read [connect to destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/connect-destination.html?lang=en) and [activate profiles and segments to a destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en) for more information. After establishing the connection to your destination, get the destination instance ID that you should use in API calls to this endpoint from the URL when [browsing a connection with your destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/destination-details-page.html?lang=en).
 >![UI image how to get destination instance ID](./assets/get-destination-instance-id.png)
 
 ## Getting started with destination testing API operations {#get-started}
@@ -151,7 +151,7 @@ A successful response returns HTTP status 200 along with the API response from y
 | -------- | ----------- |
 | `aggregationKey` | Includes information about the aggregation policy configured for the destination. For more information, read the [Aggregation policy](./destination-configuration.md#aggregation) section in the destination configuration document.  |
 | `traceId` | A unique identifier for the operation. When encountering errors, you can share this ID with the Adobe team for troubleshooting purposes.|
-| `results.httpCalls.request` | Includes the request that was sent by Adobe to your destination|
+| `results.httpCalls.request` | Includes the request that was sent by Adobe to your destination.|
 | `results.httpCalls.response` | Includes the response received by Adobe from your destination.|
 | `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
 

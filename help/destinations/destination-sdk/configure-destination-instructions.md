@@ -8,7 +8,7 @@ title: How to use Destination SDK to configure your destination
 
 ## Overview {#overview}
 
-This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination using Destination SDK. The steps are laid out in sequential order below.
+This page describes how to use the reference information in [Configuration options in Destinations SDK](./configuration-options.md) to configure your destination. The steps are laid out in sequential order below.
 
 ## Prerequisites {#prerequisites}
 
@@ -20,7 +20,7 @@ Before advancing to the steps illustrated below, please read the [Destination SD
 
 ## Step 1: Create a server and template configuration {#create-server-template-configuration}
 
-Start by creating a server and template configuration using the /destinations-server endpoint (read [API reference](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
+Start by creating a server and template configuration using the `/destinations-server` endpoint (read [API reference](./destination-server-api.md)). For more information about the server and template configuration, refer to [Server and template specs](./configuration-options.md#server-and-template) in the reference section.
 
 Shown below is an example configuration. Note that the message transformation template in the `requestBody.value` parameter is addressed in step 3, [Create transformation template](./configure-destination-instructions.md#create-transformation-template).
 
@@ -151,7 +151,7 @@ Depending on whether you specify `"authenticationRule": "CUSTOMER_AUTHENTICATION
 
 After setting up your destination using the templates in the previous steps, you can use the [destination testing tool](./create-template.md) to test the integration between Adobe Experience Platform and your destination.
 
-As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer the two resources below for instructions how to create segments in Experience Platform:
+As part of the process to test your destination, you must use the Experience Platform UI to create segments, which you will activate to your destination. Refer to the two resources below for instructions how to create segments in Experience Platform:
 
 * [Create a segment documentation page](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=en#create-segment)
 * [Create a segment video walkthrough](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html?lang=en)

@@ -31,16 +31,16 @@ The instructions below show you how to use the GitHub web interface to author do
 
    ![Add new file](./assets/github-navigate-and-create-file.gif)
 
-5. Name your destination `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in Adobe Experience Platform. For example, if your company is called Moviestar, you would name your file `moviestar.md`. You don't need to save your file yet.
+5. Name your destination `YOURDESTINATION.md`, where YOURDESTINATION is the name of your destination in Adobe Experience Platform. For example, if your company is called Moviestar, you would name your file `moviestar.md`.
 
 ## Author the documentation page for your destination {#author-documentation}
 
 1. You will create the content of your destination page based on the [documentation self-service template](./self-service-template.md). **[Download](assets/yourdestination-template.zip)** the template and unzip it to extract the `.md` file template.
 2. Paste and edit the content of the template with relevant information for your destination in an online markdown editor, such as [dillinger.io](https://dillinger.io/). Follow the instructions in the template for details on what you should fill in and which paragraphs can be removed.
-3. Copy the content from the markdown editor into your new file in Github.
+3. Copy the content from the markdown editor into your new file in GitHub.
 4. For any screenshots or images that you plan on using, use the GitHub interface to upload the files to `experience-platform.en/help/destinations/assets/catalog/[...]`, where `[...]` is the desired category for your destination. For example, if you are adding a personalization destination to Experience Platform, select the `personalization` category. You need to link to the images from the page you are authoring. See [instructions how to link to images](https://experienceleague.adobe.com/docs/contributor/contributor-guide/writing-essentials/linking.html?lang=en#link-to-images).
 
-   ![Upload image to Github](./assets/upload-image.gif)
+   ![Upload image to GitHub](./assets/upload-image.gif)
 
 5.  When you are ready, save the file in your branch.
 

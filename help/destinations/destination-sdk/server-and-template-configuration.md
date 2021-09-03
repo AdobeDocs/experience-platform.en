@@ -1,12 +1,12 @@
 ---
-description: The server and template specs can be configured in Adobe Destination SDK via the common endpoint `/authoring/destination-servers`.
+description: The server and template specs can be configured in Adobe Experience Platform Destination SDK via the common endpoint `/authoring/destination-servers`.
 title: Configuration options for server and template specs in Destination SDK
 ---
 # Configuration options for server and template specs
 
 ## Overview {#overview}
 
-The server and template specs can be configured in Adobe Destination SDK via the common endpoint `/authoring/destination-servers`. Read [Destinations API endpoint operations](./destination-server-api.md) for a complete list of operations you can perform on the endpoint.
+The server and template specs can be configured in Adobe Experience Platform Destination SDK via the common endpoint `/authoring/destination-servers`. Read [Destinations API endpoint operations](./destination-server-api.md) for a complete list of operations you can perform on the endpoint.
 
 ## Example configuration {#example-configuration}
 

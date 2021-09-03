@@ -400,4 +400,4 @@ Destination SDK API endpoints follow the general Experience Platform API error m
 
 ## Next steps
 
-After reading this document, you now know when to use credentials endpoint and how to set up a credentials configuration using the `/authoring/credentials` API endpoint or the `/authoring/destinations` endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.
+After reading this document, you now know when to use the credentials endpoint and how to set up a credentials configuration using the `/authoring/credentials` API endpoint or the `/authoring/destinations` endpoint. Read [how to use Destination SDK to configure your destination](./configure-destination-instructions.md) to understand where this step fits into the process of configuring your destination.

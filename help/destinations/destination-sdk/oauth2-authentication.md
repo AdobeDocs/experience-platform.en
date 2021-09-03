@@ -201,7 +201,7 @@ To set up this authentication method for your destination, add the following lin
 
 The configurations described in the sections above describe standard OAuth 2 grants. However, the system designed by Adobe provides flexibility so you can use custom parameters for any variations in the OAuth 2 grant. To customize the standard OAuth 2 settings, use the `authenticationDataFields` parameters, as shown in the examples below.
 
-**Example 1: Using `authenticationDataFields` to capture information coming from the authentication response**
+### Example 1: Using `authenticationDataFields` to capture information coming from the authentication response {#example-1}
 
 In this example, a destination platform has refresh tokens that expire after a certain amount of time. In this case, the partner sets up the `refreshTokenExpiration` custom field to get the refresh token expiration from the `refresh_token_expires_in` field in the API response. 
 
@@ -241,7 +241,8 @@ In this example, a destination platform has refresh tokens that expire after a c
 
 ```
 
-**Example 2: Using `authenticationDataFields` to provide a special refresh token**  
+### Example 2: Using `authenticationDataFields` to provide a special refresh token {#example-2}
+
 In this example, a partner sets up their destination to provide a special refresh token. Furthermore, the expiration date for access tokens is not returned in the API response so they can hardcode a default value, in this case 3600 seconds.
 
 ```json
@@ -257,7 +258,8 @@ In this example, a partner sets up their destination to provide a special refres
       ]
 ```
 
-**Example 3: The user inputs client ID and client secret when they configure the destination**
+### Example 3: The user inputs client ID and client secret when they configure the destination {#example-3}
+
 In this example, instead of creating a global client ID and client secret as shown in the section [Prerequisites in your system](./oauth2-authentication.md#prerequisites), the customer is required to input client ID, client secret, and account ID (the ID that the customer uses to log into the destination)
 
 ```json

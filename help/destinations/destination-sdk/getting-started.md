@@ -1,12 +1,12 @@
 ---
-description: This page describes how to authenticate and start using Adobe Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
+description: This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
 title: Getting started with Destination SDK
 ---
 # Getting started 
 
 ## Overview {#overview}
 
-This page describes how to authenticate and start using Adobe Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
+This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
 
 ## Terminology {#terminology}
 

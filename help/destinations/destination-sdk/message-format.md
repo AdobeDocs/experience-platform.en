@@ -33,11 +33,11 @@ Experience Platform uses schemas to describe the structure of data in a consiste
 
 Users who want to activate data to your destination need to map the fields that they use for their datasets in Experience Platform to a schema that translates to your destination's expected format. Adobe will create a custom field group for your company to add to the target schema. The fields in the field group depend on the profile attribute fields that you can receive.
 
-**Source XDM schema (1)**: This refers to the schema that a customer uses in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
+**Source XDM schema (1)**: This refers to the schema that a customer uses in Experience Platform. In Experience Platform, in the [mapping step](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-segment-streaming-destinations.html?lang=en#mapping) of the activate destination workflow, customers would map fields from their source schema to your destination's target schema (2).
 
 **Target XDM schema (2)**: Based on the JSON standard schema (3) that you share with Adobe, the team at Adobe will create a custom schema for your destination. Note that in a [future phase of the project](./overview.md#phased-approach), you will be able to create the custom schema for your destination on your own.
 
-**JSON standard schema of your destination profile attributes (3)**: Please share with us a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`,  `productId`, `productName`, and so on.
+**JSON standard schema of your destination profile attributes (3)**: Please share with us a [JSON schema](https://json-schema.org/learn/miscellaneous-examples.html) of all the profile attributes that your platform supports and their types (for example: object, string, array). Example fields that your destination could support could be `firstName`, `lastName`, `gender`, `email`, `phone`, `productId`, `productName`, and so on.
 
 Based on the schema transformations described above, here is how the structure of a message changes between the source XDM schema and the sample schema on the partner side:
 
