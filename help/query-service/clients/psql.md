@@ -22,7 +22,7 @@ Select the icon to copy the section labeled **[!UICONTROL PSQL Command]**, then 
 
 >[!IMPORTANT]
 >
->If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string. Additionally, if you are using version 12.0 or greater, you will need to add `PGGSSENCMODE=disable` to your connection string.
+>If you are on a PC, use a text editor to remove the line breaks in the command string, then copy the string. If you are using version 12.0 or greater, you will need to add `PGGSSENCMODE=disable` to your connection string. Additionally, if you are using non-expiring credentials, ensure you replace the password field with the non-expiring credential password. To learn more about non-expiring credentials, please read the [credentials guide](../ui/credentials.md).
 
 You should see a result like this:
 

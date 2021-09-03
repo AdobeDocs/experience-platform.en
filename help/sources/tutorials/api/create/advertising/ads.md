@@ -15,7 +15,7 @@ exl-id: 4658e392-1bd9-4e74-aa05-96109f9b62a0
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Google AdWords] (hereinafter referred to as "[!DNL AdWords]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Google AdWords] (hereinafter referred to as "[!DNL AdWords]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting Started
 

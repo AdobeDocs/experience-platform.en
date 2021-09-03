@@ -52,7 +52,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## Managing audit logs in the API
 
-All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) for more information.
+All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
 
 ## Managing audit logs for Adobe Admin Console
 

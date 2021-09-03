@@ -50,7 +50,7 @@ Some destinations in Experience Platform have certain rules and obligations for 
 
 Before setting up a [!DNL Google Customer Match] destination in Experience Platform, make sure you read and adhere to Google's policy for using [!DNL Customer Match], outlined in the [Google support documentation](https://support.google.com/google-ads/answer/6299717).
 
-Next, make sure your [!DNL Google] account is configured for a [!DNL Standard] or higher access level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
+Next, make sure your [!DNL Google] account is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
 
 ### Allow list {#allowlist}
 
@@ -167,6 +167,17 @@ After completing the activation flow, switch to your **[!UICONTROL Google Ads]**
 
 When mapping a segment to both [!DNL IDFA] and [!DNL GAID] mobile IDs, [!DNL Google Customer Match] creates a separate segment for each ID mapping. Your [!DNL Google Ads] account shows two different segments, one for the [!DNL IDFA], and one for the [!DNL GAID] mapping.
 
+## Troubleshooting {#troubleshooting}
+
+### 400 Bad Request error message {#bad-request}
+
+When configuring this destination, you may receive the following error:
+
+`{"message":"Google Customer Match Error: OperationAccessDenied.ACTION_NOT_PERMITTED","code":"400 BAD_REQUEST"}`
+
+This error occurs when customer accounts do not comply with the [prerequisites](#google-account-prerequisites). To fix this issue, contact Google and make sure your account is allow-listed and is configured for a [!DNL Standard] or higher permission level. See the [Google Ads documentation](https://support.google.com/google-ads/answer/9978556?visit_id=637611563637058259-4176462731&rd=1) for details.
+
 ## Extra resources {#additional-resources}
 
 * [Integrate Google Customer Match - Video tutorial](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/integrate-with-google-customer-match.html)
+

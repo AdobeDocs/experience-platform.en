@@ -7,13 +7,15 @@ feature: Data Management
 
 # Observability Insights {#observability}
 
-* [Observability Insights overview](home.md)
+* [Observability Insights overview](./home.md)
 * Observability Insights API {#api}
-  * [Overview](api/overview.md)
-  * [Getting started](api/getting-started.md)
-  * [Metrics](api/metrics.md)
-* Notifications {#notifications}
-  * [Overview](notifications/overview.md)
-  * [Subscribe to I/O Event notifications](notifications/subscribe.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/observability-insights.yaml)
+  * [Overview](./api/overview.md)
+  * [Getting started](./api/getting-started.md)
+  * [Metrics](./api/metrics.md)
+* Alerts {#alerts}
+  * [Overview](./alerts/overview.md)
+  * [Standard alert rules](./alerts/rules.md)
+  * [UI guide](./alerts/ui.md)
+  * [Subscribe to I/O Event notifications](./alerts/subscribe.md)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/observability-insights/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

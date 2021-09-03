@@ -9,7 +9,7 @@ exl-id: 898df7fe-37a9-4495-ac05-30029258a6f4
 ---
 # Create a streaming dataflow for raw data using the [!DNL Flow Service] API
 
-This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for retrieving raw data from a streaming source connector and bringing them to Experience Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 
@@ -38,7 +38,7 @@ This tutorial also requires you to have a valid source connection ID for a strea
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained. This target XDM schema also extends the XDM [!DNL Individual Profile] class.
 
-To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/schema-registry.yaml).
+To create a target XDM schema, make a POST request to the `/schemas` endpoint of the [[!DNL Schema Registry] API](https://www.adobe.io/experience-platform-apis/references/schema-registry/).
 
 **API format**
 
@@ -146,7 +146,7 @@ A successful response returns details of the newly created schema including its 
 
 ## Create a target dataset
 
-With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/catalog.yaml), while providing the ID of the target schema within the payload.
+With a target XDM schema created and its unique `$id` you can now create a target dataset to contain your source data. To create a target dataset, make a POST request to the `dataSets` endpoint of the [Catalog Service API](https://www.adobe.io/experience-platform-apis/references/catalog/), while providing the ID of the target schema within the payload.
 
 **API format**
 

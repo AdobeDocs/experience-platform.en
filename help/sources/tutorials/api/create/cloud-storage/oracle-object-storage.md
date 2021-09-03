@@ -11,7 +11,7 @@ exl-id: a85faa44-7d5a-42a2-9052-af01744e13c9
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Oracle Object Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Oracle Object Storage] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

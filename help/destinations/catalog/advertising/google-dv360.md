@@ -39,13 +39,13 @@ Note the following details that are specific to [!DNL Google Display & Video 360
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
-### Allow list
+### Allow-listing
 
 >[!NOTE]
 >
->The allow list is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow list process described below has been completed by Google before creating a destination.
+>Allow-listing is mandatory before setting up your first [!DNL Google Display & Video 360] destination in Platform. Please ensure the allow-listing process described below has been completed by Google before creating a destination.
 
 Before creating the [!DNL Google Display & Video 360] destination in Platform, you must contact Google asking for Adobe to be put on the list of allowed data providers, and for your account to be added to the allow list. Contact Google and provide the following information:
 
@@ -79,3 +79,13 @@ See [Activate audience data to streaming segment export destinations](../../ui/a
 ## Exported data 
 
 To verify if data has been exported successfully to the [!DNL Google Display & Video 360] destination, check your [!DNL Google Display & Video 360] account. If activation was successful, audiences are populated in your account.
+
+## Troubleshooting {#troubleshooting}
+
+### 400 Bad Request error message {#bad-request}
+
+When configuring this destination, you may receive the following error:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+This error occurs when customer accounts do not comply with the [prerequisites](#prerequisites). To fix this issue, contact Google and make sure your account is allow-listed.
