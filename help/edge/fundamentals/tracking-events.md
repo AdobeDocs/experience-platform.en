@@ -97,7 +97,7 @@ alloy("sendEvent", {
 
 ### Setting `eventType` {#event-types}
 
-In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Refer to the XDM documentation for a [list of all the predefined event types](../../xdm/classes/experienceevent.md#eventType).
+In XDM ExperienceEvent schemas, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Refer to the XDM documentation for a [list of all the predefined event types](../../xdm/classes/experienceevent.md#eventType).
 
 These event types will be shown in a dropdown if using the tag extension or you can always pass them in without tags. They can be passed in as part of the `xdm` option.
 
