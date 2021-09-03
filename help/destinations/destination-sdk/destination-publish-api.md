@@ -61,7 +61,7 @@ curl -X POST https://platform.adobe.io/data/core/activation/authoring/destinatio
 
 **Response**
 
-A successful response returns HTTP status 200 with details of your destination publish request.
+A successful response returns HTTP status 201 with details of your destination publish request.
 
 ## List destination publish requests {#retrieve-list}
 
@@ -94,8 +94,6 @@ The following response returns HTTP status 200 with a list of destinations submi
 
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "publishedConnectionSpecId":"cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-   "publishedFlowSpecId":"14518937-270c-4525-bdec-c2ba7cce3860",
    "publishDetailsList":[
       {
          "configId":"string",
@@ -114,8 +112,6 @@ The following response returns HTTP status 200 with a list of destinations submi
 |Parameter | Type | Description|
 |---------|----------|------|
 |`destinationId` | String | The destination ID of the destination configuration that you have submitted for publishing. |
-|`publishedConnectionSpecId` | String | Returns the Adobe-internal Connection Spec ID that was created for your submitted destination. |
-|`publishedFlowSpecId` | String | Returns the Adobe-internal Flow Spec ID that was created for your submitted destination. |
 |`publishDetailsList.configId` | String | The unique ID of the destination publish request for your submitted destination. |
 |`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination should be available. |
 |`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`.|
@@ -191,8 +187,6 @@ A successful response returns HTTP status 200 with detailed information about th
 ```json
 {
    "destinationId":"1230e5e4-4ab8-4655-ae1e-a6296b30f2ec",
-   "publishedConnectionSpecId":"cfc0fee1-7dc0-40ef-b73e-d8b134c436f5",
-   "publishedFlowSpecId":"14518937-270c-4525-bdec-c2ba7cce3860",
    "publishDetailsList":[
       {
          "configId":"string",
