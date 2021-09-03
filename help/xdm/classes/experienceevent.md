@@ -76,18 +76,18 @@ The following table outlines the accepted values for `eventType`, along with the
 
 | Value | Definition |
 | --- | --- |
-|`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean the viewer watched the whole video, as the viewer could have skipped ahead. |
-|`advertising.timePlayed` | Describes the amount of time spent by a user on a specific timed media asset. |
-|`advertising.federated` | Indicates if an Experience Event was created through data federation (data sharing between customers). |
 |`advertising.clicks` | Click action(s) on an advertisement. |
+|`advertising.completes` | A timed media asset has been watched to completion. This does not necessarily mean the viewer watched the whole video, as the viewer could have skipped ahead. |
 |`advertising.conversions` | Pre-defined action(s) performed by a customer which triggers an event for performance evaluation. |
+|`advertising.federated` | Indicates if an Experience Event was created through data federation (data sharing between customers). |
 |`advertising.firstQuartiles` | A digital video ad has played through 25% of its duration at normal speed. |
 |`advertising.impressions` | Impression(s) of an advertisement to a customer with the potential of being viewed. |
 |`advertising.midpoints` | A digital video ad has played through 50% of its duration at normal speed. |
 |`advertising.starts` | A digital video ad has started playing. |
 |`advertising.thirdQuartiles` | A digital video ad has played through 75% of its duration at normal speed. |
-|`web.webpagedetails.pageViews` | A webpage has received one or more views. |
-|`web.webinteraction.linkClicks` | A link has been selected one or more times. |
+|`advertising.timePlayed` | Describes the amount of time spent by a user on a specific timed media asset. |
+|`application.close` | ??? |
+|`application.launch` | ??? |
 |`commerce.checkouts` | A checkout event has occurred for a product list. There can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps, the timestamp and referenced page/experience for each event are used to identify each individual event (step), represented in order. |
 |`commerce.productListAdds` | A product has been added to the product list or shopping cart. |
 |`commerce.productListOpens` | A new product list (shopping cart) has been initialized or created. |
@@ -97,9 +97,32 @@ The following table outlines the accepted values for `eventType`, along with the
 |`commerce.productViews` | A product has received one or more views. |
 |`commerce.purchases` | An order has been accepted. This is the only required action in a commerce conversion. A purchase event must have a product list referenced. |
 |`commerce.saveForLaters` | A product list has been saved for future use, such a product wishlist. |
+|`decisioning.propositionDisplay` | ??? |
+|`decisioning.propositionInteract` | ??? |
 |`delivery.feedback` | Feedback events for a delivery, such as an email delivery. |
+|`directMarketing.emailBounced` | An email to a person bounced. |
+|`directMarketing.emailBouncedSoft` | An email to a person soft-bounced. |
+|`directMarketing.emailClicked` | A person clicked a link in a marketing email. |
+|`directMarketing.emailDelivered` | An email was successfully delivered to person's email service |
+|`directMarketing.emailOpened` | A person opened a marketing email. |
+|`directMarketing.emailUnsubscribed` | A person unsubscribed from a marketing email. |
+|`leadOperation.convertLead` | A lead was converted. |
+|`leadOperation.interestingMoment` | An interesting moment was recorded for a person. |
+|`leadOperation.newLead` | A lead was created. |
+|`leadOperation.scoreChanged` | The value of the lead's score attribute was changed. |
+|`leadOperation.statusInCampaignProgressionChanged` | A lead's status in a campaign has changed. |
+|`listOperation.addToList` | A person was added to a marketing list. |
+|`listOperation.removeFromList` | A person was removed from a marketing list. |
 |`message.feedback` | Feedback events like sent/bounce/error for messages sent to a customer. |
 |`message.tracking` | Tracking events like open/click/custom actions on messages sent to a customer. |
+|`opportunityEvent.addToOpportunity` | A person was added to an opportunity. |
+|`opportunityEvent.opportunityUpdated` | An opportunity was updated. |
+|`opportunityEvent.removeFromOpportunity` | A person was removed from an opportunity. |
+|`pushTracking.applicationOpened` | ??? |
+|`pushTracking.customAction` | ??? |
+|`web.formFilledOut` | A person filled out a form on a wep page. |
+|`web.webinteraction.linkClicks` | A link has been selected one or more times. |
+|`web.webpagedetails.pageViews` | A webpage has received one or more views. |
 
 {style="table-layout:auto"}
 
