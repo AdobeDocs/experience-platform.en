@@ -1,6 +1,7 @@
 ---
 title: Third-Party Extensions
 description: Learn about third-party extensions for Adobe Experience Platform.
+exl-id: c82546de-a89d-4d1c-b97a-43983b513360
 ---
 # Third-Party extensions
 

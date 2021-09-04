@@ -1,6 +1,7 @@
 ---
 title: Extensions
 description: Learn how tag extensions function in Adobe Experience Platform.
+exl-id: e911bedd-6c67-4339-91d7-839c8b00c153
 ---
 # Extensions
 

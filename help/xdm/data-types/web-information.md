@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Web Information Data Type
 topic-legacy: overview
 description: This document provides an overview of the web information Experience Data Model (XDM) data type.
+exl-id: bfb00835-5908-4baf-af2a-6d845710e340
 ---
 # [!UICONTROL Web information] data type
 

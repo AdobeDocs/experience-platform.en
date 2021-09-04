@@ -1,6 +1,7 @@
 ---
 title: Library Modules in Web Extensions
 description: Learn how to format library modules for web extensions in Adobe Experience Platform.
+exl-id: 08f2bb01-9071-49c5-a0ff-47d592cc34a5
 ---
 # Library modules in web extensions
 

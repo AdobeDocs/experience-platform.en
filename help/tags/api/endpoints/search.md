@@ -1,6 +1,7 @@
 ---
 title: Search endpoint
 description: Learn how to make calls to the /search endpoint in the Reactor API.
+exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 ---
 # Search endpoint
 

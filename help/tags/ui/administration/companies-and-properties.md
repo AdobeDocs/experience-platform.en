@@ -1,6 +1,7 @@
 ---
 title: Properties
 description: Learn how your extensions, environments, and libraries are organized and grouped for your organization in Adobe Experience Platform.
+exl-id: e5b4a853-c23e-498c-9e20-e773ea1de88b
 ---
 # Properties
 

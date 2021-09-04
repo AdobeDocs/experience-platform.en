@@ -1,6 +1,7 @@
 ---
 title: Compare Resource Revisions
 description: Learn how to to view the history of revisions for a tag resource in Adobe Experience Platform.
+exl-id: 95b22641-9f6f-4aac-a727-d99098f040a4
 ---
 # Compare resource revisions
 

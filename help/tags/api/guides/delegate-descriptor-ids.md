@@ -1,6 +1,7 @@
 ---
 title: Delegate Descriptor IDs
 description: Learn about delegate descriptor IDs in the Reactor API, and how they link resources with extensions.
+exl-id: 2c2b9b31-0618-4b93-97ec-0798fc06aac0
 ---
 # Delegate descriptor IDs
 

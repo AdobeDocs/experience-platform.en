@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Mapping sets overview
 topic-legacy: overview
 description: Learn how to use mapping sets with Adobe Experience Platform Data Prep.
+exl-id: b45545b7-3ae7-400d-b6fd-b2cb76061093
 ---
-
 # Mapping sets overview
 
 A mapping set is a set of mappings that transforms data from one schema to another. This document provides information on how mapping sets are comprised, including input schema, output schema, and mappings.

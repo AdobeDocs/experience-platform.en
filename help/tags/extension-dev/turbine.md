@@ -1,6 +1,7 @@
 ---
 title: Turbine Free Variable
 description: Learn about the turbine object, a free variable which provides information and utilities specific to the Adobe Experience Platform tag runtime.
+exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 ---
 # Turbine free variable
 

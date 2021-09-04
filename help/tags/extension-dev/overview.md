@@ -1,6 +1,7 @@
 ---
 title: Extension development overview
 description: Learn about the primary components of different tag extension types and the extension development process in Adobe Experience Platform.
+exl-id: b72df3df-f206-488d-a690-0f086973c5b6
 ---
 # Extension development overview
 
