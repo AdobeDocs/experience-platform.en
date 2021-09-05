@@ -153,11 +153,11 @@ feature: Destinations
       * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
       * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
       * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
-    * Developer tools reference {#developer-tools-reference}
-      * [Get sample template API operations](./destination-sdk/sample-template-api.md)
-      * [Render template API operations](./destination-sdk/render-template-api.md)
-      * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
-      * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+      * Developer tools reference {#developer-tools-reference}
+        * [Get sample template API operations](./destination-sdk/sample-template-api.md)
+        * [Render template API operations](./destination-sdk/render-template-api.md)
+        * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
+        * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
     * Guides {#guides}
       * [Use Destination SDK to configure your destination](./destination-sdk/configure-destination-instructions.md)
     * Document your destination {#document-destination}

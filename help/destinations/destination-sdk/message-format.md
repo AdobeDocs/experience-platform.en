@@ -25,7 +25,7 @@ Adobe Experience Platform exports data to a significant number of destinations, 
 Experience Platform can adjust the exported message format to match the expected format on your side. To understand this customization, the following concepts are important:
 * The source (1) and target (2) XDM schema in Adobe Experience Platform
 * The message format on the partner side (3), and 
-* The transformation layer between the two.
+* The transformation layer between the two, which you can define by creating a [message transformation template](./message-format.md#using-templating).
 
 ![Schema to JSON transformation](./assets/transformations-3-steps.png)
 
@@ -81,7 +81,6 @@ Considering the message format, the corresponding transformations are as follows
 |`_your_custom_schema.lastName` | `attributes.last_name` | `last_name` |
 |`personalEmail.address` | `attributes.external_id` | `external_id` |
 
-
 ## Using a templating language for the identity, attributes, and segment membership transformations {#using-templating}
 
 Adobe uses a templating language similar to [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) to transform the fields from the XDM schema into a format supported by your destination.
@@ -91,10 +90,6 @@ This section provides several examples of how these transformations are made, fr
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
 3. Deepest dive, showing two examples of templates from industry partners.
-
-
-
-
 
 ### Profile Attributes {#attributes}
 
@@ -792,9 +787,12 @@ The table below provides descriptions for the functions in the examples above.
 | `addedSegments(listOfSegments)` | Returns only the segments that have status `realized` or `existing`. |
 | `removedSegments(listOfSegments)` | Returns only the segments that have status `exited`. |
 
+<!--
 
 ## What Adobe needs from you to set up your destination {#what-adobe-needs}
 
 Based on the transformations outlined in the sections above, Adobe needs the following information to set up your destination:
 
 * Considering *all* the fields that your platform can receive, Adobe needs the standard JSON schema that corresponds to your expected message format. Having the template allows Adobe to define transformations and to create a custom XDM schema for your company, which customers would use to export data to your destination.
+
+-->
