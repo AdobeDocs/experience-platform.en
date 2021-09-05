@@ -775,11 +775,11 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 
 ### Create a template that uses aggregation key to group exported profiles {#template-aggregation-key}
 
-When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can edit the message transformation template to group the profiles exported to your destination based on criteria such as segment ID, segment membership, or identity namespaces, as shown in the examples below.
+When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can edit the message transformation template to group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces, as shown in the examples below.
 
-#### Example of using segment ID aggregation key in the template
+#### Example of using segment ID aggregation key in the template {#aggregation-key-segment-id}
 
-If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use `segmentId` to group profiles in the HTTP messages exported to your destination:
+If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use `segmentId` in the template to group profiles in the HTTP messages exported to your destination:
 
 ```python
 {
@@ -801,7 +801,31 @@ If you use [configurable aggregation](./destination-configuration.md) and set `i
 
 
 
-#### Example of using identity namespace aggregation key in the template
+#### Example of using segment alias aggregation key in the template {#aggregation-key-segment-alias}
+
+If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination:
+
+```python
+"customerList={{input.aggregationKey.segmentAlias}}"
+```
+
+#### Example of using segment status aggregation key in the template {#aggregation-key-segment-status}
+
+If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+
+Possible values are:
+
+* realized
+* existing
+* exited
+
+See below how you can use this information in a template:
+
+```python
+"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+```
+
+#### Example of using identity namespace aggregation key in the template {#aggregation-key-identity}
 
 Below is an example where the configurable aggregation in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"identityNamespaces": ["email", "phone"]`
 
