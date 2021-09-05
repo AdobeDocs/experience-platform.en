@@ -18,7 +18,7 @@ You can generate sample profiles based on either the Adobe XDM source schema, or
 
 ## Getting started with sample profile generation API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Generate sample profiles based on the source schema {#generate-sample-profiles-source-schema}
 
