@@ -229,6 +229,8 @@ An aggregation policy determines how the exported profiles are combined together
 * Best effort aggregation
 * Configurable aggregation (shown in the configuration above)
 
+Read the article on [using templating](./message-format.md#using-templating) to understand how you can adjust your message transformation template based on the aggregation policy you select.
+
 ### Best effort aggregation {#best-effort-aggregation}
 
 >[!TIP]

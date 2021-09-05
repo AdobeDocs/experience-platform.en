@@ -89,7 +89,7 @@ This section provides several examples of how these transformations are made, fr
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
-3. Deepest dive, showing two examples of templates from industry partners.
+3. Templates the include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment membership, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
@@ -770,6 +770,137 @@ The `json` below represents the data exported out of Adobe Experience Platform.
             }
         }
     ]
+}
+```
+
+### Create a template that uses aggregation key to group exported profiles {#template-aggregation-key}
+
+When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can edit the message transformation template to group the profiles exported to your destination based on criteria such as segment ID, segment membership, or identity namespaces, as shown in the examples below.
+
+#### Example of using segment ID aggregation key in the template
+
+If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use `segmentId` to group profiles in the HTTP messages exported to your destination:
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.segmentId %}
+                "{{ns}}": [
+                    {% for id in profile.segmentId %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+
+
+#### Example of using identity namespace aggregation key in the template
+
+Below is an example where the configurable aggregation in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"identityNamespaces": ["email", "phone"]`
+
+**Input**
+
+Profile 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ]
+   }
+}
+```
+
+Profile 2:
+
+```json
+       {
+            "identityMap": {
+                "email": [
+                    {
+                        "id": "e3@example.com"
+                    }
+                ],
+                "phone": [
+                    {
+                        "id": "+40744333444"
+                    },
+                    {
+                        "id": "+40744555666"
+                    }
+                ]
+            }
+        }
+```
+
+**Template**
+
+>[!IMPORTANT]
+>
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Result**
+
+The `json` below represents the data exported out of Adobe Experience Platform.
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
 }
 ```
 
