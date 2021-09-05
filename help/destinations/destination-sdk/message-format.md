@@ -773,7 +773,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-### Create a template that uses aggregation key to group exported profiles {#template-aggregation-key}
+### Include aggregation key in your template to group exported profiles by various criteria {#template-aggregation-key}
 
 When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can edit the message transformation template to group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces, as shown in the examples below.
 
@@ -928,7 +928,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-### Reference: Context and functions used in the transformation templates
+### Reference: Context and functions used in the transformation templates {#reference}
 
 The context provided to the template contains `input`  (the profiles / data that is exported in this call) and `destination` (data about the destination that Adobe is sending data to, valid for all profiles).
 
