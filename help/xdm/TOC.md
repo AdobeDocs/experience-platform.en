@@ -44,6 +44,7 @@ feature: Schemas
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
+    * [Reservation Details](./field-groups/event/reservation-details.md)
     * [Web Details](./field-groups/event/web-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
 * Data types {#data-types}
@@ -83,6 +84,7 @@ feature: Schemas
   * [Search](./data-types/search.md)
   * [Subscription](./data-types/subscription.md)
   * [Telecom Subscription](./data-types/telecom-subscription.md)
+  * [Transaction](./data-types/transaction.md)
   * [Web information](./data-types/web-information.md)
   * [Web interaction](./data-types/web-interaction.md)
   * [Web page details](./data-types/webpage-details.md)

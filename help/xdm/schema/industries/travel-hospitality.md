@@ -26,3 +26,13 @@ Use the following legend to interpret this ERD:
 >[!NOTE]
 >
 >The Experience Event entity includes an "_ID" field, which represents the unique identifier (`_id`) attribute provided by the XDM ExperienceEvent class. See the reference document on [XDM ExperienceEvent](../../classes/experienceevent.md) for more details on what is expected for this value.
+
+## [!UICONTROL Travel and hospitality] use cases
+
+The following table outlines the recommended classes and schema field groups for several common use cases for the travel and hospitality industry.
+
+| Use case | Recommended classes and field groups |
+| --- | --- |
+| Cross-sell dining and other resident attractions to in-market guests and guests with upcoming hotel reservations. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Reservation Details](../../field-groups/event/reservation-details.md)</li><li>[Web Details](../../field-groups/event/web-details.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
+
+{style="table-layout:auto"}
