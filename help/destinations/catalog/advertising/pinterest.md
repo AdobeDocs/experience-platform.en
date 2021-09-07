@@ -23,13 +23,13 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 The Pinterest Customer List destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow, please map the desired identities to the target field "pinterest_audience". Identities are distinguished and resolved upon data ingestion into Pinterest.
+In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow, map the desired identities to the target field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.
 
 |Target Identity|Description|Considerations|
 |---|---|---|
-|GAID|Google Advertising ID|Select the GAID target identity when your source identity is a GAID namespace.|
-|IDFA|Apple ID for Advertisers|Select the IDFA target identity when your source identity is an IDFA namespace.|
-|EMAIL|Email addresses hashed with the SHA256 algorithm|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform.|
+|GAID|Google Advertising ID|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
+|IDFA|Apple ID for Advertisers|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
+|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
 
 {style="table-layout:auto"}
 
