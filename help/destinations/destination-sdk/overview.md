@@ -11,7 +11,7 @@ Adobe Experience Platform Destination SDK is a suite of configuration APIs that 
 
 The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog.
 
-![Destinations overview for partners](./assets/destinations-overview.gif)
+![Destinations catalog overview](./assets/destinations-catalog-overview.png)
 
 ## Productized and custom integrations
 
