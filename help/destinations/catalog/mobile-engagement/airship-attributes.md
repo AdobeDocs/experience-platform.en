@@ -4,11 +4,7 @@ title: Airship Attributes connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Attributes for targeting within Airship.
 exl-id: bfc1b52f-2d68-40d6-9052-c2ee1e877961
 ---
-# (Beta) [!DNL Airship Attributes] connection {#airship-attributes-destination}
-
->[!IMPORTANT]
->
->The [!DNL Airship Attributes] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
+# [!DNL Airship Attributes] connection {#airship-attributes-destination}
 
 ## Overview {#overview}
 
