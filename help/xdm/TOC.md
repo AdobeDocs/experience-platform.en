@@ -44,6 +44,7 @@ feature: Schemas
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
+    * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)
     * [Web Details](./field-groups/event/web-details.md)
   * [Field group name updates](./field-groups/name-updates.md)
