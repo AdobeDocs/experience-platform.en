@@ -4,6 +4,8 @@ title: Real-time CDP B2B Edition Account Overview
 seo-title: Real-time Customer Data Platform Business to Business Edition Account overview
 description: Overview of Real-time Customer Data Platform Business to Business Edition Account
 seo-description: Overview of Real-time Customer Data Platform Business to Business Edition Account
+hide: yes
+hidefromtoc: yes
 ---
 # Real-time Customer Data Platform Business to Business Account overview
 
