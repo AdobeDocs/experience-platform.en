@@ -1,6 +1,7 @@
 ---
 title: Rule components endpoint
 description: Learn how to make calls to the /rule_components endpoint in the Reactor API.
+exl-id: 8a878a89-7f41-45fc-88f3-17f0f743e29c
 ---
 # Rule components endpoint
 

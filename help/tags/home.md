@@ -1,6 +1,7 @@
 ---
 title: Tags Overview
 description: Tags in Adobe Experience Platform are the next generation of tag management capabilities from Adobe. Tags give customers a simple way to deploy and manage all of the analytics, marketing, and advertising tags necessary to power relevant customer experiences.
+exl-id: 23d882a5-1ddd-404b-a7e9-3000f1804971
 ---
 # Tags overview
 

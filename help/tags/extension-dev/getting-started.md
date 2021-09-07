@@ -1,6 +1,7 @@
 ---
 title: Getting Started with Extension Development
 description: Get started with developing your own tag extensions in Adobe Experience Platform.
+exl-id: 3925b928-0180-4a4f-aaa6-42f342089560
 ---
 # Getting started with extension development
 

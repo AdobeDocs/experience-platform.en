@@ -1,6 +1,7 @@
 ---
 title: Companies endpoint
 description: Learn how to make calls to the /companies endpoint in the Reactor API.
+exl-id: ee435358-ed34-4e0c-93af-796133fb11fc
 ---
 # Companies endpoint
 

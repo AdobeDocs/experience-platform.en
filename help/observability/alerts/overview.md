@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics;date range
 title: Alerts Overview
 description: Learn about alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
+exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 ---
-
 # Alerts overview
 
 Adobe Experience Platform allows you to subscribe to event-based alerts regarding Adobe Experience Platform activities. Alerts reduce or eliminate the need to poll the [[!DNL Observability Insights] API](../api/overview.md) in order to check if a job has completed, if a certain milestone within a workflow has been reached, or if any errors have occurred.

@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Analytics Product String Extension
 description: The latest release notes for the Adobe Analytics Product String tag extension in Adobe Experience Platform.
+exl-id: 3ddc3e6f-412c-42d5-8cbf-25273c1794d5
 ---
 # Adobe Analytics Product String extension release notes
 
