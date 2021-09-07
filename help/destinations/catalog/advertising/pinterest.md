@@ -15,8 +15,8 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 ## Prerequisites {#prerequisites}
 
-* The user would need to authenticate with a Pinterest account which has access to the advertiser account they want to add an audience to. Details on sharing advertiser accounts can be found here: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. Specifically, the user would need the "audience" access levels.
-* Details on customer list identity formats can be found here: https://help.pinterest.com/en/business/article/audience-targeting. 
+* The user would need to authenticate with a Pinterest account which has access to the advertiser account they want to add an audience to. Details on sharing advertiser accounts can be found [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifically, the user would need the "audience" access levels.
+* Details on customer list identity formats can be found [here](https://help.pinterest.com/en/business/article/audience-targeting). 
 
 
 ## Supported identities {#supported-identities}
@@ -70,4 +70,4 @@ All [!DNL Adobe Experience Platform] destinations are compliant with data usage 
 
 ## Additional resources {#additional-resources}
 
-Please refer to the the Pinterest Help Center page (https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
+Please refer to the the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.
