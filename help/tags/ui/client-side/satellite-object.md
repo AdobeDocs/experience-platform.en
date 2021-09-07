@@ -209,24 +209,39 @@ The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@a
 
 The ISO 8601 date when the current library was built.
 
-### `environment`
-
-The environment for which this library was built. The possible values are:
-
-* development
-* staging
-* production
-
 This example demonstrates the object values:
 
 ```javascript
 {
   turbineVersion: "14.0.0",
   turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  buildDate: "2016-03-30T16:27:10Z"
 }
 ```
+
+## `environment`
+
+This object contains information about the environment that the current tag runtime library is deployed on.
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+The object contains the following properties:
+
+```javascript
+{
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
+  stage: "development"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `id` | The id of the environment. |
+| `stage` | The environment for which this library was built. The possible values are `development`, `staging`, and `production`. |
 
 ## `notify`
 
