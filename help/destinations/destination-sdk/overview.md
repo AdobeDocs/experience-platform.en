@@ -13,7 +13,7 @@ The Destination SDK documentation provides instructions for you to use the Adobe
 
 ![Destinations catalog overview](./assets/destinations-catalog-overview.png)
 
-## Productized and custom integrations
+## Productized and custom integrations {#productized-custom-integrations}
 
 As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](/help/destinations/catalog/overview.md):
 1. Standardize integration configurations across customers with pre-configured parameters and simplify the setup experience for customers.
@@ -71,7 +71,7 @@ The process to configure your destination in Experience Platform is outlined bel
 3. [Build your integration](./configure-destination-instructions.md) following the product documentation.
 4. [Test your integration](./test-destination.md) following the product documentation.
 5. [Submit your integration](./destination-publish-api.md) for Adobe’s review (the standard response time is 5 business days).
-6. Use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
+6. If you are an ISV or SI creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
 7. Once approved by Adobe, your integration will show up in the [Experience Platform catalog](/help/destinations/catalog/overview.md).
 8. If you’d like to update your integration, follow the same process.
 

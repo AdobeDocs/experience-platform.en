@@ -17,4 +17,4 @@ To use Destination SDK, make sure that you meet the technical and partnership pr
 
 ## Partnership prerequisites
 
-You must be a member of the Adobe Partner Exchange program. Contact [Adobe Exchange](https://partners.adobe.com/exchangeprogram/creativecloud.html) if you are interested in using Destination SDK.
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) looking to use Destination SDK, read the partnership requirements for ISVs and SIs in the [getting access section](./overview.md#get-access).
