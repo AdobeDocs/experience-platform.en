@@ -9,7 +9,7 @@ exl-id: 8483f8a1-efe8-4ebb-b074-e0577e5a81a4
 ---
 # Create a data usage policy in the API
 
-The [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
+The [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to create and manage data usage policies to determine what marketing actions can be taken against data that contains certain data usage labels.
 
 This document provides a step-by-step tutorial for creating a policy using the [!DNL Policy Service] API. For a more comprehensive guide to the different operations available in the API, see the [Policy Service developer guide](../api/getting-started.md).
 

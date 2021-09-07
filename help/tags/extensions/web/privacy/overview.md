@@ -1,6 +1,7 @@
 ---
 title: Adobe Privacy Extension Overview
 description: Learn about the Adobe Privacy tag extension in Adobe Experience Platform.
+exl-id: 8401861e-93ad-48eb-8796-b26ed8963c32
 ---
 # Adobe Privacy extension overview
 

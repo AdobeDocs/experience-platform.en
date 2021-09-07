@@ -2,6 +2,7 @@
 title: Adobe Extensions
 description: Documentation for tag extensions in Adobe Experience Platform.
 seo-description: Documentation for the tag extensions provided by Adobe solutions.
+exl-id: 2433a64f-66f2-4c21-bdec-c6b8e1658b2b
 ---
 # Adobe extensions
 

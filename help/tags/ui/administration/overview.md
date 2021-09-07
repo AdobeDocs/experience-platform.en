@@ -1,6 +1,7 @@
 ---
 title: Administration Overview
 description: Learn key information concerning administrators in Adobe Experience Platform Launch.
+exl-id: 56ae72fb-5599-4794-a7e3-71ea9a40f9e4
 ---
 # Administration overview
 

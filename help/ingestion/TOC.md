@@ -35,5 +35,5 @@ feature: Data Ingestion
   - [Streaming ingestion validation](quality/streaming-validation.md)
   - [Data ingestion notifications](quality/subscribe-events.md)
 - [Source connectors](source-connectors.md)
-- [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/data-ingestion/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

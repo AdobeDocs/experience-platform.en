@@ -1,6 +1,7 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs (Beta)
 
@@ -52,7 +53,7 @@ Select **[!UICONTROL Download log]** to export an audit log.
 
 ## Managing audit logs in the API
 
-All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/audit-query.yaml) for more information.
+All actions that you can perform in the UI can also be done using API calls. See the [API reference document](https://www.adobe.io/experience-platform-apis/references/audit-query/) for more information.
 
 ## Managing audit logs for Adobe Admin Console
 

@@ -112,6 +112,14 @@ Please note that a `SNAPSHOT` clause works with a table or table alias but not o
 
 Additionally, you can use `HEAD` and `TAIL` as special offset values for snapshot clauses. Using `HEAD` refers to an offset before the first snapshot, while `TAIL` refers to an offset after the last snapshot.
 
+>[!NOTE]
+>
+>If you are querying between two snapshot IDs and the start snapshot is expired, the following two scenarios can occur, depending if the optional fallback behavior flag (`resolve_fallback_snapshot_on_failure`) is set:
+>
+>- If the optional fallback behavior flag is set, Query Service will choose the earliest available snapshot, set it as the start snapshot, and return the data between the earliest available snapshot and the specified end snapshot. This data is **inclusive** of the earliest available snapshot.
+>
+>- If the optional fallback behavior flag is not set, an error will be returned.
+
 ### WHERE clause
 
 By default, matches produced by a `WHERE` clause on a `SELECT` query are case-sensitive. If you want matches to be case-insensitive, you can use the keyword `ILIKE` instead of `LIKE`.
