@@ -12,7 +12,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Getting started {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
-* [B2B Edition]{#b2b}
+* B2B Edition{#b2b}
   * [Real-time CDP B2B overview](b2b/overview.md)
   * Accounts {#account}
     * [Account overview](b2b/account/account-overview.md)
