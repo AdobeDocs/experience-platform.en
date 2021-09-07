@@ -52,7 +52,7 @@ feature: Destinations
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
         * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
-        * [Pinterest Customer List connection](./catalog/advertising/pinterest-customer-list.md)
+        * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
         * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)

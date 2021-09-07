@@ -11,7 +11,8 @@ Create audiences from your customer lists, people who've visited your site or pe
 
 >[!IMPORTANT]
 >
->This destination was built by the Pinterest team. For any inquiries or update requests, please contact them directly at https://help.pinterest.com/en/contact .
+>This destination was built by the Pinterest team. For any inquiries or update requests, please contact them directly at https://help.pinterest.com/en/contact.
+
 ## Prerequisites {#prerequisites}
 
 * The user would need to authenticate with a Pinterest account which has access to the advertiser account they want to add an audience to. Details on sharing advertiser accounts can be found here: https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts. Specifically, the user would need the "audience" access levels.
