@@ -102,9 +102,9 @@ feature: Destinations
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
-        * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
-        * [(Beta) Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
-        * [(Beta) Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
+        * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+        * [Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
