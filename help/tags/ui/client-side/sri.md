@@ -1,6 +1,7 @@
 ---
 title: Subresource Integrity (SRI) Support
 description: Learn how subresource integrity (SRI) is supported in Adobe Experience Platform.
+exl-id: bd8bc3f7-9a85-44e2-ae07-f0664179b51c
 ---
 # Subresource integrity (SRI) support
 

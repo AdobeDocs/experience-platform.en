@@ -11,7 +11,7 @@ exl-id: 00455a61-c8c1-42f4-a962-fc16f7370cbd
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Microsoft SQL Server] using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

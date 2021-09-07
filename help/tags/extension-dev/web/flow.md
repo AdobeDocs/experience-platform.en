@@ -1,6 +1,7 @@
 ---
 title: Web Extension Flow
 description: Learn how web extension components interact with each other at runtime in Adobe Experience Platform.
+exl-id: 90a0c64c-d240-4e2c-876b-22f05d6f3f82
 ---
 # Web extension flow
 

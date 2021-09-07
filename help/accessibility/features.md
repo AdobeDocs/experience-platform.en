@@ -4,8 +4,8 @@ title: General Accessibility Features in Platform
 topic-legacy: guide
 type: Documentation
 description: Learn more about the general accessibility features supported by Adobe Experience Platform, including keyboard navigation, color palettes and contrast, and assistive technology support.
+exl-id: 4b7e2f2b-af51-4376-8a63-16c921cc7135
 ---
-
 # Accessibility features in Experience Platform
 
 Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals, including users working with assistive devices such as speech recognition software and screen readers. This document outlines the general accessibility features supported by Platform, including keyboard navigation, semantic structure, sufficient contrast between foreground elements and background elements, and support for assistive technologies.

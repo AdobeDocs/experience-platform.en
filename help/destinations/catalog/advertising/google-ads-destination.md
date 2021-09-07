@@ -39,7 +39,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 
 **Segment Export** - you are exporting all members of a segment (audience) to the Google destination.
 
-## Prerequisites
+## Prerequisites {#prerequisites}
 
 ### Existing [!DNL Google Ads] account
 
@@ -47,7 +47,7 @@ Note the following details that are specific to [!DNL Google Ads] destinations:
 >
 > [!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. In order to perform the allow list steps in the next section, you must have an existing integration with [!DNL Google Ads]. As a result, the recommended approach for using [!DNL Google Ads] is setting up a [!DNL Google Customer Match] integration. For more details on creating a [!DNL Google Customer Match] integration, please read the tutorial on creating a [[!DNL Google Customer Match]](./google-customer-match.md) connection.
 
-### Allow list
+### Allow-listing {#allow-listing}
 
 >[!NOTE]
 >
@@ -77,7 +77,20 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
-
 ## Exported data 
 
 To verify if data has been exported successfully to the [!DNL Google Ads] destination, check your [!DNL Google Ads] account. If activation was successful, audiences are populated in your account.
+
+## Troubleshooting {#troubleshooting}
+
+### 400 Bad Request error message {#bad-request}
+
+When configuring this destination, you may receive the following error:
+
+`{"message":"Google Error: AuthorizationError.USER_PERMISSION_DENIED","code":"400 BAD_REQUEST"}`
+
+This error occurs either when customer accounts do not comply with the [prerequisites](#prerequisites) or when customers try to configure the destination without an existing [!DNL Google Ads] account.
+
+[!DNL Google] has deprecated new [!DNL Google Ads] cookie integrations with third-party vendors. To perform the [allow-list](#allow-listing) steps, you must have an existing integration with [!DNL Google Ads].
+
+The recommended approach for using [!DNL Google Ads] is setting up a [[!DNL Google Customer Match]](google-customer-match.md) integration.

@@ -1,6 +1,7 @@
 ---
 title: Search endpoint
 description: Learn how to make calls to the /search endpoint in the Reactor API.
+exl-id: 14eb8d8a-3b42-42f3-be87-f39e16d616f4
 ---
 # Search endpoint
 
@@ -34,7 +35,7 @@ For more in-depth information on how to use this functionality, refer to the [se
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Perform a search {#perform}
 

@@ -99,6 +99,8 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Destinations] | [!UICONTROL Activate Destinations] | Ability to activate data to active destinations that have been created. This permission requires either “View Destinations” or “Manage [!UICONTROL Destinations”] to be granted to the user who will activate destinations. |
 | [!DNL Data Ingestion] | [!UICONTROL Manage Sources] | Access to read, create, edit, and disable sources. |
 | [!DNL Data Ingestion] | [!UICONTROL View Sources] | Read-only access to available sources in the **[!UICONTROL Catalog]** tab and authenticated sources in the **[!UICONTROL Browse]** tab. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share Connections] | Access to create, accept, and decline partner handshakes to connect two IMS Organizations and enable [!DNL Segment Match] flows. |
+| [!DNL Data Ingestion] | [!DNL Manage Audience Share] | Access to read, create, edit, and publish [!DNL Segment Match] feeds with active partners. |
 | [!DNL Data Science Workspace] | [!UICONTROL Manage Data Science Workspace] | Access to read, create, edit, and delete in [!DNL Data Science Workspace]. |
 | [!DNL Data Governance] | [!UICONTROL Apply Data Usage Labels] | Access to read, create, and delete usage labels. |
 | [!DNL Data Governance] | [!UICONTROL Manage Data Usage Policies] | Access to read, create, edit, and delete data usage policies. |
@@ -107,6 +109,7 @@ The following table outlines the available permissions for [!DNL Experience Plat
 | [!DNL Dashboards] | [!UICONTROL View License Usage Dashboard] | Read-only access to view the license usage dashboard. |
 | [!DNL Dashboards] | [!UICONTROL Manage Standard Dashboards] | Add custom attributes that are not yet in the data warehouse. |
 | [!DNL Query Service] | [!UICONTROL Manage Queries] | Access to read, create, edit, and delete structured SQL queries for Platform data. |
+| [!DNL Query Service] | [!UICONTROL Manage Query Service Integration] | Access to create, update, and delete non-expiring credentials for Query Service access. |
 
 ## Next steps
 

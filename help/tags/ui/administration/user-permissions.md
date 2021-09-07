@@ -1,6 +1,7 @@
 ---
 title: User Permissions for Tags
 description: Learn about the different types of permissions available for tags and some basic implementation strategies for different business use cases.
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 ---
 # User permissions for tags
 
