@@ -14,6 +14,6 @@ description: This document provides an overview of the Transaction Experience Da
 | `transactionAmount` | [[!UICONTROL Currency]](./currency.md) | Describes the amount of currency exchanged as part of the transaction. |
 | `transactionDate` | [!UICONTROL DateTime] | A timestamp of when the transaction occurred. |
 | `transactionId` | [!UICONTROL String] | A unique identifier for the transaction. |
-| `transactionType` | [!UICONTROL String] | The type of transaction utilized by the visitor. |
+| `transactionType` | [!UICONTROL String] | The type of transaction used by the visitor. |
 
 {style="table-layout:auto"}

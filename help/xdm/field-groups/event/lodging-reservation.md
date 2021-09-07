@@ -8,7 +8,7 @@ description: This document provides an overview of the Lodging Reservation schem
 
 [!UICONTROL Lodging Reservation] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) used to capture information regarding a lodging reservation.
 
-The field group is an extension of the [!UICONTROL Reservation Details] field group, and contains all of the same fields under a single object-type fields, `reservations`. In addition to these generic fields, [!UICONTROL Lodging Reservation] also includes `lodgingReservations` array. This array of objects is used to describe a one or more reservations with properties unique to lodging.
+The field group is an extension of the [!UICONTROL Reservation Details] field group, and contains all of the same fields under a single object-type field, `reservations`. In addition to these generic fields, [!UICONTROL Lodging Reservation] also includes `lodgingReservations` array. This array of objects is used to describe one or more reservations with properties unique to lodging.
 
 >[!NOTE]
 >
