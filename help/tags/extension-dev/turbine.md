@@ -23,8 +23,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 {
     turbineVersion: "14.0.0",
     turbineBuildDate: "2016-07-01T18:10:34Z",
-    buildDate: "2016-03-30T16:27:10Z",
-    environment: "development"
+    buildDate: "2016-03-30T16:27:10Z"
 }
 ```
 
@@ -33,7 +32,25 @@ console.log(turbine.buildInfo.turbineBuildDate);
 | `turbineVersion` | The [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) version used inside the current library. |
 |`turbineBuildDate` | The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@adobe/reactor-turbine) used inside the container was built. |
 |`buildDate` | The ISO 8601 date when the current library was built. |
-|`environment` | The environment for which this library was built. Accepted values are `development`, `staging`, and `production`. |
+
+
+## [!DNL environment]
+
+```js
+console.log(turbine.environment.stage);
+```
+
+`turbine.environment` is an object containing information about the environment that the library is deployed on.
+
+```js
+{
+    stage: "development"
+}
+```
+
+| Property | Description |
+| --- | --- |
+|`stage` | The environment for which this library was built. Accepted values are `development`, `staging`, and `production`. |
 
 
 ## [!DNL debugEnabled]
