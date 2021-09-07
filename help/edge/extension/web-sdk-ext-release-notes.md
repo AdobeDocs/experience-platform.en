@@ -9,7 +9,7 @@ This document covers the release notes for the Adobe Experience Platform Web SDK
 
 ## Version 2.7.2 - September 7, 2021
 
-* No longer trigger deprecation warning for `turbine.buildInfo.environment.`
+* There's no longer a trigger deprecation warning for `turbine.buildInfo.environment.`
 
 ## Version 2.7.1 - September 7, 2021
 
