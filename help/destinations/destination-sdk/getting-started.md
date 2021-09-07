@@ -1,12 +1,12 @@
 ---
-description: This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
+description: This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 title: Getting started with Destination SDK
 ---
 # Getting started 
 
 ## Overview {#overview}
 
-This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name and ID, and how to be added to an allowed partner list.
+This page describes how to authenticate and start using Adobe Experience Platform Destination SDK. It includes instructions on how to obtain Adobe I/O authentication credentials, a sandbox name, and the destination authoring access control permission.
 
 ## Terminology {#terminology}
 
@@ -47,9 +47,17 @@ All resources in Experience Platform are isolated to specific virtual sandboxes.
 
 The Adobe Exchange team provides you with your sandbox name, which you are required to use in calls to the Destination SDK API endpoints.
 
-## Allowlisting {#allowlisting}
+## Role-based access control (RBAC) {#rbac}
 
-To use the API endpoints described in the [reference documentation](./configuration-options.md), you must be added to a list of allowed partners. Work with the Adobe Exchange team to be added to the allow list.
+To use the Destination SDK API endpoints described in the [reference documentation](./configuration-options.md), you need the **[!UICONTROL Destination Authoring]** access control permission. Work with the Adobe Exchange team to get this permission assigned to you in [Adobe Admin Console](https://adminconsole.adobe.com/). 
+
+![Destination Authoring permission](./assets/destination-authoring-permission.png)
+
+For more information, read the following Experience Platform Access Control documents:
+
+* [Manage permissions for a product profile](/help/access-control/ui/permissions.md)
+* [Available permissions for Experience Platform](/help/access-control/home.md#permissions)
+* [Adobe Admin Console documentation](https://helpx.adobe.com/enterprise/using/admin-console.html)
 
 ## Additional considerations {#additional-considerations}
 
@@ -58,4 +66,4 @@ To use the API endpoints described in the [reference documentation](./configurat
 
 ## Next steps {#next-steps}
 
-By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name and ID, and were added to an allowlist. Next, you can set up a destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.
+By following the steps in this article, you obtained authentication credentials to Adobe I/O, a sandbox name, and the destination authoring access control permission. Next, you can set up a destination using Destination SDK. Read [Use Destination SDK to configure your destination](./configure-destination-instructions.md) for next steps.

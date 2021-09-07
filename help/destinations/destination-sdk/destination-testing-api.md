@@ -21,7 +21,7 @@ You can use the [Sample profile generation API](./sample-profile-generation-api.
 
 ## Getting started with destination testing API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Test your destination configuration without adding profiles to the call {#test-without-adding-profiles}
 
