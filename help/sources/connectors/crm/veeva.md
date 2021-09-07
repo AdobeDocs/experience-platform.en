@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Veeva CRM Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect Veeva CRM to Adobe Experience Platform using APIs or the user interface.
+exl-id: fcd7af48-e66a-4313-bbfe-73301d335c67
 ---
 # (Beta) [!DNL Veeva CRM]
 

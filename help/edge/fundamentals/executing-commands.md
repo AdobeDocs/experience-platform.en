@@ -64,7 +64,7 @@ All promises returned from commands are resolved with a `result` object. The res
 ```js
 alloy("getLibraryInfo")
   .then(function(result) {
-    console.log(results.libraryInfo.version);
+    console.log(result.libraryInfo.version);
   });
 ```
 

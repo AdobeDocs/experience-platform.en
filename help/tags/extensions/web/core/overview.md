@@ -1,6 +1,7 @@
 ---
 title: Core Extension Overview
 description: Learn about the Core tag extension in Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 ---
 # Core extension overview
 

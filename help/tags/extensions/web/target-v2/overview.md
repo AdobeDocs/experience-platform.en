@@ -1,6 +1,7 @@
 ---
 title: Adobe Target v2 Extension Overview
 description: Learn about the Adobe Target v2 tag extension in Adobe Experience Platform.
+exl-id: 8f491d67-86da-4e27-92bf-909cd6854be1
 ---
 # Adobe Target v2 extension overview
 

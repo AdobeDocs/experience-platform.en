@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Common Analytics Plugins Extension
 description: The latest release notes for the Common Analytics Plugins tag extension in Adobe Experience Platform.
+exl-id: 5ea4b709-4e21-4f5d-be99-e72e4889ed99
 ---
 # Common Analytics Plugins release notes
 

@@ -3,8 +3,8 @@ solution: Experience Platform
 title: Explore and Process Raw Datasets Powering Experience Platform Dashboards
 type: Documentation
 description: Learn how to use Query Service to explore and process raw datasets powering profile, segment, and destination dashboards in Experience Platform.
+exl-id: 0087dcab-d5fe-4a24-85f6-587e9ae74fb8
 ---
-
 # Explore, verify, and process dashboard datasets using Query Service
 
 Adobe Experience Platform provides important information about your organization's profile, segment, and destinations data through dashboards available within the Experience Platform UI. You can then use Adobe Experience Platform Query Service to explore, verify, and process the raw datasets powering these dashboards in the data lake.

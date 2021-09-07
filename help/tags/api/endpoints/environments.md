@@ -1,6 +1,7 @@
 ---
 title: Environments endpoint
 description: Learn how to make calls to the /environments endpoint in the Reactor API.
+exl-id: 4c22f799-8338-4cf0-980a-3900d725ab5d
 ---
 # Environments endpoint
 

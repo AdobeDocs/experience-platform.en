@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Namespacing in Experience Data Model (XDM)
 topic-legacy: overviews
 description: Learn how namespacing in Experience Data Model (XDM) allows you to extend your schemas and prevent field collisions as different schema components are brought together.
+exl-id: b351dfaf-5219-4750-a7a9-cf4689a5b736
 ---
-
 # Namespacing in Experience Data Model (XDM)
 
 All fields in Experience Data Model (XDM) schemas have an associated namespace. These namespaces allow you to extend your schemas and prevent field collisions as different schema components are brought together. This document provides an overview of namespaces in
