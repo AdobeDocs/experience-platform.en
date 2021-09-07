@@ -1,6 +1,7 @@
 ---
 title: Hosts endpoint
 description: Learn how to make calls to the /hosts endpoint in the Reactor API.
+exl-id: 9d0d2a65-49e9-429c-a665-754b59a11cf1
 ---
 # Hosts endpoint
 

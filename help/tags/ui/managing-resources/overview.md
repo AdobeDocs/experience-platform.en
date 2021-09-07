@@ -1,6 +1,7 @@
 ---
 title: Manage Resources
 description: Learn how to manage various resources in Adobe Experience Platform, including extensions, data elements, and rules.
+exl-id: 3ec0078e-76a6-42ac-94cf-df9572b37b52
 ---
 # Manage resources
 

@@ -1,6 +1,7 @@
 ---
 title: Grant User Access
 description: Set up your team members' tag user accounts and permissions in Adobe Experience Platform.
+exl-id: c7235e50-13b3-4487-b171-873063875621
 ---
 # Grant user access
 

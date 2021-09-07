@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Analytics Extension
 description: The latest release notes for the Adobe Analytics tag extension in Adobe Experience Platform.
+exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 ---
 # Adobe Analytics extension release notes
 

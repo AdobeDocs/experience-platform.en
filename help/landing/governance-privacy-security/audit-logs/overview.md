@@ -1,6 +1,7 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs (Beta)
 

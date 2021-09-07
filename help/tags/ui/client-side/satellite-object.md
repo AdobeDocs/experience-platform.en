@@ -1,6 +1,7 @@
 ---
 title: Satellite Object Reference
 description: Learn about the client-side _satellite object and the various functions you can perform with it in tags.
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 ---
 # Satellite object reference
 
@@ -208,7 +209,31 @@ The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@a
 
 The ISO 8601 date when the current library was built.
 
-### `environment`
+This example demonstrates the object values:
+
+```javascript
+{
+  turbineVersion: "14.0.0",
+  turbineBuildDate: "2016-07-01T18:10:34Z",
+  buildDate: "2016-03-30T16:27:10Z"
+}
+```
+
+## `environment`
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+This object contains information about the environment that the current tag runtime library is deployed on. The object contains the following properties:
+
+### `id`
+
+The id of the environment.
+
+### `stage`
 
 The environment for which this library was built. The possible values are:
 
@@ -220,10 +245,8 @@ This example demonstrates the object values:
 
 ```javascript
 {
-  turbineVersion: "14.0.0",
-  turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  id: "EN123456...",
+  stage: "development"
 }
 ```
 

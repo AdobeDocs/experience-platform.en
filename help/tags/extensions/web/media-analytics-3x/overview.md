@@ -1,6 +1,7 @@
 ---
 title: Adobe Media Analytics (3.x SDK) for Audio and Video Extension Overview
 description: Learn about the Adobe Media Analytics (3.x SDK) for Audio and Video tag extension in Adobe Experience Platform.
+exl-id: 7289d57d-7e7f-4832-9469-3b5a62183a32
 ---
 # Adobe Media Analytics (3.x SDK) for Audio and Video extension overview
 

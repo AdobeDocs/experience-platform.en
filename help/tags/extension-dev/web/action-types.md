@@ -1,6 +1,7 @@
 ---
 title: Action Types for Web Extensions
 description: Learn how to define an action-type library module for a tag extension in a web property.
+exl-id: d4539132-a72c-40b0-84b6-50cbe3785d2d
 ---
 # Action types for web extensions
 

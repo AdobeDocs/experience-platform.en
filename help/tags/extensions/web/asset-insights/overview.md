@@ -1,6 +1,7 @@
 ---
 title: AEM Asset Insights Extension Overview
 description: Learn about the AEM Asset Insights tag extension in Adobe Experience Platform.
+exl-id: 7d3edd42-09fe-4e40-93dc-1edd2fdbb121
 ---
 # AEM Asset Insights extension overview
 

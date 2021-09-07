@@ -1,6 +1,7 @@
 ---
 title: Error Handling
 description: Learn how error are handled in the Reactor API.
+exl-id: 336c0ced-1067-4519-94e1-85aea700fce6
 ---
 # Error handling
 

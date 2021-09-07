@@ -97,34 +97,7 @@ alloy("sendEvent", {
 
 ### Setting `eventType` {#event-types}
 
-In an XDM experience event, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Below is a list of all the predefined event types provided by XDM. [Read more in the XDM public repo](https://github.com/adobe/xdm/blob/master/docs/reference/behaviors/time-series.schema.md#xdmeventtype-known-values).
-
-
-| **Event Type:**               | **Definition:** |
-| ---------------------------------- | ------------ |
-| advertising.completes           | Indicates if a timed media asset was watched to completion - this does not necessarily mean the viewer watched the whole video; viewer could have skipped ahead        |
-| advertising.timePlayed           | Describes the amount of time spent by a user on a specific timed media asset|
-| advertising.federated            | Indicates if an experience event was created through data federation (data sharing between customers |
-| advertising.clicks | Click(s) actions on an advertisement |
-| advertising.conversions | A customer pre-defined action(s) which triggers an event for performance evaluation |
-| advertising.firstQuartiles | A digital video ad has played through 25% of its duration at normal speed |
-| advertising.impressions | Impression(s) of an advertisement to an end-user with the potential of being viewed |
-| advertising.midpoints | A digital video ad has played through 50% of its duration at normal speed | 
-| advertising.starts | A digital video ad has started playing |
-| advertising.thirdQuartiles | A digital video ad has played through 75% of its duration at normal speed |
-| web.webpagedetails.pageViews | View(s) of a webpage has occurred |
-| web.webinteraction.linkClicks | Click of a web-link has occurred | 
-| commerce.checkouts | An action during a checkout process of a product list, there can be more than one checkout event if there are multiple steps in a checkout process. If there are multiple steps the event time information and referenced page or experience is used to identify the step individual events represent in order | 
-| commerce.productListAdds | Addition of a product to the product list. Example a product is added to a shopping cart |
-| commerce.productListOpens | Initializations of a new product list. Example a shopping cart is created | 
-| commerce.productListRemovals | Removal(s) of a product entry from a product list. Example a product is removed from a shopping cart |
-| commerce.productListReopens | A product list that was no longer accessible(abandoned) has been re-activated by the user. Example via a re-marketing activity |
-| commerce.productListViews | View(s) of a product-list has occurred |
-| commerce.productViews | View(s) of a product have occurred | 
-| commerce.purchases | An order has been accepted. Purchase is the only required action in a commerce conversion. Purchase must have a product list referenced | 
-| commerce.saveForLaters | Product list is saved for future use. Example a product wish list |
-| delivery.feedback | Feedback events for a delivery. Example feedback events for an email delivery |
-
+In XDM ExperienceEvent schemas, there is an optional `eventType` field. This holds the primary event type for the record. Setting an event type can help you differentiate between the different events you will be sending in. XDM provides several predefined event types that you can use or you always create your own custom event types for your use cases. Refer to the XDM documentation for a [list of all the predefined event types](../../xdm/classes/experienceevent.md#eventType).
 
 These event types will be shown in a dropdown if using the tag extension or you can always pass them in without tags. They can be passed in as part of the `xdm` option.
 

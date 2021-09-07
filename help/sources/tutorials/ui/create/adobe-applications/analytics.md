@@ -9,7 +9,7 @@ exl-id: 5ddbaf63-feaa-44f5-b2f2-2d5ae507f423
 ---
 # Create an Adobe Analytics source connection in the UI
 
-This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring [!DNL Analytics] report suite data into Adobe Experience Platform.
+This tutorial provides steps for creating an Adobe Analytics source connection in the UI to bring [!DNL Analytics] Report Suite data into Adobe Experience Platform.
 
 ## Getting started
 
@@ -24,7 +24,7 @@ This tutorial requires a working understanding of the following components of Ad
 It is important to understand the following key terms used throughout this document:
 
 * **Standard attribute**: Standard attributes are any attribute that is pre-defined by Adobe. They contain the same meaning for all customers and are available in the [!DNL Analytics] source data and [!DNL Analytics] schema field groups.
-* **Custom attribute**: Custom attributes are any attribute in the custom dimension hierarchy in [!DNL Analytics]. They are also among the Adobe-defined schemas, but can be interpreted differently by different customers. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
+* **Custom attribute**: Custom attributes are any attribute in the custom variable hierarchy in [!DNL Analytics]. Custom attributes are used within an Adobe Analytics implementation to capture specific information into a Report Suite, and they can differ in their use from Report Suite to Report Suite. Custom attributes include eVars, props, and lists. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on eVars.
 * **Any attribute in Custom field groups**: Attributes that originate from field groups created by customers are all user-defined and are considered to be neither standard nor custom attributes.
 * **Friendly names**: Friendly names are human-provided labels for custom variables in an [!DNL Analytics] implementation. See the following [[!DNL Analytics] documentation on conversion variables](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/conversion-variables/conversion-var-admin.html?lang=en) for more information on friendly names.
 
@@ -40,15 +40,15 @@ Under the **[!UICONTROL Adobe applications]** category, select **[!UICONTROL Ado
 
 ### Select data
 
-The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Report suite]** to start creating a source connection for Analytics report suite data, and then select the report suite you would like to ingest. Select **[!UICONTROL Next]** to proceed.
+The **[!UICONTROL Analytics source add data]** step appears. Select **[!UICONTROL Report Suite]** to start creating a source connection for Analytics Report Suite data, and then select the Report Suite you would like to ingest. Report Suites that are not selectable have already been ingested, either in this sandbox or in a different sandbox. Select **[!UICONTROL Next]** to proceed.
 
 >[!NOTE]
 >
->Multiple in-bound connections to a source can be made for bringing in different data.
+>Multiple in-bound connections can be made to bring in multiple Report Suites, however only one Report Suite may be used with Real-time Customer Data Platform at a time.
 
 ![](../../../../images/tutorials/create/analytics/add-data.png)
 
-<!---Analytics report suites can be configured for one sandbox at a time. To import the same report suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
+<!---Analytics Report Suites can be configured for one sandbox at a time. To import the same Report Suite into a different sandbox, the dataset flow will have to be deleted and instantiated again via configuration for a different sandbox.--->
 
 ### Mapping
 
@@ -60,7 +60,7 @@ The [!UICONTROL Mapping] page provides an interface to map source fields to thei
 
 >[!TIP]
 >
->Only schemas that have the [!DNL Analytics] template field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your report suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
+>Only schemas that have the [!DNL Analytics] template field group are displayed in the schema selection menu. Other schemas are omitted. If there are no appropriate schemas available for your Report Suite data, then you must create a new schema. For detailed steps on creating schemas, see the guide on [creating and editing schemas in the UI](../../../../../xdm/ui/resources/schemas.md).
 
 ![select-schema](../../../../images/tutorials/create/analytics/select-schema.png)
 
@@ -68,9 +68,9 @@ The [!UICONTROL Map standard fields] section displays panels for [!UICONTROL Sta
 
 | Map standard fields | Description |
 | --- | --- |
-| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped standard attributes. Standard mappings refer to mapping sets between standard attributes in the source [!DNL Analytics] data and standard attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
-| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped standard attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
-| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and custom attributes in [!DNL Analytics] field group. Custom attributes can be mapped to other custom attributes, as well as standard attributes. |
+| [!UICONTROL Standard mappings applied] | The [!UICONTROL Standard mappings applied] panel displays the total number of mapped attributes. Standard mappings refer to mapping sets between all attributes in the source [!DNL Analytics] data and corresponding attributes in [!DNL Analytics] field group. These are pre-mapped and cannot be edited. |
+| [!UICONTROL Non matching standard mappings] | The [!UICONTROL Non matching standard mappings] panel refers to the number of mapped attributes that contain friendly name conflicts. These conflicts appear when you are re-using a schema that already has a populated set of field descriptors from a different Report Suite. You can proceed with your [!DNL Analytics] dataflow even with friendly name conflicts. |
+| [!UICONTROL Custom mappings] | The [!UICONTROL Custom mappings] panel displays the number of mapped custom attributes, including eVars, props, and lists. Custom mappings refer to mapping sets between custom attributes in the source [!DNL Analytics] data and attributes in custom field groups included in the selected schema. |
 
 ![map-standard-fields](../../../../images/tutorials/create/analytics/map-standard-fields.png)
 
@@ -86,7 +86,7 @@ Platform automatically detects your mapping sets for any friendly name conflicts
 
 ![mapping](../../../../images/tutorials/create/analytics/mapping.png)
 
-If there are friendly name conflicts in your mapping sets, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will be the same. Alternatively, you can opt to create a new schema with a blank set of descriptors.
+If there are friendly name conflicts between your source Report Suite and your selected schema, you can still continue with your [!DNL Analytics] dataflow, acknowledging that the field descriptors will not be changed. Alternatively, you can opt to create a new schema with a blank set of descriptors.
 
 Select **[!UICONTROL Next]** to proceed.
 
@@ -141,7 +141,7 @@ The **[!UICONTROL Dataflow detail]** step appears, where you must provide a name
 The [!UICONTROL Review] step appears, allowing you to review your new Analytics dataflow before it is created. Details of the connection are grouped by categories, including:
 
 * [!UICONTROL Connection]: Displays the source platform of the connection.
-* [!UICONTROL Data type]: Displays the selected report suite and its corresponding report suite ID.
+* [!UICONTROL Data type]: Displays the selected Report Suite and its corresponding Report Suite ID.
 
 ![review](../../../../images/tutorials/create/analytics/review.png)
 
@@ -175,7 +175,7 @@ To delete a dataflow, head to the [!UICONTROL Dataflows] page and then select th
 
 ## Next steps and additional resources
 
-Once the connection is created, a target schema and dataflow is automatically created to contain the incoming data. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-time Customer Profile] and Segmentation Service. See the following documents for more details:
+Once the connection is created, the dataflow is automatically created to contain the incoming data and populate a dataset with your selected schema. Furthermore, data back-filling occurs and ingests up to 13 months of historical data. When the initial ingestion completes, [!DNL Analytics] data and be used by downstream Platform services such as [!DNL Real-time Customer Profile] and Segmentation Service. See the following documents for more details:
 
 * [[!DNL Real-time Customer Profile] overview](../../../../../profile/home.md)
 * [[!DNL Segmentation Service] overview](../../../../../segmentation/home.md)
