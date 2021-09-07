@@ -4,8 +4,8 @@ title: Overview of accessibility features in Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Adobe Experience Platform is committed to providing accessible and inclusive features to all individuals.
+exl-id: 54ce6826-09ee-4716-8237-ef904a41986f
 ---
-
 # Accessibility in Adobe Experience Platform
 
 Accessibility refers to a series of features that make a software product usable, with as little effort as possible, for users with visual, auditory, cognitive, motor, or other kinds of disabilities. Adobe is an industry leader in accessibility and supports the creation of outstanding web experiences by encouraging developers to produce rich, engaging content that is accessible to all users. For more details about Adobe's commitment to accessibility, see [Adobe Accessibility](https://www.adobe.com/accessibility.html).

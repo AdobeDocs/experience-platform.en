@@ -1,6 +1,7 @@
 ---
 title: Implementing Third-Party Libraries
 description: Learn about the different methods of hosting third-party libraries within your Adobe Experience Platform tag extensions.
+exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
 ---
 # Implementing third-party libraries
 

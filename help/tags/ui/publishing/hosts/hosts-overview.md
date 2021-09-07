@@ -1,6 +1,7 @@
 ---
 title: Hosts Overview
 description: Learn about the different hosting options available in Adobe Experience Platform.
+exl-id: 7968fc64-2022-4503-a45a-82942c6dd9d3
 ---
 # Hosts overview
 

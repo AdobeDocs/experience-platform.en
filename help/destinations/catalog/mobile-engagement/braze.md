@@ -4,11 +4,7 @@ title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
-# (Beta) [!DNL Braze] connection
-
->[!IMPORTANT]
->
->The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
+# [!DNL Braze] connection
 
 ## Overview {#overview}
 

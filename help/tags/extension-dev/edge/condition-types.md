@@ -1,6 +1,7 @@
 ---
 title: Condition Types for Edge Extensions
 description: Learn how to define an condition-type library module for an edge extension in Adobe Experience Platform.
+exl-id: fe13420e-ffa7-49d6-92c4-965ebd9d7390
 ---
 # Condition types for edge extensions
 
