@@ -44,12 +44,14 @@ console.log(turbine.environment.stage);
 
 ```js
 {
+    id: "EN123456...",
     stage: "development"
 }
 ```
 
 | Property | Description |
 | --- | --- |
+|`id` | The id of the environment. |
 |`stage` | The environment for which this library was built. Accepted values are `development`, `staging`, and `production`. |
 
 
