@@ -89,17 +89,15 @@ This section provides several examples of how these transformations are made, fr
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
-3. Templates the include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment membership, or identity namespaces.
+3. Templates the include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
 To transform the profile attributes exported to your destination, see the JSON and code samples below.
 
-
 >[!IMPORTANT]
 >
->For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en). 
-
+>For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
 **Input**
@@ -779,7 +777,7 @@ When you use [configurable aggregation](./destination-configuration.md#configura
 
 #### Example of using segment ID aggregation key in the template {#aggregation-key-segment-id}
 
-If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use `segmentId` in the template to group profiles in the HTTP messages exported to your destination:
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use `segmentId` in the template to group profiles in the HTTP messages exported to your destination:
 
 ```python
 {
@@ -803,7 +801,7 @@ If you use [configurable aggregation](./destination-configuration.md) and set `i
 
 #### Example of using segment alias aggregation key in the template {#aggregation-key-segment-alias}
 
-If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination:
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination:
 
 ```python
 "customerList={{input.aggregationKey.segmentAlias}}"
@@ -811,7 +809,7 @@ If you use [configurable aggregation](./destination-configuration.md) and set `i
 
 #### Example of using segment status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](./destination-configuration.md) and set `includeSegmentId` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
