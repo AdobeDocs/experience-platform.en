@@ -41,6 +41,7 @@ feature: Schemas
     * [Channel Details](./field-groups/event/channel-details.md)
     * [Commerce Details](./field-groups/event/commerce-details.md)
     * [Device Trade-In Details](./field-groups/event/device-trade-in-details.md)
+    * [Dining Reservation](./field-groups/event/dining-reservation.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)

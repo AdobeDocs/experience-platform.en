@@ -33,6 +33,6 @@ The following table outlines the recommended classes and schema field groups for
 
 | Use case | Recommended classes and field groups |
 | --- | --- |
-| Cross-sell dining and other resident attractions to in-market guests and guests with upcoming hotel reservations. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Reservation Details](../../field-groups/event/reservation-details.md)</li><li>[Lodging Reservation](../../field-groups/event/lodging-reservation.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
+| Cross-sell dining and other resident attractions to in-market guests and guests with upcoming hotel reservations. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[Reservation Details](../../field-groups/event/reservation-details.md)</li><li>[Lodging Reservation](../../field-groups/event/lodging-reservation.md)</li><li>[Dining Reservation](../../field-groups/event/dining-reservation.md)</li></ul></li><li>**[XDM Individual Profile](../../classes/individual-profile.md)**:<ul><li>Product (custom field group)\*</li></ul></li></ul> |
 
 {style="table-layout:auto"}

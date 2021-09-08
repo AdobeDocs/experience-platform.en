@@ -20,9 +20,9 @@ The field group is an extension of the [!UICONTROL Reservation Details] field gr
 
 `lodgingReservations` is an array of objects that represents a list of lodging reservations. If a reservation event involves reservations at multiple different hotels along the route of a trip, for example, these reservations can be listed as individual objects under `lodgingReservations` for a single event.
 
-The structure of each object provided under `lodgingReservation` is provided below.
+The structure of each object provided under `lodgingReservations` is provided below.
 
-![Lodging Reservation structure](../../images/field-groups/lodging-reservation/lodgingReservations.png)
+![lodgingReservations structure](../../images/field-groups/lodging-reservation/lodgingReservations.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
@@ -41,7 +41,7 @@ The structure of each object provided under `lodgingReservation` is provided bel
 | `created` | Integer | This value is captured when a reservation has been created. |
 | `currencyCode` | String | The ISO 4217 currency code used to make the purchase. |
 | `discountPercent` | Double | The discount percentage associated with the booking. |
-| `freeCancelation` | Boolean | Indicated whether the room has a free cancellation policy. |
+| `freeCancelation` | Boolean | Indicates whether the room has a free cancellation policy. |
 | `guestID` | String | The guest ID associated with the hotel booking. |
 | `length` | Integer | The total number of days for the reservation. |
 | `loyaltyID` | String | The loyalty program ID for the guest listed in the reservation. |
