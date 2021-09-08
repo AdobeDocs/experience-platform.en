@@ -1,6 +1,7 @@
 ---
-description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. 
+description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration.
 title: Test your destination configuration
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 ---
 # Test your destination configuration {#developer-tools}
 

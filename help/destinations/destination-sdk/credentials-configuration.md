@@ -1,6 +1,7 @@
 ---
 description: This configuration determines how Adobe Experience Platform users authenticate to your destination endpoint to activate data.
 title: Configuration options for credentials in Destination SDK
+exl-id: 33eaab24-f867-4744-b424-4ba71727373c
 ---
 # Authentication configuration {#credentials}
 
