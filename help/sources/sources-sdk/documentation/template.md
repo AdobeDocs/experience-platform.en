@@ -135,20 +135,20 @@ A successful response returns the structure of the queried file.
       "members": [
         {
           "id": "cff65fb4c5f5828666ad846443720efd",
-          "email_address": "jonsnow@gmail.com",
+          "email_address": "roykent@gmail.com",
           "unique_email_id": "72c758cbf1",
-          "full_name": "Jon Snow",
+          "full_name": "Roy Kent",
           "web_id": 547094062,
           "email_type": "html",
           "status": "subscribed",
           "merge_fields": {
-            "FNAME": "Jon",
-            "LNAME": "Snow",
+            "FNAME": "Roy",
+            "LNAME": "Kent",
             "ADDRESS": {
               "addr1": "",
               "addr2": "",
-              "city": "",
-              "state": "",
+              "city": "Richmond",
+              "state": "Virginia",
               "zip": "",
               "country": "US"
             },
@@ -302,9 +302,9 @@ For detailed steps on how to create a target dataset, see the tutorial on [creat
 
 ### Create a target connection {#target-connection}
 
-A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID that corresponds to the Data Lake. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
+A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
-You now have the unique identifiers a target schema a target dataset and the connection spec ID to the Data Lake. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
+You now have the unique identifiers a target schema a target dataset and the connection spec ID to the [!DNL Data Lake]. Using these identifiers, you can create a target connection using the [!DNL Flow Service] API to specify the dataset that will contain the inbound source data.
 
 **API format**
 
@@ -328,7 +328,7 @@ curl -X POST \
         "name": "{YOURSOURCE} Target Connection",
         "description": "{YOURSOURCE} Target Connection",
         "connectionSpec": {
-            "id": "b3ba5556-48be-44b7-8b85-ff2b69b46dc4",
+            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
             "version": "1.0"
         },
         "data": {
@@ -344,9 +344,9 @@ curl -X POST \
 | -------- | ----------- |
 | `name` | The name of your target connection. Ensure that the name of your target connection is descriptive as you can use this to look up information on your target connection. |
 | `description` | An optional value that you can include to provide more information on your target connection. |
-| `connectionSpec.id` |
-| `data.format` |
-| `params.dataSetId` |
+| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Lake]. This fixed ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`. |
+| `data.format` | The format of the *YOURSOURCE* data that you want to bring to Platform. |
+| `params.dataSetId` | The target dataset ID retrieved in a previous step. |
 
 
 **Response**
@@ -362,7 +362,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 ### Create a mapping {#mapping}
 
-In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
+In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
 
 **API format**
 
@@ -416,10 +416,10 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `xdmSchema` | The ID of the target XDM schema. |
-| `mappings.destinationXdmPath` |
-| `mappings.sourceAttribute` |
-| `mappings.identity` |
+| `xdmSchema` | The ID of the [target XDM schema](#target-schema) generated in an earlier step. |
+| `mappings.destinationXdmPath` | The destination XDM path where the source attribute is being mapped to. |
+| `mappings.sourceAttribute` | The source attribute that needs to be mapped to a destination XDM path. |
+| `mappings.identity` | A boolean value that designates whether the mapping set will be marked for [!DNL Identity Service]. |
 | `mappings.identityGroup` |
 | `mappings.namespaceCode` |
 | `mappings.version` |
@@ -475,10 +475,19 @@ curl -X POST \
             "version": "1.0"
         },
         "sourceConnectionIds": [
-            "7142ea27-55b8-4895-9394-dfe6dd964cf5"
+            "246d052c-da4a-494a-937f-a0d17b1c6cf5"
         ],
         "targetConnectionIds": [
-            "f31b9a55-7561-4eaf-a4a2-075c9341281c"
+            "7c96c827-3ffd-460c-a573-e9558f72f263"
+        ],
+        "transformations": [
+            {
+                "name": "Mapping",
+                "params": {
+                    "mappingId": "bf5286a9c1ad4266baca76ba3adc9366",
+                    "mappingVersion": "0"
+                }
+            }
         ],
         "scheduleParams": {
             "startTime": "1625040887",
@@ -492,15 +501,21 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your dataflow. Ensure that the name of your dataflow is descriptive as you can use this to look up information on your dataflow. |
 | `description` | An optional value that you can include to provide more information on your dataflow. |
-| `flowSpec.id` |
-| `flowSpec.version` |
-| `sourceConnectionIds` |
-| `targetConnectionIds` |
-| `scheduleParams.startTime` |
-| `scheduleParams.frequency` |
-| `scheduleParams.interval` |
+| `flowSpec.id` | The flow specification ID required to create a dataflow. This fixed ID is: `6499120c-0b15-42dc-936e-847ea3c24d72`. |
+| `flowSpec.version` | The corresponding version of the flow specification ID. This value defaults to `1.0`. |
+| `sourceConnectionIds` | The [source connection ID](#source-connection) generated in an earlier step. |
+| `targetConnectionIds` | The [target connection ID](#target-connection) generated in an earlier step. |
+| `transformations` | This property contains the various transformations that are needed to be applied to your data. This property is required when bringing non-XDM-compliant data to Platform. |
+| `transformations.name` | The name assigned to the transformation. |
+| `transformations.params.mappingId` | The [mapping ID](#mapping) generated in an earlier step. |
+| `transformations.params.mappingVersion` | The corresponding version of the mapping ID. This value defaults to `0`. |
+| `scheduleParams.startTime` | This property contains information on the ingestion scheduling of the dataflow. |
+| `scheduleParams.frequency` | The frequency at which the dataflow will collect data. Acceptable values include: `once`, `minute`, `hour`, `day`, or `week`. |
+| `scheduleParams.interval` | The interval designates the period between two consecutive flow runs. The interval's value should be a non-zero integer. Interval is not required when frequency is set as `once` and should be greater than or equal to `15` for other frequency values. |
 
 **Response**
+
+A successful response returns the ID (`id`) of the newly created dataflow. You can use this ID to monitor, update, or delete your dataflow.
 
 ```json
 {
