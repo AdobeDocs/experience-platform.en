@@ -89,11 +89,9 @@ In the [!UICONTROL Target Field] section, click the mapping icon to the right of
    
 ![Braze Destination Target Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
-* [!UICONTROL Select attributes]: Use this option to map your XDM attributes to standard [!DNL Braze] attributes.
+In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
 * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
-* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
-* You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
+* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
 ![Braze Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 
