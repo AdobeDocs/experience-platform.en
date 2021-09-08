@@ -121,6 +121,7 @@ feature: Destinations
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
+        * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
