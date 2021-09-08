@@ -4,11 +4,7 @@ title: Braze connection
 description: Braze is a comprehensive customer engagement platform that powers relevant and memorable experiences between customers and the brands they love.
 exl-id: 508e79ee-7364-4553-b153-c2c00cc85a73
 ---
-# (Beta) [!DNL Braze] connection
-
->[!IMPORTANT]
->
->The Braze destination in Adobe Experience Platform is currently in Beta. The documentation and the functionality are subject to change.
+# [!DNL Braze] connection
 
 ## Overview {#overview}
 
@@ -93,11 +89,9 @@ In the [!UICONTROL Target Field] section, click the mapping icon to the right of
    
 ![Braze Destination Target Mapping](../../assets/catalog/mobile-engagement/braze/mapping-target.png)
 
-In the [!UICONTROL Select target field] window, you can choose between three categories of target fields:
-* [!UICONTROL Select attributes]: Use this option to map your XDM attributes to standard [!DNL Braze] attributes.
+In the [!UICONTROL Select target field] window, you can choose between two categories of target fields:
 * [!UICONTROL Select identity namespace]: Use this option to map [!DNL Platform] identity namespaces to [!DNL Braze] identity namespaces.
-* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account.
-* You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
+* [!UICONTROL Select custom attributes]: Use this option to map XDM attributes to custom [!DNL Braze] attributes that you defined in your [!DNL Braze] account. <br> You can also use this option to rename existing XDM attributes into [!DNL Braze]. For instance, mapping a `lastName` XDM attribute to a custom `Last_Name` attribute in [!DNL Braze], will create the `Last_Name` attribute in [!DNL Braze], if it doesn't already exist, and map the `lastName` XDM attribute to it.
   
 ![Braze Destination Target Mapping Fields](../../assets/catalog/mobile-engagement/braze/mapping-target-fields.png)
 

@@ -1,6 +1,7 @@
 ---
 title: BrightCove Video Tracking Extension Overview
 description: Learn about the BrightCove Video Tracking tag extension in Adobe Experience Platform.
+exl-id: d27eff21-2abf-4495-8382-08cab32742e0
 ---
 # BrightCove Video Tracking extension overview
 

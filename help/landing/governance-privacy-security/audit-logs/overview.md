@@ -1,6 +1,7 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs (Beta)
 
@@ -30,7 +31,7 @@ The following table outlines which actions on which resources are recorded by au
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have the "View Audit Logs" access control permission granted. To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
+In order to view and export audit logs, you must have the "View Audit Logs" access control permission granted (found under the "Data Governance" category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
 
 ## Managing audit logs in the UI
 

@@ -1,6 +1,7 @@
 ---
 title: Libraries
 description: Learn about the concept of tag libraries and how they function within Adobe Experience Platform.
+exl-id: 4d6f86e6-5684-4635-aaf1-87ba10cd7d94
 ---
 # Libraries
 

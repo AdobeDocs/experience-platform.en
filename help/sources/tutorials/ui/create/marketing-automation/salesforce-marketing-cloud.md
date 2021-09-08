@@ -5,6 +5,7 @@ title: Create a Salesforce Marketing Cloud Source Connection in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Salesforce Marketing Cloud source connection using the Adobe Experience Platform UI.
+exl-id: 1d9bde60-31e0-489c-9c1c-b6471e0ea554
 ---
 # Create a [!DNL Salesforce Marketing Cloud] source connection in the UI
 

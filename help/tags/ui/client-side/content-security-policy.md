@@ -1,6 +1,7 @@
 ---
 title: Content Security Policy (CSP) Support
 description: Learn how to deal with Content Security Policy (CSP) restrictions when integrating your website with tags in Adobe Experience Platform.
+exl-id: 9232961e-bc15-47e1-aa6d-3eb9b865ac23
 ---
 # Content Security Policy (CSP) support
 

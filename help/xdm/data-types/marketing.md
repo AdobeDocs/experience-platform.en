@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Marketing Data Type
 topic-legacy: overview
 description: This document provides an overview of the Marketing XDM data type.
+exl-id: b5ac0127-15fe-42b6-b7fc-2fbcda7e7e27
 ---
-
 # [!UICONTROL Marketing] data type
 
 [!UICONTROL Marketing] is a standard XDM data type that describes marketing activities that are active with a particular touchpoint.

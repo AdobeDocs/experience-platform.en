@@ -1,6 +1,7 @@
 ---
 title: Self-Hosting Libraries
 description: Learn how to implement self-hosting for your tag library builds in Adobe Experience Platform.
+exl-id: 8c3bf202-de7a-46e0-801f-0cede24865fd
 ---
 # Self-hosting libraries
 

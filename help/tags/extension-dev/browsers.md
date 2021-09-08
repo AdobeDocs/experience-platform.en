@@ -1,6 +1,7 @@
 ---
 title: Supported Browsers
 description: A list of multiple browsers compatible with an Adobe Experience Platform tag runtime.
+exl-id: fc9ff6f5-7d54-4f13-8286-44791499d704
 ---
 # Supported browsers
 
