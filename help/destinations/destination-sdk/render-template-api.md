@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to to render exported data for your destination, based on your message transformation template.
 title: Render template API operations
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 ---
 # Render template API operations {#render-template-api-operations}
 
