@@ -160,7 +160,7 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 7: Publish your destination {#publish-destination}
 
-After configuring and testing your destination. use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
+After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 8: Document your destination {#document-destination}
 

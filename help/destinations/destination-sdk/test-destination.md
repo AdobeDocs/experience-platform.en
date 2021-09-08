@@ -229,4 +229,4 @@ For descriptions of the request and response parameters, refer to [Destination t
 
 ## Next steps
 
-After confirming that your destination is configured correctly, use the Adobe [self-service documentation process](./docs-framework/documentation-instructions.md) to create a documentation page for your destination.
+After testing your destination and confirming that it is configured correctly, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
