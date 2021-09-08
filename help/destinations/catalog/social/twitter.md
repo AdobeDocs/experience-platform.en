@@ -54,7 +54,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 ## Activate segments to this destination {#activate}
 
-Read [Activate profiles and segments to streaming segment export destinations](../../ui/activate/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
 
 ## Data usage and governance {#data-usage-governance}
 
