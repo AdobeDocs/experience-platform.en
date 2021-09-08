@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Destination testing API operations
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 ---
 # Destination testing API operations {#template-api-operations}
 

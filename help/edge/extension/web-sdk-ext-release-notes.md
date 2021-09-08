@@ -7,13 +7,11 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
-## Version 2.7.2 - September 7, 2021
-
-* There's no longer a trigger deprecation warning for `turbine.buildInfo.environment.`
-
-## Version 2.7.1 - September 7, 2021
+## Version 2.7.3 - September 7, 2021
 
 Contains version 2.6.4 of the Adobe Experience Platform Web SDK library.
+
+* There's no longer a deprecation warning for `container.buildInfo.environment.`
 
 ## Version 2.7.0 - August 16, 2021
 

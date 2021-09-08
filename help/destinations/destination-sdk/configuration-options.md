@@ -3,6 +3,7 @@ description: The destinations service in Adobe Experience Platform uses configur
 seo-description: The destinations service in Adobe Experience Platform uses configuration templates for several components that build up the destinations functionality. Combined, these components allow Experience Platform to connect to destination partners, send custom messages, and activate profile data across the digital ecosystem.
 seo-title: Configuration options in Destination SDK
 title: Configuration options in Destination SDK
+exl-id: 8890c70a-cdb9-4b9d-aa81-affe72b1fdc5
 ---
 # Configuration options in Destination SDK
 

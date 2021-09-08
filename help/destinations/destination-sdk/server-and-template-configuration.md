@@ -1,6 +1,7 @@
 ---
 description: The server and template specs can be configured in Adobe Experience Platform Destination SDK via the common endpoint `/authoring/destination-servers`.
 title: Configuration options for server and template specs in Destination SDK
+exl-id: cf493ed5-0bdb-4b90-b84d-73926a566a2a
 ---
 # Configuration options for server and template specs
 
