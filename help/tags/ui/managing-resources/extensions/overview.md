@@ -56,7 +56,7 @@ Tags are highly extendible. Extensions add core functionality to tags. A common 
 1. From a property's overview page, open the **[!UICONTROL Extensions]** tab.
 1. Select an extension.
 
-   ![]()../../../images/extensions.png)
+   ![Core Extension](../../../images/extensions.png)
 
    * If the extension exists, select it from the extensions catalog.
    * Mouse over an extension in your list to configure or disable it.
