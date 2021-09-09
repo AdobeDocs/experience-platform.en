@@ -1,6 +1,7 @@
 ---
 title: Data Collection End-to-End Overview
 description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the data collection technologies provided by Adobe Experience Platform.
+exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 ---
 # Data collection end-to-end overview
 

@@ -1,7 +1,8 @@
 ---
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations;license usage
 title: Standard Dashboard Widgets
-description: This guide provides step-by-step instructions for adding standard widgets to your Adobe Experience Platform dashboards. 
+description: This guide provides step-by-step instructions for adding standard widgets to your Adobe Experience Platform dashboards.
+exl-id: 37353e73-b207-444a-b2b5-a20a3628086b
 ---
 # Add standard widgets to dashboards
 
