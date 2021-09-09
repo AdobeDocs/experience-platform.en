@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Platform Data Collection End-to-End Overview
-description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the Adobe Experience Platform Data Collection.
+title: Data Collection End-to-End Overview
+description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the data collection technologies provided by Adobe Experience Platform.
 ---
-# Adobe Experience Platform Data Collection end-to-end overview
+# Data collection end-to-end overview
 
-Adobe Experience Platform Data Collection provides several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
+In Adobe Experience Platform, data collection refers to several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using Data Collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
+This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ Once you are able to send data to the Edge Network, you can also optionally [con
 
 [Experience Data Model (XDM)](../xdm/home.md) is an open-source specification that provides common structures and definitions for data in the form of schemas. In other words, XDM is a way of structuring and formatting your data in a way that is actionable by the Edge Network and other Adobe Experience Cloud applications.
 
-The first step in setting up your Data Collection operations is to create an XDM schema to represent your data. At a later step in this tutorial, you will map the data you want to send to the structure of this schema.
+The first step in setting up your data collection operations is to create an XDM schema to represent your data. At a later step in this tutorial, you will map the data you want to send to the structure of this schema.
 
 >[!NOTE]
 >
