@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;date range
 title: Subscribe to Adobe I/O Event Notifications
 description: This document provides steps on how to subscribe to Adobe I/O event notifications for Adobe Experience Platform services. Reference information regarding available event types is also provided, along with links to further documentation on how to interpret returned event data for each applicable [!DNL Platform] service.
+feature: Alerts
 exl-id: c0ad7217-ce84-47b0-abf6-76bcf280f026
 ---
 # Subscribe to Adobe I/O Event notifications
