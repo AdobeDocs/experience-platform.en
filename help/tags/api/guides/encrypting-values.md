@@ -1,6 +1,7 @@
 ---
 title: Encrypting Values
 description: Learn how to encrypt sensitive values when using the Reactor API.
+exl-id: d89e7f43-3bdb-40a5-a302-bad6fd1f4596
 ---
 # Encrypting values
 

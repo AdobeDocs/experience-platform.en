@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Sandbox management API Endpoint
 topic-legacy: developer guide
 description: The /sandboxes endpoint in the Sandbox API allows you to  programmatically manage sandboxes in Adobe Experience Platform.
+exl-id: 0ff653b4-3e31-4ea5-a22e-07e18795f73e
 ---
 # Sandbox management endpoint
 
@@ -11,7 +12,7 @@ Sandboxes in Adobe Experience Platform provide isolated development environments
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+The API endpoint used in this guide is part of the [[!DNL Sandbox] API](https://www.adobe.io/experience-platform-apis/references/sandbox). Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Retrieve a list of sandboxes {#list}
 

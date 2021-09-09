@@ -1,6 +1,7 @@
 ---
 title: Tags Troubleshooting Guide
 description: Get answers to frequently asked questions about tags in Adobe Experience Platform.
+exl-id: c06b8e25-4d79-4a11-94da-94ac096b5e33
 ---
 # Tags troubleshooting guide
 

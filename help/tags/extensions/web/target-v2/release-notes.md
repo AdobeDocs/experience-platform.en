@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Target v2 Extension
 description: The latest release notes for the Adobe Target v2 tag extension in Adobe Experience Platform.
+exl-id: c1a04e62-026d-4b16-aa70-bc6d5dbe6b2d
 ---
 # Adobe Target v2 Extension release notes
 

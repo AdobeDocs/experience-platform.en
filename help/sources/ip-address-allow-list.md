@@ -10,7 +10,7 @@ exl-id: 40093c80-dbdb-4dc1-97bb-81a8200b731f
 
 You can define network access controls through your network firewall. By specifying the appropriate source IP range, you can allow traffic for the data transfer service. The following IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources.
 
-## VA7
+## VA7: North America
 
 - `20.42.2.0/23`
 - `20.42.4.0/26`
@@ -25,7 +25,7 @@ You can define network access controls through your network firewall. By specify
 - `40.70.148.160/28`
 - `52.167.107.224/28`
 
-## NLD2
+## NLD2: Europe
 
 - `13.69.67.192/28`
 - `13.69.107.112/28`
@@ -35,7 +35,7 @@ You can define network access controls through your network firewall. By specify
 - `40.113.176.232/29`
 - `52.236.187.112/28`
 
-## AUS5
+## AUS5: Australia
 
 - `13.70.74.144/28`
 - `20.37.193.0/25`

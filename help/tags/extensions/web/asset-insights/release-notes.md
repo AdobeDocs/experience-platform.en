@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the AEM Asset Insights Extension
 description: The latest release notes for the AEM Asset Insights tag extension in Adobe Experience Platform.
+exl-id: cee35b44-2249-47c6-80d6-8b4eaa9802df
 ---
 # AEM Asset Insights release notes
 

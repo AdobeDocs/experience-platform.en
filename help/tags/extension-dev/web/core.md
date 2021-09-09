@@ -1,6 +1,7 @@
 ---
 title: Core Library Modules for Web Extensions
 description: Learn about the core library modules you can use within your web extensions.
+exl-id: 7fb63208-aed0-4add-b6da-8e4aea063d0a
 ---
 # Core library modules for web extensions
 

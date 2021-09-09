@@ -67,6 +67,8 @@ feature: Data Ingestion, Sources
     - [PostgreSQL connector](connectors/databases/postgres.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
+  - Local system {#local-system}
+    - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -208,6 +210,8 @@ feature: Data Ingestion, Sources
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+    - Local system {#local-system}
+      - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -238,4 +242,5 @@ feature: Data Ingestion, Sources
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -1,6 +1,7 @@
 ---
 title: Cloud Connector Extension Overview
 description: Learn about the Cloud Connector event forwarding extension in Adobe Experience Platform.
+exl-id: f3713652-ac32-4171-8dda-127c8c235849
 ---
 # Cloud Connector extension overview
 

@@ -7,6 +7,12 @@ exl-id: 91de8c91-023a-45b6-9f67-ac75ee471e50
 
 This document covers the release notes for the Adobe Experience Platform Web SDK tag extension. For the latest release notes on the SDK itself, see the [Platform Web SDK release notes](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html).
 
+## Version 2.7.3 - September 7, 2021
+
+Contains version 2.6.4 of the Adobe Experience Platform Web SDK library.
+
+* There's no longer a deprecation warning for `container.buildInfo.environment.`
+
 ## Version 2.7.0 - August 16, 2021
 
 Contains version 2.6.3 of the Adobe Experience Platform Web SDK library.
@@ -63,8 +69,8 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
 
 ## Version 2.2.0 - October 1, 2020
 
-* When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls Platform is now aware of environments so users are only presented with those schemas that they have access to edit. 
-* When using the `identityMap` data element, the namespaces is now pre-populated in a dropwdown so you don't have to fill this in manually. 
+* When customers tried to create an XDM object from sandbox schemas, they were running into authentication issues. The API that calls Platform is now aware of environments so users are only presented with those schemas that they have access to edit.
+* When using the `identityMap` data element, the namespaces is now pre-populated in a dropdown so you don't have to fill this in manually.
 * Revamped the UI for the `xdmObject` data element. In the new UI, you can see which fields have been populated without having to enter each item in the object.
 
 ## Version 2.1.1 - August 26, 2020
@@ -94,7 +100,7 @@ Contains version 2.3.0 of the Adobe Experience Platform Web SDK library.
   * Added a `scopes` option to the `sendEvent` command. Decisions are returned in the `sendEvent` resolved promise.
   * Added a built-in `__view__` scope which will result in returning page/view wide offers. (VEC offers in Target for example.)
 Those decisions return from the `sendEvent` command only if `renderDecisions` is set to false.
-  * Added a `Decisions Received` event, which fires when decisions become available. 
+  * Added a `Decisions Received` event, which fires when decisions become available.
 * Combined multiple Personalization notifications under a single server call.
 * Fixed issue in Event Merge ID where it was being reset every time the data element was referenced.
 * Renamed the `setCustomerIds` action to `syncIdentity`.
@@ -125,7 +131,7 @@ Those decisions return from the `sendEvent` command only if `renderDecisions` is
 
 ## Version 0.0.3 - November 25, 2019
 
-* New Merge ID and Type fields on the Send Event action. Merge ID maps to `xdm.eventMergeID` in the XDM schema and Type maps to `xdm.eventType` in the XDM schema. 
+* New Merge ID and Type fields on the Send Event action. Merge ID maps to `xdm.eventMergeID` in the XDM schema and Type maps to `xdm.eventType` in the XDM schema.
 
 ## Version 0.0.2 - November 18, 2019
 

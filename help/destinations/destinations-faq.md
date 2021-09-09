@@ -4,8 +4,8 @@ title: Frequently asked questions
 seo-title: Frequently asked questions
 description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
 seo-description: Answers to the most frequently asked questions about Adobe Experience Platform destinations
+exl-id: 2c34ecd0-a6d0-48dd-86b0-a144a6acf61a
 ---
-
 # Frequently asked questions {#faq}
 
 ## Overview {#overview}
