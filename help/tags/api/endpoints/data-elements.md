@@ -1,6 +1,7 @@
 ---
 title: Data elements endpoint
 description: Learn how to make calls to the /data_elements endpoint in the Reactor API.
+exl-id: ea346682-441b-415b-af06-094158eb7c71
 ---
 # Data elements endpoint
 
@@ -14,7 +15,7 @@ For more general information on data elements and their use in tags, see the [da
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of data elements {#list}
 

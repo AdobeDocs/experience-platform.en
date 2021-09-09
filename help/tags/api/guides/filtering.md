@@ -1,6 +1,7 @@
 ---
 title: Filtering responses in the Reactor API
 description: Learn how to filter results when listing resources in the Reactor API.
+exl-id: 8a91f3dd-4ead-4a10-abb1-e71acb0d73b6
 ---
 # Filtering responses in the Reactor API
 

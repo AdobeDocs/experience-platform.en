@@ -1,6 +1,7 @@
 ---
 title: Rules endpoint
 description: Learn how to make calls to the /rules endpoint in the Reactor API.
+exl-id: 79ef4389-e4b7-461e-8579-16a1a78cdd43
 ---
 # Rules endpoint
 
@@ -14,7 +15,7 @@ A rule belongs to exactly one [property](./properties.md). A property can have m
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of rules {#list}
 

@@ -1,6 +1,7 @@
 ---
 title: Searching Resources in the Reactor API
 description: Learn how to search for resources in the Reactor API.
+exl-id: cb594e60-3e24-457e-bfb3-78ec84d3e39a
 ---
 # Searching resources in the Reactor API
 

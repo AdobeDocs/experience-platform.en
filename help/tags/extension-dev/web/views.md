@@ -1,6 +1,7 @@
 ---
 title: Views in Web Extensions
 description: Learn how to define views for library modules in your Adobe Experience Platform web extensions.
+exl-id: 4471df3e-75e2-4257-84c0-dd7b708be417
 ---
 # Views in web extensions
 

@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
-
 # Activate audience data to batch profile export destinations
 
 ## Overview {#overview}
@@ -19,13 +19,17 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ## Select your destination {#select-destination}
 
-1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Browse]** tab.
+1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
     
-    ![Destination Browse tab](../assets/ui/activate-batch-profile-destinations/browse-tab.png)
+    ![Destination Catalog tab](../assets/ui/activate-batch-profile-destinations/catalog-tab.png)
 
-1. Select the **[!UICONTROL Add segments]** button corresponding to the destination where you want to activate your segments, as shown in the image below.
+1. Select **[!UICONTROL Activate segments]** on the card corresponding to the destination where you want to activate your segments, as shown in the image below.
 
-    ![Activate buttons](../assets/ui/activate-batch-profile-destinations/activate-buttons-browse.png)
+    ![Activate segments button](../assets/ui/activate-batch-profile-destinations/activate-segments-button.png)
+
+1. Select the destination connection that you want to use to activate your segments, then select **[!UICONTROL Next]**.
+
+    ![Select destination](../assets/ui/activate-batch-profile-destinations/select-destination.png)
 
 1. Move to the next section to [select your segments](#select-segments).
 
@@ -65,9 +69,12 @@ Select **[!UICONTROL Export full files]** to trigger the export of a file contai
     
       >[!IMPORTANT]
       >
-      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+      >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
 1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+      >[!TIP]
+      >
+      > For daily exports, set your start and end date to line up with the duration of your campaigns in your downstream platforms.
 1. Select **[!UICONTROL Create]** to save the schedule.
 
  
@@ -84,16 +91,19 @@ Select **[!UICONTROL Export incremental files]** to trigger an export where the 
 1. Use the **[!UICONTROL Frequency]** selector to select the export frequency:
     
     * **[!UICONTROL Daily]**: schedule incremental file exports once a day, every day, at the time you specify.
-    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3,6,7, or 12 hours.
+    * **[!UICONTROL Hourly]**: schedule incremental file exports every 3, 6, 8, or 12 hours.
 
-2. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
+1. Use the **[!UICONTROL Time]** selector to choose the time of day, in [!DNL UTC] format, when the export should take place.
    
      >[!IMPORTANT]
      >
-     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This is a limitation that will be addressed in future releases.
+     >Because of the way internal Experience Platform processes are configured, the first incremental or full file export may not contain all the backfill data. <br> <br> To ensure a complete and most up-to-date backfill data export for both full and incremental files, Adobe recommends setting the first file export time after 12 PM GMT of the following day. This limitation will be addressed in future releases.
 
-3. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
-4. Select **[!UICONTROL Create]** to save the schedule.
+1. Use the **[!UICONTROL Date]** selector to choose the day or interval when the export should take place.
+      >[!TIP]
+      >
+      >Set your start and end date to line up with the duration of your campaigns in your downstream platforms.
+1. Select **[!UICONTROL Create]** to save the schedule.
 
 ### Configure file names {#file-names}
 
@@ -138,9 +148,7 @@ For profile-based destinations, you must select the profile attributes that you 
 
     ![Select source field page](../assets/ui/activate-batch-profile-destinations/target-field-page.png)
 
-
 1. To add more mappings, repeat steps 1 to3.
-
 
 >[!NOTE] 
 >
@@ -176,7 +184,7 @@ It is recommended that one of the attributes is a [unique identifier](../../dest
 >abstract="Eliminate multiple records of the same profile in the export files by selecting a deduplication key. Select a single namespace or up to two XDM schema attributes as a deduplication key. Not selecting a deduplication key may lead to duplicate profile entries in the export files."
 >additional-url="http://www.adobe.com/go/destinations-deduplication-keys-en" text="Learn more in documentation"
 
-A deduplication key is a user defined primary key which determines the identity by which users want their profiles to be deduplicated.​
+A deduplication key is a user-defined primary key which determines the identity by which users want their profiles to be deduplicated.​
 
 Deduplication keys eliminate the possibility of having multiple records of the same profile in one export file.
 

@@ -1,6 +1,7 @@
 ---
 title: Adobe Audience Manager Extension Overview
 description: Learn about the Adobe Audience Manager tag extension in Adobe Experience Platform.
+exl-id: d345e145-fdb9-4ca3-88c2-9c2a247ea59a
 ---
 # Adobe Audience Manager extension overview
 

@@ -3,6 +3,7 @@ title: Event Types in the Adobe Experience Platform Web SDK Extension
 description: Learn about how to use event types provided by the Adobe Experience Platform Web SDK extension in Adobe Experience Platform Launch.
 solution: Experience Platform
 feature: Web SDK
+exl-id: b3162406-c5ce-42ec-ab01-af8ac8c63560
 ---
 # Event types
 
@@ -253,9 +254,4 @@ if (propositions) {
   // you can send them to a third party or use
   // them in some other way.
 }
-``` 
-
-
-
-
-
+```

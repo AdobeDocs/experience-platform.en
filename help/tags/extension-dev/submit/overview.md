@@ -1,6 +1,7 @@
 ---
 title: Extension Submission Process Overview
 description: Learn the steps for submitting your extension in Adobe Experience Platform from development to release.
+exl-id: 7a30ae5c-f9c7-45f9-b648-3fb31006b1ce
 ---
 # Extension submission process overview
 
