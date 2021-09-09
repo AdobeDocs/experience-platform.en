@@ -44,6 +44,7 @@ feature: Schemas
     * [Dining Reservation](./field-groups/event/dining-reservation.md)
     * [End User ID Details](./field-groups/event/enduserids.md)
     * [Environment Details](./field-groups/event/environment-details.md)
+    * [Flight Reservation](./field-groups/event/flight-reservation.md)
     * [IAB TCF 2.0 Consent](./field-groups/event/iab.md)
     * [Lodging Reservation](./field-groups/event/lodging-reservation.md)
     * [Reservation Details](./field-groups/event/reservation-details.md)

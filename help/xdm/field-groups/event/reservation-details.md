@@ -37,3 +37,11 @@ For more details on the field group, refer to the public XDM repository:
 
 * [Populated example](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.example.1.json)
 * [Full schema](https://github.com/adobe/xdm/blob/master/components/fieldgroups/experience-event/industry-verticals/experienceevent-reservation-details.schema.json)
+
+## Industry-specific reservation field groups
+
+There are several other standard field groups that extend the [!UICONTROL Reservation Details] schema for industry-specific use cases. Refer to the following documentation for more details:
+
+* [[!UICONTROL Dining Reservation]](./dining-reservation.md)
+* [[!UICONTROL Flight Reservation]](./flight-reservation.md)
+* [[!UICONTROL Lodging Reservation]](./lodging-reservation.md)
