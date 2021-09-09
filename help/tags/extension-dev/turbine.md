@@ -111,6 +111,7 @@ The logging utility is used to log messages to the console. Messages will only s
 * `logger.warn(message: string)`: Logs a warning message to the console.
 * `logger.error(message: string)`: Logs an error message to the console.
 * `logger.debug(message: string)`: Logs a debug message to the console. (Visible only when `verbose` logging is enabled within your browser console.)
+* `logger.deprecation(message: string)`: Logs a warning message to the console whether or not tag debugging is enabled by the user.
 
 ### `onDebugChanged`
 
