@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/destinations` API endpoint.
 title: Destinations API endpoint operations
+exl-id: 96755e9d-be62-432f-b985-91330575b395
 ---
 # Destinations endpoint API operations {#destination-configuration}
 
