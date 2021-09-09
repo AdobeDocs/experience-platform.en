@@ -564,8 +564,8 @@ A successful response returns details regarding your flow run, including informa
             "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
             "sandboxName": "prod",
             "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "c9cef9cb-c934-4467-8ef9-cbc934546741",
-            "etag": "\"b8003af1-0000-0200-0000-5f2b09f10000\"",
+            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
+            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
             "metrics": {
                 "durationSummary": {
                     "startedAtUTC": 1596656058198,
@@ -742,7 +742,7 @@ The following request updates your flow run schedule, as well as your dataflow's
 
 ```shell
 curl -X PATCH \
-    'https://platform.adobe.io/data/foundation/flowservice/flows/2edc08ac-4df5-4fe6-936f-81a19ce92f5c' \
+    'https://platform.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -757,12 +757,12 @@ curl -X PATCH \
             {
                 "op": "replace",
                 "path": "/name",
-                "value": "Database Dataflow Feb2021"
+                "value": "New dataflow name"
             },
             {
                 "op": "replace",
                 "path": "/description",
-                "value": "Database dataflow for testing update API"
+                "value": "Updated dataflow description"
             }
         ]'
 ```
@@ -779,7 +779,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 
 ```json
 {
-    "id": "2edc08ac-4df5-4fe6-936f-81a19ce92f5c",
+    "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
     "etag": "\"50014cc8-0000-0200-0000-6036eb720000\""
 }
 ```
@@ -802,7 +802,7 @@ DELETE /flows/{FLOW_ID}
 
 ```shell
 curl -X DELETE \
-    'https://platform-int.adobe.io/data/foundation/flowservice/flows/20c115bc-46e3-40f3-bfe9-fb25abe4ba76' \
+    'https://platform-int.adobe.io/data/foundation/flowservice/flows/993f908f-3342-4d9c-9f3c-5aa9a189ca1a' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \

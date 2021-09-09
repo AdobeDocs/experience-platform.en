@@ -60,7 +60,7 @@ The following response is an example of an empty generic REST connector connecti
   "providerId": "{PROVIDER_ID}",
   "version": "{VERSION}",
   "attributes": {
-    "category": "{Cloud Storage}",
+    "category": "{CATEGORRY}",
     "isSource": "{IS_SOURCE}"
   },
   "authSpec": [
