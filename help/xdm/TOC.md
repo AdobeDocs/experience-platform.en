@@ -25,6 +25,8 @@ feature: Schemas
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
   * [Segment definition](./classes/segment-definition.md)
+  * B2B classes {#b2b}
+    * [XDM Business Campaign](./classes/b2b/business-campaign.md)
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
@@ -54,6 +56,7 @@ feature: Schemas
   * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
+  * [B2B Source](./data-types/b2b-source.md)
   * [Commerce](./data-types/commerce.md)
   * [Consent String](./data-types/consent-string.md)
   * [Consents & Preferences](./data-types/consents.md)
@@ -62,6 +65,7 @@ feature: Schemas
   * [Email address](./data-types/email-address.md)
   * [Environment](./data-types/environment.md)
   * [Experience channel](./data-types/experience-channel.md)
+  * [External Source System Audit Attributes](./data-types/external-source-system-audit-attributes.md)
   * [Generic Consent Field](./data-types/consent-field.md)
   * [Generic Marketing Preference Field](./data-types/marketing-field.md)
   * [Generic Marketing Preference Field with Subscriptions](./data-types/marketing-field-subscriptions.md)
