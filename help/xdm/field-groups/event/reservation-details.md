@@ -2,8 +2,8 @@
 keywords: Experience Platform;home;popular topics;schema;Schema;XDM;ExperienceEvent;fields;schemas;Schemas;Schema design;field group;field group;reservation;reservation details;
 title: Reservation Details Schema Field Group
 description: This document provides an overview of the Reservation Details schema field group.
+exl-id: 06f9ee37-9879-4db2-af68-9336366f7521
 ---
-
 # [!UICONTROL Reservation Details] schema field group
 
 [!UICONTROL Reservation Details] is a standard schema field group for the [[!DNL XDM ExperienceEvent] class](../../classes/experienceevent.md) used to capture information regarding a reservation, including length, modification, refundable status, and number of rooms.
