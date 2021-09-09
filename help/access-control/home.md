@@ -62,7 +62,7 @@ Users can be granted access to one or more sandboxes within a product profile. I
 
 The "Sandbox Management" permission allows users to manage, view, or reset sandboxes.
 
-### Permissions
+### Permissions {#permissions}
 
 The permissions tab within a product profile displays the sandboxes and permissions that are active for that profile:
 
