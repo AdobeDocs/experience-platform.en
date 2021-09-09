@@ -1,12 +1,12 @@
 ---
-title: Adobe Experience Platform Edge Network End-to-End Overview
-description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the Adobe Experience Platform Edge Network.
+title: Adobe Experience Platform Data Collection End-to-End Overview
+description: A high-level overview of how to send event data to Adobe Experience Cloud solutions using the Adobe Experience Platform Data Collection.
 ---
-# Adobe Experience Platform Edge Network end-to-end overview
+# Adobe Experience Platform Data Collection end-to-end overview
 
-Adobe Experience Platform Edge Network provides a single gateway to transfer your data to other Adobe products or third-party destinations. In order to use the Edge Network to send event data from your application, it is important to understand the core components that have to be configured in order for that data to be delivered to the destinations you require.
+Adobe Experience Platform Data Collection provides several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
+This guide provides a high-level tutorial of how to send an event through the Edge Network using Data Collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
 
 >[!NOTE]
 >
@@ -19,7 +19,16 @@ This tutorial uses the Data Collection UI to create a schema, configure a datast
 * Develop
 * Manage Extensions
 
-See the guide on [managing permissions](../tags/ui/administration/manage-permissions.md) in the tags documentation to learn how to grant access to properties and property rights.
+See the guide on [managing permissions for tags](../tags/ui/administration/manage-permissions.md) to learn how to grant access to properties and property rights.
+
+To use the various Data Collection products mentioned in this guide, you must also have access to datastreams and the ability to create and manage schemas. If you need access to either of these features, please contact your CSM to help you get the necessary access. Please note that if you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use the SDK at no extra charge.
+
+If you already have access to Platform, you must ensure that you have the all [permissions](../access-control/home.md#permissions) under the following categories enabled:
+
+* Data Modeling
+* Identities
+
+See the [access control UI overview](../access-control/ui/overview.md) to learn how to grant permissions for Platform capabilities to users.
 
 ## Process summary
 
@@ -35,7 +44,7 @@ Once you are able to send data to the Edge Network, you can also optionally [con
 
 [Experience Data Model (XDM)](../xdm/home.md) is an open-source specification that provides common structures and definitions for data in the form of schemas. In other words, XDM is a way of structuring and formatting your data in a way that is actionable by the Edge Network and other Adobe Experience Cloud applications.
 
-The first step in setting up your Edge Network operations is to create an XDM schema to represent your data. At a later step in this tutorial, you will map the data you want to send to the structure of this schema.
+The first step in setting up your Data Collection operations is to create an XDM schema to represent your data. At a later step in this tutorial, you will map the data you want to send to the structure of this schema.
 
 >[!NOTE]
 >
@@ -102,8 +111,8 @@ Once you have created a schema and a datastream, the next step is to install and
 
 The process can be summarized as follows:
 
-1. [Install the SDK on a tag property](#install-sdk) to gain access to its capabilities.
-1. [Create an XDM data element](#data-element) to map variables on your website to the structure of the XDM schema you created previously.
+1. [Install the Adobe Experience Platform Web SDK on a tag property](#install-sdk) to gain access to its capabilities.
+1. [Create an XDM Object data element](#data-element) to map variables on your website to the structure of the XDM schema you created previously.
 1. [Create a rule](#rule) to tell the SDK when it should send data to the Edge Network.
 1. [Build and install a library](#library) to implement the rule on your website.
 
