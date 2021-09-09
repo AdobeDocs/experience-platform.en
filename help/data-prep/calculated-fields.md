@@ -4,7 +4,6 @@ solution: Experience Platform
 title: Data Prep Overview
 topic-legacy: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
-exl-id: f15eeb50-a531-4560-a524-1a670fbda706
 ---
 
 # Calculated fields
