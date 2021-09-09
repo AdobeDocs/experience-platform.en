@@ -94,7 +94,7 @@ In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you c
 
 ![Datastreams](./images/e2e/datastreams.png)
 
-The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](./fundamentals/datastreams.md).
+The configuration requirements for a datastream depend on which products and capabilities you are sending data to. For detailed information on the configuration options for each product, refer to the [datastreams overview](../edge/fundamentals/datastreams.md).
 
 ## Install and configure the Web SDK
 
@@ -104,8 +104,8 @@ Once you have created a schema and a datastream, the next step is to install and
 >
 >This section uses the Data Collection UI to configure the Web SDK tag extension, but you can also install and configure it using raw code instead. Refer to the following guides for more information:
 >
->* [Install the SDK](./fundamentals/installing-the-sdk.md)
->* [Configure the SDK](./fundamentals/configuring-the-sdk.md)
+>* [Install the SDK](../edge/fundamentals/installing-the-sdk.md)
+>* [Configure the SDK](../edge/fundamentals/configuring-the-sdk.md)
 >
 >Also note that even if you only want to use event forwarding, you must still install and configure the SDK as described before configuring event forwarding at a [later step](#event-forwarding).
 
