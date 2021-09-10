@@ -51,9 +51,15 @@ Once you have provided all the required details, select **[!UICONTROL Generate c
 
 >[!IMPORTANT]
 >
->Once the **[!UICONTROL Generate credentials]** button is selected, a configuration file that contains information such as technical account name, technical account ID, and credential. Since Adobe does **not** record the generated credential, you **must** securely store the downloaded file and keep a record of the credential.
+>Once the **[!UICONTROL Generate credentials]** button is selected, a configuration JSON file is downloaded to your local machine. Since Adobe does **not** record the generated credential, you **must** securely store the downloaded file and keep a record of the credential.
 >
 >Additionally, if the credentials are not used for 90 days, the credentials will be pruned.
+
+The configuration JSON file contains information such as technical account name, technical account ID, and credential. It is provided in the following format.
+
+```json
+{"technicalAccountName":"9F0A21EE-B8F3-4165-9871-846D3C8BC49E@TECHACCT.ADOBE.COM","credential":"3d184fa9e0b94f33a7781905c05203ee","technicalAccountId":"4F2611B8613AA3670A495E55"}
+```
 
 Now that you have saved your generated credentials, select **[!UICONTROL Close]**. You can now see a list of all your non-expiring credentials.
 
@@ -75,13 +81,19 @@ Once you have provided all the required details, select **[!UICONTROL Update acc
 
 You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. 
 
-When connecting to these external clients, you will generally need to include the following information:
+The table below contains the list of parameters and their description, typically required to connect to external clients.
 
-- **Server/Host**: The name of the server/host that you are connecting to. This value takes the form of `server.adobe.io` and can be found under **[!UICONTROL Host]** within the expiring credentials section.
-- **Port**: The port for the server/host you are connecting to. This value can be found under **[!UICONTROL Port]** within the expiring credentials section. An example value for the port would be `80`.
-- **Username**: The username for the user who is connecting to the external client. This takes the form of `ID@AdobeOrg` and can be found under **[!UICONTROL Username]** within the expiring credentials section.
-- **Password**: The password for the user who is connecting to the external client. If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the expiring credentials section. If you're using non-expiring credentials, this value is comprised of both the technical account ID and the credential in the form: `technicalAccountId:credential`.
-- **Database**: The database that you are connecting to. This value can be found under **[!UICONTROL Database]** within the expiring credentials section. An example value for the database would be `prod:all`.
+>[!NOTE]
+>
+>When connecting to a host using non-expiring credentials it is still necessary to use all the parameters listed in the EXPIRING CREDENTIALS section except for the password.
+
+| Parameter  | Description |
+|---|---|
+| **Server/Host**  | The name of the server/host that you are connecting to. This value takes the form of `server.adobe.io` and can be found under **[!UICONTROL Host]**.  |
+| **Port**  | The port for the server/host you are connecting to. This value can be found under **[!UICONTROL Port]**. An example value for the port would be `80`.  |
+| **Database**  | The database that you are connecting to. This value can be found under **[!UICONTROL Database]**. An example value for the database would be `prod:all`. |
+| **Username**  | The username for the user who is connecting to the external client. This takes the form of an alphanumeric string before `@AdobeOrg`. This value is found under **[!UICONTROL Username]**.  |
+| **Password**  | The password for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the expiring credentials section.</li><li>If you're using non-expiring credentials, this value is comprised of the arguments from the technicalAccountID and the credential taken from the configuration JSON file. The password value takes the form: `{technicalAccountId}:{credential}`.</li></ul>  |
 
 ## Next steps
 
