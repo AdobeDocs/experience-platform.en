@@ -39,7 +39,7 @@ The process of configuring the Edge Network for your website can be summarized a
 1. [Create a datastream](#datastream) to configure which destinations you want your data to be sent to.
 1. [Install and configure the Web SDK](#sdk) to send data to the datastream when certain events occur on your website.
 
-Once you are able to send data to the Edge Network, you can also optionally [configure event forwarding](#event-forwarding) if your organization has a licence for it.
+Once you are able to send data to the Edge Network, you can also optionally [configure event forwarding](#event-forwarding) if your organization has a license for it.
 
 ## Create a schema {#schema}
 
@@ -91,7 +91,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 >
 >If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. Details on this process are covered in a [later section](#event-forwarding).
 
-In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can can create a new configuration by selecting **[!UICONTROL New Datastream]**.
+In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can create a new configuration by selecting **[!UICONTROL New Datastream]**.
 
 ![Datastreams](./images/e2e/datastreams.png)
 
@@ -135,7 +135,7 @@ The configuration page for the SDK appears. Most required values are auto-popula
 
 ![Configure the Web SDK](./images/e2e/configure-sdk.png)
 
-Before you can install the SDK, however, you must select a datastream so it knows where to sent your data to. Under **[!UICONTROL Datastreams]**, use the dropdown menu to select the datastream that you configured at an [earlier step](#datastream). Once you've set the datastream, select **[!UICONTROL Save]** to finish installing the SDK to the property.
+Before you can install the SDK, however, you must select a datastream so it knows where to send your data to. Under **[!UICONTROL Datastreams]**, use the dropdown menu to select the datastream that you configured at an [earlier step](#datastream). Once you've set the datastream, select **[!UICONTROL Save]** to finish installing the SDK to the property.
 
 ![Set datastream and save](./images/e2e/set-datastream.png)
 
@@ -206,7 +206,7 @@ The event configuration page appears. To configure an event, you must first sele
 >
 >For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/web/overview.md) in the tags documentation.
 
-The form submit event allows you to use a [CSS selector](https://www.w3schools.com/css/css_selectors.asp) to reference a specific element for the rule to fire on. In the example below, the the ID `add-to-cart-form` is used so that this rule only fires for the "Add to Cart" form. Select **[!UICONTROL Keep Changes]** to add the event to the rule.
+The form submit event allows you to use a [CSS selector](https://www.w3schools.com/css/css_selectors.asp) to reference a specific element for the rule to fire on. In the example below, the ID `add-to-cart-form` is used so that this rule only fires for the "Add to Cart" form. Select **[!UICONTROL Keep Changes]** to add the event to the rule.
 
 ![Event configuration](./images/e2e/event-config.png)
 
@@ -248,7 +248,7 @@ After you have installed the environment on your website, you can [test your imp
 
 >[!NOTE]
 >
->Event forwarding is only available for organizations that have been licenced for it.
+>Event forwarding is only available for organizations that have been licensed for it.
 
 Once you have configured the SDK to send data to the Edge Network, you can set up event forwarding to tell the Edge Network where you want that data to be delivered.
 
