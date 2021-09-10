@@ -34,7 +34,7 @@ Each tag property has a platform. There are currently two platforms that you can
 
 By default, product profiles grant access to all properties that exist within your company, both currently and in the future. Using this permission type, you can restrict or grant access to specific existing properties by name.
 
-### Property rights
+### Property rights {#property-rights}
 
 Any property that you create in the Data Collection UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
 
