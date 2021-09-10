@@ -14,7 +14,7 @@ description: This document provides an overview of the External Source System Au
 
 | Property | Data type | Description |
 | --- | --- | --- |
-| `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | An identifier for the source used for auditing. |
+| `externalKey` | [[!UICONTROL B2B Source]](./b2b-source.md) | A composite identifier for the source used for auditing. |
 | `createdBy` | String | The name of the user who created this record. |
 | `createdDate` | DateTime | The date when this record was created. |
 | `externalID` | String | External unique identifier for the source. This value is used to help identify and deduplicate if needed. |

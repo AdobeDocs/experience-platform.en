@@ -14,7 +14,7 @@ description: This document provides an overview of the XDM Business Campaign cla
 
 | Property | Data type |  Description |
 | --- | --- | --- |
-| `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | An identifier for the campaign. |
+| `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the campaign. |
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Audit attributes for external sources related to the campaign. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the `campaignID`. |
 | `campaignDescription` | String  | A description for the campaign. |

@@ -27,6 +27,8 @@ feature: Schemas
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
     * [XDM Business Campaign](./classes/b2b/business-campaign.md)
+    * [XDM Business Opportunity](./classes/b2b/business-opportunity.md)
+    * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
     * [Demographic Details](./field-groups/profile/demographic-details.md)
