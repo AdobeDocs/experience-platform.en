@@ -26,8 +26,11 @@ feature: Schemas
   * [XDM ExperienceEvent](./classes/experienceevent.md)
   * [Segment definition](./classes/segment-definition.md)
   * B2B classes {#b2b}
+    * [XDM Business Account](./classes/b2b/business-account.md)
+    * [XDM Business Account Person Relation](./classes/b2b/business-account-person-relation.md)
     * [XDM Business Campaign](./classes/b2b/business-campaign.md)
     * [XDM Business Opportunity](./classes/b2b/business-opportunity.md)
+    * [XDM Business Opportunity Person Relation](./classes/b2b/business-opportunity-person-relation.md)
     * [XDM Business Marketing List](./classes/b2b/business-marketing-list.md)
 * Schema field groups {#field-groups}
   * Profile field groups {#profile}
