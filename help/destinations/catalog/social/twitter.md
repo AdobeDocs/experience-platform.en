@@ -1,8 +1,8 @@
 ---
 title: Twitter Custom Audiences connection
 description: Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform
+exl-id: fd244e58-cd94-4de7-81e4-c321eb673b65
 ---
-
 # [!DNL Twitter Custom Audiences] connection
 
 ## Overview {#overview}
