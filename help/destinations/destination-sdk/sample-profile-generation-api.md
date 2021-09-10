@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint, to generate sample profiles to use in destination testing.
 title: Sample profile generation API operations
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 ---
 # Sample profile generation API operations {#sample-profile-api-operations}
 

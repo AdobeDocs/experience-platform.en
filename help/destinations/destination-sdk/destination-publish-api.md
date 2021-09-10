@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 title: Publish Destinations API endpoint operations
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 ---
 # Publish Destinations endpoint API operations {#publish-destination}
 
