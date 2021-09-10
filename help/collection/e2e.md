@@ -7,7 +7,7 @@ exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 
 In Adobe Experience Platform, data collection refers to several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
+This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -173,9 +173,26 @@ Once you have finished mapping your data to the schema, provide a name for the d
 
 After you've saved the data element, the next step is to create a rule that will send it to the Edge Network whenever a certain event occurs on your website (such as when a customer adds a product to a cart).
 
-As an example, this section shows how to create a rule that will trigger when a customer adds an item to a cart. However, you can set up rules for virtually any event that can occur on your website.
+You can set up rules for virtually any event that can occur on your website. As an example, this section shows how to create a rule that will trigger when a customer submits a form. The following HTML represents a simple webpage with an "Add to Cart" form, which will be the subject of the rule:
 
-Select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+In the Data Collection UI, select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
 
 ![Rules](./images/e2e/rules.png)
 
@@ -183,13 +200,13 @@ On the next screen, provide a name for the rule. From here, the next step is to 
 
 ![Name rule](./images/e2e/name-rule.png)
 
-The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the **[!UICONTROL Form]** category. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
+The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the **[!UICONTROL Form]** category.
 
 >[!NOTE]
 >
 >For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/web/overview.md) in the tags documentation.
 
-Select **[!UICONTROL Keep Changes]** to add the event to the rule.
+The form submit event allows you to use a [CSS selector](https://www.w3schools.com/css/css_selectors.asp) to reference a specific element for the rule to fire on. In the example below, the the ID `add-to-cart-form` is used so that this rule only fires for the "Add to Cart" form. Select **[!UICONTROL Keep Changes]** to add the event to the rule.
 
 ![Event configuration](./images/e2e/event-config.png)
 
