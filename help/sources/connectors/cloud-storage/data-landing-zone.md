@@ -44,5 +44,5 @@ The documentation below provides information on how to connect Azure Blob to Ado
 
 ### Using the UI
 
-- 
+- Connect [!DNL Data Landing Zone] to Platform using the UI
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
