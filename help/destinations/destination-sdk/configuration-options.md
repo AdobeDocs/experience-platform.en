@@ -34,3 +34,5 @@ The pages below provide more detail about the functionality and configuration op
 |[Message format](./message-format.md) | - |
 |[Destination testing](./test-destination.md) | [Destination testing API operations](./destination-testing-api.md) |
 |[Destination publishing](./configure-destination-instructions.md#publish-destination) | [Destination publishing API operations](./destination-publish-api.md) |
+
+{style="table-layout:auto"}

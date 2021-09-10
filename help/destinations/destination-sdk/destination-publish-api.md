@@ -120,6 +120,8 @@ The following response returns HTTP status 200 with a list of destinations submi
 |`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`.|
 |`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time. |
 
+{style="table-layout:auto"}
+
 ## Update an existing destination publish request {#update}
 
 You can update the allowed organizations in an existing destination publish request by making a PUT request to the `/authoring/destinations/publish` endpoint and providing the ID of the destination for which you want to update the allowed organizations. In the body of the call, provide the updated allowed organizations.
