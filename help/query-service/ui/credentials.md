@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Query Service UI Guide
 topic-legacy: guide
 description: Adobe Experience Platform Query Service provides a user interface that can be used to write and execute queries, view previously executed queries, and access queries saved by users within your IMS Organization.
+exl-id: ea25fa32-809c-429c-b855-fcee5ee31b3e
 ---
-
 # Credentials guide
 
 Adobe Experience Platform Query Service allows you to connect with external clients. You can connect to these external clients by using either expiring credentials or non-expiring credentials.

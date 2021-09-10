@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Data Prep Overview
 topic-legacy: overview
 description: This document introduces Data Prep within Adobe Experience Platform.
+exl-id: 9bef5c3b-368d-4492-bdef-64e67fc25bfd
 ---
-
 # Calculated fields
 
 Calculated fields allow for values to be created based on the attributes in the input schema. These values can then be assigned to attributes in the target schema and be provided a name and description to allow for easier reference.
@@ -32,4 +32,4 @@ Select **[!UICONTROL Save]** to proceed.
 
 The mapping screen reappears with your newly created source field. Apply the appropriate corresponding target field and select **[!UICONTROL Finish]** to complete the mapping.
 
-![](./images/calculated-fields/new-calculated-field.png) 
+![](./images/calculated-fields/new-calculated-field.png)

@@ -17,6 +17,7 @@ Adobe Experience Platform currently supports the following social destinations:
 * [Adobe [!DNL Livefyre] extension](adobe-livefyre.md)
 * [[!DNL Facebook] connection](facebook.md)
 * [[!DNL LinkedIn Matched Audiences] connection](linkedin.md)
+* [[!DNL Twitter Custom Audiences] connection](twitter.md)
 
 ## Connect to a new social destination {#connect-destination}
 
