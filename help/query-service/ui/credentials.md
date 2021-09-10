@@ -85,9 +85,9 @@ The table below contains the list of parameters and their description, typically
 
 >[!NOTE]
 >
->When connecting to a host using non-expiring credentials it is still necessary to use all the parameters listed in the EXPIRING CREDENTIALS section except for the password.
+>When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password.
 
-| Parameter  | Description |
+| Parameter | Description |
 |---|---|
 | **Server/Host**  | The name of the server/host that you are connecting to. This value takes the form of `server.adobe.io` and can be found under **[!UICONTROL Host]**.  |
 | **Port**  | The port for the server/host you are connecting to. This value can be found under **[!UICONTROL Port]**. An example value for the port would be `80`.  |
