@@ -8,7 +8,7 @@ description: Learn how to connect Adobe Experience Platform to Data Landing Zone
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 
-High-level overview
+This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection, as well as instructions on how to generate and refresh your credentials, as well as retrieve and activate your [!DNL Data Landing Zone].
 
 ## Getting started
 
@@ -202,13 +202,13 @@ curl -X GET \
 GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType={OBJECT_TYPE}&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
 ```
 
-| Parameter | Description |
-| --- | --- |
-| `{CONNECTION_SPEC_ID}` |
-| `{OBJECT_TYPE}` |
-| `{OBJECT}` |
-| `{FILE_TYPE}` |
-| `{PREVIEW}` |
+| Parameter | Description | Example |
+| --- | --- | --- |
+| `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
+| `{OBJECT_TYPE}` | The type of the object of the object you want to access. | `file` |
+| `{OBJECT}` | The path and name of the object you want to access. | `dlz-user-container/data8.csv` |
+| `{FILE_TYPE}` | The type of the file. | `delimited` |
+| `{PREVIEW}` | A boolean value that defines if file preview is supported. | `true` |
 
 **Request**
 
@@ -286,6 +286,11 @@ curl -X GET \
 
 ## Create a source connection
 
+A source connection creates and manages the connection to the external source from where data is ingested. A source connection consists of information like data source, data format, and the source connection ID needed to create a dataflow. A source connection instance is specific to a tenant and IMS Organization.
+
+To create a source connection, make a POST request to the `/sourceConnections` endpoint of the [!DNL Flow Service] API.
+
+
 **API format**
 
 ```http
@@ -303,7 +308,7 @@ curl -X POST \
     -H 'x-sandbox-name: {SANDBOX_NAME}' \
     -H 'Content-Type: application/json' \
     -d '{
-        "name": "dlztestSrcConn",
+        "name": "Data Landing Zone source connection",
         "data": {
             "format": "delimited"
         },
@@ -317,7 +322,16 @@ curl -X POST \
     }'
 ```
 
+| Property | Description |
+| --- | --- |
+| `name` |
+| `data.format` |
+| `params.path` |
+| `connectionSpec.id` |
+
 **Response**
+
+A successful response returns the unique identifier (`id`) of the newly created source connection. This ID is required in the next tutorial to create a dataflow.
 
 ```json
 {

@@ -17,9 +17,6 @@ WHAT EXACTLY IS DATA LANDING ZONE?
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
->[!IMPORTANT]
->
->The [!DNL Azure Blob] source connector currently does not support same-region connectivity to Platform. This means that if your Azure instance is using the same network region as Platform, then a connection to Platform sources cannot be established. Currently, only cross-region connectivity is supported. Please contact your Adobe account manager for more information.
 
 ## Naming constraints for files and directories
 
