@@ -65,7 +65,7 @@ feature: Schemas
   * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
-  * [[!UICONTROL B2B Source]](./data-types/b2b-source.md)
+  * [B2B Source](./data-types/b2b-source.md)
   * [Commerce](./data-types/commerce.md)
   * [Consent String](./data-types/consent-string.md)
   * [Consents & Preferences](./data-types/consents.md)
