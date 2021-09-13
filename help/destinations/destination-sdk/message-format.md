@@ -779,29 +779,170 @@ When you use [configurable aggregation](./destination-configuration.md#configura
 
 If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use `segmentId` in the template to group profiles in the HTTP messages exported to your destination:
 
-```python
+**Input**
+
+Consider the four profiles below, where the first two are part of the segment with the segment ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` and the other two are part of the segment with the segment ID `8f812592-3f06-416b-bd50-e7831848a31a`.
+
+Profile 1:
+
+```json
 {
-            "profiles": [
-            {% for profile in input.profiles %}
-            {
-                {% for ns in input.aggregationKey.segmentId %}
-                "{{ns}}": [
-                    {% for id in profile.segmentId %}
-                    "{{id.id}}"{% if not loop.last %},{% endif %}
-                    {% endfor %}
-                ]{% if not loop.last %},{% endif %}
-                {% endfor %}
-            }{% if not loop.last %},{% endif %}
-            {% endfor %}
-        ]
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
 }
 ```
 
+Profile 2:
 
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      },
+      "birthDate":{
+         "value":"1980/07/31"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profile 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      },
+      "birthDate":{
+         
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profile 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      },
+      "birthDate":{
+         "value":"1940/01/01"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Template**
+
+>[!IMPORTANT]
+>
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+```python
+{
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            {% for attribute in profile.attributes %}
+            "{{ attribute.key }}":
+                {% if attribute.value is empty %}
+                    null
+                {% else %}
+                    "{{ attribute.value.value }}"
+                {% endif %}
+            {% if not loop.last %},{% endif %}
+            {% endfor %}
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+    "audienceId": "{{input.aggregationKey.segmentId}}"
+}
+```
+
+**Result**
+
+When exported to your destination, the profiles are split into two groups, based on their segment ID.
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Hermione",
+            "birthDate": null
+        },
+        {
+            "firstName": "Harry",
+            "birthDate": "1980/07/31"
+        }
+    ],
+    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+}
+```
+
+```json
+{
+    "profiles": [
+        {
+            "firstName": "Tom",
+            "birthDate": null
+        },
+        {
+            "firstName": "Jerry",
+            "birthDate": "1940/01/01"
+        }
+    ],
+    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+}
+```
 
 #### Example of using segment alias aggregation key in the template {#aggregation-key-segment-alias}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination:
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination.
+
+Add the line below to the template to group exported profiles based on the segment alias.
 
 ```python
 "customerList={{input.aggregationKey.segmentAlias}}"
@@ -809,7 +950,7 @@ If you use [configurable aggregation](./destination-configuration.md#configurabl
 
 #### Example of using segment status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
@@ -817,7 +958,7 @@ Possible values are:
 * existing
 * exited
 
-See below how you can use this information in a template:
+Add the line below to the template to add or remove profiles from segments, based on the values above.:
 
 ```python
 "action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
@@ -825,7 +966,7 @@ See below how you can use this information in a template:
 
 #### Example of using identity namespace aggregation key in the template {#aggregation-key-identity}
 
-Below is an example where the configurable aggregation in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"identityNamespaces": ["email", "phone"]`
+Below is an example where the [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"identityNamespaces": ["email", "phone"]`
 
 **Input**
 
@@ -854,23 +995,23 @@ Profile 1:
 Profile 2:
 
 ```json
-       {
-            "identityMap": {
-                "email": [
-                    {
-                        "id": "e3@example.com"
-                    }
-                ],
-                "phone": [
-                    {
-                        "id": "+40744333444"
-                    },
-                    {
-                        "id": "+40744555666"
-                    }
-                ]
-            }
-        }
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ]
+   }
+}
 ```
 
 **Template**
@@ -924,6 +1065,14 @@ The `json` below represents the data exported out of Adobe Experience Platform.
       }
    ]
 }
+```
+
+#### Example of using the aggregation key in a URL template
+
+Note that depending on your use case, you can also use the aggregation keys described here in a URL, as shown below:
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
 ```
 
 ### Reference: Context and functions used in the transformation templates {#reference}
