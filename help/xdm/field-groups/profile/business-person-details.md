@@ -9,16 +9,16 @@ description: This document provides an overview of the XDM Business Person Detai
 >
 >This field group is only available for organizations that have access to the B2B edition of Real-time Customer Data Platform.
 
-[!UICONTROL XDM Business Person Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md). The field group provides a root-level `person` object, whose sub-fields describe information about an individual person.
+[!UICONTROL XDM Business Person Details] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) that captures information about an individual person in the context of a business-to-business (B2B) enterprise.
 
 ![](../../images/field-groups/business-person-details.png)
 
 | Property | Data type | Description |
 | --- | --- | --- |
 | `b2b` | Object | An object that captures the B2B-specific details about the person. |
-| `b2b.accountKey` | [B2B Source](../../data-types/b2b-source.md) | A composite identifier for the business account related to the person. |
-| `b2b.convertedContactKey` | [B2B Source](../../data-types/b2b-source.md) | A composite identifier for the associated contact if the lead was converted. |
-| `b2b.personKey` | [B2B Source](../../data-types/b2b-source.md) | A composite identifier for the person or profile fragment. |
+| `b2b.accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the business account related to the person. |
+| `b2b.convertedContactKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the associated contact if the lead was converted. |
+| `b2b.personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person or profile fragment. |
 | `b2b.accountID` | String | A unique ID for the business account this person is associated with. |
 | `b2b.blockedCause` | String | If the person is blocked, this property provides the reason why. |
 | `b2b.convertedContactID` | String | The contact ID if the lead was successfully converted. |

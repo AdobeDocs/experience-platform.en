@@ -45,6 +45,7 @@ feature: Schemas
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
+    * [XDM Business Person Components](./field-groups/profile/business-person-components.md)
     * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * Event field groups {#event}
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
@@ -64,7 +65,7 @@ feature: Schemas
   * [Application](./data-types/application.md)
   * [Beacon](./data-types/beacon.md)
   * [Browser details](./data-types/browser-details.md)
-  * [B2B Source](./data-types/b2b-source.md)
+  * [[!UICONTROL B2B Source]](./data-types/b2b-source.md)
   * [Commerce](./data-types/commerce.md)
   * [Consent String](./data-types/consent-string.md)
   * [Consents & Preferences](./data-types/consents.md)
