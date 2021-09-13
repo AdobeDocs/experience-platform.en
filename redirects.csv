@@ -1,4 +1,5 @@
 source,dest
+https://experienceleague.adobe.com/docs/experience-platform/observability/notifications/(*),https://experienceleague.adobe.com/docs/experience-platform/observability/alerts/
 https://experienceleague.adobe.com/docs/launch/using/reference/upgrade/(*),https://experienceleague.adobe.com/docs/experience-platform/tags/home.html
 https://experienceleague.adobe.com/docs/launch/using/release-notes/2018-release-notes.html,https://experienceleague.adobe.com/docs/launch/using/release-notes/2018.html
 https://experienceleague.adobe.com/docs/launch/using/release-notes/2019-release-notes.html,https://experienceleague.adobe.com/docs/launch/using/release-notes/2019.html
