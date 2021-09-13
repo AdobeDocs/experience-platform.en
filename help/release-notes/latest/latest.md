@@ -10,10 +10,10 @@ exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Destinations {#destinations}](#destinations-destinations)
-- [Observability Insights {#observability}](#observability-insights-observability)
-- [Real-time Customer Profile {#profile}](#real-time-customer-profile-profile)
-- [Sources {#sources}](#sources-sources)
+- [Destinations {#destinations}](#destinations)
+- [Observability Insights {#observability}](#observability)
+- [Real-time Customer Profile {#profile}](#real-time-customer-profile)
+- [Sources {#sources}](#sources)
 
 ## Destinations {#destinations}
 
