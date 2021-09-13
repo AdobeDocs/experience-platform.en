@@ -1,6 +1,7 @@
 ---
 title: SFTP Hosts
 description: Learn how to configure tags in Adobe Experience Platform to deliver library builds to a secured, self-hosted SFTP server.
+exl-id: 3c1dc43b-291c-4df4-94f7-a03b25dbb44c
 ---
 # SFTP hosts
 

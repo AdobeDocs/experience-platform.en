@@ -1,6 +1,7 @@
 ---
 title: Extension packages endpoint
 description: Learn how to make calls to the /extension_packages endpoint in the Reactor API.
+exl-id: a91c6f32-6c72-4118-a43f-2bd8ef50709f
 ---
 # Extension packages endpoint
 

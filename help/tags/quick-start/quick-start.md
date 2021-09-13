@@ -1,6 +1,7 @@
 ---
 title: Quickstart Guide
 description: Learn how to quickly get up and running with tags in Adobe Experience Platform.
+exl-id: 490ee344-3b18-4189-9293-2378f86fb10d
 ---
 # Quickstart guide
 

@@ -4,8 +4,8 @@ title: Custom Accessibility Solutions for Experience Platform
 topic-legacy: guide
 type: Documentation
 description: Learn more about the custom accessibility solutions within the Adobe Experience Platform user interface.
+exl-id: cb5ad99e-8a95-4c9e-aae6-1d0036ecf052
 ---
-
 # Custom accessibility solutions for Experience Platform
 
 Adobe Experience Platform is continuously enhanced to meet the needs of all types of users and adhere to the worldwide standards that include individuals with visual, auditory, mobility, or other impairments. This document outlines custom accessibility solutions within the Experience Platform user interface.

@@ -1,6 +1,7 @@
 ---
 title: Adobe Target Extension Overview
 description: Learn about the tag extension for Adobe Target in Adobe Experience Platform.
+exl-id: b1c5e25b-42ea-4835-b2d4-913fa2536e77
 ---
 # Adobe Target extension overview
 

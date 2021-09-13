@@ -1,6 +1,7 @@
 ---
 title: Library Modules in Edge Extensions
 description: Format library modules for tag extensions in an edge property.
+exl-id: 82b98972-6fa2-4143-bcf4-c5dac1ca0e7f
 ---
 # Library modules in edge extensions
 

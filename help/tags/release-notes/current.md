@@ -1,6 +1,7 @@
 ---
 title: Release Notes
 description: The latest release notes for tags in Adobe Experience Platform.
+exl-id: 2ebeaa1e-64b8-48fd-b4e8-419663271a87
 ---
 # Release notes
 
