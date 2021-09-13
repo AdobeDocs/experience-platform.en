@@ -15,6 +15,6 @@ description: This document provides an overview of the XDM Business Account clas
 | Property | Data type |  Description |
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the account. |
-| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Audit attributes for external sources related to the account. |
+| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the account comes from an external source system, this object captures audit attributes for that system. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the `accountID`. |
 | `accountID` | String  | A unique identifier for the account. |

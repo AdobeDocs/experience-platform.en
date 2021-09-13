@@ -14,7 +14,7 @@ description: This document provides an overview of the XDM Business Marketing Li
 
 | Property | Data type |  Description |
 | --- | --- | --- |
-| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Audit attributes for external sources related to the marketing list membership. |
+| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the marketing list membership comes from an external source system, this object captures audit attributes for that system. |
 | `marketingListKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the marketing list that the person is a member of. |
 | `marketingListMemberKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the marketing list membership for this person. |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person who is a member of the marketing list. |

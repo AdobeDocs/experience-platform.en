@@ -16,7 +16,7 @@ description: This document provides an overview of the XDM Business Account Pers
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the account in the account-person relationship. |
 | `accountPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the relationship between the account and the person. |
-| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Audit attributes for external sources related to the account. |
+| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the account-person relationship comes from an external source system, this object captures audit attributes for that system. |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person in the account-person relationship. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the other ID fields captured by the class. |
 | `accountID` | String  | A unique identifier for the account in the account-person relationship. |

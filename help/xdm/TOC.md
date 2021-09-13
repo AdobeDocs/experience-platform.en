@@ -45,6 +45,7 @@ feature: Schemas
     * [Segment Membership Details](./field-groups/profile/segmentation.md)
     * [Telecom Subscription](./field-groups/profile/telecom-subscription.md)
     * [Work Contact Details](./field-groups/profile/work-contact-details.md)
+    * [XDM Business Person Details](./field-groups/profile/business-person-details.md)
   * Event field groups {#event}
     * [Campaign Marketing Details](./field-groups/event/campaign-marketing-details.md)
     * [Channel Details](./field-groups/event/channel-details.md)

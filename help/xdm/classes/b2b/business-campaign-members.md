@@ -16,7 +16,7 @@ description: This document provides an overview of the XDM Business Campaign Mem
 | --- | --- | --- |
 | `campaignKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the campaign. |
 | `campaignMemberKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the campaign membership. |
-| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | Audit attributes for external sources related to the campaign membership. |
+| `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the campaign membership comes from an external source system, this object captures audit attributes for that system. |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person associated with the campaign membership. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the `campaignMemberID`. |
 | `campaignID` | String  | A unique ID for the campaign. |
