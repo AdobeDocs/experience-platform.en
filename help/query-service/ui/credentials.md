@@ -30,11 +30,71 @@ The **[!UICONTROL Expiring credentials]** section provides the following informa
 
 You can use non-expiring credentials to set up a more permanent connection to an external client.
 
-To create a set of non-expiring credentials, select **[!UICONTROL Generate credentials]**.
+Before you can create non-expiring credentials, you must configure both the **Sandboxes** and **Manage Query Service Integration** permissions for your Org in the Adobe Admin Console. 
 
->[!NOTE]
->
->Before you can create non-expiring credentials, you must have both the **Sandboxes** and **Manage Query Service Integration** permissions. To learn how to assign these permissions, please read the documentation on [Access Control](../../access-control/home.md).
+Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
+
+In the [!UICONTROL Products and services] section of the [!UICONTROL Overview], select **Adobe Experience Platform**.
+
+![Adobe Admin Console dashboard](../images/ui/credentials/adobe-admin-console-dashboard.png)
+
+The Adobe Experience Platform Details page appears. Next, create a new profile. Select [!UICONTROL **New Profile**].
+
+![Adobe Experience Platform Details page](../images/ui/credentials/aep-details.png)
+
+A profile creation dialog appears. Enter a descriptive name for the new profile and select [!UICONTROL **Save**]. The [!UICONTROL Settings] page for your new profile appears. Select the [!UICONTROL **Permissions**] tab from the available options.
+
+### Enable Query Service Permissions
+
+To ensure the correct Query Service permissions are enabled for your Org, find and select the [!UICONTROL **Query Service**] category from the list.
+
+![Permissions tab query service category highlighted](../images/ui/credentials/permissions-tab-query-service-category.png)
+
+The [!UICONTROL Edit Permissions] workspace for Query Service appears. Select the plus (**+**) icon for [!UICONTROL **Manage Queries**], and [!UICONTROL **Manage Query Service Integration**] to add them to the [!UICONTROL Included Permission Items] column. Next, select [!UICONTROL **Save**] to confirm your changes.
+
+![Save Included Permission Items](../images/ui/credentials/edit-permissions-for-query-service-profile.png)
+
+This returns you to the Settings > Permissions tab.
+
+### Enable Sandbox Permissions
+
+To ensure the correct sandbox is selected for your Org, find and select the [!UICONTROL **Sandboxes**] category from the list.
+
+![Permissions tab Sandboxes category highlighted](../images/ui/credentials/permissions-tab-sandboxes-category.png)
+
+The Sandboxes workspace appears. From the [!UICONTROL Available Permission Items], find the relevant sandbox, in this image it is the Prod sandbox. Select the plus (**+**) icon to add it to the [!UICONTROL Included Permission Items]. Next, select [!UICONTROL **Save**] to confirm your changes.
+
+![Add Prod Sandbox permission](../images/ui/credentials/prod-sandbox.png)
+
+This returns you to the Settings > Permissions tab.
+
+There are three more steps required to allow a user access to the non-expiring account feature.
+
+1. Add a new user to grant the newly created permissions to. Select the [!UICONTROL **Users**] tab, followed by [!UICONTROL **Add User**]. 
+
+![User tab Add User button highlighted](../images/ui/credentials/users-tab-new-user.png)
+
+- The create user dialog appears. Input a name and email for the new user and select [!UICONTROL **Save**].
+
+<!-- I have not seen this I am assuming it is true. -->
+
+2. The user must then be added as an admin to allow an account creation for any active product profile. Select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**] to add the newly created user as an admin.  
+ 
+![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
+
+- The add admin dialog appears. Input the new admin's details into the text fields and select [!UICONTROL **Save**].
+
+3. The user must then be added as a developer for an integration to be created. Select the **Developers** tab, followed by the **Add Developer**.
+
+![Developers tab Add Developer button highlighted](../images/ui/credentials/developers-tab-add-developer.png)
+
+- The add developer dialog appears. Input the new developer's details into the text fields and select **Save**.
+
+To learn more about how to assign permissions, please read the documentation on [Access Control](../../access-control/home.md).
+
+All the required permissions are now configured in the Adobe Developer console for the user to use the expiring credentials feature. 
+
+To create a set of non-expiring credentials, in the Queries Credentials workspace select **[!UICONTROL Generate credentials]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
