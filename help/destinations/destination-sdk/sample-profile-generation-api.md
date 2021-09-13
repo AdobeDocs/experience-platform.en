@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/sample-profiles` API endpoint, to generate sample profiles to use in destination testing.
 title: Sample profile generation API operations
+exl-id: 5f1cd00a-8eee-4454-bcae-07b05afa54af
 ---
 # Sample profile generation API operations {#sample-profile-api-operations}
 
@@ -40,6 +41,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance based on which you are generating sample profiles. |
 | `{COUNT}` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. <br> If the count parameter is not specified, then the default number of generated profiles is determined by the `maxUsersPerRequest` value in the [destination server configuration](./destination-server-api.md#create). If this property is not defined, then Adobe will generate one sample profile. |
+
+{style="table-layout:auto"}
 
 
 **Request**
@@ -167,6 +170,7 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | `xdm:status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
+{style="table-layout:auto"}
 
 ## Generate sample profiles based on the target schema {#generate-sample-profiles-target-schema}
 
@@ -187,6 +191,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | The ID of the destination configuration based on which you are generating sample profiles. |
 | `{COUNT}` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. <br> If the count parameter is not specified, then the default number of generated profiles is determined by the `maxUsersPerRequest` value in the [destination server configuration](./destination-server-api.md#create). If this property is not defined, then Adobe will generate one sample profile. |
+
+{style="table-layout:auto"}
 
 **Request**
 

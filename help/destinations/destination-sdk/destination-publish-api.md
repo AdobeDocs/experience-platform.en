@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/destinations/publish` API endpoint.
 title: Publish Destinations API endpoint operations
+exl-id: 0564a132-42f4-478c-9197-9b051acf093c
 ---
 # Publish Destinations endpoint API operations {#publish-destination}
 
@@ -118,6 +119,8 @@ The following response returns HTTP status 200 with a list of destinations submi
 |`publishDetailsList.allowedOrgs` | String | Returns the Experience Platform organizations for which the destination should be available. |
 |`publishDetailsList.status` | String | The status of your destination publish request. Possible values are `TEST`, `REVIEW`, `APPROVED`, `PUBLISHED`, `DENIED`, `REVOKED`, `DEPRECATED`.|
 |`publishDetailsList.publishedDate` | String | The date when the destination was submitted for publishing, in epoch time. |
+
+{style="table-layout:auto"}
 
 ## Update an existing destination publish request {#update}
 

@@ -1,6 +1,7 @@
 ---
 description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to create and test a message transformation template.
 title: Create and test a message transformation template
+exl-id: 15e7f436-4d33-4172-bd14-ad8dfbd5e4a8
 ---
 # Create and test a message transformation template {#create-template}
 

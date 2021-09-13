@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Destination testing API operations
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 ---
 # Destination testing API operations {#template-api-operations}
 
@@ -155,6 +156,7 @@ A successful response returns HTTP status 200 along with the API response from y
 | `results.httpCalls.response` | Includes the response received by Adobe from your destination.|
 | `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
 
+{style="table-layout:auto"}
 
 ## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
 

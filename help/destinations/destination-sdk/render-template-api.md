@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/template/render` API endpoint, to to render exported data for your destination, based on your message transformation template.
 title: Render template API operations
+exl-id: e64ea89e-6064-4a05-9730-e0f7d7a3e1db
 ---
 # Render template API operations {#render-template-api-operations}
 
@@ -35,6 +36,8 @@ POST authoring/testing/template/render
 | `destinationId` | The ID of the destination configuration for which you are rendering exported data. |
 | `template` | The character-escaped version of the template based on which you are rendering exported data. |
 | `profiles` | If you'd like to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](./sample-profile-generation-api.md). |
+
+{style="table-layout:auto"}
 
 
 You can render exported data as shown in the examples below:

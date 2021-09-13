@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;date range
 title: Alerts Overview
 description: Learn about alerts in Adobe Experience Platform, including the structure of how alert rules are defined.
+feature: Alerts
 exl-id: c38a93c6-1618-4ef9-8f94-41c7ab4af43c
 ---
 # Alerts overview
@@ -50,6 +51,10 @@ Alerts can be received and managed through two channels:
 Alerts can be sent to a configured webhook to facilitate efficient automation of activity monitoring. In order to receive alerts via webhook, you must register your webhook for Platform alerts in Adobe Developer Console. See the guide on [subscribing to Adobe I/O Event notifications](./subscribe.md) for specific steps.
 
 ### Platform UI {#ui}
+
+The Platform UI allows you to view received alerts and manage alert rules. The following video provides an introduction to these capabilities.
+
+>[!VIDEO](https://video.tv.adobe.com/v/336218?quality=12&learn=on)
 
 To work with alerts in the Platform UI, you must have the following access control permissions enabled through Adobe Admin Console:
 
