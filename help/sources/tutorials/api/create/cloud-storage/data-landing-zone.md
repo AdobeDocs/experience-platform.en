@@ -23,7 +23,7 @@ The following sections provide additional information that you will need to know
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-## Get Landing Zone Credentials
+## Get [!DNL Data Landing Zone] Credentials
 
 **API format**
 
@@ -54,7 +54,7 @@ curl -X GET \
 }
 ```
 
-## Refresh Landing Zone Credentials
+## Refresh [!DNL Data Landing Zone] Credentials
 
 **API format**
 
@@ -85,7 +85,7 @@ curl -X POST \
 }
 ```
 
-## Get Landing Zone
+## Get [!DNL Data Landing Zone]
 
 **API format**
 
@@ -114,7 +114,7 @@ curl -X GET \
 }
 ```
 
-## Activate Landing Zone
+## Activate [!DNL Data Landing Zone]
 
 **API format**
 
@@ -143,7 +143,7 @@ curl -X POST \
 }
 ```
 
-## Explore Landing Zone
+## Explore [!DNL Data Landing Zone] file structure and contents
 
 **API format**
 
@@ -194,7 +194,7 @@ curl -X GET \
 ]
 ```
 
-## Preview Landing Zone data
+## Preview [!DNL Data Landing Zone] file structure and contents
 
 **API format**
 
@@ -324,10 +324,10 @@ curl -X POST \
 
 | Property | Description |
 | --- | --- |
-| `name` |
-| `data.format` |
-| `params.path` |
-| `connectionSpec.id` |
+| `name` | The name of your [!DNL Data Landing Zone] source connection. |
+| `data.format` | The format of the data you want to bring to Platform. |
+| `params.path` | The path to the file that you want to bring to Platform. |
+| `connectionSpec.id` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
 
 **Response**
 
@@ -339,3 +339,6 @@ A successful response returns the unique identifier (`id`) of the newly created 
     "etag": "\"1400d460-0000-0200-0000-613be3520000\""
 }
 ```
+
+## Next steps
+
