@@ -76,9 +76,7 @@ There are three more steps required to allow a user access to the non-expiring a
 
 The create user dialog appears. Input a name and email for the new user and select [!UICONTROL **Save**].
 
-- The user must then be added as an admin to allow an account creation for any active product profile. 
-
-To add the newly created user as an admin. select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**].
+- The user must then be added as an admin to allow an account creation for any active product profile. To add the newly created user as an admin. select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL **Add Admins**].
  
 ![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
 
