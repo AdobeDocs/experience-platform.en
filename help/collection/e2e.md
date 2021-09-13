@@ -7,7 +7,7 @@ exl-id: 01ddbb19-40bb-4cb5-bfca-b272b88008b3
 
 In Adobe Experience Platform, data collection refers to several technologies that work together to collect transfer your data to other Adobe products or third-party destinations. In order to send event data from your application to the Adobe Experience Platform Edge Network, it is important to understand these core technologies and how to configure them to deliver your data to the destinations you require, when you require it.
 
-This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI.
+This guide provides a high-level tutorial of how to send an event through the Edge Network using data collection technologies. Specifically, the tutorial walks through the steps of installing and configuring the Adobe Experience Platform Web SDK tag extension within the Data Collection UI (formerly Adobe Experience Platform Launch).
 
 >[!NOTE]
 >
@@ -33,13 +33,13 @@ See the [access control UI overview](../access-control/ui/overview.md) to learn 
 
 ## Process summary
 
-The process of configuring the Edge Network for your website can be summarized as follows:
+The process of configuring data collection for your website can be summarized as follows:
 
 1. [Create a schema](#schema) to determine how your data will be structured when being sent to the Edge Network.
 1. [Create a datastream](#datastream) to configure which destinations you want your data to be sent to.
 1. [Install and configure the Web SDK](#sdk) to send data to the datastream when certain events occur on your website.
 
-Once you are able to send data to the Edge Network, you can also optionally [configure event forwarding](#event-forwarding) if your organization has a licence for it.
+Once you are able to send data to the Edge Network, you can also optionally [configure event forwarding](#event-forwarding) if your organization has a license for it.
 
 ## Create a schema {#schema}
 
@@ -91,7 +91,7 @@ A datastream is a configuration that tells the Edge Network where you want your 
 >
 >If you want to use [event forwarding](../tags/ui/event-forwarding/overview.md) (assuming your organization is licensed for the functionality), you must enable it for a datastream in the same way that you enable Adobe products. Details on this process are covered in a [later section](#event-forwarding).
 
-In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can can create a new configuration by selecting **[!UICONTROL New Datastream]**.
+In the Data Collection UI, select **[!UICONTROL Datastreams]**. From here, you can select an existing datastream from the list to edit, or you can create a new configuration by selecting **[!UICONTROL New Datastream]**.
 
 ![Datastreams](./images/e2e/datastreams.png)
 
@@ -135,7 +135,7 @@ The configuration page for the SDK appears. Most required values are auto-popula
 
 ![Configure the Web SDK](./images/e2e/configure-sdk.png)
 
-Before you can install the SDK, however, you must select a datastream so it knows where to sent your data to. Under **[!UICONTROL Datastreams]**, use the dropdown menu to select the datastream that you configured at an [earlier step](#datastream). Once you've set the datastream, select **[!UICONTROL Save]** to finish installing the SDK to the property.
+Before you can install the SDK, however, you must select a datastream so it knows where to send your data to. Under **[!UICONTROL Datastreams]**, use the dropdown menu to select the datastream that you configured at an [earlier step](#datastream). Once you've set the datastream, select **[!UICONTROL Save]** to finish installing the SDK to the property.
 
 ![Set datastream and save](./images/e2e/set-datastream.png)
 
@@ -173,9 +173,26 @@ Once you have finished mapping your data to the schema, provide a name for the d
 
 After you've saved the data element, the next step is to create a rule that will send it to the Edge Network whenever a certain event occurs on your website (such as when a customer adds a product to a cart).
 
-As an example, this section shows how to create a rule that will trigger when a customer adds an item to a cart. However, you can set up rules for virtually any event that can occur on your website.
+You can set up rules for virtually any event that can occur on your website. As an example, this section shows how to create a rule that will trigger when a customer submits a form. The following HTML represents a simple webpage with an "Add to Cart" form, which will be the subject of the rule:
 
-Select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+  <form id="add-to-cart-form">
+    <label for="item">Product:</label><br>
+    <input type="text" id="item" name="item"><br>
+    <label for="amount">Amount:</label><br>
+    <input type="number" id="amount" name="amount" value="1"><br><br>
+    <input type="submit" value="Add to Cart">
+  </form> 
+
+</body>
+</html>
+```
+
+In the Data Collection UI, select **[!UICONTROL Rules]** in the left navigation, then select **[!UICONTROL Create New Rule]**.
 
 ![Rules](./images/e2e/rules.png)
 
@@ -183,13 +200,13 @@ On the next screen, provide a name for the rule. From here, the next step is to 
 
 ![Name rule](./images/e2e/name-rule.png)
 
-The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the **[!UICONTROL Form]** category. In the configuration dialog that appears, you can provide the CSS selector for the particular form you want this rule to fire on.
+The event configuration page appears. To configure an event, you must first select the event type. Event types are provided by extensions. To set up a "form submit" event, for example, select the **[!UICONTROL Core]** extension, then select the **[!UICONTROL Submit]** event type under the **[!UICONTROL Form]** category.
 
 >[!NOTE]
 >
 >For more information on the different event types provided by Adobe web extensions, including how to configure them, see the [Adobe extensions reference](../tags/extensions/web/overview.md) in the tags documentation.
 
-Select **[!UICONTROL Keep Changes]** to add the event to the rule.
+The form submit event allows you to use a [CSS selector](https://www.w3schools.com/css/css_selectors.asp) to reference a specific element for the rule to fire on. In the example below, the ID `add-to-cart-form` is used so that this rule only fires for the "Add to Cart" form. Select **[!UICONTROL Keep Changes]** to add the event to the rule.
 
 ![Event configuration](./images/e2e/event-config.png)
 
@@ -231,7 +248,7 @@ After you have installed the environment on your website, you can [test your imp
 
 >[!NOTE]
 >
->Event forwarding is only available for organizations that have been licenced for it.
+>Event forwarding is only available for organizations that have been licensed for it.
 
 Once you have configured the SDK to send data to the Edge Network, you can set up event forwarding to tell the Edge Network where you want that data to be delivered.
 

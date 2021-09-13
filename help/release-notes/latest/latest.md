@@ -19,10 +19,22 @@ Updates to existing features in Adobe Experience Platform:
 
 Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
 
+**New destinations**
+
+| Destination | Description |
+| ----------- | ----------- |
+| [[!DNL Airship Attributes]](../../destinations/catalog/mobile-engagement/airship-attributes.md) | The Airship Attributes destination, previously in beta, is now generally available. |
+| [[!DNL Airship Tags]](../../destinations/catalog/mobile-engagement/airship-tags.md) | The Airship Tags destination, previously in beta, is now generally available. |
+| [[!DNL Braze]](../../destinations/catalog/mobile-engagement/braze.md) | The Braze destination, previously in beta, is now generally available. |
+| [[!DNL Pinterest Customer List]](../../destinations/catalog/advertising/pinterest.md) | With the Pinterest Customer List destination, you can create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest. |
+| [[!DNL Twitter Custom Audiences]](../../destinations/catalog/social/twitter.md) | Target your existing followers and customers in Twitter and create relevant re-marketing campaigns by activating your audiences built within Adobe Experience Platform. |
+| [[!DNL Verizon Media/Yahoo DataX]](../../destinations/catalog/advertising/datax.md) | DataX is an aggregate Verizon Media/Yahoo infrastructure that hosts various components that enable Verizon Media/Yahoo to exchange data with its external partners in a secure, automated and scalable manner.|
+
 **New features**
 
 | Feature | Description |
 | --- | --- |
+| [[!DNL Destination SDK]](../../destinations/destination-sdk/overview.md) | Adobe Experience Platform Destination SDK is a suite of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates. |
 | [Usability improvements to Destinations](../../destinations/ui/activation-overview.md) | Usability improvements to destinations enable marketers to seamlessly activate segments to existing destinations. |
 
 For more general information on destinations, refer to the [destinations overview](../../destinations/home.md).
