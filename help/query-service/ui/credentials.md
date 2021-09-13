@@ -70,23 +70,23 @@ This returns you to the Settings > Permissions tab.
 
 There are three more steps required to allow a user access to the non-expiring account feature.
 
-1. Add a new user to grant the newly created permissions to. Select the [!UICONTROL **Users**] tab, followed by [!UICONTROL **Add User**]. 
+- Add a new user to grant the newly created permissions to. Select the [!UICONTROL **Users**] tab, followed by [!UICONTROL **Add User**]. 
 
 ![User tab Add User button highlighted](../images/ui/credentials/users-tab-new-user.png)
 
-- The create user dialog appears. Input a name and email for the new user and select [!UICONTROL **Save**].
+The create user dialog appears. Input a name and email for the new user and select [!UICONTROL **Save**].
 
-1. The user must then be added as an admin to allow an account creation for any active product profile. Select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**] to add the newly created user as an admin.  
+- The user must then be added as an admin to allow an account creation for any active product profile. Select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**] to add the newly created user as an admin.  
  
 ![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
 
-- The add admin dialog appears. Input the new admin's details into the text fields and select [!UICONTROL **Save**].
+The add admin dialog appears. Input the new admin's details into the text fields and select [!UICONTROL **Save**].
 
-1. The user must then be added as a developer for an integration to be created. Select the **Developers** tab, followed by the **Add Developer**.
+- The user must then be added as a developer for an integration to be created. Select the **Developers** tab, followed by the **Add Developer**.
 
 ![Developers tab Add Developer button highlighted](../images/ui/credentials/developers-tab-add-developer.png)
 
-- The add developer dialog appears. Input the new developer's details into the text fields and select **Save**.
+The add developer dialog appears. Input the new developer's details into the text fields and select **Save**.
 
 To learn more about how to assign permissions, please read the documentation on [Access Control](../../access-control/home.md).
 
