@@ -78,13 +78,13 @@ There are three more steps required to allow a user access to the non-expiring a
 
 <!-- I have not seen this I am assuming it is true. -->
 
-2. The user must then be added as an admin to allow an account creation for any active product profile. Select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**] to add the newly created user as an admin.  
+1. The user must then be added as an admin to allow an account creation for any active product profile. Select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL**Add Admins**] to add the newly created user as an admin.  
  
 ![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
 
 - The add admin dialog appears. Input the new admin's details into the text fields and select [!UICONTROL **Save**].
 
-3. The user must then be added as a developer for an integration to be created. Select the **Developers** tab, followed by the **Add Developer**.
+1. The user must then be added as a developer for an integration to be created. Select the **Developers** tab, followed by the **Add Developer**.
 
 ![Developers tab Add Developer button highlighted](../images/ui/credentials/developers-tab-add-developer.png)
 
