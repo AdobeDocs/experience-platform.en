@@ -33,7 +33,7 @@ See the [access control UI overview](../access-control/ui/overview.md) to learn 
 
 ## Process summary
 
-The process of configuring the Edge Network for your website can be summarized as follows:
+The process of configuring data collection for your website can be summarized as follows:
 
 1. [Create a schema](#schema) to determine how your data will be structured when being sent to the Edge Network.
 1. [Create a datastream](#datastream) to configure which destinations you want your data to be sent to.
