@@ -8,7 +8,7 @@ description: Learn how to connect Adobe Experience Platform to Data Landing Zone
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 
-This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection, as well as instructions on how to generate and refresh your credentials, as well as retrieve and activate your [!DNL Data Landing Zone].
+This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to generate and refresh your credentials, as well as retrieve and activate your [!DNL Data Landing Zone].
 
 ## Getting started
 
