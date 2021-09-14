@@ -60,7 +60,7 @@ The following response is an example of an empty generic REST connector connecti
   "providerId": "{PROVIDER_ID}",
   "version": "{VERSION}",
   "attributes": {
-    "category": "{CATEGORRY}",
+    "category": "{CATEGORY}",
     "isSource": "{IS_SOURCE}"
   },
   "authSpec": [
@@ -213,6 +213,41 @@ The following response is an example of an empty generic REST connector connecti
   }
 }
 ```
+
+| Source specifications | Description | Example |
+| --- | --- | --- |
+| `name` | The name of your source. | `mailchimp` |
+| `type` | 
+| `providerId` |
+| `version` |
+| `attributes.category` |
+| `attributes.isSource` |
+| `authSpec` |
+| `authSpec.name` |
+| `authSpec.type` |
+| `authSpec.spec.$schema` |
+| `authSpec.spec.type` |
+| `authSpec.spec.properties` | This authentication specification property contains information on the authentication values required in order to utilize the source. |
+| `sourceSpec.attributes` | This attribute displays information on the source specific to the UI or API. |
+| `sourceSpec.attributes.uiAttributes` | This attribute displays information on the source specific to the UI. |
+| `sourceSpec.attributes.uiAttributes.documentationLink` | This attribute displays the documentation link where the usage of this source is documented. | `wwww.adobe.com/go/sources-mailchimp-en` |
+| `sourceSpec.attributes.uiAttributes.isBeta` | This is a boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | `true` / `false` |
+| `sourceSpec.attributes.uiAttributes.category` | This attribute displays the category of  the source. | `advertising`, `crm`, `cloud storage`, `database`, `ecommerce`, `marketing automation`, `payments`, `protocols`, `streaming`. |
+| `sourceSpec.attributes.uiAttributes.icon` | This attribute displays the icon used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.label` | This attribute displays the label to be used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.description` | This attribute displays a brief description of the source. |
+| `sourceSpec.attributes.urlParams.hostName` | This attribute displays the `hostName` of the endpoint to fetch data from. If there are any params in this attribute that you need to acquire from the end user, you can specify it as a template enclosed in (`{{PARAMS}}`). | `https://{{HOST_NAME}}.api.mailchimp.com` |
+| `sourceSpec.attributes.urlParams.path` | This attribute displays the resource path from where to fetch the data from. | `/3.0/lists/{{LIST_ID}}/members` |
+| `sourceSpec.attributes.urlParams.method` | This attribute displays the HTTP method to be used to make the request to the source to fetch data. | `GET`, `POST` |
+| `sourceSpec.attributes.contentPath` | This attribute displays the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
+| `sourceSpec.attributes.queryParams` | This attribute displays the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
+| `sourceSpec.attributes.headerParams` | This attribute displays comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
+| `sourceSpec.attributes.paginationParams` | This attribute displays the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
+| `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | | `before_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | This attribute displays the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | his attribute displays the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
 
 ### Author your generic connection specification
 
