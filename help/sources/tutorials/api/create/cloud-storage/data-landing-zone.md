@@ -23,77 +23,24 @@ The following sections provide additional information that you will need to know
 
 For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
 
-## Get [!DNL Data Landing Zone] Credentials
-
-**API format**
-
-```http
-GET /connectors/landingzone/credentials
-```
-
-**Request**
-
-```shell
-curl -X GET \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-```
-
-**Response**
-
-```json
-{
-    "containerName": "dlz-user-container",
-    "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
-    "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
-}
-```
-
-## Refresh [!DNL Data Landing Zone] Credentials
-
-**API format**
-
-```http
-POST /connectors/landingzone/credentials
-```
-
-**Request**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-```
-
-**Response**
-
-```json
-{
-    "containerName": "dlz-user-container",
-    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
-    "storageAccountName": "dlblobstore99hh25i3dflek",
-    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
-}
-```
 
 ## Get [!DNL Data Landing Zone]
 
+The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET request to the `/landingzone` endpoint of the [!DNL Connectors] API to retrieve a landing zone that you can use.
+
 **API format**
 
 ```http
-GET /connectors/landingzone
+GET /connectors/landingzone?type={TYPE}
 ```
 
+| Parameter | Description |
+| --- | --- |
+| `{TYPE}` |
+
 **Request**
+
+The following request example retrieves an existing landing zone.
 
 ```shell
 curl -X GET \
@@ -107,10 +54,95 @@ curl -X GET \
 
 **Response**
 
+The following response returns information on a landing zone, including its corresponding `containerName` and `containerTTL`.
+
 ```json
 {
     "containerName": "dlz-user-container",
     "containerTTL": "7"
+}
+```
+
+## Get [!DNL Data Landing Zone] credentials
+
+To retrieve credentials for a [!DNL Data Landing Zone], make a GET request to the `/credentials` endpoint of the [!DNL Connectors] API.
+
+**API format**
+
+```http
+GET /connectors/landingzone/credentials?type={TYPE}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{TYPE}` |
+
+**Request**
+
+The following request example retrieves credentials for an existing landing zone.
+
+```shell
+curl -X GET \
+    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns the credential information for your landing zone, including your current `SASToken` and `SASUri`, as well as the `storageAccountName` that corresponds to your landing zone container.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-ed86a61d-201f-4b50-b10f-a1bf173066fd&sr=c&sp=racwdlm&sig=4yTba8voU3L0wlcLAv9mZLdZ7NlMahbfYYPTMkQ6ZGU%3D"
+}
+```
+
+## Update [!DNL Data Landing Zone] credentials
+
+You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
+
+**API format**
+
+```http
+POST /connectors/landingzone/credentials?type={TYPE}&action={ACTION}
+```
+
+| Parameter | Description |
+| --- | --- |
+| `{TYPE}` |
+| `{ACTION}` |
+
+**Request**
+
+The following request updates your landing zone credentials.
+
+```shell
+curl -X POST \
+    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
+    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+    -H 'x-api-key: {API_KEY}' \
+    -H 'x-gw-ims-org-id: {IMS_ORG}' \
+    -H 'x-sandbox-name: {SANDBOX_NAME}' \
+    -H 'Content-Type: application/json' \
+```
+
+**Response**
+
+The following response returns updated values for your `SASToken` and `SASUri`.
+
+```json
+{
+    "containerName": "dlz-user-container",
+    "SASToken": "sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D",
+    "storageAccountName": "dlblobstore99hh25i3dflek",
+    "SASUri": "https://dlblobstore99hh25i3dflek.blob.core.windows.net/dlz-user-container?sv=2020-04-08&si=dlz-9c4d03b8-a6ff-41be-9dcf-20123e717e99&sr=c&sp=racwdlm&sig=JbRMoDmFHQU4OWOpgrKdbZ1d%2BkvslO35%2FXTqBO%2FgbRA%3D"
 }
 ```
 
