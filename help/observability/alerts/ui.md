@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;date range
 title: Alerts UI Guide
 description: Learn how to manage alerts in the Experience Platform user interface.
+feature: Alerts
 exl-id: 4ba3ef2b-7394-405e-979d-0e5e1fe676f3
 ---
 # Alerts UI guide
