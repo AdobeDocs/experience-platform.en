@@ -37,6 +37,8 @@ POST authoring/testing/template/render
 | `template` | The character-escaped version of the template based on which you are rendering exported data. |
 | `profiles` | If you'd like to add profiles to the body of the call, you can generate some by using the [Sample profile generation API](./sample-profile-generation-api.md). |
 
+{style="table-layout:auto"}
+
 
 You can render exported data as shown in the examples below:
 
