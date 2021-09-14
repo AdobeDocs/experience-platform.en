@@ -9,13 +9,13 @@ user-guide-description: Bring together known and anonymous data from multiple en
 # Real-time Customer Data Platform Help {#rtcdp}
 
 * [Real-time CDP overview](overview.md)
+* [Real-time CDP B2B Edition overview](b2b-overview.md)
 * Getting started {#intro}
   * [Getting started](get-started.md)
+  * [Getting started with B2B](get-started-with-b2b.md)
   * [Metrics overview](home-page-dashboards.md)
-* B2B Edition{#b2b}
-  * [Real-time CDP B2B overview](b2b/overview.md)
 * Accounts {#account}
-  * [Account overview](b2b/account/overview.md)
+  * [Accounts](accounts/profile-overview.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}

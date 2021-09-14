@@ -1,13 +1,13 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
-title: Real-time CDP B2B Edition Account Overview
-seo-title: Real-time Customer Data Platform Business to Business Edition Account overview
+title: Real-time CDP B2B Edition Overview
+seo-title: Real-time Customer Data Platform Business to Business Edition overview
 description: Overview of Real-time Customer Data Platform Business to Business Edition Account
 seo-description: Overview of Real-time Customer Data Platform Business to Business Edition Account
 hide: yes
 hidefromtoc: yes
 ---
-# Real-time Customer Data Platform Business to Business Account overview
+# Real-time Customer Data Platform Business to Business Edition overview
 
 >[!IMPORTANT]
 >
