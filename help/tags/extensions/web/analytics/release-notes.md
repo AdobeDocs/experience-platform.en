@@ -8,6 +8,16 @@ exl-id: 3c7b4ec0-4b81-4ef4-b15f-6ad102525840
 >[!NOTE]
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
+>
+
+## August 24, 2021
+
+### Adobe Analytics Extension 1.8.6
+
+#### Bug Fixes
+
+* Upgraded [AppMeasurement to v2.22.1](https://experienceleague.adobe.com/docs/analytics/implementation/appmeasurement-updates.html).
+* Updated fallback linkName to mirror Activity Map logic instead of using innerHTML.
 
 ## August 6, 2020
 
