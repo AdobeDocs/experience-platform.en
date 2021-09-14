@@ -44,7 +44,7 @@ The [!DNL Profile] store data model consists of two core entity types:
 
 ## Profile fragments
 
-There are multiple guardrails in this document referring to "profile fragments." The Real-time Customer Profile is composed of multiple profile fragments. Each fragment represents the data for the identity from a dataset where it is the primary identity. This means that a fragment may contain a primary ID and event data (time series) in an XDM ExperienceEvent dataset or it may be composed of a primary ID and record data (time-independent attributes) in an XDM Individual Profile dataset.
+There are multiple guardrails in this document referring to "profile fragments." A Real-time Customer Profile is composed of multiple profile fragments. Each fragment represents a unique primary identity and the corresponding record and event data for that ID within a given dataset. 
 
 ## Limit types
 
@@ -94,7 +94,7 @@ The following guardrails refer to data size and are recommended to ensure that d
 | --- | --- | --- | --- |
 | Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
 | Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Maximum profile fragment size | 50MB | Hard | **The maximum size of a profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
+| Maximum profile fragment size across all datasets | 50MB | Hard | **The maximum size of a profile fragment across all datasets is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB across all datasets. |
 | Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance.|
 | Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
 
