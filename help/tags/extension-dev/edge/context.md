@@ -1,6 +1,7 @@
 ---
 title: Context in Edge Extension Modules
 description: Learn about the context object and the role it plays in interacting with library modules in tag extensions of edge properties.
+exl-id: 04e4e369-687e-4b46-9d24-18a97a218555
 ---
 # Context in edge extension modules
 

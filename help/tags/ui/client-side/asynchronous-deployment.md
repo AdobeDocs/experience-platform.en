@@ -1,6 +1,7 @@
 ---
 title: Asynchronous Deployment
 description: Learn how to asynchronously deploy Adobe Experience Platform tag libraries on your website.
+exl-id: ed117d3a-7370-42aa-9bc9-2a01b8e7794e
 ---
 # Asynchronous deployment
 

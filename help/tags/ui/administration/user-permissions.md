@@ -1,6 +1,7 @@
 ---
 title: User Permissions for Tags
 description: Learn about the different types of permissions available for tags and some basic implementation strategies for different business use cases.
+exl-id: 9b48847a-6133-4dbd-b17d-e7b88152ad7d
 ---
 # User permissions for tags
 
@@ -33,7 +34,7 @@ Each tag property has a platform. There are currently two platforms that you can
 
 By default, product profiles grant access to all properties that exist within your company, both currently and in the future. Using this permission type, you can restrict or grant access to specific existing properties by name.
 
-### Property rights
+### Property rights {#property-rights}
 
 Any property that you create in the Data Collection UI becomes available in Admin Console, allowing you to group the property with specific property rights in the same product profile.
 

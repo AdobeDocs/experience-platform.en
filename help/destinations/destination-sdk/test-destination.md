@@ -1,6 +1,7 @@
 ---
-description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration. 
+description: As part of Destination SDK, Adobe provides developer tools to assist you in configuring and testing your destination. This page describes how to test your destination configuration.
 title: Test your destination configuration
+exl-id: 21e4d647-1168-4cb4-a2f8-22d201e39bba
 ---
 # Test your destination configuration {#developer-tools}
 
@@ -228,4 +229,4 @@ For descriptions of the request and response parameters, refer to [Destination t
 
 ## Next steps
 
-After confirming that your destination is configured correctly, use the Adobe [self-service documentation process](./docs-framework/documentation-instructions.md) to create a documentation page for your destination.
+After testing your destination and confirming that it is configured correctly, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.

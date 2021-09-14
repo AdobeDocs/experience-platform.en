@@ -1,6 +1,7 @@
 ---
 title: Create an Exchange Listing for an Extension
 description: Learn how to add your extension to the public catalog in Adobe Experience Platform.
+exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
 ---
 # Create an exchange listing for an extension
 

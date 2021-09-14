@@ -1,6 +1,7 @@
 ---
 title: Data Elements
 description: Data elements are the building blocks for your data dictionary (or data map). Use data elements to collect, organize, and deliver data across marketing and ad technology.
+exl-id: 1e7b03cc-5a54-403d-bf8d-dbc206cfeb2d
 ---
 # Data elements
 

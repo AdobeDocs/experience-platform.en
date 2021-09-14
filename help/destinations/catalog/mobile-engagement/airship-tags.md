@@ -4,11 +4,7 @@ title: Airship Tags connection
 description: Seamlessly pass Adobe Audience Data to Airship as Audience Tags for targeting within Airship.
 exl-id: 84cf5504-f0b5-48d8-8da1-ff91ee1dc171
 ---
-# (Beta) [!DNL Airship Tags] connection {#airship-tags-destination}
-
->[!IMPORTANT]
->
->The [!DNL Airship Tags] destination in Adobe Experience Platform is currently in beta. The documentation and the functionality are subject to change.
+# [!DNL Airship Tags] connection {#airship-tags-destination}
 
 ## Overview
 

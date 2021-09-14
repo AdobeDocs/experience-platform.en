@@ -1,6 +1,7 @@
 ---
 title: Edge Extension Flow
 description: Learn how the components of an edge extension in Adobe Experience Platform interact with each other at runtime.
+exl-id: 99058e22-3e14-4ec6-858e-bb1c1fafdb7c
 ---
 # Edge extension flow
 

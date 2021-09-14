@@ -5,8 +5,8 @@ type: Tutorial
 seo-title: Activate audience data to batch profile export destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by sending segments to batch profile-based destinations.
+exl-id: 82ca9971-2685-453a-9e45-2001f0337cda
 ---
-
 # Activate audience data to batch profile export destinations
 
 ## Overview {#overview}

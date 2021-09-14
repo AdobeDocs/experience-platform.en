@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Core Extension
 description: The latest release notes for the Core extension in Adobe Experience Platform.
+exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 ---
 # Core Extension release notes
 
