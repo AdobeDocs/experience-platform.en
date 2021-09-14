@@ -5,25 +5,29 @@ title: Shared Devices Overview
 topic-legacy: tutorial
 description:
 ---
-# (Beta) Shared Devices overview
+# (Beta) Shared Device Detection overview
 
 >[!IMPORTANT]
 >
->The [!DNL Shared Devices] feature is in beta. Its features and documentation are subject to change.
+>The [!DNL Shared Device Detection] feature is in beta. Its features and documentation are subject to change.
 
 Adobe Experience Platform [!DNL Identity Service] helps you to gain a better view of your customer and their behavior by bridging identities across devices and systems, allowing you to deliver impactful, personal digital experiences in real time.
 
-[!DNL Shared Devices] refer to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks. Through [!DNL Shared Device Detection] different users of the same device can be prevented from being merged into a single Identity, allowing for more accurate representation.
+[!DNL Shared Device Detection] refer to devices that are used by more than one individual. Examples of a shared device include tablets, library computers, and kiosks. Through [!DNL Shared Device Detection] different users of the same device can be prevented from being merged into a single Identity, allowing for more accurate representation.
 
-With [!DNL Shared Devices] you can:
+With [!DNL Shared Device Detection] you can:
 
 * Create separate identity graphs for different users of the same device;
 * Prevent the mixing of data from different individuals using the same device;
 * Generate a cleaner and more accurate view of your customers.
 
+>[!TIP]
+>
+>Configurations for [!DNL Shared Device Detection] must be completed prior to enabling [!DNL Profile] for dataset because once data starts to flow into the [!DNL Identity Service], you can no longer revise the settings.
+
 ## Getting started
 
-Working with [!DNL Shared Devices] requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with [!DNL Shared Devices], please review the documentation for the following services:
+Working with [!DNL Shared Device Detection] requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with [!DNL Shared Device Detection], please review the documentation for the following services:
 
 * [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
   * [Identity graph viewer](./identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
@@ -31,7 +35,7 @@ Working with [!DNL Shared Devices] requires an understanding of the various Adob
 
 ### Terminology
 
-The following table contains a list of terms that are essential to understanding [!DNL Shared Devices]:
+The following table contains a list of terms that are essential to understanding [!DNL Shared Device Detection]:
 
 | Terms | Definition |
 | --- | --- |
