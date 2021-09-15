@@ -25,7 +25,6 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | tag extension | [Web SDK extension docs](../../tags/extensions/web/sdk/overview.md) |
 | Debugging tools available | [Debugger extension](https://experienceleague.adobe.com/docs/debugger-learn/tutorials/experience-platform-debugger/introduction-to-the-experience-platform-debugger.html?lang=en) and [Griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon) |
 
-
 {style="table-layout:auto"}
 
 ## Adobe Experience Platform
