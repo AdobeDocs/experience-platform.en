@@ -772,17 +772,22 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-### Include aggregation key in your template to group exported profiles by various criteria {#template-aggregation-key}
+### Include aggregation key in your template to access exported profiles grouped by various criteria {#template-aggregation-key}
 
-When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can edit the message transformation template to group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces, as shown in the examples below.
+When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces.
+
+In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. This helps you format the HTTP message exported out of Experience Platform to match the format expected by your destination.
 
 #### Use segment ID aggregation key in the template {#aggregation-key-segment-id}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use `segmentId` in the template to group profiles in the HTTP messages exported to your destination:
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by segment ID. See below how you can access the segment ID in the template.
 
 **Input**
 
-Consider the four profiles below, where the first two are part of the segment with the segment ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` and the other two are part of the segment with the segment ID `8f812592-3f06-416b-bd50-e7831848a31a`.
+Consider the four profiles below, where:
+* the first two are part of the segment with the segment ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` 
+* the third profile is part of the segment with the segment ID `8f812592-3f06-416b-bd50-e7831848a31a`
+* the fourth profile is part of both segments above.
 
 Profile 1:
 
@@ -870,6 +875,10 @@ Profile 4:
          "8f812592-3f06-416b-bd50-e7831848a31a":{
             "lastQualificationTime":"2021-02-20T12:00:00Z",
             "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
          }
       }
    }
@@ -882,24 +891,18 @@ Profile 4:
 >
 >For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Notice below how `audienceId` is used in the template to access segment IDs. This assumes that you use `audienceId` for segment membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
+
 ```python
 {
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
     "profiles": [
         {% for profile in input.profiles %}
         {
-            {% for attribute in profile.attributes %}
-            "{{ attribute.key }}":
-                {% if attribute.value is empty %}
-                    null
-                {% else %}
-                    "{{ attribute.value.value }}"
-                {% endif %}
-            {% if not loop.last %},{% endif %}
-            {% endfor %}
+            "first_name": "{{ profile.attributes.firstName.value }}"
         }{% if not loop.last %},{% endif %}
         {% endfor %}
     ]
-    "audienceId": "{{input.aggregationKey.segmentId}}"
 }
 ```
 
@@ -909,49 +912,53 @@ When exported to your destination, the profiles are split into two groups, based
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Hermione",
-            "birthDate": null
-        },
-        {
-            "firstName": "Harry",
-            "birthDate": "1980/07/31"
-        }
-    ],
-    "audienceId": "788d8874-8007-4253-92b7-ee6b6c20c6f3"
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione",
+         "birthDate":null
+      },
+      {
+         "firstName":"Harry",
+         "birthDate":"1980/07/31"
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 ```json
 {
-    "profiles": [
-        {
-            "firstName": "Tom",
-            "birthDate": null
-        },
-        {
-            "firstName": "Jerry",
-            "birthDate": "1940/01/01"
-        }
-    ],
-    "audienceId": "8f812592-3f06-416b-bd50-e7831848a31a"
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom",
+         "birthDate":null
+      },
+      {
+         "firstName":"Jerry",
+         "birthDate":"1940/01/01"
+      }
+   ]
 }
 ```
 
 #### Use segment alias aggregation key in the template {#aggregation-key-segment-alias}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can use segment alias in the template to group profiles in the HTTP messages exported to your destination.
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access segment alias in the template.
 
-Add the line below to the template to group exported profiles based on the segment alias.
+Add the line below to the template to access the exported profiles grouped by segment alias.
 
 ```python
-"customerList={{input.aggregationKey.segmentAlias}}"
+customerList={{input.aggregationKey.segmentAlias}}
 ```
 
 #### Use segment status aggregation key in the template {#aggregation-key-segment-status}
 
-If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can use the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
 
 Possible values are:
 
@@ -959,10 +966,10 @@ Possible values are:
 * existing
 * exited
 
-Add the line below to the template to add or remove profiles from segments, based on the values above.:
+Add the line below to the template to add or remove profiles from segments, based on the values above:
 
 ```python
-"action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}"
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
 ```
 
 #### Use identity namespace aggregation key in the template {#aggregation-key-identity}
@@ -1021,6 +1028,8 @@ Profile 2:
 >
 >For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
 
+Notice that `input.aggregationKey.identityNamespaces` is used in the template below
+
 ```python
 {
             "profiles": [
@@ -1068,7 +1077,7 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-#### Use the aggregation key in a URL template
+#### Use the aggregation key in a URL template {#aggregation-key-url-template}
 
 Note that depending on your use case, you can also use the aggregation keys described here in a URL, as shown below:
 
