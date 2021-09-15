@@ -8,7 +8,7 @@ description: Learn how to connect Adobe Experience Platform to Data Landing Zone
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 
-This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to generate and refresh your credentials, as well as retrieve and activate your [!DNL Data Landing Zone].
+This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
 
 ## Getting started
 
@@ -36,7 +36,7 @@ GET /connectors/landingzone?type={TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{TYPE}` |
+| `{TYPE}` | The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
 
 **Request**
 
@@ -75,7 +75,7 @@ GET /connectors/landingzone/credentials?type={TYPE}
 
 | Parameter | Description |
 | --- | --- |
-| `{TYPE}` |
+| `{TYPE}` | The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
 
 **Request**
 
@@ -116,7 +116,7 @@ POST /connectors/landingzone/credentials?type={TYPE}&action={ACTION}
 
 | Parameter | Description |
 | --- | --- |
-| `{TYPE}` |
+| `{TYPE}` |  The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
 | `{ACTION}` |
 
 **Request**
@@ -146,36 +146,9 @@ The following response returns updated values for your `SASToken` and `SASUri`.
 }
 ```
 
-## Activate [!DNL Data Landing Zone]
-
-**API format**
-
-```http
-POST /connectors/landingzone/credentials
-```
-
-**Request**
-
-```shell
-curl -X POST \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone?type=user_drop_zone&action=activate' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-```
-
-**Response**
-
-```json
-{
-    "containerName": "dlz-user-container",
-    "containerTTL": "7"
-}
-```
-
 ## Explore [!DNL Data Landing Zone] file structure and contents
+
+You can explore the file structure and contents of your landing zone by making a GET request to the `connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
 **API format**
 
@@ -199,6 +172,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns an array of files and folders found within the queried directory. Take note of the `path` property of the file you wish you upload, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -228,6 +203,8 @@ curl -X GET \
 
 ## Preview [!DNL Data Landing Zone] file structure and contents
 
+To inspect the structure of a file in your landing zone, perform a GET request while providing the file's path and type as a query parameter.
+
 **API format**
 
 ```http
@@ -254,6 +231,8 @@ curl -X GET \
 ```
 
 **Response**
+
+A successful response returns the structure of the queried file including table names and data types.
 
 ```json
 {
@@ -374,3 +353,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
+By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure and found the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform](../../collect/cloud-storage.md).
