@@ -1,7 +1,6 @@
 ---
 title: Pinterest Customer List connection
 description: Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
-exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
 # [!DNL Pinterest Customer List] connection
 
