@@ -64,13 +64,14 @@ Adhering to the following guardrails is recommended when creating a data model f
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Number of datasets recommended to contribute to the [!DNL Profile] union schema | 20 | Soft | **A maximum of 20 [!DNL Profile]-enabled datasets is recommended.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Campaign or Target).|
+| Number of Profile-enabled datasets | 20 | Soft | **A maximum of 20 datasets may contribute to the [!DNL Profile] union schema.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics).|
+|Number of Adobe Analytics report suite datasets enabled for Profile| 1 | Hard | **A maximum of one (1) Analytics report suite dataset can be enabled for Profile.** Multiple Analytics report suite datasets cannot be enabled for Profile.|
 | Number of multi-entity relationships recommended| 5 | Soft | **A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 |Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time-independent data) is <=500.**|
 |Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**|
 |Identity count limit for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups.| 
-|Number of Adobe Analytics report suite datasets enabled for Profile| 1 | Hard | **A maximum of one (1) Analytics report suite dataset can be enabled for Profile.** Multiple Analytics report suite datasets cannot be enabled for Profile.|
+
 
 ### Dimension entity guardrails
 
