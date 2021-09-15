@@ -53,7 +53,7 @@ This page lists the supported use cases for Web SDK, with links to additional in
 | Props, eVars, and events |  |
 | ListVar support for Adobe Analytics |  |
 | OS and browser version |  |
-| Out-of-the-box variables | [Automatically mapped variables](../data-collection/adobe-analytics/automatically-mapped-vars.mf) |
+| Out-of-the-box variables | [Automatically mapped variables](../data-collection/adobe-analytics/automatically-mapped-vars.md) |
 | VISTA rules/processing rules |  |
 | Visitor attributes support |  |
 | Exit link support |  |
