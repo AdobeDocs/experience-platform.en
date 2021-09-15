@@ -8,6 +8,8 @@ description: Learn how to connect Adobe Experience Platform to Data Landing Zone
 ---
 # Connect [!DNL Data Landing Zone] to Adobe Experience Platform using the Flow Service API
 
+[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. [!DNL Data Landing Zone] is used solely for the ingress and egress of your data in and out of Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
+
 This tutorial walks you through the steps on how to create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/). This tutorial also provides instructions on how to retrieve your [!DNL Data Landing Zone], as well as view and refresh your credentials.
 
 ## Getting started
@@ -117,7 +119,7 @@ POST /connectors/landingzone/credentials?type={TYPE}&action={ACTION}
 | Parameter | Description |
 | --- | --- |
 | `{TYPE}` |  The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
-| `{ACTION}` |
+| `{ACTION}` | The action you intend to apply to your credentials. |
 
 **Request**
 
@@ -353,4 +355,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure and found the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform](../../collect/cloud-storage.md).
+By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure and found the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).

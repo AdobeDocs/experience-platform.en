@@ -11,7 +11,7 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Data Landing Zone] through batches.
 
-The [!DNL Data Landing Zone] provides you with a temporary storage where you can upload and organize various types of files prior to ingesting them to Platform.
+[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. [!DNL Data Landing Zone] is used solely for the ingress and egress of your data in and out of Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
 
 ## IP address allow list
 
@@ -31,7 +31,7 @@ The following is a list of constraints you must account for when naming your clo
 
 ## Connect [!DNL Data Landing Zone] to [!DNL Platform]
 
-The documentation below provides information on how to connect Azure Blob to Adobe Experience Platform using APIs or the user interface:
+The documentation below provides information on how to bring data from your [!DNL Data Landing Zone] container to Adobe Experience Platform using APIs or the user interface:
 
 ### Using APIs
 
@@ -40,5 +40,5 @@ The documentation below provides information on how to connect Azure Blob to Ado
 
 ### Using the UI
 
-- Connect [!DNL Data Landing Zone] to Platform using the UI
+- [Connect [!DNL Data Landing Zone] to Platform using the UI](../../tutorials/ui/create/cloud-storage/data-landing-zone.md)
 - [Create a dataflow for a cloud storage connection in the UI](../../tutorials/ui/dataflow/batch/cloud-storage.md)
