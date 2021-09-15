@@ -1,6 +1,7 @@
 ---
 title: Data Element Types for Web Extensions
 description: Learn how to define a data-element-type library module for a tag extension in a web property.
+exl-id: 3aa79322-2237-492f-82ff-0ba4d4902f70
 ---
 # Data element types for web extensions
 

@@ -1,6 +1,7 @@
 ---
 title: App configurations endpoint
 description: Learn how to make calls to the /app_configurations endpoint in the Reactor API.
+exl-id: 88a1ec36-b4d2-4fb6-92cb-1da04268492a
 ---
 # App configurations endpoint
 

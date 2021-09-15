@@ -1,6 +1,7 @@
 ---
 description: This page describes all the API operations that you can perform using the `/authoring/audience-templates` API endpoint.
 title: Audience metadata endpoint API operations
+exl-id: 3444da8c-b2be-4254-980a-8cce7560134d
 ---
 # Audience metadata endpoint API operations
 
@@ -12,7 +13,7 @@ This page lists and describes all the API operations that you can perform using 
 
 ## Getting started with audience templates API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a new audience template {#create}
 

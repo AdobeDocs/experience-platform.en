@@ -3,6 +3,7 @@ description: This page describes how to use the reference information in Configu
 seo-description: This page describes how to use the reference information in Configuration options for the Destinations SDK to configure your destination using Destination SDK.
 seo-title: How to use Destination SDK to configure your destination
 title: How to use Destination SDK to configure your destination
+exl-id: d8aa7353-ba55-4a0d-81c4-ea2762387638
 ---
 # How to use Destination SDK to configure your destination
 
@@ -34,7 +35,7 @@ POST platform.adobe.io/data/core/activation/authoring/destination-servers
    "urlBasedDestination":{
       "url":{
          "templatingStrategy":"PEBBLE_V1",
-         "value":"https://api.moviestar.com/data/{{endpoint.region}}/items"
+         "value":"https://api.moviestar.com/data/{{customerData.region}}/items"
       }
    },
    "httpTemplate":{
@@ -159,8 +160,8 @@ As part of the process to test your destination, you must use the Experience Pla
 
 ## Step 7: Publish your destination {#publish-destination}
 
-After configuring and testing your destination. use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
+After configuring and testing your destination, use the [destination publishing API](./destination-publish-api.md) to submit your configuration to Adobe for review.
 
 ## Step 8: Document your destination {#document-destination}
 
-Finally, use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).
+If you are an Independent Software Vendor (ISV) or System Integrator (SI) creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page for your destination in the [Experience League destinations catalog](/help/destinations/catalog/overview.md).

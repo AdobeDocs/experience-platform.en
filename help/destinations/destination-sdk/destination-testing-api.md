@@ -1,6 +1,7 @@
 ---
 description: This page lists and describes all the API operations that you can perform using the `/authoring/testing/destinationInstance/` API endpoint, to test if your destination is configured correctly and to verify the integrity of data flows to your configured destination.
 title: Destination testing API operations
+exl-id: 2b54250d-ec30-4ad7-a8be-b86b14e4f074
 ---
 # Destination testing API operations {#template-api-operations}
 
@@ -21,7 +22,7 @@ You can use the [Sample profile generation API](./sample-profile-generation-api.
 
 ## Getting started with destination testing API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Test your destination configuration without adding profiles to the call {#test-without-adding-profiles}
 
@@ -155,6 +156,7 @@ A successful response returns HTTP status 200 along with the API response from y
 | `results.httpCalls.response` | Includes the response received by Adobe from your destination.|
 | `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
 
+{style="table-layout:auto"}
 
 ## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
 

@@ -1,6 +1,7 @@
 ---
 title: Shared Modules in Web Extensions
 description: Learn how to define shared library modules for web extensions in Adobe Experience Platform.
+exl-id: ec013a39-966c-43f3-bc36-31198990a17e
 ---
 # Shared modules in web extensions
 

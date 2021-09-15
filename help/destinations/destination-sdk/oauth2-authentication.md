@@ -1,6 +1,7 @@
 ---
 description: This page describes the various OAuth 2 authentication flows supported by Destination SDK, and provides instructions to set up OAuth 2 authentication for your destination.
 title: OAuth 2 authentication
+exl-id: 280ecb63-5739-491c-b539-3c62bd74e433
 ---
 # OAuth 2 authentication 
 
@@ -25,7 +26,7 @@ As a first step, you must create an app in your system for Adobe Experience Plat
 |`https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | Production |
 |`https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | Staging |
 
- {style="table-layout:auto"}
+{style="table-layout:auto"}
 
 At the end of this step, you should have:
 * A client ID;
@@ -70,7 +71,7 @@ If your destination supports a standard OAuth 2.0 Authorization Code flow (read 
 |---------|----------|---------|
 | Authorization Code | <ul><li><b>clientId</b></li><li><b>clientSecret</b></li><li>scope</li><li><b>authorizationUrl</b></li><li><b>accessTokenUrl</b></li><li>refreshTokenUrl</li></ul> | <ul><li><b>accessToken</b></li><li>expiresIn</li><li>refreshToken</li><li>tokenType</li></ul> |
 
- {style="table-layout:auto"}
+{style="table-layout:auto"}
 
 To set up this authentication method for your destination, add the following lines to your configuration, in the `/destinations` [endpoint](./destination-configuration.md):
 

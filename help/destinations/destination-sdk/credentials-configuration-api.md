@@ -1,6 +1,7 @@
 ---
 description: This page describes all the API operations that you can perform using the `/authoring/credentials` API endpoint.
 title: Credentials endpoint API operations
+exl-id: 89957f38-e7f4-452d-abc0-0940472103fe
 ---
 # Credentials endpoint API operations {#credentials}
 
@@ -139,7 +140,7 @@ The sections below list out the necessary parameters for each authentication typ
 
 ## Getting started with credentials configuration API operations {#get-started}
 
-Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain required headers and how to get allow listed.
+Before continuing, please review the [getting started guide](./getting-started.md) for important information that you need to know in order to successfully make calls to the API, including how to obtain the required destination authoring permission and required headers.
 
 ## Create a credentials configuration {#create}
 

@@ -1,5 +1,5 @@
 ---
-description: Adobe Experience Platform Destination SDK is a set of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations will be stored in Experience Platform and can be retrieved via API for additional updates.
+description: Adobe Experience Platform Destination SDK is a set of configuration APIs that allow you to configure destination integration patterns for Experience Platform to deliver audience and profile data to your endpoint, based on data and authentication formats of your choice. The configurations are stored in Experience Platform and can be retrieved via API for additional updates.
 title: Adobe Experience Platform Destination SDK
 exl-id: 7aca9f40-98c8-47c2-ba88-4308fc2b1798
 ---
@@ -11,9 +11,9 @@ Adobe Experience Platform Destination SDK is a suite of configuration APIs that 
 
 The Destination SDK documentation provides instructions for you to use the Adobe Experience Platform Destination SDK to configure, test and release a productized destination integration with Adobe Experience Platform, and have your destination become part of the ever-growing destinations catalog.
 
-![Destinations overview for partners](./assets/destinations-overview.gif)
+![Destinations catalog overview](./assets/destinations-catalog-overview.png)
 
-## Productized and custom integrations
+## Productized and custom integrations {#productized-custom-integrations}
 
 As a Destination SDK partner, you can benefit from adding your productized destination to the [Experience Platform catalog](/help/destinations/catalog/overview.md):
 1. Standardize integration configurations across customers with pre-configured parameters and simplify the setup experience for customers.
@@ -57,8 +57,8 @@ Destination SDK access varies based on your status as a partner or Experience Pl
 ---------|----------|
 | Independent Software Vendor (ISV) | Join the [Adobe Exchange program](https://partners.adobe.com/exchangeprogram/experiencecloud.html) and request to get an Experience Platform sandbox provisioned to access Destination SDK. |
 | System Integrator (SI) | You need to be at either Gold or Platinum level in the [Adobe Solution Partner Program](https://solutionpartners.adobe.com/home.html), and you will get an Experience Platform sandbox provisioned and access to Destination SDK. |
-| Experience Platform customer on the Activation package | By default, you get access to Experience Platform sandboxes and Destination SDK. |
-| Experience Platform customer on the Real-time CDP package | You do not have access to Destination SDK, but you have access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
+| Experience Platform customer on the [Activation package](https://helpx.adobe.com/legal/product-descriptions/adobe-experience-platform0.html) | By default, you get access to Experience Platform sandboxes and Destination SDK. |
+| Experience Platform customer on the [Real-time CDP package](https://helpx.adobe.com/legal/product-descriptions/real-time-customer-data-platform.html) | You do not have access to Destination SDK, but you have access to all the productized destinations configured by other companies using Destination SDK and published across Experience Platform organizations. |
 
 {style="table-layout:auto"}
 
@@ -71,7 +71,7 @@ The process to configure your destination in Experience Platform is outlined bel
 3. [Build your integration](./configure-destination-instructions.md) following the product documentation.
 4. [Test your integration](./test-destination.md) following the product documentation.
 5. [Submit your integration](./destination-publish-api.md) for Adobe’s review (the standard response time is 5 business days).
-6. Use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
+6. If you are an ISV or SI creating a [productized integration](./overview.md#productized-custom-integrations), use the [self-service documentation process](./docs-framework/documentation-instructions.md) to create a product documentation page on Experience League for your destination.
 7. Once approved by Adobe, your integration will show up in the [Experience Platform catalog](/help/destinations/catalog/overview.md).
 8. If you’d like to update your integration, follow the same process.
 

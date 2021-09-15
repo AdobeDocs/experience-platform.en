@@ -1,6 +1,7 @@
 ---
 title: Deploy JavaScript Tags to Manage Customer Consent
 description: Learn how to manage customer opt-in and opt-out signals for various Adobe solutions in Adobe Experience Platform.
+exl-id: 7762c42f-71c8-4f29-a96b-c6c04b838a91
 ---
 # Deploy JavaScript tags to manage customer consent
 

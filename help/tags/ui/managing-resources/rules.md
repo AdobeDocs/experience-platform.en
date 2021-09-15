@@ -1,6 +1,7 @@
 ---
 title: Rules
 description: Learn how tag extensions function in Adobe Experience Platform.
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 ---
 # Rules
 

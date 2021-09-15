@@ -1,6 +1,7 @@
 ---
 title: Common Analytics Extension Overview
 description: Learn about the Common Analytics tag extension in Adobe Experience Platform.
+exl-id: 9eeb4589-df90-4356-b927-b2c29c32370b
 ---
 # Common Analytics Plugins extension overview
 

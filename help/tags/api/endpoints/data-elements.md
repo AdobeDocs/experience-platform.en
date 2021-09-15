@@ -1,6 +1,7 @@
 ---
 title: Data elements endpoint
 description: Learn how to make calls to the /data_elements endpoint in the Reactor API.
+exl-id: ea346682-441b-415b-af06-094158eb7c71
 ---
 # Data elements endpoint
 

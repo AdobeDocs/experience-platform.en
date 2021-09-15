@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Product List Item Data Type
 topic-legacy: overview
 description: This document provides an overview of the Product list item XDM data type.
+exl-id: 056fdb5b-6782-4e29-9d62-90b270c05795
 ---
 # [!UICONTROL Product list item] data type
 

@@ -3,8 +3,8 @@ solution: Experience Platform
 title: How to Gain & Grant Access Permissions for Experience Platform Dashboards
 type: Documentation
 description: Grant users the ability to view, edit, and update Experience Platform dashboards using Adobe Admin Console.
+exl-id: 2e50790f-b3ab-4851-a9a5-7cb98bf98ce3
 ---
-
 # Access permissions for dashboards
 
 In order to grant users the ability to view, edit, and update dashboards, you must first enable permissions. In Adobe Experience Platform, access control is provided through the Adobe Admin Console. This functionality leverages product profiles in [!DNL Admin Console], which link users with permissions and sandboxes.

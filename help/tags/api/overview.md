@@ -1,6 +1,7 @@
 ---
 title: Reactor API Guide
 description: The Reactor API allows developers to programmatically manage all resources for tags in Adobe Experience Platform. Follow this guide to learn how to perform key operations using the API.
+exl-id: 153eab11-db08-499e-80d1-c56f254372ce
 ---
 # [!DNL Reactor] API guide
 

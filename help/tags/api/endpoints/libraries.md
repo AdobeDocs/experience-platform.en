@@ -1,6 +1,7 @@
 ---
 title: Libraries endpoint
 description: Learn how to make calls to the /libraries endpoint in the Reactor API.
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 ---
 # Libraries endpoint
 
