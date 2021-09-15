@@ -27,11 +27,15 @@ In the Platform UI, select **[!UICONTROL Sources]** from the left navigation to 
 
 You can select the appropriate category from the catalog on the left-hand side of your screen. Alternatively, you can find the specific source you wish to work with using the search bar.
 
-Under the [!UICONTROL Cloud storage] category, select **[!UICONTROL Data Landing Zone]** and then select the ellipses (**...**) on the bottom right of the card.
+Under the [!UICONTROL Cloud storage] category, select the ellipses (**...**) from the **[!UICONTROL Data Landing Zone]** card, and then select **[!UICONTROL View credentials]** from the dropdown menu that appears.
 
-![more-options]()
+![options](../../../../images/tutorials/create/dlz/options.png)
 
-A dropdown panel appears, providing you with options to view existing dataflows or view credentials. To see your credentials, select **[!UICONTROL View credentials]**.
+The credentials pop-up window appears, displaying your container name, SAS token, storage account name, and SAS URI. 
 
-![view-credentials]()
+![view-credentials](../../../../images/tutorials/create/dlz/credentials.png)
+
+To start bringing
+
+![catalog](../../../../images/tutorials/create/dlz/catalog.png)
 
