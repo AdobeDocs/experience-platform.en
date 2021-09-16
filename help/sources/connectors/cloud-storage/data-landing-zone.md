@@ -7,7 +7,9 @@ description: Learn how to connect Data Landing Zone to Adobe Experience Platform
 ---
 # [!DNL Data Landing Zone]
 
-[!DNL Data Landing Zone] is an Adobe Experience Platform provisioned [!DNL Azure Blob] storage, allowing you access to a secure container to ingest and egress files in and out of Platform through Sources and Destinations. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Adobe Experience Platform Produces and Services license.
+Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into Platform. Platform allows you to bring in data from a [!DNL Data Landing Zone] container through batches.
+
+[!DNL Data Landing Zone] is a Platform-provisioned [!DNL Azure Blob] storage, allowing you access to a secure container to ingest and egress files in and out of Platform through Sources and Destinations. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Platform Produces and Services license.
 
 [!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms in both rest and transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross region set ups for your net work. Platform enforces a strict seven-day time-to-live on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
