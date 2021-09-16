@@ -7,16 +7,9 @@ description: Learn how to connect Data Landing Zone to Adobe Experience Platform
 ---
 # [!DNL Data Landing Zone]
 
-Adobe Experience Platform provides native connectivity for cloud providers like AWS, [!DNL Google Cloud Platform], and [!DNL Azure]. You can bring your data from these systems into [!DNL Platform].
+[!DNL Data Landing Zone] is an Adobe Experience Platform provisioned [!DNL Azure Blob] storage, allowing you access to a secure container to ingest and egress files in and out of Platform through Sources and Destinations. You have access to one [!DNL Data Landing Zone] container per sandbox, and the total data volume across all containers is limited to the total data provided with your Adobe Experience Platform Produces and Services license.
 
-Cloud storage sources can bring your own data into [!DNL Platform] without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the Sources workflow. [!DNL Platform] allows you to bring in data from [!DNL Data Landing Zone] through batches.
-
-[!DNL Data Landing Zone] is a cloud-based data storage facility for temporary file storage provisioned with Adobe Experience Platform. [!DNL Data Landing Zone] is used solely for the ingress and egress of your data in and out of Platform. Data is automatically deleted from the [!DNL Data Landing Zone] after seven days.
-
-## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
-
+[!DNL Data Landing Zone] supports SAS-based authentication and its data is protected with standard [!DNL Azure Blob] storage security mechanisms in both rest and transit. SAS-based authentication allows you to securely access your [!DNL Data Landing Zone] container through a public internet connection. There are no network changes required for you to access your [!DNL Data Landing Zone] container, which means you do not need to configure any allow lists or cross region set ups for your net work. Platform enforces a strict seven-day time-to-live on all files uploaded to a [!DNL Data Landing Zone] container. All files are deleted after seven days.
 
 ## Naming constraints for files and directories
 
