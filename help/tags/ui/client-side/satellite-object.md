@@ -221,34 +221,27 @@ This example demonstrates the object values:
 
 ## `environment`
 
+This object contains information about the environment that the current tag runtime library is deployed on.
+
 **Code**
 
 ```javascript
 _satellite.environment
 ```
 
-This object contains information about the environment that the current tag runtime library is deployed on. The object contains the following properties:
-
-### `id`
-
-The id of the environment.
-
-### `stage`
-
-The environment for which this library was built. The possible values are:
-
-* development
-* staging
-* production
-
-This example demonstrates the object values:
+The object contains the following properties:
 
 ```javascript
 {
-  id: "EN123456...",
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
   stage: "development"
 }
 ```
+
+| Property | Description |
+| --- | --- |
+| `id` | The id of the environment. |
+| `stage` | The environment for which this library was built. The possible values are `development`, `staging`, and `production`. |
 
 ## `notify`
 

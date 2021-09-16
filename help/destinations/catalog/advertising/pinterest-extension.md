@@ -1,8 +1,6 @@
 ---
-keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
 title: Pinterest Conversion Tracking extension
 description: The Pinterest Conversion Tracking extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
-exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
 # [!DNL Pinterest Conversion Tracking] extension {#pinterest-extension}
 
@@ -20,7 +18,7 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions. and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 

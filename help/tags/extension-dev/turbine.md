@@ -11,7 +11,7 @@ exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 
 The `turbine` object is a "free variable" within the scope of your extension's library modules. It provides information and utilities specific to the Adobe Experience Platform tag runtime and is always available to library modules without using `require()`.
 
-## [!DNL buildInfo]
+## `buildInfo`
 
 ```js
 console.log(turbine.buildInfo.turbineBuildDate);
@@ -34,7 +34,7 @@ console.log(turbine.buildInfo.turbineBuildDate);
 |`buildDate` | The ISO 8601 date when the current library was built. |
 
 
-## [!DNL environment]
+## `environment`
 
 ```js
 console.log(turbine.environment.stage);
@@ -44,24 +44,24 @@ console.log(turbine.environment.stage);
 
 ```js
 {
-    id: "EN123456...",
+    id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
     stage: "development"
 }
 ```
 
 | Property | Description |
 | --- | --- |
-|`id` | The id of the environment. |
-|`stage` | The environment for which this library was built. Accepted values are `development`, `staging`, and `production`. |
+|`id` | The ID of the environment. |
+|`stage` | The environment for which this library was built. Possible values are `development`, `staging`, and `production`. |
 
 
-## [!DNL debugEnabled]
+## `debugEnabled`
 
-Whether tag debugging is currently enabled.
+A boolean value indicating whether tag debugging is currently enabled.
 
 If you are simply attempting to log messages, it's unlikely you will need to use this. Instead, always log messages using `turbine.logger` to ensure your messages are only printed to the console when tag debugging is enabled.
 
-### [!DNL getDataElementValue]
+### `getDataElementValue`
 
 ```js
 console.log(turbine.getDataElementValue(dataElementName));
@@ -69,7 +69,7 @@ console.log(turbine.getDataElementValue(dataElementName));
 
 Returns the value of a data element.
 
-### [!DNL getExtensionSettings] {#get-extension-settings}
+### `getExtensionSettings` {#get-extension-settings}
 
 ```js
 var extensionSettings = turbine.getExtensionSettings();
@@ -79,7 +79,7 @@ Returns the settings object that was last saved from the [extension configuratio
 
 Please note that values within the returned settings objects may be coming from data elements. Because of this, calling `getExtensionSettings()` at different times may yield different results if the values of the data elements have changed. To get the most up-to-date values, please wait as long as possible before calling `getExtensionSettings()`.
 
-### [!DNL getHostedLibFileUrl] {#get-hosted-lib-file}
+### `getHostedLibFileUrl` {#get-hosted-lib-file}
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -90,7 +90,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 
 The [hostedLibFiles](./manifest.md) property can be defined inside the extension manifest in order to host various files along with the tag runtime library. This module returns the URL where the given library file is hosted.
 
-### [!DNL getSharedModule] {#shared}
+### `getSharedModule` {#shared}
 
 ```js
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
@@ -98,7 +98,7 @@ var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 
 Retrieves a module that has been shared from another extension. If no matching module is found, `undefined` will be returned. See [Implementing Shared Modules](./web/shared.md) for more information regarding shared modules.
 
-### [!DNL logger]
+### `logger`
 
 ```js
 turbine.logger.error('Error!');
@@ -111,14 +111,15 @@ The logging utility is used to log messages to the console. Messages will only s
 * `logger.warn(message: string)`: Logs a warning message to the console.
 * `logger.error(message: string)`: Logs an error message to the console.
 * `logger.debug(message: string)`: Logs a debug message to the console. (Visible only when `verbose` logging is enabled within your browser console.)
+* `logger.deprecation(message: string)`: Logs a warning message to the console whether or not tag debugging is enabled by the user.
 
-### [!DNL onDebugChanged]
+### `onDebugChanged`
 
 By passing a callback function into `turbine.onDebugChanged`, tags will call your callback whenever debugging is toggled. Tags will pass a boolean to the callback function which will be true if debugging was enabled or false if debugging was disabled.
 
 If you are simply attempting to log messages, it's unlikely you will need to use this. Instead, always log messages using `turbine.logger` and tags will ensure your messages are only printed to the console when tag debugging is enabled. 
 
-### [!DNL propertySettings] {#property-settings}
+### `propertySettings` {#property-settings}
 
 ```js
 console.log(turbine.propertySettings.domains);

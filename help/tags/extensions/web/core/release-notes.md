@@ -9,6 +9,18 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## September 16, 2021
+
+v3.1.0
+
+New data elements were added:
+
+* Merged Object - Select multiple data elements that will each provide an object. These objects will be deeply (recursively) merged together to produce a new object.
+* Conditional Value - Return one of two values (conditionalValue or fallbackValue) based on the result of the comparison.
+* Runtime Environment - Return one of the following Launch environment variables: environment stage, library build date, property name, property ID, rule name, rule id, event type, event detail payload, direct call identifier.
+* JavaScript Tools - Wrapper for common JavaScript operations: basic string manipulation (replace, substring, regex match, first and last index, split, slice), basic array operations (slice, join, pop, shift) and basic universal operations (slice, length).
+* Device Attributes - Return device attributes like window size or screen size.
+
 ## August 11, 2021
 
 v3.0.0
