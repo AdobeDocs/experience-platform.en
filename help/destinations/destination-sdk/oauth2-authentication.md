@@ -15,18 +15,15 @@ This page describes the various OAuth 2 authentication flows supported by Destin
 
 ### Prerequisites in your system {#prerequisites}
 
-As a first step, you must create an app in your system for Adobe Experience Platform, or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination. As part of this configuration in your system, you need the Adobe Experience Platform OAuth 2 redirect/callback URL, which you can get from the table below.
+As a first step, you must create an app in your system for Adobe Experience Platform, or otherwise register Experience Platform in your system. The goal is to generate a client ID and client secret, which are needed to authenticate Experience Platform to your destination. As part of this configuration in your system, you need the Adobe Experience Platform OAuth 2 redirect/callback URLs, which you can get from the list below.
+
+* `https://platform-va7.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-nld2.adobe.io/data/core/activation/oauth/api/v1/callback`
+* `https://platform-aus5.adobe.io/data/core/activation/oauth/api/v1/callback`
 
 >[!IMPORTANT]
 >
 >The step to register a redirect/callback URL for Adobe Experience Platform in your system is required only for the [OAuth 2 with Authorization Code](./oauth2-authentication.md#authorization-code) grant type. For the other two supported grant types (password and client credentials), you can skip this step.
-
-|Redirect/callback URL | Environment |
-|---------|----------|
-|`https://platform.adobe.io/data/core/activation/oauth/api/v1/callback` | Production |
-|`https://platform-stage.adobe.io/data/core/activation/oauth/api/v1/callback` | Staging |
-
-{style="table-layout:auto"}
 
 At the end of this step, you should have:
 * A client ID;
