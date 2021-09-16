@@ -27,9 +27,9 @@ If you do not have these artifacts coordinated, please contact your Adobe repres
 
 Once your artifacts are ready, you can begin the process of creating a new connection specification.
 
-### Retrieve a generic REST connection specification
+### Retrieve a REST API-based connection specification
 
-To create a new connection specification, you must first retrieve a generic REST connection specification using the [!DNL Flow Service] API. To get an example, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
+To create a new connection specification, you must first retrieve REST API-based connection specification using the [!DNL Flow Service] API. To get an example, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
 **API format**
 
