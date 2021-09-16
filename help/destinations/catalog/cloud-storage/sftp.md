@@ -16,24 +16,31 @@ Create a live outbound connection to your SFTP server to periodically export del
 
 ## Export Type {#export-type}
 
-**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-destinations.md#select-attributes).
+**Profile-based** - you are exporting all members of a segment, together with the desired schema fields (for example: email address, phone number, last name), as chosen from the select attributes screen of the [destination activation workflow](../../ui/activate-batch-profile-destinations.md).
 
 ![SFTP profile-based export type](../../assets/catalog/cloud-storage/sftp/catalog.png)
 
-## Connect destination {#connect-destination}
+## Connect to the destination {#connect}
 
-Refer to the [Cloud storage destinations workflow ](./workflow.md) for instructions on how to connect to your cloud storage destinations, including SFTP.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-For SFTP destinations, enter the following information in the create destination workflow, in the **Authentication** step:
+### Connection parameters {#parameters}
+
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
 
 * **Host**: The address of your SFTP storage location
 * **Username**: The username to log into your SFTP storage location
 * **Password**: The password to log into your SFTP storage location
+* **[!UICONTROL Name]**: enter a name that will help you identify this destination.
+* **[!UICONTROL Description]**: enter a description of this destination.
+* **[!UICONTROL Folder path]**: enter the path to the destination folder that will host the exported files.
+
+Optionally, you can attach your RSA-formatted public key to add encryption to your exported files. Your public key must be written as a [!DNL Base64] encoded string.
 
 ## Exported data {#exported-data}
 
-For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Email Marketing destinations and Cloud storage destinations](../../ui/activate-destinations.md#esp-and-cloud-storage) in the segment activation tutorial.
+For [!DNL SFTP] destinations, Platform creates a tab-delimited `.csv` file in the storage location that you provided. For more information about the files, see [Activate audience data to batch profile export destinations](../../ui/activate-batch-profile-destinations.md) in the segment activation tutorial.
 
 ## IP address allow list
 
-Refer to [IP address allow list for cloud storage destinations](./ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.
+Refer to [IP address allow list for cloud storage destinations](ip-address-allow-list.md) if you need to add Adobe IPs to an allow list.

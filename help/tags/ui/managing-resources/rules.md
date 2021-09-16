@@ -1,6 +1,7 @@
 ---
 title: Rules
 description: Learn how tag extensions function in Adobe Experience Platform.
+exl-id: 2beca2c9-72b7-4ea0-a166-50a3b8edb9cd
 ---
 # Rules
 
@@ -162,7 +163,7 @@ Adobe cannot guarantee that any other rules will actually be triggered and that 
 * **JavaScript:** The JavaScript is loaded from the server as regular text, wrapped in a script tag, and added to the document using Postscribe. If the rule has multiple JavaScript custom scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 * **HTML:** The HTML is loaded from the server and added to the document using Postscribe. If the rule has multiple custom HTML scripts, they are loaded in parallel from the server, but executed in the same order that was configured in the rule.
 
-## Rule Component Sequencing
+## Rule Component Sequencing {#sequencing}
 
 The tag runtime environment's behavior depends on whether **[!UICONTROL Run rule components in sequence]** is on or off for your property.
 

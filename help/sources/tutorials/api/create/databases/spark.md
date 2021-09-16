@@ -15,7 +15,7 @@ exl-id: 1f7ca86e-32f4-45f7-92c2-f87c5c0c4ea4
 
 A base connection represents the authenticated connection between a source and Adobe Experience Platform.
 
-This tutorial walks you through the steps to create a base connection for [!DNL Apache Spark] on [!DNL Azure HDInsights] (hereinafter referred to as "[!DNL Spark]") using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to create a base connection for [!DNL Apache Spark] on [!DNL Azure HDInsights] (hereinafter referred to as "[!DNL Spark]") using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

@@ -10,7 +10,7 @@ exl-id: ce39b95b-cff7-46cf-a14c-8203017c8826
 
 The [!DNL Real-time Customer Profile] API includes multiple endpoints, outlined below. Please visit the individual endpoint guides for details and refer to the [getting started guide](getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml).
+To view all available endpoints and CRUD operations, visit the [Real-time Customer Profile API Reference swagger](https://www.adobe.com/go/profile-apis-en).
 
 For a guide to working with [!DNL Real-time Customer Profile] data in the [!DNL Experience Platform] UI, please refer to the [Profile user guide](../ui/user-guide.md).
 
@@ -46,7 +46,7 @@ To learn more about merge policies, and their role within Platform, please begin
 
 ## Preview sample status ([!DNL Profile] preview) {#profile-preview}
 
-As data enabled for Profile is ingested into Experience Platform, it is stored within the Profile data store. As the number of records in the Profile store increases or decreases, a sample job is run that includes information regarding how many profile fragments and merged profiles are in the data store. Using the Profile API you can preview the latest successful sample, as well as list profile distribution by dataset and by identity namespace. To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
+As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store.  To get started using the `/profilepreviewstatus` endpoint, refer to the [preview sample status endpoint guide](preview-sample-status.md).
 
 ## Profile system jobs {#profile-system-jobs}
 

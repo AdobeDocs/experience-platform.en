@@ -4,6 +4,7 @@ solution: Experience Platform
 title: Experience Channel Data Type
 topic-legacy: overview
 description: This document provides an overview of the Experience channel Experience Data Model (XDM) data type.
+exl-id: 209654f7-0bde-439a-989c-ce2e41599105
 ---
 # [!UICONTROL Experience channel] data type
 

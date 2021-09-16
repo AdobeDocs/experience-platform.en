@@ -1,6 +1,7 @@
 ---
 title: Backwards Compatibility Standard
 description: Learn about the backward compatibility standard in Adobe Experience Platform that ensures updated versions of tag extensions are compatible with previous versions.
+exl-id: 325390f1-88c7-4b9e-a484-5442ca649bdf
 ---
 # Backwards compatibility standard
 

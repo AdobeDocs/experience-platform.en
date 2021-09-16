@@ -1,6 +1,7 @@
 ---
 title: Adobe Analytics Extension Overview
 description: Learn about the Adobe Analytics tag extension in Adobe Experience Platform.
+exl-id: 33ebdcb6-9bf0-44e6-b016-e93fe78af578
 ---
 # Adobe Analytics extension overview
 
@@ -361,7 +362,7 @@ Use the editor to specify your custom page code.
 
 Select if you want to increment a pageview.
 
-#### Do not increment a pageview - s.t()
+#### Do not increment a pageview - s.tl()
 
 Select if you do not want to increment a pageview.
 

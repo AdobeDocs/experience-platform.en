@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Segment Match Overview
 topic-legacy: overview
 description: Segment Match is a segment-sharing service in Adobe Experience Platform that allows for two or more Platform users to exchange segment data in a secure, governed, and privacy-friendly manner.
+exl-id: 4e6ec2e0-035a-46f4-b171-afb777c14850
 ---
-
 # (Beta) [!DNL Segment Match] overview
 
 >[!IMPORTANT]
@@ -68,6 +68,17 @@ Data usage labels allow you to categorize datasets and fields according to usage
 [!DNL Segment Match] uses the C11 label, a contract label specific to [!DNL Segment Match] that you can manually add to any datasets or attributes to ensure that they are excluded from the [!DNL Segment Match] partner-sharing process. The C11 label denotes data that should not be used in [!DNL Segment Match] processes. After you have determined which datasets and/or fields you want to exclude from [!DNL Segment Match] and added the C11 label accordingly, the label is automatically enforced by the [!DNL Segment Match] workflow. [!DNL Segment Match] automatically enables the [!UICONTROL Restrict data sharing] core policy. For specific instructions on how to apply data usage labels to datasets, see the tutorial on [managing data usage labels in the UI](../../data-governance/labels/user-guide.md).
 
 For a list of data usage labels and their definitions, see the [data usage labels glossary](../../data-governance/labels/reference.md). For information on data usage policies, see the [data usage policies overview](../../data-governance/policies/overview.md).
+
+### Understanding [!DNL Segment Match] permissions
+
+There are two permissions associated with [!DNL Segment Match]:
+
+| Permission | Description |
+| --- | --- |
+| Manage Audience Share Connections | This permission allows you to complete the partner handshake process, which connects two IMS Organizations to enable [!DNL Segment Match] flows. |
+| Manage Audience Shares | This permission allows you to create, edit, and publish feeds (the package of data used for [!DNL Segment Match]) with active partners (partners who have been connected by the admin user with **[!UICONTROL Audience Share Connections]** access). |
+
+See the [access control overview](../../access-control/home.md) for more information on access control and permissions.
 
 ## [!DNL Segment Match] end-to-end workflow
 

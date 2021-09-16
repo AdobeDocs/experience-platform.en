@@ -1,6 +1,7 @@
 ---
 title: Release an Extension
 description: Learn how to privately or publicly release a tag extension in Adobe Experience Platform.
+exl-id: a5eb6902-4b0f-4717-a431-a290c50fb5a6
 ---
 # Release an extension
 

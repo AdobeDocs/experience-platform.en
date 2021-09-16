@@ -1,14 +1,14 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;preview;sample
 title: Preview Sample Status (Profile Preview) API Endpoint
-description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate a dataset overlap report.
+description: Using the preview sample status endpoint, part of the Real-time Customer Profile API, you can preview the latest successful sample of your Profile data, list profile distribution by dataset and by identity, and generate reports showing dataset overlap, identity overlap, and unknown profiles.
 exl-id: a90a601e-629e-417b-ac27-3d69379bb274
 ---
 # Preview sample status endpoint (Profile preview)
 
 Adobe Experience Platform enables you to ingest customer data from multiple sources in order to build a robust, unified profile for each of your individual customers. As data is ingested into Platform, a sample job is run to update the profile count and other Real-time Customer Profile data-related metrics. 
 
-The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate a dataset overlap report and an identity overlap report to gain visibility into the composition of your organization's Profile store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
+The results of this sample job can be viewed using the `/previewsamplestatus` endpoint, part of the Real-time Customer Profile API. This endpoint can also be used to list profile distributions by both dataset and identity namespace, as well as to generate multiple reports in order to gain visibility into the composition of your organization's Profile Store. This guide walks through the steps required to view these metrics using the `/previewsamplestatus` API endpoint.
 
 >[!NOTE]
 >
@@ -30,10 +30,10 @@ To learn more about profiles and their role within Experience Platform, please b
 
 ## How the sample job is triggered
 
-As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
+As data enabled for Real-time Customer Profile is ingested into [!DNL Platform], it is stored within the Profile data store. When the ingestion of records into the Profile Store increases or decreases the total profile count by more than 5%, a sampling job is triggered to update the count. The way in which the sample is triggered depends on the type of ingestion being used:
 
 * For **streaming data workflows**, a check is done on an hourly basis to determine if the 5% increase or decrease threshold has been met. If it has, a sample job is automatically triggered to update the count. 
-* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
+* For **batch ingestion**, within 15 minutes of successfully ingesting a batch into the Profile Store, if the 5% increase or decrease threshold is met, a job is run to update the count. Using the Profile API you can preview the latest successful sample job, as well as list profile distribution by dataset and by identity namespace.
 
 The profile count and profiles by namespace metrics are also available within the [!UICONTROL Profiles] section of the Experience Platform UI. For information on how to access Profile data using the UI, please visit the [[!DNL Profile] UI guide](../ui/user-guide.md).
 
@@ -93,9 +93,9 @@ The response includes the details for the last successful sample job that was ru
 |Property|Description|
 |---|---|
 |`numRowsToRead`|The total number of merged profiles in the sample.|
-|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile store.|
+|`sampleJobRunning`| A boolean value that returns `true` when a sample job is in progress. Provides transparency into the latency that occurs from when a batch file is uploaded to when it is actually added to the Profile Store.|
 |`cosmosDocCount`|Total document count in Cosmos.|
-|`totalFragmentCount`|Total number of profile fragments in the Profile store.|
+|`totalFragmentCount`|Total number of profile fragments in the Profile Store.|
 |`lastSuccessfulBatchTimestamp`|Last successful batch ingestion timestamp.|
 |`streamingDriven`| *This field has been deprecated and contains no significance to the response.*|
 |`totalRows`|Total number of merged profiles in Experience Platform, also know as the 'profile count.'|
@@ -200,7 +200,7 @@ The response includes a `data` array, containing a list of dataset objects. The 
 
 ## List profile distribution by identity namespace
 
-You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
+You can perform a GET request to the `/previewsamplestatus/report/namespace` endpoint to view the breakdown by identity namespace across all of the merged profiles in your Profile Store. This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
 
 Identity namespaces are an important component of Adobe Experience Platform Identity Service that serve as indicators of the context to which customer data relates. To learn more, begin by reading the [identity namespace overview](../../identity-service/namespaces.md).
 
@@ -297,7 +297,7 @@ The response includes a `data` array, with individual objects containing the det
 
 ## Generate the dataset overlap report
 
-The dataset overlap report provides visibility into the composition of your organization's Profile store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
+The dataset overlap report provides visibility into the composition of your organization's Profile Store by exposing the datasets that contribute most to your addressable audience (merged profiles). In addition to providing insights into your data, this report can help you take actions to optimize license usage, such as setting a TTL for certain datasets.
 
 You can generate the dataset overlap report by performing a GET request to the `/previewsamplestatus/report/dataset/overlap` endpoint.
 
@@ -357,22 +357,23 @@ The results of the report can be interpreted from the datasets and profile count
 ```
 
 This report provides the following information:
+
 * There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.
 * There is a total of 454,642 profiles in the organization.
 
-## Generate the identity overlap report
+## Generate the identity namespace overlap report
 
-The identity overlap report provides visibility into the composition of your organization's Profile store by exposing the identities that contribute most to your addressable audience (merged profiles). This includes both the standard identities provided by Adobe, as well as the custom identities defined by your organization.
+The identity namespace overlap report provides visibility into the composition of your organization's Profile Store by exposing the identity namespaces that contribute most to your addressable audience (merged profiles). This includes both the standard identity namespaces provided by Adobe, as well as the custom identity namespaces defined by your organization.
 
-You can generate the identity overlap report by performing a GET request to the `/previewsamplestatus/report/identity/overlap` endpoint.
+You can generate the identity namespace overlap report by performing a GET request to the `/previewsamplestatus/report/namespace/overlap` endpoint.
 
 **API format**
 
 ```http
-GET /previewsamplestatus/report/identity/overlap
-GET /previewsamplestatus/report/identity/overlap?{QUERY_PARAMETERS}
+GET /previewsamplestatus/report/namespace/overlap
+GET /previewsamplestatus/report/namespace/overlap?{QUERY_PARAMETERS}
 ```
 
 |Parameter|Description|
@@ -385,7 +386,7 @@ The following request uses the `date` parameter to return the most recent report
 
 ```shell
 curl -X GET \
-  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/identity/overlap?date=2021-12-29 \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/namespace/overlap?date=2021-12-29 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -393,7 +394,7 @@ curl -X GET \
 
 **Response**
 
-A successful request returns HTTP Status 200 (OK) and the identity overlap report. 
+A successful request returns HTTP Status 200 (OK) and the identity namespace overlap report. 
 
 ```json
 {
@@ -440,7 +441,7 @@ A successful request returns HTTP Status 200 (OK) and the identity overlap repor
 |Namespace codes|The `code` is a short form for each identity namespace name. A mapping of each `code` to its `name` can be found using the [Adobe Experience Platform Identity Service API](../../identity-service/api/list-namespaces.md). The `code` is also referred to as the [!UICONTROL Identity symbol] in the Experience Platform UI. To learn more, visit the [identity namespace overview](../../identity-service/namespaces.md).|
 |`reportTimestamp`|The timestamp of the report. If a `date` parameter was provided during the request, the report returned is for the date provided. If no `date` parameter is provided, the most recent report is returned.|
 
-### Interpreting the identity overlap report
+### Interpreting the identity namespace overlap report
 
 The results of the report can be interpreted from the identities and profile counts in the response. The numerical value of each row tells you how many profiles are composed of that exact combination of standard and custom identity namespaces.
 
@@ -453,11 +454,137 @@ Consider the following excerpt from the `data` object:
 ```
 
 This report provides the following information:
+
 * There are 142 profiles composed of `AAID`, `ECID`, and `Email` standard identities, as well as from a custom `crmid` identity namespace.
 * There are 24 profiles that are composed of `AAID` and `ECID` identity namespaces.
 * There are 6,565 profiles that include only an `ECID` identity.
 
+## Generate the unknown profiles report
+
+You can gain further visibility into the composition of your organization's Profile Store through the unknown profiles report. An "unknown profile" refers to any profile that is both unstitched and inactive for a given time period. An "unstitched" profile is a profile that contains only one profile fragment, while an "inactive" profile is any profile that has not added new events for the specified time period. The unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+
+You can generate the unknown profiles report by performing a GET request to the `/previewsamplestatus/report/unknownProfiles` endpoint.
+
+**API format**
+
+```http
+GET /previewsamplestatus/report/unknownProfiles
+```
+
+**Request**
+
+The following request returns the unknown profiles report.
+
+```shell
+curl -X GET \
+  https://platform.adobe.io/data/core/ups/previewsamplestatus/report/unknownProfiles \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+```
+
+**Response**
+
+A successful request returns HTTP Status 200 (OK) and the unknown profiles report. 
+
+>[!NOTE]
+>
+>For the purposes of this guide, the report has been truncated to include only `"120days"` and "`7days`" time periods. The full unknown profiles report provides a breakdown of profiles for a period of 7, 30, 60, 90, and 120 days.
+
+```json
+{
+  "data": {
+      "totalNumberOfProfiles": 63606,
+      "totalNumberOfEvents": 130977,
+      "unknownProfiles": {
+          "120days": {
+              "countOfProfiles": 1644,
+              "eventsAssociated": 26824,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 18,
+                      "eventsAssociated": 95
+                  },
+                  "loyal": {
+                      "countOfProfiles": 26,
+                      "eventsAssociated": 71
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1600,
+                      "eventsAssociated": 26658
+                  }
+              }
+          },
+          "7days": {
+              "countOfProfiles": 1782,
+              "eventsAssociated": 29151,
+              "nsDistribution": {
+                  "Email": {
+                      "countOfProfiles": 19,
+                      "eventsAssociated": 97
+                  },
+                  "ECID": {
+                      "countOfProfiles": 1734,
+                      "eventsAssociated": 28591
+                  },
+                  "loyal": {
+                      "countOfProfiles": 29,
+                      "eventsAssociated": 463
+                  }
+              }
+          }
+      }
+  },
+  "reportTimestamp": "2025-08-25T22:14:55.186"
+}
+```
+
+|Property|Description|
+|---|---|
+|`data`|The `data` object contains the information returned for the unknown profiles report.|
+|`totalNumberOfProfiles`|The total count of unique profiles in the Profile Store. This is equivalent to the addressable audience count. It includes both known and unknown profiles.|
+|`totalNumberOfEvents`|The total number of ExperienceEvents in the Profile Store.|
+|`unknownProfiles`|An object containing a breakdown of unknown profiles (unstitched and inactive) by time period. The unknown profiles report provides a breakdown of profiles for 7, 30, 60, 90, and 120 day time periods.|
+|`countOfProfiles`|The count of unknown profiles for the time period or the count of unknown profiles for the namespace. |
+|`eventsAssociated`|The number of ExperienceEvents for the time range or the number of events for the namespace.|
+|`nsDistribution`|An object containing individual identity namespaces with the distribution of unknown profiles and events for each namespace. Note: Adding together the total `countOfProfiles` for each identity namespace in the `nsDistribution` object equals the `countOfProfiles` for the time period. The same is true for `eventsAssociated` per namespace and the total `eventsAssociated` per time period.|
+|`reportTimestamp`|The timestamp of the report.|
+
+### Interpreting the unknown profiles report
+
+The results of the report can provide insight into how many unstitched and inactive profiles your organization has within its Profile Store.
+
+Consider the following excerpt from the `data` object:
+
+```json
+  "7days": {
+    "countOfProfiles": 1782,
+    "eventsAssociated": 29151,
+    "nsDistribution": {
+      "Email": {
+        "countOfProfiles": 19,
+        "eventsAssociated": 97
+      },
+      "ECID": {
+        "countOfProfiles": 1734,
+        "eventsAssociated": 28591
+      },
+      "loyal": {
+        "countOfProfiles": 29,
+        "eventsAssociated": 463
+      }
+    }
+  }
+```
+
+This report provides the following information:
+
+* There are 1,782 profiles that contain only one profile fragment and have no new events for the past seven days.
+* There are 29,151 ExperienceEvents associated with the 1,782 unknown profiles.
+* There are 1,734 unknown profiles containing a single profile fragment from the identity namespace of ECID.
+* There are 28,591 events associated with the 1,734 unknown profiles that contain a single profile fragment from the identity namespace of ECID.
+
 ## Next steps
 
-Now that you know how to preview sample data in the Profile store and run multiple overlap reports, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
+Now that you know how to preview sample data in the Profile Store and run multiple reports on the data, you can also use the estimate and preview endpoints of the Segmentation Service API to view summary-level information regarding your segment definitions. This information helps to ensure you are isolating the expected audience in your segment. To learn more about working with segment previews and estimates using the Segmentation API, please visit the [preview and estimate endpoints guide](../../segmentation/api/previews-and-estimates.md).
 
