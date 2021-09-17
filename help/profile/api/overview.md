@@ -52,6 +52,10 @@ As data is ingested into Platform, a sample job is run to update the profile cou
 
 Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the [!DNL Profile] store in order to remove data that you no longer require or that was added in error. This requires using the API to create a [!DNL Profile System Job], also known as a "[!DNL delete request]", which can be modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
 
+## Update profiles incrementally {#update-profile}
+
+Profiles within Experience Platform can be updated incrementally in order to change only the values for select attributes. This can be done through batch or streaming ingestion and requires an upsert tag to be included in a Profile-enabled dataset. For more information on how to incrementally update profiles, please refer to the tutorial for [updating profile data](../tutorials/update-profile-data.md).
+
 ## Next steps {#next-steps}
 
 To begin making calls using the [!DNL Real-time Customer Profile] API, read the [getting started guide](getting-started.md) then select one of the endpoint guides to learn how to use specific [!DNL Profile]-related endpoints. To work with [!DNL Profile] data using the [!DNL Experience Platform] UI, please refer to the [Real-time Customer Profile user guide](../ui/user-guide.md).

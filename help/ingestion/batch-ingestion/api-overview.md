@@ -2,49 +2,20 @@
 keywords: Experience Platform;home;popular topics;batch ingestion;Batch ingestion;ingestion;developer guide;api guide;upload;ingest Parquet;ingest json;
 solution: Experience Platform
 title: Batch Ingestion API Guide
-topic-legacy: developer guide
-description: This document provides a comprehensive overview of using batch ingestion APIs.
+description: This document provides a comprehensive guide for developers working with batch ingestion APIs for Adobe Experience Platform.
 exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
-# Batch ingestion API guide
+# Batch ingestion developer guide
 
-This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 
+This document provides a comprehensive guide to using [batch ingestion API endpoints](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion) in Adobe Experience Platform. For an overview of batch ingestion APIs, including prerequisites and best practices, please begin by reading the [batch ingestion API overview](overview.md).
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 
 ## Getting started
 
-Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
+The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
 
-The following sections provide additional information that you will need to know or have on-hand in order to successfully make calls to the Batch Ingestion API.
-
-This guide requires a working understanding of the following components of Adobe Experience Platform:
-
-- [Batch ingestion](./overview.md): Allows you to ingest data into Adobe Experience Platform as batch files.
-- [[!DNL Experience Data Model (XDM)] System](../../xdm/home.md): The standardized framework by which [!DNL Experience Platform] organizes customer experience data.
-- [[!DNL Sandboxes]](../../sandboxes/home.md): [!DNL Experience Platform] provides virtual sandboxes which partition a single [!DNL Platform] instance into separate virtual environments to help develop and evolve digital experience applications.
-
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- `Authorization: Bearer {ACCESS_TOKEN}`
-- `x-api-key: {API_KEY}`
-- `x-gw-ims-org-id: {IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- `x-sandbox-name: {SANDBOX_NAME}`
-
->[!NOTE]
->
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
-
-Requests that contain a payload (POST, PUT, PATCH) may require an additional `Content-Type` header. The accepted values specific to each call are provided in the call parameters. 
+Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Types
 
@@ -52,7 +23,7 @@ When ingesting data, it is important to understand how [!DNL Experience Data Mod
 
 There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
 
-For example, neither JSON nor CSV has a date or date-time type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
+For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
 
 The table below shows the conversions supported when ingesting data.
 
@@ -76,6 +47,7 @@ The table below shows the conversions supported when ingesting data.
 ## Ingestion constraints
 
 Batch data ingestion has some constraints:
+
 - Maximum number of files per batch: 1500
 - Maximum batch size: 100 GB
 - Maximum number of properties or fields per row: 10000
@@ -151,7 +123,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
 
 ### Upload files
 
-Now that you have created a batch, you can use the `batchId` from before to upload files to the batch. You can upload multiple files to the batch.
+Now that you have created a batch, you can use the batch ID from the batch creation response to upload files to the batch. You can upload multiple files to the batch.
 
 >[!NOTE]
 >
@@ -959,6 +931,8 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```
 
 ## Appendix
+
+The following section contains additional information for ingesting data in Experience Platform using batch ingestion.
 
 ### Data transformation for batch ingestion
 

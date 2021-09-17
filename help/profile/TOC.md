@@ -37,9 +37,10 @@ feature: Profiles
   * [Union schema UI guide](ui/union-schema.md)
   * [Union schema overview (Video)](video/union-schemas-overview.md)
 * Tutorials {#tutorials}
-  * [Add data to [!DNL Profile]](tutorials/add-profile-data.md)
-  * [Configure a dataset for [!DNL Profile] & [!DNL Identity] service](tutorials/dataset-configuration.md)
+  * [Add data to Real-time Customer Profile](tutorials/add-profile-data.md)
+  * [Configure a dataset for Profile](tutorials/dataset-configuration.md)
   * [Generate the dataset overlap report](tutorials/dataset-overlap-report.md)
+  * [Update profiles incrementally](tutorials/update-profile-data.md)
   * [More tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)

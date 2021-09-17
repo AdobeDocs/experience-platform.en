@@ -1,20 +1,24 @@
 ---
 keywords: Experience Platform;home;popular topics;data ingestion;batch;Batch;enable dataset;Batch ingestion overview;overview;batch ingestion overview;
 solution: Experience Platform
-title: Batch Ingestion Overview
+title: Batch Ingestion API Overview
 topic-legacy: overview
 description: The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the Experience Data Model (XDM) registry.
 exl-id: ffd1dc2d-eff8-4ef7-a26b-f78988f050ef
 ---
-# Batch ingestion overview
+# Batch ingestion API overview
 
-The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be the profile data from a flat file in a CRM system (such as a Parquet file), or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
+The Adobe Experience Platform Data Ingestion API allows you to ingest data into Platform as batch files. Data being ingested can be profile data from a flat file (such as a Parquet file) or data that conforms to a known schema in the [!DNL Experience Data Model] (XDM) registry.
 
 The [Data Ingestion API reference](https://www.adobe.io/experience-platform-apis/references/data-ingestion/) provides additional information on these API calls.
 
 The following diagram outlines the batch ingestion process:
 
 ![](../images/batch-ingestion/overview/batch_ingestion.png)
+
+## Getting started
+
+The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
 ## Using the API
 
@@ -23,7 +27,6 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 1. Create a new batch. 
 2. Upload files to a specified dataset that matches the XDM schema of the data. 
 3. Signal the end of the batch. 
-
 
 ### [!DNL Data Ingestion] prerequisites
 
@@ -37,33 +40,11 @@ The [!DNL Data Ingestion] API allows you to ingest data as batches (a unit of da
 - The recommended batch size is between 256 MB and 100 GB.
 - Each batch should contain at most 1500 files.
 
-To upload a file larger than 512MB, the file will need to be divided into smaller chunks. Instructions to upload a large file can be found [here](#large-file-upload---create-file).
-
-### Reading sample API calls
-
-This guide provides example API calls to demonstrate how to format your requests. These include paths, required headers, and properly formatted request payloads. Sample JSON returned in API responses is also provided. For information on the conventions used in documentation for sample API calls, see the section on [how to read example API calls](../../landing/troubleshooting.md#how-do-i-format-an-api-request) in the [!DNL Experience Platform] troubleshooting guide.
-
-### Gather values for required headers
-
-In order to make calls to [!DNL Platform] APIs, you must first complete the [authentication tutorial](https://www.adobe.com/go/platform-api-authentication-en). Completing the authentication tutorial provides the values for each of the required headers in all [!DNL Experience Platform] API calls, as shown below:
-
-- Authorization: Bearer `{ACCESS_TOKEN}`
-- x-api-key: `{API_KEY}`
-- x-gw-ims-org-id: `{IMS_ORG}`
-
-All resources in [!DNL Experience Platform] are isolated to specific virtual sandboxes. All requests to [!DNL Platform] APIs require a header that specifies the name of the sandbox the operation will take place in:
-
-- x-sandbox-name: `{SANDBOX_NAME}`
-
 >[!NOTE]
 >
->For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+>To upload a file larger than 512MB, the file will need to be divided into smaller chunks. Instructions to upload a large file can be found in the [large file upload section of this document](#large-file-upload---create-file).
 
-All requests that contain a payload (POST, PUT, PATCH) require an additional header:
-
-- Content-Type: application/json
-
-### Create a batch
+## Create a batch
 
 Before data can be added to a dataset, it must be linked to a batch, which will later be uploaded into a specified dataset.
 
@@ -124,7 +105,7 @@ You can upload files using the Small File Upload API. However, if your files are
 
 >[!NOTE]
 >
->The examples below use the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](./api-overview.md).
+>The examples below use the [Apache Parquet](https://parquet.apache.org/documentation/latest/) file format. An example that uses the JSON file format can be found in the [batch ingestion developer guide](api-overview.md).
 
 ### Small file upload
 
