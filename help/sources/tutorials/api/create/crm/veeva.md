@@ -5,6 +5,7 @@ title: Create a Veeva CRM Base Connection Using the Flow Service API
 topic-legacy: overview
 type: Tutorial
 description: Learn how to connect Adobe Experience Platform to Veeva CRM using the Flow Service API.
+exl-id: e1aea5a2-a247-43eb-8252-2e2ed96b82a1
 ---
 # (Beta) Create a [!DNL Veeva CRM] base connection using the [!DNL Flow Service] API
 
