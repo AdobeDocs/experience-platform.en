@@ -1,7 +1,6 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: Enable a Dataset for Profile and Identity Service using APIs
-topic-legacy: tutorial
 type: Tutorial
 description: This tutorial shows you how to enable a dataset for use with Real-time Customer Profile and Identity Service using Adobe Experience Platform APIs.
 ---
@@ -20,7 +19,7 @@ This tutorial covers the process of enabling a dataset for use in [!DNL Real-tim
 
 This tutorial requires a working understanding of several Adobe Experience Platform services involved in managing Profile-enabled datasets. Before beginning this tutorial, please review the documentation for these related DNL Platform services:
 
-- [[!DNL Real-time Customer Profile]](../home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Real-time Customer Profile]](../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 - [[!DNL Identity Service]](../../identity-service/home.md): Enables [!DNL Real-time Customer Profile] by bridging identities from disparate data sources being ingested into [!DNL Platform].
 - [[!DNL Catalog Service]](../../catalog/home.md): A RESTful API that allows you to create datasets and configure them for [!DNL Real-time Customer Profile] and [!DNL Identity Service].
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
@@ -208,7 +207,7 @@ curl -X PATCH \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -d '[
         { "op": "add", "path": "/tags/unifiedProfile", "value": ["enabled:true"] },
-        { "op": "add", "path": "/tags/unifiedIdentity", "value": ["enabled:true"] }	
+        { "op": "add", "path": "/tags/unifiedIdentity", "value": ["enabled:true"] } 
       ]'
 ```
 
@@ -232,7 +231,7 @@ Both [!DNL Real-time Customer Profile] and [!DNL Identity Service] consume XDM d
 
 ## Confirm data ingest by [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
 
-When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected. Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Real-time Customer Profile]. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations. For detailed instructions on how to use the [!DNL Real-time Customer Profile] API to access [!DNL Profile] data, please follow the [entities endpoint guide](../api/entities.md), also known as the "[!DNL Profile Access]" API.
+When uploading data to a new dataset for the first time, or as part of a process involving a new ETL or data source, it is recommended to carefully check the data to ensure it has been uploaded as expected. Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Real-time Customer Profile]. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations. For detailed instructions on how to use the [!DNL Real-time Customer Profile] API to access [!DNL Profile] data, please refer to the [entities endpoint guide](../../profile/api/entities.md), also known as the "[!DNL Profile Access]" API.
 
 ## Confirm data ingest by Identity Service {#confirm-data-ingest-by-identity-service}
 
