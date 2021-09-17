@@ -469,7 +469,7 @@ Depending on your authentication customization, you might need to access data fi
 | response.body | HTTP response body | ``{{ response.body.access_token }}`` |
 | response.status | HTTP response status | ``{{ response.status }}`` |
 | response.headers | HTTP response headers | ``{{ response.headers.server[0] }}`` |
-| authContext | Access information about the current authentication attempt | <ul><li>`{{ authContext.sandboxName }} `</li><li>`{{ authContext.sandboxId }} `</li><li>`{{ authContext.imsOrgId }} `</li><li>`{{ authContext.client }} // the client executing the authentication attempt `</li></ul> |
+| userContext | Access information about the current authentication attempt | <ul><li>`{{ userContext.sandboxName }} `</li><li>`{{ userContext.sandboxId }} `</li><li>`{{ userContext.imsOrgId }} `</li><li>`{{ userContext.client }} // the client executing the authentication attempt `</li></ul> |
 
 {style="table-layout:auto"}
 
