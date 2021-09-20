@@ -43,7 +43,6 @@ The identity resolution system provides the following features:
 
 * Unified B2B and B2C people records
 * A multi-level account hierarchy
-* A related accounts collection
 * Many to many, people to account connections
 * People and account identity resolved in real-time
 
