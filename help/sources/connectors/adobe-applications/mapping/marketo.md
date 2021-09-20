@@ -141,9 +141,11 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `accountID` | This is the primary identity. |
-| `mktoCdpExternalId` | `extSourceSystemAudit.externalID` | This is the secondary identity and is applicable only if you have the [!DNL Salesforce] integration. |
-| `msftCdpExternalId` | `extSourceSystemAudit.externalID` | This is the secondary identity and is applicable only if you have the [!DNL Microsoft Dynamics] integration. |
+| `"Marketo"` | `accountKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `accountKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| `concat(id, ".mkto_org")` | `accountKey.sourceID` |
+| `concat(id, ".mkto_org@${MUNCHKIN_ID}.Marketo")` | `accountKey.sourceKey` | This is the primary identity. `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| <ul><li>`iif(mktoCdpExternalId != null && mktoCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpExternalId, "sourceKey", concat(mktoCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(msftCdpExternalId != null && msftCdpExternalId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", msftCdpExternalId,"sourceKey", concat(msftCdpExternalId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity and the values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be replaced as part of the Explore API. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `billingCity` | `accountBillingAddress.city` |
@@ -160,7 +162,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `company` | `accountName` |
 | `companyNotes` | `accountDescription` |
 | `site` | `accountSite` |
-| `mktoCdpParentOrgId` | `accountParentID` |
+| `iif(mktoCdpParentOrgId != null && mktoCdpParentOrgId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(mktoCdpParentOrgId, ".mkto_org"), "sourceKey", concat(mktoCdpParentOrgId, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `accountParentKey` |
 
 {style="table-layout:auto"}
 
