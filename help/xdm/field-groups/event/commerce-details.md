@@ -4,8 +4,8 @@ solution: Experience Platform
 title: Commerce Details Schema Field Group
 topic-legacy: overview
 description: This document provides an overview of the Commerce Details schema field group.
+exl-id: 36aba186-fadb-4abb-a94f-7e151ff3f744
 ---
-
 # [!UICONTROL Commerce Details] schema field group
 
 >[!NOTE]

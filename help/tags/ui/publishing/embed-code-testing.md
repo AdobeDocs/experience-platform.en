@@ -1,6 +1,7 @@
 ---
 title: Test Embed Codes using Adobe Experience Platform Debugger
 description: Learn how to use Platform Debugger to locally test different embed codes for Adobe Experience Platform on your website.
+exl-id: ae6183b9-0d25-49d0-b0e9-f8b5ba58ab33
 ---
 # Test embed codes using Adobe Experience Platform Debugger
 

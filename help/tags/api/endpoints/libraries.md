@@ -1,6 +1,7 @@
 ---
 title: Libraries endpoint
 description: Learn how to make calls to the /libraries endpoint in the Reactor API.
+exl-id: 0f7bc10f-2e03-43fa-993c-a2635f4d0c64
 ---
 # Libraries endpoint
 
@@ -10,7 +11,7 @@ A library belongs to exactly one property. A property can have many libraries.
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 Before working with libraries in the Reactor API, it is important to understand the roles that library state and environments play in determining what actions you can make on a particular library. See the guide on the [library publishing flow](../../ui/publishing/publishing-flow.md) for more information.
 
@@ -42,6 +43,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -163,6 +165,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -421,7 +424,7 @@ POST /libraries/{LIBRARY_ID}/relationships/{RESOURCE_TYPE}
 The following request adds two data elements to a library.
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/data_elements \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -618,7 +621,7 @@ POST /libraries/{LIBRARY_ID}/relationships/environment
 **Request**
 
 ```shell
-curl -X GET \
+curl -X POST \
   https://reactor.adobe.io/libraries/LBdd2f55e9c3bb4ce0a582a0b0c586a6f5/relationships/environment \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -678,7 +681,7 @@ PATCH /libraries/{LIBRARY_ID}
 The following request transitions the state of an existing library, based on the value of `meta.action` provided in the payload. The available actions for a library depend on its current publishing state, as outlined in the [publishing flow](../../ui/publishing/publishing-flow.md#state).
 
 ```shell
-curl -X PUT \
+curl -X PATCH \
   https://reactor.adobe.io/libraries/LB5862ee2dc21b4646a5536c8d6edb0c84 \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
@@ -928,6 +931,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1068,6 +1072,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1198,6 +1203,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1310,6 +1316,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1421,6 +1428,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 
@@ -1543,6 +1551,7 @@ curl -X GET \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H "Content-Type: application/vnd.api+json" \
   -H 'Accept: application/vnd.api+json;revision=1'
 ```
 

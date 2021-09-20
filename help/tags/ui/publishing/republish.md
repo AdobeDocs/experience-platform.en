@@ -1,6 +1,7 @@
 ---
 title: Republish a Library
 description: Learn how to republish a previous tag library in Adobe Experience Platform.
+exl-id: 026b01f2-a93d-4e8a-9ed2-47c4f011e70f
 ---
 # Republish a library
 

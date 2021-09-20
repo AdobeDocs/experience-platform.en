@@ -15,9 +15,13 @@ feature: Destinations
     * [Connect to email marketing destinations and activate data using the Flow Service API](./api/email-marketing.md)
 * UI guides {#ui}
     * [Destinations workspace](./ui/destinations-workspace.md)
-    * [Connect to a destination](./ui/connect-destination.md)
+    * [Create a new destination connection](./ui/connect-destination.md)
+    * Activate audience data to destinations{#activate}
+        * [Activation overview](./ui/activation-overview.md)
+        * [Activate audience data to streaming segment export destinations](./ui/activate-segment-streaming-destinations.md)
+        * [Activate audience data to streaming profile export destinations](./ui/activate-streaming-profile-destinations.md)
+        * [Activate audience data to batch profile export destinations](./ui/activate-batch-profile-destinations.md)
     * [View destination details](./ui/destination-details-page.md)
-    * [Activate profiles and segments to a destination](./ui/activate-destinations.md)
     * [Update destination accounts](./ui/update-accounts.md)
     * [Edit activation flows](./ui/edit-activation.md)
     * [Delete destinations](./ui/delete-destinations.md)
@@ -47,9 +51,11 @@ feature: Destinations
         * [Google gtag extension](./catalog/advertising/gtag-advertising.md)
         * [LinkedIn Insight Tag extension](./catalog/advertising/linkedin.md)
         * [Microsoft Bing connection](./catalog/advertising/bing.md)
-        * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest.md)
+        * [Pinterest Conversion Tracking extension](./catalog/advertising/pinterest-extension.md)
+        * [Pinterest Customer List connection](./catalog/advertising/pinterest.md)
         * [The Trade Desk connection](./catalog/advertising/tradedesk.md)
         * [Twitter Universal Website Tag extension](./catalog/advertising/twitter-uwt.md)
+        * [Yahoo/Verizon DataX connection](./catalog/advertising/datax.md)
     * Analytics destinations {#analytics}
         * [Analytics destinations overview](./catalog/analytics/overview.md)
         * [Adform Website Tracking extension](./catalog/analytics/adform.md)
@@ -73,7 +79,6 @@ feature: Destinations
         * [Yext Conversion Tracking extension](./catalog/analytics/yext.md)
     * Cloud storage destinations {#cloud-storage}
         * [Cloud Storage destinations overview](./catalog/cloud-storage/overview.md)
-        * [Create a cloud storage destination](./catalog/cloud-storage/workflow.md)
         * [(Beta) Amazon Kinesis connection](./catalog/cloud-storage/amazon-kinesis.md)
         * [Amazon S3 connection](./catalog/cloud-storage/amazon-s3.md)
         * [Azure Blob connection](./catalog/cloud-storage/azure-blob.md)
@@ -98,9 +103,9 @@ feature: Destinations
         * [Tag extension overview](./catalog/launch-extensions/overview.md)  
     * Mobile engagement destinations {#mobile-engagement}
         * [Mobile engagement destinations overview](./catalog/mobile-engagement/overview.md)
-        * [(Beta) Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
-        * [(Beta) Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
-        * [(Beta) Braze connection](./catalog/mobile-engagement/braze.md)
+        * [Airship Attributes connection](./catalog/mobile-engagement/airship-attributes.md)
+        * [Airship Tags connection](./catalog/mobile-engagement/airship-tags.md)
+        * [Braze connection](./catalog/mobile-engagement/braze.md)
     * Personalization destinations {#personalization}
         * [Personalization destinations overview](./catalog/personalization/overview.md)
         * [Adobe Target extension](./catalog/personalization/adobe-target.md)
@@ -113,10 +118,10 @@ feature: Destinations
         * [Marketo Web Personalization extension](./catalog/personalization/marketo-web-personalization.md)
     * Social destinations{#social}
         * [Social destinations overview](./catalog/social/overview.md)
-        * [Create a social destination](./catalog/social/workflow.md)
         * [Adobe Livefyre extension](./catalog/social/adobe-livefyre.md)
         * [Facebook connection](./catalog/social/facebook.md)
         * [LinkedIn Matched Audiences connection](./catalog/social/linkedin.md)
+        * [[!DNL Twitter Custom Audiences] connection](./catalog/social/twitter.md)
     * Survey destinations {#survey}
         * [Survey destinations overview](./catalog/survey/overview.md)
         * [Foresee extension destination](./catalog/survey/foresee.md)
@@ -129,5 +134,38 @@ feature: Destinations
         * [Invoca Tags extension](./catalog/voice/invoca.md)
         * [Medallia extension](./catalog/voice/medallia.md)
         * [Talk URL Inbox extension](./catalog/voice/talkurl.md)
+* Destination SDK {#destination-sdk}
+    * [Overview](./destination-sdk/overview.md)
+    * [Integration prerequisites](./destination-sdk/integration-prerequisites.md)
+    * [Getting started](./destination-sdk/getting-started.md)
+    * Destination SDK functionality {#functionality}
+      * [Configuration options](./destination-sdk/configuration-options.md)
+      * [Destination configuration](./destination-sdk/destination-configuration.md)
+      * [Server and template specs](./destination-sdk/server-and-template-configuration.md)
+      * [Message format](./destination-sdk/message-format.md)
+      * [Audience metadata management](./destination-sdk/audience-metadata-management.md)
+      * [Authentication configuration](./destination-sdk/credentials-configuration.md)
+      * [OAuth 2 authentication](./destination-sdk/oauth2-authentication.md)
+      * Developer tools {#developer-tools}
+        * [Create and test a message transformation template](./destination-sdk/create-template.md)
+        * [Test your destination configuration](./destination-sdk/test-destination.md)
+    * API reference {#api-reference}
+      * [Destinations endpoint API operations](./destination-sdk/destination-configuration-api.md)
+      * [Destination server endpoint API operations](./destination-sdk/destination-server-api.md)
+      * [Audience metadata endpoint API operations](./destination-sdk/audience-metadata-api.md)
+      * [Credentials endpoint API operations](./destination-sdk/credentials-configuration-api.md)
+      * [Publish endpoint API operations](./destination-sdk/destination-publish-api.md)
+      * Developer tools reference {#developer-tools-reference}
+        * [Get sample template API operations](./destination-sdk/sample-template-api.md)
+        * [Render template API operations](./destination-sdk/render-template-api.md)
+        * [Destination testing API operations](./destination-sdk/destination-testing-api.md)
+        * [Sample profile generation API operations](./destination-sdk/sample-profile-generation-api.md)
+    * Guides {#guides}
+      * [Use Destination SDK to configure your destination](./destination-sdk/configure-destination-instructions.md)
+    * Document your destination {#document-destination}
+      * [Document your destination in Adobe Experience Platform](./destination-sdk/docs-framework/documentation-instructions.md)
+      * [Use the GitHub web interface to create a destination documentation page](./destination-sdk/docs-framework/use-github-interface-to-create-documentation.md)
+      * [Use a text editor in your local environment to create a destination documentation page](./destination-sdk/docs-framework/work-in-local-environment.md)
+      * [Documentation self-service template](./destination-sdk/docs-framework/self-service-template.md)
 * [Frequently asked questions](./destinations-faq.md)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

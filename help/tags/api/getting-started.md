@@ -1,10 +1,11 @@
 ---
 title: Getting started with the Reactor API
 description: Learn how to get started with the Reactor API, including steps to generate required access credentials.
+exl-id: fc1acc1d-6cfb-43c1-9ba9-00b2730cad5a
 ---
 # Getting started with the Reactor API
 
-In order to use the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml), each request must include the following authentication headers:
+In order to use the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/), each request must include the following authentication headers:
 
 * `Authorization: Bearer {ACCESS_TOKEN}`
 * `x-api-key: {API_KEY}`

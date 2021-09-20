@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Media Analytics for Audio and Video Extension
 description: The latest release notes for the Adobe Media Analytics for Audio and Video tag extension in Adobe Experience Platform.
+exl-id: 79d92f42-795f-4685-926f-ebe6f4125539
 ---
 # Adobe Media Analytics for Audio and Video release notes
 

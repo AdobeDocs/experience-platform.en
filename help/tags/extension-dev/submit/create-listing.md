@@ -1,6 +1,7 @@
 ---
 title: Create an Exchange Listing for an Extension
 description: Learn how to add your extension to the public catalog in Adobe Experience Platform.
+exl-id: 0395fc99-5e2b-46d6-a067-f8f167733e02
 ---
 # Create an exchange listing for an extension
 
@@ -33,10 +34,11 @@ If you already have a company account, or if you do not plan on ever completing 
 1. Sign in to the [Exchange Partner site](https://partners.adobe.com/exchangeprogram/experiencecloud). Once signed in, select the **App Manager** link next to your name.
 1. Select the **Create New Application** tab, and then select **Create New App** for a customized solution, or select an applicable template.
 1. Provide your listing information. For detailed information on App Manager check out the full [article](https://adobeexchangeec.zendesk.com/hc/en-us/articles/360024197931). Listing information should be very clear about what the extension does and why it is useful. The listing functions as a marketing space for your app. Promote your extension here using clear descriptions, links to landing pages on your site, links to help docs or support email addresses, and so on. Although space in extension views is limited, the Exchange listing provides an opportunity to promote both your extension and your company. The following are suggestions to improve promotion of the extension:
-   - **App Icon** – Make sure the icon for the Exchange listing has the appropriate dimensions, 512 x 512 for png or 1:1 aspect ratio for jpg. 
-    >[!NOTE]
-    >
-    >This is a different file format than used in your extension code. The extension itself will contain an svg file as the [icon](../manifest.md).
+   - **App Icon** – Make sure the icon for the Exchange listing has the appropriate dimensions, 512 x 512 for png or 1:1 aspect ratio for jpg.
+      >[!NOTE]
+      >
+      >This is a different file format than used in your extension code. The extension itself will contain an svg file as the [icon](../manifest.md).
+
    - **Featured Image** - Get attention by using an image that can stand alone and will show your brand and highlight your application. The Featured Image is the one shown when someone shares a link to your Exchange listing or posts about it on social media. It therefore needs to be a model representation of your brand.
    - **App Publisher's Logo** - This is your corporate logo, make sure the icon has the appropriate dimensions of 1280 x 720, or 2560 x 1440 (16:9) in png or jpg format.
    - **Configuration Instructions** – Inform customers how to configure your Adobe Experience Platform extension. Make sure they understand any required settings and next steps when your [configuration view](../configuration.md) appears immediately after installing your extension in a property. 

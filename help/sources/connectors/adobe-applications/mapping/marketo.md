@@ -312,7 +312,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 >[!NOTE]
 >
->The `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../ingestion/tutorials/map-a-csv-file.md) for more information.
+>The `to_object('ECID',arrays_to_objects('id',explode(ecids)))` source field is a calculated field that must be added using the [!UICONTROL Add calculated field] option in the Platform UI. See the tutorial on [adding calculated fields](../../../../data-prep/calculated-fields.md) for more information.
 
 ## Next steps
 

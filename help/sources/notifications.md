@@ -10,7 +10,7 @@ exl-id: 0f1cde97-3030-4b8e-be08-21f64e78b794
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using [!DNL Platform] services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
-[[!DNL Adobe Experience Platform Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) is used to collect and centralize customer data from various disparate sources within [!DNL Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
+[[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) is used to collect and centralize customer data from various disparate sources within [!DNL Platform]. The service provides a user interface and RESTful API from which all supported sources are connectable.
 
 With Adobe I/O Events, you can subscribe to events and use webhooks to receive notifications regarding the status of your flow runs. These notifications contain information about the success of your flow run or errors that contributed to a run's failure.
 
@@ -26,7 +26,7 @@ This document also requires a working understanding of webhooks and how to conne
 
 In order to receive flow run notifications, you must use Adobe Developer Console to register a webhook to your [!DNL Experience Platform] integration.
 
-Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this.
+Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) for detailed steps on how to accomplish this.
 
 >[!IMPORTANT]
 >

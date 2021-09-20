@@ -1,6 +1,7 @@
 ---
 title: Adobe Extensions Reference
 description: Find documentation for tag extensions for Adobe products in Adobe Experience Platform.
+exl-id: 226948f4-7738-4cfd-ad22-5934820b1399
 ---
 # Adobe extensions reference
 

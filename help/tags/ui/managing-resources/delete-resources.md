@@ -1,6 +1,7 @@
 ---
 title: Delete Resources
 description: Learn how to delete tag resources in Adobe Experience Platform.
+exl-id: c8e26720-1976-48ec-8490-3d4ce587831e
 ---
 # Delete resources
 

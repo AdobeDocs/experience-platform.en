@@ -25,7 +25,7 @@ An example of a marketing action might be the desire to export a dataset to a th
 >
 >Marketing actions by themselves do not restrict data usage. They must be included in enabled data usage policies in order for those actions to be evaluated for policy violations.
 
-When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) to check for policy violations in your integration.
+When data usage happens in your organization's service, relevant marketing actions should be indicated so that any policy violations can be identified. You can then use the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) to check for policy violations in your integration.
 
 >[!NOTE]
 >

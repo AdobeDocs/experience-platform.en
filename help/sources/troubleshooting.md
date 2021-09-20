@@ -67,3 +67,7 @@ Partial ingestion should be used if you do **not** have constraints, such as hav
 ### What is the typical partial ingestion error threshold?
 
 There is no "typical error threshold" for partial ingestion. Instead, this value can vary from use case to use case. By default, the error threshold is set to 5%.
+
+### How long does it take for a flow run status to update after the creation of a new dataflow?
+
+Flow runs are not generated instantaneously and can take around two to three minutes to update after its designated `startTime`. Checking the status of a flow run, immediately after the creation of a new dataflow does not return information on the flow run's `lastRunDetails` as it has not yet happened. It is recommended to allow the dataflow a few minutes to generate before checking the status of the flow run.

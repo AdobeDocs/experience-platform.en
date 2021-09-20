@@ -20,5 +20,5 @@ feature: Data Management
   * [Sandbox types](api/types.md)
   * [Appendix](api/appendix.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/sandbox-api.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/sandbox)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

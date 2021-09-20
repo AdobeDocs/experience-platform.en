@@ -3,8 +3,8 @@ keywords: Experience Platform;home;popular topics;dataset;Dataset;time to live;t
 solution: Experience Platform
 title: Time-to-live on Datasets
 description: This document provides general guidance on time-to-live (TTL) for datasets in the Profile store for Adobe Experience Platform.
+exl-id: a91f2cd2-3a5d-42e6-81c3-0ec5bc644f5f
 ---
-
 # Profile Service time-to-live (TTL)
 
 Profile Service lets users apply time-to-live (TTL) on data in the Profile Store. TTL is a mechanism that limits the amount of time that data lives within a dataset. This lets you automatically remove data from the Profile Store that is no longer useful for your use cases.
@@ -37,4 +37,3 @@ So, for example, if you applied a TTL value of 30 days on May 15th, the followin
 1. All new events will get a TTL value of 30 days applied as it is ingested.
 2. All existing events that have a timestamp older than April 15th will be immediately deleted with the system job.
 3. All existing events that have a timestamp that is newer than April 15th will have an TTL expiration value 30 days after their event timestamp. So, if an event has a timestamp of April 18th, it will be deleted thirty days after that timestamp's date, which would be May 18th.
-

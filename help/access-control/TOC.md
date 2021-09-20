@@ -21,5 +21,5 @@ feature: Access Control
   * [List names of permissions and resource types](api/permissions-and-resource-types.md)
   * [View effective policies](api/effective-policies.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/access-control.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/access-control/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -29,5 +29,5 @@ feature: Data Governance
   * [Policies](api/policies.md)
   * [Marketing actions](api/marketing-actions.md)
   * [Evaluation](api/evaluation.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 * [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

@@ -72,11 +72,11 @@ Standard identity namespaces are namespaces available to all organizations. See 
 
 ## Where can I find the list of identity namespaces available for my organization?
 
-Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service), you can list all available identity namespaces for your organization by making a GET request to the `/idnamespace/identities` endpoint. See the section on [listing available namespaces](./api/list-namespaces.md) in the Identity Service API overview for more information.
 
 ## How do I create a custom namespace for my organization?
 
-Using the [Identity Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](./api/create-custom-namespace.md) in the Identity Service API overview for more information.
+Using the [Identity Service API](https://www.adobe.io/experience-platform-apis/references/identity-service), you can create a custom identity namespace for your organization by making a POST request to the `/idnamespace/identities` endpoint. See the section on [creating a custom namespace](./api/create-custom-namespace.md) in the Identity Service API overview for more information.
 
 ## What are composite identities and XIDs?
 
@@ -279,7 +279,7 @@ This error displays when an unexpected exception occurs in the execution of a [!
 
 [!DNL Identity Service] ingests identity data from record and time series data that is uploaded to [!DNL Platform] using Batch Ingestion. As batch ingestion is an asynchronous process, you must view the details for a batch to view errors. Errors will accumulate as the batch progresses until the batch is complete.
 
-The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml).
+The following is a list of error messages related to [!DNL Identity Service] you may encounter when using the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/).
 
 ### Unknown XDM schema
 
