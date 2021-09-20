@@ -263,10 +263,13 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `personID` | This is the primary identity. |
+| `"Marketo"` | `b2b.personKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `b2b.personKey.sourceInstanceID` | `{MUNCHKIN_ID}` will be replaced as part of Explore API. |
+| `id` | `b2b.personKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `b2b.personKey.sourceKey` | This is the primary identity. `{MUNCHKIN_ID}` will be replaced as part of Explore API. |
 | `iif(unsubscribed == 'true', 'n', 'y' ))` | `consents.marketing.email.val` | If unsubscribed is `true` (for example, value = `1`),  then set `consents.marketing.email.val` as (`n`). If unsubscribed is `false` (for example, value = `0`),  then set `consents.marketing.email.val` as `null`. |
 | `unsubscribedReason` | `consents.marketing.email.reason` |
-| `contactCompany` | `b2b.accountID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `b2b.accountKey` |
 | `marketingSuspended` | `b2b.isMarketingSuspended` |
 | `marketingSuspendedCause` | `b2b.marketingSuspendedCause` |
 | `leadScore` | `b2b.personScore` |
@@ -276,8 +279,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadPartitionId` | `b2b.personGroupID` |
 | `mktoCdpIsConverted` | `b2b.isConverted` |
 | `mktoCdpConvertedDate` | `b2b.convertedDate` |
-| `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `extSourceSystemAudit.externalID` | This is the secondary identity using the `Lead` namespace. This is a calculated field and is applicable only if you have the [!DNL Salesforce] integration. |
-| `decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , "")` | `extSourceSystemAudit.externalID` | This is the secondary identity using the `Lead` namespace. This is a calculated field and is applicable only if you have the [!DNL Microsoft Dynamics] integration. |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity. |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
 | `updatedAt` | `extSourceSystemAudit.lastUpdatedDate` |
 | `title` | `extendedWorkDetails.jobTitle` |
@@ -300,10 +302,9 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `leadStatus` | `personComponents.personStatus` |
 | `personType` | `personComponents.personType` |
 | `leadPartitionId` | `personComponents.personGroupID` |
-| `contactCompany` | `personComponents.sourceAccountID` |
-| `decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , "")` | `personComponents.sourceExternalID` | This is a calculated field and is applicable only if you have the [!DNL Salesforce] integration. |
-| `decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , "")` | `personComponents.sourceExternalID` | This is a calculated field and is applicable only if you have the [!DNL Microsoft Dynamics] integration. |
-| `id` | `personComponents.sourcePersonID` |
+| `iif(contactCompany != null && contactCompany != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}", "sourceID", concat(contactCompany, ".mkto_org"), "sourceKey", concat(contactCompany, ".mkto_org@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourceAccountKey` |
+| <ul><li>`iif(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}", "sourceID", decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null), "sourceKey", concat(decode(sfdcType, "Contact", sfdcContactId, "Lead", sfdcLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li><li>`iif(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null) != null, to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null), "sourceKey", concat(decode(msftType, "Contact", msftContactId, "Lead", msftLeadId , null),"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`</li></ul> | `personComponents.sourceExternalKey` |
+| `iif(id != null && id != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", id, "sourceKey", concat(id,"@${MUNCHKIN_ID}.Marketo")), null)` | `personComponents.sourcePersonKey` |
 | `email` | `personComponents.workEmail.address` |
 | `email` | `workEmail.address` |
 | `iif(ecids != null, to_object('ECID',arrays_to_objects('id',explode(ecids))), null)` | `identityMap` | This is a calculated field. |
