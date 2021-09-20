@@ -88,7 +88,7 @@ curl -X POST https://platform.adobe.io/data/core/ups/segment/jobs \
 
 | Property | Description |
 | -------- | ----------- |
-| `segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](./segment-definitions.md). |
+| `segmentId` | The ID of the segment definition that you want to create a segment job for. These segment definitions can belong to different merge policies. More information about segment definitions can be found in the [segment definition endpoint guide](../../segmentation/api/segment-definitions.md). |
 
 ### Response
 
