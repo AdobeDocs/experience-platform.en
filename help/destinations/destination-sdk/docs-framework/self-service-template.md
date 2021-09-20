@@ -49,18 +49,17 @@ exl-id: 99700474-8bf6-4176-acc1-38814e17c995
 
 **Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the *YOURDESTINATION* destination.
 
-## Use Cases
+## Use cases
 
 To help you better understand how and when you should use the *YOURDESTINATION* destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-
-### Use Case #1
+### Use case #1
 
 *For mobile messaging platforms:*
 
 *A home rental and sales platform wants to push mobile notifications to customers' Android and iOS devices to let them know that there are 100 updated listings in the area where they previously searched for a rental.*
 
-### Use Case #2
+### Use case #2
 
 *For social network platforms:*
 
@@ -145,7 +144,7 @@ If no policy violations have been detected, select **[!UICONTROL Finish]** to co
 
 -->
 
-## Exported Data {#exported-data}
+## Exported data {#exported-data}
 
 *Add a note about how data is exported to your destination. This would help the customer make sure that they have correctly integrated with your destination. For example, you could provide a sample JSON like the one below.*
 
