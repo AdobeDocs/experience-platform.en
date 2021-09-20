@@ -53,6 +53,12 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
+### Create activation flow in the Platform UI {#activation-flow}
+
+To activate segments ad-hoc to a destination, you must first have an activation flow configured for the chosen destination.
+
+See the following tutorial for detailed instructions on how to configure an activation flow for your destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
+
 ## Run the segmentation job {#segmentation-job}
 
 You can create a new segment job by making a POST request to the `/segment/jobs` endpoint and including in the body the ID of the segment definition from which you would like to create a new audience.
@@ -337,7 +343,7 @@ You can activate any number of segments on a single activation job.
 
 ```shell
 
-curl -X POST https://platform-stage.adobe.io/data/core/activation/disflowprovider/adhocrun \
+curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adhocrun \
  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
  -H 'Content-Type: application/json' \
  -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -360,5 +366,3 @@ curl -X POST https://platform-stage.adobe.io/data/core/activation/disflowprovide
    ]
 }
 ```
-
-### Response
