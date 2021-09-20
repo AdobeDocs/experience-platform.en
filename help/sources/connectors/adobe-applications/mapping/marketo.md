@@ -219,9 +219,11 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityID` | This is the primary identity. |
-| `externalOpportunityId` | `extSourceSystemAudit.externalID` | This is the secondary identity. |
-| `mktoCdpAccountOrgId` | `accountID` | Relationship |
+| `"Marketo"` | `opportunityKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| `id` | `opportunityKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | `opportunityKey.sourceKey` | This is the primary identity. `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| `iif(externalOpportunityId != null && externalOpportunityId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", externalOpportunityId, "sourceKey", concat(externalOpportunityId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)` | `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity and the values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be replaced as part of the Explore API. |
 | `description` | `opportunityDescription` |
 | `name` | `opportunityName` |
 | `stage` | `opportunityStage` |
@@ -239,7 +241,7 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 | `isWon` | `isWon` |
 | `quantity` | `opportunityQuantity` |
 | `probability` | `probabilityPercentage` |
-| `mktoCdpSourceCampaignId` | `campaignID` | This dataset is recommended only if you are using the [!DNL Salesforce] integration. |
+| `iif(mktoCdpSourceCampaignId != null && mktoCdpSourceCampaignId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpSourceCampaignId, "sourceKey", concat(mktoCdpSourceCampaignId,"@${MUNCHKIN_ID}.Marketo")), null)` | `campaignKey` | This source dataset is only available to users with the [!DNL Salesforce] integration. |
 | `lastActivityDate` | `lastActivityDate` |
 | `leadSource` | `leadSource` |
 | `nextStep` | `nextStep` |
@@ -250,10 +252,13 @@ The tables below contain the mappings between the fields in the nine [!DNL Marke
 
 | Source dataset | XDM target field | Notes |
 | -------------- | ---------------- | ----- |
-| `id` | `opportunityPersonID` | This is the primary identity |
-| `mktoCdpSfdcId` | `extSourceSystemAudit.externalID` | This is the secondary identity. |
-| `mktoCdpOpptyId` | `opportunityID` | Relationship |
-| `leadId` | `personID` | Relationship |
+| `"Marketo"` | `opportunityPersonKey.sourceType` |
+| `"${MUNCHKIN_ID}"` | `opportunityPersonKey.sourceInstanceID` | `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| `id` | `opportunityPersonKey.sourceID` |
+| `concat(id,"@${MUNCHKIN_ID}.Marketo")` | This is the primary identity. `"${MUNCHKIN_ID}"` will be replaced as part of Explore API. |
+| `iif(mktoCdpSfdcId != null && mktoCdpSfdcId != "", to_object("sourceType", "${CRM_TYPE}", "sourceInstanceID", "${CRM_ORG_ID}","sourceID", mktoCdpSfdcId, "sourceKey", concat(mktoCdpSfdcId,"@${CRM_ORG_ID}.${CRM_TYPE}")), null)`| `extSourceSystemAudit.externalKey` | The `extSourceSystemAudit.externalKey` is the secondary identity and the values for `{CRM_ORG_ID}` and `{CRM_TYPE}` will be replaced as part of the Explore API. |
+| `iif(mktoCdpOpptyId != null && mktoCdpOpptyId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", mktoCdpOpptyId, "sourceKey", concat(mktoCdpOpptyId,"@${MUNCHKIN_ID}.Marketo")), null)` | `opportunityKey` | Relationship |
+| `iif(leadId != null && leadId != "", to_object("sourceType", "Marketo", "sourceInstanceID", "${MUNCHKIN_ID}","sourceID", leadId, "sourceKey", concat(leadId,"@${MUNCHKIN_ID}.Marketo")), null)` | `personKey` | Relationship |
 | `role` | `personRole` |
 | `isPrimary` | `isPrimary` |
 | `createdAt` | `extSourceSystemAudit.createdDate` |
