@@ -1,16 +1,16 @@
 ---
-keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas
+keywords: Experience Platform;home;popular topics;Marketo source connector;namespaces;schemas;b2b;B2B
 solution: Experience Platform
-title: Marketo namespaces
+title: B2B namespaces and schemas
 topic-legacy: overview
 description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
-# [!DNL Marketo Engage] namespaces and schemas
+# B2B namespaces and schemas
 
 This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
-## Set up the [!DNL Marketo] namespace and schema auto-generation utility
+## Set up B2B namespaces and schema auto-generation utility
 
 The first step in using the [!DNL Marketo] namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
 
@@ -60,77 +60,34 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 
 A successful request creates the B2B namespaces and schemas according to beta specifications.
 
-## [!DNL Marketo] namespaces
+## B2B namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve as indicators of the context to which an identity relates.
+Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context or type of an identity.
 
-A fully qualified identity includes an ID value and a namespace. A new custom namespace is required for every new [!DNL Marketo] instance and dataset combination. For example, a [!DNL Marketo] source connector ingesting the `programs` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
+A fully qualified identity includes an ID value and a namespace. A new custom namespace is required for every new [!DNL Marketo] instance and dataset combination. For example, a [!DNL Marketo] source connector ingesting the `campaign` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
 
-The [!DNL Marketo] namespace is used in the primary identity of the entity.
+B2B namespaces used in the primary identity of the entity.
 
-The following table contains information on the underlying set up for [!DNL Marketo] namespaces.
-
->[!NOTE]
->
->Please scroll left/right to view the full contents of the table.
-
-| Display name | Display name example | Identity symbol | Identity type | Issuer type | Issuer entity type | Munchkin ID example |
-| --- | --- | --- | --- | --- | --- | --- |
-| `marketo_person_{MUNCHKIN_ID}` | `marketo_person_123-ABC-789`| auto-generated | `CROSS_DEVICE` | [!DNL Marketo] | `person` | `123-ABC-789` |
-| `marketo_company_{MUNCHKIN_ID}` | `marketo_company_123-ABC-789`| auto-generated | `B2B_ACCOUNT` | [!DNL Marketo] | `company` | `123-ABC-789` |
-| `marketo_opportunity_{MUNCHKIN_ID}` | `marketo_opportunity_123-ABC-789`| auto-generated | `B2B_OPPORTUNITY` | [!DNL Marketo] | `opportunity` | `123-ABC-789` |
-| `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `marketo_opportunity_contact_role_123-ABC-789`| auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Marketo] | `opportunity contact role` | `123-ABC-789` |
-| `marketo_program_{MUNCHKIN_ID}` | `marketo_program_123-ABC-789`| auto-generated | `B2B_CAMPAIGN` | [!DNL Marketo] | `program` | `123-ABC-789` |
-| `marketo_program_member_{MUNCHKIN_ID}` | `marketo_program_member_123-ABC-789`| auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Marketo] | `program member` | `123-ABC-789` |
-| `marketo_static_list_{MUNCHKIN_ID}` | `marketo_static_list_123-ABC-789`| auto-generated | `B2B_MARKETING_LIST` | [!DNL Marketo] | `static list` | `123-ABC-789` |
-| `marketo_static_list_member_{MUNCHKIN_ID}` | `marketo_static_list_member_123-ABC-789`| auto-generated | `B2B_MARKETING_LIST_MEMBER` | [!DNL Marketo] | `static list member` | `123-ABC-789` |
-| `marketo_named_account_{MUNCHKIN_ID}` | `marketo_named_account_123-ABC-789`| auto-generated | `B2B_ACCOUNT` | [!DNL Marketo] | `named account` | `123-ABC-789` |
-
-{style="table-layout:auto"}
-
-### [!DNL Salesforce] namespaces
-
-If you are subscribed to the [!DNL Salesforce] integration, the [!DNL Salesforce] namespace is used in the secondary identity of the entity.
-
-The following table contains information on the underlying set up for [!DNL Salesforce] namespaces.
+The following table contains information on the underlying set up for B2B namespaces.
 
 >[!NOTE]
 >
 >Please scroll left/right to view the full contents of the table.
 
-| Display name | Display name example | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Salesforce] subscription organization ID example |
-| --- | --- | --- | --- | --- | --- | --- |
-| `salesforce_person_{SALESFORCE_ORGANIZATION_ID}` | `salesforce_person_00DA0000000Hz79`| auto-generated | `CROSS_DEVICE` | [!DNL Salesforce] | `lead` | `00DA0000000Hz79` |
-| `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | `salesforce_account_00DA0000000Hz79`| auto-generated | `B2B_ACCOUNT` | [!DNL Salesforce] | `account` | `00DA0000000Hz79` |
-| `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | `salesforce_opportunity_00DA0000000Hz79`| auto-generated | `B2B_OPPORTUNITY` | [!DNL Salesforce] | `opportunity` | `00DA0000000Hz79` |
-| `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | `salesforce_opportunity_contact_role_00DA0000000Hz79`| auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Salesforce] | `opportunity contact role` | `00DA0000000Hz79` |
-| `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` | `salesforce_campaign_00DA0000000Hz79`| auto-generated | `B2B_CAMPAIGN` | [!DNL Salesforce] | `campaign` | `00DA0000000Hz79` |
-| `salesforce_campaign_member_{SALESFORCE_ORGANIZATION_ID}` |  `salesforce_campaign_member_00DA0000000Hz79`| auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Salesforce] | `campaign member` | `00DA0000000Hz79` |
+| Display Name | Identity Symbol | Identity Type |
+| --- | --- | --- |
+| B2B Person | `b2b_person` | `CROSS_DEVICE` |
+| B2B Account | `b2b_account` | `B2B_ACCOUNT` |
+| B2B Opportunity | `b2b_opportunity` | `B2B_OPPORTUNITY` |
+| B2B Opportunity Person Relation | `b2b_opportunity_person_relation` | `B2B_OPPORTUNITY_PERSON` |
+| B2B Campaign | `b2b_campaign` | `B2B_CAMPAIGN` |
+| B2B Campaign Member | `b2b_campaign_member` | `B2B_CAMPAIGN_MEMBER` |
+| B2B Marketing List | `b2b_marketing_list` | `B2B_MARKETING_LIST` |
+| B2B Marketing List Member | `b2b_marketing_list_member` | `B2B_MARKETING_LIST_MEMBER` |
 
 {style="table-layout:auto"}
 
-### [!DNL Microsoft Dynamics] namespaces
-
-If you are subscribed to the [!DNL Dynamics] integration, the [!DNL Dynamics] namespace is used as secondary identity of the entity.
-
-The following table contains information on the underlying set up for [!DNL Dynamics] namespaces.
-
->[!NOTE]
->
->Please scroll left/right to view the full contents of the table.
-
-| Display name | Display name example | Identity symbol | Identity type | Issuer type | Issuer entity type | [!DNL Dynamics] subscription organization ID example |
-| --- | --- | --- | --- | --- | --- | --- |
-| `microsoft_person_{DYNAMICS_ID}` | `microsoft_person_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `CROSS_DEVICE` | [!DNL Microsoft] | `person` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_account_{DYNAMICS_ID}` | `microsoft_account_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `B2B_ACCOUNT` | [!DNL Microsoft] | `account` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_opportunity_{DYNAMICS_ID}` | `microsoft_opportunity_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `B2B_OPPORTUNITY` | [!DNL Microsoft] | `opportunity` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_opportunity_contact_connection_{DYNAMICS_ID}` | `microsoft_opportunity_contact_connection_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `B2B_OPPORTUNITY_PERSON` | [!DNL Microsoft] | `opportunity relationship` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_campaign_{DYNAMICS_ID}` | `microsoft_campaign_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `B2B_CAMPAIGN` | [!DNL Microsoft] | `campaign` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-| `microsoft_campaign_member_{DYNAMICS_ID}` | `microsoft_campaign_member_94cahe38-e51h-3d57-a9c6-2edklb7184mh` | auto-generated | `B2B_CAMPAIGN_MEMBER` | [!DNL Microsoft] | `campaign member` | `94cahe38-e51h-3d57-a9c6-2edklb7184mh` |
-
-{style="table-layout:auto"}
-
-## [!DNL Marketo] schemas
+## B2B schemas
 
 Experience Platform uses schemas to describe the structure of data in a consistent and reusable way. By defining data consistently across systems, it becomes easier to retain meaning and therefore gain value from data.
 
@@ -138,7 +95,7 @@ Before data can be ingested into Platform, a schema must be composed to describe
 
 For more information on the schema composition model, including design principles and best practices, see the [basics of schema composition](../../../../xdm/schema/composition.md).
 
-The following table contains information on the underlying setup of [!DNL Marketo] schemas.
+The following table contains information on the underlying setup of B2B schemas.
 
 >[!NOTE]
 >
@@ -146,16 +103,15 @@ The following table contains information on the underlying setup of [!DNL Market
 
 | Schema name | Base class | Field groups | [!DNL Profile] in Schema | Primary identity | Primary identity namespace | Secondary identity | Secondary identity namespace | Relationship | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `[!DNL Marketo] Company {MUNCHKIN_ID}` | XDM Business Account | XDM Business Account Details | Enabled |  `accountID` in the base class | `marketo_company_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` in the base class | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` in XDM Business Account Details field group</li><li>Type: one-to-one</li><li>Reference schema: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Namespace: `marketo_company_{MUNCHKIN_ID}`</li></ul> |
-| `[!DNL Marketo] Person {MUNCHKIN_ID}` | XDM Individual Profile | <ul><li>XDM Business Person Details</li><li>XDM Business Person Components</li><li>IdentityMap</li><li>Consent and Preference Details</li></ul> | Enabled | `personID` in the base class | `marketo_person_{MUNCHKIN_ID}` | <ol><li>`extSourceSystemAudit.externalID` of XDM Business Person Details field group</li><li>`workEmail.address` of XDM Business Person Details field group</li><li>`identityMap` of Identity Map field group</ol></li> | <ol><li>`salesforce_lead_{SALESFORCE_ORGANIZATION_ID}`</li><li>Email</li><li>ECID</li></ol> | <ul><li>`personComponents.sourceAccountID` of XDM Business Person Components field group</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Namespace: `marketo_company_{MUNCHKIN_ID}`</li><li>Destination property: `accountID`</li><li>Relationship name from current schema: Account</li><li>Relationship name from reference schema: People</li></ul> |
-| `[!DNL Marketo] Opportunity {MUNCHKIN_ID}` | XDM Business Opportunity | XDM Business Opportunity Details | Enabled | `opportunityID` in the base class | `marketo_opportunity_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` in the base class | `salesforce_opportunity_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Company {MUNCHKIN_ID}`</li><li>Namespace: `marketo_company_{MUNCHKIN_ID}`</li><li>Destination property: `accountID`</li><li>Relationship name from current schema: Account</li><li>Relationship name from reference schema: Opportunities</li></ul> |
-| `[!DNL Marketo] Opportunity Contact Role {MUNCHKIN_ID}` | XDM Business Opportunity Person Relation | None | Enabled | `opportunityPersonID` in the base class | `marketo_opportunity_contact_role_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` in the base class | `salesforce_opportunity_contact_role_{SALESFORCE_ORGANIZATION_ID}` | First relationship<ul><li>`personID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>Namespace: `marketo_person_{MUNCHKIN_ID}`</li><li>Destination property: `personID`</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Opportunities</li></ul>Second relationship<ul><li>`opportunityID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>Namespace: `marketo_opportunity_{MUNCHKIN_ID}`</li><li>Destination property: `opportunityID`</li><li>Relationship name from current schema: Opportunity</li><li>Relationship name from reference schema: People</li></ul> |
-| `[!DNL Marketo] Program {MUNCHKIN_ID}` | XDM Business Campaign | XDM Business Campaign Details | Enabled | `campaignID` in the base class | `marketo_program_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` in the base class | `salesforce_campaign_{SALESFORCE_ORGANIZATION_ID}` |
-| `[!DNL Marketo] Program Member {MUNCHKIN_ID}` | XDM Business Campaign Member | XDM Business Campaign Member Details | Enabled | `campaignMemberID` in the base class | `marketo_program_member_{MUNCHKIN_ID}` | None | None | First relationship<ul><li>`personID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `Marketo Person {MUNCHKIN_ID}`</li><li>Namespace: `marketo_person_{MUNCHKIN_ID}`</li><li>Destination property: `personID`</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Programs</li></ul>Second relationship<ul><li>`campaignID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>Namespace: `marketo_program_{MUNCHKIN_ID}`</li><li>Destination property: `campaignID`</li><li>Relationship name from current schema: Program</li><li>Relationship name from reference schema: People</li></ul> |
-| `[!DNL Marketo] Static List {MUNCHKIN_ID}` | XDM Business Marketing List | None | Enabled | `marketingListID` in the base class | `marketo_static_list_{MUNCHKIN_ID}` | None | None | None | Static List is not synced from [!DNL Salesforce] and therefore does not have a secondary identity. |
-| `[!DNL Marketo] Static List Member {MUNCHKIN_ID}`| XDM Business Marketing List Members | None | Enabled | `marketingListMemberID` in the base class | `marketo_static_list_member_{MUNCHKIN_ID}` | None | None | First relationship<ul><li>`personID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Person {MUNCHKIN_ID}`</li><li>Namespace: `marketo_person_{MUNCHKIN_ID}`</li><li>Destination property: `personID`</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Lists</li></ul>Second relationship<ul><li>`marketingListID` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: `[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>Namespace: `marketo_static_list_{MUNCHKIN_ID}`</li><li>Destination property: `marketingListID`</li><li>Relationship name from current schema: List</li><li>Relationship name from reference schema: People</li></ul> | Static list member is not synced from [!DNL Salesforce] and therefore does not have a secondary identity. |
-| `[!DNL Marketo] Named Account {MUNCHKIN_ID}` | XDM Business Account | XDM Business Account Details | Enabled | `accountID` in the base class | `marketo_named_account_{MUNCHKIN_ID}` | `extSourceSystemAudit.externalID` in the base class | `salesforce_account_{SALESFORCE_ORGANIZATION_ID}` | <ul><li>`accountParentID` in XDM Business Account Details field group</li><li>Type: one-to-one</li><li>Reference Schema: `[!DNL Marketo] Named Account {MUNCHKIN_ID}`</li><li>Namespace: `marketo_named_account_{MUNCHKIN_ID}` |
-| `[!DNL Marketo] Activity {MUNCHKIN ID}` | XDM ExperienceEvent | <ul><li>Visit WebPage</li><li>New Lead</li><li>Convert Lead</li><li>Add To List</li><li>Remove From List</li><li>Add To Opportunity</li><li>Remove From Opportunity</li><li>Form Filled Out</li><li>Link Clicks</li><li>Email Delivered</li><li>Email Opened</li><li>Email Clicked</li><li>Email Bounced</li><li>Email Bounced Soft</li><li>Email Unsubscribed</li><li>Score Changed</li><li>Opportunity Updated</li><li>Status in Campaign Progression Changed</li><li>Person Identifier</li><li>Marketo Web URL | Enabled | `personID` of Person Identifier field group | `marketo_person_{MUNCHKIN_ID}` | None | None | First relationship<ul><li>`listOperations.listID` field</li><li>Type: one-to-one</li><li>Reference Schema: `[!DNL Marketo] Static List {MUNCHKIN_ID}`</li><li>Namespace: `marketo_static_list_{MUNCHKIN_ID}`</li></ul>Second relationship<ul><li>`opportunityEvent.opportunityID` field</li><li>Type: one-to-one</li><li>Reference Schema: `[!DNL Marketo] Opportunity {MUNCHKIN_ID}`</li><li>Namespace: `marketo_opportunity_{MUNCHKIN_ID}`</li></ul>Third relationship<ul><li>`leadOperation.campaignProgression.campaignID` field</li><li>Type: one-to-one</li><li>Reference Schema: `[!DNL Marketo] Program {MUNCHKIN_ID}`</li><li>Namespace: `marketo_program_{MUNCHKIN_ID}`</li></ul> | The primary identity of `[!DNL Marketo] Activity {MUNCHKIN_ID}` schema is `personID`, which is the same as the primary identity of `[!DNL Marketo] Person {MUNCHKIN_ID}` schema. |
+| B2B Account | XDM Business Account | XDM Business Account Details | Enabled |  `accountKey.sourceKey` in the base class | B2B Account | `extSourceSystemAudit.externalID` in the base class | B2B Account | <ul><li>`accountParentKey.sourceKey` in XDM Business Account Details field group</li><li>Type: one-to-one</li><li>Reference schema: B2B Account</li><li>Namespace: B2B Account</li></ul> |
+| B2B Person | XDM Individual Profile | <ul><li>XDM Business Person Details</li><li>XDM Business Person Components</li><li>IdentityMap</li><li>Consent and Preference Details</li></ul> | Enabled | `b2b.personKey.sourceKey` in the base class | B2B Person | <ol><li>`extSourceSystemAudit.externalKey.sourceKey` of XDM Business Person Details field group</li><li>`workEmail.address` of XDM Business Person Details field group</ol></li> | <ol><li>B2B Person</li><li>Email</li></ol> | <ul><li>`personComponents.sourceAccountKey.sourceKey` of XDM Business Person Components field group</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Account</li><li>Namespace: B2B Account</li><li>Destination property: accountKey.sourceKey</li><li>Relationship name from current schema: Account</li><li>Relationship name from reference schema: People</li></ul> |
+| B2B Opportunity | XDM Business Opportunity | XDM Business Opportunity Details | Enabled | `opportunityKey.sourceKey` in the base class | B2B Opportunity | `extSourceSystemAudit.externalKey.sourceKey` in the base class | B2B Opportunity | <ul><li>`accountKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Account</li><li>Namespace: B2B Account</li><li>Destination property: `accountKey.sourceKey`</li><li>Relationship name from current schema: Account</li><li>Relationship name from reference schema: Opportunities</li></ul> |
+| B2B Opportunity Person Relation | XDM Business Opportunity Person Relation | None | Enabled | `opportunityPersonKey.sourceKey` in the base class | B2B Opportunity Person Relation | `extSourceSystemAudit.externalKey.sourceKey` in the base class | B2B Opportunity Person Relation | **First relationship**<ul><li>`personKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Person</li><li>Namespace: B2B Person</li><li>Destination property: b2b.personKey.sourceKey</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Opportunities</li></ul>**Second relationship**<ul><li>`opportunityKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Opportunity </li><li>Namespace: B2B Opportunity </li><li>Destination property: `opportunityKey.sourceKey`</li><li>Relationship name from current schema: Opportunity</li><li>Relationship name from reference schema: People</li></ul> |
+| B2B Campaign | XDM Business Campaign | XDM Business Campaign Details | Enabled | `campaignKey.sourceKey` in the base class | B2B Campaign | `extSourceSystemAudit.externalKey.sourceKey` in the base class | B2B Campaign |
+| B2B Campaign Member | XDM Business Campaign Member | XDM Business Campaign Member Details | Enabled | `ccampaignMemberKey.sourceKey` in the base class | B2B Campaign Member | `extSourceSystemAudit.externalKey.sourceKey` in the base class | B2B Campaign Member | **First relationship**<ul><li>`personKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Person</li><li>Namespace: B2B Person</li><li>Destination property: `b2b.personKey.sourceKey`</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Campaigns</li></ul>**Second relationship**<ul><li>`campaignKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Campaign</li><li>Namespace: B2B Campaign</li><li>Destination property: `campaignKey.sourceKey`</li><li>Relationship name from current schema: Campaign</li><li>Relationship name from reference schema: People</li></ul> |
+| B2B Marketing List | XDM Business Marketing List | None | Enabled | `marketingListKey.sourceKey` in the base class | B2B Marketing List | None | None | None | Static List is not synced from [!DNL Salesforce] and therefore does not have a secondary identity. |
+| B2B Marketing List Member | XDM Business Marketing List Members | None | Enabled | `marketingListMemberKey.sourceKey` in the base class | B2B Marketing List Member | None | None | **First relationship**<ul><li>`ersonKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Person</li><li>Namespace: B2B Person</li><li>Destination property: `b2b.personKey.sourceKey`</li><li>Relationship name from current schema: Person</li><li>Relationship name from reference schema: Marketing Lists</li></ul>**Second relationship**<ul><li>`marketingListKey.sourceKey` in the base class</li><li>Type: Many-to-one</li><li>Reference Schema: B2B Marketing List</li><li>Namespace: B2B Marketing List</li><li>Destination property: `marketingListKey.sourceKey`</li><li>Relationship name from current schema: List</li><li>Relationship name from reference schema: People</li></ul> | Static list member is not synced from [!DNL Salesforce] and therefore does not have a secondary identity. |
+| B2B Activity | XDM ExperienceEvent | <ul><li>Visit WebPage</li><li>New Lead</li><li>Convert Lead</li><li>Add To List</li><li>Remove From List</li><li>Add To Opportunity</li><li>Remove From Opportunity</li><li>Form Filled Out</li><li>Link Clicks</li><li>Email Delivered</li><li>Email Opened</li><li>Email Clicked</li><li>Email Bounced</li><li>Email Bounced Soft</li><li>Email Unsubscribed</li><li>Score Changed</li><li>Opportunity Updated</li><li>Status in Campaign Progression Changed</li><li>Person Identifier</li><li>Marketo Web URL</li><li>Interesting Moment</li></ul> | Enabled | `personKey.sourceKey` of Person Identifier field group | B2B Person | None | None | **First relationship**<ul><li>`listOperations.listKey.sourceKey` field</li><li>Type: one-to-one</li><li>Reference Schema: B2B Marketing List</li><li>Namespace: B2B Marketing List</li></ul>**Second relationship**<ul><li>`opportunityEvent.opportunityKey.sourceKey` field</li><li>Type: one-to-one</li><li>Reference Schema: B2B Opportunity</li><li>Namespace: B2B Opportunity</li></ul>**Third relationship**<ul><li>`leadOperation.campaignProgression.campaignKey.sourceKey` field</li><li>Type: one-to-one</li><li>Reference Schema: B2B Campaign</li><li>Namespace: B2B Campaign</li></ul> | `ExperienceEvent` is different from entities. The identity of experience event is the person who did the activity. |
 
 {style="table-layout:auto"}
 
