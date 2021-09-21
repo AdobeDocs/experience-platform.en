@@ -30,15 +30,14 @@ The following section provides additional information that you will need to know
 In order for [!DNL Flow Service] to connect with [!DNL Snowflake], you must provide the following connection properties:
 
 | Credential | Description |
-| -------------- | --------------- |
+| --- | --- |
 | `account` | The [!DNL Snowflake] account you want to connect to Platform. |
 | `warehouse` | The [!DNL Snowflake] warehouse manages the query execution process for the application. Each [!DNL Snowflake] warehouse is independent from one another and must be accessed individually when bringing data over to Platform. |
 | `database` | The [!DNL Snowflake] contains the data you want to bring the Platform. |
-| `schema` | The schema of the [!DNL Snowflake] database that you are accessing. |
 | `username` | The username for the [!DNL Snowflake] account. |
 | `password` | The password for the [!DNL Snowflake] user account. |
-| `role` | The role of the [!DNL Snowflake] user account. This credential is not required and defaults to `sysadmin`. |
-| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `connectionSpec.id` | The connection specification returns a source’s connector properties, including authentication specifications related to creating the base and source connections. The connection specification ID for [!DNL Snowflake] is `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 For more information about getting started, refer to this [[!DNL Snowflake] document](https://docs.snowflake.com/en/user-guide/oauth-custom.html).
 
@@ -72,16 +71,11 @@ curl -X POST \
         "auth": {
             "specName": "Basic Authentication for Snowflake,
             "params": {
-                "account": "{ACCOUNT}",
-                "warehouse: "{WAREHOUSE}",
-                "database": "{DATABASE}",
-                "schema": "{SCHEMA}",
-                "username": "{USERNAME}",
-                "password": "{PASSWORD}"
+                "connectionString": "{CONNECTION_STRING}"
             }
         },
         "connectionSpec": {
-            "id": "51ae16c2-bdad-42fd-9fce-8d5dfddaf140",
+            "id": "b2e08744-4f1a-40ce-af30-7abac3e23cf3",
             "version": "1.0"
         }
     }'
@@ -89,13 +83,8 @@ curl -X POST \
 
 | Property | Description |
 | -------- | ----------- |
-| `auth.params.account` | The [!DNL Snowflake] account you are accessing. |
-| `auth.params.warehouse` | The [!DNL Snowflake] warehouse you want to connect to Platform. |
-| `auth.params.database` | The [!DNL Snowflake] database that contains the data you want to bring to Platform. |
-| `auth.params.schema` | The schema of your [!DNL Snowflake] database. |
-| `auth.params.username` | The username of your [!DNL Snowflake] account. |
-| `auth.params.password` | The password of your [!DNL Snowflake] account. |
-| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `51ae16c2-bdad-42fd-9fce-8d5dfddaf140`. |
+| `auth.params.connectionString` | The connection string used to connect to your [!DNL Snowflake] instance. The connection string pattern for [!DNL Snowflake] is `jdbc:snowflake://{ACCOUNT_NAME}.snowflakecomputing.com/?user={USERNAME}&password={PASSWORD}&db={DATABASE}&warehouse={WAREHOUSE}`. |
+| `connectionSpec.id` | The [!DNL Snowflake] connection specification ID: `b2e08744-4f1a-40ce-af30-7abac3e23cf3`. |
 
 **Response**
 
