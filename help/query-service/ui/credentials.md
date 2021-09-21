@@ -35,9 +35,9 @@ You can use non-expiring credentials to set up a more permanent connection to an
 Before you can create non-expiring credentials, you must:
 
 1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
-2. [Select a product profile.](../../access-control/ui/browse)
-3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions) for your Org.
-4. [Add a new user](../../access-control/ui/users) to grant the newly created permissions to.
+2. [Select a product profile.](../../access-control/ui/browse.md)
+3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for your Org.
+4. [Add a new user](../../access-control/ui/users.md) to grant the newly created permissions to.
 5. [Add the user as an admin.](#Add-new-user-as-an-admin)
 6. [Add the user as a developer.](#Add-new-user-as-a-developer)
 
