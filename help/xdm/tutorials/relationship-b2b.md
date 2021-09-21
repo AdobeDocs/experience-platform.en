@@ -16,7 +16,7 @@ The following diagram provides an example of how the different B2B classes can r
 
 ![B2B class relationships](../images/tutorials/relationship-b2b/classes.png)
 
-This tutorial covers the steps to define a relationship between two schemas in Real-time CDP BDP Edition.
+This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-time CDP BDP Edition.
 
 ## Getting started
 
@@ -28,23 +28,23 @@ This tutorial requires a working understanding of [!DNL XDM System] and the Sche
 
 ## Define a source and destination schema
 
-It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between business opportunities (defined in an "[!DNL Opportunities]" schema) and their associated customer account (defined in an "[!DNL Accounts]" schema).
+It is expected that you have already created the two schemas that will be defined in the relationship. For demonstration purposes, this tutorial creates a relationship between business opportunities (defined in an "[!DNL Opportunities]" schema) and their associated business account (defined in an "[!DNL Accounts]" schema).
 
-Schema relationships are represented by a dedicated field within a **source schema** that references the primary identity field of a **destination schema**. In the steps that follow, "[!DNL Opportunities]" will be the source schema, while "[!DNL Accounts]" will act as the destination schema.
+Schema relationships are represented by a dedicated field within a **source schema** that references the primary identity field of a **destination schema**. In the steps that follow, "[!DNL Opportunities]" serves as the source schema, while "[!DNL Accounts]" acts as the destination schema.
 
 ### Understanding identities in B2B relationships
 
-In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. When setting a primary identity for a B2B entity, it is important to take into account that entity IDs may overlap if you are recording them across different systems.
+In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Platform.
 
-To account for this, all standard B2B classes contain "key" fields that conform to the [!UICONTROL B2B Source] data type (for example, the [!UICONTROL XDM Business Opportunity] class provides an `opportunityKey` field). This data type provides fields for an string identifier for the record along with other contextual information about the identifier's source. One of these fields, `sourceKey`, concatenates the values of the other fields in the data type to produce a wholly unique identifier for the entity. This field should always be used as the primary identity for B2B entity schemas.
+To account for this, all standard B2B classes contain "key" fields that conform to the [!UICONTROL B2B Source] data type. This data type provides fields for a string identifier for the B2B entity along with other contextual information about the identifier's source. One of these fields, `sourceKey`, concatenates the values of the other fields in the data type to produce a wholly unique identifier for the entity. This field should always be used as the primary identity for B2B entity schemas.
 
 ![sourceKey field](../images/tutorials/relationship-b2b/sourcekey.png)
 
 >[!NOTE]
 >
->When [setting an XDM field as an identity](../ui/fields/identity.md), you must provide an identity namespace to define the identity under. This can be a standard namespace provided by Adobe, or a custom namespace defined by your organization. See the overview on [identity namespaces](../../identity-service/namespaces.md) for more information.
+>When [setting an XDM field as an identity](../ui/fields/identity.md), you must provide an identity namespace to define the identity under. This can be a standard namespace provided by Adobe, or a custom namespace defined by your organization. In practice, the namespace is simply a contextual string can be set to any value you like, provided that it is meaningful to your organization for categorizing the identity type. See the overview on [identity namespaces](../../identity-service/namespaces.md) for more information.
 
-For reference purposes, the following sections describe the structure of each schema used in this tutorial before a relationship has been defined. Take note of where the primary identities have been defined and the custom namespaces they use.
+For reference purposes, the following sections describe the structure of each schema used in this tutorial before a relationship has been defined. Take note of where the primary identities have been defined in the schema structure and the custom namespaces they use.
 
 ### [!DNL Opportunities] schema
 
@@ -61,7 +61,7 @@ The destination schema "[!DNL Accounts]" is based on the [!UICONTROL XDM Account
 
 ## Define a relationship field for the source schema {#relationship-field}
 
-In order to define a relationship between two schemas, the source schema must have a dedicated field that references the primary identity of the destination schema. Standard B2B classes include dedicated source key fields for related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and campaign (`campaignKey`).
+In order to define a relationship between two schemas, the source schema must have a dedicated field that references the primary identity of the destination schema. Standard B2B classes include dedicated source key fields for commonly related business entities. For example, the [!UICONTROL XDM Business Opportunity] class contains source key fields for a related account (`accountKey`) and a related campaign (`campaignKey`). However, you can also add other [!UICONTROL B2B Source] fields to the schema by using custom field groups if you require more than the default components.
 
 >[!NOTE]
 >
@@ -93,4 +93,4 @@ If you view the structure of the destination schema, the relationship marker app
 
 ## Next steps
 
-By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas, and that data has been activated in the Profile data store, you can use attributes from both schemas for multi-class segmentation use cases. See the documentation on Real-time CDP B2B Edition for more information.
+By following this tutorial, you have successfully created a many-to-one relationship between two schemas using the [!DNL Schema Editor]. Once data has been ingested using datasets based on these schemas and that data has been activated in the Profile data store, you can use attributes from both schemas for multi-class segmentation use cases. See the documentation on Real-time CDP B2B Edition for more information.
