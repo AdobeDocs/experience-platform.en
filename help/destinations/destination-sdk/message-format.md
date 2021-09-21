@@ -90,17 +90,15 @@ This section provides several examples of how these transformations are made, fr
 
 1. Simple transformation examples. Learn how templating works with simple transformations for [Profile attributes](./message-format.md#attributes), [Segment membership](./message-format.md#segment-membership), and [Identity](./message-format.md#identities) fields.
 2. Increased complexity examples of templates that combine the fields above: [Create a template that sends segments and identities](./message-format.md#segments-and-identities) and [Create a template that sends segments, identities, and profile attributes](./message-format.md#segments-identities-attributes).
-3. Deepest dive, showing two examples of templates from industry partners.
+3. Templates the include the aggregation key. When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, Experience Platform groups the profiles exported to your destination based on criteria such as segment ID, segment status, or identity namespaces.
 
 ### Profile Attributes {#attributes}
 
 To transform the profile attributes exported to your destination, see the JSON and code samples below.
 
-
 >[!IMPORTANT]
 >
->For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en). 
-
+>For a list of all available profile attributes in Adobe Experience Platform, see the [XDM field dictionary](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/field-dictionary.html?lang=en).
 
 
 **Input**
@@ -774,7 +772,346 @@ The `json` below represents the data exported out of Adobe Experience Platform.
 }
 ```
 
-### Reference: Context and functions used in the transformation templates
+### Include aggregation key in your template to access exported profiles grouped by various criteria {#template-aggregation-key}
+
+When you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration, you can group the profiles exported to your destination based on criteria such as segment ID, segment alias, segment membership, or identity namespaces.
+
+In the message transformation template, you can access the aggregation keys mentioned above, as shown in the examples in the following sections. This helps you format the HTTP message exported out of Experience Platform to match the format expected by your destination.
+
+#### Use segment ID aggregation key in the template {#aggregation-key-segment-id}
+
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, the profiles in the HTTP messages exported to your destination are grouped by segment ID. See below how you can access the segment ID in the template.
+
+**Input**
+
+Consider the four profiles below, where:
+* the first two are part of the segment with the segment ID `788d8874-8007-4253-92b7-ee6b6c20c6f3` 
+* the third profile is part of the segment with the segment ID `8f812592-3f06-416b-bd50-e7831848a31a`
+* the fourth profile is part of both segments above.
+
+Profile 1:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Hermione"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profile 2:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Harry"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profile 3:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Tom"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+Profile 4:
+
+```json
+{
+   "attributes":{
+      "firstName":{
+         "value":"Jerry"
+      }
+   },
+   "segmentMembership":{
+      "ups":{
+         "8f812592-3f06-416b-bd50-e7831848a31a":{
+            "lastQualificationTime":"2021-02-20T12:00:00Z",
+            "status":"existing"
+         },
+         "788d8874-8007-4253-92b7-ee6b6c20c6f3":{
+            "lastQualificationTime":"2020-11-20T13:15:49Z",
+            "status":"existing"
+         }
+      }
+   }
+}
+```
+
+**Template**
+
+>[!IMPORTANT]
+>
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+Notice below how `audienceId` is used in the template to access segment IDs. This assumes that you use `audienceId` for segment membership in your destination taxonomy. You can use any other field name instead, depending on your own taxonomy.
+
+```python
+{
+    "audienceId": "{{ input.aggregationKey.segmentId }}",
+    "profiles": [
+        {% for profile in input.profiles %}
+        {
+            "first_name": "{{ profile.attributes.firstName.value }}"
+        }{% if not loop.last %},{% endif %}
+        {% endfor %}
+    ]
+}
+```
+
+**Result**
+
+When exported to your destination, the profiles are split into two groups, based on their segment ID.
+
+```json
+{
+   "audienceId":"788d8874-8007-4253-92b7-ee6b6c20c6f3",
+   "profiles":[
+      {
+         "firstName":"Hermione"
+      },
+      {
+         "firstName":"Harry"
+      },
+      {
+         "firstName":"Jerry"
+      }
+   ]
+}
+```
+
+```json
+{
+   "audienceId":"8f812592-3f06-416b-bd50-e7831848a31a",
+   "profiles":[
+      {
+         "firstName":"Tom"
+      },
+      {
+         "firstName":"Jerry"
+      }
+   ]
+}
+```
+
+#### Use segment alias aggregation key in the template {#aggregation-key-segment-alias}
+
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` to true, you can also access segment alias in the template.
+
+Add the line below to the template to access the exported profiles grouped by segment alias.
+
+```python
+customerList={{input.aggregationKey.segmentAlias}}
+```
+
+#### Use segment status aggregation key in the template {#aggregation-key-segment-status}
+
+If you use [configurable aggregation](./destination-configuration.md#configurable-aggregation) and set `includeSegmentId` and `includeSegmentStatus` to true, you can access the segment status in the template to group profiles in the HTTP messages exported to your destination based on whether the profiles should be added or removed from segments.
+
+Possible values are:
+
+* realized
+* existing
+* exited
+
+Add the line below to the template to add or remove profiles from segments, based on the values above:
+
+```python
+action={% if input.aggregationKey.segmentStatus == "exited" %}REMOVE{% else %}ADD{% endif%}
+```
+
+#### Use identity namespace aggregation key in the template {#aggregation-key-identity}
+
+Below is an example where the [configurable aggregation](./destination-configuration.md#configurable-aggregation) in the destination configuration is set to aggregate exported profiles by identity namespaces, in the form `"namespaces": ["email", "phone"]` and `"namespaces": ["GAID", "IDFA"]`. Refer to the `groups` parameter in the [destination configuration API reference](./destination-configuration-api.md) to see how this is done.
+
+**Input**
+
+Profile 1:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e1@example.com"
+         },
+         {
+            "id":"e2@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744111222"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"AEBE52E7-03EE-455A-B3C4-E57283966239"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
+         }
+      ]
+   }
+}
+```
+
+Profile 2:
+
+```json
+{
+   "identityMap":{
+      "email":[
+         {
+            "id":"e3@example.com"
+         }
+      ],
+      "phone":[
+         {
+            "id":"+40744333444"
+         },
+         {
+            "id":"+40744555666"
+         }
+      ],
+      "IDFA":[
+         {
+            "id":"134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         }
+      ],
+      "GAID":[
+         {
+            "id":"47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
+         }
+      ]
+   }
+}
+```
+
+**Template**
+
+>[!IMPORTANT]
+>
+>For all templates that you use, you must escape the illegal characters, such as double quotes `""` before inserting the template in the [destination server configuration](./server-and-template-configuration.md#template-specs). For more information on escaping double quotes, see Chapter 9 in the [JSON standard](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf).
+
+Notice that `input.aggregationKey.identityNamespaces` is used in the template below
+
+```python
+{
+            "profiles": [
+            {% for profile in input.profiles %}
+            {
+                {% for ns in input.aggregationKey.identityNamespaces %}
+                "{{ns}}": [
+                    {% for id in profile.identityMap[ns] %}
+                    "{{id.id}}"{% if not loop.last %},{% endif %}
+                    {% endfor %}
+                ]{% if not loop.last %},{% endif %}
+                {% endfor %}
+            }{% if not loop.last %},{% endif %}
+            {% endfor %}
+        ]
+}
+```
+
+**Result**
+
+When exported to your destination, the profiles are split into two groups, based on their identity namespaces (email and phone in one group, GAID and IDFA in another).
+
+```json
+{
+   "profiles":[
+      {
+         "email":[
+            "e1@example.com",
+            "e2@example.com"
+         ],
+         "phone":[
+            "+40744111222"
+         ]
+      },
+      {
+         "email":[
+            "e3@example.com"
+         ],
+         "phone":[
+            "+40744333444",
+            "+40744555666"
+         ]
+      }
+   ]
+}
+```
+
+```json
+{
+   "profiles":[
+      {
+         "IDFA":[
+            "AEBE52E7-03EE-455A-B3C4-E57283966239"
+         ],
+         "GAID":[
+            "e4fe9bde-caa0-47b6-908d-ffba3fa184f2"
+         ]
+      },
+      {
+         "IDFA":[
+            "134GHU45-34HH-GHJ7-K0H8-LHN665998NN0"
+         ],
+         "GAID":[
+            "47bh00i9-8jv6-334n-lll8-nb7f24sghg76"
+         ]
+      }
+   ]
+}
+```
+
+#### Use the aggregation key in a URL template {#aggregation-key-url-template}
+
+Note that depending on your use case, you can also use the aggregation keys described here in a URL, as shown below:
+
+```python
+https://api.example.com/audience/{{input.aggregationKey.segmentId}}
+```
+
+### Reference: Context and functions used in the transformation templates {#reference}
 
 The context provided to the template contains `input`  (the profiles / data that is exported in this call) and `destination` (data about the destination that Adobe is sending data to, valid for all profiles).
 
