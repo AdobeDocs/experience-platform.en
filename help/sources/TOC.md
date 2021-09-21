@@ -65,6 +65,7 @@ feature: Data Ingestion, Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake connector](connectors/databases/snowflake.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
   - Local system {#local-system}
@@ -119,6 +120,7 @@ feature: Data Ingestion, Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -208,6 +210,7 @@ feature: Data Ingestion, Sources
       - [Oracle](tutorials/ui/create/databases/oracle.md)
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+      - [Snowflake](tutorials/ui/create/databases/snowflake.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
     - Local system {#local-system}
