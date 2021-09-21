@@ -66,7 +66,7 @@ Identity namespaces are a component of [[!DNL Identity Service]](../../../../ide
 
 A fully qualified identity includes an ID value and a namespace. A new custom namespace is required for every new [!DNL Marketo] instance and dataset combination. For example, a [!DNL Marketo] source connector ingesting the `campaign` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
 
-B2B namespaces used in the primary identity of the entity.
+B2B namespaces are used in the primary identity of the entity.
 
 The following table contains information on the underlying set up for B2B namespaces.
 
