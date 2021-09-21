@@ -9,7 +9,7 @@ exl-id: 367a3a9e-0980-4144-a669-e4cfa7a9c722
 ---
 # Update dataflows using the Flow Service API
 
-This tutorial covers the steps for updating a dataflow, including its name, description, and schedule using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial covers the steps for updating a dataflow, including its name, description, and schedule using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

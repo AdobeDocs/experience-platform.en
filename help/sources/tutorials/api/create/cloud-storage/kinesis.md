@@ -9,7 +9,7 @@ exl-id: 64da8894-12ac-45a0-b03e-fe9b6aa435d3
 ---
 # Create an [!DNL Amazon Kinesis] source connection using the Flow Service API
 
-This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
+This tutorial walks you through the steps to connect [!DNL Amazon Kinesis] (hereinafter referred to as "[!DNL Kinesis]") to Experience Platform, using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

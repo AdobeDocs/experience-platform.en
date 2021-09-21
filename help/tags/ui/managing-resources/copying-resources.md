@@ -1,6 +1,7 @@
 ---
 title: Copy Resources
 description: Learn how to create a new tag resource using the settings of an existing tag resource in Adobe Experience Platform.
+exl-id: 7e52ceae-97df-4c64-aba3-4f5ba6018a47
 ---
 # Copy resources
 

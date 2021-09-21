@@ -46,9 +46,9 @@ The **[!UICONTROL Policies]** workspace in the [!DNL Experience Platform] UI all
 
 ### Using APIs
 
-The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dule-policy-service.yaml) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
+The `/labels` endpoint in the [Policy Service API](https://www.adobe.io/experience-platform-apis/references/policy-service/) allows you to programmatically manage data usage labels, including creating custom labels. Refer to the [labels endpoint guide](../api/labels.md) for more information.
 
-The [Dataset Service API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/dataset-service.yaml) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
+The [Dataset Service API](https://www.adobe.io/experience-platform-apis/references/dataset-service/) is used to manage labels for dataset and fields. See the guide on [managing dataset labels](./dataset-api.md) for more information.
 
 ## Next steps
 

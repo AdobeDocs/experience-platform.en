@@ -18,7 +18,7 @@ To learn more about computed attributes, please begin by reading the [computed a
 
 ## Getting started
 
-The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/real-time-customer-profile.yaml). 
+The API endpoint used in this guide is part of the [Real-time Customer Profile API](https://www.adobe.com/go/profile-apis-en). 
 
 Before continuing, please review the [Profile API getting started guide](../api/getting-started.md) for links to recommended documentation, a guide to reading the sample API calls that appear in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 

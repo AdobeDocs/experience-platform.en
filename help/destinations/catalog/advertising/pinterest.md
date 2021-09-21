@@ -1,57 +1,73 @@
 ---
-keywords: Pinterest;pinterest;Pinterest Conversion Tracking;pintrest conversion tracking
-title: Pinterest Conversion Tracking extension
-description: The Pinterest Conversion Tracking extension is an advertising destination in Adobe Experience Platform. For more information about the extension functionality, see the extension page on Adobe Exchange.
+title: Pinterest Customer List connection
+description: Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 exl-id: e601f75f-0d40-4cd0-93ca-54d7439f1db7
 ---
-# [!DNL Pinterest Conversion Tracking] extension {#pinterest-extension}
+# [!DNL Pinterest Customer List] connection
 
 ## Overview {#overview}
 
-Track visitor actions on your website after views of your Promoted Pin. Measure return on ad spend and create targeted audiences. Learn more [here](https://ads.pinterest.com/).
+Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 
-[!DNL Pinterest Conversion Tracking] is an advertising extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
-
-This destination is a tag extension. For more information about how tag extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
-
-![Pinterest Conversion Tracking Extension](../../assets/catalog/advertising/pinterest/catalog.png)
+>[!IMPORTANT]
+>
+>This destination was built by the Pinterest team. For any inquiries or update requests, please contact them directly at https://help.pinterest.com/en/contact.
 
 ## Prerequisites {#prerequisites}
 
-This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
+* The user would need to authenticate with a Pinterest account which has access to the advertiser account they want to add an audience to. Details on sharing advertiser accounts can be found [here](https://help.pinterest.com/en/business/article/share-and-manage-access-to-your-ad-accounts). Specifically, the user would need the "audience" access levels.
+* Details on customer list identity formats can be found [here](https://help.pinterest.com/en/business/article/audience-targeting). 
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions. and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
-## Install extension {#install-extension}
+## Supported identities {#supported-identities}
 
-To install the [!DNL Pinterest Conversion Tracking] extension:
+The [!DNL Pinterest Customer List] destination supports the activation of identities described in the table below. Learn more about [identities](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#getting-started).
 
-In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [mapping step](/help/destinations/ui/activate-segment-streaming-destinations.md#mapping) of the destination activation workflow, map the desired identities to the target field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.
 
-Select the extension from the catalog or use the search bar.
+|Target Identity|Description|Considerations|
+|---|---|---|
+|GAID|[!DNL Google Advertising ID]|Map the *GAID* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
+|IDFA|[!DNL Apple ID for Advertisers]|Map the *IDFA* source identity namespace to the target identity field *pinterest_audience*. Identities are distinguished and resolved upon data ingestion into Pinterest.|
+|EMAIL|Email addresses (clear text or hashed with the SHA256 algorithm)|Both plain text and SHA256 hashed email addresses are supported by Adobe Experience Platform. <br> Map the *Email* or *Email_LC_SHA256* source identity namespace to the target identity field *pinterest_audience*.|
 
-Click on the destination to highlight it, then select **[!UICONTROL Configure]** in the right rail. If the **[!UICONTROL Configure]** control is greyed out, you are missing the **[!UICONTROL manage_properties]** permission. See [Prerequisites](#prerequisites).
+{style="table-layout:auto"}
 
-Select the property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of in the tags documentation.
+## Export type {#export-type}
 
-The workflow walks you through the steps to complete the installation. 
+**Segment Export** - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Pinterest Customer List destination.
 
-For information about the extension configuration options and installation support, see the [Pinterest Conversion Tracking page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.100523.pinterest-conversion-tracking-for-adobe-launch.html).
+## Use Cases {#use-cases}
 
-You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). For more information, see the section on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the tags documentation.
+To help you better understand how and when you should use the [!DNL Pinterest Customer List] destination, here are sample use cases that Adobe Experience Platform customers can solve by using this destination.
 
-## How to use the extension {#how-to-use}
 
-Once you have installed the extension, you can start setting up rules.
+### Use Case #1
 
-You can set up rules for your installed extensions to send event data to the extension destination only in certain situations. For more information about setting up rules for your extensions, see the [tags documentation](../../../tags/ui/managing-resources/rules.md).
+Create audiences from your customer lists, people who've visited your site or people who have already interacted with your content on Pinterest.
 
-## Configure, upgrade, and delete extension {#configure-upgrade-delete}
+## Connect to destination {#connect}
 
-You can configure, upgrade, and delete extensions in the Data Collection UI.
+To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
->[!TIP]
->
->If the extension is already installed on one of your properties, the Platform UI still displays **[!UICONTROL Install]** for the extension. Kick off the installation workflow as described in [Install extension](#install-extension) to configure or delete your extension.
 
-To upgrade your extension, see the guide on the [extension upgrade process](../../../tags/ui/managing-resources/extensions/extension-upgrade.md) in the tags documentation.
+
+### Connection parameters {#parameters}
+
+While [setting up](../../ui/connect-destination.md) this destination, you must provide the following information:
+
+*  **[!UICONTROL Name]**: A name by which you will recognize this destination in the future.
+*  **[!UICONTROL Description]**: A description that will help you identify this destination in the future.
+*  **[!UICONTROL Account ID]**: Your Pinterest ad account ID.
+
+## Activate segments to this destination {#activate}
+
+Read [Activate profiles and segments to streaming segment export destinations](/help/destinations/ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+## Data usage and governance {#data-usage-governance}
+
+All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [Data Governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+## Additional resources {#additional-resources}
+
+Please refer to the the [Pinterest Help Center page](https://help.pinterest.com/en/business/article/audience-targeting) for additional information.

@@ -1,6 +1,7 @@
 ---
 title: Extension Manifest
 description: Learn how to configure a JSON manifest file that informs Adobe Experience Platform how to properly consume your extension.
+exl-id: 7cac020b-3cfd-4a0a-a2d1-edee1be125d0
 ---
 # Extension manifest
 
