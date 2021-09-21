@@ -130,6 +130,7 @@ feature: Schemas
   * [Create a schema (API)](tutorials/create-schema-api.md)
   * [Define a relationship between two schemas (UI)](tutorials/relationship-ui.md)
   * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
+  * [Define a relationship between two schemas (B2B)](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
