@@ -5,7 +5,11 @@ title: Snowflake Source Connector Overview
 topic-legacy: overview
 description: Learn how to connect Snowflake to Adobe Experience Platform using APIs or the user interface.
 ---
-# [!DNL Snowflake] source
+# (Beta) [!DNL Snowflake] source
+
+>[!NOTE]
+>
+>The [!DNL Snowflake] source is in beta. See the [Sources overview](../../home.md#terms-and-conditions) for more information on using beta-labelled connectors.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
