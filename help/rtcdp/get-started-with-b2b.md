@@ -9,7 +9,7 @@ description: Use this sample scenario as an example when setting up your impleme
 >
 >The Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
 
-This getting started guide leads you through a sample implementation of the Real-time Customer Data Platform (Real-time CDP) B2B Edition. Althouhg this guide will use specic examples, links to additional information will assist you in your set up.
+This getting started guide leads you through a sample implementation of the Real-time Customer Data Platform (Real-time CDP) B2B Edition. Although this guide will use specific examples, links to additional information will assist you in your set up.
 
 This example use case demonstrates the additional benefits of the Real-time CDP B2B Edition to:
 
