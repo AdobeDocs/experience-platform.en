@@ -9,6 +9,16 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 >
 >Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../../term-updates.md) for a consolidated reference of the terminology changes.
 
+## September 23, 2021
+
+v3.2.0
+
+The following changes were introduced in the Conditional Value data element:
+
+* Add a checkbox for the conditional and fallback values that allows the user to choose if they want undefined to be the returned value.
+* Number values are exposed as numbers in the settings object.
+* Conditional value is no longer required so that it can behave in the same way like the fallback value.
+
 ## September 17, 2021
 
 v3.1.1
