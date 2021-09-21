@@ -16,6 +16,7 @@ Experience Platform provides support for ingesting data from a third-party CRM s
 
 A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
 
+<!--
 ## Field mapping from [!DNL Salesforce] to XDM
 
 To establish a source connection between [!DNL Salesforce] and Platform, the [!DNL Salesforce] source data fields must be mapped to their appropriate target XDM fields prior to being ingested into Platform.
@@ -79,6 +80,8 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 ![run-generator](../../images/tutorials/create/salesforce/run-generator.png)
 
 A successful request creates the B2B namespaces and schemas according to beta specifications.
+
+-->
 
 ## Connect [!DNL Salesforce] to Platform using APIs
 
