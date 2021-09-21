@@ -36,8 +36,8 @@ Before you can create non-expiring credentials, you must:
 
 1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
 2. [Select a product profile.](../../access-control/ui/browse)
-3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions for your Org.](../../access-control/ui/permissions)
-4. [Add a new user to grant the newly created permissions to.](../../access-control/ui/users)
+3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions) for your Org.
+4. [Add a new user](../../access-control/ui/users) to grant the newly created permissions to.
 5. [Add the user as an admin.](#Add-new-user-as-an-admin)
 6. [Add the user as a developer.](#Add-new-user-as-a-developer)
 
@@ -45,7 +45,7 @@ If you have already completed these prerequisite steps you may continue to the [
 
 #### Add new user as an admin
 
-To add the newly created user as an admin. select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL **Add Admins**].
+To add the newly created user as an admin, select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL **Add Admins**] on the settings page of the product profile.
  
 ![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
 
@@ -53,7 +53,7 @@ A dialog appears that allows you to add an admin. Input the new admin's details 
 
 #### Add new user as a developer
 
-Select the **Developers** tab, followed by the **Add Developer**.
+Select the **Developers** tab, followed by **Add Developer** on the settings page of the product profile.
 
 ![Developers tab Add Developer button highlighted](../images/ui/credentials/developers-tab-add-developer.png)
 
@@ -61,11 +61,11 @@ A dialog appears that allows you to add a developer. Input the new developer's d
 
 To learn more about how to assign permissions, please read the documentation on [Access Control](../../access-control/home.md).
 
-All the required permissions are now configured in the Adobe Developer console for the user to use the expiring credentials feature.
+All the required permissions are now configured in the Adobe Developer console for the user to use the expiring credentials feature. Return to the Platform UI.
 
 ### Generate Credentials
 
-To create a set of non-expiring credentials, in the Platform left navigation select [!UICONTROL Queries] in the left navigation followed by [!UICONTROL Credentials]. Next, select **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, in the Experience Platform left navigation select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**. Next, select **[!UICONTROL Generate credentials]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
