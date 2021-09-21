@@ -32,32 +32,14 @@ You can use non-expiring credentials to set up a more permanent connection to an
 
 ### Prerequisites
 
-Before you can create non-expiring credentials, you must:
+The linked documentation provides complete guidance on how to complete their respective steps. Before you can create non-expiring credentials, you must:
 
 1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
 2. [Select a product profile.](../../access-control/ui/browse.md)
 3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for your Org.
 4. [Add a new user](../../access-control/ui/users.md) to grant the newly created permissions to.
-5. [Add the user as an admin.](#Add-new-user-as-an-admin)
-6. [Add the user as a developer.](#Add-new-user-as-a-developer)
-
-If you have already completed these prerequisite steps you may continue to the [Generate Credentials](#Generate-Credentials) section.
-
-#### Add new user as an admin
-
-To add the newly created user as an admin, select the [!UICONTROL **Admins**] tab, followed by [!UICONTROL **Add Admins**] on the settings page of the product profile.
- 
-![Admin tab Add Admin button highlighted](../images/ui/credentials/admins-tab-add-admin.png)
-
-A dialog appears that allows you to add an admin. Input the new admin's details into the text fields and select [!UICONTROL **Save**].
-
-#### Add new user as a developer
-
-Select the **Developers** tab, followed by **Add Developer** on the settings page of the product profile.
-
-![Developers tab Add Developer button highlighted](../images/ui/credentials/developers-tab-add-developer.png)
-
-A dialog appears that allows you to add a developer. Input the new developer's details into the text fields and select **Save**.
+5. [Add the user as a product profile admin.](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)
+6. [Add the user as a product profile developer.](https://helpx.adobe.com/enterprise/using/manage-developers.html)
 
 To learn more about how to assign permissions, please read the documentation on [Access Control](../../access-control/home.md).
 
@@ -65,7 +47,7 @@ All the required permissions are now configured in the Adobe Developer console f
 
 ### Generate Credentials
 
-To create a set of non-expiring credentials, in the Experience Platform left navigation select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**. Next, select **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, in the Experience Platform UI select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
@@ -110,7 +92,7 @@ Once you have provided all the required details, select **[!UICONTROL Update acc
 
 ## Using credentials to connect to external clients
 
-You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. 
+You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. The method of input for these credentials will vary depending on the external client. Refer to the external client's documentation for specific instructions on the use of these credentials.
 
 The table below outlines the parameters that are typically required to connect to external clients.
 
