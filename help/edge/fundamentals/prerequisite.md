@@ -18,7 +18,7 @@ To use the Platform Web SDK, you must first:
 - Be entitled to Adobe Experience Platform. If you have not purchased Adobe Experience Platform, Adobe will provision you with the necessary access to use in a limited fashion with the SDK at no extra charge.
 - If your website is already using the [Experience Cloud ID Service](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html) on your website--either through Visitor API or the Experience Cloud ID Service extension within Adobe Experience Platform Launch--and you would like to continue using it while migrating to Adobe Experience Platform Web SDK, you must be using the latest version of Visitor API or the Experience Cloud ID Service extension. See [ID Migration](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en#identity) for more information.
 
-# Managing permissions for Adobe Experience Platform Web SDK
+## Managing permissions for Adobe Experience Platform Web SDK
 
 Using Adobe Experience Platform doesn't require any special permissioning but you need to have the right [permissions](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=en) to create your schemas in Adobe Experience Platform. The minimum permissions that someone needs can be found in the Data Modeling and Identities category.  
 
