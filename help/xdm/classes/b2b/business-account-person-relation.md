@@ -15,12 +15,12 @@ description: This document provides an overview of the XDM Business Account Pers
 | Property | Data type |  Description |
 | --- | --- | --- |
 | `accountKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the account in the account-person relationship. |
-| `accountPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the relationship between the account and the person. |
+| `accountPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the account-person relation entity. |
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the account-person relationship comes from an external source system, this object captures audit attributes for that system. |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person in the account-person relationship. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the other ID fields captured by the class. |
 | `accountID` | String  | A unique identifier for the account in the account-person relationship. |
-| `accountPersonID` | String  | A unique identifier for the relationship between the account and the person. |
+| `accountPersonID` | String  | A unique identifier for the account-person relation entity. |
 | `currencyCode` | String  | The ISO 4217 currency code used for the relationship between the account and the person. |
 | `isActive` | Boolean  | Indicates whether the relationship between the account and the person is active. |
 | `isDirect` | Boolean  | Indicates whether this is a direct relationship between the account and the person. |

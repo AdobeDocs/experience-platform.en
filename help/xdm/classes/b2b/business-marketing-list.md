@@ -15,8 +15,8 @@ description: This document provides an overview of the XDM Business Marketing Li
 | Property | Data type |  Description |
 | --- | --- | --- |
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the marketing list comes from an external source system, this object captures audit attributes for that system. |
-| `marketingListKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the marketing list. |
+| `marketingListKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the marketing list entity. |
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the `marketingListID`. |
 | `marketingListDescription` | String  | A description for the marketing list. |
-| `marketingListID` | String  | A unique ID for the marketing list. |
+| `marketingListID` | String  | A unique ID for the marketing list entity. |
 | `marketingListName` | String  | The name of the marketing list. |

@@ -12,13 +12,15 @@ description: This document provides an overview of the XDM Business Opportunity 
 
 ![](../../images/classes/b2b/business-opportunity-person-relation.png)
 
-| Property | Data type |  Description |
+| Property | Data type | Description |
 | --- | --- | --- |
 | `extSourceSystemAudit` | [[!UICONTROL External Source System Audit Attributes]](../../data-types/external-source-system-audit-attributes.md) | If the business person relation comes from an external source system, this object captures audit attributes for that system. |
 | `opportunityKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the opportunity in the opportunity-person relationship. |
-| `opportunityPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the relationship between the opportunity and the person. |
+| `opportunityPersonKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the opportunity-person relation entity. |
 | `personKey` | [[!UICONTROL B2B Source]](../../data-types/b2b-source.md) | A composite identifier for the person in the opportunity-person relationship. |
-| `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the other ID fields captured by the class. |
-| `isPrimary` | Boolean  | Indicates whether the person is the primary contact for this opportunity. |
-| `personID` | String  | A unique identifier for the person in the opportunity-person relationship. |
-| `personRole` | String  | The role for the person in the opportunity-person relationship. |
+| `_id` | String | A unique identifier for the record. This is a system-generated value that is separate from the other ID fields captured by the class. |
+| `opportunityID` | String | A unique identifier for the opportunity in the opportunity-person relationship. |
+| `opportunityPersonID` | String | A unique identifier for the opportunity-person relation entity |
+| `isPrimary` | Boolean | Indicates whether the person is the primary contact for this opportunity. |
+| `personID` | String | A unique identifier for the person in the opportunity-person relationship. |
+| `personRole` | String | The role for the person in the opportunity-person relationship. |
