@@ -68,7 +68,6 @@ You can create a new segment job by making a POST request to the `/segment/jobs`
 
 Refer to [Create a new segment job](../../segmentation/api/segment-jobs.md#create) for detailed instructions on how to make this API call.
 
-
 ## Run the segment export job {#export-job}
 
 Once the segmentation job has completed successfully, run the segment export job.
@@ -120,7 +119,6 @@ curl -X POST https://platform.adobe.io/data/core/activation/disflowprovider/adho
 | <ul><li>`destinationId1`</li><li>`destinationId2`</li></ul> | The IDs of the destination instances to which you want to activate audience segments. |
 | <ul><li>`segmentId1`</li><li>`segmentId2`</li><li>`segmentId3`</li></ul>  | The IDs of the audience segments that you want to activate to the selected destination. |
 | <ul><li>`exportid11`</li><li>`exportid12`</li></ul> | The IDs returned in the response of the [segment export](../../segmentation/api/export-jobs.md#create) job. |
-
 
 ### Response
 
