@@ -1,15 +1,24 @@
 ---
 keywords: view profiles rtcdp;rtcdp profile view;rtcdp profiles
-title: Viewing profiles in Real-time Customer Data Platform
-seo-title: View Real-time Customer Profile data on Real-time Customer Data Platform
-description: View Real-time Customer Profile data on Real-time Customer Data Platform
-seo-description: View Real-time Customer Profile data on Real-time Customer Data Platform
+title: Browse profiles in Real-time Customer Data Platform
+description: Real-time Customer Data Platform enables you to browse Real-time Customer Profile data using the Adobe Experience Platform user interface.
 exl-id: 8481e286-2ff0-484f-85d2-a8db9b08d8d3
 ---
-# Viewing profiles in Real-time Customer Data Platform
 
-[!DNL Real-time Customer Profile] creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. As individual profiles are aggregated based on data being brought into the system from various sources, each profile becomes an actionable, timestamped account of every interaction your customer has with your brand.
+# Browse profiles in Real-time Customer Data Platform
 
-Within the user interface, you can view these read-only profiles and see important information regarding the individual customer such as preferences, past events and interactions, and segments to which the individual belongs.
+Real-time Customer Profile creates a holistic view of each of your individual customers, combining data from multiple channels including online, offline, CRM, and third-party data. As individual profiles are aggregated based on data being brought into the system from various sources, each profile becomes an actionable, timestamped account of every interaction your customer has with your brand.
 
-Since [!DNL Real-time Customer Data Platform] is built on top of Adobe Experience Platform, Real-time CDP is able to make use of the profile viewing capabilities that are part of [!DNL Experience Platform]. For a detailed guide to viewing customer profiles within the [!DNL Platform] user interface, please see the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md).
+Within the Adobe Experience Platform user interface, you can view these read-only profiles and see important information regarding each of your individual customers, including their preferences, past events, interactions, and the segments to which the individual belongs.
+
+Real-time Customer Data Platform is built on top of Adobe Experience Platform and is thereby able to make use of the profile viewing capabilities in the Experience Platform UI. For a detailed guide to viewing customer profiles within the Platform user interface, please see the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md).
+
+## Profile enhancements for Real-time CDP, B2B Edition
+
+In addition to the profile browse capabilities supported by Adobe Experience Platform, you can use Real-time CDP, B2B Edition to browse the [!UICONTROL Opportunities] and [!UICONTROL Accounts] associated with an individual.
+
+To explore these enhancements, follow the steps outlined in the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md) to browse a profile by merge policy or identity namespace. 
+
+From the profile details tab, select **[!UICONTROL Accounts]** to view...
+
+Select the **[!UICONTROL Opportunities]** tab to view...
