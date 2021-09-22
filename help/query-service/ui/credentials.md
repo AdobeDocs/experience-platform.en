@@ -32,22 +32,22 @@ You can use non-expiring credentials to set up a more permanent connection to an
 
 ### Prerequisites
 
-The linked documentation provides complete guidance on how to complete their respective steps. Before you can create non-expiring credentials, you must:
+Before you can generate non-expiring credentials, you must complete the following steps in Adobe Admin Console:
 
 1. Log into [Adobe Admin Console](https://adminconsole.adobe.com/) and select the relevant Org from the top navigation bar.
 2. [Select a product profile.](../../access-control/ui/browse.md)
-3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for your Org.
-4. [Add a new user](../../access-control/ui/users.md) to grant the newly created permissions to.
-5. [Add the user as a product profile admin.](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html)
-6. [Add the user as a product profile developer.](https://helpx.adobe.com/enterprise/using/manage-developers.html)
+3. [Configure both the **Sandboxes** and **Manage Query Service Integration** permissions](../../access-control/ui/permissions.md) for the product profile.
+4. [Add a new user to a product profile](../../access-control/ui/users.md) so they are granted its configured permissions.
+5. [Add the user as a product profile admin](https://helpx.adobe.com/enterprise/using/manage-product-profiles.html) to allow an account creation for any active product profile.
+6. [Add the user as a product profile developer](https://helpx.adobe.com/enterprise/using/manage-developers.html) in order to create an integration.
 
-To learn more about how to assign permissions, please read the documentation on [Access Control](../../access-control/home.md).
+To learn more about how to assign permissions, please read the documentation on [access control](../../access-control/home.md).
 
-All the required permissions are now configured in the Adobe Developer console for the user to use the expiring credentials feature. Return to the Platform UI.
+All the required permissions are now configured in Adobe Developer Console for the user to use the expiring credentials feature.
 
-### Generate Credentials
+### Generate credentials
 
-To create a set of non-expiring credentials, in the Experience Platform UI select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
+To create a set of non-expiring credentials, return to the Platform UI and select **[!UICONTROL Queries]** from the left navigation to access the [!UICONTROL Queries] workspace. Next, select the **[!UICONTROL Credentials]** tab followed by **[!UICONTROL Generate credentials]**.
 
 ![](../images/ui/credentials/generate-credentials.png)
 
@@ -94,23 +94,23 @@ Once you have provided all the required details, select **[!UICONTROL Update acc
 
 You can use either the expiring or non-expiring credentials to connect with external clients, such as Aqua Data Studio, Looker, or Power BI. The method of input for these credentials will vary depending on the external client. Refer to the external client's documentation for specific instructions on the use of these credentials.
 
+The image indicates the location of each parameter found in the UI except for the password of the non-expiring credentials. While non-expiring credentials are provided by their JSON configuration files, you can view your expiring credentials under the **Credentials** tab in the UI.
+
+![](../images/ui/credentials/expiring-credentials.png)
+
 The table below outlines the parameters that are typically required to connect to external clients.
 
 >[!NOTE]
 >
->When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password.
+>When connecting to a host using non-expiring credentials, it is still necessary to use all the parameters listed in the [!UICONTROL EXPIRING CREDENTIALS] section except for the password and username.
 
 | Parameter | Description |
 |---|---|
-| Server/Host  | The name of the server/host that you are connecting to. This value takes the form of `server.adobe.io` and can be found under **[!UICONTROL Host]**.  |
-| Port  | The port for the server/host you are connecting to. This value can be found under **[!UICONTROL Port]**. An example value for the port would be `80`.  |
-| Database  | The database that you are connecting to. This value can be found under **[!UICONTROL Database]**. An example value for the database would be `prod:all`. |
-| Username  | The username for the user who is connecting to the external client. This takes the form of an alphanumeric string before `@AdobeOrg`. This value is found under **[!UICONTROL Username]**.  |
-| Password  | The password for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the expiring credentials section.</li><li>If you're using non-expiring credentials, this value is comprised of the arguments from the technicalAccountID and the credential taken from the configuration JSON file. The password value takes the form: `{technicalAccountId}:{credential}`.</li></ul>  |
-
-The image indicates the location of each parameter found in the UI except for the password of the non-expiring credentials.
-
-![](../images/ui/credentials/expiring-credentials.png)
+| Server/Host  | The name of the server/host that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and takes the form of `server.adobe.io`. The value is found under **[!UICONTROL Host]** in the [!UICONTROL EXPIRING CREDENTIALS] section.</ul></li> |
+| Port  | The port for the server/host you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and is found under **[!UICONTROL Port]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the port would be `80`.</ul></li>  |
+| Database  | The database that you are connecting to. <ul><li>This value is used for both expiring credentials and non-expiring credentials and found under **[!UICONTROL Database]** in the [!UICONTROL EXPIRING CREDENTIALS] section. An example value for the database would be `prod:all`.</ul></li> |
+| Username  | The username for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this takes the form of an alphanumeric string before `@AdobeOrg`. This value is found under **[!UICONTROL Username]**.</li><li>If you're using non-expiring credentials, this is a string of your choosing although it **cannot** be the same as the `technicalAccountID` value found in the configuration JSON file.</li></ul>  |
+| Password  | The password for the user who is connecting to the external client. <ul><li>If you're using expiring credentials, this can be found under **[!UICONTROL Password]** within the [!UICONTROL EXPIRING CREDENTIALS] section.</li><li>If you're using non-expiring credentials, this value is the concatenated arguments from the technicalAccountID and the credential taken from the configuration JSON file. The password value takes the form: `{technicalAccountId}:{credential}`.</li></ul>  |
 
 ## Next steps
 
