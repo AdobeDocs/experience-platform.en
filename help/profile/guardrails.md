@@ -65,7 +65,7 @@ Adhering to the following guardrails is recommended when creating a data model f
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
 | Number of Profile-enabled datasets | 20 | Soft | **A maximum of 20 datasets may contribute to the [!DNL Profile] union schema.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics).|
-|Number of Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | **A maximum of one (1) Analytics report suite dataset should be enabled for Profile.** Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences to data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix to this document.|
+|Number of Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | **A maximum of one (1) Analytics report suite dataset should be enabled for Profile.** Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix to this document.|
 | Number of multi-entity relationships recommended| 5 | Soft | **A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 |Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time-independent data) is <=500.**|
@@ -120,7 +120,7 @@ The guardrails outlined in this section refer to the number and nature of segmen
 
 This section provides additional details for individual guardrails.
 
-## Adobe Analytics report suite datasets in Platform {#aa-datasets}
+### Adobe Analytics report suite datasets in Platform {#aa-datasets}
 
 A maximum of one (1) Adobe Analytics report suite dataset should be enabled for Profile. This is a soft limit, meaning that you are able to enable more than one Analytics dataset for Profile, but it is not recommended as it may have unintended consequences for your data. This is due to the differences between Experience Data Model (XDM) schemas, which provide the semantic structure for data in Experience Platform and allow for consistency in data interpretation, and the customizable nature of eVars and conversion variables in Adobe Analytics. 
 
