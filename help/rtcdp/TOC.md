@@ -9,10 +9,11 @@ user-guide-description: Bring together known and anonymous data from multiple en
 # Real-time Customer Data Platform Help {#rtcdp}
 
 * [Real-time CDP overview](overview.md)
-* [Administration overview](administration/admin-overview.md)
-* [Metrics overview](home-page-dashboards.md)
 * Getting started {#intro}
   * [Getting started](get-started.md)
+  * [Metrics overview](home-page-dashboards.md)
+* Administration {#admin}
+  * [Administration overview](administration/admin-overview.md)
 * Account Profiles {#account}
   * [Account profile overview](accounts/account-profile-overview.md)
   * [Account profile UI guide](accounts/account-profile-ui-guide.md)
