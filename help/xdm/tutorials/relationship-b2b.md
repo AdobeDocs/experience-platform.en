@@ -16,7 +16,11 @@ The following diagram provides an example of how the different B2B classes can r
 
 ![B2B class relationships](../images/tutorials/relationship-b2b/classes.png)
 
-This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-time CDP BDP Edition.
+This tutorial covers the steps to define a many-to-one relationship between two schemas in Real-time CDP B2B Edition.
+
+>[!NOTE]
+>
+>This tutorial focuses on how to manually establish relationships between B2B schemas in the Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the Marketo Engage source connector documentation for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md#auto-generation).
 
 ## Getting started
 
