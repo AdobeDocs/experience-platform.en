@@ -15,11 +15,17 @@ This document provides an overview of the configurations you need to prepare in 
 
 ## ConnectionSpecs
 
-Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections. Connection specifications are tenant and IMS Organization agnostic.
+Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`.
 
-### Generic REST connector connection specification example
+| Specs | Description |
+| --- | --- |
+| `authSpec` |
+| `sourceSpec` |
+| `exploreSpec` |
 
-The following payload contains an example of a generic REST connection specification that supports five different authentication options.
+### Connection specification example
+
+The following payload contains an example of a generic REST connection specification that supports OAuth 2 refresh code authentication.
 
 ```json
 {
@@ -80,142 +86,6 @@ The following payload contains an example of a generic REST connection specifica
         ]
       }
     },
-    {
-      "name": "OAuth Client Credentials",
-      "type": "oAuth2.0-clientCredentials",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service using client credential flow.",
-        "links": [
-          {
-            "rel": "specificationLink",
-            "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.4"
-          }
-        ],
-        "properties": {
-          "clientId": {
-            "description": "Client id of user.",
-            "type": "string"
-          },
-          "clientSecret": {
-            "description": "Client secret of user.",
-            "type": "string",
-            "format": "password"
-          },
-          "accessTokenUrl": {
-            "description": "Access token url to fetch access token.",
-            "type": "string"
-          }
-        },
-        "required": [
-          "client_id",
-          "client_secret",
-          "accessTokenUrl"
-        ]
-      }
-    },
-    {
-      "name": "OAuth Password Grant",
-      "type": "oAuth2.0-passwordGrant",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service password grant flow.",
-        "links": [
-          {
-            "rel": "specificationLink",
-            "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.3"
-          }
-        ],
-        "properties": {
-          "username": {
-            "description": "Enter username.",
-            "type": "string"
-          },
-          "password": {
-            "description": "Enter password.",
-            "type": "string",
-            "format": "password"
-          },
-          "accessTokenUrl": {
-            "description": "Access token url to fetch authorization token ",
-            "type": "string"
-          },
-          "clientId": {
-            "description": "Client id of user.",
-            "type": "string"
-          },
-          "clientSecret": {
-            "description": "Client secret of user.",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "accessTokenUrl",
-          "username",
-          "password"
-        ]
-      }
-    },
-    {
-      "name": "Basic Authentication",
-      "type": "basicAuthentication",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service.",
-        "properties": {
-          "username": {
-            "description": "Enter username.",
-            "type": "string"
-          },
-          "password": {
-            "description": "Enter password.",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "username",
-          "password"
-        ]
-      }
-    },
-    {
-      "name": "API Key Authentication",
-      "type": "apiKey",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service.",
-        "properties": {
-          "keyName": {
-            "description": "apiKey name for authentication.",
-            "type": "string",
-            "default": "apiKey"
-          },
-          "value": {
-            "description": "apiKey value for authentication.",
-            "type": "string",
-            "format": "password"
-          },
-          "addTo": {
-            "type": "string",
-            "enum": [
-              "header",
-              "query"
-            ],
-            "default": "query"
-          }
-        },
-        "required": [
-          "keyName",
-          "password"
-        ]
-      }
-    }
   ],
   "sourceSpec": {
     "attributes": {
@@ -413,34 +283,6 @@ The following payload contains an example of a generic REST connection specifica
 
 ```
 
-## SourceSpecs
-
-Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. Source specifications also contain information regarding parameters for the URL, content, header, and schedule, among others.
-
-| Source specifications | Description | Example |
-| --- | --- | --- |
-| `sourceSpec.attributes` | This attribute displays information on the source specific to the UI or API. |
-| `sourceSpec.attributes.uiAttributes` | This attribute displays information on the source specific to the UI. |
-| `sourceSpec.attributes.uiAttributes.documentationLink` | This attribute displays the documentation link where the usage of this source is documented. | `wwww.adobe.com/go/sources-mailchimp-en` |
-| `sourceSpec.attributes.uiAttributes.isBeta` | This is a boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | `true` / `false` |
-| `sourceSpec.attributes.uiAttributes.category` | This attribute displays the category of  the source. | `advertising`, `crm`, `cloud storage`, `database`, `ecommerce`, `marketing automation`, `payments`, `protocols`, `streaming`. |
-| `sourceSpec.attributes.uiAttributes.icon` | This attribute displays the icon used for the rendering of the source in the Platform UI. |
-| `sourceSpec.attributes.uiAttributes.label` | This attribute displays the label to be used for the rendering of the source in the Platform UI. |
-| `sourceSpec.attributes.uiAttributes.description` | This attribute displays a brief description of the source. |
-| `sourceSpec.attributes.urlParams.hostName` | This attribute displays the `hostName` of the endpoint to fetch data from. If there are any params in this attribute that you need to acquire from the end user, you can specify it as a template enclosed in (`{{PARAMS}}`). | `https://{{HOST_NAME}}.api.mailchimp.com` |
-| `sourceSpec.attributes.urlParams.path` | This attribute displays the resource path from where to fetch the data from. | `/3.0/lists/{{LIST_ID}}/members` |
-| `sourceSpec.attributes.urlParams.method` | This attribute displays the HTTP method to be used to make the request to the source to fetch data. | `GET`, `POST` |
-| `sourceSpec.attributes.contentPath` | This attribute displays the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
-| `sourceSpec.attributes.queryParams` | This attribute displays the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
-| `sourceSpec.attributes.headerParams` | This attribute displays comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
-| `sourceSpec.attributes.paginationParams` | This attribute displays the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
-| `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | | `before_last_changed` |
-| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | This attribute displays the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
-| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | his attribute displays the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
-
-
 ## AuthSpecs
 
 Authentication specifications define how Platform users can connect to your source.
@@ -498,6 +340,83 @@ The following is an example of refreshCode authentication type:
     "required": [
       "accessToken"
     ]
+  }
+}
+```
+
+## SourceSpecs
+
+Source specifications contain information specific to a source, including attributes pertaining to a source's category, beta status, and catalog icon. Source specifications also contain information regarding parameters for the URL, content, header, and schedule, among others.
+
+| Source specifications | Description | Example |
+| --- | --- | --- |
+| `sourceSpec.attributes` | This attribute displays information on the source specific to the UI or API. |
+| `sourceSpec.attributes.uiAttributes` | This attribute displays information on the source specific to the UI. |
+| `sourceSpec.attributes.uiAttributes.documentationLink` | This attribute displays the documentation link where the usage of this source is documented. | `wwww.adobe.com/go/sources-mailchimp-en` |
+| `sourceSpec.attributes.uiAttributes.isBeta` | This is a boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | `true` / `false` |
+| `sourceSpec.attributes.uiAttributes.category` | This attribute displays the category of  the source. | `advertising`, `crm`, `cloud storage`, `database`, `ecommerce`, `marketing automation`, `payments`, `protocols`, `streaming`. |
+| `sourceSpec.attributes.uiAttributes.icon` | This attribute displays the icon used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.label` | This attribute displays the label to be used for the rendering of the source in the Platform UI. |
+| `sourceSpec.attributes.uiAttributes.description` | This attribute displays a brief description of the source. |
+| `sourceSpec.attributes.urlParams.hostName` | This attribute displays the `hostName` of the endpoint to fetch data from. If there are any params in this attribute that you need to acquire from the end user, you can specify it as a template enclosed in (`{{PARAMS}}`). | `https://{{HOST_NAME}}.api.mailchimp.com` |
+| `sourceSpec.attributes.urlParams.path` | This attribute displays the resource path from where to fetch the data from. | `/3.0/lists/{{LIST_ID}}/members` |
+| `sourceSpec.attributes.urlParams.method` | This attribute displays the HTTP method to be used to make the request to the source to fetch data. | `GET`, `POST` |
+| `sourceSpec.attributes.contentPath` | This attribute displays the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
+| `sourceSpec.attributes.queryParams` | This attribute displays the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
+| `sourceSpec.attributes.headerParams` | This attribute displays comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
+| `sourceSpec.attributes.paginationParams` | This attribute displays the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
+| `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | | `before_last_changed` |
+| `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | This attribute displays the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
+| `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | his attribute displays the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
+
+
+## ExploreSpecs
+
+```json
+{
+  "exploreSpec": {
+    "name": "Resource",
+    "type": "Resource",
+    "requestSpec": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "type": "object"
+    },
+    "responseSpec": {
+      "$schema": "http: //json-schema.org/draft-07/schema#",
+      "type": "object",
+      "properties": {
+        "format": {
+          "type": "string"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "columns": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    }
   }
 }
 ```

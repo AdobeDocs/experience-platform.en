@@ -815,7 +815,7 @@ A successful response returns HTTP status 204 (No Content) and a blank body. You
 
 ### Update your connection
 
-To update your connection's name, description, and credentials, perform a PATCH request to the [!DNL Flow Service] API while providing your connection ID, version, and the new information you want to use.
+To update your connection's name, description, and credentials, perform a PATCH request to the [!DNL Flow Service] API while providing your base connection ID, version, and the new information you want to use.
 
 >[!IMPORTANT]
 >
@@ -824,12 +824,12 @@ To update your connection's name, description, and credentials, perform a PATCH 
 **API format**
 
 ```http
-PATCH /connections/{CONNECTION_ID}
+PATCH /connections/{BASE_CONNECTION_ID}
 ```
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to update. |
+| `{BASE_CONNECTION_ID}` | The unique `id` value for the connection you want to update. |
 
 **Request**
 
@@ -874,7 +874,7 @@ curl -X PATCH \
 
 **Response**
 
-A successful response returns your connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
+A successful response returns your base connection ID and an updated etag. You can verify the update by making a GET request to the [!DNL Flow Service] API, while providing your connection ID.
 
 ```json
 {
@@ -885,7 +885,7 @@ A successful response returns your connection ID and an updated etag. You can ve
 
 ### Delete your connection
 
-Once you have an existing connection ID, perform a DELETE request to the [!DNL Flow Service] API.
+Once you have an existing base connection ID, perform a DELETE request to the [!DNL Flow Service] API.
 
 **API format**
 
@@ -895,7 +895,7 @@ DELETE /connections/{CONNECTION_ID}
 
 | Parameter | Description |
 | --------- | ----------- |
-| `{CONNECTION_ID}` | The unique `id` value for the connection you want to delete. |
+| `{BASE_CONNECTION_ID}` | The unique `id` value for the base connection you want to delete. |
 
 **Request**
 

@@ -82,36 +82,6 @@ The following response is an example of an empty generic REST connector connecti
         ]
       }
     },
-    {
-      "name": "API Key Authentication",
-      "type": "apiKey",
-      "attributes": {
-        "authParams": {
-          "addTo": "header"
-        }
-      },
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service.",
-        "properties": {
-          "keyName": {
-            "description": "apiKey name for authentication.",
-            "type": "string",
-            "default": "apiKey"
-          },
-          "value": {
-            "description": "apiKey value for authentication.",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "keyName",
-          "value"
-        ]
-      }
-    }
   ],
   "sourceSpec": {
     "attributes": {
@@ -285,36 +255,6 @@ The following payload is an example of a connection specification authored with 
         ]
       }
     },
-    {
-      "name": "API Key Authentication",
-      "type": "apiKey",
-      "attributes": {
-        "authParams": {
-          "addTo": "header"
-        }
-      },
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "description": "defines auth params required for connecting to rest service.",
-        "properties": {
-          "keyName": {
-            "description": "apiKey name for authentication.",
-            "type": "string",
-            "default": "apiKey"
-          },
-          "value": {
-            "description": "apiKey value for authentication.",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "keyName",
-          "value"
-        ]
-      }
-    }
   ],
   "sourceSpec": {
     "attributes": {
