@@ -14,7 +14,7 @@ exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 
 This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
 
-## Set up the [!DNL Marketo] namespace and schema auto-generation utility {#auto-generation}
+## Set up the [!DNL Marketo] namespace and schema auto-generation utility
 
 The first step in using the [!DNL Marketo] namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
 
