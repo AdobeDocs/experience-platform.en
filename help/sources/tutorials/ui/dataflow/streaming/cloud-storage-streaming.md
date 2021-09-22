@@ -35,7 +35,7 @@ After creating your authenticating your streaming cloud storage account, the **[
 - The left part of the interface is a browser that allows you to view the available data streams within your account;
 - The right part of the interface lets you preview up to 100 rows of data from a JSON file.
 
-![interface](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![interface](../../../../images/tutorials/dataflow/cloud-storage/streaming/interface.png)
 
 Select the data stream that you want to use, and then select **[!UICONTROL Choose file]** to upload a sample schema.
 
@@ -43,13 +43,13 @@ Select the data stream that you want to use, and then select **[!UICONTROL Choos
 >
 >If your data is XDM compliant, you can skip uploading a sample schema, and select **[!UICONTROL Next]** to proceed.
 
-![select-stream](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![select-stream](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-stream.png)
 
-Once your schema uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema. 
-
-![schema-preview](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+Once your schema uploads, the preview interface updates to display a preview of the schema you uploaded. The preview interface allows you to inspect the contents and structure of a file. You can also use the [!UICONTROL Search field] utility to access specific items from within your schema.
 
 When finished, select **[!UICONTROL Next]**.
+
+![schema-preview](../../../../images/tutorials/dataflow/cloud-storage/streaming/schema-preview.png)
 
 ## Mapping
 
@@ -61,35 +61,35 @@ Choose a dataset for inbound data to be ingested into. You can either use an exi
 
 To ingest data into a new dataset, select **[!UICONTROL New dataset]** and enter a name and description for the dataset in the fields provided. To add a schema, you can enter an existing schema name in the **[!UICONTROL Select schema]** dialog box. Alternatively, you can select **[!UICONTROL Schema advanced search]** to search for an appropriate schema.
 
-![new-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![new-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-dataset.png)
 
 The [!UICONTROL Select schema] window appears, providing you with a list of available schemas to choose from. Select a schema from the list to update the right-rail to display details specific to the schema you selected, including information on whether the schema is enabled for [!DNL Profile]. 
 
 Once you have identified and selected the schema you want to use, select **[!UICONTROL Done]**.
 
-![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![select-schema](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-schema.png)
 
 The [!UICONTROL Target dataset] page updates with your selected schema displayed as part of the dataset. During this step, you can enable your dataset for [!DNL Profile] and create a holistic view of an entity's attributes and behaviors. Data from all enabled datasets will be included in [!DNL Profile] and changes are applied when you save your dataflow.
 
 Toggle the **[!UICONTROL Profile dataset]** button to enable your target dataset for [!DNL Profile].
 
-![new-profile](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![new-profile](../../../../images/tutorials/dataflow/cloud-storage/streaming/new-profile.png)
 
 ### Existing dataset
 
 To ingest data into an existing dataset, select **[!UICONTROL Existing dataset]**, then select the dataset icon.
 
-![existing-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![existing-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-dataset.png)
 
 The **[!UICONTROL Select dataset]** dialog appears, providing you with a list of available datasets to choose from. Select a dataset from the list to update the right-rail to display details specific to the dataset you selected, including information on whether the dataset can be enabled for [!DNL Profile].
 
 Once you have identified and selected the dataset you want to use, select **[!UICONTROL Done]**.
 
-![select-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![select-dataset](../../../../images/tutorials/dataflow/cloud-storage/streaming/select-dataset.png)
 
 Once you select your dataset, select the [!DNL Profile] toggle to enable your dataset for [!DNL Profile].
 
-![existing-profile](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![existing-profile](../../../../images/tutorials/dataflow/cloud-storage/streaming/existing-profile.png)
 
 ### Map standard fields
 
@@ -103,7 +103,7 @@ Based on your needs, you can choose to map fields directly, or use data prep fun
 
 Once your source data is mapped, select **[!UICONTROL Next]**.
 
-![mapping](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![mapping](../../../../images/tutorials/dataflow/cloud-storage/streaming/mapping.png)
 
 ## Dataflow detail
 
@@ -111,7 +111,7 @@ The **[!UICONTROL Dataflow detail]** step appears, allowing you to name and give
 
 Provide values for the dataflow and select **[!UICONTROL Next]**.
 
-![dataflow-detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![dataflow-detail](../../../../images/tutorials/dataflow/cloud-storage/streaming/dataflow-detail.png)
 
 ### Review
 
@@ -122,7 +122,7 @@ The **[!UICONTROL Review]** step appears, allowing you to review your new datafl
 
 Once you have reviewed your dataflow, select **[!UICONTROL Finish]** and allow some time for the dataflow to be created.
 
-![review](../../../../images/tutorials/dataflow/cloud-storage/streaming/)
+![review](../../../../images/tutorials/dataflow/cloud-storage/streaming/review.png)
 
 ## Monitor and delete your dataflow
 
