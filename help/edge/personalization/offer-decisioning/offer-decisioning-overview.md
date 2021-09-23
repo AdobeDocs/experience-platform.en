@@ -8,7 +8,7 @@ exl-id: 4ab51f9d-3c44-4855-b900-aa2cde673a9a
 
 >[!NOTE]
 >
->The use of Offer Decisioning in Adobe Experience Platform Web SDK is currently available in early access to select users. This functionality is not available to all IMS organizations.
+>The use of Offer Decisioning in Adobe Experience Platform Web SDK is available in early access to select users. This functionality is not available to all IMS organizations.
 
 Adobe Experience Platform [!DNL Web SDK] can deliver and render personalized offers that are managed in Offer Decisioning. You can create your offers and other related objects using the Offer Decisioning user interface (UI) or APIs.
 
@@ -24,7 +24,7 @@ It is important to understand the following terminology when working with Offer 
 
 * **Container:** A container is an isolation mechanism to keep different concerns apart. The container ID is the first path element for all repository APIs. All decisioning objects reside within a container.
 
-* **Decision Scopes:** For Offer Decisioning, these are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
+* **Decision Scopes:** For Offer Decisioning, decision scopes are the Base64 encoded strings of JSON containing the activity and placement IDs you want the offer decisioning service to use to propose offers.
 
   *Decision scope JSON:*
 
@@ -49,11 +49,11 @@ It is important to understand the following terminology when working with Offer 
 
 * **Datastreams:** For more information, please read the [datastreams](../../fundamentals/datastreams.md) documentation.
 
-* **Identity**: For more information, please read this documentation outlining how [Platform Web SDK leverages Identity Service](../../identity/overview.md).
+* **Identity**: For more information, please read this documentation outlining how [Platform Web SDK uses Identity Service](../../identity/overview.md).
 
 ## Enabling Offer Decisioning
 
-To enable Offer Decisioning, you need to perform the following steps:
+To enable Offer Decisioning, perform the following steps:
 
 1. Enabled Adobe Experience Platform in your [datastream](../../fundamentals/datastreams.md) and check the "Offer Decisioning" box
 
@@ -80,7 +80,7 @@ To enable Offer Decisioning, you need to perform the following steps:
 
       1. [Create a tag property](../../../tags/ui/administration/companies-and-properties.md)
       1. [Add the embed code](https://experienceleague.adobe.com/docs/core-services-learn/implementing-in-websites-with-launch/configure-launch/launch-add-embed.html)
-      1. Install and configure the Platform Web SDK extension with the Datastream you just created by selecting the configuration from the "Datastream" drop down. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
+      1. Install and configure the Platform Web SDK extension with the Datastream you created by selecting the configuration from the "Datastream" dropdown. See the documentation on [extensions](../../../tags/ui/managing-resources/extensions/overview.md).
 
          ![install-aep-web-sdk-extension](./assets/install-aep-web-sdk-extension.png)
       
