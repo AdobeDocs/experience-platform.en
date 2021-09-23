@@ -153,10 +153,10 @@ In this example, if propositions are found on the server matching the `salutatio
         "meta": {}
       }
     ],
-        "scopeDetails": {
-          "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
-          "activity": {
-            "id": "384457"
+    "scopeDetails": {
+      "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+      "activity": {
+        "id": "384457"
       }
     },
     "renderAttempted": false
