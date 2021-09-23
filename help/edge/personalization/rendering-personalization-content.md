@@ -85,8 +85,8 @@ The `propositions` array may look similar to this example:
         "meta": {}
       }
     ],
-        "scopeDetails": {
-          ...
+    "scopeDetails": {
+      ...
     },
     "renderAttempted": false
   }
@@ -136,7 +136,7 @@ In this example, if propositions are found on the server matching the `salutatio
       "activity": {
         "id": "384456"
       }
-        },  
+    },  
     "renderAttempted": false
   },
   {
