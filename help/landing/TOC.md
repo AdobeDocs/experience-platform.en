@@ -9,6 +9,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
+* [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
