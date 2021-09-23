@@ -11,6 +11,12 @@ exl-id: a049b2d5-7a00-435d-bcc7-112658a53a1e
 
 ## September 23, 2021
 
+v3.2.1
+
+* Fixed an error where the conditional value data element view initialization was not working properly when the field values were 0.
+
+## September 23, 2021
+
 v3.2.0
 
 The following changes were introduced in the Conditional Value data element:
