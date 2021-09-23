@@ -3,16 +3,16 @@ keywords: Experience Platform;home;popular topics;Marketo source connector;names
 solution: Experience Platform
 title: B2B namespaces and schemas
 topic-legacy: overview
-description: This document provides an overview of custom namespaces required when creating a Marketo Engage source connector.
+description: This document provides an overview of custom namespaces required when creating a B2B source connector.
 exl-id: f1592be5-987e-41b8-9844-9dea5bd452b9
 ---
 # B2B namespaces and schemas
 
-This document provides information on the underlying set up for the B2B namespaces and schemas used with [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]"). This document also provides details around setting up your Postman automation utility required for generating [!DNL Marketo] B2B namespaces and schemas.
+This document provides information on the underlying set up for the namespaces and schemas to be used with B2B sources. This document also provides details around setting up your Postman automation utility required for generating B2B namespaces and schemas.
 
 ## Set up B2B namespaces and schema auto-generation utility
 
-The first step in using the [!DNL Marketo] namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
+The first step in using the B2B namespace and schema auto-generation utility is to set up your Platform developer console and [!DNL Postman] environment.
 
 - You can download the namespace and schema auto-generation utility collection and environment from this [GitHub repository](https://github.com/adobe/experience-platform-postman-samples/tree/master/Postman%20Collections/CDP%20Namespaces%20and%20Schemas%20Utility).
 - For information on using Platform APIs including details on how to gather values for required headers and read sample API calls, see the guide on [getting started with Platform APIs](../../../../landing/api-guide.md).
@@ -38,11 +38,6 @@ The following table contains example values as well as additional information on
 | `SANDBOX_NAME` | The name of the virtual sandbox partition that you are using. | `prod` |
 | `TENANT_ID` | An ID used to ensure that the resources you create are namespaced properly and are contained within your IMS Organization. | `b2bcdpproductiontest` |
 | `PLATFORM_URL` | The URL endpoint that you are making API calls to. This value is fixed and is always set to: `http://platform.adobe.io/`. | `http://platform.adobe.io/` |
-| `munchkinId` | The unique ID for your [!DNL Marketo] account. See the tutorial on [authenticating your [!DNL Marketo] instance](./marketo-auth.md) for information on how to retrieve your `munchkinId`. | `123-ABC-456` |
-| `sfdc_org_id` | The organization ID for your [!DNL Salesforce] account. See the following [[!DNL Salesforce] guide](https://help.salesforce.com/articleView?id=000325251&type=1&mode=1) for more information on acquiring your [!DNL Salesforce] organization ID. | `00D4W000000FgYJUA0` |
-| `msd_org_id` | The organization ID for your [!DNL Dynamics] account. See the following [[!DNL Microsoft Dynamics] guide](https://docs.microsoft.com/en-us/power-platform/admin/determine-org-id-name) for more information on acquiring your [!DNL Dynamics] organization ID. | `f6438fab-67e8-4814-a6b5-8c8dcdf7a98f` |
-| `has_abm` | A boolean value that indicates if you are subscribed to [!DNL Marketo Account-Based Marketing]. | `false` |
-| `has_msi` | A boolean value that indicates if you are subcscribed to [!DNL Marketo Sales Insight]. | `false` |
 
 {style="table-layout:auto"}
 
@@ -58,13 +53,11 @@ The [!DNL Runner] interface appears. From here, ensure that all the checkboxes a
 
 ![run-generator](../images/marketo/run-generator.png)
 
-A successful request creates the B2B namespaces and schemas according to beta specifications.
+A successful request creates the namespaces and schemas required for B2B.
 
 ## B2B namespaces
 
-Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context or type of an identity.
-
-A fully qualified identity includes an ID value and a namespace. A new custom namespace is required for every new [!DNL Marketo] instance and dataset combination. For example, a [!DNL Marketo] source connector ingesting the `campaign` dataset requires its own custom namespace, and another Marketo source connector ingesting the same dataset also requires its own new custom namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
+Identity namespaces are a component of [[!DNL Identity Service]](../../../../identity-service/home.md) that serve to distinguish the context or type of an identity. A fully qualified identity includes an ID value and a namespace. See the [namespaces overview](../../../../identity-service/namespaces.md) for more information.
 
 B2B namespaces are used in the primary identity of the entity.
 

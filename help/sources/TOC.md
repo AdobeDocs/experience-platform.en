@@ -20,10 +20,10 @@ feature: Data Ingestion, Sources
       - [Audience Manager field mappings](connectors/adobe-applications/mapping/audience-manager.md)
       - [Target field mappings](connectors/adobe-applications/mapping/target.md)
       - [Marketo Engage field mappings](connectors/adobe-applications/mapping/marketo.md)
-    - Marketo Engage {#marketo}
+    - B2B {#b2b}
       - [Marketo Engage connector](connectors/adobe-applications/marketo/marketo.md)
       - [Marketo Engage authentication guide](connectors/adobe-applications/marketo/marketo-auth.md)
-      - [Marketo Engage namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
+      - [B2B namespaces and schemas](connectors/adobe-applications/marketo/marketo-namespaces.md)
   - Advertising {#advertising}
     - [Google AdWords connector](connectors/advertising/ads.md)
   - Cloud storage {#cloud-storage}
