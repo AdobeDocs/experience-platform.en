@@ -65,8 +65,8 @@ The `propositions` array may look similar to this example:
         "meta": {}
       }
     ],
-        "scopeDetails": {
-         ...
+    "scopeDetails": {
+      ...
     },
     "renderAttempted": false
   },
