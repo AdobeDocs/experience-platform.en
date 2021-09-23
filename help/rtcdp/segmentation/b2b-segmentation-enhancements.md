@@ -28,7 +28,7 @@ Once these requirements have been met you are able to combine these attributes f
 
 ## Getting started
 
-Once the Union schemas that use B2B classes have data ingested and relationships established between them, the segmentation attributes will be available in the left rail. You can now create your own segments based on the following use cases.
+Once the union schemas that use B2B classes have data ingested and relationships established between them, the segmentation attributes will be available in the left rail. You can now create your own segments based on the following use cases.
 
 ## Examples of different use cases
 
@@ -38,7 +38,11 @@ The following use cases are available for segmentation with the B2B Edition.
 
 ### Example 1
 
-Find all the people who are the "Decision Maker" of any opportunity (Person - Opportunity Person Relation). This is achieved linking the Person class to the Opportunity Person Relation class. This shows how they are related to an opportunity.
+Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the Person class, and the Opportunity Person Relation class. This is achieved using a schema with Person class to the XDM Business Opportunity Person Relation class.
+
+![](../assets/segmentation/business-opportunity-person-relation-schema.png)
+
+The file path in the [!UICONTROL Attributes] side rail reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written break down of the segment's attributes. 
 
 ![](../assets/segmentation/decision-maker.png)
 
