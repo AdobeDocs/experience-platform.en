@@ -19,9 +19,9 @@ Connection specifications return a source's connector properties, including auth
 
 | Specs | Description |
 | --- | --- |
-| `authSpec` |
-| `sourceSpec` |
-| `exploreSpec` |
+| `authSpec` | The `authSpec` value contains information on the authentication parameters required to connect a source to Platform. Any given source can support multiple different types of authentication. |
+| `sourceSpec` | The `sourceSpec` value contains general information pertaining to a source, including information on attributes required to present the source in the UI, documentation link, and parameters regarding pagination, header, body, and scheduling. |
+| `exploreSpec` | The `exploreSpec` value defines a the file structure and contents of a source can be explored and inspected. This value also defines how response payloads are structured and formatted. |
 
 ### Connection specification example
 
@@ -33,6 +33,9 @@ The following payload contains an example of a generic REST connection specifica
   "name": "generic-rest-connector",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
   "version": "1.0",
+  "attributes": {
+    "category": "Cloud storage",
+    "isSource": "True"
   "authSpec": [
     {
       "name": "oAuth2-refresh-code",
@@ -282,6 +285,15 @@ The following payload contains an example of a generic REST connection specifica
 }
 
 ```
+
+| Source specifications | Description | Example |
+| --- | --- | --- |
+| `name` | The name of your source. | `mailchimp` |
+| `type` | 
+| `providerId` |
+| `version` |
+| `attributes.category` |
+| `attributes.isSource` |
 
 ## AuthSpecs
 
