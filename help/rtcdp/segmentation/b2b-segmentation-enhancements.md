@@ -1,41 +1,72 @@
 ---
-title: Tutorial of Segmentation Enhancements for Real-time CDP B2B Edition.
-description: Tutorial for Real-time CDP B2B Edition users through the new UI artifacts and flows for B2B specific use cases.
+title: Overview of Segmentation Enhancements for Real-time CDP B2B Edition.
+description: Overview for Real-time CDP B2B Edition users through the new UI artifacts and flows for B2B specific use cases.
 ---
-# Tutorial of Segmentation Enhancements for Real-time CDP B2B Edition
+# Overview of Segmentation Enhancements for Real-time Customer Data Platform B2B Edition
+
+<!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
 >[!IMPORTANT]
 >
 >The Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
 
-(This document shows all the different types of attributes that can be combined for common B2B use cases.)
+This document provides examples regarding the segmentation enhancements available for the Real-time CDP B2B Edition and how the different types of attributes that can be combined for common B2B use cases.
 
-This document provides guidance on the segmentation enhancements available for the Real-time CDP B2B Edition.
-
-This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468)
+>[!NOTE]
+>
+>These segmentation enhancements are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).
 
 ## Prerequisites
 
-The following pre-requisites are required to use the enhanced B2B segmentation attributes.
+Before you can use the enhanced segmentation attributes for B2B classes, you must complete the following steps:
 
-- Need to have schemas set up that use the B2B classes. These include: Account, Account Person Relation, Campaign, Campaign Members, Opportunity, Opportunity Person Relation, Marketing List, Marketing List Members. For documentation on [how to set up schemas with B2B classes](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html))
-- You can create segments based on these attribute however you will need relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on how to [create relationships between XDM B2B schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) for more information.
-- Data must be ingested to use with these segments. See the sources documentation for information on [how to ingest data](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html?lang=en). 
+- Create schemas that use the B2B classes. The B2B Edition classes include: Account, Account Person Relation, Campaign, Campaign Members, Opportunity, Opportunity Person Relation, Marketing List, Marketing List Members. For information on [how to set up schemas](../../xdm/home.md) with B2B classes please see the schema documentation.
+- [Create relationships between your XDM B2B schemas](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html). Segments based on these attributes require relationships between the classes to fully use the extended B2B Segmentation functionality.
+- Ingest data for use with these segments. See the sources documentation for information on [how to ingest data](../../sources/home.md). 
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
-Once the 'things' are set up the attributes will be available in the left rail. You can do the following 'things' with this stuff once you have it set up.
+## Getting started
+
+Once the Union schemas that use B2B classes have data ingested and relationships established between them, the segmentation attributes will be available in the left rail. You can now create your own segments based on the following use cases.
 
 ## Examples of different use cases
 
-The following use cases are available for segmentation. 
+The following use cases are available for segmentation with the B2B Edition. 
+
+<!-- short blurb explaining what the segment does, and then an accompanying screenshot to show how it’s built -->
 
 ### Example 1
 
-People who are the "Decision Maker" of any opportunity (Person - Opportunity Person Relation). This is achieved linking the Person class to the opportunity-person relation class. This shows how they are related to an opportunity.
+Find all the people who are the "Decision Maker" of any opportunity (Person - Opportunity Person Relation). This is achieved linking the Person class to the Opportunity Person Relation class. This shows how they are related to an opportunity.
 
 ![](../assets/segmentation/decision-maker.png)
 
 ### Example 2
 
-People who are directly assigned to any opportunities of which the opportunity amount is more than the given amount. This segment requires a link between the Person class, the Opportunity-Person Relation class, and the Opportunity class.
+Find all the people who are directly assigned to any opportunities of which the opportunity amount is more than the given amount ($1 million). This segment requires a link between the Person class, the Opportunity Person Relation class, and the Opportunity class.
+
+### Example 3
+
+Find all the people who are directly assigned to any opportunities where the account is located in "Canada". This segment requires a link between the Person class, the Opportunity Person Relation class, the Opportunity class, and the Account class.
+
+### Example 4
+
+Find all the people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry, and visited the pricing page in the last three days. This segment requires a link between the Person class, the Opportunity Person Relation class, the Opportunity class, and the Account class, and the XDM ExperienceEvent class.
+
+### Example 5
+
+Find all the people who work in an "HR" department and are related to any account that has at least one open opportunity worth $1 million or more. This segment requires a link between the Person class, the Account class, and the Opportunity class.
+
+### Example 6
+
+Find all the people who are VP and are related to any account with annual revenue of 100 millions or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the Person class, the Account class, and the XDM ExperienceEvent class.
+
+### Example 7
+
+Find all the people who are a "Decision Maker" of any closed-lost opportunity, and visited the pricing page in the last week. This segment requires a link between the Person class, the Opportunity Person Relation class, the
+Opportunity class, and the XDM ExperienceEvent class.
+
+## Next steps
+
+After reading this overview, you now have an understanding of the segmentation possibilities that are available using the Real-time CDP B2B Edition. For more information about the Segmentation Service, please read the [Segmentation documentation](../../segmentation/home.md).
