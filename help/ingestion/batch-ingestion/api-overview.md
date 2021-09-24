@@ -183,7 +183,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
-                "format": "Parquet"
+                "format": "parquet"
            }
       }'
 ```
@@ -247,13 +247,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 >This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet \
+curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key : {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  --data-binary "@{FILE_PATH_AND_NAME}.Parquet"
+  --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
 | Parameter | Description |
@@ -324,7 +324,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
-             "format": "Parquet"
+             "format": "parquet"
            }
       }'
 ```
@@ -384,7 +384,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 **Request**
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet?action=INITIALIZE \
+curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=INITIALIZE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
@@ -420,14 +420,14 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 >This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet \
+curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'Content-Range: bytes {CONTENT_RANGE}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  --data-binary "@{FILE_PATH_AND_NAME}.Parquet"
+  --data-binary "@{FILE_PATH_AND_NAME}.parquet"
 ```
 
 | Parameter | Description |
@@ -461,7 +461,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 **Request**
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet?action=COMPLETE \
+curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
