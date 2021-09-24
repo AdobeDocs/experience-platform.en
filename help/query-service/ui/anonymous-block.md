@@ -61,3 +61,50 @@ SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_de
 ```
 
 ## Up to 15:28
+
+then the second statement stores the snapshot ID as a varaible for use:
+
+```
+SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
+```
+
+By keeping track of the last snapshot ID that was successful and comparing this to the current snapshot ID, the system knows that with respect to the last success that was done and the current success that that has happened, how many incremental rows are required for processing.
+
+this is captured in the line :
+
+```
+select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
+```
+
+## New use case
+
+Whenever a data set is getting appended with new datasets, this query pattern provides a method for the end user to do incremental loading. Which is a big optimization to improve performance and save costs.
+
+If new data is being added to the dataset via a pipeline and I need to update the resultant dataset. This feature allows you to only process the deltas and propagate the deltas in rather than the entire data set.
+
+The system takes deltas on input goes through a sequence of operations and delta on output, and then that is appended to the output dataset.
+ 
+## use case summary
+
+if you have gotten input data set and you're adding new rows to that data set, the output dataset that is to be processed (like the results) depend on these extra rows that were added, not the entire row dataset. In that case it won't work. This won't work, it will not be enough, it's only deltas.
+
+Each of the rows are disjointed from each other.
+And in that case, the incremental load and the incremental processing is a very valuable tool as you will only be processing a fraction of the records that you otherwise would.
+
+
+The anonymous block does not need to be used with the snaphot feature, it can be used for other processing goals. It can be used for other purposes beyond incremental loading.
+
+(Incremental load is a design pattern)
+
+### differnt tangent
+
+`SET` is for setting a local variable.
+It is used in the anonymus block to set the response from a query as a local variable.
+
+{I can put in Cetus statements like I can create datasets where I purchased the results on the lake. But what you're saying is that I can also take the results of a select query and temporarily assign it to a local variable called. As you know this snapshot ID for example right and then I can reuse it. I can reuse it in the in the beginning thing,}
+
+`SET` is used to persist the result of a select query with a variable.
+
+**NOTE** The Examples are technically accurate but the table names will need to be replaced with placeholders.
+
+PK might be able to build a simple example in one of the sandboxes and show that - MSG PK and ask
