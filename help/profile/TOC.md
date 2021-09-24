@@ -40,7 +40,6 @@ feature: Profiles
   * [Add data to Real-time Customer Profile](tutorials/add-profile-data.md)
   * [Configure a dataset for Profile](tutorials/dataset-configuration.md)
   * [Generate the dataset overlap report](tutorials/dataset-overlap-report.md)
-  * [Update profiles incrementally](tutorials/update-profile-data.md)
   * [More tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [Privacy request processing](privacy.md)
 * [[!DNL Profile] troubleshooting guide](troubleshooting.md)

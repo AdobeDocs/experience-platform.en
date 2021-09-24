@@ -97,11 +97,16 @@ In order to drive coordinated, consistent, and personalized experiences for your
 
 Observability Insights allows you to expose key metrics in Adobe Experience Platform. In addition to [!DNL Experience Platform] usage statistics and performance indicators for various [!DNL Platform] functionalities, there are specific profile-related metrics that allow you to gain insight into incoming request rates, successful ingestion rates, ingested record sizes, and more. To learn more, begin by reading the [Observability Insights API overview](../observability/api/overview.md), and for a complete list of Real-time Customer Profile metrics, see the documentation on [available metrics](../observability/api/metrics.md#available-metrics).
 
+## Update Profile Store data
+
+Occasionally it may be necessary to incrementally update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to incrementally update profiles, please refer to the tutorial for [enabling a dataset for Profile and upsert](../catalog/datasets/enable-upsert.md).
+
 ## [!DNL Data governance] and [!DNL Privacy]
 
 [!DNL Data governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
+
 *   Data usage labeling 
 *   Data access policies 
 *   Access control on data for marketing actions

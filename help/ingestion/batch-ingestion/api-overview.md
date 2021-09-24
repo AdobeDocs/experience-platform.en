@@ -15,43 +15,7 @@ The appendix to this document provides information for [formatting data to be us
 
 The API endpoints used in this guide is part of the [Data Ingestion API](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). Data ingestion provides a RESTful API through which you can perform basic CRUD operations against the supported object types.
 
-Before continuing, please review the [getting started guide](getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
-
-## Types
-
-When ingesting data, it is important to understand how [!DNL Experience Data Model] (XDM) schemas work. For more information about how XDM field types map to different formats, please read the [Schema Registry developer guide](../../xdm/api/getting-started.md).
-
-There is some flexibility when ingesting data - if a type does not match what is in the target schema, the data will be converted to the expressed target type. If it cannot, it will fail the batch with a `TypeCompatibilityException`. 
-
-For example, neither JSON nor CSV has a `date` or `date-time` type. As a result, these values are expressed using [ISO 8061 formatted strings](https://www.iso.org/iso-8601-date-and-time-format.html) ("2018-07-10T15:05:59.000-08:00") or Unix Time formatted in milliseconds (1531263959000) and are converted at ingestion time to the target XDM type.
-
-The table below shows the conversions supported when ingesting data.
-
-| Inbound (row) vs Target (col) | String  | Byte  | Short  | Integer  | Long  | Double  | Date  | Date-Time | Object | Map |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| String    | X | X | X | X | X | X | X | X |   |   |
-| Byte      | X | X | X | X | X | X |   |   |   |   |
-| Short     | X | X | X | X | X | X |   |   |   |   |
-| Integer   | X | X | X | X | X | X |   |   |   |   |
-| Long      | X | X | X | X | X | X | X | X |   |   |
-| Double    | X | X | X | X | X | X |   |   |   |   |
-| Date      |   |   |   |   |   |   | X |   |   |   |
-| Date-Time |   |   |   |   |   |   |   | X |   |   |
-| Object    |   |   |   |   |   |   |   |   | X | X |
-| Map       |   |   |   |   |   |   |   |   | X | X |
-
->[!NOTE]
->
->Booleans and arrays cannot be converted to other types.
-
-## Ingestion constraints
-
-Batch data ingestion has some constraints:
-
-- Maximum number of files per batch: 1500
-- Maximum batch size: 100 GB
-- Maximum number of properties or fields per row: 10000
-- Maximum number of batches per minute, per user: 138
+Before continuing, please review the [batch ingestion API overview](overview.md) and the [getting started guide](getting-started.md). 
 
 ## Ingest JSON files
 
@@ -197,7 +161,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID
 200 OK
 ```
 
-## Ingest Parquet files
+## Ingest Parquet files {#ingest-parquet-files}
 
 >[!NOTE]
 >
@@ -219,7 +183,7 @@ curl -X POST "https://platform.adobe.io/data/foundation/import/batches" \
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
-                "format": "parquet"
+                "format": "Parquet"
            }
       }'
 ```
@@ -283,13 +247,13 @@ PUT /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 >This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
-curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
+curl -X PUT https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key : {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  --data-binary "@{FILE_PATH_AND_NAME}.parquet"
+  --data-binary "@{FILE_PATH_AND_NAME}.Parquet"
 ```
 
 | Parameter | Description |
@@ -360,7 +324,7 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches \
   -d '{
           "datasetId": "{DATASET_ID}",
            "inputFormat": {
-             "format": "parquet"
+             "format": "Parquet"
            }
       }'
 ```
@@ -420,7 +384,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 **Request**
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=INITIALIZE \
+curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet?action=INITIALIZE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
@@ -456,14 +420,14 @@ PATCH /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 >This API supports single-part upload. Ensure that the content-type is application/octet-stream.
 
 ```shell
-curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet \
+curl -X PATCH https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'Content-Type: application/octet-stream' \
   -H 'Content-Range: bytes {CONTENT_RANGE}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
-  --data-binary "@{FILE_PATH_AND_NAME}.parquet"
+  --data-binary "@{FILE_PATH_AND_NAME}.Parquet"
 ```
 
 | Parameter | Description |
@@ -497,7 +461,7 @@ POST /batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}
 **Request**
 
 ```shell
-curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.parquet?action=COMPLETE \
+curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}/datasets/{DATASET_ID}/files/{FILE_NAME}.Parquet?action=COMPLETE \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-api-key: {API_KEY}' \
@@ -779,6 +743,21 @@ curl -X POST https://platform.adobe.io/data/foundation/import/batches/{BATCH_ID}
 ```http
 200 OK
 ```
+
+## Patch a batch
+
+Occasionally it may be necessary to incrementally update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. Adobe Experience Platform supports the update or patch of Profile Store data through an upsert action or "patching a batch".
+
+>[!NOTE]
+>
+>These updates are allowed only on profile records, not experience events.
+
+The following is required in order to patch a batch:
+
+- **A dataset enabled for Profile and incremental updates.** This is done through dataset tags and requires a specific `isUpsert:true` tag be added to the `unifiedProfile` array. For details steps showing how to create a dataset or configure an existing dataset for upsert, follow the tutorial for [enabling a dataset for Profile updates](../../catalog/datasets/enable-upsert.md).
+- **A Parquet file containing the fields to be patched and identity fields for the Profile.** The data format for patching a batch is similar to the regular batch ingestion process. The input required is a Parquet file, and in addition to the fields to be updated, the uploaded data must contain the identity fields in order to match the data in the Profile Store.
+
+Once you have a dataset enabled for Profile and upsert, and a Parquet file containing the fields you wish to patch as well the necessary identity fields, you can follow the steps for [ingesting Parquet files](#ingest-parquet-files) in order to complete the patch via batch ingestion.
 
 ## Replay a batch
 

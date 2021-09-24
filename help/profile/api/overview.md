@@ -54,7 +54,7 @@ Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DN
 
 ## Update profiles incrementally {#update-profile}
 
-Profiles within Experience Platform can be updated incrementally in order to change only the values for select attributes. This can be done through batch or streaming ingestion and requires an upsert tag to be included in a Profile-enabled dataset. For more information on how to incrementally update profiles, please refer to the tutorial for [updating profile data](../tutorials/update-profile-data.md).
+Occasionally it may be necessary to incrementally update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to incrementally update profiles, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Next steps {#next-steps}
 
