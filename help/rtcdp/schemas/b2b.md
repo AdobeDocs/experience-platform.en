@@ -8,7 +8,7 @@ Real-time Customer Data Platform B2B Edition provides several standard [Experien
 
 The following standard classes are provided in Real-time CDP B2B Edition:
 
-<!-- !!PLACEHOLDER Links to be added later -->
+<!-- #PLACEHOLDER Links to be added later -->
 
 * XDM Business Account
 * XDM Business Account Person Relation
@@ -19,6 +19,6 @@ The following standard classes are provided in Real-time CDP B2B Edition:
 * XDM Business Marketing List
 * XDM Business Marketing List Members
 
-For steps on how to create a many-to-one relationship between two schemas, refer to the tutorial on [!!PLACEHOLDER defining B2B schema relationships].
+For steps on how to create a many-to-one relationship between two schemas, refer to the tutorial on [#PLACEHOLDER defining B2B schema relationships].
 
 If you are using a B2B source connection, you can use a tool to automatically generate the required schemas and the relationships between them. See the guide on [B2B namespaces](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md) in the sources documentation for more information.
