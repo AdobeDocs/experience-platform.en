@@ -117,24 +117,24 @@ The following response is an example of an empty generic REST connector connecti
         "offSetName": "The offset name. Currently, offset is the only supported pagination type."
       },
       "scheduleParams": {
-        "scheduleStartParamName": "{SCHEDULE_START_PARAM_NAME}",
-        "scheduleEndParamName": "{SCHEDULE_END_PARAM_NAME}",
-        "scheduleStartParamFormat": "{SCHEDULE_START_PARAM_FORMAT}",
-        "scheduleEndParamFormat": "{SCHEDULE_END_PARAM_FORMAT}"
+        "scheduleStartParamName": "Defines the starting point for when data reading begins. ",
+        "scheduleEndParamName": "Defines the point for when the data reading ends.",
+        "scheduleStartParamFormat": "Defines the supported format for scheduleStartParamName.",
+        "scheduleEndParamFormat": "Defines the supported format for scheduleEndParamName"
       }
     },
     "spec": {
       "$schema": "http://json-schema.org/draft-07/schema#",
       "type": "object",
-      "description": "defines static and user input parameters to fetch resource values.",
+      "description": "Defines static and user input parameters to fetch resource values.",
       "properties": {
         "domain": {
           "type": "string",
-          "description": "domain name of client server."
+          "description": "The domain name of client server."
         },
         "listId": {
           "type": "string",
-          "description": "listId for which members need to fetch."
+          "description": "The listId for which members need to fetch."
         }
       }
     }
@@ -272,7 +272,7 @@ The following payload is an example of a connection specification authored with 
         },
         "listId": {
           "type": "string",
-          "description": "listId for which memebers need to fetch."
+          "description": "listId for which members need to fetch."
         }
       }
     }
