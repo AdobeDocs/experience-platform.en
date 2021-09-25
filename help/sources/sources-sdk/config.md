@@ -23,6 +23,8 @@ Connection specifications return a source's connector properties, including auth
 | `sourceSpec` | The `sourceSpec` array contains general information pertaining to a source, including information on attributes required to present the source in the UI, documentation link, and parameters regarding pagination, header, body, and scheduling. Furthermore, `sourceSpec` describes the schema of the parameters required to create a source connection from a base connection, and is necessary in order to create a source connection. |
 | `exploreSpec` | The `exploreSpec` array defines the parameters required for exploring and inspecting objects contained in your source. The `exploreSpec` also defines the response format returned when objects are explored and inspected. |
 
+{style="table-layout:auto"}
+
 The following is an example of a connection specification that supports OAuth 2 refresh code authentication.
 
 ```json
@@ -41,45 +43,11 @@ The following is an example of a connection specification that supports OAuth 2 
       "spec": {
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
-        "description": "defines auth params required for connecting to rest service using authorization flow.",
-        "links": [
-          {
-            "rel": "specificationLink",
-            "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
-          }
-        ],
         "properties": {
-          "clientId": {
-            "description": "Client id of user account.",
-            "type": "string"
-          },
-          "clientSecret": {
-            "description": "Client secret of user account.",
-            "type": "string",
-            "format": "password"
-          },
           "accessToken": {
             "description": "Access Token",
             "type": "string",
             "format": "password"
-          },
-          "refreshToken": {
-            "description": "Refresh Token",
-            "type": "string",
-            "format": "password"
-          },
-          "expirationDate": {
-            "description": "Date when token will expire",
-            "type": "string",
-            "format": "date"
-          },
-          "refreshTokenUrl": {
-            "description": "Access token url to fetch access token.",
-            "type": "string"
-          },
-          "requestParameterOverride": {
-            "description": "Access token url to fetch access token.",
-            "type": "object"
           }
         },
         "required": [
@@ -178,36 +146,6 @@ The following is an example of a connection specification that supports OAuth 2 
               }
             }
           },
-          {
-            "name": "pointer",
-            "type": "pointer",
-            "spec": {
-              "$schema": "http://json-schema.org/draft-07/schema#",
-              "type": "object",
-              "properties": {
-                "limitName": {
-                  "type": "string",
-                  "description": "limit property name",
-                  "example": "limit or count"
-                },
-                "limitValue": {
-                  "type": "integer",
-                  "description": "number of records per page to fetch.",
-                  "example": "limit=10 or count=10"
-                },
-                "pointerName": {
-                  "type": "string",
-                  "description": "pointer property name",
-                  "example": "pointer"
-                },
-                "pointerValue": {
-                  "type": "integer",
-                  "description": "pointer next value.",
-                  "example": "$.body.paging.next"
-                }
-              }
-            }
-          }
         ],
         "scheduleParams": {
           "name": "scheduling",
@@ -287,11 +225,12 @@ The following is an example of a connection specification that supports OAuth 2 
 | Source specifications | Description | Example |
 | --- | --- | --- |
 | `name` | The name of your source. | `mailchimp` |
-| `type` | 
 | `providerId` | The ID of the provider. This value is auto-generated. | `0ed90a81-07f4-4586-8190-b40eccef1c5a` |
 | `version` | The version of the queried connection specification. | `1.0` |
 | `attributes` | A generic, searchable key-value pair map that contains more information regarding a source. |
 | `attributes.category` | Defines the category of the source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+
+{style="table-layout:auto"}
 
 ## Authentication specifications {#auth}
 
@@ -301,58 +240,43 @@ The following is an example of OAuth 2 refreshCode authentication type:
 
 ```json
 {
-  "name": "oAuth2-refresh-code",
-  "type": "oAuth2-refresh-code",
-  "spec": {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "description": "defines auth params required for connecting to rest service using authorization flow.",
-    "links": [
-      {
-        "rel": "specificationLink",
-        "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
-      }
-    ],
-    "properties": {
-      "clientId": {
-        "description": "Client id of user app. Needed to generate accessToken post its expiry.",
-        "type": "string"
-      },
-      "clientSecret": {
-        "description": "Client secret of user app. Needed to generate accessToken post its expiry.",
-        "type": "string",
-        "format": "password"
-      },
-      "accessToken": {
-        "description": "Access Token",
-        "type": "string",
-        "format": "password"
-      },
-      "refreshToken": {
-        "description": "Refresh Token. Needed to generate accessToken once it expires.",
-        "type": "string",
-        "format": "password"
-      },
-      "expirationDate": {
-        "description": "Date when accessToken will expire",
-        "type": "string",
-        "format": "date"
-      },
-      "refreshTokenUrl": {
-        "description": "Refresh token url to fetch refresh token.",
-        "type": "string"
-      },
-      "accessTokenUrl": {
-        "description": "Access token url to fetch access token.",
-        "type": "object"
+  "authSpec": [
+    {
+      "name": "oAuth2-refresh-code",
+      "type": "oAuth2-refresh-code",
+      "spec": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "accessToken": {
+            "description": "Access Token",
+            "type": "string",
+            "format": "password"
+          }
+        },
+        "required": [
+          "accessToken"
+        ]
       }
     },
-    "required": [
-      "accessToken"
-    ]
-  }
+  ],
 }
 ```
+
+| Authentication specifications | Description | Example |
+| --- | --- | --- |
+| `authSpec.name` | Displays the name of the supported authentication type. | `oAuth2-refresh-code` |
+| `authSpec.type` | Defines the type of authentication supported by the source. | `oAuth2-refresh-code` |
+| `authSpec.spec` | Contains information on the authentication's schema, data type, and properties. |
+| `authSpec.spec.$schema` | Defines the schema used for the authentication. | `http://json-schema.org/draft-07/schema#` |
+| `authSpec.spec.type` | Defines the data type of the schema. | `object` |
+| `authSpec.spec.properties` | Contains information on the credentials used for the authentication. |
+| `authSpec.spec.properties.description` | Displays a brief description on the credential. |
+| `authSpec.spec.properties.type` | Defines the data type of the credential. | `string` |
+| `authSpec.spec.properties.format` | Defines the format of the credential. | `format` |
+| `authSpec.spec.required` | Displays the credentials required in order to authenticate. | `accessToken` |
+
+{style="table-layout:auto"}
 
 ## Source specifications {#source}
 
@@ -450,36 +374,6 @@ Source specifications contain information specific to a source, including attrib
               }
             }
           },
-          {
-            "name": "pointer",
-            "type": "pointer",
-            "spec": {
-              "$schema": "http://json-schema.org/draft-07/schema#",
-              "type": "object",
-              "properties": {
-                "limitName": {
-                  "type": "string",
-                  "description": "limit property name",
-                  "example": "limit or count"
-                },
-                "limitValue": {
-                  "type": "integer",
-                  "description": "number of records per page to fetch.",
-                  "example": "limit=10 or count=10"
-                },
-                "pointerName": {
-                  "type": "string",
-                  "description": "pointer property name",
-                  "example": "pointer"
-                },
-                "pointerValue": {
-                  "type": "integer",
-                  "description": "pointer next value.",
-                  "example": "$.body.paging.next"
-                }
-              }
-            }
-          }
         ],
         "scheduleParams": {
           "name": "scheduling",
@@ -515,20 +409,20 @@ Source specifications contain information specific to a source, including attrib
 
 | Source specifications | Description | Example |
 | --- | --- | --- |
-| `sourceSpec.attributes` | Defines information on the source specific to the UI or API. |
+| `sourceSpec.attributes` | Contains information on the source specific to the UI or API. |
 | `sourceSpec.attributes.uiAttributes` | Displays information on the source specific to the UI. |
 | `sourceSpec.attributes.uiAttributes.documentationLink` | Displays the documentation link where the usage of this source is documented. | `wwww.adobe.com/go/sources-mailchimp-en` |
-| `sourceSpec.attributes.uiAttributes.isBeta` | This is a boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | <ul><li>`true`</li><li>`false`</li></ul> |
-| `sourceSpec.attributes.uiAttributes.category` | Defines the category of  the source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.isBeta` | A boolean attribute that indicates whether the source requires more feedback from customers to add to its functionality. | <ul><li>`true`</li><li>`false`</li></ul> |
+| `sourceSpec.attributes.uiAttributes.category` | Defines the category of the source. | <ul><li>`advertising`</li><li>`cloud storage`</li><li>`crm`</li><li>`customer success`</li><li>`database`</li><li>`ecommerce`</li><li>`marketing automation`</li><li>`payments`</li><li>`protocols`</li><li>`streaming`</li></ul> |
 | `sourceSpec.attributes.uiAttributes.icon` | Defines the icon used for the rendering of the source in the Platform UI. | `mailchimp-icon.svg` |
 | `sourceSpec.attributes.uiAttributes.label` | Displays the label to be used for the rendering of the source in the Platform UI. |
 | `sourceSpec.attributes.uiAttributes.description` | Displays a brief description of the source. |
 | `sourceSpec.attributes.urlParams.hostName` | Defines the `hostName` of the endpoint to fetch data from. If there are any params in this attribute that you need to acquire from the end user, you can specify it as a template enclosed in (`{{PARAMS}}`). | `https://{{HOST_NAME}}.api.mailchimp.com` |
 | `sourceSpec.attributes.urlParams.path` | Defines the resource path from where to fetch the data from. | `/3.0/lists/{{LIST_ID}}/members` |
 | `sourceSpec.attributes.urlParams.method` | Defines the HTTP method to be used to make the request to the source to fetch data. | `GET`, `POST` |
-| `sourceSpec.attributes.contentPath` | Defines the node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
+| `sourceSpec.attributes.contentPath` | Defines the node that contains the list of items required to be ingested to Platform. This attribute should follow JSON path syntax. | See the [appendix](#appendix) for a detailed example of the `$.members` attribute. |
 | `sourceSpec.attributes.queryParams` | Defines the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
-| `sourceSpec.attributes.headerParams` | Defines comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
+| `sourceSpec.attributes.headerParams` | Defines the comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
 | `sourceSpec.attributes.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
 | `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
@@ -536,6 +430,7 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
 
+{style="table-layout:auto"}
 
 ## Explore specifications
 
@@ -593,27 +488,21 @@ Explore specifications defines the parameters required for exploring and inspect
 | `name` | Defines the name or identifier of the explore specification. | `Resource` |
 | `type` | Defines the type of the explore specification. | `Resource` |
 | `requestSpec` | Contains the parameters required to explore objects in the connection. |
-| `requestSpec.$schema` | |
+| `requestSpec.$schema` | Defines the schema used for the request specification. | `http://json-schema.org/draft-07/schema#` |
 | `requestSpec.type` | Defines the data type of the request specification. | `object` |
 | `responseSpec` | Contains the parameters that define the format of the response message returned against an explore call. |
-| `responseSpec.$schema` | |
+| `responseSpec.$schema` | Defines the schema used for the response specification. | `http://json-schema.org/draft-07/schema#` |
 | `responseSpec.type` | Defines the data type of the response specification. | `object` |
 | `responseSpec.properties` | Contains information pertaining to how the response message is formatted. |
-| `responseSpec.properties.format` | |
-| `responseSpec.properties.format.type` | |
+| `responseSpec.properties.format` | Defines the formatting of the response schema. | `object` |
+| `responseSpec.properties.format.type` | Defines the data type of properties. | `string` |
 | `responseSpec.schema` | Contains information pertaining to how the response schema is formatted. |
 | `responseSpec.schema.type`  | Defines the data type of the schema. | `object` |
-| `responseSpec.schema.properties` | |
-| `responseSpec.schema.properties.columns` | |
-| `responseSpec.schema.properties.columns.type` | |
-| `responseSpec.schema.properties.columns.items` | |
-| `responseSpec.schema.properties.columns.items.type` | |
-| `responseSpec.schema.properties.columns.items.properties` | |
-| `responseSpec.schema.properties.columns.items.properties.name` | |
-| `responseSpec.schema.properties.columns.items.properties.name.type` | |
-| `responseSpec.schema.properties.columns.items.properties.type` | |
-| `responseSpec.data` | |
-| `responseSpec.data.type` | |
+| `responseSpec.schema.properties` | Contains information on the columns, type, and items held within a schema. |
+| `responseSpec.schema.properties.columns.items.properties.name` | Displays the name of the file. |
+| `responseSpec.schema.properties.columns.items.properties.name.type` | Defines the data type of the file name. | `string` |
+
+{style="table-layout:auto"}
 
 ## Appendix {#appendix}
 
