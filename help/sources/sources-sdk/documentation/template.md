@@ -420,9 +420,6 @@ curl -X POST \
 | `mappings.destinationXdmPath` | The destination XDM path where the source attribute is being mapped to. |
 | `mappings.sourceAttribute` | The source attribute that needs to be mapped to a destination XDM path. |
 | `mappings.identity` | A boolean value that designates whether the mapping set will be marked for [!DNL Identity Service]. |
-| `mappings.identityGroup` |
-| `mappings.namespaceCode` |
-| `mappings.version` |
 
 **Response**
 
