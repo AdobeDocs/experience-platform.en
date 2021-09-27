@@ -39,7 +39,7 @@ alloy("sendEvent", {
     xdm: {}
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -65,6 +65,9 @@ The `propositions` array may look similar to this example:
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   },
   {
@@ -82,6 +85,9 @@ The `propositions` array may look similar to this example:
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      ...
+    },
     "renderAttempted": false
   }
 ]
@@ -101,7 +107,7 @@ alloy("sendEvent", {
     decisionScopes: ['salutation', 'discount']
   }).then(function(result) {
     if (result.propositions) {
-      // Manually render propositions
+      // Manually render propositions and send "display" event
     }
   });
 ```
@@ -125,6 +131,12 @@ In this example, if propositions are found on the server matching the `salutatio
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:cZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ2",
+      "activity": {
+        "id": "384456"
+      }
+    },  
     "renderAttempted": false
   },
   {
@@ -141,6 +153,12 @@ In this example, if propositions are found on the server matching the `salutatio
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:FZJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ0",
+      "activity": {
+        "id": "384457"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -158,6 +176,12 @@ In this example, if propositions are found on the server matching the `salutatio
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   },
   {
@@ -175,6 +199,12 @@ In this example, if propositions are found on the server matching the `salutatio
         "meta": {}
       }
     ],
+    "scopeDetails": {
+      "id": "AT:PyJhY3Rpdml0eUlkIjoiMTI3MDE5IiwiZXhwZXJpZW5jZUlkIjoiMCJ8",
+      "activity": {
+        "id": "384459"
+      }
+    },
     "renderAttempted": false
   }
 ]
@@ -186,6 +216,7 @@ At this point, you can render proposition content as you see fit. In this exampl
 1. Loop through each proposition, looking for the proposition with a scope of `discount`.
 1. If you find a proposition, loop through each item in the proposition, looking for the item that is HTML content. (It's better to check than to assume.)
 1. If you find an item containing HTML content, find the `daily-special` element on the page and replace its HTML with the personalized content.
+1. After the content is rendered, send a `display` event.
 
 Your code would look as follows:
 
@@ -218,15 +249,31 @@ alloy("sendEvent", {
       var discountPropositionItem = discountProposition.items[i];
       if (discountPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
         discountHtml = discountPropositionItem.data.content;
-        break;
+        // Render the content
+        var dailySpecialElement = document.getElementById("daily-special");
+        dailySpecialElement.innerHTML = discountHtml;
+        
+        // For this example, we assume there is only a signle place to update in the HTML.
+        break;  
       }
     }
-  }
-
-  if (discountHtml) {
-    // Discount HTML exists. Time to render it.
-    var dailySpecialElement = document.getElementById("daily-special");
-    dailySpecialElement.innerHTML = discountHtml;
+      // Send a "display" event 
+    alloy("sendEvent", {
+      xdm: {
+        eventType: "display",
+        _experience: {
+          decisioning: {
+            propositions: [
+              {
+                id: discountProposition.id,
+                scope: discountProposition.scope,
+                scopeDetails: discountProposition.scopeDetails
+              }
+            ]
+          }
+        }
+      }
+    });
   }
 });
 ```
