@@ -10,7 +10,7 @@ description: Overview of the various Real-time CDP B2B Edition use cases availab
 >
 >The Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
 
-This document provides examples regarding the segmentation available for the Real-time CDP B2B Edition and how the different types of attributes that can be combined for common B2B use cases.
+This document provides examples regarding the segmentation available for the Real-time CDP B2B Edition and how the different types of attributes can be combined for common B2B use cases.
 
 >[!NOTE]
 >
@@ -20,7 +20,7 @@ This document provides examples regarding the segmentation available for the Rea
 
 Before you can use the segmentation attributes for B2B classes, you must complete the following steps:
 
-- Create schemas that use the B2B classes. The B2B Edition classes include: Account, Account Person Relation, Campaign, Campaign Members, Opportunity, Opportunity Person Relation, Marketing List, Marketing List Members. For information on how to set up schemas for use with B2B classes please see the schema documentation.
+- Create schemas that use the B2B classes. The B2B Edition classes include Account, Account Person Relation, Campaign, Campaign Members, Opportunity, Opportunity Person Relation, Marketing List, Marketing List Members. For information on how to set up schemas for use with B2B classes please see the schema documentation.
   <!-- [PLACEHOLDER how to set up schemas for use with B2B classes]()] -->
 - Create relationships between your XDM B2B schemas. Segments based on these attributes require relationships between the classes to fully use the extended B2B Segmentation functionality.
   <!-- [PLACEHOLDER Create relationships between your XDM B2B schemas]() -->
@@ -35,7 +35,7 @@ Once the union schemas that use B2B classes have data ingested and relationships
 
 ## Examples of different use cases
 
-The following use cases are available for segmentation with the B2B Edition. Each example will provide a description of what the segment does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflect the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written break down of the segment's attributes. 
+The following use cases are available for segmentation with the B2B Edition. Each example will provide a description of what the segment does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the segment's attributes. 
 
 See the documentation on the schema auto generation utility for for use cases that require [relations between schemas](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 <!-- [possible PLACEHOLDER] -->
@@ -44,7 +44,7 @@ See the documentation on the schema auto generation utility for for use cases th
 
 ### Example 1
 
-Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the Person class, and the Opportunity Person Relation class. 
+Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the Person class and the Opportunity Person Relation class. 
 
 ![UI displaying example 1 settings](../assets/segmentation/decision-maker.png)
 
@@ -68,13 +68,13 @@ Find all the people who are a "Decision Maker" of any opportunity where the acco
 
 ### Example 5
 
-Find all the people who work in a "HR" department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the Person class, the Account class, and the Opportunity class.
+Find all the people who work in a Human Resources (HR) department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the Person class, the Account class, and the Opportunity class.
 
 ![UI displaying example 5 settings](../assets/example-5.png)
 
 ### Example 6
 
-Find all the people who's job title is Vice President and are related to any account with annual revenue of the given amount ($100 millions) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the Person class, the Account class, and the XDM ExperienceEvent class.
+Find all the people whose job title is Vice President and are related to any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the Person class, the Account class, and the XDM ExperienceEvent class.
 
 ![UI displaying example 6 settings](../assets/example-6.png)
 
