@@ -2,11 +2,11 @@
 title: XDM Business Marketing List Members Class
 description: This document provides an overview of the XDM Business Marketing List Members class in Experience Data Model (XDM).
 ---
-# [!UICONTROL XDM Business Marketing List Members] class
+# [!UICONTROL XDM Business Marketing List Members] class (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This class is only available for organizations that have access to Real-time Customer Data Platform B2B Edition.
+>This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
 
 [!UICONTROL XDM Business Marketing List Members] is a standard Experience Data Model (XDM) class that describes members, persons, or contacts associated with a marketing list.
 

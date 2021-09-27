@@ -25,7 +25,7 @@ feature: Schemas
   * [XDM Individual Profile](./classes/individual-profile.md)
   * [XDM ExperienceEvent](./classes/experienceevent.md)
   * [Segment definition](./classes/segment-definition.md)
-  * B2B classes {#b2b}
+  * B2B classes (Beta) {#b2b}
     * [XDM Business Account](./classes/b2b/business-account.md)
     * [XDM Business Account Person Relation](./classes/b2b/business-account-person-relation.md)
     * [XDM Business Campaign](./classes/b2b/business-campaign.md)
@@ -139,11 +139,11 @@ feature: Schemas
   * [Mixins (Deprecated)](api/mixins.md)
   * [Appendix](api/appendix.md)
 * Tutorials {#tutorials}
-  * [Create a schema (UI)](tutorials/create-schema-ui.md)
-  * [Create a schema (API)](tutorials/create-schema-api.md)
-  * [Define a relationship between two schemas (UI)](tutorials/relationship-ui.md)
-  * [Define a relationship between two schemas (API)](tutorials/relationship-api.md)
-  * [Define a relationship between two schemas (B2B)](tutorials/relationship-b2b.md)
+  * [Create a schema in the UI](tutorials/create-schema-ui.md)
+  * [Create a schema in the API](tutorials/create-schema-api.md)
+  * [Define a schema relationship in the UI](tutorials/relationship-ui.md)
+  * [Define a schema relationship in the API](tutorials/relationship-api.md)
+  * [Define a schema relationship in Real-time CDP B2B Edition (Beta)](tutorials/relationship-b2b.md)
   * [Create an ad-hoc schema (API)](tutorials/ad-hoc.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
