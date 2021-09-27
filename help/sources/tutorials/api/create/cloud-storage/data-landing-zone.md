@@ -215,7 +215,7 @@ To inspect the structure of a file in your landing zone, perform a GET request w
 **API format**
 
 ```http
-GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType={OBJECT_TYPE}&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
+GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=file&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}
 ```
 
 | Parameter | Description | Example |
@@ -224,7 +224,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType={OBJECT_TYPE}&objec
 | `{OBJECT_TYPE}` | The type of the object you want to access. | `file` |
 | `{OBJECT}` | The path and name of the object you want to access. | `dlz-user-container/data8.csv` |
 | `{FILE_TYPE}` | The type of the file. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
-| `{PREVIEW}` | A boolean value that defines if file preview is supported. | `true` |
+| `{PREVIEW}` | A boolean value that defines if file preview is supported. | </ul><li>`true`</li><li>`false`</li></ul> |
 
 **Request**
 
