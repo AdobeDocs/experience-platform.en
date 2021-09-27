@@ -80,7 +80,7 @@ This helps you to manage [!DNL Profiles] and ensure that their data are both rel
 
 Any Experience Platform destinations are available and fully supported by the B2B Edition such as [!DNL Google], [!DNL Linkedin], or [!DNL Facebook]. There is also a [!DNL Marketo Engage] destination which streams data out of [!DNL Marketo] or out of Platform and makes it available as audiences.
 
-The [!DNL Marketo] destination provides a seamless and quick way to pull information from AEP into [!DNL Marketo] that the connector is streaming to. The segment connector enables marketers to push segments created in Adobe Experience Platform to [!DNL Marketo]. In [!DNL Marketo], these audiences will be available as static lists.
+The [!DNL Marketo] destination provides a seamless and quick way to pull information from AEP into [!DNL Marketo] that the connector is streaming to. The segment connector enables marketers to push segments created in Adobe Experience Platform to [!DNL Marketo]. In [!DNL Marketo], these audiences are then available as static lists.
 
 For companies with more than one CRM, the B2B edition provides the option to configure destination connectors to separate instances of [!DNL Marketo] or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently. 
 

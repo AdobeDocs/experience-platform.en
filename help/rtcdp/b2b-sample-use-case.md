@@ -11,7 +11,7 @@ description: This sample scenario provides an example for the configuration of y
 
 The Real-time Customer Data Platform B2B Edition is expanding the existing [!DNL Real-time CDP] and Adobe Experience Platform offerings to support B2B data and workflows. This example use case demonstrates the additional benefits provided by the B2B Edition. They include:
 
-- Unify person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on creating XDM schema relationships for use with varied B2B sources for more information. 
+- Combine person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on creating XDM schema relationships for use with varied B2B sources for more information. 
   <!-- PLACEHOLDER [creating XDM schema relationships]() -->
 - Segment an audience based on attributes of related entities. This includes Accounts, Opportunities, Campaigns, and Marketing Lists. Segments are no longer limited to just Person attributes and Experience Events. See the B2B segmentation documentation for more examples on creating B2B specific audiences.
   <!-- PLACEHOLDER [B2B segmentation documentation]()  -->
