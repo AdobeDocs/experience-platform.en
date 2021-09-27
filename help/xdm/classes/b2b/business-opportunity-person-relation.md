@@ -6,7 +6,7 @@ description: This document provides an overview of the XDM Business Opportunity 
 
 >[!NOTE]
 >
->This class is only available for organizations that have access to the B2B edition of Real-time Customer Data Platform.
+>This class is only available for organizations that have access to Real-time Customer Data Platform B2B Edition.
 
 [!UICONTROL XDM Business Opportunity Person Relation] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a person that is associated with a business opportunity.
 
@@ -24,3 +24,5 @@ description: This document provides an overview of the XDM Business Opportunity 
 | `isPrimary` | Boolean | Indicates whether the person is the primary contact for this opportunity. |
 | `personID` | String | A unique identifier for the person in the opportunity-person relationship. |
 | `personRole` | String | The role for the person in the opportunity-person relationship. |
+
+See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
