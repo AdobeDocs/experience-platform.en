@@ -46,44 +46,44 @@ See the documentation on the schema auto generation utility for for use cases th
 
 Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the Person class, and the Opportunity Person Relation class. 
 
-![](../assets/segmentation/decision-maker.png)
+![UI displaying example 1 settings](../assets/segmentation/decision-maker.png)
 
 ### Example 2
 
 Find all the people who are directly assigned to any opportunities of which the opportunity amount is more than the given amount ($1 million). This segment requires a link between the Person class, the Opportunity Person Relation class, and the Opportunity class.
 
-![]()
+![UI displaying example 2 settings](../assets/example-2.png)
 
 ### Example 3
 
 Find all the people who are directly assigned to any opportunities where the account is located in a given location (Canada). This segment requires a link between the Person class, the Opportunity Person Relation class, the Opportunity class, and the Account class.
 
-![]()
+![UI displaying example 3 settings](../assets/example-3.png)
 
 ### Example 4
 
 Find all the people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry, and visited the pricing page in the last three days. This segment requires a link between the Person class, the Opportunity Person Relation class, the Opportunity class, and the Account class, and the XDM ExperienceEvent class.
 
-![]()
+![UI displaying example 4 settings](../assets/example-4.png)
 
 ### Example 5
 
 Find all the people who work in a "HR" department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the Person class, the Account class, and the Opportunity class.
 
-![]()
+![UI displaying example 5 settings](../assets/example-5.png)
 
 ### Example 6
 
 Find all the people who's job title is Vice President and are related to any account with annual revenue of the given amount ($100 millions) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the Person class, the Account class, and the XDM ExperienceEvent class.
 
-![]()
+![UI displaying example 6 settings](../assets/example-6.png)
 
 ### Example 7
 
 Find all the people who are a "Decision Maker" of any closed-lost opportunity, and visited the pricing page in the last week. This segment requires a link between the Person class, the Opportunity Person Relation class, the
 Opportunity class, and the XDM ExperienceEvent class.
 
-![]()
+![UI displaying example 7 settings](../assets/example-7.png)
 
 ## Next steps
 
