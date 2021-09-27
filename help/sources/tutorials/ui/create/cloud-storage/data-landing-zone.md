@@ -39,11 +39,11 @@ For a detailed, step-by-step guide on how to create a dataflow for a cloud stora
 
 [!DNL Data Landing Zone] is an out-of-the-box source that comes with your Adobe Experience Platform Sources license. [!DNL Data Landing Zone] uses an SAS URI and SAS Token-based authentication. You can retrieve and refresh your authentication credentials from the [!UICONTROL Sources catalog] page.
 
-In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] category, select the ellipses (**...**) from the **[!UICONTROL Data Landing Zone]** card, and then select **[!UICONTROL View credentials]** from the dropdown menu that appears.
+In the [!UICONTROL Sources catalog], under the [!UICONTROL Cloud storage] category, select the ellipses (**...**) from the **[!UICONTROL Data Landing Zone]** card. From the dropdown menu that appears, select **[!UICONTROL View credentials]**.
 
 ![options](../../../../images/tutorials/create/dlz/options.png)
 
-The credentials pop-up window appears, displaying your container name, SAS token, storage account name, and SAS URI. 
+A popover appears, displaying your container name, SAS token, storage account name, and SAS URI. 
 
 Select **[!UICONTROL Refresh credentials]** and allow for a few seconds for your updated credentials to be processed.
 

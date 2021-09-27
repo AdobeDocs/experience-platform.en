@@ -21,37 +21,34 @@ This guide requires a working understanding of the following components of Exper
 
 The following sections provide additional information that you will need to know in order to successfully create a [!DNL Data Landing Zone] source connection using the [!DNL Flow Service] API.
 
-### Using Platform APIs
+This tutorial also requires you to read the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md) to learn how to authenticate to Platform APIs and interpret the example calls provided in the documentation.
 
-For information on how to successfully make calls to Platform APIs, see the guide on [getting started with Platform APIs](../../../../../landing/api-guide.md).
+## Retrieve a usable landing zone
 
-
-## Get [!DNL Data Landing Zone]
-
-The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET request to the `/landingzone` endpoint of the [!DNL Connectors] API to retrieve a landing zone that you can use.
+The first step in using APIs to access [!DNL Data Landing Zone] is to make a GET request to the `/landingzone` endpoint of the [!DNL Connectors] API while providing `type=user_drop_zone` as part of your request header.
 
 **API format**
 
 ```http
-GET /connectors/landingzone?type={TYPE}
+GET /connectors/landingzone?type=user_drop_zone
 ```
 
-| Parameter | Description |
+| Headers | Description |
 | --- | --- |
-| `{TYPE}` | The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
+| `user_drop_zone` |  The `user_drop_zone` type allows the API to distinguish a landing zone container from the other types of containers that are available to you. |
 
 **Request**
 
-The following request example retrieves an existing landing zone.
+The following request retrieves an existing landing zone.
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone?type=user_drop_zone' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone?type=user_drop_zone' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' 
 ```
 
 **Response**
@@ -65,19 +62,20 @@ The following response returns information on a landing zone, including its corr
 }
 ```
 
-## Get [!DNL Data Landing Zone] credentials
+| Property | Description |
+| --- | --- |
+| `containerName` | The name of the landing zone you retrieved. |
+| `containerTTL` | The time-to-live setting applied to your data within the landing zone. Any within a given landing zone is deleted after seven days. |
+
+## Retrieve [!DNL Data Landing Zone] credentials
 
 To retrieve credentials for a [!DNL Data Landing Zone], make a GET request to the `/credentials` endpoint of the [!DNL Connectors] API.
 
 **API format**
 
 ```http
-GET /connectors/landingzone/credentials?type={TYPE}
+GET /connectors/landingzone/credentials?type=user_drop_zone
 ```
-
-| Parameter | Description |
-| --- | --- |
-| `{TYPE}` | The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
 
 **Request**
 
@@ -85,12 +83,12 @@ The following request example retrieves credentials for an existing landing zone
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
 ```
 
 **Response**
@@ -106,6 +104,13 @@ The following response returns the credential information for your landing zone,
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `containerName` | The name of your landing zone. |
+| `SASToken` | The shared access signature token for your landing zone. This string contains all of the information necessary to authorize a request. |
+| `SASUri` | The shared access signature URI for your landing zone. This string is a combination of the URI to the landing zone for which you are being authenticated to and its corresponding SAS token, |
+
+
 ## Update [!DNL Data Landing Zone] credentials
 
 You can update your `SASToken` by making a POST request to the `/credentials` endpoint of the [!DNL Connectors] API.
@@ -113,13 +118,13 @@ You can update your `SASToken` by making a POST request to the `/credentials` en
 **API format**
 
 ```http
-POST /connectors/landingzone/credentials?type={TYPE}&action={ACTION}
+POST /connectors/landingzone/credentials?type=user_drop_zone&action=refresh
 ```
 
-| Parameter | Description |
+| Headers | Description |
 | --- | --- |
-| `{TYPE}` |  The type of container you want to access. The container `type` used for [!DNL Data Landing Zone] is `user_drop_zone`. |
-| `{ACTION}` | The action you intend to apply to your credentials. |
+| `user_drop_zone` |  The `user_drop_zone` type allows the API to distinguish a landing zone container from the other types of containers that are available to you. |
+| `refresh` | The `refresh` action allows you to reset your landing zone credentials and automatically generate a new `SASToken`. |
 
 **Request**
 
@@ -127,12 +132,12 @@ The following request updates your landing zone credentials.
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+  'https://platform.adobe.io/data/foundation/connectors/landingzone/credentials?type=user_drop_zone&action=refresh' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
 ```
 
 **Response**
@@ -148,7 +153,7 @@ The following response returns updated values for your `SASToken` and `SASUri`.
 }
 ```
 
-## Explore [!DNL Data Landing Zone] file structure and contents
+## Explore landing zone file structure and contents
 
 You can explore the file structure and contents of your landing zone by making a GET request to the `connectionSpecs` endpoint of the [!DNL Flow Service] API.
 
@@ -166,7 +171,7 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType=root
 
 ```shell
 curl -X GET \
-    'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=ROOT' \
+    'http://platform.adobe.io/data/foundation/flowservice/connectionSpecs/26f526f2-58f4-4712-961d-e41bf1ccc0e8/explore?objectType=root' \
     -H 'Authorization: Bearer {ACCESS_TOKEN}' \
     -H 'x-api-key: {API_KEY}' \
     -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -175,7 +180,7 @@ curl -X GET \
 
 **Response**
 
-A successful response returns an array of files and folders found within the queried directory. Take note of the `path` property of the file you wish you upload, as you are required to provide it in the next step to inspect its structure.
+A successful response returns an array of files and folders found within the queried directory. Take note of the `path` property of the file you wish to upload, as you are required to provide it in the next step to inspect its structure.
 
 ```json
 [
@@ -203,7 +208,7 @@ A successful response returns an array of files and folders found within the que
 ]
 ```
 
-## Preview [!DNL Data Landing Zone] file structure and contents
+## Preview landing zone file structure and contents
 
 To inspect the structure of a file in your landing zone, perform a GET request while providing the file's path and type as a query parameter.
 
@@ -216,9 +221,9 @@ GET /connectionSpecs/{CONNECTION_SPEC_ID}/explore?objectType={OBJECT_TYPE}&objec
 | Parameter | Description | Example |
 | --- | --- | --- |
 | `{CONNECTION_SPEC_ID}` | The connection specification ID that corresponds to [!DNL Data Landing Zone]. This fixed ID is: `26f526f2-58f4-4712-961d-e41bf1ccc0e8`. |
-| `{OBJECT_TYPE}` | The type of the object of the object you want to access. | `file` |
+| `{OBJECT_TYPE}` | The type of the object you want to access. | `file` |
 | `{OBJECT}` | The path and name of the object you want to access. | `dlz-user-container/data8.csv` |
-| `{FILE_TYPE}` | The type of the file. | `delimited` |
+| `{FILE_TYPE}` | The type of the file. | <ul><li>`delimited`</li><li>`json`</li><li>`parquet`</li></ul> |
 | `{PREVIEW}` | A boolean value that defines if file preview is supported. | `true` |
 
 **Request**
@@ -355,4 +360,4 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ## Next steps
 
-By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure and found the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
+By following this tutorial, you have retrieved your [!DNL Data Landing Zone] credentials, explored its file structure to find the file you wish to bring to Platform, and created a source connection to begin bringing your data to Platform. You can now proceed to the next tutorial, where you will learn how to [create a dataflow to bring cloud storage data to Platform using the [!DNL Flow Service] API](../../collect/cloud-storage.md).
