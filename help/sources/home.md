@@ -91,6 +91,7 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
+- [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
 ### eCommerce
 
