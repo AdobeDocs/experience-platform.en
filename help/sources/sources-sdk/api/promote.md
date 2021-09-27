@@ -15,16 +15,14 @@ description:
 
 Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Promote your source using the [!DNL Authoring Service] API
-
-The [!DNL Authoring Service API]...
+## Promote your source using the [!DNL Flow Service] API
 
 To promote your source either globally or to specified IMS Organizations, make a POST request to the [!DNL Authoring Service] API, while providing your fully authored connection spec and the sandboxes you want to provision for your new source.
 
 **API format**
 
 ```http
-POST /authoring-service/connectionSpecs?action=publish
+POST /flowService/connectionSpecs?action=publish
 ```
 
 **Request**

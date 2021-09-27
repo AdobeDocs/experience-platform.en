@@ -28,10 +28,6 @@ The first steps in creating a new source is to collect your artifacts and to aut
 
 For a step-by-step guide on how to create a new connection specification, including steps on how to retrieve a generic connection specification, see the tutorial on [creating a new source](./create.md).
 
-## Test
-
-For steps on how to test your new source, see the tutorial on [testing a new source](./test.md).
-
 ## Promote
 
-Once your connection specification is created and validated, you can proceed to promote the new source to Platform globally, or to specific IMS organizations using the [!DNL Authoring Service] API. For a step-by-step guide on how to promote your source, see the tutorial on [promoting a new source](./promote.md)
+Once your connection specification is created and validated, you can proceed to promote the new source to Platform globally, or to specific IMS organizations using the [!DNL Flow Service] API. For a step-by-step guide on how to promote your source, see the tutorial on [promoting a new source](./promote.md)
