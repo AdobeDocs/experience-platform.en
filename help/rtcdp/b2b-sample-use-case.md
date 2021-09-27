@@ -9,7 +9,7 @@ description: This sample scenario provides an example for the configuration of y
 >
 >The Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
 
-The Real-time Customer Data Platform B2B Edition has expanded existing Real-time CDP and Experience Platform offerings to support B2B data and workflows. This example use case demonstrates the additional benefits provided by the B2B Edition. They include:
+The Real-time Customer Data Platform B2B Edition is expanding the existing [!DNL Real-time CDP] and Adobe Experience Platform offerings to support B2B data and workflows. This example use case demonstrates the additional benefits provided by the B2B Edition. They include:
 
 - Unify person and account data from different siloed data sources to produce a comprehensive view that enables a better understanding of the customers and more accurate segmentation. See the documentation on creating XDM schema relationships for use with varied B2B sources for more information. 
   <!-- PLACEHOLDER [creating XDM schema relationships]() -->
@@ -23,7 +23,7 @@ Bodea, a technology company, has a new product and wants to specifically target 
 
 In order to maximize the efficiency of their marketing campaign, Bodea also wants to target the people associated with that existing account who have done at least $1 million in business AND have visited the new product page in the last month.
 
-However, Bodea has two different lines of business. Bodea's first line of business 'Line 1' creates software for the automotive industry. Its second line of business 'Line 2' is selling 3D printers that create automobile parts. Each line of business has its own sales system, 'Sales-System 1' and 'Sales-System 2'. Each line of Bodea has different corporate information silos. 
+However, Bodea has two different lines of business. Bodea's first line of business 'Line 1' creates software for the automotive industry. Its second line of business 'Line 2' sells 3D printers that create automobile parts. Each line of business has its own sales system, 'Sales-System 1' and 'Sales-System 2'. Each line of Bodea has different corporate information silos. 
 
 Both Line 1 and Line 2 sell to the Townsend company. 
 
