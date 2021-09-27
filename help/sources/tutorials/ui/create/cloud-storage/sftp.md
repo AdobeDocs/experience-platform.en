@@ -82,7 +82,7 @@ To use SSH public key-based credentials, select **[!UICONTROL SSH public key]** 
 | Credential | Description |
 | ---------- | ----------- |
 | Private key content | The Base64 encoded SSH private key content. The type of OpenSSH key must be classified as either RSA or DSA. |
-| Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as value. |
+| Passphrase | Specifies the pass phrase or password to decrypt the private key if the key file or the key content is protected by a pass phrase. If PrivateKeyContent is password protected, this parameter needs to be used with the PrivateKeyContent's passphrase as its value. |
 
 
 ## Next steps
