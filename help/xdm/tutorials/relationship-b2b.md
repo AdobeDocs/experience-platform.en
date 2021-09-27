@@ -8,7 +8,7 @@ description: Learn how to define a many-to-one relationship between two schemas 
 >
 >If you are not using Real-time Customer Data Platform B2B Edition, see the guide on [creating a non-B2B relationship](./relationship-ui.md) instead.
 
-Real-time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including accounts, opportunities, campaigns, and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
+Real-time Customer Data Platform B2B Edition provides several Experience Data Model (XDM) classes that capture fundamental B2B data entities, including [accounts](../classes/b2b/business-account.md), [opportunities](../classes/b2b/business-opportunity.md), [campaigns](../classes/b2b/business-campaign.md), and more. By building schemas based on these classes and enabling them for use in [Real-time Customer Profile](../../profile/home.md), you can merge data from disparate sources into a unified representation called a union schema.
 
 However, union schemas can only contain fields captured by schemas that share the same class. This is where schema relationships come in. By implementing relationships in your B2B schemas, you can describe how these business entities relate to each other and can include attributes from multiple classes in downstream segmentation use cases.
 
@@ -20,7 +20,7 @@ This tutorial covers the steps to define a many-to-one relationship between two 
 
 >[!NOTE]
 >
->This tutorial focuses on how to manually establish relationships between B2B schemas in the Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the sources documentation on B2B namespaces and schemas for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md.
+>This tutorial focuses on how to manually establish relationships between B2B schemas in the Platform UI. If you are bringing in data from a B2B source connection, you can use an auto-generation utility to create the required schemas, identities, and relationships instead. See the sources documentation on B2B namespaces and schemas for more information on [using the auto-generation utility](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ## Getting started
 
@@ -40,7 +40,7 @@ Schema relationships are represented by a dedicated field within a **source sche
 
 In order to establish a relationship, both schemas must have defined primary identities and be enabled for [!DNL Real-time Customer Profile]. When setting a primary identity for a B2B entity, keep in mind that string-based entity IDs may overlap if you are collecting them across different systems or locations, which could lead to data conflicts in Platform.
 
-To account for this, all standard B2B classes contain "key" fields that conform to the [!UICONTROL B2B Source] data type. This data type provides fields for a string identifier for the B2B entity along with other contextual information about the identifier's source. One of these fields, `sourceKey`, concatenates the values of the other fields in the data type to produce a wholly unique identifier for the entity. This field should always be used as the primary identity for B2B entity schemas.
+To account for this, all standard B2B classes contain "key" fields that conform to the [[!UICONTROL B2B Source] data type](../data-types/b2b-source.md). This data type provides fields for a string identifier for the B2B entity along with other contextual information about the identifier's source. One of these fields, `sourceKey`, concatenates the values of the other fields in the data type to produce a wholly unique identifier for the entity. This field should always be used as the primary identity for B2B entity schemas.
 
 ![sourceKey field](../images/tutorials/relationship-b2b/sourcekey.png)
 
