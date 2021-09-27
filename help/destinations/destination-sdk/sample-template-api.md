@@ -54,7 +54,7 @@ curl --location --request GET 'https://platform.adobe.io/data/core/activation/au
 
 A successful response returns HTTP status 200 with a sample template that you can edit to match your expected data format.
 
-If the destination ID you provide corresponds to a destination server template with `maxUsersPerRequest=1`, the request returns a sample template similar to this one:
+If the destination ID you provide corresponds to a destination configuration with [best effort aggregation](./destination-configuration.md#best-effort-aggregation) and `maxUsersPerRequest=1` in the aggregation policy, the request returns a sample template similar to this one:
 
 ```python
 
@@ -89,7 +89,7 @@ If the destination ID you provide corresponds to a destination server template w
 
 ```
 
-If the destination ID you provide corresponds to a destination server template with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
+If the destination ID you provide corresponds to a destination server template with [configurable aggregation](./destination-configuration.md#configurable-aggregation) or [best effort aggregation](./destination-configuration.md#best-effort-aggregation) with `maxUsersPerRequest` greater than one, the request returns a sample template similar to this one:
 
 ```python
 
