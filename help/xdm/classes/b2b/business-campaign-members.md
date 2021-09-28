@@ -24,4 +24,6 @@ exl-id: a39eac7d-46ee-4e9c-a1c0-4dbb63f2c813
 | `campaignMemberID` | String  | A unique ID for the campaign membership entity. |
 | `personId` | String  | A unique ID for the person who is a member of the associated campaign. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

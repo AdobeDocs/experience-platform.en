@@ -31,4 +31,6 @@ exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 | `relationEndDate` | DateTime | The date when the relationship between the account and the person ended. |
 | `relationStartDate` | DateTime | The date when the relationship between the account and the person started. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

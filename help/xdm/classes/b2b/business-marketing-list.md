@@ -22,4 +22,6 @@ exl-id: 510c5608-054d-4bed-91eb-22d84b5dc625
 | `marketingListID` | String  | A unique ID for the marketing list entity. |
 | `marketingListName` | String  | The name of the marketing list. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
