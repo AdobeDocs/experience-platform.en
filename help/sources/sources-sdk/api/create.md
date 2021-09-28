@@ -41,12 +41,12 @@ GET /connectionSpecs
 
 ```shell
 curl -X GET \
-    'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs  /' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs  /' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
 ```
 
 **Response**
@@ -184,21 +184,20 @@ The following response is an example of an empty generic REST connector connecti
 }
 ```
 
-### Author your generic connection specification
+### Author your connection specification
 
-Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source. For more information on connection specifications, see the documentation on [preparing your configurations](../config.md).
+Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config.md).
 
 The following payload is an example of a connection specification authored with information specific to a [!DNL MailChimp] source:
 
 ```json
 {
-  "id": "6360f136-5980-4111-8bdf-15d29eab3b5a",
-  "name": "mailChimpConnector",
-  "type": "generic-rest-connector",
+  "name": "MailChimp",
+  "type": "generic-rest",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
   "version": "1.0",
   "attributes": {
-    "category": "Cloud Storage",
+    "category": "cloudStorage",
     "isSource": true
   },
   "authSpec": [
@@ -322,6 +321,7 @@ The following payload is an example of a connection specification authored with 
 }
 ```
 
+
 ## Next steps
 
-With a fully-authored connection specification ready, you can now submit your connection specification to a specific sandbox of your choice through the [!DNL Flow Service] API for testing. See the tutorial on [testing your new source](./test.md) for more information.
+With a fully-authored connection specification ready, you can now submit your connection specification to a specific sandbox of your choice through the [!DNL Flow Service] API for testing. See the tutorial on [promoting your new source](./promote.md) for more information.
