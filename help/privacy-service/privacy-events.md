@@ -32,7 +32,7 @@ Please review the following Privacy Service documentation before starting this t
 
 In order to receive [!DNL Privacy Service Events], you must use Adobe Developer Console to register a webhook to your [!DNL Privacy Service] integration.
 
-Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/notifications/subscribe.md) for detailed steps on how to accomplish this. Ensure that you choose **[!UICONTROL Privacy Service Events]** as your event provider in order to access the events listed above.
+Follow the tutorial on [subscribing to [!DNL I/O Event] notifications](../observability/alerts/subscribe.md) for detailed steps on how to accomplish this. Ensure that you choose **[!UICONTROL Privacy Service Events]** as your event provider in order to access the events listed above.
 
 ## Receive [!DNL Privacy Service Event] notifications
 

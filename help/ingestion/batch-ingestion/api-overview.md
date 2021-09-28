@@ -8,7 +8,7 @@ exl-id: 4ca9d18d-1b65-4aa7-b608-1624bca19097
 ---
 # Batch ingestion API guide
 
-This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/ingest-api.yaml). 
+This document provides a comprehensive overview of using [batch ingestion APIs](https://www.adobe.io/experience-platform-apis/references/data-ingestion/). 
 
 The appendix to this document provides information for [formatting data to be used for ingestion](#data-transformation-for-batch-ingestion), including sample CSV and JSON data files.
 

@@ -15,18 +15,18 @@ A dataflow is a scheduled task that retrieves and ingests data from a source to 
 
 This tutorial requires a working understanding of the following components of Adobe Experience Platform:
 
--   [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
-    -   [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
-    -   [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
--   [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+- [[!DNL Experience Data Model (XDM)] System](../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
+  - [Basics of schema composition](../../../../xdm/schema/composition.md): Learn about the basic building blocks of XDM schemas, including key principles and best practices in schema composition.
+  - [Schema Editor tutorial](../../../../xdm/tutorials/create-schema-ui.md): Learn how to create custom schemas using the Schema Editor UI.
+- [[!DNL Real-time Customer Profile]](../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 
 Additionally, this tutorial requires that you have already created a database account. A list of tutorials for creating different database connectors in the UI can be found in the [source connectors overview](../../../home.md).
 
-## Select data
+## Add data
 
-After creating your database account, the **[!UICONTROL Select data]** step appears, providing an interactive interface for you to explore your database hierarchy.
+After creating your database account, the **[!UICONTROL Add data]** step appears, providing an interactive interface for you to explore your database hierarchy.
 
-- The left half of the interface is a browser, displaying your account's list of databases.
+- The left half of the interface is a browser, displaying your account's list of data tables.
 - The right half of the interface lets you preview up to 100 rows of data.
 
 You can use the **[!UICONTROL Search]** option on the top of the page to quickly identify the source data you intend to use.
@@ -35,7 +35,7 @@ You can use the **[!UICONTROL Search]** option on the top of the page to quickly
 >
 >The search source data option is available to all tabular-based source connectors excluding the Analytics, Classifications, Event Hubs, and Kinesis connectors.
 
-Once you find the source data, select the directory, then click **[!UICONTROL Next]**.
+Once you find the source data, select the table, then select **[!UICONTROL Next]**.
 
 ![select-data](../../../images/tutorials/dataflow/databases/select-data.png)
 
@@ -72,7 +72,7 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![](../../../images/tutorials/dataflow/databases/select-existing-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../ingestion/tutorials/map-a-csv-file.md).
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../data-prep/functions.md) or the [calculated fields guide](../../../../data-prep/calculated-fields.md).
 
 >[!TIP]
 >

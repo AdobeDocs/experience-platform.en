@@ -1,6 +1,7 @@
 ---
 title: Builds endpoint
 description: Learn how to make calls to the /builds endpoint in the Reactor API.
+exl-id: 476abea0-efff-478a-b87f-ef6b91bfcca5
 ---
 # Builds endpoint
 
@@ -18,7 +19,7 @@ For more general information about builds and how they fit into the publishing w
 
 ## Getting started
 
-The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/reactor.yaml). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
+The endpoint used in this guide is part of the [Reactor API](https://www.adobe.io/experience-platform-apis/references/reactor/). Before continuing, please review the [getting started guide](../getting-started.md) for important information regarding how to authenticate to the API.
 
 ## Retrieve a list of builds {#list}
 

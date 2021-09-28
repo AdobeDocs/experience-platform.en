@@ -1,6 +1,7 @@
 ---
 title: Extension Upgrades
 description: Learn how extension upgrades are packaged and represented in the extension catalog.
+exl-id: 4a7e0c5c-4bd1-4fb8-8509-f88a0aa42ac4
 ---
 # Extension upgrades
 

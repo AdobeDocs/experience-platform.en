@@ -1,6 +1,7 @@
 ---
 title: Adobe Client Data Layer Extension
 description: Learn about the Adobe Client Data Layer tag extension in Adobe Experience Platform.
+exl-id: c4d1b4d3-4b51-4701-be2e-31b08e109bf6
 ---
 # Adobe Client Data Layer extension
 

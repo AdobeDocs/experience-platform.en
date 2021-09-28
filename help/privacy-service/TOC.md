@@ -26,5 +26,5 @@ feature: Privacy
   * [FAQ](regulations/faq.md)
   * [Terminology](regulations/terminology.md)
 * [Troubleshooting guide](troubleshooting-guide.md)
-* [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/privacy-service.yaml)
+* [API reference](https://www.adobe.io/experience-platform-apis/references/privacy-service/)
 * [Release notes](release-notes.md)

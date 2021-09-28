@@ -122,7 +122,7 @@ The **[!UICONTROL Select schema]** dialog appears. Select the schema you wish to
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/select-schema.png)
 
-Based on your needs, you can choose to map fields directly, or use mapper functions to transform source data to derive computed or calculated values. For more information on data mapping and mapper functions, refer to the tutorial on [mapping CSV data to XDM schema fields](../../../../../ingestion/tutorials/map-a-csv-file.md). 
+Based on your needs, you can choose to map fields directly, or use data prep functions to transform source data to derive computed or calculated values. For more information on mapper functions and calculated fields, refer to either the [Data Prep functions guide](../../../../../data-prep/functions.md) or the [calculated fields guide](../../../../../data-prep/calculated-fields.md).
 
 ![](../../../../images/tutorials/dataflow/cloud-storage/batch/mapping.png)
 
@@ -136,7 +136,7 @@ Please note that you cannot map across different types. For example, you cannot 
 
 >[!TIP]
 >
->[!DNL Platform] provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
+>Platform provides intelligent recommendations for auto-mapped fields based on the target schema or dataset that you selected. You can manually adjust mapping rules to suit your use cases.
 
 Select **[!UICONTROL Preview data]** to see mapping results of up to 100 rows of sample data from the selected dataset.
 

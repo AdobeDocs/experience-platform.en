@@ -11,7 +11,7 @@ exl-id: cebecaf3-9746-4b0b-9c50-11789fba66c3
 
 The [!DNL Segmentation Service] API provides multiple endpoints that allow you to programmatically manage your segmentation operations in [!DNL Experience Platform]. This overview document provides high-level introductions to each of these endpoints, and links to their associated endpoint guides for details. Before reading the individual endpoint guides, please refer to the [getting started guide](./getting-started.md) for important information on required headers, reading sample API calls, and more.
 
-To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/segmentation.yaml).
+To view all available endpoints and CRUD operations, please refer to the [Segmentation Service API reference](https://www.adobe.io/experience-platform-apis/references/segmentation/).
 
 ## Export jobs
 

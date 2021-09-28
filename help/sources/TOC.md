@@ -34,6 +34,7 @@ feature: Data Ingestion, Sources
     - [Azure Blob connector](connectors/cloud-storage/blob.md)
     - [Azure Event Hubs connector](connectors/cloud-storage/eventhub.md)
     - [Azure File Storage connector](connectors/cloud-storage/azure-file-storage.md)
+    - [Data Landing Zone](connectors/cloud-storage/data-landing-zone.md)
     - [FTP connector](connectors/cloud-storage/ftp.md)
     - [Google Cloud Storage connector](connectors/cloud-storage/google-cloud-storage.md)
     - [Google PubSub](connectors/cloud-storage/google-pubsub.md)
@@ -65,8 +66,11 @@ feature: Data Ingestion, Sources
     - [Oracle connector](connectors/databases/oracle.md)
     - [Phoenix connector](connectors/databases/phoenix.md)
     - [PostgreSQL connector](connectors/databases/postgres.md)
+    - [Snowflake connector](connectors/databases/snowflake.md)
   - eCommerce {#ecommerce}
     - [Shopify connector](connectors/ecommerce/shopify.md)
+  - Local system {#local-system}
+    - [Local file upload connector](connectors/local-system/local-file-upload.md)  
   - Marketing automation {#marketing-automation}
     - [HubSpot connector](connectors/marketing-automation/hubspot.md)
     - [Salesforce Marketing Cloud](connectors/marketing-automation/salesforce-marketing-cloud.md)
@@ -88,6 +92,7 @@ feature: Data Ingestion, Sources
       - [Azure Data Lake Storage Gen2](tutorials/api/create/cloud-storage/adls-gen2.md)
       - [Azure Event Hubs](tutorials/api/create/cloud-storage/eventhub.md)
       - [Azure File Storage](tutorials/api/create/cloud-storage/azure-file-storage.md)
+      - [Data Landing Zone](tutorials/api/create/cloud-storage/data-landing-zone.md)
       - [FTP](tutorials/api/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/api/create/cloud-storage/google.md)
       - [Google PubSub](tutorials/api/create/cloud-storage/google-pubsub.md)
@@ -117,6 +122,7 @@ feature: Data Ingestion, Sources
       - [Oracle](tutorials/api/create/databases/oracle.md)
       - [Phoenix](tutorials/api/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/api/create/databases/postgres.md)
+      - [Snowflake](tutorials/api/create/databases/snowflake.md)
       - [SQL Server](tutorials/api/create/databases/sql-server.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/api/create/ecommerce/shopify.md)
@@ -175,6 +181,7 @@ feature: Data Ingestion, Sources
       - [Azure Blob](tutorials/ui/create/cloud-storage/blob.md)
       - [Azure Event Hubs](tutorials/ui/create/cloud-storage/eventhub.md)
       - [Azure File Storage](tutorials/ui/create/cloud-storage/azure-file-storage.md)
+      - [Data Landing Zone](tutorials/ui/create/cloud-storage/data-landing-zone.md)
       - [FTP](tutorials/ui/create/cloud-storage/ftp.md)
       - [Google Cloud Storage](tutorials/ui/create/cloud-storage/google-cloud-storage.md)
       - [Google PubSub](tutorials/ui/create/cloud-storage/google-pubsub.md)
@@ -206,8 +213,11 @@ feature: Data Ingestion, Sources
       - [Oracle](tutorials/ui/create/databases/oracle.md)
       - [Phoenix](tutorials/ui/create/databases/phoenix.md)
       - [PostgreSQL](tutorials/ui/create/databases/postgres.md)
+      - [Snowflake](tutorials/ui/create/databases/snowflake.md)
     - eCommerce {#ecommerce}
       - [Shopify](tutorials/ui/create/ecommerce/shopify.md)
+    - Local system {#local-system}
+      - [Local file upload](tutorials/ui/create/local-system/local-file-upload.md)  
     - Marketing automation {#marketing-automation}
       - [HubSpot](tutorials/ui/create/marketing-automation/hubspot.md)
       - [Salesforce Marketing Cloud](tutorials/ui/create/marketing-automation/salesforce-marketing-cloud.md)
@@ -238,4 +248,5 @@ feature: Data Ingestion, Sources
 - [Flow run notifications](notifications.md)
 - [IP address allow list](ip-address-allow-list.md)
 - [Frequently asked questions](./troubleshooting.md)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

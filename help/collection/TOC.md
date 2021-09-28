@@ -6,7 +6,7 @@ user-guide-description: Enable client-side data collection for Adobe Experience 
 feature: Data Collection
 ---
 
-# Adobe Experience Platform Collection {#collection}
+# Adobe Experience Platform Data Collection {#collection}
 
-- [Data Collection overview](home.md)
--
+- [Data Collection overview](./home.md)
+- [End-to-end overview](./e2e.md)
