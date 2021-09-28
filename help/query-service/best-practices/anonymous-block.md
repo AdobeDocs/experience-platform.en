@@ -6,36 +6,65 @@ description: The Anonymous Block is a tool provided by Adobe Experience Platform
 
 <!-- https://jira.corp.adobe.com/browse/PLAT-104217 -->
 
-Adobe Experience Platform Query Service supports anonymous blocks. Anonymous blocks allow you to chain one or more SQL statements that are executed in sequence. They also allow for optional declaration and exception-handling.
+Adobe Experience Platform Query Service supports anonymous blocks. The anonymous block feature allows you to chain one or more SQL statements that are executed in sequence. They also allow for optional declaration and exception-handling.
 
-The anonymous block feature is an efficient way to perform a sequence of operations or queries. This chain of queries can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
+The anonymous block feature is an efficient way to perform a sequence of operations or queries. The chain of queries within the block can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
 
-A block is comprised of three sections: decleration, execution, and exception-handling. The sections are defined by the keywords `DECLARE`, `BEGIN`, `EXCEPTION`, and `END`. 
+The table provides a breakdown of the blocks three sections: declaration, execution, and exception-handling. The sections are defined by the keywords `DECLARE`, `BEGIN`, `EXCEPTION`, and `END`. 
 
-- The optional declaration section is where variables are declared, data types are defined, and memory is allocated. 
-- An executable section starts with the keyword `BEGIN` and ends with the keyword `END`. Any set of statements included within the `BEGIN` and `END` keywords will be executed in sequence and ensures that subsequent queries will not execute until the previous query in the sequence has completed.
-- The exception-handling section starts with the keyword `EXCEPTION` and contains the code to catch and handle exceptions should any of the SQL statements in the execution section fail. The exception clause means that if any of the queries fail, the entire block is stopped.
+| section  | description |
+|---|---|
+| declaration  | The optional declaration section is where variables are declared, data types are defined, and memory is allocated.   |
+| execution  | An executable section starts with the keyword `BEGIN` and ends with the keyword `END`. Any set of statements included within the `BEGIN` and `END` keywords will be executed in sequence and ensures that subsequent queries will not execute until the previous query in the sequence has been completed. |
+| exception-handling  | The exception-handling section starts with the keyword `EXCEPTION` and contains the code to catch and handle exceptions should any of the SQL statements in the execution section fail. The exception clause means that if any of the queries fail, the entire block is stopped. |
 
 It is worth noting that a block is an executable statement and can therefore be nested within other blocks.
 
 >[!NOTE]
 >
-> It is strongly reccomended to test your queries on smaller datasets and ensure that they work as expected. If a query has a syntax error then the exception will be thrown and the entire block will be aborted. Once you have verified the integrity of the queries you may begin to chain them. This will ensure that the block works as expected before you start operationalizing them.
+> It is strongly recommended to test your queries on smaller datasets and ensure that they work as expected. If a query has a syntax error then the exception will be thrown and the entire block will be aborted. Once you have verified the integrity of the queries you may begin to chain them. This will ensure that the block works as expected before you put them into operation.
 
-<!-- Anonymous block cna be used with the Incremental load feature as an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes or other databases. It can be used with both streaming and batch data. -->
+See the [SQL syntax in Query Service](../sql/syntax.md) document for more information on any of the SQL syntax used.
 
-This document outlines how to use anonymous blocks in the following use cases. 
+## Sample anonymous block queries 
+
+The following query shows an example of chaining events. 
+
+```SQL
+$$BEGIN
+     
+    CREATE TABLE ADLS_TABLE_A AS SELECT * FROM ADLS_TABLE_1....;
+    ....
+    CREATE TABLE ADLS_TABLE_D AS SELECT * FROM ADLS_TABLE_C....;
+     
+    EXCEPTION WHEN OTHER THEN SET @ret = SELECT 'ERROR';
+     
+END$$;
+```
+
+The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the 'SNAPSHOT' feature.
 
 ```SQL
 $$BEGIN                                             
-  set @current_sid = SELECT parent_id  from (SELECT history_meta('your_table_name')) WHERE  is_current = true;
-  create temp table abcd_temp_table AS select count(1) from your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
+  SET @current_sid = SELECT parent_id  FROM (SELECT history_meta('your_table_name')) WHERE  is_current = true;
+  CREATE temp table abcd_temp_table AS SELECT count(1) FROM your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
 END$$;
-
 ```
 
-## Example use case - write or append new datasets to the data lake
+### Next steps
 
+By reading this document you now have a clear understanding of what the anonymous block feature is and how they are structured. For more [general guidance on query execution](./writing-queries.md), please read the guide on query execution in Query Service.
+
+For more samples of queries that can be used within Query Service, please read the guides on [Adobe Analytics sample queries](./adobe-analytics.md), [Adobe Target sample queries](./adobe-target.md), or [ExperienceEvent sample queries](./experience-event-queries.md).
+
+.
+
+.
+
+.
+
+<!-- Anonymous block can be used with the Incremental load feature as an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes or other databases. It can be used with both streaming and batch data. -->
+ 
 You can create a set of sequenced queries because you want to write or append new datasets to the data lake. You create templates for the the queries. For ths reason you want the exception-handling section to fail if there is an error to preserve the integrity of the process.
 
 If the sequence of queries were executed manually one by one, this would require the clusters to be spun up one after the other. However the autonomous block reuses the same cluster to execute the queries and is therefore much faster more efficient process. The cluster is essentially being reused across all of the chained queries which is highly efficient.
@@ -60,7 +89,7 @@ Snapshot is a feature that is built into the dataset layer itself. When you run 
 
 This is the first part of the anonymous block feature [highlighted in 15:25 of the meeting video].
 
-```
+```SQL
 SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_delta_log a join
                             (SELECT MAX(process_timestamp)process_timestamp FROM lookup_delta_log
                                 WHERE process_name = 'DIM_TABLE_ABC' AND process_status = 'SUCCESSFUL' )b
@@ -71,7 +100,7 @@ SET @from_snapshot_id = SELECT coalesce(last_snapshot_id, 'HEAD') from lookup_de
 
 then the second statement stores the snapshot ID as a varaible for use:
 
-```
+```SQL
 SET @to_snapshot_id = SELECT snapshot_id from (SELECT history_meta('Source Table Name')) WHERE  is_current = true;
 ```
 
@@ -79,7 +108,7 @@ By keeping track of the last snapshot ID that was successful and comparing this 
 
 this is captured in the line :
 
-```
+```SQL
 select  *  from Live SNAPSHOT BETWEEN @from_snapshot_id AND @to_snapshot_id WHERE NOT EXISTS (SELECT _id FROM DIM_TABLE_ABC_Incremental a where _id=a._id);
 ```
 
@@ -103,15 +132,17 @@ The anonymous block does not need to be used with the snaphot feature, it can be
 
 (Incremental load is a design pattern)
 
-### differnt tangent
+<!-- ### differnt tangent
 
 `SET` is for setting a local variable.
-It is used in the anonymus block to set the response from a query as a local variable.
+It is used in the anonymous block to store the response from a query as a local variable.
 
-{I can put in Cetus statements like I can create datasets where I purchased the results on the lake. But what you're saying is that I can also take the results of a select query and temporarily assign it to a local variable called. As you know this snapshot ID for example right and then I can reuse it. I can reuse it in the in the beginning thing,}
+{I can put in CTAS statements like I can create datasets where I purchased the results on the lake. But what you're saying is that I can also take the results of a select query and temporarily assign it to a local variable called. As you know this snapshot ID for example right and then I can reuse it. I can reuse it in the in the beginning thing,}
 
-`SET` is used to persist the result of a select query with a variable.
+`SET` is used to persist the result of a select query with a variable. -->
+
+<!-- To delete:
 
 **NOTE** The Examples are technically accurate but the table names will need to be replaced with placeholders.
 
-PK might be able to build a simple example in one of the sandboxes and show that - MSG PK and ask
+PK might be able to build a simple example in one of the sandboxes and show that - MSG PK and ask -->
