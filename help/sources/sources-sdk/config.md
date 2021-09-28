@@ -492,13 +492,19 @@ Source specifications contain information specific to a source, including attrib
 | `sourceSpec.attributes.queryParams` | Defines the supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (`&`). | `excludes=id&foo=bar&userParam={{USER_PARAM_VALUE}}` |
 | `sourceSpec.attributes.headerParams` | Defines the comma (`,`) separated headers that need to be supplied in the HTTP request to source URL while fetching data. | `Content-Type=application/json,foo=bar&userHeader={{USER_HEADER_VALUE}}` |
 | `sourceSpec.attributes.paginationParams` | Defines the parameters or fields that must be supplied to get a link to the next page from the user's current page response, or while creating a next page URL. |
-| `sourceSpec.attributes.paginationParams` == `offsetType` | This pagination type requires the user to only specify the starting offset of records. | See the [appendix](#appendix) for a detailed example of the offset type of pagination. |
+| `sourceSpec.attributes.paginationParams.name` | Displays the name of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned. See the [appendix](#appendix) for a detailed example of the offset type of pagination.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request.</li></ul> |
+| `sourceSpec.attributes.paginationParams.type` | Displays the type of the supported pagination type for your source. | <ul><li>`offset`: This pagination type allows you to parse through results by specifying an index from where to start the resulting array, and a limit on how many results are returned. See the [appendix](#appendix) for a detailed example of the offset type of pagination.</li><li>`pointer`: This pagination type allows you to use a `pointer` variable to point to a particular item that needs to be sent with a request.</li></ul> |
+| `sourceSpec.attributes.scheduleParams` | Contains parameters that define supported scheduling formats for your source. |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamName` | | `since_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamName` | | `before_last_changed` |
 | `sourceSpec.attributes.scheduleParams.scheduleStartParamFormat` | Defines the supported format for the `scheduleStartParamName`. | `yyyy-MM-ddTHH:mm:ssZ` |
 | `sourceSpec.attributes.scheduleParams.scheduleEndParamFormat` | Defines the supported format for the `scheduleEndParamName`.| `yyyy-MM-ddTHH:mm:ssZ` |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>Currently, the only supported types for pagination are `offset` and `pointer`.
 
 ## Explore specifications
 
