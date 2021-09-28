@@ -30,7 +30,7 @@ The following is an example of a connection specification that supports OAuth 2 
 ```json
 {
   "id": "359dc4ef-d2e5-4d43-a343-6b0c38910bce",
-  "name": "generic-rest-connector",
+  "name": "generic-source",
   "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
   "version": "1.0",
   "attributes": {
@@ -43,11 +43,45 @@ The following is an example of a connection specification that supports OAuth 2 
       "spec": {
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
+        "description": "defines auth params required for connecting to rest service using authorization flow.",
+        "links": [
+          {
+            "rel": "specificationLink",
+            "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
+          }
+        ],
         "properties": {
+          "clientId": {
+            "description": "Client id of user app. Needed to generate accessToken post its expiry.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "Client secret of user app. Needed to generate accessToken post its expiry.",
+            "type": "string",
+            "format": "password"
+          },
           "accessToken": {
             "description": "Access Token",
             "type": "string",
             "format": "password"
+          },
+          "refreshToken": {
+            "description": "Refresh Token. Needed to generate accessToken once it expires.",
+            "type": "string",
+            "format": "password"
+          },
+          "expirationDate": {
+            "description": "Date when accessToken will expire",
+            "type": "string",
+            "format": "date"
+          },
+          "refreshTokenUrl": {
+            "description": "Refresh token url to fetch refresh token.",
+            "type": "string"
+          },
+          "accessTokenUrl": {
+            "description": "Access token url to fetch access token.",
+            "type": "object"
           }
         },
         "required": [
@@ -247,11 +281,45 @@ The following is an example of OAuth 2 refreshCode authentication type:
       "spec": {
         "$schema": "http://json-schema.org/draft-07/schema#",
         "type": "object",
+        "description": "defines auth params required for connecting to rest service using authorization flow.",
+        "links": [
+          {
+            "rel": "specificationLink",
+            "href": "https://datatracker.ietf.org/doc/html/rfc6749#section-1.3.1"
+          }
+        ],
         "properties": {
+          "clientId": {
+            "description": "Client id of user app. Needed to generate accessToken post its expiry.",
+            "type": "string"
+          },
+          "clientSecret": {
+            "description": "Client secret of user app. Needed to generate accessToken post its expiry.",
+            "type": "string",
+            "format": "password"
+          },
           "accessToken": {
             "description": "Access Token",
             "type": "string",
             "format": "password"
+          },
+          "refreshToken": {
+            "description": "Refresh Token. Needed to generate accessToken once it expires.",
+            "type": "string",
+            "format": "password"
+          },
+          "expirationDate": {
+            "description": "Date when accessToken will expire",
+            "type": "string",
+            "format": "date"
+          },
+          "refreshTokenUrl": {
+            "description": "Refresh token url to fetch refresh token.",
+            "type": "string"
+          },
+          "accessTokenUrl": {
+            "description": "Access token url to fetch access token.",
+            "type": "object"
           }
         },
         "required": [
