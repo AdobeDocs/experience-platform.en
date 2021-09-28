@@ -26,4 +26,6 @@ exl-id: 7be193d2-52eb-4b28-953b-5e0fc21d8f93
 | `personID` | String | A unique identifier for the person in the opportunity-person relationship. |
 | `personRole` | String | The role for the person in the opportunity-person relationship. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

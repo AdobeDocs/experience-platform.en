@@ -20,4 +20,6 @@ exl-id: abe4c919-a680-4aad-918e-6e56cae8bd4d
 | `_id` | String  | A unique identifier for the record. This is a system-generated value that is separate from the `accountID`. |
 | `accountID` | String  | A unique identifier for the account entity. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
