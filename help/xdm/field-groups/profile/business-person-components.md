@@ -3,11 +3,11 @@ title: XDM Business Person Components Schema Field Group
 description: This document provides an overview of the XDM Business Person Components schema field group.
 ---
 
-# [!UICONTROL XDM Business Person Components] schema field group
+# [!UICONTROL XDM Business Person Components] schema field group (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This field group is only available for organizations that have access to the B2B edition of Real-time Customer Data Platform (Real-time CDP).
+>This field group is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
 
 [!UICONTROL XDM Business Person Components] is a standard schema field group for the [[!DNL XDM Individual Profile] class](../../classes/individual-profile.md) that captures multiple source records for a person, and other attributes which are required for person segmentation.
 
