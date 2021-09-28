@@ -1,12 +1,13 @@
 ---
 title: XDM Business Campaign Class
 description: This document provides an overview of the XDM Business Campaign class in Experience Data Model (XDM).
+exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 ---
-# [!UICONTROL XDM Business Campaign] class
+# [!UICONTROL XDM Business Campaign] class (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This class is only available for organizations that have access to Real-time Customer Data Platform B2B Edition.
+>This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
 
 [!UICONTROL XDM Business Campaign] is a standard Experience Data Model (XDM) class that captures the minimum required properties of a business campaign.
 
