@@ -12,15 +12,15 @@ The table provides a breakdown of the block's three sections: declaration, execu
 
 | section  | description |
 |---|---|
-| declaration  | The optional declaration section is where variables are declared, data types are defined, and memory is allocated.   |
+| declaration  | The optional declaration section starts with the keyword `DECLARE`. This is where variables are declared, data types are defined, and memory is allocated.   |
 | execution  | An executable section starts with the keyword `BEGIN` and ends with the keyword `END`. Any set of statements included within the `BEGIN` and `END` keywords will be executed in sequence and ensures that subsequent queries will not execute until the previous query in the sequence has been completed. |
-| exception-handling  | The exception-handling section starts with the keyword `EXCEPTION` and contains the code to catch and handle exceptions should any of the SQL statements in the execution section fail. The exception clause means that if any of the queries fail, the entire block is stopped. |
+| exception-handling  | The optional exception-handling section starts with the keyword `EXCEPTION`. It contains the code to catch and handle exceptions should any of the SQL statements in the execution section fail. If any of the queries fail, the entire block is stopped. |
 
 It is worth noting that a block is an executable statement and can therefore be nested within other blocks.
 
 >[!NOTE]
 >
-> It is strongly recommended to test your queries on smaller datasets and ensure that they work as expected. If a query has a syntax error then the exception will be thrown and the entire block will be aborted. Once you have verified the integrity of the queries you may begin to chain them. This will ensure that the block works as expected before you put them into operation.
+> It is strongly recommended to test your queries on smaller datasets and ensure that they work as expected. If a query has a syntax error then the exception will be thrown and the entire block will be aborted. Once you have verified the integrity of the queries you may begin to chain them. This ensures that the block works as expected before you put them into operation.
 
 See the [SQL syntax in Query Service](../sql/syntax.md) document for more information on any of the SQL syntax used.
 
@@ -40,7 +40,7 @@ $$BEGIN
 END$$;
 ```
 
-The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the 'SNAPSHOT' feature.
+The block below uses `SET` to persist the result of a select query with a variable. It is used in the anonymous block to store the response from a query as a local variable for use with the `SNAPSHOT` feature.
 
 ```SQL
 $$BEGIN                                             
