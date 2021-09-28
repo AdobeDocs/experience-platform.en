@@ -5,6 +5,7 @@ title: Connect Data Landing Zone to Platform using the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a Data Landing Zone source connector using the Platform user interface.
+exl-id: 653c9958-5d89-4b0c-af3d-a3e74aa47a08
 ---
 # Connect [!DNL Data Landing Zone] to Platform using the UI
 
