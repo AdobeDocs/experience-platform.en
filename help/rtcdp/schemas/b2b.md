@@ -1,6 +1,7 @@
 ---
 title: Schemas in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of Experience Data Model (XDM) schemas in Real-time Customer Data Platform B2B Edition.
+exl-id: 3b18d377-108f-443f-86ae-dc7537cf9013
 ---
 # Schemas in Real-time Customer Data Platform B2B Edition (Beta)
 
