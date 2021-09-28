@@ -231,6 +231,14 @@ DROP TABLE [IF EXISTS] [db_name.]table_name
 
 -  `IF EXISTS`: If this is specified, no exception is thrown if the table does **not** exist.
 
+## CREATE DATABASE
+
+The `CREATE DATABASE` command creates an adls database.
+
+```sql
+CREATE DATABASE [IF NOT EXISTS] db_name
+```
+
 ## DROP DATABASE
 
 The `DROP DATABASE` command drops an existing database.
@@ -558,6 +566,7 @@ COPY query
 
 The `ALTER TABLE` command lets you add or drop primary or foreign key constraints as well as add columns to the table.
 
+
 #### ADD or DROP CONSTRAINT
 
 The following SQL queries show examples of adding or dropping constraints to a table. 
@@ -596,6 +605,32 @@ ALTER TABLE table_name ADD COLUMN column_name data_type
 ALTER TABLE table_name ADD COLUMN column_name_1 data_type1, column_name_2 data_type2 
 ```
 
+#### ADD SCHEMA
+
+The following SQL queries show examples of adding table to a database / schema.
+
+```sql
+ALTER TABLE table_name ADD SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> Adls tables and views cannot be added to DWH databases / schemas.
+
+
+#### REMOVE SCHEMA
+
+The following SQL queries show examples of removing table to a database / schema.
+
+```sql
+ALTER TABLE table_name REMOVE SCHEMA database_name.schema_name
+```
+
+>[!NOTE]
+>
+> DWH tables and views cannot be removed from physically linked DWH databases / schemas (its first parent).
+
+
 **Parameters**
 
 - `table_name`: The name of the table which you are editing.
@@ -630,4 +665,39 @@ SHOW FOREIGN KEYS
 ------------------+---------------------+----------+---------------------+----------------------+-----------
  table_name_1   | column_name1        | text     | table_name_3        | column_name3         |  "ECID"
  table_name_2   | column_name2        | text     | table_name_4        | column_name4         |  "AAID"
+```
+
+
+### SHOW DATAGROUPS
+
+The `SHOW DATAGROUPS` command lists all the databases with their type and all the tables / views that are part of the database.
+
+```sql
+SHOW DATAGROUPS
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                       |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   adls_db     | adls_scheema      | ADLS      | Data Lake Table      | adls_table1                                        | 6149ff6e45cfa318a76ba6d3
+   adls_db     | adls_scheema      | ADLS      | Data Warehouse Table | _table_demo1                                       | 22df56cf-0790-4034-bd54-d26d55ca6b21
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view1                                         | c2e7ddac-d41c-40c5-a7dd-acd41c80c5e9
+   adls_db     | adls_scheema      | ADLS      | View                 | adls_view4                                         | b280c564-df7e-405f-80c5-64df7ea05fc3
+```
+
+
+### SHOW DATAGROUPS FOR TABLE
+
+The `SHOW DATAGROUPS` command lists all the databases with their type which contains table as the child.
+
+```sql
+SHOW DATAGROUPS FOR _table_demo2
+```
+
+```console
+   Database   |      Schema       | GroupType |      ChildType       |                     ChildName                      |               ChildId
+  -------------+-------------------+-----------+----------------------+----------------------------------------------------+--------------------------------------
+   dwh_db_demo | schema2           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   dwh_db_demo | schema1           | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
+   qsaccel     | profile_aggs      | QSACCEL   | Data Warehouse Table | _table_demo2                                       | d270f704-0a65-4f0f-b3e6-cb535eb0c8ce
 ```
