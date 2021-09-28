@@ -27,7 +27,7 @@ For information on how to successfully make calls to Platform APIs, see the guid
 
 ### Gather required credentials
 
-In order for [!DNL Flow Service] to connect with generic REST API, you must provide values for the following connection properties:
+In order for [!DNL Flow Service] to connect with generic REST API, you must provide valid credentials for the authentication type of your choice. Generic REST API supports both OAuth 2 refresh code and basic authentication. See the following tables for information on the credentials for the two supported authentication types.
 
 #### OAuth 2 refresh code
 
