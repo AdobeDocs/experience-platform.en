@@ -4,30 +4,37 @@ description: The Anonymous Block is a tool provided by Adobe Experience Platform
 ---
 # Sample queries for Anonymous block
 
-https://jira.corp.adobe.com/browse/PLAT-104217
+<!-- https://jira.corp.adobe.com/browse/PLAT-104217 -->
 
-Adobe Experience Platform Query Service supports anonymous blocks. Anonymous blocks are used for chaining the queries where you have a dependency. These are batch queries that will essentially write the data, append the data, and create a new data set. As they are sequential, the next query will not execute until the first query in that sequence has completed.
+Adobe Experience Platform Query Service supports anonymous blocks. Anonymous blocks allow you to chain one or more SQL statements that are executed in sequence. They also allow for optional declaration and exception-handling.
 
-A block is comprised of three sections: decleration, executable and exception-handling. The sections are defined by the keywords `DECLARE`, `BEGIN`, `EXCEPTION`, and `END`.
-An anonymous block can have its own declaration and exception-handling sections.
+The anonymous block feature is an efficient way to perform a sequence of operations or queries. This chain of queries can be saved as a template and scheduled to run at a particular time or interval. These queries can be used to write and append data to create a new data set and are typically used where you have a dependency.
 
-A declaration section is where variables are declared, data types are defined, and memory is allocated. 
+A block is comprised of three sections: decleration, execution, and exception-handling. The sections are defined by the keywords `DECLARE`, `BEGIN`, `EXCEPTION`, and `END`. 
 
-An executable section starts with the keyword `BEGIN` and ends with the keyword `END`. Any set of statements included within the `BEGIN` and `END` keywords will be executed in sequence. All the queries are executed in sequence.
-
-The exception-handling section starts with the keyword `EXCEPTION` and contains the code to catch and handle exceptions raised by the code in the execution section. The exception clause means that if any of the queries fail, the entire block is stopped.
+- The optional declaration section is where variables are declared, data types are defined, and memory is allocated. 
+- An executable section starts with the keyword `BEGIN` and ends with the keyword `END`. Any set of statements included within the `BEGIN` and `END` keywords will be executed in sequence and ensures that subsequent queries will not execute until the previous query in the sequence has completed.
+- The exception-handling section starts with the keyword `EXCEPTION` and contains the code to catch and handle exceptions should any of the SQL statements in the execution section fail. The exception clause means that if any of the queries fail, the entire block is stopped.
 
 It is worth noting that a block is an executable statement and can therefore be nested within other blocks.
 
 >[!NOTE]
 >
->If one of the queries has a syntax error then the exception will be thrown and the entire block will be aborted. For this reason it is reccomended to test your queries on smaller datasets and ensure that they work as expected. Then begin to chain them query by query to ensure the block works as expected before you start operationalizing them.
-
-The anonymous block feature is a very efficient way to perform a sequence of operations or queries. This chain of queries can be saved as a template and scheduled to run the entire sequence at a particular time or interval.
+> It is strongly reccomended to test your queries on smaller datasets and ensure that they work as expected. If a query has a syntax error then the exception will be thrown and the entire block will be aborted. Once you have verified the integrity of the queries you may begin to chain them. This will ensure that the block works as expected before you start operationalizing them.
 
 <!-- Anonymous block cna be used with the Incremental load feature as an ideal solution for near real-time movement of data from relational databases to data warehouses, data lakes or other databases. It can be used with both streaming and batch data. -->
 
-## Example use case
+This document outlines how to use anonymous blocks in the following use cases. 
+
+```SQL
+$$BEGIN                                             
+  set @current_sid = SELECT parent_id  from (SELECT history_meta('your_table_name')) WHERE  is_current = true;
+  create temp table abcd_temp_table AS select count(1) from your_table_name  SNAPSHOT SINCE @current_sid;                                                                                                     
+END$$;
+
+```
+
+## Example use case - write or append new datasets to the data lake
 
 You can create a set of sequenced queries because you want to write or append new datasets to the data lake. You create templates for the the queries. For ths reason you want the exception-handling section to fail if there is an error to preserve the integrity of the process.
 
@@ -43,7 +50,7 @@ This sequential execution can also be scheduled to occur at a set time or interv
 
 Secondly, execution can be stopped if there is an exception clause and thirdly from a resource point of view, the queries as a chain will be more efficient than you executing the queries one after the other because we reuse the cluster resources
 
-The cluster of resources helps Because every query what we do, every batch query that we get Jordan what we do is that we spin up a cluster, will load the query we execute the query and then we spin down the cluster. -->
+The cluster of resources helps because every query what we do, every batch query that we get Jordan what we do is that we spin up a cluster, will load the query we execute the query and then we spin down the cluster. -->
 
 ## How to use anonymous block with snapshot to create streams
 
