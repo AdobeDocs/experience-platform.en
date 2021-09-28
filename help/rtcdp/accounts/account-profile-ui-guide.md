@@ -6,6 +6,10 @@ description: Through the use of account profiles, Real-time Customer Data Platfo
 
 # Account profile UI guide
 
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+
 >[!NOTE]
 >
 >Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).

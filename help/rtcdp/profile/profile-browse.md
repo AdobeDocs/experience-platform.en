@@ -15,10 +15,14 @@ Real-time Customer Data Platform is built on top of Adobe Experience Platform an
 
 ## Profile enhancements for Real-time CDP, B2B Edition
 
-In addition to the profile browse capabilities supported by Adobe Experience Platform, you can use Real-time CDP, B2B Edition to browse the [!UICONTROL Opportunities] and [!UICONTROL Accounts] associated with an individual.
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
+
+In addition to the profile browse capabilities supported by Adobe Experience Platform, you can use Real-time CDP, B2B Edition to browse [!UICONTROL Accounts] and [!UICONTROL Opportunities] associated with an individual.
 
 To explore these enhancements, follow the steps outlined in the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md) to browse a profile by merge policy or identity namespace. 
 
-From the profile details tab, select **[!UICONTROL Accounts]** to view...
+From the profile details tab, select **[!UICONTROL Accounts]** to view a list of accounts related to the profile. This list includes basic information from the account profile, as well as a link to the account profile itself. For more information on viewing and exploring account profiles, begin by reading the 
 
 Select the **[!UICONTROL Opportunities]** tab to view...
