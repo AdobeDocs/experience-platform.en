@@ -1,6 +1,7 @@
 ---
 title: XDM Business Marketing List Members Class
 description: This document provides an overview of the XDM Business Marketing List Members class in Experience Data Model (XDM).
+exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 ---
 # [!UICONTROL XDM Business Marketing List Members] class (Beta)
 

@@ -1,6 +1,7 @@
 ---
 title: XDM Business Account Person Relation Class
 description: This document provides an overview of the XDM Business Account Person Relation class in Experience Data Model (XDM).
+exl-id: d51abe9b-d936-4c84-96e2-35a81ca6b67f
 ---
 # [!UICONTROL XDM Business Account Person Relation] class (Beta)
 
