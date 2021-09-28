@@ -1,6 +1,7 @@
 ---
 title: XDM Business Campaign Class
 description: This document provides an overview of the XDM Business Campaign class in Experience Data Model (XDM).
+exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 ---
 # [!UICONTROL XDM Business Campaign] class (Beta)
 
