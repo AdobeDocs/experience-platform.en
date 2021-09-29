@@ -3,9 +3,13 @@ keywords: custom personalization; destination; experience platform custom destin
 title: Custom Personalization Destination
 description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
 ---
-# Custom personalization connection {#custom-personalization-connection}
+# Custom personalization connection (beta) {#custom-personalization-connection} 
 
 ## Overview {#overview}
+
+>[!IMPORTANT]
+>
+>The Custom personalization connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve segment information from Adobe Experience Platform.
 

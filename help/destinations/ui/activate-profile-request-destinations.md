@@ -8,11 +8,15 @@ seo-description: Learn how to activate the audience data you have in Adobe Exper
 hidefromtoc: yes
 hide: yes
 ---
-# Activate audience data to profile request destinations
+# Activate audience data to profile request destinations (beta)
 
 ## Overview {#overview}
 
-This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations.
+>[!IMPORTANT]
+>
+>Profile request destinations in Adobe Experience Platform are currently in Beta. The documentation and functionality are subject to change.
+
+This article explains the workflow required to activate audience data in Adobe Experience Platform profile request destinations. Examples of profile request destinations are the [Adobe Target](../../destinations/catalog/personalization/adobe-target-connection.md) and the [Custom personalization](../../destinations/catalog/personalization/custom-personalization.md) connections.
 
 ## Prerequisites {#prerequisites}
 

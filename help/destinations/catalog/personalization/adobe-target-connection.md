@@ -4,9 +4,13 @@ title: Adobe Target connection
 description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
 ---
 
-# Adobe Target connection {#adobe-target-connection}
+# Adobe Target connection (beta) {#adobe-target-connection}
 
 ## Overview {#overview}
+
+>[!IMPORTANT]
+>
+>The Adobe Target connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
 
