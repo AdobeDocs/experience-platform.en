@@ -37,13 +37,15 @@ The Experience Platform UI provides a dashboard through which you can view impor
 
 Each individual customer profile is composed of multiple profile fragments that have been merged to form a single view of that customer. For example, if a customer interacts with your brand across several channels, your organization will have multiple profile fragments related to that single customer appearing in multiple datasets. When these fragments are ingested into Platform, they are merged together in order to create a single profile for that customer. 
 
-When the data from multiple sources conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the [merge policy](#merge-policies) determines which information to prioritize and include in the profile for the individual. Therefore, the total number of profile fragments within Platform is likely to always be higher than the total number of merged profiles, as each profile is composed of multiple fragments.
+In other words, profile fragments represent a unique primary identity and the corresponding [record](#record-data) or [event](#time-series-events) data for that ID within a given dataset. 
 
-### Record data
+When the data from multiple datasets conflicts (for example one fragment lists the customer as "single" while the other lists the customer as "married") the [merge policy](#merge-policies) determines which information to prioritize and include in the profile for the individual. Therefore, the total number of profile fragments within Platform is likely to always be higher than the total number of merged profiles, as each profile is typically composed of multiple fragments from multiple datasets.
+
+### Record data {#record-data}
 
 A profile is a representation of a subject, an organization or an individual, composed of many attributes (also known as record data). For example, the profile of a product may include a SKU and description, whereas the profile of a person contains information like first name, last name, and email address. Using [!DNL Experience Platform], you can customize profiles to use specific data relevant to your business. The standard [!DNL Experience Data Model] (XDM) class, [!DNL XDM Individual Profile], is the preferred class upon which to build a schema when describing customer record data, and supplies the data integral to many interactions between Platform services. For more information on working with schemas in [!DNL Experience Platform], please begin by reading the [XDM System overview](../xdm/home.md).
 
-### Time series events
+### Time series events {#time-series-events}
 
 Time series data provides a snapshot of the system at the time an action was taken either directly or indirectly by a subject, as well as data detailing the event itself. Represented by the standard schema class XDM ExperienceEvent, time series data can describe events such as items being added to a cart, links being clicked, and videos viewed. Time series data can be used to base segmentation rules on, and events can be accessed individually in the context of a profile. 
 
@@ -102,6 +104,7 @@ Observability Insights allows you to expose key metrics in Adobe Experience Plat
 [!DNL Data governance] is a series of strategies and technologies used to manage customer data and ensure compliance with regulations, restrictions, and policies applicable to data use. 
 
 As it relates to accessing data, data governance plays a key role within [!DNL Experience Platform] at various levels: 
+
 *   Data usage labeling 
 *   Data access policies 
 *   Access control on data for marketing actions
@@ -114,4 +117,4 @@ As it relates to accessing data, data governance plays a key role within [!DNL E
 
 ## Next steps and additional resources
 
-To learn more about working with [!DNL Real-time Customer Profile] data using the Experience Platform UI or the Profile API, please begin by reading the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md), respectively.
+To learn more about working with Real-time Customer Profile data using the Experience Platform UI or the Profile API, please begin by reading the [Profile UI guide](ui/user-guide.md) or [API developer guide](api/overview.md), respectively.
