@@ -18,6 +18,10 @@ This article explains the workflow required to activate audience data in Adobe E
 
 To activate data to destinations, you must have successfully [connected to a destination](./connect-destination.md). If you haven't done so already, go to the [destinations catalog](../catalog/overview.md), browse the supported destinations, and configure the destination that you want to use.
 
+### Segment merge policy {#merge-policy}
+
+Profile request destinations currently support only the activation of segments that use the default merge policy. Attempting to activate segments with a different merge policy results in an error in the [!UICONTROL Review] page.
+
 ## Select your destination {#select-destination}
 
 1. Go to **[!UICONTROL Connections > Destinations]**, and select the **[!UICONTROL Catalog]** tab.
