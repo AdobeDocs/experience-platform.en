@@ -120,6 +120,8 @@ Below is an example configuration for a fictional destination, Moviestar, which 
 |`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 
+{style="table-layout:auto"}
+
 ## Customer authentication configurations {#customer-authentication-configurations}
 
 This section generates the account page in Experience Platform user interface, where users connect Experience Platform to the accounts they have with your destination. Depending on which authentication option you indicate in the `authType` field, the Experience Platform page is generated for the users as follows:
@@ -142,6 +144,8 @@ Users select **[!UICONTROL Connect to destination]** to trigger the OAuth 2 auth
 |`customerAuthenticationConfigurations` | String | Indicates the configuration used to authenticate Experience Platform customers to your server. See `authType` below for accepted values. |
 |`authType` | String | Accepted values are `OAUTH2, BEARER`. <br><ul><li> If your destination supports OAuth 2 authentication, select the `OAUTH2` value and add the required fields for OAuth 2, as shown in the Destination SDK OAuth 2 authentication page. Additionally, you should select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md). </li><li>For bearer authentication, select `BEARER` and select `authenticationRule=CUSTOMER_AUTHENTICATION` in the [destination delivery section](./destination-configuration.md).</li></ul> |
 
+{style="table-layout:auto"}
+
 ## Customer data fields {#customer-data-fields}
 
 This section allows partners to introduce custom fields. In the example configuration above, `customerDataFields` requires users to select an endpoint in the authentication flow and indicate their customer ID with the destination. The configuration is reflected in the authentication flow as shown below:
@@ -158,6 +162,8 @@ This section allows partners to introduce custom fields. In the example configur
 |`enum` | String | Renders the custom field as a dropdown menu and lists the options available to the user. |
 |`pattern` | String | Enforces a pattern for the custom field, if needed. Use regular expressions to enforce a pattern. For example, if your customer IDs don't include numbers or underscores, enter `^[A-Za-z]+$` in this field. |
 
+{style="table-layout:auto"}
+
 ## UI attributes {#ui-attributes}
 
 This section refers to the UI elements in the configuration above that Adobe should use for your destination in the Adobe Experience Platform user interface. See below:
@@ -168,6 +174,8 @@ This section refers to the UI elements in the configuration above that Adobe sho
 |`category` | String | Refers to the category assigned to your destination in Adobe Experience Platform. For more information, read [Destination Categories](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html). Use one of the following values: `adobeSolutions, advertising, analytics, cdp, cloudStorage, crm, customerSuccess, database, dmp, ecommerce, email, emailMarketing, enrichment, livechat, marketingAutomation, mobile, personalization, protocols, social, streaming, subscriptions, surveys, tagManagers, voc, warehouses, payments`. |
 |`connectionType` | String | `Server-to-server` is currently the only available option. |
 |`frequency` | String | `Streaming` is currently the only available option. |
+
+{style="table-layout:auto"}
 
 ## Schema configuration in the mapping step {#schema-configuration}
 
@@ -181,6 +189,8 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
+
+{style="table-layout:auto"}
 
 ## Identities and attributes {#identities-and-attributes}
 
@@ -202,6 +212,8 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 |`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
 |`acceptedGlobalNamespaces` | - | *Not shown in example configuration*. Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
+{style="table-layout:auto"}
+
 ## Destination delivery {#destination-delivery}
 
 |Parameter | Type | Description|
@@ -209,6 +221,8 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 |`authenticationRule` | String | Indicates how [!DNL Platform] customers connect to your destination. Accepted values are `CUSTOMER_AUTHENTICATION`, `PLATFORM_AUTHENTICATION`, `NONE`. <br> <ul><li>Use `CUSTOMER_AUTHENTICATION` if Platform customers log into your system via a username and password, a bearer token, or another method of authentication. For example, you would select this option if you also selected `authType: OAUTH2` or `authType:BEARER` in `customerAuthenticationConfigurations`. </li><li> Use `PLATFORM_AUTHENTICATION` if there is a global authentication system between Adobe and your destination and the [!DNL Platform] customer does not need to provide any authentication credentials to connect to your destination. In this case, you must create a credentials object using the [Credentials](./credentials-configuration.md) configuration. </li><li>Use `NONE` if no authentication is required to send data to your destination platform. </li></ul> |
 |`destinationServerId` | String | The `instanceId` of the [destination server configuration](./destination-server-api.md) used for this destination. |
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
+
+{style="table-layout:auto"}
 
 ## Segment mapping configuration {#segment-mapping}
 
@@ -229,6 +243,8 @@ This section allows you to set the aggregation policies that Experience Platform
 An aggregation policy determines how the exported profiles are combined together in the data exports. Available options are:
 * Best effort aggregation
 * Configurable aggregation (shown in the configuration above)
+
+Read the section on [using templating](./message-format.md#using-templating) and the [aggregation key examples](./message-format.md#template-aggregation-key) to understand how to include the aggregation policy in your message transformation template based on your selected aggregation policy. 
 
 ### Best effort aggregation {#best-effort-aggregation}
 

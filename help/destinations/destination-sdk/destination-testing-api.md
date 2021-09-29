@@ -156,6 +156,7 @@ A successful response returns HTTP status 200 along with the API response from y
 | `results.httpCalls.response` | Includes the response received by Adobe from your destination.|
 | `inputProfiles` | Includes the profiles that were exported on the call to your destination. The profiles match your source schema.|
 
+{style="table-layout:auto"}
 
 ## Test your destination configuration with profiles added to the call {#test-with-added-profiles}
 

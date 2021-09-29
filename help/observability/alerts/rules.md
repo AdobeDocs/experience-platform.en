@@ -2,6 +2,7 @@
 keywords: Experience Platform;home;popular topics;date range
 title: Standard alert rules
 description: This document covers the predefined alert rules provided by Experience Platform.
+feature: Alerts
 exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 ---
 # Standard alert rules

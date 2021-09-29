@@ -23,6 +23,10 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Generate sample profiles based on the source schema {#generate-sample-profiles-source-schema}
 
+>[!IMPORTANT]
+>
+>Add the sample profiles generated here to HTTP calls when [testing your destination](./test-destination.md). 
+
 You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
 
 >[!TIP]
@@ -41,6 +45,8 @@ GET authoring/sample-profiles?destinationInstanceId={DESTINATION_INSTANCE_ID}&co
 | -------- | ----------- |
 | `{DESTINATION_INSTANCE_ID}` | The ID of the destination instance based on which you are generating sample profiles. |
 | `{COUNT}` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. <br> If the count parameter is not specified, then the default number of generated profiles is determined by the `maxUsersPerRequest` value in the [destination server configuration](./destination-server-api.md#create). If this property is not defined, then Adobe will generate one sample profile. |
+
+{style="table-layout:auto"}
 
 
 **Request**
@@ -168,8 +174,13 @@ A successful response returns HTTP status 200 with the specified number of sampl
 | `xdm:status` | Indicates whether the segment membership has been realized as part of the current request. The following values are accepted: <ul><li>`existing`: The profile was already part of the segment prior to the request, and continues to maintain its membership.</li><li>`realized`: The profile is entering the segment as part of the current request.</li><li>`exited`: The profile is exiting the segment as part of the current request.</li></ul> |
 | `identityMap` | A map-type field that describes the various identity values for an individual, along with their associated namespaces. For more information on `identityMap`, read [Basis of schema composition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en#identityMap). |
 
+{style="table-layout:auto"}
 
 ## Generate sample profiles based on the target schema {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Use the sample profiles generated here when crafting your template, in the [render template step](./render-template-api.md#multiple-profiles-with-body). 
 
 You can generate sample profiles based on the target schema making a GET request to the `authoring/sample-profiles/` endpoint and providing the destination ID of the destination configuration based on which you are creating your template.
 
@@ -188,6 +199,8 @@ GET authoring/sample-profiles?destinationId={DESTINATION_ID}&count={COUNT}
 | -------- | ----------- |
 | `{DESTINATION_ID}` | The ID of the destination configuration based on which you are generating sample profiles. |
 | `{COUNT}` | *Optional*. The number of sample profiles that you are generating. The parameter can take values between `1 - 1000`. <br> If the count parameter is not specified, then the default number of generated profiles is determined by the `maxUsersPerRequest` value in the [destination server configuration](./destination-server-api.md#create). If this property is not defined, then Adobe will generate one sample profile. |
+
+{style="table-layout:auto"}
 
 **Request**
 

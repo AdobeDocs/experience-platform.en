@@ -42,10 +42,6 @@ The [!DNL Profile] store data model consists of two core entity types:
 
   ![](images/guardrails/profile-and-dimension-entities.png)
 
-## Profile fragments
-
-There are multiple guardrails in this document referring to "profile fragments." The Real-time Customer Profile is composed of multiple profile fragments. Each fragment represents the data for the identity from a dataset where it is the primary identity. This means that a fragment may contain a primary ID and event data (time series) in an XDM ExperienceEvent dataset or it may be composed of a primary ID and record data (time-independent attributes) in an XDM Individual Profile dataset.
-
 ## Limit types
 
 When defining your data model, it is recommended to stay within the provided guardrails to ensure proper performance and avoid system errors. 
@@ -56,6 +52,10 @@ The guardrails provided in this document include two limit types:
 
 * **Hard limit:** A hard limit provides an absolute maximum for the system. Going beyond a hard limit will result in breakages and errors, preventing the system from functioning as expected.
 
+## Profile fragments
+
+In this document, there are several guardrails that refer to "profile fragments." In Experience Platform, multiple profile fragments are merged together to form the Real-time Customer Profile. Each fragment represents a unique primary identity and the corresponding record or event data for that ID within a given dataset. To learn more about profile fragments, refer to the [Profile overview](home.md#profile-fragments-vs-merged-profiles).
+
 ## Data model guardrails
 
 Adhering to the following guardrails is recommended when creating a data model for use with [!DNL Real-time Customer Profile].
@@ -64,11 +64,13 @@ Adhering to the following guardrails is recommended when creating a data model f
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Number of datasets recommended to contribute to the [!DNL Profile] union schema | 20 | Soft | **A maximum of 20 [!DNL Profile]-enabled datasets is recommended.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled.|
+| Number of Profile-enabled datasets | 20 | Soft | **A maximum of 20 datasets may contribute to the [!DNL Profile] union schema.** To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics).|
+|Number of Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | **A maximum of one (1) Analytics report suite dataset should be enabled for Profile.** Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix to this document.|
 | Number of multi-entity relationships recommended| 5 | Soft | **A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended.** Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | Maximum JSON depth for ID field used in multi-entity relationship| 4 | Soft | **The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4.** This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
 |Array cardinality in a profile fragment|<=500|Soft|**The optimal array cardinality in a profile fragment (time-independent data) is <=500.**|
 |Array cardinality in ExperienceEvent|<=10|Soft|**The optimal array cardinality in an ExperienceEvent (time series data) is <=10.**|
+|Identity count limit for individual profile Identity Graph | 50 | Hard | **The maximum number of identities in an Identity Graph for an individual profile is 50.** Any profiles with more than 50 identities are excluded from segmentation, exports, and lookups.| 
 
 ### Dimension entity guardrails
 
@@ -92,8 +94,8 @@ The following guardrails refer to data size and are recommended to ensure that d
 | --- | --- | --- | --- |
 | Maximum ExperienceEvent size | 10KB | Hard | **The maximum size of an event is 10KB.** Ingestion will continue, however any events larger than 10KB will be dropped.|
 | Maximum profile record size | 100KB | Hard | **The maximum size of a profile record is 100KB.** Ingestion will continue, however profile records larger than 100KB will be dropped.|
-| Maximum profile fragment size | 50MB | Hard | **The maximum size of a profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
-| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance.|
+| Maximum profile fragment size | 50MB | Hard | **The maximum size of a single profile fragment is 50MB.** Segmentation, exports, and lookups may fail for any [profile fragment](#profile-fragments) that is larger than 50MB.|
+| Maximum profile storage size | 50MB | Soft | **The maximum size of a stored profile is 50MB.** Adding new [profile fragments](#profile-fragments) into a profile that is larger than 50MB will affect system performance. For example, a profile could contain a single fragment that is 50MB or it could contain multiple fragments across multiple datasets with a combined total size of 50MB. Attempting to store a profile with a single fragment larger than 50MB, or multiple fragments that total more than 50MB in combined size, will affect system performance.|
 | Number of Profile or ExperienceEvent batches ingested per day | 90 | Soft | **The maximum number of Profile or ExperienceEvent batches ingested per day is 90.** This means that the combined total of Profile and ExperienceEvent batches ingested each day cannot exceed 90. Ingesting additional batches will affect system performance.|
 
 ### Dimension entity guardrails
@@ -113,3 +115,13 @@ The guardrails outlined in this section refer to the number and nature of segmen
 | Maximum number of segments per sandbox | 10K | Soft | **The maximum number of segments an organization can create is 10K per sandbox.** An organization can have more than 10K segments in total, as long as there are less than 10,000 segments in each individual sandbox. Attempting to create additional segments will result in degraded system performance.|
 | Maximum number of streaming segments per sandbox | 500 | Soft | **The maximum number of streaming segments an organization can create is 500 per sandbox.** An organization can have more than 500 streaming segments in total, as long as there are less than 500 streaming segments in each individual sandbox. Attempting to create additional streaming segments will result in degraded system performance.|
 | Maximum number of batch segments per sandbox | 10K | Soft | **The maximum number of batch segments an organization can create is 10K per sandbox.** An organization can have more than 10K batch segments in total, as long as there are less than 10,000 batch segments in each individual sandbox. Attempting to create additional batch segments will result in degraded system performance.|
+
+## Appendix
+
+This section provides additional details for individual guardrails.
+
+### Adobe Analytics report suite datasets in Platform {#aa-datasets}
+
+A maximum of one (1) Adobe Analytics report suite dataset should be enabled for Profile. This is a soft limit, meaning that you are able to enable more than one Analytics dataset for Profile, but it is not recommended as it may have unintended consequences for your data. This is due to the differences between Experience Data Model (XDM) schemas, which provide the semantic structure for data in Experience Platform and allow for consistency in data interpretation, and the customizable nature of eVars and conversion variables in Adobe Analytics. 
+
+For example, in Adobe Analytics a single organization may have multiple report suites. If report suite A designates eVar 4 as "internal search term" and report suite B designates eVar 4 as "referring domain", these values will both be ingested into the same field in Profile, causing confusion and degrading data quality.
