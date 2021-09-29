@@ -73,7 +73,7 @@ To view identity namespaces in the UI, select **[!UICONTROL Identities]** in the
 
 ![browse](./images/browse.png)
 
-A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Identity clusters] and [!UICONTROL Identity graph strength]. [!UICONTROL Identity cluster] refers to identities that are related in the same identity graph, regardless of namespace, while the [!UICONTROL Identity graph strength] strength displays information on the number of cookie and non-cookie IDs within your sandbox.
+A list of identity namespaces appears in the main interface of the page, displaying information on their names, identity symbols, last updated date, and whether they are a standard or a custom namespace. The right rail contains information on [!UICONTROL Identity graph strength].
 
 ![identities](./images/identities.png)
 
