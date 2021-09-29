@@ -1,96 +1,89 @@
 ---
 keywords: RTCDP;CDP;B2B Edition;Real-time Customer Data Platform;real time customer data platform;real time cdp;b2b;cdp;Customer AI
 title: Real-time CDP B2B Edition Overview
-seo-title: Real-time Customer Data Platform Business to Business Edition overview
-description: Overview of Real-time Customer Data Platform Business to Business Edition Account
-seo-description: Overview of Real-time Customer Data Platform Business to Business Edition Account
+seo-title: Real-time Customer Data Platform B2B Edition overview
+description: Overview of Real-time Customer Data Platform B2B Edition Account
+seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 hide: yes
 hidefromtoc: yes
 ---
-# Real-time Customer Data Platform Business to Business Edition overview
+# Real-time Customer Data Platform B2B Edition overview
 
 >[!IMPORTANT]
 >
->The Real-time CDP Business to Business Edition is currently in beta. The documentation and the functionality are subject to change.
+>Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
 
-Built on Real-time Customer Data Platform (Real-time CDP), the Real-time CDP, B2B Edition was purpose-built for marketers. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
+Built on Real-time Customer Data Platform (Real-time CDP), Real-time CDP B2B Edition is purpose-built for marketers operating in a business-to-business service model. It brings together data from multiple sources and combines it into a single view of people and account profiles. This unified data allows marketers to precisely target specific audiences and engage those audiences across all available channels.
 
-There are improvements to a variety of Adobe Experience Platform capabilities that distinguish the Real-time B2B Edition from its B2C Edition counterpart. They include improvements to the Experience Data Model (XDM) specifically for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for [!DNL Marketo Engage]. The [!DNL Marketo] connector allows B2B brands to connect the industry-leading B2B engagement data with behavioral information for lead nurturing and account-based marketing. 
+There are improvements to a variety of Adobe Experience Platform capabilities that distinguish Real-time CDP B2B Edition from its B2C counterpart. They include improvements to the Experience Data Model (XDM) for B2B use cases, upgrades to identity resolution and profile segmentation, as well as a custom-built connector and destination for [!DNL Marketo Engage]. The [!DNL Marketo] connector allows B2B brands to connect its industry-leading B2B engagement data with behavioral information in order to nurture leads and enhance account-based marketing operations.
 
 With Real-time CDP B2B Edition, you can:
 
-* Combine the data collected from multiple sources into a single view, to create holistic people and account profiles.
-* Enrich, segment, and export all your cross-source data from a centralized location for your unified account profiles.
-* Manage your data using data governance tools that are available at every step of the centralizing process to ensure that your data conforms to legal regulations.
+* Combine data collected from multiple sources into a single view in order to create holistic people and account profiles.
+* Enrich, segment, and export all your cross-source data from a centralized store of unified account profiles.
+* Manage your data using data governance tools that are available at every step of the centralizing process to ensure that your data conforms to legal regulations and business policies.
 
-More comprehensive details on the improvements made for the B2B edition are divided into sections below. 
+More comprehensive details on the improvements made for Real-time CDP B2B Edition are divided into sections below. 
 
 ## XDM
 
-XDM has been expanded with a new set of schema classes and field groups that extend fields specifically for B2B purposes. These recent extensions to existing data objects provide preconfigured support for leads, accounts, opportunities, and other B2B centric data. Newly created Experience Events field groups also support additional event types, and the 'Individual Profile' data object is now connected to accounts and the buying group. 
+Real-time CDP B2B Edition provides several new XDM schema classes, field groups, and relationship types to capture and structure your data specifically for B2B purposes. See the overview on [XDM in Real-time CDP B2B edition](./schemas/b2b.md) for a breakdown of each of these enhancements.
 
-The B2B Edition supports many-to-many relationships between people and accounts. This allows profile data to be linked to more than one account and is critical for the identity resolution feature provided by the system.
+By using preconfigured B2B schemas, you can bring in data in a standardized, actionable structure. Many of the new schema classes map almost directly to those encountered in mainstream CRMs such as [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo], and other B2B data sources. With Real-time CDP B2B Edition, you can bring data from B2B sources into Platform in a straightforward manner and with results that are easy to audit.
 
-The use of preconfigured B2B data schemas allows clients to bring in data from standard data structures. Many of the new schema classes map almost directly to those encountered in mainstream CRMs such as [!DNL Salesforce], [!DNL Microsoft Dynamics], [!DNL Marketo], and other B2B data sources. With B2B Edition, you can bring data from B2B sources into Platform in a straightforward manner and with easy to audit results.
-
-These latest innovations within the Real-time CDP, B2B Edition enable B2B brands to better ingest and activate data via B2B centric data sources and destinations. The improved data unification and presentation allows for significantly more variety and flexibility per source system for B2B sources.
+These XDM enhancements allow you to better ingest and activate data via B2B-centric sources and destinations, improving data unification and presentation for more various and flexible use cases.
 
 ## Identity resolution
 
-With easier and more flexible data ingestion, information within the system [!DNL Data Lake] must be identified and managed promptly. The B2B Edition provides powerful, real-time identification of source records that represent real-world people and businesses.
+After schemas are defined and data has been ingested conforming to those schemas, Real-time CDP B2B Edition identifies source records that represent real-world people and businesses through a powerful, real-time identity resolution system.
 
 The identity resolution system provides the following features:
 
 * Combined B2B and B2C people records
 * A multi-level account hierarchy
-* Many-to-many, people to account connections
-* People and account identity resolved in real-time
+* Many-to-many, people-to-account connections
+* People and account identities are resolved in real-time
 
-The identity resolution system has been expanded to support a more multifaceted classification of people. The system allows for people to be identified as both business opportunities as well as being identified as consumers.
+The identity resolution system has been expanded to support a more multifaceted classification of people. The system allows for people to be identified as leads in business opportunities as well as customers.
+
+<!-- Which CMS is "the CMS", exactly? Do they just mean any generic CMS, or series of CMSes? Please investigate/revise so this is clearer. https://git.corp.adobe.com/AdobeDocs/experience-platform.en/pull/2012#discussion_r4163815 -->
 
 Account records are synchronized from the CMS through multiple tools and can be brought together by Platform. The system brings together those people associated wth business opportunities and those recorded as customers, but is also able to preserve the distinction between them as an attribute if they are identifiable. 
 
-Matching identifiers are used to link together and merged account records from across multiple systems. The hierarchies of the accounts are preserved throughout this process. Differentiators are used scrutinize whether a person is associated with an account or not, and provides the ability to separate them from the account if needed.
+Matching identifiers are used to link together and merge account records from across multiple systems. Account hierarchies are preserved throughout this process. Differentiators are used scrutinize whether a person is associated with an account or not, and provide the ability to separate them from the account if needed.
 
-## [!DNL Profiles] and [!DNL segmentation]
+## Profiles and segmentation
 
-These features are distinct to the [!DNL Real-time CDP], B2B Edition as they allow you to build complete customer profiles for your business-to-business needs. This is critical for companies where regulations follow the individual. 
+Once Real-time CDP B2B Edition has ingested data and resolved identities related to people, companies, attributes, and behaviors, that data is used to construct profiles. These profiles can then be segmented into browsable audiences that can then be activated to various destinations.
 
-The B2B Edition allows all this collected data about the people, companies, attributes, and behaviors, to be segmented into browsable audiences that can be sent to various destinations using connectors.
-
-The system tracks people as individuals rather than their emails. By preserving the distinction of customers who have separate B2B and B2C data, it creates a more sophisticated version of identity than is available in the current market.
-
-This means that when someone changes jobs the system still follows them. The person is still the same entity, they are just linked to a new account. This native functionality offers a great vector for expansion into new accounts as the system follows these people as individuals including all of their attributes and behaviors.
+When implemented correctly, the system tracks people using unique primary identifiers rather than attributes that can change, such as email addresses. This means that when someone changes jobs the system still follows them. The person is still the same entity, but instead they are linked to a new account. This native functionality offers a great vector for expansion into new accounts as the system follows these people as individuals including all of their attributes and behaviors.
 
 ## B2B sources
 
-Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The [!DNL Marketo] source allows you to stream B2B data into Platform and keep this data up to date using Platform-connected applications. It supports any number of instances of [!DNL Marketo] (which is beneficial to large companies with multiple instances) and pulls into a single IMS ORG where the data is merged.
+Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. The [!DNL Marketo] source allows you to stream B2B data into Platform and keep this data up to date using Platform-connected applications. It supports any number of instances of [!DNL Marketo] (which is beneficial to large companies with multiple instances) and pulls into a single IMS Organization where the data is merged.
 
 >[!NOTE]
 >
->The [!DNL Marketo] source is **not** required to use the B2B Edition of [!DNL Real-time CDP]. 
+>The [!DNL Marketo] source is **not** required to use Real-time CDP B2B Edition. 
 
-Furthermore, the average latency for B2B data to stream from [!DNL Marketo] is lower than the current standard for event data, which ranges from 24 to 48-hour cycles. Data streamed from [!DNL Marketo] is pushed to Platform in under a minute and becomes available in individual profiles within another minute.
+<!-- Clarify, is TTLs for Experience Events relevant to B2B specifically? Paragraph might need to be cut. -->
 
 Real-time Customer Profile also supports Experience Events time-to-live. Adobe Experience Platform can retain data for a different lengths of time depending on its' source. The duration that data is retained on Experience Platform is configured by the data set. [!DNL Marketo] source data can be retained for 25 months, and web interaction data for unknown users can be expunged on the same schedule set for Adobe Experience Platform.
 
-This helps you to manage [!DNL Profiles] and ensure that their data are both relevant and useful. It is important that the pertinent data is kept for the appropriate amount of time to support the common two year-long sales cycles of B2B deals.
+<!-- Maybe link out to Market sources doc instead -->
+
+<!-- This helps you to manage [!DNL Profiles] and ensure that their data are both relevant and useful. It is important that the pertinent data is kept for the appropriate amount of time to support the common two year-long sales cycles of B2B deals. -->
 
 ## B2B destinations
 
-Any Experience Platform destinations are available and fully supported by the B2B Edition such as [!DNL Google], [!DNL Linkedin], or [!DNL Facebook]. There is also a [!DNL Marketo Engage] destination which streams data out of [!DNL Marketo] or out of Platform and makes it available as audiences.
+All Experience Platform destinations such as [!DNL Google], [!DNL Linkedin], or [!DNL Facebook], are available and fully supported by Real-time CDP B2B Edition. There is also a [!DNL Marketo Engage] destination which streams data out of [!DNL Marketo] or out of Platform and makes it available as audiences.
 
-The [!DNL Marketo] destination provides a seamless and quick way to pull information from AEP into [!DNL Marketo] that the connector is streaming to. The segment connector enables marketers to push segments created in Adobe Experience Platform to [!DNL Marketo]. In [!DNL Marketo], these audiences are then available as static lists.
+The [!DNL Marketo] destination provides a seamless and quick way to pull information from Experience Platform into [!DNL Marketo]. The destination enables marketers to push segments created in Adobe Experience Platform to [!DNL Marketo]. In [!DNL Marketo], these audiences are then available as static lists.
 
-For companies with more than one CRM, the B2B edition provides the option to configure destination connectors to separate instances of [!DNL Marketo] or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently. 
+For companies with more than one CRM, Real-time CDP B2B Edition provides the option to configure destination connectors to separate instances of [!DNL Marketo] or CRM. If required, you can configure destination connectors to each instance and send audiences to each of the CRM instances independently. 
 
 ## Next steps
 
-See the following documents to learn more about the specific differences between [!DNL Real-time CDP] and the [!DNL Real-time CDP] B2B Edition.
+Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-* Getting Started with B2B Edition
-* B2B Profile Enhancements
-* Access Control for B2B
-* Schema Building Enhancements
-* New XDM B2B Classes & Field Groups
-* [!DNL Marketo] Source connectors
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./-sample-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
