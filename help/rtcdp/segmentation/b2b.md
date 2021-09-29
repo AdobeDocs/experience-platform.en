@@ -40,43 +40,43 @@ If you are using a B2B source connection, see the documentation on the schema au
 
 Find all the people who are the "Decision Maker" of any opportunity. This segment requires a link between the [!UICONTROL Person] class and the [!UICONTROL Opportunity Person Relation] class. 
 
-![UI displaying example 1 settings](../assets/segmentation/decision-maker.png)
+![UI displaying example 1 settings](../assets/segmentation/example-1.png)
 
 ### Example 2
 
 Find all the people who are directly assigned to any opportunities of which the opportunity amount is more than the given amount ($1 million). This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Opportunity Person Relation] class, and [!UICONTROL Opportunity] class.
 
-![UI displaying example 2 settings](../assets/example-2.png)
+![UI displaying example 2 settings](../assets/segmentation/example-2.png)
 
 ### Example 3
 
 Find all the people who are directly assigned to any opportunities where the account is located in a given location (Canada). This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Opportunity Person Relation] class, [!UICONTROL Opportunity] class, and [!UICONTROL Account] class.
 
-![UI displaying example 3 settings](../assets/example-3.png)
+![UI displaying example 3 settings](../assets/segmentation/example-3.png)
 
 ### Example 4
 
 Find all the people who are a "Decision Maker" of any opportunity where the account is in the "Finance" industry, and visited the pricing page in the last three days. This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Opportunity Person Relation] class, [!UICONTROL Opportunity] class, and [!UICONTROL Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
-![UI displaying example 4 settings](../assets/example-4.png)
+![UI displaying example 4 settings](../assets/segmentation/example-4.png)
 
 ### Example 5
 
 Find all the people who work in a Human Resources (HR) department and are related to any account that has at least one open opportunity worth the given amount ($1 million) or more. This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Account] class, and [!UICONTROL Opportunity] class.
 
-![UI displaying example 5 settings](../assets/example-5.png)
+![UI displaying example 5 settings](../assets/segmentation/example-5.png)
 
 ### Example 6
 
 Find all the people whose job title is Vice President and are related to any account with annual revenue of the given amount ($100 million) or more, and have visited the pricing page at least 3 times in the last month. This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Account] class, and [!UICONTROL XDM ExperienceEvent] class.
 
-![UI displaying example 6 settings](../assets/example-6.png)
+![UI displaying example 6 settings](../assets/segmentation/example-6.png)
 
 ### Example 7
 
 Find all the people who are a "Decision Maker" of any closed-lost opportunity, and visited the pricing page in the last week. This segment requires a link between the [!UICONTROL Person] class, [!UICONTROL Opportunity Person Relation] class, [!UICONTROL Opportunity] class, and [!UICONTROL XDM ExperienceEvent] class.
 
-![UI displaying example 7 settings](../assets/example-7.png)
+![UI displaying example 7 settings](../assets/segmentation/example-7.png)
 
 ## Next steps
 
