@@ -10,7 +10,7 @@ description: Overview of the various Real-time CDP B2B Edition use cases availab
 >
 >Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
 
-This document provides examples regarding the segmentation available for Real-time CDP, B2B Edition and how the different types of attributes can be combined for common B2B use cases.
+This document provides examples regarding the segmentation available for Real-time CDP B2B Edition and how the different types of attributes can be combined for common B2B use cases.
 
 >[!NOTE]
 >
@@ -20,12 +20,9 @@ This document provides examples regarding the segmentation available for Real-ti
 
 Before you can use the segmentation attributes for B2B classes, you must complete the following steps:
 
-1. Create schemas that use the B2B classes. The B2B Edition classes include Account, Campaign, Opportunity, Marketing List, and more. For information on how to set up schemas for use with B2B classes please see the schema documentation.
-  <!-- [PLACEHOLDER how to set up schemas for use with B2B classes]()] -->
-1. Create relationships between your Experience Data Model (XDM) B2B schemas. Segments based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality.
-  <!-- [PLACEHOLDER Create relationships between your XDM B2B schemas]() -->
-1. Ingest data using datasets based on your B2B schemas. See the sources documentation for information on how to ingest data. 
-  <!-- [PLACEHOLDER how to ingest data](../../sources/home.md). -->
+1. Create schemas that use the B2B classes. The B2B Edition classes include Account, Campaign, Opportunity, Marketing List, and more. For information on [how to set up schemas for use with B2B classes](../schemas/b2b.md) please see the schema documentation.
+1. Create relationships between your Experience Data Model (XDM) B2B schemas. Segments based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on [how to define a relationship between two B2B schemas](../../xdm/tutorials/relationship-b2b.md) for more information.
+1. Ingest data using datasets based on your B2B schemas. See the sources documentation for [information on how to ingest data](../../sources/connectors/adobe-applications/marketo/marketo.md). 
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
@@ -37,8 +34,7 @@ Once the union schemas that use B2B classes have data ingested and relationships
 
 The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the segment does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the segment's attributes. 
 
-See the documentation on the schema auto generation utility for use cases that require [relations between schemas](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
-<!-- [possible PLACEHOLDER] -->
+If you are using a B2B source connection, see the documentation on the schema auto-generation utility for use cases that require [relations between schemas](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ### Example 1
 
