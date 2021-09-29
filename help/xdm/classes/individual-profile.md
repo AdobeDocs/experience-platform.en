@@ -36,12 +36,17 @@ The [!DNL XDM Individual Profile] class itself provides several system-generated
 
 Adobe provides several standard field groups for use with the [!DNL XDM Individual Profile] class. The following is a list of some commonly used field groups for the class:
 
+* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Demographic Details]](../field-groups/profile/demographic-details.md)
 * [[!UICONTROL IdentityMap]](../field-groups/profile/identitymap.md)
 * [[!UICONTROL Loyalty Details]](../field-groups/profile/loyalty-details.md)
 * [[!UICONTROL Personal Contact Details]](../field-groups/profile/personal-contact-details.md)
-* [[!UICONTROL Consents and Preferences]](../field-groups/profile/consents.md)
 * [[!UICONTROL Segment Membership Details]](../field-groups/profile/segmentation.md)
+* [[!UICONTROL Telecom Subscription]](../field-groups/profile/telecom-subscription.md)
 * [[!UICONTROL Work Contact Details]](../field-groups/profile/work-contact-details.md)
+* [[!UICONTROL XDM Business Person Components]](../field-groups/profile/business-person-components.md)\*
+* [[!UICONTROL XDM Business Person Details]](../field-groups/profile/business-person-details.md)\*
+
+*\*This field group is only available to organizations with access to the B2B edition of Real-time Customer Data Platform.*
 
 For a complete list of all compatible field groups for [!DNL XDM Individual Profile], refer to the [XDM GitHub repo](https://github.com/adobe/xdm/tree/master/components/fieldgroups/profile).
