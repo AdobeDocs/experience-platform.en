@@ -49,7 +49,7 @@ You can use the generic template to [create a new audience template](./audience-
 
 The Adobe engineering team can work with you to expand the generic template with custom fields if your use cases requires it.
 
-## Template examples {#template-examples}
+## Configuration examples {#configuration-examples}
 
 This section includes three examples of generic audience metadata configurations, for your reference, along with descriptions of the main sections of the configuration. Notice how the url, headers, request and response body differ between the three example configurations. This is due to the different specifications of the three sample platforms' marketing API.
 

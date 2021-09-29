@@ -94,7 +94,7 @@ To view the details of one of the sample profiles, select the **[!UICONTROL Prof
 To learn more about merge policies and their role within Platform, see the [merge policies overview](../merge-policies/overview.md).
 
 
-### Browse by [!UICONTROL Identity]
+### Browse by [!UICONTROL Identity] {#browse-identity}
 
 On the **[!UICONTROL Browse]** tab, you can use an identity namespace in order to look up a specific profile by an identity value. Browsing by an identity requires you to provide a merge policy, an identity namespace, and an identity value.
 

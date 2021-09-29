@@ -32,6 +32,9 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Segment builder guide](segmentation/segment-builder-guide.md)
   * [B2B Segmentation](segmentation/b2b-segmentation.md)
   * [Customer AI](segmentation/customer-ai.md)
+* Schemas {#schemas}
+  * [Schemas overview](schemas/overview.md)
+  * [Schemas in Real-time CDP B2B Edition](schemas/b2b.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)

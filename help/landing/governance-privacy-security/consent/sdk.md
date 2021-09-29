@@ -92,6 +92,10 @@ Once you have finished configuring the extension, it can be integrated into your
 
 Once you have integrated the SDK extension into your website, you can start using the Platform Web SDK `setConsent` command to send consent data to Platform. 
 
+>[!IMPORTANT]
+>
+>The `setConsent` command only updates data directly in the Profile store, and does not send any data to the Data Lake.
+
 There are two scenarios where `setConsent` should be called on your site:
 
 1. When consent is loaded on the page (in other words, on every page load)
@@ -188,6 +192,8 @@ var setConsent = function () {
 ## Handling SDK responses
 
 All [!DNL Platform SDK] commands return promises that indicate whether the call succeeded or failed. You can then use these responses for additional logic such as displaying confirmation messages to the customer. See the section on [handling success or failure](../../../edge/fundamentals/executing-commands.md#handling-success-or-failure) in the guide on executing SDK commands for specific examples.
+
+Once you have successfully made `setConsent` calls with the SDK, you can use the profile viewer in the Platform UI to verify whether data is landing in the Profile store. See the section on [browsing profiles by identity](../../../profile/ui/user-guide.md#browse-identity) for more information.
 
 ## Next steps
 
