@@ -1,18 +1,18 @@
 ---
 title: Adobe Experience Platform Release Notes
 description: The latest release notes for Adobe Experience Platform.
+exl-id: 96375409-803f-45af-805e-900207d972e4
 ---
-
 # Adobe Experience Platform release notes 
 
 **Release date: September 29, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Data Prep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
-## Data Prep {#data-prep}
+## [!DNL Data Prep] {#data-prep}
 
 [!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
@@ -20,9 +20,9 @@ Updates to existing features in Adobe Experience Platform:
 
 | Feature | Description |
 | --- | --- |
-| Support for streaming dataflows | You can now use data prep functions when creating a streaming dataflow for [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], and [!DNL Google PubSub]. For more information, see the tutorial on [creating a streaming dataflow for cloud storage sources](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md). |
+| Support for streaming dataflows | You can now use data prep functions when creating a streaming dataflow for [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], and [!DNL Google PubSub]. See the tutorial on [creating a streaming dataflow for cloud storage sources](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) for more information. |
 
-For more information, please see the [[!DNL Data Prep] overview](../../data-prep/home.md).
+To learn more about [!DNL Data Prep] see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## Sources {#sources}
 
