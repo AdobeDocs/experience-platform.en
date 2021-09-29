@@ -23,6 +23,10 @@ Before continuing, please review the [getting started guide](./getting-started.m
 
 ## Generate sample profiles based on the source schema {#generate-sample-profiles-source-schema}
 
+>[!IMPORTANT]
+>
+>Add the sample profiles generated here to HTTP calls when [testing your destination](./test-destination.md). 
+
 You can generate sample profiles based on the source schema by making a GET request to the `authoring/sample-profiles/` endpoint and providing the ID of a destination instance that you created based on the destination configuration that you want to test. 
 
 >[!TIP]
@@ -173,6 +177,10 @@ A successful response returns HTTP status 200 with the specified number of sampl
 {style="table-layout:auto"}
 
 ## Generate sample profiles based on the target schema {#generate-sample-profiles-target-schema}
+
+>[!IMPORTANT]
+>
+>Use the sample profiles generated here when crafting your template, in the [render template step](./render-template-api.md#multiple-profiles-with-body). 
 
 You can generate sample profiles based on the target schema making a GET request to the `authoring/sample-profiles/` endpoint and providing the destination ID of the destination configuration based on which you are creating your template.
 
