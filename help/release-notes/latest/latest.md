@@ -8,7 +8,7 @@ description: The latest release notes for Adobe Experience Platform.
 
 Updates to existing features in Adobe Experience Platform:
 
-- [!DNL Data Prep](#data-prep)
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
 ## [!DNL Data Prep] {#data-prep}
