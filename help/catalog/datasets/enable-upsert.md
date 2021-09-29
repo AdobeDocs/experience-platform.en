@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
-title: Enable a Dataset for Incremental Profile Updates using APIs
+title: Enable a Dataset for Profile Updates using APIs
 type: Tutorial
 description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make incremental updates to Real-time Customer Profile data.
 ---
 
-# Enable a dataset for incremental profile updates using APIs
+# Enable a dataset for profile updates using APIs
 
-This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make incremental updates to Real-time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
+This tutorial covers the process of enabling a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data. This includes steps for creating a new dataset and configuring an existing dataset. 
 
 ## Getting started
 
@@ -181,6 +181,10 @@ Under the `tags` property, you can see that `unifiedProfile` is present with the
 ### Disable the dataset for Profile
 
 In order to configure a Profile-enabled dataset for incremental updates, you must first disable the `unifiedProfile` tag and then re-enable it alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
+
+>[!WARNING]
+>
+>Data ingested into the dataset while it is disabled will not be ingested into the Profile Store. It is recommended to avoid ingesting data into the dataset until it has been re-enabled for Profile.
 
 **API format**
 

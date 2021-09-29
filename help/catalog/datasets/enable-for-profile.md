@@ -226,7 +226,7 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 
 Both [!DNL Real-time Customer Profile] and [!DNL Identity Service] consume XDM data as it is being ingested into a dataset. For instructions on how to upload data into a dataset, refer to the tutorial on [creating a dataset using APIs](../../catalog/datasets/create.md). When planning what data to send to your [!DNL Profile]-enabled dataset, consider the following best practices:
 
-- Include any data you want to use as audience segment criteria. 
+- Include any data you want to use as segmentation criteria. 
 - Include as many identifiers as you can ascertain from your profile data to maximize your identity graph. This allows [!DNL Identity Service] to stitch identities across datasets more effectively.
 
 ## Confirm data ingest by [!DNL Real-time Customer Profile] {#confirm-data-ingest-by-real-time-customer-profile}
