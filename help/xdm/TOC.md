@@ -112,6 +112,7 @@ feature: Schemas
     * [Classes](./ui/resources/classes.md)
     * [Field groups](./ui/resources/field-groups.md)
     * [Data types](./ui/resources/data-types.md)
+    * [Standard fields](./ui/resources/standard-fields.md)
   * Define fields {#fields}
     * [Overview](./ui/fields/overview.md)
     * [Required fields](./ui/fields/required.md)
