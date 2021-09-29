@@ -30,7 +30,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
-  * [B2B Segmentation](segmentation/b2b-segmentation.md)
+  * [B2B Segmentation](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)

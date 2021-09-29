@@ -2,13 +2,13 @@
 title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition.
 description: Overview of the various Real-time CDP B2B Edition use cases available.
 ---
-# Overview of Segmentation use cases for Real-time Customer Data Platform Business-to-Business Edition
+# Overview of Segmentation use cases for Real-time Customer Data Platform B2B Edition (Beta)
 
 <!-- This document relates to this [ticket](https://jira.corp.adobe.com/browse/PLAT-100468) -->
 
 >[!IMPORTANT]
 >
->Real-time CDP Business-to-Business Edition is currently in beta. The documentation and the functionality are subject to change.
+>Real-time CDP B2B Edition is currently in beta. The documentation and the functionality are subject to change.
 
 This document provides examples regarding the segmentation available for Real-time CDP, B2B Edition and how the different types of attributes can be combined for common B2B use cases.
 
@@ -39,8 +39,6 @@ The following use cases are available for segmentation with the B2B Edition. Eac
 
 See the documentation on the schema auto generation utility for use cases that require [relations between schemas](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 <!-- [possible PLACEHOLDER] -->
-
-<!-- short blurb explaining what the segment does, and then an accompanying screenshot to show how it’s built -->
 
 ### Example 1
 
