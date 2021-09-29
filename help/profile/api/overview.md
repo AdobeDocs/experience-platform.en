@@ -52,9 +52,9 @@ As data is ingested into Platform, a sample job is run to update the profile cou
 
 Profile-enabled data that is ingested into [!DNL Platform] is stored in the [!DNL Data Lake] as well as the [!DNL Real-time Customer Profile] data store. Occasionally it may be necessary to delete a dataset or batch from the [!DNL Profile] store in order to remove data that you no longer require or that was added in error. This requires using the API to create a [!DNL Profile System Job], also known as a "[!DNL delete request]", which can be modified, monitored, or deleted if required. To learn how to work with delete requests using the `/system/jobs` endpoint in the [!DNL Real-time Customer Profile] API, follow the steps outlined in the [profile system jobs endpoint guide](profile-system-jobs.md).
 
-## Update profiles incrementally {#update-profile}
+## Update profiles attributes {#update-profile}
 
-Occasionally it may be necessary to incrementally update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to incrementally update profiles, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
+Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
 
 ## Next steps {#next-steps}
 

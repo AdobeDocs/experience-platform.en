@@ -2,7 +2,7 @@
 keywords: Experience Platform;profile;real-time customer profile;troubleshooting;API;enable dataset
 title: Enable a Dataset for Profile Updates using APIs
 type: Tutorial
-description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make incremental updates to Real-time Customer Profile data.
+description: This tutorial shows you how to use Adobe Experience Platform APIs to enable a dataset with "upsert" capabilities in order to make updates to Real-time Customer Profile data.
 ---
 
 # Enable a dataset for profile updates using APIs
@@ -44,7 +44,7 @@ When creating a new dataset, you can enable that dataset for Profile and enable 
 >
 >To create a new Profile-enabled dataset, you must know the ID of an existing XDM schema that is enabled for Profile. For information on how to look-up or create a Profile-enabled schema, see the tutorial on [creating a schema using the Schema Registry API](../../xdm/tutorials/create-schema-api.md). 
 
-To create a dataset that is enabled for Profile and incremental updates, use a POST request to the `/dataSets` endpoint.
+To create a dataset that is enabled for Profile and updates, use a POST request to the `/dataSets` endpoint.
 
 **API format**
 
@@ -54,7 +54,7 @@ POST /dataSets
 
 **Request**
 
-By including `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support incremental updates.
+By including `unifiedProfile` under `tags` in the request body, the dataset will be enabled for [!DNL Profile] upon creation. Within the `unifiedProfile` array, adding `isUpsert:true` will add the ability for the dataset to support updates.
 
 ```shell
 curl -X POST \
@@ -96,7 +96,7 @@ A successful response shows an array containing the ID of the newly created data
 
 ## Configure an existing dataset {#configure-an-existing-dataset}
 
-The following steps cover how to configure an existing Profile-enabled dataset for incremental update ("upsert") functionality. 
+The following steps cover how to configure an existing Profile-enabled dataset for update ("upsert") functionality. 
 
 >[!NOTE]
 >
@@ -180,7 +180,7 @@ Under the `tags` property, you can see that `unifiedProfile` is present with the
 
 ### Disable the dataset for Profile
 
-In order to configure a Profile-enabled dataset for incremental updates, you must first disable the `unifiedProfile` tag and then re-enable it alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
+In order to configure a Profile-enabled dataset for updates, you must first disable the `unifiedProfile` tag and then re-enable it alongside the `isUpsert` tag. This is done using two PATCH requests, once to disable and one to re-enable.
 
 >[!WARNING]
 >
@@ -224,7 +224,7 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 
 ### Enable the dataset for Profile and upsert {#enable-the-dataset}
 
-An existing dataset can be enabled for Profile and incremental updates using a single PATCH request.
+An existing dataset can be enabled for Profile and attribute updates using a single PATCH request.
 
 **API format**
 
@@ -254,7 +254,7 @@ curl -X PATCH \
 ```
 
 **Response**
-A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been enabled and configured for incremental updates.
+A successful PATCH request returns HTTP Status 200 (OK) and an array containing the ID of the updated dataset. This ID should match the one sent in the PATCH request. The `unifiedProfile` tag has now been enabled and configured for attribute updates.
 
 ```json
 [
@@ -264,4 +264,4 @@ A successful PATCH request returns HTTP Status 200 (OK) and an array containing 
 
 ## Next Steps
 
-Your Profile and upsert-enabled dataset can now be used by batch and streaming ingestion workflows to make incremental updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).
+Your Profile and upsert-enabled dataset can now be used by batch and streaming ingestion workflows to make updates to profile data. To learn more about ingesting data into Adobe Experience Platform, please begin by reading the [data ingestion overview](../../ingestion/home.md).
