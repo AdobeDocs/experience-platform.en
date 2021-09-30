@@ -112,7 +112,6 @@ feature: Schemas
     * [Classes](./ui/resources/classes.md)
     * [Field groups](./ui/resources/field-groups.md)
     * [Data types](./ui/resources/data-types.md)
-    * [Standard fields](./ui/resources/standard-fields.md)
   * Define fields {#fields}
     * [Overview](./ui/fields/overview.md)
     * [Required fields](./ui/fields/required.md)
@@ -121,6 +120,7 @@ feature: Schemas
     * [Enum fields](./ui/fields/enum.md)
     * [Identity fields](./ui/fields/identity.md)
     * [Relationship fields](./ui/fields/relationship.md)
+  * [Field-based workflows](./ui/resources/field-based-workflows.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
 * Schema Registry API {#api}
