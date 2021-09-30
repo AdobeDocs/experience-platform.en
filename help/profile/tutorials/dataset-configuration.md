@@ -3,6 +3,7 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Configure a Dataset for Profile and Identity Service using APIs
 type: Documentation
 description: Learn how to enable a dataset for use with Real-time Customer Profile and Identity Service using Adobe Experience Platform APIs.
+exl-id: 142cb7df-072a-4f3a-8a9c-9a78afb35312
 ---
 # Configure a dataset for Profile using APIs
 
