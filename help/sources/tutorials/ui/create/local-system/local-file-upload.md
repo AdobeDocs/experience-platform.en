@@ -5,6 +5,7 @@ title: Create a Local File Upload Source Connector in the UI
 topic-legacy: overview
 type: Tutorial
 description: Learn how to create a source connection for your local system to bring local files to Platform
+exl-id: 9ce15362-c30d-40cc-9d9c-caa650579390
 ---
 # Create a local file upload source connector in the UI
 

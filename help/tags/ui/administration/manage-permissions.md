@@ -1,6 +1,7 @@
 ---
 title: Manage Permissions for Tags
 description: Learn about how to grant permissions for tags in Adobe Experience Platform.
+exl-id: b0439909-c515-4829-82b9-267da8862cba
 ---
 # Manage permissions for tags
 

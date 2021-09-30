@@ -1,9 +1,10 @@
 ---
 keywords: Experience Platform;home;popular topics;date range
 title: Standard alert rules
-description: This document covers the predefined alert rules provided by Experience Platform. 
+description: This document covers the predefined alert rules provided by Experience Platform.
+feature: Alerts
+exl-id: b4af1c15-b1bc-4e4b-a447-09cc17a63988
 ---
-
 # Standard alert rules
 
 Adobe Experience Platform provides several predefined alert rules that you can enable for your organization. The table below covers the details of these Adobe-provided alert rules. For more general information on alerts in Experience Platform, see the [alerts overview](./overview.md).

@@ -1,6 +1,7 @@
 ---
 title: Shared modules for the Adobe Analytics extension
 description: Learn about the shared library modules provided by the Adobe Analytics tag extension in Adobe Experience Platform.
+exl-id: f1d7cb2b-0058-46f9-983c-079079e06057
 ---
 # Shared modules for the Adobe Analytics extension
 

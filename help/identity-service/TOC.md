@@ -23,5 +23,5 @@ feature: Identities
   - [Identity graph viewer](ui/identity-graph-viewer.md)
 - [ECID overview](ecid.md)
 - [Troubleshooting guide](troubleshooting-guide.md)
-- [API reference](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/id-service-api.yaml)
+- [API reference](https://www.adobe.io/experience-platform-apis/references/identity-service)
 - [Platform release notes](https://www.adobe.com/go/platform-release-notes-en)

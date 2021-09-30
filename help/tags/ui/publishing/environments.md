@@ -1,6 +1,7 @@
 ---
 title: Environments
 description: Learn about the concept of tag environments and how they function within Adobe Experience Platform.
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 ---
 # Environments
 

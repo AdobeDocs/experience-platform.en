@@ -1,19 +1,19 @@
 ---
 title: Marketo Engage Destination
 description: Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
+exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 ---
-
 # (Beta) Marketo Engage destination {#beta-marketo-engage-destination}
 
 >[!IMPORTANT]
 >
->The Marketo Engage Destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+>The Marketo Engage destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 ## Overview {#overview}
 
 Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
-The segment connector enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
+The destination enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
 
 ## Supported identities {#supported-identities}
 
@@ -24,20 +24,28 @@ The segment connector enables marketers to push segments created in Adobe Experi
 
 ## Export type {#export-type}
 
-Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Marketo Engage destination.
+Segment Export - you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
 
-## Set Up {#set-up}
+## Set up destination and activate segments {#set-up}
 
-Instructions on how to set up the destination [can be found here](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en).
+For detailed instructions on how to set up the destination and activate segments, read [Push an Adobe Experience Platform Segment to a Marketo Static List](https://experienceleague.adobe.com/docs/marketo/using/product-docs/core-marketo-concepts/smart-lists-and-static-lists/static-lists/push-an-adobe-experience-cloud-segment-to-a-marketo-static-list.html?lang=en) in the Marketo documentation.
+
+<!--
 
 ## Connect to the destination {#connect}
 
 To connect to this destination, follow the steps described in the [destination configuration tutorial](../../ui/connect-destination.md).
 
-## Data Usage and Governance {#data-usage-governance}
+-->
+
+## Data usage and governance {#data-usage-governance}
 
 All [!DNL Adobe Experience Platform] destinations are compliant with data usage policies when handling your data. For detailed information on how [!DNL Adobe Experience Platform] enforces data governance, see the [data governance overview](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+
+<!--
 
 ## Activate segments to this destination {#activate}
 
 See [Activate audience data to streaming segment export destinations](../../ui/activate-segment-streaming-destinations.md) for instructions on activating audience segments to this destination.
+
+-->

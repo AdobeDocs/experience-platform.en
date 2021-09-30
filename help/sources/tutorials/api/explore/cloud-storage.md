@@ -8,7 +8,7 @@ exl-id: ba1a9bff-43a6-44fb-a4e7-e6a45b7eeebd
 ---
 # Explore a cloud storage system using the [!DNL Flow Service] API
 
-This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) to explore a third-party cloud storage system.
+This tutorial uses the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to explore a third-party cloud storage system.
 
 ## Getting started
 
@@ -180,7 +180,7 @@ A successful response returns the structure of the queried file including table 
 
 ## Using query parameters {#query}
 
-The [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) supports the use of query parameters to preview and inspect different file types.
+The [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) supports the use of query parameters to preview and inspect different file types.
 
 | Parameter | Description |
 | --------- | ----------- |

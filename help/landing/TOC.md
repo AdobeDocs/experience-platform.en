@@ -9,6 +9,7 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
 
 * [Platform overview](home.md)
 * [Platform overview (Video)](video/platform-overview.md)
+* [Platform tutorials](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
 * [A customer experience powered by Platform (Video)](video/customer-experience.md)
 * [Behind the scenes of a customer experience powered by Platform (Video)](video/customer-experience-bts.md)
 * Getting started {#getting-started}
@@ -40,10 +41,10 @@ user-guide-description: Learn how Experience Platform makes it possible to deliv
     * Adobe standard {#adobe}
       * [Overview](./governance-privacy-security/consent/adobe/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/adobe/dataset.md)
-      * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/adobe/sdk.md) 
     * IAB TCF 2.0 {#iab}
       * [Overview](./governance-privacy-security/consent/iab/overview.md)
       * [Configure a dataset to capture consent and preference data](./governance-privacy-security/consent/iab/dataset.md)
+    * [Integrate the Platform Web SDK to process consent and preference data](./governance-privacy-security/consent/sdk.md) 
   * Audit logs (Beta) {#audit-logs}
     * [Overview](./governance-privacy-security/audit-logs/overview.md)
 * [License usage dashboard](license-usage-dashboard.md)

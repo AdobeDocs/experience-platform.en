@@ -1,6 +1,7 @@
 ---
 title: Audit Logs Overview
 description: Learn how audit logs allow you to see who did what actions in Adobe Experience Platform.
+exl-id: 00baf615-5b71-4e0a-b82a-ca0ce8566e7f
 ---
 # Audit logs (Beta)
 
@@ -14,23 +15,25 @@ In a basic sense, an audit log tells **who** performed **what** action, and **wh
 
 This document covers audit logs in Platform, including how to view and manage them in UI or API.
 
-## Event types captured by audit logs
+## Event types captured by audit logs {#category}
 
 The following table outlines which actions on which resources are recorded by audit logs:
 
 | Resource | Actions |
 | --- | --- |
-| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
 | [Dataset](../../../catalog/datasets/overview.md) | <ul><li>Create</li><li>Update</li><li>Delete</li><li>Enable for [Real-time Customer Profile](../../../profile/home.md)</li></ul> |
 | [Schema](../../../xdm/schema/composition.md) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Class](../../../xdm/schema/composition.md#class) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
 | [Field group](../../../xdm/schema/composition.md#field-group) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Data type](../../../xdm/schema/composition.md#data-type) | <ul><li>Create</li><li>Update</li><li>Delete</li></ul> |
+| [Sandbox](../../../sandboxes/home.md) | <ul><li>Create</li><li>Update</li><li>Reset</li><li>Delete</li></ul> |
 | [Destination](../../../destinations/home.md) | <ul><li>Activate</li></ul> |
 
 ## Access to audit logs
 
 When the feature is enabled for your organization, audit logs are automatically collected as activity occurs. You do not need to manually enable log collection.
 
-In order to view and export audit logs, you must have the "View Audit Logs" access control permission granted. To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
+In order to view and export audit logs, you must have the "View Audit Logs" access control permission granted (found under the "Data Governance" category). To learn how to manage individual permissions for Platform features, please refer to the [access control documentation](../../../access-control/home.md).
 
 ## Managing audit logs in the UI
 
@@ -43,6 +46,23 @@ The system only displays audit logs from the last year. Any logs that exceed thi
 Select an event from the list to view its details in the right rail.
 
 ![Event details](../../images/audit-logs/select-event.png)
+
+Select the funnel icon (![Filter icon](../../images/audit-logs/icon.png)) to display a list of filter controls to help narrow results.
+
+![Filters](../../images/audit-logs/filters.png)
+
+The following filters are available for audit events in the UI:
+
+| Filter | Description |
+| --- | --- |
+| [!UICONTROL Category] | Use the dropdown menu to filter displayed results by [category](#category). |
+| [!UICONTROL Action] | Filter by action. Currently only [!UICONTROL Create] and [!UICONTROL Delete] actions can be filtered. |
+| [!UICONTROL Access Control Status] | Filter by whether the action was allowed (completed) or denied due to lack of [access control](../../../access-control/home.md) permissions. |
+| [!UICONTROL Date] | Select a start date and/or an end date to define a date range to filter results by. |
+
+To remove a filter, select the "X" on the pill icon for the filter in question, or select **[!UICONTROL Clear all]** to remove all filters.
+
+![Clear filters](../../images/audit-logs/clear-filters.png)
 
 <!-- (Planned for post-beta release)
 ### Export an audit log

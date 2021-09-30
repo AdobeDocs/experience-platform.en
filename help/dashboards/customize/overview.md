@@ -2,8 +2,8 @@
 keywords: Experience Platform;user interface;UI;dashboards;dashboard;profiles;segments;destinations
 title: Dashboard Customization Overview
 description: Learn more about the ways in which you can customize the data displayed in your Adobe Experience Platform dashboards.
+exl-id: efabdb61-4148-4b0e-b7a1-6e788b5e43a8
 ---
-
 # Dashboard customization overview
 
 The profiles, segments, and destinations dashboards available within Adobe Experience Platform can be customized in a number of different ways. This guide provides an overview of available customizations, with links to step-by-step instructions guiding your through how to personalize which widgets are displayed in your dashboards as well as the size, shape, and location of those widgets.

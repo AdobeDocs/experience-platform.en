@@ -1,6 +1,7 @@
 ---
 title: Properties endpoint
 description: Learn how to make calls to the /properties endpoint in the Reactor API.
+exl-id: 7830c519-312f-4f73-b3f5-64ab0420d902
 ---
 # Properties endpoint
 

@@ -9,7 +9,7 @@ exl-id: 0fae04d0-164b-4113-a274-09677f4bbde5
 ---
 # Collect data from a customer success system using source connectors and APIs
 
-This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service]](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) API.
+This tutorial covers the steps for retrieving data from a third-party customer success system and ingesting it into [!DNL Platform] through source connectors and the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Getting started
 

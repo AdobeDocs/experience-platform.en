@@ -1,6 +1,7 @@
 ---
 title: Audit events endpoint
 description: Learn how to make calls to the /audit_events endpoint in the Reactor API.
+exl-id: 59cd58dc-4085-47b7-846f-d3937740dd9b
 ---
 # Audit events endpoint
 
