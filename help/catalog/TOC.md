@@ -25,6 +25,8 @@ feature: Data Management
   * [Datasets overview](datasets/overview.md)
   * [Datasets user guide](datasets/user-guide.md)
   * [Create and populate a dataset using APIs](datasets/create.md)
+  * [Enable a dataset for Profile and Identity](datasets/enable-for-profile.md)
+  * [Enable a dataset for Profile updates (upsert)](datasets/enable-upsert.md)
 * [Privacy request processing in the Data Lake](privacy.md)
 * [Data protection in Experience Platform](data-protection.md)
 * [API reference](https://www.adobe.io/experience-platform-apis/references/catalog/)
