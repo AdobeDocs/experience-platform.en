@@ -120,7 +120,7 @@ feature: Schemas
     * [Enum fields](./ui/fields/enum.md)
     * [Identity fields](./ui/fields/identity.md)
     * [Relationship fields](./ui/fields/relationship.md)
-  * [Field-based workflows](./ui/resources/field-based-workflows.md)
+  * [Field-based workflows](./ui/field-based-workflows.md)
   * [Generate sample XDM data](./ui/sample.md)
   * [Export XDM schemas](./ui/export.md)
 * Schema Registry API {#api}
