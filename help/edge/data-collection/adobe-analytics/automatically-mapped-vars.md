@@ -40,7 +40,7 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | environment.browserDetails.viewportWidth | bw | AppMeasurement query parameter BROWSER_WIDTH mapping. |
 | environment.connectionType | ct | AppMeasurement query parameter CT_CONNECT_TYPE mapping. |
 | environment.ipV4 | X-Forwarded-For | This is a HTTP Header mapping, X-FORWARDED-FOR. |
-| identityMap.ECID.[0].id | mid | AppMeasurement query parameter MID mapping. |
+| identityMap.ECID[0].id | mid | AppMeasurement query parameter MID mapping. |
 | marketing.trackingCode | v0 | AppMeasurement query parameter CAMPAIGN mapping. |
 | media.mediaTimed.completes.value | c.a.media.complete | AppMeasurement context data. |
 | media.mediaTimed.dropBeforeStart.value |  c.a.media.view, c.a.media.timePlayed, c.a.media.play| AppMeasurement context data. |
@@ -52,10 +52,10 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | media.mediaTimed.pauses.value | c.a.media.pauseCount | AppMeasurement context data `c.a.media.pauseCount` mapping. |
 | media.mediaTimed.primaryAssetReference.@id | c.a.media.asset   | AppMeasurement context data. |
 | media.mediaTimed.primaryAssetReference.dc:title | c.a.media.friendlyName | AppMeasurement context data `c.a.media.friendlyName` mapping. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator.[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement context data. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Creator[N].iptc4xmpExt:Name | c.a.media.originator | AppMeasurement context data. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Episode.iptc4xmpExt:Number | c.a.media.episode | AppMeasurement context data `c.a.media.episode` mapping. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Genre | c.a.media.genre | AppMeasurement context data. |
-| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating.[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement context data. |
+| media.mediaTimed.primaryAssetReference.iptc4xmpExt:Rating[N].iptc4xmpExt:RatingValue | c.a.media.rating | AppMeasurement context data. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Season.iptc4xmpExt:Number | c.a.media.season | AppMeasurement context data `c.a.media.season` mapping. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Identifier | a.media.name | AppMeasurement context data `a.media.name` mapping. |
 | media.mediaTimed.primaryAssetReference.iptc4xmpExt:Series.iptc4xmpExt:Name | c.a.media.show | AppMeasurement context data `c.a.media.show` mapping. |
@@ -83,9 +83,9 @@ Below is a list of variables that Adobe Experience Platform Edge Network automat
 | placeContext.geo.postalCode | zip | AppMeasurement query parameter ZIP mapping. |
 | placeContext.geo.stateProvince | state | AppMeasurement query parameter STATE mapping. |
 | productListItems[N].lineItemId | products | AppMeasurement query parameter Products Category mapping. |
-| productlistitems.[N].name | products | AppMeasurement query parameter Products Name mapping. |
-| productlistitems.[N].priceTotal | products | AppMeasurement query parameter Products Price mapping. |
-| productlistitems.[N].quantity | products | AppMeasurement query parameter Products Quantity mapping. |
+| productlistitems[N].name | products | AppMeasurement query parameter Products Name mapping. |
+| productlistitems[N].priceTotal | products | AppMeasurement query parameter Products Price mapping. |
+| productlistitems[N].quantity | products | AppMeasurement query parameter Products Quantity mapping. |
 | web.webInteraction.URL | pev1 | AppMeasurement query parameter PAGE_EVENT_VAR1 mapping. |
 | web.webInteraction.name | pev2 | AppMeasurement query parameter PAGE_EVENT_VAR2 mapping. |
 | web.webInteraction.type | pe | `web.webInteraction.type=other` to `pe=lnk_o`; `web.webInteraction.type=download` to `pe=lnk_d`; `web.webInteraction.type=exit` to `pe=lnk_e` |
