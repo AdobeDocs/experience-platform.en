@@ -23,7 +23,7 @@ Before you can use the segmentation attributes for B2B classes, you must complet
 1. Create schemas that use the B2B classes. The B2B Edition classes include Account, Campaign, Opportunity, Marketing List, and more. For information on [how to set up schemas for use with B2B classes](../schemas/b2b.md) please see the schema documentation.
 1. Create relationships between your Experience Data Model (XDM) B2B schemas. Segments based on B2B Edition attributes require relationships between the classes to fully use the extended B2B Segmentation functionality. See the documentation on [how to define a relationship between two B2B schemas](../../xdm/tutorials/relationship-b2b.md) for more information.
 1. Ingest data using datasets based on your B2B schemas. See the sources documentation for [information on how to ingest data](../../sources/connectors/adobe-applications/marketo/marketo.md).
-1. Read the [Segment builder user guide](./help/segmentation/ui/segment-builder.md) for a more detailed guidance on how to build segments.
+1. Read the [Segment builder user guide](../../segmentation/ui/segment-builder.md) for a more detailed guidance on how to build segments.
 
 Once these requirements have been met you are able to combine these attributes for common B2B use cases.
 
