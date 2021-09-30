@@ -6,6 +6,7 @@ type: Tutorial
 description: This tutorial outlines the steps necessary to add data to Real-time Customer Profile.
 exl-id: c2df224b-bf3d-4994-aa3a-9e9f4a6a726c
 ---
+
 # Add data to [!DNL Real-time Customer Profile]
 
 This tutorial outlines the steps necessary to add data to [!DNL Real-time Customer Profile].
@@ -33,3 +34,7 @@ When uploading data to a new dataset for the first time, or as part of a process
 Using the [!DNL Real-time Customer Profile] Access API, you can retrieve batch data as it gets loaded into a dataset. If you are unable to retrieve any of the entities you expect, your dataset may not be enabled for [!DNL Profile]. After confirming that your dataset has been enabled, ensure that your source data format and identifiers support your expectations.
 
 For detailed instructions on how to access entities using the [!DNL Real-time Customer Profile] API, please refer to the [entities endpoint guide](../api/entities.md), also known as the "[!DNL Profile Access] API".
+
+## Update Profile Store data
+
+Occasionally it may be necessary to update data in your organization's Profile Store. For example, you may need to correct records or change an attribute value. This can be done through batch or streaming ingestion and requires a Profile-enabled dataset configured with an upsert tag. For more information on how to configure a dataset for attribute updates, please refer to the tutorial for [enabling a dataset for Profile and upsert](../../catalog/datasets/enable-upsert.md).
