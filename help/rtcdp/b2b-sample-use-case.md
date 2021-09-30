@@ -22,9 +22,9 @@ Bodea, a technology company, has a new product and wants to specifically target 
 
 In order to maximize the efficiency of their marketing campaign, Bodea also wants to target the people associated with that existing account who have done at least $1 million in business AND have visited the new product page in the last month.
 
-However, Bodea has two different lines of business. Bodea's first line of business "Line 1" creates software for the automotive industry. Its second line of business "Line 2" sells 3D printers that create automobile parts. Both lines of business sell to the Townsend company. 
+However, Bodea has two different lines of business. Bodea's first line of business "Line 1" creates software for the automotive industry. Its second line of business "Line 2" sells 3D printers that create automobile parts. As a result of Bodea's two lines of business, the revenue data generated from Bodea's customer accounts is not unified in a single view. 
 
-Each line of Bodea's business has its own sales system: "Sales-System 1" and "Sales-System 2", and maintains different corporate information silos.
+Both lines of Bodea's business sell to the Townsend company and each line of business has its own sales system: "Sales-System 1" and "Sales-System 2". Their data is maintained in different corporate information silos.
 
 Sales-System 1 uses the Marketo Engage (hereinafter referred to as “Marketo”) source connector to bring B2B data from Marketo to Platform and keep this data up to date using Platform-connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
 
@@ -32,7 +32,25 @@ Sales System 2 uses Salesforce as its source to bring B2B data into Platform whe
 
 ![lines of business diagram](./assets/lines-of-business.png)
 
-As a result of Bodea's two lines of business, the revenue generated from Bodea's customer accounts is not unified in a single view. The Townsend business relationship data is recorded as two separate accounts in each sales system.
+<!-- reshuffle? -->
+
+## Current data situation
+
+The Townsend business relationship data is recorded as two separate accounts in each sales system.
+
+- In Marketo, Account 1 has two related people (p1@townsend.com and p2@townsend.com) and one closed-won opportunity of $200k ("Opportunity 1").
+
+- In Salesforce, Account 2 also has two related people (p2@townsend.com and p3@townsend.com) and one closed-won opportunity of $900k ("Opportunity 2").
+
+For integration and additional corporate control purposes, Bodea also has a Master Data Management (MDM) system where it maintains a record indicating Account 1 in Marketo and Account 2 in Salesforce are the same company.
+
+In the last month, `p2@townsend.com` visited the new product page and the web visit was recorded by Marketo.
+
+![account info diagram](./assets/account-info.png)
+
+## The problem
+
+Line 1 has just released a new software product and would like to up-sell it to Bodea’s existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
 
 As the relevant Townsend information is recorded as Account 1 in Marketo and Account 2 in Salesforce, Bodea's marketing team is unable to efficiently utilize the siloed information.
 
@@ -42,29 +60,13 @@ To date, Townsend has spent more than a million dollars cumulatively on Bodea pr
 
 As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment would not find anyone qualified in either Marketo or Salesforce.
 
-### Benefits of Real-time CDP B2B Edition
-
-Line 1 has just released a new software product and would like to up-sell it to Bodea’s existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
-
-The Real-time CDP B2B Edition allows Bodea to use the combined data from disparate sources:
-
-- In Marketo, Account 1 has two related people (p1@townsend.com and p2@townsend.com) and one closed-won opportunity of $200k ("Opportunity 1").
-
-- In Salesforce, Account 2 also has two related people (p2@townsend.com and p3@townsend.com) and one closed-won opportunity of $900k ("Opportunity 2").
-
-For integration and additional corporate control purposes, Bodea also has a Master Data Management (MDM) system where it maintains a record indicating Account 1 in Sales-System 1 and Account 2 in Sales-System 2 are the same company.
-
-In the last month, `p2@townsend.com` visited the new product page and the web visit was recorded in Sales-System 1.
-
-![account info diagram](./assets/account-info.png)
-
 ### How Real-time CDP B2B Edition solves the problem
 
 With Real-time CDP B2B Edition, Bodea's marketing team can:
 
-- Bring the data from all of Sales-System 1, Sales-System 2, and the MDM into Real-time CDP B2B Edition and create unique segments using this aggregate data for varied marketing initiatives.
+- Combine the data from all disparate sources (Marketo, Salesforce, and the Master Data Management) into Real-time CDP B2B Edition.
 
-For the purpose of this example, people are being identified by their emails. The combined related data might look as follows:
+For simplicity's sake and the purpose of this example, people are being identified by their emails. The combined account data for this example looks as follows:
 
 | People |
 |---|
@@ -77,7 +79,7 @@ For the purpose of this example, people are being identified by their emails. Th
 | Opportunity 1, $200k  |
 | Opportunity 2, $900k  |
 
-- Create a segment that finds all the people who:
+- Create unique segments using this aggregate data for varied marketing initiatives. In this example the segment finds all the people who:
 
   - Have associated opportunities (across ALL accounts) exceed $1 million in value
   - AND
