@@ -9,8 +9,21 @@ exl-id: 96375409-803f-45af-805e-900207d972e4
 
 Updates to existing features in Adobe Experience Platform:
 
+- [Data Ingestion](#ingestion)
 - [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
+
+## Data Ingestion {#ingestion}
+
+Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from various sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
+
+**New features**
+
+|Feature | Description|
+|------- | -----------|
+|Upsert or patch Profile records using Batch ingestion | Real-time Customer Profile now allows updates to profile attributes in individual profile record data via batch ingestion. To learn more, refer to the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).|
+
+To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
 
 ## [!DNL Data Prep] {#data-prep}
 

@@ -89,7 +89,9 @@ The **[!UICONTROL Profiles added]** widget displays the total number of merged p
 
 >[!NOTE]
 >
->The [!UICONTROL Profiles added] widget reflects the number of profiles added to the system following your organization's initial configuration. For example, if four million profiles were added during configuration and you added an additional one million profiles over the last 30 days, the [!UICONTROL Profiles added] widget would display "1,000,000" while the [!UICONTROL Profile count] widget would display "5,000,000".
+>The [!UICONTROL Profiles added] widget reflects the number of profiles added to the system following your organization's initial configuration. To learn more about adding profiles to the Profile Store, refer to the [Real-time Customer Profile documentation](../../profile/home.md).
+>
+>For example, if four million profiles were added during configuration and you added an additional one million profiles over the last 30 days, the [!UICONTROL Profiles added] widget would display "1,000,000" while the [!UICONTROL Profile count] widget would display "5,000,000".
 
 ![](../images/profiles/profiles-added.png)
 
