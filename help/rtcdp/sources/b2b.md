@@ -1,6 +1,7 @@
 ---
 title: Schemas in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of sources in Real-time Customer Data Platform B2B Edition.
+exl-id: eeea4b2e-67c5-4491-9b8e-4b8987e44777
 ---
 # Sources in Real-time Customer Data Platform B2B Edition
 
