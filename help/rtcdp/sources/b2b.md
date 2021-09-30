@@ -4,7 +4,7 @@ description: An overview of the role of sources in Real-time Customer Data Platf
 ---
 # Sources in Real-time Customer Data Platform B2B Edition
 
-Real-time Customer Data Platform B2B Edition allows you to bring your B2B data to be ingested from [sources](../../sources/home.md) while providing you with the ability to structure, label, and enhance incoming data using services. You can use the [[!DNL Marketo Engage] source](../../sources/connectors/adobe-applications/marketo/marketo.md) to bring B2B data to Platform.
+Real-time Customer Data Platform B2B Edition allows you to bring your B2B data through the [[!DNL Marketo Engage]](../../sources/connectors/adobe-applications/marketo/marketo.md) source connector while providing you with the ability to structure, label, and enhance incoming data using services.
 
 The following documents provides more information on using [!DNL Marketo] to bring B2B data to Platform:
 
