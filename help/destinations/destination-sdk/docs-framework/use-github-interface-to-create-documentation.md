@@ -17,7 +17,7 @@ The instructions below show you how to use the GitHub web interface to author do
 ## Set up your GitHub authoring environment {#set-up-environment}
 
 1. In your browser, navigate to `https://github.com/AdobeDocs/experience-platform.en`.
-2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown in the image below.
+2. To [fork](https://experienceleague.adobe.com/docs/contributor/contributor-guide/setup/local-repo.html?lang=en#fork-the-repository) the repository, click **Fork** as shown below. This creates a copy of the Experience Platform repository in your own GitHub account.
 
    ![Fork Adobe documentation repository](./assets/ssd-fork-repository.gif)
 
@@ -54,7 +54,7 @@ The instructions below show you how to use the GitHub web interface to author do
 >
 >Note that there is nothing you can break here. By following the instructions in this section, you are simply suggesting a documentation update. Your suggested update will be approved or edited by the Adobe Experience Platform documentation team.
 
-1.  After you saved the file and uploaded your desired images, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch that you worked on is selected and select **Contribute > Pull request**.
+1.  After you saved the file and uploaded your desired images, you can open a pull request (PR) to merge your working branch into the master branch of the Adobe documentation repository. Make sure the branch that you worked on is selected and select **Contribute > Open pull request**.
    
    ![Create pull request](./assets/ssd-create-pull-request-1.gif)
 
