@@ -46,9 +46,7 @@ The identity resolution system provides the following features:
 
 The identity resolution system has been expanded to support a more multifaceted classification of people. The system allows for people to be identified as leads in business opportunities as well as customers.
 
-<!-- Which CMS is "the CMS", exactly? Do they just mean any generic CMS, or series of CMSes? Please investigate/revise so this is clearer. https://git.corp.adobe.com/AdobeDocs/experience-platform.en/pull/2012#discussion_r4163815 -->
-
-Account records are synchronized from the CMS through multiple tools and can be brought together by Platform. The system brings together those people associated wth business opportunities and those recorded as customers, but is also able to preserve the distinction between them as an attribute if they are identifiable. 
+Account records synchronized by the source CRM and connected via multiple paths within the system are merged together by Platform. The system brings together those people associated wth business opportunities and those recorded as customers, but is also able to preserve the distinction between them as an attribute if they are identifiable. 
 
 Matching identifiers are used to link together and merge account records from across multiple systems. Account hierarchies are preserved throughout this process. Differentiators are used scrutinize whether a person is associated with an account or not, and provide the ability to separate them from the account if needed.
 
