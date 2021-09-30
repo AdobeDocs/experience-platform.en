@@ -7,13 +7,13 @@ exl-id: 5ae5f114-47ba-4ff6-8e42-f8f43eb079f7
 
 >[!IMPORTANT]
 >
->The Marketo Engage Destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
+>The Marketo Engage destination in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 ## Overview {#overview}
 
 Marketo Engage is the only end-to-end customer experience management (CXM) solution for marketing, advertising, analytics, and commerce. It lets you automate and manage activities from CRM lead management and customer engagement to account-based marketing and revenue attribution.
 
-The segment connector enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
+The destination enables marketers to push segments created in Adobe Experience Platform to Marketo where they will appear as static lists.
 
 ## Supported identities {#supported-identities}
 
@@ -24,7 +24,7 @@ The segment connector enables marketers to push segments created in Adobe Experi
 
 ## Export type {#export-type}
 
-Segment Export - you are exporting all members of a segment (audience) with the identifiers (name, phone number, or others) used in the Marketo Engage destination.
+Segment Export - you are exporting all members of a segment (audience) with the identifiers (email, ECID) used in the Marketo Engage destination.
 
 ## Set up destination and activate segments {#set-up}
 
