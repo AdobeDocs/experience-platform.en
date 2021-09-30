@@ -1,14 +1,12 @@
 ---
-keywords: activate profile request destinations;activate data
+keywords: activate profile request destinations;activate data;profile request destinations
 title: Activate audience data to profile request destinations
 type: Tutorial
 seo-title:  Activate audience data to profile request destinations
 description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
 seo-description: Learn how to activate the audience data you have in Adobe Experience Platform by mapping segments to profile request destinations.
-hidefromtoc: yes
-hide: yes
 ---
-# Activate audience data to profile request destinations (beta)
+# Activate audience data to profile request destinations (Beta)
 
 ## Overview {#overview}
 
@@ -24,7 +22,7 @@ To activate data to destinations, you must have successfully [connected to a des
 
 ### Segment merge policy {#merge-policy}
 
-Profile request destinations currently support only the activation of segments that use the default merge policy. Attempting to activate segments with a different merge policy results in an error in the [!UICONTROL Review] page.
+Profile request destinations currently support only the activation of segments that use the default merge policy. Attempting to activate segments with a different merge policy results in an error in the [[!UICONTROL Review]](#review) page.
 
 ## Select your destination {#select-destination}
 

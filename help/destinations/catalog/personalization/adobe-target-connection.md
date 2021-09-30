@@ -4,7 +4,7 @@ title: Adobe Target connection
 description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
 ---
 
-# Adobe Target connection (beta) {#adobe-target-connection}
+# Adobe Target connection (Beta) {#adobe-target-connection}
 
 ## Overview {#overview}
 
@@ -12,9 +12,9 @@ description: Adobe Target is an application that provides real-time, 1:1 , and A
 >
 >The Adobe Target connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
-Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
+Adobe Target is an application that provides real-time, 1:1 , AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
 
-Adobe Target is a personalization connection in Adobe Experience Platform. This destination shares audiences with Adobe Target to be used in real-time, to decide which offer the user should see.
+Adobe Target is a personalization connection in Adobe Experience Platform.
 
 ## Prerequisites {#prerequisites}
 
@@ -48,7 +48,7 @@ While [setting up](../../ui/connect-destination.md) this destination, you must p
 
 Read [Activate profiles and segments to profile request destinations](../../ui/activate-profile-request-destinations.md) for instructions on activating audience segments to this destination.
 
-## Exported Data {#exported-data}
+## Exported data {#exported-data}
 
 Adobe Target reads profile data from the Adobe Experience Platform Edge Network, so no data gets exported.
 

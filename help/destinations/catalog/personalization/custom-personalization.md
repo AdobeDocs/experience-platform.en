@@ -3,7 +3,7 @@ keywords: custom personalization; destination; experience platform custom destin
 title: Custom Personalization Destination
 description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
 ---
-# Custom personalization connection (beta) {#custom-personalization-connection} 
+# Custom personalization connection (Beta) {#custom-personalization-connection} 
 
 ## Overview {#overview}
 
@@ -11,9 +11,7 @@ description: This destination provides external personalization, content managem
 >
 >The Custom personalization connection in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
-This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrieve segment information from Adobe Experience Platform.
-
-This destinatination provides real-time, 1:1, ad personalization based on a user profile's segment membership.
+This destination provides a way to retrieve segment information from Adobe Experience Platform to external personalization platforms, content management systems, ad servers, and other applications that are running on customer websites.
 
 ## Prerequisites {#prerequisites}
 
@@ -21,23 +19,21 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Export type {#export-type}
 
-**Profile Request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different Adobe Data Collection datastreams.
+**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different Adobe Data Collection datastreams.
 
-## Use Cases {#use-cases}
+## Use cases {#use-cases}
 
-This destination shares audiences with an ad server and non-Adobe personalization applications, to be used in real-time for deciding which offer and advertisement the user should see on a website.
+This destination shares audiences with an ad servers and non-Adobe personalization applications, to be used in real-time, for deciding which advertisement users should see on a website.
 
 ### Use Case #1
 
 **Personalizing a home page**
 
-A home rental and sales website wants to personalize their home page based on customer segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and map those to the custom personalization destination that had been set up for their non-Adobe personalization application as targeting criteria.
+A home rental and sales website wants to personalize their home page based on segment qualifications in Adobe Experience Platform. The company can select what audiences should get a personalized experience and map those to the custom personalization destination that had been set up for their non-Adobe personalization application as targeting criteria.
 
 **Targeted on-site advertising**
 
 Using a separate custom personalization destination for their ad server, the same website can target on-site advertising using a different set of segments from Adobe Experience Platform as targeting criteria.
-
-<!-- The integration alias input during the setup of a custom personalization will be what denotes which JSON object and the segments it contains is for the ad server. -->
 
 ## Connect to the destination {#connect}
 
@@ -58,11 +54,13 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 ## Exported data {#exported-data}
 
-The segments a profile qualifies for will be returned to the page based on the set up of the destinations configured to be returned to the datastream and what segments have been mapped to the corresponding destinations.
+The segments a profile qualifies for are sent to the page based on the configuration of the destinations configured to be returned to the datastream and what segments have been mapped to the corresponding destinations.
 
-If you are using Adobe Launch to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality and your custom code action will have an `event.destinations` variable that you can use.
+If you are using Adobe Launch to deploy the Experience Platform Web SDK, use the [send event](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
-If you are not using Adobe Launch to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality the JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias signifying for the application you are integrating with Adobe Experience Platform. The segment ids can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
+If you are not using Adobe Launch to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality.
+
+The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The segment IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 
 ```
 alloy("sendEvent", {
@@ -78,12 +76,16 @@ alloy("sendEvent", {
     }
   }
 }).then(function(results) {
-    if(results.destinations) { //Looking to see if the destination results are there
-        if(results.destinations.personlaizationAlias) {
-          //Code to pass the segment ids into the system that corresponds to personalizationAlias
+    if(results.destinations) { // Looking to see if the destination results are there
+ 
+        // Get the destination with a particular alias
+        var personalizationDestinations = results.destinations.filter(x => x.alias == “personalizationAlias”)
+        if(personalizationDestinations.length > 0) {
+             // Code to pass the segment IDs into the system that corresponds to personalizationAlias
         }
-        if(results.destinations.adServerAlias) {
-          //Code to pass the segment ids into the system that corresponds to adServerAlias
+        var adServerDestinations = results.destinations.filter(x => x.alias == “adServerAlias”)
+        if(adServerDestinations.length > 0) {
+            // Code to pass the segment ids into the system that corresponds to adServerAlias
         }
      }
    })
@@ -91,6 +93,7 @@ alloy("sendEvent", {
     // Tracking the event failed.
   });
 ```
+
 
 ## Data usage and governance {#data-usage-governance}
 
