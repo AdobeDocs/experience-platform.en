@@ -33,7 +33,7 @@ Once the union schemas that use B2B classes have data ingested and relationships
 
 B2B attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-time Customer Data Platform. 
 
-In order to effectively create segments for B2B use cases, it is important to have an intimate knowledge of the schema and understand the what the data structure looks like. It is also useful to be aware of the path that the data takes from one data object to another.
+In order to effectively create segments for B2B use cases, it is important to have an intimate knowledge of the schema and understand what the data structure looks like. It is also useful to be aware of the path that the data takes from one data object to another.
 
 The image below illustrates the relationships between the B2B classes available within the Real-time CDP B2B Edition.
 
@@ -43,7 +43,7 @@ Finding the correct attribute by browsing attributes within the schema builder c
 
 To view a more visual representation of the data structure, navigate to the Schema UI. Select the appropriate schema from the available list and select the appropriate relationship from the [!UICONTROL Composition] side rail.
 
-![source-key example using the people relationship in the schema workspace](../assets/segmentation/source-key-schema-realtionship-example.png)
+![source-key example using the people relationship in the schema workspace](../assets/segmentation/source-key-schema-relationship-example.png)
 
 This is relationship is reflected within the segment builder UI through the use of `Key` folders as shown in the image below.
 
