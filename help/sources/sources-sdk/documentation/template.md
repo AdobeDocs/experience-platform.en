@@ -9,7 +9,7 @@ description: Learn how to connect Adobe Experience Platform to YOURSOURCE using 
 
 *As you go through this template, replace or delete all the paragraphs in italics (starting with this one).*
 
-*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of UICONTROL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
+*Start by updating the metadata (title and description) at the top of the page. Please ignore all instances of DNL on this page. This is a tag that helps our machine translation processes correctly translate the page into the multiple languages that we support. We will add tags to your documentation after you submit it.*
 
 ## Overview
 
@@ -78,11 +78,9 @@ curl -X POST \
 | --- | --- |
 | `name` | The name of your base connection. Ensure that the name of your base connection is descriptive as you can use this to look up information on your base connection. |
 | `description` | An optional value that you can include to provide more information on your base connection. |
-| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the Authoring Service API. |
+| `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
-| `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
-| `auth.params.refreshToken` | The corresponding refresh token for your source. This token is used to regenerate your access token when it expires. |
-| `auth.params.expirationDate` | The expiration date of your access token. |
+| `auth.params.` | Contains the credentials required to authenticate your source. |
 
 **Response**
 
