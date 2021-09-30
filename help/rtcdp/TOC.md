@@ -36,5 +36,6 @@ user-guide-description: Bring together known and anonymous data from multiple en
   * [Schemas in Real-time CDP B2B Edition](schemas/b2b.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
+  * [Sources in Real-time CDP B2B Edition](sources/b2b.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)
