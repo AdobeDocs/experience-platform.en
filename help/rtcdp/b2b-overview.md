@@ -64,11 +64,7 @@ Platform allows data to be ingested from external sources while providing you wi
 >
 >The [!DNL Marketo] source is **not** required to use Real-time CDP B2B Edition. 
 
-See the Marketo Engage source connector documentation for more information. 
-
-<!-- Maybe link out to Market sources doc instead -->
-
-<!-- This helps you to manage [!DNL Profiles] and ensure that their data are both relevant and useful. It is important that the pertinent data is kept for the appropriate amount of time to support the common two year-long sales cycles of B2B deals. -->
+See the [sources in Real-time CDP B2B Edition](./sources/b2b) documentation for more information on Marketo and bringing B2B data into Platform.
 
 ## B2B destinations
 
