@@ -87,8 +87,10 @@ By reading this document you now have now been introduced to the types of object
 
 The following documentation is recommended to improve your understanding of B2B specific features: 
 
-- [Marketo connector]()
-- [B2B Schemas]()
+<!-- - [Marketo connector]() -->
+- [Schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md)
+
+<!-- PLACEHOLDER -->
 <!-- - [Account Profiles]() -->
 <!-- - [B2B Segmentation examples]() -->
 <!-- PLACEHOLDERS to tutorial / account profiles / B2B connectors / segmentation examples -->
