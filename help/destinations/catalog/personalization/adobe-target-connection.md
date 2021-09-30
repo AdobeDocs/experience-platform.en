@@ -1,6 +1,6 @@
 ---
 keywords: target personalization; destination; experience platform target destination;adobe target destination;
-title: Adobe Target connection
+title: Adobe Target connection (Beta)
 description: Adobe Target is an application that provides real-time, 1:1 , and AI-powered personalization and experimentation in all inbound customer interactions across websites, mobile apps, and more.
 ---
 
