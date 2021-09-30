@@ -1,6 +1,6 @@
 ---
 keywords: custom personalization; destination; experience platform custom destination;
-title: Custom Personalization Destination
+title: Custom personalization connection (Beta)
 description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
 ---
 # Custom personalization connection (Beta) {#custom-personalization-connection} 
@@ -19,11 +19,11 @@ This integration is powered by the [Adobe Experience Platform Web SDK](../../../
 
 ## Export type {#export-type}
 
-**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different Adobe Data Collection datastreams.
+**Profile request** - you are requesting all the segments that are mapped in the custom personalization destination for a single profile. Different custom personalization destinations can be set up for different [Adobe Data Collection datastreams](../../../edge/fundamentals/datastreams.md).
 
 ## Use cases {#use-cases}
 
-This destination shares audiences with an ad servers and non-Adobe personalization applications, to be used in real-time, for deciding which advertisement users should see on a website.
+This destination shares audiences with ad servers and non-Adobe personalization applications, to be used in real-time, for deciding which advertisement users should see on a website.
 
 ### Use Case #1
 
@@ -56,7 +56,7 @@ Read [Activate profiles and segments to profile request destinations](../../ui/a
 
 If you are using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [send event complete](../../../edge/extension/event-types.md) functionality and your custom code action will have an `event.destinations` variable that you can use to see the exported data.
 
-If you are not using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality.
+If you are not using [Adobe Tags](../../../tags/home.md) to deploy the Experience Platform Web SDK, use the [handling responses from events](../../../edge/fundamentals/tracking-events.md#handling-responses-from-events) functionality to see the exported data.
 
 The JSON response from Adobe Experience Platform can be parsed to find the corresponding integration alias of the application you are integrating with Adobe Experience Platform. The segment IDs can be passed into the application's code as targeting parameters. Below is a sample of what this would look like specific to the destination response.
 
