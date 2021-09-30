@@ -72,7 +72,7 @@ The default fields shown can also be changed at an organizational-level to displ
 
 >[!NOTE]
 >
->Similar functionality is available for customer profiles and a step-by-step guide has been created with instructions for adding and removing attributes, resizing panels, etc. Please read the [profile detail customization guide](profile-customization.md) to learn more.
+>Similar functionality is available for customer profiles and a step-by-step guide has been created with instructions for adding and removing attributes, resizing panels, etc. Please read the [profile detail customization guide](../../profile/ui/profile-customization.md) to learn more.
 
 ![](images/b2b-account-details.png)
 
