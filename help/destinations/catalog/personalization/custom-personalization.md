@@ -2,6 +2,7 @@
 keywords: custom personalization; destination; experience platform custom destination;
 title: Custom personalization connection (Beta)
 description: This destination provides external personalization, content management systems, ad servers, and other applications that are running on your site a way to retrive segment information from Adobe Experience Platform. This destinatination provides real-time 1:1 and personalization based on a user profile's segment membership.
+exl-id: 2382cc6d-095f-4389-8076-b890b0b900e3
 ---
 # Custom personalization connection (Beta) {#custom-personalization-connection} 
 
