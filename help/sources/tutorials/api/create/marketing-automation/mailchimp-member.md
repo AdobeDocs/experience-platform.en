@@ -5,13 +5,9 @@ title: Create a MailChimp connection using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp using the Flow Service API.
 ---
-# Create a [!DNL MailChimp] connection using the Flow Service API
+# Create a [!DNL MailChimp Member Activity] connection using the Flow Service API
 
-*Provide a short overview for your company, including the value it provides to customers. Include a link to your product documentation homepage, for further reading.*
-
->[!IMPORTANT]
->
->This documentation page was created by the *YOURSOURCE* team. For any inquiries or update requests, please contact them directly at *Insert link or email address where you can be reached for updates*.
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Member Activity] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites
 
@@ -22,17 +18,13 @@ Before you can connect [!DNL MailChimp] to Adobe Experience Platform, you must f
 * *any account specifics on your side*
 * *how to obtain an API key to connect to your platform*
 
-## Connect [!DNL MailChimp] to Platform using the [!DNL Flow Service] API
-
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
-
-### Create a base connection {#base-connection}
+## Create a base connection {#base-connection}
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
 To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL MailChimp] authentication credentials as part of the request body.
 
-#### Create a [!DNL MailChimp] base connection using basic authentication
+### Create a [!DNL MailChimp] base connection using basic authentication
 
 To create a [!DNL MailChimp] base connection using basic authentication, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `host`, `authorizationTestUrl`, `username`, and `password`.
 
@@ -95,7 +87,7 @@ A successful response returns the newly created base connection, including its u
 }
 ```
 
-#### Create a [!DNL MailChimp] base connection using OAuth 2 refresh code
+### Create a [!DNL MailChimp] base connection using OAuth 2 refresh code
 
 To create a [!DNL MailChimp] base connection using OAuth 2 refresh code, make a POST request to the `/connections` endpoint of [!DNL Flow Service] API while providing credentials for your `host`, `authorizationTestUrl`, and `accessToken`.
 
@@ -156,7 +148,7 @@ A successful response returns the newly created base connection, including its u
 }
 ```
 
-### Explore your source {#explore}
+## Explore your source {#explore}
 
 Using the base connection ID you generated in the previous step, you can explore files and directories by performing GET requests. When performing GET requests to explore your source's file structure and contents, you must include the query parameters that are listed in the table below:
 
@@ -322,7 +314,7 @@ A successful response returns the structure of the queried file.
     }
 ```
 
-### Create a source connection {#source-connection}
+## Create a source connection {#source-connection}
 
 You can create a source connection by making a POST request to the [!DNL Flow Service] API. A source connection consists of a connection ID, a path to the source data file, and a connection spec ID.
 
@@ -367,7 +359,7 @@ curl -X POST \
       "data": {
           "format": "json",
           "schema": {
-              "id": "https://ns.adobe.com/aepstreamingservices/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
               "version": "application/vnd.adobe.xed-full+json;version=1"
           }
       },
@@ -397,7 +389,7 @@ A successful response returns the unique identifier (`id`) of the newly created 
 }
 ```
 
-### Create a target XDM schema {#target-schema}
+## Create a target XDM schema {#target-schema}
 
 In order for the source data to be used in Platform, a target schema must be created to structure the source data according to your needs. The target schema is then used to create a Platform dataset in which the source data is contained.
 
@@ -411,7 +403,7 @@ A target dataset can be created by performing a POST request to the [Catalog Ser
 
 For detailed steps on how to create a target dataset, see the tutorial on [creating a dataset using the API](https://experienceleague.adobe.com/docs/experience-platform/catalog/api/create-dataset.html?lang=en).
 
-### Create a target connection {#target-connection}
+## Create a target connection {#target-connection}
 
 A target connection represents the connection to the destination where the ingested data lands in. To create a target connection, you must provide the fixed connection specification ID that corresponds to the [!DNL Data Lake]. This ID is: `c604ff05-7f1a-43c0-8e18-33bf874cb11c`.
 
@@ -445,7 +437,7 @@ curl -X POST \
       "data": {
           "format": "parquet_xdm",
           "schema": {
-              "id": "https://ns.adobe.com/aepstreamingservices/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
+              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
               "version": "application/vnd.adobe.xed-full+json;version=1"
           }
       },
@@ -475,7 +467,7 @@ A successful response returns the new target connection's unique identifier (`id
 }
 ```
 
-### Create a mapping {#mapping}
+## Create a mapping {#mapping}
 
 In order for the source data to be ingested into a target dataset, it must first be mapped to the target schema that the target dataset adheres to. This is achieved by performing a POST request to Conversion Service with data mappings defined within the request payload.
 
@@ -497,7 +489,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "version": 0,
-      "xdmSchema": "_aepstreamingservices.schemas.570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
+      "xdmSchema": "_{TENANT_ID}.schemas.570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
       "xdmVersion": "1.0",
       "mappings": [
       {
@@ -538,7 +530,7 @@ A successful response returns details of the newly created mapping including its
 }
 ```
 
-### Create a flow {#flow}
+## Create a flow {#flow}
 
 The last step towards bringing [!DNL MailChimp] data to Platform is to create a dataflow. By now, you have the following required values prepared:
 
@@ -623,7 +615,7 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 }
 ```
 
-### Monitor your dataflow
+## Monitor your dataflow
 
 Once your dataflow has been created, you can monitor the data that is being ingested through it to see information on flow runs, completion status, and errors.
 
@@ -742,7 +734,7 @@ A successful response returns details regarding your flow run, including informa
 | `fileSummary` | Defines the file count of the data. |
 | `statusSummary` | Defines whether the flow run is a success or a failure. |
 
-### Update your dataflow
+## Update your dataflow
 
 To update your dataflow's run schedule, name, and description, perform a PATCH request to the [!DNL Flow Service] API while providing your flow ID, version, and the new schedule you want to use.
 
@@ -804,7 +796,7 @@ A successful response returns your flow ID and an updated etag. You can verify t
 }
 ```
 
-### Delete your dataflow
+## Delete your dataflow
 
 With an existing flow ID, you can delete a dataflow by performing a DELETE request to the [!DNL Flow Service] API.
 
@@ -833,7 +825,7 @@ curl -X DELETE \
 
 A successful response returns HTTP status 204 (No Content) and a blank body. You can confirm the deletion by attempting a lookup (GET) request to the dataflow. The API will return an HTTP 404 (Not Found) error, indicating that the dataflow has been deleted.
 
-### Update your connection
+## Update your connection
 
 To update your connection's name, description, and credentials, perform a PATCH request to the [!DNL Flow Service] API while providing your base connection ID, version, and the new information you want to use.
 
@@ -903,7 +895,7 @@ A successful response returns your base connection ID and an updated etag. You c
 }
 ```
 
-### Delete your connection
+## Delete your connection
 
 Once you have an existing base connection ID, perform a DELETE request to the [!DNL Flow Service] API.
 
