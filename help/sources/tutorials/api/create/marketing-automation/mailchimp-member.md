@@ -20,9 +20,11 @@ Before you can connect [!DNL MailChimp] to Adobe Experience Platform, you must f
 
 ## Create a base connection {#base-connection}
 
+Once you have retrieved your [!DNL MailChimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL MailChimp Member Activity] data to Platform. The first step in creating a dataflow is to create a base connection.
+
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
-To create a base connection ID, make a POST request to the `/connections` endpoint while providing your [!DNL MailChimp] authentication credentials as part of the request body.
+[!DNL MailChimp] supports both basic authentication and OAuth 2 refresh code. See the following examples for guidance on how to authenticate with either authentication types.
 
 ### Create a [!DNL MailChimp] base connection using basic authentication
 
