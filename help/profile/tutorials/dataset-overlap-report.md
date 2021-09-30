@@ -118,6 +118,7 @@ To interpret the results of the report, consider the following example:
 ```
 
 This report provides the following information:
+
 * There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.

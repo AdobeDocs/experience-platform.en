@@ -1,12 +1,13 @@
 ---
 title: XDM Business Marketing List Members Class
 description: This document provides an overview of the XDM Business Marketing List Members class in Experience Data Model (XDM).
+exl-id: 069002c2-5583-4c59-84ee-c071e2acaaec
 ---
-# [!UICONTROL XDM Business Marketing List Members] class
+# [!UICONTROL XDM Business Marketing List Members] class (Beta)
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This class is only available for organizations that have access to Real-time Customer Data Platform B2B Edition.
+>This class is available as part of Real-time Customer Data Platform B2B Edition, which is currently in beta. The documentation and functionality are subject to change.
 
 [!UICONTROL XDM Business Marketing List Members] is a standard Experience Data Model (XDM) class that describes members, persons, or contacts associated with a marketing list.
 
@@ -22,5 +23,7 @@ description: This document provides an overview of the XDM Business Marketing Li
 | `marketingListID` | String  | A unique ID for the marketing list. |
 | `marketingListMemberID` | String  | A unique ID for the marketing list membership entity. |
 | `personId` | String  | A unique ID for the person. |
+
+{style="table-layout:auto"}
 
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
