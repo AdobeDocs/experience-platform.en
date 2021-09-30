@@ -3,8 +3,8 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Getting Started with the Data Ingestion API
 type: Documentation
 description: The Data Ingestion API getting started guide outlines the key concepts and basic functionality that you need to know before you can begin to ingest data into Experience Platform using APIs.
+exl-id: 0653de2b-3268-478b-a23f-c458b6d3df7c
 ---
-
 # Getting started with the Data Ingestion API {#getting-started}
 
 Using Data Ingestion API endpoints, you can perform basic CRUD operations in order to ingest data in Adobe Experience Platform.
@@ -36,4 +36,4 @@ All resources in [!DNL Experience Platform] are isolated to specific virtual san
 
 * `x-sandbox-name: {SANDBOX_NAME}`
 
-For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md). 
+For more information on sandboxes in [!DNL Platform], see the [sandbox overview documentation](../../sandboxes/home.md).
