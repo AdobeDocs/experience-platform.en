@@ -1,6 +1,7 @@
 ---
 title: Sample Anonymous Block Queries
-description: The Anonymous Block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries 
+description: The Anonymous Block is an SQL syntax supported by Adobe Experience Platform Query Service, which allows you to efficiently execute a sequence of queries
+exl-id: ec497475-9d2b-43aa-bcf4-75a430590496
 ---
 # Sample queries for Anonymous block
 
