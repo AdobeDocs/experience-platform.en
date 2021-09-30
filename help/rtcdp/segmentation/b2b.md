@@ -37,7 +37,7 @@ In order to effectively create segments for B2B use cases, it is important to ha
 
 The image below illustrates the relationships between the B2B classes available within the Real-time CDP B2B Edition.
 
-![B2B class ERD](../assets/segmentation/b2b-classes.md)
+![B2B class ERD](../assets/segmentation/b2b-classes.png)
 
 Finding the correct attribute by browsing attributes within the schema builder can be complicated. 
 
@@ -47,7 +47,7 @@ To view a more visual representation of the data structure, navigate to the Sche
 
 This is relationship is reflected within the segment builder UI through the use of `Key` folders as shown in the image below.
 
-![source-key example using the segment builder in the segmentation workspace](../assets/segmentation/source-key-segmentation-example.md)
+![source-key example using the segment builder in the segmentation workspace](../assets/segmentation/source-key-segmentation-example.png)
 
 Please refer to the XDM documentation for more information on the [XDM Business Opportunity Person Relation class](../../xdm/classes/b2b/business-opportunity-person-relation.md) used in this example.
 
