@@ -44,15 +44,13 @@ To learn more about connecting enterprise sources, please refer to the [sources 
 
 You can choose a source by selecting the radio button next to the connection name, and then use **[!UICONTROL Select]** to return to the [!UICONTROL Browse] tab.
 
-With a source selected, you must now enter an **[!UICONTROL Account id]** related to the source. For example, selecting a Salesforce source would require you to enter an account id from the Salesforce instance in order to view the account profile tied to that id.
+With a source selected, you must now enter an **[!UICONTROL Account id]** related to the source. For example, selecting a Salesforce source would require you to enter an account ID from the Salesforce instance in order to view the account profile tied to that ID.
 
 >[!NOTE]
 >
->For Marketo accounts, there are two possible account tables that are referenced, therefore you must use a specific syntax in order to ensure you are referencing the correct table. 
+>For Marketo account IDs, there are two possible account tables that can be referenced, therefore you must use a specific syntax in order to ensure you are viewing the correct account. 
 >
->The most common syntax the account id followed by `.mkto_org`. 
->
->XYZ customers may use `.mkto_org` to reference XYZ or `.mkto_account` to reference XYZ.
+>The most common, standard syntax is the Marketo account ID appended by `.mkto_org` (for example, `1234567.mkto_org`). Marketo Account-Based Marketing customers may have additional values that can be found using the Marketo account ID appended by `.mkto_account`. If you are unsure of which syntax to use, please check with your Marketo administrator.
 
 ![](images/b2b-account-browse-id.png)
 
