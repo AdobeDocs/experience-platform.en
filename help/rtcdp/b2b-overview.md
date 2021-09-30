@@ -64,9 +64,7 @@ Platform allows data to be ingested from external sources while providing you wi
 >
 >The [!DNL Marketo] source is **not** required to use Real-time CDP B2B Edition. 
 
-<!-- Clarify, is TTLs for Experience Events relevant to B2B specifically? Paragraph might need to be cut. -->
-
-Real-time Customer Profile also supports Experience Events time-to-live. Adobe Experience Platform can retain data for a different lengths of time depending on its' source. The duration that data is retained on Experience Platform is configured by the data set. [!DNL Marketo] source data can be retained for 25 months, and web interaction data for unknown users can be expunged on the same schedule set for Adobe Experience Platform.
+See the Marketo Engage source connector documentation for more information. 
 
 <!-- Maybe link out to Market sources doc instead -->
 
@@ -84,4 +82,4 @@ For companies with more than one CRM, Real-time CDP B2B Edition provides the opt
 
 Now that you better understand the benefits for marketers offered by Real-time CDP B2B Edition, and differences between it and Real-time CDP, you can learn about how to apply these features to your own IMS Organization.
 
-To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./-sample-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
+To understand how Real-time CDP B2B Edition can benefit your business-to-business service model, see the [example use case for Real-time CDP B2B Edition](./b2b-sample-use-case.md). Alternatively you can refer to the [schemas in Real-time Customer Data Platform B2B Edition](./schemas/b2b.md) documentation for more specific guidance on creating schemas, and defining relationships for essential B2B data entities.
