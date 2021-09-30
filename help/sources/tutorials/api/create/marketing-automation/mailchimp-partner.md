@@ -494,7 +494,7 @@ A successful response returns details of the newly created mapping including its
 
 ```json
 {
-    "id": "bf5286a9c1ad4266baca76ba3adc9366",
+    "id": "63ece68a55e14c0489f121ab06261c8g",
     "version": 0,
     "createdDate": 1597784069368,
     "modifiedDate": 1597784069368,
@@ -548,7 +548,7 @@ curl -X POST \
           {
               "name": "Mapping",
               "params": {
-                  "mappingId": "{{mappingId}}",
+                  "mappingId": "63ece68a55e14c0489f121ab06261c8g",
                   "mappingVersion": 0
               }
           }
