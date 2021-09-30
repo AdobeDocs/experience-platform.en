@@ -162,23 +162,25 @@ Using the base connection ID you generated in the previous step, you can explore
 
 | Parameter | Description |
 | --------- | ----------- |
-| `objectType` | The type of object that you wish to explore. Set this value as either: <ul><li>`folder`: Explore a specific directory</li><li>`root`: Explore the root directory.</li></ul> |
-| `object` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+| `{BASE_CONNECTION_ID}` |
+| `{OBJECT_TYPE}` | The type of object that you wish to explore. Set this value as either: <ul><li>`folder`: Explore a specific directory</li><li>`root`: Explore the root directory.</li></ul> |
+| `{FILE_TYPE}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
+| `{PREVIEW}` |
+| `{SOURCE_PARAMS}` |
 
 Use the following calls to find the path of the file you wish to bring into [!DNL Platform]:
 
 **API format**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=root
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=folder&object={PATH}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&objectType={OBJECT_TYPE}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
 **Request**
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa/explore?objectType=file&object=json&fileType=json&server=us6&listId=10c097ca71' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -191,87 +193,133 @@ A successful response returns the structure of the queried file.
 
 ```json
 {
-  "data": [
+"data": [
     {
-      "members": [
-        {
-          "id": "cff65fb4c5f5828666ad846443720efd",
-          "email_address": "roykent@gmail.com",
-          "unique_email_id": "72c758cbf1",
-          "full_name": "Roy Kent",
-          "web_id": 547094062,
-          "email_type": "html",
-          "status": "subscribed",
-          "merge_fields": {
-            "FNAME": "Roy",
-            "LNAME": "Kent",
-            "ADDRESS": {
-              "addr1": "",
-              "addr2": "",
-              "city": "Richmond",
-              "state": "Virginia",
-              "zip": "",
-              "country": "US"
+        "list_id": "10c097ca71",
+        "_links": [
+            {
+                "rel": "self",
+                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+                "method": "GET",
+                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
+                "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
             },
-            "PHONE": "",
-            "BIRTHDAY": ""
-          },
-          "stats": {
-            "avg_open_rate": 0,
-            "avg_click_rate": 0
-          },
-          "ip_signup": "",
-          "timestamp_signup": "",
-          "ip_opt": "103.43.112.97",
-          "timestamp_opt": "2021-06-01T15:31:36+00:00",
-          "member_rating": 2,
-          "last_changed": "2021-06-01T15:31:36+00:00",
-          "language": "",
-          "vip": false,
-          "email_client": "",
-          "location": {
-            "latitude": 0,
-            "longitude": 0,
-            "gmtoff": 0,
-            "dstoff": 0,
-            "country_code": "",
-            "timezone": ""
-          },
-          "source": "Admin Add",
-          "tags_count": 0,
-          "tags": [
-             
-          ],
-          "list_id": "10c097ca71"
-        }
-      ],
-      "list_id": "10c097ca71",
-      "total_items": 2,
-      "_links": [
-        {
-          "rel": "self",
-          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-          "method": "GET",
-          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
-          "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
-        },
-        {
-          "rel": "parent",
-          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71",
-          "method": "GET",
-          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
-        },
-        {
-          "rel": "create",
-          "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-          "method": "POST",
-          "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-          "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/POST.json"
-        }
-      ]
+            {
+                "rel": "parent",
+                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71",
+                "method": "GET",
+                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+            },
+            {
+                "rel": "create",
+                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+                "method": "POST",
+                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+                "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/POST.json"
+            }
+        ],
+        "members": [
+            {
+                "id": "cff65fb4c5f5828666ad846443720efd",
+                "email_address": "vivekt2134@gmail.com",
+                "unique_email_id": "72c758cbf1",
+                "contact_id": "874a0d6e9ddb89d8b4a31e416ead2d6f",
+                "full_name": "Vivek Tiwari",
+                "web_id": 547094062,
+                "email_type": "html",
+                "status": "subscribed",
+                "consents_to_one_to_one_messaging": true,
+                "merge_fields": {
+                    "FNAME": "Vivek",
+                    "LNAME": "Tiwari",
+                    "ADDRESS": {
+                        "country": "US"
+                    }
+                },
+                "stats": {
+                    "avg_open_rate": 0,
+                    "avg_click_rate": 0
+                },
+                "ip_opt": "103.43.112.97",
+                "timestamp_opt": "2021-06-01T15:31:36+00:00",
+                "member_rating": 2,
+                "last_changed": "2021-06-01T15:31:36+00:00",
+                "vip": false,
+                "location": {
+                    "latitude": 0,
+                    "longitude": 0,
+                    "gmtoff": 0,
+                    "dstoff": 0
+                },
+                "source": "Admin Add",
+                "tags_count": 0,
+                "list_id": "10c097ca71",
+                "_links": [
+                    {
+                        "rel": "self",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                        "method": "GET",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+                    },
+                    {
+                        "rel": "parent",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
+                        "method": "GET",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
+                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
+                    },
+                    {
+                        "rel": "update",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                        "method": "PATCH",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PATCH.json"
+                    },
+                    {
+                        "rel": "upsert",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                        "method": "PUT",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
+                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PUT.json"
+                    },
+                    {
+                        "rel": "delete",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                        "method": "DELETE"
+                    },
+                    {
+                        "rel": "activity",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/activity",
+                        "method": "GET",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Activity/Response.json"
+                    },
+                    {
+                        "rel": "goals",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/goals",
+                        "method": "GET",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Goals/Response.json"
+                    },
+                    {
+                        "rel": "notes",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/notes",
+                        "method": "GET",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Notes/CollectionResponse.json"
+                    },
+                    {
+                        "rel": "events",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/events",
+                        "method": "POST",
+                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Events/POST.json"
+                    },
+                    {
+                        "rel": "delete_permanent",
+                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/actions/delete-permanent",
+                        "method": "POST"
+                    }
+                ]
+            },
+        ]
     }
-  ]
-}
 ```
 
 ### Create a source connection {#source-connection}
@@ -319,7 +367,7 @@ curl -X POST \
       "data": {
           "format": "json",
           "schema": {
-              "id": "{SCHEMA_ID}",
+              "id": "https://ns.adobe.com/aepstreamingservices/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
               "version": "application/vnd.adobe.xed-full+json;version=1"
           }
       },
@@ -397,12 +445,12 @@ curl -X POST \
       "data": {
           "format": "parquet_xdm",
           "schema": {
-              "id": "https://ns.adobe.com/{IMS_ORG}/schemas/e8832506e6b87f75dbe0311a0461794d3b25bfc3cb8b8654",
+              "id": "https://ns.adobe.com/aepstreamingservices/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
               "version": "application/vnd.adobe.xed-full+json;version=1"
           }
       },
       "params": {
-          "dataSetId": "{{dataSetId}}"
+          "dataSetId": "6155e3a9bd13651949515f14"
       }
   }'
 ```
@@ -441,44 +489,31 @@ POST /conversion/mappingSets
 
 ```shell
 curl -X POST \
-    'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
-    -H 'Authorization: Bearer {ACCESS_TOKEN}' \
-    -H 'x-api-key: {API_KEY}' \
-    -H 'x-gw-ims-org-id: {IMS_ORG}' \
-    -H 'x-sandbox-name: {SANDBOX_NAME}' \
-    -H 'Content-Type: application/json' \
-    -d '{
-        "version": 0,
-        "xdmSchema": "https://ns.adobe.com/{TENANT_ID}/schemas/995dabbea86d58e346ff91bd8aa741a9f36f29b1019138d4",
-        "xdmVersion": "1.0",
-        "id": null,
-        "mappings": [
-            {
-                "destinationXdmPath": "_id",
-                "sourceAttribute": "Id",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.firstName",
-                "sourceAttribute": "FirstName",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            },
-            {
-                "destinationXdmPath": "person.name.lastName",
-                "sourceAttribute": "LastName",
-                "identity": false,
-                "identityGroup": null,
-                "namespaceCode": null,
-                "version": 0
-            }
-        ]
-    }'
+  'https://platform.adobe.io/data/foundation/conversion/mappingSets' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "version": 0,
+      "xdmSchema": "_aepstreamingservices.schemas.570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
+      "xdmVersion": "1.0",
+      "mappings": [
+      {
+        "destinationXdmPath": "person.name.firstName",
+        "sourceAttribute": "merge_fields.FNAME",
+        "identity": false,
+        "version": 0
+      },
+      {
+        "destinationXdmPath": "person.name.lastName",
+        "sourceAttribute": "merge_fields.LNAME",
+        "identity": false,
+        "version": 0
+      }
+    ]
+  }'
 ```
 
 | Property | Description |
@@ -583,8 +618,8 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 
 ```json
 {
-     "id": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-     "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\""
+    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
+    "etag": "\"2e01f11d-0000-0200-0000-615649660000\""
 }
 ```
 
@@ -619,159 +654,80 @@ A successful response returns details regarding your flow run, including informa
 {
     "items": [
         {
-            "createdAt": 1596656079576,
-            "updatedAt": 1596656113526,
-            "createdBy": "{CREATED_BY}",
-            "updatedBy": "{UPDATED_BY}",
-            "createdClient": "{CREATED_CLIENT}",
-            "updatedClient": "{UPDATED_CLIENT}",
-            "sandboxId": "1bd86660-c5da-11e9-93d4-6d5fc3a66a8e",
-            "sandboxName": "prod",
-            "id": "9830305a-985f-47d0-b030-5a985fd7d004",
-            "flowId": "993f908f-3342-4d9c-9f3c-5aa9a189ca1a",
-            "etag": "\"510bb1d4-8453-4034-b991-ab942e11dd8a\"",
-            "metrics": {
-                "durationSummary": {
-                    "startedAtUTC": 1596656058198,
-                    "completedAtUTC": 1596656113306
-                },
-                "sizeSummary": {
-                    "inputBytes": 24012,
-                    "outputBytes": 17128
-                },
-                "recordSummary": {
-                    "inputRecordCount": 100,
-                    "outputRecordCount": 99,
-                    "failedRecordCount": 1
-                },
-                "fileSummary": {
-                    "inputFileCount": 1,
-                    "outputFileCount": 1,
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                },
-                "statusSummary": {
-                    "status": "success",
-                    "errors": [
-                        {
-                            "code": "CONNECTOR-2001-500",
-                            "message": "Error occurred at promotion activity."
-                        }
-                    ],
-                    "activityRefs": [
-                        "promotionActivity"
-                    ]
-                }
+            "id": "209812ad-7bef-430c-b5b2-a648aae72094",
+            "createdAt": 1633044829955,
+            "updatedAt": 1633044838006,
+            "createdBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+            "updatedBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+            "createdClient": "exc_app",
+            "updatedClient": "exc_app",
+            "sandboxId": "efa50823-2648-4a5a-a508-2326480a5ae0",
+            "sandboxName": "mailchimp-test",
+            "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+            "name": "Mailchimp Connector Flow Generic Rest",
+            "description": "Mailchimp Connector Description Flow Generic Rest",
+            "flowSpec": {
+                "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
+                "version": "1.0"
             },
-            "activities": [
+            "state": "enabled",
+            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
+            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
+            "sourceConnectionIds": [
+                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
+            ],
+            "targetConnectionIds": [
+                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
+            ],
+            "inheritedAttributes": {
+                "sourceConnections": [
+                    {
+                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
+                        "connectionSpec": {
+                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+                            "version": "1.0"
+                        },
+                        "baseConnection": {
+                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
+                            "connectionSpec": {
+                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+                                "version": "1.0"
+                            }
+                        }
+                    }
+                ],
+                "targetConnections": [
+                    {
+                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
+                        "connectionSpec": {
+                            "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
+                            "version": "1.0"
+                        }
+                    }
+                ]
+            },
+            "scheduleParams": {
+                "startTime": "1633044818",
+                "frequency": "minute",
+                "interval": 15
+            },
+            "transformations": [
                 {
-                    "id": "copyActivity",
-                    "updatedAtUTC": 1596656095088,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656058198,
-                        "completedAtUTC": 1596656089650,
-                        "extensions": {
-                            "windowStart": 1596653708000,
-                            "windowEnd": 1596655508000
-                        }
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 24012
-                    },
-                    "recordSummary": {},
-                    "fileSummary": {
-                        "inputFileCount": 1,
-                        "outputFileCount": 1
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "extensions": {
-                            "type": "one-time"
-                        }
-                    },
-                    "sourceInfo": [
-                        {
-                            "id": "c0e18602-f9ea-44f9-a186-02f9ea64f9ac",
-                            "type": "SourceConnection",
-                            "reference": {
-                                "type": "AdfRunId",
-                                "ids": [
-                                    "8a8eb0cc-e283-4605-ac70-65a5adb1baef"
-                                ]
-                            }
-                        }
-                    ]
-                },
-                {
-                    "id": "promotionActivity",
-                    "updatedAtUTC": 1596656113485,
-                    "durationSummary": {
-                        "startedAtUTC": 1596656095333,
-                        "completedAtUTC": 1596656113306
-                    },
-                    "sizeSummary": {
-                        "inputBytes": 24012,
-                        "outputBytes": 17128
-                    },
-                    "recordSummary": {
-                        "inputRecordCount": 100,
-                        "outputRecordCount": 99,
-                        "failedRecordCount": 1
-                    },
-                    "fileSummary": {
-                        "inputFileCount": 2,
-                        "outputFileCount": 1,
-                        "extensions": {
-                            "manifest": {
-                                "fileInfo": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=input_files"
-                            }
-                        }
-                    },
-                    "statusSummary": {
-                        "status": "success",
-                        "errors": [
-                            {
-                                "code": "CONNECTOR-2001-500",
-                                "message": "Error occurred at promotion activity."
-                            }
-                        ],
-                        "extensions": {
-                            "manifest": {
-                                "failedRecords": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_errors",
-                                "sampleErrors": "https://platform.adobe.io/data/foundation/export/batches/01EF01X41KJD82Y9ZX6ET54PCZ/meta?path=row_error_samples.json"
-                            },
-                            "errors": [
-                                {
-                                    "code": "INGEST-1212-400",
-                                    "message": "Encountered 1 errors in the data. Successfully ingested 99 rows. Review the associated diagnostic files for additional details."
-                                },
-                                {
-                                    "code": "MAPPER-3700-400",
-                                    "recordCount": 1,
-                                    "message": "Mapper Transform Error"
-                                }
-                            ]
-                        }
-                    },
-                    "targetInfo": [
-                        {
-                            "id": "47166b83-01c7-4b65-966b-8301c70b6562",
-                            "type": "TargetConnection",
-                            "reference": {
-                                "type": "Batch",
-                                "ids": [
-                                    "01EF01X41KJD82Y9ZX6ET54PCZ"
-                                ]
-                            }
-                        }
-                    ]
+                    "name": "Mapping",
+                    "params": {
+                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
+                        "mappingVersion": 0
+                    }
                 }
-            ]
+            ],
+            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
+            "lastOperation": {
+                "started": 1633044829988,
+                "updated": 0,
+                "operation": "create"
+            }
         }
-    ],
-    "_links": {}
+    ]
 }
 ```
 
