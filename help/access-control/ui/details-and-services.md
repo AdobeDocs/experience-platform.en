@@ -33,6 +33,6 @@ When finished, select **[!UICONTROL Save]**.
 
 Customers entitled to the B2B or B2P Edition have access to B2B UI. B2B UI can be provisioned for users through the [!UICONTROL Enable services menu]. Select the toggle beside [!UICONTROL B2B UI] to enable the service for a particular product profile, and then select **[!UICONTROL Save]**.
 
-The B2B UI toggle enables users to view B2B workflows around managing Accounts and Opportunities, as well as create B2B related segments.
+The B2B UI toggle enables users to view B2B workflows around managing Accounts and Opportunities, as well as create B2B related segments. For more information, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../rtcdp/b2b-overview.md).
 
 ![enable-b2b](../images/enable-b2b.png)
