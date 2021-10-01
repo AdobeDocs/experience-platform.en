@@ -2,6 +2,7 @@
 keywords: RTCDP;CDP;Real-time Customer Data Platform;real time customer data platform;real time cdp;cdp;rtcdp
 title: Example Use Case for Real-time Customer Data Platform B2B Edition
 description: This sample scenario provides an example for the configuration of your implementation of Real-time Customer Data Platform B2B Edition.
+exl-id: 15505980-ac33-44b2-8989-c08cbabd212b
 ---
 # Example Use Case for Real-time Customer Data Platform B2B Edition
 
