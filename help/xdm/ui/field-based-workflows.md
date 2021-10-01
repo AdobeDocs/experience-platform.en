@@ -1,10 +1,14 @@
 ---
-title: Field-based workflows in the Schema Editor
-description: Learn how to individually add standard fields from Adobe-defined field groups to your Experience Data Model (XDM) schemas.
+title: Field-based workflows in the Schema Editor (Beta)
+description: Learn how to individually add fields from existing field groups to your Experience Data Model (XDM) schemas.
 hide: true
 hidefromtoc: true
 ---
-# Field-based workflows in the Schema Editor
+# Field-based workflows in the Schema Editor (Beta)
+
+>[!IMPORTANT]
+>
+>The workflows described in this document are currently in beta. The functionality and documentation are subject to change.
 
 Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
 
