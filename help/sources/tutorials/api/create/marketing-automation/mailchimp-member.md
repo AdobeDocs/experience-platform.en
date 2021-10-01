@@ -1,11 +1,11 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Create a MailChimp connection using the Flow Service API
+title: Create a dataflow for MailChimp Member Activity using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp using the Flow Service API.
 ---
-# Create a [!DNL MailChimp Member Activity] connection using the Flow Service API
+# Create a dataflow for [!DNL MailChimp Member Activity]using the Flow Service API
 
 The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Member Activity] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
