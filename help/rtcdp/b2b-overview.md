@@ -6,6 +6,7 @@ description: Overview of Real-time Customer Data Platform B2B Edition Account
 seo-description: Overview of Real-time Customer Data Platform B2B Edition Account
 hide: yes
 hidefromtoc: yes
+exl-id: 9b45bba4-fc46-4d69-b36a-5cb91f316612
 ---
 # Real-time Customer Data Platform B2B Edition overview
 
