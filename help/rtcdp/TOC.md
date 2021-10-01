@@ -9,6 +9,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 # Real-time Customer Data Platform Help {#rtcdp}
 
 * [Real-time CDP overview](overview.md)
+* [Real-time CDP B2B Edition overview](b2b-overview.md)
 * Getting started {#intro}
   * [Getting started](get-started.md)
   * [Metrics overview](home-page-dashboards.md)
@@ -30,6 +31,7 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
+  * [B2B Segmentation](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
 * Schemas {#schemas}
   * [Schemas overview](schemas/overview.md)
