@@ -31,15 +31,15 @@ Once these requirements have been met you are able to combine these attributes f
 
 Once the union schemas for the B2B classes have relationships established and have been used to ingest data, their attributes are made available in the left rail of the Segment Builder. 
 
-B2B attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-time Customer Data Platform. 
+B2B classes and their attributes are appended with a `B2B` label within the Segmentation workspace to differentiate them from those available as standard within Real-time Customer Data Platform. 
 
-In order to effectively create segments for B2B use cases, it is important to have an intimate knowledge of the schema and understand what the data structure looks like. It is also useful to be aware of the path that the data takes from one data object to another.
+In order to effectively create segments for B2B use cases, it is important to have an intimate knowledge of the schema and understand what the data model looks like. It is also useful to be aware of the path that the data takes from one data object to another.
 
 The image below illustrates the relationships between the B2B classes available within Real-time CDP B2B Edition.
 
 ![B2B class ERD](../assets/segmentation/b2b-classes.png)
 
-Since your data model can be complicated, you can use the Platform UI to view a more detailed visual representation of your data structure in order to help find the relevant attributes for your use case. To start, go to the Platform UI and select Schemas in the left navigation.
+Since your data model can be complicated, you can use the Platform UI to view a more detailed visual representation of your data model in order to help find the relevant attributes for your use case. To start, go to the Platform UI and select Schemas in the left navigation.
 
 Select the appropriate schema from the available list and select the appropriate relationship from the [!UICONTROL Composition] side rail. In the example below, selecting the "Person" relationship reveals which attribute in the current schema references the related "Person" schema (if it is the source schema in the relationship), or is referenced by the "Person" schema (if it is the destination schema in the relationship).
 
@@ -56,8 +56,6 @@ The use cases below provide information on which classes are used to establish r
 ## Examples of different use cases
 
 The following use cases are available for segmentation with the B2B Edition. Each example provides a description of what the segment does and a description of the classes used to create them. The images provided highlight the file path in the [!UICONTROL Attributes] side rail which reflects the structure of the schema. The [!UICONTROL Segment properties] section on the right of the display contains a written breakdown of the segment's attributes. 
-
-If you are using a B2B source connection, see the documentation on the schema auto-generation utility for use cases that require [relations between schemas](../../sources/connectors/adobe-applications/marketo/marketo-namespaces.md).
 
 ### Example 1
 
