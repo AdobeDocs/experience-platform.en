@@ -3,6 +3,7 @@ title: Field-based workflows in the Schema Editor (Beta)
 description: Learn how to individually add fields from existing field groups to your Experience Data Model (XDM) schemas.
 hide: true
 hidefromtoc: true
+exl-id: 0499ff30-a602-419b-b9d3-2defdd4354a7
 ---
 # Field-based workflows in the Schema Editor (Beta)
 
