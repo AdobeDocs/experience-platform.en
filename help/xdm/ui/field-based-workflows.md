@@ -32,7 +32,7 @@ If there are multiple fields you wish to remove, you can manage the field group 
 
 ![Manage related fields](../images/ui/field-based-workflows/manage-related-fields.png)
 
-A dialog appears, showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Add fields]**.
+A dialog appears showing the structure of the field group in question. From here you can use the provided checkboxes to select or deselect the fields that you require. When you are satisfied, select **[!UICONTROL Add fields]**.
 
 ![Select fields from field group](../images/ui/field-based-workflows/select-fields.png)
 
