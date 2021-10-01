@@ -46,7 +46,7 @@ The canvas reappears with only the selected fields present in the schema structu
 
 ## Add standard fields directly to a schema
 
-You can add fields from standard fields groups directly to a schema without needing to know their corresponding field group beforehand. To add a standard field to a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
+You can add fields from standard field groups directly to a schema without needing to know their corresponding field group beforehand. To add a standard field to a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
 ![Field placeholder](../images/ui/field-based-workflows/root-custom-field.png)
 
