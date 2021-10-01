@@ -18,33 +18,23 @@ Real-time Customer Data Platform B2B Edition expands the existing Real-time CDP 
 
 ## Use case
 
-Bodea, a technology company, has a new product and wants to specifically target its marketing campaign towards customers who have spent over one million dollars on its products previously.
-
-In order to maximize the efficiency of their marketing campaign, Bodea also wants to target the people associated with that existing account who have done at least $1 million in business AND have visited the new product page in the last month.
+Bodea, a technology company, has a new product and wants to simultaneously target customers with an email and a LinkedIn add campaign. In order to maximize the efficiency of their marketing campaign, Bodea also wants to target the people associated with that existing account who have spent over one million dollars on its products previously, AND have visited the new product page in the last month.
 
 However, Bodea has two different lines of business. Bodea's first line of business "Line 1" creates software for the automotive industry. Its second line of business "Line 2" sells 3D printers that create automobile parts. As a result of Bodea's two lines of business, the revenue data generated from Bodea's customer accounts is not unified in a single view. 
 
-Both lines of Bodea's business sell to the Townsend company and each line of business has its own sales system: "Sales-System 1" and "Sales-System 2". Their data is maintained in different corporate information silos.
-
-Sales-System 1 uses the Marketo Engage (hereinafter referred to as “Marketo”) source connector to bring B2B data from Marketo to Platform and keep this data up to date using Platform-connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
-
-Sales System 2 uses Salesforce as its source to bring B2B data into Platform where it can be labeled managed and enhanced. Experience Platform allows you to ingest data from a variety of sources such as Adobe applications, CRMs, cloud-based storage, databases, and many others.
-
-![lines of business diagram](./assets/lines-of-business.png)
-
-<!-- reshuffle? -->
+Each line of business has its own sales system: "CRM 1" and "CRM 2". Both of these CRM sales systems are connected to their own marketing automation platform "Marketo 1" and "Marketo 2". Data from CRM 1 gets synced only into Marketo 1 and Data from CRM2 gets synced only into Marketo 2. Ultimately, their data is maintained in different corporate information silos.
 
 ## Current data situation
 
-The Townsend business relationship data is recorded as two separate accounts in each sales system.
+As both lines of Bodea's business sell to the Townsend company, the Townsend business data is recorded as two separate accounts in each sales system.
 
-- In Marketo, Account 1 has two related people (p1@townsend.com and p2@townsend.com) and one closed-won opportunity of $200k ("Opportunity 1").
+In Marketo 1, Townsend is recorded as Account 1. It has two related people (p1@townsend.com and p2@townsend.com) and one closed-won opportunity of $200k ("Opportunity 1") in CRM 1. That data is synced from CRM 1 into Marketo 1.
 
-- In Salesforce, Account 2 also has two related people (p2@townsend.com and p3@townsend.com) and one closed-won opportunity of $900k ("Opportunity 2").
+In Marketo 2, Townsend is recorded as Account 2. Account 2 also has two related people (p2@townsend.com and p3@townsend.com) and one closed-won opportunity of $900k ("Opportunity 2") in CRM 2. That data is synced from CRM 2 to Marketo 2.
 
-For integration and additional corporate control purposes, Bodea also has a Master Data Management (MDM) system where it maintains a record indicating Account 1 in Marketo and Account 2 in Salesforce are the same company.
+For integration and additional corporate control purposes, Bodea also has a Master Data Management (MDM) system where it maintains a record indicating that Account 1 in Marketo 1 (and CRM 1) and Account 2 in Marketo 2 (and CRM 2) are the same company.
 
-In the last month, `p2@townsend.com` visited the new product page and the web visit was recorded by Marketo.
+In the last month, `p2@townsend.com` visited the new product page and the web visit was recorded by Marketo 1.
 
 ![account info diagram](./assets/account-info.png)
 
@@ -52,19 +42,25 @@ In the last month, `p2@townsend.com` visited the new product page and the web vi
 
 Line 1 has just released a new software product and would like to up-sell it to Bodea’s existing top-tier customer base. Bodea launches a marketing campaign with that specific target audience in mind.
 
-As the relevant Townsend information is recorded as Account 1 in Marketo and Account 2 in Salesforce, Bodea's marketing team is unable to efficiently utilize the siloed information.
+As the relevant Townsend information is recorded as Account 1 in Marketo 1 and Account 2 in Marketo 2, Bodea's marketing team is unable to efficiently utilize the siloed information.
 
 This prohibits Bodea's marketing team from efficiently targeting specific business contacts at these companies with this new opportunity. 
 
 To date, Townsend has spent more than a million dollars cumulatively on Bodea products across all of their accounts. However, a segment created using their old system would not include anyone from Townsend unless the total spent within a single sales system totaled more than 1 million dollars. This is because the revenue data is siloed in accounts under different sales systems.
 
-As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment would not find anyone qualified in either Marketo or Salesforce.
+As Townsend's spending is split across different sales systems and does not individually total more than one million, the segment would not find anyone qualified in either Marketo 1 or Marketo 2.
 
 ### How Real-time CDP B2B Edition solves the problem
 
 With Real-time CDP B2B Edition, Bodea's marketing team can:
 
-- Combine the data from all disparate sources (Marketo, Salesforce, and the Master Data Management) into Real-time CDP B2B Edition.
+- Combine the data from all disparate sources (multiple Marketo and CRM instances, and the Master Data Management) into Real-time CDP B2B Edition.
+
+With RT-CDP B2B Edition, Bodea can use the Marketo Engage Source Connector to bring B2B data from Marketo 1 and Marketo 2 into Experience Platform and keep this data current using Platform connected applications. See the [Marketo source connector](../sources/connectors/adobe-applications/marketo/marketo.md) documentation for more information. 
+
+B2B data (People, Accounts, Opportunities, and activity ) from CRM1 is synced into Marketo 1. Similarly all B2B data from CRM 2 is synced into Marketo 2. They get synced into Adobe Experience Platform via the Marketo source connector. However, If Bodea wants to bring in additional data from a CRM into Experience Platform, they can use existing CRM Connectors.
+
+![lines of business diagram](./assets/lines-of-business.png)
 
 For simplicity's sake and the purpose of this example, people are being identified by their emails. The combined account data for this example looks as follows:
 
@@ -85,7 +81,7 @@ For simplicity's sake and the purpose of this example, people are being identifi
   - AND
   - Have visited the product page in the last month
 
-- Create an audience who are the most efficient recipients of Bodea's new marketing campaign. In this example, the audience would only consist of `p2@townsend.com` who qualified for the segment. 
+- Create an audience who are the most efficient recipients of Bodea's new marketing campaign. In this example, RT-CDP, B2B Edition will help the marketer identify `p2@townsend.com` as the right target for this marketing campaign. 
 
 By using the Marketo Engage destination, Bodea has an end-to-end customer experience management (CXM) solution for its marketing team. The audience created in Experience Platform is pushed to Marketo destination where it appears as a static list containing all the relevant details of the persons of interest. This audience is then automatically added to both a Marketo marketing campaign and a Linkedin marketing campaign by the Marketo destination. See the [Marketo Engage destination](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/adobe/marketo-engage.html) documentation for more information on this feature.
 
