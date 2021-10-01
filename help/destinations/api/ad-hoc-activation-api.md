@@ -1,17 +1,21 @@
 ---
 keywords: Experience Platform;destination api;ad-hoc activation;activate segments ad-hoc
 solution: Experience Platform
-title: Activate audience segments to your destinations using the Adobe Experience Platform API
-description: Activate audience segments to your destinations using the Adobe Experience Platform API
+title: (Beta) Activate audience segments through ad-hoc activation API
+description: This document contains examples on how to activate audience segments to your destinations using the Adobe Experience Platform ad-hoc activation API
 topic-legacy: tutorial
 type: Tutorial
 hidefromtoc: yes
 hide: yes
 ---
 
-# Activate audience segments through ad-hoc activation API
+# (Beta) Activate audience segments through ad-hoc activation API
 
-## Overview
+>[!IMPORTANT]
+>
+>The [!DNL ad-hoc activation API] in Platform is currently in beta. The documentation and the functionality are subject to change.
+
+## Overview {#overview}
 
 Read this tutorial to understand how to use the segment create job to programmatically create audience segments, export them, and activate them to batch destinations using the ad-hoc activation API endpoint.
 
@@ -60,7 +64,7 @@ You can find accompanying reference documentation for the segmentation and segme
 
 To activate segments ad-hoc to a destination, you must first have an activation flow configured for the chosen destination.
 
-See the following tutorial for detailed instructions on how to configure an activation flow for your destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
+See the following tutorial for detailed instructions on how to configure an activation flow for your batch destinations: [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md).
 
 ## Run the segment creation job {#segmentation-job}
 
@@ -127,7 +131,7 @@ A successful response returns HTTP status 200.
 ```shell
 {
    "code":"DEST-ADH-200",
-   "message":"Adhoc run triggered succesfully",
+   "message":"Adhoc run triggered successfully",
    "statusURLs":[
       "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-1",
       "https://platform.adobe.io/data/core/activation/flowservice/runs?properties=providerRefId=ADH:segment-id-2"
