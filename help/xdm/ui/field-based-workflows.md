@@ -6,7 +6,7 @@ hidefromtoc: true
 ---
 # Field-based workflows in the Schema Editor
 
-Adobe Experience Platform provides a robust set of standardized [field groups](../../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
+Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
 
 When you add a field group to a schema, that schema inherits all the fields contained in that group. However, you can now add individual fields to your schema without needing to include other fields from the group that you may not necessarily use.
 
@@ -14,7 +14,7 @@ This guide covers the different methods for adding individual fields to a schema
 
 ## Prerequisites
 
-This tutorial assumes that you are familiar with the [composition of XDM schemas](../../schema/composition.md) and how to use the Schema Editor in the Platform UI. To follow along, you should start the process of [creating a new schema](./schemas.md) and assigning it to a standard class before continuing with this guide.
+This tutorial assumes that you are familiar with the [composition of XDM schemas](../schema/composition.md) and how to use the Schema Editor in the Platform UI. To follow along, you should start the process of [creating a new schema](./resources/schemas.md) and assigning it to a standard class before continuing with this guide.
 
 ## Remove fields added from standard field groups
 
