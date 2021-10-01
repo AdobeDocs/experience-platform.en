@@ -1,6 +1,7 @@
 ---
 title: Overview of Segmentation Use Cases for Real-time CDP B2B Edition.
 description: Overview of the various Real-time CDP B2B Edition use cases available.
+exl-id: 2a99b85e-71b3-4781-baf7-a4d5436339d3
 ---
 # Overview of Segmentation use cases for Real-time Customer Data Platform B2B Edition (Beta)
 
