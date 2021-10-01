@@ -8,7 +8,7 @@ hidefromtoc: true
 
 Adobe Experience Platform provides a robust set of standardized [field groups](../schema/composition.md#field-group) for use in Experience Data Model (XDM) schemas. The structure and semantics behind these field groups are carefully tailored to meet a wide variety of segmentation use cases and other downstream applications in Platform. You can also define your own custom field groups to address unique business needs.
 
-When you add a field group to a schema, that schema inherits all the fields contained in that group. However, you can now add individual fields to your schema without needing to include other fields from the group that you may not necessarily use.
+When you add a field group to a schema, that schema inherits all the fields contained in that group. However, you can now add individual fields to your schema without needing to include other fields from the associated field group that you may not necessarily use.
 
 This guide covers the different methods for adding individual fields to a schema in the Platform UI.
 
@@ -42,13 +42,13 @@ The canvas reappears with only the selected fields present in the schema structu
 
 ## Add custom fields directly to a schema
 
-If you have previously [created custom field groups](./resources/field-groups.md#create), add custom fields directly to the schema without needing to separately add them to a custom field group beforehand.
+If you have previously [created custom field groups](./resources/field-groups.md#create), you can add custom fields directly to the schema without needing to separately add them to a custom field group beforehand.
 
 >[!WARNING]
 >
 >When you add a custom field to a schema, you must still select an existing custom field group for it to be associated with. This means that in order to add custom fields directly to a schema, you must have at least one custom field group previously defined in the sandbox you are working in. In addition, any other schemas that employ that custom field group will also inherit the newly added field after you save your changes.
 
-To add fields to the root level of a schema, select the plus (**+**) icon next to the schema's name in the canvas.
+To add fields to the root level of a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
 
 ![Root custom field](../images/ui/field-based-workflows/root-custom-field.png)
 
@@ -64,9 +64,13 @@ The new field is added to the canvas, and is namespaced under your [tenant ID](.
 
 ![Tenant ID](../images/ui/field-based-workflows/tenantId.png)
 
+>[!NOTE]
+>
+>The rest of the fields provided by the selected custom field group are removed from the schema by default. If you want to add some of these fields to the schema, select a field belonging to the group and then select **[!UICONTROL Manage related fields]** in the right rail.
+
 ### Add fields to the structure of standard field groups
 
-If the schema you are working on has an object-typ fields provided by a standard field group, you can add your own custom fields to that standard object. Select the plus (**+**) icon next to the root of the object and provide the details of the custom field in the right rail.
+If the schema you are working on has an object-type field provided by a standard field group, you can add your own custom fields to that standard object. Select the plus (**+**) icon next to the root of the object and provide the details of the custom field in the right rail.
 
 ![Add field to standard object](../images/ui/field-based-workflows/add-field-to-standard-object.png)
 
