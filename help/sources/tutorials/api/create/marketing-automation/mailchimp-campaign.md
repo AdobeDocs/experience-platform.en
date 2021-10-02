@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Create a dataflow for MailChimp Campaign Activity using the Flow Service API
+title: Create a dataflow for MailChimp Campaign using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp using the Flow Service API.
 ---
-# Create a dataflow for [!DNL MailChimp Campaign Activity] using the Flow Service API
+# Create a dataflow for [!DNL MailChimp Campaign] using the Flow Service API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Campaign Activity] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Campaign] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Before you can connect [!DNL MailChimp] to Adobe Experience Platform using OAuth
 
 ## Create a base connection {#base-connection}
 
-Once you have retrieved your [!DNL MailChimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL MailChimp Campaign Activity] data to Platform. The first step in creating a dataflow is to create a base connection.
+Once you have retrieved your [!DNL MailChimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL MailChimp Campaign] data to Platform. The first step in creating a dataflow is to create a base connection.
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
@@ -45,7 +45,7 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d '{
     "name": "MailChimp base connection with basic authentication",
-    "description": "MailChimp Campaign Activity base connection with basic authentication",
+    "description": "MailChimp Campaign base connection with basic authentication",
     "connectionSpec": {
         "id": "2e8580db-6489-4726-96de-e33f5f60295f",
         "version": "1.0"
@@ -69,7 +69,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication |
 
@@ -108,7 +108,7 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d '{
     "name": "MailChimp base connection with OAuth 2 refresh code",
-    "description": "MailChimp Campaign Activity base connection with OAuth 2 refresh code",
+    "description": "MailChimp Campaign base connection with OAuth 2 refresh code",
     "connectionSpec": {
         "id": "2e8580db-6489-4726-96de-e33f5f60295f",
         "version": "1.0"
@@ -131,7 +131,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the Authoring Service API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
@@ -152,14 +152,15 @@ Using the base connection ID you generated in the previous step, you can explore
 | Parameter | Description |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
-| `{OBJECT_TYPE}` | The type of object that you wish to explore. |
+| `{OBJECT_TYPE}` | The type of the object you wish to explore. For REST sources, this value defaults to `rest`. |
+| `{OBJECT}` | The object that you wish to explore. |
 | `{FILE_TYPE}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
-| `{SOURCE_PARAMS}` | A base64-encoded string of your `list_id`. |
+| `{SOURCE_PARAMS}` | A base64-encoded string of your `campaign_id`. |
 
 >[!TIP]
 >
->To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `list_id` string in base64. For example, `"list_id": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0`.
+>To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `"campaign": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0`.
 
 **API format**
 
@@ -183,134 +184,7 @@ curl -X GET \
 A successful response returns the structure of the queried file.
 
 ```json
-{
-"data": [
-    {
-        "list_id": "10c097ca71",
-        "_links": [
-            {
-                "rel": "self",
-                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-                "method": "GET",
-                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
-                "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
-            },
-            {
-                "rel": "parent",
-                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71",
-                "method": "GET",
-                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
-            },
-            {
-                "rel": "create",
-                "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-                "method": "POST",
-                "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-                "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/POST.json"
-            }
-        ],
-        "members": [
-            {
-                "id": "cff65fb4c5f5828666ad846443720efd",
-                "email_address": "kendallt2134@gmail.com",
-                "unique_email_id": "72c758cbf1",
-                "contact_id": "874a0d6e9ddb89d8b4a31e416ead2d6f",
-                "full_name": "Kendall Roy",
-                "web_id": 547094062,
-                "email_type": "html",
-                "status": "subscribed",
-                "consents_to_one_to_one_messaging": true,
-                "merge_fields": {
-                    "FNAME": "Kendall",
-                    "LNAME": "Roy",
-                    "ADDRESS": {
-                        "country": "US"
-                    }
-                },
-                "stats": {
-                    "avg_open_rate": 0,
-                    "avg_click_rate": 0
-                },
-                "ip_opt": "103.43.112.97",
-                "timestamp_opt": "2021-06-01T15:31:36+00:00",
-                "member_rating": 2,
-                "last_changed": "2021-06-01T15:31:36+00:00",
-                "vip": false,
-                "location": {
-                    "latitude": 0,
-                    "longitude": 0,
-                    "gmtoff": 0,
-                    "dstoff": 0
-                },
-                "source": "Admin Add",
-                "tags_count": 0,
-                "list_id": "10c097ca71",
-                "_links": [
-                    {
-                        "rel": "self",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
-                    },
-                    {
-                        "rel": "parent",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/CollectionResponse.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Paths/Lists/Members/Collection.json"
-                    },
-                    {
-                        "rel": "update",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "PATCH",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PATCH.json"
-                    },
-                    {
-                        "rel": "upsert",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "PUT",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json",
-                        "schema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/PUT.json"
-                    },
-                    {
-                        "rel": "delete",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
-                        "method": "DELETE"
-                    },
-                    {
-                        "rel": "activity",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/activity",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Activity/Response.json"
-                    },
-                    {
-                        "rel": "goals",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/goals",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Goals/Response.json"
-                    },
-                    {
-                        "rel": "notes",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/notes",
-                        "method": "GET",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Notes/CollectionResponse.json"
-                    },
-                    {
-                        "rel": "events",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/events",
-                        "method": "POST",
-                        "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Events/POST.json"
-                    },
-                    {
-                        "rel": "delete_permanent",
-                        "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd/actions/delete-permanent",
-                        "method": "POST"
-                    }
-                ]
-            },
-        ]
-    }
+
 ```
 
 ## Create a source connection {#source-connection}
@@ -348,8 +222,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "MailChimp source connection to ingest listId",
-      "description": "MailChimp Campaign Activity source connection to ingest listId",
+      "name": "MailChimp source connection to ingest campaign ID",
+      "description": "MailChimp Campaign source connection to ingest campaign ID",
       "baseConnectionId": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
       "connectionSpec": {
           "id": "2e8580db-6489-4726-96de-e33f5f60295f",
@@ -357,10 +231,6 @@ curl -X POST \
       },
       "data": {
           "format": "json",
-          "schema": {
-              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
-              "version": "application/vnd.adobe.xed-full+json;version=1"
-          }
       },
       "params": {
           "campaignId": "{CAMPAIGN_ID}"
@@ -375,7 +245,7 @@ curl -X POST \
 | `baseConnectionId` | The base connection ID of [!DNL MailChimp]. This ID was generated in an earlier step. |
 | `connectionSpec.id` | The connection specification ID that corresponds to your source. |
 | `data.format` | The format of the [!DNL MailChimp] data that you want to ingest. |
-| `params.listId` | Also known as audience ID, the [!DNL MailChimp] list ID allows for the transfer of audience data to other integrations. |
+| `params.campaignId` | The [!DNL MailChimp] campaign ID identifies a specific [!DNL MailChimp] campaign, which then allows you to send emails to your lists/audiences. |
 
 **Response**
 
@@ -428,7 +298,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "MailChimp target connection",
-      "description": "MailChimp Campaign Activity target connection",
+      "description": "MailChimp Campaign target connection",
       "connectionSpec": {
           "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
           "version": "1.0"
@@ -468,7 +338,7 @@ A successful response returns the new target connection's unique identifier (`id
 
 >[!IMPORTANT]
 >
->Data prep functions are currently not supported for [!DNL MailChimp Campaign Activity].
+>Data prep functions are currently not supported for [!DNL MailChimp Campaign].
 
 <!--
 ## Create a mapping {#mapping}
@@ -563,8 +433,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "MailChimp Campaign Activity dataflow",
-      "description": "MailChimp Campaign Activity dataflow",
+      "name": "MailChimp Campaign dataflow",
+      "description": "MailChimp Campaign dataflow",
       "flowSpec": {
           "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
           "version": "1.0"
@@ -647,8 +517,8 @@ A successful response returns details regarding your flow run, including informa
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "imsOrgId": "{IMS_ORG}",
-            "name": "MailChimp Campaign Activity dataflow",
-            "description": "MailChimp Campaign Activity dataflow",
+            "name": "MailChimp Campaign dataflow",
+            "description": "MailChimp Campaign dataflow",
             "flowSpec": {
                 "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
                 "version": "1.0"
@@ -759,12 +629,12 @@ curl -X PATCH \
           {
               "op": "replace",
               "path": "/name",
-              "value": "MailChimp Campaign Activity Dataflow 2.0"
+              "value": "MailChimp Campaign Dataflow 2.0"
           },
           {
               "op": "replace",
               "path": "/description",
-              "value": "MailChimp Campaign Activity Dataflow Updated"
+              "value": "MailChimp Campaign Dataflow Updated"
           }
       ]'
 ```
@@ -857,12 +727,12 @@ curl -X PATCH \
       {
           "op": "replace",
           "path": "/name",
-          "value": "MailChimp Campaign Activity Connection 2.0"
+          "value": "MailChimp Campaign Connection 2.0"
       },
       {
           "op": "add",
           "path": "/description",
-          "value": "Updated MailChimp Campaign Activity Connection"
+          "value": "Updated MailChimp Campaign Connection"
       }
   ]'
 ```

@@ -1,13 +1,13 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Create a dataflow for MailChimp Member Activity using the Flow Service API
+title: Create a dataflow for MailChimp Members using the Flow Service API
 topic-legacy: tutorial
 description: Learn how to connect Adobe Experience Platform to MailChimp using the Flow Service API.
 ---
-# Create a dataflow for [!DNL MailChimp Member Activity]using the Flow Service API
+# Create a dataflow for [!DNL MailChimp Members] using the Flow Service API
 
-The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Member Activity] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
+The following tutorial walks you through the steps to create a source connection and a dataflow to bring [!DNL MailChimp Members] data to Platform using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ Before you can connect [!DNL MailChimp] to Adobe Experience Platform using OAuth
 
 ## Create a base connection {#base-connection}
 
-Once you have retrieved your [!DNL MailChimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL MailChimp Member Activity] data to Platform. The first step in creating a dataflow is to create a base connection.
+Once you have retrieved your [!DNL MailChimp] authentication credentials, you can now start the process of creating dataflow to bring [!DNL MailChimp Members] data to Platform. The first step in creating a dataflow is to create a base connection.
 
 A base connection retains information between your source and Platform, including your source's authentication credentials, the current state of the connection, and your unique base connection ID. The base connection ID allows you to explore and navigate files from within your source and identify the specific items that you want to ingest, including information regarding their data types and formats.
 
@@ -45,7 +45,7 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d '{
     "name": "MailChimp base connection with basic authentication",
-    "description": "MailChimp Member Activity base connection with basic authentication",
+    "description": "MailChimp Members base connection with basic authentication",
     "connectionSpec": {
         "id": "2e8580db-6489-4726-96de-e33f5f60295f",
         "version": "1.0"
@@ -69,7 +69,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after your source is registered and approved through the [!DNL Flow Service] API. |
 | `auth.specName` | The authentication type that you are using to connect your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.username` | The username that corresponds with your [!DNL MailChimp] account. This is required for basic authentication. |
 | `auth.params.password` | The password that corresponds with your [!DNL MailChimp] account. This is required for basic authentication |
 
@@ -108,7 +108,7 @@ curl -X POST \
 -H 'Content-Type: application/json' \
 -d '{
     "name": "MailChimp base connection with OAuth 2 refresh code",
-    "description": "MailChimp Member Activity base connection with OAuth 2 refresh code",
+    "description": "MailChimp Members base connection with OAuth 2 refresh code",
     "connectionSpec": {
         "id": "2e8580db-6489-4726-96de-e33f5f60295f",
         "version": "1.0"
@@ -131,7 +131,7 @@ curl -X POST \
 | `connectionSpec.id` | The connection specification ID of your source. This ID can be retrieved after registering your source using the Authoring Service API. |
 | `auth.specName` | The authentication type that you are using to authenticate your source to Platform. |
 | `auth.params.host` | The root URL used to connect to [!DNL MailChimp] API. The format for the root URL is `https://{DC}.api.mailchimp.com`, where `{DC}` represents the data center that corresponds to your account.|
-| `auth.params.authorizationTestUrl` |
+| `auth.params.authorizationTestUrl` | (Optional) The authorization Test URL is used to validate credentials when creating a base connection. If unprovided, credentials are automatically checked during the source connection creation step instead. |
 | `auth.params.accessToken` | The corresponding access token used to authenticate your source. This is required for OAuth-based authentication. |
 
 **Response**
@@ -152,7 +152,8 @@ Using the base connection ID you generated in the previous step, you can explore
 | Parameter | Description |
 | --------- | ----------- |
 | `{BASE_CONNECTION_ID}` | The base connection ID generated in the previous step. |
-| `{OBJECT_TYPE}` | The type of object that you wish to explore. |
+| `{OBJECT_TYPE}` | The type of the object you wish to explore. For REST sources, this value defaults to `rest`. |
+| `{OBJECT}` | The object that you wish to explore. |
 | `{FILE_TYPE}` | This parameter is required only when viewing a specific directory. Its value represents the path of the directory you wish to explore. |
 | `{PREVIEW}` | A boolean value that defines whether the contents of the connection supports preview. |
 | `{SOURCE_PARAMS}` | A base64-encoded string of your `list_id`. |
@@ -164,7 +165,7 @@ Using the base connection ID you generated in the previous step, you can explore
 **API format**
 
 ```http
-GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&objectType={OBJECT_TYPE}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
+GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&object={OBJECT}&fileType={FILE_TYPE}&preview={PREVIEW}&sourceParams={SOURCE_PARAMS}
 ```
 
 **Request**
@@ -349,7 +350,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "MailChimp source connection to ingest listId",
-      "description": "MailChimp Member Activity source connection to ingest listId",
+      "description": "MailChimp Members source connection to ingest listId",
       "baseConnectionId": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
       "connectionSpec": {
           "id": "2e8580db-6489-4726-96de-e33f5f60295f",
@@ -357,10 +358,6 @@ curl -X POST \
       },
       "data": {
           "format": "json",
-          "schema": {
-              "id": "https://ns.adobe.com/{TENANT_ID}/schemas/570630b91eb9d5cf5db0436756abb110d02912917a67da2d",
-              "version": "application/vnd.adobe.xed-full+json;version=1"
-          }
       },
       "params": {
           "listId": "10c097ca71"
@@ -428,7 +425,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -d '{
       "name": "MailChimp target connection",
-      "description": "MailChimp Member Activity target connection",
+      "description": "MailChimp Members target connection",
       "connectionSpec": {
           "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
           "version": "1.0"
@@ -558,8 +555,8 @@ curl -X POST \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
   -d '{
-      "name": "MailChimp Member Activity dataflow",
-      "description": "MailChimp Member Activity dataflow",
+      "name": "MailChimp Members dataflow",
+      "description": "MailChimp Members dataflow",
       "flowSpec": {
           "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
           "version": "1.0"
@@ -655,8 +652,8 @@ A successful response returns details regarding your flow run, including informa
             "sandboxId": "{SANDBOX_ID}",
             "sandboxName": "{SANDBOX_NAME}",
             "imsOrgId": "{IMS_ORG}",
-            "name": "MailChimp Member Activity dataflow",
-            "description": "MailChimp Member Activity dataflow",
+            "name": "MailChimp Members dataflow",
+            "description": "MailChimp Members dataflow",
             "flowSpec": {
                 "id": "6499120c-0b15-42dc-936e-847ea3c24d72",
                 "version": "1.0"
@@ -767,12 +764,12 @@ curl -X PATCH \
           {
               "op": "replace",
               "path": "/name",
-              "value": "MailChimp Member Activity Dataflow 2.0"
+              "value": "MailChimp Members Dataflow 2.0"
           },
           {
               "op": "replace",
               "path": "/description",
-              "value": "MailChimp Member Activity Dataflow Updated"
+              "value": "MailChimp Members Dataflow Updated"
           }
       ]'
 ```
@@ -865,12 +862,12 @@ curl -X PATCH \
       {
           "op": "replace",
           "path": "/name",
-          "value": "MailChimp Member Activity Connection 2.0"
+          "value": "MailChimp Members Connection 2.0"
       },
       {
           "op": "add",
           "path": "/description",
-          "value": "Updated MailChimp Member Activity Connection"
+          "value": "Updated MailChimp Members Connection"
       }
   ]'
 ```
