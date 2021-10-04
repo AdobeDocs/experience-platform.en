@@ -9,7 +9,7 @@ description:
 
 >[!IMPORTANT]
 >
->Sources SDK is in beta. The feature and documentation are subject to change.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 This document provides a high-level overview of the process of creating a new source, from authoring connection specification information, to testing, and to promoting your source globally or to a specific IMS Organization.
 

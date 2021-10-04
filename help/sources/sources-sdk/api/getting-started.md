@@ -9,7 +9,7 @@ description: This document provides an introduction to the prerequisite informat
 
 >[!IMPORTANT]
 >
->Sources SDK is in beta. The feature and documentation are subject to change.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 Sources SDK allows you to integrate your own REST-based source to bring data to Adobe Experience Platform. This document provides an introduction to the core concepts you need to know before attempting to make calls to the [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml).
 

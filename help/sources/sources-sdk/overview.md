@@ -9,7 +9,7 @@ description:
 
 >[!IMPORTANT]
 >
->Sources SDK is in beta. The feature and documentation are subject to change.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source to bring your data to Experience Platform.
 

@@ -9,7 +9,7 @@ description: This document provides an overview of the configurations you need t
 
 >[!IMPORTANT]
 >
->Sources SDK is in beta. The feature and documentation are subject to change.
+>Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
 This document provides an overview of the configurations you need to prepare in order to use Sources SDK.
 
