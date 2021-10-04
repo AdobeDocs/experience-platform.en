@@ -11,23 +11,26 @@ description:
 >
 >Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-This document provides a high-level overview of the process of creating a new source, from authoring connection specification information, to testing, and to promoting your source globally or to a specific IMS Organization.
+This document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Sources SDK utilizes two separate APIs:
+[!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput.
 
-* [[!DNL Flow Service] API](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml) - [!DNL Flow Service] is used to collect and centralize customer data from various disparate sources within Platform. The service provides a user interface and RESTful API that lets you set-up source connections to various data providers with ease. These source connections enable you to authenticate your third-party systems, set times for ingestion runs, and manage data ingestion throughput. 
-* [!DNL Authoring Service] API
+The [!DNL Flow Service] API provides several endpoints that allow you to programmatically manage connection and flow specifications for a new source that you are integrating through Sources SDK. These endpoints are outlined below.
 
-## Getting started
+To view all available endpoints and CRUD operations, visit the [[!DNL Flow Service] API reference](https://www.adobe.io/experience-platform-apis/references/flow-service/).
 
-Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
+## Connection specifications
 
-## Create
+Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`. You can create, view, and edit connection specifications using the `/connectionSpecs` endpoint.
 
-The first steps in creating a new source is to collect your artifacts and to author a new connection specification.
+See the [connection specifications endpoint guide](./connection-specs.md) for more information on the use of this endpoint.
 
-For a step-by-step guide on how to create a new connection specification, including steps on how to retrieve a generic connection specification, see the tutorial on [creating a new source](./create.md).
+## Flow specifications
 
-## Promote
+Flow specifications contain information that define a flow, including the source and target connection IDs that it supports, transformation specifications that are needed to be applied to the data, and scheduling parameters required to generate a flow. You can create, view, and edit flow specifications by using the `/flowSpecs` endpoint.
 
-Once your connection specification is created and validated, you can proceed to promote the new source to Platform globally, or to specific IMS organizations using the [!DNL Flow Service] API. For a step-by-step guide on how to promote your source, see the tutorial on [promoting a new source](./promote.md)
+See the [flow specifications endpoint guide](./flow-specs.md) for more information on the use of this endpoint.
+
+## Next steps
+
+To begin using the [!DNL Flow Service] API and create a new source through Sources SDK, read the [getting started guide](./getting-started.md) then select one of the endpoint guides to learn how to use specific endpoints.
