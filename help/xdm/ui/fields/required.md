@@ -22,7 +22,7 @@ In the example below, the `loyaltyId` field is set as required, but its parent o
 
 ![Nested required field](../../images/ui/fields/required/nested.png)
 
-If you want a nested field to always be required in a schema, you must also manually set all parent fields as required (with the exception of the tenant ID object).
+If you want a nested field to always be required in a schema, you must also set all parent fields as required (with the exception of the tenant ID object).
 
 ![Parent and child required fields](../../images/ui/fields/required/parent-and-child.png)
 
