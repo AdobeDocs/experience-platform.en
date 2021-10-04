@@ -23,7 +23,8 @@ For guidance on any terminolgy used within this guide please refer to the [SQL s
 The steps below demonstrate how to create an incremental data load process using SNAPSHOTS and the anonymous block feature.
 
 1. Create a delta log table as displayed below.
-<!-- The adds and deletes tables for a dataset are collectively referred to as the delta tables because they store changes made to the dataset -->
+
+A delta log table is a collective term for the tables responsible for storing changes made to the dataset and support a number of utility commands.
 
 1. Populate the delta log table with one empty record
 
