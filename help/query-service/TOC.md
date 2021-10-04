@@ -29,6 +29,7 @@ feature: Queries
   - [Sample Adobe Analytics queries](best-practices/adobe-analytics.md)
   - [Sample Adobe Target queries](best-practices/adobe-target.md)
   - [Sample anonymous block queries](best-practices/anonymous-block.md)
+  - [Sample incremental loading query](best-practices/incremental-load.md)
 - SQL reference {#sql}
   - [SQL overview](sql/overview.md)
   - [SQL syntax](sql/syntax.md)
