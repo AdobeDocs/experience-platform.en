@@ -45,6 +45,26 @@ The canvas reappears with only the selected fields present in the schema structu
 
 ![Fields added](../images/ui/field-based-workflows/fields-added.png)
 
+## Add standard fields directly to a schema
+
+You can add fields from standard field groups directly to a schema without needing to know their corresponding field group beforehand. To add a standard field to a schema, select the plus (**+**) icon next to the schema's name in the canvas. An **[!UICONTROL Untitled Field]** placeholder appears in the schema structure and the right rail updates to reveal controls to configure the field.
+
+![Field placeholder](../images/ui/field-based-workflows/root-custom-field.png)
+
+Under **[!UICONTROL Field name]**, start typing the name of the field you wish to add. The system automatically searches for standard fields that match the query and lists them under **[!UICONTROL Recommended Standard Fields]**, including the field groups that they belong to.
+
+![Recommended Standard Fields](../images/ui/field-based-workflows/standard-field-search.png)
+
+While some standard fields share the same name, their structure may vary depending on the field group they come from. If a standard field is nested within a parent object in the field group structure, the parent field will also be included in the schema if the child field is added.
+
+Select the preview icon (![Preview icon](../images/ui/field-based-workflows/preview-icon.png)) next to a standard field to view the structure of its field group and better understand how it might be nested. To add the standard field to the schema, select the plus icon (![Plus icon](../images/ui/field-based-workflows/add-icon.png)).
+
+![Add standard field](../images/ui/field-based-workflows/add-standard-field.png)
+
+The canvas updates to show the standard field added to the schema, including any parent fields that it is nested under within the field group structure. The name of the field group is also listed under **[!UICONTROL Field groups]** in the left rail. If you want to add more fields from the same field group, select **[!UICONTROL Manage related fields]** in the right rail.
+
+![Standard field added](../images/ui/field-based-workflows/standard-field-added.png)
+
 ## Add custom fields directly to a schema
 
 If you have previously [created custom field groups](./resources/field-groups.md#create), you can add custom fields directly to the schema without needing to separately add them to a custom field group beforehand.
@@ -57,7 +77,11 @@ To add fields to the root level of a schema, select the plus (**+**) icon next t
 
 ![Root custom field](../images/ui/field-based-workflows/root-custom-field.png)
 
-Use the controls in the right rail to provide a name, display name, and data type for the field. Under **[!UICONTROL Assign field group]**, select the custom field group that you want the new field to be associated with.
+Start typing in the name of the custom field you wish to add, and the system automatically starts searching for matching standard fields. To create a new custom field instead, select the top option appended with **([!UICONTROL New Field])**.
+
+![New field](../images/ui/field-based-workflows/custom-field-search.png)
+
+From here, provide a display name and data type for the field. Under **[!UICONTROL Assign field group]**, select the custom field group that you want the new field to be associated with.
 
 ![Select field group](../images/ui/field-based-workflows/select-field-group.png)
 
@@ -73,7 +97,7 @@ The new field is added to the canvas, and is namespaced under your [tenant ID](.
 >
 >The rest of the fields provided by the selected custom field group are removed from the schema by default. If you want to add some of these fields to the schema, select a field belonging to the group and then select **[!UICONTROL Manage related fields]** in the right rail.
 
-### Add fields to the structure of standard field groups
+### Add custom fields to the structure of standard field groups
 
 If the schema you are working on has an object-type field provided by a standard field group, you can add your own custom fields to that standard object. Select the plus (**+**) icon next to the root of the object and provide the details of the custom field in the right rail.
 
