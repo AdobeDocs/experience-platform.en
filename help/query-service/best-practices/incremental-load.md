@@ -14,7 +14,7 @@ This document provides a series of examples that can be used as a template to cr
 
 ## Getting Started
 
-The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the Incremental data load capability it is recommended that you read the [Sample anonymous block queries]() documentation and also the [SNAPSHOT clause](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=en#snapshot-clause) documentation.
+The SQL examples throughout this document require you to have an understanding of anonymous block and snapshot capabilities. Before using the Incremental data load capability it is recommended that you read the [Sample anonymous block queries](./anonymous-block.md) documentation and also the [SNAPSHOT clause](https://experienceleague.adobe.com/docs/experience-platform/query/sql/syntax.html?lang=en#snapshot-clause) documentation.
 
 For guidance on any terminolgy used within this guide please refer to the [SQL syntax guide](../sql/syntax.md).
 
