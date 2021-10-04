@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp b2b;b2b;account;account profile;account profiles rtcdp;real-time customer data platform;
 title: Account Profiles in Real-time CDP B2B Edition
-description: Learn how Real-time Customer Data Platform B2B Edition enables you to aggregate account information from multiple sources and deduplicate account data using account profiles.
+description: Learn how Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources using account profiles.
 ---
 # Account profiles overview
 
@@ -11,11 +11,11 @@ description: Learn how Real-time Customer Data Platform B2B Edition enables you 
 
 >[!NOTE]
 >
->Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).
+>Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, B2B Edition including the features and functionality available, please begin by reading the [Real-time CDP, B2B Edition overview](../b2b-overview.md).
 
-Account profiles enable you to aggregate account information from multiple sources and deduplicate account data from a single source. These aggregated views of an account bring together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account data.
+Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account data.
 
-By stitching together account data from different sources, you can begin to see a complete picture of each of your customer accounts and its related opportunities and contacts. This unified view enables your organization to take your B2B marketing campaigns to a new level. To learn more about the power of Real-time CDP, B2B Edition, read the [Real-time CDP, B2B Edition example use case](../b2b-sample-use-case.md).
+By stitching together account data from different sources, you can begin to see a complete picture of each of your customer accounts and its related opportunities and contacts. This enables your organization to take your B2B marketing campaigns to a new level. To learn more about the power of Real-time CDP, B2B Edition, read the [Real-time CDP, B2B Edition example use case](../b2b-use-case.md).
 
 ## Account profile viewer
 

@@ -28,7 +28,7 @@ As customer data comes together it is merged into a single profile through the u
 
 ## Merge policies
 
-When bringing customer data together, merge policies are the rules that Platform uses to determine how data will be prioritizes and what data will be combines to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
+When bringing customer data together, merge policies are the rules that Platform uses to determine how data will be prioritized and what data will be combined to create that unified view. For more information on merge policies, see the [merge policies overview](merge-policies.md).
 
 ## Profile viewer
 

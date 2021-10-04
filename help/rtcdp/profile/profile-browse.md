@@ -25,7 +25,7 @@ Real-time CDP, B2B Edition also enables you to browse [!UICONTROL Accounts], [!U
 
 To explore these enhancements, begin by following the steps outlined in the [Real-time Customer Profile user guide](../../profile/ui/user-guide.md) to browse a profile by merge policy or identity namespace. 
 
-![](images/b2b-profile-browse.png)
+![](images/b2b-browse-profile.png)
 
 The profile detail includes access to [!UICONTROL Accounts], [!UICONTROL Opportunities], and [!UICONTROL Source records] tabs in addition to the standard information provided in the customer profile that is has also been enhanced with B2B events and attributes.
 

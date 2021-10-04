@@ -1,7 +1,7 @@
 ---
 keywords: rtcdp profile;profiles rtcdp;rtcdp identities;rtcdp merge policies;real-time customer profile
 title: Account Profile UI Guide
-description: Through the use of account profiles, Real-time Customer Data Platform B2B Edition enables you to aggregate account information from multiple sources and deduplicate account data. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
+description: Through the use of account profiles, Real-time Customer Data Platform B2B Edition enables you to unify account information from multiple sources. This guide provides details for interacting with account profiles in the Adobe Experience Platform user interface.
 ---
 
 # Account profile UI guide
@@ -14,7 +14,7 @@ description: Through the use of account profiles, Real-time Customer Data Platfo
 >
 >Account profiles are only available to Real-time Customer Data Platform B2B Edition customers. To learn more about Real-time CDP, including the features and functionality available to each license type, please begin by reading the [Real-time CDP overview](../overview.md).
 
-Account profiles enable you to aggregate account information from multiple sources and deduplicate account data from a single source. These aggregated views of an account bring together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account data. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
+Account profiles enable you to unify account information from multiple sources. This unified view of an account brings together data from across your many marketing channels and the diverse systems that your organization is currently using to store customer account information. This document provides a guide to interacting with account profiles using the Real-time CDP, B2B Edition capabilities available in the Adobe Experience Platform user interface (UI).
 
 ## Browse account profiles
 
@@ -36,7 +36,7 @@ This opens the **[!UICONTROL Select source]** dialog, where you can select a sou
 
 >[!NOTE]
 >
->Your organization may have more than one connection to the same source, so it is important to review the connection name, source system, and source system instance to ensure you are searching by the correct source instance.
+>Your organization may have multiple sources configured for the same service provider (for example, Marketo), so it is important to review the connection name, source system, and source system instance to ensure you are searching by the correct source instance.
 
 To learn more about connecting enterprise sources, please refer to the [sources overview](../sources/sources-overview.md).
 
@@ -76,7 +76,7 @@ The default fields shown can also be changed at an organizational-level to displ
 
 ![](images/b2b-account-details.png)
 
-You can view additional information related to the account by selecting another of the available tabs. These tabs include attributes, people, and the opportunities tab that shows all of the open and closed opportunities related to the account across your enterprise systems.
+You can view additional details related to the account by selecting another of the available tabs. These tabs include attributes, people, and the opportunities tab that shows open and closed opportunities related to the account across your enterprise systems. Please refer to the following sections for more information about each tab.
 
 ## Attributes tab
 
@@ -90,13 +90,21 @@ In addition to being able to view the data in a list, you can use the search bar
 
 The **[!UICONTROL People]** tab provides a list of individual people associated with the account. These people may be contacts and leads from different enterprise systems managed by different teams within your organization, but in Real-time CDP, B2B Edition they are presented together as a single list enabling you to see a more holistic view of your account contacts.
 
+>[!NOTE]
+>
+>The [!UICONTROL People] tab displays a list of up to 25 people associated with the account. For accounts with more than 25 associated people, the system shows a random sampling of 25 records.
+
 In addition to showing you a snapshot of information for the contact, each person listed also includes a **[!UICONTROL Profile ID]**, which is a clickable link that allows you to explore the Real-time Customer Profile for that individual. To learn more about viewing individual customer profiles related to your accounts, please visit the guide for [browsing profiles in Real-time CDP, B2B Edition](../profile/profile-browse.md).
 
 ![](images/b2b-account-people.png)
 
 ## Opportunities tab
 
-The **[!UICONTROL Opportunities]** tab provides details related to open and closed opportunities related to the account. These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
+The **[!UICONTROL Opportunities]** tab provides information for open and closed opportunities related to the account. These opportunities may be ingested into Experience Platform from multiple sources, however Real-time CDP, B2B Edition makes it easy for marketers to see all of these opportunities together in one place.
+
+>[!NOTE]
+>
+>The [!UICONTROL Opportunities] tab displays a list of up to 25 opportunities associated with the account. For accounts with more than 25 associated opportunities, the system shows a random sampling of 25 records.
 
 Each opportunity includes information such as the name of the opportunity, its amount, stage, and whether the opportunity is open, closed, won, or lost.
 
