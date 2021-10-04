@@ -1,327 +1,947 @@
 ---
 keywords: Experience Platform;home;popular topics;sources;connectors;source connectors;sources sdk;sdk;SDK
 solution: Experience Platform
-title: Create a New Source
+title: Connection Specifications API Endpoint
 topic-legacy: tutorial
-description: Learn how to create a new source using Sources SDK.
+description: The /connectionSpecs endpoint in the Flow Service API allows you to create, view, and update connection specifications and integrate new sources through Sources SDK.
 ---
-# Create a new source
+# Connection specifications endpoint
 
 >[!IMPORTANT]
 >
 >Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-The following document provides steps on how to create a new source using Sources SDK.
+A connection specification represents the structure of a source. It contains information on a source's authentication and scheduling requirements, defines how source data can be explored and inspected, and provides information on the attributes of a given source. The `/connectionSpecs` endpoint in the [!DNL Flow Service] API allows you to programmatically manage the connection specifications within your organization.
+
+The following document provides steps on how to retrieve, create, and update connection specifications using the [!DNL Flow Service] API for Sources SDK.
 
 ## Getting started
 
 Before continuing, please review the [getting started guide](./getting-started.md) for links to related documentation, a guide to reading the sample API calls in this document, and important information regarding required headers that are needed to successfully make calls to any Experience Platform API.
 
-## Collect artifacts
+## Look up a connection specification {#lookup}
 
-The first step in creating a new source is to collect artifacts for the source. These items, which include an **icon**, a **description**, a **label**, and the appropriate **category** for your source, must be coordinated with the Adobe product team.
-
-If you do not have these artifacts coordinated, please contact your Adobe representative before attempting to do this tutorial.
-
-## Create a new connection specification
-
-Once your artifacts are ready, you can begin the process of creating a new connection specification.
-
-### Retrieve a REST API-based connection specification
-
-To create a new connection specification, you must first retrieve REST API-based connection specification using the [!DNL Flow Service] API. To get an example, make a GET request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
+You can look up a specific connection specification by making a GET request that include's the connection specification's ID in the path.
 
 **API format**
 
 ```http
-GET /connectionSpecs
+GET /connectionSpecs/{CONNECTION_SPEC_ID}
+```
+
+**Request**
+
+The following request retrieves the `c4b4d052-0aa6-46e0-9970-5088a8b05327` connection specification.
+
+```shell
+curl -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/c4b4d052-0aa6-46e0-9970-5088a8b05327' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' 
+```
+
+**Response**
+
+A successful response returns the details of the queried connection specification.
+
+```json
+{
+  "items": [
+      {
+          "id": "c4b4d052-0aa6-46e0-9970-5088a8b05327",
+          "createdAt": 1633383140981,
+          "updatedAt": 1633383140981,
+          "createdBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+          "updatedBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+          "createdClient": "exc_app",
+          "updatedClient": "exc_app",
+          "sandboxId": "efa50823-2648-4a5a-a508-2326480a5ae0",
+          "sandboxName": "mailchimp-test",
+          "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+          "name": "generic-rest-extension",
+          "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+          "version": "1.0",
+          "type": "generic-rest",
+          "authSpec": [
+              {
+                  "name": "OAuth2 Refresh Code",
+                  "type": "OAuth2RefreshCode",
+                  "spec": {
+                      "$schema": "http://json-schema.org/draft-07/schema#",
+                      "type": "object",
+                      "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
+                      "properties": {
+                          "host": {
+                              "type": "string",
+                              "description": "Enter resource url host path"
+                          },
+                          "authorizationTestUrl": {
+                              "description": "Authorization test url to validate accessToken.",
+                              "type": "string"
+                          },
+                          "accessToken": {
+                              "description": "Access Token of mailChimp endpoint.",
+                              "type": "string",
+                              "format": "password"
+                          }
+                      },
+                      "required": [
+                          "host",
+                          "accessToken"
+                      ]
+                  }
+              },
+              {
+                  "name": "Basic Authentication",
+                  "type": "BasicAuthentication",
+                  "spec": {
+                      "$schema": "http://json-schema.org/draft-07/schema#",
+                      "type": "object",
+                      "description": "defines auth params required for connecting to rest service.",
+                      "properties": {
+                          "host": {
+                              "type": "string",
+                              "description": "Enter resource url host path."
+                          },
+                          "username": {
+                              "description": "Username to connect mailChimp endpoint.",
+                              "type": "string"
+                          },
+                          "password": {
+                              "description": "Password to connect mailChimp endpoint.",
+                              "type": "string",
+                              "format": "password"
+                          }
+                      },
+                      "required": [
+                          "host",
+                          "username",
+                          "password"
+                      ]
+                  }
+              }
+          ],
+          "sourceSpec": {
+              "spec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "description": "Define user input parameters to fetch resource values.",
+                  "properties": {
+                      "listId": {
+                          "type": "string",
+                          "description": "listId for which members need to fetch."
+                      }
+                  }
+              },
+              "attributes": {
+                  "uiAttributes": {
+                      "isSource": true,
+                      "isPreview": true,
+                      "isBeta": true,
+                      "icon": {
+                          "key": "mailchimpMembersIcon"
+                      },
+                      "description": {
+                          "key": "mailchimpMembersDescription"
+                      },
+                      "label": {
+                          "key": "mailchimpMembersLabel"
+                      }
+                  },
+                  "urlParams": {
+                      "path": "/3.0/lists/${listId}/members",
+                      "method": "GET"
+                  },
+                  "contentPath": "$.members",
+                  "paginationParams": {
+                      "type": "OFFSET",
+                      "limitName": "count",
+                      "limitValue": "100",
+                      "offSetName": "offset"
+                  },
+                  "scheduleParams": {
+                      "scheduleStartParamName": "since_last_changed",
+                      "scheduleEndParamName": "before_last_changed",
+                      "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+                      "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+                  }
+              }
+          },
+          "exploreSpec": {
+              "name": "Resource",
+              "type": "Resource",
+              "requestSpec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object"
+              },
+              "responseSpec": {
+                  "$schema": "http: //json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "properties": {
+                      "format": {
+                          "type": "string"
+                      },
+                      "schema": {
+                          "type": "object",
+                          "properties": {
+                              "columns": {
+                                  "type": "array",
+                                  "items": {
+                                      "type": "object",
+                                      "properties": {
+                                          "name": {
+                                              "type": "string"
+                                          },
+                                          "type": {
+                                              "type": "string"
+                                          }
+                                      }
+                                  }
+                              }
+                          }
+                      },
+                      "data": {
+                          "type": "array",
+                          "items": {
+                              "type": "object"
+                          }
+                      }
+                  }
+              }
+          },
+          "attributes": {
+              "uiAttributes": {
+                  "apiFeatures": {
+                      "explorePaginationSupported": false
+                  }
+              }
+          }
+      }
+  ]
+}
+```
+
+## Create a connection specification {#create}
+
+To create a connection specification, you must first retrieve a `generic-rest` type of connection specification using the [!DNL Flow Service] API. Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then update the attributes with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config.md).
+
+With your specification information updated, you can submit the new connection specification by making a POST request to the `/connectionSpecs` endpoint of the [!DNL Flow Service] API.
+
+**API format**
+
+```http
+POST /connectionSpecs
 ```
 
 **Request**
 
 ```shell
-curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs  /' \
+curl -X POST \
+  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
   -H 'x-sandbox-name: {SANDBOX_NAME}' \
   -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MailChimp source",
+      "description": "New MailChimp source using generic-rest",
+      "type": "generic-rest",
+      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+      "version": "1.0",
+      "attributes": {
+          "uiAttributes": {
+              "apiFeatures": {
+                  "explorePaginationSupported": false
+              }
+          }
+      },
+      "authSpec": [
+          {
+              "name": "OAuth2 Refresh Code",
+              "type": "OAuth2RefreshCode",
+              "spec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
+                  "properties": {
+                      "host": {
+                          "type": "string",
+                          "description": "Enter resource url host path"
+                      },
+                      "authorizationTestUrl": {
+                          "description": "Authorization test url to validate accessToken.",
+                          "type": "string"
+                      },
+                      "accessToken": {
+                          "description": "Access Token of mailChimp endpoint.",
+                          "type": "string",
+                          "format": "password"
+                      }
+                  },
+                  "required": [
+                      "host",
+                      "accessToken"
+                  ]
+              }
+          },
+          {
+              "name": "Basic Authentication",
+              "type": "BasicAuthentication",
+              "spec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "description": "defines auth params required for connecting to rest service.",
+                  "properties": {
+                      "host": {
+                          "type": "string",
+                          "description": "Enter resource url host path."
+                      },
+                      "username": {
+                          "description": "Username to connect mailChimp endpoint.",
+                          "type": "string"
+                      },
+                      "password": {
+                          "description": "Password to connect mailChimp endpoint.",
+                          "type": "string",
+                          "format": "password"
+                      }
+                  },
+                  "required": [
+                      "host",
+                      "username",
+                      "password"
+                  ]
+              }
+          }
+      ],
+      "sourceSpec": {
+          "attributes": {
+              "uiAttributes": {
+                  "isSource": true,
+                  "isPreview": true,
+                  "isBeta": true,
+                  "icon": {
+                      "key": "mailchimpMembersIcon"
+                  },
+                  "description": {
+                      "key": "mailchimpMembersDescription"
+                  },
+                  "label": {
+                      "key": "mailchimpMembersLabel"
+                  }
+              },
+              "urlParams": {
+                  "path": "/3.0/lists/${listId}/members",
+                  "method": "GET"
+              },
+              "contentPath": "$.members",
+              "paginationParams": {
+                  "type": "OFFSET",
+                  "limitName": "count",
+                  "limitValue": "100",
+                  "offSetName": "offset"
+              },
+              "scheduleParams": {
+                  "scheduleStartParamName": "since_last_changed",
+                  "scheduleEndParamName": "before_last_changed",
+                  "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+                  "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+              }
+          },
+          "spec": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "type": "object",
+              "description": "Define user input parameters to fetch resource values.",
+              "properties": {
+                  "listId": {
+                      "type": "string",
+                      "description": "listId for which members need to fetch."
+                  }
+              }
+          }
+      },
+      "exploreSpec": {
+          "name": "Resource",
+          "type": "Resource",
+          "requestSpec": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "type": "object"
+          },
+          "responseSpec": {
+              "$schema": "http: //json-schema.org/draft-07/schema#",
+              "type": "object",
+              "properties": {
+                  "format": {
+                      "type": "string"
+                  },
+                  "schema": {
+                      "type": "object",
+                      "properties": {
+                          "columns": {
+                              "type": "array",
+                              "items": {
+                                  "type": "object",
+                                  "properties": {
+                                      "name": {
+                                          "type": "string"
+                                      },
+                                      "type": {
+                                          "type": "string"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "data": {
+                      "type": "array",
+                      "items": {
+                          "type": "object"
+                      }
+                  }
+              }
+          }
+      }
+  }'
 ```
 
 **Response**
 
-The following response is an example of an empty generic REST connector connection specification that you must fill out to create a new source.
+A successful response returns the newly created connection specification, including its unique `id`.
 
 ```json
 {
-  "name": "The name of your source",
-  "type": "The type of your source.",
-  "providerId": "The Provider ID of your source",
-  "version": "Define the corresponding corresponding of your connection specification.",
-  "attributes": {
-    "category": "Define the category of your source.",
-    "isSource": true,
-  },
-  "authSpec": [
-    {
-      "name": "The name of the authentication type supported by your source.",
-      "type": "The type of authentication supported by your source",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "accessToken": {
-            "description": "The credential required to authenticate your source. In this example, it's an Access Token",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "accessToken"
-        ]
-      }
-    },
-  ],
-  "sourceSpec": {
-    "attributes": {
-      "uiAttributes": {
-        "documentationLink": "The link to the documentation, where more information on your source can be found.",
-        "isSource": true,
-        "category": {
-          "key": "The category of your source"
-        },
-        "icon": {
-          "key": "An SVG file that represents the icon displayed with your source."
-        },
-        "description": {
-          "key": "A short description about your source."
-        },
-        "label": {
-          "key": "A short label to accompany your source."
-        }
-      },
-      "urlParams": {
-        "hostname": "The host domain, where the API call to your source is being made to.",
-        "path": "The resource path from where to fetch the data.",
-        "method": "The HTTP method to be used to make the request to the source, to fetch the data."
-      },
-      "contentPath": "The node that contains the list of items required to be ingested to Platform.  This attribute should follow JSON path syntax.",
-      "queryParams": "The supported query parameters that can be used to append the source URL when making a request to fetch data. These query parameters must be separated with an ampersand (&).",
-      "headerParams": "The comma (,) separated headers that need to be supplied in the HTTP request to source URL while fetching data.",
-      "bodyParams": "Defines any parameters required to be provided to the request body.",
-      "paginationParams": {
-        "paginationType": "Defines the pagination parameters and/or fields that need to be supplied to get a link tto traverse pages of a response or while creating a next page url. ",
-        "limitName": "The parameter name for limit.",
-        "limitValue": "An integer that defines the limit",
-        "offSetName": "The offset name. Currently, offset is the only supported pagination type."
-      },
-      "scheduleParams": {
-        "scheduleStartParamName": "Defines the starting point for when data reading begins. ",
-        "scheduleEndParamName": "Defines the point for when the data reading ends.",
-        "scheduleStartParamFormat": "Defines the supported format for scheduleStartParamName.",
-        "scheduleEndParamFormat": "Defines the supported format for scheduleEndParamName"
-      }
-    },
-    "spec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "description": "Defines static and user input parameters to fetch resource values.",
-      "properties": {
-        "domain": {
-          "type": "string",
-          "description": "The domain name of client server."
-        },
-        "listId": {
-          "type": "string",
-          "description": "The listId for which members need to fetch."
-        }
-      }
-    }
-  },
-  "exploreSpec": {
-    "name": "Resource",
-    "type": "Resource",
-    "requestSpec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object"
-    },
-    "responseSpec": {
-      "$schema": "http: //json-schema.org/draft-07/schema#",
-      "type": "object",
-      "properties": {
-        "format": {
-          "type": "string"
-        },
-        "schema": {
-          "type": "object",
-          "properties": {
-            "columns": {
-              "type": "array",
-              "items": {
+    "id": "f6c0de0c-0a42-4cd9-9139-8768bf2f1b55",
+    "createdAt": 1633388930134,
+    "updatedAt": 1633388930134,
+    "createdBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+    "updatedBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+    "createdClient": "exc_app",
+    "updatedClient": "exc_app",
+    "sandboxId": "efa50823-2648-4a5a-a508-2326480a5ae0",
+    "sandboxName": "mailchimp-test",
+    "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+    "name": "MailChimp-test-source",
+    "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+    "version": "1.0",
+    "type": "generic-rest",
+    "authSpec": [
+        {
+            "name": "OAuth2 Refresh Code",
+            "type": "OAuth2RefreshCode",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
                 "type": "object",
+                "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                 "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "type": {
-                    "type": "string"
-                  }
-                }
-              }
+                    "host": {
+                        "type": "string",
+                        "description": "Enter resource url host path"
+                    },
+                    "authorizationTestUrl": {
+                        "description": "Authorization test url to validate accessToken.",
+                        "type": "string"
+                    },
+                    "accessToken": {
+                        "description": "Access Token of mailChimp endpoint.",
+                        "type": "string",
+                        "format": "password"
+                    }
+                },
+                "required": [
+                    "host",
+                    "accessToken"
+                ]
             }
-          }
         },
-        "data": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
+        {
+            "name": "Basic Authentication",
+            "type": "BasicAuthentication",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "description": "defines auth params required for connecting to rest service.",
+                "properties": {
+                    "host": {
+                        "type": "string",
+                        "description": "Enter resource url host path."
+                    },
+                    "username": {
+                        "description": "Username to connect mailChimp endpoint.",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "Password to connect mailChimp endpoint.",
+                        "type": "string",
+                        "format": "password"
+                    }
+                },
+                "required": [
+                    "host",
+                    "username",
+                    "password"
+                ]
+            }
         }
-      }
+    ],
+    "sourceSpec": {
+        "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "Define user input parameters to fetch resource values.",
+            "properties": {
+                "listId": {
+                    "type": "string",
+                    "description": "listId for which members need to fetch."
+                }
+            }
+        },
+        "attributes": {
+            "uiAttributes": {
+                "isSource": true,
+                "isPreview": true,
+                "isBeta": true,
+                "icon": {
+                    "key": "mailchimpMembersIcon"
+                },
+                "description": {
+                    "key": "mailchimpMembersDescription"
+                },
+                "label": {
+                    "key": "mailchimpMembersLabel"
+                }
+            },
+            "urlParams": {
+                "path": "/3.0/lists/${listId}/members",
+                "method": "GET"
+            },
+            "contentPath": "$.members",
+            "paginationParams": {
+                "type": "OFFSET",
+                "limitName": "count",
+                "limitValue": "100",
+                "offSetName": "offset"
+            },
+            "scheduleParams": {
+                "scheduleStartParamName": "since_last_changed",
+                "scheduleEndParamName": "before_last_changed",
+                "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+                "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+            }
+        }
+    },
+    "exploreSpec": {
+        "name": "Resource",
+        "type": "Resource",
+        "requestSpec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object"
+        },
+        "responseSpec": {
+            "$schema": "http: //json-schema.org/draft-07/schema#",
+            "type": "object",
+            "properties": {
+                "format": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "columns": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    },
+    "attributes": {
+        "uiAttributes": {
+            "apiFeatures": {
+                "explorePaginationSupported": false
+            }
+        }
     }
-  }
 }
 ```
 
-### Author your connection specification
+## Update a connection specification {#update}
 
-Once you have retrieved a generic REST connection specification, copy and paste the payload to the text editor of your choice and then fill out or replace the values with information relevant to your specific source. For more information on connection specifications, including details particular to its several arrays, see the documentation on [preparing your configurations](../config.md).
+You can update the fields of a connection specification through a PUT operation. When updating a connection specification through a PUT request, the body must include all of the fields that would be required when creating a new connection specification in a POST request.
 
-The following payload is an example of a connection specification authored with information specific to a [!DNL MailChimp] source:
+**API format**
+
+```http
+PUT /connectionSpecs/{CONNECTION_SPEC_ID}
+```
+
+**Request**
+
+```shell
+PUT -X GET \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs/f6c0de0c-0a42-4cd9-9139-8768bf2f1b55' \
+  -H 'Authorization: Bearer {ACCESS_TOKEN}' \
+  -H 'x-api-key: {API_KEY}' \
+  -H 'x-gw-ims-org-id: {IMS_ORG}' \
+  -H 'x-sandbox-name: {SANDBOX_NAME}' \
+  -H 'Content-Type: application/json' \
+  -d '{
+      "name": "MailChimp source update 1.0",
+      "description": "New MailChimp source using generic-rest",
+      "type": "generic-rest",
+      "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+      "version": "1.0",
+      "attributes": {
+          "uiAttributes": {
+              "apiFeatures": {
+                  "explorePaginationSupported": false
+              }
+          }
+      },
+      "authSpec": [
+          {
+              "name": "OAuth2 Refresh Code",
+              "type": "OAuth2RefreshCode",
+              "spec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
+                  "properties": {
+                      "host": {
+                          "type": "string",
+                          "description": "Enter resource url host path"
+                      },
+                      "authorizationTestUrl": {
+                          "description": "Authorization test url to validate accessToken.",
+                          "type": "string"
+                      },
+                      "accessToken": {
+                          "description": "Access Token of mailChimp endpoint.",
+                          "type": "string",
+                          "format": "password"
+                      }
+                  },
+                  "required": [
+                      "host",
+                      "accessToken"
+                  ]
+              }
+          },
+          {
+              "name": "Basic Authentication",
+              "type": "BasicAuthentication",
+              "spec": {
+                  "$schema": "http://json-schema.org/draft-07/schema#",
+                  "type": "object",
+                  "description": "defines auth params required for connecting to rest service.",
+                  "properties": {
+                      "host": {
+                          "type": "string",
+                          "description": "Enter resource url host path."
+                      },
+                      "username": {
+                          "description": "Username to connect mailChimp endpoint.",
+                          "type": "string"
+                      },
+                      "password": {
+                          "description": "Password to connect mailChimp endpoint.",
+                          "type": "string",
+                          "format": "password"
+                      }
+                  },
+                  "required": [
+                      "host",
+                      "username",
+                      "password"
+                  ]
+              }
+          }
+      ],
+      "sourceSpec": {
+          "attributes": {
+              "uiAttributes": {
+                  "isSource": true,
+                  "isPreview": true,
+                  "isBeta": true,
+                  "icon": {
+                      "key": "mailchimpMembersIcon"
+                  },
+                  "description": {
+                      "key": "mailchimpMembersDescription"
+                  },
+                  "label": {
+                      "key": "mailchimpMembersLabel"
+                  }
+              },
+              "urlParams": {
+                  "path": "/3.0/lists/${listId}/members",
+                  "method": "GET"
+              },
+              "contentPath": "$.members",
+              "paginationParams": {
+                  "type": "OFFSET",
+                  "limitName": "count",
+                  "limitValue": "100",
+                  "offSetName": "offset"
+              },
+              "scheduleParams": {
+                  "scheduleStartParamName": "since_last_changed",
+                  "scheduleEndParamName": "before_last_changed",
+                  "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+                  "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+              }
+          },
+          "spec": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "type": "object",
+              "description": "Define user input parameters to fetch resource values.",
+              "properties": {
+                  "listId": {
+                      "type": "string",
+                      "description": "listId for which members need to fetch."
+                  }
+              }
+          }
+      },
+      "exploreSpec": {
+          "name": "Resource",
+          "type": "Resource",
+          "requestSpec": {
+              "$schema": "http://json-schema.org/draft-07/schema#",
+              "type": "object"
+          },
+          "responseSpec": {
+              "$schema": "http: //json-schema.org/draft-07/schema#",
+              "type": "object",
+              "properties": {
+                  "format": {
+                      "type": "string"
+                  },
+                  "schema": {
+                      "type": "object",
+                      "properties": {
+                          "columns": {
+                              "type": "array",
+                              "items": {
+                                  "type": "object",
+                                  "properties": {
+                                      "name": {
+                                          "type": "string"
+                                      },
+                                      "type": {
+                                          "type": "string"
+                                      }
+                                  }
+                              }
+                          }
+                      }
+                  },
+                  "data": {
+                      "type": "array",
+                      "items": {
+                          "type": "object"
+                      }
+                  }
+              }
+          }
+      }
+  }'
+```
+
+**Response**
+
+A successful call returns the updated connection specification details, including its updated name.
 
 ```json
 {
-  "name": "MailChimp",
-  "type": "generic-rest",
-  "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
-  "version": "1.0",
-  "attributes": {
-    "category": "cloudStorage",
-    "isSource": true
-  },
-  "authSpec": [
-    {
-      "name": "oAuth2-refresh-code",
-      "type": "oAuth2-refresh-code",
-      "spec": {
-        "$schema": "http://json-schema.org/draft-07/schema#",
-        "type": "object",
-        "properties": {
-          "accessToken": {
-            "description": "Access Token",
-            "type": "string",
-            "format": "password"
-          }
-        },
-        "required": [
-          "accessToken"
-        ]
-      }
-    },
-  ],
-  "sourceSpec": {
-    "attributes": {
-      "uiAttributes": {
-        "documentationLink": "http://www.adobe.com/go/sources-generic-rest-connector",
-        "isSource": true,
-        "category": {
-          "key": "cloudStorage"
-        },
-        "icon": {
-          "key": "genericRestConnector"
-        },
-        "description": {
-          "key": "genericRestConnectorDescription"
-        },
-        "label": {
-          "key": "genericRestConnectorLabel"
-        }
-      },
-      "urlParams": {
-        "hostname": "https://{{domain}}.api.mailchimp.com",
-        "path": "/3.0/lists/{{listId}}/members",
-        "method": "GET"
-      },
-      "contentPath": "$.members",
-      "queryParams": "excludes=id",
-      "headerParams": "",
-      "bodyParams": "",
-      "paginationParams": {
-        "paginationType": "offset",
-        "limitName": "count",
-        "limitValue": "100",
-        "offSetName": "offset"
-      },
-      "scheduleParams": {
-        "scheduleStartParamName": "since_last_changed",
-        "scheduleEndParamName": "before_last_changed",
-        "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ssZ",
-        "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ssZ"
-      }
-    },
-    "spec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object",
-      "description": "defines static and user input parameters to fetch resource values.",
-      "properties": {
-        "domain": {
-          "type": "string",
-          "description": "domain name of client server."
-        },
-        "listId": {
-          "type": "string",
-          "description": "listId for which members need to fetch."
-        }
-      }
-    }
-  },
-  "exploreSpec": {
-    "name": "Resource",
-    "type": "Resource",
-    "requestSpec": {
-      "$schema": "http://json-schema.org/draft-07/schema#",
-      "type": "object"
-    },
-    "responseSpec": {
-      "$schema": "http: //json-schema.org/draft-07/schema#",
-      "type": "object",
-      "properties": {
-        "format": {
-          "type": "string"
-        },
-        "schema": {
-          "type": "object",
-          "properties": {
-            "columns": {
-              "type": "array",
-              "items": {
+    "id": "f6c0de0c-0a42-4cd9-9139-8768bf2f1b55",
+    "createdAt": 1633388930134,
+    "updatedAt": 1633389108018,
+    "createdBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+    "updatedBy": "8AB06C9C5DE6B1820A495C40@AdobeID",
+    "createdClient": "exc_app",
+    "updatedClient": "exc_app",
+    "sandboxId": "efa50823-2648-4a5a-a508-2326480a5ae0",
+    "sandboxName": "mailchimp-test",
+    "imsOrgId": "C6420AAF5CD2749D0A495C60@AdobeOrg",
+    "name": "MailChimp source update 1.0",
+    "providerId": "0ed90a81-07f4-4586-8190-b40eccef1c5a",
+    "version": "1.0",
+    "type": "generic-rest",
+    "authSpec": [
+        {
+            "name": "OAuth2 Refresh Code",
+            "type": "OAuth2RefreshCode",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
                 "type": "object",
+                "description": "Define auth params required for connecting to generic rest using oauth2 authorization code.",
                 "properties": {
-                  "name": {
-                    "type": "string"
-                  },
-                  "type": {
-                    "type": "string"
-                  }
-                }
-              }
+                    "host": {
+                        "type": "string",
+                        "description": "Enter resource url host path"
+                    },
+                    "authorizationTestUrl": {
+                        "description": "Authorization test url to validate accessToken.",
+                        "type": "string"
+                    },
+                    "accessToken": {
+                        "description": "Access Token of mailChimp endpoint.",
+                        "type": "string",
+                        "format": "password"
+                    }
+                },
+                "required": [
+                    "host",
+                    "accessToken"
+                ]
             }
-          }
         },
-        "data": {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
+        {
+            "name": "Basic Authentication",
+            "type": "BasicAuthentication",
+            "spec": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "description": "defines auth params required for connecting to rest service.",
+                "properties": {
+                    "host": {
+                        "type": "string",
+                        "description": "Enter resource url host path."
+                    },
+                    "username": {
+                        "description": "Username to connect mailChimp endpoint.",
+                        "type": "string"
+                    },
+                    "password": {
+                        "description": "Password to connect mailChimp endpoint.",
+                        "type": "string",
+                        "format": "password"
+                    }
+                },
+                "required": [
+                    "host",
+                    "username",
+                    "password"
+                ]
+            }
         }
-      }
+    ],
+    "sourceSpec": {
+        "spec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "description": "Define user input parameters to fetch resource values.",
+            "properties": {
+                "listId": {
+                    "type": "string",
+                    "description": "listId for which members need to fetch."
+                }
+            }
+        },
+        "attributes": {
+            "uiAttributes": {
+                "isSource": true,
+                "isPreview": true,
+                "isBeta": true,
+                "icon": {
+                    "key": "mailchimpMembersIcon"
+                },
+                "description": {
+                    "key": "mailchimpMembersDescription"
+                },
+                "label": {
+                    "key": "mailchimpMembersLabel"
+                }
+            },
+            "urlParams": {
+                "path": "/3.0/lists/${listId}/members",
+                "method": "GET"
+            },
+            "contentPath": "$.members",
+            "paginationParams": {
+                "type": "OFFSET",
+                "limitName": "count",
+                "limitValue": "100",
+                "offSetName": "offset"
+            },
+            "scheduleParams": {
+                "scheduleStartParamName": "since_last_changed",
+                "scheduleEndParamName": "before_last_changed",
+                "scheduleStartParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK",
+                "scheduleEndParamFormat": "yyyy-MM-ddTHH:mm:ss:fffffffK"
+            }
+        }
+    },
+    "exploreSpec": {
+        "name": "Resource",
+        "type": "Resource",
+        "requestSpec": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object"
+        },
+        "responseSpec": {
+            "$schema": "http: //json-schema.org/draft-07/schema#",
+            "type": "object",
+            "properties": {
+                "format": {
+                    "type": "string"
+                },
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "columns": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "data": {
+                    "type": "array",
+                    "items": {
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    },
+    "attributes": {
+        "uiAttributes": {
+            "apiFeatures": {
+                "explorePaginationSupported": false
+            }
+        }
     }
-  }
 }
 ```
-
-
-## Next steps
-
-With a fully-authored connection specification ready, you can now submit your connection specification to a specific sandbox of your choice through the [!DNL Flow Service] API for testing. See the tutorial on [promoting your new source](./promote.md) for more information.
