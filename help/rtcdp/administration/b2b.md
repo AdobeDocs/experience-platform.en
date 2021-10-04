@@ -2,7 +2,11 @@
 title: Access control in Real-time Customer Data Platform B2B Edition
 description: An overview of the role of access control in Real-time Customer Data Platform B2B Edition.
 ---
-# Access control in Real-time Customer Data Platform B2B Edition (Beta)
+# (Beta) Access control in Real-time Customer Data Platform B2B Edition
+
+>[!IMPORTANT]
+>
+>Real-time Customer Data Platform B2B Edition is currently in beta. The documentation and functionality are subject to change.
 
 Access control for Real-time CDP B2B Edition is administered through the [Adobe Admin Console](http://adminconsole.adobe.com). This functionality leverages product profiles in [!DNL Admin Console], allowing you to link users with permissions and sandboxes. Using this feature, administrators can grant or restrict access to specific Real-time CDP capabilities, such as B2B UI, for defined sets of users.
 
