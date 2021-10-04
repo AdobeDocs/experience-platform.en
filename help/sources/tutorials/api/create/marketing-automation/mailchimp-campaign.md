@@ -47,7 +47,7 @@ curl -X POST \
     "name": "MailChimp base connection with basic authentication",
     "description": "MailChimp Campaign base connection with basic authentication",
     "connectionSpec": {
-        "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+        "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
         "version": "1.0"
     },
     "auth": {
@@ -79,8 +79,8 @@ A successful response returns the newly created base connection, including its u
 
 ```json
 {
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"4000cff7-0000-0200-0000-6154bad60000\""
+    "id": "9601747c-6874-4c02-bb00-5732a8c43086",
+    "etag": "\"3702dabc-0000-0200-0000-615b5b5a0000\""
 }
 ```
 
@@ -110,7 +110,7 @@ curl -X POST \
     "name": "MailChimp base connection with OAuth 2 refresh code",
     "description": "MailChimp Campaign base connection with OAuth 2 refresh code",
     "connectionSpec": {
-        "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+        "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
         "version": "1.0"
     },
     "auth": {
@@ -140,8 +140,8 @@ A successful response returns the newly created base connection, including its u
 
 ```json
 {
-    "id": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
-    "etag": "\"4000cff7-0000-0200-0000-6154bad60000\""
+    "id": "9601747c-6874-4c02-bb00-5732a8c43086",
+    "etag": "\"3702dabc-0000-0200-0000-615b5b5a0000\""
 }
 ```
 
@@ -160,7 +160,7 @@ Using the base connection ID you generated in the previous step, you can explore
 
 >[!TIP]
 >
->To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `"campaign": "10c097ca71"` encoded in base64 equates to `eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0`.
+>To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `"campaign_id": "c66a200cda"` encoded in base64 equates to `eyJjYW1wYWlnbl9pZCI6ICJjNjZhMjAwY2RhIn0=`.
 
 **API format**
 
@@ -172,7 +172,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&objectType={OBJECT
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJsaXN0SWQiOiIxMGMwOTdjYTcxIn0=' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJjYW1wYWlnbl9pZCI6ICJjNjZhMjAwY2RhIn0=' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -226,14 +226,14 @@ curl -X POST \
       "description": "MailChimp Campaign source connection to ingest campaign ID",
       "baseConnectionId": "4cea039f-f1cc-4fa5-9136-db8dd4c7fbfa",
       "connectionSpec": {
-          "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+          "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
           "version": "1.0"
       },
       "data": {
           "format": "json",
       },
       "params": {
-          "campaignId": "{CAMPAIGN_ID}"
+          "campaignId": "c66a200cda"
       }
   }'
 ```
@@ -253,8 +253,8 @@ A successful response returns the unique identifier (`id`) of the newly created 
 
 ```json
 {
-    "id": "a51e4cf6-65ef-45f4-b4bf-4f03da5f01cc",
-    "etag": "\"6b02b65d-0000-0200-0000-6154bfbe0000\""
+    "id": "d6557bf1-7347-415f-964c-9316bd4cbf56",
+    "etag": "\"e205c206-0000-0200-0000-615b5c070000\""
 }
 ```
 
@@ -331,8 +331,8 @@ A successful response returns the new target connection's unique identifier (`id
 
 ```json
 {
-    "id": "8db5fb4a-6ce8-4370-afc0-1765e39535a5",
-    "etag": "\"960093ce-0000-0200-0000-6154da3e0000\""
+    "id": "9463fe9c-027d-4347-a423-894fcd105647",
+    "etag": "\"b902e822-0000-0200-0000-615b5c370000\""
 }
 ```
 
@@ -440,10 +440,10 @@ curl -X POST \
           "version": "1.0"
       },
       "sourceConnectionIds": [
-          "a51e4cf6-65ef-45f4-b4bf-4f03da5f01cc"
+          "d6557bf1-7347-415f-964c-9316bd4cbf56"
       ],
       "targetConnectionIds": [
-          "8db5fb4a-6ce8-4370-afc0-1765e39535a5"
+          "9463fe9c-027d-4347-a423-894fcd105647"
       ],
       "scheduleParams": {
           "startTime": "1632809759",
@@ -471,8 +471,8 @@ A successful response returns the ID (`id`) of the newly created dataflow. You c
 
 ```json
 {
-    "id": "209812ad-7bef-430c-b5b2-a648aae72094",
-    "etag": "\"2e01f11d-0000-0200-0000-615649660000\""
+    "id": "be2d5249-eeaf-4a74-bdbd-b7bf62f7b2da",
+    "etag": "\"7e010621-0000-0200-0000-615b5c9b0000\""
 }
 ```
 
@@ -524,26 +524,26 @@ A successful response returns details regarding your flow run, including informa
                 "version": "1.0"
             },
             "state": "enabled",
-            "version": "\"2e01f11d-0000-0200-0000-615649660000\"",
-            "etag": "\"2e01f11d-0000-0200-0000-615649660000\"",
+            "version": "\"7e01322c-0000-0200-0000-615b5d520000\"",
+            "etag": "\"7e01322c-0000-0200-0000-615b5d520000\"",
             "sourceConnectionIds": [
-                "e70d2773-711f-43ee-b956-9a1a5da03dd8"
+                "d6557bf1-7347-415f-964c-9316bd4cbf56"
             ],
             "targetConnectionIds": [
-                "43e141f6-6385-4d80-a4e4-c0fb59abbd43"
+                "9463fe9c-027d-4347-a423-894fcd105647"
             ],
             "inheritedAttributes": {
                 "sourceConnections": [
                     {
-                        "id": "e70d2773-711f-43ee-b956-9a1a5da03dd8",
+                        "id": "d6557bf1-7347-415f-964c-9316bd4cbf56",
                         "connectionSpec": {
-                            "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+                            "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
                             "version": "1.0"
                         },
                         "baseConnection": {
-                            "id": "05c595e5-edc3-45c8-90bb-fcf556b57c4b",
+                            "id": "9601747c-6874-4c02-bb00-5732a8c43086",
                             "connectionSpec": {
-                                "id": "2e8580db-6489-4726-96de-e33f5f60295f",
+                                "id": "c8ce8c8c-37fb-4162-9fbf-c2f181e04a7a",
                                 "version": "1.0"
                             }
                         }
@@ -551,7 +551,7 @@ A successful response returns details regarding your flow run, including informa
                 ],
                 "targetConnections": [
                     {
-                        "id": "43e141f6-6385-4d80-a4e4-c0fb59abbd43",
+                        "id": "9463fe9c-027d-4347-a423-894fcd105647",
                         "connectionSpec": {
                             "id": "c604ff05-7f1a-43c0-8e18-33bf874cb11c",
                             "version": "1.0"
@@ -560,24 +560,21 @@ A successful response returns details regarding your flow run, including informa
                 ]
             },
             "scheduleParams": {
-                "startTime": "1633044818",
+                "startTime": "1633377385",
                 "frequency": "minute",
                 "interval": 15
             },
-            "transformations": [
-                {
-                    "name": "Mapping",
-                    "params": {
-                        "mappingId": "5a365b23962d4653b9d9be25832ee5b4",
-                        "mappingVersion": 0
-                    }
-                }
-            ],
-            "runs": "/flows/209812ad-7bef-430c-b5b2-a648aae72094/runs",
+            "runs": "/flows/be2d5249-eeaf-4a74-bdbd-b7bf62f7b2da/runs",
             "lastOperation": {
-                "started": 1633044829988,
+                "started": 1633377421476,
                 "updated": 0,
                 "operation": "create"
+            },
+            "lastRunDetails": {
+                "id": "84f95788-3e83-4ce0-8e45-c0a89117c6f1",
+                "state": "failed",
+                "startedAtUTC": 1633377445979,
+                "completedAtUTC": 1633377487082
             }
         }
     ]
