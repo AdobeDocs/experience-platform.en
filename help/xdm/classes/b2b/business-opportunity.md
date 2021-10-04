@@ -26,4 +26,6 @@ exl-id: d816b0f9-fd37-45da-aa55-247f7f662da0
 | `opportunityStage` | String  | The sales stage of the opportunity. |
 | `opportunityType` | String  | The type of opportunity. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.

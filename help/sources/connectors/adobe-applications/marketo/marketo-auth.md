@@ -10,7 +10,7 @@ exl-id: 594dc8b6-cd6e-49ec-9084-b88b1fe8167a
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo Engage] source is currently in beta. Its features and the documentation are subject to change.
+>The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in Beta. The documentation and functionality are subject to change.
 
 Before you can create a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector, you must first set up a custom service through the [!DNL Marketo] interface, as well as retrieve values for your Munchkin ID, client ID, and client secret.
 

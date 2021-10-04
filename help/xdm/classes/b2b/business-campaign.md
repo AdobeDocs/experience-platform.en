@@ -23,4 +23,6 @@ exl-id: 4e3228a1-74be-43af-b355-45d84afb1611
 | `campaignName` | String  | The name of the campaign. |
 | `campaignType` | String  | The campaign type or target audience. |
 
+{style="table-layout:auto"}
+
 See the guide on [schema relationships in Real-time CDP B2B Edition](../../tutorials/relationship-b2b.md) to learn how this class conceptually relates to the other B2B classes and how you can establish these relationships in the Adobe Experience Platform UI.
