@@ -53,7 +53,7 @@ GET /flows?property=transformations[].params.segmentSelectors.selectors[].value.
 
 ### Combining filters
 
-Multiple `property` filters can be included in a query, provided they are separated by "and" characters (`&`). An AND relationship is assumed when combining filters, meaning that an entity must satisfy all filters in order for it to be included in the response.
+Multiple `property` filters can be included in a query provided they are separated by "and" characters (`&`). An AND relationship is assumed when combining filters, meaning that an entity must satisfy all filters in order for it to be included in the response.
 
 **Return all enabled flows for a segment ID:**
 
