@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;identity service;Identity Serv
 solution: Experience Platform
 title: Shared Devices Overview
 topic-legacy: tutorial
-description:
+description: Shared Device Detection identifies different authenticated users of the same device, allowing for a more accurate representation of customer data in identity graphs
 ---
 # (Beta) Shared Device Detection overview
 
@@ -23,11 +23,11 @@ With [!DNL Shared Device Detection] you can:
 
 >[!TIP]
 >
->Configurations for [!DNL Shared Device Detection] must be completed prior to enabling [!DNL Profile] for dataset because once data starts to flow into the [!DNL Identity Service], you can no longer revise the settings.
+>Configurations for [!DNL Shared Device Detection] must be completed prior to enabling [!DNL Profile] for dataset because you an no longer revise settings, once data starts to flow into [!DNL Identity Service].
 
 ## Getting started
 
-Working with [!DNL Shared Device Detection] requires an understanding of the various Adobe Experience Platform services involved. Before beginning to work with [!DNL Shared Device Detection], please review the documentation for the following services:
+Working with [!DNL Shared Device Detection] requires an understanding of the various Platform services involved. Before beginning to work with [!DNL Shared Device Detection], please review the documentation for the following services:
 
 * [[!DNL Identity Service]](../home.md): Gain a better view of individual customers and their behavior by bridging identities across devices and systems.
   * [Identity graph viewer](./identity-graph-viewer.md): Visualize and interact with the identity graph viewer to better understand how customer identities are stitched together, and in what ways.
@@ -40,50 +40,56 @@ The following table contains a list of terms that are essential to understanding
 | Terms | Definition |
 | --- | --- |
 | Shared device | A shared device is any device that is used by more than one individual. Examples of shared devices include tablets, library computers, and kiosks. |
-| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to an algorithm that allows for data from different users of the same device to be separated from one another. |
+| [!DNL Shared Device Detection] | [!DNL Shared Device Detection] refers to a configuration setting that allows for data from different users of the same device to be separated from one another. |
 | [!UICONTROL Shared Identity Namespace] | A [!UICONTROL Shared Identity Namespace] is used to represent a single device that is shared by multiple different users. | 
-| [!UICONTROL User Identity Namespace] | A [!UICONTROL User Identity Namespace] is used to represent the individual user of a shared device. |
+| [!UICONTROL User Identity Namespace] | A [!UICONTROL User Identity Namespace] is used to represent the authenticated, or logged in, user of a shared device. |
 
 ## Shared Devices UI
 
 In the Platform UI, select **[!UICONTROL Identities]** from the left-navigation and then select **[!UICONTROL Identity settings]**.
 
-![identity-dashboard]()
+![identity-dashboard](../images/shared-device/identity-dashboard.png)
 
-The [!UICONTROL Shared device settings] page appears, providing you with the option to configure shared device settings for your data. Shared device settings are disabled by default.
+The [!UICONTROL Shared device settings] page appears, providing you with the option to configure shared device settings for your data and apply specific identity namespaces as your shared identity namespace and user identity namespace. Shared device settings are disabled by default.
 
-Enabling shared device settings allows you to... [Describe what enabling shared device settings does here]
+When enabled, shared device settings allows data from different users of the same device to be separated from one another. This configuration setting allows for a cleaner and more accurate representation of identity graphs, where user identities of the same device are not combined together.
 
 Select **[!UICONTROL Enable]** to start modifying your shared device settings.
 
-![enable-shared-device]()
+![enable-shared-device](../images/shared-device/enable-shared-device.png)
 
 Two search bars appear, allowing you to designate your [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace]. 
 
-![set-namespaces]()
+![set-namespaces](../images/shared-device/set-namespaces.png)
 
-The [!UICONTROL Shared Identity Namespace] allows you to designate a single device as a shared device.
+The [!UICONTROL Shared Identity Namespace] designates a single device as a shared device.
 
 Select the **[!UICONTROL Shared Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
 
-![shared-identity-namespace]()
+![shared-identity-namespace](../images/shared-device/shared-identity-namespace.png)
 
 Alternatively, you can select the table icon ![table-icon](../images/shared-device/table-icon.png) next to the search bar to see a table of all available identity namespaces including their corresponding descriptions.
 
-![namespace-list]()
+Select the identity namespace of your choice, and then select **[!UICONTROL Select]** to proceed.
+
+![select-shared-namespace](../images/shared-device/select-shared-namespace.png)
 
 The [!UICONTROL User Identity Namespace] allows you to identify different users of the same device and prevent data from being combined into the same identity graph.
 
 Select the **[!UICONTROL User Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
 
-![user-identity-namespace]()
+![user-identity-namespace](../images/shared-device/user-identity-namespace.png)
 
 Similar to the **[!UICONTROL Shared Identity Namespace]**, you can select the table icon ![table-icon](../images/shared-device/table-icon.png) next to the search bar to see a table of all available identity namespaces including their corresponding descriptions.
 
-![namespace-list]()
+Select the identity namespace of your choice, and then select **[!UICONTROL Select]** to proceed.
 
-Once you have configured your [!UICONTROL Shared Device Settings], select **[!UICONTROL Save]** and then select **[!UICONTROL Yes]** in the pop up window that appears to confirm.
+![select-user-namespace](../images/shared-device/select-user-namespace.png)
 
-![save]()
+Once you have configured your [!UICONTROL Shared Device Settings], select **[!UICONTROL Save]**.
 
-## Next steps
+![save](../images/shared-device/save.png)
+
+A pop up window appears prompting you to confirm your selection. Select **[!UICONTROL Yes]** to complete the configuration setting.
+
+![confirm](../images/shared-device/confirm.png)
