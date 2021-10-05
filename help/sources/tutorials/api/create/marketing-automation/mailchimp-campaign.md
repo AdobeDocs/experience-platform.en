@@ -160,7 +160,7 @@ Using the base connection ID you generated in the previous step, you can explore
 
 >[!TIP]
 >
->To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `"campaign_id": "c66a200cda"` encoded in base64 equates to `eyJjYW1wYWlnbl9pZCI6ICJjNjZhMjAwY2RhIn0=`.
+>To retrieve the accepted format-type for `{SOURCE_PARAMS}`, you must encode the entire `campaign_id` string in base64. For example, `{"campaignId": "c66a200cda"}` encoded in base64 equates to `eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9`.
 
 **API format**
 
@@ -172,7 +172,7 @@ GET /connections/{BASE_CONNECTION_ID}/explore?objectType=rest&objectType={OBJECT
 
 ```shell
 curl -X GET \
-  'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJjYW1wYWlnbl9pZCI6ICJjNjZhMjAwY2RhIn0=' \
+  'https://platform.adobe.io/data/foundation/flowservice/connections/05c595e5-edc3-45c8-90bb-fcf556b57c4b/explore?objectType=rest&object=json&fileType=json&preview=true&sourceParams=eyJjYW1wYWlnbklkIjoiYzY2YTIwMGNkYSJ9' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
@@ -184,7 +184,68 @@ curl -X GET \
 A successful response returns the structure of the queried file.
 
 ```json
-
+{
+    "data": [
+        {
+            "emails": [
+                {
+                    "campaign_id": "c66a200cda",
+                    "list_id": "10c097ca71",
+                    "list_is_active": true,
+                    "email_id": "cff65fb4c5f5828666ad846443720efd",
+                    "email_address": "kendall2134@gmail.com",
+                    "_links": [
+                        {
+                            "rel": "parent",
+                            "href": "https://us6.api.mailchimp.com/3.0/reports/c66a200cda/email-activity",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Reports/EmailActivity/CollectionResponse.json"
+                        },
+                        {
+                            "rel": "self",
+                            "href": "https://us6.api.mailchimp.com/3.0/reports/c66a200cda/email-activity/cff65fb4c5f5828666ad846443720efd",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Reports/EmailActivity/Response.json"
+                        },
+                        {
+                            "rel": "member",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/cff65fb4c5f5828666ad846443720efd",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+                        }
+                    ]
+                },
+                {
+                    "campaign_id": "c66a200cda",
+                    "list_id": "10c097ca71",
+                    "list_is_active": true,
+                    "email_id": "a16b82774b211afaf60902d1afd8abc5",
+                    "email_address": "logan9935890967@gmail.com",
+                    "_links": [
+                        {
+                            "rel": "parent",
+                            "href": "https://us6.api.mailchimp.com/3.0/reports/c66a200cda/email-activity",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Reports/EmailActivity/CollectionResponse.json"
+                        },
+                        {
+                            "rel": "self",
+                            "href": "https://us6.api.mailchimp.com/3.0/reports/c66a200cda/email-activity/a16b82774b211afaf60902d1afd8abc5",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Reports/EmailActivity/Response.json"
+                        },
+                        {
+                            "rel": "member",
+                            "href": "https://us6.api.mailchimp.com/3.0/lists/10c097ca71/members/a16b82774b211afaf60902d1afd8abc5",
+                            "method": "GET",
+                            "targetSchema": "https://us6.api.mailchimp.com/schema/3.0/Definitions/Lists/Members/Response.json"
+                        }
+                    ]
+                },
+            ]
+        }
+    ]    
+}
 ```
 
 ## Create a source connection {#source-connection}
