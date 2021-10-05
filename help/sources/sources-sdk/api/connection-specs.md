@@ -240,7 +240,7 @@ POST /connectionSpecs
 
 ```shell
 curl -X POST \
-  'https://platform.adobe.io/data/foundation/flowservice/sourceConnections' \
+  'https://platform.adobe.io/data/foundation/flowservice/connectionSpecs' \
   -H 'Authorization: Bearer {ACCESS_TOKEN}' \
   -H 'x-api-key: {API_KEY}' \
   -H 'x-gw-ims-org-id: {IMS_ORG}' \
