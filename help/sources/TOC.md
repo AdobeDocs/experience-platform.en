@@ -163,7 +163,6 @@ feature: Data Ingestion, Sources
   - [Update dataflows](tutorials/api/update-dataflows.md)
   - [Delete accounts](tutorials/api/delete.md)
   - [Delete dataflows](tutorials/api/delete-dataflows.md)
-  - [Sorting and filtering](tutorials/api/sorting-and-filtering.md)
 - UI tutorials {#ui-tutorials}
   - Create a source connection {#create}
     - Adobe applications {#adobe-applications}

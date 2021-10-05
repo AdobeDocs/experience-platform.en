@@ -10,6 +10,7 @@ feature: Data Management, Data Ingestion
 - [Dataflows overview](./home.md)
 - API guides {#api}
   - [Monitor dataflows](./api/monitor.md)
+  - [Sort and filter API responses](./api/sort-and-filter.md)
 - UI guides {#ui}
   - [Monitor dataflows in destinations](./ui/monitor-destinations.md)
   - [Monitor dataflows in sources](./ui/monitor-sources.md)
