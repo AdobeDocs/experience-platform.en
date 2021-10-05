@@ -11,14 +11,14 @@ description:
 >
 >Sources SDK is currently in beta and your organization may not have access to it yet. The functionality described in this documentation is subject to change.
 
-Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source to bring your data to Experience Platform.
+Adobe Experience Platform Sources SDK is a set of configuration APIs that allow you to integrate a REST API-based source using the [[!DNL Flow Service] API](https://www.adobe.io/experience-platform-apis/references/flow-service/) to bring your data to Experience Platform.
 
 With Sources SDK, you can:
 
-* Configure a new source to the Platform catalog, complete with create, read, update, and delete functionalities, as well as abilities to test and publish the source through API-driven `connectionSpec` access;
+* Configure a new source to the Platform catalog, complete with create, read, update, and delete functionalities, as well as abilities to test and publish the source through [!DNL Flow Service];
 * Define authentication types for your source;
 * Publish your source to one or all IMS Organizations;
-* Create user-facing documentation for your source.
+* Create user-facing documentation for your new source.
 
 ## Understanding sources
 
@@ -28,10 +28,10 @@ For more information on sources, and to see a list of different sources currentl
 
 ## Create a source
 
-See the [sources SDK API guide](./api/getting-started.md) to start creating a new source to bring your data to Platform.
+Through Sources SDK, you can integrate your own REST API-based source and bring your data to Platform with [!DNL Flow Service]. Sources SDK allows you to retrieve generic connection specifications from [!DNL Flow Service], use their specification structures as template, and author your own connection specification by replacing the property values with information that pertain to your own specific source.
+
+See the [Sources SDK API guide](./api/overview.md) to start creating a new source to bring your data to Platform.
 
 ## Document your source
 
-Once your source is created, see the [documentation guide](./documentation/overview.md) to start documenting your new source.
-
-## Known limitations
+Once your source is created, see the [documentation guide](./documentation/overview.md) for instructions on how to document your source through the [!DNL GitHub] web interface or through your own text editor.
