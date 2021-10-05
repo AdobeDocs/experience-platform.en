@@ -3,7 +3,7 @@ keywords: Experience Platform;home;popular topics;sources;connectors;source conn
 solution: Experience Platform
 title: Sources SDK API Guide
 topic-legacy: overview
-description:
+description: his document provides an overview of the process of creating a new source, including steps on how to retrieve, write, and submit a new connection specification using the Flow Service API
 ---
 # Sources SDK API guide
 
@@ -23,7 +23,7 @@ To view all available endpoints and CRUD operations, visit the [[!DNL Flow Servi
 
 Connection specifications return a source's connector properties, including authentication specifications related to creating the base and source connections and a fixed connection specification ID that is assigned to a particular source. Connection specifications are tenant and IMS Organization agnostic. A typical connection specification contains basic information on a given source, as well as three distinct sections: `authSpec`, `sourceSpec`, and `exploreSpec`. You can create, view, and edit connection specifications using the `/connectionSpecs` endpoint.
 
-See the [connection specifications endpoint guide](./connection-specs.md) for more information on the use of this endpoint.
+See the [connection specifications endpoint guide](./connection-specs.md) for more information on the use of this endpoint. For information on the properties and values used for a connection specification, including details on configuring authentication, source, and explore specifications, see the [configuration options document](../config.md).
 
 ## Flow specifications
 
