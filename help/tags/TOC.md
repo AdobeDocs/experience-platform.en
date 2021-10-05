@@ -46,8 +46,8 @@ feature: Data Collection
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
 * Event forwarding {#event-forwarding}
-    * [Overview](./ui/event-forwarding/overview.md)
-    * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Overview](./ui/event-forwarding/overview.md)
+  * [Getting started](./ui/event-forwarding/getting-started.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
@@ -117,7 +117,6 @@ feature: Data Collection
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
   * [Getting started](./extension-dev/getting-started.md)
-  * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
     * [Company setup](./extension-dev/submit/setup.md)
@@ -129,6 +128,7 @@ feature: Data Collection
   * [Extension configuration](./extension-dev/configuration.md)
   * [Extension manifest](./extension-dev/manifest.md)
   * Web extensions {#web}
+    * [Supported browsers](./extension-dev/web/browsers.md)
     * [Extension flow](./extension-dev/web/flow.md)
     * [Library module format](./extension-dev/web/format.md)
     * [Views](./extension-dev/web/views.md)
@@ -138,6 +138,8 @@ feature: Data Collection
     * [Data element types](./extension-dev/web/data-element-types.md)
     * [Core modules](./extension-dev/web/core.md)
     * [Shared modules](./extension-dev/web/shared.md)
+    * [Turbine free variable](./extension-dev/web/turbine.md)
+    * [Hosting third-party libraries](./extension-dev/web/third-party-libraries.md)
   * Edge extensions {#edge}
     * [Extension flow](./extension-dev/edge/flow.md)
     * [Library module format](./extension-dev/edge/format.md)
@@ -145,8 +147,6 @@ feature: Data Collection
     * [Action types](./extension-dev/edge/action-types.md)
     * [Data element types](./extension-dev/edge/data-element-types.md)
     * [Context parameter](./extension-dev/edge/context.md)
-  * [Hosting third-party libraries](./extension-dev/third-party-libraries.md)
-  * [Turbine free variable](./extension-dev/turbine.md)
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)

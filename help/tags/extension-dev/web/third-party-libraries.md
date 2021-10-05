@@ -7,7 +7,7 @@ exl-id: d8eaf814-cce8-499d-9f02-b2ed3c5ee4d0
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../../term-updates.md) for a consolidated reference of the terminology changes.
 
 One of the main purposes of tag extensions in Adobe Experience Platform is to enable you to easily implement existing marketing technologies (libraries) into your website. By using extensions, you can implement libraries provided by third-party content delivery networks (CDNs) without having to manually edit your website's HTML.
 
@@ -15,7 +15,7 @@ There are several methods to host third-party (vendor) libraries within your ext
 
 ## Prerequisites
 
-This document requires a working understanding of extensions within tags, including what they can do and how they are composed. See the [extension development overview](./overview.md) for more information.
+This document requires a working understanding of extensions within tags, including what they can do and how they are composed. See the [extension development overview](../overview.md) for more information.
 
 ## Base code loading process
 
@@ -78,7 +78,7 @@ The base code creates a script element, sets it to load asynchronously, and sets
 
 ## Tags implementation options
 
-The sections below demonstrate the different ways you can load vendor libraries in your extensions, using the Pinterest base code shown previously as an example. Each of these examples involves creating an [action type for a web extension](./web/action-types.md) that loads the library on your website.
+The sections below demonstrate the different ways you can load vendor libraries in your extensions, using the Pinterest base code shown previously as an example. Each of these examples involves creating an [action type for a web extension](../web/action-types.md) that loads the library on your website.
 
 >[!NOTE]
 >
@@ -133,7 +133,7 @@ module.exports = function() {
 
 Optionally, you can take additional steps to refactor this implementation. Since the variables `scriptElement` and `firstScriptElement` are now scoped to the exported function, you can remove the IIFE since these variables don't run the risk of becoming globals.
 
-In addition, tags provide several [core modules](./web/core.md) which are utilities that any extension can use. Specifically, the `@adobe/reactor-load-script` module loads a script from a remote location by creating a script element and adding it to the document. By using this module for the script loading process, you can refactor the action code even further:
+In addition, tags provide several [core modules](../web/core.md) which are utilities that any extension can use. Specifically, the `@adobe/reactor-load-script` module loads a script from a remote location by creating a script element and adding it to the document. By using this module for the script loading process, you can refactor the action code even further:
 
 ```js
 var loadScript = require('@adobe/reactor-load-script');
@@ -166,7 +166,7 @@ To address these concerns, you can choose to include the vendor library as a sep
 
 To implement this, you must first download the vendor library onto your machine. In the case of Pinterest, the vendor library is found at [https://s.pinimg.com/ct/core.js](https://s.pinimg.com/ct/core.js). Once you have downloaded the file, you must place it within your extension project. In the example below, the file is named `pinterest.js` and is located within a `vendor` folder in the project directory.
 
-Once the library file is in your project, you must update your [extension manifest](./manifest.md) (`extension.json`) to indicate that the vendor library should be delivered alongside the main tag library. This is done by adding the path to the library file within a `hostedLibFiles` array:
+Once the library file is in your project, you must update your [extension manifest](../manifest.md) (`extension.json`) to indicate that the vendor library should be delivered alongside the main tag library. This is done by adding the path to the library file within a `hostedLibFiles` array:
 
 ```json
 {

@@ -7,7 +7,7 @@ exl-id: 1664ab2e-8704-4a56-8b6b-acb71534084e
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](../term-updates.md) for a consolidated reference of the terminology changes.
+>Adobe Experience Platform Launch has been rebranded as a suite of data collection technologies in Adobe Experience Platform. Several terminology changes have rolled out across the product documentation as a result. Please refer to the following [document](.../../term-updates.md) for a consolidated reference of the terminology changes.
 
 The `turbine` object is a "free variable" within the scope of your extension's library modules. It provides information and utilities specific to the Adobe Experience Platform tag runtime and is always available to library modules without using `require()`.
 
@@ -77,7 +77,7 @@ Returns the value of a data element.
 var extensionSettings = turbine.getExtensionSettings();
 ```
 
-Returns the settings object that was last saved from the [extension configuration](./configuration.md) view.
+Returns the settings object that was last saved from the [extension configuration](../configuration.md) view.
 
 Please note that values within the returned settings objects may be coming from data elements. Because of this, calling `getExtensionSettings()` at different times may yield different results if the values of the data elements have changed. To get the most up-to-date values, please wait as long as possible before calling `getExtensionSettings()`.
 
@@ -90,7 +90,7 @@ loadScript(turbine.getHostedLibFileUrl('AppMeasurement.js')).then(function() {
 })
 ```
 
-The [hostedLibFiles](./manifest.md) property can be defined inside the extension manifest in order to host various files along with the tag runtime library. This module returns the URL where the given library file is hosted.
+The [hostedLibFiles](../manifest.md) property can be defined inside the extension manifest in order to host various files along with the tag runtime library. This module returns the URL where the given library file is hosted.
 
 ## `getSharedModule` {#shared}
 
@@ -98,7 +98,7 @@ The [hostedLibFiles](./manifest.md) property can be defined inside the extension
 var mcidInstance = turbine.getSharedModule('adobe-mcid', 'mcid-instance');
 ```
 
-Retrieves a module that has been shared from another extension. If no matching module is found, `undefined` will be returned. See [Implementing Shared Modules](./web/shared.md) for more information regarding shared modules.
+Retrieves a module that has been shared from another extension. If no matching module is found, `undefined` will be returned. See [Implementing Shared Modules](../web/shared.md) for more information regarding shared modules.
 
 ## `logger`
 
