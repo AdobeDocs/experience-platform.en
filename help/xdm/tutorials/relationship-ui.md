@@ -9,6 +9,10 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
 # Define a relationship between two schemas using the [!DNL Schema Editor]
 
+>[!NOTE]
+>
+>If you are using Real-time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md) instead.
+
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
 While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.

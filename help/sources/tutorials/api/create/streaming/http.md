@@ -76,7 +76,6 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
      "name": "Sample streaming connection",
-     "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",
@@ -139,7 +138,6 @@ curl -X POST https://platform.adobe.io/data/foundation/flowservice/connections \
  -H 'x-sandbox-name: {SANDBOX_NAME}' \
  -d '{
      "name": "Sample streaming connection",
-     "providerId": "521eee4d-8cbe-4906-bb48-fb6bd4450033",
      "description": "Sample description",
      "connectionSpec": {
          "id": "bc7b00d6-623a-4dfc-9fdb-f1240aeadaeb",

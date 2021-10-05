@@ -9,9 +9,13 @@ user-guide-description: Bring together known and anonymous data from multiple en
 # Real-time Customer Data Platform Help {#rtcdp}
 
 * [Real-time CDP overview](overview.md)
+* [Real-time CDP B2B Edition overview](b2b-overview.md)
 * Getting started {#intro}
-  * [Getting started](get-started.md)
-  * [Metrics overview](home-page-dashboards.md)
+  * Real-time CDP {#rtcdp-intro}
+    * [Get started with Real-time CDP](get-started.md)
+    * [Metrics overview](home-page-dashboards.md)
+  * Real-time CDP B2B Edition {#rtcdpb2b-intro}
+    * [Get started with Real-time CDP B2B Edition](./b2b-use-case.md)
 * Administration {#admin}
   * [Administration overview](administration/admin-overview.md)
 * Datasets {#datasets}
@@ -30,8 +34,13 @@ user-guide-description: Bring together known and anonymous data from multiple en
 * Segments {#segmentation}
   * [Segmentation overview](segmentation/segmentation-overview.md)
   * [Segment builder guide](segmentation/segment-builder-guide.md)
+  * [B2B Segmentation](segmentation/b2b.md)
   * [Customer AI](segmentation/customer-ai.md)
+* Schemas {#schemas}
+  * [Schemas overview](schemas/overview.md)
+  * [Schemas in Real-time CDP B2B Edition](schemas/b2b.md)
 * Sources {#sources}
   * [Sources overview](sources/sources-overview.md)
+  * [Sources in Real-time CDP B2B Edition](sources/b2b.md)
 * [Experience Platform Release notes](https://www.adobe.com/go/platform-release-notes-en)
 * [Experience Platform Glossary](https://www.adobe.com/go/platform-glossary-en)

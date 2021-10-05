@@ -10,7 +10,7 @@ exl-id: 063ec5d9-d643-4141-bf6d-878273f22b33
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo Engage] source is currently in beta. Its features and the documentation are subject to change.
+>The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in beta. The documentation and functionality are subject to change.
 
 Adobe Experience Platform allows data to be ingested from external sources while providing you with the ability to structure, label, and enhance incoming data using Platform services. You can ingest data from a variety of sources such as Adobe applications, cloud-based storage, databases, and many others.
 
@@ -68,3 +68,4 @@ The following documentation provides further information on creating a [!DNL Mar
 * For information on the underlying setup for the B2B namespaces and schemas used with [!DNL Marketo], see the documentation for [B2B namespaces and schemas](./marketo-namespaces.md).
 * For information on finding your [!DNL Marketo] munchkin ID and generating your credentials, see the [[!DNL Marketo] authentication guide](./marketo-auth.md).
 * For information on the specific mapping rules that apply to [!DNL Marketo] datasets, see the documentation on [[!DNL Marketo] field mappings](../mapping/marketo.md).
+* For general information on [!DNL Real-time Customer Data Platform B2B Edition] and its features, see the documentation on [[!DNL Real-time Customer Data Platform B2B Edition]](../../../../rtcdp/b2b-overview.md).

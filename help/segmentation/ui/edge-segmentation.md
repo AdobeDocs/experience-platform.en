@@ -12,7 +12,7 @@ exl-id: eae948e6-741c-45ce-8e40-73d10d5a88f1
 >
 >Edge segmentation is currently in beta. The documentation and the functionality are subject to change.
 
-Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously on the edge, enabling same page and next page personalization use cases. 
+Edge segmentation is the ability to evaluate segments in Adobe Experience Platform instantaneously [on the edge](../../edge/home.md), enabling same page and next page personalization use cases. 
 
 ## Edge segmentation query types
 
