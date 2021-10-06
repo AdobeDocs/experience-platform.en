@@ -15,7 +15,7 @@ This document provides default use and rate limits to help you model your Profil
 
 >[!NOTE]
 >
->Most customers do not exceed these limits because of the denormalized hybrid data model used by Experience Platform. If you are concerned about these limits or would like to learn more, please contact Adobe support.
+>Most customers do not exceed these limits because of the denormalized hybrid data model used by Experience Platform. If you would like to learn about custom limits, please contact your customer care representative.
 
 ## Getting started
 
@@ -46,7 +46,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Profile-enabled datasets | 20 | Soft | A maximum of 20 datasets contributing to the Profile union schema is recommended. To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics). *Note: Due to the denormalized hybrid data model, most customers do not exceed this limit.*|
+| Profile-enabled datasets | 20 | Soft | A maximum of 20 datasets contributing to the Profile union schema is recommended. To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics). *Note: Due to the denormalized hybrid data model, most customers do not exceed this limit. If you would like to learn about custom limits, please contact your customer care representative.*|
 |Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
 | Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
