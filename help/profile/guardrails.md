@@ -9,13 +9,13 @@ exl-id: 33ff0db2-6a75-4097-a9c6-c8b7a9d8b78c
 ---
 # Default Guardrails for [!DNL Real-time Customer Profile] data
 
-Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model.
+Adobe Experience Platform enables you to deliver personalized cross-channel experiences based on behavioral insights and customer attributes in the form of Real-time Customer Profiles. To support this new approach to profiles, Experience Platform uses a highly denormalized hybrid data model that differs from the traditional relational data model. Use of this hybrid data model makes it important that the data being collected is modeled correctly.
 
-This document provides default use and rate limits to help you model your Profile data for optimal system performance. 
+This document provides default use and rate limits to help you model your Profile data for optimal system performance. When reviewing the following guardrails, it is assumed that you have modeled the data correctly. If you have questions on how to model your data, please contact your customer service representative.
 
 >[!NOTE]
 >
->Most customers do not exceed these limits because of the denormalized hybrid data model used by Experience Platform. If you would like to learn about custom limits, please contact your customer care representative.
+>Most customers do not exceed these default limits. If you would like to learn about custom limits, please contact your customer care representative.
 
 ## Getting started
 
@@ -32,11 +32,11 @@ There are two types of default limits within this document:
 
 * **Soft limit:** It is possible to go beyond a soft limit, however soft limits provide a recommended maximum for optimal system performance. 
 
-* **Hard limit:** A hard limit provides an absolute maximum. Going beyond a hard limit may prevent the system from functioning as expected.
+* **Hard limit:** A hard limit provides an absolute maximum.
 
 >[!NOTE]
 >
->The limits outlined in this document are constantly being improved. Please check back regularly for updates.
+>The limits outlined in this document are constantly being improved. Please check back regularly for updates. If you are interested in learning about custom limits, please contact your customer care representative.
 
 ## Data model limits
 
@@ -46,7 +46,7 @@ The following guardrails provide recommended limits when modeling Real-time Cust
 
 | Guardrail | Limit | Limit Type | Description |
 | --- | --- | --- | --- |
-| Profile-enabled datasets | 20 | Soft | A maximum of 20 datasets contributing to the Profile union schema is recommended. To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics). *Note: Due to the denormalized hybrid data model, most customers do not exceed this limit. If you would like to learn about custom limits, please contact your customer care representative.*|
+| Profile-enabled datasets | 20 | Soft | A maximum of 20 datasets contributing to the Profile union schema is recommended. To enable another dataset for [!DNL Profile], an existing dataset should first be removed or disabled. The 20 dataset limit includes datasets from other Adobe solutions (for example, Adobe Analytics). *Note: Due to the nature of Experience Platform's denormalized hybrid data model, most customers do not exceed this limit. For questions about how to model your data, or if you would like to learn more about custom limits, please contact your customer care representative.*|
 |Adobe Analytics report suite datasets enabled for Profile| 1 | Soft | A maximum of one (1) Analytics report suite dataset should be enabled for Profile. Attempting to enable multiple Analytics report suite datasets for Profile may have unintended consequences for data quality. For more information, see the section on [Adobe Analytics datasets](#aa-datasets) in the Appendix.|
 | Multi-entity relationships| 5 | Soft | A maximum of 5 multi-entity relationships defined between primary entities and dimension entities is recommended. Additional relationship mappings should not be made until an existing relationship is removed or disabled. | 
 | JSON depth for ID field used in multi-entity relationship| 4 | Soft | The recommended maximum JSON depth for an ID field used in multi-entity relationships is 4. This means that in a highly nested schema, fields that are nested more than 4 levels deep should not be used as an ID field in a relationship.|
