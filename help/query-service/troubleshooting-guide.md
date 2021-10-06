@@ -75,7 +75,7 @@ You cannot use wildcards to get all the data from your rows, as Query Service sh
 
 ### Should I use `NOT IN` in my SQL query?
 
-While it may be common to use the `NOT IN` operator to retrieve rows that are not in another table or SQL statement, this operator can slow down performance and may return unexpected results if you have large numbers of records or the columns that are being compared accept `NOT NULL`.
+The `NOT IN` operator is often used to retrieve rows that are not found in another table or SQL statement. This operator can slow down performance and may return unexpected results if the columns that are being compared accept `NOT NULL`, or you have large numbers of records.
 
 Instead of using `NOT IN`, you can use either `NOT EXISTS` or `LEFT OUTER JOIN`.
 
