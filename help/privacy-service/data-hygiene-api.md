@@ -3,6 +3,7 @@ title: Data Hygiene API (Alpha)
 description: Learn how to programmatically correct or delete your customers' stored personal data in Adobe Experience Platform.
 hide: true
 hidefromtoc: true
+exl-id: 78c8b15b-b433-4168-a1e8-c97b96e4bf85
 ---
 # Data Hygiene API (Alpha)
 
