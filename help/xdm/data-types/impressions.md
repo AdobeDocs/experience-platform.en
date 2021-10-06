@@ -4,7 +4,7 @@ description: This document provides an overview of the Impressions XDM data type
 ---
 # [!UICONTROL Impressions] data type
 
-[!UICONTROL Impressions] is a standard XDM data type that describes a marketing impression, which is a metric used to quantify the number of digital views or engagements of a piece of content such as an advertisement, digital post, or web page.
+[!UICONTROL Impressions] is a standard XDM data type that describes a marketing impression, which is a metric used to quantify the number of digital views or engagements for a piece of content such as an advertisement, digital post, or web page.
 
 ![](../images/data-types/impressions.png)
 
