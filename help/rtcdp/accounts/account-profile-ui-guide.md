@@ -22,11 +22,11 @@ To browse account profiles, begin by selecting **[!UICONTROL Profiles]** under A
 
 ![](images/b2b-account-browse.png)
 
-On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account id from a connected enterprise source or by entering source details ad-hoc.
+On the **[!UICONTROL Browse]** tab, you can explore account profiles using an account id from a connected enterprise source or by entering source details directly.
 
 ![](images/b2b-account-browse-by.png)
 
-### Browse by connected enterprise source
+### Browse by [!UICONTROL Connected enterprise source]
 
 To browse account profiles by a connected enterprise source, you must first select a connected source using the selector button next to the **[!UICONTROL Source]** field.
 
@@ -54,13 +54,13 @@ With a source selected, you must now enter an **[!UICONTROL Account id]** relate
 
 ![](images/b2b-account-browse-id.png)
 
-### Browse by ad hoc
+### Browse by [!UICONTROL Other]
 
-Real-time CDP, B2B Edition supports the ability to perform an "ad hoc" browse by allowing you to enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account id]** for an account that you would like to view. By entering the source name and instance you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
+Real-time CDP, B2B Edition supports the ability to perform a direct lookup by allowing you to enter a **[!UICONTROL Source name]**, **[!UICONTROL Source instance]**, and **[!UICONTROL Account id]** for an account that you would like to view. By entering the source name and instance directly, you provide the context necessary for Experience Platform to search for, and display, the correct account profile data.
 
-The ability to perform an ad hoc browse is useful under circumstances where a source connection directly to the data is not possible. For example, if your organization has data governance policies in place that prevent connecting directly to a CRM, you can export that data into a cloud storage system and then ingest it into Experience Platform. 
+The ability to perform a direct lookup is useful under circumstances where a source connection directly to the data is not possible. For example, if your organization has data governance policies in place that prevent connecting directly to a CRM, you can export that data into a cloud storage system and then ingest it into Experience Platform. 
 
-Another example could be that you are performing a transformation on the data between the time it leaves a system and enters Platform. You can use adhoc browse to provide context for the data (specifying that this is Marketo data, despite the fact that it is coming from an Amazon S3 bucket, for example) so that the system knows where to look for, and how to properly render, the data.
+Another example could be that you are performing a transformation on the data between the time it leaves a system and enters Platform. You can use the direct lookup functionality to provide context for the data (such as specifying that it is Marketo data, despite the fact that it is coming from an Amazon S3 bucket, for example) so that the system knows where to look for, and how to properly render, the data.
 
 ![](images/b2b-account-browse-adhoc.png)
 

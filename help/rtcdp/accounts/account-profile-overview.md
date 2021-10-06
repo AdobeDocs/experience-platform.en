@@ -19,4 +19,4 @@ By stitching together account data from different sources, you can begin to see 
 
 ## Account profile viewer
 
-With Real-time CDP, B2B Edition, you can use the Experience Platform user interface to view account profiles and search for specific accounts using an account id from a connected enterprise source or by entering source details ad-hoc. For more information regarding how to view account profiles within the Platform UI, please see the [account profile UI guide](account-profile-ui-guide.md).
+With Real-time CDP, B2B Edition, you can use the Experience Platform user interface to view account profiles and search for specific accounts using an account id from a connected enterprise source or by entering source details directly. For more information regarding how to view account profiles within the Platform UI, please see the [account profile UI guide](account-profile-ui-guide.md).
