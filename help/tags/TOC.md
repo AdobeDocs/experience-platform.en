@@ -117,6 +117,7 @@ feature: Data Collection
 * Extension development {#extension-dev}
   * [Overview](./extension-dev/overview.md)
   * [Getting started](./extension-dev/getting-started.md)
+  * [Supported browsers](./extension-dev/browsers.md)
   * Submission process {#submit}
     * [Overview](./extension-dev/submit/overview.md)
     * [Company setup](./extension-dev/submit/setup.md)
@@ -128,7 +129,6 @@ feature: Data Collection
   * [Extension configuration](./extension-dev/configuration.md)
   * [Extension manifest](./extension-dev/manifest.md)
   * Web extensions {#web}
-    * [Supported browsers](./extension-dev/web/browsers.md)
     * [Extension flow](./extension-dev/web/flow.md)
     * [Library module format](./extension-dev/web/format.md)
     * [Views](./extension-dev/web/views.md)
