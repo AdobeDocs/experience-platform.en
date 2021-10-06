@@ -76,7 +76,6 @@ Select the **[!UICONTROL User Identity Namespace]** search bar and either enter 
 >
 >The [!UICONTROL User Identity Namespace] should be mapped to the identity namespace that corresponds to the end user's login ID. Options include customer ID, email, and hashed email.
 
-
 ![emails](../images/shared-device/emails.png)
 
 Once you have configured your [!UICONTROL Shared Device Settings], select **[!UICONTROL Save]**.
