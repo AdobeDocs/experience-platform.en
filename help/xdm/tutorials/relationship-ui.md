@@ -9,6 +9,10 @@ exl-id: feed776b-bc8d-459b-9700-e5c9520788c0
 ---
 # Define a relationship between two schemas using the [!DNL Schema Editor]
 
+>[!NOTE]
+>
+>If you are using Real-time Customer Data Platform B2B Edition, see the guide on [creating B2B relationships](./relationship-b2b.md) instead.
+
 The ability to understand the relationships between your customers and their interactions with your brand across various channels is an important part of Adobe Experience Platform. Defining these relationships within the structure of your [!DNL Experience Data Model] (XDM) schemas allows you to gain complex insights into your customer data.
 
 While schema relationships can be inferred through the use of the union schema and [!DNL Real-time Customer Profile], this only applies to schemas that share the same class. To establish a relationship between two schemas belonging to different classes, a dedicated relationship field must be added to a source schema, which references the identity of a destination schema.
@@ -43,9 +47,21 @@ The source schema "[!DNL Loyalty Members]" is based on the [!DNL XDM Individual 
 
 ### [!DNL Hotels] schema
 
-The destination schema "[!DNL Hotels]" is based on a custom "[!DNL Hotels]" class, and contains fields that describe a hotel. The `hotelId` field serves as the primary identity for the schema under a custom `hotelId` namespace. Like the [!DNL Loyalty Members] schema, this schema has also been enabled for [!DNL Real-time Customer Profile].
+The destination schema "[!DNL Hotels]" is based on a custom "[!DNL Hotels]" class, and contains fields that describe a hotel.
 
 ![](../images/tutorials/relationship/hotels.png)
+
+In order to participate in a relationship, the destination schema must have a primary identity. In this example, the `hotelId` field is used as the primary identity, using a custom "Hotel ID" identity namespace.
+
+![Hotel primary identity](../images/tutorials/relationship/hotel-identity.png)
+
+>[!NOTE]
+>
+>To learn how to create custom identity namespaces, refer to the [Identity Service documentation](../../identity-service/namespaces.md#manage-namespaces).
+
+Once the primary identity has been set, the destination schema must then be enabled for [!DNL Real-time Customer Profile].
+
+![Enable for Profile](../images/tutorials/relationship/hotel-profile.png)
 
 ## Create a relationship schema field group
 

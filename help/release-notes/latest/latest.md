@@ -1,85 +1,41 @@
 ---
 title: Adobe Experience Platform Release Notes
-description: Experience Platform release notes for July 28, 2021.
-doc-type: release notes
-last-update: July 28, 2021
-author: ens60013
+description: The latest release notes for Adobe Experience Platform.
 exl-id: 8f2c9bf8-1487-46e4-993b-bd9b63774cab
 ---
-
 # Adobe Experience Platform release notes 
 
-**Release date: July 28, 2021**
+**Release date: September 29, 2021**
 
 Updates to existing features in Adobe Experience Platform:
 
-- [Data Science Workspace](#dsw)
-- [Dataflows](#destinations)
-- [Destinations](#destinations)
-- [Experience Data Model (XDM)](#xdm)
-- [Query Service](#query)
+- [Data Ingestion](#ingestion)
+- [[!DNL Data Prep]](#data-prep)
 - [Sources](#sources)
 
-## Data Science Workspace {#dsw}
+## Data Ingestion {#ingestion}
 
-Data Science Workspace uses machine learning and artificial intelligence to create insights from your data. Integrated into Adobe Experience Platform, Data Science Workspace helps you make predictions using your content and data assets across Adobe solutions.
+Adobe Experience Platform Data Ingestion represents the multiple methods by which Platform ingests data from various sources, as well as how that data is persisted within the Data Lake for use by downstream Platform services.
+
+**New features**
+
+|Feature | Description|
+|------- | -----------|
+|Upsert or patch Profile records using Batch ingestion | Real-time Customer Profile now allows updates to profile attributes in individual profile record data via batch ingestion. To learn more, refer to the [batch ingestion developer guide](../../ingestion/batch-ingestion/api-overview.md).|
+
+To learn more about ingesting data into Platform, visit the [Data Ingestion documentation](../../ingestion/home.md).
+
+## [!DNL Data Prep] {#data-prep}
+
+[!DNL Data Prep] allows data engineers to map, transform, and validate data to and from Experience Data Model (XDM).
 
 **New features**
 
 | Feature | Description |
 | --- | --- |
-| Library and OS updates | Data Science Workspace has made significant library and OS updates to improve functionality and usability. This includes JupyterLab 1.2.20, Python 3.7, Pandas 1.2.4, Tensorflow 2.4.1 with CUDA 11 and CUDNN 8 support, and more. To learn how to view the available libraries within JupyterLab, visit the [supported libraries](../../data-science-workspace/jupyterlab/overview.md#supported-libraries) section in the JupyterLab notebooks overview documentation. |
+| Support for streaming dataflows | You can now use data prep functions when creating a streaming dataflow for [!DNL Amazon Kinesis], [!DNL Azure Event Hubs], and [!DNL Google PubSub]. See the tutorial on [creating a streaming dataflow for cloud storage sources](../../sources/tutorials/ui/dataflow/streaming/cloud-storage-streaming.md) for more information. |
 
-For more general information on Data Science Workspace, refer to the [Data Science Workspace overview](../../data-science-workspace/home.md).
-
-## Dataflows {#dataflows}
-
-In Platform, data is ingested from many different sources, analyzed within the system, and activated to a wide variety of destinations. Platform makes the process of tracking this potentially non-linear flow of data easier by providing transparency with dataflows.
-
-Dataflows are a representation of jobs that move data across Platform. These dataflows are configured across different services, helping move data from source connectors to target datasets, where it is then utilized by Identity Service and Real-time Customer Profile before ultimately being activated to destinations.
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Destinations dashboard | You can now use the monitoring dashboard to monitor dataflows for destinations. To learn more, please read the tutorial on [monitoring destinations in the UI](../../dataflows/ui/monitor-destinations.md#monitoring-destinations-dashboard) |
-
-For more general information on dataflows, refer to the [dataflows overview](../../dataflows/home.md). To learn more about destinations, refer to the [destinations overview](../../destinations/home.md).
-
-## Destinations {#destinations}
-
-Destinations are pre-built integrations with destination platforms that allow for the seamless activation of data from Adobe Experience Platform. You can use destinations to activate your known and unknown data for cross-channel marketing campaigns, email campaigns, targeted advertising, and many other use cases.
-
-**New features**
-
-| Feature | Description |
-| --- | --- |
-| [Faster incremental file exports](../../destinations/ui/activate-destinations.md#export-incremental-files) | You can now schedule incremental file exports for file-based destinations every 3, 6, 8, and 12 hours. Changing the file export schedule for segments that have already been saved is not currently supported. To re-export segments with a different schedule, you must create a new destination instance. This is a limitation which will be addressed in future releases. |
-| [Support for deduplication keys](../../destinations/ui/activate-destinations.md#deduplication-keys) | Eliminate multiple records of the same profile in the export files by selecting a deduplication key. You can select a single namespace or up to two XDM schema attributes as a deduplication key. |
-
-## Experience Data Model (XDM) {#xdm}
-
-Experience Data Model (XDM) is an open-source specification that is designed to improve the power of digital experiences. It provides common structures and definitions for data in the form of schemas, which allow any application to communicate with Platform services.
-
-| Feature | Description |
-| --- | --- |
-| Telecommunications industry filter | When adding field groups to a schema in the UI, you can now filter by the telecommunications industry. See the [telecommunications industry entity relationship diagram (ERD)](../../xdm/schema/industries/telecom.md) to see a recommended data model for telecom use cases. |
-
-For more general information on XDM in Platform, refer to the [XDM System overview](../../xdm/home.md).
-
-## Query Service {#query}
-
-Query Service provides the ability to use standard SQL to query data in Adobe Experience Platform, supporting a variety of analysis and data management use cases. It is a serverless tool that allows you to join datasets from the Data Lake and capture the query results as a new dataset for use in reporting, Data Science Workspace, or for ingestion into Real-time Customer Profile.
-
-You can use Query Service to build data analysis ecosystems, creating a picture of customers across their various interaction channels. These channels might include point-of-sale, web, mobile, or CRM systems.
-
-**New features**
-
-| Feature | Description |
-| ------- | ----------- |
-| Scheduled queries | You can now schedule queries in Platform using the Query Editor. To learn more, please read the documentation on the [Query Editor](../../query-service/ui/user-guide.md#scheduled-queries). |
-
-For more information, refer to the [Query Service documentation](../../query-service/home.md).
+To learn more about [!DNL Data Prep] see the [[!DNL Data Prep] overview](../../data-prep/home.md).
 
 ## Sources {#sources}
 
@@ -88,8 +44,9 @@ Adobe Experience Platform can ingest data from external sources while allowing y
 Experience Platform provides a RESTful API and an interactive UI that lets you set up source connections for various data providers with ease. These source connections allow you to authenticate and connect to external storage systems and CRM services, set times for ingestion runs, and manage data ingestion throughput.
 
 | Feature | Description |
-| ------- | ----------- |
-| Beta sources moving to GA | The following sources have been promoted from beta to GA: <ul><li>[[!DNL Amazon Redshift]](../../sources/connectors/databases/redshift.md)</li><li>[[!DNL Azure Table Storage]](../../sources/connectors/databases/ats.md)</li><li>[[!DNL PayPal]](../../sources/connectors/payments/paypal.md)</li></ul> |
-| [!DNL Salesforce Marketing Cloud] (Beta) | You can now connect [!DNL Salesforce Marketing Cloud] to Experience Platform using the [!DNL Flow Service] API or the UI. See the [[!DNL Salesforce Marketing Cloud] connector overview](../../sources/connectors/marketing-automation/salesforce-marketing-cloud.md) for more information. |
+| --- | --- |
+| [!DNL Data Landing Zone] | You can now create a [!DNL Data Landing Zone] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/cloud-storage/data-landing-zone.md) or the [user interface](../../sources/tutorials/ui/create/cloud-storage/data-landing-zone.md). [!DNL Data Landing Zone] is an [!DNL Azure Blob] storage interface provisioned by Platform, granting you to access a secure, cloud-based file storage facility to ingest and egress files in and out of Platform. See the [[!DNL Data Landing Zone] overview](../../sources/connectors/cloud-storage/data-landing-zone.md) for more information. |
+| [!DNL Snowflake] | You can now create a [!DNL Snowflake] source connection using the [[!DNL Flow Service] API](../../sources/tutorials/api/create/databases/snowflake.md) or the [user interface](../../sources/tutorials/ui/create/databases/snowflake.md) to bring data from your [!DNL Snowflake] database to Platform. See the [[!DNL Snowflake] overview](../../sources/connectors/databases/snowflake.md) for more information. |
+| [!DNL SFTP] source enhancements | You can manually set a custom port number when creating an [!DNL SFTP] source connection. See the [[!DNL SFTP] overview](../../sources/connectors/cloud-storage/sftp.md) for more information. | 
 
 To learn more about sources, see the [sources overview](../../sources/home.md).

@@ -1,6 +1,7 @@
 ---
 title: Release Notes for the Adobe Experience Cloud Identity Service Extension
 description: The latest release notes for the Adobe Experience Cloud Identity Service tag extension in Adobe Experience Platform.
+exl-id: f9bfbed7-1eec-4916-9235-a75b5e2efcf8
 ---
 # Adobe Experience Cloud Identity Service extension release notes
 

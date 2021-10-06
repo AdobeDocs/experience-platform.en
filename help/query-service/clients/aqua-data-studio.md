@@ -27,7 +27,7 @@ The **[!DNL Register Server]** dialog appears. Under the **[!DNL General]** tab,
 
 >[!NOTE]
 >
->For more information on finding your login credentials, host, port, and database name, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+>For more information on finding your login credentials, host, port, and database name, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 ![](../images/clients/aqua-data-studio/register-server-general-tab.png)
 

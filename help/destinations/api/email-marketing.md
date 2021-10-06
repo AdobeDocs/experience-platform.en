@@ -15,7 +15,7 @@ This tutorial uses the Adobe Campaign destination in all examples, but the steps
 
 ![Overview - the steps to create a destination and activate segments](../assets/api/email-marketing/overview.png)
 
-If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate profiles and segments to a destination](../ui/activate-destinations.md) tutorials.
+If you prefer to use the user interface in Platform to connect a destination and activate data, see the [Connect a destination](../ui/connect-destination.md) and [Activate audience data to batch profile export destinations](../ui/activate-batch-profile-destinations.md) tutorials.
 
 ## Get started
 
@@ -60,7 +60,7 @@ All requests that contain a payload (POST, PUT, PATCH) require an additional med
 
 ### Swagger documentation 
 
-You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/flow-service.yaml). We recommend that you use this tutorial and the Swagger documentation page in parallel.
+You can find accompanying reference documentation for all the API calls in this tutorial in Swagger. See the [Flow Service API documentation on Adobe I/O](https://www.adobe.io/experience-platform-apis/references/flow-service/). We recommend that you use this tutorial and the Swagger documentation page in parallel.
 
 ## Get the list of available destinations {#get-the-list-of-available-destinations}
 

@@ -1,6 +1,7 @@
 ---
 title: Core Extension Overview
 description: Learn about the Core tag extension in Adobe Experience Platform.
+exl-id: 841f32ad-a6a8-49fb-a131-ef4faab47187
 ---
 # Core extension overview
 
@@ -119,7 +120,7 @@ The event triggers if a custom event type occurs. Named JavaScript functions tha
 
 #### Data Element Changed
 
-The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialogue that appears.
+The event triggers if a specified data element changes. You must provide a name for the data element. You can select the data element by either typing its name into the text field, or selecting the data element icon to the right side of the text field and choosing from a list provided within the dialog that appears.
 
 #### Direct Call
 
@@ -702,6 +703,61 @@ Local storage gives browsers a way to store information from page to page ([http
 
 Use the provided field to specify the value you created for a local storage item, such as `lastProductViewed.`
 
+### Merged Objects
+
+Select multiple data elements that will each provide an object. These objects will be deeply (recursively) merged together to produce a new object. The source objects will not be modified. If a property is found at the same location on multiple source objects, the value from the latter object will be used. If a source property value is `undefined`, it will not override a value from a prior source object. If arrays are found at the same location on multiple source objects, the arrays will be concatenated.
+
+As an example, assume you select a data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "tennis"
+  },
+  "dessert": "ice cream",
+  "fruits": [
+    "apple",
+    "banana"
+  ]
+}
+```
+
+Assume you also select another data element which provides the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": undefined,
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "cherry",
+    "duku"
+  ]
+}
+```
+
+The result of the Merged Objects data element would be the following object:
+
+```
+{
+  "sport": {
+    "name": "volleyball"
+  },
+  "dessert": "ice cream",
+  "pet": "dog",
+  "instrument": undefined,
+  "fruits": [
+    "apple",
+    "banana",
+    "cherry",
+    "duku"
+  ]
+}
+```
+
 ### Page info
 
 Use these data points to capture page info for use in your rule logic or to send information to Analytics or external tracking systems.
@@ -768,3 +824,36 @@ Some common use cases include:
 * If this is the landing page for the visit, populate an Analytics metric
 * Show a new offer to the visitor after X number of Session Counts
 * Display a newsletter sign up if this is a first time visitor
+
+### Conditional value
+
+A wrapper for the [Value Comparison](#value-comparison-value-comparison) condition. Based on the result of the comparison, will return one of the two available values in the form. Can thereby handle "If... Then... Else..." scenarios without the need for extra rules.
+
+### Runtime environment
+
+Allows you to select one of the following variables:
+
+* Environment stage - Returns `_satellite.environment.stage` to differentiate between development/staging/production environments.
+* Library build date - Returns `turbine.buildInfo.buildDate` which contains the same value like `_satellite.buildInfo.buildDate`.
+* Property name - Returns `_satellite.property.name` to get the name of the Launch property.
+* Property ID - Returns `_satellite.property.id` to get the ID of the Launch property
+* Rule name - Returns `event.$rule.name` containing the name of the executed rule.
+* Rule ID - Returns `event.$rule.id` containing the ID of the executed rule.
+* Event type - Returns `event.$type` containing the type of event that triggered the rule.
+* Event detail payload - Returns `event.detail` containing the payload of a Custom Event or Direct Call Rule.
+* Direct call identifier - Returns `event.identifier` containing the identifier of a Direct Call Rule.
+
+### Device Attributes
+
+Returns one of the following visitor device attributes:
+
+* Browser window size
+* Screen size
+
+### JavaScript Tools
+
+It is a wrapper for common JavaScript operations. It receives a data element as an input. It returns the result of one of the following transformations of the data element value:
+
+* Basic string manipulation (replace, substring, regex match, first and last index, split, slice)
+* Basic array operations (slice, join, pop, shift)
+* Basic universal operations (slice, length)

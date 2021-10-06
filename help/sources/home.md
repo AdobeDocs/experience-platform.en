@@ -49,6 +49,7 @@ Cloud storage sources can bring your own data into Platform without the need to 
 - [[!DNL Apache HDFS] connector](connectors/cloud-storage/hdfs.md)
 - [[!DNL Azure Event Hubs] connector](connectors/cloud-storage/eventhub.md)
 - [[!DNL Azure File Storage] connector](connectors/cloud-storage/azure-file-storage.md)
+- [[!DNL Data Landing Zone]](connectors/cloud-storage/data-landing-zone.md)
 - [[!DNL FTP] connector](connectors/cloud-storage/ftp.md)
 - [[!DNL Google Cloud Storage] connector](connectors/cloud-storage/google-cloud-storage.md)
 - [[!DNL Google PubSub] connector](connectors/cloud-storage/google-pubsub.md)
@@ -91,12 +92,19 @@ Experience Platform provides support for ingesting data from a third-party datab
 - [[!DNL Oracle] connector](connectors/databases/oracle.md)
 - [[!DNL Phoenix] connector](connectors/databases/phoenix.md)
 - [[!DNL PostgreSQL] connector](connectors/databases/postgres.md)
+- [[!DNL Snowflake] connector](connectors/databases/snowflake.md)
 
 ### eCommerce
 
 Experience Platform provides support for ingesting data from a third-party eCommerce system. See the following related documents for more information on specific source connectors:
 
 - [[!DNL Shopify]](connectors/ecommerce/shopify.md)
+
+### Local system
+
+Experience Platform provides support for ingesting data from your local system. See the following related documents for more information on specific source connectors:
+
+- [Local file upload](connectors/local-system/local-file-upload.md)
 
 ### Marketing Automation
 
@@ -116,7 +124,6 @@ Experience Platform provides support for ingesting data from a third-party payme
 Experience Platform provides support for ingesting data from streaming sources. See the following related documents for more information on specific source connectors:
 
 - [[!DNL HTTP API]](connectors/streaming/http.md)
-
 
 ### Protocols
 

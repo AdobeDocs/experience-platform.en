@@ -91,6 +91,26 @@ For example, you may want to predict whether a customer visits a certain URL or 
 
 ![Any of example](../images/user-guide/any-of.png)
 
+### Custom events (*optional*) {#custom-events}
+
+If you have additional information in addition to the [standard event fields](../input-output.md#standard-events) used by Customer AI to generate propensity scores, a custom events option is provided. If the dataset you selected includes custom events defined in your schema, you can add them to your instance.
+
+![event feature](../images/user-guide/event-feature.png)
+
+To add a custom event, select **[!UICONTROL Add custom event]**. Next, input a custom event name then map it to the event field in your schema. Custom event names are displayed in place of the fields value when looking at influential factors and other insights. This means user id's, reservation id's, device info, and other custom values are listed with the custom event name instead of the ID/value of the event. These additional custom events are used by Customer AI to improve the quality of your model and provide more accurate results.
+
+![Custom Event field](../images/user-guide/custom-event.png)
+
+Next, select the operator you wish to use from the available operators drop-down. Only operators compatible with the event are listed.
+
+![Custom Event operator](../images/user-guide/custom-operator.png)
+
+Lastly, enter the field value(s) if the operator selected requires one. In this example, we only need to see if a hotel or restaurant reservation exists. However, if we wanted to be more exact we could use the equals operator and enter an exact value in the value prompt.
+
+![Custom Event field value](../images/user-guide/custom-value.png)
+
+Once complete, select **[!UICONTROL Next]** in the top-right to continue.
+
 ### Configure a schedule *(optional)* {#configure-a-schedule}
 
 The **[!UICONTROL Advanced]** step appears. This optional step allows you to configure a schedule to automate prediction runs, define prediction exclusions to filter certain events, or select **[!UICONTROL Finish]** if nothing is needed. 
@@ -99,9 +119,11 @@ Setup a scoring schedule by configuring the **[!UICONTROL Scoring Frequency]**. 
 
 ![](../images/user-guide/schedule.png)
 
-Below the schedule configuration, you have the ability to define prediction exclusions to prevent events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs.
+### Prediction exclusions
 
-To exclude certain events, select **[!UICONTROL Add exclusion]** and define the event in the same fashion as to how the goal is defined. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container and then select **[!UICONTROL Remove Container]**.
+If your dataset contained any columns added as test data, you can add that column or event to an exclusion list by selecting **Add Exclusion** followed by entering the field you wish to exclude. This prevents events that meet certain conditions from being evaluated when generating scores. This feature can be used to filter out irrelevant data inputs or certain promotions.
+
+To exclude an event, select **[!UICONTROL Add exclusion]** and define the event. To remove an exclusion, select the ellipses (**[!UICONTROL ...]**) to the top-right of the event container, then select **[!UICONTROL Remove Container]**.
 
 ![](../images/user-guide/exclusion.png)
 

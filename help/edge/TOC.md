@@ -38,6 +38,7 @@ feature: Data Management
   * Adobe Target {#adobe-target}
     * [Overview](personalization/adobe-target/target-overview.md)
     * [Single-page application implementation](personalization/adobe-target/spa-implementation.md)
+    * [Accessing response tokens](personalization/adobe-target/accessing-response-tokens.md)
   * Offer Decisioning {#offer-decisioning}
     * [Overview](personalization/offer-decisioning/offer-decisioning-overview.md)
 * Consent {#consent}
@@ -48,6 +49,7 @@ feature: Data Management
     * [Integrate without tags](consent/iab-tcf/without-launch.md)
 * Web SDK tag extension {#extension}
   * [Web SDK extension](extension/web-sdk-extension-configuration.md)
+  * [Event types](extension/event-types.md)
   * [Action types](extension/action-types.md)
   * [Data element types](extension/data-element-types.md)
   * [Accessing the ECID](extension/accessing-the-ecid.md)

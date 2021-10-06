@@ -12,7 +12,7 @@ From lead management to account-based marketing, [!DNL Marketo Engagement Platfo
 
 [!DNL Marketo’s Munchkin] JavaScript allows for tracking of end-user page visits and clicks to your [!DNL Marketo] landing pages and external web pages.
 
-[!DNL Marketo Munchkin] is an email extension in Adobe Experience Platform. For more information about the extension functionality, see the extension page on [Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
+[!DNL Marketo Munchkin] is an email extension in Adobe Experience Platform. For more information about Marketo Munchkin, read [Lead Tracking](https://developers.marketo.com/javascript-api/lead-tracking/) in the Marketo documentation.
 
 This destination is a tag extension. For more information about how tag extensions work in Platform, see the [tag extensions overview](../launch-extensions/overview.md).
 
@@ -22,13 +22,13 @@ This destination is a tag extension. For more information about how tag extensio
 
 This extension is available in the [!DNL Destinations] catalog for all customers who have purchased Platform.
 
-To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions. and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
+To use this extension, you need access to tags in Adobe Experience Platform. Tags are offered to Adobe Experience Cloud customers as an included, value-add feature. Contact your organization administrator to get access to tags and ask them to grant you the **[!UICONTROL manage_properties]** permission so you can install extensions.
 
 ## Install extension {#install-extension}
 
 To install the [!DNL Marketo Munchkin] extension:
 
-In the [Platform interface](http://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
+In the [Platform interface](https://platform.adobe.com/), go to **[!UICONTROL Destinations]** > **[!UICONTROL Catalog]**.
 
 Select the extension from the catalog or use the search bar.
 
@@ -37,8 +37,6 @@ Click on the destination to highlight it, then select **[!UICONTROL Configure]**
 Select the property in which you want to install the extension. You also have the option of creating a new property. A property is a collection of rules, data elements, configured extensions, environments, and libraries. Learn about properties in the [Properties page section](../../../tags/ui/administration/companies-and-properties.md#properties-page) of in the tags documentation.
 
 The workflow walks you through the steps to complete the installation. 
-
-For information about the extension configuration options and installation support, see the [Marketo Munchkin page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101054.marketo-munchkin.html).
 
 You can also install the extension directly in the [Data Collection UI](https://experience.adobe.com/#/data-collection/). For more information, see the section on [adding a new extension](../../../tags/ui/managing-resources/extensions/overview.md#add-a-new-extension) in the tags documentation.
 

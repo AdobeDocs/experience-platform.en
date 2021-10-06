@@ -18,7 +18,7 @@ To connect [!DNL Tableau] to [!DNL Query Service], open [!DNL Tableau], and in t
 
 ![](../images/clients/tableau/open-connection.png)
 
-You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, visit the [credentials page on Platform](https://platform.adobe.com/query/configuration). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
+You can now enter values to connect with Adobe Experience Platform. For more information on finding your database name, host, port, and login credentials, please read the [credentials guide](../ui/credentials.md). To find your credentials, log in to [!DNL Platform], then select **[!UICONTROL Queries]**, followed by **[!UICONTROL Credentials]**.
 
 Ensure that you have checked the **[!UICONTROL SSL Required]** box before trying to connect.
 

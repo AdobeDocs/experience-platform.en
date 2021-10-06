@@ -46,12 +46,13 @@ feature: Data Collection
   * [Content Security Policy (CSP) support](./ui/client-side/content-security-policy.md)
   * [Subresource Integrity (SRI) support](./ui/client-side/sri.md)
 * Event forwarding {#event-forwarding}
-    * [Overview](./ui/event-forwarding/overview.md)
-    * [Getting started](./ui/event-forwarding/getting-started.md)
+  * [Overview](./ui/event-forwarding/overview.md)
+  * [Getting started](./ui/event-forwarding/getting-started.md)
 * Administration {#admin}
   * [Overview](./ui/administration/overview.md)
   * [Companies and properties](./ui/administration/companies-and-properties.md)
   * [User permissions](./ui/administration/user-permissions.md)
+  * [Manage permissions](./ui/administration/manage-permissions.md)
 * Extensions {#extensions}
   * [Overview](./extensions/overview.md)
   * Adobe extensions {#adobe}

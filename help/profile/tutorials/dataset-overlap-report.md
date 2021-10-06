@@ -3,8 +3,8 @@ keywords: Experience Platform;profile;real-time customer profile;troubleshooting
 title: Generate the Dataset Overlap Report
 type: Tutorial
 description: This tutorial outlines the steps necessary to generate the dataset overlap report using the Real-time Customer Profile API.
+exl-id: 90894ed3-b09e-435d-a9e3-18fd6dc8e907
 ---
-
 # Generate the dataset overlap report
 
 The dataset overlap report provides visibility into the composition of your organization's [!DNL Profile] store by exposing the datasets that contribute most to your addressable audience (profiles). 
@@ -118,6 +118,7 @@ To interpret the results of the report, consider the following example:
 ```
 
 This report provides the following information:
+
 * There are 123 profiles comprised of data coming from the following datasets: `5d92921872831c163452edc8`, `5da7292579975918a851db57`, `5eb2cdc6fa3f9a18a7592a98`.
 * There are 454,412 profiles comprised of data coming from these two datasets: `5d92921872831c163452edc8` and `5eb2cdc6fa3f9a18a7592a98`.
 * There are 107 profiles that are comprised only of data from dataset `5eeda0032af7bb19162172a7`.

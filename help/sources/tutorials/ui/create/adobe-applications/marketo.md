@@ -11,9 +11,9 @@ exl-id: a6aa596b-9cfa-491e-86cb-bd948fb561a8
 
 >[!IMPORTANT]
 >
->The [!DNL Marketo Engage] source is currently in beta. The feature and documentation are subject change. Furthermore, you must ensure that you are using a non-production sandbox when using the connector during the beta program. For more information on sandboxes, please refer to the [Sandboxes documentation](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=en#understanding-sandboxes).
+>The [!DNL Marketo Engage] source in Adobe Experience Platform is currently in beta. The documentation and functionality are subject to change.
 
-This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring consumer data into Adobe Experience Platform.
+This tutorial provides steps for creating a [!DNL Marketo Engage] (hereinafter referred to as "[!DNL Marketo]") source connector in the UI to bring B2B data into Adobe Experience Platform.
 
 ## Getting started
 
@@ -23,7 +23,7 @@ This tutorial requires a working understanding of the following components of Ad
 * [Experience Data Model (XDM)](../../../../../xdm/home.md): The standardized framework by which Experience Platform organizes customer experience data.
   * [Create and edit schemas in the UI](../../../../../xdm/ui/resources/schemas.md): Learn how to create and edit schemas in the UI.
 * [Identity namespaces](../../../../../identity-service/namespaces.md): Identity namespaces are a component of [!DNL Identity Service] that serve as indicators of the context to which an identity relates. A fully qualified identity includes an ID value and a namespace.
-* [[!DNL Real-time Customer Profile]](../../../../../profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
+* [[!DNL Real-time Customer Profile]](/help/profile/home.md): Provides a unified, real-time consumer profile based on aggregated data from multiple sources.
 * [Sandboxes](../../../../../sandboxes/home.md): Experience Platform provides virtual sandboxes which partition a single Platform instance into separate virtual environments to help develop and evolve digital experience applications.
 
 ### Gather required credentials
@@ -176,5 +176,5 @@ You can delete dataflows that are no longer necessary or were incorrectly create
 
 By following this tutorial, you have successfully created a dataflow to bring in [!DNL Marketo] data. Incoming data can now be used by downstream Platform services such as [!DNL Real-time Customer Profile] and [!DNL Data Science Workspace]. See the following documents for more details:
 
-* [[!DNL Real-time Customer Profile] overview](../../../../profile/home.md)
-* [[!DNL Data Science Workspace] overview](../../../../data-science-workspace/home.md)
+* [[!DNL Real-time Customer Profile] overview](/help/profile/home.md)
+* [[!DNL Data Science Workspace] overview](/help/data-science-workspace/home.md)

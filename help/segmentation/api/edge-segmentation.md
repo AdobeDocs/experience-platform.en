@@ -22,7 +22,7 @@ This developer guide requires a working understanding of the various [!DNL Adobe
 - [[!DNL Segmentation]](../home.md): Provides the ability to create segments and audiences from your [!DNL Real-time Customer Profile] data.
 - [[!DNL Experience Data Model (XDM)]](../../xdm/home.md): The standardized framework by which [!DNL Platform] organizes customer experience data.
 
-In order to successfully make calls to [!DNL Data Prep] API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
+In order to successfully make calls to any Experience Platform API endpoints, please read the guide on [getting started with Platform APIs](../../landing/api-guide.md) to learn about required headers and how to read sample API calls.
 
 ## Edge segmentation query types {#query-types}
 
@@ -32,8 +32,8 @@ In order for a segment to be evaluated using edge segmentation, the query must c
 | ---------- | ------- |
 | Incoming hit | Any segment definition that refers to a single incoming event with no time restriction. |
 | Incoming hit that refers to a profile | Any segment definition that refers to a single incoming event, with no time restriction, and one or more profile attributes. |
-| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
-| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
+| Incoming hit with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours |
+| Incoming hit that refers to a profile with a time window of 24 hours | Any segment definition that refers to a single incoming event within 24 hours, and one or more profile attributes |
 
 {style="table-layout:auto"}
 
@@ -41,9 +41,9 @@ The following query types are **not** currently supported by edge segmentation:
 
 | Query type | Details |
 | ---------- | ------- |
-| Relative-time window | If a query refers to a time window, it cannot be evaluated using edge segmentation. |
-| Negation | If a query contains a negation, or a `not` event, it cannot be evaluated using edge segmentation. | 
 | Multiple events | If a query contains more than one event, it cannot be evaluated using edge segmentation. |
+| Frequency query | Any segment definition that refers to an event happening at least a certain number of times. |
+| Frequency query that refers to a profile | Any segment definition that refers to an event happening at least a certain number of times and has one or more profile attributes. |
 
 {style="table-layout:auto"}
 
@@ -221,7 +221,7 @@ A successful response returns the details of the newly created segment definitio
     "expression": {
         "type": "PQL",
         "format": "pql/text",
-        "value": "select var1 from xEvent where var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = true"
+        "value": "chain(xEvent, timestamp, [X: WHAT(var1._experience.analytics.endUser.firstWeb.webPageDetails.isHomePage = "true")])"
     },
     "evaluationInfo": {
         "batch": {

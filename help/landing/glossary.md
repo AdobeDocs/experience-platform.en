@@ -138,6 +138,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 ## D
 
+**Daily**: In the context of scheduled file exports, schedules full or incremental file exports once a day, every day, from the start date to the end date at the time specified by the user.
+
 **Data dictionary**: In the context of tags, a data dictionary (also known as a data map) is a set of data elements defined within a property.
 
 **Data element**: In the context of tags, a data element is a pointer used within rules and extensions to point to a specific piece of data that exists on the client device.
@@ -173,6 +175,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **Dataset ID**: An Adobe-generated identifier for an ingested dataset.
 
 **Dataset output**: Dataset output provides a mechanism for determining what the "Create Table as Select" option will be used for a particular [!DNL Query Service] run.
+
+**Deduplication key**: A user defined primary key that determines the identity by which users want their profiles to be deduplicated.​
 
 **Delta column**: A delta column allows you to select a source data field to represent a timestamp for incremental ingestion.
 
@@ -218,6 +222,10 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Experience Event**: An Experience Event represents a snapshot of the system when an interaction or event related to a customer experience takes place. Experience Events are immutable fact records of what occurred and represent what happened without aggregation or interpretation. In Experience Data Model (XDM), this concept is captured by the [!DNL XDM ExperienceEvent] class.
 
+**Export full file**: An export file containing a full snapshot of all profile qualifications for the selected segment.
+
+**Export incremental files**: A series of exported files where the first file is a full snapshot of all profile qualifications for the selected segment, and subsequent files are incremental profile qualifications since the previous export.
+
 **Extension**: In the context of tags, an extension is a package of functionality added to a tag property. An extension is usually focused around a particular marketing or analytics solution and provides the tools needed to deploy that technology into a client environment.
 
 **Extension package**: In the context of tags, an extension package is a ZIP file created and uploaded by an extension developer that provides everything necessary for tags users to install the extension inside their property. An extension package contains a manifest specifying information about the extension, the HTML/JavaScript needed for end-users to configure the behavior of the tag extension, and the executable JavaScript delivered to the client environment (if required).
@@ -247,6 +255,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 ## H
 
 **Host**: In the context of tags, a host specifies the location, domain, and user credentials necessary for the system to deliver a build.
+
+**Hourly**: In the context of scheduled file exports, schedules incremental file exports every 3, 6, 8, or 12 hours.
 
 ## I
 
@@ -308,6 +318,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 
 **Machine-learning model**: A machine-learning model is an instance of a machine-learning recipe that is trained using historical data and configurations to solve for a business use case. In Adobe Experience Platform Data Science Workspace, machine-learning models are called recipes.
 
+**Mandatory attribute**: A user enabled checkbox that ensures all profile records contain the selected attribute. For example: all exported profiles contain an email address.
+
 **Mapping**: Data mapping is the process of mapping source data fields to related target fields in a destination. 
 
 **Marketing action**: In the data governance framework, a marketing action (also known as a marketing use case) is an action that an Experience Platform data consumer takes, for which there is a need to check for violations of data usage policies.
@@ -337,6 +349,8 @@ exl-id: 00eae5f5-7dfa-45ac-aff9-9e1769a3a53a
 **On-site personalization marketing action**: A marketing action that uses data for on-site content personalization. On-site personalization is any data that is used to make inferences about users' interests, and is used to select which content or ads are served based on those inferences.
 
 **On-site targeting marketing action**: A marketing action that uses data for on-site ads, including the selection and delivery of advertisements on your organization's websites or apps, or to measure the delivery and effectiveness of such advertisements.
+
+**Once**: In the context of scheduled file exports, schedules a one-time, on-demand, full file export.
 
 **Overwrite save strategy**: The "Overwrite" save strategy is an option for ingesting third-party data via a connection, where you can specify if ingested data will be overwritten on a specified schedule.
 

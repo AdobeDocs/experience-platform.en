@@ -1,8 +1,9 @@
 ---
-title: Tags Satellite Object Reference
-description: Learn about the client-side _satellite object and the various functions you can perform with it in Adobe Experience Platform.
+title: Satellite Object Reference
+description: Learn about the client-side _satellite object and the various functions you can perform with it in tags.
+exl-id: f8b31c23-409b-471e-bbbc-b8f24d254761
 ---
-# Adobe Experience Platform tags Satellite object reference
+# Satellite object reference
 
 >[!NOTE]
 >
@@ -124,7 +125,13 @@ _satellite.logger.deprecation('This method is no longer supported, please use [n
 
 This logs a warning to the browser console. The message is displayed whether or not tag debugging is enabled by the user.
 
-## `cookie`
+## `cookie` {#cookie}
+
+`_satellite.cookie` contains functions for reading and writing cookies. It is an exposed copy of the third-party library js-cookie. For details on more advanced usage of this library, please review the [js-cookie documentation](https://www.npmjs.com/package/js-cookie#basic-usage).
+
+### Set a cookie {#cookie-set}
+
+To set a cookie, use `_satellite.cookie.set()`.
 
 **Code**
 
@@ -132,9 +139,41 @@ This logs a warning to the browser console. The message is displayed whether or 
 _satellite.cookie.set(name: string, value: string[, attributes: Object])
 ```
 
+>[!NOTE]
+>
+>In the old [`setCookie`](#setCookie) method of setting cookies, the third (optional) argument to this function call was an integer that indicated the cookie's time-to-live (TTL) in days. In this new method, an "attributes" object is accepted as a third argument instead. In order to set a TTL for a cookie using the new method, you must provide an `expires` property in the attributes object and set it to the desired value. This is demonstrated in the example below.
+
+**Example**
+
+The following function call writes a cookie that expires in one week.
+
+```javascript
+_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
+```
+
+### Retrieve a cookie {#cookie-get}
+
+To retrieve a cookie, use `_satellite.cookie.get()`.
+
+**Code**
+
 ```javascript
 _satellite.cookie.get(name: string) => string
 ```
+
+**Example**
+
+The following function call reads a previously set cookie.
+
+```javascript
+var product = _satellite.cookie.get('product');
+```
+
+### Remove a cookie {#cookie-remove}
+
+To remove a cookie, use `_satellite.cookie.remove()`.
+
+**Code**
 
 ```javascript
 _satellite.cookie.remove(name: string)
@@ -142,22 +181,11 @@ _satellite.cookie.remove(name: string)
 
 **Example**
 
-```javascript
-// Writing a cookie that expires in one week.
-_satellite.cookie.set('product', 'Circuit Pro', { expires: 7 });
-```
+The following function call removes a previously set cookie.
 
 ```javascript
-// Reading a previously set cookie.
-var product = _satellite.cookie.get('product');
-```
-
-```javascript
-// Removing a previously set cookie.
 _satellite.cookie.remove('product');
 ```
-
-This is a utility for reading and writing cookies. It is an exposed copy of the third-party library js-cookie. For more advanced usage, please review the [js-cookie usage documentation](https://www.npmjs.com/package/js-cookie#basic-usage) (external link).
 
 ## `buildInfo`
 
@@ -181,24 +209,39 @@ The ISO 8601 date when the version of [Turbine](https://www.npmjs.com/package/@a
 
 The ISO 8601 date when the current library was built.
 
-### `environment`
-
-The environment for which this library was built. The possible values are:
-
-* development
-* staging
-* production
-
 This example demonstrates the object values:
 
 ```javascript
 {
   turbineVersion: "14.0.0",
   turbineBuildDate: "2016-07-01T18:10:34Z",
-  buildDate: "2016-03-30T16:27:10Z",
-  environment: "development"
+  buildDate: "2016-03-30T16:27:10Z"
 }
 ```
+
+## `environment`
+
+This object contains information about the environment that the current tag runtime library is deployed on.
+
+**Code**
+
+```javascript
+_satellite.environment
+```
+
+The object contains the following properties:
+
+```javascript
+{
+  id: "ENbe322acb4fc64dfdb603254ffe98b5d3",
+  stage: "development"
+}
+```
+
+| Property | Description |
+| --- | --- |
+| `id` | The id of the environment. |
+| `stage` | The environment for which this library was built. The possible values are `development`, `staging`, and `production`. |
 
 ## `notify`
 
@@ -230,11 +273,11 @@ An optional logging level can be passed which will affect the styling and filter
 
 If you do not provide a logging level or pass any other level value, the message will be logged as a regular message.
 
-## `setCookie`
+## `setCookie` {#setCookie}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This method has been deprecated. Please use `_satellite.cookie.set()` instead.
+>This method has been deprecated. Please use [`_satellite.cookie.set()`](#cookie-set) instead.
 
 **Code**
 
@@ -252,9 +295,9 @@ This sets a cookie in the user's browser. The cookie will persist for the number
 
 ## `readCookie`
 
->[!NOTE]
+>[!IMPORTANT]
 >
->This method has been deprecated. Please use `_satellite.cookie.get()` instead.
+>This method has been deprecated. Please use [`_satellite.cookie.get()`](#cookie-get) instead.
 
 **Code**
 
@@ -274,7 +317,7 @@ This reads a cookie from the user's browser.
 
 >[!NOTE]
 >
->This method has been deprecated. Please use `_satellite.cookie.remove()` instead.
+>This method has been deprecated. Please use [`_satellite.cookie.remove()`](#cookie-remove) instead.
 
 **Code**
 

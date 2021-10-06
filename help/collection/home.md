@@ -30,11 +30,15 @@ The data-collection technologies provided by Experience Platform focus on the di
 
 Adobe Experience Platform Web and Mobile SDKs collapse and compress all Adobe product libraries into a single development kit for web or mobile platforms. Compressing these libraries speeds up data collection and consolidates operations into a single stream from client-side devices to Adobe Experience Platform Edge Network.
 
-## Flip-the-switch process to deploy Adobe technology
+## Flip-the-switch process to deploy Adobe technology {#edge}
 
 Platform Edge Network is a globally distributed, fast, and reliable network of servers capable of receiving and processing data at tremendous scale. Using tags, you can set up [datastreams](../edge/fundamentals/datastreams.md) for products like Adobe Target, Adobe Audience Manager, and Adobe Analytics, which allow you to activate these products on the server side without changing client-side code. 
 
 ![](./images/deploy.png)
+
+>[!NOTE]
+>
+>For a high-level introduction to the Platform Edge Network, refer to the following [interactive product tour](https://adobe-ideacloud.forgedx.com/adobe-adobe-edge-collection/adobe-experience-edge/public/mx?SUID=hgb1a48ICSCpbM6MzBYHbxnsh9DgjUy1).
 
 ## Transform, enrich, and send data fast and securely
 

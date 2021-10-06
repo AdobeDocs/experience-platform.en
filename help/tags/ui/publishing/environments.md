@@ -1,6 +1,7 @@
 ---
 title: Environments
 description: Learn about the concept of tag environments and how they function within Adobe Experience Platform.
+exl-id: 0bf641c9-412e-4737-9b76-232d980385b2
 ---
 # Environments
 
@@ -122,7 +123,7 @@ For more information on this setting, see the guide on [asynchronous deployment]
 
 #### Synchronous deployment
 
-When the browser reads an embed code using synchronous deployment, it retrieves the tag library and executes it before continuing to load the page. This is also how [Dynamic Tag Management (DTM)](https://experienceleague.adobe.com/docs/dtm/using/dtm-home.html) works.
+When the browser reads an embed code using synchronous deployment, it retrieves the tag library and executes it before continuing to load the page.
 
 Synchronous embed codes consist of two `<script>` tags that must be placed within the HTML of your website. One `<script>` tag must be placed in the document `<head>`, while the other must be placed just before the closing `</body>` tag.
 
