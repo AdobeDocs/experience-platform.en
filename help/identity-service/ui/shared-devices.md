@@ -50,7 +50,7 @@ In the Platform UI, select **[!UICONTROL Identities]** from the left-navigation 
 
 ![identity-dashboard](../images/shared-device/identity-dashboard.png)
 
-The [!UICONTROL Shared device settings] page appears, providing you with the option to configure shared device settings for your data and apply specific identity namespaces as your shared identity namespace and user identity namespace. Shared device settings are disabled by default.
+The [!UICONTROL Shared device settings] page appears, providing you with an interface to configure shared device settings for your data. Shared device settings are disabled by default.
 
 When enabled, shared device settings allows data from different users of the same device to be separated from one another. This configuration setting allows for a cleaner and more accurate representation of identity graphs, where user identities of the same device are not combined together.
 
@@ -58,33 +58,26 @@ Select **[!UICONTROL Enable]** to start modifying your shared device settings.
 
 ![enable-shared-device](../images/shared-device/enable-shared-device.png)
 
-Two search bars appear, allowing you to designate your [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace]. 
+The [!UICONTROL Shared Identity Namespace] and [!UICONTROL User Identity Namespace] configuration options appear, allowing you to modify the identity namespaces that you want to use.
 
 ![set-namespaces](../images/shared-device/set-namespaces.png)
 
-The [!UICONTROL Shared Identity Namespace] designates a single device as a shared device.
-
-Select the **[!UICONTROL Shared Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
+[!UICONTROL Shared Identity Namespace] represents a single device that is used by multiple different users. This namespace is always set to **[!UICONTROL ECID]**.
 
 ![shared-identity-namespace](../images/shared-device/shared-identity-namespace.png)
 
-Alternatively, you can select the table icon ![table-icon](../images/shared-device/table-icon.png) next to the search bar to see a table of all available identity namespaces including their corresponding descriptions.
-
-Select the identity namespace of your choice, and then select **[!UICONTROL Select]** to proceed.
-
-![select-shared-namespace](../images/shared-device/select-shared-namespace.png)
-
 The [!UICONTROL User Identity Namespace] allows you to identify different users of the same device and prevent data from being combined into the same identity graph.
-
-Select the **[!UICONTROL User Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
 
 ![user-identity-namespace](../images/shared-device/user-identity-namespace.png)
 
-Similar to the **[!UICONTROL Shared Identity Namespace]**, you can select the table icon ![table-icon](../images/shared-device/table-icon.png) next to the search bar to see a table of all available identity namespaces including their corresponding descriptions.
+Select the **[!UICONTROL User Identity Namespace]** search bar and either enter an identity namespace or select an identity namespace from the dropdown menu.
 
-Select the identity namespace of your choice, and then select **[!UICONTROL Select]** to proceed.
+>[!TIP]
+>
+>The [!UICONTROL User Identity Namespace] should be mapped to the identity namespace that corresponds to the end user's login ID. Options include customer ID, email, and hashed email.
 
-![select-user-namespace](../images/shared-device/select-user-namespace.png)
+
+![emails](../images/shared-device/emails.png)
 
 Once you have configured your [!UICONTROL Shared Device Settings], select **[!UICONTROL Save]**.
 
