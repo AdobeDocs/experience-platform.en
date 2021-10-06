@@ -27,3 +27,13 @@ Use the following legend to interpret this ERD:
 >[!NOTE]
 >
 >The Experience Event entity includes an "_ID" field, which represents the unique identifier (`_id`) attribute provided by the XDM ExperienceEvent class. See the reference document on [XDM ExperienceEvent](../../classes/experienceevent.md) for more details on what is expected for this value.
+
+## [!UICONTROL Telecommunications] use cases
+
+The following table outlines the recommended classes and schema field groups for several common use cases for the telecom industry.
+
+| Use case | Recommended classes and field groups |
+| --- | --- |
+| Understand customers who are good candidates for cross-sell or up-sell opportunities based on their current holdings and their browsing behavior. | <ul><li>**[XDM ExperienceEvent](../../classes/experienceevent.md)**:<ul><li>[[!UICONTROL Upsell Details]](../../field-groups/event/upsell-details.md)</li><li>[[!UICONTROL Upgrade Details]](../../field-groups/event/upgrade-details.md)</li></ul></li><li>**[[!UICONTROL XDM Individual Profile]](../../classes/individual-profile.md)**:<ul><li>[[!UICONTROL Telecom Subscription]](../../field-groups/profile/telecom-subscription.md)</li><li>[[!UICONTROL Demographic Details]](../../field-groups/profile/demographic-details.md)</li><li>[[!UICONTROL Personal Contact Details]](../../field-groups/profile/personal-contact-details.md)</li></ul></li></ul> |
+
+{style="table-layout:auto"}
