@@ -145,8 +145,8 @@ feature: Data Collection
     * [Action types](./extension-dev/edge/action-types.md)
     * [Data element types](./extension-dev/edge/data-element-types.md)
     * [Context parameter](./extension-dev/edge/context.md)
-  * [Turbine free variable](./extension-dev/turbine.md)
   * [Hosting third-party libraries](./extension-dev/third-party-libraries.md)
+  * [Turbine free variable](./extension-dev/turbine.md)
   * [Backwards compatibility standard](./extension-dev/backwards-compatibility.md)
 * Reactor API {#api}
   * [Overview](./api/overview.md)
