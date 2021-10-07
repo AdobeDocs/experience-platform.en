@@ -16,10 +16,6 @@ Adobe Experience Platform provides native connectivity for cloud providers like 
 
 Cloud storage sources can bring your data into Platform without the need to download, format, or upload. Ingested data can be formatted as XDM JSON, XDM Parquet, or delimited. Every step of the process is integrated into the sources workflow. Platform allows you to bring in data from [!DNL Azure Event Hubs] in real time.
 
-## IP address allow list
-
-A list of IP addresses must be added to an allow list prior to working with source connectors. Failing to add your region-specific IP addresses to your allow list may lead to errors or non-performance when using sources. See the [IP address allow list](../../ip-address-allow-list.md) page for more information.
-
 ## Connect [!DNL Google PubSub] to Platform
 
 The documentation below provides information on how to connect [!DNL Google PubSub] to Platform using APIs or the user interface:
