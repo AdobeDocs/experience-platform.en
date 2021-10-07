@@ -10,6 +10,16 @@ exl-id: fbc5efdc-f166-4000-bde2-4aa4b0318b38
 
 This document provides answers to frequently asked questions about Adobe Experience Platform [!DNL Data Science Workspace]. For questions and troubleshooting regarding [!DNL Platform] APIs in general, see the [Adobe Experience Platform API troubleshooting guide](../landing/troubleshooting.md).
 
+## JupyterLab Notebook query status stuck on execution
+
+If you are trying to query a large dataset or performing multiple queries and the JupyterLab notebook cell is not properly transmitting data. This is an indication that the query/queries have reached the maximum allocated amount of RAM for the notebook. Another indication that additional ram needs to be allocated is if the Notebook Kernel status changes from busy to idle before completing the query.
+
+To resolve this issue, select the gear icon in the top right of JupyterLab and slide the slider to the right followed by selecting **[!UICONTROL Update configs]** to allocate more RAM. 
+
+![allocate more ram](./images/jupyterlab/user-guide/notebook-gpu-config.png)
+
+Additionally, if you are running multiple queries and your RAM value is already multiple GBs. Unless you need the results from previous queries, restart the kernel to reset the used RAM. This ensures that you have the maximum amount of RAM available to the current query.
+
 ## [!DNL JupyterLab] environment is not loading in [!DNL Google Chrome]
 
 >[!IMPORTANT]
