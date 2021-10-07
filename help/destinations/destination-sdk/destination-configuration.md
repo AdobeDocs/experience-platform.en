@@ -7,13 +7,15 @@ exl-id: b7e4db67-2981-4f18-b202-3facda5c8f0b
 
 ## Overview {#overview}
 
-This configuration allows you to indicate basic information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+This configuration allows you to indicate essential information like your destination name, category, description, logo, and more. The settings in this configuration also determine how Experience Platform users authenticate to your destination, how it appears in the Experience Platform user interface and the identities that can be exported to your destination.
+
+This configuration also connects the other configurations required for your destination to work - destination server and audience metadata - to this one. Read how you can reference the two configurations in a [section further below](./destination-configuration.md#connecting-all-configurations).
 
 You can configure the functionality described in this document by using the `/authoring/destinations` API endpoint. Read [Destinations API endpoint operations](./destination-configuration-api.md) for a complete list of operations you can perform on the endpoint.
 
 ## Example configuration {#example-configuration}
 
-Below is an example configuration for a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
+Below is an example configuration of a fictional destination, Moviestar, which has endpoints in four locations on the globe. The destination belongs to the mobile destinations category. The sections further below break down how this configuration is constructed.
 
 ```json
 
@@ -113,7 +115,8 @@ Below is an example configuration for a fictional destination, Moviestar, which 
             ]
          }
       }
-   }
+   },
+   "backfillHistoricalProfileData":true
 }
 
 ```
@@ -238,6 +241,14 @@ Through the `audienceTemplateId`, this section also ties together this configura
 
 The parameters shown in the configuration above are described in the [destinations endpoint API reference](./destination-configuration-api.md).
 
+## How this configuration connects all necessary information for your destination {#connecting-all-configurations}
+
+Some settings for your destination can be configured through the destination server or the audience metadata endpoint. The destination configuration endpoint connects all these settings by referencing the configurations as follows:
+
+* Use the `destinationServerId` to reference the destination server and template configuration set up for your destination.
+* Use the `audienceMetadataId` to reference the audience metadata configuration set up for your destination.
+
+
 ## Aggregation policy {#aggregation}
 
 ![Aggregation policy in the configuration template](./assets/aggregation-configuration.png)
@@ -273,10 +284,10 @@ This option allows you to:
 
 For detailed explanations of the aggregation parameters, refer to the [Destinations API endpoint operations](./destination-configuration-api.md) reference page, where each parameter is described.
 
-<!--
+## Historical profile qualifications
 
-commenting out the `backfillHistoricalProfileData` parameter, which will only be used after an April release
+You can use the `backfillHistoricalProfileData` parameter in the destinations configuration to determine if historical profile qualifications should be exported to your destination.
 
+|Parameter | Type | Description|
+|---------|----------|------|
 |`backfillHistoricalProfileData` | Boolean | Controls whether historical profile data is exported when segments are activated to the destination. <br> <ul><li> `true`: [!DNL Platform] sends the historical user profiles that qualified for the segment before the segment is activated. </li><li> `false`: [!DNL Platform] only includes user profiles that qualify for the segment after the segment is activated. </li></ul> |
-
--->
