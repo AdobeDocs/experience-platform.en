@@ -124,7 +124,7 @@ Below is an example configuration of a fictional destination, Moviestar, which h
 |Parameter | Type | Description|
 |---------|----------|------|
 |`name` | String | Indicates the title of your destination in the Experience Platform catalog. |
-|`description` | String | Provide a description that Adobe will use in the Experience Platform destinations catalog for your destination card. Aim for no more than 4-5 sentences. |
+|`description` | String | Provide a description for your destination card in the Experience Platform destinations catalog. Aim for no more than 4-5 sentences. |
 |`status` | String | Indicates the lifecycle status of the destination card. Accepted values are `TEST`, `PUBLISHED`, and `DELETED`. Use `TEST` when you first configure your destination. |
 
 {style="table-layout:auto"}
@@ -192,7 +192,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, users will have the option of mapping Experience Platform attributes to the predefined attributes on your destination's side. |
+|`profileFields` | Array | *Not shown in example configuration above.* When you add predefined `profileFields`, Experience Platform users have the option of mapping Platform attributes to the predefined attributes on your destination's side. |
 |`profileRequired` | Boolean | Use `true` if users should be able to map profile attributes from Experience Platform to custom attributes on your destination's side, as shown in the example configuration above. |
 |`segmentRequired` | Boolean | Always use `segmentRequired:true`. |
 |`identityRequired` | Boolean | Use `true` if users should be able to map identity namespaces from Experience Platform to your desired schema. |
@@ -203,7 +203,7 @@ Use the parameters in `schemaConfig` to enable the mapping step of the destinati
 
 The parameters in this section determine how the target identities and attributes are populated in the mapping step of the Experience Platform user interface, where users map their XDM schemas to the schema in your destination.
 
-Adobe needs to know which [!DNL Platform] identities customers will be able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
+You must indicate which [!DNL Platform] identities customers are able to export to your destination. Some examples are [!DNL Experience Cloud ID], hashed email, device ID ([!DNL IDFA], [!DNL GAID]). These values are [!DNL Platform] identity namespaces that customers can map to identity namespaces from your destination.
 
 Identity namespaces do not require a 1-to-1 correspondence between [!DNL Platform] and your destination.
 For instance, customers could map a [!DNL Platform] [!DNL IDFA] namespace to an [!DNL IDFA] namespace from your destination, or they can map the same [!DNL Platform] [!DNL IDFA] namespace to a [!DNL Customer ID] namespace in your destination.
@@ -214,9 +214,9 @@ Read more in the [Identity Namespace overview](https://experienceleague.adobe.co
 
 |Parameter | Type | Description|
 |---------|----------|------|
-|`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in our partners' documentation. |
+|`acceptsAttributes` | Boolean | Indicates if your destination accepts standard profile attributes. Usually, these attributes are highlighted in partners' documentation. |
 |`acceptsCustomNamespaces` | Boolean | Indicates if customers can set up custom namespaces in your destination. |
-|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. This is where you would provide the transformation that needs to be applied (for example, transform the email to lowercase, then hash).   |
+|`allowedAttributesTransformation` | String | *Not shown in example configuration*. Used, for example, when the [!DNL Platform] customer has plain email addresses as an attribute and your platform only accepts hashed emails. In this object, you can the transformation that needs to be applied (for example, transform the email to lowercase, then hash). For an example, see `requiredTransformation` in the [destination configuration API reference](./destination-configuration-api.md#update). |
 |`acceptedGlobalNamespaces` | - | Used for cases when your platform accepts [standard identity namespaces](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en#standard-namespaces) (for example, IDFA), so you can restrict Platform users to only selecting these identity namespaces. |
 
 {style="table-layout:auto"}
@@ -253,9 +253,9 @@ Some settings for your destination can be configured through the destination ser
 
 ![Aggregation policy in the configuration template](./assets/aggregation-configuration.png)
 
-This section allows you to set the aggregation policies that Experience Platform will use when exporting data to your destination.
+This section allows you to set the aggregation policies that Experience Platform should use when exporting data to your destination.
 
-An aggregation policy determines how the exported profiles are combined together in the data exports. Available options are:
+An aggregation policy determines how the exported profiles are combined in the data exports. Available options are:
 * Best effort aggregation
 * Configurable aggregation (shown in the configuration above)
 
@@ -265,9 +265,9 @@ Read the section on [using templating](./message-format.md#using-templating) and
 
 >[!TIP]
 >
->Use this option if your API endpoint accepts less than 100 profiles per API call. 
+>Use this option if your API endpoint accepts fewer than 100 profiles per API call. 
 
-This option works best for destinations which prefer less profiles per request and would rather take more requests with less data than less requests with more data.
+This option works best for destinations which prefer fewer profiles per request and would rather take more requests with less data than fewer requests with more data.
 
 Use the `maxUsersPerRequest` parameter to specify the maximum number of profiles that your destination can take in a request.
 
